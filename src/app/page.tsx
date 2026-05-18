@@ -81,7 +81,6 @@ function getRelevanceInfo(relevance: string): { label: string; className: string
 }
 
 function mapGroupNames(groups: Group[]): Group[] {
-  // Try to intelligently assign meaningful names to empty group names based on position
   const levelNames = ["上游原料與設備", "中游製造與組件", "下游系統與應用", "周邊與服務", "其他"];
   return groups.map((g, i) => ({
     ...g,
@@ -92,6 +91,15 @@ function mapGroupNames(groups: Group[]): Group[] {
 /* ─── Tab types ─── */
 type TabId = "focus" | "topics" | "map" | "companies";
 
+/* ─── Search Icon Component ─── */
+function SearchIcon() {
+  return (
+    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+    </svg>
+  );
+}
+
 /* ─── Main Component ─── */
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabId>("topics");
@@ -101,6 +109,7 @@ export default function Home() {
   const [selectedTopicSlug, setSelectedTopicSlug] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"count" | "name">("count");
   const [detailViewMode, setDetailViewMode] = useState<"list" | "structure">("list");
+  const [searchFocused, setSearchFocused] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
   const detailRef = useRef<HTMLDivElement>(null);
 
@@ -218,48 +227,49 @@ export default function Home() {
 
   /* ─── Render ─── */
   return (
-    <div className="min-h-screen bg-[#0f172a] flex flex-col">
+    <div className="min-h-screen bg-[#0a0e1a] text-[#e2e8f0] flex flex-col">
       {/* ─── Top Nav Bar ─── */}
-      <header className="sticky top-0 z-50 bg-[#0f172a]/95 backdrop-blur-lg border-b border-[#334155]">
-        <div className="max-w-[1440px] mx-auto px-4 lg:px-6">
+      <header className="sticky top-0 z-50 bg-[#0d1117]/95 backdrop-blur-xl border-b border-white/[0.06]">
+        <div className="max-w-7xl mx-auto px-5 lg:px-8">
           {/* Top row: brand + search */}
-          <div className="flex items-center justify-between h-14 gap-4">
-            <div className="flex items-center gap-2.5 shrink-0">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-base">
+          <div className="flex items-center h-16 gap-5">
+            <div className="flex items-center gap-3 shrink-0">
+              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-lg shadow-lg shadow-indigo-500/20">
                 🏭
               </div>
               <div className="leading-tight">
-                <h1 className="text-sm font-bold text-white">台股產業鏈知識圖譜</h1>
-                <p className="text-[10px] text-[#64748b]">
+                <h1 className="text-[15px] font-bold text-white tracking-tight">台股產業鏈知識圖譜</h1>
+                <p className="text-[11px] text-[#546280] mt-0.5">
                   {stats.total_topics} 題材 · {stats.unique_companies} 公司
                 </p>
               </div>
             </div>
 
-            {/* Search bar */}
-            <div ref={searchRef} className="relative flex-1 max-w-md mx-auto">
-              <div className="relative">
-                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#64748b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+            {/* Search bar - clean, no icon blocking text */}
+            <div ref={searchRef} className="relative flex-1 max-w-lg mx-auto">
+              <div className={`flex items-center rounded-2xl transition-all duration-200 ${searchFocused ? "bg-[#1c2333] ring-2 ring-indigo-500/40" : "bg-[#161b28]"}`}>
                 <input
                   type="text"
                   placeholder="搜尋題材、公司名稱或代碼..."
-                  className="search-input w-full pl-10 pr-4 py-2 rounded-xl text-sm"
+                  className="w-full bg-transparent px-5 py-2.5 text-sm text-white placeholder-[#4a5568] outline-none"
                   value={search}
                   onChange={(e) => {
                     setSearch(e.target.value);
                     setShowAutocomplete(true);
                   }}
-                  onFocus={() => setShowAutocomplete(true)}
+                  onFocus={() => { setShowAutocomplete(true); setSearchFocused(true); }}
+                  onBlur={() => setSearchFocused(false)}
                 />
+                <div className="pr-4 text-[#4a5568]">
+                  <SearchIcon />
+                </div>
               </div>
               {showAutocomplete && suggestions.length > 0 && (
-                <div className="autocomplete-dropdown rounded-b-xl">
+                <div className="autocomplete-dropdown rounded-2xl mt-1">
                   {suggestions.map((s, i) => (
                     <button
                       key={`${s.type}-${s.slug}-${i}`}
-                      className="w-full px-4 py-2.5 flex items-center justify-between hover:bg-[#334155] transition-colors text-left text-sm"
+                      className="w-full px-5 py-3 flex items-center justify-between hover:bg-white/[0.04] transition-colors text-left"
                       onClick={() => {
                         if (s.type === "topic") {
                           handleSelectTopic(s.slug);
@@ -272,22 +282,17 @@ export default function Home() {
                         setShowAutocomplete(false);
                       }}
                     >
-                      <span className="text-white">{s.name}</span>
-                      <span className="text-xs text-[#64748b]">{s.sub}</span>
+                      <span className="text-[#e2e8f0] text-sm">{s.name}</span>
+                      <span className="text-xs text-[#546280] ml-3 shrink-0">{s.sub}</span>
                     </button>
                   ))}
                 </div>
               )}
             </div>
-
-            <div className="hidden lg:flex items-center gap-2 text-xs text-[#64748b]">
-              <kbd className="px-1.5 py-0.5 rounded bg-[#1e293b] border border-[#334155] text-[10px]">⌘K</kbd>
-              <span>搜尋</span>
-            </div>
           </div>
 
           {/* Tab navigation */}
-          <div className="flex items-center gap-1 -mb-px overflow-x-auto">
+          <div className="flex items-center gap-1 -mb-px overflow-x-auto pb-0.5">
             {([
               { id: "focus" as TabId, label: "每日焦點", icon: "🔥" },
               { id: "topics" as TabId, label: "題材總覽", icon: "📋" },
@@ -296,10 +301,10 @@ export default function Home() {
             ] as const).map((tab) => (
               <button
                 key={tab.id}
-                className={`nav-tab px-4 py-2.5 text-sm font-medium whitespace-nowrap rounded-t-lg transition-colors ${
+                className={`nav-tab px-5 py-3 text-sm font-medium whitespace-nowrap transition-colors ${
                   activeTab === tab.id
-                    ? "active text-indigo-400 bg-[#1e293b]"
-                    : "text-[#64748b] hover:text-[#94a3b8] hover:bg-[#1e293b]/50"
+                    ? "active text-indigo-400"
+                    : "text-[#546280] hover:text-[#8b9ab8]"
                 }`}
                 onClick={() => setActiveTab(tab.id)}
               >
@@ -312,35 +317,35 @@ export default function Home() {
       </header>
 
       {/* ─── Stats Bar ─── */}
-      <div className="bg-[#0f172a] border-b border-[#334155]/50">
-        <div className="max-w-[1440px] mx-auto px-4 lg:px-6 py-3">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <div className="stats-card rounded-xl p-3 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-indigo-500/10 flex items-center justify-center text-lg">📋</div>
+      <div className="bg-[#0a0e1a] border-b border-white/[0.04]">
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="stats-card rounded-2xl p-4 flex items-center gap-4">
+              <div className="w-11 h-11 rounded-xl bg-indigo-500/10 flex items-center justify-center text-lg">📋</div>
               <div>
-                <div className="text-xl font-bold text-indigo-400">{stats.total_topics}</div>
-                <div className="text-xs text-[#64748b]">題材數</div>
+                <div className="text-2xl font-bold text-indigo-400 leading-none">{stats.total_topics}</div>
+                <div className="text-xs text-[#546280] mt-1">題材數</div>
               </div>
             </div>
-            <div className="stats-card rounded-xl p-3 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-lg">🏢</div>
+            <div className="stats-card rounded-2xl p-4 flex items-center gap-4">
+              <div className="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center text-lg">🏢</div>
               <div>
-                <div className="text-xl font-bold text-emerald-400">{stats.unique_companies}</div>
-                <div className="text-xs text-[#64748b]">不重複公司</div>
+                <div className="text-2xl font-bold text-emerald-400 leading-none">{stats.unique_companies}</div>
+                <div className="text-xs text-[#546280] mt-1">不重複公司</div>
               </div>
             </div>
-            <div className="stats-card rounded-xl p-3 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center text-lg">📊</div>
+            <div className="stats-card rounded-2xl p-4 flex items-center gap-4">
+              <div className="w-11 h-11 rounded-xl bg-amber-500/10 flex items-center justify-center text-lg">📊</div>
               <div>
-                <div className="text-xl font-bold text-amber-400">{stats.total_companies}</div>
-                <div className="text-xs text-[#64748b]">公司條目</div>
+                <div className="text-2xl font-bold text-amber-400 leading-none">{stats.total_companies}</div>
+                <div className="text-xs text-[#546280] mt-1">公司條目</div>
               </div>
             </div>
-            <div className="stats-card rounded-xl p-3 flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-rose-500/10 flex items-center justify-center text-lg">🏷️</div>
+            <div className="stats-card rounded-2xl p-4 flex items-center gap-4">
+              <div className="w-11 h-11 rounded-xl bg-rose-500/10 flex items-center justify-center text-lg">🏷️</div>
               <div>
-                <div className="text-xl font-bold text-rose-400">{categories.length - 1}</div>
-                <div className="text-xs text-[#64748b]">產業類別</div>
+                <div className="text-2xl font-bold text-rose-400 leading-none">{categories.length - 1}</div>
+                <div className="text-xs text-[#546280] mt-1">產業類別</div>
               </div>
             </div>
           </div>
@@ -348,25 +353,25 @@ export default function Home() {
       </div>
 
       {/* ─── Main Content ─── */}
-      <main className="flex-1 max-w-[1440px] mx-auto w-full px-4 lg:px-6 py-4">
+      <main className="flex-1 max-w-7xl mx-auto w-full px-5 lg:px-8 py-6">
         {/* ─── Focus Tab ─── */}
         {activeTab === "focus" && (
           <div className="fade-in">
-            <div className="bg-[#1e293b] rounded-2xl border border-[#334155] p-8 text-center">
-              <div className="text-5xl mb-4">🔥</div>
-              <h2 className="text-xl font-bold text-white mb-2">每日焦點</h2>
-              <p className="text-[#94a3b8] text-sm max-w-lg mx-auto">
+            <div className="bg-[#111827] rounded-3xl border border-white/[0.06] p-12 text-center max-w-2xl mx-auto">
+              <div className="text-6xl mb-6">🔥</div>
+              <h2 className="text-2xl font-bold text-white mb-3">每日焦點</h2>
+              <p className="text-[#8b9ab8] text-sm leading-relaxed max-w-md mx-auto">
                 每日精選台股產業題材焦點，追蹤市場動態與產業趨勢變化。敬請期待更多功能上線。
               </p>
-              <div className="mt-6 flex justify-center gap-3">
+              <div className="mt-8 flex justify-center gap-4">
                 <button
-                  className="px-6 py-2 rounded-xl bg-indigo-500 text-white text-sm font-medium hover:bg-indigo-600 transition-colors"
+                  className="px-8 py-3 rounded-2xl bg-indigo-500 text-white text-sm font-semibold hover:bg-indigo-600 transition-colors shadow-lg shadow-indigo-500/20"
                   onClick={() => setActiveTab("topics")}
                 >
                   瀏覽全部題材
                 </button>
                 <button
-                  className="px-6 py-2 rounded-xl bg-[#334155] text-white text-sm font-medium hover:bg-[#475569] transition-colors"
+                  className="px-8 py-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-white text-sm font-medium hover:bg-white/[0.08] transition-colors"
                   onClick={() => setActiveTab("map")}
                 >
                   產業地圖
@@ -378,11 +383,11 @@ export default function Home() {
 
         {/* ─── Topics Tab ─── */}
         {activeTab === "topics" && (
-          <div className="flex gap-6 fade-in">
+          <div className="flex gap-8 fade-in">
             {/* Sidebar: Category filter */}
-            <aside className="hidden lg:block w-56 shrink-0">
-              <div className="sticky top-[120px] space-y-1">
-                <h3 className="text-xs font-bold text-[#64748b] uppercase tracking-wider mb-3 px-3">產業類別</h3>
+            <aside className="hidden lg:block w-60 shrink-0">
+              <div className="sticky top-[136px] space-y-1">
+                <h3 className="text-[11px] font-bold text-[#546280] uppercase tracking-widest mb-4 px-4">產業類別</h3>
                 {categories.map((cat) => {
                   const color = cat === "全部" ? DEFAULT_COLOR : CATEGORY_COLORS[cat] || DEFAULT_COLOR;
                   const count = categoryCount[cat] || 0;
@@ -390,23 +395,20 @@ export default function Home() {
                   return (
                     <button
                       key={cat}
-                      className={`sidebar-category w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm ${
+                      className={`sidebar-category w-full flex items-center justify-between px-4 py-2.5 rounded-xl text-sm transition-all ${
                         isActive
-                          ? "active text-white bg-indigo-500/10 border-l-3 border-indigo-500"
-                          : "text-[#94a3b8] hover:text-white"
+                          ? "active bg-indigo-500/10 text-white"
+                          : "text-[#8b9ab8] hover:text-white hover:bg-white/[0.03]"
                       }`}
                       onClick={() => setSelectedCategory(cat)}
                     >
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2.5">
                         {cat !== "全部" && (
-                          <span
-                            className="w-2.5 h-2.5 rounded-full shrink-0"
-                            style={{ backgroundColor: color.solid }}
-                          />
+                          <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color.solid }} />
                         )}
                         <span className="truncate">{cat}</span>
                       </div>
-                      <span className={`text-xs px-1.5 py-0.5 rounded-md ${isActive ? "bg-indigo-500/20 text-indigo-300" : "bg-[#334155] text-[#64748b]"}`}>
+                      <span className={`text-xs px-2 py-0.5 rounded-md font-medium ${isActive ? "bg-indigo-500/20 text-indigo-300" : "bg-white/[0.04] text-[#546280]"}`}>
                         {count}
                       </span>
                     </button>
@@ -418,16 +420,16 @@ export default function Home() {
             {/* Main area */}
             <div className="flex-1 min-w-0">
               {/* Mobile category pills */}
-              <div className="lg:hidden flex flex-wrap gap-2 mb-4 overflow-x-auto pb-2">
+              <div className="lg:hidden flex flex-wrap gap-2 mb-5 overflow-x-auto pb-2">
                 {categories.map((cat) => {
                   const color = cat === "全部" ? DEFAULT_COLOR : CATEGORY_COLORS[cat] || DEFAULT_COLOR;
                   return (
                     <button
                       key={cat}
-                      className={`category-pill px-3 py-1.5 rounded-full text-xs font-medium whitespace-nowrap border ${
+                      className={`category-pill px-4 py-2 rounded-xl text-xs font-medium whitespace-nowrap border transition-all ${
                         selectedCategory === cat
-                          ? "bg-indigo-500/20 border-indigo-500/50 text-indigo-300"
-                          : "bg-[#1e293b] border-[#334155] text-[#94a3b8] hover:border-[#475569]"
+                          ? "bg-indigo-500/15 border-indigo-500/40 text-indigo-300"
+                          : "bg-[#111827] border-white/[0.06] text-[#8b9ab8] hover:border-white/[0.12]"
                       }`}
                       onClick={() => setSelectedCategory(cat)}
                     >
@@ -441,22 +443,22 @@ export default function Home() {
               </div>
 
               {/* Sort controls */}
-              <div className="flex items-center justify-between mb-4">
-                <p className="text-sm text-[#64748b]">
-                  共 <span className="text-white font-medium">{filteredTopics.length}</span> 個題材
+              <div className="flex items-center justify-between mb-5">
+                <p className="text-sm text-[#546280]">
+                  共 <span className="text-white font-semibold">{filteredTopics.length}</span> 個題材
                 </p>
                 <div className="flex items-center gap-2">
                   <button
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium ${
-                      sortBy === "count" ? "bg-indigo-500/20 text-indigo-300 border border-indigo-500/30" : "bg-[#1e293b] text-[#64748b] border border-[#334155]"
+                    className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${
+                      sortBy === "count" ? "bg-indigo-500/15 text-indigo-300 border border-indigo-500/30" : "bg-[#111827] text-[#546280] border border-white/[0.06] hover:text-[#8b9ab8]"
                     }`}
                     onClick={() => setSortBy("count")}
                   >
                     按公司數
                   </button>
                   <button
-                    className={`px-3 py-1.5 rounded-lg text-xs font-medium ${
-                      sortBy === "name" ? "bg-indigo-500/20 text-indigo-300 border border-indigo-500/30" : "bg-[#1e293b] text-[#64748b] border border-[#334155]"
+                    className={`px-4 py-2 rounded-xl text-xs font-medium transition-all ${
+                      sortBy === "name" ? "bg-indigo-500/15 text-indigo-300 border border-indigo-500/30" : "bg-[#111827] text-[#546280] border border-white/[0.06] hover:text-[#8b9ab8]"
                     }`}
                     onClick={() => setSortBy("name")}
                   >
@@ -466,47 +468,44 @@ export default function Home() {
               </div>
 
               {/* Topic Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
                 {filteredTopics.map((topic) => {
                   const cat = getCategory(topic.name);
                   const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
                   return (
                     <button
                       key={topic.slug}
-                      className={`topic-card-item text-left bg-[#1e293b] rounded-xl border overflow-hidden ${
+                      className={`topic-card-item text-left rounded-2xl border overflow-hidden transition-all ${
                         selectedTopicSlug === topic.slug
-                          ? "border-indigo-500 ring-2 ring-indigo-500/20"
-                          : "border-[#334155]"
+                          ? "border-indigo-500/60 shadow-lg shadow-indigo-500/10"
+                          : "border-white/[0.06] hover:border-white/[0.12]"
                       }`}
                       onClick={() => handleSelectTopic(topic.slug)}
                     >
                       {/* Gradient top bar */}
                       <div className={`h-1.5 bg-gradient-to-r ${color.gradient}`} />
-                      <div className="p-4">
-                        <div className="flex items-start justify-between gap-2 mb-2">
-                          <div className="flex items-center gap-2 min-w-0">
-                            <span
-                              className="w-2 h-2 rounded-full shrink-0"
-                              style={{ backgroundColor: color.solid }}
-                            />
-                            <span className="text-[10px] font-medium text-[#64748b] uppercase tracking-wider truncate">
+                      <div className="bg-[#111827] p-5">
+                        <div className="flex items-start justify-between gap-3 mb-3">
+                          <div className="flex items-center gap-2.5 min-w-0">
+                            <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color.solid }} />
+                            <span className="text-[11px] font-medium text-[#546280] uppercase tracking-wider truncate">
                               {cat}
                             </span>
                           </div>
-                          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md bg-gradient-to-r ${color.gradient} text-white shrink-0`}>
+                          <span className={`text-[11px] font-bold px-2.5 py-1 rounded-lg bg-gradient-to-r ${color.gradient} text-white shrink-0`}>
                             {topic.total} 家
                           </span>
                         </div>
-                        <h3 className="font-semibold text-sm text-white leading-snug mb-1.5 line-clamp-2">
+                        <h3 className="font-semibold text-[15px] text-white leading-snug mb-2 line-clamp-2">
                           {topic.name}
                         </h3>
                         {topic.description && (
-                          <p className="text-xs text-[#64748b] line-clamp-2 leading-relaxed">
-                            {topic.description.substring(0, 100)}{topic.description.length > 100 ? "..." : ""}
+                          <p className="text-xs text-[#546280] line-clamp-2 leading-relaxed">
+                            {topic.description.substring(0, 120)}{topic.description.length > 120 ? "..." : ""}
                           </p>
                         )}
-                        <div className="mt-3 flex items-center gap-2">
-                          <span className="text-[10px] text-indigo-400 font-medium">查看詳情 →</span>
+                        <div className="mt-4 pt-3 border-t border-white/[0.04]">
+                          <span className="text-xs text-indigo-400 font-medium">查看詳情 →</span>
                         </div>
                       </div>
                     </button>
@@ -514,9 +513,9 @@ export default function Home() {
                 })}
               </div>
               {filteredTopics.length === 0 && (
-                <div className="text-center py-16">
-                  <div className="text-4xl mb-3">🔍</div>
-                  <p className="text-[#64748b]">找不到符合條件的題材</p>
+                <div className="text-center py-20">
+                  <div className="text-5xl mb-4">🔍</div>
+                  <p className="text-[#546280] text-lg">找不到符合條件的題材</p>
                 </div>
               )}
             </div>
@@ -527,32 +526,32 @@ export default function Home() {
         {activeTab === "map" && (
           <div className="fade-in">
             {!selectedTopicData ? (
-              <div className="text-center py-16">
-                <div className="text-5xl mb-4">🗺️</div>
-                <h2 className="text-xl font-bold text-white mb-2">產業地圖</h2>
-                <p className="text-[#94a3b8] text-sm max-w-md mx-auto mb-6">
+              <div className="text-center py-20">
+                <div className="text-6xl mb-5">🗺️</div>
+                <h2 className="text-2xl font-bold text-white mb-3">產業地圖</h2>
+                <p className="text-[#8b9ab8] text-sm max-w-md mx-auto mb-8 leading-relaxed">
                   請先從「題材總覽」選擇一個題材，或從下方挑選，即可查看產業地圖與供應鏈結構。
                 </p>
                 <button
-                  className="px-6 py-2.5 rounded-xl bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition-colors"
+                  className="px-8 py-3 rounded-2xl bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition-colors shadow-lg shadow-indigo-500/20"
                   onClick={() => setActiveTab("topics")}
                 >
                   📋 瀏覽題材總覽
                 </button>
                 {/* Quick pick grid */}
-                <div className="mt-8 max-w-3xl mx-auto">
-                  <h3 className="text-sm font-medium text-[#64748b] mb-3">熱門題材</h3>
-                  <div className="flex flex-wrap gap-2 justify-center">
+                <div className="mt-10 max-w-3xl mx-auto">
+                  <h3 className="text-sm font-medium text-[#546280] mb-4">熱門題材</h3>
+                  <div className="flex flex-wrap gap-2.5 justify-center">
                     {topics.slice(0, 12).map((t) => {
                       const cat = getCategory(t.name);
                       const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
                       return (
                         <button
                           key={t.slug}
-                          className="px-3 py-1.5 rounded-lg bg-[#1e293b] border border-[#334155] text-sm text-[#94a3b8] hover:text-white hover:border-indigo-500/50 transition-colors"
+                          className="px-4 py-2 rounded-xl bg-[#111827] border border-white/[0.06] text-sm text-[#8b9ab8] hover:text-white hover:border-indigo-500/40 transition-all"
                           onClick={() => handleSelectTopic(t.slug)}
                         >
-                          <span className="inline-block w-2 h-2 rounded-full mr-1.5" style={{ backgroundColor: color.solid }} />
+                          <span className="inline-block w-2 h-2 rounded-full mr-2" style={{ backgroundColor: color.solid }} />
                           {t.name}
                         </button>
                       );
@@ -561,61 +560,61 @@ export default function Home() {
                 </div>
               </div>
             ) : (
-              <div className="flex gap-6" ref={detailRef}>
+              <div className="flex gap-8" ref={detailRef}>
                 {/* Detail Panel */}
                 <div className="flex-1 min-w-0">
                   {/* Back button & header */}
-                  <div className="flex items-center gap-3 mb-4">
+                  <div className="flex items-center gap-4 mb-6">
                     <button
-                      className="w-8 h-8 rounded-lg bg-[#1e293b] border border-[#334155] flex items-center justify-center text-[#64748b] hover:text-white hover:border-[#475569] transition-colors"
+                      className="w-10 h-10 rounded-xl bg-[#111827] border border-white/[0.06] flex items-center justify-center text-[#8b9ab8] hover:text-white hover:border-white/[0.12] transition-colors text-lg"
                       onClick={() => setSelectedTopicSlug(null)}
                     >
                       ←
                     </button>
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2.5 mb-1">
                         {(() => {
                           const cat = getCategory(selectedTopicData.name);
                           const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
                           return (
                             <>
                               <span className="w-3 h-3 rounded-full shrink-0" style={{ backgroundColor: color.solid }} />
-                              <span className="text-xs font-medium text-[#64748b]">{cat}</span>
+                              <span className="text-xs font-medium text-[#546280]">{cat}</span>
                             </>
                           );
                         })()}
                       </div>
-                      <h2 className="text-lg font-bold text-white truncate">{selectedTopicData.name}</h2>
+                      <h2 className="text-xl font-bold text-white truncate">{selectedTopicData.name}</h2>
                     </div>
-                    <span className="text-xs bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full font-medium shrink-0">
+                    <span className="text-xs bg-indigo-500/15 text-indigo-300 px-4 py-1.5 rounded-full font-medium shrink-0 border border-indigo-500/20">
                       {selectedTopicData.total} 家公司
                     </span>
                   </div>
 
                   {/* Description */}
                   {selectedTopicData.description && (
-                    <div className="bg-[#1e293b] rounded-xl border border-[#334155] p-4 mb-4">
-                      <p className="text-sm text-[#94a3b8] leading-relaxed">{selectedTopicData.description}</p>
+                    <div className="bg-[#111827] rounded-2xl border border-white/[0.06] p-5 mb-5">
+                      <p className="text-sm text-[#8b9ab8] leading-relaxed">{selectedTopicData.description}</p>
                     </div>
                   )}
 
                   {/* View toggle */}
-                  <div className="flex items-center gap-2 mb-4">
+                  <div className="flex items-center gap-2.5 mb-5">
                     <button
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
                         detailViewMode === "list"
-                          ? "bg-indigo-500/20 text-indigo-300 border border-indigo-500/30"
-                          : "bg-[#1e293b] text-[#64748b] border border-[#334155] hover:text-white"
+                          ? "bg-indigo-500/15 text-indigo-300 border border-indigo-500/30"
+                          : "bg-[#111827] text-[#546280] border border-white/[0.06] hover:text-[#8b9ab8]"
                       }`}
                       onClick={() => setDetailViewMode("list")}
                     >
                       📋 公司列表
                     </button>
                     <button
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all ${
                         detailViewMode === "structure"
-                          ? "bg-indigo-500/20 text-indigo-300 border border-indigo-500/30"
-                          : "bg-[#1e293b] text-[#64748b] border border-[#334155] hover:text-white"
+                          ? "bg-indigo-500/15 text-indigo-300 border border-indigo-500/30"
+                          : "bg-[#111827] text-[#546280] border border-white/[0.06] hover:text-[#8b9ab8]"
                       }`}
                       onClick={() => setDetailViewMode("structure")}
                     >
@@ -625,37 +624,35 @@ export default function Home() {
 
                   {/* List View */}
                   {detailViewMode === "list" && (
-                    <div className="space-y-4">
+                    <div className="space-y-5">
                       {mapGroupNames(selectedTopicData.groups).map((group, gi) => (
-                        <div key={gi} className="bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
-                          <div className="px-4 py-3 border-b border-[#334155] flex items-center justify-between">
+                        <div key={gi} className="bg-[#111827] rounded-2xl border border-white/[0.06] overflow-hidden">
+                          <div className="px-5 py-4 border-b border-white/[0.04] flex items-center justify-between">
                             <h3 className="font-semibold text-sm text-white">{group.name}</h3>
-                            <span className="text-xs text-[#64748b]">{group.companies.length} 家公司</span>
+                            <span className="text-xs text-[#546280]">{group.companies.length} 家公司</span>
                           </div>
-                          <div className="divide-y divide-[#334155]">
+                          <div className="divide-y divide-white/[0.04]">
                             {group.companies.map((company) => {
                               const relInfo = getRelevanceInfo(company.relevance);
                               return (
-                                <div key={company.code} className="company-card flex items-center justify-between px-4 py-3 gap-3">
-                                  <div className="flex items-center gap-3 min-w-0">
-                                    <div className="w-10 h-10 rounded-lg bg-[#0f172a] border border-[#334155] flex items-center justify-center shrink-0">
-                                      <span className="text-xs font-mono font-bold text-[#94a3b8]">{company.code.slice(0, 4)}</span>
+                                <div key={company.code} className="company-card flex items-center justify-between px-5 py-4 gap-4">
+                                  <div className="flex items-center gap-4 min-w-0">
+                                    <div className="w-11 h-11 rounded-xl bg-[#0a0e1a] border border-white/[0.06] flex items-center justify-center shrink-0">
+                                      <span className="text-xs font-mono font-bold text-[#8b9ab8]">{company.code.slice(0, 4)}</span>
                                     </div>
                                     <div className="min-w-0">
                                       <div className="flex items-center gap-2">
                                         <span className="text-sm font-medium text-white">{company.name}</span>
-                                        <span className="text-xs text-[#64748b]">{company.code}</span>
+                                        <span className="text-xs text-[#546280]">{company.code}</span>
                                       </div>
                                       {company.role && (
-                                        <p className="text-xs text-[#64748b] truncate mt-0.5">{company.role}</p>
+                                        <p className="text-xs text-[#546280] truncate mt-0.5">{company.role}</p>
                                       )}
                                     </div>
                                   </div>
-                                  <div className="flex items-center gap-2 shrink-0">
-                                    <span className={`${relInfo.className} text-xs px-2 py-0.5 rounded-full font-medium`}>
-                                      {relInfo.emoji} {relInfo.label}
-                                    </span>
-                                  </div>
+                                  <span className={`${relInfo.className} text-xs px-3 py-1 rounded-full font-medium whitespace-nowrap shrink-0`}>
+                                    {relInfo.emoji} {relInfo.label}
+                                  </span>
                                 </div>
                               );
                             })}
@@ -667,54 +664,54 @@ export default function Home() {
 
                   {/* Structure View */}
                   {detailViewMode === "structure" && (
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                       {(() => {
                         const namedGroups = mapGroupNames(selectedTopicData.groups);
                         const levelColors = [
-                          { bg: "bg-emerald-500/10", border: "border-emerald-500/30", text: "text-emerald-400", label: "上游", icon: "⬆️" },
-                          { bg: "bg-amber-500/10", border: "border-amber-500/30", text: "text-amber-400", label: "中游", icon: "⏺️" },
-                          { bg: "bg-blue-500/10", border: "border-blue-500/30", text: "text-blue-400", label: "下游", icon: "⬇️" },
-                          { bg: "bg-purple-500/10", border: "border-purple-500/30", text: "text-purple-400", label: "周邊", icon: "🔄" },
-                          { bg: "bg-slate-500/10", border: "border-slate-500/30", text: "text-slate-400", label: "其他", icon: "📦" },
+                          { bg: "bg-emerald-500/[0.06]", border: "border-emerald-500/20", text: "text-emerald-400", label: "上游", icon: "⬆️" },
+                          { bg: "bg-amber-500/[0.06]", border: "border-amber-500/20", text: "text-amber-400", label: "中游", icon: "⏺️" },
+                          { bg: "bg-blue-500/[0.06]", border: "border-blue-500/20", text: "text-blue-400", label: "下游", icon: "⬇️" },
+                          { bg: "bg-purple-500/[0.06]", border: "border-purple-500/20", text: "text-purple-400", label: "周邊", icon: "🔄" },
+                          { bg: "bg-slate-500/[0.06]", border: "border-slate-500/20", text: "text-slate-400", label: "其他", icon: "📦" },
                         ];
                         return namedGroups.map((group, gi) => {
                           const level = levelColors[Math.min(gi, levelColors.length - 1)];
                           return (
                             <div key={gi} className="slide-up" style={{ animationDelay: `${gi * 100}ms` }}>
                               {/* Level header */}
-                              <div className="flex items-center gap-2 mb-3">
+                              <div className="flex items-center gap-2.5 mb-4">
                                 <span className="text-lg">{level.icon}</span>
                                 <h3 className={`font-bold text-sm ${level.text}`}>
                                   {level.label}：{group.name}
                                 </h3>
-                                <span className="text-xs text-[#64748b] ml-auto">{group.companies.length} 家</span>
+                                <span className="text-xs text-[#546280] ml-auto">{group.companies.length} 家</span>
                               </div>
                               {/* Flow arrows for middle levels */}
                               {gi > 0 && (
-                                <div className="flex justify-center my-2">
+                                <div className="flex justify-center my-3">
                                   <div className="flex flex-col items-center">
-                                    <div className="w-0.5 h-4 bg-[#334155]" />
-                                    <svg className="w-4 h-4 text-[#64748b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <div className="w-0.5 h-5 bg-white/[0.08]" />
+                                    <svg className="w-4 h-4 text-[#546280]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                     </svg>
                                   </div>
                                 </div>
                               )}
                               {/* Company cards */}
-                              <div className={`${level.bg} ${level.border} border rounded-xl p-4`}>
-                                <div className="flex flex-wrap gap-2">
+                              <div className={`${level.bg} ${level.border} border rounded-2xl p-5`}>
+                                <div className="flex flex-wrap gap-3">
                                   {group.companies.map((company) => {
                                     const relInfo = getRelevanceInfo(company.relevance);
                                     return (
                                       <div
                                         key={company.code}
-                                        className="bg-[#0f172a]/50 border border-[#334155] rounded-lg px-3 py-2 flex items-center gap-2 hover:border-[#475569] transition-colors"
+                                        className="bg-[#0a0e1a]/80 border border-white/[0.06] rounded-xl px-4 py-2.5 flex items-center gap-2.5 hover:border-white/[0.12] transition-all"
                                       >
                                         <div className="text-center">
                                           <div className="text-xs font-bold text-white">{company.code}</div>
-                                          <div className="text-[10px] text-[#94a3b8]">{company.name}</div>
+                                          <div className="text-[11px] text-[#8b9ab8]">{company.name}</div>
                                         </div>
-                                        <span className={`${relInfo.className} text-[10px] px-1.5 py-0.5 rounded font-medium whitespace-nowrap`}>
+                                        <span className={`${relInfo.className} text-[11px] px-2 py-0.5 rounded-md font-medium whitespace-nowrap`}>
                                           {relInfo.label}
                                         </span>
                                       </div>
@@ -732,17 +729,17 @@ export default function Home() {
 
                 {/* Right info panel (desktop only) */}
                 <div className="hidden xl:block w-72 shrink-0">
-                  <div className="sticky top-[120px] space-y-4">
+                  <div className="sticky top-[136px] space-y-5">
                     {/* Quick stats */}
-                    <div className="bg-[#1e293b] rounded-xl border border-[#334155] p-4">
-                      <h4 className="text-xs font-bold text-[#64748b] uppercase tracking-wider mb-3">題材概要</h4>
-                      <div className="space-y-2">
+                    <div className="bg-[#111827] rounded-2xl border border-white/[0.06] p-5">
+                      <h4 className="text-[11px] font-bold text-[#546280] uppercase tracking-widest mb-4">題材概要</h4>
+                      <div className="space-y-3">
                         <div className="flex justify-between text-sm">
-                          <span className="text-[#94a3b8]">公司總數</span>
+                          <span className="text-[#8b9ab8]">公司總數</span>
                           <span className="text-white font-medium">{selectedTopicData.total}</span>
                         </div>
                         <div className="flex justify-between text-sm">
-                          <span className="text-[#94a3b8]">供應鏈層級</span>
+                          <span className="text-[#8b9ab8]">供應鏈層級</span>
                           <span className="text-white font-medium">{selectedTopicData.groups.length}</span>
                         </div>
                         {(() => {
@@ -752,7 +749,7 @@ export default function Home() {
                           );
                           return (
                             <div className="flex justify-between text-sm">
-                              <span className="text-[#94a3b8]">核心公司</span>
+                              <span className="text-[#8b9ab8]">核心公司</span>
                               <span className="text-emerald-400 font-medium">{highRel}</span>
                             </div>
                           );
@@ -761,16 +758,16 @@ export default function Home() {
                     </div>
 
                     {/* Related topics */}
-                    <div className="bg-[#1e293b] rounded-xl border border-[#334155] p-4">
-                      <h4 className="text-xs font-bold text-[#64748b] uppercase tracking-wider mb-3">同類題材</h4>
-                      <div className="space-y-1.5">
+                    <div className="bg-[#111827] rounded-2xl border border-white/[0.06] p-5">
+                      <h4 className="text-[11px] font-bold text-[#546280] uppercase tracking-widest mb-4">同類題材</h4>
+                      <div className="space-y-2">
                         {topics
                           .filter((t) => getCategory(t.name) === getCategory(selectedTopicData.name) && t.slug !== selectedTopicData.slug)
                           .slice(0, 5)
                           .map((t) => (
                             <button
                               key={t.slug}
-                              className="w-full text-left px-3 py-2 rounded-lg text-sm text-[#94a3b8] hover:text-white hover:bg-[#334155] transition-colors truncate"
+                              className="w-full text-left px-4 py-2.5 rounded-xl text-sm text-[#8b9ab8] hover:text-white hover:bg-white/[0.04] transition-colors truncate"
                               onClick={() => handleSelectTopic(t.slug)}
                             >
                               {t.name}
@@ -788,59 +785,61 @@ export default function Home() {
         {/* ─── Companies Tab ─── */}
         {activeTab === "companies" && (
           <div className="fade-in">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="relative flex-1 max-w-md">
-                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#64748b]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-                <input
-                  type="text"
-                  placeholder="搜尋公司名稱或代碼..."
-                  className="search-input w-full pl-10 pr-4 py-2.5 rounded-xl text-sm"
-                  value={companySearch}
-                  onChange={(e) => setCompanySearch(e.target.value)}
-                />
+            <div className="flex items-center gap-5 mb-6">
+              <div className="relative flex-1 max-w-lg">
+                <div className="flex items-center rounded-2xl bg-[#161b28]">
+                  <input
+                    type="text"
+                    placeholder="搜尋公司名稱或代碼..."
+                    className="w-full bg-transparent px-5 py-3 text-sm text-white placeholder-[#4a5568] outline-none"
+                    value={companySearch}
+                    onChange={(e) => setCompanySearch(e.target.value)}
+                  />
+                  <div className="pr-4 text-[#4a5568]">
+                    <SearchIcon />
+                  </div>
+                </div>
               </div>
-              <p className="text-sm text-[#64748b]">
-                共 <span className="text-white font-medium">{filteredCompanies.length}</span> 家公司
+              <p className="text-sm text-[#546280]">
+                共 <span className="text-white font-semibold">{filteredCompanies.length}</span> 家公司
               </p>
             </div>
 
-            <div className="bg-[#1e293b] rounded-xl border border-[#334155] overflow-hidden">
+            <div className="bg-[#111827] rounded-2xl border border-white/[0.06] overflow-hidden">
               {/* Table header */}
-              <div className="grid grid-cols-[80px_1fr_120px_1fr] px-4 py-3 border-b border-[#334155] bg-[#0f172a]/50">
-                <span className="text-xs font-bold text-[#64748b] uppercase tracking-wider">代碼</span>
-                <span className="text-xs font-bold text-[#64748b] uppercase tracking-wider">名稱</span>
-                <span className="text-xs font-bold text-[#64748b] uppercase tracking-wider">題材數</span>
-                <span className="text-xs font-bold text-[#64748b] uppercase tracking-wider">相關題材</span>
+              <div className="grid grid-cols-[90px_1fr_100px_1fr] px-5 py-3.5 border-b border-white/[0.06] bg-[#0a0e1a]/60">
+                <span className="text-[11px] font-bold text-[#546280] uppercase tracking-wider">代碼</span>
+                <span className="text-[11px] font-bold text-[#546280] uppercase tracking-wider">名稱</span>
+                <span className="text-[11px] font-bold text-[#546280] uppercase tracking-wider">題材數</span>
+                <span className="text-[11px] font-bold text-[#546280] uppercase tracking-wider">相關題材</span>
               </div>
               {/* Table body */}
-              <div className="divide-y divide-[#334155] max-h-[calc(100vh-320px)] overflow-y-auto">
+              <div className="divide-y divide-white/[0.04] max-h-[calc(100vh-320px)] overflow-y-auto">
                 {filteredCompanies.slice(0, 100).map((company) => {
                   const companyTopics = topics.filter((t) => company.topics.includes(t.slug));
                   return (
                     <div
                       key={company.code}
-                      className="company-card grid grid-cols-[80px_1fr_120px_1fr] px-4 py-3 items-center gap-3"
+                      className="company-card grid grid-cols-[90px_1fr_100px_1fr] px-5 py-4 items-center gap-4"
                     >
                       <span className="text-sm font-mono font-bold text-indigo-400">{company.code}</span>
                       <span className="text-sm text-white font-medium">{company.name}</span>
-                      <span className="text-sm text-[#94a3b8]">
-                        <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-indigo-500/20 text-xs text-indigo-300 font-bold">
+                      <span className="text-sm text-[#8b9ab8]">
+                        <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-indigo-500/15 text-xs text-indigo-300 font-bold">
                           {company.topic_count}
                         </span>
                       </span>
-                      <div className="flex flex-wrap gap-1">
+                      <div className="flex flex-wrap gap-1.5">
                         {companyTopics.slice(0, 3).map((t) => {
                           const cat = getCategory(t.name);
                           const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
                           return (
                             <button
                               key={t.slug}
-                              className="px-2 py-0.5 rounded text-[10px] font-medium border hover:border-indigo-500/50 transition-colors cursor-pointer"
+                              className="px-2.5 py-1 rounded-lg text-[11px] font-medium border hover:border-indigo-500/40 transition-colors cursor-pointer"
                               style={{
-                                backgroundColor: `${color.solid}15`,
-                                borderColor: `${color.solid}40`,
+                                backgroundColor: `${color.solid}12`,
+                                borderColor: `${color.solid}30`,
                                 color: color.solid,
                               }}
                               onClick={() => {
@@ -853,7 +852,7 @@ export default function Home() {
                           );
                         })}
                         {companyTopics.length > 3 && (
-                          <span className="text-[10px] text-[#64748b] self-center">+{companyTopics.length - 3}</span>
+                          <span className="text-[11px] text-[#546280] self-center ml-1">+{companyTopics.length - 3}</span>
                         )}
                       </div>
                     </div>
@@ -861,7 +860,7 @@ export default function Home() {
                 })}
               </div>
               {filteredCompanies.length > 100 && (
-                <div className="px-4 py-3 border-t border-[#334155] text-center text-xs text-[#64748b]">
+                <div className="px-5 py-4 border-t border-white/[0.04] text-center text-xs text-[#546280]">
                   顯示前 100 筆，共 {filteredCompanies.length} 家公司
                 </div>
               )}
@@ -871,8 +870,8 @@ export default function Home() {
       </main>
 
       {/* ─── Footer ─── */}
-      <footer className="border-t border-[#334155] mt-8 py-6">
-        <div className="max-w-[1440px] mx-auto px-4 lg:px-6 text-center text-xs text-[#64748b]">
+      <footer className="border-t border-white/[0.04] mt-8 py-8">
+        <div className="max-w-7xl mx-auto px-5 lg:px-8 text-center text-xs text-[#3a4560]">
           台股產業鏈知識圖譜 · 資料來源：aistockmap.com + CasualMarket + 多源驗證 · 最後更新：2026-05-18
         </div>
       </footer>

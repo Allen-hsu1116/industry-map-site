@@ -5,13 +5,13 @@
   --primary-light: #818cf8;
   --primary-dark: #4f46e5;
   --accent: #f59e0b;
-  --bg-dark: #0f172a;
-  --bg-card: #1e293b;
-  --bg-card-hover: #334155;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --border: #334155;
+  --bg-dark: #0a0e1a;
+  --bg-card: #111827;
+  --bg-card-hover: #1c2333;
+  --text-primary: #e2e8f0;
+  --text-secondary: #8b9ab8;
+  --text-muted: #546280;
+  --border: rgba(255, 255, 255, 0.06);
   --success: #22c55e;
   --warning: #f59e0b;
   --danger: #ef4444;
@@ -24,22 +24,27 @@ body {
   background: var(--bg-dark);
   color: var(--text-primary);
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-dark); }
-::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+/* Custom scrollbar - thin and subtle */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.08); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.15); }
+
+/* Smooth scrolling */
+html { scroll-behavior: smooth; }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateX(-20px); }
+  from { opacity: 0; transform: translateX(-16px); }
   to { opacity: 1; transform: translateX(0); }
 }
 
@@ -53,58 +58,9 @@ body {
   50% { opacity: 0.7; }
 }
 
-.fade-in { animation: fadeIn 0.3s ease-out; }
-.slide-in { animation: slideIn 0.3s ease-out; }
-.slide-up { animation: slideUp 0.3s ease-out; }
-
-/* Search input */
-.search-input {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.search-input:focus {
-  border-color: var(--primary);
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
-}
-.search-input::placeholder {
-  color: var(--text-muted);
-}
-
-/* Supply chain levels */
-.supply-level {
-  position: relative;
-}
-.supply-level::before {
-  content: '';
-  position: absolute;
-  left: 16px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--border);
-}
-
-/* Tab indicator animation */
-.nav-tab {
-  position: relative;
-  transition: color 0.2s;
-}
-.nav-tab.active {
-  color: #818cf8;
-}
-.nav-tab.active::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #6366f1, #818cf8);
-  border-radius: 2px 2px 0 0;
-}
+.fade-in { animation: fadeIn 0.35s ease-out; }
+.slide-in { animation: slideIn 0.35s ease-out; }
+.slide-up { animation: slideUp 0.35s ease-out; }
 
 /* Autocomplete dropdown */
 .autocomplete-dropdown {
@@ -114,12 +70,12 @@ body {
   right: 0;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 16px 16px;
   border-top: none;
-  max-height: 320px;
+  max-height: 360px;
   overflow-y: auto;
   z-index: 100;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* Company card hover */
@@ -133,13 +89,14 @@ body {
 
 /* Topic card */
 .topic-card-item {
-  transition: all 0.2s ease;
+  background: var(--bg-card);
+  transition: all 0.25s ease;
   cursor: pointer;
 }
 .topic-card-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(99, 102, 241, 0.15);
-  border-color: rgba(99, 102, 241, 0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.25);
 }
 
 /* Category pill */
@@ -147,76 +104,53 @@ body {
   transition: all 0.15s ease;
 }
 .category-pill:hover {
-  transform: scale(1.05);
-}
-.category-pill.active {
-  transform: scale(1.05);
-  box-shadow: 0 0 12px rgba(99, 102, 241, 0.3);
+  transform: scale(1.03);
 }
 
 /* Stats card */
 .stats-card {
-  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(30, 41, 59, 0.6) 100%);
+  background: var(--bg-card);
   border: 1px solid var(--border);
-  transition: transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .stats-card:hover {
   transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Sidebar category */
 .sidebar-category {
   transition: all 0.15s ease;
   cursor: pointer;
+  border-radius: 12px;
 }
 .sidebar-category:hover {
-  background: var(--bg-card-hover);
+  background: rgba(255, 255, 255, 0.04);
 }
 .sidebar-category.active {
-  background: rgba(99, 102, 241, 0.1);
+  background: rgba(99, 102, 241, 0.08);
   border-left: 3px solid var(--primary);
+  border-radius: 0 12px 12px 0;
 }
 
 /* Badge styles */
 .badge-core {
-  background: rgba(34, 197, 94, 0.15);
-  color: #4ade80;
-  border: 1px solid rgba(34, 197, 94, 0.3);
-}
-.badge-growth {
-  background: rgba(245, 158, 11, 0.15);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
-}
-.badge-niche {
-  background: rgba(96, 165, 250, 0.15);
-  color: #93c5fd;
-  border: 1px solid rgba(96, 165, 250, 0.3);
-}
-.badge-related {
-  background: rgba(148, 163, 184, 0.15);
-  color: #94a3b8;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-}
-
-/* Tag styles */
-.tag-revenue {
   background: rgba(34, 197, 94, 0.1);
   color: #4ade80;
   border: 1px solid rgba(34, 197, 94, 0.2);
 }
-.tag-foreign {
+.badge-growth {
   background: rgba(245, 158, 11, 0.1);
   color: #fbbf24;
   border: 1px solid rgba(245, 158, 11, 0.2);
 }
-.tag-momentum {
-  background: rgba(239, 68, 68, 0.1);
-  color: #f87171;
-  border: 1px solid rgba(239, 68, 68, 0.2);
+.badge-niche {
+  background: rgba(96, 165, 250, 0.1);
+  color: #93c5fd;
+  border: 1px solid rgba(96, 165, 250, 0.2);
 }
-.tag-default {
-  background: rgba(99, 102, 241, 0.1);
-  color: #a5b4fc;
-  border: 1px solid rgba(99, 102, 241, 0.2);
+.badge-related {
+  background: rgba(148, 163, 184, 0.1);
+  color: #94a3b8;
+  border: 1px solid rgba(148, 163, 184, 0.15);
 }
