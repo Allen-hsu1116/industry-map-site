@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
+/* ─── Design system: aistockmap-aligned semantic tokens ─── */
 :root {
-  --primary: #6366f1;
-  --primary-light: #818cf8;
-  --primary-dark: #4f46e5;
-  --accent: #f59e0b;
-  --bg-dark: #080c18;
-  --bg-card: #111827;
-  --bg-card-hover: #1c2333;
-  --text-primary: #e2e8f0;
-  --text-secondary: #8b9ab8;
-  --text-muted: #546280;
-  --border: rgba(255, 255, 255, 0.06);
-  --success: #22c55e;
-  --warning: #f59e0b;
-  --danger: #ef4444;
+  --color-bg: #060a14;
+  --color-surface: #0d1320;
+  --color-surface-hover: #141c2e;
+  --color-surface-active: #1a2540;
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-hover: rgba(255, 255, 255, 0.12);
+  --color-primary: #6366f1;
+  --color-primary-hover: #818cf8;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-tertiary: #475569;
 
-  /* shadcn dark theme CSS variables */
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* shadcn dark theme variables */
+  --background: #060a14;
+  --foreground: #f1f5f9;
+  --card: #0d1320;
+  --card-foreground: #f1f5f9;
+  --popover: #0d1320;
+  --popover-foreground: #f1f5f9;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #141c2e;
+  --secondary-foreground: #f1f5f9;
+  --muted: #141c2e;
+  --muted-foreground: #94a3b8;
+  --accent: #1a2540;
+  --accent-foreground: #f1f5f9;
   --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border-color: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0.088 263.54);
+  --destructive-foreground: #f1f5f9;
+  --border-color: rgba(255, 255, 255, 0.07);
+  --input: rgba(255, 255, 255, 0.07);
+  --ring: #6366f1;
   --radius: 0.75rem;
 }
 
@@ -64,8 +64,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', Roboto, sans-serif;
-  background: var(--bg-dark);
-  color: var(--text-primary);
+  background: var(--color-bg);
+  color: var(--color-text-primary);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,27 +81,23 @@ html { scroll-behavior: smooth; }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideIn { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes modalIn { from { opacity: 0; transform: scale(0.95) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
 
 .fade-in { animation: fadeIn 0.35s ease-out; }
 .slide-in { animation: slideIn 0.35s ease-out; }
 .slide-up { animation: slideUp 0.35s ease-out; }
-
-@keyframes modalIn {
-  from { opacity: 0; transform: scale(0.95) translateY(10px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
-}
 .modal-in { animation: modalIn 0.2s ease-out; }
 
 .autocomplete-dropdown {
   position: absolute; top: 100%; left: 0; right: 0;
-  background: var(--bg-card); border: 1px solid var(--border);
+  background: var(--color-surface); border: 1px solid var(--color-border);
   border-radius: 0 0 16px 16px; border-top: none;
   max-height: 380px; overflow-y: auto; z-index: 100;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .company-card { transition: all 0.15s ease; cursor: pointer; }
-.company-card:hover { background: var(--bg-card-hover); transform: translateX(4px); }
+.company-card:hover { background: var(--color-surface-hover); transform: translateX(4px); }
 
 .company-row { transition: all 0.15s ease; cursor: pointer; }
 .company-row:hover { background: rgba(255, 255, 255, 0.03); }
@@ -109,16 +105,17 @@ html { scroll-behavior: smooth; }
 .category-pill { transition: all 0.15s ease; }
 .category-pill:hover { transform: scale(1.03); }
 
-/* Nav tab */
+/* Nav tab — aistockmap style underline accent */
 .nav-tab { position: relative; transition: color 0.2s; }
-.nav-tab.active { color: #818cf8; }
+.nav-tab.active { color: var(--color-primary-hover); }
 .nav-tab.active::after {
-  content: ''; position: absolute; bottom: -1px; left: 0; right: 0;
-  height: 2px; background: linear-gradient(90deg, #6366f1, #818cf8);
+  content: ''; position: absolute; bottom: -1px; left: 16px; right: 16px;
+  height: 2px; background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
   border-radius: 2px 2px 0 0;
 }
 
-.badge-core { background: rgba(34, 197, 94, 0.1); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.2); }
-.badge-growth { background: rgba(245, 158, 11, 0.1); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
-.badge-niche { background: rgba(96, 165, 250, 0.1); color: #93c5fd; border: 1px solid rgba(96, 165, 250, 0.2); }
-.badge-related { background: rgba(148, 163, 184, 0.1); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.15); }
+/* Relevance badges */
+.badge-core { background: rgba(34, 197, 94, 0.12); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.2); }
+.badge-growth { background: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
+.badge-niche { background: rgba(96, 165, 250, 0.12); color: #93c5fd; border: 1px solid rgba(96, 165, 250, 0.2); }
+.badge-related { background: rgba(148, 163, 184, 0.12); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.15); }
