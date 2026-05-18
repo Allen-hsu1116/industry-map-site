@@ -220,7 +220,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#080c18] text-[#e2e8f0] flex flex-col">
       {/* ─── Top Nav Bar ─── */}
       <header className="sticky top-0 z-50 bg-[#0b1022]/95 backdrop-blur-2xl border-b border-white/[0.05]">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="flex items-center h-16 gap-6">
             <div className="flex items-center gap-3 shrink-0">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-lg shadow-lg shadow-indigo-500/20">🏭</div>
@@ -229,7 +229,7 @@ export default function Home() {
                 <p className="text-[11px] text-[#546280] mt-0.5">{stats.total_topics} 題材 · {stats.unique_companies} 公司</p>
               </div>
             </div>
-            <div ref={searchRef} className="relative flex-1 max-w-md mx-auto">
+            <div ref={searchRef} className="relative flex-1 max-w-xl mx-auto">
               <div className={`flex items-center rounded-2xl transition-all duration-200 ${searchFocused ? "bg-[#151c2e] ring-2 ring-indigo-500/30" : "bg-[#111827]"}`}>
                 <input
                   type="text"
@@ -278,21 +278,21 @@ export default function Home() {
 
       {/* ─── Stats Bar ─── */}
       <div className="bg-[#080c18] border-b border-white/[0.04]">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10 py-5">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-            <div className="stats-card rounded-2xl p-5 flex items-center gap-5">
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-12 py-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="stats-card rounded-2xl p-6 flex items-center gap-6">
               <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-xl">📋</div>
               <div><div className="text-2xl font-bold text-indigo-400 leading-none">{stats.total_topics}</div><div className="text-xs text-[#546280] mt-1.5">題材數</div></div>
             </div>
-            <div className="stats-card rounded-2xl p-5 flex items-center gap-5">
+            <div className="stats-card rounded-2xl p-6 flex items-center gap-6">
               <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-xl">🏢</div>
               <div><div className="text-2xl font-bold text-emerald-400 leading-none">{stats.unique_companies}</div><div className="text-xs text-[#546280] mt-1.5">不重複公司</div></div>
             </div>
-            <div className="stats-card rounded-2xl p-5 flex items-center gap-5">
+            <div className="stats-card rounded-2xl p-6 flex items-center gap-6">
               <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-xl">📊</div>
               <div><div className="text-2xl font-bold text-amber-400 leading-none">{stats.total_companies}</div><div className="text-xs text-[#546280] mt-1.5">公司條目</div></div>
             </div>
-            <div className="stats-card rounded-2xl p-5 flex items-center gap-5">
+            <div className="stats-card rounded-2xl p-6 flex items-center gap-6">
               <div className="w-12 h-12 rounded-xl bg-rose-500/10 flex items-center justify-center text-xl">🏷️</div>
               <div><div className="text-2xl font-bold text-rose-400 leading-none">{categories.length - 1}</div><div className="text-xs text-[#546280] mt-1.5">產業類別</div></div>
             </div>
@@ -301,7 +301,7 @@ export default function Home() {
       </div>
 
       {/* ─── Main Content ─── */}
-      <main className="flex-1 max-w-6xl mx-auto w-full px-6 lg:px-10 py-8">
+      <main className="flex-1 max-w-[1400px] mx-auto w-full px-8 lg:px-12 py-10">
 
         {/* ─── Focus Tab ─── */}
         {activeTab === "focus" && (
@@ -309,7 +309,7 @@ export default function Home() {
             <div className="bg-[#111827] rounded-3xl border border-white/[0.06] p-14 text-center max-w-2xl mx-auto mt-8">
               <div className="text-6xl mb-6">🔥</div>
               <h2 className="text-2xl font-bold text-white mb-3">每日焦點</h2>
-              <p className="text-[#8b9ab8] text-sm leading-relaxed max-w-md mx-auto">每日精選台股產業題材焦點，追蹤市場動態與產業趨勢變化。敬請期待更多功能上線。</p>
+              <p className="text-[#8b9ab8] text-sm leading-relaxed max-w-lg mx-auto">每日精選台股產業題材焦點，追蹤市場動態與產業趨勢變化。敬請期待更多功能上線。</p>
               <div className="mt-10 flex justify-center gap-4">
                 <button className="px-8 py-3 rounded-2xl bg-indigo-500 text-white text-sm font-semibold hover:bg-indigo-600 transition-colors shadow-lg shadow-indigo-500/20" onClick={() => setActiveTab("topics")}>瀏覽全部題材</button>
                 <button className="px-8 py-3 rounded-2xl bg-white/[0.04] border border-white/[0.08] text-white text-sm font-medium hover:bg-white/[0.08] transition-colors" onClick={() => setActiveTab("map")}>產業地圖</button>
@@ -320,10 +320,10 @@ export default function Home() {
 
         {/* ─── Topics Tab ─── */}
         {activeTab === "topics" && (
-          <div className="flex gap-10 fade-in">
+          <div className="flex gap-12 fade-in">
             {/* Sidebar */}
             <aside className="hidden lg:block w-56 shrink-0">
-              <div className="sticky top-[140px] space-y-1.5">
+              <div className="sticky top-[140px] space-y-2">
                 <h3 className="text-[11px] font-bold text-[#546280] uppercase tracking-widest mb-4 px-4">產業類別</h3>
                 {categories.map((cat) => {
                   const color = cat === "全部" ? DEFAULT_COLOR : CATEGORY_COLORS[cat] || DEFAULT_COLOR;
@@ -370,7 +370,7 @@ export default function Home() {
               </div>
 
               {/* Topic Grid — 2 cols on desktop for breathing room */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filteredTopics.map((topic) => {
                   const cat = getCategory(topic.name);
                   const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
@@ -380,7 +380,7 @@ export default function Home() {
                       onClick={() => goToTopic(topic.slug)}
                     >
                       <div className={`h-1.5 bg-gradient-to-r ${color.gradient}`} />
-                      <div className="bg-[#111827] px-6 py-5">
+                      <div className="bg-[#111827] px-8 py-7">
                         <div className="flex items-start justify-between gap-3 mb-3">
                           <div className="flex items-center gap-2.5 min-w-0">
                             <span className="w-2.5 h-2.5 rounded-full shrink-0" style={{ backgroundColor: color.solid }} />
@@ -414,7 +414,7 @@ export default function Home() {
               <div className="text-center py-24">
                 <div className="text-6xl mb-5">🗺️</div>
                 <h2 className="text-2xl font-bold text-white mb-3">產業地圖</h2>
-                <p className="text-[#8b9ab8] text-sm max-w-md mx-auto mb-8 leading-relaxed">請先從「題材總覽」選擇一個題材，或從下方挑選，即可查看產業地圖與供應鏈結構。</p>
+                <p className="text-[#8b9ab8] text-sm max-w-lg mx-auto mb-8 leading-relaxed">請先從「題材總覽」選擇一個題材，或從下方挑選，即可查看產業地圖與供應鏈結構。</p>
                 <button className="px-8 py-3 rounded-2xl bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition-colors shadow-lg shadow-indigo-500/20" onClick={() => setActiveTab("topics")}>📋 瀏覽題材總覽</button>
                 <div className="mt-12 max-w-3xl mx-auto">
                   <h3 className="text-sm font-medium text-[#546280] mb-5">熱門題材</h3>
@@ -455,7 +455,7 @@ export default function Home() {
                   </div>
 
                   {selectedTopicData.description && (
-                    <div className="bg-[#111827] rounded-2xl border border-white/[0.06] p-6 mb-6">
+                    <div className="bg-[#111827] rounded-2xl border border-white/[0.06] p-7 mb-7">
                       <p className="text-sm text-[#8b9ab8] leading-[1.8]">{selectedTopicData.description}</p>
                     </div>
                   )}
@@ -470,7 +470,7 @@ export default function Home() {
                     <div className="space-y-5">
                       {mapGroupNames(selectedTopicData.groups).map((group, gi) => (
                         <div key={gi} className="bg-[#111827] rounded-2xl border border-white/[0.06] overflow-hidden">
-                          <div className="px-6 py-4 border-b border-white/[0.04] flex items-center justify-between">
+                          <div className="px-7 py-5 border-b border-white/[0.04] flex items-center justify-between">
                             <h3 className="font-semibold text-sm text-white">{group.name}</h3>
                             <span className="text-xs text-[#546280]">{group.companies.length} 家公司</span>
                           </div>
@@ -478,7 +478,7 @@ export default function Home() {
                             {group.companies.map((company) => {
                               const relInfo = getRelevanceInfo(company.relevance);
                               return (
-                                <button key={company.code} className="company-card w-full flex items-center justify-between px-6 py-4 gap-4 text-left"
+                                <button key={company.code} className="company-card w-full flex items-center justify-between px-7 py-5 gap-4 text-left"
                                   onClick={() => goToCompany(company.code)}
                                 >
                                   <div className="flex items-center gap-4 min-w-0">
@@ -505,7 +505,7 @@ export default function Home() {
 
                   {/* Structure View */}
                   {detailViewMode === "structure" && (
-                    <div className="space-y-10">
+                    <div className="space-y-12">
                       {(() => {
                         const namedGroups = mapGroupNames(selectedTopicData.groups);
                         const levelColors = [
@@ -538,7 +538,7 @@ export default function Home() {
                                     const relInfo = getRelevanceInfo(company.relevance);
                                     return (
                                       <div key={company.code}
-                                        className="bg-[#0a0e1a]/80 border border-white/[0.06] rounded-xl px-4 py-2.5 flex items-center gap-2.5 hover:border-indigo-500/30 hover:bg-[#0a0e1a] transition-all cursor-pointer"
+                                        className="bg-[#0a0e1a]/80 border border-white/[0.06] rounded-xl px-5 py-3 flex items-center gap-2.5 hover:border-indigo-500/30 hover:bg-[#0a0e1a] transition-all cursor-pointer"
                                         onClick={() => goToCompany(company.code)}
                                       >
                                         <div className="text-center">
@@ -592,7 +592,7 @@ export default function Home() {
         {activeTab === "companies" && (
           <div className="fade-in">
             <div className="flex items-center gap-6 mb-8">
-              <div className="relative flex-1 max-w-lg">
+              <div className="relative flex-1 max-w-xl">
                 <div className="flex items-center rounded-2xl bg-[#111827]">
                   <input type="text" placeholder="搜尋公司名稱或代碼..." className="w-full bg-transparent px-5 py-3 text-sm text-white placeholder-[#4a5568] outline-none" value={companySearch} onChange={(e) => setCompanySearch(e.target.value)} />
                   <div className="pr-4 text-[#4a5568]"><SearchIcon /></div>
@@ -602,11 +602,11 @@ export default function Home() {
             </div>
 
             {/* Two-column layout: list + detail */}
-            <div className="flex gap-8">
+            <div className="flex gap-10">
               {/* Company list */}
               <div className={`transition-all duration-300 ${selectedCompanyData ? "w-[45%]" : "w-full"}`}>
                 <div className="bg-[#111827] rounded-2xl border border-white/[0.06] overflow-hidden">
-                  <div className="grid grid-cols-[90px_1fr_80px] px-6 py-4 border-b border-white/[0.06] bg-[#0a0e1a]/60">
+                  <div className="grid grid-cols-[90px_1fr_100px] px-7 py-4 border-b border-white/[0.06] bg-[#0a0e1a]/60">
                     <span className="text-[11px] font-bold text-[#546280] uppercase tracking-wider">代碼</span>
                     <span className="text-[11px] font-bold text-[#546280] uppercase tracking-wider">名稱</span>
                     <span className="text-[11px] font-bold text-[#546280] uppercase tracking-wider text-right">題材數</span>
@@ -614,7 +614,7 @@ export default function Home() {
                   <div className="divide-y divide-white/[0.04] max-h-[calc(100vh-280px)] overflow-y-auto">
                     {filteredCompanies.slice(0, 150).map((company) => (
                       <button key={company.code}
-                        className={`company-row w-full grid grid-cols-[90px_1fr_80px] px-6 py-4 items-center gap-4 text-left transition-colors ${selectedCompanyCode === company.code ? "bg-indigo-500/10" : "hover:bg-white/[0.03]"}`}
+                        className={`company-row w-full grid grid-cols-[90px_1fr_100px] px-7 py-4 items-center gap-4 text-left transition-colors ${selectedCompanyCode === company.code ? "bg-indigo-500/10" : "hover:bg-white/[0.03]"}`}
                         onClick={() => goToCompany(company.code)}
                       >
                         <span className="text-sm font-mono font-bold text-indigo-400">{company.code}</span>
@@ -702,7 +702,7 @@ export default function Home() {
 
       {/* ─── Footer ─── */}
       <footer className="border-t border-white/[0.04] mt-12 py-10">
-        <div className="max-w-6xl mx-auto px-6 lg:px-10 text-center text-xs text-[#3a4560]">
+        <div className="max-w-[1400px] mx-auto px-8 lg:px-12 text-center text-xs text-[#3a4560]">
           台股產業鏈知識圖譜 · 資料來源：aistockmap.com + CasualMarket + 多源驗證 · 最後更新：2026-05-18
         </div>
       </footer>
