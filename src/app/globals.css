@@ -15,6 +15,49 @@
   --success: #22c55e;
   --warning: #f59e0b;
   --danger: #ef4444;
+
+  /* shadcn dark theme CSS variables */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border-color: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0.088 263.54);
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border-color);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,6 +86,12 @@ html { scroll-behavior: smooth; }
 .slide-in { animation: slideIn 0.35s ease-out; }
 .slide-up { animation: slideUp 0.35s ease-out; }
 
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-in { animation: modalIn 0.2s ease-out; }
+
 .autocomplete-dropdown {
   position: absolute; top: 100%; left: 0; right: 0;
   background: var(--bg-card); border: 1px solid var(--border);
@@ -57,21 +106,8 @@ html { scroll-behavior: smooth; }
 .company-row { transition: all 0.15s ease; cursor: pointer; }
 .company-row:hover { background: rgba(255, 255, 255, 0.03); }
 
-.topic-card-item { background: var(--bg-card); transition: all 0.25s ease; cursor: pointer; }
-.topic-card-item:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(99, 102, 241, 0.1); }
-
 .category-pill { transition: all 0.15s ease; }
 .category-pill:hover { transform: scale(1.03); }
-
-.stats-card {
-  background: var(--bg-card); border: 1px solid var(--border);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.stats-card:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); }
-
-.sidebar-category { transition: all 0.15s ease; cursor: pointer; border-radius: 12px; }
-.sidebar-category:hover { background: rgba(255, 255, 255, 0.03); }
-.sidebar-category.active { background: rgba(99, 102, 241, 0.08); border-left: 3px solid var(--primary); border-radius: 0 12px 12px 0; }
 
 /* Nav tab */
 .nav-tab { position: relative; transition: color 0.2s; }
