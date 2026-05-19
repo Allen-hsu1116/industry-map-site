@@ -17,13 +17,34 @@ interface Group { name: string; companies: CompanyInGroup[]; }
 interface TopicData { slug: string; name: string; description: string; total: number; groups: Group[]; }
 interface CompanyData { code: string; name: string; topic_count: number; topics: string[]; }
 
+interface FinancialProfile { industry: string; chairman: string; established: string; listed: string; capital: string; website: string; }
+interface FinancialValuation { date: string; pe: string; pb: string; dividendYield: string; }
+interface FinancialPrice { date: string; open: number; high: number; low: number; close: number; volume: number; }
+interface FinancialIncome { revenue: string; grossProfit: string; operatingIncome: string; netIncome: string; eps: string; }
+interface FinancialMonthlyRevenue { month: string; revenue: string; mom: string; yoy: string; }
+interface FinancialBalance { totalAssets: string; totalLiabilities: string; equity: string; bookValuePerShare: string; }
+interface FinancialDividend { year: string; cashDividendPerShare: string; }
+
+interface FinancialData {
+  code: string;
+  name: string;
+  profile: FinancialProfile;
+  valuation: FinancialValuation;
+  price: FinancialPrice;
+  income: FinancialIncome;
+  monthly_revenue: FinancialMonthlyRevenue;
+  balance: FinancialBalance;
+  dividend: FinancialDividend;
+  updatedAt: string;
+}
+
 const CATEGORY_COLORS: Record<string, { gradient: string; solid: string; light: string; bg: string }> = {
   "半導體製造": { gradient: "from-blue-500 to-blue-700", solid: "#3b82f6", light: "#93c5fd", bg: "bg-blue-500/10" },
   "IC設計":     { gradient: "from-purple-500 to-purple-700", solid: "#8b5cf6", light: "#c4b5fd", bg: "bg-purple-500/10" },
   "IC 設計":    { gradient: "from-purple-500 to-purple-700", solid: "#8b5cf6", light: "#c4b5fd", bg: "bg-purple-500/10" },
   "先進封測":   { gradient: "from-cyan-500 to-cyan-700", solid: "#06b6d4", light: "#67e8f9", bg: "bg-cyan-500/10" },
   "基板材料":   { gradient: "from-amber-500 to-amber-700", solid: "#f59e0b", light: "#fcd34d", bg: "bg-amber-500/10" },
-  "記憶體":     { gradient: "from-green-500 to-green-700", solid: "#22c55e", light: "#86efac", bg: "bg-green-500/10" },
+  "記憶體":     { gradient: "from-green-500 to-green-700", solid: "#22c55e", light: "##86efac", bg: "bg-green-500/10" },
   "AI 伺服器":  { gradient: "from-rose-500 to-rose-700", solid: "#f43f5e", light: "#fda4af", bg: "bg-rose-500/10" },
   "散熱冷卻":   { gradient: "from-orange-500 to-orange-700", solid: "#f97316", light: "#fdba74", bg: "bg-orange-500/10" },
   "散熱":       { gradient: "from-orange-500 to-orange-700", solid: "#f97316", light: "#fdba74", bg: "bg-orange-500/10" },
@@ -65,7 +86,58 @@ function mapGroupNames(groups: Group[]): Group[] {
   return groups.map((g, i) => ({ ...g, name: g.name || levelNames[i] || `群組 ${i + 1}` }));
 }
 
+/* ─── Number formatting helpers (Chinese units) ─── */
+function formatMoneyNTD(thousands: string): string {
+  const num = parseFloat(thousands);
+  if (isNaN(num) || num === 0) return "-";
+  if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 10000) return `${(num / 10000).toFixed(1)}億`;
+  if (num >= 1000) return `${(num / 1000).toFixed(0)}百萬`;
+  return num.toLocaleString();
+}
+
+function formatCapitalNTD(ntd: string): string {
+  const num = parseFloat(ntd);
+  if (isNaN(num) || num === 0) return "-";
+  if (num >= 1e11) return `${(num / 1e11).toFixed(1).replace(/\.0$/, "")}百億`;
+  if (num >= 1e10) return `${(num / 1e10).toFixed(1).replace(/\.0$/, "")}十億`;
+  if (num >= 1e8) return `${(num / 1e8).toFixed(2)}億`;
+  return num.toLocaleString();
+}
+
+function formatPercent(val: string): string {
+  const num = parseFloat(val);
+  if (isNaN(num)) return "-";
+  const sign = num >= 0 ? "+" : "";
+  return `${sign}${num.toFixed(2)}%`;
+}
+
+function formatPercentAbs(val: string): string {
+  const num = parseFloat(val);
+  if (isNaN(num)) return "-";
+  return `${num.toFixed(2)}%`;
+}
+
+function formatPrice(num: number): string {
+  if (num === 0) return "-";
+  return num.toLocaleString();
+}
+
+function formatDate(dateStr: string): string {
+  if (!dateStr || dateStr.length !== 8) return dateStr;
+  const y = dateStr.slice(0, 4);
+  const m = dateStr.slice(4, 6);
+  const d = dateStr.slice(6, 8);
+  return `${y}/${m}/${d}`;
+}
+
+function formatRocDate(dateStr: string): string {
+  if (!dateStr) return "-";
+  return dateStr;
+}
+
 type TabId = "focus" | "topics" | "map" | "companies";
+type CompanyDetailTab = "overview" | "financials" | "supply_chain";
 
 /* ─── Tiny icon components ─── */
 function SearchIcon({ className = "w-4.5 h-4.5" }: { className?: string }) {
@@ -81,6 +153,199 @@ function ExternalIcon() {
   return <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>;
 }
 
+/* ─── Financial Detail Components ─── */
+function StatItem({ label, value, sub, className = "" }: { label: string; value: string | React.ReactNode; sub?: string; className?: string }) {
+  return (
+    <div className={cn("bg-[var(--color-sm)] bg-white/[0.02] rounded-xl p-4", className)}>
+      <div className="text-xs text-[var(--color-text-tertiary)] mb-1">{label}</div>
+      <div className="text-lg font-bold text-white">{value}</div>
+      {sub && <div className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{sub}</div>}
+    </div>
+  );
+}
+
+function CompanyFinancialPanel({ data }: { data: FinancialData }) {
+  const grossMargin = (() => {
+    const rev = parseFloat(data.income.revenue);
+    const gp = parseFloat(data.income.grossProfit);
+    if (rev > 0 && gp > 0) return ((gp / rev) * 100).toFixed(1) + "%";
+    return "-";
+  })();
+  const netMargin = (() => {
+    const rev = parseFloat(data.income.revenue);
+    const ni = parseFloat(data.income.netIncome);
+    if (rev > 0 && ni > 0) return ((ni / rev) * 100).toFixed(1) + "%";
+    return "-";
+  })();
+  const debtRatio = (() => {
+    const assets = parseFloat(data.balance.totalAssets);
+    const liabilities = parseFloat(data.balance.totalLiabilities);
+    if (assets > 0 && liabilities > 0) return ((liabilities / assets) * 100).toFixed(1) + "%";
+    return "-";
+  })();
+
+  return (
+    <div className="space-y-6">
+      {/* Valuation */}
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 估值指標</h4>
+        <div className="grid grid-cols-2 gap-3">
+          <StatItem label="本益比 (P/E)" value={data.valuation.pe || "-"} sub={data.valuation.pe ? "倍" : undefined} />
+          <StatItem label="股價淨值比 (P/B)" value={data.valuation.pb || "-"} sub={data.valuation.pb ? "倍" : undefined} />
+          <StatItem label="現金殖利率" value={data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "-"} />
+          <StatItem label="每股淨值" value={data.balance.bookValuePerShare || "-"} sub="元" />
+        </div>
+      </div>
+
+      {/* Price */}
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💹 股價資訊</h4>
+        <div className="grid grid-cols-4 gap-3">
+          <StatItem label="收盤價" value={formatPrice(data.price.close)} sub="元" className="col-span-2" />
+          <StatItem label="開盤" value={formatPrice(data.price.open)} sub="元" />
+          <StatItem label="成交量" value={formatPrice(data.price.volume)} sub="張" />
+        </div>
+        <div className="grid grid-cols-2 gap-3 mt-3">
+          <StatItem label="最高" value={formatPrice(data.price.high)} sub="元" />
+          <StatItem label="最低" value={formatPrice(data.price.low)} sub="元" />
+        </div>
+      </div>
+
+      {/* Income */}
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📊 財務摘要</h4>
+        <div className="grid grid-cols-2 gap-3">
+          <StatItem label="營業收入" value={formatMoneyNTD(data.income.revenue)} sub="千元" className="col-span-2" />
+          <StatItem label="毛利" value={formatMoneyNTD(data.income.grossProfit)} sub={`毛利率 ${grossMargin}`} />
+          <StatItem label="淨利" value={formatMoneyNTD(data.income.netIncome)} sub={`淨利率 ${netMargin}`} />
+          <StatItem label="EPS" value={data.income.eps || "-"} sub="元/股" />
+          <StatItem label="負債比" value={debtRatio} />
+        </div>
+      </div>
+
+      {/* Monthly Revenue */}
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📅 月營收</h4>
+        <div className="grid grid-cols-3 gap-3">
+          <StatItem label="月營收" value={formatMoneyNTD(data.monthly_revenue.revenue)} sub="千元" className="col-span-3" />
+          <StatItem label="月增率 (MoM)" value={formatPercent(data.monthly_revenue.mom)} />
+          <StatItem label="年增率 (YoY)" value={formatPercentAbs(data.monthly_revenue.yoy)} />
+        </div>
+      </div>
+
+      {/* Dividend */}
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💰 股利</h4>
+        <div className="grid grid-cols-2 gap-3">
+          <StatItem label="現金股利" value={data.dividend.cashDividendPerShare || "-"} sub="元/股" />
+          <StatItem label="股利年度" value={data.dividend.year || "-"} />
+        </div>
+      </div>
+
+      {/* Data source */}
+      <div className="text-center pt-2">
+        <p className="text-[10px] text-[var(--color-text-tertiary)]">資料更新：{data.updatedAt} · 來源：TWSE</p>
+      </div>
+    </div>
+  );
+}
+
+function CompanyOverviewPanel({ data }: { data: FinancialData }) {
+  return (
+    <div className="space-y-6">
+      {/* Profile Card */}
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">🏢 基本資料</h4>
+        <div className="space-y-3">
+          {[
+            { label: "產業別", value: data.profile.industry || "-", icon: "🏭" },
+            { label: "董事長", value: data.profile.chairman || "-", icon: "👔" },
+            { label: "成立日期", value: formatDate(data.profile.established) || "-", icon: "📅" },
+            { label: "上市日期", value: formatDate(data.profile.listed) || "-", icon: "🏛️" },
+            { label: "實收資本額", value: formatCapitalNTD(data.profile.capital) || "-", icon: "💰" },
+          ].map((row) => (
+            <div key={row.label} className="flex items-center justify-between py-2.5 px-4 bg-white/[0.02] rounded-xl">
+              <span className="text-sm text-[var(--color-text-secondary)] flex items-center gap-2">
+                <span className="text-xs">{row.icon}</span>{row.label}
+              </span>
+              <span className="text-sm text-white font-medium">{row.value}</span>
+            </div>
+          ))}
+          {data.profile.website && (
+            <div className="flex items-center justify-between py-2.5 px-4 bg-white/[0.02] rounded-xl">
+              <span className="text-sm text-[var(--color-text-secondary)] flex items-center gap-2">
+                <span className="text-xs">🌐</span>公司網站
+              </span>
+              <a href={data.profile.website} target="_blank" rel="noopener noreferrer" className="text-sm text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1">
+                {data.profile.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}
+                <ExternalIcon />
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Quick Valuation */}
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 快速估值</h4>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
+            <div className="text-2xl font-bold text-emerald-400">{data.price.close ? formatPrice(data.price.close) : "-"}</div>
+            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">收盤價 (元)</div>
+          </div>
+          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
+            <div className="text-2xl font-bold text-indigo-400">{data.valuation.pe || "-"}</div>
+            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">本益比 (倍)</div>
+          </div>
+          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
+            <div className="text-2xl font-bold text-amber-400">{data.income.eps || "-"}</div>
+            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">EPS (元)</div>
+          </div>
+          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
+            <div className="text-2xl font-bold text-rose-400">{data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "-"}</div>
+            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">殖利率</div>
+          </div>
+        </div>
+      </div>
+
+      {/* Data source */}
+      <div className="text-center pt-2">
+        <p className="text-[10px] text-[var(--color-text-tertiary)]">資料更新：{data.updatedAt}</p>
+      </div>
+    </div>
+  );
+}
+
+function NoFinancialData({ code }: { code: string }) {
+  return (
+    <div className="text-center py-12">
+      <div className="text-5xl mb-4">📊</div>
+      <h3 className="text-lg font-semibold text-white mb-2">財務資料尚未準備</h3>
+      <p className="text-sm text-[var(--color-text-tertiary)] mb-6 max-w-sm mx-auto leading-relaxed">
+        {code} 的財務資料正在準備中，我們正在逐步擴充公司資料庫。
+      </p>
+      <div className="flex gap-3 justify-center">
+        <a
+          href={`https://aistockmap.com/stock/${code}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white px-6 py-2.5 rounded-xl text-sm font-medium shadow-lg shadow-indigo-500/15 transition-all"
+        >
+          查看 AI Stock Map <ExternalIcon />
+        </a>
+        <a
+          href={`https://goodinfo.tw/tw/StockDetail.asp?StockID=${code}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-white/[0.05] border border-[var(--color-border)] text-[var(--color-text-secondary)] hover:text-white hover:border-[var(--color-border-hover)] px-6 py-2.5 rounded-xl text-sm font-medium transition-all"
+        >
+          GoodInfo <ExternalIcon />
+        </a>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabId>("topics");
   const [search, setSearch] = useState("");
@@ -92,6 +357,10 @@ export default function Home() {
   const [searchFocused, setSearchFocused] = useState(false);
   const [selectedCompanyCode, setSelectedCompanyCode] = useState<string | null>(null);
   const [showCompanyModal, setShowCompanyModal] = useState(false);
+  const [companyDetailTab, setCompanyDetailTab] = useState<CompanyDetailTab>("overview");
+  const [financialData, setFinancialData] = useState<FinancialData | null>(null);
+  const [financialLoading, setFinancialLoading] = useState(false);
+  const [financialError, setFinancialError] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
 
   const topics: TopicData[] = industriesData.topics as TopicData[];
@@ -133,16 +402,41 @@ export default function Home() {
     const comp = companies.find((c) => c.code === selectedCompanyCode);
     if (!comp) return null;
     const relatedTopics = topics.filter((t) => comp.topics.includes(t.slug));
-    const roles: { topic: string; topicName: string; group: string; role: string; relevance: string }[] = [];
+    const roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string }[] = [];
     for (const t of relatedTopics) {
       for (const g of t.groups) {
         for (const c of g.companies) {
-          if (c.code === comp.code) { roles.push({ topic: t.slug, topicName: t.name, group: g.name, role: c.role, relevance: c.relevance }); }
+          if (c.code === comp.code) { roles.push({ topic: t.slug, topicName: t.name, topicDescription: t.description || "", group: g.name, role: c.role, relevance: c.relevance }); }
         }
       }
     }
     return { ...comp, relatedTopics, roles };
   }, [selectedCompanyCode, companies, topics]);
+
+  // Fetch financial data when a company is selected
+  useEffect(() => {
+    if (!selectedCompanyCode) {
+      setFinancialData(null);
+      setFinancialError(false);
+      return;
+    }
+    setFinancialLoading(true);
+    setFinancialError(false);
+    fetch(`/industry-map-site/data/financials/${selectedCompanyCode}.json`)
+      .then((res) => {
+        if (!res.ok) throw new Error("Not found");
+        return res.json();
+      })
+      .then((data: FinancialData) => {
+        setFinancialData(data);
+        setFinancialLoading(false);
+      })
+      .catch(() => {
+        setFinancialData(null);
+        setFinancialError(true);
+        setFinancialLoading(false);
+      });
+  }, [selectedCompanyCode]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) { if (searchRef.current && !searchRef.current.contains(e.target as Node)) setShowAutocomplete(false); }
@@ -573,7 +867,7 @@ export default function Home() {
                   </div>
                   <ScrollArea className="max-h-[calc(100vh-280px)]">
                     {filteredCompanies.slice(0, 150).map((company) => (
-                      <button key={company.code} className={cn("company-row w-full grid grid-cols-[100px_1fr_100px] px-7 py-4 items-center gap-4 text-left transition-colors", selectedCompanyCode === company.code ? "bg-[var(--color-primary)]/10" : "hover:bg-white/[0.03]")} onClick={() => { setSelectedCompanyCode(company.code); }}>
+                      <button key={company.code} className={cn("company-row w-full grid grid-cols-[100px_1fr_100px] px-7 py-4 items-center gap-4 text-left transition-colors", selectedCompanyCode === company.code ? "bg-[var(--color-primary)]/10" : "hover:bg-white/[0.03]")} onClick={() => { setSelectedCompanyCode(company.code); setCompanyDetailTab("overview"); }}>
                         <span className="text-sm font-mono font-bold text-indigo-400">{company.code}</span>
                         <span className="text-sm text-white font-medium">{company.name}</span>
                         <span className="text-sm text-right">
@@ -592,54 +886,118 @@ export default function Home() {
               {selectedCompanyData && (
                 <div className="flex-1 min-w-0 fade-in">
                   <Card className="bg-[var(--color-surface)] border-[var(--color-border)] rounded-2xl sticky top-[140px]">
-                    <CardContent className="p-8">
-                      <div className="flex items-center justify-between mb-6">
-                        <div className="flex items-center gap-4">
-                          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-lg font-bold text-white shadow-lg shadow-indigo-500/15">{selectedCompanyData.code.slice(0, 4)}</div>
-                          <div>
-                            <h2 className="text-xl font-bold text-white">{selectedCompanyData.name}</h2>
-                            <span className="text-sm text-[var(--color-text-tertiary)]">{selectedCompanyData.code}</span>
+                    <CardContent className="p-0">
+                      {/* Company Header */}
+                      <div className="px-8 pt-8 pb-6">
+                        <div className="flex items-center justify-between mb-6">
+                          <div className="flex items-center gap-4">
+                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-lg font-bold text-white shadow-lg shadow-indigo-500/15">{selectedCompanyData.code.slice(0, 4)}</div>
+                            <div>
+                              <h2 className="text-xl font-bold text-white">{selectedCompanyData.name}</h2>
+                              <span className="text-sm text-[var(--color-text-tertiary)]">{selectedCompanyData.code}</span>
+                            </div>
+                          </div>
+                          <Button variant="outline" size="icon" className="w-9 h-9 rounded-xl bg-white/[0.04] border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-white" onClick={() => setSelectedCompanyCode(null)}>
+                            <CloseIcon />
+                          </Button>
+                        </div>
+                        <div className="grid grid-cols-2 gap-4">
+                          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
+                            <div className="text-2xl font-bold text-indigo-400">{selectedCompanyData.topic_count}</div>
+                            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">相關題材</div>
+                          </div>
+                          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
+                            <div className="text-2xl font-bold text-emerald-400">{selectedCompanyData.roles.length}</div>
+                            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">供應鏈角色</div>
                           </div>
                         </div>
-                        <Button variant="outline" size="icon" className="w-9 h-9 rounded-xl bg-white/[0.04] border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-white" onClick={() => setSelectedCompanyCode(null)}>
-                          <CloseIcon />
-                        </Button>
                       </div>
-                      <div className="grid grid-cols-2 gap-4 mb-7">
-                        <div className="bg-[var(--color-surface)] rounded-xl p-4 text-center">
-                          <div className="text-2xl font-bold text-indigo-400">{selectedCompanyData.topic_count}</div>
-                          <div className="text-xs text-[var(--color-text-tertiary)] mt-1">相關題材</div>
-                        </div>
-                        <div className="bg-[var(--color-surface)] rounded-xl p-4 text-center">
-                          <div className="text-2xl font-bold text-emerald-400">{selectedCompanyData.roles.length}</div>
-                          <div className="text-xs text-[var(--color-text-tertiary)] mt-1">供應鏈角色</div>
-                        </div>
+
+                      {/* Detail Tabs */}
+                      <div className="px-8 flex gap-1 border-b border-[var(--color-border)]">
+                        {([
+                          { id: "overview" as CompanyDetailTab, label: "概覽", icon: "📊" },
+                          { id: "financials" as CompanyDetailTab, label: "財務", icon: "💹" },
+                          { id: "supply_chain" as CompanyDetailTab, label: "供應鏈", icon: "🔗" },
+                        ]).map((tab) => (
+                          <button
+                            key={tab.id}
+                            className={cn(
+                              "px-5 py-3 text-sm font-medium transition-all border-b-2",
+                              companyDetailTab === tab.id
+                                ? "text-indigo-400 border-indigo-400"
+                                : "text-[var(--color-text-tertiary)] border-transparent hover:text-[var(--color-text-secondary)]"
+                            )}
+                            onClick={() => setCompanyDetailTab(tab.id)}
+                          >
+                            <span className="mr-1.5">{tab.icon}</span>{tab.label}
+                          </button>
+                        ))}
                       </div>
-                      <h3 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">供應鏈角色</h3>
-                      <div className="space-y-3 mb-7">
-                        {selectedCompanyData.roles.map((role, i) => {
-                          const relInfo = getRelevanceInfo(role.relevance);
-                          return (
-                            <div key={i} className="bg-[var(--color-surface)] rounded-xl p-4">
-                              <div className="flex items-center justify-between mb-1.5">
-                                <Button variant="ghost" className="text-sm text-indigo-400 hover:text-[var(--color-primary-hover)] font-medium h-auto p-0" onClick={() => goToTopic(role.topic)}>{role.topicName}</Button>
-                                <span className={cn(relInfo.className, "text-xs px-2.5 py-0.5 rounded-full font-medium")}>{relInfo.emoji} {relInfo.label}</span>
-                              </div>
-                              <div className="text-xs text-[var(--color-text-secondary)]">{role.group}{role.role ? ` — ${role.role}` : ""}</div>
+
+                      {/* Tab Content */}
+                      <div className="px-8 py-6 max-h-[calc(100vh-420px)] overflow-y-auto">
+                        {companyDetailTab === "overview" && (
+                          financialLoading ? (
+                            <div className="text-center py-12">
+                              <div className="inline-block w-6 h-6 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
+                              <p className="text-sm text-[var(--color-text-tertiary)] mt-3">載入財務資料...</p>
                             </div>
-                          );
-                        })}
-                      </div>
-                      <Separator className="bg-white/[0.06] mb-7" />
-                      <h3 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">相關題材</h3>
-                      <div className="flex flex-wrap gap-2">
-                        {selectedCompanyData.relatedTopics.map((t) => {
-                          const cat = getCategory(t.name);
-                          const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
-                          return (
-                            <Button key={t.slug} variant="outline" size="sm" className="rounded-lg text-xs font-medium h-auto py-1.5 hover:border-indigo-500/40 transition-colors" style={{ backgroundColor: `${color.solid}12`, borderColor: `${color.solid}30`, color: color.solid }} onClick={() => goToTopic(t.slug)}>{t.name}</Button>
-                          );
-                        })}
+                          ) : financialData ? (
+                            <CompanyOverviewPanel data={financialData} />
+                          ) : financialError ? (
+                            <NoFinancialData code={selectedCompanyData.code} />
+                          ) : null
+                        )}
+                        {companyDetailTab === "financials" && (
+                          financialLoading ? (
+                            <div className="text-center py-12">
+                              <div className="inline-block w-6 h-6 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
+                              <p className="text-sm text-[var(--color-text-tertiary)] mt-3">載入財務資料...</p>
+                            </div>
+                          ) : financialData ? (
+                            <CompanyFinancialPanel data={financialData} />
+                          ) : financialError ? (
+                            <NoFinancialData code={selectedCompanyData.code} />
+                          ) : null
+                        )}
+                        {companyDetailTab === "supply_chain" && (
+                          <div className="space-y-6">
+                            <div>
+                              <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">供應鏈角色</h4>
+                              <div className="space-y-3">
+                                {selectedCompanyData.roles.map((role, i) => {
+                                  const relInfo = getRelevanceInfo(role.relevance);
+                                  return (
+                                    <div key={i} className="bg-white/[0.02] rounded-xl p-4">
+                                      <div className="flex items-center justify-between mb-1.5">
+                                        <Button variant="ghost" className="text-sm text-indigo-400 hover:text-[var(--color-primary-hover)] font-medium h-auto p-0" onClick={() => goToTopic(role.topic)}>{role.topicName}</Button>
+                                        <span className={cn(relInfo.className, "text-xs px-2.5 py-0.5 rounded-full font-medium")}>{relInfo.emoji} {relInfo.label}</span>
+                                      </div>
+                                      <div className="text-xs text-[var(--color-text-secondary)]">{role.group}{role.role ? ` — ${role.role}` : ""}</div>
+                                      {role.topicDescription && (
+                                        <p className="text-xs text-[var(--color-text-tertiary)] mt-1.5 line-clamp-2">{role.topicDescription.substring(0, 100)}{role.topicDescription.length > 100 ? "..." : ""}</p>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                            <Separator className="bg-white/[0.06]" />
+                            <div>
+                              <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">相關題材</h4>
+                              <div className="flex flex-wrap gap-2">
+                                {selectedCompanyData.relatedTopics.map((t) => {
+                                  const cat = getCategory(t.name);
+                                  const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
+                                  return (
+                                    <Button key={t.slug} variant="outline" size="sm" className="rounded-lg text-xs font-medium h-auto py-1.5 hover:border-indigo-500/40 transition-colors" style={{ backgroundColor: `${color.solid}12`, borderColor: `${color.solid}30`, color: color.solid }} onClick={() => goToTopic(t.slug)}>{t.name}</Button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </CardContent>
                   </Card>
@@ -694,7 +1052,7 @@ export default function Home() {
                 })}
               </div>
               <div className="flex gap-3">
-                <Button className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white h-11 rounded-xl" onClick={() => { setShowCompanyModal(false); setSelectedCompanyCode(selectedCompanyData.code); setActiveTab("companies"); }}>查看完整資料</Button>
+                <Button className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white h-11 rounded-xl" onClick={() => { setShowCompanyModal(false); setSelectedCompanyCode(selectedCompanyData.code); setActiveTab("companies"); setCompanyDetailTab("overview"); }}>查看完整資料</Button>
                 <Button variant="outline" className="bg-white/[0.05] border-[var(--color-border-hover)] text-[var(--color-text-secondary)] hover:text-white h-11 rounded-xl px-6" onClick={() => setShowCompanyModal(false)}>關閉</Button>
               </div>
             </CardContent>
