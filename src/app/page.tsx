@@ -907,14 +907,16 @@ function CompanyFullPageDetail({
 
   /* ─── TradingView Widget Loader ─── */
   const techTabRef = useRef<HTMLDivElement>(null);
-  const tvScriptLoadedRef = useRef(false);
   useEffect(() => {
-    if (detailTab !== "tech" || tvScriptLoadedRef.current) return;
-    const loadTV = () => {
+    if (detailTab !== "tech") return;
+    // Clean up any existing widget containers to allow fresh load
+    const timer = setTimeout(() => {
       const container = techTabRef.current?.querySelector(".tradingview-widget-container__widget");
       if (!container) return;
-      const existingScript = document.querySelector('script[src*="embed-widget-symbol-overview"]');
-      if (existingScript) existingScript.remove();
+      // Remove stale scripts
+      document.querySelectorAll('script[src*="embed-widget-symbol-overview"]').forEach(s => s.remove());
+      // Clear container for fresh injection
+      container.innerHTML = "";
       const script = document.createElement("script");
       script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
       script.async = true;
@@ -935,13 +937,11 @@ function CompanyFullPageDetail({
         backgroundColor: "rgba(13, 19, 32, 1)",
         gridLineColor: "rgba(242, 242, 242, 0.06)",
       });
-      container.innerHTML = "";
       container.appendChild(script);
-      tvScriptLoadedRef.current = true;
-    };
-    const timer = setTimeout(loadTV, 300);
+    }, 500);
     return () => clearTimeout(timer);
   }, [detailTab, data.code]);
+
   const aiSummary = (() => {
     const name = data.name;
     const ind = data.profile.industry;
