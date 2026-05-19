@@ -521,7 +521,7 @@ function generateIndustryAnalysis(
   return `${roleName || "參與者"}在${topicShort}領域扮演${relInfo.label}角色，產業分析準備中，敬請期待。`;
 }
 
-function CompanyFinancialPanel({ data }: { data: FinancialData }) {
+function CompanyFinancialPanel({ data, revenueTab, onRevenueTabChange }: { data: FinancialData; revenueTab: "monthly" | "quarterly" | "yearly"; onRevenueTabChange: (tab: "monthly" | "quarterly" | "yearly") => void }) {
   const trends = data.trends;
   const grossMargin = (() => {
     const rev = parseFloat(data.income.revenue);
@@ -541,6 +541,30 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
     if (assets > 0 && liabilities > 0) return ((liabilities / assets) * 100).toFixed(1) + "%";
     return "-";
   })();
+
+  const momVal = parseFloat(data.monthly_revenue.mom) || 0;
+  const yoyVal = parseFloat(data.monthly_revenue.yoy) || 0;
+
+  const latestGrossMargin = (() => {
+    if (trends?.quarterly_income && trends.quarterly_income.length > 0) {
+      const latest = trends.quarterly_income[trends.quarterly_income.length - 1];
+      if (latest.revenue > 0) return ((latest.grossProfit / latest.revenue) * 100).toFixed(1);
+    }
+    return "-";
+  })();
+  const latestNetMargin = (() => {
+    if (trends?.quarterly_income && trends.quarterly_income.length > 0) {
+      const latest = trends.quarterly_income[trends.quarterly_income.length - 1];
+      if (latest.revenue > 0) return ((latest.netIncome / latest.revenue) * 100).toFixed(1);
+    }
+    return "-";
+  })();
+
+  const revenueSubTabs: { id: "monthly" | "quarterly" | "yearly"; label: string }[] = [
+    { id: "monthly", label: "月份" },
+    { id: "quarterly", label: "季度" },
+    { id: "yearly", label: "年度" },
+  ];
 
   return (
     <div className="space-y-6">
@@ -573,33 +597,184 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
         )}
       </div>
 
-      {/* Monthly Revenue Chart */}
+      {/* ── 營收分析 ── */}
       <div>
-        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📅 月營收</h4>
+        <div className="flex items-center justify-between mb-3">
+          <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest">📊 營收分析</h4>
+          <div className="flex items-center gap-1 bg-white/[0.03] rounded-lg p-0.5">
+            {revenueSubTabs.map(tab => (
+              <button
+                key={tab.id}
+                className={cn(
+                  "px-3 py-1.5 text-xs font-medium rounded-md transition-all",
+                  revenueTab === tab.id
+                    ? "bg-indigo-500/20 text-indigo-400"
+                    : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                )}
+                onClick={() => onRevenueTabChange(tab.id)}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
-        {trends?.monthly_revenue && trends.monthly_revenue.length > 0 && (
-          <div className="mb-3">
-            <RevenueAreaChart data={trends.monthly_revenue} />
+        {/* Monthly Revenue Tab */}
+        {revenueTab === "monthly" && (
+          <div className="space-y-3">
+            {/* MoM/YoY Badges */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-white/[0.02] rounded-xl p-4">
+                <div className="text-xs text-[var(--color-text-tertiary)] mb-1">月增率 (MoM)</div>
+                <TrendIndicator value={momVal} size="md" />
+              </div>
+              <div className="bg-white/[0.02] rounded-xl p-4">
+                <div className="text-xs text-[var(--color-text-tertiary)] mb-1">年增率 (YoY)</div>
+                <TrendIndicator value={yoyVal} size="md" />
+              </div>
+            </div>
+
+            {trends?.monthly_revenue && trends.monthly_revenue.length > 0 && (
+              <RevenueAreaChart data={trends.monthly_revenue} />
+            )}
+
+            {/* Monthly revenue data table */}
+            {trends?.monthly_revenue && trends.monthly_revenue.length > 0 && (
+              <div className="bg-white/[0.02] rounded-xl overflow-hidden">
+                <div className="grid grid-cols-4 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
+                  <span>月份</span>
+                  <span className="text-right">營收(億)</span>
+                  <span className="text-right">MoM</span>
+                  <span className="text-right">YoY</span>
+                </div>
+                <div className="max-h-52 overflow-y-auto">
+                  {trends.monthly_revenue.slice().reverse().slice(0, 12).map((row, i) => (
+                    <div key={i} className="grid grid-cols-4 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
+                      <span className="text-[var(--color-text-secondary)]">{formatTrendMonth(row.month)}</span>
+                      <span className="text-right text-white font-medium">{formatRevShort(row.revenue)}</span>
+                      <span className={cn("text-right", row.mom >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.mom)}</span>
+                      <span className={cn("text-right", row.yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.yoy)}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="grid grid-cols-3 gap-3">
+              <StatItem label="月營收" value={formatMoneyNTD(data.monthly_revenue.revenue)} className="col-span-3" />
+              <StatItem
+                label="月增率 (MoM)"
+                value={formatPercent(data.monthly_revenue.mom)}
+                trend={<TrendIndicator value={momVal} />}
+              />
+              <StatItem
+                label="年增率 (YoY)"
+                value={formatPercentAbs(data.monthly_revenue.yoy)}
+                trend={<TrendIndicator value={yoyVal} />}
+              />
+              {trends && trends.monthly_revenue && trends.monthly_revenue.length > 1 && (
+                <StatItem label="資料期數" value={`${trends.monthly_revenue.length} 期`} sub="月營收趨勢" />
+              )}
+            </div>
           </div>
         )}
 
-        <div className="grid grid-cols-3 gap-3">
-          <StatItem label="月營收" value={formatMoneyNTD(data.monthly_revenue.revenue)} className="col-span-3" />
-          <StatItem
-            label="月增率 (MoM)"
-            value={formatPercent(data.monthly_revenue.mom)}
-            trend={<TrendIndicator value={parseFloat(data.monthly_revenue.mom) || 0} />}
-          />
-          <StatItem
-            label="年增率 (YoY)"
-            value={formatPercentAbs(data.monthly_revenue.yoy)}
-            trend={<TrendIndicator value={parseFloat(data.monthly_revenue.yoy) || 0} />}
-          />
-          {trends && trends.monthly_revenue && trends.monthly_revenue.length > 1 && (
-            <StatItem label="資料期數" value={`${trends.monthly_revenue.length} 期`} sub="月營收趨勢" />
-          )}
-        </div>
+        {/* Quarterly Revenue Tab */}
+        {revenueTab === "quarterly" && (
+          <div className="space-y-3">
+            {trends?.quarterly_income && trends.quarterly_income.length > 0 ? (
+              <QuarterlyIncomeChart data={trends.quarterly_income} />
+            ) : (
+              <div className="bg-white/[0.02] rounded-xl p-6 text-center">
+                <span className="text-[var(--color-text-tertiary)] text-sm">📋 季度資料準備中</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Yearly Revenue Tab */}
+        {revenueTab === "yearly" && (
+          <div className="space-y-3">
+            {trends?.quarterly_income && trends.quarterly_income.length > 0 ? (() => {
+              // Aggregate quarterly data into yearly
+              const yearlyMap = new Map<number, { revenue: number; grossProfit: number; netIncome: number }>();
+              trends.quarterly_income.forEach(q => {
+                const yearMatch = q.quarter.match(/(\d{4})/);
+                if (yearMatch) {
+                  const yr = parseInt(yearMatch[1]);
+                  const existing = yearlyMap.get(yr) || { revenue: 0, grossProfit: 0, netIncome: 0 };
+                  yearlyMap.set(yr, {
+                    revenue: existing.revenue + q.revenue,
+                    grossProfit: existing.grossProfit + q.grossProfit,
+                    netIncome: existing.netIncome + q.netIncome,
+                  });
+                }
+              });
+              const yearlyData = Array.from(yearlyMap.entries())
+                .sort(([a], [b]) => a - b)
+                .map(([yr, vals]) => ({
+                  year: String(yr),
+                  revenue: vals.revenue / 100000,
+                  grossProfit: vals.grossProfit / 100000,
+                  netIncome: vals.netIncome / 100000,
+                }));
+              return (
+                <div className="bg-white/[0.02] rounded-xl p-4">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-[var(--color-text-tertiary)]">年度營收趨勢</span>
+                  </div>
+                  <ResponsiveContainer width="100%" height={230}>
+                    <BarChart data={yearlyData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+                      <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
+                      <XAxis dataKey="year" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+                      <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+                      <Tooltip
+                        contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+                        labelStyle={{ color: "#94a3b8" }}
+                        formatter={(value: unknown, name: unknown) => {
+                          const v = Number(value);
+                          const n = String(name);
+                          const label = n === "revenue" ? "營收" : n === "grossProfit" ? "毛利" : "淨利";
+                          return [`${v.toFixed(1)} 億`, label];
+                        }}
+                      />
+                      <Bar dataKey="revenue" fill={CHART_COLORS.revenue} radius={[2, 2, 0, 0]} name="revenue" />
+                      <Bar dataKey="grossProfit" fill={CHART_COLORS.grossProfit} radius={[2, 2, 0, 0]} name="grossProfit" />
+                      <Bar dataKey="netIncome" fill={CHART_COLORS.netIncome} radius={[2, 2, 0, 0]} name="netIncome" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </div>
+              );
+            })() : (
+              <div className="bg-white/[0.02] rounded-xl p-6 text-center">
+                <span className="text-[var(--color-text-tertiary)] text-sm">📋 年度資料準備中</span>
+              </div>
+            )}
+          </div>
+        )}
       </div>
+
+      {/* ── 獲利能力趨勢 ── */}
+      {trends?.quarterly_income && trends.quarterly_income.length > 1 && (
+        <div>
+          <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 獲利能力趨勢</h4>
+          <div className="grid grid-cols-2 gap-3 mb-3">
+            <div className="bg-white/[0.02] rounded-xl p-4">
+              <div className="text-xs text-[var(--color-text-tertiary)] mb-1">毛利率</div>
+              <div className="text-lg font-bold" style={{ color: latestGrossMargin !== "-" ? "#f472b6" : "var(--color-text-tertiary)" }}>
+                {latestGrossMargin !== "-" ? `${latestGrossMargin}%` : "-"}
+              </div>
+            </div>
+            <div className="bg-white/[0.02] rounded-xl p-4">
+              <div className="text-xs text-[var(--color-text-tertiary)] mb-1">淨利率</div>
+              <div className="text-lg font-bold" style={{ color: latestNetMargin !== "-" ? "#fbbf24" : "var(--color-text-tertiary)" }}>
+                {latestNetMargin !== "-" ? `${latestNetMargin}%` : "-"}
+              </div>
+            </div>
+          </div>
+          <MarginTrendChart data={trends.quarterly_income} />
+        </div>
+      )}
 
       {/* Dividend */}
       <div>
@@ -688,6 +863,7 @@ function CompanyFullPageDetail({
 }) {
   const [detailTab, setDetailTab] = useState<CompanyDetailTab>("overview");
   const [industrySubTab, setIndustrySubTab] = useState(0);
+  const [revenueTab, setRevenueTab] = useState<"monthly" | "quarterly" | "yearly">("monthly");
 
   const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
   const marketPos = getMarketPosition(data.market_position);
@@ -811,7 +987,7 @@ function CompanyFullPageDetail({
                 </div>
               </div>
 
-              <CompanyFinancialPanel data={data} />
+              <CompanyFinancialPanel data={data} revenueTab={revenueTab} onRevenueTabChange={setRevenueTab} />
             </div>
           )}
 
@@ -1057,7 +1233,7 @@ function CompanyFullPageDetail({
                 <h4 className="text-sm font-bold text-white mb-4">📊 TradingView 即時圖表</h4>
                 <div className="rounded-xl overflow-hidden" style={{ background: "#0d1320" }}>
                   <iframe
-                    src={`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${data.code}&symbol=TWSE%3A${data.code}&interval=D&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=%230d1320&studies=[]&theme=dark&style=1&locale=zh_TW&timezone=Asia/Taipei&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&allow_popup_charts=&showpopupbutton=&range=all`}
+                    src={`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${data.code}&symbol=TWSE%3A${data.code}&interval=D&theme=dark&style=1&locale=zh_TW&toolbar_bg=%230d1320&enable_publishing=false&hide_side_toolbar=0&allow_symbol_change=true&range=all`}
                     style={{ width: "100%", height: "500px", border: "none" }}
                     allowFullScreen
                   />
