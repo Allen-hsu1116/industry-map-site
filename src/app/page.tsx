@@ -905,7 +905,43 @@ function CompanyFullPageDetail({
   const marketPos = getMarketPosition(data.market_position);
   const trends = data.trends;
 
-  /* Generate AI summary */
+  /* ─── TradingView Widget Loader ─── */
+  const techTabRef = useRef<HTMLDivElement>(null);
+  const tvScriptLoadedRef = useRef(false);
+  useEffect(() => {
+    if (detailTab !== "tech" || tvScriptLoadedRef.current) return;
+    const loadTV = () => {
+      const container = techTabRef.current?.querySelector(".tradingview-widget-container__widget");
+      if (!container) return;
+      const existingScript = document.querySelector('script[src*="embed-widget-symbol-overview"]');
+      if (existingScript) existingScript.remove();
+      const script = document.createElement("script");
+      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
+      script.async = true;
+      script.innerHTML = JSON.stringify({
+        symbols: [[`TWSE:${data.code}`]],
+        chartOnly: false,
+        width: "100%",
+        height: "100%",
+        colorTheme: "dark",
+        locale: "zh_TW",
+        isTransparent: true,
+        autosize: true,
+        showVolume: true,
+        showMA: true,
+        hideDateRanges: false,
+        hideMarketStatus: false,
+        hideSymbolLogo: false,
+        backgroundColor: "rgba(13, 19, 32, 1)",
+        gridLineColor: "rgba(242, 242, 242, 0.06)",
+      });
+      container.innerHTML = "";
+      container.appendChild(script);
+      tvScriptLoadedRef.current = true;
+    };
+    const timer = setTimeout(loadTV, 300);
+    return () => clearTimeout(timer);
+  }, [detailTab, data.code]);
   const aiSummary = (() => {
     const name = data.name;
     const ind = data.profile.industry;
@@ -1264,13 +1300,13 @@ function CompanyFullPageDetail({
 
           {/* ─── 技術分析 Tab ─── */}
           {detailTab === "tech" && (
-            <div className="space-y-6">
-              {/* TradingView Chart Link */}
-              <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
+            <div className="space-y-6" ref={techTabRef}>
+              {/* TradingView Symbol Overview Widget */}
+              <div className="bg-[var(--color-surface)] rounded-2xl p-4 border border-[var(--color-border)]">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-sm font-bold text-white">📈 技術走勢圖</h4>
                   <a
-                    href={`https://www.tradingview.com/chart/?symbol=TWSE%3A${data.code}`}
+                    href={`https://www.tradingview.com/symbols/TWSE-${data.code}/`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 border border-blue-500/30 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all"
@@ -1278,22 +1314,10 @@ function CompanyFullPageDetail({
                     在 TradingView 開啟 ↗
                   </a>
                 </div>
-                {/* Price Chart with Recharts */}
-                {trends?.monthly_price && trends.monthly_price.length > 1 ? (
-                  <div className="mb-4">
-                    <PriceAreaChart data={trends.monthly_price} />
-                  </div>
-                ) : (
-                  <div className="text-center py-12 rounded-xl bg-white/[0.02] border border-white/[0.04]">
-                    <div className="text-4xl mb-3">📈</div>
-                    <p className="text-sm text-[var(--color-text-tertiary)]">股價走勢資料累積中</p>
-                    <p className="text-xs text-[var(--color-text-tertiary)] mt-1">需要更多歷史資料才能生成走勢圖</p>
-                  </div>
-                )}
-                <div className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
-                  <span>💡</span>
-                  <span>資料由 TradingView 提供。如需完整 K 線圖、技術指標與畫線工具，請點擊上方連結開啟。</span>
+                <div className="tradingview-widget-container" style={{ height: "500px", width: "100%" }}>
+                  <div className="tradingview-widget-container__widget" style={{ height: "100%", width: "100%" }}></div>
                 </div>
+                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">💡 在圖表上可切換日線/週線/月線，查看成交量與均線。如需完整 K 線圖與技術指標，請點擊上方連結。</p>
               </div>
 
               {/* Key Indicators */}
