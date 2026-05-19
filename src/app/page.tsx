@@ -905,43 +905,6 @@ function CompanyFullPageDetail({
   const marketPos = getMarketPosition(data.market_position);
   const trends = data.trends;
 
-  /* ─── TradingView Widget Loader ─── */
-  const techTabRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (detailTab !== "tech") return;
-    // Clean up any existing widget containers to allow fresh load
-    const timer = setTimeout(() => {
-      const container = techTabRef.current?.querySelector(".tradingview-widget-container__widget");
-      if (!container) return;
-      // Remove stale scripts
-      document.querySelectorAll('script[src*="embed-widget-symbol-overview"]').forEach(s => s.remove());
-      // Clear container for fresh injection
-      container.innerHTML = "";
-      const script = document.createElement("script");
-      script.src = "https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js";
-      script.async = true;
-      script.innerHTML = JSON.stringify({
-        symbols: [[`TWSE:${data.code}`]],
-        chartOnly: false,
-        width: "100%",
-        height: "100%",
-        colorTheme: "dark",
-        locale: "zh_TW",
-        isTransparent: true,
-        autosize: true,
-        showVolume: true,
-        showMA: true,
-        hideDateRanges: false,
-        hideMarketStatus: false,
-        hideSymbolLogo: false,
-        backgroundColor: "rgba(13, 19, 32, 1)",
-        gridLineColor: "rgba(242, 242, 242, 0.06)",
-      });
-      container.appendChild(script);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [detailTab, data.code]);
-
   const aiSummary = (() => {
     const name = data.name;
     const ind = data.profile.industry;
@@ -1300,8 +1263,8 @@ function CompanyFullPageDetail({
 
           {/* ─── 技術分析 Tab ─── */}
           {detailTab === "tech" && (
-            <div className="space-y-6" ref={techTabRef}>
-              {/* Price Chart */}
+            <div className="space-y-6">
+              {/* Price Chart with TradingView lightweight-charts */}
               <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-sm font-bold text-white">📈 技術走勢圖</h4>
@@ -1323,14 +1286,7 @@ function CompanyFullPageDetail({
                     <p className="text-xs text-[var(--color-text-tertiary)] mt-1">需要更多歷史資料才能生成走勢圖</p>
                   </div>
                 )}
-              </div>
-
-              {/* TradingView Symbol Overview Widget — fallback for regions where embed works */}
-              <div className="bg-[var(--color-surface)] rounded-2xl p-4 border border-[var(--color-border)]">
-                <div className="tradingview-widget-container" style={{ height: "500px", width: "100%" }}>
-                  <div className="tradingview-widget-container__widget" style={{ height: "100%", width: "100%" }}></div>
-                </div>
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-2 text-center">💡 如上方圖表未顯示，請點擊「在 TradingView 開啟完整圖表」查看互動式K線圖</p>
+                <p className="text-xs text-[var(--color-text-tertiary)] mt-3 text-center">💡 資料由每日收盤價累積生成，互動式 K 線圖請點擊上方連結</p>
               </div>
 
               {/* Key Indicators */}
