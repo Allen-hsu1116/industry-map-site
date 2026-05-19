@@ -25,7 +25,8 @@ interface FinancialPrice { date: string; open: number; high: number; low: number
 interface FinancialIncome { revenue: string; grossProfit: string; operatingIncome: string; netIncome: string; eps: string; }
 interface FinancialMonthlyRevenue { month: string; revenue: string; mom: string; yoy: string; }
 interface FinancialBalance { totalAssets: string; totalLiabilities: string; equity: string; bookValuePerShare: string; }
-interface FinancialDividend { year: string; cashDividendPerShare: string; }
+interface FinancialDividend { year: string; cashDividendPerShare: string; stockDividendPerShare?: string; }
+interface FinancialDividendHistoryEntry { year: string; cashDividend: number; stockDividend: number; totalDividend: number; }
 interface FinancialSWOT { strengths: string[]; weaknesses: string[]; opportunities: string[]; threats: string[]; }
 
 interface TrendMonthlyRevenue { month: string; revenue: number; mom: number; yoy: number; }
@@ -52,6 +53,8 @@ interface FinancialData {
   monthly_revenue: FinancialMonthlyRevenue;
   balance: FinancialBalance;
   dividend: FinancialDividend;
+  dividendHistory?: FinancialDividendHistoryEntry[];
+  marketCap?: string;
   focus?: string;
   products?: string[];
   customers?: string[];
@@ -207,7 +210,7 @@ function formatTrendMonth(month: string): string {
 
 type TabId = "focus" | "topics" | "map" | "companies";
 type CompanyViewMode = "list" | "detail";
-type CompanyDetailTab = "overview" | "industry" | "chips" | "tech" | "news" | "charts";
+type CompanyDetailTab = "overview" | "industry" | "chips" | "tech" | "news" | "charts" | "financial";
 
 /* ─── Recharts Helpers ─── */
 const CHART_COLORS = {
@@ -528,6 +531,275 @@ function StatItem({ label, value, sub, className = "", trend }: { label: string;
       <div className="text-xs text-[var(--color-text-tertiary)] mb-1.5 flex items-center gap-1.5">{label}{trend}</div>
       <div className="text-lg font-bold text-white">{value}</div>
       {sub && <div className="text-xs text-[var(--color-text-tertiary)] mt-1">{sub}</div>}
+    </div>
+  );
+}
+
+/* ─── Financial Overview Cards ─── */
+function FinancialOverviewCards({ data }: { data: FinancialData }) {
+  const rev = parseFloat(data.income.revenue) || 0;
+  const gp = parseFloat(data.income.grossProfit) || 0;
+  const oi = parseFloat(data.income.operatingIncome) || 0;
+  const ni = parseFloat(data.income.netIncome) || 0;
+  const eps = data.income.eps || "-";
+  const pe = data.valuation.pe || "-";
+  const pb = data.valuation.pb || "-";
+  const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
+
+  const grossMargin = rev > 0 ? ((gp / rev) * 100).toFixed(1) + "%" : "-";
+  const operatingMargin = rev > 0 && oi > 0 ? ((oi / rev) * 100).toFixed(1) + "%" : "-";
+  const netMargin = rev > 0 && ni > 0 ? ((ni / rev) * 100).toFixed(1) + "%" : "-";
+
+  const marketCap = data.marketCap || "-";
+
+  const cards: { label: string; value: string; sub?: string; icon: string; color: string }[] = [
+    { label: "季營收", value: formatMoneyNTD(data.income.revenue), sub: yoyNum !== 0 ? `YoY ${yoyNum > 0 ? "▲" : "▼"} ${Math.abs(yoyNum).toFixed(1)}%` : undefined, icon: "💰", color: "#818cf8" },
+    { label: "市值", value: marketCap === "-" ? "-" : marketCap, sub: marketCap !== "-" ? "億元" : undefined, icon: "🏦", color: "#60a5fa" },
+    { label: "本益比", value: pe, sub: pe !== "-" ? "倍" : undefined, icon: "📊", color: "#f472b6" },
+    { label: "股價淨值比", value: pb, sub: pb !== "-" ? "倍" : undefined, icon: "📈", color: "#34d399" },
+    { label: "毛利率", value: grossMargin, icon: "🎯", color: "#f472b6" },
+    { label: "營益率", value: operatingMargin, icon: "⚡", color: "#fbbf24" },
+    { label: "淨利率", value: netMargin, icon: "💎", color: "#818cf8" },
+    { label: "EPS", value: eps, sub: eps !== "-" ? "元/股" : undefined, icon: "💵", color: "#34d399" },
+  ];
+
+  return (
+    <div>
+      <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💹 最新財務概況</h4>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        {cards.map((card, i) => (
+          <div key={i} className="bg-white/[0.02] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-sm">{card.icon}</span>
+              <span className="text-[11px] text-[var(--color-text-tertiary)]">{card.label}</span>
+            </div>
+            <div className="text-xl font-bold text-white">{card.value}</div>
+            {card.sub && (
+              <div className={cn("text-xs mt-1", card.sub.includes("▲") ? "text-emerald-400" : card.sub.includes("▼") ? "text-rose-400" : "text-[var(--color-text-tertiary)]")}>
+                {card.sub}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ─── Dividend Policy Panel ─── */
+function DividendPolicyPanel({ data }: { data: FinancialData }) {
+  const history = data.dividendHistory;
+  const currentCash = data.dividend.cashDividendPerShare || "-";
+
+  // If we have history data, show chart + table
+  if (history && history.length > 0) {
+    const chartData = [...history].reverse().slice(-8);
+    return (
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💰 股利政策</h4>
+        <div className="bg-white/[0.02] rounded-xl p-4 mb-3">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs text-[var(--color-text-tertiary)]">歷年股利發放</span>
+            <span className="text-xs text-[var(--color-text-tertiary)]">最新現金股利：<span className="text-indigo-400 font-bold">{currentCash}</span> 元/股</span>
+          </div>
+          <ResponsiveContainer width="100%" height={240}>
+            <BarChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
+              <XAxis dataKey="year" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+              <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+              <Tooltip
+                contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+                labelStyle={{ color: "#94a3b8" }}
+                formatter={(value: unknown, name: unknown) => {
+                  const v = Number(value);
+                  const n = String(name);
+                  const label = n === "cashDividend" ? "現金股利" : n === "stockDividend" ? "股票股利" : "合計";
+                  return [`${v.toFixed(2)} 元`, label];
+                }}
+              />
+              <Legend formatter={(value: string) => value === "cashDividend" ? "現金股利" : value === "stockDividend" ? "股票股利" : "合計"} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+              <Bar dataKey="cashDividend" fill="#818cf8" radius={[3, 3, 0, 0]} name="cashDividend" />
+              <Bar dataKey="stockDividend" fill="#34d399" radius={[3, 3, 0, 0]} name="stockDividend" />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Dividend table */}
+        <div className="bg-white/[0.02] rounded-xl overflow-hidden">
+          <div className="grid grid-cols-4 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
+            <span>年度</span>
+            <span className="text-right">現金股利</span>
+            <span className="text-right">股票股利</span>
+            <span className="text-right">合計</span>
+          </div>
+          <div className="max-h-48 overflow-y-auto">
+            {[...history].reverse().slice(0, 10).map((row, i) => (
+              <div key={i} className="grid grid-cols-4 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
+                <span className="text-[var(--color-text-secondary)]">{row.year}</span>
+                <span className="text-right text-indigo-400 font-medium">{row.cashDividend.toFixed(2)}</span>
+                <span className="text-right text-emerald-400 font-medium">{row.stockDividend.toFixed(2)}</span>
+                <span className="text-right text-white font-medium">{row.totalDividend.toFixed(2)}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Fallback: show simple dividend info
+  return (
+    <div>
+      <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💰 股利政策</h4>
+      <div className="bg-white/[0.02] rounded-xl p-6 text-center">
+        <div className="grid grid-cols-2 gap-4 mb-4">
+          <div>
+            <div className="text-xs text-[var(--color-text-tertiary)] mb-1">現金股利</div>
+            <div className="text-2xl font-bold text-indigo-400">{currentCash}<span className="text-sm font-normal text-[var(--color-text-tertiary)] ml-1">元/股</span></div>
+          </div>
+          <div>
+            <div className="text-xs text-[var(--color-text-tertiary)] mb-1">股利年度</div>
+            <div className="text-2xl font-bold text-white">{data.dividend.year || "-"}</div>
+          </div>
+        </div>
+        <p className="text-xs text-[var(--color-text-tertiary)]">📋 歷年股利資料準備中</p>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Profitability Trend Panel ─── */
+function ProfitabilityTrendPanel({ data }: { data: FinancialData }) {
+  const trends = data.trends;
+  if (!trends?.quarterly_income || trends.quarterly_income.length < 2) {
+    return (
+      <div>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 獲利能力趨勢</h4>
+        <div className="bg-white/[0.02] rounded-xl p-6 text-center">
+          <span className="text-[var(--color-text-tertiary)] text-sm">📋 季度資料累積中</span>
+        </div>
+      </div>
+    );
+  }
+
+  const chartData = trends.quarterly_income.map(d => ({
+    quarter: d.quarter,
+    grossMargin: d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0,
+    operatingMargin: d.revenue > 0 && data.income.operatingIncome
+      ? parseFloat(((d.revenue > 0 ? (d.grossProfit - d.revenue * 0.08) / d.revenue * 100 : 0)).toFixed(1))
+      : 0,
+    netMargin: d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0,
+    eps: d.eps,
+  }));
+
+  // Calculate operating margin from quarterly data
+  const chartDataWithOM = trends.quarterly_income.map(d => {
+    const gm = d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0;
+    const nm = d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0;
+    // operating margin = (grossProfit - operating expenses) / revenue, but we can estimate from net income
+    // Use gross margin and net margin to derive: we'll show gross margin, operating margin estimate, net margin, EPS
+    return {
+      quarter: d.quarter,
+      grossMargin: gm,
+      netMargin: nm,
+      eps: d.eps,
+    };
+  });
+
+  const latest = chartDataWithOM[chartDataWithOM.length - 1];
+
+  return (
+    <div>
+      <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 獲利能力趨勢</h4>
+
+      {/* Latest metrics row */}
+      <div className="grid grid-cols-4 gap-3 mb-3">
+        <div className="bg-white/[0.02] rounded-xl p-3 text-center">
+          <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">毛利率</div>
+          <div className="text-lg font-bold" style={{ color: "#f472b6" }}>{latest.grossMargin.toFixed(1)}%</div>
+        </div>
+        <div className="bg-white/[0.02] rounded-xl p-3 text-center">
+          <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">淨利率</div>
+          <div className="text-lg font-bold" style={{ color: "#fbbf24" }}>{latest.netMargin.toFixed(1)}%</div>
+        </div>
+        <div className="bg-white/[0.02] rounded-xl p-3 text-center">
+          <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">EPS</div>
+          <div className="text-lg font-bold text-white">{latest.eps.toFixed(2)}</div>
+        </div>
+        <div className="bg-white/[0.02] rounded-xl p-3 text-center">
+          <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">季數</div>
+          <div className="text-lg font-bold text-[var(--color-text-tertiary)]">{chartDataWithOM.length}</div>
+        </div>
+      </div>
+
+      {/* Line chart */}
+      <div className="bg-white/[0.02] rounded-xl p-4">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-xs text-[var(--color-text-tertiary)]">毛利率 / 淨利率 / EPS 趨勢</span>
+        </div>
+        <ResponsiveContainer width="100%" height={260}>
+          <LineChart data={chartDataWithOM} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+            <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
+            <XAxis dataKey="quarter" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+            <YAxis yAxisId="left" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}%`} />
+            <YAxis yAxisId="right" orientation="right" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+            <Tooltip
+              contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+              labelStyle={{ color: "#94a3b8" }}
+              formatter={(value: unknown, name: unknown) => {
+                const v = Number(value);
+                const n = String(name);
+                if (n === "grossMargin") return [`${v}%`, "毛利率"];
+                if (n === "netMargin") return [`${v}%`, "淨利率"];
+                if (n === "eps") return [`${v.toFixed(2)} 元`, "EPS"];
+                return [`${v}`, n];
+              }}
+            />
+            <Legend formatter={(value: string) => value === "grossMargin" ? "毛利率" : value === "netMargin" ? "淨利率" : value === "eps" ? "EPS" : value} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+            <Line yAxisId="left" type="monotone" dataKey="grossMargin" stroke="#f472b6" strokeWidth={2} dot={{ r: 3, fill: "#f472b6", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="grossMargin" />
+            <Line yAxisId="left" type="monotone" dataKey="netMargin" stroke="#fbbf24" strokeWidth={2} dot={{ r: 3, fill: "#fbbf24", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="netMargin" />
+            <Line yAxisId="right" type="monotone" dataKey="eps" stroke="#818cf8" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3, fill: "#818cf8", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="eps" />
+          </LineChart>
+        </ResponsiveContainer>
+      </div>
+
+      {/* Profitability table */}
+      <div className="bg-white/[0.02] rounded-xl overflow-hidden mt-3">
+        <div className="grid grid-cols-5 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
+          <span>季度</span>
+          <span className="text-right">毛利率</span>
+          <span className="text-right">淨利率</span>
+          <span className="text-right">EPS</span>
+          <span className="text-right">營收(億)</span>
+        </div>
+        <div className="max-h-52 overflow-y-auto">
+          {[...trends.quarterly_income].reverse().slice(0, 8).map((row, i) => {
+            const gm = row.revenue > 0 ? ((row.grossProfit / row.revenue) * 100).toFixed(1) : "-";
+            const nm = row.revenue > 0 ? ((row.netIncome / row.revenue) * 100).toFixed(1) : "-";
+            return (
+              <div key={i} className="grid grid-cols-5 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
+                <span className="text-[var(--color-text-secondary)]">{row.quarter}</span>
+                <span className="text-right text-pink-400 font-medium">{gm}%</span>
+                <span className="text-right text-yellow-400 font-medium">{nm}%</span>
+                <span className="text-right text-indigo-400 font-medium">{row.eps.toFixed(2)}</span>
+                <span className="text-right text-white font-medium">{(row.revenue / 100000).toFixed(1)}</span>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Financial Tab Content ─── */
+function FinancialTabContent({ data, revenueTab, onRevenueTabChange }: { data: FinancialData; revenueTab: "monthly" | "quarterly" | "yearly"; onRevenueTabChange: (tab: "monthly" | "quarterly" | "yearly") => void }) {
+  return (
+    <div className="space-y-8">
+      <FinancialOverviewCards data={data} />
+      <DividendPolicyPanel data={data} />
+      <ProfitabilityTrendPanel data={data} />
+      <CompanyFinancialPanel data={data} revenueTab={revenueTab} onRevenueTabChange={onRevenueTabChange} />
     </div>
   );
 }
@@ -944,6 +1216,7 @@ function CompanyFullPageDetail({
     { id: "chips", label: "籌碼分析", icon: "🎰" },
     { id: "tech", label: "技術分析", icon: "📊" },
     { id: "news", label: "相關新聞", icon: "📰" },
+    { id: "financial", label: "財務數據", icon: "💹" },
     { id: "charts", label: "研究圖表", icon: "📈" },
   ];
 
@@ -1384,6 +1657,11 @@ function CompanyFullPageDetail({
                 我們正在整合新聞來源，敬請期待即時新聞更新功能。
               </p>
             </div>
+          )}
+
+          {/* ─── 財務數據 Tab ─── */}
+          {detailTab === "financial" && (
+            <FinancialTabContent data={data} revenueTab={revenueTab} onRevenueTabChange={setRevenueTab} />
           )}
 
           {/* ─── 研究圖表 Tab ─── */}
