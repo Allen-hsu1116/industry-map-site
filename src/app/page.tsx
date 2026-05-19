@@ -234,6 +234,42 @@ function formatRevShort(num: number): string {
   return `${num.toFixed(0)}萬`;
 }
 
+/* ─── Monthly Price Chart ─── */
+function PriceAreaChart({ data }: { data: TrendMonthlyPrice[] }) {
+  const chartData = data.map(d => ({
+    month: formatTrendMonth(d.month),
+    avg: d.avg,
+    high: d.high,
+    low: d.low,
+  }));
+  return (
+    <ResponsiveContainer width="100%" height={280}>
+      <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+        <defs>
+          <linearGradient id="priceGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#818cf8" stopOpacity={0.3} />
+            <stop offset="95%" stopColor="#818cf8" stopOpacity={0.02} />
+          </linearGradient>
+        </defs>
+        <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
+        <XAxis dataKey="month" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+        <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} domain={["auto", "auto"]} />
+        <Tooltip
+          contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+          labelStyle={{ color: "#94a3b8" }}
+          formatter={(value: unknown, name: unknown) => {
+            const label = String(name) === "avg" ? "均價" : String(name) === "high" ? "最高" : "最低";
+            return [`${Number(value).toLocaleString()} 元`, label];
+          }}
+        />
+        <Area type="monotone" dataKey="avg" stroke="#818cf8" strokeWidth={2} fill="url(#priceGrad)" dot={{ r: 3, fill: "#818cf8", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="avg" />
+        <Line type="monotone" dataKey="high" stroke="#34d399" strokeWidth={1} strokeDasharray="4 4" dot={false} name="high" />
+        <Line type="monotone" dataKey="low" stroke="#f87171" strokeWidth={1} strokeDasharray="4 4" dot={false} name="low" />
+      </AreaChart>
+    </ResponsiveContainer>
+  );
+}
+
 function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
   if (!data || data.length === 0) return null;
   if (data.length === 1) {
@@ -867,6 +903,7 @@ function CompanyFullPageDetail({
 
   const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
   const marketPos = getMarketPosition(data.market_position);
+  const trends = data.trends;
 
   /* Generate AI summary */
   const aiSummary = (() => {
@@ -1228,17 +1265,35 @@ function CompanyFullPageDetail({
           {/* ─── 技術分析 Tab ─── */}
           {detailTab === "tech" && (
             <div className="space-y-6">
-              {/* TradingView Widget */}
-              <div className="bg-[var(--color-surface)] rounded-2xl p-4 border border-[var(--color-border)]">
-                <h4 className="text-sm font-bold text-white mb-4">📊 TradingView 即時圖表</h4>
-                <div className="rounded-xl overflow-hidden" style={{ background: "#0d1320" }}>
-                  <iframe
-                    src={`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${data.code}&symbol=TWSE%3A${data.code}&interval=D&theme=dark&style=1&locale=zh_TW&toolbar_bg=%230d1320&enable_publishing=false&hide_side_toolbar=0&allow_symbol_change=true&range=all`}
-                    style={{ width: "100%", height: "500px", border: "none" }}
-                    allowFullScreen
-                  />
+              {/* TradingView Chart Link */}
+              <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="text-sm font-bold text-white">📈 技術走勢圖</h4>
+                  <a
+                    href={`https://www.tradingview.com/chart/?symbol=TWSE%3A${data.code}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 border border-blue-500/30 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all"
+                  >
+                    在 TradingView 開啟 ↗
+                  </a>
                 </div>
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">💡 TradingView 提供完整技術分析工具：K 線圖、均線、技術指標、畫線工具等。可切換時間區間與指標。</p>
+                {/* Price Chart with Recharts */}
+                {trends?.monthly_price && trends.monthly_price.length > 1 ? (
+                  <div className="mb-4">
+                    <PriceAreaChart data={trends.monthly_price} />
+                  </div>
+                ) : (
+                  <div className="text-center py-12 rounded-xl bg-white/[0.02] border border-white/[0.04]">
+                    <div className="text-4xl mb-3">📈</div>
+                    <p className="text-sm text-[var(--color-text-tertiary)]">股價走勢資料累積中</p>
+                    <p className="text-xs text-[var(--color-text-tertiary)] mt-1">需要更多歷史資料才能生成走勢圖</p>
+                  </div>
+                )}
+                <div className="flex items-center gap-2 text-xs text-[var(--color-text-tertiary)]">
+                  <span>💡</span>
+                  <span>資料由 TradingView 提供。如需完整 K 線圖、技術指標與畫線工具，請點擊上方連結開啟。</span>
+                </div>
               </div>
 
               {/* Key Indicators */}
