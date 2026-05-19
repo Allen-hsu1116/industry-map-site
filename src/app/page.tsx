@@ -1131,9 +1131,9 @@ function CompanyFullPageDetail({
                         <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                           <h4 className="text-sm font-bold text-white mb-3">🎯 市場定位</h4>
                           <div className="flex items-center gap-3 mb-3">
-                            <span className="text-2xl">{topicAnalysis?.market_position?.charAt(0) || marketPos.emoji}</span>
-                            <span className="text-lg font-bold" style={{ color: topicAnalysis?.market_position === '🟢 產業龍頭' ? '#34d399' : topicAnalysis?.market_position === '🟠 成長挑戰' ? '#fbbf24' : '#60a5fa' }}>
-                              {topicAnalysis?.market_position || marketPos.label}
+                            <span className="w-3 h-3 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: topicAnalysis?.market_position?.includes('龍頭') ? '#34d399' : topicAnalysis?.market_position?.includes('成長') ? '#fbbf24' : '#60a5fa' }}></span>
+                            <span className="text-lg font-bold" style={{ color: topicAnalysis?.market_position?.includes('龍頭') ? '#34d399' : topicAnalysis?.market_position?.includes('成長') ? '#fbbf24' : '#60a5fa' }}>
+                              {topicAnalysis?.market_position?.replace(/^[🟢🟠🔵🟣🟡🔴]\s*/, '') || marketPos.label}
                             </span>
                           </div>
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
