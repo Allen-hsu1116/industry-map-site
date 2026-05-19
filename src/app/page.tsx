@@ -25,6 +25,7 @@ interface FinancialIncome { revenue: string; grossProfit: string; operatingIncom
 interface FinancialMonthlyRevenue { month: string; revenue: string; mom: string; yoy: string; }
 interface FinancialBalance { totalAssets: string; totalLiabilities: string; equity: string; bookValuePerShare: string; }
 interface FinancialDividend { year: string; cashDividendPerShare: string; }
+interface FinancialSWOT { strengths: string[]; weaknesses: string[]; opportunities: string[]; threats: string[]; }
 
 interface TrendMonthlyRevenue { month: string; revenue: number; mom: number; yoy: number; }
 interface TrendQuarterlyIncome { quarter: string; revenue: number; grossProfit: number; netIncome: number; eps: number; }
@@ -46,6 +47,11 @@ interface FinancialData {
   monthly_revenue: FinancialMonthlyRevenue;
   balance: FinancialBalance;
   dividend: FinancialDividend;
+  focus?: string;
+  products?: string[];
+  customers?: string[];
+  swot?: FinancialSWOT;
+  market_position?: string;
   trends?: FinancialTrends;
   updatedAt: string;
 }
@@ -55,13 +61,13 @@ const CATEGORY_COLORS: Record<string, { gradient: string; solid: string; light: 
   "IC設計":     { gradient: "from-purple-500 to-purple-700", solid: "#8b5cf6", light: "#c4b5fd", bg: "bg-purple-500/10" },
   "IC 設計":    { gradient: "from-purple-500 to-purple-700", solid: "#8b5cf6", light: "#c4b5fd", bg: "bg-purple-500/10" },
   "先進封測":   { gradient: "from-cyan-500 to-cyan-700", solid: "#06b6d4", light: "#67e8f9", bg: "bg-cyan-500/10" },
-  "基板材料":   { gradient: "from-amber-500 to-amber-700", solid: "##f59e0b", light: "#fcd34d", bg: "bg-amber-500/10" },
-  "記憶體":     { gradient: "from-green-500 to-green-700", solid: "#22c55e", light: "##86efac", bg: "bg-green-500/10" },
+  "基板材料":   { gradient: "from-amber-500 to-amber-700", solid: "#f59e0b", light: "#fcd34d", bg: "bg-amber-500/10" },
+  "記憶體":     { gradient: "from-green-500 to-green-700", solid: "#22c55e", light: "#86efac", bg: "bg-green-500/10" },
   "AI 伺服器":  { gradient: "from-rose-500 to-rose-700", solid: "#f43f5e", light: "#fda4af", bg: "bg-rose-500/10" },
   "散熱冷卻":   { gradient: "from-orange-500 to-orange-700", solid: "#f97316", light: "#fdba74", bg: "bg-orange-500/10" },
   "散熱":       { gradient: "from-orange-500 to-orange-700", solid: "#f97316", light: "#fdba74", bg: "bg-orange-500/10" },
   "電子零組件": { gradient: "from-indigo-500 to-indigo-700", solid: "#6366f1", light: "#a5b4fc", bg: "bg-[var(--color-primary)]/10" },
-  "被動元件":   { gradient: "from-teal-500 to-teal-700", solid: "##14b8a6", light: "#5eead4", bg: "bg-teal-500/10" },
+  "被動元件":   { gradient: "from-teal-500 to-teal-700", solid: "#14b8a6", light: "#5eead4", bg: "bg-teal-500/10" },
   "網通衛星":   { gradient: "from-sky-500 to-sky-700", solid: "#0ea5e9", light: "#7dd3fc", bg: "bg-sky-500/10" },
   "光學顯示":   { gradient: "from-fuchsia-500 to-fuchsia-700", solid: "#d946ef", light: "#f0abfc", bg: "bg-fuchsia-500/10" },
   "消費終端":   { gradient: "from-pink-500 to-pink-700", solid: "#ec4899", light: "#f9a8d4", bg: "bg-pink-500/10" },
@@ -170,11 +176,6 @@ function formatDate(dateStr: string): string {
   return `${y}/${m}/${d}`;
 }
 
-function formatRocDate(dateStr: string): string {
-  if (!dateStr) return "-";
-  return dateStr;
-}
-
 function formatTrendMonth(month: string): string {
   if (!month) return "-";
   if (month.length === 5) {
@@ -185,13 +186,9 @@ function formatTrendMonth(month: string): string {
   return month;
 }
 
-function formatTrendQuarter(quarter: string): string {
-  if (!quarter) return "-";
-  return quarter;
-}
-
 type TabId = "focus" | "topics" | "map" | "companies";
-type CompanyDetailTab = "overview" | "financials" | "supply_chain";
+type CompanyViewMode = "list" | "detail";
+type CompanyDetailTab = "overview" | "industry" | "chips" | "tech" | "news" | "charts";
 
 /* ─── Recharts Helpers ─── */
 const CHART_COLORS = {
@@ -206,7 +203,6 @@ const CHART_COLORS = {
   yoy: "#34d399",
 };
 
-const rechartsGridStyle = { stroke: "rgba(255,255,255,0.06)", strokeDasharray: "3,3" };
 const rechartsAxisStyle = { fill: "#94a3b8", fontSize: 11 };
 
 function formatRev(num: number): string {
@@ -323,61 +319,54 @@ function QuarterlyIncomeChart({ data }: { data: TrendQuarterlyIncome[] }) {
   );
 }
 
-function PriceAreaChart({ data }: { data: TrendMonthlyPrice[] }) {
-  if (!data || data.length === 0) return null;
-  if (data.length === 1) {
-    return (
-      <div className="bg-white/[0.02] rounded-xl p-4">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-xs text-[var(--color-text-tertiary)]">月均價走勢</span>
-          <span className="text-lg font-bold text-white">{formatPrice(data[0].avg)} <span className="text-xs text-[var(--color-text-tertiary)]">元</span></span>
-        </div>
-        <div className="text-xs text-[var(--color-text-tertiary)] text-center py-4">📈 資料累積中</div>
-      </div>
-    );
-  }
+/* ─── Margin Trend Chart ─── */
+function MarginTrendChart({ data }: { data: TrendQuarterlyIncome[] }) {
+  if (!data || data.length <= 1) return null;
   const chartData = data.map(d => ({
-    month: formatTrendMonth(d.month),
-    avg: d.avg,
-    high: d.high,
-    low: d.low,
+    quarter: d.quarter,
+    grossMargin: d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0,
+    netMargin: d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0,
   }));
   return (
     <div className="bg-white/[0.02] rounded-xl p-4">
       <div className="flex items-center justify-between mb-2">
-        <span className="text-xs text-[var(--color-text-tertiary)]">月均價走勢</span>
-        <span className="text-sm font-bold text-white">{formatPrice(data[data.length - 1].avg)} <span className="text-xs text-[var(--color-text-tertiary)]">元</span></span>
+        <span className="text-xs text-[var(--color-text-tertiary)]">毛利率 / 淨利率趨勢</span>
       </div>
       <ResponsiveContainer width="100%" height={220}>
         <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
           <defs>
-            <linearGradient id="priceGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor={CHART_COLORS.price} stopOpacity={0.3} />
-              <stop offset="95%" stopColor={CHART_COLORS.price} stopOpacity={0.02} />
+            <linearGradient id="gmGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#f472b6" stopOpacity={0.2} />
+              <stop offset="95%" stopColor="#f472b6" stopOpacity={0.02} />
+            </linearGradient>
+            <linearGradient id="nmGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#fbbf24" stopOpacity={0.2} />
+              <stop offset="95%" stopColor="#fbbf24" stopOpacity={0.02} />
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
-          <XAxis dataKey="month" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
-          <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+          <XAxis dataKey="quarter" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+          <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}%`} />
           <Tooltip
             contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
             labelStyle={{ color: "#94a3b8" }}
             formatter={(value: unknown, name: unknown) => {
               const v = Number(value);
               const n = String(name);
-              if (n === "avg") return [`${formatPrice(v)} 元`, "均價"];
-              if (n === "high") return [`${formatPrice(v)} 元`, "最高"];
-              return [`${formatPrice(v)} 元`, "最低"];
+              if (n === "grossMargin") return [`${v}%`, "毛利率"];
+              return [`${v}%`, "淨利率"];
             }}
           />
-          <Area type="monotone" dataKey="avg" stroke={CHART_COLORS.price} strokeWidth={2} fill="url(#priceGrad)" dot={{ r: 3, fill: CHART_COLORS.price, stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} />
+          <Area type="monotone" dataKey="grossMargin" stroke="#f472b6" strokeWidth={2} fill="url(#gmGrad)" dot={{ r: 3, fill: "#f472b6", stroke: "#1e1e2e", strokeWidth: 1.5 }} name="grossMargin" />
+          <Area type="monotone" dataKey="netMargin" stroke="#fbbf24" strokeWidth={2} fill="url(#nmGrad)" dot={{ r: 3, fill: "#fbbf24", stroke: "#1e1e2e", strokeWidth: 1.5 }} name="netMargin" />
+          <Legend formatter={(value: string) => value === "grossMargin" ? "毛利率" : "淨利率"} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
         </AreaChart>
       </ResponsiveContainer>
     </div>
   );
 }
 
-/* ─── Mini Sparkline (kept for small inline usage in overview) ─── */
+/* ─── Mini Sparkline ─── */
 function SparkLine({
   data,
   width = 120,
@@ -416,7 +405,6 @@ function SparkLine({
   });
 
   const linePath = points.map((p, i) => `${i === 0 ? "M" : "L"} ${p.x} ${p.y}`).join(" ");
-
   const areaPath = data.length > 1
     ? `${linePath} L ${points[points.length - 1].x} ${height} L ${points[0].x} ${height} Z`
     : "";
@@ -443,7 +431,7 @@ function SparkLine({
   );
 }
 
-/* ─── Trend Indicator (up/down arrow) ─── */
+/* ─── Trend Indicator ─── */
 function TrendIndicator({ value, suffix = "%", size = "sm" }: { value: number; suffix?: string; size?: "sm" | "md" }) {
   const isPositive = value > 0;
   const isNeutral = value === 0;
@@ -477,22 +465,10 @@ function AiIcon() {
 /* ─── Financial Detail Components ─── */
 function StatItem({ label, value, sub, className = "", trend }: { label: string; value: string | React.ReactNode; sub?: string; className?: string; trend?: React.ReactNode }) {
   return (
-    <div className={cn("bg-[var(--color-sm)] bg-white/[0.02] rounded-xl p-4", className)}>
+    <div className={cn("bg-white/[0.02] rounded-xl p-4", className)}>
       <div className="text-xs text-[var(--color-text-tertiary)] mb-1.5 flex items-center gap-1.5">{label}{trend}</div>
       <div className="text-lg font-bold text-white">{value}</div>
       {sub && <div className="text-xs text-[var(--color-text-tertiary)] mt-1">{sub}</div>}
-    </div>
-  );
-}
-
-function TrendSparkLine({ data, color, label, formattedValue }: { data: number[]; color?: string; label: string; formattedValue: string }) {
-  return (
-    <div className="bg-white/[0.02] rounded-xl p-4">
-      <div className="flex items-center justify-between mb-2">
-        <span className="text-xs text-[var(--color-text-tertiary)]">{label}</span>
-        <span className="text-sm font-bold text-white">{formattedValue}</span>
-      </div>
-      <SparkLine data={data} width={180} height={36} color={color || "#818cf8"} gradientFrom={color || "#818cf8"} showDots={data.length <= 12} />
     </div>
   );
 }
@@ -561,14 +537,9 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
         </div>
       </div>
 
-      {/* Price Trend Chart */}
+      {/* Price Info */}
       <div>
         <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💹 股價資訊</h4>
-        {trends?.monthly_price && trends.monthly_price.length > 0 && (
-          <div className="mb-3">
-            <PriceAreaChart data={trends.monthly_price} />
-          </div>
-        )}
         <div className="grid grid-cols-4 gap-3">
           <StatItem label="收盤價" value={formatPrice(data.price.close)} sub="元" className="col-span-2" />
           <StatItem label="開盤" value={formatPrice(data.price.open)} sub="元" />
@@ -591,7 +562,6 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
           <StatItem label="負債比" value={debtRatio} />
         </div>
 
-        {/* Quarterly income chart */}
         {trends?.quarterly_income && trends.quarterly_income.length > 0 && (
           <div className="mt-4">
             <QuarterlyIncomeChart data={trends.quarterly_income} />
@@ -644,139 +614,6 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
   );
 }
 
-function CompanyOverviewPanel({ data, roles }: { data: FinancialData; roles?: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string }[] | null }) {
-  const revenueTrendData: number[] = data.trends?.monthly_revenue?.map(d => d.yoy) || [];
-  const priceAvgData: number[] = data.trends?.monthly_price?.map(d => d.avg) || [];
-
-  return (
-    <div className="space-y-6">
-      {/* AI Industry Analysis - Per-industry paragraphs */}
-      <div className="bg-gradient-to-br from-indigo-500/[0.08] to-purple-600/[0.06] border border-indigo-500/20 rounded-2xl p-6">
-        <div className="flex items-center gap-2.5 mb-4">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
-            <AiIcon />
-          </div>
-          <h4 className="text-sm font-bold text-white">AI 產業分析</h4>
-          <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">Beta</Badge>
-        </div>
-        <div className="space-y-4">
-          {roles && roles.length > 0 ? (
-            roles.map((role, i) => {
-              const relInfo = getRelevanceInfo(role.relevance);
-              const cat = getCategory(role.topicName);
-              const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
-              const badgeStyle = getRoleBadge(role.relevance);
-              return (
-                <div key={i} className="border-t border-indigo-500/10 pt-3 first:border-t-0 first:pt-0">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-xs font-bold whitespace-nowrap" style={{ color: badgeStyle.color, backgroundColor: badgeStyle.bg, padding: "2px 8px", borderRadius: 999 }}>{relInfo.emoji} {relInfo.label}</span>
-                    <span className="text-sm font-semibold text-white">{role.topicName}</span>
-                    <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
-                  </div>
-                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
-                </div>
-              );
-            })
-          ) : (
-            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-              {data.name}（{data.code}）為{data.profile.industry}龍頭企業，本益比 {data.valuation.pe || "—"} 倍，殖利率 {data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "—"}。
-              {parseFloat(data.monthly_revenue.yoy) > 0
-                ? ` 月營收年增 ${data.monthly_revenue.yoy}%，成長動能持續。`
-                : parseFloat(data.monthly_revenue.yoy) < 0
-                ? ` 月營收年減 ${Math.abs(parseFloat(data.monthly_revenue.yoy))}%，需關注營收動能變化。`
-                : ""}
-              {data.income.eps ? `每股盈餘 ${data.income.eps} 元。` : ""}
-            </p>
-          )}
-        </div>
-        <div className="mt-4 flex items-center gap-3">
-          <div className="text-xs text-[var(--color-text-tertiary)] px-3 py-1.5 bg-white/[0.04] rounded-lg">
-            📊 分析基於公開財務資料
-          </div>
-        </div>
-      </div>
-
-      {/* Profile Card */}
-      <div>
-        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">🏢 基本資料</h4>
-        <div className="space-y-3">
-          {[
-            { label: "產業別", value: data.profile.industry || "-", icon: "🏭" },
-            { label: "董事長", value: data.profile.chairman || "-", icon: "👔" },
-            { label: "成立日期", value: formatDate(data.profile.established) || "-", icon: "📅" },
-            { label: "上市日期", value: formatDate(data.profile.listed) || "-", icon: "🏛️" },
-            { label: "實收資本額", value: formatCapitalNTD(data.profile.capital) || "-", icon: "💰" },
-          ].map((row) => (
-            <div key={row.label} className="flex items-center justify-between py-2.5 px-4 bg-white/[0.02] rounded-xl">
-              <span className="text-sm text-[var(--color-text-secondary)] flex items-center gap-2">
-                <span className="text-xs">{row.icon}</span>{row.label}
-              </span>
-              <span className="text-sm text-white font-medium">{row.value}</span>
-            </div>
-          ))}
-          {data.profile.website && (
-            <div className="flex items-center justify-between py-2.5 px-4 bg-white/[0.02] rounded-xl">
-              <span className="text-sm text-[var(--color-text-secondary)] flex items-center gap-2">
-                <span className="text-xs">🌐</span>公司網站
-              </span>
-              <a href={data.profile.website} target="_blank" rel="noopener noreferrer" className="text-sm text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1">
-                {data.profile.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}
-                <ExternalIcon />
-              </a>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Quick Valuation with sparklines */}
-      <div>
-        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 快速估值</h4>
-        <div className="grid grid-cols-2 gap-3">
-          <div className="bg-white/[0.02] rounded-xl p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="text-2xl font-bold text-white">{data.price.close ? formatPrice(data.price.close) : "-"}</div>
-                <div className="text-xs text-[var(--color-text-tertiary)] mt-1">收盤價 (元)</div>
-              </div>
-              {priceAvgData.length > 0 && (
-                <div className="opacity-70">
-                  <SparkLine data={priceAvgData} width={60} height={24} color="#818cf8" showDots={false} />
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-indigo-400">{data.valuation.pe || "-"}</div>
-            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">本益比 (倍)</div>
-          </div>
-          <div className="bg-white/[0.02] rounded-xl p-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="text-2xl font-bold text-amber-400">{data.income.eps || "-"}</div>
-                <div className="text-xs text-[var(--color-text-tertiary)] mt-1">EPS (元)</div>
-              </div>
-              {revenueTrendData.length > 0 && (
-                <div className="opacity-70">
-                  <SparkLine data={revenueTrendData} width={60} height={24} color="#fbbf24" showDots={false} />
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
-            <div className="text-2xl font-bold text-rose-400">{data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "-"}</div>
-            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">殖利率</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Data source */}
-      <div className="text-center pt-2">
-        <p className="text-[10px] text-[var(--color-text-tertiary)]">資料更新：{data.updatedAt}</p>
-      </div>
-    </div>
-  );
-}
-
 function NoFinancialData({ code }: { code: string }) {
   return (
     <div className="text-center py-12">
@@ -807,6 +644,431 @@ function NoFinancialData({ code }: { code: string }) {
   );
 }
 
+/* ─── Placeholder Section Component (aistockmap paywall-style) ─── */
+function PlaceholderSection({ title, icon }: { title: string; icon: string }) {
+  return (
+    <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+      <div className="flex items-center gap-3 mb-4">
+        <span className="text-lg">{icon}</span>
+        <h4 className="text-sm font-bold text-white">{title}</h4>
+      </div>
+      <div className="flex items-center gap-2 text-[var(--color-text-tertiary)]">
+        <span className="text-sm">📋 資料準備中</span>
+      </div>
+      <div className="mt-3 flex items-center gap-1.5">
+        <span className="text-xs text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-1.5 rounded-lg">🔒 升級解鎖</span>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Market Position Badge ─── */
+function getMarketPosition(position: string | undefined): { emoji: string; label: string; desc: string; color: string } {
+  if (!position) return { emoji: "🟢", label: "產業龍頭", desc: "市場領導地位", color: "#34d399" };
+  const p = position.toLowerCase();
+  if (p.includes("龍頭") || p.includes("leader")) return { emoji: "🟢", label: "產業龍頭", desc: position, color: "#34d399" };
+  if (p.includes("成長") || p.includes("growth")) return { emoji: "🟠", label: "成長挑戰", desc: position, color: "#fbbf24" };
+  if (p.includes("利基") || p.includes("niche")) return { emoji: "🔵", label: "利基專精", desc: position, color: "#60a5fa" };
+  return { emoji: "🟢", label: "產業龍頭", desc: position || "市場領導地位", color: "#34d399" };
+}
+
+/* ─── Company Full Page Detail View ─── */
+function CompanyFullPageDetail({
+  data,
+  roles,
+  onBack,
+}: {
+  data: FinancialData;
+  roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string }[] | null;
+  onBack: () => void;
+}) {
+  const [detailTab, setDetailTab] = useState<CompanyDetailTab>("overview");
+  const [industrySubTab, setIndustrySubTab] = useState(0);
+
+  const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
+  const marketPos = getMarketPosition(data.market_position);
+
+  /* Generate AI summary */
+  const aiSummary = (() => {
+    const name = data.name;
+    const ind = data.profile.industry;
+    const pe = data.valuation.pe || "—";
+    const yoy = data.monthly_revenue.yoy;
+    const eps = data.income.eps;
+    const yield_ = data.valuation.dividendYield;
+    let summary = `${name}（${data.code}）為${ind}${marketPos.label}企業，`;
+    if (yoyNum > 0) summary += `月營收年增 ${yoy}%，成長動能持續。`;
+    else if (yoyNum < 0) summary += `月營收年減 ${Math.abs(yoyNum).toFixed(2)}%，需關注營收動能變化。`;
+    else summary += "營收持平。";
+    if (pe !== "—") summary += ` 本益比 ${pe} 倍，`;
+    if (yield_) summary += `殖利率 ${yield_}%。`;
+    if (eps) summary += `每股盈餘 ${eps} 元。`;
+    return summary;
+  })();
+
+  /* Badges */
+  const badges: { label: string; color: string; show: boolean }[] = [
+    { label: `營收年增 ▲${yoyNum.toFixed(1)}%`, color: "#34d399", show: yoyNum > 0 },
+    { label: "連三月年增", color: "#818cf8", show: true },
+    { label: "投信買超", color: "#fbbf24", show: false },
+    { label: "有股票期貨", color: "#f97316", show: false },
+  ];
+
+  /* Industry sub-tabs */
+  const industryRoles = roles || [];
+
+  const DETAIL_TABS: { id: CompanyDetailTab; label: string; icon: string }[] = [
+    { id: "overview", label: "基本資料", icon: "📋" },
+    { id: "industry", label: "產業分析", icon: "🏭" },
+    { id: "chips", label: "籌碼分析", icon: "🎰" },
+    { id: "tech", label: "技術分析", icon: "📊" },
+    { id: "news", label: "相關新聞", icon: "📰" },
+    { id: "charts", label: "研究圖表", icon: "📈" },
+  ];
+
+  return (
+    <div className="fade-in">
+      <div className="max-w-6xl mx-auto">
+        {/* ─── Top Bar: Back + Company Header ─── */}
+        <div className="flex items-center justify-between mb-6">
+          <button
+            className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors group"
+            onClick={onBack}
+          >
+            <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            返回公司列表
+          </button>
+          <button className="flex items-center gap-1.5 text-sm text-[var(--color-text-tertiary)] hover:text-rose-400 transition-colors">
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            加入收藏
+          </button>
+        </div>
+
+        {/* ─── Company Title ─── */}
+        <div className="mb-5">
+          <h1 className="text-3xl font-bold text-white mb-2">
+            {data.name} <span className="text-[var(--color-text-secondary)] text-xl font-normal">({data.code})</span>
+          </h1>
+          <p className="text-sm text-[var(--color-text-tertiary)]">
+            {data.profile.industry} · <span style={{ color: marketPos.color }}>{marketPos.label}</span>
+          </p>
+        </div>
+
+        {/* ─── Badges ─── */}
+        <div className="flex flex-wrap gap-2.5 mb-8">
+          {badges.filter(b => b.show).map((b, i) => (
+            <span key={i} className="text-xs font-medium px-3 py-1.5 rounded-full" style={{ color: b.color, backgroundColor: `${b.color}18`, border: `1px solid ${b.color}30` }}>
+              {b.label}
+            </span>
+          ))}
+        </div>
+
+        {/* ─── TradingView Widget ─── */}
+        <div className="mb-8">
+          <iframe
+            src={`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${data.code}&symbol=TWSE%3A${data.code}&interval=D&theme=dark&style=1&locale=zh_TW&toolbar_bg=%230d1320&enable_publishing=false&hide_top_toolbar=false&hide_side_toolbar=false&allow_symbol_change=false`}
+            style={{ width: "100%", height: "400px", border: "none", borderRadius: "12px" }}
+            allowFullScreen
+          />
+        </div>
+
+        {/* ─── Main Tabs ─── */}
+        <div className="flex items-center gap-1 border-b border-[var(--color-border)] mb-8 overflow-x-auto">
+          {DETAIL_TABS.map((tab) => (
+            <button
+              key={tab.id}
+              className={cn(
+                "px-5 py-3.5 text-sm font-medium whitespace-nowrap transition-all border-b-2",
+                detailTab === tab.id
+                  ? "text-indigo-400 border-indigo-400"
+                  : "text-[var(--color-text-tertiary)] border-transparent hover:text-[var(--color-text-secondary)]"
+              )}
+              onClick={() => setDetailTab(tab.id)}
+            >
+              <span className="mr-1.5">{tab.icon}</span>{tab.label}
+            </button>
+          ))}
+        </div>
+
+        {/* ─── Tab Content ─── */}
+        <div className="min-h-[400px]">
+          {/* ─── 基本資料 Tab ─── */}
+          {detailTab === "overview" && (
+            <div className="space-y-8">
+              {/* AI 智能摘要 */}
+              <div className="bg-gradient-to-br from-indigo-500/[0.08] to-purple-600/[0.06] border border-indigo-500/20 rounded-2xl p-6">
+                <div className="flex items-center gap-2.5 mb-4">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                    <AiIcon />
+                  </div>
+                  <h4 className="text-sm font-bold text-white">AI 智能摘要</h4>
+                  <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">Beta</Badge>
+                </div>
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{aiSummary}</p>
+                <div className="mt-4 flex items-center gap-3">
+                  <div className="text-xs text-[var(--color-text-tertiary)] px-3 py-1.5 bg-white/[0.04] rounded-lg">
+                    📊 分析基於公開財務資料
+                  </div>
+                </div>
+              </div>
+
+              {/* 市場定位 */}
+              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                <h4 className="text-sm font-bold text-white mb-3">🎯 市場定位</h4>
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="text-2xl">{marketPos.emoji}</span>
+                  <span className="text-lg font-bold" style={{ color: marketPos.color }}>{marketPos.label}</span>
+                </div>
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                  {data.market_position || `${data.name}為${data.profile.industry}領導企業，在全球市場佔據關鍵地位，擁有強大的技術壁壙與客戶黏著度。`}
+                </p>
+              </div>
+
+              {/* 技術重心 */}
+              <PlaceholderSection title="技術重心" icon="🔬" />
+
+              {/* 主要產品 */}
+              {data.products && data.products.length > 0 ? (
+                <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                  <h4 className="text-sm font-bold text-white mb-3">📦 主要產品</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {data.products.map((p, i) => (
+                      <Badge key={i} className="bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/20 text-xs">{p}</Badge>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <PlaceholderSection title="主要產品" icon="📦" />
+              )}
+
+              {/* 主要客戶 */}
+              {data.customers && data.customers.length > 0 ? (
+                <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                  <h4 className="text-sm font-bold text-white mb-3">👥 主要客戶</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {data.customers.map((c, i) => (
+                      <Badge key={i} className="bg-emerald-500/15 text-emerald-400 border-emerald-500/20 text-xs">{c}</Badge>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <PlaceholderSection title="主要客戶" icon="👥" />
+              )}
+
+              {/* SWOT 分析 */}
+              {data.swot && (data.swot.strengths.length > 0 || data.swot.weaknesses.length > 0 || data.swot.opportunities.length > 0 || data.swot.threats.length > 0) ? (
+                <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                  <h4 className="text-sm font-bold text-white mb-4">🏛️ SWOT 分析</h4>
+                  <div className="grid grid-cols-2 gap-4">
+                    {[
+                      { label: "優勢 (S)", items: data.swot.strengths, color: "#34d399" },
+                      { label: "劣勢 (W)", items: data.swot.weaknesses, color: "#f87171" },
+                      { label: "機會 (O)", items: data.swot.opportunities, color: "#818cf8" },
+                      { label: "威脅 (T)", items: data.swot.threats, color: "#fbbf24" },
+                    ].map((sw) => (
+                      <div key={sw.label} className="bg-white/[0.02] rounded-xl p-4">
+                        <h5 className="text-xs font-bold mb-2" style={{ color: sw.color }}>{sw.label}</h5>
+                        <ul className="space-y-1">
+                          {sw.items.map((item, i) => (
+                            <li key={i} className="text-xs text-[var(--color-text-secondary)]">• {item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <PlaceholderSection title="SWOT 分析" icon="🏛️" />
+              )}
+
+              <Separator className="bg-white/[0.06]" />
+
+              {/* Financial data cards */}
+              <CompanyFinancialPanel data={data} />
+            </div>
+          )}
+
+          {/* ─── 產業分析 Tab ─── */}
+          {detailTab === "industry" && (
+            <div className="space-y-6">
+              {industryRoles.length > 0 ? (
+                <>
+                  {/* Industry sub-tabs */}
+                  <div className="flex items-center gap-2 overflow-x-auto pb-2">
+                    {industryRoles.map((role, i) => {
+                      const topicShort = role.topicName.includes("｜") ? role.topicName.split("｜")[1] || role.topicName : role.topicName;
+                      const cat = getCategory(role.topicName);
+                      const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
+                      return (
+                        <button
+                          key={i}
+                          className={cn(
+                            "px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all border",
+                            industrySubTab === i
+                              ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/40"
+                              : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)] hover:border-[var(--color-border-hover)]"
+                          )}
+                          onClick={() => setIndustrySubTab(i)}
+                        >
+                          <span className="inline-block w-2 h-2 rounded-full mr-1.5" style={{ backgroundColor: color.solid }} />
+                          {topicShort}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* Selected industry detail */}
+                  {industryRoles[industrySubTab] && (() => {
+                    const role = industryRoles[industrySubTab];
+                    const relInfo = getRelevanceInfo(role.relevance);
+                    const roleBadge = getRoleBadge(role.relevance);
+                    const cat = getCategory(role.topicName);
+                    const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
+
+                    return (
+                      <div className="space-y-6">
+                        <div className="bg-gradient-to-br from-indigo-500/[0.08] to-purple-600/[0.06] border border-indigo-500/20 rounded-2xl p-6">
+                          <div className="flex items-center gap-2.5 mb-4">
+                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
+                              <AiIcon />
+                            </div>
+                            <h4 className="text-sm font-bold text-white">AI 產業分析</h4>
+                            <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">Beta</Badge>
+                          </div>
+                          <div>
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
+                                {relInfo.emoji} {relInfo.label}
+                              </span>
+                              <span className="text-sm font-semibold text-white">{role.topicName}</span>
+                              <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
+                              <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/20 ml-auto">高關聯度</span>
+                            </div>
+                            {role.role && <p className="text-xs text-[var(--color-text-tertiary)] mb-2">{role.role}</p>}
+                            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
+                          </div>
+                        </div>
+
+                        <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                          <h4 className="text-sm font-bold text-white mb-3">🔗 在此產業的角色</h4>
+                          <div className="space-y-3">
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-[var(--color-text-secondary)]">供應鏈群組</span>
+                              <span className="text-sm text-white font-medium">{role.group}</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-sm text-[var(--color-text-secondary)]">角色定位</span>
+                              <span className="text-xs px-2.5 py-1 rounded-full font-bold whitespace-nowrap" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
+                                {relInfo.emoji} {relInfo.label}
+                              </span>
+                            </div>
+                            {role.role && (
+                              <div className="flex items-center justify-between">
+                                <span className="text-sm text-[var(--color-text-secondary)]">角色說明</span>
+                                <span className="text-sm text-white font-medium">{role.role}</span>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
+                </>
+              ) : (
+                <div className="text-center py-16">
+                  <div className="text-5xl mb-4">🏭</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">尚無產業關聯</h3>
+                  <p className="text-sm text-[var(--color-text-tertiary)]">此公司尚未建立產業關聯分析。</p>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* ─── 籌碼分析 Tab ─── */}
+          {detailTab === "chips" && (
+            <div className="space-y-6">
+              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                <h4 className="text-sm font-bold text-white mb-4">🎰 籌碼分析</h4>
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <StatItem label="本益比 (P/E)" value={data.valuation.pe || "-"} sub={data.valuation.pe ? "倍" : undefined} />
+                  <StatItem label="股價淨值比 (P/B)" value={data.valuation.pb || "-"} sub={data.valuation.pb ? "倍" : undefined} />
+                  <StatItem label="現金殖利率" value={data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "-"} />
+                  <StatItem label="負債比" value={(() => {
+                    const assets = parseFloat(data.balance.totalAssets);
+                    const liabilities = parseFloat(data.balance.totalLiabilities);
+                    if (assets > 0 && liabilities > 0) return ((liabilities / assets) * 100).toFixed(1) + "%";
+                    return "-";
+                  })()} />
+                </div>
+              </div>
+              <PlaceholderSection title="外資持股變化" icon="🌐" />
+              <PlaceholderSection title="投信買賣超" icon="🏦" />
+              <PlaceholderSection title="融資融券" icon="📈" />
+            </div>
+          )}
+
+          {/* ─── 技術分析 Tab ─── */}
+          {detailTab === "tech" && (
+            <div className="space-y-6">
+              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                <h4 className="text-sm font-bold text-white mb-3">📊 技術分析</h4>
+                <p className="text-sm text-[var(--color-text-tertiary)] mb-4">TradingView 即時圖表已在頁面上方顯示，提供完整的技術分析功能，包含 K 線圖、技術指標、畫線工具等。</p>
+                <div className="flex items-center gap-3">
+                  <div className="text-xs text-[var(--color-text-tertiary)] bg-white/[0.04] px-3 py-1.5 rounded-lg">💡 請使用頁面頂部的 TradingView 圖表進行技術分析</div>
+                </div>
+              </div>
+              <PlaceholderSection title="技術指標彙總" icon="📏" />
+              <PlaceholderSection title="支撐/壓力位" icon="📐" />
+            </div>
+          )}
+
+          {/* ─── 相關新聞 Tab ─── */}
+          {detailTab === "news" && (
+            <div className="text-center py-16">
+              <div className="text-5xl mb-4">📰</div>
+              <h3 className="text-lg font-semibold text-white mb-2">新聞資料準備中</h3>
+              <p className="text-sm text-[var(--color-text-tertiary)] max-w-md mx-auto">
+                我們正在整合新聞來源，敬請期待即時新聞更新功能。
+              </p>
+            </div>
+          )}
+
+          {/* ─── 研究圖表 Tab ─── */}
+          {detailTab === "charts" && (
+            <div className="space-y-8">
+              <h4 className="text-sm font-bold text-white">📈 研究圖表</h4>
+              {data.trends?.monthly_revenue && data.trends.monthly_revenue.length > 0 && (
+                <RevenueAreaChart data={data.trends.monthly_revenue} />
+              )}
+              {data.trends?.quarterly_income && data.trends.quarterly_income.length > 0 && (
+                <QuarterlyIncomeChart data={data.trends.quarterly_income} />
+              )}
+              {data.trends?.quarterly_income && data.trends.quarterly_income.length > 1 && (
+                <MarginTrendChart data={data.trends.quarterly_income} />
+              )}
+              {(!data.trends?.monthly_revenue || data.trends.monthly_revenue.length === 0) &&
+               (!data.trends?.quarterly_income || data.trends.quarterly_income.length === 0) && (
+                <div className="text-center py-16">
+                  <div className="text-5xl mb-4">📉</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">圖表資料累積中</h3>
+                  <p className="text-sm text-[var(--color-text-tertiary)]">需要更多歷史資料才能生成完整走勢圖。</p>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+    MAIN PAGE COMPONENT
+   ═══════════════════════════════════════════════════════════════════ */
 export default function Home() {
   const [activeTab, setActiveTab] = useState<TabId>("topics");
   const [search, setSearch] = useState("");
@@ -817,12 +1079,13 @@ export default function Home() {
   const [detailViewMode, setDetailViewMode] = useState<"list" | "structure">("structure");
   const [searchFocused, setSearchFocused] = useState(false);
   const [selectedCompanyCode, setSelectedCompanyCode] = useState<string | null>(null);
+  const [companyViewMode, setCompanyViewMode] = useState<CompanyViewMode>("list");
   const [showCompanyModal, setShowCompanyModal] = useState(false);
-  const [companyDetailTab, setCompanyDetailTab] = useState<CompanyDetailTab>("overview");
   const [financialData, setFinancialData] = useState<FinancialData | null>(null);
   const [financialLoading, setFinancialLoading] = useState(false);
   const [financialError, setFinancialError] = useState(false);
   const searchRef = useRef<HTMLDivElement>(null);
+  const companyListScrollRef = useRef<number>(0);
 
   const topics: TopicData[] = industriesData.topics as TopicData[];
   const companies: CompanyData[] = companiesData as CompanyData[];
@@ -908,8 +1171,15 @@ export default function Home() {
   const goToTopic = (slug: string) => { setSelectedTopicSlug(slug); setActiveTab("map"); setDetailViewMode("structure"); };
   const goToCompany = (code: string) => {
     setSelectedCompanyCode(code);
-    if (activeTab === "companies") { /* stay, detail panel will show */ }
-    else { setShowCompanyModal(true); }
+    if (activeTab === "companies") {
+      setCompanyViewMode("detail");
+    } else {
+      setShowCompanyModal(true);
+    }
+  };
+  const goBackToCompanyList = () => {
+    setCompanyViewMode("list");
+    // Keep selectedCompanyCode so state is preserved if user goes back
   };
 
   /* ─── Render ─── */
@@ -974,28 +1244,30 @@ export default function Home() {
       </header>
 
       {/* ─── Stats Bar ─── */}
-      <div className="relative bg-[var(--color-bg)] border-b border-[var(--color-border)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { emoji: "📋", number: stats.total_topics, label: "題材數", color: "text-indigo-400" },
-              { emoji: "🏢", number: stats.unique_companies, label: "不重複公司", color: "text-emerald-400" },
-              { emoji: "📊", number: stats.total_companies, label: "公司條目", color: "text-amber-400" },
-              { emoji: "🏷️", number: categories.length - 1, label: "產業類別", color: "text-rose-400" },
-            ].map((stat, i) => (
-              <Card key={i} className="bg-[var(--color-surface)] border-[var(--color-border)] rounded-2xl p-6 hover:shadow-lg hover:shadow-indigo-500/5 transition-all hover:-translate-y-0.5">
-                <CardContent className="p-0 flex items-center gap-5">
-                  <div className="w-12 h-12 rounded-xl bg-white/[0.04] flex items-center justify-center text-xl shrink-0">{stat.emoji}</div>
-                  <div>
-                    <div className={cn("text-2xl font-bold leading-none", stat.color)}>{stat.number}</div>
-                    <div className="text-xs text-[var(--color-text-tertiary)] mt-1.5">{stat.label}</div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+      {!(activeTab === "companies" && companyViewMode === "detail") && (
+        <div className="relative bg-[var(--color-bg)] border-b border-[var(--color-border)]">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { emoji: "📋", number: stats.total_topics, label: "題材數", color: "text-indigo-400" },
+                { emoji: "🏢", number: stats.unique_companies, label: "不重複公司", color: "text-emerald-400" },
+                { emoji: "📊", number: stats.total_companies, label: "公司條目", color: "text-amber-400" },
+                { emoji: "🏷️", number: categories.length - 1, label: "產業類別", color: "text-rose-400" },
+              ].map((stat, i) => (
+                <Card key={i} className="bg-[var(--color-surface)] border-[var(--color-border)] rounded-2xl p-6 hover:shadow-lg hover:shadow-indigo-500/5 transition-all hover:-translate-y-0.5">
+                  <CardContent className="p-0 flex items-center gap-5">
+                    <div className="w-12 h-12 rounded-xl bg-white/[0.04] flex items-center justify-center text-xl shrink-0">{stat.emoji}</div>
+                    <div>
+                      <div className={cn("text-2xl font-bold leading-none", stat.color)}>{stat.number}</div>
+                      <div className="text-xs text-[var(--color-text-tertiary)] mt-1.5">{stat.label}</div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* ─── Main Content ─── */}
       <main className="flex-1 relative max-w-7xl mx-auto w-full px-6 lg:px-8 py-8">
@@ -1302,24 +1574,25 @@ export default function Home() {
 
         {/* ─── Companies Tab ─── */}
         {activeTab === "companies" && (
-          <div className="fade-in">
-            <div className="flex items-center gap-6 mb-8">
-              <div className="relative flex-1 max-w-xl">
-                <div className="flex items-center rounded-2xl bg-[var(--color-surface)]">
-                  <Input
-                    type="text"
-                    placeholder="搜尋公司名稱或代碼..."
-                    className="w-full bg-transparent border-0 shadow-none px-6 py-3 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)]"
-                    value={companySearch}
-                    onChange={(e) => setCompanySearch(e.target.value)}
-                  />
-                  <div className="pr-5 text-[var(--color-text-tertiary)]"><SearchIcon /></div>
+          <>
+            {/* ─── Company List Mode ─── */}
+            {companyViewMode === "list" && (
+              <div className="fade-in">
+                <div className="flex items-center gap-6 mb-8">
+                  <div className="relative flex-1 max-w-xl">
+                    <div className="flex items-center rounded-2xl bg-[var(--color-surface)]">
+                      <Input
+                        type="text"
+                        placeholder="搜尋公司名稱或代碼..."
+                        className="w-full bg-transparent border-0 shadow-none px-6 py-3 text-sm text-[var(--color-text-primary)] placeholder:text-[var(--color-text-tertiary)]"
+                        value={companySearch}
+                        onChange={(e) => setCompanySearch(e.target.value)}
+                      />
+                      <div className="pr-5 text-[var(--color-text-tertiary)]"><SearchIcon /></div>
+                    </div>
+                  </div>
+                  <p className="text-sm text-[var(--color-text-tertiary)]">共 <span className="text-white font-semibold">{filteredCompanies.length}</span> 家公司</p>
                 </div>
-              </div>
-              <p className="text-sm text-[var(--color-text-tertiary)]">共 <span className="text-white font-semibold">{filteredCompanies.length}</span> 家公司</p>
-            </div>
-            <div className="flex gap-8">
-              <div className={cn("transition-all duration-300", selectedCompanyData ? "w-[45%]" : "w-full")}>
                 <Card className="bg-[var(--color-surface)] border-[var(--color-border)] rounded-2xl overflow-hidden">
                   <div className="grid grid-cols-[100px_1fr_100px] px-7 py-4 border-b border-[var(--color-border)] bg-[var(--color-surface)]/60">
                     <span className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-wider">代碼</span>
@@ -1328,7 +1601,7 @@ export default function Home() {
                   </div>
                   <ScrollArea className="max-h-[calc(100vh-280px)]">
                     {filteredCompanies.slice(0, 150).map((company) => (
-                      <button key={company.code} className={cn("company-row w-full grid grid-cols-[100px_1fr_100px] px-7 py-4 items-center gap-4 text-left transition-colors", selectedCompanyCode === company.code ? "bg-[var(--color-primary)]/10" : "hover:bg-white/[0.03]")} onClick={() => { setSelectedCompanyCode(company.code); setCompanyDetailTab("overview"); }}>
+                      <button key={company.code} className="company-row w-full grid grid-cols-[100px_1fr_100px] px-7 py-4 items-center gap-4 text-left transition-colors hover:bg-white/[0.03]" onClick={() => goToCompany(company.code)}>
                         <span className="text-sm font-mono font-bold text-indigo-400">{company.code}</span>
                         <span className="text-sm text-white font-medium">{company.name}</span>
                         <span className="text-sm text-right">
@@ -1344,179 +1617,50 @@ export default function Home() {
                   )}
                 </Card>
               </div>
-              {selectedCompanyData && (
-                <div className="flex-1 min-w-0 fade-in">
-                  <Card className="bg-[var(--color-surface)] border-[var(--color-border)] rounded-2xl sticky top-[140px]">
-                    <CardContent className="p-0">
-                      {/* Company Header */}
-                      <div className="px-8 pt-8 pb-6">
-                        <div className="flex items-center justify-between mb-6">
-                          <div className="flex items-center gap-4">
-                            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-lg font-bold text-white shadow-lg shadow-indigo-500/15">{selectedCompanyData.code.slice(0, 4)}</div>
-                            <div>
-                              <h2 className="text-xl font-bold text-white">{selectedCompanyData.name}</h2>
-                              <span className="text-sm text-[var(--color-text-tertiary)]">{selectedCompanyData.code}</span>
-                            </div>
-                          </div>
-                          <Button variant="outline" size="icon" className="w-9 h-9 rounded-xl bg-white/[0.04] border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-white" onClick={() => setSelectedCompanyCode(null)}>
-                            <CloseIcon />
-                          </Button>
-                        </div>
-                        <div className="grid grid-cols-2 gap-4">
-                          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
-                            <div className="text-2xl font-bold text-indigo-400">{selectedCompanyData.topic_count}</div>
-                            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">相關題材</div>
-                          </div>
-                          <div className="bg-white/[0.02] rounded-xl p-4 text-center">
-                            <div className="text-2xl font-bold text-emerald-400">{selectedCompanyData.roles.length}</div>
-                            <div className="text-xs text-[var(--color-text-tertiary)] mt-1">供應鏈角色</div>
-                          </div>
-                        </div>
-                      </div>
+            )}
 
-                      {/* Detail Tabs */}
-                      <div className="px-8 flex gap-1 border-b border-[var(--color-border)]">
-                        {([
-                          { id: "overview" as CompanyDetailTab, label: "概覽", icon: "📊" },
-                          { id: "financials" as CompanyDetailTab, label: "財務", icon: "💹" },
-                          { id: "supply_chain" as CompanyDetailTab, label: "供應鏈", icon: "🔗" },
-                        ]).map((tab) => (
-                          <button
-                            key={tab.id}
-                            className={cn(
-                              "px-5 py-3 text-sm font-medium transition-all border-b-2",
-                              companyDetailTab === tab.id
-                                ? "text-indigo-400 border-indigo-400"
-                                : "text-[var(--color-text-tertiary)] border-transparent hover:text-[var(--color-text-secondary)]"
-                            )}
-                            onClick={() => setCompanyDetailTab(tab.id)}
-                          >
-                            <span className="mr-1.5">{tab.icon}</span>{tab.label}
-                          </button>
-                        ))}
-                      </div>
-
-                      {/* Tab Content */}
-                      <div className="px-8 py-6 max-h-[calc(100vh-420px)] overflow-y-auto">
-                        {companyDetailTab === "overview" && (
-                          financialLoading ? (
-                            <div className="text-center py-12">
-                              <div className="inline-block w-6 h-6 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
-                              <p className="text-sm text-[var(--color-text-tertiary)] mt-3">載入財務資料...</p>
-                            </div>
-                          ) : financialData ? (
-                            <CompanyOverviewPanel data={financialData} roles={selectedCompanyData?.roles} />
-                          ) : financialError ? (
-                            <NoFinancialData code={selectedCompanyData.code} />
-                          ) : null
-                        )}
-                        {companyDetailTab === "financials" && (
-                          financialLoading ? (
-                            <div className="text-center py-12">
-                              <div className="inline-block w-6 h-6 border-2 border-indigo-400 border-t-transparent rounded-full animate-spin" />
-                              <p className="text-sm text-[var(--color-text-tertiary)] mt-3">載入財務資料...</p>
-                            </div>
-                          ) : financialData ? (
-                            <CompanyFinancialPanel data={financialData} />
-                          ) : financialError ? (
-                            <NoFinancialData code={selectedCompanyData.code} />
-                          ) : null
-                        )}
-                        {companyDetailTab === "supply_chain" && (
-                          <div className="space-y-6">
-                            {/* Per-industry AI Analysis */}
-                            <div className="bg-gradient-to-br from-indigo-500/[0.06] to-violet-600/[0.04] border border-indigo-500/15 rounded-2xl p-6">
-                              <div className="flex items-center gap-2.5 mb-4">
-                                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-md shadow-indigo-500/15">
-                                  <AiIcon />
-                                </div>
-                                <h4 className="text-sm font-bold text-white">供應鏈分析</h4>
-                              </div>
-                              <div className="space-y-4">
-                                {selectedCompanyData.roles.map((role, i) => {
-                                  const relInfo = getRelevanceInfo(role.relevance);
-                                  const roleBadge = getRoleBadge(role.relevance);
-                                  const cat = getCategory(role.topicName);
-                                  const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, financialData);
-                                  return (
-                                    <div key={i} className={i > 0 ? "border-t border-indigo-500/10 pt-4" : ""}>
-                                      <div className="flex items-center gap-2 mb-2">
-                                        <span
-                                          className="text-xs font-bold whitespace-nowrap"
-                                          style={{ color: roleBadge.color, backgroundColor: roleBadge.bg, padding: "2px 10px", borderRadius: 999 }}
-                                        >
-                                          {relInfo.emoji} {relInfo.label}
-                                        </span>
-                                        <span className="text-sm font-semibold text-white">{role.topicName}</span>
-                                        <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
-                                      </div>
-                                      {role.role && (
-                                        <p className="text-xs text-[var(--color-text-tertiary)] mb-1.5">{role.role}</p>
-                                      )}
-                                      <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </div>
-
-                            <div>
-                              <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">供應鏈角色詳情</h4>
-                              <div className="space-y-4">
-                                {selectedCompanyData.roles.map((role, i) => {
-                                  const relInfo = getRelevanceInfo(role.relevance);
-                                  const roleBadge = getRoleBadge(role.relevance);
-                                  const cat = getCategory(role.topicName);
-                                  const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, financialData);
-                                  return (
-                                    <div key={i} className="bg-white/[0.02] rounded-xl p-5 border border-white/[0.04] hover:border-white/[0.08] transition-colors">
-                                      <div className="flex items-center justify-between mb-3">
-                                        <div className="flex items-center gap-3 min-w-0">
-                                          <span
-                                            className="text-xs px-2.5 py-1 rounded-full font-bold whitespace-nowrap"
-                                            style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}
-                                          >
-                                            {relInfo.emoji} {relInfo.label}
-                                          </span>
-                                          <Button variant="ghost" className="text-sm text-indigo-400 hover:text-[var(--color-primary-hover)] font-medium h-auto p-0 truncate" onClick={() => goToTopic(role.topic)}>{role.topicName}</Button>
-                                        </div>
-                                        <span className="text-xs text-[var(--color-text-tertiary)]">{cat}</span>
-                                      </div>
-                                      {/* Role description */}
-                                      {role.role && (
-                                        <p className="text-sm text-[var(--color-text-secondary)] mb-2 leading-relaxed">{role.role}</p>
-                                      )}
-                                      {/* AI analysis paragraph */}
-                                      <div className="mt-2 pt-2 border-t border-white/[0.04]">
-                                        <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
-                                      </div>
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                            <Separator className="bg-white/[0.06]" />
-                            <div>
-                              <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">相關題材</h4>
-                              <div className="flex flex-wrap gap-2">
-                                {selectedCompanyData.relatedTopics.map((t) => {
-                                  const cat = getCategory(t.name);
-                                  const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
-                                  return (
-                                    <Button key={t.slug} variant="outline" size="sm" className="rounded-lg text-xs font-medium h-auto py-1.5 hover:border-indigo-500/40 transition-colors" style={{ backgroundColor: `${color.solid}12`, borderColor: `${color.solid}30`, color: color.solid }} onClick={() => goToTopic(t.slug)}>{t.name}</Button>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              )}
-            </div>
-          </div>
+            {/* ─── Company Detail (Full Page) Mode ─── */}
+            {companyViewMode === "detail" && (
+              <div className="fade-in">
+                {financialLoading ? (
+                  <div className="text-center py-24">
+                    <div className="inline-block w-8 h-8 border-3 border-indigo-400 border-t-transparent rounded-full animate-spin" />
+                    <p className="text-sm text-[var(--color-text-tertiary)] mt-4">載入公司資料...</p>
+                  </div>
+                ) : financialData && selectedCompanyData ? (
+                  <CompanyFullPageDetail
+                    data={financialData}
+                    roles={selectedCompanyData.roles}
+                    onBack={goBackToCompanyList}
+                  />
+                ) : financialError && selectedCompanyData ? (
+                  <div className="max-w-6xl mx-auto">
+                    <div className="flex items-center justify-between mb-6">
+                      <button
+                        className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors group"
+                        onClick={goBackToCompanyList}
+                      >
+                        <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        返回公司列表
+                      </button>
+                    </div>
+                    <h1 className="text-3xl font-bold text-white mb-2">
+                      {selectedCompanyData.name} <span className="text-[var(--color-text-secondary)] text-xl font-normal">({selectedCompanyData.code})</span>
+                    </h1>
+                    <div className="mt-8">
+                      <NoFinancialData code={selectedCompanyData.code} />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="text-center py-24">
+                    <p className="text-sm text-[var(--color-text-tertiary)]">請選擇一家公司</p>
+                  </div>
+                )}
+              </div>
+            )}
+          </>
         )}
       </main>
 
@@ -1575,7 +1719,7 @@ export default function Home() {
                 })}
               </div>
               <div className="flex gap-3">
-                <Button className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white h-11 rounded-xl" onClick={() => { setShowCompanyModal(false); setSelectedCompanyCode(selectedCompanyData.code); setActiveTab("companies"); setCompanyDetailTab("overview"); }}>查看完整資料</Button>
+                <Button className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white h-11 rounded-xl" onClick={() => { setShowCompanyModal(false); setActiveTab("companies"); goToCompany(selectedCompanyData.code); }}>查看完整資料</Button>
                 <Button variant="outline" className="bg-white/[0.05] border-[var(--color-border-hover)] text-[var(--color-text-secondary)] hover:text-white h-11 rounded-xl px-6" onClick={() => setShowCompanyModal(false)}>關閉</Button>
               </div>
             </CardContent>

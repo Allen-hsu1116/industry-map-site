@@ -121,3 +121,12 @@
 .badge-growth { background: rgba(245, 158, 11, 0.12); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.2); }
 .badge-niche { background: rgba(96, 165, 250, 0.12); color: #93c5fd; border: 1px solid rgba(96, 165, 250, 0.2); }
 .badge-related { background: rgba(148, 163, 184, 0.12); color: #94a3b8; border: 1px solid rgba(148, 163, 184, 0.15); }
+
+/* Company detail full page */
+.company-detail-enter { animation: fadeIn 0.35s ease-out; }
+
+/* TradingView iframe styling */
+iframe[src*="tradingview"] {
+  border-radius: 12px;
+  background: #0d1320;
+}
