@@ -53,6 +53,15 @@ interface FinancialData {
   swot?: FinancialSWOT;
   market_position?: string;
   trends?: FinancialTrends;
+  industry_analysis?: Record<string, {
+    ai_summary?: string;
+    market_position?: string;
+    market_position_detail?: string;
+    focus?: string;
+    products?: string[];
+    customers?: string[];
+    swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] };
+  }>;
   updatedAt: string;
 }
 
@@ -216,9 +225,13 @@ function formatRev(num: number): string {
   return num.toLocaleString();
 }
 function formatRevShort(num: number): string {
-  if (num >= 100000000) return `${(num / 100000000).toFixed(1)}億`;
-  if (num >= 10000) return `${(num / 10000).toFixed(0)}萬`;
-  return num.toLocaleString();
+  // Input is in 千元 (thousands of NTD)
+  // 1 億 = 100,000 千元, 1 兆 = 1,000,000,000 千元 (10^9)
+  if (num >= 1e9) return `${(num / 1e9).toFixed(2).replace(/\.?0+$/, "")}兆`;
+  if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 1000) return `${(num / 1000).toFixed(1).replace(/\.0$/, "")}億`;
+  return `${num.toFixed(0)}萬`;
 }
 
 function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
@@ -236,7 +249,7 @@ function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
   }
   const chartData = data.map(d => ({
     month: formatTrendMonth(d.month),
-    revenue: d.revenue / 100000000,
+    revenue: d.revenue / 100000, // 千元 → 億
     mom: d.mom,
     yoy: d.yoy,
   }));
@@ -244,7 +257,7 @@ function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
     <div className="bg-white/[0.02] rounded-xl p-4">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs text-[var(--color-text-tertiary)]">月營收趨勢</span>
-        <span className="text-sm font-bold text-white">{formatRevShort(data[data.length - 1].revenue)} <span className="text-xs text-[var(--color-text-tertiary)]">億</span></span>
+        <span className="text-sm font-bold text-white">{formatRevShort(data[data.length - 1].revenue)}</span>
       </div>
       <ResponsiveContainer width="100%" height={220}>
         <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
@@ -289,9 +302,9 @@ function QuarterlyIncomeChart({ data }: { data: TrendQuarterlyIncome[] }) {
   }
   const chartData = data.map(d => ({
     quarter: d.quarter,
-    revenue: d.revenue / 100000000,
-    grossProfit: d.grossProfit / 100000000,
-    netIncome: d.netIncome / 100000000,
+    revenue: d.revenue / 100000, // 千元 → 億
+    grossProfit: d.grossProfit / 100000,
+    netIncome: d.netIncome / 100000,
     grossMargin: d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0,
   }));
   return (
@@ -798,78 +811,6 @@ function CompanyFullPageDetail({
                 </div>
               </div>
 
-              {/* 市場定位 */}
-              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                <h4 className="text-sm font-bold text-white mb-3">🎯 市場定位</h4>
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">{marketPos.emoji}</span>
-                  <span className="text-lg font-bold" style={{ color: marketPos.color }}>{marketPos.label}</span>
-                </div>
-                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                  {data.market_position || `${data.name}為${data.profile.industry}領導企業，在全球市場佔據關鍵地位，擁有強大的技術壁壙與客戶黏著度。`}
-                </p>
-              </div>
-
-              {/* 技術重心 */}
-              <PlaceholderSection title="技術重心" icon="🔬" />
-
-              {/* 主要產品 */}
-              {data.products && data.products.length > 0 ? (
-                <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                  <h4 className="text-sm font-bold text-white mb-3">📦 主要產品</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {data.products.map((p, i) => (
-                      <Badge key={i} className="bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/20 text-xs">{p}</Badge>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <PlaceholderSection title="主要產品" icon="📦" />
-              )}
-
-              {/* 主要客戶 */}
-              {data.customers && data.customers.length > 0 ? (
-                <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                  <h4 className="text-sm font-bold text-white mb-3">👥 主要客戶</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {data.customers.map((c, i) => (
-                      <Badge key={i} className="bg-emerald-500/15 text-emerald-400 border-emerald-500/20 text-xs">{c}</Badge>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <PlaceholderSection title="主要客戶" icon="👥" />
-              )}
-
-              {/* SWOT 分析 */}
-              {data.swot && (data.swot.strengths.length > 0 || data.swot.weaknesses.length > 0 || data.swot.opportunities.length > 0 || data.swot.threats.length > 0) ? (
-                <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                  <h4 className="text-sm font-bold text-white mb-4">🏛️ SWOT 分析</h4>
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { label: "優勢 (S)", items: data.swot.strengths, color: "#34d399" },
-                      { label: "劣勢 (W)", items: data.swot.weaknesses, color: "#f87171" },
-                      { label: "機會 (O)", items: data.swot.opportunities, color: "#818cf8" },
-                      { label: "威脅 (T)", items: data.swot.threats, color: "#fbbf24" },
-                    ].map((sw) => (
-                      <div key={sw.label} className="bg-white/[0.02] rounded-xl p-4">
-                        <h5 className="text-xs font-bold mb-2" style={{ color: sw.color }}>{sw.label}</h5>
-                        <ul className="space-y-1">
-                          {sw.items.map((item, i) => (
-                            <li key={i} className="text-xs text-[var(--color-text-secondary)]">• {item}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <PlaceholderSection title="SWOT 分析" icon="🏛️" />
-              )}
-
-              <Separator className="bg-white/[0.06]" />
-
-              {/* Financial data cards */}
               <CompanyFinancialPanel data={data} />
             </div>
           )}
@@ -911,30 +852,145 @@ function CompanyFullPageDetail({
                     const cat = getCategory(role.topicName);
                     const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
 
+                    // Check for per-topic analysis data
+                    const topicAnalysis = data.industry_analysis?.[role.topic];
+
                     return (
                       <div className="space-y-6">
+                        {/* AI 產業分析 Summary */}
                         <div className="bg-gradient-to-br from-indigo-500/[0.08] to-purple-600/[0.06] border border-indigo-500/20 rounded-2xl p-6">
                           <div className="flex items-center gap-2.5 mb-4">
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
                               <AiIcon />
                             </div>
-                            <h4 className="text-sm font-bold text-white">AI 產業分析</h4>
+                            <h4 className="text-sm font-bold text-white">AI 智能摘要</h4>
                             <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">Beta</Badge>
                           </div>
-                          <div>
-                            <div className="flex items-center gap-2 mb-2">
-                              <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
-                                {relInfo.emoji} {relInfo.label}
-                              </span>
-                              <span className="text-sm font-semibold text-white">{role.topicName}</span>
-                              <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
-                              <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-400 border border-amber-500/20 ml-auto">高關聯度</span>
-                            </div>
-                            {role.role && <p className="text-xs text-[var(--color-text-tertiary)] mb-2">{role.role}</p>}
-                            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
+                          <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                            {topicAnalysis?.ai_summary || analysisText}
+                          </p>
+                          <div className="mt-4 flex items-center gap-3">
+                            <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
+                              {relInfo.emoji} {relInfo.label}
+                            </span>
+                            <span className="text-sm font-semibold text-white">{role.topicName}</span>
+                            <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
                           </div>
                         </div>
 
+                        {/* 市場定位 */}
+                        <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                          <h4 className="text-sm font-bold text-white mb-3">🎯 市場定位</h4>
+                          <div className="flex items-center gap-3 mb-3">
+                            <span className="text-2xl">{topicAnalysis?.market_position?.charAt(0) || marketPos.emoji}</span>
+                            <span className="text-lg font-bold" style={{ color: topicAnalysis?.market_position === '🟢 產業龍頭' ? '#34d399' : topicAnalysis?.market_position === '🟠 成長挑戰' ? '#fbbf24' : '#60a5fa' }}>
+                              {topicAnalysis?.market_position || marketPos.label}
+                            </span>
+                          </div>
+                          <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                            {topicAnalysis?.market_position_detail || `${data.name}為${role.topicName}產業之關鍵參與者，在供應鏈中扮演${relInfo.label}角色。`}
+                          </p>
+                        </div>
+
+                        {/* 技術重心 */}
+                        {topicAnalysis?.focus ? (
+                          <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                            <h4 className="text-sm font-bold text-white mb-3">🔬 技術重心</h4>
+                            <div className="space-y-4">
+                              {topicAnalysis.focus.split('\n\n').map((section, si) => {
+                                const lines = section.split('\n');
+                                const title = lines[0];
+                                const bullets = lines.slice(1).filter(l => l.trim().startsWith('-') || l.trim().startsWith('•'));
+                                return (
+                                  <div key={si}>
+                                    {title && <p className="text-sm font-semibold text-white mb-2">{title.replace(/^[-•]\s*/, '')}</p>}
+                                    {bullets.length > 0 && (
+                                      <ul className="space-y-1.5">
+                                        {bullets.map((b, bi) => (
+                                          <li key={bi} className="text-sm text-[var(--color-text-secondary)] pl-4 relative before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-indigo-400">
+                                            {b.replace(/^[-•]\s*/, '')}
+                                          </li>
+                                        ))}
+                                      </ul>
+                                    )}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ) : (
+                          <PlaceholderSection title="技術重心" icon="🔬" />
+                        )}
+
+                        {/* 主要產品 */}
+                        {topicAnalysis?.products && topicAnalysis.products.length > 0 ? (
+                          <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                            <h4 className="text-sm font-bold text-white mb-3">📦 主要產品</h4>
+                            <div className="space-y-3">
+                              {topicAnalysis.products.map((p, i) => {
+                                const [name, ...descParts] = p.split(': ');
+                                const desc = descParts.join(': ');
+                                return (
+                                  <div key={i}>
+                                    <p className="text-sm font-semibold text-white">{name}</p>
+                                    {desc && <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{desc}</p>}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ) : (
+                          <PlaceholderSection title="主要產品" icon="📦" />
+                        )}
+
+                        {/* 主要客戶 */}
+                        {topicAnalysis?.customers && topicAnalysis.customers.length > 0 ? (
+                          <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                            <h4 className="text-sm font-bold text-white mb-3">👥 主要客戶</h4>
+                            <div className="space-y-3">
+                              {topicAnalysis.customers.map((c, i) => {
+                                const [name, ...descParts] = c.split(': ');
+                                const desc = descParts.join(': ');
+                                return (
+                                  <div key={i}>
+                                    <p className="text-sm font-semibold text-white">{name}</p>
+                                    {desc && <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{desc}</p>}
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        ) : (
+                          <PlaceholderSection title="主要客戶" icon="👥" />
+                        )}
+
+                        {/* SWOT 分析 */}
+                        {topicAnalysis?.swot && ((topicAnalysis.swot.strengths?.length ?? 0) > 0 || (topicAnalysis.swot.weaknesses?.length ?? 0) > 0) ? (
+                          <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                            <h4 className="text-sm font-bold text-white mb-4">🏛️ SWOT 分析</h4>
+                            <div className="grid grid-cols-2 gap-4">
+                              {[
+                                { label: "優勢 (S)", items: topicAnalysis.swot.strengths || [], color: "#34d399" },
+                                { label: "劣勢 (W)", items: topicAnalysis.swot.weaknesses || [], color: "#f87171" },
+                                { label: "機會 (O)", items: topicAnalysis.swot.opportunities || [], color: "#818cf8" },
+                                { label: "威脅 (T)", items: topicAnalysis.swot.threats || [], color: "#fbbf24" },
+                              ].map((sw) => (
+                                <div key={sw.label} className="bg-white/[0.02] rounded-xl p-4">
+                                  <h5 className="text-xs font-bold mb-2" style={{ color: sw.color }}>{sw.label}</h5>
+                                  <ul className="space-y-1">
+                                    {sw.items.map((item, i) => (
+                                      <li key={i} className="text-xs text-[var(--color-text-secondary)]">• {item}</li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
+                          <PlaceholderSection title="SWOT 分析" icon="🏛️" />
+                        )}
+
+                        {/* 供應鏈角色 */}
                         <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                           <h4 className="text-sm font-bold text-white mb-3">🔗 在此產業的角色</h4>
                           <div className="space-y-3">
@@ -996,15 +1052,45 @@ function CompanyFullPageDetail({
           {/* ─── 技術分析 Tab ─── */}
           {detailTab === "tech" && (
             <div className="space-y-6">
-              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                <h4 className="text-sm font-bold text-white mb-3">📊 技術分析</h4>
-                <p className="text-sm text-[var(--color-text-tertiary)] mb-4">TradingView 即時圖表已在頁面上方顯示，提供完整的技術分析功能，包含 K 線圖、技術指標、畫線工具等。</p>
-                <div className="flex items-center gap-3">
-                  <div className="text-xs text-[var(--color-text-tertiary)] bg-white/[0.04] px-3 py-1.5 rounded-lg">💡 請使用頁面頂部的 TradingView 圖表進行技術分析</div>
+              {/* TradingView Widget */}
+              <div className="bg-[var(--color-surface)] rounded-2xl p-4 border border-[var(--color-border)]">
+                <h4 className="text-sm font-bold text-white mb-4">📊 TradingView 即時圖表</h4>
+                <div className="rounded-xl overflow-hidden" style={{ background: "#0d1320" }}>
+                  <iframe
+                    src={`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${data.code}&symbol=TWSE%3A${data.code}&interval=D&hidesidetoolbar=0&symboledit=1&saveimage=1&toolbarbg=%230d1320&studies=[]&theme=dark&style=1&locale=zh_TW&timezone=Asia/Taipei&studies_overrides=%7B%7D&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&allow_popup_charts=&showpopupbutton=&range=all`}
+                    style={{ width: "100%", height: "500px", border: "none" }}
+                    allowFullScreen
+                  />
+                </div>
+                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">💡 TradingView 提供完整技術分析工具：K 線圖、均線、技術指標、畫線工具等。可切換時間區間與指標。</p>
+              </div>
+
+              {/* Key Indicators */}
+              <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
+                <h4 className="text-sm font-bold text-white mb-4">📈 關鍵指標</h4>
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
+                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">本益比</p>
+                    <p className="text-xl font-bold text-white">{data.valuation.pe || "-"}</p>
+                    <p className="text-xs text-[var(--color-text-tertiary)]">倍</p>
+                  </div>
+                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
+                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">股價淨值比</p>
+                    <p className="text-xl font-bold text-white">{data.valuation.pb || "-"}</p>
+                    <p className="text-xs text-[var(--color-text-tertiary)]">倍</p>
+                  </div>
+                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
+                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">現金殖利率</p>
+                    <p className="text-xl font-bold text-white">{data.valuation.dividendYield || "-"}</p>
+                    <p className="text-xs text-[var(--color-text-tertiary)]">%</p>
+                  </div>
+                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
+                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">每股淨值</p>
+                    <p className="text-xl font-bold text-white">{data.balance.bookValuePerShare || "-"}</p>
+                    <p className="text-xs text-[var(--color-text-tertiary)]">元</p>
+                  </div>
                 </div>
               </div>
-              <PlaceholderSection title="技術指標彙總" icon="📏" />
-              <PlaceholderSection title="支撐/壓力位" icon="📐" />
             </div>
           )}
 
