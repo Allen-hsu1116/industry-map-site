@@ -120,20 +120,25 @@ function mapGroupNames(groups: Group[]): Group[] {
 
 /* ─── Number formatting helpers (Chinese units) ─── */
 function formatMoneyNTD(thousands: string): string {
+  // Input is in 千元 (thousands of NTD)
+  // 1 億 = 100,000 千元, 1 兆 = 10,000,000 千元
   const num = parseFloat(thousands);
   if (isNaN(num) || num === 0) return "-";
+  if (num >= 10000000) return `${(num / 10000000).toFixed(2).replace(/\.?0+$/, "")}兆`;
   if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 10000) return `${(num / 10000).toFixed(1)}億`;
-  if (num >= 1000) return `${(num / 1000).toFixed(0)}百萬`;
-  return num.toLocaleString();
+  if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 1000) return `${(num / 1000).toFixed(0)}億`;
+  return `${num.toFixed(0)}萬`;
 }
 
 function formatMoneyNTDNum(num: number): string {
+  // Input raw number in 千元
   if (num === 0) return "-";
+  if (num >= 10000000) return `${(num / 10000000).toFixed(2).replace(/\.?0+$/, "")}兆`;
   if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 10000) return `${(num / 10000).toFixed(1)}億`;
-  if (num >= 1000) return `${(num / 1000).toFixed(0)}百萬`;
-  return num.toLocaleString();
+  if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 1000) return `${(num / 1000).toFixed(0)}億`;
+  return `${num.toFixed(0)}萬`;
 }
 
 function formatCapitalNTD(ntd: string): string {
@@ -537,25 +542,11 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
         </div>
       </div>
 
-      {/* Price Info */}
-      <div>
-        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💹 股價資訊</h4>
-        <div className="grid grid-cols-4 gap-3">
-          <StatItem label="收盤價" value={formatPrice(data.price.close)} sub="元" className="col-span-2" />
-          <StatItem label="開盤" value={formatPrice(data.price.open)} sub="元" />
-          <StatItem label="成交量" value={formatPrice(data.price.volume)} sub="張" />
-        </div>
-        <div className="grid grid-cols-2 gap-3 mt-3">
-          <StatItem label="最高" value={formatPrice(data.price.high)} sub="元" />
-          <StatItem label="最低" value={formatPrice(data.price.low)} sub="元" />
-        </div>
-      </div>
-
       {/* Income + Quarterly Chart */}
       <div>
         <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📊 財務摘要</h4>
         <div className="grid grid-cols-2 gap-3">
-          <StatItem label="營業收入" value={formatMoneyNTD(data.income.revenue)} sub="千元" className="col-span-2" />
+          <StatItem label="營業收入" value={formatMoneyNTD(data.income.revenue)} className="col-span-2" />
           <StatItem label="毛利" value={formatMoneyNTD(data.income.grossProfit)} sub={`毛利率 ${grossMargin}`} />
           <StatItem label="淨利" value={formatMoneyNTD(data.income.netIncome)} sub={`淨利率 ${netMargin}`} />
           <StatItem label="EPS" value={data.income.eps || "-"} sub="元/股" />
@@ -580,7 +571,7 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
         )}
 
         <div className="grid grid-cols-3 gap-3">
-          <StatItem label="月營收" value={formatMoneyNTD(data.monthly_revenue.revenue)} sub="千元" className="col-span-3" />
+          <StatItem label="月營收" value={formatMoneyNTD(data.monthly_revenue.revenue)} className="col-span-3" />
           <StatItem
             label="月增率 (MoM)"
             value={formatPercent(data.monthly_revenue.mom)}
@@ -765,15 +756,6 @@ function CompanyFullPageDetail({
               {b.label}
             </span>
           ))}
-        </div>
-
-        {/* ─── TradingView Widget ─── */}
-        <div className="mb-8">
-          <iframe
-            src={`https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${data.code}&symbol=TWSE%3A${data.code}&interval=D&theme=dark&style=1&locale=zh_TW&toolbar_bg=%230d1320&enable_publishing=false&hide_top_toolbar=false&hide_side_toolbar=false&allow_symbol_change=false`}
-            style={{ width: "100%", height: "400px", border: "none", borderRadius: "12px" }}
-            allowFullScreen
-          />
         </div>
 
         {/* ─── Main Tabs ─── */}
@@ -1039,25 +1021,13 @@ function CompanyFullPageDetail({
 
           {/* ─── 研究圖表 Tab ─── */}
           {detailTab === "charts" && (
-            <div className="space-y-8">
-              <h4 className="text-sm font-bold text-white">📈 研究圖表</h4>
-              {data.trends?.monthly_revenue && data.trends.monthly_revenue.length > 0 && (
-                <RevenueAreaChart data={data.trends.monthly_revenue} />
-              )}
-              {data.trends?.quarterly_income && data.trends.quarterly_income.length > 0 && (
-                <QuarterlyIncomeChart data={data.trends.quarterly_income} />
-              )}
-              {data.trends?.quarterly_income && data.trends.quarterly_income.length > 1 && (
-                <MarginTrendChart data={data.trends.quarterly_income} />
-              )}
-              {(!data.trends?.monthly_revenue || data.trends.monthly_revenue.length === 0) &&
-               (!data.trends?.quarterly_income || data.trends.quarterly_income.length === 0) && (
-                <div className="text-center py-16">
-                  <div className="text-5xl mb-4">📉</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">圖表資料累積中</h3>
-                  <p className="text-sm text-[var(--color-text-tertiary)]">需要更多歷史資料才能生成完整走勢圖。</p>
-                </div>
-              )}
+            <div className="space-y-6">
+              <div className="bg-[var(--color-surface)] rounded-2xl p-10 border border-[var(--color-border)] text-center">
+                <div className="text-4xl mb-4">📈</div>
+                <h4 className="text-lg font-bold text-white mb-2">研究圖表</h4>
+                <p className="text-sm text-[var(--color-text-tertiary)]">功能規劃中，敬請期待</p>
+                <p className="text-xs text-[var(--color-text-tertiary)] mt-2">將提供更多進階分析圖表與研究工具</p>
+              </div>
             </div>
           )}
         </div>
