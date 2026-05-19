@@ -1,40 +1,58 @@
 @import "tailwindcss";
 
 /* ─── Design system: aistockmap-aligned semantic tokens ─── */
-:root {
-  --color-bg: #060a14;
-  --color-surface: #0d1320;
-  --color-surface-hover: #141c2e;
-  --color-surface-active: #1a2540;
-  --color-border: rgba(255, 255, 255, 0.07);
-  --color-border-hover: rgba(255, 255, 255, 0.12);
-  --color-primary: #6366f1;
-  --color-primary-hover: #818cf8;
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #94a3b8;
-  --color-text-tertiary: #475569;
+@layer base {
+  :root {
+    --color-bg: #060a14;
+    --color-surface: #0d1320;
+    --color-surface-hover: #141c2e;
+    --color-surface-active: #1a2540;
+    --color-border: rgba(255, 255, 255, 0.07);
+    --color-border-hover: rgba(255, 255, 255, 0.12);
+    --color-primary: #6366f1;
+    --color-primary-hover: #818cf8;
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-text-tertiary: #475569;
 
-  /* shadcn dark theme variables */
-  --background: #060a14;
-  --foreground: #f1f5f9;
-  --card: #0d1320;
-  --card-foreground: #f1f5f9;
-  --popover: #0d1320;
-  --popover-foreground: #f1f5f9;
-  --primary: #6366f1;
-  --primary-foreground: #ffffff;
-  --secondary: #141c2e;
-  --secondary-foreground: #f1f5f9;
-  --muted: #141c2e;
-  --muted-foreground: #94a3b8;
-  --accent: #1a2540;
-  --accent-foreground: #f1f5f9;
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: #f1f5f9;
-  --border-color: rgba(255, 255, 255, 0.07);
-  --input: rgba(255, 255, 255, 0.07);
-  --ring: #6366f1;
-  --radius: 0.75rem;
+    /* shadcn dark theme variables */
+    --background: #060a14;
+    --foreground: #f1f5f9;
+    --card: #0d1320;
+    --card-foreground: #f1f5f9;
+    --popover: #0d1320;
+    --popover-foreground: #f1f5f9;
+    --primary: #6366f1;
+    --primary-foreground: #ffffff;
+    --secondary: #141c2e;
+    --secondary-foreground: #f1f5f9;
+    --muted: #141c2e;
+    --muted-foreground: #94a3b8;
+    --accent: #1a2540;
+    --accent-foreground: #f1f5f9;
+    --destructive: oklch(0.396 0.141 25.723);
+    --destructive-foreground: #f1f5f9;
+    --border-color: rgba(255, 255, 255, 0.07);
+    --input: rgba(255, 255, 255, 0.07);
+    --ring: #6366f1;
+    --radius: 0.75rem;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', Roboto, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.06); border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.12); }
 }
 
 @theme inline {
@@ -60,24 +78,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans TC', Roboto, sans-serif;
-  background: var(--color-bg);
-  color: var(--color-text-primary);
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.06); border-radius: 10px; }
-::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.12); }
-
-html { scroll-behavior: smooth; }
-
+/* ─── Animations ─── */
 @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideIn { from { opacity: 0; transform: translateX(-16px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -88,6 +89,7 @@ html { scroll-behavior: smooth; }
 .slide-up { animation: slideUp 0.35s ease-out; }
 .modal-in { animation: modalIn 0.2s ease-out; }
 
+/* ─── Custom components ─── */
 .autocomplete-dropdown {
   position: absolute; top: 100%; left: 0; right: 0;
   background: var(--color-surface); border: 1px solid var(--color-border);
