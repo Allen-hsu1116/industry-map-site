@@ -11,6 +11,7 @@ import { cn } from "@/lib/utils";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, Legend } from "recharts";
 import industriesData from "../../public/data/industries.json";
 import companiesData from "../../public/data/companies.json";
+import TradingViewChart from "./TradingViewChart";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; }
@@ -30,11 +31,15 @@ interface FinancialSWOT { strengths: string[]; weaknesses: string[]; opportuniti
 interface TrendMonthlyRevenue { month: string; revenue: number; mom: number; yoy: number; }
 interface TrendQuarterlyIncome { quarter: string; revenue: number; grossProfit: number; netIncome: number; eps: number; }
 interface TrendMonthlyPrice { month: string; high: number; low: number; avg: number; volume: number; }
+interface TrendDailyPrice { date: string; open: number; high: number; low: number; close: number; volume: number; }
+interface TrendYearlyTrading { year: string; high: number; low: number; avg_closing: number; trade_volume: number; trade_value: number; }
 
 interface FinancialTrends {
   monthly_revenue?: TrendMonthlyRevenue[];
   quarterly_income?: TrendQuarterlyIncome[];
   monthly_price?: TrendMonthlyPrice[];
+  daily_prices?: TrendDailyPrice[];
+  yearly_trading?: TrendYearlyTrading[];
 }
 
 interface FinancialData {
@@ -1264,7 +1269,7 @@ function CompanyFullPageDetail({
           {/* ─── 技術分析 Tab ─── */}
           {detailTab === "tech" && (
             <div className="space-y-6">
-              {/* Price Chart with TradingView lightweight-charts */}
+              {/* Price Chart — K-line with lightweight-charts, fallback to monthly area chart */}
               <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-sm font-bold text-white">📈 技術走勢圖</h4>
@@ -1277,16 +1282,68 @@ function CompanyFullPageDetail({
                     在 TradingView 開啟完整圖表 ↗
                   </a>
                 </div>
-                {trends?.monthly_price && trends.monthly_price.length > 1 ? (
-                  <PriceAreaChart data={trends.monthly_price} />
-                ) : (
-                  <div className="text-center py-12 rounded-xl bg-white/[0.02] border border-white/[0.04]">
-                    <div className="text-4xl mb-3">📈</div>
-                    <p className="text-sm text-[var(--color-text-tertiary)]">股價走勢資料累積中</p>
-                    <p className="text-xs text-[var(--color-text-tertiary)] mt-1">需要更多歷史資料才能生成走勢圖</p>
-                  </div>
-                )}
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-3 text-center">💡 資料由每日收盤價累積生成，互動式 K 線圖請點擊上方連結</p>
+                {(() => {
+                  const dp = trends?.daily_prices;
+                  if (dp && dp.length >= 5) {
+                    // Compute MA lines
+                    const sorted = [...dp].sort((a, b) => a.date.localeCompare(b.date));
+                    const candleData = sorted.map(d => ({
+                      time: d.date,
+                      open: d.open,
+                      high: d.high,
+                      low: d.low,
+                      close: d.close,
+                    }));
+                    const volumeData = sorted.map(d => ({
+                      time: d.date,
+                      value: d.volume,
+                      color: d.close >= d.open ? "rgba(34,171,148,0.4)" : "rgba(247,82,95,0.4)",
+                    }));
+                    const computeMA = (period: number) =>
+                      sorted.slice(period - 1).map((d, i) => {
+                        const window = sorted.slice(i, i + period);
+                        const avg = window.reduce((s, x) => s + x.close, 0) / period;
+                        return { time: d.date, value: Math.round(avg * 100) / 100 };
+                      });
+                    const ma5 = computeMA(5);
+                    const ma10 = sorted.length >= 10 ? computeMA(10) : undefined;
+                    const ma20 = sorted.length >= 20 ? computeMA(20) : undefined;
+                    return (
+                      <div>
+                        <div className="flex items-center gap-3 mb-3 text-xs">
+                          <span className="text-[#22ab94]">● 漲</span>
+                          <span className="text-[#f7525f]">● 跌</span>
+                          {ma5.length > 0 && <span className="text-[#818cf8]">━ MA5</span>}
+                          {ma10 && ma10.length > 0 && <span className="text-[#f472b6]">━ MA10</span>}
+                          {ma20 && ma20.length > 0 && <span className="text-[#fbbf24]">━ MA20</span>}
+                        </div>
+                        <TradingViewChart
+                          candleData={candleData}
+                          volumeData={volumeData}
+                          ma5Data={ma5}
+                          ma10Data={ma10}
+                          ma20Data={ma20}
+                          height={420}
+                        />
+                      </div>
+                    );
+                  } else if (trends?.monthly_price && trends.monthly_price.length > 1) {
+                    return (
+                      <>
+                        <PriceAreaChart data={trends.monthly_price} />
+                        <p className="text-xs text-[var(--color-text-tertiary)] mt-3 text-center">💡 每日 K 線資料累積中（需 ≥5 個交易日），目前顯示月均價趨勢圖</p>
+                      </>
+                    );
+                  } else {
+                    return (
+                      <div className="text-center py-12 rounded-xl bg-white/[0.02] border border-white/[0.04]">
+                        <div className="text-4xl mb-3">📈</div>
+                        <p className="text-sm text-[var(--color-text-tertiary)]">股價走勢資料累積中</p>
+                        <p className="text-xs text-[var(--color-text-tertiary)] mt-1">需要更多歷史資料才能生成走勢圖</p>
+                      </div>
+                    );
+                  }
+                })()}
               </div>
 
               {/* Key Indicators */}

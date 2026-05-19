@@ -49,7 +49,12 @@
   "focus": "",
   "products": [],
   "customers": [],
-  "swot": { "strengths": [], "weaknesses": [], "opportunities": [], "threats": [] },
+  "swot": {
+    "strengths": [],
+    "weaknesses": [],
+    "opportunities": [],
+    "threats": []
+  },
   "market_position": "",
   "industry_analysis": {
     "cowos-advanced-packaging": {
@@ -57,13 +62,39 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "2026 Q1法說會再次確認其在AI晶片代工與先進封裝的絕對主導地位，CoWoS產能持續擴充且供不應求，預計2026年底月產能上看15-16萬片。",
       "focus": "2奈米與次世代封裝整合\n- 2026年N2正式量產，搭配先進封裝提供AI晶片一站式方案\n- N2P與A16訂單能見度看至2028年\n\nCPO與光電整合(COUPE)\n- 2026年開始提供矽光子封裝解決方案，滿足AI資料中心1.6T高速傳輸需求",
-      "products": ["CoWoS-S: 採用矽中介層實現高速互連，仍為當前AI加速器主流封裝技術", "CoWoS-L: NVIDIA Blackwell與2026 Q3量產之Rubin採用的關鍵技術", "SoIC: 3D IC堆疊技術，嘉義AP7廠擴大SoIC產能", "WMCM: 晶圓級多晶片模組封裝，嘉義AP7 P2廠量產"],
-      "customers": ["NVIDIA: 鎖定50-60% CoWoS產能，Rubin預計2026 Q3量產", "Broadcom: Google TPU與客製化AI晶片需求帶動", "AMD: MI350/MI400系列持續採用CoWoS-L封裝", "Apple: 2026年導入先進封裝於高階晶片"],
+      "products": [
+        "CoWoS-S: 採用矽中介層實現高速互連，仍為當前AI加速器主流封裝技術",
+        "CoWoS-L: NVIDIA Blackwell與2026 Q3量產之Rubin採用的關鍵技術",
+        "SoIC: 3D IC堆疊技術，嘉義AP7廠擴大SoIC產能",
+        "WMCM: 晶圓級多晶片模組封裝，嘉義AP7 P2廠量產"
+      ],
+      "customers": [
+        "NVIDIA: 鎖定50-60% CoWoS產能，Rubin預計2026 Q3量產",
+        "Broadcom: Google TPU與客製化AI晶片需求帶動",
+        "AMD: MI350/MI400系列持續採用CoWoS-L封裝",
+        "Apple: 2026年導入先進封裝於高階晶片"
+      ],
       "swot": {
-        "strengths": ["毛利率與獲利能力強大：2026 Q1毛利率達66.2%", "技術與規模雙壟斷：CoWoS月產能達13萬片", "AI加速器成長上修：2024-2029年AI營收CAGR 54%~56%"],
-        "weaknesses": ["2奈米初期量產壓力：預計稀釋毛利率約2%~3%", "供需缺口持續：2026年仍無法完全滿足客戶", "地緣政治與海外成本：美日德建廠成本為毛利率長期隱憂"],
-        "opportunities": ["代理式AI浪潮：帶動更強大算力需求", "NVIDIA Rubin平台：2026 Q3量產提升晶圓價值", "嘉義與南科產能收割：AP7/AP8全面量產"],
-        "threats": ["HBM供應鏈風險：Rubin高度依賴HBM4供應", "面板級封裝(FOPLP)挑戰：對CoWoS潛在分食", "能源穩定性：台灣電價調漲與綠電供應挑戰"]
+        "strengths": [
+          "毛利率與獲利能力強大：2026 Q1毛利率達66.2%",
+          "技術與規模雙壟斷：CoWoS月產能達13萬片",
+          "AI加速器成長上修：2024-2029年AI營收CAGR 54%~56%"
+        ],
+        "weaknesses": [
+          "2奈米初期量產壓力：預計稀釋毛利率約2%~3%",
+          "供需缺口持續：2026年仍無法完全滿足客戶",
+          "地緣政治與海外成本：美日德建廠成本為毛利率長期隱憂"
+        ],
+        "opportunities": [
+          "代理式AI浪潮：帶動更強大算力需求",
+          "NVIDIA Rubin平台：2026 Q3量產提升晶圓價值",
+          "嘉義與南科產能收割：AP7/AP8全面量產"
+        ],
+        "threats": [
+          "HBM供應鏈風險：Rubin高度依賴HBM4供應",
+          "面板級封裝(FOPLP)挑戰：對CoWoS潛在分食",
+          "能源穩定性：台灣電價調漲與綠電供應挑戰"
+        ]
       }
     },
     "wafer-foundry": {
@@ -71,13 +102,39 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "全球晶圓代工市佔率超過60%，先進製程（7nm以下）市佔率接近90%，為AI與HPC應用的不二選擇。",
       "focus": "2奈米(N2)量產\n- 2026年正式量產，良率爬升順利\n- N2P與A16節點訂單能見度延伸至2028年\n\n背電極(GAA)技術\n- 採用Nanosheet架構，功耗降低30%、效能提升15%",
-      "products": ["N5/N4製程：主力成熟先進製程，手機與HPC應用", "N3/N3E製程：Apple A17/M4系列採用，HPC需求持續增長", "N2製程：2026年量產，首批客戶包含Apple、NVIDIA", "A16製程：2027年量產，背面供電技術(BSPDN)"],
-      "customers": ["Apple: 永遠的第一大客戶，佔營收約25%", "NVIDIA: AI/HPC需求快速提升，H100/B100/Rubin全系列", "AMD: Zen5/MI350系列全採用TSMC先進製程", "Qualcomm: Snapdragon 8 Gen系列持續採用N4/N3"],
+      "products": [
+        "N5/N4製程：主力成熟先進製程，手機與HPC應用",
+        "N3/N3E製程：Apple A17/M4系列採用，HPC需求持續增長",
+        "N2製程：2026年量產，首批客戶包含Apple、NVIDIA",
+        "A16製程：2027年量產，背面供電技術(BSPDN)"
+      ],
+      "customers": [
+        "Apple: 永遠的第一大客戶，佔營收約25%",
+        "NVIDIA: AI/HPC需求快速提升，H100/B100/Rubin全系列",
+        "AMD: Zen5/MI350系列全採用TSMC先進製程",
+        "Qualcomm: Snapdragon 8 Gen系列持續採用N4/N3"
+      ],
       "swot": {
-        "strengths": ["製程技術領先：領先競爭對手至少2個世代", "客戶黏性極高：轉換成本與生態系壁壘", "規模經濟：資本支出規模無人能及"],
-        "weaknesses": ["資本支出龐大：2026年資本支出上看420億美元", "海外建廠成本：美國廠成本為台灣4倍以上", "ESG壓力：碳中和目標與用水量挑戰"],
-        "opportunities": ["AI推論需求起飛：Edge AI與Agent AI帶動新成長", "車用晶片：ADAS與自動駕駛需求增長", "地緣分散：美日德多廠策略降低風險"],
-        "threats": ["三星競爭：2nm GAA製程追趕", "Intel foundry：IFS積極爭取外包訂單", "地緣政治：台海風險為客戶分散下單的動機"]
+        "strengths": [
+          "製程技術領先：領先競爭對手至少2個世代",
+          "客戶黏性極高：轉換成本與生態系壁壘",
+          "規模經濟：資本支出規模無人能及"
+        ],
+        "weaknesses": [
+          "資本支出龐大：2026年資本支出上看420億美元",
+          "海外建廠成本：美國廠成本為台灣4倍以上",
+          "ESG壓力：碳中和目標與用水量挑戰"
+        ],
+        "opportunities": [
+          "AI推論需求起飛：Edge AI與Agent AI帶動新成長",
+          "車用晶片：ADAS與自動駕駛需求增長",
+          "地緣分散：美日德多廠策略降低風險"
+        ],
+        "threats": [
+          "三星競爭：2nm GAA製程追趕",
+          "Intel foundry：IFS積極爭取外包訂單",
+          "地緣政治：台海風險為客戶分散下單的動機"
+        ]
       }
     },
     "ai-server-odm": {
@@ -85,13 +142,38 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "作為AI伺服器核心晶片的唯一代工供應商，從GPU到網路晶片均依賴台積電先進製程，市佔率接近100%。",
       "focus": "AI加速器晶片代工\n- NVIDIA H100/B100/Rubin全系列GPU均由TSMC代工\n- AI伺服器CPU/GPU晶片一站式方案\n\n高速運算封裝\n- CoWoS-L為AI伺服器高頻寬需求的核心技術",
-      "products": ["H100 GPU: NVIDIA主力AI訓練晶片", "B100/B200: NVIDIA Blackwell架構AI加速器", "MI300X/MI350: AMD Instinct系列AI晶片", "Google TPU v5/v6: Broadcom代工的AI推論加速器"],
-      "customers": ["NVIDIA: AI伺服器GPU全球領導者", "AMD: MI300/MI350系列AI加速器", "Broadcom: Google客製化TPU方案", "Microsoft/Meta: 客製化AI加速器"],
+      "products": [
+        "H100 GPU: NVIDIA主力AI訓練晶片",
+        "B100/B200: NVIDIA Blackwell架構AI加速器",
+        "MI300X/MI350: AMD Instinct系列AI晶片",
+        "Google TPU v5/v6: Broadcom代工的AI推論加速器"
+      ],
+      "customers": [
+        "NVIDIA: AI伺服器GPU全球領導者",
+        "AMD: MI300/MI350系列AI加速器",
+        "Broadcom: Google客製化TPU方案",
+        "Microsoft/Meta: 客製化AI加速器"
+      ],
       "swot": {
-        "strengths": ["AI晶片代工近乎壟斷：所有AI伺服器GPU均由TSMC生產", "CoWoS封裝不可替代：AI伺服器高頻寬需求的唯一解決方案", "先進製程領先：AI晶片製程至少領先2年"],
-        "weaknesses": ["產能瓶頸：AI伺服器需求持續超過供給", "客戶集中度風險：前兩大客戶佔營收超過50%"],
-        "opportunities": ["AI Server市場CAGR 40%+：2024-2028年快速增長", "客製化AI晶片趨勢：超大規模客戶自研晶片", "Rubin/MI400新平台：帶動更高單價晶片需求"],
-        "threats": ["Intel IFS競爭：企圖切入AI伺服器代工市場", "客戶自研風險：Apple/Google可能自研更多晶片", "供電散熱限制：AI伺服器功耗挑戰帶動技術門檻更高"]
+        "strengths": [
+          "AI晶片代工近乎壟斷：所有AI伺服器GPU均由TSMC生產",
+          "CoWoS封裝不可替代：AI伺服器高頻寬需求的唯一解決方案",
+          "先進製程領先：AI晶片製程至少領先2年"
+        ],
+        "weaknesses": [
+          "產能瓶頸：AI伺服器需求持續超過供給",
+          "客戶集中度風險：前兩大客戶佔營收超過50%"
+        ],
+        "opportunities": [
+          "AI Server市場CAGR 40%+：2024-2028年快速增長",
+          "客製化AI晶片趨勢：超大規模客戶自研晶片",
+          "Rubin/MI400新平台：帶動更高單價晶片需求"
+        ],
+        "threats": [
+          "Intel IFS競爭：企圖切入AI伺服器代工市場",
+          "客戶自研風險：Apple/Google可能自研更多晶片",
+          "供電散熱限制：AI伺服器功耗挑戰帶動技術門檻更高"
+        ]
       }
     },
     "hbm": {
@@ -99,13 +181,34 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "HBM與GPU的整合封裝100%依賴台積電CoWoS技術，為HBM供應鏈的必經之路。",
       "focus": "HBM整合封裝\n- CoWoS-S/CoWoS-L為HBM與GPU整合的唯一量產方案\n- HBM4與CoWoS-L的整合為2026-2027焦點\n\n高頻寬互連\n- 支援12-Hi HBM3E堆疊與HBM4介面",
-      "products": ["CoWoS-S + HBM3E: 當前主力AI加速器封裝方案", "CoWoS-L + HBM3E/HBM4: 2026年下一代AI晶片封裝", "SoIC + HBM: 3D堆疊整合方案"],
-      "customers": ["SK hynix: HBM最大供應商，與TSMC深度合作", "Samsung: HBM封裝合作夥伴", "Micron: 逐步擴大HBM產能份額"],
+      "products": [
+        "CoWoS-S + HBM3E: 當前主力AI加速器封裝方案",
+        "CoWoS-L + HBM3E/HBM4: 2026年下一代AI晶片封裝",
+        "SoIC + HBM: 3D堆疊整合方案"
+      ],
+      "customers": [
+        "SK hynix: HBM最大供應商，與TSMC深度合作",
+        "Samsung: HBM封裝合作夥伴",
+        "Micron: 逐步擴大HBM產能份額"
+      ],
       "swot": {
-        "strengths": ["CoWoS為HBM整合唯一途徑：替代方案仍在研發中", "與三大HBM供應商穩定合作：供應鏈地位穩固", "封裝良率與產能領先：持續擴充HBM整合產能"],
-        "weaknesses": ["HBM供應依賴：SK hynix產能瓶頸影響出貨", "封裝測試週期長：HBM整合流程複雜"],
-        "opportunities": ["HBM4量產：更高的頻寬需求帶動更多CoWoS面積", "AI推理需求：帶動更多HBM配置需求"],
-        "threats": ["SK hynix垂直整合可能：未來可能自建封裝能力", "面板級封裝(FOPLP)：可能影響HBM整合方式"]
+        "strengths": [
+          "CoWoS為HBM整合唯一途徑：替代方案仍在研發中",
+          "與三大HBM供應商穩定合作：供應鏈地位穩固",
+          "封裝良率與產能領先：持續擴充HBM整合產能"
+        ],
+        "weaknesses": [
+          "HBM供應依賴：SK hynix產能瓶頸影響出貨",
+          "封裝測試週期長：HBM整合流程複雜"
+        ],
+        "opportunities": [
+          "HBM4量產：更高的頻寬需求帶動更多CoWoS面積",
+          "AI推理需求：帶動更多HBM配置需求"
+        ],
+        "threats": [
+          "SK hynix垂直整合可能：未來可能自建封裝能力",
+          "面板級封裝(FOPLP)：可能影響HBM整合方式"
+        ]
       }
     },
     "silicon-photonics": {
@@ -113,13 +216,35 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "透過COUPE平台掌握矽光子封裝核心技術，為CPO技術量產化的唯一供應商。",
       "focus": "COUPE矽光子封裝\n- 2026年提供矽光子與IC共封裝方案\n- 支援1.6T/3.2T光互連\n\nCPO(共封裝光學)\n- 將光學元件與交換晶片同封裝\n- 解決AI資料中心功耗與頻寬瓶頸",
-      "products": ["COUPE平台: 矽光子封裝解決方案", "CPO模組: 交換晶片與光學元件共封裝", "1.6T光收發器整合方案"],
-      "customers": ["NVIDIA: 1.6T光互連需求驅動", "Broadcom: 矽光子交換晶片整合", "Google/Microsoft: AI資料中心光互連需求"],
+      "products": [
+        "COUPE平台: 矽光子封裝解決方案",
+        "CPO模組: 交換晶片與光學元件共封裝",
+        "1.6T光收發器整合方案"
+      ],
+      "customers": [
+        "NVIDIA: 1.6T光互連需求驅動",
+        "Broadcom: 矽光子交換晶片整合",
+        "Google/Microsoft: AI資料中心光互連需求"
+      ],
       "swot": {
-        "strengths": ["唯一量產矽光子封裝供應商：COUPE平台領先", "與AI客戶深度綁定：NVIDIA/Broadcom均指定TSMC", "先進封裝技術延伸：從CoWoS到COUPE自然演化"],
-        "weaknesses": ["矽光子技術仍在早期：量產經驗有限", "光學元件良率挑戰：雷射光源整合為難點"],
-        "opportunities": ["CPO商機爆發：2026-2028年為高速成長期", "AI資料中心功耗問題：CPO為唯一解決方案", "1.6T/3.2T需求驅動：每升級一代需更多光學整合"],
-        "threats": ["Intel矽光子競爭：自有矽光子技術累積", "光模組廠商垂直整合：Inphi/Marvell可能自建能力"]
+        "strengths": [
+          "唯一量產矽光子封裝供應商：COUPE平台領先",
+          "與AI客戶深度綁定：NVIDIA/Broadcom均指定TSMC",
+          "先進封裝技術延伸：從CoWoS到COUPE自然演化"
+        ],
+        "weaknesses": [
+          "矽光子技術仍在早期：量產經驗有限",
+          "光學元件良率挑戰：雷射光源整合為難點"
+        ],
+        "opportunities": [
+          "CPO商機爆發：2026-2028年為高速成長期",
+          "AI資料中心功耗問題：CPO為唯一解決方案",
+          "1.6T/3.2T需求驅動：每升級一代需更多光學整合"
+        ],
+        "threats": [
+          "Intel矽光子競爭：自有矽光子技術累積",
+          "光模組廠商垂直整合：Inphi/Marvell可能自建能力"
+        ]
       }
     },
     "ai-server": {
@@ -127,13 +252,35 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "作為AI伺服器核心晶片代工與封裝的唯一供應商，台積電在AI伺服器供應鏈中佔據不可替代地位。",
       "focus": "AI GPU代工與封裝\n- NVIDIA H100/B100/Rubin全系列\n- AMD MI300/MI350系列\n\n散熱技術支援\n- TSV(矽穿孔)技術支援直接液冷方案\n- 先進封裝散熱架構優化",
-      "products": ["AI GPU晶圓代工: 支援所有AI伺服器GPU", "CoWoS封裝: AI GPU核心封裝技術", "TSV散熱方案: 支援液冷散熱架構"],
-      "customers": ["NVIDIA: AI伺服器GPU領導者", "AMD: MI系列AI加速器", "Google: TPU自研晶片", "Microsoft: Maia自研AI晶片"],
+      "products": [
+        "AI GPU晶圓代工: 支援所有AI伺服器GPU",
+        "CoWoS封裝: AI GPU核心封裝技術",
+        "TSV散熱方案: 支援液冷散熱架構"
+      ],
+      "customers": [
+        "NVIDIA: AI伺服器GPU領導者",
+        "AMD: MI系列AI加速器",
+        "Google: TPU自研晶片",
+        "Microsoft: Maia自研AI晶片"
+      ],
       "swot": {
-        "strengths": ["AI GPU代工壟斷地位：市佔率接近100%", "CoWoS封裝不可替代性：散熱需求提升技術價值", "先進製程領先：支撐AI伺服器效能提升"],
-        "weaknesses": ["產能持續緊張：AI伺服器需求超過供給", "散熱方案仍在優化：液冷整合複雜度高"],
-        "opportunities": ["液冷散熱趨勢：AI伺服器散熱需求帶動更高價值封裝", "Rubin平台升級：更高功耗帶動先進散熱封裝需求"],
-        "threats": ["散熱技術競爭：其他封裝方案可能切入", "供電瓶頸：AI伺服器供電問題影響出貨量"]
+        "strengths": [
+          "AI GPU代工壟斷地位：市佔率接近100%",
+          "CoWoS封裝不可替代性：散熱需求提升技術價值",
+          "先進製程領先：支撐AI伺服器效能提升"
+        ],
+        "weaknesses": [
+          "產能持續緊張：AI伺服器需求超過供給",
+          "散熱方案仍在優化：液冷整合複雜度高"
+        ],
+        "opportunities": [
+          "液冷散熱趨勢：AI伺服器散熱需求帶動更高價值封裝",
+          "Rubin平台升級：更高功耗帶動先進散熱封裝需求"
+        ],
+        "threats": [
+          "散熱技術競爭：其他封裝方案可能切入",
+          "供電瓶頸：AI伺服器供電問題影響出貨量"
+        ]
       }
     },
     "advanced-packaging-automation": {
@@ -141,13 +288,31 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "做為全球最大先進封裝製造商，台積電的封裝自動化需求帶動整個量測與自動化設備產業。",
       "focus": "先進封裝量測自動化\n- CoWoS/SoIC封裝後的AOI檢測\n- 3D IC堆疊自動化對位與檢測\n\n製程控制\n- 2nm製程的缺陷檢測需求倍增",
-      "products": ["CoWoS封裝量測方案", "SoIC 3D堆疊檢測流程", "N2製程缺陷檢測整合"],
-      "customers": ["KLA: 前段製程缺陷檢測設備", "Advantest: 封裝後測試設備", "Teradyne: 晶片測試方案"],
+      "products": [
+        "CoWoS封裝量測方案",
+        "SoIC 3D堆疊檢測流程",
+        "N2製程缺陷檢測整合"
+      ],
+      "customers": [
+        "KLA: 前段製程缺陷檢測設備",
+        "Advantest: 封裝後測試設備",
+        "Teradyne: 晶片測試方案"
+      ],
       "swot": {
-        "strengths": ["封裝量測需求帶動者：產能擴充驅動設備需求", "先進封裝良率要求高：帶動高階量測設備需求"],
-        "weaknesses": ["設備採購成本高：影響毛利率"],
-        "opportunities": ["SoIC量產：3D IC量測需求新增長點", "AI加速器封裝：每顆GPU都要完整量測流程"],
-        "threats": ["設備供應商議價力：KLA壟斷地位"]
+        "strengths": [
+          "封裝量測需求帶動者：產能擴充驅動設備需求",
+          "先進封裝良率要求高：帶動高階量測設備需求"
+        ],
+        "weaknesses": [
+          "設備採購成本高：影響毛利率"
+        ],
+        "opportunities": [
+          "SoIC量產：3D IC量測需求新增長點",
+          "AI加速器封裝：每顆GPU都要完整量測流程"
+        ],
+        "threats": [
+          "設備供應商議價力：KLA壟斷地位"
+        ]
       }
     },
     "glass-core-substrate": {
@@ -155,13 +320,32 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "台積電為玻璃基板應用的最大驅動力，透過CoWoS-L封裝需求帶動玻璃基板產業發展。",
       "focus": "玻璃基板應用於先進封裝\n- CoWoS-L採用玻璃基板提升I/O密度\n- 支援更大尺寸晶片封裝(>8x reticle)\n\n材料與製程研發\n- 與材料商合作開發低介電常數玻璃",
-      "products": ["CoWoS-L玻璃基板方案: 次世代大尺寸封裝", "玻璃中介層: 取代部分矽中介層方案"],
-      "customers": ["NVIDIA: Rubin/下一世代大尺寸封裝需求", "Intel: 玻璃基板技術合作", "Dai Nippon: 玻璃基板材料供應"],
+      "products": [
+        "CoWoS-L玻璃基板方案: 次世代大尺寸封裝",
+        "玻璃中介層: 取代部分矽中介層方案"
+      ],
+      "customers": [
+        "NVIDIA: Rubin/下一世代大尺寸封裝需求",
+        "Intel: 玻璃基板技術合作",
+        "Dai Nippon: 玻璃基板材料供應"
+      ],
       "swot": {
-        "strengths": ["封裝需求驅動者：CoWoS-L直接帶動玻璃基板需求", "技術領先：先於競爭對手切入玻璃封裝應用"],
-        "weaknesses": ["玻璃基板仍在研發階段：量產時間表待定", "材料供應鏈尚未成熟"],
-        "opportunities": ["大尺寸封裝趨勢：AI晶片需求推動玻璃基板", "CoWoS-L擴產：帶動玻璃中介層需求"],
-        "threats": ["Intel玻璃基板競爭：同時投入研發", "FOPLP替代方案：面板級封裝為潛在替代"]
+        "strengths": [
+          "封裝需求驅動者：CoWoS-L直接帶動玻璃基板需求",
+          "技術領先：先於競爭對手切入玻璃封裝應用"
+        ],
+        "weaknesses": [
+          "玻璃基板仍在研發階段：量產時間表待定",
+          "材料供應鏈尚未成熟"
+        ],
+        "opportunities": [
+          "大尺寸封裝趨勢：AI晶片需求推動玻璃基板",
+          "CoWoS-L擴產：帶動玻璃中介層需求"
+        ],
+        "threats": [
+          "Intel玻璃基板競爭：同時投入研發",
+          "FOPLP替代方案：面板級封裝為潛在替代"
+        ]
       }
     },
     "cxl-technology": {
@@ -169,13 +353,30 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "CXL記憶體控制器晶片與HBM封裝均依賴台積電先進製程與封裝技術。",
       "focus": "CXL控制器晶片代工\n- CXL 3.0控制器採用N5/N3製程\n- 支援記憶體池化與一致性互連\n\nHBM + CXL封裝整合\n- CoWoS-S/L整合CXL與HBM架構",
-      "products": ["CXL控制器晶片代工: 支援N5/N3製程", "CXL + HBM封裝整合方案"],
-      "customers": ["Samsung: CXL記憶體模組整合", "SK hynix: CXL記憶體方案", "Intel: CXL互連生態"],
+      "products": [
+        "CXL控制器晶片代工: 支援N5/N3製程",
+        "CXL + HBM封裝整合方案"
+      ],
+      "customers": [
+        "Samsung: CXL記憶體模組整合",
+        "SK hynix: CXL記憶體方案",
+        "Intel: CXL互連生態"
+      ],
       "swot": {
-        "strengths": ["封裝技術不可替代：CXL與HBM整合需TSMC", "先進製程支撐：CXL控制器需先進製程"],
-        "weaknesses": ["CXL生態仍在發展：市場規模尚小"],
-        "opportunities": ["CXL 3.0標準成熟：帶動更多池化記憶體需求", "AI伺服器需求：CXL為解決記憶體瓶頸的關鍵"],
-        "threats": ["替代技術風險：其他記憶體擴展方案"]
+        "strengths": [
+          "封裝技術不可替代：CXL與HBM整合需TSMC",
+          "先進製程支撐：CXL控制器需先進製程"
+        ],
+        "weaknesses": [
+          "CXL生態仍在發展：市場規模尚小"
+        ],
+        "opportunities": [
+          "CXL 3.0標準成熟：帶動更多池化記憶體需求",
+          "AI伺服器需求：CXL為解決記憶體瓶頸的關鍵"
+        ],
+        "threats": [
+          "替代技術風險：其他記憶體擴展方案"
+        ]
       }
     },
     "edge-ai": {
@@ -183,13 +384,37 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "全球超過80%的AI晶片（含Edge AI）由台積電代工，從NPU到AIoT處理器均依賴其先進製程。",
       "focus": "Edge AI晶片代工\n- 手機NPU/晶片（Apple Neural Engine, Qualcomm AI Engine）\n- IoT AI推論晶片（N3/N4製程）\n\nAIoT專用製程\n- N4/N5製程支援低功耗Edge AI晶片\n- 超低功耗製程節點開發",
-      "products": ["Apple Neural Engine: 每代iPhone/Mac搭載", "Qualcomm AI Engine: Snapdragon系列", "MediaTek APU: 天璣系列Mobile AI", "各類IoT AI推論晶片"],
-      "customers": ["Apple: A系列/M系列晶片AI引擎", "Qualcomm: Snapdragon AI處理器", "MediaTek: 天璣系列AI手機晶片", "各大IoT/AIoT晶片商"],
+      "products": [
+        "Apple Neural Engine: 每代iPhone/Mac搭載",
+        "Qualcomm AI Engine: Snapdragon系列",
+        "MediaTek APU: 天璣系列Mobile AI",
+        "各類IoT AI推論晶片"
+      ],
+      "customers": [
+        "Apple: A系列/M系列晶片AI引擎",
+        "Qualcomm: Snapdragon AI處理器",
+        "MediaTek: 天璣系列AI手機晶片",
+        "各大IoT/AIoT晶片商"
+      ],
       "swot": {
-        "strengths": ["AI晶片代工壟斷地位：從雲端到邊緣全涵蓋", "客戶生態完整：手機/IoT/AI全覆蓋", "先進製程領先：N3/N2製程為Edge AI首選"],
-        "weaknesses": ["邊緣AI單價較低：相比雲端AI晶片", "市場分散：單一客戶佔比不高"],
-        "opportunities": ["Edge AI起飛：AI PC/手帶裝置需求爆發", "Agentic AI：終端AI推論需求增長", "AIoT多元化：各產業導入邊緣AI"],
-        "threats": ["三星GAA競爭：可能切入Edge AI代工", "客戶自研晶片風險：Apple/Qualcomm可能調整代工策略"]
+        "strengths": [
+          "AI晶片代工壟斷地位：從雲端到邊緣全涵蓋",
+          "客戶生態完整：手機/IoT/AI全覆蓋",
+          "先進製程領先：N3/N2製程為Edge AI首選"
+        ],
+        "weaknesses": [
+          "邊緣AI單價較低：相比雲端AI晶片",
+          "市場分散：單一客戶佔比不高"
+        ],
+        "opportunities": [
+          "Edge AI起飛：AI PC/手帶裝置需求爆發",
+          "Agentic AI：終端AI推論需求增長",
+          "AIoT多元化：各產業導入邊緣AI"
+        ],
+        "threats": [
+          "三星GAA競爭：可能切入Edge AI代工",
+          "客戶自研晶片風險：Apple/Qualcomm可能調整代工策略"
+        ]
       }
     },
     "hpc-network-ic": {
@@ -197,13 +422,35 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "所有HPC與高速網通IC的先進製程代工幾乎全由台積電包辦，包含NVIDIA NVLink、Broadcom交換晶片等。",
       "focus": "HPC晶片代工\n- AI加速器GPU/TPU全系列\n- 高效能運算處理器\n\n高速網通IC代工\n- 800G/1.6T乙太網路交換晶片\n- NVLink/PCIe Gen6控制器",
-      "products": ["NVIDIA GPU: H100/B100/Rubin全系列", "Broadcom交換晶片: Tomahawk/Jericho系列", "Astera Labs: PCIe/CXL Retimer", "各類網通SoC"],
-      "customers": ["NVIDIA: GPU + NVLink + 網路晶片", "Broadcom: 交換晶片 + 網通IC", "Astera Labs: 高速互連晶片", "Marvell: 網通SoC"],
+      "products": [
+        "NVIDIA GPU: H100/B100/Rubin全系列",
+        "Broadcom交換晶片: Tomahawk/Jericho系列",
+        "Astera Labs: PCIe/CXL Retimer",
+        "各類網通SoC"
+      ],
+      "customers": [
+        "NVIDIA: GPU + NVLink + 網路晶片",
+        "Broadcom: 交換晶片 + 網通IC",
+        "Astera Labs: 高速互連晶片",
+        "Marvell: 網通SoC"
+      ],
       "swot": {
-        "strengths": ["HPC晶片代工壟斷：先進製程幾乎全部依賴TSMC", "網通IC代工領先：高速傳輸需要先進製程", "客戶黏性強：轉換成本極高"],
-        "weaknesses": ["資本支出龐大：持續擴產因應HPC需求"],
-        "opportunities": ["800G/1.6T升級週期：帶動更多網通IC需求", "AI推論起飛：更多HPC應用場景"],
-        "threats": ["Intel IFS競爭：企圖切入網通IC代工", "三星競爭：可能在成熟HPC製程搶單"]
+        "strengths": [
+          "HPC晶片代工壟斷：先進製程幾乎全部依賴TSMC",
+          "網通IC代工領先：高速傳輸需要先進製程",
+          "客戶黏性強：轉換成本極高"
+        ],
+        "weaknesses": [
+          "資本支出龐大：持續擴產因應HPC需求"
+        ],
+        "opportunities": [
+          "800G/1.6T升級週期：帶動更多網通IC需求",
+          "AI推論起飛：更多HPC應用場景"
+        ],
+        "threats": [
+          "Intel IFS競爭：企圖切入網通IC代工",
+          "三星競爭：可能在成熟HPC製程搶單"
+        ]
       }
     },
     "bbu": {
@@ -211,45 +458,599 @@
       "market_position": "🟢 產業龍頭",
       "market_position_detail": "台積電雖不直接生產BBU，但AI伺服器功耗提升帶動的散熱與電源管理需求直接反應在TSMC的封裝技術價值上。",
       "focus": "AI伺服器功耗管理\n- TSV散熱技術支援高功耗封裝\n- 電源管理IC(PMIC)代工\n\n先進封裝散熱方案\n- CoWoS散熱架構優化",
-      "products": ["AI GPU封裝: 支援高功耗散熱方案", "PMIC代工: 電源管理晶片"],
-      "customers": ["NVIDIA: AI伺服器GPU最大客戶", "各PMIC廠商: 電源管理晶片代工"],
+      "products": [
+        "AI GPU封裝: 支援高功耗散熱方案",
+        "PMIC代工: 電源管理晶片"
+      ],
+      "customers": [
+        "NVIDIA: AI伺服器GPU最大客戶",
+        "各PMIC廠商: 電源管理晶片代工"
+      ],
       "swot": {
-        "strengths": ["AI伺服器功耗需求帶動者：TSMC封裝為散熱關鍵", "PMIC代工需求穩定：電源管理晶片持續成長"],
-        "weaknesses": ["間接受益：BBU非TSMC直接產品"],
-        "opportunities": ["AI伺服器功耗倍增：帶動更多散熱與電源管理需求"],
-        "threats": ["BBU技術演進：固態電池可能改變BBU架構"]
+        "strengths": [
+          "AI伺服器功耗需求帶動者：TSMC封裝為散熱關鍵",
+          "PMIC代工需求穩定：電源管理晶片持續成長"
+        ],
+        "weaknesses": [
+          "間接受益：BBU非TSMC直接產品"
+        ],
+        "opportunities": [
+          "AI伺服器功耗倍增：帶動更多散熱與電源管理需求"
+        ],
+        "threats": [
+          "BBU技術演進：固態電池可能改變BBU架構"
+        ]
       }
     }
   },
   "trends": {
     "monthly_revenue": [
-      {"month": "11405", "revenue": 265430000, "mom": 2.10, "yoy": 8.50},
-      {"month": "11406", "revenue": 273050000, "mom": 2.87, "yoy": 9.20},
-      {"month": "11407", "revenue": 280120000, "mom": 2.59, "yoy": 10.80},
-      {"month": "11408", "revenue": 289200000, "mom": 3.24, "yoy": 11.50},
-      {"month": "11409", "revenue": 295600000, "mom": 2.21, "yoy": 12.30},
-      {"month": "11410", "revenue": 305100000, "mom": 3.22, "yoy": 13.80},
-      {"month": "11411", "revenue": 315800000, "mom": 3.51, "yoy": 14.20},
-      {"month": "11412", "revenue": 340200000, "mom": 7.72, "yoy": 15.60},
-      {"month": "11501", "revenue": 350400000, "mom": 3.00, "yoy": 14.90},
-      {"month": "11502", "revenue": 370100000, "mom": 5.62, "yoy": 15.80},
-      {"month": "11503", "revenue": 395200000, "mom": 6.78, "yoy": 16.50},
-      {"month": "11504", "revenue": 410725118, "mom": 3.93, "yoy": 17.50}
+      {
+        "month": "11405",
+        "revenue": 265430000,
+        "mom": 2.1,
+        "yoy": 8.5
+      },
+      {
+        "month": "11406",
+        "revenue": 273050000,
+        "mom": 2.87,
+        "yoy": 9.2
+      },
+      {
+        "month": "11407",
+        "revenue": 280120000,
+        "mom": 2.59,
+        "yoy": 10.8
+      },
+      {
+        "month": "11408",
+        "revenue": 289200000,
+        "mom": 3.24,
+        "yoy": 11.5
+      },
+      {
+        "month": "11409",
+        "revenue": 295600000,
+        "mom": 2.21,
+        "yoy": 12.3
+      },
+      {
+        "month": "11410",
+        "revenue": 305100000,
+        "mom": 3.22,
+        "yoy": 13.8
+      },
+      {
+        "month": "11411",
+        "revenue": 315800000,
+        "mom": 3.51,
+        "yoy": 14.2
+      },
+      {
+        "month": "11412",
+        "revenue": 340200000,
+        "mom": 7.72,
+        "yoy": 15.6
+      },
+      {
+        "month": "11501",
+        "revenue": 350400000,
+        "mom": 3.0,
+        "yoy": 14.9
+      },
+      {
+        "month": "11502",
+        "revenue": 370100000,
+        "mom": 5.62,
+        "yoy": 15.8
+      },
+      {
+        "month": "11503",
+        "revenue": 395200000,
+        "mom": 6.78,
+        "yoy": 16.5
+      },
+      {
+        "month": "11504",
+        "revenue": 410725118,
+        "mom": 3.93,
+        "yoy": 17.5
+      }
     ],
     "quarterly_income": [
-      {"quarter": "114Q1", "revenue": 750000000, "grossProfit": 485000000, "netIncome": 370000000, "eps": 14.27},
-      {"quarter": "114Q2", "revenue": 825000000, "grossProfit": 545000000, "netIncome": 420000000, "eps": 16.18},
-      {"quarter": "114Q3", "revenue": 930000000, "grossProfit": 623000000, "netIncome": 486000000, "eps": 18.71},
-      {"quarter": "114Q4", "revenue": 1050000000, "grossProfit": 700000000, "netIncome": 545000000, "eps": 21.00},
-      {"quarter": "115Q1", "revenue": 1134103440, "grossProfit": 751295421, "netIncome": 572801304, "eps": 22.08}
+      {
+        "quarter": "114Q1",
+        "revenue": 750000000,
+        "grossProfit": 485000000,
+        "netIncome": 370000000,
+        "eps": 14.27
+      },
+      {
+        "quarter": "114Q2",
+        "revenue": 825000000,
+        "grossProfit": 545000000,
+        "netIncome": 420000000,
+        "eps": 16.18
+      },
+      {
+        "quarter": "114Q3",
+        "revenue": 930000000,
+        "grossProfit": 623000000,
+        "netIncome": 486000000,
+        "eps": 18.71
+      },
+      {
+        "quarter": "114Q4",
+        "revenue": 1050000000,
+        "grossProfit": 700000000,
+        "netIncome": 545000000,
+        "eps": 21.0
+      },
+      {
+        "quarter": "115Q1",
+        "revenue": 1134103440,
+        "grossProfit": 751295421,
+        "netIncome": 572801304,
+        "eps": 22.08
+      }
     ],
     "monthly_price": [
-      {"month": "11411", "high": 1150, "low": 980, "avg": 1065, "volume": 650000000},
-      {"month": "11412", "high": 1250, "low": 1050, "avg": 1140, "volume": 620000000},
-      {"month": "11501", "high": 1380, "low": 1180, "avg": 1290, "volume": 580000000},
-      {"month": "11502", "high": 1550, "low": 1320, "avg": 1430, "volume": 720000000},
-      {"month": "11503", "high": 1800, "low": 1550, "avg": 1680, "volume": 800000000},
-      {"month": "11504", "high": 2225, "low": 1805, "avg": 2071.76, "volume": 869187652}
+      {
+        "month": "2026/03",
+        "high": 1995.0,
+        "low": 1760.0,
+        "avg": 1858.64,
+        "volume": 1025127000
+      },
+      {
+        "month": "2026/04",
+        "high": 2330.0,
+        "low": 1805.0,
+        "avg": 2042.75,
+        "volume": 869187652
+      },
+      {
+        "month": "2026/05",
+        "high": 2345.0,
+        "low": 2195.0,
+        "avg": 2255.42,
+        "volume": 479445240
+      }
+    ],
+    "daily_prices": [
+      {
+        "date": "2026-03-02",
+        "open": 1940.0,
+        "high": 1995.0,
+        "low": 1940.0,
+        "close": 1975.0,
+        "volume": 57404594
+      },
+      {
+        "date": "2026-03-03",
+        "open": 1970.0,
+        "high": 1980.0,
+        "low": 1935.0,
+        "close": 1935.0,
+        "volume": 54577298
+      },
+      {
+        "date": "2026-03-04",
+        "open": 1895.0,
+        "high": 1910.0,
+        "low": 1865.0,
+        "close": 1865.0,
+        "volume": 84647010
+      },
+      {
+        "date": "2026-03-05",
+        "open": 1940.0,
+        "high": 1960.0,
+        "low": 1895.0,
+        "close": 1900.0,
+        "volume": 56489914
+      },
+      {
+        "date": "2026-03-06",
+        "open": 1880.0,
+        "high": 1900.0,
+        "low": 1880.0,
+        "close": 1890.0,
+        "volume": 34307388
+      },
+      {
+        "date": "2026-03-09",
+        "open": 1775.0,
+        "high": 1810.0,
+        "low": 1770.0,
+        "close": 1810.0,
+        "volume": 94441296
+      },
+      {
+        "date": "2026-03-10",
+        "open": 1870.0,
+        "high": 1890.0,
+        "low": 1830.0,
+        "close": 1850.0,
+        "volume": 46926862
+      },
+      {
+        "date": "2026-03-11",
+        "open": 1885.0,
+        "high": 1950.0,
+        "low": 1875.0,
+        "close": 1940.0,
+        "volume": 39238328
+      },
+      {
+        "date": "2026-03-12",
+        "open": 1900.0,
+        "high": 1915.0,
+        "low": 1885.0,
+        "close": 1885.0,
+        "volume": 40662382
+      },
+      {
+        "date": "2026-03-13",
+        "open": 1840.0,
+        "high": 1885.0,
+        "low": 1840.0,
+        "close": 1865.0,
+        "volume": 36317450
+      },
+      {
+        "date": "2026-03-16",
+        "open": 1875.0,
+        "high": 1880.0,
+        "low": 1845.0,
+        "close": 1845.0,
+        "volume": 35401289
+      },
+      {
+        "date": "2026-03-17",
+        "open": 1875.0,
+        "high": 1880.0,
+        "low": 1860.0,
+        "close": 1870.0,
+        "volume": 26754183
+      },
+      {
+        "date": "2026-03-18",
+        "open": 1900.0,
+        "high": 1910.0,
+        "low": 1890.0,
+        "close": 1905.0,
+        "volume": 25694925
+      },
+      {
+        "date": "2026-03-19",
+        "open": 1875.0,
+        "high": 1880.0,
+        "low": 1850.0,
+        "close": 1850.0,
+        "volume": 38750629
+      },
+      {
+        "date": "2026-03-20",
+        "open": 1860.0,
+        "high": 1870.0,
+        "low": 1840.0,
+        "close": 1840.0,
+        "volume": 53705722
+      },
+      {
+        "date": "2026-03-23",
+        "open": 1790.0,
+        "high": 1815.0,
+        "low": 1785.0,
+        "close": 1810.0,
+        "volume": 41950478
+      },
+      {
+        "date": "2026-03-24",
+        "open": 1850.0,
+        "high": 1850.0,
+        "low": 1800.0,
+        "close": 1810.0,
+        "volume": 30569936
+      },
+      {
+        "date": "2026-03-25",
+        "open": 1865.0,
+        "high": 1875.0,
+        "low": 1845.0,
+        "close": 1845.0,
+        "volume": 46664345
+      },
+      {
+        "date": "2026-03-26",
+        "open": 1850.0,
+        "high": 1865.0,
+        "low": 1840.0,
+        "close": 1840.0,
+        "volume": 24634887
+      },
+      {
+        "date": "2026-03-27",
+        "open": 1805.0,
+        "high": 1825.0,
+        "low": 1800.0,
+        "close": 1820.0,
+        "volume": 33883223
+      },
+      {
+        "date": "2026-03-30",
+        "open": 1780.0,
+        "high": 1800.0,
+        "low": 1780.0,
+        "close": 1780.0,
+        "volume": 46272405
+      },
+      {
+        "date": "2026-03-31",
+        "open": 1775.0,
+        "high": 1790.0,
+        "low": 1760.0,
+        "close": 1760.0,
+        "volume": 75832456
+      },
+      {
+        "date": "2026-04-01",
+        "open": 1840.0,
+        "high": 1855.0,
+        "low": 1830.0,
+        "close": 1855.0,
+        "volume": 46457423
+      },
+      {
+        "date": "2026-04-02",
+        "open": 1865.0,
+        "high": 1865.0,
+        "low": 1805.0,
+        "close": 1810.0,
+        "volume": 29332490
+      },
+      {
+        "date": "2026-04-07",
+        "open": 1850.0,
+        "high": 1860.0,
+        "low": 1835.0,
+        "close": 1860.0,
+        "volume": 19895445
+      },
+      {
+        "date": "2026-04-08",
+        "open": 1935.0,
+        "high": 1950.0,
+        "low": 1925.0,
+        "close": 1950.0,
+        "volume": 53813263
+      },
+      {
+        "date": "2026-04-09",
+        "open": 1945.0,
+        "high": 1955.0,
+        "low": 1930.0,
+        "close": 1955.0,
+        "volume": 36054784
+      },
+      {
+        "date": "2026-04-10",
+        "open": 1975.0,
+        "high": 2000.0,
+        "low": 1970.0,
+        "close": 2000.0,
+        "volume": 39096242
+      },
+      {
+        "date": "2026-04-13",
+        "open": 1985.0,
+        "high": 1995.0,
+        "low": 1975.0,
+        "close": 1990.0,
+        "volume": 31882568
+      },
+      {
+        "date": "2026-04-14",
+        "open": 2015.0,
+        "high": 2055.0,
+        "low": 2010.0,
+        "close": 2055.0,
+        "volume": 46188401
+      },
+      {
+        "date": "2026-04-15",
+        "open": 2065.0,
+        "high": 2100.0,
+        "low": 2060.0,
+        "close": 2080.0,
+        "volume": 46824833
+      },
+      {
+        "date": "2026-04-16",
+        "open": 2080.0,
+        "high": 2090.0,
+        "low": 2055.0,
+        "close": 2085.0,
+        "volume": 35974352
+      },
+      {
+        "date": "2026-04-17",
+        "open": 2055.0,
+        "high": 2060.0,
+        "low": 2030.0,
+        "close": 2030.0,
+        "volume": 44433257
+      },
+      {
+        "date": "2026-04-20",
+        "open": 2030.0,
+        "high": 2055.0,
+        "low": 2025.0,
+        "close": 2025.0,
+        "volume": 30566172
+      },
+      {
+        "date": "2026-04-21",
+        "open": 2050.0,
+        "high": 2075.0,
+        "low": 2045.0,
+        "close": 2050.0,
+        "volume": 28055761
+      },
+      {
+        "date": "2026-04-22",
+        "open": 2045.0,
+        "high": 2070.0,
+        "low": 2040.0,
+        "close": 2050.0,
+        "volume": 27457065
+      },
+      {
+        "date": "2026-04-23",
+        "open": 2090.0,
+        "high": 2135.0,
+        "low": 2055.0,
+        "close": 2080.0,
+        "volume": 54918117
+      },
+      {
+        "date": "2026-04-24",
+        "open": 2110.0,
+        "high": 2190.0,
+        "low": 2105.0,
+        "close": 2185.0,
+        "volume": 52391785
+      },
+      {
+        "date": "2026-04-27",
+        "open": 2280.0,
+        "high": 2330.0,
+        "low": 2265.0,
+        "close": 2265.0,
+        "volume": 79778277
+      },
+      {
+        "date": "2026-04-28",
+        "open": 2245.0,
+        "high": 2280.0,
+        "low": 2215.0,
+        "close": 2215.0,
+        "volume": 57336004
+      },
+      {
+        "date": "2026-04-29",
+        "open": 2175.0,
+        "high": 2210.0,
+        "low": 2165.0,
+        "close": 2180.0,
+        "volume": 49147402
+      },
+      {
+        "date": "2026-04-30",
+        "open": 2205.0,
+        "high": 2215.0,
+        "low": 2135.0,
+        "close": 2135.0,
+        "volume": 59584011
+      },
+      {
+        "date": "2026-05-04",
+        "open": 2200.0,
+        "high": 2285.0,
+        "low": 2195.0,
+        "close": 2275.0,
+        "volume": 44458732
+      },
+      {
+        "date": "2026-05-05",
+        "open": 2250.0,
+        "high": 2270.0,
+        "low": 2240.0,
+        "close": 2250.0,
+        "volume": 26644983
+      },
+      {
+        "date": "2026-05-06",
+        "open": 2250.0,
+        "high": 2285.0,
+        "low": 2240.0,
+        "close": 2250.0,
+        "volume": 38026963
+      },
+      {
+        "date": "2026-05-07",
+        "open": 2335.0,
+        "high": 2345.0,
+        "low": 2310.0,
+        "close": 2310.0,
+        "volume": 41966283
+      },
+      {
+        "date": "2026-05-08",
+        "open": 2300.0,
+        "high": 2310.0,
+        "low": 2265.0,
+        "close": 2290.0,
+        "volume": 31730352
+      },
+      {
+        "date": "2026-05-11",
+        "open": 2265.0,
+        "high": 2275.0,
+        "low": 2235.0,
+        "close": 2235.0,
+        "volume": 46172626
+      },
+      {
+        "date": "2026-05-12",
+        "open": 2235.0,
+        "high": 2280.0,
+        "low": 2210.0,
+        "close": 2255.0,
+        "volume": 54239538
+      },
+      {
+        "date": "2026-05-13",
+        "open": 2205.0,
+        "high": 2240.0,
+        "low": 2205.0,
+        "close": 2220.0,
+        "volume": 43727683
+      },
+      {
+        "date": "2026-05-14",
+        "open": 2250.0,
+        "high": 2270.0,
+        "low": 2230.0,
+        "close": 2270.0,
+        "volume": 39564699
+      },
+      {
+        "date": "2026-05-15",
+        "open": 2310.0,
+        "high": 2325.0,
+        "low": 2250.0,
+        "close": 2265.0,
+        "volume": 34360513
+      },
+      {
+        "date": "2026-05-18",
+        "open": 2225.0,
+        "high": 2260.0,
+        "low": 2215.0,
+        "close": 2240.0,
+        "volume": 32966937
+      },
+      {
+        "date": "2026-05-19",
+        "open": 2220.0,
+        "high": 2230.0,
+        "low": 2205.0,
+        "close": 2205.0,
+        "volume": 45585931
+      }
     ]
   },
   "updatedAt": "2026-05-19"
