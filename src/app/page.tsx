@@ -551,10 +551,11 @@ function FinancialOverviewCards({ data }: { data: FinancialData }) {
   const netMargin = rev > 0 && ni > 0 ? ((ni / rev) * 100).toFixed(1) + "%" : "-";
 
   const marketCap = data.marketCap || "-";
+  const marketCapHasUnit = marketCap.includes("兆") || marketCap.includes("億");
 
   const cards: { label: string; value: string; sub?: string; icon: string; color: string }[] = [
     { label: "季營收", value: formatMoneyNTD(data.income.revenue), sub: yoyNum !== 0 ? `YoY ${yoyNum > 0 ? "▲" : "▼"} ${Math.abs(yoyNum).toFixed(1)}%` : undefined, icon: "💰", color: "#818cf8" },
-    { label: "市值", value: marketCap === "-" ? "-" : marketCap, sub: marketCap !== "-" ? "億元" : undefined, icon: "🏦", color: "#60a5fa" },
+    { label: "市值", value: marketCap === "-" ? "-" : marketCap, sub: !marketCapHasUnit && marketCap !== "-" ? "億元" : undefined, icon: "🏦", color: "#60a5fa" },
     { label: "本益比", value: pe, sub: pe !== "-" ? "倍" : undefined, icon: "📊", color: "#f472b6" },
     { label: "股價淨值比", value: pb, sub: pb !== "-" ? "倍" : undefined, icon: "📈", color: "#34d399" },
     { label: "毛利率", value: grossMargin, icon: "🎯", color: "#f472b6" },
