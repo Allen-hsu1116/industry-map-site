@@ -1301,8 +1301,8 @@ function CompanyFullPageDetail({
           {/* ─── 技術分析 Tab ─── */}
           {detailTab === "tech" && (
             <div className="space-y-6" ref={techTabRef}>
-              {/* TradingView Symbol Overview Widget */}
-              <div className="bg-[var(--color-surface)] rounded-2xl p-4 border border-[var(--color-border)]">
+              {/* Price Chart */}
+              <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-sm font-bold text-white">📈 技術走勢圖</h4>
                   <a
@@ -1311,13 +1311,26 @@ function CompanyFullPageDetail({
                     rel="noopener noreferrer"
                     className="text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 border border-blue-500/30 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all"
                   >
-                    在 TradingView 開啟 ↗
+                    在 TradingView 開啟完整圖表 ↗
                   </a>
                 </div>
+                {trends?.monthly_price && trends.monthly_price.length > 1 ? (
+                  <PriceAreaChart data={trends.monthly_price} />
+                ) : (
+                  <div className="text-center py-12 rounded-xl bg-white/[0.02] border border-white/[0.04]">
+                    <div className="text-4xl mb-3">📈</div>
+                    <p className="text-sm text-[var(--color-text-tertiary)]">股價走勢資料累積中</p>
+                    <p className="text-xs text-[var(--color-text-tertiary)] mt-1">需要更多歷史資料才能生成走勢圖</p>
+                  </div>
+                )}
+              </div>
+
+              {/* TradingView Symbol Overview Widget — fallback for regions where embed works */}
+              <div className="bg-[var(--color-surface)] rounded-2xl p-4 border border-[var(--color-border)]">
                 <div className="tradingview-widget-container" style={{ height: "500px", width: "100%" }}>
                   <div className="tradingview-widget-container__widget" style={{ height: "100%", width: "100%" }}></div>
                 </div>
-                <p className="text-xs text-[var(--color-text-tertiary)] mt-3">💡 在圖表上可切換日線/週線/月線，查看成交量與均線。如需完整 K 線圖與技術指標，請點擊上方連結。</p>
+                <p className="text-xs text-[var(--color-text-tertiary)] mt-2 text-center">💡 如上方圖表未顯示，請點擊「在 TradingView 開啟完整圖表」查看互動式K線圖</p>
               </div>
 
               {/* Key Indicators */}
