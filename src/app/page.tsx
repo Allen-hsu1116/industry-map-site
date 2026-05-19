@@ -121,23 +121,23 @@ function mapGroupNames(groups: Group[]): Group[] {
 /* ─── Number formatting helpers (Chinese units) ─── */
 function formatMoneyNTD(thousands: string): string {
   // Input is in 千元 (thousands of NTD)
-  // 1 億 = 100,000 千元, 1 兆 = 10,000,000 千元
+  // 1 億 = 100,000 千元, 1 兆 = 1,000,000,000 千元 (10^9)
   const num = parseFloat(thousands);
   if (isNaN(num) || num === 0) return "-";
-  if (num >= 10000000) return `${(num / 10000000).toFixed(2).replace(/\.?0+$/, "")}兆`;
+  if (num >= 1e9) return `${(num / 1e9).toFixed(2).replace(/\.?0+$/, "")}兆`;
   if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
   if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 1000) return `${(num / 1000).toFixed(0)}億`;
+  if (num >= 1000) return `${(num / 1000).toFixed(1).replace(/\.0$/, "")}億`;
   return `${num.toFixed(0)}萬`;
 }
 
 function formatMoneyNTDNum(num: number): string {
   // Input raw number in 千元
   if (num === 0) return "-";
-  if (num >= 10000000) return `${(num / 10000000).toFixed(2).replace(/\.?0+$/, "")}兆`;
+  if (num >= 1e9) return `${(num / 1e9).toFixed(2).replace(/\.?0+$/, "")}兆`;
   if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
   if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 1000) return `${(num / 1000).toFixed(0)}億`;
+  if (num >= 1000) return `${(num / 1000).toFixed(1).replace(/\.0$/, "")}億`;
   return `${num.toFixed(0)}萬`;
 }
 
