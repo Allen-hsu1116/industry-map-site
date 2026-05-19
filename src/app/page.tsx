@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, Legend } from "recharts";
 import industriesData from "../../public/data/industries.json";
 import companiesData from "../../public/data/companies.json";
 
@@ -192,7 +193,191 @@ function formatTrendQuarter(quarter: string): string {
 type TabId = "focus" | "topics" | "map" | "companies";
 type CompanyDetailTab = "overview" | "financials" | "supply_chain";
 
-/* ─── Sparkline SVG Component ─── */
+/* ─── Recharts Helpers ─── */
+const CHART_COLORS = {
+  revenue: "#818cf8",
+  grossProfit: "#34d399",
+  netIncome: "#fbbf24",
+  grossMargin: "#f472b6",
+  price: "#60a5fa",
+  priceHigh: "#93c5fd",
+  priceLow: "#60a5fa",
+  mom: "#f97316",
+  yoy: "#34d399",
+};
+
+const rechartsGridStyle = { stroke: "rgba(255,255,255,0.06)", strokeDasharray: "3,3" };
+const rechartsAxisStyle = { fill: "#94a3b8", fontSize: 11 };
+
+function formatRev(num: number): string {
+  if (num >= 100000000) return `${(num / 100000000).toFixed(0)}億`;
+  if (num >= 10000) return `${(num / 10000).toFixed(0)}萬`;
+  return num.toLocaleString();
+}
+function formatRevShort(num: number): string {
+  if (num >= 100000000) return `${(num / 100000000).toFixed(1)}億`;
+  if (num >= 10000) return `${(num / 10000).toFixed(0)}萬`;
+  return num.toLocaleString();
+}
+
+function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
+  if (!data || data.length === 0) return null;
+  if (data.length === 1) {
+    return (
+      <div className="bg-white/[0.02] rounded-xl p-4">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-xs text-[var(--color-text-tertiary)]">月營收趨勢</span>
+          <span className="text-lg font-bold text-white">{formatRevShort(data[0].revenue)}</span>
+        </div>
+        <div className="text-xs text-[var(--color-text-tertiary)] text-center py-4">📈 資料累積中，敬請期待完整走勢圖</div>
+      </div>
+    );
+  }
+  const chartData = data.map(d => ({
+    month: formatTrendMonth(d.month),
+    revenue: d.revenue / 100000000,
+    mom: d.mom,
+    yoy: d.yoy,
+  }));
+  return (
+    <div className="bg-white/[0.02] rounded-xl p-4">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-xs text-[var(--color-text-tertiary)]">月營收趨勢</span>
+        <span className="text-sm font-bold text-white">{formatRevShort(data[data.length - 1].revenue)} <span className="text-xs text-[var(--color-text-tertiary)]">億</span></span>
+      </div>
+      <ResponsiveContainer width="100%" height={220}>
+        <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+          <defs>
+            <linearGradient id="revGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={CHART_COLORS.revenue} stopOpacity={0.3} />
+              <stop offset="95%" stopColor={CHART_COLORS.revenue} stopOpacity={0.02} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
+          <XAxis dataKey="month" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+          <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+          <Tooltip
+            contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+            labelStyle={{ color: "#94a3b8" }}
+            formatter={(value: unknown, name: unknown) => [`${Number(value).toFixed(1)} 億`, "營收"]}
+          />
+          <Area type="monotone" dataKey="revenue" stroke={CHART_COLORS.revenue} strokeWidth={2} fill="url(#revGrad)" dot={{ r: 3, fill: CHART_COLORS.revenue, stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+function QuarterlyIncomeChart({ data }: { data: TrendQuarterlyIncome[] }) {
+  if (!data || data.length === 0) return null;
+  if (data.length === 1) {
+    const d = data[0];
+    const gm = d.revenue > 0 ? ((d.grossProfit / d.revenue) * 100).toFixed(1) : "-";
+    return (
+      <div className="bg-white/[0.02] rounded-xl p-4">
+        <div className="text-xs text-[var(--color-text-tertiary)] mb-2">季度損益趨勢</div>
+        <div className="grid grid-cols-3 gap-3">
+          <div><span className="text-xs text-[var(--color-text-tertiary)]">營收</span><div className="text-sm font-bold text-white">{formatRevShort(d.revenue)}</div></div>
+          <div><span className="text-xs text-[var(--color-text-tertiary)]">毛利</span><div className="text-sm font-bold text-white">{formatRevShort(d.grossProfit)}</div></div>
+          <div><span className="text-xs text-[var(--color-text-tertiary)]">淨利</span><div className="text-sm font-bold text-white">{formatRevShort(d.netIncome)}</div></div>
+        </div>
+        <div className="mt-2 text-xs text-[var(--color-text-tertiary)]">毛利率 {gm}%</div>
+        <div className="text-xs text-[var(--color-text-tertiary)] text-center py-2 mt-2">📈 資料累積中</div>
+      </div>
+    );
+  }
+  const chartData = data.map(d => ({
+    quarter: d.quarter,
+    revenue: d.revenue / 100000000,
+    grossProfit: d.grossProfit / 100000000,
+    netIncome: d.netIncome / 100000000,
+    grossMargin: d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0,
+  }));
+  return (
+    <div className="bg-white/[0.02] rounded-xl p-4">
+      <div className="text-xs text-[var(--color-text-tertiary)] mb-2">季度損益趨勢</div>
+      <ResponsiveContainer width="100%" height={230}>
+        <BarChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+          <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
+          <XAxis dataKey="quarter" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+          <YAxis yAxisId="left" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+          <YAxis yAxisId="right" orientation="right" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}%`} domain={[0, 100]} />
+          <Tooltip
+            contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+            labelStyle={{ color: "#94a3b8" }}
+            formatter={(value: unknown, name: unknown) => {
+              const v = Number(value);
+              const n = String(name);
+              if (n === "grossMargin") return [`${v}%`, "毛利率"];
+              const label = n === "revenue" ? "營收" : n === "grossProfit" ? "毛利" : "淨利";
+              return [`${v.toFixed(1)} 億`, label];
+            }}
+          />
+          <Bar yAxisId="left" dataKey="revenue" fill={CHART_COLORS.revenue} radius={[2, 2, 0, 0]} name="revenue" />
+          <Bar yAxisId="left" dataKey="grossProfit" fill={CHART_COLORS.grossProfit} radius={[2, 2, 0, 0]} name="grossProfit" />
+          <Bar yAxisId="left" dataKey="netIncome" fill={CHART_COLORS.netIncome} radius={[2, 2, 0, 0]} name="netIncome" />
+          <Line yAxisId="right" type="monotone" dataKey="grossMargin" stroke={CHART_COLORS.grossMargin} strokeWidth={2} dot={{ r: 3, fill: CHART_COLORS.grossMargin }} name="grossMargin" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+function PriceAreaChart({ data }: { data: TrendMonthlyPrice[] }) {
+  if (!data || data.length === 0) return null;
+  if (data.length === 1) {
+    return (
+      <div className="bg-white/[0.02] rounded-xl p-4">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-xs text-[var(--color-text-tertiary)]">月均價走勢</span>
+          <span className="text-lg font-bold text-white">{formatPrice(data[0].avg)} <span className="text-xs text-[var(--color-text-tertiary)]">元</span></span>
+        </div>
+        <div className="text-xs text-[var(--color-text-tertiary)] text-center py-4">📈 資料累積中</div>
+      </div>
+    );
+  }
+  const chartData = data.map(d => ({
+    month: formatTrendMonth(d.month),
+    avg: d.avg,
+    high: d.high,
+    low: d.low,
+  }));
+  return (
+    <div className="bg-white/[0.02] rounded-xl p-4">
+      <div className="flex items-center justify-between mb-2">
+        <span className="text-xs text-[var(--color-text-tertiary)]">月均價走勢</span>
+        <span className="text-sm font-bold text-white">{formatPrice(data[data.length - 1].avg)} <span className="text-xs text-[var(--color-text-tertiary)]">元</span></span>
+      </div>
+      <ResponsiveContainer width="100%" height={220}>
+        <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+          <defs>
+            <linearGradient id="priceGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor={CHART_COLORS.price} stopOpacity={0.3} />
+              <stop offset="95%" stopColor={CHART_COLORS.price} stopOpacity={0.02} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
+          <XAxis dataKey="month" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+          <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+          <Tooltip
+            contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+            labelStyle={{ color: "#94a3b8" }}
+            formatter={(value: unknown, name: unknown) => {
+              const v = Number(value);
+              const n = String(name);
+              if (n === "avg") return [`${formatPrice(v)} 元`, "均價"];
+              if (n === "high") return [`${formatPrice(v)} 元`, "最高"];
+              return [`${formatPrice(v)} 元`, "最低"];
+            }}
+          />
+          <Area type="monotone" dataKey="avg" stroke={CHART_COLORS.price} strokeWidth={2} fill="url(#priceGrad)" dot={{ r: 3, fill: CHART_COLORS.price, stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} />
+        </AreaChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+/* ─── Mini Sparkline (kept for small inline usage in overview) ─── */
 function SparkLine({
   data,
   width = 120,
@@ -312,6 +497,36 @@ function TrendSparkLine({ data, color, label, formattedValue }: { data: number[]
   );
 }
 
+/* ─── AI Analysis Generator ─── */
+function generateIndustryAnalysis(
+  roleName: string,
+  topicName: string,
+  relevance: string,
+  role: string,
+  finData: FinancialData | null
+): string {
+  const relInfo = getRelevanceInfo(relevance);
+  const cat = getCategory(topicName);
+  const topicShort = topicName.includes("｜") ? topicName.split("｜")[1] || topicName : topicName;
+
+  if (finData) {
+    const pe = finData.valuation.pe;
+    const yoy = finData.monthly_revenue.yoy;
+    const yoyNum = parseFloat(yoy) || 0;
+    const growthDesc = yoyNum > 10 ? "成長動能持續" : yoyNum > 0 ? "營收穩健成長" : yoyNum > -10 ? "面臨成長壓力" : "營收明顯下滑";
+    const name = finData.name;
+
+    if (relInfo.label === "核心") {
+      return `作為${topicShort}的${role || "關鍵角色"}，${name}在${cat}領域佔據關鍵地位。本益比 ${pe || "—"} 倍，月營收年增 ${yoy}%，${growthDesc}。憑藉其產業領導地位與技術優勢，持續引領市場發展方向。`;
+    } else if (relInfo.label === "成長") {
+      return `在${topicShort}領域中，${name}具備顯著成長潛力。本益比 ${pe || "—"} 倍，月營收年增 ${yoy}%，${growthDesc}。隨產業需求擴張，有望進一步提升市佔率。`;
+    } else {
+      return `${name}在${topicShort}具備利基市場定位，本益比 ${pe || "—"} 倍，月營收年增 ${yoy}%。雖非核心角色，但在特定環節提供不可替代的專業價值。`;
+    }
+  }
+  return `${roleName || "參與者"}在${topicShort}領域扮演${relInfo.label}角色，產業分析準備中，敬請期待。`;
+}
+
 function CompanyFinancialPanel({ data }: { data: FinancialData }) {
   const trends = data.trends;
   const grossMargin = (() => {
@@ -333,24 +548,9 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
     return "-";
   })();
 
-  // Extract trend data for sparklines
-  const revenueTrendData: number[] = trends?.monthly_revenue?.map(d => d.revenue) || [];
-  const momTrendData: number[] = trends?.monthly_revenue?.map(d => d.mom) || [];
-  const yoyTrendData: number[] = trends?.monthly_revenue?.map(d => d.yoy) || [];
-  const epsTrendData: number[] = trends?.quarterly_income?.map(d => d.eps) || [];
-  const gpTrendData: number[] = trends?.quarterly_income?.map(d => {
-    const rev = d.revenue;
-    return rev > 0 ? (d.grossProfit / rev) * 100 : 0;
-  }) || [];
-  const niTrendData: number[] = trends?.quarterly_income?.map(d => {
-    const rev = d.revenue;
-    return rev > 0 ? (d.netIncome / rev) * 100 : 0;
-  }) || [];
-  const priceAvgData: number[] = trends?.monthly_price?.map(d => d.avg) || [];
-
   return (
     <div className="space-y-6">
-      {/* Valuation + Price Sparkline */}
+      {/* Valuation */}
       <div>
         <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 估值指標</h4>
         <div className="grid grid-cols-2 gap-3">
@@ -361,17 +561,12 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
         </div>
       </div>
 
-      {/* Price with sparkline */}
+      {/* Price Trend Chart */}
       <div>
         <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💹 股價資訊</h4>
-        {/* Price sparkline */}
-        {priceAvgData.length > 0 && (
-          <div className="bg-white/[0.02] rounded-xl p-5 mb-3">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs text-[var(--color-text-tertiary)]">月均價趨勢</span>
-              <span className="text-lg font-bold text-white">{formatPrice(data.price.close)} <span className="text-xs text-[var(--color-text-tertiary)]">元</span></span>
-            </div>
-            <SparkLine data={priceAvgData} width={320} height={48} color="#818cf8" gradientFrom="#818cf8" showDots={priceAvgData.length <= 12} />
+        {trends?.monthly_price && trends.monthly_price.length > 0 && (
+          <div className="mb-3">
+            <PriceAreaChart data={trends.monthly_price} />
           </div>
         )}
         <div className="grid grid-cols-4 gap-3">
@@ -385,60 +580,32 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
         </div>
       </div>
 
-      {/* Income with trend sparklines */}
+      {/* Income + Quarterly Chart */}
       <div>
         <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📊 財務摘要</h4>
         <div className="grid grid-cols-2 gap-3">
           <StatItem label="營業收入" value={formatMoneyNTD(data.income.revenue)} sub="千元" className="col-span-2" />
-          <StatItem
-            label="毛利"
-            value={formatMoneyNTD(data.income.grossProfit)}
-            sub={`毛利率 ${grossMargin}`}
-            trend={gpTrendData.length > 1 ? <SparkLine data={gpTrendData} width={40} height={14} color="#34d399" showDots={false} /> : undefined}
-          />
-          <StatItem
-            label="淨利"
-            value={formatMoneyNTD(data.income.netIncome)}
-            sub={`淨利率 ${netMargin}`}
-            trend={niTrendData.length > 1 ? <SparkLine data={niTrendData} width={40} height={14} color="#818cf8" showDots={false} /> : undefined}
-          />
-          <StatItem
-            label="EPS"
-            value={data.income.eps || "-"}
-            sub="元/股"
-            trend={epsTrendData.length > 1 ? <SparkLine data={epsTrendData} width={40} height={14} color="#fbbf24" showDots={false} /> : undefined}
-          />
+          <StatItem label="毛利" value={formatMoneyNTD(data.income.grossProfit)} sub={`毛利率 ${grossMargin}`} />
+          <StatItem label="淨利" value={formatMoneyNTD(data.income.netIncome)} sub={`淨利率 ${netMargin}`} />
+          <StatItem label="EPS" value={data.income.eps || "-"} sub="元/股" />
           <StatItem label="負債比" value={debtRatio} />
         </div>
 
-        {/* Quarterly income trend sparklines */}
+        {/* Quarterly income chart */}
         {trends?.quarterly_income && trends.quarterly_income.length > 0 && (
-          <div className="mt-4 space-y-3">
-            <h5 className="text-[11px] font-medium text-[var(--color-text-tertiary)] tracking-wider">季度趨勢</h5>
-            <div className="grid grid-cols-2 gap-3">
-              {epsTrendData.length > 1 && (
-                <TrendSparkLine data={epsTrendData} color="#fbbf24" label="EPS 趨勢" formattedValue={`${data.income.eps} 元`} />
-              )}
-              {gpTrendData.length > 1 && (
-                <TrendSparkLine data={gpTrendData} color="#34d399" label="毛利率趨勢" formattedValue={grossMargin} />
-              )}
-            </div>
+          <div className="mt-4">
+            <QuarterlyIncomeChart data={trends.quarterly_income} />
           </div>
         )}
       </div>
 
-      {/* Monthly Revenue with sparkline */}
+      {/* Monthly Revenue Chart */}
       <div>
         <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📅 月營收</h4>
 
-        {/* Revenue trend sparkline */}
-        {revenueTrendData.length > 0 && (
-          <div className="bg-white/[0.02] rounded-xl p-5 mb-3">
-            <div className="flex items-center justify-between mb-3">
-              <span className="text-xs text-[var(--color-text-tertiary)]">月營收趨勢</span>
-              <span className="text-lg font-bold text-white">{formatMoneyNTD(data.monthly_revenue.revenue)} <span className="text-xs text-[var(--color-text-tertiary)]">千元</span></span>
-            </div>
-            <SparkLine data={revenueTrendData} width={320} height={48} color="#818cf8" gradientFrom="#818cf8" showDots={revenueTrendData.length <= 12} />
+        {trends?.monthly_revenue && trends.monthly_revenue.length > 0 && (
+          <div className="mb-3">
+            <RevenueAreaChart data={trends.monthly_revenue} />
           </div>
         )}
 
@@ -454,8 +621,8 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
             value={formatPercentAbs(data.monthly_revenue.yoy)}
             trend={<TrendIndicator value={parseFloat(data.monthly_revenue.yoy) || 0} />}
           />
-          {(revenueTrendData.length > 1 || momTrendData.length > 1) && (
-            <StatItem label="資料期數" value={`${revenueTrendData.length} 期`} sub="月營收趨勢" />
+          {trends && trends.monthly_revenue && trends.monthly_revenue.length > 1 && (
+            <StatItem label="資料期數" value={`${trends.monthly_revenue.length} 期`} sub="月營收趨勢" />
           )}
         </div>
       </div>
@@ -477,14 +644,13 @@ function CompanyFinancialPanel({ data }: { data: FinancialData }) {
   );
 }
 
-function CompanyOverviewPanel({ data }: { data: FinancialData }) {
-  const trends = data.trends;
-  const revenueTrendData: number[] = trends?.monthly_revenue?.map(d => d.yoy) || [];
-  const priceAvgData: number[] = trends?.monthly_price?.map(d => d.avg) || [];
+function CompanyOverviewPanel({ data, roles }: { data: FinancialData; roles?: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string }[] | null }) {
+  const revenueTrendData: number[] = data.trends?.monthly_revenue?.map(d => d.yoy) || [];
+  const priceAvgData: number[] = data.trends?.monthly_price?.map(d => d.avg) || [];
 
   return (
     <div className="space-y-6">
-      {/* AI Industry Analysis */}
+      {/* AI Industry Analysis - Per-industry paragraphs */}
       <div className="bg-gradient-to-br from-indigo-500/[0.08] to-purple-600/[0.06] border border-indigo-500/20 rounded-2xl p-6">
         <div className="flex items-center gap-2.5 mb-4">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
@@ -493,15 +659,36 @@ function CompanyOverviewPanel({ data }: { data: FinancialData }) {
           <h4 className="text-sm font-bold text-white">AI 產業分析</h4>
           <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">Beta</Badge>
         </div>
-        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-          {data.name}（{data.code}）為{data.profile.industry}龍頭企業，本益比 {data.valuation.pe || "—"} 倍，殖利率 {data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "—"}。
-          {parseFloat(data.monthly_revenue.yoy) > 0
-            ? ` 月營收年增 ${data.monthly_revenue.yoy}%，成長動能持續。`
-            : parseFloat(data.monthly_revenue.yoy) < 0
-            ? ` 月營收年減 ${Math.abs(parseFloat(data.monthly_revenue.yoy))}%，需關注營收動能變化。`
-            : ""}
-          {data.income.eps ? `每股盈餘 ${data.income.eps} 元。` : ""}
-        </p>
+        <div className="space-y-4">
+          {roles && roles.length > 0 ? (
+            roles.map((role, i) => {
+              const relInfo = getRelevanceInfo(role.relevance);
+              const cat = getCategory(role.topicName);
+              const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
+              const badgeStyle = getRoleBadge(role.relevance);
+              return (
+                <div key={i} className="border-t border-indigo-500/10 pt-3 first:border-t-0 first:pt-0">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <span className="text-xs font-bold whitespace-nowrap" style={{ color: badgeStyle.color, backgroundColor: badgeStyle.bg, padding: "2px 8px", borderRadius: 999 }}>{relInfo.emoji} {relInfo.label}</span>
+                    <span className="text-sm font-semibold text-white">{role.topicName}</span>
+                    <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
+                  </div>
+                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
+                </div>
+              );
+            })
+          ) : (
+            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+              {data.name}（{data.code}）為{data.profile.industry}龍頭企業，本益比 {data.valuation.pe || "—"} 倍，殖利率 {data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "—"}。
+              {parseFloat(data.monthly_revenue.yoy) > 0
+                ? ` 月營收年增 ${data.monthly_revenue.yoy}%，成長動能持續。`
+                : parseFloat(data.monthly_revenue.yoy) < 0
+                ? ` 月營收年減 ${Math.abs(parseFloat(data.monthly_revenue.yoy))}%，需關注營收動能變化。`
+                : ""}
+              {data.income.eps ? `每股盈餘 ${data.income.eps} 元。` : ""}
+            </p>
+          )}
+        </div>
         <div className="mt-4 flex items-center gap-3">
           <div className="text-xs text-[var(--color-text-tertiary)] px-3 py-1.5 bg-white/[0.04] rounded-lg">
             📊 分析基於公開財務資料
@@ -1218,7 +1405,7 @@ export default function Home() {
                               <p className="text-sm text-[var(--color-text-tertiary)] mt-3">載入財務資料...</p>
                             </div>
                           ) : financialData ? (
-                            <CompanyOverviewPanel data={financialData} />
+                            <CompanyOverviewPanel data={financialData} roles={selectedCompanyData?.roles} />
                           ) : financialError ? (
                             <NoFinancialData code={selectedCompanyData.code} />
                           ) : null
@@ -1237,29 +1424,50 @@ export default function Home() {
                         )}
                         {companyDetailTab === "supply_chain" && (
                           <div className="space-y-6">
-                            {/* AI Analysis for supply chain */}
+                            {/* Per-industry AI Analysis */}
                             <div className="bg-gradient-to-br from-indigo-500/[0.06] to-violet-600/[0.04] border border-indigo-500/15 rounded-2xl p-6">
-                              <div className="flex items-center gap-2.5 mb-3">
+                              <div className="flex items-center gap-2.5 mb-4">
                                 <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-md shadow-indigo-500/15">
                                   <AiIcon />
                                 </div>
                                 <h4 className="text-sm font-bold text-white">供應鏈分析</h4>
                               </div>
-                              <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                                {selectedCompanyData.name} 在 {selectedCompanyData.roles.length} 個產業題材中扮演重要角色，
-                                涵蓋 {Array.from(new Set(selectedCompanyData.roles.map(r => {
-                                  const cat = getCategory(r.topicName);
-                                  return cat;
-                                }))).join("、")} 等領域。
-                              </p>
-                            </div>
-
-                            <div>
-                              <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">供應鏈角色</h4>
                               <div className="space-y-4">
                                 {selectedCompanyData.roles.map((role, i) => {
                                   const relInfo = getRelevanceInfo(role.relevance);
                                   const roleBadge = getRoleBadge(role.relevance);
+                                  const cat = getCategory(role.topicName);
+                                  const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, financialData);
+                                  return (
+                                    <div key={i} className={i > 0 ? "border-t border-indigo-500/10 pt-4" : ""}>
+                                      <div className="flex items-center gap-2 mb-2">
+                                        <span
+                                          className="text-xs font-bold whitespace-nowrap"
+                                          style={{ color: roleBadge.color, backgroundColor: roleBadge.bg, padding: "2px 10px", borderRadius: 999 }}
+                                        >
+                                          {relInfo.emoji} {relInfo.label}
+                                        </span>
+                                        <span className="text-sm font-semibold text-white">{role.topicName}</span>
+                                        <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
+                                      </div>
+                                      {role.role && (
+                                        <p className="text-xs text-[var(--color-text-tertiary)] mb-1.5">{role.role}</p>
+                                      )}
+                                      <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+
+                            <div>
+                              <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">供應鏈角色詳情</h4>
+                              <div className="space-y-4">
+                                {selectedCompanyData.roles.map((role, i) => {
+                                  const relInfo = getRelevanceInfo(role.relevance);
+                                  const roleBadge = getRoleBadge(role.relevance);
+                                  const cat = getCategory(role.topicName);
+                                  const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, financialData);
                                   return (
                                     <div key={i} className="bg-white/[0.02] rounded-xl p-5 border border-white/[0.04] hover:border-white/[0.08] transition-colors">
                                       <div className="flex items-center justify-between mb-3">
@@ -1272,18 +1480,15 @@ export default function Home() {
                                           </span>
                                           <Button variant="ghost" className="text-sm text-indigo-400 hover:text-[var(--color-primary-hover)] font-medium h-auto p-0 truncate" onClick={() => goToTopic(role.topic)}>{role.topicName}</Button>
                                         </div>
+                                        <span className="text-xs text-[var(--color-text-tertiary)]">{cat}</span>
                                       </div>
-                                      {/* Relevance tagline / role description */}
+                                      {/* Role description */}
                                       {role.role && (
                                         <p className="text-sm text-[var(--color-text-secondary)] mb-2 leading-relaxed">{role.role}</p>
                                       )}
-                                      {/* AI analysis placeholder */}
+                                      {/* AI analysis paragraph */}
                                       <div className="mt-2 pt-2 border-t border-white/[0.04]">
-                                        {role.analysis ? (
-                                          <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{role.analysis}</p>
-                                        ) : (
-                                          <p className="text-xs text-[var(--color-text-tertiary)] italic">🤖 分析準備中...</p>
-                                        )}
+                                        <p className="text-xs text-[var(--color-text-secondary)] leading-relaxed">{analysisText}</p>
                                       </div>
                                     </div>
                                   );
