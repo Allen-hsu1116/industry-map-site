@@ -22,7 +22,7 @@ interface CompanyData { code: string; name: string; topic_count: number; topics:
 interface FinancialProfile { industry: string; chairman: string; established: string; listed: string; capital: string; website: string; address?: string; }
 interface FinancialValuation { date: string; pe: string; pb: string; dividendYield: string; }
 interface FinancialPrice { date: string; open: number; high: number; low: number; close: number; volume: number; }
-interface FinancialIncome { revenue: string; grossProfit: string; operatingIncome: string; netIncome: string; eps: string; operatingMargin?: string; }
+interface FinancialIncome { revenue: string; grossProfit: string; operatingIncome: string; netIncome: string; eps: string; operatingMargin?: string; revenueYoy?: number; }
 interface FinancialMonthlyRevenue { month: string; revenue: string; mom: string; yoy: string; }
 interface FinancialBalance { totalAssets: string; totalLiabilities: string; equity: string; bookValuePerShare: string; }
 interface FinancialDividend { year: string; cashDividendPerShare: string; stockDividendPerShare?: string; }
@@ -596,7 +596,9 @@ function FinancialOverviewCards({ data }: { data: FinancialData }) {
   const eps = data.income.eps || "-";
   const pe = data.valuation.pe || "-";
   const pb = data.valuation.pb || "-";
-  const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
+  // revenueYoy: prefer quarterly YoY from income data (accurate for 季營收);
+  // fall back to monthly_revenue.yoy if not available
+  const revenueYoy = data.income.revenueYoy != null ? data.income.revenueYoy : (parseFloat(data.monthly_revenue.yoy) || 0);
 
   const grossMargin = rev > 0 ? ((gp / rev) * 100).toFixed(1) + "%" : "-";
   const operatingMargin = rev > 0 && oi > 0 ? ((oi / rev) * 100).toFixed(1) + "%" : "-";
@@ -609,7 +611,7 @@ function FinancialOverviewCards({ data }: { data: FinancialData }) {
   const periodLabel = latestQuarter ? formatQuarterLabel(latestQuarter.quarter) : "最新季度";
 
   const cards: { label: string; value: string; sub?: string }[] = [
-    { label: `季營收 (${periodLabel})`, value: formatRevenueDisplay(parseFloat(data.income.revenue) || 0), sub: yoyNum !== 0 ? `${yoyNum > 0 ? "+" : ""}${yoyNum.toFixed(1)}%` : undefined },
+    { label: `季營收 (${periodLabel})`, value: formatRevenueDisplay(parseFloat(data.income.revenue) || 0), sub: revenueYoy !== 0 ? `${revenueYoy > 0 ? "+" : ""}${revenueYoy.toFixed(1)}%` : undefined },
     { label: "市值", value: marketCap === "-" ? "-" : marketCap },
     { label: "本益比", value: pe, sub: pe !== "-" ? "x" : undefined },
     { label: "股價淨值比", value: pb, sub: pb !== "-" ? "x" : undefined },
