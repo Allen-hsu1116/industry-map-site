@@ -1199,6 +1199,7 @@ function RevenueComposedChart({ data, mode }: { data: TrendMonthlyRevenue[] | Tr
     const monthlyData = (data as TrendMonthlyRevenue[]).map(d => ({
       period: formatTrendMonth(d.month),
       revenue: d.revenue / 100000, // 千元 → 億
+      mom: d.mom,
       yoy: d.yoy,
     }));
     return (
@@ -1215,27 +1216,32 @@ function RevenueComposedChart({ data, mode }: { data: TrendMonthlyRevenue[] | Tr
               const v = Number(value);
               const n = String(name);
               if (n === "yoy") return [`${v.toFixed(1)}%`, "YoY"];
+              if (n === "mom") return [`${v.toFixed(1)}%`, "MoM"];
               return [`${v.toFixed(1)} 億`, "營收"];
             }}
           />
-          <Legend formatter={(value: string) => value === "revenue" ? "營收" : "YoY"} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+          <Legend formatter={(value: string) => value === "revenue" ? "營收" : value === "yoy" ? "YoY" : "MoM"} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
           <Bar yAxisId="left" dataKey="revenue" fill={CHART_COLORS.revenue} radius={[3, 3, 0, 0]} name="revenue" />
           <Line yAxisId="right" type="monotone" dataKey="yoy" stroke="#34d399" strokeWidth={2} dot={{ r: 3, fill: "#34d399", stroke: "#1e1e2e", strokeWidth: 1.5 }} name="yoy" />
+          <Line yAxisId="right" type="monotone" dataKey="mom" stroke="#f97316" strokeWidth={2} dot={{ r: 3, fill: "#f97316", stroke: "#1e1e2e", strokeWidth: 1.5 }} name="mom" />
         </ComposedChart>
       </ResponsiveContainer>
     );
   }
 
-  // Quarterly mode: show revenue bars + YoY line (calculated from previous same-quarter)
+  // Quarterly mode: show revenue bars + YoY line + QoQ line
   const quarterlyData = data as TrendQuarterlyIncome[];
-  // Calculate YoY by comparing to quarter from 4 periods ago
+  // Calculate YoY by comparing to quarter from 4 periods ago, QoQ by comparing to previous quarter
   const chartData = quarterlyData.map((d, idx) => {
     const prevSameQ = idx >= 4 ? quarterlyData[idx - 4] : null;
+    const prevQ = idx >= 1 ? quarterlyData[idx - 1] : null;
     const yoy = prevSameQ && prevSameQ.revenue > 0 ? ((d.revenue - prevSameQ.revenue) / prevSameQ.revenue * 100) : null;
+    const qoq = prevQ && prevQ.revenue > 0 ? ((d.revenue - prevQ.revenue) / prevQ.revenue * 100) : null;
     return {
       period: formatQuarterLabel(d.quarter),
       revenue: d.revenue / 100000, // 千元 → 億
       yoy,
+      qoq,
     };
   });
   return (
@@ -1252,12 +1258,14 @@ function RevenueComposedChart({ data, mode }: { data: TrendMonthlyRevenue[] | Tr
             const v = Number(value);
             const n = String(name);
             if (n === "yoy") return [v !== null ? `${v.toFixed(1)}%` : "-", "YoY"];
+            if (n === "qoq") return [v !== null ? `${v.toFixed(1)}%` : "-", "QoQ"];
             return [`${v.toFixed(1)} 億`, "營收"];
           }}
         />
-        <Legend formatter={(value: string) => value === "revenue" ? "營收" : "YoY"} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+        <Legend formatter={(value: string) => value === "revenue" ? "營收" : value === "yoy" ? "YoY" : "QoQ"} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
         <Bar yAxisId="left" dataKey="revenue" fill={CHART_COLORS.revenue} radius={[3, 3, 0, 0]} name="revenue" />
         <Line yAxisId="right" type="monotone" dataKey="yoy" stroke="#34d399" strokeWidth={2} dot={{ r: 3, fill: "#34d399", stroke: "#1e1e2e", strokeWidth: 1.5 }} name="yoy" connectNulls={false} />
+        <Line yAxisId="right" type="monotone" dataKey="qoq" stroke="#a78bfa" strokeWidth={2} dot={{ r: 3, fill: "#a78bfa", stroke: "#1e1e2e", strokeWidth: 1.5 }} name="qoq" connectNulls={false} />
       </ComposedChart>
     </ResponsiveContainer>
   );
