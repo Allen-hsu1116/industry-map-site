@@ -535,7 +535,7 @@ function StatItem({ label, value, sub, className = "", trend }: { label: string;
   );
 }
 
-/* ─── Financial Overview Cards ─── */
+/* ─── Financial Overview Cards (aistockmap style: 2x4 grid) ─── */
 function FinancialOverviewCards({ data }: { data: FinancialData }) {
   const rev = parseFloat(data.income.revenue) || 0;
   const gp = parseFloat(data.income.grossProfit) || 0;
@@ -551,32 +551,41 @@ function FinancialOverviewCards({ data }: { data: FinancialData }) {
   const netMargin = rev > 0 && ni > 0 ? ((ni / rev) * 100).toFixed(1) + "%" : "-";
 
   const marketCap = data.marketCap || "-";
-  const marketCapHasUnit = marketCap.includes("兆") || marketCap.includes("億");
 
-  const cards: { label: string; value: string; sub?: string; icon: string; color: string }[] = [
-    { label: "季營收", value: formatMoneyNTD(data.income.revenue), sub: yoyNum !== 0 ? `YoY ${yoyNum > 0 ? "▲" : "▼"} ${Math.abs(yoyNum).toFixed(1)}%` : undefined, icon: "💰", color: "#818cf8" },
-    { label: "市值", value: marketCap === "-" ? "-" : marketCap, sub: !marketCapHasUnit && marketCap !== "-" ? "億元" : undefined, icon: "🏦", color: "#60a5fa" },
-    { label: "本益比", value: pe, sub: pe !== "-" ? "倍" : undefined, icon: "📊", color: "#f472b6" },
-    { label: "股價淨值比", value: pb, sub: pb !== "-" ? "倍" : undefined, icon: "📈", color: "#34d399" },
-    { label: "毛利率", value: grossMargin, icon: "🎯", color: "#f472b6" },
-    { label: "營益率", value: operatingMargin, icon: "⚡", color: "#fbbf24" },
-    { label: "淨利率", value: netMargin, icon: "💎", color: "#818cf8" },
-    { label: "EPS", value: eps, sub: eps !== "-" ? "元/股" : undefined, icon: "💵", color: "#34d399" },
+  // Determine the period label for income statement
+  const latestQuarter = data.trends?.quarterly_income?.[data.trends.quarterly_income.length - 1];
+  const periodLabel = latestQuarter ? `${latestQuarter.quarter}` : "最新季度";
+
+  const cards: { label: string; value: string; sub?: string }[] = [
+    { label: `季營收 (${periodLabel})`, value: formatMoneyNTD(data.income.revenue), sub: yoyNum !== 0 ? `${yoyNum > 0 ? "+" : ""}${yoyNum.toFixed(1)}%` : undefined },
+    { label: "市值", value: marketCap === "-" ? "-" : marketCap },
+    { label: "本益比", value: pe, sub: pe !== "-" ? "x" : undefined },
+    { label: "股價淨值比", value: pb, sub: pb !== "-" ? "x" : undefined },
+    { label: "毛利率", value: grossMargin },
+    { label: "營益率", value: operatingMargin },
+    { label: "淨利率", value: netMargin },
+    { label: "EPS", value: eps, sub: eps !== "-" ? "元" : undefined },
   ];
 
   return (
-    <div>
-      <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💹 最新財務概況</h4>
+    <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
+      <div className="flex items-center justify-between mb-4">
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest">
+          最新財務概況{periodLabel ? ` (${periodLabel})` : ""}
+        </h4>
+      </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {cards.map((card, i) => (
-          <div key={i} className="bg-white/[0.02] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-sm">{card.icon}</span>
-              <span className="text-[11px] text-[var(--color-text-tertiary)]">{card.label}</span>
-            </div>
+          <div key={i} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
+            <div className="text-[11px] text-[var(--color-text-tertiary)] mb-1.5">{card.label}</div>
             <div className="text-xl font-bold text-white">{card.value}</div>
             {card.sub && (
-              <div className={cn("text-xs mt-1", card.sub.includes("▲") ? "text-emerald-400" : card.sub.includes("▼") ? "text-rose-400" : "text-[var(--color-text-tertiary)]")}>
+              <div className={cn(
+                "text-xs mt-1",
+                /^[+-]\d/.test(card.sub) && parseFloat(card.sub) > 0 ? "text-emerald-400" :
+                /^[+-]\d/.test(card.sub) && parseFloat(card.sub) < 0 ? "text-rose-400" :
+                "text-[var(--color-text-tertiary)]"
+              )}>
                 {card.sub}
               </div>
             )}
@@ -587,7 +596,7 @@ function FinancialOverviewCards({ data }: { data: FinancialData }) {
   );
 }
 
-/* ─── Dividend Policy Panel ─── */
+/* ─── Dividend Policy Panel (aistockmap style) ─── */
 function DividendPolicyPanel({ data }: { data: FinancialData }) {
   const history = data.dividendHistory;
   const currentCash = data.dividend.cashDividendPerShare || "-";
@@ -596,8 +605,17 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
   if (history && history.length > 0) {
     const chartData = [...history].reverse().slice(-8);
     return (
-      <div>
-        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💰 股利政策</h4>
+      <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
+        <div className="flex items-center justify-between mb-4">
+          <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest">
+            股利政策
+          </h4>
+          <span className="text-[10px] font-medium px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">
+            配息頻率: 季
+          </span>
+        </div>
+
+        {/* Bar Chart */}
         <div className="bg-white/[0.02] rounded-xl p-4 mb-3">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs text-[var(--color-text-tertiary)]">歷年股利發放</span>
@@ -619,8 +637,8 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
                 }}
               />
               <Legend formatter={(value: string) => value === "cashDividend" ? "現金股利" : value === "stockDividend" ? "股票股利" : "合計"} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
-              <Bar dataKey="cashDividend" fill="#818cf8" radius={[3, 3, 0, 0]} name="cashDividend" />
-              <Bar dataKey="stockDividend" fill="#34d399" radius={[3, 3, 0, 0]} name="stockDividend" />
+              <Bar dataKey="cashDividend" fill="#6366f1" radius={[3, 3, 0, 0]} name="cashDividend" />
+              <Bar dataKey="stockDividend" fill="#f97316" radius={[3, 3, 0, 0]} name="stockDividend" />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -628,18 +646,18 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
         {/* Dividend table */}
         <div className="bg-white/[0.02] rounded-xl overflow-hidden">
           <div className="grid grid-cols-4 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
-            <span>年度</span>
+            <span>所屬年度</span>
             <span className="text-right">現金股利</span>
             <span className="text-right">股票股利</span>
-            <span className="text-right">合計</span>
+            <span className="text-right">合計股利</span>
           </div>
           <div className="max-h-48 overflow-y-auto">
             {[...history].reverse().slice(0, 10).map((row, i) => (
               <div key={i} className="grid grid-cols-4 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
                 <span className="text-[var(--color-text-secondary)]">{row.year}</span>
-                <span className="text-right text-indigo-400 font-medium">{row.cashDividend.toFixed(2)}</span>
-                <span className="text-right text-emerald-400 font-medium">{row.stockDividend.toFixed(2)}</span>
-                <span className="text-right text-white font-medium">{row.totalDividend.toFixed(2)}</span>
+                <span className="text-right text-indigo-400 font-medium">{row.cashDividend.toFixed(2)} 元</span>
+                <span className="text-right text-orange-400 font-medium">{row.stockDividend > 0 ? `${row.stockDividend.toFixed(2)} 元` : "-"}</span>
+                <span className="text-right text-white font-medium">{row.totalDividend.toFixed(2)} 元</span>
               </div>
             ))}
           </div>
@@ -650,8 +668,12 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
 
   // Fallback: show simple dividend info
   return (
-    <div>
-      <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">💰 股利政策</h4>
+    <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
+      <div className="flex items-center justify-between mb-4">
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest">
+          股利政策
+        </h4>
+      </div>
       <div className="bg-white/[0.02] rounded-xl p-6 text-center">
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
@@ -669,13 +691,13 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
   );
 }
 
-/* ─── Profitability Trend Panel ─── */
+/* ─── Profitability Trend Panel (aistockmap style) ─── */
 function ProfitabilityTrendPanel({ data }: { data: FinancialData }) {
   const trends = data.trends;
   if (!trends?.quarterly_income || trends.quarterly_income.length < 2) {
     return (
       <div>
-        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 獲利能力趨勢</h4>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">獲利能力趨勢</h4>
         <div className="bg-white/[0.02] rounded-xl p-6 text-center">
           <span className="text-[var(--color-text-tertiary)] text-sm">📋 季度資料累積中</span>
         </div>
@@ -798,7 +820,7 @@ function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: Fi
   const [profitTab, setProfitTab] = useState<"quarterly" | "yearly">("quarterly");
   return (
     <div className="space-y-6">
-      {/* 1. 頂部公司資訊區 */}
+      {/* 1. 公司基本資料卡片 */}
       <CompanyInfoHeader data={data} />
 
       {/* 2. 最新財務概況 8 卡片 */}
@@ -822,47 +844,55 @@ function CompanyInfoHeader({ data }: { data: FinancialData }) {
   const established = data.profile.established;
   const establishedYear = (() => {
     if (!established || established.length < 4) return "-";
-    // ROC year format: e.g. 0760215 => 1987
     const s = established;
     if (s.length === 7) {
       const rocYear = parseInt(s.slice(0, 3));
       return `${rocYear + 1911}`;
     }
-    // Western year format: e.g. 19870221
     return s.slice(0, 4);
   })();
 
   return (
     <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
-      {/* Market cap big number */}
-      <div className="mb-5">
-        <span className="text-xs text-[var(--color-text-tertiary)]">市值</span>
-        <div className="text-3xl font-bold text-white mt-1">{marketCap}</div>
-      </div>
-      {/* Info grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-sm">
+      {/* Company name big title */}
+      <h3 className="text-2xl font-bold text-white mb-4">
+        {data.name}<span className="text-[var(--color-text-tertiary)] font-normal ml-1">({data.code})</span>
+      </h3>
+      {/* Info grid — 2 columns as per aistockmap */}
+      <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
         <div>
-          <div className="text-[11px] text-[var(--color-text-tertiary)] mb-0.5">產業分類</div>
-          <div className="text-[var(--color-text-secondary)] font-medium">{data.profile.industry || "-"}</div>
+          <span className="text-[11px] text-[var(--color-text-tertiary)]">市值</span>
+          <div className="text-lg font-bold text-white mt-0.5">{marketCap}</div>
         </div>
         <div>
-          <div className="text-[11px] text-[var(--color-text-tertiary)] mb-0.5">成立年份</div>
-          <div className="text-[var(--color-text-secondary)] font-medium">{establishedYear}</div>
+          <span className="text-[11px] text-[var(--color-text-tertiary)]">產業分類</span>
+          <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{data.profile.industry || "-"}</div>
         </div>
         <div>
-          <div className="text-[11px] text-[var(--color-text-tertiary)] mb-0.5">董事長</div>
-          <div className="text-[var(--color-text-secondary)] font-medium">{data.profile.chairman || "-"}</div>
+          <span className="text-[11px] text-[var(--color-text-tertiary)]">成立年份</span>
+          <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{establishedYear}</div>
         </div>
         <div>
-          <div className="text-[11px] text-[var(--color-text-tertiary)] mb-0.5">官方網站</div>
-          {data.profile.website ? (
-            <a href={data.profile.website} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1 truncate">
-              {data.profile.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
-              <ExternalIcon />
-            </a>
-          ) : (
-            <div className="text-[var(--color-text-tertiary)]">-</div>
-          )}
+          <span className="text-[11px] text-[var(--color-text-tertiary)]">董事長</span>
+          <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{data.profile.chairman || "-"}</div>
+        </div>
+        {/* 總部 — placeholder since JSON doesn't have address */}
+        <div>
+          <span className="text-[11px] text-[var(--color-text-tertiary)]">實收資本額</span>
+          <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{data.profile.capital ? formatCapitalNTD(data.profile.capital) : "-"}</div>
+        </div>
+        <div>
+          <span className="text-[11px] text-[var(--color-text-tertiary)]">官方網站</span>
+          <div className="mt-0.5">
+            {data.profile.website ? (
+              <a href={data.profile.website} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1 truncate">
+                {data.profile.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")}
+                <ExternalIcon />
+              </a>
+            ) : (
+              <span className="text-[var(--color-text-tertiary)]">-</span>
+            )}
+          </div>
         </div>
       </div>
     </div>
@@ -881,7 +911,7 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
   return (
     <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
       <div className="flex items-center justify-between mb-4">
-        <h4 className="text-sm font-bold text-white">📊 營收分析趨勢</h4>
+        <h4 className="text-sm font-bold text-white">營收分析趨勢</h4>
         {/* Pill buttons */}
         <div className="flex items-center gap-1 bg-white/[0.03] rounded-lg p-0.5">
           {revenueTabs.map(tab => (
@@ -891,7 +921,7 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
                 "px-3 py-1.5 text-xs font-medium rounded-md transition-all",
                 revenueTab === tab.id
                   ? "bg-indigo-500/20 text-indigo-400"
-                  : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                  : "text-gray-400 hover:text-[var(--color-text-secondary)]"
               )}
               onClick={() => onRevenueTabChange(tab.id)}
             >
@@ -1137,7 +1167,7 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
   return (
     <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
       <div className="flex items-center justify-between mb-4">
-        <h4 className="text-sm font-bold text-white">📈 獲利能力趨勢</h4>
+        <h4 className="text-sm font-bold text-white">獲利能力趨勢</h4>
         <div className="flex items-center gap-1 bg-white/[0.03] rounded-lg p-0.5">
           {profitTabs.map(tab => (
             <button
@@ -1146,7 +1176,7 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
                 "px-3 py-1.5 text-xs font-medium rounded-md transition-all",
                 profitTab === tab.id
                   ? "bg-indigo-500/20 text-indigo-400"
-                  : "text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)]"
+                  : "text-gray-400 hover:text-[var(--color-text-secondary)]"
               )}
               onClick={() => onProfitTabChange(tab.id)}
             >
@@ -1375,10 +1405,17 @@ function CompanyFullPageDetail({
     return summary;
   })();
 
-  /* Badges */
+  /* Badges — determine "連三月年增" from trends data */
+  const consecutiveMonthlyGrowth = (() => {
+    const mr = trends?.monthly_revenue;
+    if (!mr || mr.length < 3) return false;
+    const last3 = mr.slice(-3);
+    return last3.every(d => d.yoy > 0);
+  })();
+
   const badges: { label: string; color: string; show: boolean }[] = [
     { label: `營收年增 ▲${yoyNum.toFixed(1)}%`, color: "#34d399", show: yoyNum > 0 },
-    { label: "連三月年增", color: "#818cf8", show: true },
+    { label: "連三月年增", color: "#818cf8", show: consecutiveMonthlyGrowth },
     { label: "投信買超", color: "#fbbf24", show: false },
     { label: "有股票期貨", color: "#f97316", show: false },
   ];
@@ -1398,8 +1435,8 @@ function CompanyFullPageDetail({
   return (
     <div className="fade-in">
       <div className="max-w-6xl mx-auto">
-        {/* ─── Top Bar: Back + Company Header ─── */}
-        <div className="flex items-center justify-between mb-6">
+        {/* ─── Top Bar: Back + Company Header (aistockmap style) ─── */}
+        <div className="flex items-center justify-between mb-4">
           <button
             className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-white transition-colors group"
             onClick={onBack}
@@ -1407,49 +1444,54 @@ function CompanyFullPageDetail({
             <svg className="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
-            返回公司列表
+            返回
           </button>
-          <button className="flex items-center gap-1.5 text-sm text-[var(--color-text-tertiary)] hover:text-rose-400 transition-colors">
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+          <button className="flex items-center gap-1.5 text-sm text-[var(--color-text-tertiary)] hover:text-rose-400 transition-colors px-3 py-1.5 rounded-full border border-white/[0.06] hover:border-rose-400/30">
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
             </svg>
             加入收藏
           </button>
         </div>
 
-        {/* ─── Company Title ─── */}
-        <div className="mb-5">
-          <h1 className="text-3xl font-bold text-white mb-2">
-            {data.name} <span className="text-[var(--color-text-secondary)] text-xl font-normal">({data.code})</span>
-          </h1>
-          <p className="text-sm text-[var(--color-text-tertiary)]">
+        {/* ─── Company Title (aistockmap style: badge + name) ─── */}
+        <div className="mb-4">
+          <div className="flex items-center gap-3 mb-1">
+            <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-bold bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">
+              {data.code}
+            </span>
+            <h1 className="text-2xl font-bold text-white">
+              {data.name}
+            </h1>
+          </div>
+          <p className="text-sm text-[var(--color-text-tertiary)] mt-1 ml-1">
             {data.profile.industry} · <span style={{ color: marketPos.color }}>{marketPos.label}</span>
           </p>
         </div>
 
-        {/* ─── Badges ─── */}
-        <div className="flex flex-wrap gap-2.5 mb-8">
+        {/* ─── Badges (aistockmap style pill badges) ─── */}
+        <div className="flex flex-wrap gap-2 mb-6">
           {badges.filter(b => b.show).map((b, i) => (
-            <span key={i} className="text-xs font-medium px-3 py-1.5 rounded-full" style={{ color: b.color, backgroundColor: `${b.color}18`, border: `1px solid ${b.color}30` }}>
+            <span key={i} className="text-[11px] font-semibold px-2.5 py-1 rounded-full" style={{ color: b.color, backgroundColor: `${b.color}15`, border: `1px solid ${b.color}25` }}>
               {b.label}
             </span>
           ))}
         </div>
 
-        {/* ─── Main Tabs ─── */}
-        <div className="flex items-center gap-1 border-b border-[var(--color-border)] mb-8 overflow-x-auto">
+        {/* ─── Main Tabs (aistockmap pill style) ─── */}
+        <div className="flex items-center gap-1 bg-white/[0.03] rounded-xl p-1 mb-8 overflow-x-auto">
           {DETAIL_TABS.map((tab) => (
             <button
               key={tab.id}
               className={cn(
-                "px-5 py-3.5 text-sm font-medium whitespace-nowrap transition-all border-b-2",
+                "px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-all rounded-lg",
                 detailTab === tab.id
-                  ? "text-indigo-400 border-indigo-400"
-                  : "text-[var(--color-text-tertiary)] border-transparent hover:text-[var(--color-text-secondary)]"
+                  ? "bg-indigo-500/20 text-indigo-400"
+                  : "text-gray-400 hover:text-[var(--color-text-secondary)]"
               )}
               onClick={() => setDetailTab(tab.id)}
             >
-              <span className="mr-1.5">{tab.icon}</span>{tab.label}
+              {tab.label}
             </button>
           ))}
         </div>
