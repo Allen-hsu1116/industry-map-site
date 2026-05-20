@@ -200,11 +200,21 @@ function formatDate(dateStr: string): string {
 
 function formatTrendMonth(month: string): string {
   if (!month) return "-";
-  // Handle ROC year formats like "11504" → "2026/04", "115/04" → "2026/04"
-  if (/^\d{5,6}$/.test(month)) {
+  // Handle CE year format like "202405" → "2024/05"
+  if (/^\d{6}$/.test(month)) {
+    const year = parseInt(month.slice(0, 4));
+    if (year >= 2000) {
+      // CE format: YYYYMM
+      return `${month.slice(0, 4)}/${month.slice(4)}`;
+    }
+    // ROC format like "11504": 3-digit year + 2-digit month
     const rocYear = parseInt(month.slice(0, 3));
-    const rest = month.slice(3);
-    return `${rocYear + 1911}/${rest}`;
+    return `${rocYear + 1911}/${month.slice(3)}`;
+  }
+  if (/^\d{5}$/.test(month)) {
+    // ROC 5-digit format: e.g. "11405"
+    const rocYear = parseInt(month.slice(0, 3));
+    return `${rocYear + 1911}/${month.slice(3)}`;
   }
   if (month.length === 5 && month.includes("/")) {
     const parts = month.split("/");
@@ -645,7 +655,7 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
 
   // If we have history data, show chart + table
   if (history && history.length > 0) {
-    const chartData = [...history].reverse().slice(-8);
+    const chartData = history.slice(-8);
     return (
       <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
         <div className="flex items-center justify-between mb-4">
