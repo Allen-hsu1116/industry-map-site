@@ -932,9 +932,13 @@ function CompanyInfoHeader({ data }: { data: FinancialData }) {
   const establishedYear = (() => {
     if (!established || established.length < 4) return "-";
     const s = established;
+    // YYYYMMDD or YYYY/MM/DD format — already CE year
+    if (s.length >= 8 && parseInt(s.slice(0, 4)) > 1900) return s.slice(0, 4);
+    if (s.includes("/") && parseInt(s.split("/")[0]) > 1900) return s.split("/")[0];
+    // ROC year format: 0760221 → 1987
     if (s.length === 7 || s.length === 8) {
       const rocYear = parseInt(s.slice(0, 3));
-      return `${rocYear + 1911}`;
+      if (rocYear > 0 && rocYear < 200) return `${rocYear + 1911}`;
     }
     return s.slice(0, 4);
   })();
