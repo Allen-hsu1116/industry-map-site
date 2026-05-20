@@ -19,7 +19,7 @@ interface Group { name: string; companies: CompanyInGroup[]; }
 interface TopicData { slug: string; name: string; description: string; total: number; groups: Group[]; }
 interface CompanyData { code: string; name: string; topic_count: number; topics: string[]; }
 
-interface FinancialProfile { industry: string; chairman: string; established: string; listed: string; capital: string; website: string; }
+interface FinancialProfile { industry: string; chairman: string; established: string; listed: string; capital: string; website: string; address?: string; }
 interface FinancialValuation { date: string; pe: string; pb: string; dividendYield: string; }
 interface FinancialPrice { date: string; open: number; high: number; low: number; close: number; volume: number; }
 interface FinancialIncome { revenue: string; grossProfit: string; operatingIncome: string; netIncome: string; eps: string; operatingMargin?: string; }
@@ -200,12 +200,54 @@ function formatDate(dateStr: string): string {
 
 function formatTrendMonth(month: string): string {
   if (!month) return "-";
-  if (month.length === 5) {
-    const y = parseInt(month.slice(0, 3));
-    const m = month.slice(3);
-    return `${y + 1911}/${m}`;
+  // Handle ROC year formats like "11504" → "2026/04", "115/04" → "2026/04"
+  if (/^\d{5,6}$/.test(month)) {
+    const rocYear = parseInt(month.slice(0, 3));
+    const rest = month.slice(3);
+    return `${rocYear + 1911}/${rest}`;
+  }
+  if (month.length === 5 && month.includes("/")) {
+    const parts = month.split("/");
+    const rocYear = parseInt(parts[0]);
+    return `${rocYear + 1911}/${parts[1]}`;
   }
   return month;
+}
+
+/** Convert ROC quarter labels like "115Q1" → "2026年 Q1", "114Q4" → "2025年 Q4" */
+function formatQuarterLabel(q: string): string {
+  if (!q) return "-";
+  const match = q.match(/^(\d{2,3})Q(\d)$/);
+  if (match) {
+    const rocYear = parseInt(match[1]);
+    const qNum = match[2];
+    return `${rocYear + 1911}年 Q${qNum}`;
+  }
+  // If already in CE format like "2025Q1"
+  const ceMatch = q.match(/^(\d{4})Q(\d)$/);
+  if (ceMatch) {
+    return `${ceMatch[1]}年 Q${ceMatch[2]}`;
+  }
+  return q;
+}
+
+/** Convert ROC year string like "107" → "2018" */
+function formatROCYear(year: string): string {
+  if (!year) return "-";
+  const num = parseInt(year);
+  if (num < 200 && num > 0) return String(num + 1911);
+  return year;
+}
+
+/** Format revenue number for display: "1.1 兆" or "2654.3億" */
+function formatRevenueDisplay(num: number): string {
+  if (num === 0) return "-";
+  // Input is in 千元 (thousands of NTD)
+  if (num >= 1e9) return `${(num / 1e9).toFixed(1).replace(/\.0$/, "")} 兆`;
+  if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 1000) return `${(num / 1000).toFixed(1).replace(/\.0$/, "")}億`;
+  return `${num.toFixed(0)}萬`;
 }
 
 type TabId = "focus" | "topics" | "map" | "companies";
@@ -552,12 +594,12 @@ function FinancialOverviewCards({ data }: { data: FinancialData }) {
 
   const marketCap = data.marketCap || "-";
 
-  // Determine the period label for income statement
+  // Determine the period label for income statement — use CE year
   const latestQuarter = data.trends?.quarterly_income?.[data.trends.quarterly_income.length - 1];
-  const periodLabel = latestQuarter ? `${latestQuarter.quarter}` : "最新季度";
+  const periodLabel = latestQuarter ? formatQuarterLabel(latestQuarter.quarter) : "最新季度";
 
   const cards: { label: string; value: string; sub?: string }[] = [
-    { label: `季營收 (${periodLabel})`, value: formatMoneyNTD(data.income.revenue), sub: yoyNum !== 0 ? `${yoyNum > 0 ? "+" : ""}${yoyNum.toFixed(1)}%` : undefined },
+    { label: `季營收 (${periodLabel})`, value: formatRevenueDisplay(parseFloat(data.income.revenue) || 0), sub: yoyNum !== 0 ? `${yoyNum > 0 ? "+" : ""}${yoyNum.toFixed(1)}%` : undefined },
     { label: "市值", value: marketCap === "-" ? "-" : marketCap },
     { label: "本益比", value: pe, sub: pe !== "-" ? "x" : undefined },
     { label: "股價淨值比", value: pb, sub: pb !== "-" ? "x" : undefined },
@@ -643,24 +685,28 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
           </ResponsiveContainer>
         </div>
 
-        {/* Dividend table */}
-        <div className="bg-white/[0.02] rounded-xl overflow-hidden">
-          <div className="grid grid-cols-4 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
-            <span>所屬年度</span>
-            <span className="text-right">現金股利</span>
-            <span className="text-right">股票股利</span>
-            <span className="text-right">合計股利</span>
-          </div>
-          <div className="max-h-48 overflow-y-auto">
-            {[...history].reverse().slice(0, 10).map((row, i) => (
-              <div key={i} className="grid grid-cols-4 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
-                <span className="text-[var(--color-text-secondary)]">{row.year}</span>
-                <span className="text-right text-indigo-400 font-medium">{row.cashDividend.toFixed(2)} 元</span>
-                <span className="text-right text-orange-400 font-medium">{row.stockDividend > 0 ? `${row.stockDividend.toFixed(2)} 元` : "-"}</span>
-                <span className="text-right text-white font-medium">{row.totalDividend.toFixed(2)} 元</span>
-              </div>
-            ))}
-          </div>
+        {/* Dividend table — HTML <table> */}
+        <div className="overflow-hidden rounded-xl">
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+                <th className="px-3 py-2 text-left">所屬年度</th>
+                <th className="px-3 py-2 text-right">現金股利</th>
+                <th className="px-3 py-2 text-right">股票股利</th>
+                <th className="px-3 py-2 text-right">合計股利</th>
+              </tr>
+            </thead>
+            <tbody className="max-h-48 overflow-y-auto">
+              {[...history].reverse().slice(0, 10).map((row, i) => (
+                <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                  <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatROCYear(row.year)}</td>
+                  <td className="px-3 py-1.5 text-right text-indigo-400 font-medium">{row.cashDividend.toFixed(2)} 元</td>
+                  <td className="px-3 py-1.5 text-right text-orange-400 font-medium">{row.stockDividend.toFixed(2)} 元</td>
+                  <td className="px-3 py-1.5 text-right text-white font-medium">{row.totalDividend.toFixed(2)} 元</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     );
@@ -818,22 +864,63 @@ function ProfitabilityTrendPanel({ data }: { data: FinancialData }) {
 /* ─── Overview Tab Content (aistockmap style) ─── */
 function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: FinancialData; revenueTab: "monthly" | "quarterly" | "yearly"; onRevenueTabChange: (tab: "monthly" | "quarterly" | "yearly") => void }) {
   const [profitTab, setProfitTab] = useState<"quarterly" | "yearly">("quarterly");
+  const [overviewSubTab, setOverviewSubTab] = useState<"financial" | "news">("financial");
   return (
     <div className="space-y-6">
-      {/* 1. 公司基本資料卡片 */}
-      <CompanyInfoHeader data={data} />
+      {/* Sub-tabs: 財務數據 | 重大資訊 */}
+      <div className="flex items-center gap-1 bg-white/[0.03] rounded-xl p-1">
+        <button
+          className={cn(
+            "px-4 py-2 text-sm font-medium rounded-lg transition-all",
+            overviewSubTab === "financial"
+              ? "bg-indigo-500/20 text-indigo-400"
+              : "text-gray-400 hover:text-[var(--color-text-secondary)]"
+          )}
+          onClick={() => setOverviewSubTab("financial")}
+        >
+          財務數據
+        </button>
+        <button
+          className={cn(
+            "px-4 py-2 text-sm font-medium rounded-lg transition-all",
+            overviewSubTab === "news"
+              ? "bg-indigo-500/20 text-indigo-400"
+              : "text-gray-400 hover:text-[var(--color-text-secondary)]"
+          )}
+          onClick={() => setOverviewSubTab("news")}
+        >
+          重大資訊
+        </button>
+      </div>
 
-      {/* 2. 最新財務概況 8 卡片 */}
-      <FinancialOverviewCards data={data} />
+      {overviewSubTab === "financial" && (
+        <>
+          {/* 1. 公司基本資料卡片 */}
+          <CompanyInfoHeader data={data} />
 
-      {/* 3. 股利政策 */}
-      <DividendPolicyPanel data={data} />
+          {/* 2. 最新財務概況 8 卡片 */}
+          <FinancialOverviewCards data={data} />
 
-      {/* 4. 營收分析趨勢 */}
-      <RevenueAnalysisPanel data={data} revenueTab={revenueTab} onRevenueTabChange={onRevenueTabChange} />
+          {/* 3. 股利政策 */}
+          <DividendPolicyPanel data={data} />
 
-      {/* 5. 獲利能力趨勢 */}
-      <ProfitabilityAnalysisPanel data={data} profitTab={profitTab} onProfitTabChange={setProfitTab} />
+          {/* 4. 營收分析趨勢 */}
+          <RevenueAnalysisPanel data={data} revenueTab={revenueTab} onRevenueTabChange={onRevenueTabChange} />
+
+          {/* 5. 獲利能力趨勢 */}
+          <ProfitabilityAnalysisPanel data={data} profitTab={profitTab} onProfitTabChange={setProfitTab} />
+        </>
+      )}
+
+      {overviewSubTab === "news" && (
+        <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
+          <div className="text-center py-12">
+            <div className="text-4xl mb-3">📰</div>
+            <h4 className="text-sm font-bold text-white mb-2">重大資訊</h4>
+            <p className="text-xs text-[var(--color-text-tertiary)]">即時重大訊息功能準備中，敬請期待</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
@@ -845,12 +932,13 @@ function CompanyInfoHeader({ data }: { data: FinancialData }) {
   const establishedYear = (() => {
     if (!established || established.length < 4) return "-";
     const s = established;
-    if (s.length === 7) {
+    if (s.length === 7 || s.length === 8) {
       const rocYear = parseInt(s.slice(0, 3));
       return `${rocYear + 1911}`;
     }
     return s.slice(0, 4);
   })();
+  const headquarters = (data.profile as any).address || "";
 
   return (
     <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
@@ -861,28 +949,27 @@ function CompanyInfoHeader({ data }: { data: FinancialData }) {
       {/* Info grid — 2 columns as per aistockmap */}
       <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
         <div>
-          <span className="text-[11px] text-[var(--color-text-tertiary)]">市值</span>
+          <span className="text-[11px] text-[var(--color-text-tertiary)] uppercase tracking-widest">市值</span>
           <div className="text-lg font-bold text-white mt-0.5">{marketCap}</div>
         </div>
         <div>
-          <span className="text-[11px] text-[var(--color-text-tertiary)]">產業分類</span>
+          <span className="text-[11px] text-[var(--color-text-tertiary)] uppercase tracking-widest">產業分類</span>
           <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{data.profile.industry || "-"}</div>
         </div>
         <div>
-          <span className="text-[11px] text-[var(--color-text-tertiary)]">成立年份</span>
+          <span className="text-[11px] text-[var(--color-text-tertiary)] uppercase tracking-widest">成立年份</span>
           <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{establishedYear}</div>
         </div>
         <div>
-          <span className="text-[11px] text-[var(--color-text-tertiary)]">董事長</span>
+          <span className="text-[11px] text-[var(--color-text-tertiary)] uppercase tracking-widest">董事長</span>
           <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{data.profile.chairman || "-"}</div>
         </div>
-        {/* 總部 — placeholder since JSON doesn't have address */}
         <div>
-          <span className="text-[11px] text-[var(--color-text-tertiary)]">實收資本額</span>
-          <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{data.profile.capital ? formatCapitalNTD(data.profile.capital) : "-"}</div>
+          <span className="text-[11px] text-[var(--color-text-tertiary)] uppercase tracking-widest">總部</span>
+          <div className="text-[var(--color-text-secondary)] font-medium mt-0.5">{headquarters || "N/A"}</div>
         </div>
         <div>
-          <span className="text-[11px] text-[var(--color-text-tertiary)]">官方網站</span>
+          <span className="text-[11px] text-[var(--color-text-tertiary)] uppercase tracking-widest">官方網站</span>
           <div className="mt-0.5">
             {data.profile.website ? (
               <a href={data.profile.website} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 font-medium flex items-center gap-1 truncate">
@@ -911,7 +998,7 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
   return (
     <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
       <div className="flex items-center justify-between mb-4">
-        <h4 className="text-sm font-bold text-white">營收分析趨勢</h4>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest">營收分析趨勢</h4>
         {/* Pill buttons */}
         <div className="flex items-center gap-1 bg-white/[0.03] rounded-lg p-0.5">
           {revenueTabs.map(tab => (
@@ -935,23 +1022,27 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
       {revenueTab === "monthly" && trends?.monthly_revenue && trends.monthly_revenue.length > 1 && (
         <>
           <RevenueComposedChart data={trends.monthly_revenue} mode="monthly" />
-          <div className="mt-4 rounded-xl overflow-hidden">
-            <div className="grid grid-cols-4 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
-              <span>月份</span>
-              <span className="text-right">營收(億)</span>
-              <span className="text-right">MoM</span>
-              <span className="text-right">YoY</span>
-            </div>
-            <div className="max-h-52 overflow-y-auto">
-              {trends.monthly_revenue.slice().reverse().slice(0, 12).map((row, i) => (
-                <div key={i} className="grid grid-cols-4 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
-                  <span className="text-[var(--color-text-secondary)]">{formatTrendMonth(row.month)}</span>
-                  <span className="text-right text-white font-medium">{formatRevShort(row.revenue)}</span>
-                  <span className={cn("text-right", row.mom >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.mom)}</span>
-                  <span className={cn("text-right", row.yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.yoy)}</span>
-                </div>
-              ))}
-            </div>
+          <div className="mt-4 overflow-hidden rounded-xl">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+                  <th className="px-3 py-2 text-left">月份</th>
+                  <th className="px-3 py-2 text-right">營收(億)</th>
+                  <th className="px-3 py-2 text-right">MoM</th>
+                  <th className="px-3 py-2 text-right">YoY</th>
+                </tr>
+              </thead>
+              <tbody className="max-h-52 overflow-y-auto">
+                {trends.monthly_revenue.slice().reverse().slice(0, 12).map((row, i) => (
+                  <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                    <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatTrendMonth(row.month)}</td>
+                    <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueDisplay(row.revenue)}</td>
+                    <td className={cn("px-3 py-1.5 text-right", row.mom >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.mom)}</td>
+                    <td className={cn("px-3 py-1.5 text-right", row.yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.yoy)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </>
       )}
@@ -965,28 +1056,32 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
           const qi = trends.quarterly_income!;
           return (<>
           <RevenueComposedChart data={qi} mode="quarterly" />
-          <div className="mt-4 rounded-xl overflow-hidden">
-            <div className="grid grid-cols-3 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
-              <span>季度</span>
-              <span className="text-right">營收(億)</span>
-              <span className="text-right">YoY</span>
-            </div>
-            <div className="max-h-52 overflow-y-auto">
-              {[...qi].reverse().slice(0, 8).map((row, i) => {
-                const prevIdx = qi.indexOf(row);
-                const prev = prevIdx > 0 ? qi[prevIdx - 1] : null;
-                const yoy = prev && prev.revenue > 0 ? ((row.revenue - prev.revenue) / prev.revenue * 100) : null;
-                return (
-                  <div key={i} className="grid grid-cols-3 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
-                    <span className="text-[var(--color-text-secondary)]">{row.quarter}</span>
-                    <span className="text-right text-white font-medium">{(row.revenue / 100000).toFixed(1)}</span>
-                    <span className={cn("text-right", yoy !== null && yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>
-                      {yoy !== null ? formatPercentNum(yoy) : "-"}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
+          <div className="mt-4 overflow-hidden rounded-xl">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+                  <th className="px-3 py-2 text-left">季度</th>
+                  <th className="px-3 py-2 text-right">營收(億)</th>
+                  <th className="px-3 py-2 text-right">YoY</th>
+                </tr>
+              </thead>
+              <tbody className="max-h-52 overflow-y-auto">
+                {[...qi].reverse().slice(0, 8).map((row, i) => {
+                  const prevIdx = qi.indexOf(row);
+                  const prev4 = prevIdx >= 4 ? qi[prevIdx - 4] : null;
+                  const yoy = prev4 && prev4.revenue > 0 ? ((row.revenue - prev4.revenue) / prev4.revenue * 100) : null;
+                  return (
+                    <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                      <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatQuarterLabel(row.quarter)}</td>
+                      <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueDisplay(row.revenue)}</td>
+                      <td className={cn("px-3 py-1.5 text-right", yoy !== null && yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>
+                        {yoy !== null ? formatPercentNum(yoy) : "-"}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </>)})()
       )}
@@ -1014,7 +1109,6 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
             revenue: vals.revenue,
             grossProfit: vals.grossProfit,
             netIncome: vals.netIncome,
-            revenueYi: vals.revenue / 1e8,       // into 兆 (input is 千元): / 1e9 * 10
           }));
         // Calculate YoY for yearly
         const yearlyWithYoy = yearlyData.map((d, i) => ({
@@ -1049,23 +1143,27 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
                 <Line yAxisId="right" type="monotone" dataKey="yoy" stroke="#34d399" strokeWidth={2} dot={{ r: 3, fill: "#34d399", stroke: "#1e1e2e", strokeWidth: 1.5 }} name="yoy" />
               </ComposedChart>
             </ResponsiveContainer>
-            <div className="mt-4 rounded-xl overflow-hidden">
-              <div className="grid grid-cols-3 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
-                <span>年度</span>
-                <span className="text-right">營收(兆)</span>
-                <span className="text-right">YoY</span>
-              </div>
-              <div className="max-h-52 overflow-y-auto">
-                {yearlyWithYoy.slice().reverse().slice(0, 10).map((row, i) => (
-                  <div key={i} className="grid grid-cols-3 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
-                    <span className="text-[var(--color-text-secondary)]">{row.year}</span>
-                    <span className="text-right text-white font-medium">{(row.revenue / 1e9).toFixed(2)}</span>
-                    <span className={cn("text-right", row.yoy !== null && row.yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>
-                      {row.yoy !== null ? formatPercentNum(row.yoy) : "-"}
-                    </span>
-                  </div>
-                ))}
-              </div>
+            <div className="mt-4 overflow-hidden rounded-xl">
+              <table className="w-full text-xs">
+                <thead>
+                  <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+                    <th className="px-3 py-2 text-left">年度</th>
+                    <th className="px-3 py-2 text-right">營收</th>
+                    <th className="px-3 py-2 text-right">年度YoY%</th>
+                  </tr>
+                </thead>
+                <tbody className="max-h-52 overflow-y-auto">
+                  {yearlyWithYoy.slice().reverse().slice(0, 10).map((row, i) => (
+                    <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                      <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{row.year}</td>
+                      <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueDisplay(row.revenue)}</td>
+                      <td className={cn("px-3 py-1.5 text-right", row.yoy !== null && row.yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>
+                        {row.yoy !== null ? formatPercentNum(row.yoy) : "-"}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </>
         );
@@ -1117,7 +1215,7 @@ function RevenueComposedChart({ data, mode }: { data: TrendMonthlyRevenue[] | Tr
     const prevSameQ = idx >= 4 ? quarterlyData[idx - 4] : null;
     const yoy = prevSameQ && prevSameQ.revenue > 0 ? ((d.revenue - prevSameQ.revenue) / prevSameQ.revenue * 100) : null;
     return {
-      period: d.quarter,
+      period: formatQuarterLabel(d.quarter),
       revenue: d.revenue / 100000, // 千元 → 億
       yoy,
     };
@@ -1153,7 +1251,7 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
   if (!trends?.quarterly_income || trends.quarterly_income.length < 2) {
     return (
       <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
-        <h4 className="text-sm font-bold text-white mb-4">📈 獲利能力趨勢</h4>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-4">📈 獲利能力趨勢</h4>
         <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 季度資料累積中</div>
       </div>
     );
@@ -1167,7 +1265,7 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
   return (
     <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
       <div className="flex items-center justify-between mb-4">
-        <h4 className="text-sm font-bold text-white">獲利能力趨勢</h4>
+        <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest">獲利能力趨勢</h4>
         <div className="flex items-center gap-1 bg-white/[0.03] rounded-lg p-0.5">
           {profitTabs.map(tab => (
             <button
@@ -1212,6 +1310,7 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
           .map(([yr, vals]) => ({
             year: String(yr),
             grossMargin: vals.revenue > 0 ? parseFloat(((vals.grossProfit / vals.revenue) * 100).toFixed(1)) : 0,
+            operatingMargin: vals.revenue > 0 && vals.grossProfit > 0 ? parseFloat((((vals.grossProfit - vals.revenue * 0.08) / vals.revenue) * 100).toFixed(1)) : 0,
             netMargin: vals.revenue > 0 ? parseFloat(((vals.netIncome / vals.revenue) * 100).toFixed(1)) : 0,
             eps: parseFloat(vals.eps.toFixed(2)),
           }));
@@ -1226,6 +1325,7 @@ function ProfitabilityQuarterlyView({ data }: { data: TrendQuarterlyIncome[] }) 
   const chartData = data.map(d => ({
     quarter: d.quarter,
     grossMargin: d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0,
+    operatingMargin: d.revenue > 0 && d.grossProfit > 0 ? parseFloat((((d.grossProfit - d.revenue * 0.08) / d.revenue) * 100).toFixed(1)) : 0,
     netMargin: d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0,
     eps: d.eps,
   }));
@@ -1233,13 +1333,20 @@ function ProfitabilityQuarterlyView({ data }: { data: TrendQuarterlyIncome[] }) 
 }
 
 /* ─── Profitability Chart + Table ─── */
-function ProfitabilityChartAndTable({ data, periodKey, periodLabel }: { data: { grossMargin: number; netMargin: number; eps: number; [key: string]: unknown }[]; periodKey: string; periodLabel: string }) {
+function ProfitabilityChartAndTable({ data, periodKey, periodLabel }: { data: { grossMargin: number; netMargin: number; eps: number; operatingMargin?: number; [key: string]: unknown }[]; periodKey: string; periodLabel: string }) {
+  // Format the period label — convert ROC year quarters to CE
+  const formatPeriodLabel = (val: unknown) => {
+    const s = String(val);
+    if (periodKey === "quarter") return formatQuarterLabel(s);
+    if (periodKey === "year") return s;
+    return s;
+  };
   return (
     <>
       <ResponsiveContainer width="100%" height={280}>
         <LineChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
-          <XAxis dataKey={periodKey} tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
+          <XAxis dataKey={periodKey} tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: string) => formatPeriodLabel(v)} />
           <YAxis yAxisId="left" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}%`} />
           <YAxis yAxisId="right" orientation="right" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
           <Tooltip
@@ -1260,23 +1367,29 @@ function ProfitabilityChartAndTable({ data, periodKey, periodLabel }: { data: { 
           <Line yAxisId="right" type="monotone" dataKey="eps" stroke="#818cf8" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3, fill: "#818cf8", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="eps" />
         </LineChart>
       </ResponsiveContainer>
-      <div className="mt-4 rounded-xl overflow-hidden">
-        <div className={cn("grid gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2", periodKey === "year" ? "grid-cols-4" : "grid-cols-4")}>
-          <span>{periodLabel}</span>
-          <span className="text-right">毛利率</span>
-          <span className="text-right">淨利率</span>
-          <span className="text-right">EPS</span>
-        </div>
-        <div className="max-h-52 overflow-y-auto">
-          {[...data].reverse().slice(0, 10).map((row, i) => (
-            <div key={i} className="grid grid-cols-4 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
-              <span className="text-[var(--color-text-secondary)]">{String(row[periodKey])}</span>
-              <span className="text-right text-pink-400 font-medium">{row.grossMargin.toFixed(1)}%</span>
-              <span className="text-right text-yellow-400 font-medium">{row.netMargin.toFixed(1)}%</span>
-              <span className="text-right text-indigo-400 font-medium">{row.eps.toFixed(2)}</span>
-            </div>
-          ))}
-        </div>
+      <div className="mt-4 overflow-hidden rounded-xl">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+              <th className="px-3 py-2 text-left">{periodLabel}</th>
+              <th className="px-3 py-2 text-right">毛利率</th>
+              <th className="px-3 py-2 text-right">營益率</th>
+              <th className="px-3 py-2 text-right">淨利率</th>
+              <th className="px-3 py-2 text-right">EPS</th>
+            </tr>
+          </thead>
+          <tbody className="max-h-52 overflow-y-auto">
+            {[...data].reverse().slice(0, 10).map((row, i) => (
+              <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatPeriodLabel(row[periodKey])}</td>
+                <td className="px-3 py-1.5 text-right text-pink-400 font-medium">{row.grossMargin.toFixed(1)}%</td>
+                <td className="px-3 py-1.5 text-right text-cyan-400 font-medium">{row.operatingMargin !== undefined ? `${row.operatingMargin.toFixed(1)}%` : "-"}</td>
+                <td className="px-3 py-1.5 text-right text-yellow-400 font-medium">{row.netMargin.toFixed(1)}%</td>
+                <td className="px-3 py-1.5 text-right text-indigo-400 font-medium">{row.eps.toFixed(2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </>
   );
