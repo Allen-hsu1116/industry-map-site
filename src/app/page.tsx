@@ -30,7 +30,7 @@ interface FinancialDividendHistoryEntry { year: string; cashDividend: number; st
 interface FinancialSWOT { strengths: string[]; weaknesses: string[]; opportunities: string[]; threats: string[]; }
 
 interface TrendMonthlyRevenue { month: string; revenue: number; mom: number; yoy: number; }
-interface TrendQuarterlyIncome { quarter: string; revenue: number; grossProfit: number; netIncome: number; eps: number; grossMargin?: number; operatingMargin?: number; netMargin?: number; }
+interface TrendQuarterlyIncome { quarter: string; revenue: number; grossProfit: number; operatingIncome?: number; netIncome: number; eps: number; grossMargin?: number; operatingMargin?: number; netMargin?: number; }
 interface TrendMonthlyPrice { month: string; high: number; low: number; avg: number; volume: number; }
 interface TrendDailyPrice { date: string; open: number; high: number; low: number; close: number; volume: number; }
 interface TrendYearlyTrading { year: string; high: number; low: number; avg_closing: number; trade_volume: number; trade_value: number; }
