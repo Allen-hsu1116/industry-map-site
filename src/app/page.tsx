@@ -2527,7 +2527,7 @@ export default function Home() {
                 })}
               </div>
               <div className="flex gap-3">
-                <Button className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white h-11 rounded-xl" onClick={() => { setShowCompanyModal(false); setActiveTab("companies"); goToCompany(selectedCompanyData.code); }}>查看完整資料</Button>
+                <Button className="flex-1 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white h-11 rounded-xl" onClick={() => { setShowCompanyModal(false); setActiveTab("companies"); setSelectedCompanyCode(selectedCompanyData.code); setCompanyViewMode("detail"); }}>查看完整資料</Button>
                 <Button variant="outline" className="bg-white/[0.05] border-[var(--color-border-hover)] text-[var(--color-text-secondary)] hover:text-white h-11 rounded-xl px-6" onClick={() => setShowCompanyModal(false)}>關閉</Button>
               </div>
             </CardContent>
