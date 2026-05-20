@@ -30,7 +30,7 @@ interface FinancialDividendHistoryEntry { year: string; cashDividend: number; st
 interface FinancialSWOT { strengths: string[]; weaknesses: string[]; opportunities: string[]; threats: string[]; }
 
 interface TrendMonthlyRevenue { month: string; revenue: number; mom: number; yoy: number; }
-interface TrendQuarterlyIncome { quarter: string; revenue: number; grossProfit: number; netIncome: number; eps: number; }
+interface TrendQuarterlyIncome { quarter: string; revenue: number; grossProfit: number; netIncome: number; eps: number; grossMargin?: number; operatingMargin?: number; netMargin?: number; }
 interface TrendMonthlyPrice { month: string; high: number; low: number; avg: number; volume: number; }
 interface TrendDailyPrice { date: string; open: number; high: number; low: number; close: number; volume: number; }
 interface TrendYearlyTrading { year: string; high: number; low: number; avg_closing: number; trade_volume: number; trade_value: number; }
@@ -772,30 +772,29 @@ function ProfitabilityTrendPanel({ data }: { data: FinancialData }) {
   }));
 
   // Calculate operating margin from quarterly data
-  const chartDataWithOM = trends.quarterly_income.map(d => {
-    const gm = d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0;
-    const nm = d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0;
-    // operating margin = (grossProfit - operating expenses) / revenue, but we can estimate from net income
-    // Use gross margin and net margin to derive: we'll show gross margin, operating margin estimate, net margin, EPS
-    return {
+  const chartDataWithOM = trends.quarterly_income.map(d => ({
       quarter: d.quarter,
-      grossMargin: gm,
-      netMargin: nm,
+      grossMargin: d.grossMargin ?? (d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0),
+      operatingMargin: d.operatingMargin ?? 0,
+      netMargin: d.netMargin ?? (d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0),
       eps: d.eps,
-    };
-  });
+  }));
 
   const latest = chartDataWithOM[chartDataWithOM.length - 1];
 
   return (
     <div>
-      <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">📈 獲利能力趨勢</h4>
+      <h4 className="text-[11px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest mb-3">獲利能力趨勢</h4>
 
       {/* Latest metrics row */}
       <div className="grid grid-cols-4 gap-3 mb-3">
         <div className="bg-white/[0.02] rounded-xl p-3 text-center">
           <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">毛利率</div>
           <div className="text-lg font-bold" style={{ color: "#f472b6" }}>{latest.grossMargin.toFixed(1)}%</div>
+        </div>
+        <div className="bg-white/[0.02] rounded-xl p-3 text-center">
+          <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">營益率</div>
+          <div className="text-lg font-bold" style={{ color: "#22d3ee" }}>{latest.operatingMargin.toFixed(1)}%</div>
         </div>
         <div className="bg-white/[0.02] rounded-xl p-3 text-center">
           <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">淨利率</div>
@@ -805,23 +804,19 @@ function ProfitabilityTrendPanel({ data }: { data: FinancialData }) {
           <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">EPS</div>
           <div className="text-lg font-bold text-white">{latest.eps.toFixed(2)}</div>
         </div>
-        <div className="bg-white/[0.02] rounded-xl p-3 text-center">
-          <div className="text-[10px] text-[var(--color-text-tertiary)] mb-1">季數</div>
-          <div className="text-lg font-bold text-[var(--color-text-tertiary)]">{chartDataWithOM.length}</div>
-        </div>
       </div>
 
-      {/* Line chart */}
+      {/* Composed chart: Lines for margins + Bar for EPS */}
       <div className="bg-white/[0.02] rounded-xl p-4">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-xs text-[var(--color-text-tertiary)]">毛利率 / 淨利率 / EPS 趨勢</span>
+          <span className="text-xs text-[var(--color-text-tertiary)]">毛利率 / 營益率 / 淨利率 / EPS</span>
         </div>
         <ResponsiveContainer width="100%" height={260}>
-          <LineChart data={chartDataWithOM} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+          <ComposedChart data={chartDataWithOM} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
             <XAxis dataKey="quarter" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
             <YAxis yAxisId="left" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}%`} />
-            <YAxis yAxisId="right" orientation="right" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} />
+            <YAxis yAxisId="right" orientation="right" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
             <Tooltip
               contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
               labelStyle={{ color: "#94a3b8" }}
@@ -829,43 +824,45 @@ function ProfitabilityTrendPanel({ data }: { data: FinancialData }) {
                 const v = Number(value);
                 const n = String(name);
                 if (n === "grossMargin") return [`${v}%`, "毛利率"];
+                if (n === "operatingMargin") return [`${v}%`, "營益率"];
                 if (n === "netMargin") return [`${v}%`, "淨利率"];
                 if (n === "eps") return [`${v.toFixed(2)} 元`, "EPS"];
                 return [`${v}`, n];
               }}
             />
-            <Legend formatter={(value: string) => value === "grossMargin" ? "毛利率" : value === "netMargin" ? "淨利率" : value === "eps" ? "EPS" : value} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+            <Legend formatter={(value: string) => value === "grossMargin" ? "毛利率" : value === "operatingMargin" ? "營益率" : value === "netMargin" ? "淨利率" : value === "eps" ? "EPS" : value} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+            <Bar yAxisId="right" dataKey="eps" fill="#6366f1" fillOpacity={0.6} radius={[3, 3, 0, 0]} name="eps" />
             <Line yAxisId="left" type="monotone" dataKey="grossMargin" stroke="#f472b6" strokeWidth={2} dot={{ r: 3, fill: "#f472b6", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="grossMargin" />
+            <Line yAxisId="left" type="monotone" dataKey="operatingMargin" stroke="#22d3ee" strokeWidth={2} dot={{ r: 3, fill: "#22d3ee", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="operatingMargin" />
             <Line yAxisId="left" type="monotone" dataKey="netMargin" stroke="#fbbf24" strokeWidth={2} dot={{ r: 3, fill: "#fbbf24", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="netMargin" />
-            <Line yAxisId="right" type="monotone" dataKey="eps" stroke="#818cf8" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3, fill: "#818cf8", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="eps" />
-          </LineChart>
+          </ComposedChart>
         </ResponsiveContainer>
       </div>
 
       {/* Profitability table */}
-      <div className="bg-white/[0.02] rounded-xl overflow-hidden mt-3">
-        <div className="grid grid-cols-5 gap-0 text-[11px] font-semibold text-[var(--color-text-tertiary)] bg-white/[0.03] px-3 py-2">
-          <span>季度</span>
-          <span className="text-right">毛利率</span>
-          <span className="text-right">淨利率</span>
-          <span className="text-right">EPS</span>
-          <span className="text-right">營收(億)</span>
-        </div>
-        <div className="max-h-52 overflow-y-auto">
-          {[...trends.quarterly_income].reverse().slice(0, 8).map((row, i) => {
-            const gm = row.revenue > 0 ? ((row.grossProfit / row.revenue) * 100).toFixed(1) : "-";
-            const nm = row.revenue > 0 ? ((row.netIncome / row.revenue) * 100).toFixed(1) : "-";
-            return (
-              <div key={i} className="grid grid-cols-5 gap-0 text-xs px-3 py-1.5 border-t border-white/[0.03] hover:bg-white/[0.02]">
-                <span className="text-[var(--color-text-secondary)]">{row.quarter}</span>
-                <span className="text-right text-pink-400 font-medium">{gm}%</span>
-                <span className="text-right text-yellow-400 font-medium">{nm}%</span>
-                <span className="text-right text-indigo-400 font-medium">{row.eps.toFixed(2)}</span>
-                <span className="text-right text-white font-medium">{(row.revenue / 100000).toFixed(1)}</span>
-              </div>
-            );
-          })}
-        </div>
+      <div className="mt-4 overflow-hidden rounded-xl">
+        <table className="w-full text-xs">
+          <thead>
+            <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+              <th className="px-3 py-2 text-left">季度</th>
+              <th className="px-3 py-2 text-right">毛利率</th>
+              <th className="px-3 py-2 text-right">營益率</th>
+              <th className="px-3 py-2 text-right">淨利率</th>
+              <th className="px-3 py-2 text-right">EPS</th>
+            </tr>
+          </thead>
+          <tbody className="max-h-52 overflow-y-auto">
+            {[...trends.quarterly_income].reverse().slice(0, 8).map((row, i) => (
+              <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatQuarterLabel(row.quarter)}</td>
+                <td className="px-3 py-1.5 text-right text-pink-400 font-medium">{(row.grossMargin ?? (row.revenue > 0 ? (row.grossProfit / row.revenue * 100) : 0)).toFixed(1)}%</td>
+                <td className="px-3 py-1.5 text-right text-cyan-400 font-medium">{(row.operatingMargin ?? 0).toFixed(1)}%</td>
+                <td className="px-3 py-1.5 text-right text-yellow-400 font-medium">{(row.netMargin ?? (row.revenue > 0 ? (row.netIncome / row.revenue * 100) : 0)).toFixed(1)}%</td>
+                <td className="px-3 py-1.5 text-right text-indigo-400 font-medium">{row.eps.toFixed(2)} 元</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
@@ -1068,6 +1065,14 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
       {revenueTab === "quarterly" && trends?.quarterly_income && trends.quarterly_income.length > 1 && (
         (() => {
           const qi = trends.quarterly_income!;
+          // Pre-compute YoY and QoQ for each quarter
+          const qiWithRates = qi.map((row, idx) => {
+            const prev4 = idx >= 4 ? qi[idx - 4] : null;
+            const prev1 = idx >= 1 ? qi[idx - 1] : null;
+            const yoy = prev4 && prev4.revenue > 0 ? ((row.revenue - prev4.revenue) / prev4.revenue * 100) : null;
+            const qoq = prev1 && prev1.revenue > 0 ? ((row.revenue - prev1.revenue) / prev1.revenue * 100) : null;
+            return { ...row, yoy, qoq };
+          });
           return (<>
           <RevenueComposedChart data={qi} mode="quarterly" />
           <div className="mt-4 overflow-hidden rounded-xl">
@@ -1075,25 +1080,24 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
               <thead>
                 <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
                   <th className="px-3 py-2 text-left">季度</th>
-                  <th className="px-3 py-2 text-right">營收(億)</th>
+                  <th className="px-3 py-2 text-right">營收</th>
+                  <th className="px-3 py-2 text-right">QoQ</th>
                   <th className="px-3 py-2 text-right">YoY</th>
                 </tr>
               </thead>
               <tbody className="max-h-52 overflow-y-auto">
-                {[...qi].reverse().slice(0, 8).map((row, i) => {
-                  const prevIdx = qi.indexOf(row);
-                  const prev4 = prevIdx >= 4 ? qi[prevIdx - 4] : null;
-                  const yoy = prev4 && prev4.revenue > 0 ? ((row.revenue - prev4.revenue) / prev4.revenue * 100) : null;
-                  return (
+                {[...qiWithRates].reverse().slice(0, 8).map((row, i) => (
                     <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                       <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatQuarterLabel(row.quarter)}</td>
                       <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueDisplay(row.revenue)}</td>
-                      <td className={cn("px-3 py-1.5 text-right", yoy !== null && yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>
-                        {yoy !== null ? formatPercentNum(yoy) : "-"}
+                      <td className={cn("px-3 py-1.5 text-right", row.qoq !== null && row.qoq >= 0 ? "text-emerald-400" : row.qoq !== null ? "text-rose-400" : "text-[var(--color-text-tertiary)]")}>
+                        {row.qoq !== null ? formatPercentNum(row.qoq) : "-"}
+                      </td>
+                      <td className={cn("px-3 py-1.5 text-right", row.yoy !== null && row.yoy >= 0 ? "text-emerald-400" : row.yoy !== null ? "text-rose-400" : "text-[var(--color-text-tertiary)]")}>
+                        {row.yoy !== null ? formatPercentNum(row.yoy) : "-"}
                       </td>
                     </tr>
-                  );
-                })}
+                  ))}
               </tbody>
             </table>
           </div>
