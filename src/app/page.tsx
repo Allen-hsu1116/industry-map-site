@@ -1315,16 +1315,17 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
       )}
 
       {profitTab === "yearly" && (() => {
-        const yearlyMap = new Map<number, { grossProfit: number; netIncome: number; eps: number; revenue: number }>();
+        const yearlyMap = new Map<number, { grossProfit: number; operatingIncome: number; netIncome: number; eps: number; revenue: number }>();
         trends.quarterly_income.forEach(q => {
           const yearMatch = q.quarter.match(/(\d{3,4})/);
           if (yearMatch) {
             let yr: number;
             const raw = parseInt(yearMatch[1]);
             yr = raw < 200 ? raw + 1911 : raw;
-            const existing = yearlyMap.get(yr) || { grossProfit: 0, netIncome: 0, eps: 0, revenue: 0 };
+            const existing = yearlyMap.get(yr) || { grossProfit: 0, operatingIncome: 0, netIncome: 0, eps: 0, revenue: 0 };
             yearlyMap.set(yr, {
               grossProfit: existing.grossProfit + q.grossProfit,
+              operatingIncome: existing.operatingIncome + (q.operatingMargin && q.revenue > 0 ? q.revenue * q.operatingMargin / 100 : 0),
               netIncome: existing.netIncome + q.netIncome,
               eps: existing.eps + q.eps,
               revenue: existing.revenue + q.revenue,
@@ -1336,7 +1337,7 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
           .map(([yr, vals]) => ({
             year: String(yr),
             grossMargin: vals.revenue > 0 ? parseFloat(((vals.grossProfit / vals.revenue) * 100).toFixed(1)) : 0,
-            operatingMargin: vals.revenue > 0 && vals.grossProfit > 0 ? parseFloat((((vals.grossProfit - vals.revenue * 0.08) / vals.revenue) * 100).toFixed(1)) : 0,
+            operatingMargin: vals.revenue > 0 ? parseFloat(((vals.operatingIncome / vals.revenue) * 100).toFixed(1)) : 0,
             netMargin: vals.revenue > 0 ? parseFloat(((vals.netIncome / vals.revenue) * 100).toFixed(1)) : 0,
             eps: parseFloat(vals.eps.toFixed(2)),
           }));
@@ -1350,9 +1351,9 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
 function ProfitabilityQuarterlyView({ data }: { data: TrendQuarterlyIncome[] }) {
   const chartData = data.map(d => ({
     quarter: d.quarter,
-    grossMargin: d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0,
-    operatingMargin: d.revenue > 0 && d.grossProfit > 0 ? parseFloat((((d.grossProfit - d.revenue * 0.08) / d.revenue) * 100).toFixed(1)) : 0,
-    netMargin: d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0,
+    grossMargin: d.grossMargin ?? (d.revenue > 0 ? parseFloat(((d.grossProfit / d.revenue) * 100).toFixed(1)) : 0),
+    operatingMargin: d.operatingMargin ?? (d.revenue > 0 && d.grossProfit > 0 ? parseFloat((((d.grossProfit - (d.revenue > 0 ? (d.revenue * 0.08) : 0)) / d.revenue) * 100).toFixed(1)) : 0),
+    netMargin: d.netMargin ?? (d.revenue > 0 ? parseFloat(((d.netIncome / d.revenue) * 100).toFixed(1)) : 0),
     eps: d.eps,
   }));
   return <ProfitabilityChartAndTable data={chartData} periodKey="quarter" periodLabel="季度" />;
@@ -1370,7 +1371,7 @@ function ProfitabilityChartAndTable({ data, periodKey, periodLabel }: { data: { 
   return (
     <>
       <ResponsiveContainer width="100%" height={280}>
-        <LineChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
+        <ComposedChart data={data} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
           <XAxis dataKey={periodKey} tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: string) => formatPeriodLabel(v)} />
           <YAxis yAxisId="left" tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}%`} />
@@ -1382,16 +1383,18 @@ function ProfitabilityChartAndTable({ data, periodKey, periodLabel }: { data: { 
               const v = Number(value);
               const n = String(name);
               if (n === "grossMargin") return [`${v}%`, "毛利率"];
+              if (n === "operatingMargin") return [`${v}%`, "營益率"];
               if (n === "netMargin") return [`${v}%`, "淨利率"];
               if (n === "eps") return [`${v.toFixed(2)} 元`, "EPS"];
               return [`${v}`, n];
             }}
           />
-          <Legend formatter={(value: string) => value === "grossMargin" ? "毛利率" : value === "netMargin" ? "淨利率" : value === "eps" ? "EPS" : value} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+          <Legend formatter={(value: string) => value === "grossMargin" ? "毛利率" : value === "operatingMargin" ? "營益率" : value === "netMargin" ? "淨利率" : value === "eps" ? "EPS" : value} wrapperStyle={{ fontSize: 12, color: "#94a3b8" }} />
+          <Bar yAxisId="right" dataKey="eps" fill="#6366f1" fillOpacity={0.6} radius={[3, 3, 0, 0]} name="eps" />
           <Line yAxisId="left" type="monotone" dataKey="grossMargin" stroke="#f472b6" strokeWidth={2} dot={{ r: 3, fill: "#f472b6", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="grossMargin" />
+          <Line yAxisId="left" type="monotone" dataKey="operatingMargin" stroke="#22d3ee" strokeWidth={2} dot={{ r: 3, fill: "#22d3ee", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="operatingMargin" />
           <Line yAxisId="left" type="monotone" dataKey="netMargin" stroke="#fbbf24" strokeWidth={2} dot={{ r: 3, fill: "#fbbf24", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="netMargin" />
-          <Line yAxisId="right" type="monotone" dataKey="eps" stroke="#818cf8" strokeWidth={2} strokeDasharray="5 5" dot={{ r: 3, fill: "#818cf8", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="eps" />
-        </LineChart>
+        </ComposedChart>
       </ResponsiveContainer>
       <div className="mt-4 overflow-hidden rounded-xl">
         <table className="w-full text-xs">
