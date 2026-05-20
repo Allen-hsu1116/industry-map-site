@@ -1325,7 +1325,7 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
             const existing = yearlyMap.get(yr) || { grossProfit: 0, operatingIncome: 0, netIncome: 0, eps: 0, revenue: 0 };
             yearlyMap.set(yr, {
               grossProfit: existing.grossProfit + q.grossProfit,
-              operatingIncome: existing.operatingIncome + (q.operatingMargin && q.revenue > 0 ? q.revenue * q.operatingMargin / 100 : 0),
+              operatingIncome: existing.operatingIncome + (q.operatingIncome || (q.operatingMargin && q.revenue > 0 ? q.revenue * q.operatingMargin / 100 : 0)),
               netIncome: existing.netIncome + q.netIncome,
               eps: existing.eps + q.eps,
               revenue: existing.revenue + q.revenue,
