@@ -2422,6 +2422,12 @@ export default function Home() {
                       className={cn("rounded-xl", detailViewMode === "structure" ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/30" : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]")}
                       onClick={() => setDetailViewMode("structure")}
                     >🔗 供應鏈結構</Button>
+                    <a
+                      href={`https://allen-hsu1116.github.io/stock-knowledge-site/產業地圖/${encodeURIComponent(selectedTopicData.name)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300 transition-colors px-3 py-1.5 rounded-xl border border-indigo-500/30 hover:bg-indigo-500/10"
+                    >📖 知識庫詳解</a>
                   </div>
 
                   {/* List View */}
@@ -2649,7 +2655,15 @@ export default function Home() {
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-lg font-bold text-white shadow-lg shadow-indigo-500/15">{selectedCompanyData.code.slice(0, 4)}</div>
                   <div>
                     <h2 className="text-xl font-bold text-white">{selectedCompanyData.name}</h2>
-                    <span className="text-sm text-[var(--color-text-tertiary)]">{selectedCompanyData.code}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-[var(--color-text-tertiary)]">{selectedCompanyData.code}</span>
+                      <a
+                        href={`https://allen-hsu1116.github.io/stock-knowledge-site/`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors"
+                      >📖 知識庫</a>
+                    </div>
                   </div>
                 </div>
                 <Button variant="outline" size="icon" className="w-9 h-9 rounded-xl bg-white/[0.04] border-[var(--color-border)] text-[var(--color-text-tertiary)] hover:text-white" onClick={() => setShowCompanyModal(false)}>
