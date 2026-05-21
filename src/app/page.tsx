@@ -136,6 +136,31 @@ function mapGroupNames(groups: Group[]): Group[] {
   return groups.map((g, i) => ({ ...g, name: g.name || levelNames[i] || `群組 ${i + 1}` }));
 }
 
+/* Classify a group's supply chain level based on company roles and group name */
+function classifyGroupLevel(group: Group): "upstream" | "midstream" | "downstream" | "peripheral" {
+  const name = group.name || "";
+  const roles = group.companies.map(c => (c.role || "")).join(" ");
+  const combined = `${name} ${roles}`;
+
+  const upstreamKw = ["材料", "原料", "基板", "晶圓", "IC設計", "矽智財", "IP", "光阻", "化學", "氣體",
+    "耗材", "PCB", "被動元件", "MLCC", "連接器", "零組件", "導線架", "特用", "設計", "供應",
+    "半導體材料", "封裝材料", "IC載板", "CCL", "玻纖", "銅箔"];
+  const downstreamKw = ["品牌", "終端", "應用", "服務", "通路", "營運", "系統整合", "ODM",
+    "伺服器品牌", "投資", "開發", "電商", "零售", "運維", "風場"];
+
+  let upScore = 0, midScore = 0, downScore = 0;
+  for (const kw of upstreamKw) { if (combined.includes(kw)) upScore++; }
+  for (const kw of downstreamKw) { if (combined.includes(kw)) downScore++; }
+  // Midstream keywords are the remainder (代工, 製造, 封裝, 模組, etc.)
+  const midKw = ["代工", "製造", "封裝", "測試", "模組", "系統", "整合"];
+  for (const kw of midKw) { if (combined.includes(kw)) midScore++; }
+
+  if (upScore > Math.max(midScore, downScore) + 1) return "upstream";
+  if (downScore > Math.max(upScore, midScore) + 1) return "downstream";
+  // Default: midstream is most common
+  return "midstream";
+}
+
 /* ─── Number formatting helpers (Chinese units) ─── */
 function formatMoneyNTD(thousands: string): string {
   // Input is in 千元 (thousands of NTD)
@@ -2471,15 +2496,14 @@ export default function Home() {
                     <div className="space-y-12">
                       {(() => {
                         const namedGroups = mapGroupNames(selectedTopicData.groups);
-                        const levelColors = [
-                          { bg: "bg-emerald-500/[0.06]", border: "border-emerald-500/20", text: "text-emerald-400", label: "上游", icon: "⬆️" },
-                          { bg: "bg-amber-500/[0.06]", border: "border-amber-500/20", text: "text-amber-400", label: "中游", icon: "⏺️" },
-                          { bg: "bg-blue-500/[0.06]", border: "border-blue-500/20", text: "text-blue-400", label: "下游", icon: "⬇️" },
-                          { bg: "bg-purple-500/[0.06]", border: "border-purple-500/20", text: "text-purple-400", label: "周邊", icon: "🔄" },
-                          { bg: "bg-slate-500/[0.06]", border: "border-slate-500/20", text: "text-slate-400", label: "其他", icon: "📦" },
-                        ];
+                        const levelMap: Record<string, { bg: string; border: string; text: string; label: string; icon: string }> = {
+                          upstream:   { bg: "bg-emerald-500/[0.06]", border: "border-emerald-500/20", text: "text-emerald-400", label: "上游", icon: "⬆️" },
+                          midstream:   { bg: "bg-amber-500/[0.06]",  border: "border-amber-500/20",  text: "text-amber-400",  label: "中游", icon: "⏺️" },
+                          downstream:  { bg: "bg-blue-500/[0.06]",   border: "border-blue-500/20",   text: "text-blue-400",   label: "下游", icon: "⬇️" },
+                          peripheral:  { bg: "bg-purple-500/[0.06]", border: "border-purple-500/20", text: "text-purple-400", label: "周邊", icon: "🔄" },
+                        };
                         return namedGroups.map((group, gi) => {
-                          const level = levelColors[Math.min(gi, levelColors.length - 1)];
+                          const level = levelMap[classifyGroupLevel(group)] || levelMap.midstream;
                           return (
                             <div key={gi} className="slide-up" style={{ animationDelay: `${gi * 80}ms` }}>
                               <div className="flex items-center gap-2.5 mb-5">
