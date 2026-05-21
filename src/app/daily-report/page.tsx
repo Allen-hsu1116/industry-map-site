@@ -80,10 +80,10 @@ interface DailyReport {
 
 /* ─── Score Color ─── */
 function getScoreColor(score: number): string {
-  if (score >= 80) return "text-emerald-400";
+  if (score >= 80) return "text-rose-400";
   if (score >= 60) return "text-yellow-400";
   if (score >= 40) return "text-orange-400";
-  return "text-red-400";
+  return "text-emerald-400";
 }
 
 function getScoreBg(score: number): string {
@@ -197,24 +197,26 @@ export default function DailyReportPage() {
                 </div>
                 <div>
                   <p className="text-gray-500 text-xs">漲跌</p>
-                  <p className={`text-xl font-bold ${(report.market_overview.change ?? 0) >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                  <p className={`text-xl font-bold ${(report.market_overview.change ?? 0) >= 0 ? "text-rose-400" : "text-emerald-400"}`}>
                     {report.market_overview.change !== null ? `${report.market_overview.change >= 0 ? "+" : ""}${report.market_overview.change?.toLocaleString()}` : "—"}
                   </p>
                 </div>
                 <div>
                   <p className="text-gray-500 text-xs">漲跌幅</p>
-                  <p className={`text-xl font-bold ${(report.market_overview.change_pct ?? 0) >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                  <p className={`text-xl font-bold ${(report.market_overview.change_pct ?? 0) >= 0 ? "text-rose-400" : "text-emerald-400"}`}>
                     {report.market_overview.change_pct !== null ? `${report.market_overview.change_pct >= 0 ? "+" : ""}${report.market_overview.change_pct}%` : "—"}
                   </p>
                 </div>
+                {report.market_overview.advancing !== null && report.market_overview.declining !== null && (
                 <div>
                   <p className="text-gray-500 text-xs">上漲/下跌</p>
                   <p className="text-lg font-bold text-white">
-                    <span className="text-emerald-400">{report.market_overview.advancing}</span>
+                    <span className="text-rose-400">{report.market_overview.advancing}</span>
                     {" / "}
-                    <span className="text-red-400">{report.market_overview.declining}</span>
+                    <span className="text-emerald-400">{report.market_overview.declining}</span>
                   </p>
                 </div>
+                )}
               </div>
             </CardContent>
           </Card>
@@ -231,7 +233,7 @@ export default function DailyReportPage() {
                 {report.hot_sectors.map((sector, i) => (
                   <div key={i} className="bg-slate-800/50 rounded-lg px-4 py-2 flex items-center gap-3">
                     <span className="text-white font-semibold">{sector.name}</span>
-                    <span className={`font-bold ${sector.change_pct.startsWith("+") ? "text-emerald-400" : "text-red-400"}`}>
+                    <span className={`font-bold ${sector.change_pct.startsWith("+") ? "text-rose-400" : "text-emerald-400"}`}>
                       {sector.change_pct}
                     </span>
                     <span className="text-gray-500 text-sm">
@@ -271,7 +273,7 @@ export default function DailyReportPage() {
                       現價 <span className="text-white font-semibold">{pick.price?.toLocaleString()}</span>
                     </span>
                     {pick.change_pct !== null && (
-                      <span className={`font-semibold ${pick.change_pct >= 0 ? "text-emerald-400" : "text-red-400"}`}>
+                      <span className={`font-semibold ${pick.change_pct >= 0 ? "text-rose-400" : "text-emerald-400"}`}>
                         {pick.change_pct >= 0 ? "+" : ""}{pick.change_pct}%
                       </span>
                     )}
@@ -307,7 +309,7 @@ export default function DailyReportPage() {
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-purple-400">🎲 籌碼面</h4>
                     <p className="text-gray-300 text-sm">
-                      外資 <span className={`font-semibold ${pick.chip_analysis.foreign_net_buy.startsWith("+") ? "text-emerald-400" : "text-red-400"}`}>
+                      外資 <span className={`font-semibold ${pick.chip_analysis.foreign_net_buy.startsWith("+") ? "text-rose-400" : "text-emerald-400"}`}>
                         {pick.chip_analysis.foreign_net_buy}
                       </span>
                     </p>

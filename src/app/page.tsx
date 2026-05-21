@@ -1051,8 +1051,8 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
                   <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                     <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatTrendMonth(row.month)}</td>
                     <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueDisplay(row.revenue)}</td>
-                    <td className={cn("px-3 py-1.5 text-right", row.mom >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.mom)}</td>
-                    <td className={cn("px-3 py-1.5 text-right", row.yoy >= 0 ? "text-emerald-400" : "text-rose-400")}>{formatPercentNum(row.yoy)}</td>
+                    <td className={cn("px-3 py-1.5 text-right", row.mom >= 0 ? "text-rose-400" : "text-emerald-400")}>{formatPercentNum(row.mom)}</td>
+                    <td className={cn("px-3 py-1.5 text-right", row.yoy >= 0 ? "text-rose-400" : "text-emerald-400")}>{formatPercentNum(row.yoy)}</td>
                   </tr>
                 ))}
               </tbody>
