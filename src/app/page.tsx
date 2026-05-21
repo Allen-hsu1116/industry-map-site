@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -2022,6 +2023,7 @@ function CompanyFullPageDetail({
     MAIN PAGE COMPONENT
    ═══════════════════════════════════════════════════════════════════ */
 export default function Home() {
+  const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<TabId>("topics");
   const [search, setSearch] = useState("");
   const [showAutocomplete, setShowAutocomplete] = useState(false);
@@ -2036,6 +2038,21 @@ export default function Home() {
   const [financialData, setFinancialData] = useState<FinancialData | null>(null);
   const [financialLoading, setFinancialLoading] = useState(false);
   const [financialError, setFinancialError] = useState(false);
+
+  // Handle URL query params: ?company=2330 or ?topic=semiconductor
+  useEffect(() => {
+    const companyParam = searchParams.get("company");
+    const topicParam = searchParams.get("topic");
+    if (companyParam) {
+      setActiveTab("companies");
+      setSelectedCompanyCode(companyParam);
+      setCompanyViewMode("detail");
+    }
+    if (topicParam) {
+      setActiveTab("topics");
+      setSelectedTopicSlug(topicParam);
+    }
+  }, [searchParams]);
   const searchRef = useRef<HTMLDivElement>(null);
   const companyListScrollRef = useRef<number>(0);
 
@@ -2178,6 +2195,11 @@ export default function Home() {
                   ))}
                 </div>
               )}
+            </div>
+            {/* External links */}
+            <div className="flex items-center gap-2 shrink-0">
+              <a href="/industry-map-site/daily-report" className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors px-3 py-1.5 rounded-lg hover:bg-indigo-500/10">📊 每日報告</a>
+              <a href="https://allen-hsu1116.github.io/stock-knowledge-site/" target="_blank" rel="noopener noreferrer" className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)] transition-colors px-3 py-1.5 rounded-lg hover:bg-white/[0.04]">📚 知識庫</a>
             </div>
           </div>
           <div className="flex items-center gap-1.5 -mb-px overflow-x-auto pb-0.5">

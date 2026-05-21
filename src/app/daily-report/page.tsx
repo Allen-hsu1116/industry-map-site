@@ -367,14 +367,43 @@ export default function DailyReportPage() {
         )}
 
         {/* Footer */}
-        <div className="mt-8 text-center text-gray-500 text-xs">
-          <p>🧠 知識來源：snake-knowledge.md</p>
-          <p className="mt-1">
-            本報告由 AI 自動產生，僅供參考，不構成投資建議。
-          </p>
-          <a href="/industry-map-site/" className="text-indigo-400 hover:text-indigo-300 mt-2 inline-block">
-            ← 返回產業地圖
-          </a>
+        <div className="mt-8 space-y-4">
+          {/* Knowledge Base Links */}
+          <Card className="bg-[#12122a] border-indigo-500/20">
+            <CardContent className="pt-6">
+              <h3 className="text-sm font-semibold text-indigo-400 mb-3">📚 知識庫參考</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <a
+                  href="https://allen-hsu1116.github.io/stock-knowledge-site/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+                >
+                  <h4 className="text-white text-sm font-semibold">📖 股票知識庫</h4>
+                  <p className="text-gray-500 text-xs mt-1">技術分析 · 基本面 · 籌碼面 · 操作策略 · 風險管理</p>
+                </a>
+                <a
+                  href="https://allen-hsu1116.github.io/knowledge-base/%E5%B0%88%E6%A1%88/%E6%87%89%E7%94%A8/ZhuLinsen-daily_stock_analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors"
+                >
+                  <h4 className="text-white text-sm font-semibold">🧠 AI 選股參考專案</h4>
+                  <p className="text-gray-500 text-xs mt-1">daily_stock_analysis · AI-Trader · Vibe-Trading</p>
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          <div className="text-center text-gray-500 text-xs">
+            <p>🧠 知識來源：stock-knowledge.md + knowledge-base (Quartz)</p>
+            <p className="mt-1">
+              本報告由 AI 自動產生，僅供參考，不構成投資建議。
+            </p>
+            <a href="/industry-map-site/" className="text-indigo-400 hover:text-indigo-300 mt-2 inline-block">
+              ← 返回產業地圖
+            </a>
+          </div>
         </div>
       </div>
     </div>
