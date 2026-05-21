@@ -2089,7 +2089,7 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("全部");
   const [selectedTopicSlug, setSelectedTopicSlug] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"count" | "name">("count");
-  const [detailViewMode, setDetailViewMode] = useState<"overview" | "structure">("overview");
+  const [detailViewMode, setDetailViewMode] = useState<"structure" | "knowledge">("structure");
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
   const [searchFocused, setSearchFocused] = useState(false);
   const [selectedCompanyCode, setSelectedCompanyCode] = useState<string | null>(null);
@@ -2197,7 +2197,7 @@ export default function Home() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const goToTopic = (slug: string) => { setSelectedTopicSlug(slug); setActiveTab("map"); setDetailViewMode("overview"); setExpandedGroups(new Set()); };
+  const goToTopic = (slug: string) => { setSelectedTopicSlug(slug); setActiveTab("map"); setDetailViewMode("structure"); setExpandedGroups(new Set()); };
   const goToCompany = (code: string) => {
     setSelectedCompanyCode(code);
     if (activeTab === "companies") {
@@ -2473,109 +2473,48 @@ export default function Home() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className={cn("rounded-xl", detailViewMode === "overview" ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/30" : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]")}
-                      onClick={() => setDetailViewMode("overview")}
-                    >📊 概覽</Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
                       className={cn("rounded-xl", detailViewMode === "structure" ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/30" : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]")}
                       onClick={() => setDetailViewMode("structure")}
                     >🔗 供應鏈結構</Button>
-                    <a
-                      href={`https://allen-hsu1116.github.io/stock-knowledge-site/產業地圖/${encodeURIComponent(selectedTopicData.name)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 text-xs text-indigo-400 hover:text-indigo-300 transition-colors px-3 py-1.5 rounded-xl border border-indigo-500/30 hover:bg-indigo-500/10"
-                    >📖 知識庫詳解</a>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className={cn("rounded-xl", detailViewMode === "knowledge" ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/30" : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]")}
+                      onClick={() => setDetailViewMode("knowledge")}
+                    >📚 知識庫詳解</Button>
+            
                   </div>
 
-                  {/* Overview View - aistockmap style */}
-                  {detailViewMode === "overview" && (
-                    <div className="space-y-8">
-                      {(() => {
-                        const namedGroups = mapGroupNames(selectedTopicData.groups);
-                        const upstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "upstream");
-                        const midstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "midstream");
-                        const downstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "downstream");
-                        
-                        const totalUpstream = upstreamGroups.reduce((s, g) => s + g.companies.length, 0);
-                        const totalMidstream = midstreamGroups.reduce((s, g) => s + g.companies.length, 0);
-                        const totalDownstream = downstreamGroups.reduce((s, g) => s + g.companies.length, 0);
-
-                        const renderValueChainColumn = (label: string, labelEn: string, icon: string, color: string, bgColor: string, borderColor: string, groups: typeof namedGroups, total: number) => (
-                          <div className={`flex-1 ${bgColor} border ${borderColor} rounded-2xl overflow-hidden`}>
-                            <div className="px-5 py-4 border-b border-white/[0.04]">
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="text-lg">{icon}</span>
-                                <span className="text-xs font-bold text-[var(--color-text-tertiary)] uppercase tracking-wider">{labelEn}</span>
-                              </div>
-                              <h3 className={`font-bold text-sm ${color}`}>{label}</h3>
-                              <p className="text-xs text-[var(--color-text-tertiary)] mt-1">{groups.length} 個群組 · {total} 家公司</p>
-                            </div>
-                            <div className="p-4 space-y-2.5">
-                              {groups.length === 0 ? (
-                                <p className="text-xs text-[var(--color-text-tertiary)] text-center py-4">無</p>
-                              ) : groups.map((group, gi) => (
-                                <div key={gi} className="flex items-center gap-2 bg-white/[0.02] rounded-lg px-3 py-2.5 hover:bg-white/[0.05] transition-colors">
-                                  <div className="flex-1 min-w-0">
-                                    <p className="text-sm font-medium text-white truncate">{group.name}</p>
-                                    <p className="text-[11px] text-[var(--color-text-tertiary)]">{group.companies.length} 家</p>
-                                  </div>
-                                  <div className="flex -space-x-1.5">
-                                    {group.companies.slice(0, 3).map((c) => (
-                                      <div key={c.code} className="w-6 h-6 rounded-md bg-[var(--color-surface)] border border-white/[0.08] flex items-center justify-center text-[9px] font-mono font-bold text-[var(--color-text-secondary)]" title={c.name}>
-                                        {c.code.slice(0, 2)}
-                                      </div>
-                                    ))}
-                                    {group.companies.length > 3 && (
-                                      <div className="w-6 h-6 rounded-md bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[9px] text-[var(--color-text-tertiary)]">
-                                        +{group.companies.length - 3}
-                                      </div>
-                                    )}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
+                  {/* Knowledge View - links to knowledge site */}
+                  {detailViewMode === "knowledge" && (
+                    <div className="space-y-6">
+                      <Card className="bg-[var(--color-surface)] border-[var(--color-border)] rounded-2xl overflow-hidden">
+                        <CardContent className="p-8">
+                          <div className="text-center space-y-4">
+                            <div className="text-4xl">📚</div>
+                            <h3 className="text-lg font-bold text-white">產業知識庫</h3>
+                            <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-lg mx-auto">
+                              前往知識庫查看 <strong className="text-white">{selectedTopicData.name}</strong> 的詳細產業分析、供應鏈解讀、公司深度研究等內容。
+                            </p>
+                            <a
+                              href={`https://allen-hsu1116.github.io/stock-knowledge-site/產業地圖/${encodeURIComponent(selectedTopicData.name)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white rounded-xl font-medium transition-colors"
+                            >
+                              前往知識庫 →
+                            </a>
                           </div>
-                        );
-
-                        return (
-                          <>
-                            {/* Key indicators */}
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                              {[
-                                { label: "公司總數", value: `${selectedTopicData.total}`, icon: "🏢", sub: `${selectedTopicData.groups.length} 個群組` },
-                                { label: "上游", value: `${totalUpstream}`, icon: "⬆️", sub: `${upstreamGroups.length} 個群組`, color: "text-emerald-400" },
-                                { label: "中游", value: `${totalMidstream}`, icon: "⏺️", sub: `${midstreamGroups.length} 個群組`, color: "text-amber-400" },
-                                { label: "下游", value: `${totalDownstream}`, icon: "⬇️", sub: `${downstreamGroups.length} 個群組`, color: "text-blue-400" },
-                              ].map((item, i) => (
-                                <div key={i} className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-4">
-                                  <div className="flex items-center gap-2 mb-2">
-                                    <span className="text-sm">{item.icon}</span>
-                                    <span className="text-[11px] text-[var(--color-text-tertiary)] font-medium">{item.label}</span>
-                                  </div>
-                                  <p className={`text-xl font-bold ${item.color || "text-white"}`}>{item.value}</p>
-                                  <p className="text-[11px] text-[var(--color-text-tertiary)] mt-0.5">{item.sub}</p>
-                                </div>
-                              ))}
-                            </div>
-
-                            {/* Value chain 3-column layout */}
-                            <div>
-                              <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2">
-                                <span className="text-base">🔗</span> 產業價值鏈結構
-                                <span className="text-[11px] text-[var(--color-text-tertiary)] font-normal">點擊「供應鏈結構」查看詳細</span>
-                              </h3>
-                              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                                {renderValueChainColumn("上游原料與設備", "UPSTREAM", "⬆️", "text-emerald-400", "bg-emerald-500/[0.04]", "border-emerald-500/20", upstreamGroups, totalUpstream)}
-                                {renderValueChainColumn("中游製造與組件", "MIDSTREAM", "⏺️", "text-amber-400", "bg-amber-500/[0.04]", "border-amber-500/20", midstreamGroups, totalMidstream)}
-                                {renderValueChainColumn("下游系統與應用", "DOWNSTREAM", "⬇️", "text-blue-400", "bg-blue-500/[0.04]", "border-blue-500/20", downstreamGroups, totalDownstream)}
-                              </div>
-                            </div>
-                          </>
-                        );
-                      })()}
+                        </CardContent>
+                      </Card>
+                      {/* Embedded knowledge site */}
+                      <div className="rounded-2xl overflow-hidden border border-[var(--color-border)]" style={{ height: "600px" }}>
+                        <iframe
+                          src={`https://allen-hsu1116.github.io/stock-knowledge-site/產業地圖/${encodeURIComponent(selectedTopicData.name)}`}
+                          className="w-full h-full border-0"
+                          title={`${selectedTopicData.name} - 知識庫`}
+                        />
+                      </div>
                     </div>
                   )}
 
