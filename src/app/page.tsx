@@ -15,7 +15,7 @@ import companiesData from "../../public/data/companies.json";
 import TradingViewChart from "./TradingViewChart";
 
 /* ─── Types ─── */
-interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; }
+interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
 interface Group { name: string; companies: CompanyInGroup[]; }
 interface TopicData { slug: string; name: string; description: string; total: number; groups: Group[]; }
 interface CompanyData { code: string; name: string; topic_count: number; topics: string[]; }
