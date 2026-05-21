@@ -133,7 +133,14 @@ function getRoleBadge(relevance: string) {
 
 function mapGroupNames(groups: Group[]): Group[] {
   const levelNames = ["上游原料與設備", "中游製造與組件", "下游系統與應用", "周邊與服務", "其他"];
-  return groups.map((g, i) => ({ ...g, name: g.name || levelNames[i] || `群組 ${i + 1}` }));
+  const named = groups.map((g, i) => ({ ...g, name: g.name || levelNames[i] || `群組 ${i + 1}` }));
+  // Sort by supply chain level: upstream → midstream → downstream
+  const levelOrder: Record<string, number> = { upstream: 0, midstream: 1, downstream: 2, peripheral: 3 };
+  return named.sort((a, b) => {
+    const la = levelOrder[classifyGroupLevel(a)] ?? 1;
+    const lb = levelOrder[classifyGroupLevel(b)] ?? 1;
+    return la - lb;
+  });
 }
 
 /* Classify a group's supply chain level based on company roles and group name */
