@@ -149,22 +149,38 @@ function classifyGroupLevel(group: Group): "upstream" | "midstream" | "downstrea
   const roles = group.companies.map(c => (c.role || "")).join(" ");
   const combined = `${name} ${roles}`;
 
-  const upstreamKw = ["材料", "原料", "基板", "晶圓", "IC設計", "矽智財", "IP", "光阻", "化學", "氣體",
-    "耗材", "PCB", "被動元件", "MLCC", "連接器", "零組件", "導線架", "特用", "設計", "供應",
-    "半導體材料", "封裝材料", "IC載板", "CCL", "玻纖", "銅箔"];
-  const downstreamKw = ["品牌", "終端", "應用", "服務", "通路", "營運", "系統整合", "ODM",
-    "伺服器品牌", "投資", "開發", "電商", "零售", "運維", "風場"];
+  // ─── Phase 1: Group name direct match (highest priority) ───
+  // If the group name explicitly says what level it is, trust it
+  if (/(?:材料|原料|基板|晶圓|光阻|化學|氣體|耗材|CCL|玻纖|銅箔|被動|MLCC|IC設計|矽智財|IC載板|封裝材料|半導體材料|設備|零件|散熱|液冷|滑軌|機殼|連接器|導線架|PCB|電池|BMS|功率|射頻|電源管理|特化|LED晶片|光電元件|特殊鋼|複材)/.test(name)) return "upstream";
+  if (/(?:品牌|終端|應用|服務|通路|營運|ODM|OEM|系統整合|整機|組裝|風場|投資|電商|零售|平台|OTT|雲端)/.test(name)) return "downstream";
+  if (/(?:代工|製造|封裝|封測|測試|模組|加工|生產|產線|組裝|ODM龍頭)/.test(name)) return "midstream";
 
-  let upScore = 0, midScore = 0, downScore = 0;
+  // ─── Phase 2: Score-based classification ───
+  const upstreamKw = ["材料", "原料", "基板", "晶圓", "IC設計", "矽智財", "IP", "光阻", "化學", "氣體",
+    "耗材", "PCB", "被動元件", "MLCC", "連接器", "導線架", "特用", "供應",
+    "半導體材料", "封裝材料", "IC載板", "CCL", "玻纖", "銅箔", "設備",
+    "散熱", "液冷", "機殼", "滑軌", "電池", "BMS", "特殊鋼", "複材", "零件"];
+  const downstreamKw = ["品牌", "終端", "應用", "服務", "通路", "營運", "系統整合",
+    "伺服器品牌", "投資", "電商", "零售", "運維", "風場", "整機", "組裝",
+    "ODM", "OEM", "平台", "雲端"];
+
+  let upScore = 0, downScore = 0;
   for (const kw of upstreamKw) { if (combined.includes(kw)) upScore++; }
   for (const kw of downstreamKw) { if (combined.includes(kw)) downScore++; }
-  // Midstream keywords are the remainder (代工, 製造, 封裝, 模組, etc.)
-  const midKw = ["代工", "製造", "封裝", "測試", "模組", "系統", "整合"];
+  // Midstream keywords
+  const midKw = ["代工", "製造", "封裝", "測試", "模組"];
+  let midScore = 0;
   for (const kw of midKw) { if (combined.includes(kw)) midScore++; }
 
-  if (upScore > Math.max(midScore, downScore) + 1) return "upstream";
-  if (downScore > Math.max(upScore, midScore) + 1) return "downstream";
-  // Default: midstream is most common
+  // Lower threshold: +0 instead of +1
+  if (upScore > 0 && upScore >= downScore && upScore >= midScore) return "upstream";
+  if (downScore > 0 && downScore >= upScore && downScore >= midScore) return "downstream";
+  if (midScore > 0 && midScore > upScore && midScore > downScore) return "midstream";
+
+  // Fallback: if name contains keywords that suggest a level
+  if (upScore > downScore) return "upstream";
+  if (downScore > upScore) return "downstream";
+
   return "midstream";
 }
 
@@ -1554,7 +1570,7 @@ function CompanyFullPageDetail({
   onBack,
 }: {
   data: FinancialData;
-  roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string }[] | null;
+  roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] } }[] | null;
   onBack: () => void;
 }) {
   const [detailTab, setDetailTab] = useState<CompanyDetailTab>("overview");
@@ -1718,7 +1734,17 @@ function CompanyFullPageDetail({
                     const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
 
                     // Check for per-topic analysis data
-                    const topicAnalysis = data.industry_analysis?.[role.topic];
+                    // Priority: data.industry_analysis > role-level products/customers/tech_focus/swot from industries.json
+                    const rawTopicAnalysis = data.industry_analysis?.[role.topic];
+                    const topicAnalysis = rawTopicAnalysis || (role.products || role.customers || role.swot ? {
+                      ai_summary: analysisText,
+                      market_position: relInfo.label,
+                      market_position_detail: `${data.name}為${role.topicName}產業之關鍵參與者，在供應鏈中扮演${relInfo.label}角色。`,
+                      focus: role.tech_focus?.join('\\n\\n') || '',
+                      products: role.products || [],
+                      customers: role.customers || [],
+                      swot: role.swot || undefined,
+                    } : null);
 
                     return (
                       <div className="space-y-6">
@@ -2127,11 +2153,11 @@ export default function Home() {
     const comp = companies.find((c) => c.code === selectedCompanyCode);
     if (!comp) return null;
     const relatedTopics = topics.filter((t) => comp.topics.includes(t.slug));
-    const roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string }[] = [];
+    const roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] } }[] = [];
     for (const t of relatedTopics) {
       for (const g of t.groups) {
         for (const c of g.companies) {
-          if (c.code === comp.code) { roles.push({ topic: t.slug, topicName: t.name, topicDescription: t.description || "", group: g.name, role: c.role, relevance: c.relevance, analysis: (c as any).analysis }); }
+          if (c.code === comp.code) { roles.push({ topic: t.slug, topicName: t.name, topicDescription: t.description || "", group: g.name, role: c.role, relevance: c.relevance, analysis: (c as any).analysis, products: (c as any).products, customers: (c as any).customers, tech_focus: (c as any).tech_focus, swot: (c as any).swot }); }
         }
       }
     }
