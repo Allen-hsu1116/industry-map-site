@@ -28539,26 +28539,25 @@
       ]
     },
     {
-      "slug": "hpc-network-ic",
       "name": "IC 設計｜HPC 與網通 IC",
-      "description": "HPC 與網通 IC 涵蓋高效能運算處理器、網路交換器 IC、乙太網路控制晶片及高速傳輸 IC。隨 AI 叢集互連需求爆發，800G 乙太網路交換器 IC 及高速傳輸協定（PCIe/CXL/InfiniBand）成為產業焦點。",
-      "total": 14,
+      "description": "聚焦於 AI 資料中心、高效能運算 (HPC) 與 5G/WiFi 網通核心晶片的 Fabless IC 設計公司。涵蓋旗艦 SoC、乙太網路/WiFi/5G 網通晶片、高速傳輸介面 IC 與儲存控制器。",
+      "total": 16,
       "groups": [
         {
-          "name": "高效能運算 SoC 與 ASIC/IP",
+          "name": "高效能運算 SoC",
           "level": "upstream",
           "companies": [
             {
-              "code": "3035",
-              "name": "智原",
-              "role": "ASIC 設計服務與 IP",
-              "relevance": "85"
-            },
-            {
               "code": "2454",
               "name": "聯發科",
-              "role": "全球前五大 IC 設計，HPC SoC",
+              "role": "全球前五大 IC 設計，HPC/ADAS SoC 平台",
               "relevance": "95"
+            },
+            {
+              "code": "3035",
+              "name": "智原",
+              "role": "ASIC 設計服務與 NRE/IP",
+              "relevance": "80"
             },
             {
               "code": "3529",
@@ -28569,20 +28568,20 @@
           ]
         },
         {
-          "name": "網通 SoC 與高速傳輸 IC",
-          "level": "upstream",
+          "name": "網通、WiFi 與 5G IC",
+          "level": "midstream",
           "companies": [
+            {
+              "code": "2379",
+              "name": "瑞昱",
+              "role": "乙太網路 IC 龍頭/WiFi SoC",
+              "relevance": "90"
+            },
             {
               "code": "3034",
               "name": "聯詠",
               "role": "顯示 SoC/網通 SoC",
               "relevance": "75"
-            },
-            {
-              "code": "5274",
-              "name": "信驊",
-              "role": "PCIe Retimer/CXL IC",
-              "relevance": "90"
             },
             {
               "code": "3163",
@@ -28591,11 +28590,59 @@
               "relevance": "80"
             },
             {
-              "code": "2379",
-              "name": "瑞昱",
-              "role": "乙太網路 IC 龍頭/WiFi SoC",
+              "code": "4968",
+              "name": "立積",
+              "role": "WiFi/Bluetooth RF 前端 IC",
+              "relevance": "85"
+            },
+            {
+              "code": "6526",
+              "name": "達發",
+              "role": "WiFi 6/7 SoC/PLC/BLE",
+              "relevance": "85"
+            },
+            {
+              "code": "6568",
+              "name": "宏觀",
+              "role": "ADSL/VDSL 網通 IC",
+              "relevance": "60"
+            }
+          ]
+        },
+        {
+          "name": "高速傳輸介面 IC",
+          "level": "midstream",
+          "companies": [
+            {
+              "code": "4966",
+              "name": "譜瑞-KY",
+              "role": "USB/PCIe/DP 高速傳輸 IC",
               "relevance": "90"
             },
+            {
+              "code": "5269",
+              "name": "祥碩",
+              "role": "USB/PD/PCIe 控制器 IC",
+              "relevance": "85"
+            },
+            {
+              "code": "6104",
+              "name": "創惟",
+              "role": "USB/HDMI 高速傳輸 IC",
+              "relevance": "70"
+            },
+            {
+              "code": "6756",
+              "name": "威鋒電子",
+              "role": "USB/超高速傳輸 IC",
+              "relevance": "75"
+            }
+          ]
+        },
+        {
+          "name": "儲存控制器 IC",
+          "level": "midstream",
+          "companies": [
             {
               "code": "2337",
               "name": "旺宏",
@@ -28603,46 +28650,22 @@
               "relevance": "65"
             },
             {
-              "code": "4966",
-              "name": "譜瑞-KY",
-              "role": "USB/PCIe/DP 高速傳輸 IC",
-              "relevance": "80"
+              "code": "8054",
+              "name": "安國",
+              "role": "USB Flash 控制器 IC",
+              "relevance": "60"
             }
           ]
         },
         {
-          "name": "網通設備與伺服器品牌",
+          "name": "伺服器管理與基礎設施 IC",
           "level": "downstream",
           "companies": [
             {
-              "code": "3380",
-              "name": "明泰",
-              "role": "網通交換器/路由器品牌",
-              "relevance": "80"
-            },
-            {
-              "code": "4906",
-              "name": "正文",
-              "role": "網通設備 ODM",
-              "relevance": "75"
-            },
-            {
-              "code": "4908",
-              "name": "前鼎",
-              "role": "網通設備/企業網路",
-              "relevance": "70"
-            },
-            {
-              "code": "2395",
-              "name": "研華",
-              "role": "工業電腦/網通平台",
-              "relevance": "65"
-            },
-            {
-              "code": "2330",
-              "name": "台積電",
-              "role": "HPC 晶圓代工龍頭",
-              "relevance": "90"
+              "code": "5274",
+              "name": "信驊",
+              "role": "伺服器 BMC/CXL 基礎設施 IC 龍頭",
+              "relevance": "95"
             }
           ]
         }
