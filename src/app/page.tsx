@@ -135,10 +135,11 @@ function mapGroupNames(groups: Group[]): Group[] {
   const levelNames = ["上游原料與設備", "中游製造與組件", "下游系統與應用", "周邊與服務", "其他"];
   const named = groups.map((g, i) => ({ ...g, name: g.name || levelNames[i] || `群組 ${i + 1}` }));
   // Sort by supply chain level: upstream → midstream → downstream
+  // Use the level field from industries.json if available, otherwise fall back to classifyGroupLevel
   const levelOrder: Record<string, number> = { upstream: 0, midstream: 1, downstream: 2, peripheral: 3 };
   return named.sort((a, b) => {
-    const la = levelOrder[classifyGroupLevel(a)] ?? 1;
-    const lb = levelOrder[classifyGroupLevel(b)] ?? 1;
+    const la = levelOrder[(a as any).level || classifyGroupLevel(a)] ?? 1;
+    const lb = levelOrder[(b as any).level || classifyGroupLevel(b)] ?? 1;
     return la - lb;
   });
 }
@@ -2088,7 +2089,8 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("全部");
   const [selectedTopicSlug, setSelectedTopicSlug] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"count" | "name">("count");
-  const [detailViewMode, setDetailViewMode] = useState<"list" | "structure">("structure");
+  const [detailViewMode, setDetailViewMode] = useState<"overview" | "structure">("overview");
+  const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
   const [searchFocused, setSearchFocused] = useState(false);
   const [selectedCompanyCode, setSelectedCompanyCode] = useState<string | null>(null);
   const [companyViewMode, setCompanyViewMode] = useState<CompanyViewMode>("list");
@@ -2195,7 +2197,7 @@ export default function Home() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const goToTopic = (slug: string) => { setSelectedTopicSlug(slug); setActiveTab("map"); setDetailViewMode("structure"); };
+  const goToTopic = (slug: string) => { setSelectedTopicSlug(slug); setActiveTab("map"); setDetailViewMode("overview"); setExpandedGroups(new Set()); };
   const goToCompany = (code: string) => {
     setSelectedCompanyCode(code);
     if (activeTab === "companies") {
@@ -2471,9 +2473,9 @@ export default function Home() {
                     <Button
                       variant="outline"
                       size="sm"
-                      className={cn("rounded-xl", detailViewMode === "list" ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/30" : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]")}
-                      onClick={() => setDetailViewMode("list")}
-                    >📋 公司列表</Button>
+                      className={cn("rounded-xl", detailViewMode === "overview" ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/30" : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)]")}
+                      onClick={() => setDetailViewMode("overview")}
+                    >📊 概覽</Button>
                     <Button
                       variant="outline"
                       size="sm"
@@ -2488,89 +2490,197 @@ export default function Home() {
                     >📖 知識庫詳解</a>
                   </div>
 
-                  {/* List View */}
-                  {detailViewMode === "list" && (
-                    <div className="space-y-5">
-                      {mapGroupNames(selectedTopicData.groups).map((group, gi) => (
-                        <Card key={gi} className="bg-[var(--color-surface)] border-[var(--color-border)] rounded-2xl overflow-hidden">
-                          <CardHeader className="px-7 py-5 border-b border-[var(--color-border)] flex-row items-center justify-between space-y-0">
-                            <CardTitle className="text-sm font-semibold text-white">{group.name}</CardTitle>
-                            <Badge variant="outline" className="border-0 bg-white/[0.04] text-[var(--color-text-tertiary)] text-xs">{group.companies.length} 家公司</Badge>
-                          </CardHeader>
-                          <CardContent className="p-0 divide-y divide-white/[0.04]">
-                            {group.companies.map((company) => {
-                              const relInfo = getRelevanceInfo(company.relevance);
-                              return (
-                                <button key={company.code} className="company-card w-full flex items-center justify-between px-7 py-5 gap-4 text-left" onClick={() => goToCompany(company.code)}>
-                                  <div className="flex items-center gap-4 min-w-0">
-                                    <div className="w-11 h-11 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] flex items-center justify-center shrink-0">
-                                      <span className="text-xs font-mono font-bold text-[var(--color-text-secondary)]">{company.code.slice(0, 4)}</span>
-                                    </div>
-                                    <div className="min-w-0">
-                                      <div className="flex items-center gap-2">
-                                        <span className="text-sm font-medium text-white">{company.name}</span>
-                                        <span className="text-xs text-[var(--color-text-tertiary)]">{company.code}</span>
-                                      </div>
-                                      {company.role && <p className="text-xs text-[var(--color-text-tertiary)] truncate mt-0.5">{company.role}</p>}
-                                    </div>
+                  {/* Overview View - aistockmap style */}
+                  {detailViewMode === "overview" && (
+                    <div className="space-y-8">
+                      {(() => {
+                        const namedGroups = mapGroupNames(selectedTopicData.groups);
+                        const upstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "upstream");
+                        const midstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "midstream");
+                        const downstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "downstream");
+                        
+                        const totalUpstream = upstreamGroups.reduce((s, g) => s + g.companies.length, 0);
+                        const totalMidstream = midstreamGroups.reduce((s, g) => s + g.companies.length, 0);
+                        const totalDownstream = downstreamGroups.reduce((s, g) => s + g.companies.length, 0);
+
+                        const renderValueChainColumn = (label: string, labelEn: string, icon: string, color: string, bgColor: string, borderColor: string, groups: typeof namedGroups, total: number) => (
+                          <div className={`flex-1 ${bgColor} border ${borderColor} rounded-2xl overflow-hidden`}>
+                            <div className="px-5 py-4 border-b border-white/[0.04]">
+                              <div className="flex items-center gap-2 mb-1">
+                                <span className="text-lg">{icon}</span>
+                                <span className="text-xs font-bold text-[var(--color-text-tertiary)] uppercase tracking-wider">{labelEn}</span>
+                              </div>
+                              <h3 className={`font-bold text-sm ${color}`}>{label}</h3>
+                              <p className="text-xs text-[var(--color-text-tertiary)] mt-1">{groups.length} 個群組 · {total} 家公司</p>
+                            </div>
+                            <div className="p-4 space-y-2.5">
+                              {groups.length === 0 ? (
+                                <p className="text-xs text-[var(--color-text-tertiary)] text-center py-4">無</p>
+                              ) : groups.map((group, gi) => (
+                                <div key={gi} className="flex items-center gap-2 bg-white/[0.02] rounded-lg px-3 py-2.5 hover:bg-white/[0.05] transition-colors">
+                                  <div className="flex-1 min-w-0">
+                                    <p className="text-sm font-medium text-white truncate">{group.name}</p>
+                                    <p className="text-[11px] text-[var(--color-text-tertiary)]">{group.companies.length} 家</p>
                                   </div>
-                                  <span className={cn(relInfo.className, "text-xs px-3 py-1 rounded-full font-medium whitespace-nowrap shrink-0")}>{relInfo.emoji} {relInfo.label}</span>
-                                </button>
-                              );
-                            })}
-                          </CardContent>
-                        </Card>
-                      ))}
+                                  <div className="flex -space-x-1.5">
+                                    {group.companies.slice(0, 3).map((c) => (
+                                      <div key={c.code} className="w-6 h-6 rounded-md bg-[var(--color-surface)] border border-white/[0.08] flex items-center justify-center text-[9px] font-mono font-bold text-[var(--color-text-secondary)]" title={c.name}>
+                                        {c.code.slice(0, 2)}
+                                      </div>
+                                    ))}
+                                    {group.companies.length > 3 && (
+                                      <div className="w-6 h-6 rounded-md bg-white/[0.06] border border-white/[0.08] flex items-center justify-center text-[9px] text-[var(--color-text-tertiary)]">
+                                        +{group.companies.length - 3}
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        );
+
+                        return (
+                          <>
+                            {/* Key indicators */}
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                              {[
+                                { label: "公司總數", value: `${selectedTopicData.total}`, icon: "🏢", sub: `${selectedTopicData.groups.length} 個群組` },
+                                { label: "上游", value: `${totalUpstream}`, icon: "⬆️", sub: `${upstreamGroups.length} 個群組`, color: "text-emerald-400" },
+                                { label: "中游", value: `${totalMidstream}`, icon: "⏺️", sub: `${midstreamGroups.length} 個群組`, color: "text-amber-400" },
+                                { label: "下游", value: `${totalDownstream}`, icon: "⬇️", sub: `${downstreamGroups.length} 個群組`, color: "text-blue-400" },
+                              ].map((item, i) => (
+                                <div key={i} className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-4">
+                                  <div className="flex items-center gap-2 mb-2">
+                                    <span className="text-sm">{item.icon}</span>
+                                    <span className="text-[11px] text-[var(--color-text-tertiary)] font-medium">{item.label}</span>
+                                  </div>
+                                  <p className={`text-xl font-bold ${item.color || "text-white"}`}>{item.value}</p>
+                                  <p className="text-[11px] text-[var(--color-text-tertiary)] mt-0.5">{item.sub}</p>
+                                </div>
+                              ))}
+                            </div>
+
+                            {/* Value chain 3-column layout */}
+                            <div>
+                              <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2">
+                                <span className="text-base">🔗</span> 產業價值鏈結構
+                                <span className="text-[11px] text-[var(--color-text-tertiary)] font-normal">點擊「供應鏈結構」查看詳細</span>
+                              </h3>
+                              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                {renderValueChainColumn("上游原料與設備", "UPSTREAM", "⬆️", "text-emerald-400", "bg-emerald-500/[0.04]", "border-emerald-500/20", upstreamGroups, totalUpstream)}
+                                {renderValueChainColumn("中游製造與組件", "MIDSTREAM", "⏺️", "text-amber-400", "bg-amber-500/[0.04]", "border-amber-500/20", midstreamGroups, totalMidstream)}
+                                {renderValueChainColumn("下游系統與應用", "DOWNSTREAM", "⬇️", "text-blue-400", "bg-blue-500/[0.04]", "border-blue-500/20", downstreamGroups, totalDownstream)}
+                              </div>
+                            </div>
+                          </>
+                        );
+                      })()}
                     </div>
                   )}
 
-                  {/* Structure View */}
+                  {/* Structure View - aistockmap style */}
                   {detailViewMode === "structure" && (
-                    <div className="space-y-12">
+                    <div className="space-y-5">
                       {(() => {
                         const namedGroups = mapGroupNames(selectedTopicData.groups);
-                        const levelMap: Record<string, { bg: string; border: string; text: string; label: string; icon: string }> = {
-                          upstream:   { bg: "bg-emerald-500/[0.06]", border: "border-emerald-500/20", text: "text-emerald-400", label: "上游", icon: "⬆️" },
-                          midstream:   { bg: "bg-amber-500/[0.06]",  border: "border-amber-500/20",  text: "text-amber-400",  label: "中游", icon: "⏺️" },
-                          downstream:  { bg: "bg-blue-500/[0.06]",   border: "border-blue-500/20",   text: "text-blue-400",   label: "下游", icon: "⬇️" },
-                          peripheral:  { bg: "bg-purple-500/[0.06]", border: "border-purple-500/20", text: "text-purple-400", label: "周邊", icon: "🔄" },
+                        const upstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "upstream");
+                        const midstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "midstream");
+                        const downstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "downstream");
+
+                        const toggleGroup = (key: string) => {
+                          setExpandedGroups(prev => {
+                            const next = new Set(prev);
+                            if (next.has(key)) next.delete(key); else next.add(key);
+                            return next;
+                          });
                         };
-                        return namedGroups.map((group, gi) => {
-                          const level = levelMap[classifyGroupLevel(group)] || levelMap.midstream;
+
+                        const renderLevelSection = (levelKey: "upstream" | "midstream" | "downstream", label: string, labelEn: string, icon: string, color: string, bgColor: string, borderColor: string, groups: typeof namedGroups) => {
+                          if (groups.length === 0) return null;
+                          const total = groups.reduce((s, g) => s + g.companies.length, 0);
+                          const sectionKey = levelKey;
+                          const isExpanded = expandedGroups.has(sectionKey);
+
                           return (
-                            <div key={gi} className="slide-up" style={{ animationDelay: `${gi * 80}ms` }}>
-                              <div className="flex items-center gap-2.5 mb-5">
-                                <span className="text-lg">{level.icon}</span>
-                                <h3 className={cn("font-bold text-sm", level.text)}>{level.label}：{group.name}</h3>
-                                <Badge variant="outline" className="ml-auto border-0 bg-white/[0.04] text-[var(--color-text-tertiary)] text-xs">{group.companies.length} 家</Badge>
-                              </div>
-                              {gi > 0 && (
-                                <div className="flex justify-center my-5">
-                                  <div className="flex flex-col items-center">
-                                    <div className="w-0.5 h-8 bg-gradient-to-b from-white/[0.04] to-white/[0.12]" />
-                                    <svg className="w-4 h-4 text-[var(--color-text-tertiary)] -mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                            <div className={`${bgColor} border ${borderColor} rounded-2xl overflow-hidden`}>
+                              <button
+                                className="w-full px-6 py-4 flex items-center justify-between hover:bg-white/[0.02] transition-colors"
+                                onClick={() => toggleGroup(sectionKey)}
+                              >
+                                <div className="flex items-center gap-3">
+                                  <span className="text-xl">{icon}</span>
+                                  <div className="text-left">
+                                    <div className="flex items-center gap-2">
+                                      <h3 className={`font-bold ${color}`}>{label}</h3>
+                                      <span className="text-[10px] font-bold text-[var(--color-text-tertiary)] uppercase tracking-widest">{labelEn}</span>
+                                    </div>
+                                    <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{groups.length} 個群組 · {total} 家公司</p>
                                   </div>
                                 </div>
-                              )}
-                              <div className={cn(level.bg, level.border, "border rounded-2xl p-6")}>
-                                <div className="flex flex-wrap gap-3">
-                                  {group.companies.map((company) => {
-                                    const relInfo = getRelevanceInfo(company.relevance);
+                                <div className="flex items-center gap-2">
+                                  <Badge className={`${color} bg-white/[0.04] border-0 text-xs`}>{total} 家</Badge>
+                                  <svg className={cn("w-5 h-5 text-[var(--color-text-tertiary)] transition-transform", isExpanded && "rotate-180")} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                  </svg>
+                                </div>
+                              </button>
+                              {isExpanded && (
+                                <div className="border-t border-white/[0.04]">
+                                  {groups.map((group, gi) => {
+                                    const groupKey = `${levelKey}-${gi}`;
+                                    const isGroupExpanded = expandedGroups.has(groupKey);
                                     return (
-                                      <Button key={company.code} variant="outline" className="bg-[var(--color-surface)]/80 border-[var(--color-border)] rounded-xl px-5 h-auto py-3 hover:border-indigo-500/30 hover:bg-[var(--color-surface)] text-white" onClick={() => goToCompany(company.code)}>
-                                        <div className="text-center">
-                                          <div className="text-xs font-bold text-white">{company.code}</div>
-                                          <div className="text-[11px] text-[var(--color-text-secondary)]">{company.name}</div>
-                                        </div>
-                                        <span className={cn(relInfo.className, "text-[11px] px-2 py-0.5 rounded-md font-medium whitespace-nowrap ml-2")}>{relInfo.label}</span>
-                                      </Button>
+                                      <div key={gi} className={cn(gi > 0 && "border-t border-white/[0.04]")}>
+                                        <button
+                                          className="w-full px-6 py-3.5 flex items-center justify-between hover:bg-white/[0.02] transition-colors"
+                                          onClick={() => toggleGroup(groupKey)}
+                                        >
+                                          <div className="flex items-center gap-2.5">
+                                            <div className={`w-2 h-2 rounded-full ${color === "text-emerald-400" ? "bg-emerald-400" : color === "text-amber-400" ? "bg-amber-400" : "bg-blue-400"}`} />
+                                            <span className="text-sm font-medium text-white">{group.name}</span>
+                                          </div>
+                                          <div className="flex items-center gap-2">
+                                            <span className="text-xs text-[var(--color-text-tertiary)]">{group.companies.length} 家</span>
+                                            <svg className={cn("w-4 h-4 text-[var(--color-text-tertiary)] transition-transform", isGroupExpanded && "rotate-180")} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                          </div>
+                                        </button>
+                                        {isGroupExpanded && (
+                                          <div className="px-6 pb-4">
+                                            <div className="flex flex-wrap gap-2.5">
+                                              {group.companies.map((company) => {
+                                                const relInfo = getRelevanceInfo(company.relevance);
+                                                return (
+                                                  <Button key={company.code} variant="outline" className="bg-white/[0.03] border-white/[0.06] rounded-xl px-4 h-auto py-2.5 hover:border-indigo-500/30 hover:bg-white/[0.06] text-white" onClick={() => goToCompany(company.code)}>
+                                                    <div className="text-center">
+                                                      <div className="text-xs font-bold text-white">{company.code}</div>
+                                                      <div className="text-[11px] text-[var(--color-text-secondary)]">{company.name}</div>
+                                                    </div>
+                                                    <span className={cn(relInfo.className, "text-[10px] px-1.5 py-0.5 rounded-md font-medium whitespace-nowrap ml-1.5")}>{relInfo.label}</span>
+                                                  </Button>
+                                                );
+                                              })}
+                                            </div>
+                                          </div>
+                                        )}
+                                      </div>
                                     );
                                   })}
                                 </div>
-                              </div>
+                              )}
                             </div>
                           );
-                        });
+                        };
+
+                        return (
+                          <>
+                            {renderLevelSection("upstream", "上游原料與設備", "UPSTREAM", "⬆️", "text-emerald-400", "bg-emerald-500/[0.04]", "border-emerald-500/20", upstreamGroups)}
+                            {renderLevelSection("midstream", "中游製造與組件", "MIDSTREAM", "⏺️", "text-amber-400", "bg-amber-500/[0.04]", "border-amber-500/20", midstreamGroups)}
+                            {renderLevelSection("downstream", "下游系統與應用", "DOWNSTREAM", "⬇️", "text-blue-400", "bg-blue-500/[0.04]", "border-blue-500/20", downstreamGroups)}
+                          </>
+                        );
                       })()}
                     </div>
                   )}
