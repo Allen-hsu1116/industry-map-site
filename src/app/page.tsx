@@ -2196,7 +2196,7 @@ export default function Home() {
         const normMR2 = rawData.monthly_revenue ? { ...rawData.monthly_revenue, revenue: str(rawData.monthly_revenue.revenue), mom: str(rawData.monthly_revenue.mom), yoy: str(rawData.monthly_revenue.yoy) } : rawData.monthly_revenue;
         const data: FinancialData = {
           ...rawData,
-          price: { ...rawData.price, close: num(rawData.price?.close), volume: num(rawData.price?.volume), change: num(rawData.price?.change), changePercent: num(rawData.price?.changePercent) },
+          price: { ...rawData.price, close: num(rawData.price?.close), volume: num(rawData.price?.volume) },
           valuation: { ...rawData.valuation, pe: str(rawData.valuation?.pe), pb: str(rawData.valuation?.pb), dividendYield: str(rawData.valuation?.dividendYield) },
           income: normIncome,
           monthly_revenue: normMR2,
