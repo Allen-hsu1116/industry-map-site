@@ -62,6 +62,18 @@ interface FinancialData {
   swot?: FinancialSWOT;
   market_position?: string;
   trends?: FinancialTrends;
+  institutional?: {
+    date: string;
+    foreign_net: number;
+    foreign_buy: number;
+    foreign_sell: number;
+    investment_trust_net: number;
+    investment_trust_buy: number;
+    investment_trust_sell: number;
+    dealer_net: number;
+    total_net: number;
+  };
+  major_news?: { date: string; subject: string }[];
   industry_analysis?: Record<string, {
     ai_summary?: string;
     market_position?: string;
@@ -973,11 +985,22 @@ function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: Fi
 
       {overviewSubTab === "news" && (
         <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
-          <div className="text-center py-12">
-            <div className="text-4xl mb-3">📰</div>
-            <h4 className="text-sm font-bold text-white mb-2">重大資訊</h4>
-            <p className="text-xs text-[var(--color-text-tertiary)]">即時重大訊息功能準備中，敬請期待</p>
-          </div>
+          <h4 className="text-sm font-bold text-white mb-4">📰 重大訊息公告</h4>
+          <div className="text-xs text-[var(--color-text-tertiary)] mb-4">資料來源：公開資訊觀測站 (MOPS)</div>
+          {data.major_news && data.major_news.length > 0 ? (
+            <div className="space-y-3">
+              {data.major_news.slice(0, 15).map((news, i) => (
+                <div key={i} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
+                  <div className="flex items-start gap-3">
+                    <div className="text-xs text-[var(--color-text-tertiary)] shrink-0 pt-0.5 font-mono">{news.date}</div>
+                    <div className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{news.subject}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 暫無重大訊息資料</div>
+          )}
         </div>
       )}
     </div>
@@ -1935,9 +1958,67 @@ function CompanyFullPageDetail({
                   })()} />
                 </div>
               </div>
-              <PlaceholderSection title="外資持股變化" icon="🌐" />
-              <PlaceholderSection title="投信買賣超" icon="🏦" />
-              <PlaceholderSection title="融資融券" icon="📈" />
+              {/* ─── 三大法人買賣超 ─── */}
+              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                <h4 className="text-sm font-bold text-white mb-4">🌐 三大法人買賣超</h4>
+                {data.institutional ? (() => {
+                  const ins = data.institutional;
+                  const fmtNum = (n: number) => {
+                    const abs = Math.abs(n);
+                    const sign = n > 0 ? "+" : n < 0 ? "-" : "";
+                    if (abs >= 10000) return `${sign}${(abs / 10000).toFixed(0)}萬張`;
+                    if (abs >= 1000) return `${sign}${(abs / 1000).toFixed(1)}千張`;
+                    return `${sign}${abs}張`;
+                  };
+                  const fmtColor = (n: number) => n > 0 ? "text-emerald-400" : n < 0 ? "text-rose-400" : "text-[var(--color-text-tertiary)]";
+                  return (
+                    <div className="space-y-4">
+                      <div className="text-xs text-[var(--color-text-tertiary)] mb-2">資料日期：{ins.date}</div>
+                      {/* 外資 */}
+                      <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-sm font-medium text-[var(--color-text-secondary)]">🇺🇳 外資</span>
+                          <span className={`text-lg font-bold ${fmtColor(ins.foreign_net)}`}>{fmtNum(ins.foreign_net)}</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3 text-xs">
+                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{(ins.foreign_buy / 10000).toFixed(0)}萬張</div></div>
+                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{(ins.foreign_sell / 10000).toFixed(0)}萬張</div></div>
+                        </div>
+                      </div>
+                      {/* 投信 */}
+                      <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-sm font-medium text-[var(--color-text-secondary)]">🏦 投信</span>
+                          <span className={`text-lg font-bold ${fmtColor(ins.investment_trust_net)}`}>{fmtNum(ins.investment_trust_net)}</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-3 text-xs">
+                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{(ins.investment_trust_buy / 10000).toFixed(1)}千張</div></div>
+                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{(ins.investment_trust_sell / 10000).toFixed(1)}千張</div></div>
+                        </div>
+                      </div>
+                      {/* 自營商 */}
+                      <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
+                        <div className="flex items-center justify-between mb-3">
+                          <span className="text-sm font-medium text-[var(--color-text-secondary)]">📊 自營商</span>
+                          <span className={`text-lg font-bold ${fmtColor(ins.dealer_net)}`}>{fmtNum(ins.dealer_net)}</span>
+                        </div>
+                        <div className="text-xs text-[var(--color-text-tertiary)]">
+                          買賣超：{ins.dealer_net > 0 ? '買超' : '賣超'} {Math.abs(ins.dealer_net).toLocaleString()} 張
+                        </div>
+                      </div>
+                      {/* 合計 */}
+                      <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-4 border border-indigo-500/20">
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm font-bold text-white">合計買賣超</span>
+                          <span className={`text-xl font-bold ${fmtColor(ins.total_net)}`}>{fmtNum(ins.total_net)}</span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })() : (
+                  <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 資料準備中</div>
+                )}
+              </div>
             </div>
           )}
 
@@ -2052,12 +2133,25 @@ function CompanyFullPageDetail({
 
           {/* ─── 相關新聞 Tab ─── */}
           {detailTab === "news" && (
-            <div className="text-center py-16">
-              <div className="text-5xl mb-4">📰</div>
-              <h3 className="text-lg font-semibold text-white mb-2">新聞資料準備中</h3>
-              <p className="text-sm text-[var(--color-text-tertiary)] max-w-md mx-auto">
-                我們正在整合新聞來源，敬請期待即時新聞更新功能。
-              </p>
+            <div className="space-y-6">
+              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                <h4 className="text-sm font-bold text-white mb-4">📰 重大訊息公告</h4>
+                <div className="text-xs text-[var(--color-text-tertiary)] mb-4">資料來源：公開資訊觀測站 (MOPS)</div>
+                {data.major_news && data.major_news.length > 0 ? (
+                  <div className="space-y-3">
+                    {data.major_news.slice(0, 15).map((news, i) => (
+                      <div key={i} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
+                        <div className="flex items-start gap-3">
+                          <div className="text-xs text-[var(--color-text-tertiary)] shrink-0 pt-0.5 font-mono">{news.date}</div>
+                          <div className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{news.subject}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 暫無重大訊息資料</div>
+                )}
+              </div>
             </div>
           )}
 
