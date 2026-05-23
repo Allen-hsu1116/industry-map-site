@@ -1608,7 +1608,7 @@ function CompanyFullPageDetail({
   })();
 
   const badges: { label: string; color: string; show: boolean }[] = [
-    { label: `營收年增 ▲${yoyNum.toFixed(1)}%`, color: "#34d399", show: yoyNum > 0 },
+    { label: `月營收年增 ▲${yoyNum.toFixed(1)}%`, color: "#34d399", show: yoyNum > 0 },
     { label: "連三月年增", color: "#818cf8", show: consecutiveMonthlyGrowth },
     { label: "投信買超", color: "#fbbf24", show: false },
     { label: "有股票期貨", color: "#f97316", show: false },
