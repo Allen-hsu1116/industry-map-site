@@ -2189,7 +2189,7 @@ export default function Home() {
           eps: num(d.eps), grossMargin: num(d.grossMargin), operatingMargin: num(d.operatingMargin), netMargin: num(d.netMargin),
         }));
         const normMR = rawData.trends?.monthly_revenue?.map(d => ({ ...d, revenue: num(d.revenue), mom: num(d.mom), yoy: num(d.yoy) }));
-        const normMP = rawData.trends?.monthly_prices?.map(d => ({ ...d, high: num(d.high), low: num(d.low), avg: num(d.avg), volume: num(d.volume) }));
+        const normMP = rawData.trends?.monthly_price?.map(d => ({ ...d, high: num(d.high), low: num(d.low), avg: num(d.avg), volume: num(d.volume) }));
         const normDP = rawData.trends?.daily_prices?.map(d => ({ ...d, open: num(d.open), high: num(d.high), low: num(d.low), close: num(d.close), volume: num(d.volume) }));
         const normYT = rawData.trends?.yearly_trading?.map(d => ({ ...d, high: num(d.high), low: num(d.low), avg_closing: num(d.avg_closing), trade_volume: num(d.trade_volume), trade_value: num(d.trade_value) }));
         const normIncome = { ...rawData.income, revenue: str(rawData.income.revenue), grossProfit: str(rawData.income.grossProfit), operatingIncome: str(rawData.income.operatingIncome), netIncome: str(rawData.income.netIncome), eps: str(rawData.income.eps) };
@@ -2200,7 +2200,7 @@ export default function Home() {
           valuation: { ...rawData.valuation, pe: str(rawData.valuation?.pe), pb: str(rawData.valuation?.pb), dividendYield: str(rawData.valuation?.dividendYield) },
           income: normIncome,
           monthly_revenue: normMR2,
-          trends: { ...rawData.trends, quarterly_income: normQI, monthly_revenue: normMR, monthly_prices: normMP, daily_prices: normDP, yearly_trading: normYT },
+          trends: { ...rawData.trends, quarterly_income: normQI, monthly_revenue: normMR, monthly_price: normMP, daily_prices: normDP, yearly_trading: normYT },
         };
         setFinancialData(data);
         setFinancialLoading(false);
