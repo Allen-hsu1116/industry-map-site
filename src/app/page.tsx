@@ -2180,7 +2180,28 @@ export default function Home() {
         if (!res.ok) throw new Error("Not found");
         return res.json();
       })
-      .then((data: FinancialData) => {
+      .then((rawData: FinancialData) => {
+        // Normalize: JSON values may be strings (e.g. "51.56") but code expects numbers
+        const num = (v: any): number => { const n = parseFloat(String(v ?? 0)); return isNaN(n) ? 0 : n; };
+        const str = (v: any): string => String(v ?? "");
+        const normQI = rawData.trends?.quarterly_income?.map(d => ({
+          ...d, revenue: num(d.revenue), grossProfit: num(d.grossProfit), operatingIncome: num(d.operatingIncome), netIncome: num(d.netIncome),
+          eps: num(d.eps), grossMargin: num(d.grossMargin), operatingMargin: num(d.operatingMargin), netMargin: num(d.netMargin),
+        }));
+        const normMR = rawData.trends?.monthly_revenue?.map(d => ({ ...d, revenue: num(d.revenue), mom: num(d.mom), yoy: num(d.yoy) }));
+        const normMP = rawData.trends?.monthly_prices?.map(d => ({ ...d, high: num(d.high), low: num(d.low), avg: num(d.avg), volume: num(d.volume) }));
+        const normDP = rawData.trends?.daily_prices?.map(d => ({ ...d, open: num(d.open), high: num(d.high), low: num(d.low), close: num(d.close), volume: num(d.volume) }));
+        const normYT = rawData.trends?.yearly_trading?.map(d => ({ ...d, high: num(d.high), low: num(d.low), avg_closing: num(d.avg_closing), trade_volume: num(d.trade_volume), trade_value: num(d.trade_value) }));
+        const normIncome = { ...rawData.income, revenue: str(rawData.income.revenue), grossProfit: str(rawData.income.grossProfit), operatingIncome: str(rawData.income.operatingIncome), netIncome: str(rawData.income.netIncome), eps: str(rawData.income.eps) };
+        const normMR2 = rawData.monthly_revenue ? { ...rawData.monthly_revenue, revenue: str(rawData.monthly_revenue.revenue), mom: str(rawData.monthly_revenue.mom), yoy: str(rawData.monthly_revenue.yoy) } : rawData.monthly_revenue;
+        const data: FinancialData = {
+          ...rawData,
+          price: { ...rawData.price, close: num(rawData.price?.close), volume: num(rawData.price?.volume), change: num(rawData.price?.change), changePercent: num(rawData.price?.changePercent) },
+          valuation: { ...rawData.valuation, pe: str(rawData.valuation?.pe), pb: str(rawData.valuation?.pb), dividendYield: str(rawData.valuation?.dividendYield) },
+          income: normIncome,
+          monthly_revenue: normMR2,
+          trends: { ...rawData.trends, quarterly_income: normQI, monthly_revenue: normMR, monthly_prices: normMP, daily_prices: normDP, yearly_trading: normYT },
+        };
         setFinancialData(data);
         setFinancialLoading(false);
       })
