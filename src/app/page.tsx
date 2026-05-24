@@ -1963,54 +1963,61 @@ function CompanyFullPageDetail({
                 <h4 className="text-sm font-bold text-white mb-4">🌐 三大法人買賣超</h4>
                 {data.institutional ? (() => {
                   const ins = data.institutional;
-                  const fmtNum = (n: number) => {
-                    const abs = Math.abs(n);
-                    const sign = n > 0 ? "+" : n < 0 ? "-" : "";
-                    if (abs >= 10000) return `${sign}${(abs / 10000).toFixed(0)}萬張`;
-                    if (abs >= 1000) return `${sign}${(abs / 1000).toFixed(1)}千張`;
-                    return `${sign}${abs}張`;
+                  // MCP 回傳單位為「股」，1 張 = 1000 股，轉換後格式化
+                  const fmtShares = (shares: number) => {
+                    const abs = Math.abs(shares);
+                    const sign = shares > 0 ? "+" : shares < 0 ? "-" : "";
+                    const 張 = abs / 1000;
+                    if (張 >= 10000) return `${sign}${(張 / 10000).toFixed(1).replace(/\.0$/, "")}萬張`;
+                    if (張 >= 1000) return `${sign}${(張 / 1000).toFixed(1)}千張`;
+                    if (張 >= 1) return `${sign}${張.toFixed(1).replace(/\.0$/, "")}張`;
+                    return `${sign}${abs}股`;
                   };
                   const fmtColor = (n: number) => n > 0 ? "text-emerald-400" : n < 0 ? "text-rose-400" : "text-[var(--color-text-tertiary)]";
+                  const foreignBuy張 = ins.foreign_buy / 1000;
+                  const foreignSell張 = ins.foreign_sell / 1000;
+                  const trustBuy張 = ins.investment_trust_buy / 1000;
+                  const trustSell張 = ins.investment_trust_sell / 1000;
                   return (
                     <div className="space-y-4">
-                      <div className="text-xs text-[var(--color-text-tertiary)] mb-2">資料日期：{ins.date}</div>
+                      <div className="text-xs text-[var(--color-text-tertiary)] mb-2">資料日期：{ins.date || "最近交易日"}</div>
                       {/* 外資 */}
                       <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-sm font-medium text-[var(--color-text-secondary)]">🇺🇳 外資</span>
-                          <span className={`text-lg font-bold ${fmtColor(ins.foreign_net)}`}>{fmtNum(ins.foreign_net)}</span>
+                          <span className={`text-lg font-bold ${fmtColor(ins.foreign_net)}`}>{fmtShares(ins.foreign_net)}</span>
                         </div>
                         <div className="grid grid-cols-2 gap-3 text-xs">
-                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{(ins.foreign_buy / 10000).toFixed(0)}萬張</div></div>
-                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{(ins.foreign_sell / 10000).toFixed(0)}萬張</div></div>
+                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{foreignBuy張 >= 1000 ? `${(foreignBuy張 / 1000).toFixed(1)}千張` : `${foreignBuy張.toFixed(0)}張`}</div></div>
+                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{foreignSell張 >= 1000 ? `${(foreignSell張 / 1000).toFixed(1)}千張` : `${foreignSell張.toFixed(0)}張`}</div></div>
                         </div>
                       </div>
                       {/* 投信 */}
                       <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-sm font-medium text-[var(--color-text-secondary)]">🏦 投信</span>
-                          <span className={`text-lg font-bold ${fmtColor(ins.investment_trust_net)}`}>{fmtNum(ins.investment_trust_net)}</span>
+                          <span className={`text-lg font-bold ${fmtColor(ins.investment_trust_net)}`}>{fmtShares(ins.investment_trust_net)}</span>
                         </div>
                         <div className="grid grid-cols-2 gap-3 text-xs">
-                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{(ins.investment_trust_buy / 10000).toFixed(1)}千張</div></div>
-                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{(ins.investment_trust_sell / 10000).toFixed(1)}千張</div></div>
+                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{trustBuy張 >= 1000 ? `${(trustBuy張 / 1000).toFixed(1)}千張` : `${trustBuy張.toFixed(0)}張`}</div></div>
+                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{trustSell張 >= 1000 ? `${(trustSell張 / 1000).toFixed(1)}千張` : `${trustSell張.toFixed(0)}張`}</div></div>
                         </div>
                       </div>
                       {/* 自營商 */}
                       <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-sm font-medium text-[var(--color-text-secondary)]">📊 自營商</span>
-                          <span className={`text-lg font-bold ${fmtColor(ins.dealer_net)}`}>{fmtNum(ins.dealer_net)}</span>
+                          <span className={`text-lg font-bold ${fmtColor(ins.dealer_net)}`}>{fmtShares(ins.dealer_net)}</span>
                         </div>
                         <div className="text-xs text-[var(--color-text-tertiary)]">
-                          買賣超：{ins.dealer_net > 0 ? '買超' : '賣超'} {Math.abs(ins.dealer_net).toLocaleString()} 張
+                          買賣超：{ins.dealer_net > 0 ? '買超' : '賣超'} {fmtShares(Math.abs(ins.dealer_net)).replace(/[+-]/, '')}
                         </div>
                       </div>
                       {/* 合計 */}
                       <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-4 border border-indigo-500/20">
                         <div className="flex items-center justify-between">
                           <span className="text-sm font-bold text-white">合計買賣超</span>
-                          <span className={`text-xl font-bold ${fmtColor(ins.total_net)}`}>{fmtNum(ins.total_net)}</span>
+                          <span className={`text-xl font-bold ${fmtColor(ins.total_net)}`}>{fmtShares(ins.total_net)}</span>
                         </div>
                       </div>
                     </div>
