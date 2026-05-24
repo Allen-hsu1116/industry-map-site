@@ -2576,7 +2576,7 @@ export default function Home() {
     }
     setFinancialLoading(true);
     setFinancialError(false);
-    fetch(`/industry-map-site/data/financials/${selectedCompanyCode}.json`)
+    fetch(`/data/financials/${selectedCompanyCode}.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Not found");
         return res.json();
@@ -2688,7 +2688,7 @@ export default function Home() {
             </div>
             {/* External links */}
             <div className="flex items-center gap-2 shrink-0">
-              <a href="/industry-map-site/daily-report" className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors px-3 py-1.5 rounded-lg hover:bg-indigo-500/10">📊 每日報告</a>
+              <a href="/daily-report" className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors px-3 py-1.5 rounded-lg hover:bg-indigo-500/10">📊 每日報告</a>
               <a href="https://allen-hsu1116.github.io/stock-knowledge-site/" target="_blank" rel="noopener noreferrer" className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)] transition-colors px-3 py-1.5 rounded-lg hover:bg-white/[0.04]">📚 知識庫</a>
             </div>
           </div>
