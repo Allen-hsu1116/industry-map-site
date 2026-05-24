@@ -20,6 +20,7 @@ interface TradingViewChartProps {
   ma5Data?: LineData[];
   ma10Data?: LineData[];
   ma20Data?: LineData[];
+  ma60Data?: LineData[];
   height?: number;
 }
 
@@ -29,6 +30,7 @@ export default function TradingViewChart({
   ma5Data,
   ma10Data,
   ma20Data,
+  ma60Data,
   height = 400,
 }: TradingViewChartProps) {
   const chartContainerRef = useRef<HTMLDivElement>(null);
@@ -144,6 +146,18 @@ export default function TradingViewChart({
       ma20Series.setData(ma20Data);
     }
 
+    // MA60
+    if (ma60Data && ma60Data.length > 0) {
+      const ma60Series = chart.addSeries(LineSeries, {
+        color: "#34d399",
+        lineWidth: 1,
+        priceLineVisible: false,
+        lastValueVisible: false,
+        title: "MA60",
+      });
+      ma60Series.setData(ma60Data);
+    }
+
     chart.timeScale().fitContent();
 
     // Handle resize
@@ -162,7 +176,7 @@ export default function TradingViewChart({
         chartRef.current = null;
       }
     };
-  }, [candleData, volumeData, ma5Data, ma10Data, ma20Data, height]);
+  }, [candleData, volumeData, ma5Data, ma10Data, ma20Data, ma60Data, height]);
 
   return (
     <div

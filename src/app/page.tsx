@@ -1194,10 +1194,10 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
                     <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                       <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatQuarterLabel(row.quarter)}</td>
                       <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueDisplay(row.revenue)}</td>
-                      <td className={cn("px-3 py-1.5 text-right", row.qoq !== null && row.qoq >= 0 ? "text-emerald-400" : row.qoq !== null ? "text-rose-400" : "text-[var(--color-text-tertiary)]")}>
+                      <td className={cn("px-3 py-1.5 text-right", row.qoq !== null && row.qoq >= 0 ? "text-rose-400" : row.qoq !== null ? "text-emerald-400" : "text-[var(--color-text-tertiary)]")}>
                         {row.qoq !== null ? formatPercentNum(row.qoq) : "-"}
                       </td>
-                      <td className={cn("px-3 py-1.5 text-right", row.yoy !== null && row.yoy >= 0 ? "text-emerald-400" : row.yoy !== null ? "text-rose-400" : "text-[var(--color-text-tertiary)]")}>
+                      <td className={cn("px-3 py-1.5 text-right", row.yoy !== null && row.yoy >= 0 ? "text-rose-400" : row.yoy !== null ? "text-emerald-400" : "text-[var(--color-text-tertiary)]")}>
                         {row.yoy !== null ? formatPercentNum(row.yoy) : "-"}
                       </td>
                     </tr>
@@ -1629,6 +1629,8 @@ function CompanyFullPageDetail({
   const [detailTab, setDetailTab] = useState<CompanyDetailTab>("overview");
   const [industrySubTab, setIndustrySubTab] = useState(0);
   const [revenueTab, setRevenueTab] = useState<"monthly" | "quarterly" | "yearly">("monthly");
+  const [techScope, setTechScope] = useState<"1M" | "3M" | "6M" | "YTD" | "1Y" | "5Y">("1Y");
+  const [maLines, setMaLines] = useState<{ ma5: boolean; ma10: boolean; ma20: boolean; ma60: boolean }>({ ma5: true, ma10: true, ma20: true, ma60: false });
 
   const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
   const marketPos = getMarketPosition(data.market_position);
@@ -1987,55 +1989,6 @@ function CompanyFullPageDetail({
                   })()} />
                 </div>
               </div>
-              {/* ─── 三大法人買賣超 (卡片 + 圖 + 表) ─── */}
-              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                <h4 className="text-sm font-bold text-white mb-4">🌐 三大法人買賣超</h4>
-                {data.institutional ? (() => {
-                  const ins = data.institutional;
-                  const fmtShares = (shares: number) => {
-                    const abs = Math.abs(shares);
-                    const sign = shares > 0 ? "+" : shares < 0 ? "-" : "";
-                    const 張 = abs / 1000;
-                    if (張 >= 10000) return `${sign}${(張 / 10000).toFixed(1).replace(/\.0$/, "")}萬張`;
-                    if (張 >= 1000) return `${sign}${(張 / 1000).toFixed(1)}千張`;
-                    if (張 >= 1) return `${sign}${張.toFixed(1).replace(/\.0$/, "")}張`;
-                    return `${sign}${abs}股`;
-                  };
-                  const fmtColor = (n: number) => n > 0 ? "text-emerald-400" : n < 0 ? "text-rose-400" : "text-[var(--color-text-tertiary)]";
-                  return (
-                    <div className="space-y-4">
-                      <div className="text-xs text-[var(--color-text-tertiary)] mb-2">資料日期：{ins.date || "最近交易日"}</div>
-                      <div className="grid grid-cols-4 gap-2 text-xs">
-                        <div></div>
-                        <div className="text-center text-emerald-400 font-medium">買進</div>
-                        <div className="text-center text-rose-400 font-medium">賣出</div>
-                        <div className="text-center font-medium">買賣超</div>
-                      </div>
-                      {[
-                        { name: "🇺🇳 外資", buy: ins.foreign_buy, sell: ins.foreign_sell, net: ins.foreign_net },
-                        { name: "🏦 投信", buy: ins.investment_trust_buy, sell: ins.investment_trust_sell, net: ins.investment_trust_net },
-                        { name: "📊 自營商", buy: 0, sell: 0, net: ins.dealer_net },
-                      ].map((row, i) => (
-                        <div key={i} className="grid grid-cols-4 gap-2 text-xs items-center bg-white/[0.02] rounded-lg px-3 py-2">
-                          <div className="text-[var(--color-text-secondary)]">{row.name}</div>
-                          <div className="text-center text-emerald-400">{row.buy ? fmtShares(row.buy) : "-"}</div>
-                          <div className="text-center text-rose-400">{row.sell ? fmtShares(row.sell) : "-"}</div>
-                          <div className={`text-center font-bold ${fmtColor(row.net)}`}>{fmtShares(row.net)}</div>
-                        </div>
-                      ))}
-                      <div className="grid grid-cols-4 gap-2 text-xs items-center bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-lg px-3 py-2 border border-indigo-500/20">
-                        <div className="font-bold text-white">合計</div>
-                        <div className="text-center text-emerald-400">{fmtShares(ins.foreign_buy + ins.investment_trust_buy + 0)}</div>
-                        <div className="text-center text-rose-400">{fmtShares(ins.foreign_sell + ins.investment_trust_sell + 0)}</div>
-                        <div className={`text-center font-bold ${fmtColor(ins.total_net)}`}>{fmtShares(ins.total_net)}</div>
-                      </div>
-                    </div>
-                  );
-                })() : (
-                  <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 資料準備中</div>
-                )}
-              </div>
-
               {/* ─── 三大法人歷史趨勢（圖+表） ─── */}
               {data.institutional_history && data.institutional_history.length > 0 && (() => {
                 const hist = data.institutional_history;
@@ -2123,14 +2076,14 @@ function CompanyFullPageDetail({
                   marginSell: d.margin_sell,
                 }));
                 const latest = allMargin[allMargin.length - 1];
-                const ratio = latest && latest.short_balance > 0 ? (latest.margin_balance / latest.short_balance).toFixed(2) : "-";
+                const ratio = latest && latest.margin_balance > 0 ? (latest.short_balance / latest.margin_balance).toFixed(2) : "-";
                 return (
                   <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                     <div className="flex items-center justify-between mb-4">
                       <h4 className="text-sm font-bold text-white">💰 融資融券</h4>
                       {latest && (
                         <span className="text-xs px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">
-                          資券比：<span className="font-bold">{ratio}</span>
+                          券資比：<span className="font-bold">{ratio}</span>
                         </span>
                       )}
                     </div>
@@ -2161,14 +2114,14 @@ function CompanyFullPageDetail({
                             <th className="px-2 py-1.5 text-left">日期</th>
                             <th className="px-2 py-1.5 text-right">融資餘額</th>
                             <th className="px-2 py-1.5 text-right">融券餘額</th>
-                            <th className="px-2 py-1.5 text-right">資券比</th>
+                            <th className="px-2 py-1.5 text-right">券資比</th>
                             <th className="px-2 py-1.5 text-right">融資買</th>
                             <th className="px-2 py-1.5 text-right">融資賣</th>
                           </tr>
                         </thead>
                         <tbody className="max-h-48 overflow-y-auto">
                           {last10.map((d, i) => {
-                            const r = d.short_balance > 0 ? (d.margin_balance / d.short_balance).toFixed(2) : "-";
+                            const r = d.margin_balance > 0 ? (d.short_balance / d.margin_balance).toFixed(2) : "-";
                             return (
                               <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                                 <td className="px-2 py-1 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
@@ -2242,37 +2195,102 @@ function CompanyFullPageDetail({
                 {(() => {
                   const dp = trends?.daily_prices;
                   if (dp && dp.length >= 5) {
-                    // Compute MA lines
                     const sorted = [...dp].sort((a, b) => a.date.localeCompare(b.date));
-                    const candleData = sorted.map(d => ({
+                    
+                    // Compute scope date boundaries
+                    const today = new Date(sorted[sorted.length - 1].date);
+                    const scopeDays: Record<string, number> = { "1M": 30, "3M": 90, "6M": 180, "YTD": 0, "1Y": 365, "5Y": 1825 };
+                    let filtered = sorted;
+                    if (techScope !== "5Y") {
+                      const cutoff = new Date(today);
+                      if (techScope === "YTD") {
+                        cutoff.setMonth(0); cutoff.setDate(1);
+                      } else {
+                        cutoff.setDate(cutoff.getDate() - (scopeDays[techScope] || 365));
+                      }
+                      const cutoffStr = cutoff.toISOString().slice(0, 10);
+                      filtered = sorted.filter(d => d.date >= cutoffStr);
+                    }
+                    if (filtered.length < 5) filtered = sorted.slice(-Math.min(sorted.length, 60));
+                    
+                    // Compute MA lines on full data then filter
+                    const computeMA = (period: number, data: typeof sorted) =>
+                      data.slice(period - 1).map((d, i) => {
+                        const window = data.slice(i, i + period);
+                        const avg = window.reduce((s, x) => s + x.close, 0) / period;
+                        return { time: d.date, value: Math.round(avg * 100) / 100 };
+                      });
+                    const ma5Full = computeMA(5, sorted);
+                    const ma10Full = sorted.length >= 10 ? computeMA(10, sorted) : [];
+                    const ma20Full = sorted.length >= 20 ? computeMA(20, sorted) : [];
+                    const ma60Full = sorted.length >= 60 ? computeMA(60, sorted) : [];
+                    
+                    const filteredDates = new Set(filtered.map(d => d.date));
+                    const ma5 = maLines.ma5 ? ma5Full.filter(m => filteredDates.has(m.time)) : [];
+                    const ma10 = maLines.ma10 ? ma10Full.filter(m => filteredDates.has(m.time)) : [];
+                    const ma20 = maLines.ma20 ? ma20Full.filter(m => filteredDates.has(m.time)) : [];
+                    const ma60 = maLines.ma60 ? ma60Full.filter(m => filteredDates.has(m.time)) : [];
+
+                    const candleData = filtered.map(d => ({
                       time: d.date,
                       open: d.open,
                       high: d.high,
                       low: d.low,
                       close: d.close,
                     }));
-                    const volumeData = sorted.map(d => ({
+                    const volumeData = filtered.map(d => ({
                       time: d.date,
                       value: d.volume,
                       color: d.close >= d.open ? "rgba(34,171,148,0.4)" : "rgba(247,82,95,0.4)",
                     }));
-                    const computeMA = (period: number) =>
-                      sorted.slice(period - 1).map((d, i) => {
-                        const window = sorted.slice(i, i + period);
-                        const avg = window.reduce((s, x) => s + x.close, 0) / period;
-                        return { time: d.date, value: Math.round(avg * 100) / 100 };
-                      });
-                    const ma5 = computeMA(5);
-                    const ma10 = sorted.length >= 10 ? computeMA(10) : undefined;
-                    const ma20 = sorted.length >= 20 ? computeMA(20) : undefined;
+
+                    const scopeOptions: { id: typeof techScope; label: string }[] = [
+                      { id: "1M", label: "1M" },
+                      { id: "3M", label: "3M" },
+                      { id: "6M", label: "6M" },
+                      { id: "YTD", label: "YTD" },
+                      { id: "1Y", label: "1Y" },
+                      { id: "5Y", label: "5Y" },
+                    ];
+                    const maOptions: { key: keyof typeof maLines; label: string; color: string }[] = [
+                      { key: "ma5", label: "MA5", color: "#818cf8" },
+                      { key: "ma10", label: "MA10", color: "#f472b6" },
+                      { key: "ma20", label: "MA20", color: "#fbbf24" },
+                      { key: "ma60", label: "MA60", color: "#34d399" },
+                    ];
+
                     return (
                       <div>
+                        {/* Scope buttons */}
+                        <div className="flex items-center gap-1 mb-3">
+                          {scopeOptions.map(opt => (
+                            <button key={opt.id}
+                              className={cn(
+                                "px-2.5 py-1 text-xs font-medium rounded-md transition-all",
+                                techScope === opt.id
+                                  ? "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30"
+                                  : "text-gray-400 hover:text-[var(--color-text-secondary)] border border-transparent"
+                              )}
+                              onClick={() => setTechScope(opt.id)}
+                            >{opt.label}</button>
+                          ))}
+                        </div>
+                        {/* MA toggle buttons */}
                         <div className="flex items-center gap-3 mb-3 text-xs">
                           <span className="text-[#22ab94]">● 漲</span>
                           <span className="text-[#f7525f]">● 跌</span>
-                          {ma5.length > 0 && <span className="text-[#818cf8]">━ MA5</span>}
-                          {ma10 && ma10.length > 0 && <span className="text-[#f472b6]">━ MA10</span>}
-                          {ma20 && ma20.length > 0 && <span className="text-[#fbbf24]">━ MA20</span>}
+                          {maOptions.map(opt => (
+                            <button key={opt.key}
+                              className={cn(
+                                "flex items-center gap-1 px-1.5 py-0.5 rounded transition-all",
+                                maLines[opt.key] ? "opacity-100" : "opacity-30 line-through"
+                              )}
+                              onClick={() => setMaLines(prev => ({ ...prev, [opt.key]: !prev[opt.key] }))}
+                            >
+                              <span style={{ color: opt.color }}>━</span>
+                              <span style={{ color: maLines[opt.key] ? opt.color : '#9ca3af' }}>{opt.label}</span>
+                            </button>
+                          ))}
                         </div>
                         <TradingViewChart
                           candleData={candleData}
@@ -2280,6 +2298,7 @@ function CompanyFullPageDetail({
                           ma5Data={ma5}
                           ma10Data={ma10}
                           ma20Data={ma20}
+                          ma60Data={ma60}
                           height={420}
                         />
                       </div>
@@ -2335,8 +2354,32 @@ function CompanyFullPageDetail({
           {/* ─── 相關新聞 Tab ─── */}
           {detailTab === "news" && (
             <div className="space-y-6">
+              {/* Google News 外部連結 */}
               <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                <h4 className="text-sm font-bold text-white mb-4">📰 重大訊息公告</h4>
+                <h4 className="text-sm font-bold text-white mb-4">📰 相關新聞</h4>
+                <div className="text-xs text-[var(--color-text-tertiary)] mb-4">點擊搜尋最新新聞報導</div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  {[
+                    { label: "Google 新聞搜尋", url: `https://news.google.com/search?q=${encodeURIComponent(data.name + " " + data.code)}`, icon: "🔍" },
+                    { label: "Yahoo 奇摩新聞", url: `https://tw.news.yahoo.com/search?q=${encodeURIComponent(data.name)}`, icon: "🔎" },
+                    { label: "MoneyDJ 理財網", url: `https://www.moneydj.com/usasp/searchresult.aspx?keyword=${encodeURIComponent(data.code)}`, icon: "💰" },
+                    { label: "鉅亨網", url: `https://www.cnyes.com/search?searchQuery=${encodeURIComponent(data.name + " " + data.code)}`, icon: "📊" },
+                  ].map((src, i) => (
+                    <a key={i} href={src.url} target="_blank" rel="noopener noreferrer"
+                      className="flex items-center gap-3 bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-indigo-500/30 hover:bg-white/[0.05] transition-all group">
+                      <span className="text-lg">{src.icon}</span>
+                      <div>
+                        <div className="text-sm text-[var(--color-text-secondary)] group-hover:text-white transition-colors">{src.label}</div>
+                        <div className="text-xs text-[var(--color-text-tertiary)]">搜尋「{data.name}」相關報導 ↗</div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* 重大訊息公告 */}
+              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                <h4 className="text-sm font-bold text-white mb-4">📋 重大訊息公告</h4>
                 <div className="text-xs text-[var(--color-text-tertiary)] mb-4">資料來源：公開資訊觀測站 (MOPS)</div>
                 {data.major_news && data.major_news.length > 0 ? (
                   <div className="space-y-3">
