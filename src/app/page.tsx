@@ -73,6 +73,35 @@ interface FinancialData {
     dealer_net: number;
     total_net: number;
   };
+  institutional_history?: {
+    date: string;
+    foreign_net: number;
+    foreign_buy: number;
+    foreign_sell: number;
+    investment_trust_net: number;
+    investment_trust_buy: number;
+    investment_trust_sell: number;
+    dealer_net: number;
+    total_net: number;
+  }[];
+  margin_history?: {
+    date: string;
+    margin_buy: number;
+    margin_sell: number;
+    margin_balance: number;
+    margin_limit: number;
+    short_sell: number;
+    short_buy: number;
+    short_balance: number;
+    short_limit: number;
+    offset: number;
+  }[];
+  per_history?: {
+    date: string;
+    pe: number;
+    pb: number;
+    dividend_yield: number;
+  }[];
   major_news?: { date: string; subject: string }[];
   industry_analysis?: Record<string, {
     ai_summary?: string;
@@ -2026,6 +2055,122 @@ function CompanyFullPageDetail({
                   <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 資料準備中</div>
                 )}
               </div>
+
+              {/* ─── 三大法人歷史趨勢 ─── */}
+              {data.institutional_history && data.institutional_history.length > 0 && (() => {
+                const hist = data.institutional_history;
+                const recent60 = hist.slice(-60);
+                const fmtShares = (s: number) => {
+                  const 張 = Math.abs(s) / 1000;
+                  const sign = s > 0 ? "+" : s < 0 ? "-" : "";
+                  if (張 >= 10000) return `${sign}${(張 / 10000).toFixed(1).replace(/\.0$/, "")}萬`;
+                  if (張 >= 1000) return `${sign}${(張 / 1000).toFixed(1)}千`;
+                  if (張 >= 1) return `${sign}${張.toFixed(1).replace(/\.0$/, "")}`;
+                  return `${s}`;
+                };
+                const chartData = recent60.map(d => ({
+                  date: d.date.slice(5),
+                  foreign: d.foreign_net / 1000,
+                  trust: d.investment_trust_net / 1000,
+                  dealer: d.dealer_net / 1000,
+                  total: d.total_net / 1000,
+                }));
+                return (
+                  <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                    <h4 className="text-sm font-bold text-white mb-4">📊 三大法人買賣超趨勢（近60日）</h4>
+                    <div className="h-72">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
+                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
+                          <YAxis tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => v >= 1000 ? `${(v/1000).toFixed(0)}千` : v <= -1000 ? `${(v/1000).toFixed(0)}千` : `${v}`} />
+                          <Tooltip formatter={(v: any, name: any) => {
+                            const labels: Record<string,string> = { foreign: "外資", trust: "投信", dealer: "自營商", total: "合計" };
+                            return [`${fmtShares(Number(v) * 1000)}張`, labels[String(name)] || String(name)];
+                          }} />
+                          <Legend formatter={(v: string) => {
+                            const labels: Record<string,string> = { foreign: "外資", trust: "投信", dealer: "自營商", total: "合計" };
+                            return labels[v] || v;
+                          }} />
+                          <Bar dataKey="foreign" fill="rgba(99,102,241,0.6)" name="外資" />
+                          <Bar dataKey="trust" fill="rgba(34,211,238,0.6)" name="投信" />
+                          <Bar dataKey="dealer" fill="rgba(251,191,36,0.6)" name="自營商" />
+                          <Line type="monotone" dataKey="total" stroke="#f472b6" strokeWidth={2} dot={false} name="合計" />
+                        </ComposedChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {/* ─── 融資融券 ─── */}
+              {data.margin_history && data.margin_history.length > 0 && (() => {
+                const marginHist = data.margin_history;
+                const chartData = marginHist.map(d => ({
+                  date: d.date.slice(5),
+                  marginBalance: d.margin_balance,
+                  shortBalance: d.short_balance,
+                  marginBuy: d.margin_buy,
+                  marginSell: d.margin_sell,
+                }));
+                return (
+                  <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                    <h4 className="text-sm font-bold text-white mb-4">💰 融資融券餘額</h4>
+                    <div className="h-64">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
+                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
+                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} />
+                          <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} />
+                          <Tooltip />
+                          <Legend formatter={(v: string) => {
+                            const labels: Record<string,string> = { marginBalance: "融資餘額", shortBalance: "融券餘額", marginBuy: "融資買", marginSell: "融資賣" };
+                            return labels[v] || v;
+                          }} />
+                          <Area type="monotone" dataKey="marginBalance" yAxisId="left" stroke="#818cf8" fill="rgba(129,140,248,0.15)" name="融資餘額" />
+                          <Bar dataKey="marginBuy" yAxisId="right" fill="rgba(34,197,94,0.5)" name="融資買" />
+                          <Bar dataKey="marginSell" yAxisId="right" fill="rgba(239,68,68,0.5)" name="融資賣" />
+                        </ComposedChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
+                );
+              })()}
+
+              {/* ─── 本益比/淨值比趨勢 ─── */}
+              {data.per_history && data.per_history.length > 0 && (() => {
+                const recentPer = data.per_history.slice(-120);
+                const chartData = recentPer.map(d => ({
+                  date: d.date.slice(5),
+                  pe: d.pe,
+                  pb: d.pb,
+                  yield: d.dividend_yield,
+                }));
+                return (
+                  <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+                    <h4 className="text-sm font-bold text-white mb-4">📐 本益比 / 淨值比 / 殖利率趨勢</h4>
+                    <div className="h-64">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
+                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={10} />
+                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} />
+                          <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} domain={[0, 'auto']} />
+                          <Tooltip />
+                          <Legend formatter={(v: string) => {
+                            const labels: Record<string,string> = { pe: "本益比", pb: "淨值比", yield: "殖利率%" };
+                            return labels[v] || v;
+                          }} />
+                          <Line type="monotone" dataKey="pe" yAxisId="left" stroke="#818cf8" strokeWidth={2} dot={false} name="本益比" />
+                          <Line type="monotone" dataKey="pb" yAxisId="left" stroke="#f472b6" strokeWidth={2} dot={false} name="淨值比" />
+                          <Line type="monotone" dataKey="yield" yAxisId="right" stroke="#22ab94" strokeWidth={2} dot={false} name="殖利率%" />
+                        </ComposedChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           )}
 
