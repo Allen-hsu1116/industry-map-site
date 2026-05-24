@@ -748,7 +748,7 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
 
   // If we have history data, show chart + table
   if (history && history.length > 0) {
-    const chartData = [...history].reverse().slice(-8);
+    const chartData = history.slice(-8);
     return (
       <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
         <div className="flex items-center justify-between mb-4">
