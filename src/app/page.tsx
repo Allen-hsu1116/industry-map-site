@@ -1036,6 +1036,89 @@ function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: Fi
   );
 }
 
+/* ─── News Tab Content (dynamic) ─── */
+function NewsTabContent({ code, name, majorNews }: { code: string; name: string; majorNews?: { date: string; subject: string }[] }) {
+  const [news, setNews] = useState<{ title: string; link: string; source: string; date: string }[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!code || !name) return;
+    setLoading(true);
+    setError("");
+    fetch(`/api/news?symbol=${encodeURIComponent(code)}&name=${encodeURIComponent(name)}`)
+      .then(r => r.json())
+      .then(data => {
+        setNews(data.news || []);
+        setLoading(false);
+      })
+      .catch(err => {
+        setError("新聞載入失敗");
+        setLoading(false);
+      });
+  }, [code, name]);
+
+  return (
+    <div className="space-y-6">
+      {/* New search results */}
+      <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+        <div className="flex items-center justify-between mb-4">
+          <h4 className="text-sm font-bold text-white">📰 相關新聞</h4>
+          <div className="text-xs text-[var(--color-text-tertiary)]">
+            搜尋「{name} {code}」近 30 日報導
+          </div>
+        </div>
+        {loading ? (
+          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">
+            <div className="animate-pulse">⏳ 載入中...</div>
+          </div>
+        ) : error ? (
+          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">⚠️ {error}</div>
+        ) : news.length > 0 ? (
+          <div className="space-y-3">
+            {news.map((item, i) => (
+              <a key={i} href={item.link} target="_blank" rel="noopener noreferrer"
+                className="block bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-indigo-500/30 hover:bg-white/[0.05] transition-all group">
+                <div className="flex items-start gap-3">
+                  <div className="text-xs shrink-0 pt-0.5">
+                    <span className="px-1.5 py-0.5 rounded bg-white/[0.06] text-[var(--color-text-tertiary)] font-medium">{item.source}</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm text-[var(--color-text-secondary)] group-hover:text-white leading-relaxed line-clamp-2 transition-colors">{item.title}</div>
+                    <div className="text-xs text-[var(--color-text-tertiary)] mt-1 font-mono">{item.date}</div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 近期無相關新聞</div>
+        )}
+      </div>
+
+      {/* 重大訊息公告 */}
+      <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+        <h4 className="text-sm font-bold text-white mb-4">📋 重大訊息公告</h4>
+        <div className="text-xs text-[var(--color-text-tertiary)] mb-4">資料來源：公開資訊觀測站 (MOPS)</div>
+        {majorNews && majorNews.length > 0 ? (
+          <div className="space-y-3">
+            {majorNews.slice(0, 15).map((n, i) => (
+              <div key={i} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
+                <div className="flex items-start gap-3">
+                  <div className="text-xs text-[var(--color-text-tertiary)] shrink-0 pt-0.5 font-mono">{n.date}</div>
+                  <div className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{n.subject}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 暫無重大訊息資料</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 /* ─── Company Info Header (aistockmap style) ─── */
 function CompanyInfoHeader({ data }: { data: FinancialData }) {
   const marketCap = data.marketCap || "-";
@@ -2076,14 +2159,14 @@ function CompanyFullPageDetail({
                   marginSell: d.margin_sell,
                 }));
                 const latest = allMargin[allMargin.length - 1];
-                const ratio = latest && latest.margin_balance > 0 ? (latest.short_balance / latest.margin_balance).toFixed(2) : "-";
+                const ratio = latest && latest.short_balance > 0 ? (latest.margin_balance / latest.short_balance).toFixed(2) : "-";
                 return (
                   <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                     <div className="flex items-center justify-between mb-4">
                       <h4 className="text-sm font-bold text-white">💰 融資融券</h4>
                       {latest && (
                         <span className="text-xs px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">
-                          券資比：<span className="font-bold">{ratio}</span>
+                          資券比：<span className="font-bold">{ratio}</span>
                         </span>
                       )}
                     </div>
@@ -2114,14 +2197,14 @@ function CompanyFullPageDetail({
                             <th className="px-2 py-1.5 text-left">日期</th>
                             <th className="px-2 py-1.5 text-right">融資餘額</th>
                             <th className="px-2 py-1.5 text-right">融券餘額</th>
-                            <th className="px-2 py-1.5 text-right">券資比</th>
+                            <th className="px-2 py-1.5 text-right">資券比</th>
                             <th className="px-2 py-1.5 text-right">融資買</th>
                             <th className="px-2 py-1.5 text-right">融資賣</th>
                           </tr>
                         </thead>
                         <tbody className="max-h-48 overflow-y-auto">
                           {last10.map((d, i) => {
-                            const r = d.margin_balance > 0 ? (d.short_balance / d.margin_balance).toFixed(2) : "-";
+                            const r = d.short_balance > 0 ? (d.margin_balance / d.short_balance).toFixed(2) : "-";
                             return (
                               <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                                 <td className="px-2 py-1 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
@@ -2169,6 +2252,29 @@ function CompanyFullPageDetail({
                           <Line type="monotone" dataKey="yield" yAxisId="right" stroke="#22ab94" strokeWidth={2} dot={false} name="殖利率%" />
                         </ComposedChart>
                       </ResponsiveContainer>
+                    </div>
+                    {/* PER/PBR/Yield detail table */}
+                    <div className="mt-4 overflow-hidden rounded-xl">
+                      <table className="w-full text-xs">
+                        <thead>
+                          <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+                            <th className="px-3 py-2 text-left">日期</th>
+                            <th className="px-3 py-2 text-right">本益比</th>
+                            <th className="px-3 py-2 text-right">淨值比</th>
+                            <th className="px-3 py-2 text-right">殖利率%</th>
+                          </tr>
+                        </thead>
+                        <tbody className="max-h-52 overflow-y-auto">
+                          {data.per_history!.slice(-10).reverse().map((d, i) => (
+                            <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                              <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
+                              <td className="px-3 py-1.5 text-right text-white font-medium">{d.pe?.toFixed(2) ?? "-"}</td>
+                              <td className="px-3 py-1.5 text-right text-white font-medium">{d.pb?.toFixed(2) ?? "-"}</td>
+                              <td className="px-3 py-1.5 text-right text-white font-medium">{d.dividend_yield?.toFixed(2) ?? "-"}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 );
@@ -2353,50 +2459,7 @@ function CompanyFullPageDetail({
 
           {/* ─── 相關新聞 Tab ─── */}
           {detailTab === "news" && (
-            <div className="space-y-6">
-              {/* Google News 外部連結 */}
-              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                <h4 className="text-sm font-bold text-white mb-4">📰 相關新聞</h4>
-                <div className="text-xs text-[var(--color-text-tertiary)] mb-4">點擊搜尋最新新聞報導</div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {[
-                    { label: "Google 新聞搜尋", url: `https://news.google.com/search?q=${encodeURIComponent(data.name + " " + data.code)}`, icon: "🔍" },
-                    { label: "Yahoo 奇摩新聞", url: `https://tw.news.yahoo.com/search?q=${encodeURIComponent(data.name)}`, icon: "🔎" },
-                    { label: "MoneyDJ 理財網", url: `https://www.moneydj.com/usasp/searchresult.aspx?keyword=${encodeURIComponent(data.code)}`, icon: "💰" },
-                    { label: "鉅亨網", url: `https://www.cnyes.com/search?searchQuery=${encodeURIComponent(data.name + " " + data.code)}`, icon: "📊" },
-                  ].map((src, i) => (
-                    <a key={i} href={src.url} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-3 bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-indigo-500/30 hover:bg-white/[0.05] transition-all group">
-                      <span className="text-lg">{src.icon}</span>
-                      <div>
-                        <div className="text-sm text-[var(--color-text-secondary)] group-hover:text-white transition-colors">{src.label}</div>
-                        <div className="text-xs text-[var(--color-text-tertiary)]">搜尋「{data.name}」相關報導 ↗</div>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              {/* 重大訊息公告 */}
-              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                <h4 className="text-sm font-bold text-white mb-4">📋 重大訊息公告</h4>
-                <div className="text-xs text-[var(--color-text-tertiary)] mb-4">資料來源：公開資訊觀測站 (MOPS)</div>
-                {data.major_news && data.major_news.length > 0 ? (
-                  <div className="space-y-3">
-                    {data.major_news.slice(0, 15).map((news, i) => (
-                      <div key={i} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
-                        <div className="flex items-start gap-3">
-                          <div className="text-xs text-[var(--color-text-tertiary)] shrink-0 pt-0.5 font-mono">{news.date}</div>
-                          <div className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{news.subject}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 暫無重大訊息資料</div>
-                )}
-              </div>
-            </div>
+            <NewsTabContent code={data.code} name={data.name} majorNews={data.major_news} />
           )}
 
           {/* ─── 研究圖表 Tab ─── */}
