@@ -13,6 +13,7 @@ import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, R
 import industriesData from "../../public/data/industries.json";
 import companiesData from "../../public/data/companies.json";
 import TradingViewChart from "./TradingViewChart";
+import RealtimeQuote from "./RealtimeQuote";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
