@@ -748,7 +748,7 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
 
   // If we have history data, show chart + table
   if (history && history.length > 0) {
-    const chartData = history.slice(-8);
+    const chartData = [...history].reverse().slice(-8);
     return (
       <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
         <div className="flex items-center justify-between mb-4">
@@ -800,7 +800,7 @@ function DividendPolicyPanel({ data }: { data: FinancialData }) {
               </tr>
             </thead>
             <tbody className="max-h-48 overflow-y-auto">
-              {[...history].reverse().slice(0, 10).map((row, i) => (
+              {history.slice(0, 10).map((row, i) => (
                 <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                   <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatROCYear(row.year)}</td>
                   <td className="px-3 py-1.5 text-right text-indigo-400 font-medium">{row.cashDividend.toFixed(2)} 元</td>
@@ -1987,12 +1987,11 @@ function CompanyFullPageDetail({
                   })()} />
                 </div>
               </div>
-              {/* ─── 三大法人買賣超 ─── */}
+              {/* ─── 三大法人買賣超 (卡片 + 圖 + 表) ─── */}
               <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                 <h4 className="text-sm font-bold text-white mb-4">🌐 三大法人買賣超</h4>
                 {data.institutional ? (() => {
                   const ins = data.institutional;
-                  // MCP 回傳單位為「股」，1 張 = 1000 股，轉換後格式化
                   const fmtShares = (shares: number) => {
                     const abs = Math.abs(shares);
                     const sign = shares > 0 ? "+" : shares < 0 ? "-" : "";
@@ -2003,51 +2002,32 @@ function CompanyFullPageDetail({
                     return `${sign}${abs}股`;
                   };
                   const fmtColor = (n: number) => n > 0 ? "text-emerald-400" : n < 0 ? "text-rose-400" : "text-[var(--color-text-tertiary)]";
-                  const foreignBuy張 = ins.foreign_buy / 1000;
-                  const foreignSell張 = ins.foreign_sell / 1000;
-                  const trustBuy張 = ins.investment_trust_buy / 1000;
-                  const trustSell張 = ins.investment_trust_sell / 1000;
                   return (
                     <div className="space-y-4">
                       <div className="text-xs text-[var(--color-text-tertiary)] mb-2">資料日期：{ins.date || "最近交易日"}</div>
-                      {/* 外資 */}
-                      <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-sm font-medium text-[var(--color-text-secondary)]">🇺🇳 外資</span>
-                          <span className={`text-lg font-bold ${fmtColor(ins.foreign_net)}`}>{fmtShares(ins.foreign_net)}</span>
-                        </div>
-                        <div className="grid grid-cols-2 gap-3 text-xs">
-                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{foreignBuy張 >= 1000 ? `${(foreignBuy張 / 1000).toFixed(1)}千張` : `${foreignBuy張.toFixed(0)}張`}</div></div>
-                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{foreignSell張 >= 1000 ? `${(foreignSell張 / 1000).toFixed(1)}千張` : `${foreignSell張.toFixed(0)}張`}</div></div>
-                        </div>
+                      <div className="grid grid-cols-4 gap-2 text-xs">
+                        <div></div>
+                        <div className="text-center text-emerald-400 font-medium">買進</div>
+                        <div className="text-center text-rose-400 font-medium">賣出</div>
+                        <div className="text-center font-medium">買賣超</div>
                       </div>
-                      {/* 投信 */}
-                      <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-sm font-medium text-[var(--color-text-secondary)]">🏦 投信</span>
-                          <span className={`text-lg font-bold ${fmtColor(ins.investment_trust_net)}`}>{fmtShares(ins.investment_trust_net)}</span>
+                      {[
+                        { name: "🇺🇳 外資", buy: ins.foreign_buy, sell: ins.foreign_sell, net: ins.foreign_net },
+                        { name: "🏦 投信", buy: ins.investment_trust_buy, sell: ins.investment_trust_sell, net: ins.investment_trust_net },
+                        { name: "📊 自營商", buy: 0, sell: 0, net: ins.dealer_net },
+                      ].map((row, i) => (
+                        <div key={i} className="grid grid-cols-4 gap-2 text-xs items-center bg-white/[0.02] rounded-lg px-3 py-2">
+                          <div className="text-[var(--color-text-secondary)]">{row.name}</div>
+                          <div className="text-center text-emerald-400">{row.buy ? fmtShares(row.buy) : "-"}</div>
+                          <div className="text-center text-rose-400">{row.sell ? fmtShares(row.sell) : "-"}</div>
+                          <div className={`text-center font-bold ${fmtColor(row.net)}`}>{fmtShares(row.net)}</div>
                         </div>
-                        <div className="grid grid-cols-2 gap-3 text-xs">
-                          <div><span className="text-[var(--color-text-tertiary)]">買進</span><div className="text-emerald-400 font-medium">{trustBuy張 >= 1000 ? `${(trustBuy張 / 1000).toFixed(1)}千張` : `${trustBuy張.toFixed(0)}張`}</div></div>
-                          <div><span className="text-[var(--color-text-tertiary)]">賣出</span><div className="text-rose-400 font-medium">{trustSell張 >= 1000 ? `${(trustSell張 / 1000).toFixed(1)}千張` : `${trustSell張.toFixed(0)}張`}</div></div>
-                        </div>
-                      </div>
-                      {/* 自營商 */}
-                      <div className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04]">
-                        <div className="flex items-center justify-between mb-3">
-                          <span className="text-sm font-medium text-[var(--color-text-secondary)]">📊 自營商</span>
-                          <span className={`text-lg font-bold ${fmtColor(ins.dealer_net)}`}>{fmtShares(ins.dealer_net)}</span>
-                        </div>
-                        <div className="text-xs text-[var(--color-text-tertiary)]">
-                          買賣超：{ins.dealer_net > 0 ? '買超' : '賣超'} {fmtShares(Math.abs(ins.dealer_net)).replace(/[+-]/, '')}
-                        </div>
-                      </div>
-                      {/* 合計 */}
-                      <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl p-4 border border-indigo-500/20">
-                        <div className="flex items-center justify-between">
-                          <span className="text-sm font-bold text-white">合計買賣超</span>
-                          <span className={`text-xl font-bold ${fmtColor(ins.total_net)}`}>{fmtShares(ins.total_net)}</span>
-                        </div>
+                      ))}
+                      <div className="grid grid-cols-4 gap-2 text-xs items-center bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-lg px-3 py-2 border border-indigo-500/20">
+                        <div className="font-bold text-white">合計</div>
+                        <div className="text-center text-emerald-400">{fmtShares(ins.foreign_buy + ins.investment_trust_buy + 0)}</div>
+                        <div className="text-center text-rose-400">{fmtShares(ins.foreign_sell + ins.investment_trust_sell + 0)}</div>
+                        <div className={`text-center font-bold ${fmtColor(ins.total_net)}`}>{fmtShares(ins.total_net)}</div>
                       </div>
                     </div>
                   );
@@ -2056,10 +2036,11 @@ function CompanyFullPageDetail({
                 )}
               </div>
 
-              {/* ─── 三大法人歷史趨勢 ─── */}
+              {/* ─── 三大法人歷史趨勢（圖+表） ─── */}
               {data.institutional_history && data.institutional_history.length > 0 && (() => {
                 const hist = data.institutional_history;
-                const recent60 = hist.slice(-60);
+                const recent30 = hist.slice(-30);
+                const last10 = hist.slice(-10);
                 const fmtShares = (s: number) => {
                   const 張 = Math.abs(s) / 1000;
                   const sign = s > 0 ? "+" : s < 0 ? "-" : "";
@@ -2068,7 +2049,8 @@ function CompanyFullPageDetail({
                   if (張 >= 1) return `${sign}${張.toFixed(1).replace(/\.0$/, "")}`;
                   return `${s}`;
                 };
-                const chartData = recent60.map(d => ({
+                const fmtColor = (n: number) => n > 0 ? "text-emerald-400" : n < 0 ? "text-rose-400" : "text-[var(--color-text-tertiary)]";
+                const chartData = recent30.map(d => ({
                   date: d.date.slice(5),
                   foreign: d.foreign_net / 1000,
                   trust: d.investment_trust_net / 1000,
@@ -2077,8 +2059,8 @@ function CompanyFullPageDetail({
                 }));
                 return (
                   <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                    <h4 className="text-sm font-bold text-white mb-4">📊 三大法人買賣超趨勢（近60日）</h4>
-                    <div className="h-72">
+                    <h4 className="text-sm font-bold text-white mb-4">📊 三大法人買賣超趨勢（近30日）</h4>
+                    <div className="h-64">
                       <ResponsiveContainer width="100%" height="100%">
                         <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
@@ -2099,24 +2081,60 @@ function CompanyFullPageDetail({
                         </ComposedChart>
                       </ResponsiveContainer>
                     </div>
+                    {/* 三大法人明細表 */}
+                    <div className="overflow-hidden rounded-xl mt-4">
+                      <table className="w-full text-xs">
+                        <thead>
+                          <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+                            <th className="px-2 py-1.5 text-left">日期</th>
+                            <th className="px-2 py-1.5 text-right">外資</th>
+                            <th className="px-2 py-1.5 text-right">投信</th>
+                            <th className="px-2 py-1.5 text-right">自營商</th>
+                            <th className="px-2 py-1.5 text-right">合計</th>
+                          </tr>
+                        </thead>
+                        <tbody className="max-h-48 overflow-y-auto">
+                          {last10.map((d, i) => (
+                            <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                              <td className="px-2 py-1 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
+                              <td className={`px-2 py-1 text-right font-medium ${fmtColor(d.foreign_net)}`}>{fmtShares(d.foreign_net)}</td>
+                              <td className={`px-2 py-1 text-right font-medium ${fmtColor(d.investment_trust_net)}`}>{fmtShares(d.investment_trust_net)}</td>
+                              <td className={`px-2 py-1 text-right font-medium ${fmtColor(d.dealer_net)}`}>{fmtShares(d.dealer_net)}</td>
+                              <td className={`px-2 py-1 text-right font-bold ${fmtColor(d.total_net)}`}>{fmtShares(d.total_net)}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 );
               })()}
 
-              {/* ─── 融資融券 ─── */}
+              {/* ─── 融資融券（圖+表+資券比） ─── */}
               {data.margin_history && data.margin_history.length > 0 && (() => {
-                const marginHist = data.margin_history;
-                const chartData = marginHist.map(d => ({
+                const allMargin = data.margin_history;
+                const recent30 = allMargin.slice(-30);
+                const last10 = allMargin.slice(-10);
+                const chartData = recent30.map(d => ({
                   date: d.date.slice(5),
                   marginBalance: d.margin_balance,
                   shortBalance: d.short_balance,
                   marginBuy: d.margin_buy,
                   marginSell: d.margin_sell,
                 }));
+                const latest = allMargin[allMargin.length - 1];
+                const ratio = latest && latest.short_balance > 0 ? (latest.margin_balance / latest.short_balance).toFixed(2) : "-";
                 return (
                   <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                    <h4 className="text-sm font-bold text-white mb-4">💰 融資融券餘額</h4>
-                    <div className="h-64">
+                    <div className="flex items-center justify-between mb-4">
+                      <h4 className="text-sm font-bold text-white">💰 融資融券</h4>
+                      {latest && (
+                        <span className="text-xs px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">
+                          資券比：<span className="font-bold">{ratio}</span>
+                        </span>
+                      )}
+                    </div>
+                    <div className="h-56">
                       <ResponsiveContainer width="100%" height="100%">
                         <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
@@ -2129,18 +2147,49 @@ function CompanyFullPageDetail({
                             return labels[v] || v;
                           }} />
                           <Area type="monotone" dataKey="marginBalance" yAxisId="left" stroke="#818cf8" fill="rgba(129,140,248,0.15)" name="融資餘額" />
+                          <Line type="monotone" dataKey="shortBalance" yAxisId="left" stroke="#f472b6" strokeWidth={2} dot={false} name="融券餘額" />
                           <Bar dataKey="marginBuy" yAxisId="right" fill="rgba(34,197,94,0.5)" name="融資買" />
                           <Bar dataKey="marginSell" yAxisId="right" fill="rgba(239,68,68,0.5)" name="融資賣" />
                         </ComposedChart>
                       </ResponsiveContainer>
                     </div>
+                    {/* 融資融券明細表 */}
+                    <div className="overflow-hidden rounded-xl mt-4">
+                      <table className="w-full text-xs">
+                        <thead>
+                          <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
+                            <th className="px-2 py-1.5 text-left">日期</th>
+                            <th className="px-2 py-1.5 text-right">融資餘額</th>
+                            <th className="px-2 py-1.5 text-right">融券餘額</th>
+                            <th className="px-2 py-1.5 text-right">資券比</th>
+                            <th className="px-2 py-1.5 text-right">融資買</th>
+                            <th className="px-2 py-1.5 text-right">融資賣</th>
+                          </tr>
+                        </thead>
+                        <tbody className="max-h-48 overflow-y-auto">
+                          {last10.map((d, i) => {
+                            const r = d.short_balance > 0 ? (d.margin_balance / d.short_balance).toFixed(2) : "-";
+                            return (
+                              <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
+                                <td className="px-2 py-1 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
+                                <td className="px-2 py-1 text-right text-indigo-400 font-medium">{d.margin_balance.toLocaleString()}</td>
+                                <td className="px-2 py-1 text-right text-pink-400 font-medium">{d.short_balance.toLocaleString()}</td>
+                                <td className="px-2 py-1 text-right font-bold text-white">{r}</td>
+                                <td className="px-2 py-1 text-right text-emerald-400">{d.margin_buy.toLocaleString()}</td>
+                                <td className="px-2 py-1 text-right text-rose-400">{d.margin_sell.toLocaleString()}</td>
+                              </tr>
+                            );
+                          })}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 );
               })()}
 
-              {/* ─── 本益比/淨值比趨勢 ─── */}
+              {/* ─── 本益比/淨值比趨勢（近1個月） ─── */}
               {data.per_history && data.per_history.length > 0 && (() => {
-                const recentPer = data.per_history.slice(-120);
+                const recentPer = data.per_history.slice(-30);
                 const chartData = recentPer.map(d => ({
                   date: d.date.slice(5),
                   pe: d.pe,
@@ -2150,11 +2199,11 @@ function CompanyFullPageDetail({
                 return (
                   <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                     <h4 className="text-sm font-bold text-white mb-4">📐 本益比 / 淨值比 / 殖利率趨勢</h4>
-                    <div className="h-64">
+                    <div className="h-56">
                       <ResponsiveContainer width="100%" height="100%">
                         <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
-                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={10} />
+                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
                           <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} />
                           <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} domain={[0, 'auto']} />
                           <Tooltip />
