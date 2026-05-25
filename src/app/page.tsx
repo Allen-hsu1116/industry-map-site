@@ -1799,6 +1799,10 @@ function CompanyFullPageDetail({
           <p className="text-sm text-[var(--color-text-tertiary)] mt-1 ml-1">
             {data.profile.industry} · <span style={{ color: marketPos.color }}>{marketPos.label}</span>
           </p>
+          {/* ─── Real-time Quote ─── */}
+          <div className="mt-2">
+            <RealtimeQuote code={data.code} />
+          </div>
         </div>
 
         {/* ─── Badges (aistockmap style pill badges) ─── */}
