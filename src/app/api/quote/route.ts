@@ -92,29 +92,63 @@ async function fetchTWSE(symbol: string): Promise<QuoteResult | null> {
   }
 }
 
+function safeFloat(v: string | undefined | null, fallback: number = 0): number {
+  if (!v || v === "-" || v === "") return fallback;
+  const n = parseFloat(v);
+  return isNaN(n) ? fallback : n;
+}
+
+function safeInt(v: string | undefined | null, fallback: number = 0): number {
+  if (!v || v === "-" || v === "") return fallback;
+  const n = parseInt(v, 10);
+  return isNaN(n) ? fallback : n;
+}
+
 function formatTWSE(info: Record<string, string>, exchange: string): QuoteResult {
-  const price = parseFloat(info.z) || 0;
-  const change = parseFloat(info.u) || 0;
-  const changePct = parseFloat(info.w) || 0;
-  const open = parseFloat(info.o) || 0;
-  const high = parseFloat(info.h) || 0;
-  const low = parseFloat(info.l) || 0;
-  const volume = parseInt(info.v) || 0;
-  const ydPrice = parseFloat(info.y) || 0;
+  const price = safeFloat(info.z);            // 最新成交價
+  const ydPrice = safeFloat(info.y);          // 昨收
+  const finalPrice = price > 0 ? price : ydPrice;
+
+  // TWSE mis API fields:
+  // z = 最新成交價, y = 昨收, u = 漲停價, w = 跌停價
+  // o = 開盤, h = 最高, l = 最低, v = 累計成交量(股)
+  // a~f = 五檔買價, b~g = 五檔賣價
+  // tv = 累計成交量(張), tval = 累計成交金額
+  // For change/changePercent: calculate from price vs ydPrice
+  const change = finalPrice > 0 && ydPrice > 0 ? finalPrice - ydPrice : 0;
+  const changePercent = ydPrice > 0 ? (change / ydPrice) * 100 : 0;
+
+  const open = safeFloat(info.o);
+  const high = safeFloat(info.h);
+  const low = safeFloat(info.l);
+  const volume = safeInt(info.v);
+
+  // 5-level bid/ask (first level only)
+  const buyPrice = safeFloat(info.a);
+  const buyVolume = safeInt(info.f);
+  const sellPrice = safeFloat(info.b);
+  const sellVolume = safeInt(info.c);  // TWSE uses 'c' for first ask volume... actually 'g' is for ask volume
+
+  // Try to get better volume from tv (in 張) or v (in 股)
+  const volumeInShares = volume > 0 ? volume : safeInt(info.tv) * 1000;
 
   return {
     symbol: info.c || "",
     name: info.n || "",
     exchange,
-    price: price > 0 ? price : ydPrice,
-    change,
-    changePercent: changePct,
+    price: finalPrice,
+    change: Math.round(change * 100) / 100,
+    changePercent: Math.round(changePercent * 100) / 100,
     open,
     high,
     low,
-    volume,
+    volume: volumeInShares,
     previousClose: ydPrice,
-    updatedAt: info.t || new Date().toISOString(),
+    buyPrice: buyPrice > 0 ? buyPrice : undefined,
+    buyVolume: buyVolume > 0 ? buyVolume : undefined,
+    sellPrice: sellPrice > 0 ? sellPrice : undefined,
+    sellVolume: undefined, // TWSE doesn't have clean single-level ask volume
+    updatedAt: `${info.d || ""} ${info.t || info["%"] || ""}`.trim() || new Date().toISOString(),
     source: "TWSE",
   };
 }
@@ -138,7 +172,6 @@ async function fetchFinMind(symbol: string): Promise<QuoteResult | null> {
     if (!data.data || data.data.length === 0) return null;
 
     const s = data.data[0];
-    const exchange = ".TW";  // approximate
     return {
       symbol: s.stock_id || symbol,
       name: "",  // FinMind snapshot doesn't include name
