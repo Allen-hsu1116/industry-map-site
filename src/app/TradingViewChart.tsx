@@ -24,6 +24,30 @@ interface TradingViewChartProps {
   height?: number;
 }
 
+function timeKey(time: unknown): string {
+  if (typeof time === "string" || typeof time === "number") return String(time);
+  if (time && typeof time === "object" && "year" in time && "month" in time && "day" in time) {
+    const record = time as { year: number; month: number; day: number };
+    return `${record.year}-${String(record.month).padStart(2, "0")}-${String(record.day).padStart(2, "0")}`;
+  }
+  return String(time ?? "");
+}
+
+function fmtPrice(value: number | undefined): string {
+  return value == null || !Number.isFinite(value) ? "—" : value.toFixed(2);
+}
+
+function fmtVolume(value: number | undefined): string {
+  if (value == null || !Number.isFinite(value)) return "—";
+  if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)}M`;
+  if (value >= 1_000) return `${(value / 1_000).toFixed(0)}K`;
+  return value.toLocaleString();
+}
+
+function escapeHtml(value: string): string {
+  return value.replace(/[&<>"]/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[char] ?? char));
+}
+
 export default function TradingViewChart({
   candleData,
   volumeData,
@@ -34,6 +58,7 @@ export default function TradingViewChart({
   height = 400,
 }: TradingViewChartProps) {
   const chartContainerRef = useRef<HTMLDivElement>(null);
+  const tooltipRef = useRef<HTMLDivElement>(null);
   const chartRef = useRef<IChartApi | null>(null);
 
   useEffect(() => {
@@ -46,6 +71,14 @@ export default function TradingViewChart({
     }
 
     const container = chartContainerRef.current;
+    const tooltip = tooltipRef.current;
+
+    const candleByTime = new Map(candleData.map((row) => [timeKey(row.time), row]));
+    const volumeByTime = new Map((volumeData ?? []).map((row) => [timeKey(row.time), row.value]));
+    const ma5ByTime = new Map((ma5Data ?? []).map((row) => [timeKey(row.time), row.value]));
+    const ma10ByTime = new Map((ma10Data ?? []).map((row) => [timeKey(row.time), row.value]));
+    const ma20ByTime = new Map((ma20Data ?? []).map((row) => [timeKey(row.time), row.value]));
+    const ma60ByTime = new Map((ma60Data ?? []).map((row) => [timeKey(row.time), row.value]));
 
     const chart = createChart(container, {
       layout: {
@@ -158,6 +191,44 @@ export default function TradingViewChart({
       ma60Series.setData(ma60Data);
     }
 
+    chart.subscribeCrosshairMove((param) => {
+      if (!tooltip || !param.point || !param.time || param.point.x < 0 || param.point.y < 0 || param.point.x > container.clientWidth || param.point.y > height) {
+        if (tooltip) tooltip.style.display = "none";
+        return;
+      }
+
+      const key = timeKey(param.time);
+      const candle = candleByTime.get(key);
+      if (!candle) {
+        tooltip.style.display = "none";
+        return;
+      }
+
+      const isUp = candle.close >= candle.open;
+      tooltip.innerHTML = `
+        <div style="font-weight:700;color:#f8fafc;margin-bottom:8px;">${escapeHtml(key)}</div>
+        <div style="display:grid;grid-template-columns:auto auto;gap:4px 14px;align-items:center;">
+          <span style="color:#94a3b8;">開盤</span><span style="text-align:right;color:#e5e7eb;font-variant-numeric:tabular-nums;">${fmtPrice(candle.open)}</span>
+          <span style="color:#94a3b8;">最高</span><span style="text-align:right;color:#fca5a5;font-variant-numeric:tabular-nums;">${fmtPrice(candle.high)}</span>
+          <span style="color:#94a3b8;">最低</span><span style="text-align:right;color:#86efac;font-variant-numeric:tabular-nums;">${fmtPrice(candle.low)}</span>
+          <span style="color:#94a3b8;">收盤</span><span style="text-align:right;color:${isUp ? "#fca5a5" : "#86efac"};font-variant-numeric:tabular-nums;">${fmtPrice(candle.close)}</span>
+          <span style="color:#94a3b8;">成交量</span><span style="text-align:right;color:#e5e7eb;font-variant-numeric:tabular-nums;">${fmtVolume(volumeByTime.get(key))}</span>
+          <span style="color:#818cf8;">MA5</span><span style="text-align:right;color:#c7d2fe;font-variant-numeric:tabular-nums;">${fmtPrice(ma5ByTime.get(key))}</span>
+          <span style="color:#f472b6;">MA10</span><span style="text-align:right;color:#fbcfe8;font-variant-numeric:tabular-nums;">${fmtPrice(ma10ByTime.get(key))}</span>
+          <span style="color:#fbbf24;">MA20</span><span style="text-align:right;color:#fde68a;font-variant-numeric:tabular-nums;">${fmtPrice(ma20ByTime.get(key))}</span>
+          <span style="color:#34d399;">MA60</span><span style="text-align:right;color:#bbf7d0;font-variant-numeric:tabular-nums;">${fmtPrice(ma60ByTime.get(key))}</span>
+        </div>
+      `;
+
+      const tooltipWidth = 176;
+      const tooltipHeight = 244;
+      const left = param.point.x > container.clientWidth - tooltipWidth - 24 ? param.point.x - tooltipWidth - 16 : param.point.x + 16;
+      const top = param.point.y > height - tooltipHeight - 16 ? height - tooltipHeight - 12 : param.point.y + 12;
+      tooltip.style.display = "block";
+      tooltip.style.left = `${Math.max(8, left)}px`;
+      tooltip.style.top = `${Math.max(8, top)}px`;
+    });
+
     chart.timeScale().fitContent();
 
     // Handle resize
@@ -179,9 +250,15 @@ export default function TradingViewChart({
   }, [candleData, volumeData, ma5Data, ma10Data, ma20Data, ma60Data, height]);
 
   return (
-    <div
-      ref={chartContainerRef}
-      style={{ width: "100%", minHeight: `${height}px` }}
-    />
+    <div className="relative" style={{ width: "100%", minHeight: `${height}px` }}>
+      <div
+        ref={chartContainerRef}
+        style={{ width: "100%", minHeight: `${height}px` }}
+      />
+      <div
+        ref={tooltipRef}
+        className="pointer-events-none absolute z-20 hidden w-44 rounded-xl border border-slate-500/30 bg-slate-950/95 p-3 text-xs shadow-2xl backdrop-blur"
+      />
+    </div>
   );
 }

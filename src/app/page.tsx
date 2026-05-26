@@ -144,6 +144,19 @@ const CATEGORY_COLORS: Record<string, { gradient: string; solid: string; light: 
 
 const DEFAULT_COLOR = { gradient: "from-gray-500 to-gray-700", solid: "#6b7280", light: "#d1d5db", bg: "bg-gray-500/10" };
 
+const darkTooltipProps = {
+  contentStyle: {
+    backgroundColor: "rgba(15, 23, 42, 0.96)",
+    border: "1px solid rgba(148, 163, 184, 0.28)",
+    borderRadius: 12,
+    color: "#e5e7eb",
+    fontSize: 12,
+    boxShadow: "0 18px 45px rgba(0,0,0,0.35)",
+  },
+  labelStyle: { color: "#cbd5e1", fontWeight: 700 },
+  itemStyle: { color: "#e5e7eb" },
+} as const;
+
 function getCategory(topicName: string): string {
   if (topicName.includes("｜")) return topicName.split("｜")[0];
   return "其他";
@@ -2144,7 +2157,7 @@ function CompanyFullPageDetail({
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
                           <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
                           <YAxis tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => v >= 1000 ? `${(v/1000).toFixed(0)}千` : v <= -1000 ? `${(v/1000).toFixed(0)}千` : `${v}`} />
-                          <Tooltip formatter={(v: unknown, name: unknown) => {
+                          <Tooltip {...darkTooltipProps} formatter={(v: unknown, name: unknown) => {
                             const labels: Record<string,string> = { foreign: "外資", trust: "投信", dealer: "自營商", total: "合計" };
                             return [`${fmtShares(Number(v) * 1000)}張`, labels[String(name)] || String(name)];
                           }} />
@@ -2219,7 +2232,7 @@ function CompanyFullPageDetail({
                           <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
                           <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} />
                           <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} />
-                          <Tooltip />
+                          <Tooltip {...darkTooltipProps} />
                           <Legend formatter={(v: string) => {
                             const labels: Record<string,string> = { marginBalance: "融資餘額", shortBalance: "融券餘額", marginBuy: "融資買", marginSell: "融資賣" };
                             return labels[v] || v;
@@ -2284,7 +2297,7 @@ function CompanyFullPageDetail({
                           <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
                           <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} />
                           <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} domain={[0, 'auto']} />
-                          <Tooltip />
+                          <Tooltip {...darkTooltipProps} />
                           <Legend formatter={(v: string) => {
                             const labels: Record<string,string> = { pe: "本益比", pb: "淨值比", yield: "殖利率%" };
                             return labels[v] || v;
