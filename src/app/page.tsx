@@ -15,6 +15,7 @@ import companiesData from "../../public/data/companies.json";
 import TradingViewChart from "./TradingViewChart";
 import RealtimeQuote from "./RealtimeQuote";
 import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketData";
+import { generateDailyAnalysis, type DailyAnalysis } from "@/lib/dailyAnalysis";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
@@ -689,6 +690,68 @@ function StatItem({ label, value, sub, className = "", trend }: { label: string;
       <div className="text-xs text-[var(--color-text-tertiary)] mb-1.5 flex items-center gap-1.5">{label}{trend}</div>
       <div className="text-lg font-bold text-white">{value}</div>
       {sub && <div className="text-xs text-[var(--color-text-tertiary)] mt-1">{sub}</div>}
+    </div>
+  );
+}
+
+function BatchAnalysisPanel({
+  title,
+  badge,
+  score,
+  summary,
+  signals,
+  risks,
+  watch,
+  generatedAt,
+}: {
+  title: string;
+  badge: string;
+  score: number;
+  summary: string;
+  signals: string[];
+  risks: string[];
+  watch: string[];
+  generatedAt?: string;
+}) {
+  const scoreTone = score >= 20 ? "text-emerald-300 bg-emerald-500/10 border-emerald-500/20" : score <= -20 ? "text-rose-300 bg-rose-500/10 border-rose-500/20" : "text-slate-300 bg-slate-500/10 border-slate-500/20";
+  const generatedLabel = generatedAt ? new Date(generatedAt).toLocaleString("zh-TW", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }) : "即時計算";
+  const renderList = (items: string[], color: string) => items.length > 0 ? (
+    <ul className="space-y-1.5">
+      {items.map((item, index) => (
+        <li key={index} className="flex gap-2 text-xs text-[var(--color-text-secondary)] leading-relaxed">
+          <span className={cn("mt-1 h-1.5 w-1.5 shrink-0 rounded-full", color)} />
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  ) : <div className="text-xs text-[var(--color-text-tertiary)]">暫無明顯訊號</div>;
+
+  return (
+    <div className="rounded-2xl border border-cyan-400/15 bg-gradient-to-br from-cyan-500/[0.08] via-white/[0.025] to-indigo-500/[0.06] p-5">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <div className="text-sm font-bold text-white">{title}</div>
+          <div className="mt-1 text-[11px] text-[var(--color-text-tertiary)]">收盤後 batch 產生 · 規則式判讀 · {generatedLabel}</div>
+        </div>
+        <div className={cn("rounded-full border px-3 py-1 text-xs font-bold", scoreTone)}>
+          {badge} · {score > 0 ? "+" : ""}{score}
+        </div>
+      </div>
+      <p className="mb-4 text-sm leading-relaxed text-slate-200">{summary}</p>
+      <div className="grid gap-4 md:grid-cols-3">
+        <div>
+          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-emerald-300">正向訊號</div>
+          {renderList(signals, "bg-emerald-400")}
+        </div>
+        <div>
+          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-rose-300">風險訊號</div>
+          {renderList(risks, "bg-rose-400")}
+        </div>
+        <div>
+          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">觀察重點</div>
+          {renderList(watch, "bg-amber-300")}
+        </div>
+      </div>
     </div>
   );
 }
@@ -1764,6 +1827,27 @@ function CompanyFullPageDetail({
   const [revenueTab, setRevenueTab] = useState<"monthly" | "quarterly" | "yearly">("monthly");
   const [techScope, setTechScope] = useState<"1M" | "3M" | "6M" | "YTD" | "1Y" | "5Y">("1Y");
   const [maLines, setMaLines] = useState<{ ma5: boolean; ma10: boolean; ma20: boolean; ma60: boolean }>({ ma5: true, ma10: true, ma20: true, ma60: false });
+  const [loadedDailyAnalysis, setLoadedDailyAnalysis] = useState<DailyAnalysis | null>(null);
+  const fallbackDailyAnalysis = useMemo(() => generateDailyAnalysis(data), [data]);
+  const resolvedDailyAnalysis = loadedDailyAnalysis?.code === data.code ? loadedDailyAnalysis : fallbackDailyAnalysis;
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/data/analysis/${data.code}.json`, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error("analysis not found");
+        return response.json() as Promise<DailyAnalysis>;
+      })
+      .then((analysis) => {
+        if (!cancelled) setLoadedDailyAnalysis(analysis);
+      })
+      .catch(() => {
+        if (!cancelled) setLoadedDailyAnalysis(fallbackDailyAnalysis);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [data.code, fallbackDailyAnalysis]);
 
   const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
   const marketPos = getMarketPosition(data.market_position);
@@ -2127,6 +2211,18 @@ function CompanyFullPageDetail({
                   })()} />
                 </div>
               </div>
+              {resolvedDailyAnalysis && (
+                <BatchAnalysisPanel
+                  title="🧠 籌碼收盤後判讀"
+                  badge={resolvedDailyAnalysis.chips.label}
+                  score={resolvedDailyAnalysis.chips.score}
+                  summary={resolvedDailyAnalysis.chips.summary}
+                  signals={resolvedDailyAnalysis.chips.signals}
+                  risks={resolvedDailyAnalysis.chips.risks}
+                  watch={resolvedDailyAnalysis.chips.watch}
+                  generatedAt={resolvedDailyAnalysis.generatedAt}
+                />
+              )}
               {/* ─── 三大法人歷史趨勢（圖+表） ─── */}
               {data.institutional_history && data.institutional_history.length > 0 && (() => {
                 const hist = data.institutional_history;
@@ -2482,6 +2578,43 @@ function CompanyFullPageDetail({
                   }
                 })()}
               </div>
+
+              {resolvedDailyAnalysis && (
+                <BatchAnalysisPanel
+                  title="🧠 技術收盤後判讀"
+                  badge={resolvedDailyAnalysis.technical.label}
+                  score={resolvedDailyAnalysis.technical.score}
+                  summary={resolvedDailyAnalysis.technical.summary}
+                  signals={resolvedDailyAnalysis.technical.signals}
+                  risks={resolvedDailyAnalysis.technical.risks}
+                  watch={resolvedDailyAnalysis.technical.watch}
+                  generatedAt={resolvedDailyAnalysis.generatedAt}
+                />
+              )}
+
+              {resolvedDailyAnalysis && (
+                <div className="rounded-2xl border border-white/[0.04] bg-white/[0.02] p-5">
+                  <div className="mb-3 text-sm font-bold text-white">🎯 明日觀察與盤中觸發條件</div>
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div>
+                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-cyan-300">觀察重點</div>
+                      <ul className="space-y-1.5">
+                        {resolvedDailyAnalysis.nextSession.focus.map((item, index) => (
+                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">觸發條件</div>
+                      <ul className="space-y-1.5">
+                        {resolvedDailyAnalysis.nextSession.triggerRules.map((item, index) => (
+                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* Technical Indicators */}
               {(() => {

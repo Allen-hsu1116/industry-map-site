@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "code": "4943",
+  "name": "康控-KY",
+  "generatedAt": "2026-05-26T18:06:37.630Z",
+  "sourceUpdatedAt": "2026-05-26",
+  "mode": "rule-batch",
+  "technical": {
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "康控-KY 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 3.8%。",
+    "signals": [],
+    "risks": [
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 3.8%"
+    ],
+    "watch": []
+  },
+  "chips": {
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "康控-KY 籌碼面目前為「籌碼中性」：資料仍需累積。",
+    "signals": [],
+    "risks": [],
+    "watch": []
+  },
+  "nextSession": {
+    "focus": [
+      "短線支撐/壓力先看 MA5：8.96",
+      "波段多空分水嶺看 MA20：9.25",
+      "追蹤法人資料是否更新"
+    ],
+    "triggerRules": [
+      "收盤突破 20 日高點 10.45 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 8.50：列為轉弱警訊",
+      "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "code": "3486",
+  "name": "力致",
+  "generatedAt": "2026-05-26T18:06:37.544Z",
+  "sourceUpdatedAt": "2026-05-22",
+  "mode": "rule-batch",
+  "technical": {
+    "stance": "insufficient",
+    "label": "資料不足",
+    "score": 0,
+    "summary": "力致 技術面目前為「資料不足」：日 K 資料不足，暫不做強弱判斷。",
+    "signals": [
+      "日 K 資料不足，暫不做強弱判斷"
+    ],
+    "risks": [],
+    "watch": []
+  },
+  "chips": {
+    "stance": "insufficient",
+    "label": "資料不足",
+    "score": 0,
+    "summary": "力致 籌碼面目前為「資料不足」：籌碼資料不足，暫不做買賣超方向判斷。",
+    "signals": [
+      "籌碼資料不足，暫不做買賣超方向判斷"
+    ],
+    "risks": [],
+    "watch": []
+  },
+  "nextSession": {
+    "focus": [
+      "等待 MA5 資料補齊",
+      "等待 MA20 資料補齊",
+      "追蹤法人資料是否更新"
+    ],
+    "triggerRules": [
+      "補齊 20 日高點後啟用突破規則",
+      "補齊 20 日低點後啟用跌破規則",
+      "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
+    ]
+  }
+}
