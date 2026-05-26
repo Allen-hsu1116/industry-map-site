@@ -54,6 +54,20 @@ export async function GET(req: NextRequest) {
   return NextResponse.json({ news: unique.slice(0, 30) });
 }
 
+type ExternalNewsItem = {
+  title?: string;
+  newsId?: string | number;
+  publishAt?: number;
+  url?: string;
+  link?: string;
+  time?: string;
+  date?: string;
+};
+
+function newsItemsFrom(value: unknown): ExternalNewsItem[] {
+  return Array.isArray(value) ? value as ExternalNewsItem[] : [];
+}
+
 // ─── Cnyes API ───
 async function fetchCnyes(query: string): Promise<NewsItem[]> {
   try {
@@ -61,8 +75,9 @@ async function fetchCnyes(query: string): Promise<NewsItem[]> {
     const res = await fetch(url);
     if (!res.ok) return [];
     const json = await res.json();
-    const items = json?.items?.data || json?.data || [];
-    return items.slice(0, 10).map((item: any) => ({
+    const record = json as { items?: { data?: unknown }; data?: unknown };
+    const items = newsItemsFrom(record.items?.data || record.data);
+    return items.slice(0, 10).map((item) => ({
       title: item.title || "",
       link: item.newsId ? `https://news.cnyes.com/news/id/${item.newsId}` : "",
       source: "鉅亨網",
@@ -78,8 +93,9 @@ async function fetchUdn(query: string): Promise<NewsItem[]> {
     const res = await fetch(url);
     if (!res.ok) return [];
     const json = await res.json();
-    const items = json?.list || json?.data || [];
-    return items.slice(0, 10).map((item: any) => ({
+    const record = json as { list?: unknown; data?: unknown };
+    const items = newsItemsFrom(record.list || record.data);
+    return items.slice(0, 10).map((item) => ({
       title: item.title || "",
       link: item.url || item.link || "",
       source: "聯合新聞網",

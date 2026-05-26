@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useRef, useEffect } from "react";
+import { Component, type ErrorInfo, type ReactNode, useState, useMemo, useRef, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,10 +14,11 @@ import industriesData from "../../public/data/industries.json";
 import companiesData from "../../public/data/companies.json";
 import TradingViewChart from "./TradingViewChart";
 import RealtimeQuote from "./RealtimeQuote";
+import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketData";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
-interface Group { name: string; companies: CompanyInGroup[]; }
+interface Group { name: string; level?: "upstream" | "midstream" | "downstream" | "peripheral"; companies: CompanyInGroup[]; }
 interface TopicData { slug: string; name: string; description: string; total: number; groups: Group[]; }
 interface CompanyData { code: string; name: string; topic_count: number; topics: string[]; }
 
@@ -180,8 +181,8 @@ function mapGroupNames(groups: Group[]): Group[] {
   // Use the level field from industries.json if available, otherwise fall back to classifyGroupLevel
   const levelOrder: Record<string, number> = { upstream: 0, midstream: 1, downstream: 2, peripheral: 3 };
   return named.sort((a, b) => {
-    const la = levelOrder[(a as any).level || classifyGroupLevel(a)] ?? 1;
-    const lb = levelOrder[(b as any).level || classifyGroupLevel(b)] ?? 1;
+    const la = levelOrder[a.level || classifyGroupLevel(a)] ?? 1;
+    const lb = levelOrder[b.level || classifyGroupLevel(b)] ?? 1;
     return la - lb;
   });
 }
@@ -1045,18 +1046,21 @@ function NewsTabContent({ code, name, majorNews }: { code: string; name: string;
 
   useEffect(() => {
     if (!code || !name) return;
-    setLoading(true);
-    setError("");
-    fetch(`/api/news?symbol=${encodeURIComponent(code)}&name=${encodeURIComponent(name)}`)
-      .then(r => r.json())
-      .then(data => {
-        setNews(data.news || []);
-        setLoading(false);
-      })
-      .catch(err => {
-        setError("新聞載入失敗");
-        setLoading(false);
-      });
+    const timer = window.setTimeout(() => {
+      setLoading(true);
+      setError("");
+      fetch(`/api/news?symbol=${encodeURIComponent(code)}&name=${encodeURIComponent(name)}`)
+        .then(r => r.json())
+        .then(data => {
+          setNews(data.news || []);
+          setLoading(false);
+        })
+        .catch(() => {
+          setError("新聞載入失敗");
+          setLoading(false);
+        });
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [code, name]);
 
   return (
@@ -1137,7 +1141,7 @@ function CompanyInfoHeader({ data }: { data: FinancialData }) {
     }
     return s.slice(0, 4);
   })();
-  const headquarters = (data.profile as any).address || "";
+  const headquarters = data.profile.address || "";
 
   return (
     <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
@@ -1301,9 +1305,8 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
         trends.quarterly_income.forEach(q => {
           const yearMatch = q.quarter.match(/(\d{3,4})/);
           if (yearMatch) {
-            let yr: number;
             const raw = parseInt(yearMatch[1]);
-            yr = raw < 200 ? raw + 1911 : raw;
+            const yr = raw < 200 ? raw + 1911 : raw;
             const existing = yearlyMap.get(yr) || { revenue: 0, grossProfit: 0, netIncome: 0 };
             yearlyMap.set(yr, { revenue: existing.revenue + q.revenue, grossProfit: existing.grossProfit + q.grossProfit, netIncome: existing.netIncome + q.netIncome });
           }
@@ -1507,9 +1510,8 @@ function ProfitabilityAnalysisPanel({ data, profitTab, onProfitTabChange }: { da
         trends.quarterly_income.forEach(q => {
           const yearMatch = q.quarter.match(/(\d{3,4})/);
           if (yearMatch) {
-            let yr: number;
             const raw = parseInt(yearMatch[1]);
-            yr = raw < 200 ? raw + 1911 : raw;
+            const yr = raw < 200 ? raw + 1911 : raw;
             const existing = yearlyMap.get(yr) || { grossProfit: 0, operatingIncome: 0, netIncome: 0, eps: 0, revenue: 0 };
             yearlyMap.set(yr, {
               grossProfit: existing.grossProfit + q.grossProfit,
@@ -1700,6 +1702,40 @@ function getMarketPosition(position: string | undefined): { emoji: string; label
   return { emoji: "🟢", label: "產業龍頭", desc: position || "市場領導地位", color: "#34d399" };
 }
 
+/* ─── Resilient Tab Error Boundary ─── */
+class TabErrorBoundary extends Component<
+  { tabKey: string; children: ReactNode },
+  { hasError: boolean; message: string }
+> {
+  state = { hasError: false, message: "" };
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, message: error.message };
+  }
+
+  componentDidCatch(error: Error, info: ErrorInfo) {
+    console.error("Company detail tab crashed", { error, info, tabKey: this.props.tabKey });
+  }
+
+  componentDidUpdate(prevProps: { tabKey: string }) {
+    if (prevProps.tabKey !== this.props.tabKey && this.state.hasError) {
+      this.setState({ hasError: false, message: "" });
+    }
+  }
+
+  render() {
+    if (!this.state.hasError) return this.props.children;
+    return (
+      <div className="rounded-2xl border border-rose-500/20 bg-rose-500/[0.06] p-8 text-center">
+        <div className="text-4xl mb-3">⚠️</div>
+        <h3 className="text-lg font-semibold text-white mb-2">這個分頁暫時無法載入</h3>
+        <p className="text-sm text-[var(--color-text-secondary)] mb-2">已保護其他分頁不受影響，請切換分頁或重新整理。</p>
+        {this.state.message && <p className="text-xs text-rose-200/80">{this.state.message}</p>}
+      </div>
+    );
+  }
+}
+
 /* ─── Company Full Page Detail View ─── */
 function CompanyFullPageDetail({
   data,
@@ -1833,7 +1869,8 @@ function CompanyFullPageDetail({
         </div>
 
         {/* ─── Tab Content ─── */}
-        <div className="min-h-[400px]">
+        <TabErrorBoundary tabKey={detailTab}>
+          <div className="min-h-[400px]">
           {/* ─── 基本資料 Tab (aistockmap style) ─── */}
           {detailTab === "overview" && (
             <OverviewTabContent data={data} revenueTab={revenueTab} onRevenueTabChange={setRevenueTab} />
@@ -2107,7 +2144,7 @@ function CompanyFullPageDetail({
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
                           <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
                           <YAxis tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => v >= 1000 ? `${(v/1000).toFixed(0)}千` : v <= -1000 ? `${(v/1000).toFixed(0)}千` : `${v}`} />
-                          <Tooltip formatter={(v: any, name: any) => {
+                          <Tooltip formatter={(v: unknown, name: unknown) => {
                             const labels: Record<string,string> = { foreign: "外資", trust: "投信", dealer: "自營商", total: "合計" };
                             return [`${fmtShares(Number(v) * 1000)}張`, labels[String(name)] || String(name)];
                           }} />
@@ -2433,32 +2470,35 @@ function CompanyFullPageDetail({
                 })()}
               </div>
 
-              {/* Key Indicators */}
-              <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
-                <h4 className="text-sm font-bold text-white mb-4">📈 關鍵指標</h4>
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
-                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">本益比</p>
-                    <p className="text-xl font-bold text-white">{data.valuation.pe || "-"}</p>
-                    <p className="text-xs text-[var(--color-text-tertiary)]">倍</p>
+              {/* Technical Indicators */}
+              {(() => {
+                const technical = computeTechnicalSummary(trends?.daily_prices);
+                const fmtNum = (value: number | undefined, digits = 2) => value == null || value === 0 ? "-" : value.toFixed(digits);
+                const indicatorCards = [
+                  { label: "趨勢判讀", value: technical.trendLabel, sub: technical.aboveMa20 === null ? "MA20 資料不足" : technical.aboveMa20 ? "站上 MA20" : "跌破 MA20", color: technical.aboveMa20 ? "text-rose-300" : technical.aboveMa20 === false ? "text-emerald-300" : "text-white" },
+                  { label: "最新收盤", value: fmtNum(technical.latestClose), sub: `${technical.change >= 0 ? "+" : ""}${technical.change.toFixed(2)} / ${technical.changePercent.toFixed(2)}%`, color: technical.change >= 0 ? "text-rose-300" : "text-emerald-300" },
+                  { label: "MA5 / MA10", value: `${fmtNum(technical.ma5)} / ${fmtNum(technical.ma10)}`, sub: "短期均線", color: "text-indigo-300" },
+                  { label: "MA20 / MA60", value: `${fmtNum(technical.ma20)} / ${fmtNum(technical.ma60)}`, sub: "中期均線", color: "text-amber-300" },
+                  { label: "成交量", value: technical.volume ? `${(technical.volume / 1000).toFixed(0)}張` : "-", sub: `20日均量 ${(technical.avgVolume20 / 1000).toFixed(0)}張`, color: "text-cyan-300" },
+                  { label: "量比", value: technical.volumeRatio20 ? technical.volumeRatio20.toFixed(2) : "-", sub: "相對 20 日均量", color: technical.volumeRatio20 >= 1.5 ? "text-rose-300" : "text-white" },
+                  { label: "20日高 / 低", value: `${fmtNum(technical.high20)} / ${fmtNum(technical.low20)}`, sub: "區間位置", color: "text-purple-300" },
+                  { label: "估值", value: `PE ${data.valuation.pe || "-"}`, sub: `PB ${data.valuation.pb || "-"} / 殖利率 ${data.valuation.dividendYield || "-"}%`, color: "text-white" },
+                ];
+                return (
+                  <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
+                    <h4 className="text-sm font-bold text-white mb-4">📈 技術指標數值</h4>
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                      {indicatorCards.map((item) => (
+                        <div key={item.label} className="bg-white/[0.04] rounded-xl p-4">
+                          <p className="text-xs text-[var(--color-text-tertiary)] mb-1">{item.label}</p>
+                          <p className={`text-lg font-bold tabular-nums ${item.color}`}>{item.value}</p>
+                          <p className="text-xs text-[var(--color-text-tertiary)] mt-1">{item.sub}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
-                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">股價淨值比</p>
-                    <p className="text-xl font-bold text-white">{data.valuation.pb || "-"}</p>
-                    <p className="text-xs text-[var(--color-text-tertiary)]">倍</p>
-                  </div>
-                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
-                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">現金殖利率</p>
-                    <p className="text-xl font-bold text-white">{data.valuation.dividendYield || "-"}</p>
-                    <p className="text-xs text-[var(--color-text-tertiary)]">%</p>
-                  </div>
-                  <div className="bg-white/[0.04] rounded-xl p-4 text-center">
-                    <p className="text-xs text-[var(--color-text-tertiary)] mb-1">每股淨值</p>
-                    <p className="text-xl font-bold text-white">{data.balance.bookValuePerShare || "-"}</p>
-                    <p className="text-xs text-[var(--color-text-tertiary)]">元</p>
-                  </div>
-                </div>
-              </div>
+                );
+              })()}
             </div>
           )}
 
@@ -2478,7 +2518,8 @@ function CompanyFullPageDetail({
               </div>
             </div>
           )}
-        </div>
+          </div>
+        </TabErrorBoundary>
       </div>
     </div>
   );
@@ -2507,17 +2548,20 @@ export default function Home() {
 
   // Handle URL query params: ?company=2330 or ?topic=semiconductor
   useEffect(() => {
-    const companyParam = searchParams.get("company");
-    const topicParam = searchParams.get("topic");
-    if (companyParam) {
-      setActiveTab("companies");
-      setSelectedCompanyCode(companyParam);
-      setCompanyViewMode("detail");
-    }
-    if (topicParam) {
-      setActiveTab("topics");
-      setSelectedTopicSlug(topicParam);
-    }
+    const timer = window.setTimeout(() => {
+      const companyParam = searchParams.get("company");
+      const topicParam = searchParams.get("topic");
+      if (companyParam) {
+        setActiveTab("companies");
+        setSelectedCompanyCode(companyParam);
+        setCompanyViewMode("detail");
+      }
+      if (topicParam) {
+        setActiveTab("topics");
+        setSelectedTopicSlug(topicParam);
+      }
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [searchParams]);
   const searchRef = useRef<HTMLDivElement>(null);
   const companyListScrollRef = useRef<number>(0);
@@ -2565,7 +2609,7 @@ export default function Home() {
     for (const t of relatedTopics) {
       for (const g of t.groups) {
         for (const c of g.companies) {
-          if (c.code === comp.code) { roles.push({ topic: t.slug, topicName: t.name, topicDescription: t.description || "", group: g.name, role: c.role, relevance: c.relevance, analysis: (c as any).analysis, products: (c as any).products, customers: (c as any).customers, tech_focus: (c as any).tech_focus, swot: (c as any).swot }); }
+          if (c.code === comp.code) { roles.push({ topic: t.slug, topicName: t.name, topicDescription: t.description || "", group: g.name, role: c.role, relevance: c.relevance, analysis: c.analysis, products: c.products, customers: c.customers, tech_focus: c.tech_focus, swot: c.swot }); }
         }
       }
     }
@@ -2574,56 +2618,30 @@ export default function Home() {
 
   // Fetch financial data when a company is selected
   useEffect(() => {
-    if (!selectedCompanyCode) {
-      setFinancialData(null);
-      setFinancialError(false);
-      return;
-    }
-    setFinancialLoading(true);
-    setFinancialError(false);
-    fetch(`/data/financials/${selectedCompanyCode}.json`)
-      .then((res) => {
-        if (!res.ok) throw new Error("Not found");
-        return res.json();
-      })
-      .then((rawData: FinancialData) => {
-        // Normalize: JSON values may be strings (e.g. "51.56") but code expects numbers,
-        // and profile.industry may contain HTML entities like &nbsp;
-        const num = (v: any): number => { const n = parseFloat(String(v ?? 0)); return isNaN(n) ? 0 : n; };
-        const str = (v: any): string => String(v ?? "");
-        const cleanStr = (v: any): string => String(v ?? "").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
-        const normQI = rawData.trends?.quarterly_income?.map(d => ({
-          ...d, revenue: num(d.revenue), grossProfit: num(d.grossProfit), operatingIncome: num(d.operatingIncome), netIncome: num(d.netIncome),
-          eps: num(d.eps), grossMargin: num(d.grossMargin), operatingMargin: num(d.operatingMargin), netMargin: num(d.netMargin),
-        }));
-        const normMR = rawData.trends?.monthly_revenue?.map(d => ({ ...d, revenue: num(d.revenue), mom: num(d.mom), yoy: num(d.yoy) }));
-        const normMP = rawData.trends?.monthly_price?.map(d => ({ ...d, high: num(d.high), low: num(d.low), avg: num(d.avg), volume: num(d.volume) }));
-        const normDP = rawData.trends?.daily_prices?.map(d => ({ ...d, open: num(d.open), high: num(d.high), low: num(d.low), close: num(d.close), volume: num(d.volume) }));
-        const normYT = rawData.trends?.yearly_trading?.map(d => ({ ...d, high: num(d.high), low: num(d.low), avg_closing: num(d.avg_closing), trade_volume: num(d.trade_volume), trade_value: num(d.trade_value) }));
-        const normIncome = { ...rawData.income, revenue: str(rawData.income.revenue), grossProfit: str(rawData.income.grossProfit), operatingIncome: str(rawData.income.operatingIncome), netIncome: str(rawData.income.netIncome), eps: str(rawData.income.eps) };
-        const normMR2 = rawData.monthly_revenue ? { ...rawData.monthly_revenue, revenue: str(rawData.monthly_revenue.revenue), mom: str(rawData.monthly_revenue.mom), yoy: str(rawData.monthly_revenue.yoy) } : rawData.monthly_revenue;
-        const normDiv = rawData.dividend ? { ...rawData.dividend, cashDividendPerShare: str(rawData.dividend.cashDividendPerShare), stockDividendPerShare: rawData.dividend.stockDividendPerShare ? str(rawData.dividend.stockDividendPerShare) : undefined } : rawData.dividend;
-        const normBal = rawData.balance ? { ...rawData.balance, totalAssets: str(rawData.balance.totalAssets), totalLiabilities: str(rawData.balance.totalLiabilities), equity: str(rawData.balance.equity), bookValuePerShare: str(rawData.balance.bookValuePerShare) } : rawData.balance;
-        const normProf = rawData.profile ? { ...rawData.profile, industry: cleanStr(rawData.profile.industry) } : rawData.profile;
-        const data: FinancialData = {
-          ...rawData,
-          profile: normProf,
-          price: { ...rawData.price, close: num(rawData.price?.close), volume: num(rawData.price?.volume) },
-          valuation: { ...rawData.valuation, pe: str(rawData.valuation?.pe), pb: str(rawData.valuation?.pb), dividendYield: str(rawData.valuation?.dividendYield) },
-          income: normIncome,
-          monthly_revenue: normMR2,
-          dividend: normDiv,
-          balance: normBal,
-          trends: { ...rawData.trends, quarterly_income: normQI, monthly_revenue: normMR, monthly_price: normMP, daily_prices: normDP, yearly_trading: normYT },
-        };
-        setFinancialData(data);
-        setFinancialLoading(false);
-      })
-      .catch(() => {
+    const timer = window.setTimeout(() => {
+      if (!selectedCompanyCode) {
         setFinancialData(null);
-        setFinancialError(true);
-        setFinancialLoading(false);
-      });
+        setFinancialError(false);
+        return;
+      }
+      setFinancialLoading(true);
+      setFinancialError(false);
+      fetch(`/data/financials/${selectedCompanyCode}.json`)
+        .then((res) => {
+          if (!res.ok) throw new Error("Not found");
+          return res.json();
+        })
+        .then((rawData: FinancialData) => {
+          setFinancialData(normalizeFinancialData(rawData) as unknown as FinancialData);
+          setFinancialLoading(false);
+        })
+        .catch(() => {
+          setFinancialData(null);
+          setFinancialError(true);
+          setFinancialLoading(false);
+        });
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [selectedCompanyCode]);
 
   useEffect(() => {
@@ -2958,9 +2976,9 @@ export default function Home() {
                     <div className="space-y-5">
                       {(() => {
                         const namedGroups = mapGroupNames(selectedTopicData.groups);
-                        const upstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "upstream");
-                        const midstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "midstream");
-                        const downstreamGroups = namedGroups.filter(g => ((g as any).level || classifyGroupLevel(g)) === "downstream");
+                        const upstreamGroups = namedGroups.filter(g => (g.level || classifyGroupLevel(g)) === "upstream");
+                        const midstreamGroups = namedGroups.filter(g => (g.level || classifyGroupLevel(g)) === "midstream");
+                        const downstreamGroups = namedGroups.filter(g => (g.level || classifyGroupLevel(g)) === "downstream");
 
                         const toggleGroup = (key: string) => {
                           setExpandedGroups(prev => {
