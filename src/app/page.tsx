@@ -758,53 +758,6 @@ function BatchAnalysisPanel({
   );
 }
 
-function KnowledgeSourcePanel({ analysis }: { analysis: DailyAnalysis }) {
-  const knowledge = analysis.knowledge;
-  const productsAndCustomers = [...knowledge.products.slice(0, 3), ...knowledge.customers.slice(0, 2)];
-
-  return (
-    <div className="rounded-2xl border border-white/[0.04] bg-white/[0.02] p-5">
-      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <div className="text-sm font-bold text-white">📚 產業知識庫與資料來源</div>
-          <div className="mt-1 text-[11px] text-[var(--color-text-tertiary)]">
-            題材角色、產品、客戶與 SWOT 放在產業分析；Daily analysis 只引用這層知識做校正
-          </div>
-        </div>
-        <div className="rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1 text-[11px] font-bold text-indigo-200">
-          SWOT {knowledge.swot.freshness}
-        </div>
-      </div>
-      <div className="grid gap-4 md:grid-cols-3">
-        <div>
-          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-emerald-300">產品/客戶</div>
-          <ul className="space-y-1.5">
-            {productsAndCustomers.length > 0 ? productsAndCustomers.map((item, index) => (
-              <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
-            )) : <li className="text-xs text-[var(--color-text-tertiary)]">尚未建立產品/客戶資料</li>}
-          </ul>
-        </div>
-        <div>
-          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-cyan-300">FinMind / 官方資料</div>
-          <ul className="space-y-1.5">
-            {knowledge.dataSources.slice(0, 5).map((item, index) => (
-              <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">題材角色</div>
-          <ul className="space-y-1.5">
-            {knowledge.topicRoles.slice(0, 4).map((role, index) => (
-              <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {role.topicId}：{role.marketPosition ?? role.relevance}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 /* ─── Financial Overview Cards (aistockmap style: 2x4 grid) ─── */
 function FinancialOverviewCards({ data }: { data: FinancialData }) {
   const rev = parseFloat(data.income.revenue) || 0;
@@ -2059,18 +2012,34 @@ function CompanyFullPageDetail({
                     const cat = getCategory(role.topicName);
                     const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
 
-                    // Check for per-topic analysis data
-                    // Priority: data.industry_analysis > role-level products/customers/tech_focus/swot from industries.json
+                    // Per-topic analysis is the source of truth when present.
+                    // Fallbacks intentionally stay scoped to the selected topic so the panel updates on sub-tab changes.
                     const rawTopicAnalysis = data.industry_analysis?.[role.topic];
-                    const topicAnalysis = rawTopicAnalysis || (role.products || role.customers || role.swot ? {
-                      ai_summary: analysisText,
-                      market_position: relInfo.label,
-                      market_position_detail: `${data.name}為${role.topicName}產業之關鍵參與者，在供應鏈中扮演${relInfo.label}角色。`,
-                      focus: role.tech_focus?.join('\\n\\n') || '',
-                      products: role.products || [],
-                      customers: role.customers || [],
-                      swot: role.swot || undefined,
-                    } : null);
+                    const knowledge = resolvedDailyAnalysis?.knowledge;
+                    const roleKnowledge = knowledge?.topicRoles.find((item) => item.topicId === role.topic);
+                    const fallbackSwot = rawTopicAnalysis?.swot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
+                      strengths: [`已建立「${role.topicName}」題材關聯，角色：${role.role || relInfo.label}`],
+                      weaknesses: ["題材別產品、客戶與競爭資料仍需補來源驗證"],
+                      opportunities: [`若${role.topicName}需求擴張，${role.group}供應鏈角色可能受惠`],
+                      threats: ["題材熱度若未反映到營收或訂單，估值重評風險升高"],
+                    };
+                    const topicProducts = (rawTopicAnalysis?.products?.length ? rawTopicAnalysis.products : role.products?.length ? role.products : knowledge?.products?.length ? knowledge.products : data.products?.length ? data.products : [`${role.group}相關產品/服務: ${role.role || role.topicName}`]) ?? [];
+                    const topicCustomers = (rawTopicAnalysis?.customers?.length ? rawTopicAnalysis.customers : role.customers?.length ? role.customers : knowledge?.customers?.length ? knowledge.customers : data.customers?.length ? data.customers : ["客戶/需求端待補: 需由年報、法說或公開資料驗證"] ) ?? [];
+                    const focusText = rawTopicAnalysis?.focus || (role.tech_focus?.length ? role.tech_focus.join('\\n\\n') : `題材技術重心\n- ${role.topicName}：${role.role || relInfo.label}\n- 觀察 ${data.name} 在${role.group}的產品規格、量產進度與客戶導入。`);
+                    const topicAnalysis = {
+                      ai_summary: rawTopicAnalysis?.ai_summary || roleKnowledge?.summary || analysisText,
+                      market_position: rawTopicAnalysis?.market_position || roleKnowledge?.marketPosition || relInfo.label,
+                      market_position_detail: rawTopicAnalysis?.market_position_detail || roleKnowledge?.role || `${data.name}為${role.topicName}題材之${role.group}參與者，在供應鏈中扮演${role.role || relInfo.label}角色。`,
+                      focus: focusText,
+                      products: topicProducts,
+                      customers: topicCustomers,
+                      swot: fallbackSwot,
+                    };
+                    const dailyIndustry = resolvedDailyAnalysis?.industry;
+                    const sourceChips = [
+                      ...(knowledge?.dataSources ?? []),
+                      ...(knowledge?.swot.sources ?? []),
+                    ];
 
                     return (
                       <div className="space-y-6">
@@ -2084,8 +2053,37 @@ function CompanyFullPageDetail({
                             <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">Beta</Badge>
                           </div>
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                            {topicAnalysis?.ai_summary || analysisText}
+                            {topicAnalysis.ai_summary || analysisText}
                           </p>
+                          {dailyIndustry && (
+                            <div className="mt-4 rounded-xl border border-indigo-500/15 bg-indigo-500/[0.05] p-4">
+                              <div className="mb-2 flex items-center justify-between gap-2">
+                                <span className="text-xs font-bold text-indigo-300">每日題材校正 · {dailyIndustry.label}</span>
+                                <span className="text-[10px] text-[var(--color-text-tertiary)]">資料日 {resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"}</span>
+                              </div>
+                              <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">{dailyIndustry.summary}</p>
+                              {(dailyIndustry.signals.length > 0 || dailyIndustry.risks.length > 0) && (
+                                <div className="mt-3 grid gap-3 md:grid-cols-2">
+                                  {dailyIndustry.signals.length > 0 && (
+                                    <div>
+                                      <div className="mb-1 text-[11px] font-bold text-emerald-300">校正訊號</div>
+                                      <ul className="space-y-1">
+                                        {dailyIndustry.signals.slice(0, 3).map((item, i) => <li key={i} className="text-[11px] leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>)}
+                                      </ul>
+                                    </div>
+                                  )}
+                                  {dailyIndustry.risks.length > 0 && (
+                                    <div>
+                                      <div className="mb-1 text-[11px] font-bold text-amber-300">校正風險</div>
+                                      <ul className="space-y-1">
+                                        {dailyIndustry.risks.slice(0, 3).map((item, i) => <li key={i} className="text-[11px] leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>)}
+                                      </ul>
+                                    </div>
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          )}
                           <div className="mt-4 flex items-center gap-3">
                             <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
                               {relInfo.emoji} {relInfo.label}
@@ -2182,7 +2180,7 @@ function CompanyFullPageDetail({
                         )}
 
                         {/* SWOT 分析 */}
-                        {topicAnalysis?.swot && ((topicAnalysis.swot.strengths?.length ?? 0) > 0 || (topicAnalysis.swot.weaknesses?.length ?? 0) > 0) ? (
+                        {topicAnalysis.swot && ((topicAnalysis.swot.strengths?.length ?? 0) > 0 || (topicAnalysis.swot.weaknesses?.length ?? 0) > 0 || (topicAnalysis.swot.opportunities?.length ?? 0) > 0 || (topicAnalysis.swot.threats?.length ?? 0) > 0) ? (
                           <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                             <h4 className="text-sm font-bold text-white mb-4">🏛️ SWOT 分析</h4>
                             <div className="grid grid-cols-2 gap-4">
@@ -2222,9 +2220,19 @@ function CompanyFullPageDetail({
                               </span>
                             </div>
                             {role.role && (
-                              <div className="flex items-center justify-between">
+                              <div className="flex items-center justify-between gap-4">
                                 <span className="text-sm text-[var(--color-text-secondary)]">角色說明</span>
-                                <span className="text-sm text-white font-medium">{role.role}</span>
+                                <span className="text-sm text-white font-medium text-right">{role.role}</span>
+                              </div>
+                            )}
+                            {sourceChips.length > 0 && (
+                              <div className="pt-3 border-t border-white/[0.04]">
+                                <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-tertiary)]">資料來源 / 校正依據</div>
+                                <div className="flex flex-wrap gap-2">
+                                  {[...new Set(sourceChips)].slice(0, 8).map((source) => (
+                                    <span key={source} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[11px] text-[var(--color-text-secondary)]">{source}</span>
+                                  ))}
+                                </div>
                               </div>
                             )}
                           </div>
@@ -2232,24 +2240,6 @@ function CompanyFullPageDetail({
                       </div>
                     );
                   })()}
-
-                  {resolvedDailyAnalysis?.industry && (
-                    <BatchAnalysisPanel
-                      title="🏭 題材角色與 SWOT 校正"
-                      badge={resolvedDailyAnalysis.industry.label}
-                      score={0}
-                      summary={resolvedDailyAnalysis.industry.summary}
-                      signals={resolvedDailyAnalysis.industry.signals}
-                      risks={resolvedDailyAnalysis.industry.risks}
-                      watch={resolvedDailyAnalysis.industry.watch}
-                      generatedAt={resolvedDailyAnalysis.generatedAt}
-                      description={`引用產業知識庫校正每日判讀 · 知識庫資料日 ${resolvedDailyAnalysis.sourceUpdatedAt ?? "未知"}`}
-                    />
-                  )}
-
-                  {resolvedDailyAnalysis?.knowledge && (
-                    <KnowledgeSourcePanel analysis={resolvedDailyAnalysis} />
-                  )}
                 </>
               ) : (
                 <div className="text-center py-16">
@@ -2371,8 +2361,7 @@ function CompanyFullPageDetail({
                 const last10 = allMargin.slice(-10);
                 const chartData = recent30.map(d => ({
                   date: d.date.slice(5),
-                  marginBalance: d.margin_balance,
-                  shortBalance: d.short_balance,
+                  shortMarginRatio: d.short_balance > 0 ? Number((d.margin_balance / d.short_balance).toFixed(2)) : null,
                   marginBuy: d.margin_buy,
                   marginSell: d.margin_sell,
                 }));
@@ -2393,17 +2382,20 @@ function CompanyFullPageDetail({
                         <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
                           <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
-                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} />
+                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => `${v}x`} domain={[0, 'auto']} />
                           <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} />
-                          <Tooltip {...darkTooltipProps} />
+                          <Tooltip {...darkTooltipProps} formatter={(v: unknown, name: unknown) => {
+                            const labels: Record<string,string> = { shortMarginRatio: "資券比", marginBuy: "融資買", marginSell: "融資賣" };
+                            const value = Number(v);
+                            return [String(name) === "shortMarginRatio" ? `${value.toFixed(2)}x` : value.toLocaleString(), labels[String(name)] || String(name)];
+                          }} />
                           <Legend formatter={(v: string) => {
-                            const labels: Record<string,string> = { marginBalance: "融資餘額", shortBalance: "融券餘額", marginBuy: "融資買", marginSell: "融資賣" };
+                            const labels: Record<string,string> = { shortMarginRatio: "資券比", marginBuy: "融資買", marginSell: "融資賣" };
                             return labels[v] || v;
                           }} />
-                          <Area type="monotone" dataKey="marginBalance" yAxisId="left" stroke="#818cf8" fill="rgba(129,140,248,0.15)" name="融資餘額" />
-                          <Line type="monotone" dataKey="shortBalance" yAxisId="left" stroke="#f472b6" strokeWidth={2} dot={false} name="融券餘額" />
-                          <Bar dataKey="marginBuy" yAxisId="right" fill="rgba(34,197,94,0.5)" name="融資買" />
-                          <Bar dataKey="marginSell" yAxisId="right" fill="rgba(239,68,68,0.5)" name="融資賣" />
+                          <Line type="monotone" dataKey="shortMarginRatio" yAxisId="left" stroke="#fbbf24" strokeWidth={2.5} dot={{ r: 2 }} name="資券比" connectNulls />
+                          <Bar dataKey="marginBuy" yAxisId="right" fill="rgba(34,197,94,0.45)" name="融資買" />
+                          <Bar dataKey="marginSell" yAxisId="right" fill="rgba(239,68,68,0.45)" name="融資賣" />
                         </ComposedChart>
                       </ResponsiveContainer>
                     </div>

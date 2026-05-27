@@ -11,7 +11,8 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Missing symbol" }, { status: 400 });
   }
 
-  // Strategy: Try TWSE mis API first (faster, no token), then FinMind as fallback
+  // Strategy: Try TWSE MIS API first (faster, no token), then FinMind as fallback.
+  // Upstream URL includes a timestamp because TWSE/edge caches can otherwise return a stale five-level book.
   let quote: QuoteResult | null = null;
 
   // 1. Try TWSE mis API
@@ -34,44 +35,30 @@ export async function GET(req: NextRequest) {
 }
 
 async function fetchTWSE(symbol: string): Promise<QuoteResult | null> {
-  try {
-    // Try TSE (上市) first
-    const exCh = `tse_${symbol}.tw`;
-    const url = `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${exCh}&json=1&delay=0`;
+  const fetchMis = async (market: "tse" | "otc") => {
+    const exCh = `${market}_${symbol}.tw`;
+    const url = `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${exCh}&json=1&delay=0&odd=1&_=${Date.now()}`;
     const res = await fetch(url, {
       cache: "no-store",
       headers: {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
-        Accept: "application/json",
+        Accept: "application/json, text/javascript, */*; q=0.01",
+        Referer: "https://mis.twse.com.tw/stock/fibest.jsp?lang=zh_tw",
+        Pragma: "no-cache",
+        "Cache-Control": "no-cache",
       },
     });
 
-    if (res.ok) {
-      const data = await res.json();
-      if (data.msgArray && data.msgArray.length > 0) {
-        return formatTWSEQuote(data.msgArray[0], "TSE");
-      }
+    if (!res.ok) return null;
+    const data = await res.json();
+    if (data.msgArray && data.msgArray.length > 0) {
+      return formatTWSEQuote(data.msgArray[0], market === "tse" ? "TSE" : "OTC");
     }
-
-    // Try OTC (上櫃)
-    const otcExCh = `otc_${symbol}.tw`;
-    const otcUrl = `https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=${otcExCh}&json=1&delay=0`;
-    const otcRes = await fetch(otcUrl, {
-      cache: "no-store",
-      headers: {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
-        Accept: "application/json",
-      },
-    });
-
-    if (otcRes.ok) {
-      const otcData = await otcRes.json();
-      if (otcData.msgArray && otcData.msgArray.length > 0) {
-        return formatTWSEQuote(otcData.msgArray[0], "OTC");
-      }
-    }
-
     return null;
+  };
+
+  try {
+    return (await fetchMis("tse")) ?? (await fetchMis("otc"));
   } catch {
     return null;
   }
