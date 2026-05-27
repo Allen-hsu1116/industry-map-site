@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2308",
+  "companyName": "台達電",
+  "updatedAt": "2026-05-28",
+  "items": [
+    {
+      "id": "strength-power-thermal-portfolio",
+      "category": "strength",
+      "statement": "台達電同時具備電源、資料中心基礎設施、風扇散熱與工業自動化產品組合，能跨多個高成長題材提供系統級解決方案。",
+      "rationale": "官方產品頁可驗證其電源及系統、資料中心、風扇與散熱管理、工業自動化等產品線；這讓台達電不是單一零組件供應商，而是可在 AI 伺服器、電源、散熱與自動化題材中重複受惠的系統供應者。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": ["psu", "ai-server-liquid-cooling", "liquid-cooling", "industrial-automation"],
+      "evidence": [
+        {
+          "sourceId": "delta-power-and-system-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 電源及系統",
+          "url": "https://www.deltaww.com/zh-TW/products/Power-and-System",
+          "claim": "台達官方產品頁列出電源及系統相關產品。"
+        },
+        {
+          "sourceId": "delta-data-center-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 資料中心",
+          "url": "https://www.deltaww.com/zh-TW/products/data-center",
+          "claim": "台達官方產品頁列出資料中心基礎設施相關產品。"
+        },
+        {
+          "sourceId": "delta-fans-thermal-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 風扇與散熱管理",
+          "url": "https://www.deltaww.com/zh-TW/products/fans-and-thermal-management",
+          "claim": "台達官方產品頁列出風扇與散熱管理產品。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "strength-official-segment-evidence",
+      "category": "strength",
+      "statement": "台達電主要業務不侷限單一題材，財報揭露的事業範圍可支持其跨電源、基礎設施、自動化與能源應用的多元定位。",
+      "rationale": "MOPS 財報是官方財務與事業揭露來源，可用來避免把台達電只簡化成單一產品概念股；多元業務也能分散單一應用需求波動。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": ["psu", "industrial-automation", "energy-storage"],
+      "evidence": [
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "台達電財報揭露主要業務與事業範圍。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-topic-attribution-risk",
+      "category": "weakness",
+      "statement": "台達電跨題材產品線很廣，若只看單一熱門題材，容易高估該題材對整體營收與獲利的直接貢獻。",
+      "rationale": "產品與題材可被官方資料支持，但不同題材收入占比與獲利彈性未必能從公開產品頁直接拆分；分析時應避免把產品存在等同於該題材高度獲利曝險。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": ["ai-server-liquid-cooling", "liquid-cooling", "sic-gan-power"],
+      "evidence": [
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "財報提供事業範圍與財務揭露，但公開資料未必能直接拆出每一熱門題材的營收彈性。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ai-data-center-power-cooling",
+      "category": "opportunity",
+      "statement": "AI 資料中心功率密度提高，使高效率電源、配電、熱管理與液冷相關產品具備中期成長機會。",
+      "rationale": "台達官方資料中心與散熱產品頁可驗證其參與資料中心基礎設施與散熱管理；AI 伺服器題材若延續高功耗趨勢，台達電可從電源與散熱兩端受惠。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": ["ai-server-liquid-cooling", "liquid-cooling", "psu"],
+      "evidence": [
+        {
+          "sourceId": "delta-data-center-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 資料中心",
+          "url": "https://www.deltaww.com/zh-TW/products/data-center",
+          "claim": "台達官方資料中心產品頁列出資料中心基礎設施相關產品。"
+        },
+        {
+          "sourceId": "delta-fans-thermal-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 風扇與散熱管理",
+          "url": "https://www.deltaww.com/zh-TW/products/fans-and-thermal-management",
+          "claim": "台達官方散熱管理產品頁支持其熱管理產品曝險。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "threat-execution-and-competitive-pressure",
+      "category": "threat",
+      "statement": "電源、散熱、工業自動化與能源基礎設施市場競爭激烈，若高階產品放量、成本控制或客戶驗證進度不如預期，題材受惠可能無法完整轉化為獲利。",
+      "rationale": "台達參與多個高規格硬體與基礎設施市場；這些產品線通常需要客戶認證、規格迭代與成本控制，分析上需把執行風險列為威脅，而不是只看題材需求。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": ["psu", "ai-server-liquid-cooling", "industrial-automation", "energy-storage"],
+      "evidence": [
+        {
+          "sourceId": "delta-power-and-system-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 電源及系統",
+          "url": "https://www.deltaww.com/zh-TW/products/Power-and-System",
+          "claim": "台達官方產品頁可驗證其電源及系統產品範圍。"
+        },
+        {
+          "sourceId": "delta-industrial-automation-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 工業自動化",
+          "url": "https://www.deltaww.com/zh-TW/products/Industrial-Automation",
+          "claim": "台達官方產品頁可驗證其工業自動化產品範圍。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

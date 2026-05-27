@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "3017",
+  "companyName": "奇鋐",
+  "updatedAt": "2026-05-28",
+  "items": [
+    {
+      "id": "strength-thermal-specialist",
+      "category": "strength",
+      "statement": "奇鋐定位為散熱解決方案供應商，產品與角色聚焦於伺服器、電子設備與高功耗硬體的熱管理需求。",
+      "rationale": "官方網站與 MOPS 財報可支持其散熱解決方案定位；相較多角化公司，奇鋐在 AI 伺服器與液冷題材中的敘事更集中於散熱能力。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": ["thermal-solutions", "air-cooling-components", "ai-server-liquid-cooling", "liquid-cooling"],
+      "evidence": [
+        {
+          "sourceId": "avc-official-homepage",
+          "publisher": "奇鋐科技 Asia Vital Components",
+          "title": "Asia Vital Components official website",
+          "url": "https://www.avc.co/",
+          "claim": "奇鋐官方網站可作為其散熱解決方案供應商定位來源。"
+        },
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "奇鋐財報提供主要業務與營運資訊。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-liquid-cooling-disclosure-gap",
+      "category": "weakness",
+      "statement": "奇鋐液冷與 AI 伺服器相關營收占比仍需依賴後續財報、法說或重大訊息驗證，不能只因題材關聯就假設高度獲利貢獻。",
+      "rationale": "目前官方與財報 evidence 可支持散熱主業與題材角色，但未充分拆出液冷、AI 伺服器等細項收入與毛利；SWOT 必須保守處理題材轉化率。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": ["ai-server-liquid-cooling", "liquid-cooling"],
+      "evidence": [
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "財報可驗證公司主要業務，但公開資訊粒度仍不足以完整拆分每一熱門題材營收。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ai-server-thermal-upgrade",
+      "category": "opportunity",
+      "statement": "AI 伺服器功耗與散熱要求提高，帶動氣冷升級、液冷模組與整體熱管理方案的中期需求。",
+      "rationale": "奇鋐的 canonical topic roles 已將其列入 AI 伺服器散熱、液冷散熱與核心散熱組件；若伺服器功耗繼續上升，熱管理供應商具備明確題材受惠邏輯。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": ["ai-server-liquid-cooling", "liquid-cooling", "air-cooling-components"],
+      "evidence": [
+        {
+          "sourceId": "avc-official-homepage",
+          "publisher": "奇鋐科技 Asia Vital Components",
+          "title": "Asia Vital Components official website",
+          "url": "https://www.avc.co/",
+          "claim": "奇鋐官方網站支持其散熱解決方案產品定位。"
+        },
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "財報可作為奇鋐主業與營運資訊的官方來源。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "threat-customer-concentration-and-cycle",
+      "category": "threat",
+      "statement": "高階散熱產品若受客戶專案時程、伺服器拉貨週期或同業價格競爭影響，營收與毛利可能出現波動。",
+      "rationale": "散熱零組件與模組通常跟終端平台、伺服器專案及客戶採購週期相關；在缺乏逐專案收入揭露時，應把客戶與週期風險列入威脅。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": ["thermal-solutions", "ai-server-liquid-cooling"],
+      "evidence": [
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "財報可作為營運、客戶集中與財務風險檢視來源。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

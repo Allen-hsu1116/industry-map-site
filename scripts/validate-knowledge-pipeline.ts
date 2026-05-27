@@ -7,6 +7,7 @@ const COMPANIES_PATH = path.join(DATA_DIR, "companies.json");
 const SOURCES_PATH = path.join(DATA_DIR, "knowledge-sources.json");
 const PRODUCT_KNOWLEDGE_DIR = path.join(DATA_DIR, "product-knowledge");
 const COMPANY_TOPIC_ROLES_DIR = path.join(DATA_DIR, "company-topic-roles");
+const COMPANY_SWOT_DIR = path.join(DATA_DIR, "company-swot");
 const REPORT_PATH = path.join(DATA_DIR, "knowledge-quality-report.json");
 
 type Severity = "error" | "warning";
@@ -118,6 +119,35 @@ interface CompanyTopicRoleItem {
 }
 
 interface CompanyTopicRoleEvidence {
+  sourceId?: unknown;
+  publisher?: unknown;
+  title?: unknown;
+  url?: unknown;
+  claim?: unknown;
+}
+
+interface CompanySwotFile {
+  schemaVersion?: unknown;
+  companyCode?: unknown;
+  companyName?: unknown;
+  updatedAt?: unknown;
+  items?: unknown;
+}
+
+interface CompanySwotItem {
+  id?: unknown;
+  category?: unknown;
+  statement?: unknown;
+  rationale?: unknown;
+  timeHorizon?: unknown;
+  relatedTopicIds?: unknown;
+  evidence?: unknown;
+  confidence?: unknown;
+  lastVerified?: unknown;
+  status?: unknown;
+}
+
+interface CompanySwotEvidence {
   sourceId?: unknown;
   publisher?: unknown;
   title?: unknown;
@@ -386,6 +416,63 @@ function validateCompanyTopicRoles(sourceIds: Set<string>, issues: QualityIssue[
   return roleCount;
 }
 
+function validateCompanySwot(sourceIds: Set<string>, issues: QualityIssue[]): number {
+  if (!fs.existsSync(COMPANY_SWOT_DIR)) return 0;
+  const files = fs.readdirSync(COMPANY_SWOT_DIR).filter((file) => file.endsWith(".json")).sort();
+  const validCategories = new Set(["strength", "weakness", "opportunity", "threat"]);
+  const validHorizons = new Set(["structural", "medium_term", "event_driven"]);
+  const validConfidence = new Set(["high", "medium", "low", "insufficient", "unverified"]);
+  const validStatus = new Set(["verified", "candidate", "rejected"]);
+  let itemCount = 0;
+
+  files.forEach((file) => {
+    const knowledge = readJson<CompanySwotFile>(path.join(COMPANY_SWOT_DIR, file));
+    const filePath = `company-swot/${file}`;
+    if (knowledge.schemaVersion !== 1) addIssue(issues, "error", "company_swot.invalid_schema", `${filePath}.schemaVersion`, `${filePath} schemaVersion must be 1`);
+    if (!asString(knowledge.companyCode)) addIssue(issues, "error", "company_swot.missing_code", `${filePath}.companyCode`, `${filePath} is missing companyCode`);
+    if (!asString(knowledge.companyName)) addIssue(issues, "warning", "company_swot.missing_name", `${filePath}.companyName`, `${filePath} is missing companyName`);
+    if (!asString(knowledge.updatedAt)) addIssue(issues, "warning", "company_swot.missing_updated_at", `${filePath}.updatedAt`, `${filePath} is missing updatedAt`);
+
+    const items = asArray(knowledge.items) as CompanySwotItem[];
+    if (items.length === 0) addIssue(issues, "warning", "company_swot.no_items", `${filePath}.items`, `${filePath} has no SWOT items`);
+    itemCount += items.length;
+
+    items.forEach((item, index) => {
+      const itemPath = `${filePath}.items[${index}]`;
+      const id = asString(item.id);
+      if (!id) addIssue(issues, "error", "company_swot.item_missing_id", `${itemPath}.id`, "SWOT item is missing id");
+      const category = asString(item.category);
+      if (!category || !validCategories.has(category)) addIssue(issues, "error", "company_swot.invalid_category", `${itemPath}.category`, `${id ?? "SWOT item"} category is invalid`);
+      const statement = asString(item.statement);
+      if (!statement) addIssue(issues, "error", "company_swot.missing_statement", `${itemPath}.statement`, `${id ?? "SWOT item"} is missing statement`);
+      if (statement && statement.length < 20) addIssue(issues, "warning", "company_swot.short_statement", `${itemPath}.statement`, `${id ?? "SWOT item"} statement is too short`);
+      const rationale = asString(item.rationale);
+      if (!rationale) addIssue(issues, "error", "company_swot.missing_rationale", `${itemPath}.rationale`, `${id ?? "SWOT item"} is missing rationale`);
+      const horizon = asString(item.timeHorizon);
+      if (!horizon || !validHorizons.has(horizon)) addIssue(issues, "error", "company_swot.invalid_horizon", `${itemPath}.timeHorizon`, `${id ?? "SWOT item"} timeHorizon is invalid`);
+      const confidence = asString(item.confidence);
+      if (!confidence || !validConfidence.has(confidence)) addIssue(issues, "error", "company_swot.invalid_confidence", `${itemPath}.confidence`, `${id ?? "SWOT item"} confidence is invalid`);
+      const status = asString(item.status);
+      if (!status || !validStatus.has(status)) addIssue(issues, "error", "company_swot.invalid_status", `${itemPath}.status`, `${id ?? "SWOT item"} status is invalid`);
+      if ((confidence === "high" || confidence === "medium") && !asString(item.lastVerified)) addIssue(issues, "error", "company_swot.missing_last_verified", `${itemPath}.lastVerified`, `${id ?? "SWOT item"} high/medium confidence needs lastVerified`);
+
+      const evidence = asArray(item.evidence) as CompanySwotEvidence[];
+      if ((confidence === "high" || confidence === "medium") && evidence.length === 0) addIssue(issues, "error", "company_swot.missing_evidence", `${itemPath}.evidence`, `${id ?? "SWOT item"} high/medium confidence needs evidence`);
+      evidence.forEach((source, sourceIndex) => {
+        const evidencePath = `${itemPath}.evidence[${sourceIndex}]`;
+        const sourceId = asString(source.sourceId);
+        if (!sourceId) addIssue(issues, "error", "company_swot.evidence_missing_source_id", `${evidencePath}.sourceId`, `${id ?? "SWOT item"} evidence is missing sourceId`);
+        else if (!sourceIds.has(sourceId)) addIssue(issues, "error", "company_swot.evidence_unknown_source_id", `${evidencePath}.sourceId`, `${id ?? "SWOT item"} evidence sourceId ${sourceId} is absent from knowledge-sources.json`);
+        if (!asString(source.claim)) addIssue(issues, "warning", "company_swot.evidence_missing_claim", `${evidencePath}.claim`, `${id ?? "SWOT item"} evidence should state the supported claim`);
+        const url = asString(source.url);
+        if (url && !/^https?:\/\//.test(url)) addIssue(issues, "warning", "company_swot.evidence_invalid_url", `${evidencePath}.url`, `${id ?? "SWOT item"} evidence URL is not http(s)`);
+      });
+    });
+  });
+
+  return itemCount;
+}
+
 function main() {
   const issues: QualityIssue[] = [];
   const industries = readJson<IndustriesFile>(INDUSTRIES_PATH);
@@ -397,6 +484,7 @@ function main() {
   const sourceIds = validateSources(sources, issues);
   const productKnowledgeItems = validateProductKnowledge(sourceIds, issues);
   const companyTopicRoles = validateCompanyTopicRoles(sourceIds, issues);
+  const companySwotItems = validateCompanySwot(sourceIds, issues);
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -407,6 +495,7 @@ function main() {
       products: graph.productCount,
       productKnowledgeItems,
       companyTopicRoles,
+      companySwotItems,
       knowledgeSources: sources.length,
       errors: issues.filter((issue) => issue.severity === "error").length,
       warnings: issues.filter((issue) => issue.severity === "warning").length,
@@ -418,7 +507,7 @@ function main() {
 
   console.log(`Knowledge validation report written to ${path.relative(process.cwd(), REPORT_PATH)}`);
   console.log(`Topics: ${report.summary.topics}, companies: ${report.summary.companiesInGraph}, roles: ${report.summary.companyRoles}`);
-  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, company topic roles: ${report.summary.companyTopicRoles}, sources: ${report.summary.knowledgeSources}`);
+  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, company topic roles: ${report.summary.companyTopicRoles}, company SWOT items: ${report.summary.companySwotItems}, sources: ${report.summary.knowledgeSources}`);
   console.log(`Errors: ${report.summary.errors}, warnings: ${report.summary.warnings}`);
 
   if (report.summary.errors > 0) {

@@ -18,6 +18,7 @@ import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketDat
 import { generateDailyAnalysis, type DailyAnalysis } from "@/lib/dailyAnalysis";
 import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "@/lib/productKnowledge";
 import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles, type CompanyTopicRolesKnowledge } from "@/lib/companyTopicRoles";
+import { groupCompanySwot, normalizeCompanySwot, type CompanySwotKnowledge, type GroupedSwot } from "@/lib/companySwot";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
@@ -1983,10 +1984,13 @@ function CompanyFullPageDetail({
   const [loadedDailyAnalysis, setLoadedDailyAnalysis] = useState<DailyAnalysis | null>(null);
   const [productKnowledge, setProductKnowledge] = useState<CompanyProductKnowledge | null>(null);
   const [companyTopicRoles, setCompanyTopicRoles] = useState<CompanyTopicRolesKnowledge | null>(null);
+  const [companySwot, setCompanySwot] = useState<CompanySwotKnowledge | null>(null);
   const fallbackDailyAnalysis = useMemo(() => generateDailyAnalysis(data), [data]);
   const resolvedDailyAnalysis = loadedDailyAnalysis?.code === data.code ? loadedDailyAnalysis : fallbackDailyAnalysis;
   const resolvedProductKnowledge = productKnowledge?.code === data.code ? productKnowledge : null;
   const resolvedCompanyTopicRoles = companyTopicRoles?.companyCode === data.code ? companyTopicRoles : null;
+  const resolvedCompanySwot = companySwot?.companyCode === data.code ? companySwot : null;
+  const groupedCompanySwot = useMemo(() => groupCompanySwot(resolvedCompanySwot), [resolvedCompanySwot]);
 
   useEffect(() => {
     let cancelled = false;
@@ -2038,6 +2042,26 @@ function CompanyFullPageDetail({
       })
       .catch(() => {
         if (!cancelled) setCompanyTopicRoles(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [data.code]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/data/company-swot/${data.code}.json`, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error("company SWOT not found");
+        return response.json() as Promise<unknown>;
+      })
+      .then((raw) => {
+        const knowledge = normalizeCompanySwot(raw);
+        if (!cancelled && knowledge?.companyCode === data.code) setCompanySwot(knowledge);
+        if (!cancelled && knowledge?.companyCode !== data.code) setCompanySwot(null);
+      })
+      .catch(() => {
+        if (!cancelled) setCompanySwot(null);
       });
     return () => {
       cancelled = true;
@@ -2224,7 +2248,22 @@ function CompanyFullPageDetail({
                     const displayRelevance = canonicalRole ? directnessToRelevance(canonicalRole.directness) : role.relevance;
                     const displayRelInfo = getRelevanceInfo(displayRelevance);
                     const displayRoleBadge = getRoleBadge(displayRelevance);
-                    const fallbackSwot = rawTopicAnalysis?.swot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
+                    const topicSwotFor = (key: keyof GroupedSwot) => {
+                      const items = groupedCompanySwot[key].filter((item) => item.relatedTopicIds.length === 0 || item.relatedTopicIds.includes(role.topic));
+                      return items.length > 0 ? items : groupedCompanySwot[key];
+                    };
+                    const canonicalSwot = resolvedCompanySwot ? {
+                      strengths: topicSwotFor("strengths").map((item) => item.statement),
+                      weaknesses: topicSwotFor("weaknesses").map((item) => item.statement),
+                      opportunities: topicSwotFor("opportunities").map((item) => item.statement),
+                      threats: topicSwotFor("threats").map((item) => item.statement),
+                    } : undefined;
+                    const canonicalSwotEvidence = resolvedCompanySwot
+                      ? resolvedCompanySwot.items
+                        .filter((item) => item.status !== "rejected" && (item.relatedTopicIds.length === 0 || item.relatedTopicIds.includes(role.topic)))
+                        .flatMap((item) => item.evidence.map((evidence) => `${evidence.publisher}：${evidence.title}`))
+                      : [];
+                    const fallbackSwot = canonicalSwot ?? rawTopicAnalysis?.swot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
                       strengths: [`已建立「${role.topicName}」題材關聯，角色：${role.role || relInfo.label}`],
                       weaknesses: ["題材別產品、客戶與競爭資料仍需補來源驗證"],
                       opportunities: [`若${role.topicName}需求擴張，${role.group}供應鏈角色可能受惠`],
@@ -2250,6 +2289,7 @@ function CompanyFullPageDetail({
                       : "";
                     const sourceChips = [
                       ...(canonicalRole?.evidence.map((item) => `${item.publisher}：${item.title}`) ?? []),
+                      ...canonicalSwotEvidence,
                       ...(knowledge?.dataSources ?? []),
                       ...(knowledge?.swot.sources ?? []),
                     ];
@@ -2428,7 +2468,14 @@ function CompanyFullPageDetail({
                         {/* SWOT 分析 */}
                         {topicAnalysis.swot && ((topicAnalysis.swot.strengths?.length ?? 0) > 0 || (topicAnalysis.swot.weaknesses?.length ?? 0) > 0 || (topicAnalysis.swot.opportunities?.length ?? 0) > 0 || (topicAnalysis.swot.threats?.length ?? 0) > 0) ? (
                           <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                            <h4 className="text-sm font-bold text-white mb-4">🏛️ SWOT 分析</h4>
+                            <div className="mb-4 flex flex-wrap items-center gap-2">
+                              <h4 className="text-sm font-bold text-white">🏛️ SWOT 分析</h4>
+                              {resolvedCompanySwot && (
+                                <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-200">
+                                  V2 evidence-backed · {resolvedCompanySwot.updatedAt}
+                                </span>
+                              )}
+                            </div>
                             <div className="grid grid-cols-2 gap-4">
                               {[
                                 { label: "優勢 (S)", items: topicAnalysis.swot.strengths || [], color: "#34d399" },
