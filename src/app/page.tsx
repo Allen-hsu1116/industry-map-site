@@ -2592,6 +2592,56 @@ function CompanyFullPageDetail({
                 />
               )}
 
+              {resolvedDailyAnalysis?.industry && (
+                <BatchAnalysisPanel
+                  title="🏭 題材角色與 SWOT 校正"
+                  badge={resolvedDailyAnalysis.industry.label}
+                  score={0}
+                  summary={resolvedDailyAnalysis.industry.summary}
+                  signals={resolvedDailyAnalysis.industry.signals}
+                  risks={resolvedDailyAnalysis.industry.risks}
+                  watch={resolvedDailyAnalysis.industry.watch}
+                  generatedAt={resolvedDailyAnalysis.generatedAt}
+                />
+              )}
+
+              {resolvedDailyAnalysis?.knowledge && (
+                <div className="rounded-2xl border border-white/[0.04] bg-white/[0.02] p-5">
+                  <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+                    <div className="text-sm font-bold text-white">📚 Daily analysis 資料來源</div>
+                    <div className="rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1 text-[11px] font-bold text-indigo-200">
+                      SWOT {resolvedDailyAnalysis.knowledge.swot.freshness}
+                    </div>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    <div>
+                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-emerald-300">產品/客戶</div>
+                      <ul className="space-y-1.5">
+                        {[...resolvedDailyAnalysis.knowledge.products.slice(0, 3), ...resolvedDailyAnalysis.knowledge.customers.slice(0, 2)].map((item, index) => (
+                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-cyan-300">FinMind / 官方資料</div>
+                      <ul className="space-y-1.5">
+                        {resolvedDailyAnalysis.knowledge.dataSources.slice(0, 5).map((item, index) => (
+                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">題材角色</div>
+                      <ul className="space-y-1.5">
+                        {resolvedDailyAnalysis.knowledge.topicRoles.slice(0, 4).map((role, index) => (
+                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {role.topicId}：{role.marketPosition ?? role.relevance}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {resolvedDailyAnalysis && (
                 <div className="rounded-2xl border border-white/[0.04] bg-white/[0.02] p-5">
                   <div className="mb-3 text-sm font-bold text-white">🎯 明日觀察與盤中觸發條件</div>

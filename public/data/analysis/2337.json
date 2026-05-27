@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-05-26T18:06:37.278Z",
+  "generatedAt": "2026-05-27T01:00:59.990Z",
   "sourceUpdatedAt": "2026-05-26",
   "mode": "rule-batch",
   "technical": {
@@ -33,6 +33,104 @@
     ],
     "watch": [
       "最近法人資料日：2026-05-25"
+    ]
+  },
+  "industry": {
+    "label": "題材關聯待驗證",
+    "summary": "旺宏 在 semiconductor-memory 的角色為「全球 NOR Flash 前三大」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "signals": [
+      "題材角色：semiconductor-memory · 全球 NOR Flash 前三大",
+      "主要產品：NOR Flash",
+      "主要產品：MLC NAND Flash",
+      "主要產品：ROM",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+    ],
+    "risks": [
+      "W：近年連續虧損",
+      "W：產品線較為單一",
+      "T：中國 NOR Flash 廠商低價競爭",
+      "T：記憶體景氣循環波動大"
+    ],
+    "watch": [
+      "O：AI 驅動 NOR Flash 需求增加",
+      "O：車用電子 NOR Flash 需求成長",
+      "知識庫最後驗證：2026-05-26（fresh）",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+    ]
+  },
+  "knowledge": {
+    "products": [
+      "NOR Flash",
+      "MLC NAND Flash",
+      "ROM",
+      "智慧型記憶卡"
+    ],
+    "customers": [
+      "任天堂",
+      "Sony",
+      "汽車電子客戶",
+      "物聯網客戶",
+      "汽車電子廠",
+      "工業控制"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "semiconductor-memory",
+        "role": "全球 NOR Flash 前三大",
+        "relevance": "unknown",
+        "marketPosition": "全球 NOR Flash 前三大",
+        "summary": "旺宏電子是全球 NOR Flash 記憶體領導廠商之一，在車用與遊戲機應用具有高市佔率。2026 年 Q1 受惠於任天堂 Switch 2 上市及車用電子需求增長，營收爆發性成長至 104.7 億，EPS 回升至 0.9 元。"
+      }
+    ],
+    "swot": {
+      "strengths": [
+        "NOR Flash 全球市佔前三",
+        "任天堂 Switch 獨家供應商",
+        "車用 NOR Flash 佈局完整",
+        "ROM 技術領先"
+      ],
+      "weaknesses": [
+        "近年連續虧損",
+        "產品線較為單一",
+        "NAND Flash 市佔低",
+        "營運槓桿高"
+      ],
+      "opportunities": [
+        "AI 驅動 NOR Flash 需求增加",
+        "車用電子 NOR Flash 需求成長",
+        "任天堂新主機 Switch 2 商機",
+        "高容量 NOR Flash 應用擴大"
+      ],
+      "threats": [
+        "中國 NOR Flash 廠商低價競爭",
+        "記憶體景氣循環波動大",
+        "NAND Flash 技術替代風險",
+        "匯率波動影響外銷營收"
+      ],
+      "sources": [
+        "financials:2337"
+      ],
+      "freshness": "fresh",
+      "lastVerified": "2026-05-26"
+    },
+    "dataSources": [
+      "MOPS company profile / financial statements",
+      "FinMind TaiwanStockPrice daily OHLCV",
+      "FinMind TaiwanStockInstitutionalInvestorsBuySell",
+      "FinMind TaiwanStockMarginPurchaseShortSale",
+      "FinMind TaiwanStockPER valuation history",
+      "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
+    ],
+    "finmindSignals": [
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向",
+      "融資融券已接 FinMind，可納入籌碼壓力與軋空觀察",
+      "PER/PBR/殖利率可由 FinMind 補歷史估值區間",
+      "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收",
+      "季損益可由 FinMind/MOPS 追蹤毛利率、營益率與 EPS 趨勢"
     ]
   },
   "nextSession": {

@@ -32,6 +32,21 @@ test("generateDailyAnalysis summarizes bullish technical and accumulation chip s
       dealer_net: 100,
       total_net: 1600,
     })),
+    products: ["先進製程", "CoWoS"],
+    industry_analysis: {
+      "ai-server": {
+        market_position: "🟢 產業龍頭",
+        market_position_detail: "AI GPU / ASIC 先進製程與封裝核心供應商",
+        products: ["N3/N2 製程", "CoWoS 先進封裝"],
+        customers: ["NVIDIA", "Apple"],
+        swot: {
+          strengths: ["先進製程領先且客戶黏著度高"],
+          weaknesses: ["海外設廠成本高"],
+          opportunities: ["AI/HPC 需求推升先進製程與封裝需求"],
+          threats: ["地緣政治與出口管制風險"],
+        },
+      },
+    },
     margin_history: Array.from({ length: 10 }, (_, index) => ({
       date: `2026-05-${String(index + 1).padStart(2, "0")}`,
       margin_buy: 100,
@@ -47,6 +62,11 @@ test("generateDailyAnalysis summarizes bullish technical and accumulation chip s
   assert.equal(analysis.mode, "rule-batch");
   assert.equal(analysis.technical.stance, "bullish");
   assert.equal(analysis.chips.stance, "accumulation");
+  assert.equal(analysis.industry.label, "核心題材受惠");
+  assert.ok(analysis.knowledge.products.includes("CoWoS"));
+  assert.ok(analysis.knowledge.topicRoles.some((role) => role.topicId === "ai-server"));
+  assert.ok(analysis.knowledge.swot.strengths.some((point) => point.includes("先進製程")));
+  assert.ok(analysis.knowledge.dataSources.some((source) => source.includes("FinMind")));
   assert.match(analysis.technical.summary, /台積電/);
   assert.ok(analysis.nextSession.triggerRules.length >= 3);
 });
@@ -62,5 +82,7 @@ test("generateDailyAnalysis returns insufficient labels when data is sparse", ()
 
   assert.equal(analysis.technical.stance, "insufficient");
   assert.equal(analysis.chips.stance, "insufficient");
+  assert.equal(analysis.industry.label, "產業資料待補");
+  assert.equal(analysis.knowledge.swot.freshness, "unknown");
   assert.ok(analysis.technical.signals[0].includes("資料不足"));
 });

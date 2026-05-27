@@ -1,3 +1,4 @@
+import { buildCompanyKnowledge, type CompanyKnowledge, type CompanyKnowledgeInput } from "./companyKnowledge";
 import { computeTechnicalSummary, safeFloat, type DailyPrice } from "./marketData";
 
 export interface InstitutionalFlowPoint {
@@ -18,13 +19,13 @@ export interface MarginPoint {
   short_balance: number;
 }
 
-export interface AnalysisInput {
+export interface AnalysisInput extends CompanyKnowledgeInput {
   code: string;
   name: string;
   updatedAt?: string;
-  trends?: { daily_prices?: DailyPrice[] };
-  valuation?: { pe?: string | number; pb?: string | number; dividendYield?: string | number };
-  monthly_revenue?: { yoy?: string | number; mom?: string | number };
+  trends?: { daily_prices?: DailyPrice[]; monthly_revenue?: { month: string }[]; quarterly_income?: { quarter: string }[] };
+  valuation?: { date?: string; pe?: string | number; pb?: string | number; dividendYield?: string | number };
+  monthly_revenue?: { latestMonth?: string; month?: string; yoy?: string | number; mom?: string | number };
   institutional_history?: InstitutionalFlowPoint[];
   margin_history?: MarginPoint[];
 }
@@ -54,6 +55,14 @@ export interface DailyAnalysis {
     risks: string[];
     watch: string[];
   };
+  industry: {
+    label: string;
+    summary: string;
+    signals: string[];
+    risks: string[];
+    watch: string[];
+  };
+  knowledge: CompanyKnowledge;
   nextSession: {
     focus: string[];
     triggerRules: string[];
@@ -87,6 +96,7 @@ function latestDate(data: { date: string }[] | undefined): string | undefined {
 }
 
 export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): DailyAnalysis {
+  const knowledge = buildCompanyKnowledge(input, now);
   const dailyPrices = input.trends?.daily_prices ?? [];
   const technical = computeTechnicalSummary(dailyPrices);
   const sortedPrices = [...dailyPrices].filter((row) => row.date && row.close > 0).sort((a, b) => a.date.localeCompare(b.date));
@@ -234,6 +244,26 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     "三大法人連 3 日同向買/賣超：提高籌碼分數權重",
   ];
 
+  const primaryRole = knowledge.topicRoles[0];
+  const industrySignals = [
+    ...(primaryRole ? [`題材角色：${primaryRole.topicId} · ${primaryRole.marketPosition ?? primaryRole.relevance}`] : []),
+    ...knowledge.products.slice(0, 3).map((item) => `主要產品：${item}`),
+    ...knowledge.finmindSignals.slice(0, 2),
+  ];
+  const industryRisks = [
+    ...knowledge.swot.weaknesses.slice(0, 2).map((item) => `W：${item}`),
+    ...knowledge.swot.threats.slice(0, 2).map((item) => `T：${item}`),
+  ];
+  const industryWatch = [
+    ...knowledge.swot.opportunities.slice(0, 2).map((item) => `O：${item}`),
+    knowledge.swot.lastVerified ? `知識庫最後驗證：${knowledge.swot.lastVerified}（${knowledge.swot.freshness}）` : "知識庫尚未建立驗證日期",
+    `資料來源：${knowledge.dataSources.slice(0, 3).join("、")}`,
+  ];
+  const industryLabel = primaryRole?.relevance === "high" ? "核心題材受惠" : primaryRole?.relevance === "medium" ? "題材關聯明確" : primaryRole ? "題材關聯待驗證" : "產業資料待補";
+  const industrySummary = primaryRole
+    ? `${input.name} 在 ${primaryRole.topicId} 的角色為「${primaryRole.marketPosition ?? primaryRole.relevance}」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。`
+    : `${input.name} 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。`;
+
   return {
     schemaVersion: 1,
     code: input.code,
@@ -259,6 +289,14 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
       risks: chipRisks.slice(0, 5),
       watch: chipWatch.slice(0, 5),
     },
+    industry: {
+      label: industryLabel,
+      summary: industrySummary,
+      signals: industrySignals.slice(0, 6),
+      risks: industryRisks.slice(0, 6),
+      watch: industryWatch.slice(0, 6),
+    },
+    knowledge,
     nextSession: {
       focus: nextFocus.slice(0, 5),
       triggerRules,

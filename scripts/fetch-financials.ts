@@ -1,8 +1,15 @@
 /**
  * fetch-financials.ts
  * 
- * Script to fetch financial data for top companies from CasualMarket MCP tools
- * and save as static JSON files for the industry-map-site.
+ * Script to fetch financial data for top companies.
+ *
+ * Preferred source order:
+ *   1. FinMind API datasets for bulk historical market/fundamental data
+ *      (price, institutional, margin, PER/PBR/yield, revenue, financial statements).
+ *   2. CasualMarket MCP tools as a Hermes-native wrapper when running inside the agent.
+ *   3. MOPS/TWSE/TPEX official endpoints for company profile, filings, and major news.
+ *
+ * Save static JSON files for the industry-map-site.
  * 
  * Usage:
  *   npx tsx scripts/fetch-financials.ts [--top N] [--output-dir DIR]

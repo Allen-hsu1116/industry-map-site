@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3169",
   "name": "亞信",
-  "generatedAt": "2026-05-26T18:06:37.485Z",
+  "generatedAt": "2026-05-27T01:01:00.222Z",
   "sourceUpdatedAt": "2026-05-26",
   "mode": "rule-batch",
   "technical": {
@@ -31,6 +31,50 @@
     "risks": [],
     "watch": [
       "最近法人資料日：2026-05-25"
+    ]
+  },
+  "industry": {
+    "label": "產業資料待補",
+    "summary": "亞信 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "signals": [
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+    ],
+    "risks": [],
+    "watch": [
+      "知識庫最後驗證：2026-05-26（fresh）",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+    ]
+  },
+  "knowledge": {
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
+    "swot": {
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
+      "freshness": "fresh",
+      "lastVerified": "2026-05-26"
+    },
+    "dataSources": [
+      "MOPS company profile / financial statements",
+      "FinMind TaiwanStockPrice daily OHLCV",
+      "FinMind TaiwanStockInstitutionalInvestorsBuySell",
+      "FinMind TaiwanStockMarginPurchaseShortSale",
+      "FinMind TaiwanStockPER valuation history",
+      "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
+      "FinMind financial statements / MOPS quarterly reports"
+    ],
+    "finmindSignals": [
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向",
+      "融資融券已接 FinMind，可納入籌碼壓力與軋空觀察",
+      "PER/PBR/殖利率可由 FinMind 補歷史估值區間",
+      "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收",
+      "季損益可由 FinMind/MOPS 追蹤毛利率、營益率與 EPS 趨勢"
     ]
   },
   "nextSession": {
