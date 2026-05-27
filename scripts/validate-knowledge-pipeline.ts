@@ -5,6 +5,7 @@ const DATA_DIR = path.resolve("public/data");
 const INDUSTRIES_PATH = path.join(DATA_DIR, "industries.json");
 const COMPANIES_PATH = path.join(DATA_DIR, "companies.json");
 const SOURCES_PATH = path.join(DATA_DIR, "knowledge-sources.json");
+const PRODUCT_KNOWLEDGE_DIR = path.join(DATA_DIR, "product-knowledge");
 const REPORT_PATH = path.join(DATA_DIR, "knowledge-quality-report.json");
 
 type Severity = "error" | "warning";
@@ -58,6 +59,35 @@ interface KnowledgeSource {
   sourceType?: unknown;
   retrievedAt?: unknown;
   notes?: unknown;
+}
+
+interface ProductKnowledgeFile {
+  schemaVersion?: unknown;
+  code?: unknown;
+  name?: unknown;
+  updatedAt?: unknown;
+  products?: unknown;
+}
+
+interface ProductKnowledgeItem {
+  name?: unknown;
+  aliases?: unknown;
+  category?: unknown;
+  plainLanguage?: unknown;
+  whyItMatters?: unknown;
+  topicFit?: unknown;
+  businessImpact?: unknown;
+  evidence?: unknown;
+  lastVerified?: unknown;
+  confidence?: unknown;
+}
+
+interface ProductEvidence {
+  sourceId?: unknown;
+  publisher?: unknown;
+  title?: unknown;
+  url?: unknown;
+  claim?: unknown;
 }
 
 function readJson<T>(filePath: string): T {
@@ -193,7 +223,7 @@ function validateCompaniesIndex(companies: CompanyIndexItem[], companyToTopics: 
   }
 }
 
-function validateSources(sources: KnowledgeSource[], issues: QualityIssue[]) {
+function validateSources(sources: KnowledgeSource[], issues: QualityIssue[]): Set<string> {
   const ids = new Set<string>();
   sources.forEach((source, index) => {
     const sourcePath = `knowledge-sources[${index}]`;
@@ -210,6 +240,55 @@ function validateSources(sources: KnowledgeSource[], issues: QualityIssue[]) {
     if (!url) addIssue(issues, "warning", "source.missing_url", `${sourcePath}.url`, `Source ${id} is missing URL`);
     if (url && !/^https?:\/\//.test(url)) addIssue(issues, "warning", "source.invalid_url", `${sourcePath}.url`, `Source ${id} URL is not http(s)`);
   });
+  return ids;
+}
+
+function validateProductKnowledge(sourceIds: Set<string>, issues: QualityIssue[]): number {
+  if (!fs.existsSync(PRODUCT_KNOWLEDGE_DIR)) return 0;
+  const files = fs.readdirSync(PRODUCT_KNOWLEDGE_DIR).filter((file) => file.endsWith(".json")).sort();
+  let productKnowledgeCount = 0;
+
+  files.forEach((file) => {
+    const knowledge = readJson<ProductKnowledgeFile>(path.join(PRODUCT_KNOWLEDGE_DIR, file));
+    const filePath = `product-knowledge/${file}`;
+    const code = asString(knowledge.code);
+    if (!code) addIssue(issues, "error", "product_knowledge.missing_code", `${filePath}.code`, `${filePath} is missing company code`);
+    if (!asString(knowledge.name)) addIssue(issues, "warning", "product_knowledge.missing_name", `${filePath}.name`, `${filePath} is missing company name`);
+    if (!asString(knowledge.updatedAt)) addIssue(issues, "warning", "product_knowledge.missing_updated_at", `${filePath}.updatedAt`, `${filePath} is missing updatedAt`);
+
+    const products = asArray(knowledge.products) as ProductKnowledgeItem[];
+    if (products.length === 0) addIssue(issues, "warning", "product_knowledge.no_products", `${filePath}.products`, `${filePath} has no products`);
+    productKnowledgeCount += products.length;
+
+    products.forEach((product, index) => {
+      const productPath = `${filePath}.products[${index}]`;
+      const name = asString(product.name);
+      if (!name) addIssue(issues, "error", "product_knowledge.product_missing_name", `${productPath}.name`, "Product knowledge item is missing name");
+      if (!asString(product.category)) addIssue(issues, "warning", "product_knowledge.product_missing_category", `${productPath}.category`, `${name ?? "Product"} is missing category`);
+      const plainLanguage = asString(product.plainLanguage);
+      if (!plainLanguage) addIssue(issues, "error", "product_knowledge.product_missing_plain_language", `${productPath}.plainLanguage`, `${name ?? "Product"} must explain what it is`);
+      if (plainLanguage && plainLanguage.length < 30) addIssue(issues, "warning", "product_knowledge.product_short_plain_language", `${productPath}.plainLanguage`, `${name ?? "Product"} explanation is too short`);
+      const whyItMatters = asString(product.whyItMatters);
+      if (!whyItMatters) addIssue(issues, "error", "product_knowledge.product_missing_why", `${productPath}.whyItMatters`, `${name ?? "Product"} must explain why it matters`);
+      if (!asString(product.lastVerified)) addIssue(issues, "warning", "product_knowledge.product_missing_last_verified", `${productPath}.lastVerified`, `${name ?? "Product"} is missing lastVerified`);
+      const confidence = asString(product.confidence);
+      if (!confidence || !["high", "medium", "low"].includes(confidence)) addIssue(issues, "warning", "product_knowledge.product_invalid_confidence", `${productPath}.confidence`, `${name ?? "Product"} confidence must be high/medium/low`);
+
+      const evidence = asArray(product.evidence) as ProductEvidence[];
+      if (evidence.length === 0) addIssue(issues, "error", "product_knowledge.product_missing_evidence", `${productPath}.evidence`, `${name ?? "Product"} must have evidence`);
+      evidence.forEach((source, sourceIndex) => {
+        const evidencePath = `${productPath}.evidence[${sourceIndex}]`;
+        const sourceId = asString(source.sourceId);
+        if (!sourceId) addIssue(issues, "error", "product_knowledge.evidence_missing_source_id", `${evidencePath}.sourceId`, `${name ?? "Product"} evidence is missing sourceId`);
+        else if (!sourceIds.has(sourceId)) addIssue(issues, "error", "product_knowledge.evidence_unknown_source_id", `${evidencePath}.sourceId`, `${name ?? "Product"} evidence sourceId ${sourceId} is absent from knowledge-sources.json`);
+        if (!asString(source.claim)) addIssue(issues, "warning", "product_knowledge.evidence_missing_claim", `${evidencePath}.claim`, `${name ?? "Product"} evidence should state the supported claim`);
+        const url = asString(source.url);
+        if (url && !/^https?:\/\//.test(url)) addIssue(issues, "warning", "product_knowledge.evidence_invalid_url", `${evidencePath}.url`, `${name ?? "Product"} evidence URL is not http(s)`);
+      });
+    });
+  });
+
+  return productKnowledgeCount;
 }
 
 function main() {
@@ -220,7 +299,8 @@ function main() {
 
   const graph = collectIndustryGraph(industries, issues);
   validateCompaniesIndex(companies, graph.companyToTopics, issues);
-  validateSources(sources, issues);
+  const sourceIds = validateSources(sources, issues);
+  const productKnowledgeItems = validateProductKnowledge(sourceIds, issues);
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -229,6 +309,7 @@ function main() {
       companiesInGraph: graph.companyToTopics.size,
       companyRoles: graph.companyRoleCount,
       products: graph.productCount,
+      productKnowledgeItems,
       knowledgeSources: sources.length,
       errors: issues.filter((issue) => issue.severity === "error").length,
       warnings: issues.filter((issue) => issue.severity === "warning").length,
@@ -240,6 +321,7 @@ function main() {
 
   console.log(`Knowledge validation report written to ${path.relative(process.cwd(), REPORT_PATH)}`);
   console.log(`Topics: ${report.summary.topics}, companies: ${report.summary.companiesInGraph}, roles: ${report.summary.companyRoles}`);
+  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, sources: ${report.summary.knowledgeSources}`);
   console.log(`Errors: ${report.summary.errors}, warnings: ${report.summary.warnings}`);
 
   if (report.summary.errors > 0) {

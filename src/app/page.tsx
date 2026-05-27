@@ -16,6 +16,7 @@ import TradingViewChart from "./TradingViewChart";
 import RealtimeQuote from "./RealtimeQuote";
 import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketData";
 import { generateDailyAnalysis, type DailyAnalysis } from "@/lib/dailyAnalysis";
+import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "@/lib/productKnowledge";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
@@ -194,8 +195,6 @@ function stripLeadingStatusIcon(value?: string): string {
     .replace(/^[\s\uFFFD\uFE0F\u200D\u{1F300}-\u{1FAFF}]+/u, "")
     .trim();
 }
-
-type ProductNarrative = { name: string; description: string; whyItMatters?: string };
 
 function describeProduct(raw: string, context: { companyName: string; topicName: string; group: string }): ProductNarrative {
   const normalized = String(raw ?? "").trim();
@@ -1981,8 +1980,10 @@ function CompanyFullPageDetail({
   const [techScope, setTechScope] = useState<"1M" | "3M" | "6M" | "YTD" | "1Y" | "5Y">("1Y");
   const [maLines, setMaLines] = useState<{ ma5: boolean; ma10: boolean; ma20: boolean; ma60: boolean }>({ ma5: true, ma10: true, ma20: true, ma60: false });
   const [loadedDailyAnalysis, setLoadedDailyAnalysis] = useState<DailyAnalysis | null>(null);
+  const [productKnowledge, setProductKnowledge] = useState<CompanyProductKnowledge | null>(null);
   const fallbackDailyAnalysis = useMemo(() => generateDailyAnalysis(data), [data]);
   const resolvedDailyAnalysis = loadedDailyAnalysis?.code === data.code ? loadedDailyAnalysis : fallbackDailyAnalysis;
+  const resolvedProductKnowledge = productKnowledge?.code === data.code ? productKnowledge : null;
 
   useEffect(() => {
     let cancelled = false;
@@ -2001,6 +2002,24 @@ function CompanyFullPageDetail({
       cancelled = true;
     };
   }, [data.code, fallbackDailyAnalysis]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/data/product-knowledge/${data.code}.json`, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error("product knowledge not found");
+        return response.json() as Promise<CompanyProductKnowledge>;
+      })
+      .then((knowledge) => {
+        if (!cancelled && knowledge.code === data.code) setProductKnowledge(knowledge);
+      })
+      .catch(() => {
+        if (!cancelled) setProductKnowledge(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [data.code]);
 
   const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
   const marketPos = getMarketPosition(data.market_position);
@@ -2308,13 +2327,40 @@ function CompanyFullPageDetail({
                             <h4 className="text-sm font-bold text-white mb-3">📦 主要產品</h4>
                             <div className="space-y-3">
                               {topicAnalysis.products.map((p, i) => {
-                                const item = describeProduct(p, { companyName: data.name, topicName: role.topicName, group: role.group });
+                                const knowledgeItem = findProductKnowledgeItem(p, resolvedProductKnowledge, role.topic);
+                                const item = knowledgeItem
+                                  ? productKnowledgeToNarrative(knowledgeItem, role.topic)
+                                  : describeProduct(p, { companyName: data.name, topicName: role.topicName, group: role.group });
                                 return (
                                   <div key={i} className="rounded-xl border border-white/[0.04] bg-white/[0.015] p-4">
-                                    <p className="text-sm font-semibold text-white">{item.name}</p>
+                                    <div className="flex flex-wrap items-center gap-2">
+                                      <p className="text-sm font-semibold text-white">{item.name}</p>
+                                      {item.confidence && <span className="rounded-full bg-emerald-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-200">{item.confidence}</span>}
+                                      {item.lastVerified && <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-[10px] text-[var(--color-text-tertiary)]">驗證 {item.lastVerified}</span>}
+                                    </div>
                                     <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">{item.description}</p>
+                                    {item.topicFit && (
+                                      <p className="mt-2 text-xs leading-relaxed text-violet-200/80">題材角色：{item.topicFit}</p>
+                                    )}
                                     {item.whyItMatters && (
                                       <p className="mt-2 text-xs leading-relaxed text-cyan-200/80">為什麼重要：{item.whyItMatters}</p>
+                                    )}
+                                    {item.businessImpact && (
+                                      <p className="mt-2 text-xs leading-relaxed text-amber-100/80">營運影響：{item.businessImpact}</p>
+                                    )}
+                                    {item.sourceLabels && item.sourceLabels.length > 0 && (
+                                      <div className="mt-3 flex flex-wrap gap-2">
+                                        {item.sourceLabels.slice(0, 2).map((label, sourceIndex) => {
+                                          const url = item.sourceUrls?.[sourceIndex];
+                                          return url ? (
+                                            <a key={sourceIndex} href={url} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[11px] text-[var(--color-text-tertiary)] hover:text-white">
+                                              來源：{label} <ExternalIcon />
+                                            </a>
+                                          ) : (
+                                            <span key={sourceIndex} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[11px] text-[var(--color-text-tertiary)]">來源：{label}</span>
+                                          );
+                                        })}
+                                      </div>
                                     )}
                                   </div>
                                 );

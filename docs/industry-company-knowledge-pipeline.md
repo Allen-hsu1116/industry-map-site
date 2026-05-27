@@ -89,22 +89,34 @@ It is a company-level rollup containing:
 
 The current frontend helper can explain common product names like CoWoS or N2, but that is only a display fallback. The best long-term approach is to make product descriptions first-class sourced knowledge.
 
-Each product should eventually become an object instead of a string:
+Current slice:
+
+- `public/data/product-knowledge/2330.json` is the first evidence-backed product knowledge sample.
+- `src/lib/productKnowledge.ts` defines the reusable schema and lookup/normalization helper.
+- The company detail UI fetches `/data/product-knowledge/{code}.json`, renders sourced product narratives first, and only falls back to `describeProduct()` when no knowledge entry matches.
+- `npm run knowledge:validate` validates product knowledge shape and checks that each evidence `sourceId` exists in `knowledge-sources.json`.
+
+Each product should be an object instead of a string:
 
 ```json
 {
   "name": "CoWoS-S",
+  "aliases": ["CoWoS", "CoWoS-S + HBM3E"],
   "category": "advanced_packaging",
   "plainLanguage": "A 2.5D advanced packaging route using a silicon interposer to connect AI accelerators and HBM.",
   "whyItMatters": "It reduces the data-movement bottleneck between compute and memory, making it central to high-end AI GPU performance and supply.",
-  "topicFit": "Direct product/technology platform for AI advanced packaging.",
+  "topicFit": {
+    "cowos-advanced-packaging": "Direct product/technology platform for AI advanced packaging.",
+    "hbm": "Key integration path between AI accelerators and HBM."
+  },
+  "businessImpact": "CoWoS capacity and yield affect AI/HPC customer shipment timing and support TSMC's advanced packaging pricing power.",
   "evidence": [
     {
-      "sourceId": "tsmc-2025-annual-report",
-      "url": "https://...",
+      "sourceId": "tsmc-cowos-platform",
+      "url": "https://www.tsmc.com/english/dedicatedFoundry/technology/cowos",
       "publisher": "TSMC",
-      "publishedAt": "2026-03-xx",
-      "quote": "...",
+      "title": "CoWoS advanced packaging technology platform",
+      "retrievedAt": "2026-05-27",
       "claim": "TSMC identifies CoWoS as an advanced packaging platform for HPC/AI applications."
     }
   ],
