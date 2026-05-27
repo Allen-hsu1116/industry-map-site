@@ -188,6 +188,54 @@ function getRoleBadge(relevance: string) {
   return ROLE_BADGE_MAP[info.label] || ROLE_BADGE_MAP["相關"];
 }
 
+type CompanyRole = {
+  topic: string;
+  topicName: string;
+  topicDescription: string;
+  group: string;
+  role: string;
+  relevance: string;
+  analysis?: string;
+  products?: string[];
+  customers?: string[];
+  tech_focus?: string[];
+  swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] };
+};
+
+function relevanceScore(relevance: string): number {
+  const raw = String(relevance ?? "").trim();
+  const numeric = Number(raw);
+  if (Number.isFinite(numeric)) return numeric;
+  if (["極高", "high", "核心"].includes(raw)) return 95;
+  if (raw === "高") return 90;
+  if (["中", "medium"].includes(raw)) return 75;
+  if (raw === "低") return 60;
+  return 50;
+}
+
+function isDirectCompanyTopic(role: CompanyRole): boolean {
+  const score = relevanceScore(role.relevance);
+  const text = `${role.topicName} ${role.group} ${role.role}`;
+  if (score < 80) return false;
+
+  // 台積電這類龍頭容易被「只要題材要晶片/ASIC/封裝就沾上」污染。
+  // 只保留它直接提供產品/產能/技術平台的題材；把終端應用的間接受惠題材降噪。
+  if (role.topicName.includes("AI 伺服器") || role.topicName.includes("智慧機器人")) return false;
+  if (/(?:BBU|CXL|玻璃基板)/i.test(text)) return false;
+  if (/ASIC代工|邊緣AI晶圓代工|CXL封裝代工|玻璃基板封裝代工/.test(text)) return false;
+
+  return true;
+}
+
+function filterCompanyRoles(roles: CompanyRole[]): CompanyRole[] {
+  const unique = Array.from(new Map(roles.map((role) => [role.topic, role])).values());
+  const direct = unique.filter(isDirectCompanyTopic);
+  const base = direct.length > 0 ? direct : unique.filter((role) => relevanceScore(role.relevance) >= 80);
+  return base
+    .sort((a, b) => relevanceScore(b.relevance) - relevanceScore(a.relevance) || a.topicName.localeCompare(b.topicName, "zh-TW"))
+    .slice(0, 6);
+}
+
 function mapGroupNames(groups: Group[]): Group[] {
   const levelNames = ["上游原料與設備", "中游製造與組件", "下游系統與應用", "周邊與服務", "其他"];
   const named = groups.map((g, i) => ({ ...g, name: g.name || levelNames[i] || `群組 ${i + 1}` }));
@@ -356,15 +404,26 @@ function formatROCYear(year: string): string {
   return year;
 }
 
-/** Format revenue number for display: "1.1 兆" or "2654.3億" */
+/** Format MOPS income statement values. Unit: 千元. */
+function formatRevenueThousandsDisplay(num: number): string {
+  if (!Number.isFinite(num) || num === 0) return "-";
+  // 千元 → 元；display in 台幣億/兆
+  const ntd = num * 1000;
+  return formatRevenueNTDDisplay(ntd);
+}
+
+/** Format monthly revenue / market values. Unit: 元. */
+function formatRevenueNTDDisplay(num: number): string {
+  if (!Number.isFinite(num) || num === 0) return "-";
+  if (num >= 1e12) return `${(num / 1e12).toFixed(2).replace(/\.?0+$/, "")}兆`;
+  if (num >= 1e8) return `${(num / 1e8).toFixed(1).replace(/\.0$/, "")}億`;
+  if (num >= 1e4) return `${(num / 1e4).toFixed(0)}萬`;
+  return num.toLocaleString();
+}
+
 function formatRevenueDisplay(num: number): string {
-  if (num === 0) return "-";
-  // Input is in 千元 (thousands of NTD)
-  if (num >= 1e9) return `${(num / 1e9).toFixed(1).replace(/\.0$/, "")} 兆`;
-  if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 1000) return `${(num / 1000).toFixed(1).replace(/\.0$/, "")}億`;
-  return `${num.toFixed(0)}萬`;
+  // Backward-compatible default for income statement / quarterly data (千元).
+  return formatRevenueThousandsDisplay(num);
 }
 
 type TabId = "focus" | "topics" | "map" | "companies";
@@ -392,13 +451,11 @@ function formatRev(num: number): string {
   return num.toLocaleString();
 }
 function formatRevShort(num: number): string {
-  // Input is in 千元 (thousands of NTD)
-  // 1 億 = 100,000 千元, 1 兆 = 1,000,000,000 千元 (10^9)
-  if (num >= 1e9) return `${(num / 1e9).toFixed(2).replace(/\.?0+$/, "")}兆`;
-  if (num >= 100000) return `${(num / 100000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 10000) return `${(num / 10000).toFixed(1).replace(/\.0$/, "")}億`;
-  if (num >= 1000) return `${(num / 1000).toFixed(1).replace(/\.0$/, "")}億`;
-  return `${num.toFixed(0)}萬`;
+  return formatRevenueThousandsDisplay(num);
+}
+
+function formatRevShortNTD(num: number): string {
+  return formatRevenueNTDDisplay(num);
 }
 
 /* ─── Monthly Price Chart ─── */
@@ -444,7 +501,7 @@ function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
       <div className="bg-white/[0.02] rounded-xl p-4">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs text-[var(--color-text-tertiary)]">月營收趨勢</span>
-          <span className="text-lg font-bold text-white">{formatRevShort(data[0].revenue)}</span>
+          <span className="text-lg font-bold text-white">{formatRevShortNTD(data[0].revenue)}</span>
         </div>
         <div className="text-xs text-[var(--color-text-tertiary)] text-center py-4">📈 資料累積中，敬請期待完整走勢圖</div>
       </div>
@@ -452,7 +509,7 @@ function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
   }
   const chartData = data.map(d => ({
     month: formatTrendMonth(d.month),
-    revenue: d.revenue / 100000, // 千元 → 億
+    revenue: d.revenue / 100000000, // 元 → 億
     mom: d.mom,
     yoy: d.yoy,
   }));
@@ -460,7 +517,7 @@ function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {
     <div className="bg-white/[0.02] rounded-xl p-4">
       <div className="flex items-center justify-between mb-2">
         <span className="text-xs text-[var(--color-text-tertiary)]">月營收趨勢</span>
-        <span className="text-sm font-bold text-white">{formatRevShort(data[data.length - 1].revenue)}</span>
+        <span className="text-sm font-bold text-white">{formatRevShortNTD(data[data.length - 1].revenue)}</span>
       </div>
       <ResponsiveContainer width="100%" height={220}>
         <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
@@ -1108,7 +1165,9 @@ function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: Fi
               ))}
             </div>
           ) : (
-            <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 暫無重大訊息資料</div>
+            <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">
+              📋 尚未載入重大訊息資料；不代表公司沒有公告，請以公開資訊觀測站為準。
+            </div>
           )}
         </div>
       )}
@@ -1308,7 +1367,7 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
               <thead>
                 <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
                   <th className="px-3 py-2 text-left">月份</th>
-                  <th className="px-3 py-2 text-right">營收(億)</th>
+                  <th className="px-3 py-2 text-right">營收（元→億）</th>
                   <th className="px-3 py-2 text-right">MoM</th>
                   <th className="px-3 py-2 text-right">YoY</th>
                 </tr>
@@ -1317,7 +1376,7 @@ function RevenueAnalysisPanel({ data, revenueTab, onRevenueTabChange }: { data: 
                 {trends.monthly_revenue.slice().reverse().slice(0, 12).map((row, i) => (
                   <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                     <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{formatTrendMonth(row.month)}</td>
-                    <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueDisplay(row.revenue)}</td>
+                    <td className="px-3 py-1.5 text-right text-white font-medium">{formatRevenueNTDDisplay(row.revenue)}</td>
                     <td className={cn("px-3 py-1.5 text-right", row.mom >= 0 ? "text-rose-400" : "text-emerald-400")}>{formatPercentNum(row.mom)}</td>
                     <td className={cn("px-3 py-1.5 text-right", row.yoy >= 0 ? "text-rose-400" : "text-emerald-400")}>{formatPercentNum(row.yoy)}</td>
                   </tr>
@@ -1467,7 +1526,7 @@ function RevenueComposedChart({ data, mode }: { data: TrendMonthlyRevenue[] | Tr
   if (mode === "monthly") {
     const monthlyData = (data as TrendMonthlyRevenue[]).map(d => ({
       period: formatTrendMonth(d.month),
-      revenue: d.revenue / 100000, // 千元 → 億
+      revenue: d.revenue / 100000000, // 元 → 億
       mom: d.mom,
       yoy: d.yoy,
     }));
@@ -1821,7 +1880,7 @@ function CompanyFullPageDetail({
   onBack,
 }: {
   data: FinancialData;
-  roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] } }[] | null;
+  roles: CompanyRole[] | null;
   onBack: () => void;
 }) {
   const [detailTab, setDetailTab] = useState<CompanyDetailTab>("overview");
@@ -1980,8 +2039,18 @@ function CompanyFullPageDetail({
             <div className="space-y-6">
               {industryRoles.length > 0 ? (
                 <>
+                  <div className="rounded-2xl border border-cyan-400/10 bg-cyan-400/[0.04] p-5">
+                    <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                      <h4 className="text-sm font-bold text-white">產業定位總覽</h4>
+                      <span className="text-[11px] text-cyan-300">已過濾間接受惠題材 · {industryRoles.length} 個直接角色</span>
+                    </div>
+                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                      這裡先把公司在題材中的「直接產品/技術平台/供應鏈角色」統整後再呈現；下方題材卡只保留可點擊的核心歸屬，避免把所有終端應用題材都算成公司本業。
+                    </p>
+                  </div>
+
                   {/* Industry sub-tabs */}
-                  <div className="flex items-center gap-2 overflow-x-auto pb-2">
+                  <div className="grid gap-2 pb-2 sm:grid-cols-2 lg:grid-cols-3">
                     {industryRoles.map((role, i) => {
                       const topicShort = role.topicName.includes("｜") ? role.topicName.split("｜")[1] || role.topicName : role.topicName;
                       const cat = getCategory(role.topicName);
@@ -1990,7 +2059,7 @@ function CompanyFullPageDetail({
                         <button
                           key={i}
                           className={cn(
-                            "px-4 py-2.5 rounded-xl text-sm font-medium whitespace-nowrap transition-all border",
+                            "px-4 py-2.5 rounded-xl text-sm font-medium text-left transition-all border",
                             industrySubTab === i
                               ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/40"
                               : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)] hover:border-[var(--color-border-hover)]"
@@ -2043,14 +2112,14 @@ function CompanyFullPageDetail({
 
                     return (
                       <div className="space-y-6">
-                        {/* AI 產業分析 Summary */}
+                        {/* 產業統整 Summary */}
                         <div className="bg-gradient-to-br from-indigo-500/[0.08] to-purple-600/[0.06] border border-indigo-500/20 rounded-2xl p-6">
                           <div className="flex items-center gap-2.5 mb-4">
                             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
                               <AiIcon />
                             </div>
-                            <h4 className="text-sm font-bold text-white">AI 智能摘要</h4>
-                            <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">Beta</Badge>
+                            <h4 className="text-sm font-bold text-white">題材角色統整摘要</h4>
+                            <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">來源整合</Badge>
                           </div>
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                             {topicAnalysis.ai_summary || analysisText}
@@ -2362,26 +2431,26 @@ function CompanyFullPageDetail({
                 );
               })()}
 
-              {/* ─── 融資融券（圖+表+資券比） ─── */}
+              {/* ─── 融資融券（圖+表+券資比） ─── */}
               {data.margin_history && data.margin_history.length > 0 && (() => {
                 const allMargin = data.margin_history;
                 const recent30 = allMargin.slice(-30);
                 const last10 = allMargin.slice(-10);
                 const chartData = recent30.map(d => ({
                   date: d.date.slice(5),
-                  shortMarginRatio: d.short_balance > 0 ? Number((d.margin_balance / d.short_balance).toFixed(2)) : null,
+                  shortMarginRatio: d.margin_balance > 0 ? Number(((d.short_balance / d.margin_balance) * 100).toFixed(2)) : null,
                   marginBuy: d.margin_buy,
                   marginSell: d.margin_sell,
                 }));
                 const latest = allMargin[allMargin.length - 1];
-                const ratio = latest && latest.short_balance > 0 ? (latest.margin_balance / latest.short_balance).toFixed(2) : "-";
+                const ratio = latest && latest.margin_balance > 0 ? `${((latest.short_balance / latest.margin_balance) * 100).toFixed(2)}%` : "-";
                 return (
                   <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                     <div className="flex items-center justify-between mb-4">
                       <h4 className="text-sm font-bold text-white">💰 融資融券</h4>
                       {latest && (
                         <span className="text-xs px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">
-                          資券比：<span className="font-bold">{ratio}</span>
+                          券資比：<span className="font-bold">{ratio}</span>
                         </span>
                       )}
                     </div>
@@ -2390,18 +2459,18 @@ function CompanyFullPageDetail({
                         <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
                           <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
                           <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
-                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => `${v}x`} domain={[0, 'auto']} />
+                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => `${v}%`} domain={[0, 'auto']} />
                           <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} />
                           <Tooltip {...darkTooltipProps} formatter={(v: unknown, name: unknown) => {
-                            const labels: Record<string,string> = { shortMarginRatio: "資券比", marginBuy: "融資買", marginSell: "融資賣" };
+                            const labels: Record<string,string> = { shortMarginRatio: "券資比", marginBuy: "融資買", marginSell: "融資賣" };
                             const value = Number(v);
-                            return [String(name) === "shortMarginRatio" ? `${value.toFixed(2)}x` : value.toLocaleString(), labels[String(name)] || String(name)];
+                            return [String(name) === "shortMarginRatio" ? `${value.toFixed(2)}%` : value.toLocaleString(), labels[String(name)] || String(name)];
                           }} />
                           <Legend formatter={(v: string) => {
-                            const labels: Record<string,string> = { shortMarginRatio: "資券比", marginBuy: "融資買", marginSell: "融資賣" };
+                            const labels: Record<string,string> = { shortMarginRatio: "券資比", marginBuy: "融資買", marginSell: "融資賣" };
                             return labels[v] || v;
                           }} />
-                          <Line type="monotone" dataKey="shortMarginRatio" yAxisId="left" stroke="#fbbf24" strokeWidth={2.5} dot={{ r: 2 }} name="資券比" connectNulls />
+                          <Line type="monotone" dataKey="shortMarginRatio" yAxisId="left" stroke="#fbbf24" strokeWidth={2.5} dot={{ r: 2 }} name="券資比" connectNulls />
                           <Bar dataKey="marginBuy" yAxisId="right" fill="rgba(34,197,94,0.45)" name="融資買" />
                           <Bar dataKey="marginSell" yAxisId="right" fill="rgba(239,68,68,0.45)" name="融資賣" />
                         </ComposedChart>
@@ -2415,14 +2484,14 @@ function CompanyFullPageDetail({
                             <th className="px-2 py-1.5 text-left">日期</th>
                             <th className="px-2 py-1.5 text-right">融資餘額</th>
                             <th className="px-2 py-1.5 text-right">融券餘額</th>
-                            <th className="px-2 py-1.5 text-right">資券比</th>
+                            <th className="px-2 py-1.5 text-right">券資比</th>
                             <th className="px-2 py-1.5 text-right">融資買</th>
                             <th className="px-2 py-1.5 text-right">融資賣</th>
                           </tr>
                         </thead>
                         <tbody className="max-h-48 overflow-y-auto">
                           {last10.map((d, i) => {
-                            const r = d.short_balance > 0 ? (d.margin_balance / d.short_balance).toFixed(2) : "-";
+                            const r = d.margin_balance > 0 ? `${((d.short_balance / d.margin_balance) * 100).toFixed(2)}%` : "-";
                             return (
                               <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
                                 <td className="px-2 py-1 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
@@ -2818,16 +2887,18 @@ export default function Home() {
     if (!selectedCompanyCode) return null;
     const comp = companies.find((c) => c.code === selectedCompanyCode);
     if (!comp) return null;
-    const relatedTopics = topics.filter((t) => comp.topics.includes(t.slug));
-    const roles: { topic: string; topicName: string; topicDescription: string; group: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] } }[] = [];
-    for (const t of relatedTopics) {
+    const candidateTopics = topics.filter((t) => comp.topics.includes(t.slug));
+    const roles: CompanyRole[] = [];
+    for (const t of candidateTopics) {
       for (const g of t.groups) {
         for (const c of g.companies) {
           if (c.code === comp.code) { roles.push({ topic: t.slug, topicName: t.name, topicDescription: t.description || "", group: g.name, role: c.role, relevance: c.relevance, analysis: c.analysis, products: c.products, customers: c.customers, tech_focus: c.tech_focus, swot: c.swot }); }
         }
       }
     }
-    return { ...comp, relatedTopics, roles };
+    const filteredRoles = filterCompanyRoles(roles);
+    const relatedTopics = candidateTopics.filter((t) => filteredRoles.some((role) => role.topic === t.slug));
+    return { ...comp, topic_count: filteredRoles.length, topics: filteredRoles.map((role) => role.topic), relatedTopics, roles: filteredRoles };
   }, [selectedCompanyCode, companies, topics]);
 
   // Fetch financial data when a company is selected
