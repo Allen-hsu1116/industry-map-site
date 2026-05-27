@@ -22,6 +22,7 @@ interface CompanyInGroup { code: string; name: string; role: string; relevance: 
 interface Group { name: string; level?: "upstream" | "midstream" | "downstream" | "peripheral"; companies: CompanyInGroup[]; }
 interface TopicData { slug: string; name: string; description: string; total: number; groups: Group[]; }
 interface CompanyData { code: string; name: string; topic_count: number; topics: string[]; }
+interface MajorNewsItem { date: string; subject: string; source?: string; }
 
 interface FinancialProfile { industry: string; chairman: string; established: string; listed: string; capital: string; website: string; address?: string; }
 interface FinancialValuation { date: string; pe: string; pb: string; dividendYield: string; }
@@ -105,7 +106,7 @@ interface FinancialData {
     pb: number;
     dividend_yield: number;
   }[];
-  major_news?: { date: string; subject: string }[];
+  major_news?: MajorNewsItem[];
   industry_analysis?: Record<string, {
     ai_summary?: string;
     market_position?: string;
@@ -1150,25 +1151,81 @@ function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: Fi
       )}
 
       {overviewSubTab === "news" && (
-        <div className="bg-white/[0.02] border border-white/[0.04] rounded-2xl p-6">
-          <h4 className="text-sm font-bold text-white mb-4">📰 重大訊息公告</h4>
-          <div className="text-xs text-[var(--color-text-tertiary)] mb-4">資料來源：公開資訊觀測站 (MOPS)</div>
-          {data.major_news && data.major_news.length > 0 ? (
-            <div className="space-y-3">
-              {data.major_news.slice(0, 15).map((news, i) => (
-                <div key={i} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
-                  <div className="flex items-start gap-3">
-                    <div className="text-xs text-[var(--color-text-tertiary)] shrink-0 pt-0.5 font-mono">{news.date}</div>
-                    <div className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{news.subject}</div>
-                  </div>
-                </div>
-              ))}
+        <DynamicMajorNewsPanel code={data.code} initialMajorNews={data.major_news} />
+      )}
+    </div>
+  );
+}
+
+/* ─── Major News Panel (dynamic MOPS/TWSE fetch with snapshot fallback) ─── */
+function DynamicMajorNewsPanel({ code, initialMajorNews }: { code: string; initialMajorNews?: MajorNewsItem[] }) {
+  const [majorNews, setMajorNews] = useState<MajorNewsItem[]>(initialMajorNews ?? []);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [source, setSource] = useState(initialMajorNews && initialMajorNews.length > 0 ? "local snapshot" : "");
+  const [fetchedAt, setFetchedAt] = useState("");
+
+  useEffect(() => {
+    if (!code) return;
+    const controller = new AbortController();
+    const timer = window.setTimeout(() => {
+      setLoading(true);
+      setError("");
+      fetch(`/api/major-news?symbol=${encodeURIComponent(code)}`, { signal: controller.signal, cache: "no-store" })
+        .then(r => {
+          if (!r.ok) throw new Error("major-news request failed");
+          return r.json();
+        })
+        .then(data => {
+          const rows = Array.isArray(data.majorNews) ? data.majorNews : [];
+          setMajorNews(rows.length > 0 ? rows : (initialMajorNews ?? []));
+          setSource(data.source || (rows.length > 0 ? "TWSE OpenAPI" : "local snapshot"));
+          setFetchedAt(data.fetchedAt || "");
+          setLoading(false);
+        })
+        .catch((err: unknown) => {
+          if ((err as { name?: string }).name === "AbortError") return;
+          setError("即時重大訊息載入失敗，已顯示本地快照");
+          setMajorNews(initialMajorNews ?? []);
+          setSource(initialMajorNews && initialMajorNews.length > 0 ? "local snapshot" : "");
+          setLoading(false);
+        });
+    }, 0);
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [code, initialMajorNews]);
+
+  return (
+    <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
+      <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <h4 className="text-sm font-bold text-white">📋 重大訊息公告</h4>
+        <div className="text-xs text-[var(--color-text-tertiary)]">
+          {loading ? "即時查詢公開資訊觀測站中..." : `資料來源：${source || "公開資訊觀測站 / 本地快照"}`}
+          {fetchedAt && <span className="ml-2">抓取 {new Date(fetchedAt).toLocaleTimeString("zh-TW", { hour12: false })}</span>}
+        </div>
+      </div>
+      {error && <div className="mb-3 rounded-lg border border-amber-400/20 bg-amber-400/[0.06] px-3 py-2 text-xs text-amber-200">{error}</div>}
+      {loading && majorNews.length === 0 ? (
+        <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">
+          <div className="animate-pulse">⏳ 載入重大訊息中...</div>
+        </div>
+      ) : majorNews.length > 0 ? (
+        <div className="space-y-3">
+          {majorNews.slice(0, 15).map((n, i) => (
+            <div key={`${n.date}-${i}`} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
+              <div className="flex items-start gap-3">
+                <div className="text-xs text-[var(--color-text-tertiary)] shrink-0 pt-0.5 font-mono">{n.date}</div>
+                <div className="flex-1 text-sm text-[var(--color-text-secondary)] leading-relaxed">{n.subject}</div>
+                {n.source && <div className="hidden sm:block text-[10px] text-[var(--color-text-tertiary)] rounded bg-white/[0.05] px-1.5 py-0.5">{n.source}</div>}
+              </div>
             </div>
-          ) : (
-            <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">
-              📋 尚未載入重大訊息資料；不代表公司沒有公告，請以公開資訊觀測站為準。
-            </div>
-          )}
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">
+          📋 尚未載入重大訊息資料；不代表公司沒有公告，請以公開資訊觀測站為準。
         </div>
       )}
     </div>
@@ -1176,7 +1233,7 @@ function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: Fi
 }
 
 /* ─── News Tab Content (dynamic) ─── */
-function NewsTabContent({ code, name, majorNews }: { code: string; name: string; majorNews?: { date: string; subject: string }[] }) {
+function NewsTabContent({ code, name, majorNews }: { code: string; name: string; majorNews?: MajorNewsItem[] }) {
   const [news, setNews] = useState<{ title: string; link: string; source: string; date: string }[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -1238,25 +1295,7 @@ function NewsTabContent({ code, name, majorNews }: { code: string; name: string;
         )}
       </div>
 
-      {/* 重大訊息公告 */}
-      <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-        <h4 className="text-sm font-bold text-white mb-4">📋 重大訊息公告</h4>
-        <div className="text-xs text-[var(--color-text-tertiary)] mb-4">資料來源：公開資訊觀測站 (MOPS)</div>
-        {majorNews && majorNews.length > 0 ? (
-          <div className="space-y-3">
-            {majorNews.slice(0, 15).map((n, i) => (
-              <div key={i} className="bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-white/[0.08] transition-all">
-                <div className="flex items-start gap-3">
-                  <div className="text-xs text-[var(--color-text-tertiary)] shrink-0 pt-0.5 font-mono">{n.date}</div>
-                  <div className="text-sm text-[var(--color-text-secondary)] leading-relaxed">{n.subject}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 暫無重大訊息資料</div>
-        )}
-      </div>
+      <DynamicMajorNewsPanel code={code} initialMajorNews={majorNews} />
     </div>
   );
 }
@@ -2715,6 +2754,36 @@ function CompanyFullPageDetail({
                 })()}
               </div>
 
+              {/* Technical Indicators */}
+              {(() => {
+                const technical = computeTechnicalSummary(trends?.daily_prices);
+                const fmtNum = (value: number | undefined, digits = 2) => value == null || value === 0 ? "-" : value.toFixed(digits);
+                const indicatorCards = [
+                  { label: "趨勢判讀", value: technical.trendLabel, sub: technical.aboveMa20 === null ? "MA20 資料不足" : technical.aboveMa20 ? "站上 MA20" : "跌破 MA20", color: technical.aboveMa20 ? "text-rose-300" : technical.aboveMa20 === false ? "text-emerald-300" : "text-white" },
+                  { label: "最新收盤", value: fmtNum(technical.latestClose), sub: `${technical.change >= 0 ? "+" : ""}${technical.change.toFixed(2)} / ${technical.changePercent.toFixed(2)}%`, color: technical.change >= 0 ? "text-rose-300" : "text-emerald-300" },
+                  { label: "MA5 / MA10", value: `${fmtNum(technical.ma5)} / ${fmtNum(technical.ma10)}`, sub: "短期均線", color: "text-indigo-300" },
+                  { label: "MA20 / MA60", value: `${fmtNum(technical.ma20)} / ${fmtNum(technical.ma60)}`, sub: "中期均線", color: "text-amber-300" },
+                  { label: "成交量", value: technical.volume ? `${(technical.volume / 1000).toFixed(0)}張` : "-", sub: `20日均量 ${(technical.avgVolume20 / 1000).toFixed(0)}張`, color: "text-cyan-300" },
+                  { label: "量比", value: technical.volumeRatio20 ? technical.volumeRatio20.toFixed(2) : "-", sub: "相對 20 日均量", color: technical.volumeRatio20 >= 1.5 ? "text-rose-300" : "text-white" },
+                  { label: "20日高 / 低", value: `${fmtNum(technical.high20)} / ${fmtNum(technical.low20)}`, sub: "區間位置", color: "text-purple-300" },
+                  { label: "估值", value: `PE ${data.valuation.pe || "-"}`, sub: `PB ${data.valuation.pb || "-"} / 殖利率 ${data.valuation.dividendYield || "-"}%`, color: "text-white" },
+                ];
+                return (
+                  <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
+                    <h4 className="text-sm font-bold text-white mb-4">📈 技術指標數值</h4>
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                      {indicatorCards.map((item) => (
+                        <div key={item.label} className="bg-white/[0.04] rounded-xl p-4">
+                          <p className="text-xs text-[var(--color-text-tertiary)] mb-1">{item.label}</p>
+                          <p className={`text-lg font-bold tabular-nums ${item.color}`}>{item.value}</p>
+                          <p className="text-xs text-[var(--color-text-tertiary)] mt-1">{item.sub}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })()}
+
               {resolvedDailyAnalysis && (
                 <BatchAnalysisPanel
                   title="📊 技術分析判讀"
@@ -2753,35 +2822,6 @@ function CompanyFullPageDetail({
                 </div>
               )}
 
-              {/* Technical Indicators */}
-              {(() => {
-                const technical = computeTechnicalSummary(trends?.daily_prices);
-                const fmtNum = (value: number | undefined, digits = 2) => value == null || value === 0 ? "-" : value.toFixed(digits);
-                const indicatorCards = [
-                  { label: "趨勢判讀", value: technical.trendLabel, sub: technical.aboveMa20 === null ? "MA20 資料不足" : technical.aboveMa20 ? "站上 MA20" : "跌破 MA20", color: technical.aboveMa20 ? "text-rose-300" : technical.aboveMa20 === false ? "text-emerald-300" : "text-white" },
-                  { label: "最新收盤", value: fmtNum(technical.latestClose), sub: `${technical.change >= 0 ? "+" : ""}${technical.change.toFixed(2)} / ${technical.changePercent.toFixed(2)}%`, color: technical.change >= 0 ? "text-rose-300" : "text-emerald-300" },
-                  { label: "MA5 / MA10", value: `${fmtNum(technical.ma5)} / ${fmtNum(technical.ma10)}`, sub: "短期均線", color: "text-indigo-300" },
-                  { label: "MA20 / MA60", value: `${fmtNum(technical.ma20)} / ${fmtNum(technical.ma60)}`, sub: "中期均線", color: "text-amber-300" },
-                  { label: "成交量", value: technical.volume ? `${(technical.volume / 1000).toFixed(0)}張` : "-", sub: `20日均量 ${(technical.avgVolume20 / 1000).toFixed(0)}張`, color: "text-cyan-300" },
-                  { label: "量比", value: technical.volumeRatio20 ? technical.volumeRatio20.toFixed(2) : "-", sub: "相對 20 日均量", color: technical.volumeRatio20 >= 1.5 ? "text-rose-300" : "text-white" },
-                  { label: "20日高 / 低", value: `${fmtNum(technical.high20)} / ${fmtNum(technical.low20)}`, sub: "區間位置", color: "text-purple-300" },
-                  { label: "估值", value: `PE ${data.valuation.pe || "-"}`, sub: `PB ${data.valuation.pb || "-"} / 殖利率 ${data.valuation.dividendYield || "-"}%`, color: "text-white" },
-                ];
-                return (
-                  <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
-                    <h4 className="text-sm font-bold text-white mb-4">📈 技術指標數值</h4>
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                      {indicatorCards.map((item) => (
-                        <div key={item.label} className="bg-white/[0.04] rounded-xl p-4">
-                          <p className="text-xs text-[var(--color-text-tertiary)] mb-1">{item.label}</p>
-                          <p className={`text-lg font-bold tabular-nums ${item.color}`}>{item.value}</p>
-                          <p className="text-xs text-[var(--color-text-tertiary)] mt-1">{item.sub}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })()}
             </div>
           )}
 
