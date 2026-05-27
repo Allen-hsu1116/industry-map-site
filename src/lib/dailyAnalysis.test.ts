@@ -73,6 +73,102 @@ test("generateDailyAnalysis summarizes bullish technical and accumulation chip s
   assert.ok(analysis.nextSession.triggerRules.length >= 3);
 });
 
+test("generateDailyAnalysis prefers V2 topic roles, canonical topics, and evidence-backed SWOT", () => {
+  const analysis = generateDailyAnalysis({
+    code: "2308",
+    name: "台達電",
+    trends: { daily_prices: makePrices(30) },
+    institutional_history: Array.from({ length: 5 }, (_, index) => ({
+      date: `2026-05-${String(index + 1).padStart(2, "0")}`,
+      foreign_net: 0,
+      investment_trust_net: 0,
+      dealer_net: 0,
+      total_net: 0,
+    })),
+    margin_history: [],
+    products: ["電源供應器"],
+    industry_analysis: {
+      "ai-server": {
+        market_position: "legacy high",
+        relevance: "high",
+        products: ["legacy product"],
+        swot: {
+          strengths: ["legacy strength"],
+          weaknesses: ["legacy weakness"],
+          opportunities: ["legacy opportunity"],
+          threats: ["legacy threat"],
+        },
+      },
+    },
+    companyTopicRoles: {
+      schemaVersion: 1,
+      companyCode: "2308",
+      companyName: "台達電",
+      updatedAt: "2026-05-28",
+      roles: [{
+        topicId: "ai-server-power",
+        topicName: "AI 伺服器電源",
+        topicType: "supply_chain_segment",
+        directness: "direct_enabler",
+        supplyChainStage: "power",
+        roleType: "power supplier",
+        roleSummary: "提供 AI 伺服器所需高功率電源與電源管理方案。",
+        products: ["AI 伺服器電源供應器"],
+        evidence: [{ sourceId: "delta-2025-ar", publisher: "Delta", title: "Annual Report", url: "https://example.com", claim: "power" }],
+        confidence: "high",
+        lastVerified: "2026-05-28",
+        status: "verified",
+      }],
+    },
+    companySwot: {
+      schemaVersion: 1,
+      companyCode: "2308",
+      companyName: "台達電",
+      updatedAt: "2026-05-28",
+      items: [{
+        id: "2308-o-ai-power-demand",
+        category: "opportunity",
+        statement: "AI 伺服器功耗提升推升高效率電源供應器需求。",
+        rationale: "高功率 GPU 伺服器需要更高效率與更高瓦數的電源架構。",
+        timeHorizon: "structural",
+        relatedTopicIds: ["ai-server"],
+        evidence: [{ sourceId: "delta-2025-ar", publisher: "Delta", title: "Annual Report", url: "https://example.com", claim: "AI power demand" }],
+        confidence: "high",
+        lastVerified: "2026-05-28",
+        status: "verified",
+      }],
+    },
+    canonicalTopics: {
+      schemaVersion: 1,
+      updatedAt: "2026-05-28",
+      topicDefinition: { rule: "test", notTopic: [] },
+      topics: [{
+        id: "ai-server",
+        name: "AI 伺服器",
+        type: "theme",
+        status: "active",
+        definition: "AI server topic",
+        whyItMatters: "AI server demand",
+        aliases: [],
+        legacyTopicIds: ["ai-server-power"],
+        include: [],
+        exclude: [],
+        activationSignals: ["CSP capex", "電源規格升級"],
+        evidence: [],
+        confidence: "medium",
+        lastVerified: "2026-05-28",
+      }],
+    },
+  }, new Date("2026-05-31T00:00:00.000Z"));
+
+  assert.equal(analysis.industry.label, "核心題材受惠");
+  assert.match(analysis.industry.summary, /V2 角色/);
+  assert.ok(analysis.industry.signals.some((signal) => signal.includes("V2 題材角色：AI 伺服器")));
+  assert.ok(analysis.industry.watch.some((item) => item.includes("V2 O：AI 伺服器功耗提升")));
+  assert.equal(analysis.canonicalKnowledge.topicRoles[0].canonicalTopicId, "ai-server");
+  assert.equal(analysis.canonicalKnowledge.swot[0].id, "2308-o-ai-power-demand");
+});
+
 test("generateDailyAnalysis returns insufficient labels when data is sparse", () => {
   const analysis = generateDailyAnalysis({
     code: "0000",

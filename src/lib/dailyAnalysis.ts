@@ -1,4 +1,7 @@
 import { buildCompanyKnowledge, type CompanyKnowledge, type CompanyKnowledgeInput } from "./companyKnowledge";
+import { directnessLabel, directnessToRelevance, type CompanyTopicRolesKnowledge, type CompanyTopicRoleItem } from "./companyTopicRoles";
+import { groupCompanySwot, type CompanySwotItem, type CompanySwotKnowledge } from "./companySwot";
+import type { CanonicalTopic, CanonicalTopicsFile } from "./canonicalTopics";
 import { computeTechnicalSummary, safeFloat, type DailyPrice } from "./marketData";
 
 export interface InstitutionalFlowPoint {
@@ -28,6 +31,36 @@ export interface AnalysisInput extends CompanyKnowledgeInput {
   monthly_revenue?: { latestMonth?: string; month?: string; yoy?: string | number; mom?: string | number };
   institutional_history?: InstitutionalFlowPoint[];
   margin_history?: MarginPoint[];
+  companyTopicRoles?: CompanyTopicRolesKnowledge | null;
+  companySwot?: CompanySwotKnowledge | null;
+  canonicalTopics?: CanonicalTopicsFile | null;
+}
+
+export interface DailyCanonicalKnowledge {
+  topicRoles: Array<{
+    topicId: string;
+    topicName: string;
+    canonicalTopicId?: string;
+    canonicalTopicName?: string;
+    directness: string;
+    directnessLabel: string;
+    confidence: string;
+    roleSummary: string;
+  }>;
+  swot: Array<{
+    id: string;
+    category: string;
+    statement: string;
+    confidence: string;
+    relatedTopicIds: string[];
+  }>;
+  topics: Array<{
+    id: string;
+    name: string;
+    type: string;
+    status: string;
+    activationSignals: string[];
+  }>;
 }
 
 export interface DailyAnalysis {
@@ -65,6 +98,7 @@ export interface DailyAnalysis {
     watch: string[];
   };
   knowledge: CompanyKnowledge;
+  canonicalKnowledge: DailyCanonicalKnowledge;
   nextSession: {
     focus: string[];
     triggerRules: string[];
@@ -95,6 +129,81 @@ function fmtShares(rawShares: number): string {
 
 function latestDate(data: { date: string }[] | undefined): string | undefined {
   return data?.filter((row) => row.date).sort((a, b) => a.date.localeCompare(b.date)).at(-1)?.date;
+}
+
+const directnessRank: Record<string, number> = {
+  core: 0,
+  direct_enabler: 1,
+  supplier: 2,
+  customer_or_channel: 3,
+  indirect: 4,
+  rejected: 5,
+};
+
+const topicStatusRank: Record<string, number> = {
+  active: 0,
+  watchlist: 1,
+  legacy_candidate: 2,
+  deprecated: 3,
+  rejected: 4,
+};
+
+function topicForRole(role: CompanyTopicRoleItem, canonicalTopics: CanonicalTopicsFile | null | undefined): CanonicalTopic | undefined {
+  return canonicalTopics?.topics.find((topic) => topic.id === role.topicId || topic.legacyTopicIds.includes(role.topicId));
+}
+
+function roleSortKey(role: CompanyTopicRoleItem, canonicalTopics: CanonicalTopicsFile | null | undefined): string {
+  const topic = topicForRole(role, canonicalTopics);
+  const mappedRank = topic ? (topicStatusRank[topic.status] ?? 9) : 9;
+  const directness = directnessRank[role.directness] ?? 99;
+  return `${mappedRank}:${directness}:${role.topicId}`;
+}
+
+function buildDailyCanonicalKnowledge(input: AnalysisInput): DailyCanonicalKnowledge {
+  const roles = [...(input.companyTopicRoles?.roles ?? [])]
+    .filter((role) => role.status !== "rejected" && role.directness !== "rejected")
+    .sort((a, b) => roleSortKey(a, input.canonicalTopics).localeCompare(roleSortKey(b, input.canonicalTopics)));
+  const roleTopicIds = new Set(roles.flatMap((role) => [role.topicId, topicForRole(role, input.canonicalTopics)?.id].filter((item): item is string => Boolean(item))));
+  const groupedSwot = groupCompanySwot(input.companySwot);
+  const swotItems = [...groupedSwot.strengths, ...groupedSwot.weaknesses, ...groupedSwot.opportunities, ...groupedSwot.threats]
+    .filter((item) => item.status !== "rejected")
+    .filter((item) => item.relatedTopicIds.length === 0 || item.relatedTopicIds.some((topicId) => roleTopicIds.has(topicId)))
+    .sort((a, b) => `${a.category}:${a.id}`.localeCompare(`${b.category}:${b.id}`));
+  const topicsById = new Map<string, CanonicalTopic>();
+  for (const role of roles) {
+    const topic = topicForRole(role, input.canonicalTopics);
+    if (topic) topicsById.set(topic.id, topic);
+  }
+
+  return {
+    topicRoles: roles.map((role) => {
+      const topic = topicForRole(role, input.canonicalTopics);
+      return {
+        topicId: role.topicId,
+        topicName: role.topicName,
+        canonicalTopicId: topic?.id,
+        canonicalTopicName: topic?.name,
+        directness: role.directness,
+        directnessLabel: directnessLabel(role.directness),
+        confidence: role.confidence,
+        roleSummary: role.roleSummary,
+      };
+    }),
+    swot: swotItems.map((item: CompanySwotItem) => ({
+      id: item.id,
+      category: item.category,
+      statement: item.statement,
+      confidence: item.confidence,
+      relatedTopicIds: item.relatedTopicIds,
+    })),
+    topics: Array.from(topicsById.values()).map((topic) => ({
+      id: topic.id,
+      name: topic.name,
+      type: topic.type,
+      status: topic.status,
+      activationSignals: topic.activationSignals,
+    })),
+  };
 }
 
 export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): DailyAnalysis {
@@ -246,25 +355,41 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     "三大法人連 3 日同向買/賣超：提高籌碼分數權重",
   ];
 
+  const canonicalKnowledge = buildDailyCanonicalKnowledge(input);
+  const primaryCanonicalRole = canonicalKnowledge.topicRoles[0];
   const primaryRole = knowledge.topicRoles[0];
+  const primaryRoleRelevance = primaryCanonicalRole ? directnessToRelevance(primaryCanonicalRole.directness as CompanyTopicRoleItem["directness"]) : primaryRole?.relevance;
   const industrySignals = [
-    ...(primaryRole ? [`題材角色：${primaryRole.topicId} · ${primaryRole.marketPosition ?? primaryRole.relevance}`] : []),
+    ...(primaryCanonicalRole ? [`V2 題材角色：${primaryCanonicalRole.canonicalTopicName ?? primaryCanonicalRole.topicName} · ${primaryCanonicalRole.directnessLabel} · ${primaryCanonicalRole.confidence}`] : []),
+    ...(!primaryCanonicalRole && primaryRole ? [`題材角色：${primaryRole.topicId} · ${primaryRole.marketPosition ?? primaryRole.relevance}`] : []),
+    ...canonicalKnowledge.topicRoles.slice(1, 3).map((role) => `相關題材：${role.canonicalTopicName ?? role.topicName} · ${role.directnessLabel}`),
     ...knowledge.products.slice(0, 3).map((item) => `主要產品：${item}`),
     ...knowledge.finmindSignals.slice(0, 2),
   ];
+  const canonicalWeaknesses = canonicalKnowledge.swot.filter((item) => item.category === "weakness").slice(0, 2).map((item) => `V2 W：${item.statement}`);
+  const canonicalThreats = canonicalKnowledge.swot.filter((item) => item.category === "threat").slice(0, 2).map((item) => `V2 T：${item.statement}`);
+  const canonicalOpportunities = canonicalKnowledge.swot.filter((item) => item.category === "opportunity").slice(0, 2).map((item) => `V2 O：${item.statement}`);
   const industryRisks = [
-    ...knowledge.swot.weaknesses.slice(0, 2).map((item) => `W：${item}`),
-    ...knowledge.swot.threats.slice(0, 2).map((item) => `T：${item}`),
+    ...canonicalWeaknesses,
+    ...canonicalThreats,
+    ...(canonicalWeaknesses.length + canonicalThreats.length === 0 ? [
+      ...knowledge.swot.weaknesses.slice(0, 2).map((item) => `W：${item}`),
+      ...knowledge.swot.threats.slice(0, 2).map((item) => `T：${item}`),
+    ] : []),
   ];
   const industryWatch = [
-    ...knowledge.swot.opportunities.slice(0, 2).map((item) => `O：${item}`),
-    knowledge.swot.lastVerified ? `知識庫最後驗證：${knowledge.swot.lastVerified}（${knowledge.swot.freshness}）` : "知識庫尚未建立驗證日期",
+    ...canonicalOpportunities,
+    ...canonicalKnowledge.topics.slice(0, 2).flatMap((topic) => topic.activationSignals.slice(0, 2).map((signal) => `追蹤 ${topic.name}：${signal}`)),
+    ...(canonicalOpportunities.length === 0 ? knowledge.swot.opportunities.slice(0, 2).map((item) => `O：${item}`) : []),
+    input.companySwot?.updatedAt ? `V2 SWOT 最後驗證：${input.companySwot.updatedAt}` : knowledge.swot.lastVerified ? `知識庫最後驗證：${knowledge.swot.lastVerified}（${knowledge.swot.freshness}）` : "知識庫尚未建立驗證日期",
     `資料來源：${knowledge.dataSources.slice(0, 3).join("、")}`,
   ];
-  const industryLabel = primaryRole?.relevance === "high" ? "核心題材受惠" : primaryRole?.relevance === "medium" ? "題材關聯明確" : primaryRole ? "題材關聯待驗證" : "產業資料待補";
-  const industrySummary = primaryRole
-    ? `${input.name} 在 ${primaryRole.topicId} 的角色為「${primaryRole.marketPosition ?? primaryRole.relevance}」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。`
-    : `${input.name} 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。`;
+  const industryLabel = primaryRoleRelevance === "high" ? "核心題材受惠" : primaryRoleRelevance === "medium" ? "題材關聯明確" : primaryCanonicalRole || primaryRole ? "題材關聯待驗證" : "產業資料待補";
+  const industrySummary = primaryCanonicalRole
+    ? `${input.name} 在「${primaryCanonicalRole.canonicalTopicName ?? primaryCanonicalRole.topicName}」的 V2 角色為「${primaryCanonicalRole.directnessLabel}」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。`
+    : primaryRole
+      ? `${input.name} 在 ${primaryRole.topicId} 的角色為「${primaryRole.marketPosition ?? primaryRole.relevance}」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。`
+      : `${input.name} 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。`;
 
   return {
     schemaVersion: 1,
@@ -301,6 +426,7 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
       watch: industryWatch.slice(0, 6),
     },
     knowledge,
+    canonicalKnowledge,
     nextSession: {
       focus: nextFocus.slice(0, 5),
       triggerRules,

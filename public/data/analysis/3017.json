@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3017",
   "name": "奇鋐",
-  "generatedAt": "2026-05-27T02:21:00.694Z",
+  "generatedAt": "2026-05-27T17:40:56.454Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,16 +38,26 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "奇鋐 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "奇鋐 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
+      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · medium",
+      "相關題材：AI 伺服器液冷散熱 · 核心產品/平台",
+      "相關題材：AI 伺服器 · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：奇鋐液冷與 AI 伺服器相關營收占比仍需依賴後續財報、法說或重大訊息驗證，不能只因題材關聯就假設高度獲利貢獻。",
+      "V2 T：高階散熱產品若受客戶專案時程、伺服器拉貨週期或同業價格競爭影響，營收與毛利可能出現波動。"
+    ],
     "watch": [
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：AI 伺服器功耗與散熱要求提高，帶動氣冷升級、液冷模組與整體熱管理方案的中期需求。",
+      "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
+      "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
+      "追蹤 AI 伺服器：雲端資本支出上修",
+      "追蹤 AI 伺服器：AI server ODM 營收年增擴大",
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -79,6 +89,119 @@
       "PER/PBR/殖利率可由 FinMind 補歷史估值區間",
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收",
       "季損益可由 FinMind/MOPS 追蹤毛利率、營益率與 EPS 趨勢"
+    ]
+  },
+  "canonicalKnowledge": {
+    "topicRoles": [
+      {
+        "topicId": "thermal_components_air",
+        "topicName": "散熱冷卻｜氣冷與核心組件",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "奇鋐在氣冷與核心散熱組件題材中的角色最直接：公司官方定位為整體散熱解決方案供應商，年報也支撐電子零件、通訊電子與電腦週邊設備製造營運背景。"
+      },
+      {
+        "topicId": "thermal-solution",
+        "topicName": "散熱冷卻｜液冷與散熱模組",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "奇鋐在散熱解決方案題材中屬於核心供應鏈角色，重點是整體熱管理與散熱模組，而不是單純的題材沾邊。"
+      },
+      {
+        "topicId": "ai-server",
+        "topicName": "AI伺服器與液冷技術",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "奇鋐在 AI 伺服器題材中的核心不是設計 GPU 或組裝整機，而是提供高功耗伺服器需要的散熱模組與熱管理能力；目前以官方整體散熱定位與年報營運範圍建立中等信心，液冷營收占比仍需後續法說或產品頁補證。"
+      },
+      {
+        "topicId": "liquid_cooling_advanced",
+        "topicName": "散熱冷卻｜液冷散熱系統",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "奇鋐被 legacy 題材歸為液冷系統整合供應鏈，產品知識庫也已把液冷散熱方案標為題材候選；但目前公開證據以整體散熱定位與財報主業務為主，尚未把液冷營收或特定客戶專案寫成確定事實。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-thermal-upgrade",
+        "category": "opportunity",
+        "statement": "AI 伺服器功耗與散熱要求提高，帶動氣冷升級、液冷模組與整體熱管理方案的中期需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling",
+          "liquid-cooling",
+          "air-cooling-components"
+        ]
+      },
+      {
+        "id": "strength-thermal-specialist",
+        "category": "strength",
+        "statement": "奇鋐定位為散熱解決方案供應商，產品與角色聚焦於伺服器、電子設備與高功耗硬體的熱管理需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "thermal-solutions",
+          "air-cooling-components",
+          "ai-server-liquid-cooling",
+          "liquid-cooling"
+        ]
+      },
+      {
+        "id": "threat-customer-concentration-and-cycle",
+        "category": "threat",
+        "statement": "高階散熱產品若受客戶專案時程、伺服器拉貨週期或同業價格競爭影響，營收與毛利可能出現波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "thermal-solutions",
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
+        "id": "weakness-liquid-cooling-disclosure-gap",
+        "category": "weakness",
+        "statement": "奇鋐液冷與 AI 伺服器相關營收占比仍需依賴後續財報、法說或重大訊息驗證，不能只因題材關聯就假設高度獲利貢獻。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling",
+          "liquid-cooling"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server-liquid-cooling",
+        "name": "AI 伺服器液冷散熱",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "AI GPU/ASIC TDP 升高",
+          "客戶導入液冷機櫃或 CDU",
+          "散熱廠液冷相關營收揭露增加"
+        ]
+      },
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "雲端資本支出上修",
+          "AI server ODM 營收年增擴大",
+          "高功耗 GPU/ASIC 平台帶動散熱與電源規格升級"
+        ]
+      }
     ]
   },
   "nextSession": {
