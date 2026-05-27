@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "knowledge:validate": "tsx scripts/validate-knowledge-pipeline.ts",
     "knowledge:build": "tsx scripts/generate-company-knowledge.ts",
     "analysis:daily": "tsx scripts/generate-daily-analysis.ts"
   },
