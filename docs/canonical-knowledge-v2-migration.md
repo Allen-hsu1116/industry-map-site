@@ -41,6 +41,7 @@ public/data/companies.json                   Legacy company index; do not delete
 public/data/product-knowledge/{code}.json    Evidence-backed product knowledge, already hybrid-consumed by UI
 public/data/v2/                              Future canonical topic/role graph; not runtime-default until validated
 reports/v2-canonical-products.json            Generated canonical product/alias candidates; review artifact
+reports/v2-canonical-role-candidates.json     Generated v2 role ontology candidates; review artifact
 reports/                                     Generated migration reports; review artifacts, not runtime source
 src/lib/legacyKnowledgeInventory.ts          Pure inventory/candidate extraction logic
 scripts/generate-v2-inventory.ts             CLI that reads legacy data and writes reports
