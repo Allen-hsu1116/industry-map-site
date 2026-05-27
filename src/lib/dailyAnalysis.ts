@@ -36,6 +36,8 @@ export interface DailyAnalysis {
   name: string;
   generatedAt: string;
   sourceUpdatedAt?: string;
+  marketDataDate?: string;
+  chipDataDate?: string;
   mode: "rule-batch";
   technical: {
     stance: "bullish" | "bearish" | "neutral" | "insufficient";
@@ -270,6 +272,8 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     name: input.name,
     generatedAt: now.toISOString(),
     sourceUpdatedAt: input.updatedAt ?? latestDate(dailyPrices) ?? latestDate(institutional) ?? latestDate(margin),
+    marketDataDate: latest?.date ?? latestDate(dailyPrices),
+    chipDataDate: latestDate(institutional) ?? latestDate(margin),
     mode: "rule-batch",
     technical: {
       stance: techStance,

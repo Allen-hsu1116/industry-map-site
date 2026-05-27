@@ -67,6 +67,8 @@ test("generateDailyAnalysis summarizes bullish technical and accumulation chip s
   assert.ok(analysis.knowledge.topicRoles.some((role) => role.topicId === "ai-server"));
   assert.ok(analysis.knowledge.swot.strengths.some((point) => point.includes("先進製程")));
   assert.ok(analysis.knowledge.dataSources.some((source) => source.includes("FinMind")));
+  assert.equal(analysis.marketDataDate, "2026-05-30");
+  assert.equal(analysis.chipDataDate, "2026-05-20");
   assert.match(analysis.technical.summary, /台積電/);
   assert.ok(analysis.nextSession.triggerRules.length >= 3);
 });

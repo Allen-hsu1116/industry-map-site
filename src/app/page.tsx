@@ -703,6 +703,7 @@ function BatchAnalysisPanel({
   risks,
   watch,
   generatedAt,
+  description,
 }: {
   title: string;
   badge: string;
@@ -712,6 +713,7 @@ function BatchAnalysisPanel({
   risks: string[];
   watch: string[];
   generatedAt?: string;
+  description?: string;
 }) {
   const scoreTone = score >= 20 ? "text-emerald-300 bg-emerald-500/10 border-emerald-500/20" : score <= -20 ? "text-rose-300 bg-rose-500/10 border-rose-500/20" : "text-slate-300 bg-slate-500/10 border-slate-500/20";
   const generatedLabel = generatedAt ? new Date(generatedAt).toLocaleString("zh-TW", { month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit" }) : "即時計算";
@@ -731,7 +733,7 @@ function BatchAnalysisPanel({
       <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
         <div>
           <div className="text-sm font-bold text-white">{title}</div>
-          <div className="mt-1 text-[11px] text-[var(--color-text-tertiary)]">收盤後 batch 產生 · 規則式判讀 · {generatedLabel}</div>
+          <div className="mt-1 text-[11px] text-[var(--color-text-tertiary)]">{description ?? `規則式判讀 · ${generatedLabel}`}</div>
         </div>
         <div className={cn("rounded-full border px-3 py-1 text-xs font-bold", scoreTone)}>
           {badge} · {score > 0 ? "+" : ""}{score}
@@ -750,6 +752,53 @@ function BatchAnalysisPanel({
         <div>
           <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">觀察重點</div>
           {renderList(watch, "bg-amber-300")}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function KnowledgeSourcePanel({ analysis }: { analysis: DailyAnalysis }) {
+  const knowledge = analysis.knowledge;
+  const productsAndCustomers = [...knowledge.products.slice(0, 3), ...knowledge.customers.slice(0, 2)];
+
+  return (
+    <div className="rounded-2xl border border-white/[0.04] bg-white/[0.02] p-5">
+      <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+        <div>
+          <div className="text-sm font-bold text-white">📚 產業知識庫與資料來源</div>
+          <div className="mt-1 text-[11px] text-[var(--color-text-tertiary)]">
+            題材角色、產品、客戶與 SWOT 放在產業分析；Daily analysis 只引用這層知識做校正
+          </div>
+        </div>
+        <div className="rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1 text-[11px] font-bold text-indigo-200">
+          SWOT {knowledge.swot.freshness}
+        </div>
+      </div>
+      <div className="grid gap-4 md:grid-cols-3">
+        <div>
+          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-emerald-300">產品/客戶</div>
+          <ul className="space-y-1.5">
+            {productsAndCustomers.length > 0 ? productsAndCustomers.map((item, index) => (
+              <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
+            )) : <li className="text-xs text-[var(--color-text-tertiary)]">尚未建立產品/客戶資料</li>}
+          </ul>
+        </div>
+        <div>
+          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-cyan-300">FinMind / 官方資料</div>
+          <ul className="space-y-1.5">
+            {knowledge.dataSources.slice(0, 5).map((item, index) => (
+              <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">題材角色</div>
+          <ul className="space-y-1.5">
+            {knowledge.topicRoles.slice(0, 4).map((role, index) => (
+              <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {role.topicId}：{role.marketPosition ?? role.relevance}</li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
@@ -2183,6 +2232,24 @@ function CompanyFullPageDetail({
                       </div>
                     );
                   })()}
+
+                  {resolvedDailyAnalysis?.industry && (
+                    <BatchAnalysisPanel
+                      title="🏭 題材角色與 SWOT 校正"
+                      badge={resolvedDailyAnalysis.industry.label}
+                      score={0}
+                      summary={resolvedDailyAnalysis.industry.summary}
+                      signals={resolvedDailyAnalysis.industry.signals}
+                      risks={resolvedDailyAnalysis.industry.risks}
+                      watch={resolvedDailyAnalysis.industry.watch}
+                      generatedAt={resolvedDailyAnalysis.generatedAt}
+                      description={`引用產業知識庫校正每日判讀 · 知識庫資料日 ${resolvedDailyAnalysis.sourceUpdatedAt ?? "未知"}`}
+                    />
+                  )}
+
+                  {resolvedDailyAnalysis?.knowledge && (
+                    <KnowledgeSourcePanel analysis={resolvedDailyAnalysis} />
+                  )}
                 </>
               ) : (
                 <div className="text-center py-16">
@@ -2581,7 +2648,7 @@ function CompanyFullPageDetail({
 
               {resolvedDailyAnalysis && (
                 <BatchAnalysisPanel
-                  title="🧠 技術收盤後判讀"
+                  title="📊 技術分析判讀"
                   badge={resolvedDailyAnalysis.technical.label}
                   score={resolvedDailyAnalysis.technical.score}
                   summary={resolvedDailyAnalysis.technical.summary}
@@ -2589,57 +2656,8 @@ function CompanyFullPageDetail({
                   risks={resolvedDailyAnalysis.technical.risks}
                   watch={resolvedDailyAnalysis.technical.watch}
                   generatedAt={resolvedDailyAnalysis.generatedAt}
+                  description={`依日 K、均線與成交量規則判讀 · 價格資料日 ${resolvedDailyAnalysis.marketDataDate ?? resolvedDailyAnalysis.sourceUpdatedAt ?? "未知"}`}
                 />
-              )}
-
-              {resolvedDailyAnalysis?.industry && (
-                <BatchAnalysisPanel
-                  title="🏭 題材角色與 SWOT 校正"
-                  badge={resolvedDailyAnalysis.industry.label}
-                  score={0}
-                  summary={resolvedDailyAnalysis.industry.summary}
-                  signals={resolvedDailyAnalysis.industry.signals}
-                  risks={resolvedDailyAnalysis.industry.risks}
-                  watch={resolvedDailyAnalysis.industry.watch}
-                  generatedAt={resolvedDailyAnalysis.generatedAt}
-                />
-              )}
-
-              {resolvedDailyAnalysis?.knowledge && (
-                <div className="rounded-2xl border border-white/[0.04] bg-white/[0.02] p-5">
-                  <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
-                    <div className="text-sm font-bold text-white">📚 Daily analysis 資料來源</div>
-                    <div className="rounded-full border border-indigo-400/20 bg-indigo-500/10 px-3 py-1 text-[11px] font-bold text-indigo-200">
-                      SWOT {resolvedDailyAnalysis.knowledge.swot.freshness}
-                    </div>
-                  </div>
-                  <div className="grid gap-4 md:grid-cols-3">
-                    <div>
-                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-emerald-300">產品/客戶</div>
-                      <ul className="space-y-1.5">
-                        {[...resolvedDailyAnalysis.knowledge.products.slice(0, 3), ...resolvedDailyAnalysis.knowledge.customers.slice(0, 2)].map((item, index) => (
-                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-cyan-300">FinMind / 官方資料</div>
-                      <ul className="space-y-1.5">
-                        {resolvedDailyAnalysis.knowledge.dataSources.slice(0, 5).map((item, index) => (
-                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">題材角色</div>
-                      <ul className="space-y-1.5">
-                        {resolvedDailyAnalysis.knowledge.topicRoles.slice(0, 4).map((role, index) => (
-                          <li key={index} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {role.topicId}：{role.marketPosition ?? role.relevance}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               )}
 
               {resolvedDailyAnalysis && (

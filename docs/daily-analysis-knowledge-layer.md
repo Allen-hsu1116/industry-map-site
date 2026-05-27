@@ -59,6 +59,19 @@ Daily analysis now includes:
   - company knowledge merges topic role/products/SWOT
   - FinMind-backed data source signals appear when source arrays exist
 
+## Current Automation Gap
+
+As of this slice, the frontend and analysis generator expose the exact source dates (`marketDataDate`, `chipDataDate`, `sourceUpdatedAt`) so stale technical data is visible instead of hidden. The repository still needs a real scheduled FinMind fetch step before `knowledge:build` and `analysis:daily`; otherwise the site only regenerates analysis from whatever JSON already exists under `public/data/financials`.
+
+Required refresh pipeline:
+
+```bash
+# planned production order
+# 1. fetch latest FinMind/MOPS/TWSE data into public/data/financials
+npm run knowledge:build
+npm run analysis:daily
+```
+
 ## Next Implementation Slices
 
 1. **FinMind fetcher hardening**
