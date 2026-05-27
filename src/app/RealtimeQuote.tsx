@@ -30,6 +30,36 @@ function formatTime(updatedAt: string): string {
   return updatedAt;
 }
 
+function getTaipeiParts(date: Date) {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Taipei",
+    weekday: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false,
+  }).formatToParts(date);
+  const value = (type: string) => parts.find((part) => part.type === type)?.value ?? "";
+  return {
+    weekday: value("weekday"),
+    hour: Number(value("hour")),
+    minute: Number(value("minute")),
+  };
+}
+
+function getTaiwanMarketStatus(now: Date) {
+  const { weekday, hour, minute } = getTaipeiParts(now);
+  const isWeekday = !["Sat", "Sun"].includes(weekday);
+  const minutes = hour * 60 + minute;
+  const open = 9 * 60;
+  const close = 13 * 60 + 30;
+  const isRegularSession = isWeekday && minutes >= open && minutes <= close;
+
+  if (isRegularSession) return { shouldAutoRefresh: true, label: "盤中自動更新" };
+  if (!isWeekday) return { shouldAutoRefresh: false, label: "休市，已停止自動更新" };
+  if (minutes < open) return { shouldAutoRefresh: false, label: "未開盤，已停止自動更新" };
+  return { shouldAutoRefresh: false, label: "已收盤，停止自動更新" };
+}
+
 function LevelRow({ label, levels, colorClass }: { label: string; levels: OrderBookLevel[]; colorClass: string }) {
   if (levels.length === 0) return null;
   return (
@@ -52,6 +82,9 @@ export default function RealtimeQuote({ code }: RealtimeQuoteProps) {
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState("");
   const [lastFetchedAt, setLastFetchedAt] = useState<Date | null>(null);
+  const [marketClock, setMarketClock] = useState(() => new Date());
+  const marketStatus = useMemo(() => getTaiwanMarketStatus(marketClock), [marketClock]);
+  const shouldAutoRefresh = marketStatus.shouldAutoRefresh;
 
   const fetchQuote = useCallback(async (isBackground = false) => {
     if (!isBackground) setLoading(true);
@@ -75,15 +108,23 @@ export default function RealtimeQuote({ code }: RealtimeQuoteProps) {
   }, [code]);
 
   useEffect(() => {
+    const clock = window.setInterval(() => setMarketClock(new Date()), 60_000);
+    return () => window.clearInterval(clock);
+  }, []);
+
+  useEffect(() => {
     const initial = window.setTimeout(() => {
       void fetchQuote(false);
     }, 0);
-    const timer = window.setInterval(() => fetchQuote(true), REFRESH_INTERVAL_MS);
+    let timer: number | undefined;
+    if (shouldAutoRefresh) {
+      timer = window.setInterval(() => fetchQuote(true), REFRESH_INTERVAL_MS);
+    }
     return () => {
       window.clearTimeout(initial);
-      window.clearInterval(timer);
+      if (timer) window.clearInterval(timer);
     };
-  }, [fetchQuote]);
+  }, [fetchQuote, shouldAutoRefresh]);
 
   const orderBook = useMemo(() => {
     const bids = quote?.orderBook?.bids ?? (quote?.buyPrice ? [{ price: quote.buyPrice, volume: quote.buyVolume ?? 0 }] : []);
@@ -144,7 +185,8 @@ export default function RealtimeQuote({ code }: RealtimeQuoteProps) {
             {quote.averagePrice && quote.averagePrice > 0 && <span>均 <b className="text-indigo-300">{quote.averagePrice.toFixed(2)}</b></span>}
             {quote.volumeRatio && quote.volumeRatio > 0 && <span>量比 <b className="text-indigo-300">{quote.volumeRatio.toFixed(2)}</b></span>}
             <span>更新 <b className="text-[var(--color-text-secondary)]">{formatTime(quote.updatedAt)}</b></span>
-            {lastFetchedAt && <span>輪詢 <b className="text-[var(--color-text-secondary)]">{lastFetchedAt.toLocaleTimeString("zh-TW", { hour12: false })}</b></span>}
+            {lastFetchedAt && <span>最後抓取 <b className="text-[var(--color-text-secondary)]">{lastFetchedAt.toLocaleTimeString("zh-TW", { hour12: false })}</b></span>}
+            <span className={shouldAutoRefresh ? "text-emerald-300" : "text-amber-300"}>{marketStatus.label}</span>
           </div>
 
           {error && (
@@ -156,7 +198,7 @@ export default function RealtimeQuote({ code }: RealtimeQuoteProps) {
           className="shrink-0 rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-1.5 text-xs text-[var(--color-text-secondary)] hover:text-white hover:border-white/[0.14] disabled:opacity-50"
           disabled={refreshing}
           onClick={() => fetchQuote(true)}
-          title={`每 ${REFRESH_INTERVAL_MS / 1000} 秒自動刷新一次`}
+          title={shouldAutoRefresh ? `盤中每 ${REFRESH_INTERVAL_MS / 1000} 秒自動刷新一次` : "非盤中不自動刷新，可手動更新一次"}
         >
           {refreshing ? "更新中..." : "手動刷新"}
         </button>

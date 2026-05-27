@@ -2055,35 +2055,6 @@ function CompanyFullPageDetail({
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                             {topicAnalysis.ai_summary || analysisText}
                           </p>
-                          {dailyIndustry && (
-                            <div className="mt-4 rounded-xl border border-indigo-500/15 bg-indigo-500/[0.05] p-4">
-                              <div className="mb-2 flex items-center justify-between gap-2">
-                                <span className="text-xs font-bold text-indigo-300">每日題材校正 · {dailyIndustry.label}</span>
-                                <span className="text-[10px] text-[var(--color-text-tertiary)]">資料日 {resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"}</span>
-                              </div>
-                              <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">{dailyIndustry.summary}</p>
-                              {(dailyIndustry.signals.length > 0 || dailyIndustry.risks.length > 0) && (
-                                <div className="mt-3 grid gap-3 md:grid-cols-2">
-                                  {dailyIndustry.signals.length > 0 && (
-                                    <div>
-                                      <div className="mb-1 text-[11px] font-bold text-emerald-300">校正訊號</div>
-                                      <ul className="space-y-1">
-                                        {dailyIndustry.signals.slice(0, 3).map((item, i) => <li key={i} className="text-[11px] leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>)}
-                                      </ul>
-                                    </div>
-                                  )}
-                                  {dailyIndustry.risks.length > 0 && (
-                                    <div>
-                                      <div className="mb-1 text-[11px] font-bold text-amber-300">校正風險</div>
-                                      <ul className="space-y-1">
-                                        {dailyIndustry.risks.slice(0, 3).map((item, i) => <li key={i} className="text-[11px] leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>)}
-                                      </ul>
-                                    </div>
-                                  )}
-                                </div>
-                              )}
-                            </div>
-                          )}
                           <div className="mt-4 flex items-center gap-3">
                             <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
                               {relInfo.emoji} {relInfo.label}
@@ -2105,6 +2076,15 @@ function CompanyFullPageDetail({
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                             {topicAnalysis?.market_position_detail || `${data.name}為${role.topicName}產業之關鍵參與者，在供應鏈中扮演${relInfo.label}角色。`}
                           </p>
+                          {dailyIndustry && (
+                            <div className="mt-4 rounded-xl border border-cyan-400/10 bg-cyan-400/[0.04] p-4">
+                              <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                                <span className="text-xs font-bold text-cyan-300">每日題材定位校正 · {dailyIndustry.label}</span>
+                                <span className="text-[10px] text-[var(--color-text-tertiary)]">資料日 {resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"}</span>
+                              </div>
+                              <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">{dailyIndustry.summary}</p>
+                            </div>
+                          )}
                         </div>
 
                         {/* 技術重心 */}
@@ -2131,6 +2111,34 @@ function CompanyFullPageDetail({
                                   </div>
                                 );
                               })}
+                              {dailyIndustry && (dailyIndustry.signals.length > 0 || dailyIndustry.risks.length > 0 || dailyIndustry.watch.length > 0) && (
+                                <div className="grid gap-3 border-t border-white/[0.04] pt-4 md:grid-cols-3">
+                                  {dailyIndustry.signals.length > 0 && (
+                                    <div>
+                                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-emerald-300">題材正向訊號</div>
+                                      <ul className="space-y-1.5">
+                                        {dailyIndustry.signals.slice(0, 3).map((item, i) => <li key={i} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>)}
+                                      </ul>
+                                    </div>
+                                  )}
+                                  {dailyIndustry.risks.length > 0 && (
+                                    <div>
+                                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-amber-300">題材風險</div>
+                                      <ul className="space-y-1.5">
+                                        {dailyIndustry.risks.slice(0, 3).map((item, i) => <li key={i} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>)}
+                                      </ul>
+                                    </div>
+                                  )}
+                                  {dailyIndustry.watch.length > 0 && (
+                                    <div>
+                                      <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-sky-300">觀察重點</div>
+                                      <ul className="space-y-1.5">
+                                        {dailyIndustry.watch.slice(0, 3).map((item, i) => <li key={i} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item}</li>)}
+                                      </ul>
+                                    </div>
+                                  )}
+                                </div>
+                              )}
                             </div>
                           </div>
                         ) : (
