@@ -6,6 +6,7 @@ const INDUSTRIES_PATH = path.join(DATA_DIR, "industries.json");
 const COMPANIES_PATH = path.join(DATA_DIR, "companies.json");
 const SOURCES_PATH = path.join(DATA_DIR, "knowledge-sources.json");
 const PRODUCT_KNOWLEDGE_DIR = path.join(DATA_DIR, "product-knowledge");
+const COMPANY_TOPIC_ROLES_DIR = path.join(DATA_DIR, "company-topic-roles");
 const REPORT_PATH = path.join(DATA_DIR, "knowledge-quality-report.json");
 
 type Severity = "error" | "warning";
@@ -83,6 +84,40 @@ interface ProductKnowledgeItem {
 }
 
 interface ProductEvidence {
+  sourceId?: unknown;
+  publisher?: unknown;
+  title?: unknown;
+  url?: unknown;
+  claim?: unknown;
+}
+
+interface CompanyTopicRolesFile {
+  schemaVersion?: unknown;
+  companyCode?: unknown;
+  companyName?: unknown;
+  updatedAt?: unknown;
+  roles?: unknown;
+}
+
+interface CompanyTopicRoleItem {
+  topicId?: unknown;
+  topicName?: unknown;
+  topicType?: unknown;
+  directness?: unknown;
+  supplyChainStage?: unknown;
+  roleType?: unknown;
+  roleSummary?: unknown;
+  products?: unknown;
+  customers?: unknown;
+  competitors?: unknown;
+  risks?: unknown;
+  evidence?: unknown;
+  confidence?: unknown;
+  lastVerified?: unknown;
+  status?: unknown;
+}
+
+interface CompanyTopicRoleEvidence {
   sourceId?: unknown;
   publisher?: unknown;
   title?: unknown;
@@ -291,6 +326,66 @@ function validateProductKnowledge(sourceIds: Set<string>, issues: QualityIssue[]
   return productKnowledgeCount;
 }
 
+function validateCompanyTopicRoles(sourceIds: Set<string>, issues: QualityIssue[]): number {
+  if (!fs.existsSync(COMPANY_TOPIC_ROLES_DIR)) return 0;
+  const files = fs.readdirSync(COMPANY_TOPIC_ROLES_DIR).filter((file) => file.endsWith(".json")).sort();
+  const validTopicTypes = new Set(["theme", "technology", "product", "process", "supply_chain_segment", "end_market"]);
+  const validDirectness = new Set(["core", "direct_enabler", "supplier", "customer_or_channel", "indirect", "rejected"]);
+  const validConfidence = new Set(["high", "medium", "low", "insufficient", "unverified"]);
+  const validStatus = new Set(["verified", "candidate", "rejected"]);
+  let roleCount = 0;
+
+  files.forEach((file) => {
+    const knowledge = readJson<CompanyTopicRolesFile>(path.join(COMPANY_TOPIC_ROLES_DIR, file));
+    const filePath = `company-topic-roles/${file}`;
+    const code = asString(knowledge.companyCode);
+    if (knowledge.schemaVersion !== 1) addIssue(issues, "error", "topic_roles.invalid_schema", `${filePath}.schemaVersion`, `${filePath} schemaVersion must be 1`);
+    if (!code) addIssue(issues, "error", "topic_roles.missing_code", `${filePath}.companyCode`, `${filePath} is missing companyCode`);
+    if (!asString(knowledge.companyName)) addIssue(issues, "warning", "topic_roles.missing_name", `${filePath}.companyName`, `${filePath} is missing companyName`);
+    if (!asString(knowledge.updatedAt)) addIssue(issues, "warning", "topic_roles.missing_updated_at", `${filePath}.updatedAt`, `${filePath} is missing updatedAt`);
+
+    const roles = asArray(knowledge.roles) as CompanyTopicRoleItem[];
+    if (roles.length === 0) addIssue(issues, "warning", "topic_roles.no_roles", `${filePath}.roles`, `${filePath} has no roles`);
+    roleCount += roles.length;
+
+    roles.forEach((role, index) => {
+      const rolePath = `${filePath}.roles[${index}]`;
+      const topicId = asString(role.topicId);
+      if (!topicId) addIssue(issues, "error", "topic_roles.role_missing_topic", `${rolePath}.topicId`, "Topic role is missing topicId");
+      if (!asString(role.topicName)) addIssue(issues, "warning", "topic_roles.role_missing_topic_name", `${rolePath}.topicName`, `${topicId ?? "Topic role"} is missing topicName`);
+      const topicType = asString(role.topicType);
+      if (!topicType || !validTopicTypes.has(topicType)) addIssue(issues, "error", "topic_roles.invalid_topic_type", `${rolePath}.topicType`, `${topicId ?? "Topic role"} topicType is invalid`);
+      const directness = asString(role.directness);
+      if (!directness || !validDirectness.has(directness)) addIssue(issues, "error", "topic_roles.invalid_directness", `${rolePath}.directness`, `${topicId ?? "Topic role"} directness is invalid`);
+      if (!asString(role.supplyChainStage)) addIssue(issues, "error", "topic_roles.missing_stage", `${rolePath}.supplyChainStage`, `${topicId ?? "Topic role"} is missing supplyChainStage`);
+      if (!asString(role.roleType)) addIssue(issues, "error", "topic_roles.missing_role_type", `${rolePath}.roleType`, `${topicId ?? "Topic role"} is missing roleType`);
+      const summary = asString(role.roleSummary);
+      if (!summary) addIssue(issues, "error", "topic_roles.missing_summary", `${rolePath}.roleSummary`, `${topicId ?? "Topic role"} is missing roleSummary`);
+      if (summary && summary.length < 30) addIssue(issues, "warning", "topic_roles.short_summary", `${rolePath}.roleSummary`, `${topicId ?? "Topic role"} summary is too short`);
+      if (asArray(role.products).length === 0) addIssue(issues, "warning", "topic_roles.no_products", `${rolePath}.products`, `${topicId ?? "Topic role"} should list related products`);
+      const confidence = asString(role.confidence);
+      if (!confidence || !validConfidence.has(confidence)) addIssue(issues, "error", "topic_roles.invalid_confidence", `${rolePath}.confidence`, `${topicId ?? "Topic role"} confidence is invalid`);
+      const status = asString(role.status);
+      if (!status || !validStatus.has(status)) addIssue(issues, "error", "topic_roles.invalid_status", `${rolePath}.status`, `${topicId ?? "Topic role"} status is invalid`);
+      if ((confidence === "high" || confidence === "medium") && !asString(role.lastVerified)) addIssue(issues, "error", "topic_roles.missing_last_verified", `${rolePath}.lastVerified`, `${topicId ?? "Topic role"} high/medium confidence needs lastVerified`);
+
+      const evidence = asArray(role.evidence) as CompanyTopicRoleEvidence[];
+      if ((confidence === "high" || confidence === "medium") && evidence.length === 0) addIssue(issues, "error", "topic_roles.missing_evidence", `${rolePath}.evidence`, `${topicId ?? "Topic role"} high/medium confidence needs evidence`);
+      evidence.forEach((source, sourceIndex) => {
+        const evidencePath = `${rolePath}.evidence[${sourceIndex}]`;
+        const sourceId = asString(source.sourceId);
+        if (!sourceId) addIssue(issues, "error", "topic_roles.evidence_missing_source_id", `${evidencePath}.sourceId`, `${topicId ?? "Topic role"} evidence is missing sourceId`);
+        else if (!sourceIds.has(sourceId)) addIssue(issues, "error", "topic_roles.evidence_unknown_source_id", `${evidencePath}.sourceId`, `${topicId ?? "Topic role"} evidence sourceId ${sourceId} is absent from knowledge-sources.json`);
+        if (!asString(source.claim)) addIssue(issues, "warning", "topic_roles.evidence_missing_claim", `${evidencePath}.claim`, `${topicId ?? "Topic role"} evidence should state the supported claim`);
+        const url = asString(source.url);
+        if (url && !/^https?:\/\//.test(url)) addIssue(issues, "warning", "topic_roles.evidence_invalid_url", `${evidencePath}.url`, `${topicId ?? "Topic role"} evidence URL is not http(s)`);
+      });
+    });
+  });
+
+  return roleCount;
+}
+
 function main() {
   const issues: QualityIssue[] = [];
   const industries = readJson<IndustriesFile>(INDUSTRIES_PATH);
@@ -301,6 +396,7 @@ function main() {
   validateCompaniesIndex(companies, graph.companyToTopics, issues);
   const sourceIds = validateSources(sources, issues);
   const productKnowledgeItems = validateProductKnowledge(sourceIds, issues);
+  const companyTopicRoles = validateCompanyTopicRoles(sourceIds, issues);
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -310,6 +406,7 @@ function main() {
       companyRoles: graph.companyRoleCount,
       products: graph.productCount,
       productKnowledgeItems,
+      companyTopicRoles,
       knowledgeSources: sources.length,
       errors: issues.filter((issue) => issue.severity === "error").length,
       warnings: issues.filter((issue) => issue.severity === "warning").length,
@@ -321,7 +418,7 @@ function main() {
 
   console.log(`Knowledge validation report written to ${path.relative(process.cwd(), REPORT_PATH)}`);
   console.log(`Topics: ${report.summary.topics}, companies: ${report.summary.companiesInGraph}, roles: ${report.summary.companyRoles}`);
-  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, sources: ${report.summary.knowledgeSources}`);
+  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, company topic roles: ${report.summary.companyTopicRoles}, sources: ${report.summary.knowledgeSources}`);
   console.log(`Errors: ${report.summary.errors}, warnings: ${report.summary.warnings}`);
 
   if (report.summary.errors > 0) {

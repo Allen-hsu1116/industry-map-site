@@ -17,6 +17,7 @@ import RealtimeQuote from "./RealtimeQuote";
 import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketData";
 import { generateDailyAnalysis, type DailyAnalysis } from "@/lib/dailyAnalysis";
 import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "@/lib/productKnowledge";
+import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles, type CompanyTopicRolesKnowledge } from "@/lib/companyTopicRoles";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
@@ -1981,9 +1982,11 @@ function CompanyFullPageDetail({
   const [maLines, setMaLines] = useState<{ ma5: boolean; ma10: boolean; ma20: boolean; ma60: boolean }>({ ma5: true, ma10: true, ma20: true, ma60: false });
   const [loadedDailyAnalysis, setLoadedDailyAnalysis] = useState<DailyAnalysis | null>(null);
   const [productKnowledge, setProductKnowledge] = useState<CompanyProductKnowledge | null>(null);
+  const [companyTopicRoles, setCompanyTopicRoles] = useState<CompanyTopicRolesKnowledge | null>(null);
   const fallbackDailyAnalysis = useMemo(() => generateDailyAnalysis(data), [data]);
   const resolvedDailyAnalysis = loadedDailyAnalysis?.code === data.code ? loadedDailyAnalysis : fallbackDailyAnalysis;
   const resolvedProductKnowledge = productKnowledge?.code === data.code ? productKnowledge : null;
+  const resolvedCompanyTopicRoles = companyTopicRoles?.companyCode === data.code ? companyTopicRoles : null;
 
   useEffect(() => {
     let cancelled = false;
@@ -2015,6 +2018,26 @@ function CompanyFullPageDetail({
       })
       .catch(() => {
         if (!cancelled) setProductKnowledge(null);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [data.code]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`/data/company-topic-roles/${data.code}.json`, { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error("company topic roles not found");
+        return response.json() as Promise<unknown>;
+      })
+      .then((raw) => {
+        const knowledge = normalizeCompanyTopicRoles(raw);
+        if (!cancelled && knowledge?.companyCode === data.code) setCompanyTopicRoles(knowledge);
+        if (!cancelled && knowledge?.companyCode !== data.code) setCompanyTopicRoles(null);
+      })
+      .catch(() => {
+        if (!cancelled) setCompanyTopicRoles(null);
       });
     return () => {
       cancelled = true;
@@ -2188,7 +2211,6 @@ function CompanyFullPageDetail({
                   {industryRoles[industrySubTab] && (() => {
                     const role = industryRoles[industrySubTab];
                     const relInfo = getRelevanceInfo(role.relevance);
-                    const roleBadge = getRoleBadge(role.relevance);
                     const cat = getCategory(role.topicName);
                     const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
 
@@ -2197,19 +2219,24 @@ function CompanyFullPageDetail({
                     const rawTopicAnalysis = data.industry_analysis?.[role.topic];
                     const knowledge = resolvedDailyAnalysis?.knowledge;
                     const roleKnowledge = knowledge?.topicRoles.find((item) => item.topicId === role.topic);
+                    const canonicalRole = resolvedCompanyTopicRoles?.roles.find((item) => item.topicId === role.topic && item.status !== "rejected");
+                    const canonicalRoleLabel = canonicalRole ? directnessLabel(canonicalRole.directness) : undefined;
+                    const displayRelevance = canonicalRole ? directnessToRelevance(canonicalRole.directness) : role.relevance;
+                    const displayRelInfo = getRelevanceInfo(displayRelevance);
+                    const displayRoleBadge = getRoleBadge(displayRelevance);
                     const fallbackSwot = rawTopicAnalysis?.swot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
                       strengths: [`已建立「${role.topicName}」題材關聯，角色：${role.role || relInfo.label}`],
                       weaknesses: ["題材別產品、客戶與競爭資料仍需補來源驗證"],
                       opportunities: [`若${role.topicName}需求擴張，${role.group}供應鏈角色可能受惠`],
                       threats: ["題材熱度若未反映到營收或訂單，估值重評風險升高"],
                     };
-                    const topicProducts = (rawTopicAnalysis?.products?.length ? rawTopicAnalysis.products : role.products?.length ? role.products : knowledge?.products?.length ? knowledge.products : data.products?.length ? data.products : [`${role.group}相關產品/服務: ${role.role || role.topicName}`]) ?? [];
-                    const topicCustomers = (rawTopicAnalysis?.customers?.length ? rawTopicAnalysis.customers : role.customers?.length ? role.customers : knowledge?.customers?.length ? knowledge.customers : data.customers?.length ? data.customers : ["客戶/需求端待補: 需由年報、法說或公開資料驗證"] ) ?? [];
+                    const topicProducts = (canonicalRole?.products?.length ? canonicalRole.products : rawTopicAnalysis?.products?.length ? rawTopicAnalysis.products : role.products?.length ? role.products : knowledge?.products?.length ? knowledge.products : data.products?.length ? data.products : [`${role.group}相關產品/服務: ${role.role || role.topicName}`]) ?? [];
+                    const topicCustomers = (canonicalRole?.customers?.length ? canonicalRole.customers : rawTopicAnalysis?.customers?.length ? rawTopicAnalysis.customers : role.customers?.length ? role.customers : knowledge?.customers?.length ? knowledge.customers : data.customers?.length ? data.customers : ["客戶/需求端待補: 需由年報、法說或公開資料驗證"] ) ?? [];
                     const focusText = rawTopicAnalysis?.focus || (role.tech_focus?.length ? role.tech_focus.join('\\n\\n') : `題材技術重心\n- ${role.topicName}：${role.role || relInfo.label}\n- 觀察 ${data.name} 在${role.group}的產品規格、量產進度與客戶導入。`);
                     const topicAnalysis = {
-                      ai_summary: rawTopicAnalysis?.ai_summary || roleKnowledge?.summary || analysisText,
-                      market_position: rawTopicAnalysis?.market_position || roleKnowledge?.marketPosition || relInfo.label,
-                      market_position_detail: rawTopicAnalysis?.market_position_detail || roleKnowledge?.role || `${data.name}為${role.topicName}題材之${role.group}參與者，在供應鏈中扮演${role.role || relInfo.label}角色。`,
+                      ai_summary: canonicalRole?.roleSummary || rawTopicAnalysis?.ai_summary || roleKnowledge?.summary || analysisText,
+                      market_position: canonicalRoleLabel || rawTopicAnalysis?.market_position || roleKnowledge?.marketPosition || relInfo.label,
+                      market_position_detail: canonicalRole?.roleSummary || rawTopicAnalysis?.market_position_detail || roleKnowledge?.role || `${data.name}為${role.topicName}題材之${role.group}參與者，在供應鏈中扮演${role.role || relInfo.label}角色。`,
                       focus: focusText,
                       products: topicProducts,
                       customers: topicCustomers,
@@ -2222,6 +2249,7 @@ function CompanyFullPageDetail({
                       ? ` 收盤後資料日 ${resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"} 的題材檢查結果為「${dailyIndustry.label}」，後續會用下方觀察重點輔助驗證這個題材角色是否反映到營收、籌碼與價格。`
                       : "";
                     const sourceChips = [
+                      ...(canonicalRole?.evidence.map((item) => `${item.publisher}：${item.title}`) ?? []),
                       ...(knowledge?.dataSources ?? []),
                       ...(knowledge?.swot.sources ?? []),
                     ];
@@ -2240,10 +2268,15 @@ function CompanyFullPageDetail({
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                             {topicAnalysis.ai_summary || analysisText}{integratedDailyNote}
                           </p>
-                          <div className="mt-4 flex items-center gap-3">
-                            <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
-                              {relInfo.emoji} {relInfo.label}
+                          <div className="mt-4 flex flex-wrap items-center gap-3">
+                            <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: displayRoleBadge.color, backgroundColor: displayRoleBadge.bg }}>
+                              {displayRelInfo.emoji} {canonicalRoleLabel ?? displayRelInfo.label}
                             </span>
+                            {canonicalRole && (
+                              <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-cyan-200">
+                                V2 {canonicalRole.directness} · {canonicalRole.confidence}
+                              </span>
+                            )}
                             <span className="text-sm font-semibold text-white">{role.topicName}</span>
                             <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
                           </div>
@@ -2428,15 +2461,35 @@ function CompanyFullPageDetail({
                             </div>
                             <div className="flex items-center justify-between">
                               <span className="text-sm text-[var(--color-text-secondary)]">角色定位</span>
-                              <span className="text-xs px-2.5 py-1 rounded-full font-bold whitespace-nowrap" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
-                                {relInfo.emoji} {relInfo.label}
+                              <span className="text-xs px-2.5 py-1 rounded-full font-bold whitespace-nowrap" style={{ color: displayRoleBadge.color, backgroundColor: displayRoleBadge.bg }}>
+                                {displayRelInfo.emoji} {canonicalRoleLabel ?? displayRelInfo.label}
                               </span>
                             </div>
                             {role.role && (
                               <div className="flex items-center justify-between gap-4">
                                 <span className="text-sm text-[var(--color-text-secondary)]">角色說明</span>
-                                <span className="text-sm text-white font-medium text-right">{role.role}</span>
+                                <span className="text-sm text-white font-medium text-right">{canonicalRole?.roleSummary ?? role.role}</span>
                               </div>
+                            )}
+                            {canonicalRole && (
+                              <>
+                                <div className="flex items-center justify-between gap-4">
+                                  <span className="text-sm text-[var(--color-text-secondary)]">V2 供應鏈階段</span>
+                                  <span className="text-sm text-white font-medium text-right">{canonicalRole.supplyChainStage}</span>
+                                </div>
+                                <div className="flex items-center justify-between gap-4">
+                                  <span className="text-sm text-[var(--color-text-secondary)]">V2 角色類型</span>
+                                  <span className="text-sm text-white font-medium text-right">{canonicalRole.roleType}</span>
+                                </div>
+                                {canonicalRole.risks && canonicalRole.risks.length > 0 && (
+                                  <div className="rounded-xl border border-amber-300/10 bg-amber-300/[0.04] p-3">
+                                    <div className="mb-1 text-[11px] font-bold uppercase tracking-widest text-amber-200">題材角色風險</div>
+                                    <ul className="space-y-1">
+                                      {canonicalRole.risks.slice(0, 3).map((risk, i) => <li key={i} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {risk}</li>)}
+                                    </ul>
+                                  </div>
+                                )}
+                              </>
                             )}
                             {sourceChips.length > 0 && (
                               <div className="pt-3 border-t border-white/[0.04]">

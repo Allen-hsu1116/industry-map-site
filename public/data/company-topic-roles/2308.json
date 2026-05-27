@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2308",
+  "companyName": "台達電",
+  "updatedAt": "2026-05-28",
+  "roles": [
+    {
+      "topicId": "sic-gan-power",
+      "topicName": "半導體製造｜第三代半導體",
+      "topicType": "technology",
+      "directness": "indirect",
+      "supplyChainStage": "power",
+      "roleType": "power_product_application_side_user",
+      "roleSummary": "台達電與第三代半導體題材的關聯主要在高效率電源、快充、伺服器電源與 EV/能源設備等應用端；現有官方與年報證據能支撐電源產品需要高效率功率轉換，但不能把台達電解讀為 SiC/GaN 晶圓、元件或封測核心供應商。",
+      "products": [
+        "電源供應系統與高效電源",
+        "電動車動力、電力管理與充電設備",
+        "能源基礎設施、儲能與能源管理"
+      ],
+      "customers": [
+        "AI、ICT、EV、能源基礎設施等高效率電源應用客戶"
+      ],
+      "competitors": [
+        "高效率電源產品供應商",
+        "快充與伺服器電源供應商"
+      ],
+      "risks": [
+        "這是應用端受惠/採用關聯，不應視為第三代半導體製造或封測核心角色",
+        "若功率元件價格或供應受限，可能影響電源產品成本與規格轉換"
+      ],
+      "legacy": {
+        "topicSlug": "sic-gan-power",
+        "groupName": "SiC/GaN測試與封裝",
+        "legacyRole": "GaN 快充 + 伺服器電源"
+      },
+      "evidence": [
+        {
+          "sourceId": "delta-power-and-system-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 電源及系統",
+          "url": "https://www.deltaww.com/zh-TW/products/Power-and-System",
+          "claim": "Official power page states Delta provides high-efficiency power for AI, ICT, industrial, medical and commercial fields."
+        },
+        {
+          "sourceId": "delta-mobility-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 交通",
+          "url": "https://www.deltaww.com/zh-TW/products/mobility",
+          "claim": "Official mobility page lists EV powertrain, EV power management and EV charging categories."
+        },
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "Financial report lists EV power-related systems, EV charging equipment, renewable-energy applications and power/thermal products among main business items."
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "psu",
+      "topicName": "電子零組件｜電源供應器",
+      "topicType": "product",
+      "directness": "core",
+      "supplyChainStage": "power",
+      "roleType": "power_supply_system_provider",
+      "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。",
+      "products": [
+        "電源供應系統與高效電源",
+        "伺服器電源",
+        "嵌入式電源",
+        "工業與醫療電源"
+      ],
+      "customers": [
+        "AI、ICT、工業、醫療與商用設備客戶：官方產品頁描述應用領域但未逐一揭露客戶名稱"
+      ],
+      "competitors": [
+        "伺服器電源供應器廠",
+        "工業/醫療電源供應商"
+      ],
+      "risks": [
+        "電源及零組件雖為最大部門，但仍需追蹤 AI 伺服器高瓦數電源占比與毛利率",
+        "功率元件成本、客戶平台切換與資料中心資本支出循環會影響需求"
+      ],
+      "legacy": {
+        "topicSlug": "psu",
+        "groupName": "伺服器電源龍頭",
+        "legacyRole": "全球電源供應器龍頭"
+      },
+      "evidence": [
+        {
+          "sourceId": "delta-power-and-system-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 電源及系統",
+          "url": "https://www.deltaww.com/zh-TW/products/Power-and-System",
+          "claim": "Official product page states Delta provides high-efficiency power for AI, ICT, industrial, medical and commercial fields and lists multiple power categories."
+        },
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "Financial report identifies Delta as a global power management and thermal solution provider; 114 Power and Components external-customer revenue was NT$280,031,634 thousand."
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "ai-server",
+      "topicName": "AI伺服器與液冷技術",
+      "topicType": "theme",
+      "directness": "direct_enabler",
+      "supplyChainStage": "power",
+      "roleType": "ai_server_power_and_thermal_infrastructure_provider",
+      "roleSummary": "台達電在 AI 伺服器題材中的角色是電源、散熱與資料中心基礎設施的直接賦能者，不是 GPU/ASIC 或整機 ODM；官方產品頁明確提到 AI 時代資料中心基礎設施，並列出電源、配電、液冷/氣冷散熱、機櫃與環境管理。",
+      "products": [
+        "電源供應系統與高效電源",
+        "資料中心基礎設施解決方案",
+        "風扇、氣冷與液冷散熱管理"
+      ],
+      "customers": [
+        "AI 資料中心與高功率伺服器供應鏈：官方產品頁描述應用場景但未揭露具名客戶"
+      ],
+      "competitors": [
+        "伺服器電源供應商",
+        "資料中心電力/冷卻基礎設施供應商",
+        "散熱管理廠"
+      ],
+      "risks": [
+        "AI 題材需拆分電源、散熱、資料中心基礎設施，避免把台達誤判為整機或晶片核心供應商",
+        "資料中心資本支出若放緩，基礎設施接單與營收成長可能受影響"
+      ],
+      "legacy": {
+        "topicSlug": "ai-server",
+        "groupName": "AI伺服器散熱與零組件",
+        "legacyRole": "AI伺服器電源/散熱"
+      },
+      "evidence": [
+        {
+          "sourceId": "delta-data-center-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 資料中心",
+          "url": "https://www.deltaww.com/zh-TW/products/data-center",
+          "claim": "Official data-center page says Delta provides integrated high-performance infrastructure for AI-era data centers and lists power, distribution, liquid/air cooling, racks, environment management and networking categories."
+        },
+        {
+          "sourceId": "delta-power-and-system-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 電源及系統",
+          "url": "https://www.deltaww.com/zh-TW/products/Power-and-System",
+          "claim": "Official power page states Delta provides high-efficiency power for AI and ICT fields."
+        },
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "Financial report identifies Delta as a global power management and thermal solution provider."
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "liquid_cooling_advanced",
+      "topicName": "散熱冷卻｜液冷散熱系統",
+      "topicType": "technology",
+      "directness": "direct_enabler",
+      "supplyChainStage": "thermal",
+      "roleType": "data_center_liquid_air_cooling_provider",
+      "roleSummary": "台達電在液冷散熱題材中是資料中心與設備端冷卻解決方案供應者；官方資料中心與風扇散熱頁皆列出液冷/氣冷散熱能力，財報也把散熱系統列為主要營業項目。",
+      "products": [
+        "風扇、氣冷與液冷散熱管理",
+        "資料中心液冷及氣冷散熱解決方案",
+        "無刷直流風扇",
+        "散熱系統"
+      ],
+      "customers": [
+        "資料中心、消費電子、車輛、工業與商用建築應用客戶：官方頁揭露應用領域"
+      ],
+      "competitors": [
+        "資料中心冷卻系統供應商",
+        "風扇與熱管理廠"
+      ],
+      "risks": [
+        "液冷導入速度與資料中心規格轉換會影響產品組合",
+        "需持續驗證液冷相對傳統風扇/氣冷的營收貢獻"
+      ],
+      "legacy": {
+        "topicSlug": "liquid_cooling_advanced",
+        "groupName": "液冷系統整合",
+        "legacyRole": "液冷散熱整合方案"
+      },
+      "evidence": [
+        {
+          "sourceId": "delta-fans-thermal-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 風扇與散熱管理",
+          "url": "https://www.deltaww.com/zh-TW/products/fans-and-thermal-management",
+          "claim": "Official page states Delta provides air-cooling and liquid-cooling thermal technologies for data centers, consumer electronics, vehicles, industrial and commercial building applications."
+        },
+        {
+          "sourceId": "delta-data-center-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 資料中心",
+          "url": "https://www.deltaww.com/zh-TW/products/data-center",
+          "claim": "Official data-center page lists liquid and air cooling solutions."
+        },
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "Financial report lists brushless DC fans and thermal systems among main business items."
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "industrial-automation",
+      "topicName": "智慧機器人｜工業自動化 / 智慧製造",
+      "topicType": "theme",
+      "directness": "core",
+      "supplyChainStage": "system_integration",
+      "roleType": "industrial_automation_solution_provider",
+      "roleSummary": "台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。",
+      "products": [
+        "工業自動化與智慧製造產品",
+        "交流馬達驅動器",
+        "伺服系統",
+        "PLC",
+        "工業機器人",
+        "系統軟體"
+      ],
+      "customers": [
+        "工廠自動化、智慧製造、製程設備與工業能源管理客戶"
+      ],
+      "competitors": [
+        "工業自動化控制與驅動系統供應商",
+        "工業機器人與製程設備供應商"
+      ],
+      "risks": [
+        "自動化需求受景氣與資本支出循環影響",
+        "機器人題材需要區分實際自動化產品與遠期人形機器人想像"
+      ],
+      "legacy": {
+        "topicSlug": "industrial-automation",
+        "groupName": "工業連接器與系統整合",
+        "legacyRole": "自動化/機器人/機電整合"
+      },
+      "evidence": [
+        {
+          "sourceId": "delta-industrial-automation-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 工業自動化",
+          "url": "https://www.deltaww.com/zh-TW/products/Industrial-Automation",
+          "claim": "Official industrial automation page lists AC motor drives, servo systems, PLCs, HMIs, industrial networks, robots, automated test equipment and system software categories."
+        },
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "Financial report lists industrial automation as a main business item and discloses 114 Automation segment external-customer revenue of NT$54,942,759 thousand."
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "ess-storage",
+      "topicName": "綠能環保｜儲能系統整合",
+      "topicType": "product",
+      "directness": "core",
+      "supplyChainStage": "system_integration",
+      "roleType": "energy_storage_and_management_solution_provider",
+      "roleSummary": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。",
+      "products": [
+        "能源基礎設施、儲能與能源管理",
+        "儲能系統",
+        "能源管理解決方案",
+        "太陽能逆變器",
+        "微電網"
+      ],
+      "customers": [
+        "再生能源、微電網、充電場域、工廠與商辦能源管理客戶"
+      ],
+      "competitors": [
+        "儲能系統整合商",
+        "逆變器與能源管理系統供應商"
+      ],
+      "risks": [
+        "儲能案場導入受政策、電價、案場資本支出與安全規範影響",
+        "需追蹤能源基礎設施產品是否實際反映到部門營收與獲利"
+      ],
+      "legacy": {
+        "topicSlug": "ess-storage",
+        "groupName": "儲能電池與BMS零組件",
+        "legacyRole": "儲能系統整合（PCS+EMS）"
+      },
+      "evidence": [
+        {
+          "sourceId": "delta-energy-infrastructure-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 能源基礎設施",
+          "url": "https://www.deltaww.com/zh-TW/products/Energy-Infrastructure-Industrial-Solutions",
+          "claim": "Official energy infrastructure page states Delta integrates power conversion, control and intelligent connectivity for renewable energy, microgrid and charging systems, and lists energy storage systems, solar inverters, energy management and wind power converters."
+        },
+        {
+          "sourceId": "mops-2308-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
+          "claim": "Financial report lists renewable-energy applications, energy technology services and smart building management/control solutions among main business items."
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}
