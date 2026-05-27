@@ -1,0 +1,142 @@
+# Spec: Canonical Topic Taxonomy V2
+
+## Objective
+
+Before wiring more knowledge into Daily Analysis, define what counts as a 「題材」 and separate durable analytical topics from noisy legacy buckets. The current `industries.json` has 81 runtime topics, but many are mixed levels: some are market themes, some are products, some are supply-chain segments, and some overlap.
+
+Success means Daily Analysis can answer:
+
+- What exactly is this topic?
+- Why does it matter economically?
+- Which companies are core vs indirect?
+- Which products/roles/SWOT items belong under this topic?
+- What should activate or deactivate attention to this topic?
+- Which legacy topic IDs map into the canonical topic?
+
+## Topic Definition
+
+A canonical topic is an investable, trackable, evidence-backed analytical lens.
+
+It must have all of these:
+
+- **Demand or supply catalyst:** why the market should care now or cyclically.
+- **Economic transmission path:** how the topic can affect revenue, margin, orders, valuation, or risk.
+- **Supply-chain boundaries:** which roles/products are included and which are explicitly excluded.
+- **Company role model:** companies can be labeled core/direct_enabler/supplier/customer_or_channel/indirect/rejected.
+- **Evidence trail:** official/filing/FinMind/news/cross-check sources, with confidence.
+- **Observable activation signals:** what to monitor daily/weekly/monthly.
+
+Not a canonical topic by itself:
+
+- One-day stock price movement.
+- A vague buzzword without product/role boundaries.
+- A generic industry category with no catalyst.
+- Business-registration boilerplate.
+- A cluster of stocks that only moved together but lacks common business logic.
+
+## Topic Type Ontology
+
+Use the existing V2 topic types:
+
+- `theme`: cross-supply-chain market narrative, e.g. AI server, 軌道 AI 運算.
+- `technology`: enabling technology, e.g. liquid cooling, CXL, CPO.
+- `product`: concrete product family, e.g. HBM, MLCC, 功率電感.
+- `process`: manufacturing/process node, e.g. N2/A16.
+- `supply_chain_segment`: reusable industry segment, e.g. 記憶體, 被動元件, 散熱, 電源.
+- `end_market`: demand bucket, e.g. 低軌衛星通訊, EV, data center.
+
+## Canonical Topic Shape
+
+Runtime shadow file:
+
+```text
+public/data/canonical-topics.json
+```
+
+Each topic contains:
+
+- `id`, `name`, `type`, `status`
+- `definition`
+- `whyItMatters`
+- `aliases`
+- `parentId`, `childIds`
+- `legacyTopicIds`
+- `include`, `exclude`
+- `activationSignals`
+- `evidence`
+- `confidence`, `lastVerified`
+
+## Status Rules
+
+- `active`: suitable for Daily Analysis once company roles/products are covered.
+- `watchlist`: plausible emerging topic, but insufficient evidence or adoption for primary scoring.
+- `legacy_candidate`: imported from old graph; not yet reviewed.
+- `deprecated`: replaced or merged into another canonical topic.
+- `rejected`: should not enter canonical analysis.
+
+## Initial Audit of Legacy Topics
+
+Current legacy runtime:
+
+- `industries.json` topics: 81 actual records.
+- `stats.total_topics`: 82, inconsistent with actual record count.
+- Legacy graph remains fallback; canonical topics are shadow layer.
+
+High-overlap examples that need canonical mapping:
+
+- `ai-server` + `ai-server-odm` + `ems-smt` + `liquid_cooling_advanced` + `thermal-solution` should become parent/child topics under **AI 伺服器** instead of one flat list.
+- `mlcc-capacitor` + `passive-inductor` + `passive-resistor` + `quartz-components` should roll up under **被動元件** with product-level children.
+- `hbm` + `cxl-technology` + `niche-memory` + `memory-modules` should roll up under **記憶體** with product/technology children.
+- `leo-satellite` + `edge-ai` can feed **軌道 AI 運算**, but this should remain `watchlist` until role/product evidence proves the AI-computing part, not just satellite communication.
+
+## Initial Canonical Topics Added
+
+The first shadow taxonomy covers user-mentioned topics plus existing AI server dependencies:
+
+- `passive-components`
+- `passive-components-mlcc`
+- `passive-components-inductor`
+- `passive-components-resistor`
+- `memory`
+- `hbm`
+- `cxl-memory-pooling`
+- `orbital-ai-computing`
+- `leo-satellite-communications`
+- `ai-server`
+- `ai-server-liquid-cooling`
+
+## Daily Analysis Adoption Rule
+
+Do not let Daily Analysis consume legacy topic names directly as truth.
+
+Adoption order:
+
+1. Use canonical topic if the company has v2 topic role evidence.
+2. Use canonical topic activation signals as watch items.
+3. Use product knowledge and SWOT only if `relatedTopicIds` map to canonical topics or accepted legacy aliases.
+4. If only legacy topic exists, label it as `legacy_candidate` or `unverified`, not a confident industry thesis.
+
+## Not Doing Yet
+
+- Not deleting `industries.json`.
+- Not rewriting all 81 topics in one pass.
+- Not promoting 軌道 AI 運算 to high confidence yet.
+- Not treating current market popularity as evidence of business exposure.
+- Not changing UI/Daily Analysis scoring until canonical topic coverage is validated.
+
+## Verification
+
+Commands:
+
+```bash
+npm test -- --test-name-pattern "CanonicalTopics|canonicalTopics"
+npm run knowledge:validate
+npm run build
+```
+
+Acceptance:
+
+- Canonical topic normalizer filters invalid records.
+- Validator checks schema, boundaries, evidence, parent refs, and legacy mappings.
+- `canonical-topics.json` validates with zero errors.
+- Legacy topics remain runtime fallback.

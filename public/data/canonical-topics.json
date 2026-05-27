@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-05-28",
+  "topicDefinition": {
+    "rule": "題材是可投資、可追蹤、可證據化的分析鏡頭：必須能連到需求催化、供應鏈位置、公司產品/角色、基本面傳導路徑與可觀測觸發訊號。",
+    "notTopic": [
+      "單日漲幅榜或人氣榜本身不是題材",
+      "只有股價一起漲、但沒有共同產品/需求/供應鏈邏輯，不升級為 canonical topic",
+      "公司營業登記或泛用描述不是題材證據",
+      "沒有公司角色邊界、無法說明誰受惠與為什麼，不進 Daily Analysis 主敘事"
+    ]
+  },
+  "topics": [
+    {
+      "id": "ai-server",
+      "name": "AI 伺服器",
+      "type": "theme",
+      "status": "active",
+      "definition": "以雲端/企業 AI 訓練與推論需求驅動的伺服器供應鏈主題，涵蓋整機、散熱、電源、PCB、連接器、BBU、記憶體與高速互連等子題。",
+      "whyItMatters": "AI 資本支出會透過 GPU/ASIC 平台滲透到伺服器 ODM、散熱、電源與高速材料，影響訂單能見度、營收成長與估值溢價。",
+      "aliases": ["AI server", "AI伺服器", "AI server supply chain"],
+      "childIds": ["ai-server-odm", "ai-server-liquid-cooling", "ai-server-chassis-rails", "bbu", "memory"],
+      "legacyTopicIds": ["ai-server", "ai-server-odm", "ems-smt"],
+      "include": ["AI 伺服器整機與 EMS/SMT", "AI 伺服器電源、散熱、機殼滑軌、BBU", "直接服務資料中心 AI 訓練/推論需求的零組件"],
+      "exclude": ["只賣一般 PC/NB 零組件且沒有 AI server 產品證據的公司", "只有股價跟漲、但無產品或客戶證據的公司"],
+      "activationSignals": ["雲端資本支出上修", "AI server ODM 營收年增擴大", "高功耗 GPU/ASIC 平台帶動散熱與電源規格升級"],
+      "evidence": [
+        { "sourceId": "finmind-taiwan-stock-datasets", "publisher": "FinMind", "title": "Taiwan Stock Market Datasets", "claim": "可用月營收、股價、法人與估值資料追蹤 AI 伺服器供應鏈公司基本面與市場反應。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "ai-server-liquid-cooling",
+      "name": "AI 伺服器液冷散熱",
+      "type": "technology",
+      "status": "active",
+      "definition": "因 AI 加速器功耗上升而導入的液冷、冷板、CDU、管路、快接頭、散熱模組與熱管理方案。",
+      "whyItMatters": "液冷滲透率提高會改變散熱廠產品組合與 ASP，並可能讓具備液冷設計/量產能力的公司取得較高成長性。",
+      "aliases": ["液冷", "水冷", "liquid cooling", "CDU", "cold plate"],
+      "parentId": "ai-server",
+      "childIds": [],
+      "legacyTopicIds": ["liquid_cooling_advanced", "thermal-solution", "thermal_components_air", "ai-server"],
+      "include": ["AI server 液冷零組件與系統", "冷板/CDU/管路/快接頭/熱管理模組"],
+      "exclude": ["純一般風扇但沒有 AI server 或高功耗平台證據的描述"],
+      "activationSignals": ["AI GPU/ASIC TDP 升高", "客戶導入液冷機櫃或 CDU", "散熱廠液冷相關營收揭露增加"],
+      "evidence": [
+        { "sourceId": "avc-official-homepage", "publisher": "奇鋐科技", "title": "Asia Vital Components official website", "claim": "奇鋐官網與公司資料可作為散熱產品與技術驗證來源。" },
+        { "sourceId": "delta-fans-thermal-products", "publisher": "台達", "title": "風扇與散熱管理產品", "claim": "台達官方產品頁可作為風扇與散熱管理產品驗證來源。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components",
+      "name": "被動元件",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "電子電路中不主動放大訊號的基礎元件族群，主要包含 MLCC/電容、電阻、電感、保護元件與石英頻率元件。",
+      "whyItMatters": "被動元件具備庫存循環與報價循環，且 AI server、車用、工控與消費電子需求復甦會透過規格升級或用量提升影響訂單與毛利率。",
+      "aliases": ["被動元件", "passive components", "MLCC", "電阻", "電感"],
+      "childIds": ["passive-components-mlcc", "passive-components-inductor", "passive-components-resistor", "quartz-components"],
+      "legacyTopicIds": ["mlcc-capacitor", "passive-inductor", "passive-resistor", "quartz-components"],
+      "include": ["MLCC/電容器", "功率電感", "電阻與保護元件", "石英頻率控制元件"],
+      "exclude": ["主動 IC 或模組廠，除非其主要收入來自被動元件", "只使用被動元件的終端組裝廠"],
+      "activationSignals": ["通路庫存去化完成", "MLCC/電阻/電感報價止跌或上漲", "車用、AI server、工控需求拉貨"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報與重大訊息可用於驗證被動元件產品與營收分類。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components-mlcc",
+      "name": "MLCC / 電容器",
+      "type": "product",
+      "status": "active",
+      "definition": "以積層陶瓷電容與其他電容器為核心的被動元件產品子題。",
+      "whyItMatters": "MLCC 用量與規格受車用電子、AI server、消費電子週期影響，報價與稼動率變化會直接影響供應商毛利。",
+      "aliases": ["MLCC", "積層陶瓷電容", "電容器"],
+      "parentId": "passive-components",
+      "childIds": [],
+      "legacyTopicIds": ["mlcc-capacitor"],
+      "include": ["MLCC 供應商", "鋁質/固態/薄膜等電容器供應商"],
+      "exclude": ["只在產品中使用 MLCC 的終端公司"],
+      "activationSignals": ["MLCC 報價止跌回升", "車用/AI server 高規 MLCC 拉貨", "庫存天數下降"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報可驗證 MLCC/電容器產品線與營收分類。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components-inductor",
+      "name": "功率電感",
+      "type": "product",
+      "status": "active",
+      "definition": "用於電源管理、濾波與能量儲存的電感產品，包含功率電感與相關磁性元件。",
+      "whyItMatters": "AI server、車用電子與高速運算平台的電源設計升級，會推升高電流、低損耗電感需求。",
+      "aliases": ["電感", "功率電感", "inductor", "power inductor"],
+      "parentId": "passive-components",
+      "childIds": [],
+      "legacyTopicIds": ["passive-inductor"],
+      "include": ["功率電感", "磁性元件"],
+      "exclude": ["非主要產品為電感的電源模組廠，除非有明確產品證據"],
+      "activationSignals": ["AI server 電源規格升級", "車用電子需求復甦", "電感稼動率/報價改善"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報可驗證功率電感與磁性元件產品線。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components-resistor",
+      "name": "電阻與被動保護元件",
+      "type": "product",
+      "status": "active",
+      "definition": "晶片電阻、精密電阻、保護元件與相關被動元件產品子題。",
+      "whyItMatters": "電阻屬基礎元件，景氣循環與庫存修正會影響出貨量；車用、工控與高階電子可帶動規格升級。",
+      "aliases": ["電阻", "晶片電阻", "保護元件", "resistor"],
+      "parentId": "passive-components",
+      "childIds": [],
+      "legacyTopicIds": ["passive-resistor"],
+      "include": ["電阻供應商", "保護元件供應商"],
+      "exclude": ["只採購電阻的下游電子產品公司"],
+      "activationSignals": ["通路庫存下降", "電阻報價止跌", "車用/工控需求復甦"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報可驗證電阻與保護元件產品線。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "memory",
+      "name": "記憶體",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "DRAM、NAND、HBM、CXL memory pooling、利基型記憶體與記憶體模組等儲存/記憶體供應鏈。",
+      "whyItMatters": "記憶體是高度循環產業，報價、庫存與 AI server 高頻寬需求會快速反映到營收、毛利率與市場評價。",
+      "aliases": ["記憶體", "memory", "DRAM", "NAND", "HBM"],
+      "childIds": ["hbm", "cxl-memory-pooling", "niche-memory", "memory-modules"],
+      "legacyTopicIds": ["hbm", "cxl-technology", "niche-memory", "memory-modules"],
+      "include": ["記憶體 IC/模組/控制相關供應鏈", "HBM 與 CXL 記憶體池化", "NOR Flash 與利基型記憶體"],
+      "exclude": ["只使用 DRAM/NAND 的一般終端品牌", "沒有記憶體產品或服務證據的半導體公司"],
+      "activationSignals": ["DRAM/NAND 合約價或現貨價上漲", "HBM 產能吃緊", "庫存週期由去化轉補庫存"],
+      "evidence": [
+        { "sourceId": "finmind-taiwan-stock-datasets", "publisher": "FinMind", "title": "Taiwan Stock Market Datasets", "claim": "月營收、股價與估值資料可追蹤記憶體景氣循環對公司基本面的影響。" },
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報與公告可驗證記憶體產品線與營收分類。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "hbm",
+      "name": "HBM 高頻寬記憶體",
+      "type": "product",
+      "status": "active",
+      "definition": "用於 AI GPU/ASIC 的高頻寬堆疊式記憶體及其相關供應鏈。",
+      "whyItMatters": "HBM 是 AI accelerator 關鍵瓶頸之一，需求強弱會影響記憶體廠、封裝、材料與測試供應鏈。",
+      "aliases": ["HBM", "HBM3", "HBM3E", "高頻寬記憶體"],
+      "parentId": "memory",
+      "childIds": [],
+      "legacyTopicIds": ["hbm"],
+      "include": ["HBM 記憶體供應", "HBM 相關封裝/測試/材料"],
+      "exclude": ["一般 DRAM/NAND 公司但沒有 HBM 相關證據者"],
+      "activationSignals": ["AI GPU 出貨上修", "HBM 供需吃緊或價格上漲", "HBM 產能與良率改善"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證 HBM 相關產品、客戶或供應鏈定位。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "cxl-memory-pooling",
+      "name": "CXL 記憶體池化",
+      "type": "technology",
+      "status": "watchlist",
+      "definition": "基於 Compute Express Link 的記憶體擴充、共享與池化技術，服務資料中心高效資源配置。",
+      "whyItMatters": "若資料中心導入 CXL memory pooling，可能帶動控制晶片、模組、伺服器平台與記憶體配置升級。",
+      "aliases": ["CXL", "Compute Express Link", "記憶體池化"],
+      "parentId": "memory",
+      "childIds": [],
+      "legacyTopicIds": ["cxl-technology"],
+      "include": ["CXL 控制晶片", "CXL 記憶體模組", "支援 CXL 的伺服器平台"],
+      "exclude": ["只泛稱高速介面、但無 CXL 產品或客戶證據"],
+      "activationSignals": ["CXL 平台商用導入", "伺服器平台支援 CXL", "公司揭露 CXL 產品量產或設計導入"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證 CXL 產品或技術導入狀態。" }
+      ],
+      "confidence": "low",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "orbital-ai-computing",
+      "name": "軌道 AI 運算",
+      "type": "theme",
+      "status": "watchlist",
+      "definition": "把 AI 推論、資料預處理或邊緣運算能力部署於衛星、太空載具或地面衛星網路節點，用於低延遲、自主判讀與通訊效率提升。",
+      "whyItMatters": "若低軌衛星從通訊鏈路升級到在軌資料處理，受惠對象會從天線/RF/地面設備擴大到耐輻射運算、邊緣 AI、電源、熱控與系統整合。",
+      "aliases": ["軌道AI", "在軌 AI", "space edge AI", "orbital AI", "satellite edge computing"],
+      "childIds": ["leo-satellite-communications", "edge-ai"],
+      "legacyTopicIds": ["leo-satellite", "edge-ai"],
+      "include": ["低軌衛星通訊與地面設備", "衛星邊緣運算/AI 推論", "太空級電源、熱控、運算與通訊模組"],
+      "exclude": ["只有一般 AI PC/AIoT，沒有衛星或太空場景證據", "只有傳統衛星零組件但無運算升級邏輯者需降為低軌衛星通訊"],
+      "activationSignals": ["衛星營運商導入邊緣運算或 AI payload", "低軌衛星地面設備訂單增加", "太空級運算/通訊模組公司揭露新設計導入"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證低軌衛星、地面設備或太空應用產品。" },
+        { "sourceId": "finmind-taiwan-stock-datasets", "publisher": "FinMind", "title": "Taiwan Stock Market Datasets", "claim": "可追蹤相關公司營收與股價是否反映衛星/邊緣 AI 設計導入。" }
+      ],
+      "confidence": "low",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "leo-satellite-communications",
+      "name": "低軌衛星通訊",
+      "type": "end_market",
+      "status": "active",
+      "definition": "低軌衛星網路相關的衛星通訊、地面設備、天線、RF、網通與系統整合供應鏈。",
+      "whyItMatters": "低軌衛星建置會帶動天線、RF、網通設備、電源與系統整合需求，是軌道 AI 運算的基礎市場。",
+      "aliases": ["低軌衛星", "LEO satellite", "衛星通訊"],
+      "parentId": "orbital-ai-computing",
+      "childIds": [],
+      "legacyTopicIds": ["leo-satellite"],
+      "include": ["衛星通訊地面設備", "天線/RF/網通設備", "衛星相關系統整合"],
+      "exclude": ["一般網通設備但無衛星通訊證據"],
+      "activationSignals": ["衛星營運商建置進度", "地面設備拉貨", "RF/天線/通訊模組訂單揭露"],
+      "evidence": [
+        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證低軌衛星通訊產品與客戶應用。" }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    }
+  ]
+}

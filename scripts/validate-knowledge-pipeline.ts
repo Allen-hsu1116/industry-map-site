@@ -8,6 +8,7 @@ const SOURCES_PATH = path.join(DATA_DIR, "knowledge-sources.json");
 const PRODUCT_KNOWLEDGE_DIR = path.join(DATA_DIR, "product-knowledge");
 const COMPANY_TOPIC_ROLES_DIR = path.join(DATA_DIR, "company-topic-roles");
 const COMPANY_SWOT_DIR = path.join(DATA_DIR, "company-swot");
+const CANONICAL_TOPICS_PATH = path.join(DATA_DIR, "canonical-topics.json");
 const REPORT_PATH = path.join(DATA_DIR, "knowledge-quality-report.json");
 
 type Severity = "error" | "warning";
@@ -148,6 +149,40 @@ interface CompanySwotItem {
 }
 
 interface CompanySwotEvidence {
+  sourceId?: unknown;
+  publisher?: unknown;
+  title?: unknown;
+  url?: unknown;
+  claim?: unknown;
+}
+
+interface CanonicalTopicsFile {
+  schemaVersion?: unknown;
+  updatedAt?: unknown;
+  topicDefinition?: unknown;
+  topics?: unknown;
+}
+
+interface CanonicalTopicItem {
+  id?: unknown;
+  name?: unknown;
+  type?: unknown;
+  status?: unknown;
+  definition?: unknown;
+  whyItMatters?: unknown;
+  aliases?: unknown;
+  parentId?: unknown;
+  childIds?: unknown;
+  legacyTopicIds?: unknown;
+  include?: unknown;
+  exclude?: unknown;
+  activationSignals?: unknown;
+  evidence?: unknown;
+  confidence?: unknown;
+  lastVerified?: unknown;
+}
+
+interface CanonicalTopicEvidence {
   sourceId?: unknown;
   publisher?: unknown;
   title?: unknown;
@@ -473,6 +508,75 @@ function validateCompanySwot(sourceIds: Set<string>, issues: QualityIssue[]): nu
   return itemCount;
 }
 
+function validateCanonicalTopics(sourceIds: Set<string>, legacyTopicIds: Set<string>, issues: QualityIssue[]): number {
+  if (!fs.existsSync(CANONICAL_TOPICS_PATH)) return 0;
+  const knowledge = readJson<CanonicalTopicsFile>(CANONICAL_TOPICS_PATH);
+  const filePath = "canonical-topics.json";
+  const validTopicTypes = new Set(["theme", "technology", "product", "process", "supply_chain_segment", "end_market"]);
+  const validStatuses = new Set(["active", "watchlist", "legacy_candidate", "deprecated", "rejected"]);
+  const validConfidence = new Set(["high", "medium", "low", "insufficient", "unverified"]);
+  const topicIds = new Set<string>();
+  const parentRefs: Array<{ topicId: string; parentId: string; path: string }> = [];
+  let topicCount = 0;
+
+  if (knowledge.schemaVersion !== 1) addIssue(issues, "error", "canonical_topics.invalid_schema", `${filePath}.schemaVersion`, `${filePath} schemaVersion must be 1`);
+  if (!asString(knowledge.updatedAt)) addIssue(issues, "warning", "canonical_topics.missing_updated_at", `${filePath}.updatedAt`, `${filePath} is missing updatedAt`);
+  const topicDefinition = knowledge.topicDefinition && typeof knowledge.topicDefinition === "object" ? knowledge.topicDefinition as Record<string, unknown> : {};
+  if (!asString(topicDefinition.rule)) addIssue(issues, "error", "canonical_topics.missing_definition_rule", `${filePath}.topicDefinition.rule`, "Canonical topic definition rule is required");
+  if (asArray(topicDefinition.notTopic).length === 0) addIssue(issues, "warning", "canonical_topics.missing_not_topic", `${filePath}.topicDefinition.notTopic`, "Canonical topic definition should list non-topic boundaries");
+
+  const topics = asArray(knowledge.topics) as CanonicalTopicItem[];
+  if (topics.length === 0) addIssue(issues, "error", "canonical_topics.no_topics", `${filePath}.topics`, `${filePath} must define at least one canonical topic`);
+  topicCount = topics.length;
+
+  topics.forEach((topic, index) => {
+    const topicPath = `${filePath}.topics[${index}]`;
+    const id = asString(topic.id);
+    if (!id) addIssue(issues, "error", "canonical_topics.topic_missing_id", `${topicPath}.id`, "Canonical topic is missing id");
+    else if (topicIds.has(id)) addIssue(issues, "error", "canonical_topics.duplicate_id", `${topicPath}.id`, `Duplicate canonical topic id: ${id}`);
+    if (id) topicIds.add(id);
+    if (!asString(topic.name)) addIssue(issues, "error", "canonical_topics.topic_missing_name", `${topicPath}.name`, `${id ?? "Canonical topic"} is missing name`);
+    const type = asString(topic.type);
+    if (!type || !validTopicTypes.has(type)) addIssue(issues, "error", "canonical_topics.invalid_type", `${topicPath}.type`, `${id ?? "Canonical topic"} type is invalid`);
+    const status = asString(topic.status);
+    if (!status || !validStatuses.has(status)) addIssue(issues, "error", "canonical_topics.invalid_status", `${topicPath}.status`, `${id ?? "Canonical topic"} status is invalid`);
+    const confidence = asString(topic.confidence);
+    if (!confidence || !validConfidence.has(confidence)) addIssue(issues, "error", "canonical_topics.invalid_confidence", `${topicPath}.confidence`, `${id ?? "Canonical topic"} confidence is invalid`);
+    const definition = asString(topic.definition);
+    if (!definition) addIssue(issues, "error", "canonical_topics.missing_definition", `${topicPath}.definition`, `${id ?? "Canonical topic"} must define what the topic is`);
+    if (definition && definition.length < 30) addIssue(issues, "warning", "canonical_topics.short_definition", `${topicPath}.definition`, `${id ?? "Canonical topic"} definition is too short`);
+    const why = asString(topic.whyItMatters);
+    if (!why) addIssue(issues, "error", "canonical_topics.missing_why", `${topicPath}.whyItMatters`, `${id ?? "Canonical topic"} must explain why it matters`);
+    if (why && why.length < 30) addIssue(issues, "warning", "canonical_topics.short_why", `${topicPath}.whyItMatters`, `${id ?? "Canonical topic"} whyItMatters is too short`);
+    if (asArray(topic.include).length === 0) addIssue(issues, "warning", "canonical_topics.missing_include", `${topicPath}.include`, `${id ?? "Canonical topic"} should define include boundaries`);
+    if (asArray(topic.exclude).length === 0) addIssue(issues, "warning", "canonical_topics.missing_exclude", `${topicPath}.exclude`, `${id ?? "Canonical topic"} should define exclude boundaries`);
+    if (asArray(topic.activationSignals).length === 0) addIssue(issues, "warning", "canonical_topics.missing_activation_signals", `${topicPath}.activationSignals`, `${id ?? "Canonical topic"} should list activation signals`);
+    const parentId = asString(topic.parentId);
+    if (id && parentId) parentRefs.push({ topicId: id, parentId, path: `${topicPath}.parentId` });
+
+    asArray(topic.legacyTopicIds).map(asString).filter((legacyTopicId): legacyTopicId is string => Boolean(legacyTopicId)).forEach((legacyTopicId, legacyIndex) => {
+      if (!legacyTopicIds.has(legacyTopicId)) addIssue(issues, "warning", "canonical_topics.unknown_legacy_topic", `${topicPath}.legacyTopicIds[${legacyIndex}]`, `${id ?? "Canonical topic"} maps unknown legacy topic ${legacyTopicId}`);
+    });
+
+    if ((confidence === "high" || confidence === "medium") && !asString(topic.lastVerified)) addIssue(issues, "error", "canonical_topics.missing_last_verified", `${topicPath}.lastVerified`, `${id ?? "Canonical topic"} high/medium confidence needs lastVerified`);
+    const evidence = asArray(topic.evidence) as CanonicalTopicEvidence[];
+    if ((confidence === "high" || confidence === "medium") && evidence.length === 0) addIssue(issues, "error", "canonical_topics.missing_evidence", `${topicPath}.evidence`, `${id ?? "Canonical topic"} high/medium confidence needs evidence`);
+    evidence.forEach((source, sourceIndex) => {
+      const evidencePath = `${topicPath}.evidence[${sourceIndex}]`;
+      const sourceId = asString(source.sourceId);
+      if (!sourceId) addIssue(issues, "error", "canonical_topics.evidence_missing_source_id", `${evidencePath}.sourceId`, `${id ?? "Canonical topic"} evidence is missing sourceId`);
+      else if (!sourceIds.has(sourceId)) addIssue(issues, "error", "canonical_topics.evidence_unknown_source_id", `${evidencePath}.sourceId`, `${id ?? "Canonical topic"} evidence sourceId ${sourceId} is absent from knowledge-sources.json`);
+      if (!asString(source.claim)) addIssue(issues, "warning", "canonical_topics.evidence_missing_claim", `${evidencePath}.claim`, `${id ?? "Canonical topic"} evidence should state the supported claim`);
+    });
+  });
+
+  parentRefs.forEach((ref) => {
+    if (!topicIds.has(ref.parentId)) addIssue(issues, "error", "canonical_topics.unknown_parent", ref.path, `${ref.topicId} parentId ${ref.parentId} is not a canonical topic`);
+  });
+
+  return topicCount;
+}
+
 function main() {
   const issues: QualityIssue[] = [];
   const industries = readJson<IndustriesFile>(INDUSTRIES_PATH);
@@ -485,6 +589,7 @@ function main() {
   const productKnowledgeItems = validateProductKnowledge(sourceIds, issues);
   const companyTopicRoles = validateCompanyTopicRoles(sourceIds, issues);
   const companySwotItems = validateCompanySwot(sourceIds, issues);
+  const canonicalTopics = validateCanonicalTopics(sourceIds, graph.topicSlugs, issues);
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -496,6 +601,7 @@ function main() {
       productKnowledgeItems,
       companyTopicRoles,
       companySwotItems,
+      canonicalTopics,
       knowledgeSources: sources.length,
       errors: issues.filter((issue) => issue.severity === "error").length,
       warnings: issues.filter((issue) => issue.severity === "warning").length,
@@ -507,7 +613,7 @@ function main() {
 
   console.log(`Knowledge validation report written to ${path.relative(process.cwd(), REPORT_PATH)}`);
   console.log(`Topics: ${report.summary.topics}, companies: ${report.summary.companiesInGraph}, roles: ${report.summary.companyRoles}`);
-  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, company topic roles: ${report.summary.companyTopicRoles}, company SWOT items: ${report.summary.companySwotItems}, sources: ${report.summary.knowledgeSources}`);
+  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, company topic roles: ${report.summary.companyTopicRoles}, company SWOT items: ${report.summary.companySwotItems}, canonical topics: ${report.summary.canonicalTopics}, sources: ${report.summary.knowledgeSources}`);
   console.log(`Errors: ${report.summary.errors}, warnings: ${report.summary.warnings}`);
 
   if (report.summary.errors > 0) {
