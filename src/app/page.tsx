@@ -189,6 +189,59 @@ function getRoleBadge(relevance: string) {
   return ROLE_BADGE_MAP[info.label] || ROLE_BADGE_MAP["相關"];
 }
 
+function stripLeadingStatusIcon(value?: string): string {
+  return String(value ?? "")
+    .replace(/^[\s\uFFFD\uFE0F\u200D\u{1F300}-\u{1FAFF}]+/u, "")
+    .trim();
+}
+
+type ProductNarrative = { name: string; description: string; whyItMatters?: string };
+
+function describeProduct(raw: string, context: { companyName: string; topicName: string; group: string }): ProductNarrative {
+  const normalized = String(raw ?? "").trim();
+  const [rawName, ...rawDescParts] = normalized.split(/[:：]\s*/);
+  const name = rawName?.trim() || normalized || "產品/技術項目";
+  const explicitDescription = rawDescParts.join("：").trim();
+  const lowerName = name.toLowerCase();
+
+  let description = explicitDescription;
+  let whyItMatters = "";
+
+  if (/cowos-s/i.test(name)) {
+    description ||= "CoWoS-S 是以矽中介層（Silicon Interposer）連接 GPU/ASIC 與 HBM 的 2.5D 先進封裝，是目前 AI 加速器最主流的高頻寬封裝路線。";
+    whyItMatters = "厲害之處在於能把運算晶片與高頻寬記憶體放在同一封裝內，大幅降低資料搬運瓶頸；AI GPU 效能、良率與供給量都會卡在這類封裝能力。";
+  } else if (/cowos-l/i.test(name)) {
+    description ||= "CoWoS-L 是面向更大晶片尺寸與更多 HBM 堆疊的進階 CoWoS 路線，常被視為 Blackwell / Rubin 世代 AI 晶片擴大封裝面積與 I/O 的關鍵。";
+    whyItMatters = "它讓更大規模的 AI 加速器能維持高頻寬互連，是先進封裝從『能做』走向『能大量供應』的重要產能瓶頸。";
+  } else if (/cowos/i.test(name)) {
+    description ||= "CoWoS 是台積電 2.5D 先進封裝平台，用來把 GPU/ASIC、HBM 與多顆晶片整合在同一封裝內，解決 AI 晶片需要超高頻寬與高密度互連的問題。";
+    whyItMatters = "AI 加速器不是只靠單顆晶片變強，還要靠封裝把運算與記憶體高速接在一起；CoWoS 產能與良率因此成為 NVIDIA、AMD、Broadcom 等 AI 晶片出貨的關鍵瓶頸。";
+  } else if (/soic/i.test(name)) {
+    description ||= "SoIC 是台積電 3D IC 晶片堆疊技術，透過晶片對晶片的垂直整合縮短訊號路徑，提升效能與能源效率。";
+    whyItMatters = "當先進製程微縮越來越貴，3D 堆疊提供另一條提升系統效能的路線，對 HPC、AI 與高階行動晶片都有戰略價值。";
+  } else if (/wmcm/i.test(name)) {
+    description ||= "WMCM 是晶圓級多晶片模組封裝，把多顆晶片在晶圓級整合，目標是提升封裝密度並降低高階模組量產成本。";
+    whyItMatters = "它代表台積電把先進封裝往更高產能、更高整合度推進，對 AI/HPC 客戶縮短導入時間有幫助。";
+  } else if (/\bN2\b|2奈米|2nm/i.test(name)) {
+    description ||= "N2 是台積電 2 奈米製程節點，導入奈米片電晶體架構，主打效能、功耗與晶片密度進一步改善。";
+    whyItMatters = "先進製程節點決定高階 AI、HPC、手機晶片的功耗與效能上限，也是台積電維持晶圓代工定價能力的核心。";
+  } else if (/\bN3\b|N3E|3奈米|3nm/i.test(name)) {
+    description ||= "N3 / N3E 是台積電 3 奈米家族製程，服務高階手機、HPC 與 AI ASIC，是目前先進製程營收的重要來源。";
+    whyItMatters = "它代表台積電已量產化的領先節點，客戶導入速度會直接影響先進製程營收占比與毛利率。";
+  } else if (/\bN5\b|\bN4\b|5奈米|4奈米|5nm|4nm/i.test(name)) {
+    description ||= "N5 / N4 是台積電成熟量產的先進製程平台，廣泛用於手機 SoC、GPU、HPC 與高速網通晶片。";
+    whyItMatters = "這類節點兼具良率、成本與產能，是支撐台積電現金流與 AI/HPC 大量出貨的主力基礎。";
+  } else if (/a16/i.test(lowerName)) {
+    description ||= "A16 是台積電規劃中的更先進製程平台，搭配背面供電等技術以改善功耗與訊號傳輸。";
+    whyItMatters = "它是後 2 奈米世代的技術延伸，關係到台積電能否繼續拉開與競爭對手的製程差距。";
+  } else if (!description) {
+    description = `${name} 是 ${context.companyName} 在「${context.topicName}」中對應到「${context.group}」供應鏈角色的產品、服務或技術項目。`;
+    whyItMatters = "後續應用年報、法說會、客戶導入與營收資料補強說明，避免只靠題材名稱硬套故事。";
+  }
+
+  return { name, description, whyItMatters };
+}
+
 type CompanyRole = {
   topic: string;
   topicName: string;
@@ -2144,6 +2197,11 @@ function CompanyFullPageDetail({
                       swot: fallbackSwot,
                     };
                     const dailyIndustry = resolvedDailyAnalysis?.industry;
+                    const primaryTopicId = knowledge?.topicRoles[0]?.topicId;
+                    const dailyIndustryApplies = Boolean(dailyIndustry && primaryTopicId === role.topic);
+                    const integratedDailyNote = dailyIndustryApplies && dailyIndustry
+                      ? ` 收盤後資料日 ${resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"} 的題材檢查結果為「${dailyIndustry.label}」，後續會用下方觀察重點輔助驗證這個題材角色是否反映到營收、籌碼與價格。`
+                      : "";
                     const sourceChips = [
                       ...(knowledge?.dataSources ?? []),
                       ...(knowledge?.swot.sources ?? []),
@@ -2161,7 +2219,7 @@ function CompanyFullPageDetail({
                             <Badge className="bg-indigo-500/20 text-indigo-400 border-indigo-500/30 text-[10px]">來源整合</Badge>
                           </div>
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                            {topicAnalysis.ai_summary || analysisText}
+                            {topicAnalysis.ai_summary || analysisText}{integratedDailyNote}
                           </p>
                           <div className="mt-4 flex items-center gap-3">
                             <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: roleBadge.color, backgroundColor: roleBadge.bg }}>
@@ -2178,21 +2236,12 @@ function CompanyFullPageDetail({
                           <div className="flex items-center gap-3 mb-3">
                             <span className="w-3 h-3 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: topicAnalysis?.market_position?.includes('龍頭') ? '#34d399' : topicAnalysis?.market_position?.includes('成長') ? '#fbbf24' : '#60a5fa' }}></span>
                             <span className="text-lg font-bold" style={{ color: topicAnalysis?.market_position?.includes('龍頭') ? '#34d399' : topicAnalysis?.market_position?.includes('成長') ? '#fbbf24' : '#60a5fa' }}>
-                              {topicAnalysis?.market_position?.replace(/^[🟢🟠🔵🟣🟡🔴]\s*/, '') || marketPos.label}
+                              {stripLeadingStatusIcon(topicAnalysis?.market_position) || marketPos.label}
                             </span>
                           </div>
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                             {topicAnalysis?.market_position_detail || `${data.name}為${role.topicName}產業之關鍵參與者，在供應鏈中扮演${relInfo.label}角色。`}
                           </p>
-                          {dailyIndustry && (
-                            <div className="mt-4 rounded-xl border border-cyan-400/10 bg-cyan-400/[0.04] p-4">
-                              <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-                                <span className="text-xs font-bold text-cyan-300">每日題材定位校正 · {dailyIndustry.label}</span>
-                                <span className="text-[10px] text-[var(--color-text-tertiary)]">資料日 {resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"}</span>
-                              </div>
-                              <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">{dailyIndustry.summary}</p>
-                            </div>
-                          )}
                         </div>
 
                         {/* 技術重心 */}
@@ -2219,7 +2268,7 @@ function CompanyFullPageDetail({
                                   </div>
                                 );
                               })}
-                              {dailyIndustry && (dailyIndustry.signals.length > 0 || dailyIndustry.risks.length > 0 || dailyIndustry.watch.length > 0) && (
+                              {dailyIndustryApplies && dailyIndustry && (dailyIndustry.signals.length > 0 || dailyIndustry.risks.length > 0 || dailyIndustry.watch.length > 0) && (
                                 <div className="grid gap-3 border-t border-white/[0.04] pt-4 md:grid-cols-3">
                                   {dailyIndustry.signals.length > 0 && (
                                     <div>
@@ -2259,12 +2308,14 @@ function CompanyFullPageDetail({
                             <h4 className="text-sm font-bold text-white mb-3">📦 主要產品</h4>
                             <div className="space-y-3">
                               {topicAnalysis.products.map((p, i) => {
-                                const [name, ...descParts] = p.split(': ');
-                                const desc = descParts.join(': ');
+                                const item = describeProduct(p, { companyName: data.name, topicName: role.topicName, group: role.group });
                                 return (
-                                  <div key={i}>
-                                    <p className="text-sm font-semibold text-white">{name}</p>
-                                    {desc && <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{desc}</p>}
+                                  <div key={i} className="rounded-xl border border-white/[0.04] bg-white/[0.015] p-4">
+                                    <p className="text-sm font-semibold text-white">{item.name}</p>
+                                    <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">{item.description}</p>
+                                    {item.whyItMatters && (
+                                      <p className="mt-2 text-xs leading-relaxed text-cyan-200/80">為什麼重要：{item.whyItMatters}</p>
+                                    )}
                                   </div>
                                 );
                               })}
