@@ -42,6 +42,7 @@ public/data/product-knowledge/{code}.json    Evidence-backed product knowledge, 
 public/data/v2/                              Future canonical topic/role graph; not runtime-default until validated
 reports/v2-canonical-products.json            Generated canonical product/alias candidates; review artifact
 reports/v2-canonical-role-candidates.json     Generated v2 role ontology candidates; review artifact
+reports/v2-source-discovery-plan.json         Generated source discovery plan for pilot companies
 reports/                                     Generated migration reports; review artifacts, not runtime source
 src/lib/legacyKnowledgeInventory.ts          Pure inventory/candidate extraction logic
 scripts/generate-v2-inventory.ts             CLI that reads legacy data and writes reports
@@ -179,6 +180,15 @@ Then map legacy topics and roles:
 - Label directness conservatively; ambiguous items stay `unverified`/`low`.
 
 ### Phase 3 — Evidence enrichment
+
+Phase 3 starts by producing a source discovery plan for pilot companies:
+
+- Generate `reports/v2-source-discovery-plan.json` from Top 30 pilot companies.
+- Preserve source priority: company official / IR first, then MOPS reports, MOPS major news, MOPS revenue, FinMind structured datasets, then lower-confidence external cross-checks later.
+- Mark unknown company official/IR pages as `needs_discovery`; do not invent official URLs.
+- Mark MOPS/FinMind sources as `queryable` candidates because extraction code can call those data providers by company code.
+
+Then enrich evidence:
 
 - Discover sources in priority order:
   1. official company/product pages;
