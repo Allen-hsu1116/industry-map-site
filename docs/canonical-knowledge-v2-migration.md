@@ -40,6 +40,7 @@ public/data/industries.json                  Legacy topic/company-role graph; do
 public/data/companies.json                   Legacy company index; do not delete yet
 public/data/product-knowledge/{code}.json    Evidence-backed product knowledge, already hybrid-consumed by UI
 public/data/v2/                              Future canonical topic/role graph; not runtime-default until validated
+reports/v2-canonical-products.json            Generated canonical product/alias candidates; review artifact
 reports/                                     Generated migration reports; review artifacts, not runtime source
 src/lib/legacyKnowledgeInventory.ts          Pure inventory/candidate extraction logic
 scripts/generate-v2-inventory.ts             CLI that reads legacy data and writes reports
@@ -162,6 +163,15 @@ Rules:
 - Write generated reports under `reports/`.
 
 ### Phase 2 — Canonical taxonomy and role mapping
+
+Phase 2 starts with deterministic product canonicalization before deeper role ontology mapping:
+
+- Build generated product/alias candidates from legacy product mentions in `reports/v2-canonical-products.json`.
+- Known high-value aliases such as CoWoS/CoWoS-S/CoWoS-L, SoIC, HBM/HBM3E, N2/A16, ABF/CCL/PCB are mapped deterministically.
+- Business-registration boilerplate is flagged with issues and must not be promoted directly into product knowledge.
+- All generated products remain `status: candidate`, `confidence: unverified`, and `needsVerification: true` until Phase 3 evidence enrichment.
+
+Then map legacy topics and roles:
 
 - Map legacy topics to v2 topic types.
 - Map legacy groups/roles to supply-chain stages and role types.
