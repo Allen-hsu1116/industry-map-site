@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { gateDailyReportPicks } from "@/lib/dailyReportGating";
 
 /* ─── Types ─── */
 interface TechnicalAnalysis {
@@ -271,6 +272,8 @@ export default function DailyReportPage() {
     );
   }
 
+  const gatedPicks = gateDailyReportPicks(report.picks, dailyAnalyses);
+
   return (
     <div className="min-h-screen bg-[#0a0a1a]">
       <div className="max-w-5xl mx-auto px-4 py-8">
@@ -371,8 +374,23 @@ export default function DailyReportPage() {
 
         {/* Stock Picks */}
         <div className="space-y-6">
-          <h2 className="text-xl font-bold text-white">🏆 今日推薦 Top {report.picks.length}</h2>
-          {report.picks.map((pick) => {
+          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <h2 className="text-xl font-bold text-white">🏆 今日推薦 Top {gatedPicks.topRecommendations.length}</h2>
+              <p className="mt-1 text-sm text-gray-400">只有 Analysis Quality A/B/C 可進 Top recommendation；D/F 會降到下方觀察區。</p>
+            </div>
+            <Badge variant="outline" className="w-fit border-cyan-400/30 bg-cyan-400/10 text-cyan-200">
+              A/B/C gate enabled
+            </Badge>
+          </div>
+          {gatedPicks.topRecommendations.length === 0 && (
+            <Card className="border-amber-500/20 bg-[#12122a]">
+              <CardContent className="pt-6">
+                <p className="text-sm text-amber-200">今天沒有符合 A/B/C 品質門檻的 Top recommendation；請只參考下方觀察清單，等資料補齊後再提高信心。</p>
+              </CardContent>
+            </Card>
+          )}
+          {gatedPicks.topRecommendations.map(({ pick }) => {
             const dailyAnalysis = dailyAnalyses[pick.code];
             const dailyIndustry = dailyAnalysis?.industry;
             const analysisQuality = dailyAnalysis?.analysisQuality;
@@ -598,6 +616,49 @@ export default function DailyReportPage() {
             );
           })}
         </div>
+
+        {gatedPicks.observationOnly.length > 0 && (
+          <Card className="mt-6 border-orange-500/20 bg-[#12122a]">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg text-orange-300">👀 觀察 / 資料不足（不列入 Top recommendation）</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-sm leading-relaxed text-gray-400">
+                以下標的來自原始候選清單，但 Analysis Quality 未達 A/B/C。它們可以追蹤，不應被包裝成高信心推薦。
+              </p>
+              {gatedPicks.observationOnly.map(({ pick, analysis, reason }) => {
+                const quality = analysis?.analysisQuality;
+                return (
+                  <div key={pick.code} className="rounded-lg border border-slate-700/80 bg-slate-900/40 p-4">
+                    <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                      <div>
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-sm font-bold text-gray-500">原候選 #{pick.rank}</span>
+                          <a href={`/industry-map-site/?company=${pick.code}`} className="font-bold text-white hover:text-indigo-300">
+                            {pick.name} <span className="text-gray-500">({pick.code})</span>
+                          </a>
+                          <Badge variant="outline" className={`text-xs ${getAnalysisQualityClass(quality?.grade)}`}>
+                            Quality {quality?.grade ?? "?"} · {quality?.label ?? "未載入"}
+                          </Badge>
+                        </div>
+                        <p className="mt-2 text-sm leading-relaxed text-amber-100/90">{reason}</p>
+                        {quality?.blockingReasons?.length ? (
+                          <p className="mt-1 text-xs text-gray-500">阻擋原因：{quality.blockingReasons.join("、")}</p>
+                        ) : null}
+                      </div>
+                      <div className={`text-2xl font-bold ${getScoreColor(pick.score)}`}>{pick.score}分</div>
+                    </div>
+                    <div className="mt-3 grid grid-cols-1 gap-3 text-sm md:grid-cols-3">
+                      <p className="text-gray-300"><span className="text-indigo-300">技術：</span>{pick.technicals.summary}</p>
+                      <p className="text-gray-300"><span className="text-purple-300">籌碼：</span>{pick.chip_analysis.summary}</p>
+                      <p className="text-gray-300"><span className="text-cyan-300">產業：</span>尚未 evidence-backed 到可推薦門檻。</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </CardContent>
+          </Card>
+        )}
 
         {/* Risk Alerts */}
         {report.risk_alerts && report.risk_alerts.length > 0 && (
