@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "category": "technical",
+  "updatedAt": "2026-05-29",
+  "source": {
+    "title": "技術分析總論",
+    "url": "https://allen-hsu1116.github.io/stock-knowledge-site/技術分析/技術分析總論"
+  },
+  "rules": [
+    {
+      "id": "technical.trend-alignment",
+      "category": "technical",
+      "title": "均線與趨勢共振",
+      "principle": "趨勢交易先判斷價格相對中短期均線的位置，收盤價、短均線、長均線同向排列時，訊號可信度高於單一突破。",
+      "positiveSignals": [
+        "收盤價高於 MA5 且 MA5 高於 MA20",
+        "MA20 斜率轉正",
+        "突破時量能高於 20 日均量"
+      ],
+      "negativeSignals": [
+        "收盤價跌破 MA20",
+        "MA5 下彎且跌破 MA20",
+        "突破無量或隔日跌回區間"
+      ],
+      "scoringImpact": {
+        "positive": 22,
+        "negative": -22
+      },
+      "riskControls": [
+        "若收盤跌破 MA20 且量增，降為觀察或移除短線推薦"
+      ],
+      "source": {
+        "title": "技術分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/技術分析/技術分析總論"
+      }
+    },
+    {
+      "id": "technical.breakout-volume",
+      "category": "technical",
+      "title": "突破必須搭配量能確認",
+      "principle": "型態突破若缺乏成交量確認，容易是假突破；帶量突破且站穩關鍵價位才提高分數。",
+      "positiveSignals": [
+        "突破 20 日高點且量比大於 1.5",
+        "突破後 2 日內未跌回整理區",
+        "長紅 K 搭配放量"
+      ],
+      "negativeSignals": [
+        "突破當日量縮",
+        "上影線過長且收盤未站穩",
+        "隔日跌破突破價"
+      ],
+      "scoringImpact": {
+        "positive": 18,
+        "negative": -18
+      },
+      "riskControls": [
+        "突破停損以突破K低點或整理區上緣為界"
+      ],
+      "source": {
+        "title": "技術分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/技術分析/技術分析總論"
+      }
+    },
+    {
+      "id": "technical.support-resistance",
+      "category": "technical",
+      "title": "支撐壓力與風險報酬比",
+      "principle": "進場位置必須先定義支撐、壓力與停損距離；靠近壓力追價會壓縮報酬風險比。",
+      "positiveSignals": [
+        "接近支撐後轉強",
+        "壓力突破後回測不破",
+        "停損距離小於目標報酬一半"
+      ],
+      "negativeSignals": [
+        "追在 20 日高點上方過遠",
+        "跌破前低支撐",
+        "目標壓力太近"
+      ],
+      "scoringImpact": {
+        "positive": 12,
+        "negative": -16
+      },
+      "riskControls": [
+        "停損距離過大時不得列入 Top recommendation"
+      ],
+      "source": {
+        "title": "技術分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/技術分析/技術分析總論"
+      }
+    },
+    {
+      "id": "technical.multi-indicator-confirmation",
+      "category": "technical",
+      "title": "多指標共振優先於單一訊號",
+      "principle": "均線、量能、型態與相對強弱同向時才提高技術分數，單一指標背離時應降權。",
+      "positiveSignals": [
+        "均線多頭排列且量能擴增",
+        "價格創高且相對大盤轉強",
+        "型態突破與籌碼買超同步"
+      ],
+      "negativeSignals": [
+        "價格創高但量縮",
+        "技術偏多但法人連賣",
+        "指標互相矛盾"
+      ],
+      "scoringImpact": {
+        "positive": 16,
+        "negative": -14
+      },
+      "riskControls": [
+        "多面向矛盾時降為觀察，不因單一漂亮K線推薦"
+      ],
+      "source": {
+        "title": "技術分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/技術分析/技術分析總論"
+      }
+    },
+    {
+      "id": "technical.wyckoff-accumulation",
+      "category": "technical",
+      "title": "區間吸籌與派發辨識",
+      "principle": "盤整區間內需觀察量價關係，低檔量縮不破與突破放量偏吸籌，高檔爆量不漲偏派發。",
+      "positiveSignals": [
+        "低檔區間量縮守穩",
+        "突破區間上緣放量",
+        "回測區間上緣不破"
+      ],
+      "negativeSignals": [
+        "高檔爆量收黑",
+        "跌破區間下緣",
+        "反彈量縮無法站回"
+      ],
+      "scoringImpact": {
+        "positive": 14,
+        "negative": -18
+      },
+      "riskControls": [
+        "區間未突破前以觀察為主，避免預設方向"
+      ],
+      "source": {
+        "title": "技術分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/技術分析/技術分析總論"
+      }
+    }
+  ]
+}

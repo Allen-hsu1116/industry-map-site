@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "category": "fundamental",
+  "updatedAt": "2026-05-29",
+  "source": {
+    "title": "基本面分析總論",
+    "url": "https://allen-hsu1116.github.io/stock-knowledge-site/基本面分析/基本面分析總論"
+  },
+  "rules": [
+    {
+      "id": "fundamental.revenue-growth-quality",
+      "category": "fundamental",
+      "title": "營收成長品質",
+      "principle": "月營收年增率需搭配累計營收、毛利率與產業需求判斷，單月跳升不能直接視為基本面轉強。",
+      "positiveSignals": [
+        "月營收 YoY 連續改善",
+        "累計營收年增為正",
+        "成長由核心產品或題材需求支撐"
+      ],
+      "negativeSignals": [
+        "單月營收年增但累計仍衰退",
+        "成長來自一次性認列",
+        "營收動能與產業需求脫鉤"
+      ],
+      "scoringImpact": {
+        "positive": 18,
+        "negative": -16
+      },
+      "riskControls": [
+        "營收資料過舊時降權，不能用舊數據支撐推薦"
+      ],
+      "source": {
+        "title": "基本面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/基本面分析/基本面分析總論"
+      }
+    },
+    {
+      "id": "fundamental.three-statements-consistency",
+      "category": "fundamental",
+      "title": "財報三表一致性",
+      "principle": "損益表、資產負債表與現金流量表需互相印證，獲利成長若沒有現金流支撐要保守看待。",
+      "positiveSignals": [
+        "營收、營益率、營業現金流同步改善",
+        "應收帳款增速低於營收增速",
+        "負債比維持可控"
+      ],
+      "negativeSignals": [
+        "獲利成長但營業現金流轉差",
+        "存貨或應收帳款快速增加",
+        "負債比快速攀升"
+      ],
+      "scoringImpact": {
+        "positive": 20,
+        "negative": -22
+      },
+      "riskControls": [
+        "財報三表互相矛盾時不得給高基本面分數"
+      ],
+      "source": {
+        "title": "基本面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/基本面分析/基本面分析總論"
+      }
+    },
+    {
+      "id": "fundamental.margin-profitability",
+      "category": "fundamental",
+      "title": "毛利率與營益率趨勢",
+      "principle": "獲利能力改善比單純營收成長更能反映競爭力，毛利率與營益率連續改善才提高基本面分數。",
+      "positiveSignals": [
+        "毛利率季增且年增",
+        "營益率連續兩季改善",
+        "產品組合升級帶動毛利"
+      ],
+      "negativeSignals": [
+        "營收成長但毛利率下滑",
+        "費用率上升侵蝕營益率",
+        "一次性業外收益支撐 EPS"
+      ],
+      "scoringImpact": {
+        "positive": 16,
+        "negative": -18
+      },
+      "riskControls": [
+        "若獲利依賴業外，基本面分數需降權"
+      ],
+      "source": {
+        "title": "基本面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/基本面分析/基本面分析總論"
+      }
+    },
+    {
+      "id": "fundamental.valuation-context",
+      "category": "fundamental",
+      "title": "估值需放在成長與同族群脈絡",
+      "principle": "本益比、股價淨值比與殖利率不能單獨解讀，需和成長率、產業位置與歷史區間比較。",
+      "positiveSignals": [
+        "本益比低於歷史區間且成長改善",
+        "估值低於同族群且基本面不差",
+        "殖利率提供下檔支撐"
+      ],
+      "negativeSignals": [
+        "高本益比但成長放緩",
+        "股價淨值比高於歷史區間",
+        "估值擴張主要由題材情緒推動"
+      ],
+      "scoringImpact": {
+        "positive": 12,
+        "negative": -16
+      },
+      "riskControls": [
+        "估值過高且無成長支撐時不得列為高信心推薦"
+      ],
+      "source": {
+        "title": "基本面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/基本面分析/基本面分析總論"
+      }
+    },
+    {
+      "id": "fundamental.balance-sheet-resilience",
+      "category": "fundamental",
+      "title": "資產負債表韌性",
+      "principle": "景氣循環與題材退潮時，現金、負債、存貨與應收帳款決定公司承壓能力。",
+      "positiveSignals": [
+        "淨現金或低負債",
+        "存貨週轉穩定",
+        "應收帳款品質良好"
+      ],
+      "negativeSignals": [
+        "短債壓力升高",
+        "存貨大幅增加",
+        "應收帳款天數拉長"
+      ],
+      "scoringImpact": {
+        "positive": 12,
+        "negative": -20
+      },
+      "riskControls": [
+        "資產負債表惡化時降低部位或取消推薦"
+      ],
+      "source": {
+        "title": "基本面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/基本面分析/基本面分析總論"
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "category": "risk",
+  "updatedAt": "2026-05-29",
+  "source": {
+    "title": "風險管理總論",
+    "url": "https://allen-hsu1116.github.io/stock-knowledge-site/風險管理/風險管理總論"
+  },
+  "rules": [
+    {
+      "id": "risk.position-sizing",
+      "category": "risk",
+      "title": "部位大小與破產風險",
+      "principle": "部位大小應由停損距離與可承受損失決定，不能因看好題材而任意放大。",
+      "positiveSignals": [
+        "停損距離可量化",
+        "單筆風險低於資金上限",
+        "波動越大部位越小"
+      ],
+      "negativeSignals": [
+        "沒有停損",
+        "單筆風險過高",
+        "連續虧損仍加碼"
+      ],
+      "scoringImpact": {
+        "positive": 6,
+        "negative": -30
+      },
+      "riskControls": [
+        "hard gate：無法定義停損或單筆風險超標，不推薦"
+      ],
+      "source": {
+        "title": "風險管理總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/風險管理/風險管理總論"
+      }
+    },
+    {
+      "id": "risk.risk-reward",
+      "category": "risk",
+      "title": "報酬風險比硬門檻",
+      "principle": "推薦前必須估計停損與目標價，預期報酬不足以覆蓋風險時不應推薦。",
+      "positiveSignals": [
+        "預期報酬風險比至少 2:1",
+        "停損距離小且壓力空間足夠",
+        "目標價有技術或估值依據"
+      ],
+      "negativeSignals": [
+        "停損很遠但上檔壓力近",
+        "追價導致 R/R 不足",
+        "目標價只靠想像"
+      ],
+      "scoringImpact": {
+        "positive": 8,
+        "negative": -28
+      },
+      "riskControls": [
+        "hard gate：報酬風險比不足，不列 Top recommendation"
+      ],
+      "source": {
+        "title": "風險管理總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/風險管理/風險管理總論"
+      }
+    },
+    {
+      "id": "risk.liquidity",
+      "category": "risk",
+      "title": "流動性與成交量限制",
+      "principle": "流動性不足會放大滑價與停損失效風險，低成交量股票需降低或取消推薦。",
+      "positiveSignals": [
+        "成交量足以支持進出",
+        "成交值穩定",
+        "價差合理"
+      ],
+      "negativeSignals": [
+        "成交量過低",
+        "單日爆量後快速萎縮",
+        "價差過大"
+      ],
+      "scoringImpact": {
+        "positive": 4,
+        "negative": -24
+      },
+      "riskControls": [
+        "hard gate：流動性不足，只能觀察或不推薦"
+      ],
+      "source": {
+        "title": "風險管理總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/風險管理/風險管理總論"
+      }
+    },
+    {
+      "id": "risk.analysis-quality",
+      "category": "risk",
+      "title": "分析品質閘門",
+      "principle": "Daily analysis 的推薦層級必須受 AnalysisQuality 控制，D/F 不可包裝成高信心推薦。",
+      "positiveSignals": [
+        "AnalysisQuality A/B/C",
+        "產品、題材角色、SWOT 有 evidence",
+        "資料日期新鮮"
+      ],
+      "negativeSignals": [
+        "AnalysisQuality D/F",
+        "legacy only",
+        "重要結論無來源"
+      ],
+      "scoringImpact": {
+        "positive": 6,
+        "negative": -30
+      },
+      "riskControls": [
+        "hard gate：AnalysisQuality D/F 只能 observation-only"
+      ],
+      "source": {
+        "title": "風險管理總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/風險管理/風險管理總論"
+      }
+    },
+    {
+      "id": "risk.staleness-and-contradiction",
+      "category": "risk",
+      "title": "資料新鮮度與矛盾降權",
+      "principle": "市場資料、籌碼資料與知識庫日期必須揭露；資料過舊或多面向矛盾時要降權。",
+      "positiveSignals": [
+        "股價、籌碼、營收日期合理",
+        "技術、籌碼、基本面方向一致"
+      ],
+      "negativeSignals": [
+        "資料過舊",
+        "技術偏多但籌碼大賣",
+        "基本面惡化但題材敘事過強"
+      ],
+      "scoringImpact": {
+        "positive": 4,
+        "negative": -18
+      },
+      "riskControls": [
+        "hard gate：關鍵資料過舊或矛盾過大時降為觀察"
+      ],
+      "source": {
+        "title": "風險管理總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/風險管理/風險管理總論"
+      }
+    }
+  ]
+}

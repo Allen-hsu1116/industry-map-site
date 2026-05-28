@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "category": "chips",
+  "updatedAt": "2026-05-29",
+  "source": {
+    "title": "籌碼面分析總論",
+    "url": "https://allen-hsu1116.github.io/stock-knowledge-site/籌碼面分析/籌碼面分析總論"
+  },
+  "rules": [
+    {
+      "id": "chips.institutional-alignment",
+      "category": "chips",
+      "title": "三大法人同向性",
+      "principle": "外資、投信、自營商買賣超同向且延續時，籌碼訊號比單日買超更可靠。",
+      "positiveSignals": [
+        "三大法人近 5 日合計買超",
+        "投信與外資同步買超",
+        "法人買超延續到 20 日"
+      ],
+      "negativeSignals": [
+        "法人近 5 日合計賣超",
+        "投信連續賣超",
+        "外資買超但投信大賣形成分歧"
+      ],
+      "scoringImpact": {
+        "positive": 20,
+        "negative": -20
+      },
+      "riskControls": [
+        "法人分歧時降低籌碼分數，不可只看單一法人"
+      ],
+      "source": {
+        "title": "籌碼面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/籌碼面分析/籌碼面分析總論"
+      }
+    },
+    {
+      "id": "chips.investment-trust-momentum",
+      "category": "chips",
+      "title": "投信波段動能",
+      "principle": "投信常反映中期波段配置，連續買超可提高趨勢可信度，連續賣超則須警惕波段退場。",
+      "positiveSignals": [
+        "投信近 5 日買超",
+        "投信買超天數增加",
+        "投信買超搭配技術突破"
+      ],
+      "negativeSignals": [
+        "投信近 5 日賣超",
+        "投信由買轉賣",
+        "投信賣超搭配跌破均線"
+      ],
+      "scoringImpact": {
+        "positive": 12,
+        "negative": -14
+      },
+      "riskControls": [
+        "投信反向轉賣時短線推薦降權"
+      ],
+      "source": {
+        "title": "籌碼面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/籌碼面分析/籌碼面分析總論"
+      }
+    },
+    {
+      "id": "chips.margin-short-ratio",
+      "category": "chips",
+      "title": "券資比與信用籌碼壓力",
+      "principle": "券資比應使用融券餘額除以融資餘額，融資暴增但股價不漲代表散戶籌碼壓力升高。",
+      "positiveSignals": [
+        "融資餘額下降且股價轉強",
+        "券資比溫和升高且價格突破",
+        "融券增加但價格不跌可能醞釀軋空"
+      ],
+      "negativeSignals": [
+        "融資餘額快速增加但技術不強",
+        "券資比異常升高且股價轉弱",
+        "融資追高集中"
+      ],
+      "scoringImpact": {
+        "positive": 10,
+        "negative": -16
+      },
+      "riskControls": [
+        "券資比 = 融券餘額 / 融資餘額 × 100%，不得誤用券資差"
+      ],
+      "source": {
+        "title": "籌碼面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/籌碼面分析/籌碼面分析總論"
+      }
+    },
+    {
+      "id": "chips.chip-price-divergence",
+      "category": "chips",
+      "title": "籌碼與價格背離",
+      "principle": "籌碼訊號必須和價格行為互相驗證，法人買超但股價不漲或放量下跌都要降權。",
+      "positiveSignals": [
+        "法人買超且價格站上均線",
+        "籌碼買超與帶量突破同步",
+        "融資下降但股價轉強"
+      ],
+      "negativeSignals": [
+        "法人買超但股價跌破支撐",
+        "放量下跌且法人賣超",
+        "融資增加但價格無法突破"
+      ],
+      "scoringImpact": {
+        "positive": 14,
+        "negative": -18
+      },
+      "riskControls": [
+        "籌碼價格背離時列為觀察，等待確認"
+      ],
+      "source": {
+        "title": "籌碼面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/籌碼面分析/籌碼面分析總論"
+      }
+    },
+    {
+      "id": "chips.data-freshness",
+      "category": "chips",
+      "title": "籌碼資料新鮮度",
+      "principle": "籌碼資料通常有交易日更新延遲，Daily analysis 必須揭露資料日期，過舊資料不能支撐推薦。",
+      "positiveSignals": [
+        "法人與融資融券資料為最近交易日",
+        "資料日期與股價日期一致或接近"
+      ],
+      "negativeSignals": [
+        "籌碼資料晚於股價超過 3 個交易日",
+        "缺法人或融資融券資料"
+      ],
+      "scoringImpact": {
+        "positive": 8,
+        "negative": -12
+      },
+      "riskControls": [
+        "籌碼資料過舊時降權並揭露 chipDataDate"
+      ],
+      "source": {
+        "title": "籌碼面分析總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/籌碼面分析/籌碼面分析總論"
+      }
+    }
+  ]
+}

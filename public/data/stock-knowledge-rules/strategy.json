@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "category": "strategy",
+  "updatedAt": "2026-05-29",
+  "source": {
+    "title": "操作策略總論",
+    "url": "https://allen-hsu1116.github.io/stock-knowledge-site/操作策略/操作策略總論"
+  },
+  "rules": [
+    {
+      "id": "strategy.trend-following",
+      "category": "strategy",
+      "title": "趨勢股策略",
+      "principle": "趨勢股重點是順勢、回測與停損，適合均線多頭且基本面或題材仍有支撐的股票。",
+      "positiveSignals": [
+        "均線多頭排列",
+        "回測 MA20 不破",
+        "基本面或題材催化延續"
+      ],
+      "negativeSignals": [
+        "跌破 MA20 且無法站回",
+        "量能退潮",
+        "題材催化消失"
+      ],
+      "scoringImpact": {
+        "positive": 14,
+        "negative": -16
+      },
+      "riskControls": [
+        "趨勢股停損以趨勢線或 MA20 為主，跌破不凹單"
+      ],
+      "source": {
+        "title": "操作策略總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/操作策略/操作策略總論"
+      }
+    },
+    {
+      "id": "strategy.range-trading",
+      "category": "strategy",
+      "title": "盤整股策略",
+      "principle": "盤整股不應用追突破邏輯，必須在區間下緣找風險報酬比，突破後才切換為趨勢策略。",
+      "positiveSignals": [
+        "區間下緣守穩",
+        "量縮整理",
+        "突破區間上緣放量"
+      ],
+      "negativeSignals": [
+        "區間上緣追價",
+        "跌破區間下緣",
+        "區間震幅不足以覆蓋成本"
+      ],
+      "scoringImpact": {
+        "positive": 8,
+        "negative": -12
+      },
+      "riskControls": [
+        "盤整未突破前只做觀察或低部位，不列高信心"
+      ],
+      "source": {
+        "title": "操作策略總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/操作策略/操作策略總論"
+      }
+    },
+    {
+      "id": "strategy.turnaround",
+      "category": "strategy",
+      "title": "轉折股策略",
+      "principle": "轉折股需要基本面落底、籌碼止穩與技術轉強三者至少兩項確認，不能只因跌深就買。",
+      "positiveSignals": [
+        "營收衰退收斂",
+        "法人賣壓減弱",
+        "價格站回 MA20"
+      ],
+      "negativeSignals": [
+        "基本面持續惡化",
+        "破底量增",
+        "反彈無量"
+      ],
+      "scoringImpact": {
+        "positive": 12,
+        "negative": -18
+      },
+      "riskControls": [
+        "轉折股若未確認，部位上限低於趨勢股"
+      ],
+      "source": {
+        "title": "操作策略總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/操作策略/操作策略總論"
+      }
+    },
+    {
+      "id": "strategy.theme-catalyst",
+      "category": "strategy",
+      "title": "題材股策略",
+      "principle": "題材股必須確認公司在題材中的實際角色、產品與受惠路徑，只有新聞熱度不能當買進理由。",
+      "positiveSignals": [
+        "有 verified company-topic-role",
+        "產品知識說明 why it matters",
+        "題材 activationSignals 可追蹤"
+      ],
+      "negativeSignals": [
+        "只有市場綽號或人氣榜",
+        "角色為 indirect 或待驗證",
+        "題材無可追蹤催化"
+      ],
+      "scoringImpact": {
+        "positive": 16,
+        "negative": -20
+      },
+      "riskControls": [
+        "題材未 evidence-backed 時只能觀察，不可列入 Top recommendation"
+      ],
+      "source": {
+        "title": "操作策略總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/操作策略/操作策略總論"
+      }
+    },
+    {
+      "id": "strategy.short-term-event",
+      "category": "strategy",
+      "title": "短線事件策略",
+      "principle": "短線事件交易必須先定義事件、預期、停損與出場條件，不能用事後理由延長持有。",
+      "positiveSignals": [
+        "事件日期明確",
+        "量價提前轉強",
+        "停損與停利先設定"
+      ],
+      "negativeSignals": [
+        "事件不明確",
+        "開高走低爆量",
+        "利多公布後不漲"
+      ],
+      "scoringImpact": {
+        "positive": 10,
+        "negative": -16
+      },
+      "riskControls": [
+        "事件交易若跌破停損立即移除，不轉成長期投資"
+      ],
+      "source": {
+        "title": "操作策略總論",
+        "url": "https://allen-hsu1116.github.io/stock-knowledge-site/操作策略/操作策略總論"
+      }
+    }
+  ]
+}
