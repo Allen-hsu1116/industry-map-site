@@ -6,7 +6,15 @@
   "products": [
     {
       "name": "CoWoS-S",
-      "aliases": ["CoWoS", "CoWoS-S + HBM3E", "CoWoS-S: 採用矽中介層實現高速互連"],
+      "aliases": [
+        "CoWoS",
+        "CoWoS-S + HBM3E",
+        "CoWoS-S: 採用矽中介層實現高速互連",
+        "InFO 封裝",
+        "InFO",
+        "Integrated Fan-Out",
+        "InFO封裝"
+      ],
       "category": "advanced_packaging",
       "plainLanguage": "CoWoS-S 是台積電 CoWoS 先進封裝家族中使用矽中介層的 2.5D 封裝路線，用來把 AI 加速器、ASIC 與 HBM 高頻寬記憶體放在同一封裝內高速互連。",
       "whyItMatters": "AI 晶片效能不只取決於運算核心，也卡在 GPU/ASIC 與 HBM 之間的資料搬移。CoWoS-S 能提供高密度、高頻寬互連，因此是 NVIDIA、AMD、Broadcom 等高階 AI 晶片能否大量出貨的關鍵封裝瓶頸。",
@@ -30,7 +38,11 @@
     },
     {
       "name": "CoWoS-L",
-      "aliases": ["CoWoS-L + HBM3E/HBM4", "CoWoS-L: NVIDIA Blackwell", "CoWoS-L"],
+      "aliases": [
+        "CoWoS-L + HBM3E/HBM4",
+        "CoWoS-L: NVIDIA Blackwell",
+        "CoWoS-L"
+      ],
       "category": "advanced_packaging",
       "plainLanguage": "CoWoS-L 是 CoWoS 家族中面向更大封裝尺寸與更多 I/O 連接的進階路線，使用局部矽中介層與重佈線架構，讓大型 AI 加速器能整合更多 HBM 與晶片模組。",
       "whyItMatters": "下一代 AI 加速器需要更大的封裝面積、更高記憶體頻寬與更多 HBM 堆疊。CoWoS-L 的價值在於把先進封裝從『能做』推進到『能支撐更大規模 AI 平台量產』。",
@@ -54,7 +66,11 @@
     },
     {
       "name": "SoIC",
-      "aliases": ["SoIC + HBM", "SoIC: 3D IC堆疊技術", "System on Integrated Chips"],
+      "aliases": [
+        "SoIC + HBM",
+        "SoIC: 3D IC堆疊技術",
+        "System on Integrated Chips"
+      ],
       "category": "3d_ic",
       "plainLanguage": "SoIC 是台積電的 3D IC 晶片堆疊技術，透過晶片對晶片的垂直堆疊與鍵合，縮短訊號傳輸距離，提升系統效能與能源效率。",
       "whyItMatters": "先進製程微縮越來越昂貴後，效能提升不只靠電晶體變小，也靠封裝與 3D 堆疊把不同晶片更緊密整合。SoIC 是台積電延長高階 HPC、AI 與行動晶片效能成長曲線的重要技術。",
@@ -78,7 +94,12 @@
     },
     {
       "name": "N2 製程",
-      "aliases": ["N2", "2奈米", "2nm", "N2製程：2026年量產"],
+      "aliases": [
+        "N2",
+        "2奈米",
+        "2nm",
+        "N2製程：2026年量產"
+      ],
       "category": "logic_process",
       "plainLanguage": "N2 是台積電 2 奈米級邏輯製程平台，導入奈米片電晶體架構，目標是在效能、功耗與晶片密度上延續先進製程領先。",
       "whyItMatters": "高階 AI、HPC 與手機晶片的功耗和效能上限高度依賴先進製程。N2 若順利量產，會延續台積電在先進製程代工的定價能力與客戶黏著度。",
@@ -102,7 +123,12 @@
     },
     {
       "name": "A16 製程",
-      "aliases": ["A16", "A16製程：2027年量產", "背面供電", "BSPDN"],
+      "aliases": [
+        "A16",
+        "A16製程：2027年量產",
+        "背面供電",
+        "BSPDN"
+      ],
       "category": "logic_process",
       "plainLanguage": "A16 是台積電規劃中的後 2 奈米世代邏輯製程平台，搭配背面供電等技術，目標是改善供電效率、訊號傳輸與晶片密度。",
       "whyItMatters": "當製程節點繼續微縮，供電與訊號壅塞會成為效能瓶頸。A16 的意義在於讓台積電能在 N2 之後繼續維持先進製程路線圖與高階客戶黏著。",
