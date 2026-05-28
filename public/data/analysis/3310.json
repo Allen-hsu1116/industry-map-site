@@ -38,19 +38,26 @@
   "industry": {
     "label": "題材關聯待驗證",
     "score": 18,
+    "knowledgeBasis": "legacy_unverified",
+    "confidence": "unverified",
+    "provenanceLabel": "Legacy 待驗證",
+    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
     "scoringFactors": [
-      "legacy 題材關聯 low +18"
+      "legacy 題材關聯 low +18",
+      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
     ],
-    "summary": "佳穎 在 defense_industry 的角色為「低」，產業 score 18/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "佳穎 在 defense_industry 的 legacy 角色為「低」，資料基礎為「Legacy 待驗證」，產業 score 18/100；此題材關聯仍待驗證，不列為核心題材受惠。",
     "signals": [
-      "產業評分：18/100（legacy 題材關聯 low +18）",
-      "題材角色：defense_industry · 低",
+      "資料基礎：Legacy 待驗證（unverified）",
+      "產業評分：18/100（legacy 題材關聯 low +18；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
+      "legacy 題材角色：defense_industry · 低（待驗證）",
       "主要產品：精密連續沖壓模具",
       "主要產品：精密端子(車用/航太)",
       "主要產品：五金零件代工",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
+      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：規模偏小，ODM訂單依賴度高",
       "W：規模較小，資本額僅7.5億",
       "T：中國沖壓廠低价競爭，原物料價格波動",

@@ -42,19 +42,26 @@
   "industry": {
     "label": "題材關聯待驗證",
     "score": 8,
+    "knowledgeBasis": "legacy_unverified",
+    "confidence": "unverified",
+    "provenanceLabel": "Legacy 待驗證",
+    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8"
+      "legacy 題材關聯 unknown +8",
+      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
     ],
-    "summary": "豐達科 在 defense_industry 的角色為「unknown」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "豐達科 在 defense_industry 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
     "signals": [
-      "產業評分：8/100（legacy 題材關聯 unknown +8）",
-      "題材角色：defense_industry · unknown",
+      "資料基礎：Legacy 待驗證（unverified）",
+      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
+      "legacy 題材角色：defense_industry · unknown（待驗證）",
       "主要產品：航太級扣件(螺栓/螺帽)",
       "主要產品：飛機發動機扣件",
       "主要產品：船舶用扣件",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
+      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：產品線單一（扣件為主），受航太景氣影響大",
       "T：中國大陸扣件低价競爭，原材料（合金鋼）價格波動"
     ],

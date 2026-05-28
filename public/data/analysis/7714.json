@@ -41,19 +41,26 @@
   "industry": {
     "label": "題材關聯待驗證",
     "score": 8,
+    "knowledgeBasis": "legacy_unverified",
+    "confidence": "unverified",
+    "provenanceLabel": "Legacy 待驗證",
+    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8"
+      "legacy 題材關聯 unknown +8",
+      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
     ],
-    "summary": "創泓科 在 cybersecurity 的角色為「unknown」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "創泓科 在 cybersecurity 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
     "signals": [
-      "產業評分：8/100（legacy 題材關聯 unknown +8）",
-      "題材角色：cybersecurity · unknown",
+      "資料基礎：Legacy 待驗證（unverified）",
+      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
+      "legacy 題材角色：cybersecurity · unknown（待驗證）",
       "主要產品：雲端防禦及資安管理監控服務 人力及技術教育訓練及AI語音辨識銷售",
       "主要產品：網路資訊安全軟硬體銷售 數據安全",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：受景氣循環影響",
       "T：國際競爭加劇",
       "T：供應鏈重組風險"
