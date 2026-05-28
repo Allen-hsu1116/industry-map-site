@@ -12,13 +12,11 @@
     "label": "Legacy only",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
       "legacy_only",
-      "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -66,7 +64,24 @@
       "roleSummary": "欣興在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演ABF載板(先進封裝用)角色。",
       "source": "legacy"
     },
-    "productNarratives": [],
+    "productNarratives": [
+      {
+        "name": "PCB、IC 載板與先進封裝基板",
+        "description": "欣興是大型印刷電路板與 IC 載板廠，產品包含 HDI 高密度連結板、多層板、軟硬結合板、FPC，以及 FCCSP、FCBGA、CSP、記憶卡類載板等封裝基板。",
+        "whyItMatters": "AI、5G、高速運算與先進封裝需要高層數、高密度、低損耗材料與精細線寬線距的板材與載板；欣興的 PCB 與 FCBGA/FCCSP 載板連結伺服器、網通、手機、車用與高效能運算晶片封裝需求。",
+        "businessImpact": "AI/HPC、先進封裝與高速網通需求提升時，高階 HDI、低損耗 PCB 與 FCBGA 載板的產品組合價值上升；但載板與 PCB 產業資本密集，獲利受產能利用率、良率、客戶庫存與價格週期影響。",
+        "sourceLabels": [
+          "Unimicron Technology：HDI",
+          "Unimicron Technology：FCBGA"
+        ],
+        "sourceUrls": [
+          "https://www.unimicron.com/en/product_HDI.html",
+          "https://www.unimicron.com/en/product_FCBGA.html"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [
         "欣興在封裝材料與耗材領域具備競爭優勢",

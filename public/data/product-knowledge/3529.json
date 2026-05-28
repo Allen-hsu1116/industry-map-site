@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "code": "3529",
+  "name": "力旺",
+  "updatedAt": "2026-05-28",
+  "products": [
+    {
+      "name": "嵌入式非揮發性記憶體 IP",
+      "aliases": [
+        "eMemory",
+        "Logic NVM",
+        "NeoBit",
+        "NeoFuse",
+        "NeoEE",
+        "NeoMTP",
+        "NeoFlash",
+        "RRAM",
+        "MRAM",
+        "NeoPUF",
+        "PUF"
+      ],
+      "category": "semiconductor_ip_embedded_nvm",
+      "plainLanguage": "力旺賣的是嵌入式非揮發性記憶體 IP，也就是把 OTP、MTP、eFlash、RRAM、MRAM、PUF 安全功能等記憶體技術授權給晶片設計公司，讓晶片內建可保存資料、識別、安全金鑰或設定值的功能。",
+      "whyItMatters": "許多 MCU、車用 IC、電源管理 IC、顯示驅動 IC、AI/IoT 晶片都需要內建少量但可靠的永久或可重複寫入記憶體；力旺的商業模式以 IP 授權與技術服務為主，具備高毛利、製程平台綁定與設計導入週期長的特性。",
+      "topicFit": {
+        "ic-design": "嵌入式 NVM silicon IP 與安全 IP 屬半導體 IP 授權題材。",
+        "niche-memory": "OTP、MTP、eFlash、RRAM、MRAM 是特殊/嵌入式非揮發性記憶體技術。",
+        "edge-ai-aiot": "AI/IoT 晶片常需要晶片內建設定、校準、安全啟動與識別功能，屬間接受惠。"
+      },
+      "businessImpact": "先進製程、車用電子、IoT 與安全晶片需求擴大時，嵌入式 NVM 與 PUF 安全 IP 的授權、權利金與技術服務機會提升；但營收受晶圓代工平台導入、客戶量產時程與半導體景氣循環影響。",
+      "evidence": [
+        {
+          "sourceId": "ememory-products",
+          "publisher": "eMemory Technology",
+          "title": "Products",
+          "url": "https://www.ememory.com.tw/en/Products",
+          "retrievedAt": "2026-05-28",
+          "claim": "eMemory official products page describes Logic NVM silicon IP platforms including NeoBit, NeoFuse, NeoEE, NeoMTP, EcoBit, NeoFlash, RRAM, MRAM and NeoPUF."
+        },
+        {
+          "sourceId": "mops-3529-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "力旺電子股份有限公司基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "retrievedAt": "2026-05-28",
+          "claim": "MOPS company profile lists eMemory's main business as embedded non-volatile memory IP licensing and technology services."
+        }
+      ],
+      "lastVerified": "2026-05-28",
+      "confidence": "high"
+    },
+    {
+      "name": "NeoPUF 與安全 IP",
+      "aliases": [
+        "NeoPUF",
+        "SecureOTP",
+        "Root of Trust",
+        "PUF security IP",
+        "anti-fuse OTP"
+      ],
+      "category": "security_ip",
+      "plainLanguage": "力旺的 NeoPUF 與安全 IP 利用晶片製程中的物理差異產生獨特識別或金鑰，讓晶片能儲存安全資訊、做身份驗證或建立信任根。",
+      "whyItMatters": "IoT、車用、AI 邊緣裝置與支付/安全晶片需要防偽、金鑰儲存與安全啟動能力；安全 IP 可把資安能力嵌進晶片設計。",
+      "topicFit": {
+        "ic-design": "安全 IP 屬晶片設計與矽智財授權。",
+        "software-cloud-security": "晶片信任根與硬體安全是資安供應鏈底層能力。",
+        "edge-ai-aiot": "IoT 與邊緣 AI 裝置需要硬體識別與安全啟動。"
+      },
+      "businessImpact": "資安需求與 IoT/車用晶片出貨成長可推升安全 IP 授權與權利金，但採用需經客戶與晶圓製程平台驗證。",
+      "evidence": [
+        {
+          "sourceId": "ememory-products",
+          "publisher": "eMemory Technology",
+          "title": "Products",
+          "url": "https://www.ememory.com.tw/en/Products",
+          "retrievedAt": "2026-05-28",
+          "claim": "eMemory official products page lists NeoPUF and related Logic NVM silicon IP platforms."
+        }
+      ],
+      "lastVerified": "2026-05-28",
+      "confidence": "high"
+    }
+  ]
+}

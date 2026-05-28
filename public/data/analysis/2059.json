@@ -12,13 +12,11 @@
     "label": "Legacy only",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
       "legacy_only",
-      "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -67,7 +65,24 @@
       "roleSummary": "川湖在「AI伺服器與液冷技術」題材的「AI伺服器散熱與零組件」中扮演AI伺服器導軌角色。",
       "source": "legacy"
     },
-    "productNarratives": [],
+    "productNarratives": [
+      {
+        "name": "伺服器滑軌與理線器",
+        "description": "川湖主要做伺服器、電子設備與家具用的滑軌、鉸鏈與理線器；其中伺服器導軌可讓機櫃中的伺服器被安全拉出維修，理線器則協助整理機櫃線材。",
+        "whyItMatters": "AI 伺服器與雲端資料中心需要大量高承重、薄型、可快速安裝維修的導軌與理線設計；這類機構件雖不是晶片，但直接影響伺服器上架、散熱、維護效率與可靠度。",
+        "businessImpact": "資料中心伺服器升級與 AI 伺服器高重量、高維修頻率需求，有利於高承重、免工具、客製化滑軌與理線器價值提升；但需求仍受雲端資本支出與主要伺服器客戶拉貨節奏影響。",
+        "sourceLabels": [
+          "川湖科技 King Slide：超薄伺服器導軌與理線器",
+          "公開資訊觀測站 MOPS：川湖科技股份有限公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://www.kingslide.com/products_cloud",
+          "https://mops.twse.com.tw/mops/web/t05st03"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [
         "川湖在AI伺服器散熱與零組件領域具備競爭優勢",

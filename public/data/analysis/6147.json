@@ -12,13 +12,11 @@
     "label": "Legacy only",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
       "legacy_only",
-      "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -68,7 +66,24 @@
       "roleSummary": "頎邦在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演封裝散熱方案角色。",
       "source": "legacy"
     },
-    "productNarratives": [],
+    "productNarratives": [
+      {
+        "name": "顯示驅動 IC 封測與凸塊服務",
+        "description": "頎邦主要幫顯示面板用的驅動 IC 做晶圓凸塊、晶圓測試與 COF/COG 等封裝，把 IC 晶片變成可連到面板或軟板上的可用零件。",
+        "whyItMatters": "面板驅動 IC 需要細間距、高可靠度的凸塊與薄膜覆晶封裝；頎邦的服務位在顯示器、手機、車用螢幕、穿戴裝置等供應鏈的關鍵後段環節。",
+        "businessImpact": "營收與毛利受面板驅動 IC 需求、顯示面板景氣、車用/高階顯示滲透率、封測稼動率與製程良率影響；OLED、車用面板或高解析顯示需求增加時，高階封裝/測試需求通常更受重視。",
+        "sourceLabels": [
+          "Chipbond：Bumping Services",
+          "Chipbond：COF Packaging"
+        ],
+        "sourceUrls": [
+          "https://www.chipbond.com.tw/en/product/processing_service/bump",
+          "https://www.chipbond.com.tw/en/product/processing_service/package/cof"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [
         "頎邦在封裝材料與耗材領域具備競爭優勢",

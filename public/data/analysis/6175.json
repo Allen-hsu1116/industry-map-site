@@ -12,13 +12,11 @@
     "label": "Legacy only",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
       "legacy_only",
-      "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -66,7 +64,24 @@
       "roleSummary": "立敦在「AI伺服器與液冷技術」題材的「AI伺服器散熱與零組件」中扮演散熱解決方案供應商角色。",
       "source": "legacy"
     },
-    "productNarratives": [],
+    "productNarratives": [
+      {
+        "name": "鋁電解電容器用化成鋁箔與電蝕鋁箔",
+        "description": "立敦主要生產化成鋁箔、電蝕鋁箔與鋁箔加工產品，這些是鋁質電解電容器的關鍵上游材料；電容器再被用在電源供應器、車用電子、通訊、消費電子與綠能設備。",
+        "whyItMatters": "鋁電解電容器在電源濾波、儲能與穩壓中很常見；化成鋁箔與電蝕鋁箔影響電容器容量、壽命、耐壓與可靠性，因此立敦的產品與電源、車用、工業、綠能供應鏈高度相關。",
+        "businessImpact": "若電源供應器、車用電子、工業設備與綠能需求回升，鋁電解電容器材料需求有支撐；但鋁箔材料受下游電容器景氣、價格競爭、能源成本與中國產能影響較大。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：立敦科技股份有限公司基本資料",
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：立敦科技股東會年報"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03",
+          "https://doc.twse.com.tw/"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [
         "立敦在AI伺服器散熱與零組件領域具備競爭優勢",

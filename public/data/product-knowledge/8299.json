@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "code": "8299",
+  "name": "群聯",
+  "updatedAt": "2026-05-28",
+  "products": [
+    {
+      "name": "NAND 控制晶片與儲存解決方案",
+      "aliases": [
+        "Phison",
+        "NAND controller",
+        "SSD controller",
+        "PASCARI",
+        "aiDAPTIV+",
+        "UFS",
+        "eMMC",
+        "PCIe SSD"
+      ],
+      "category": "nand_controller_storage",
+      "plainLanguage": "群聯設計 NAND Flash 控制晶片，並把 NAND、韌體與控制器整合成 SSD、UFS、eMMC、USB、記憶卡與企業級儲存產品；近年也推 aiDAPTIV+ 邊緣 AI 儲存方案與高速訊號調節 IC。",
+      "whyItMatters": "AI、伺服器、PC、手機、車用與工控都需要高速且可靠的儲存；群聯的控制晶片與模組是把 NAND Flash 變成可用儲存裝置的核心元件。",
+      "topicFit": {
+        "memory-modules": "SSD、UFS、eMMC、USB、記憶卡與企業級儲存產品直接連到 NAND Flash 儲存供應鏈。",
+        "ai-server": "企業級 SSD 與高容量儲存需求受資料中心與 AI 工作負載推動，但群聯不是伺服器整機廠。",
+        "edge-ai-aiot": "aiDAPTIV+ 屬邊緣 AI 與本地儲存/模型微調方案，需以產品導入與營收證據追蹤。"
+      },
+      "businessImpact": "快閃記憶體模組、控制晶片與積體電路是公司核心營收來源；NAND 報價、客戶庫存、企業級 SSD 導入、AI/PC/車用儲存需求會影響營收與毛利。",
+      "evidence": [
+        {
+          "sourceId": "phison-solutions",
+          "publisher": "群聯電子 Phison",
+          "title": "解決方案總覽",
+          "url": "https://www.phison.com/zh-tw/solutions",
+          "retrievedAt": "2026-05-28",
+          "claim": "Phison official solutions page lists SSD, UFS, eMMC, memory cards, USB and NAND services/storage solutions."
+        },
+        {
+          "sourceId": "mops-8299-2024-annual-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "群聯電子 113 年股東會年報",
+          "url": "https://doc.twse.com.tw/",
+          "retrievedAt": "2026-05-28",
+          "claim": "The annual report lists main products including SSD controllers/modules, eMMC/UFS, USB controllers and SD/microSD products, with flash memory module products as the major revenue category."
+        }
+      ],
+      "lastVerified": "2026-05-28",
+      "confidence": "high"
+    },
+    {
+      "name": "企業級 SSD 與 aiDAPTIV+ 邊緣 AI 儲存方案",
+      "aliases": [
+        "PASCARI",
+        "Enterprise SSD",
+        "PCIe Gen5 SSD",
+        "aiDAPTIV+",
+        "Edge AI storage"
+      ],
+      "category": "enterprise_ssd_ai_storage",
+      "plainLanguage": "群聯提供企業級 SSD 與 AI 相關儲存方案，把控制晶片、韌體、NAND 管理與高速介面整合成可用於伺服器、工作站或邊緣 AI 的儲存產品。",
+      "whyItMatters": "AI 訓練、推論與資料處理需要高吞吐、低延遲與高耐用度儲存；企業級 SSD 是資料中心與本地 AI 工作負載的重要基礎設施。",
+      "topicFit": {
+        "memory-modules": "企業級 SSD 是 NAND Flash 模組與控制器整合產品。",
+        "ai-server": "AI 伺服器與資料中心工作負載推動高階 SSD 需求。",
+        "edge-ai-aiot": "aiDAPTIV+ 可連到邊緣 AI 與本地模型微調應用。"
+      },
+      "businessImpact": "企業級 SSD 若放量，可改善產品組合與 ASP；但 NAND 成本、資料中心客戶認證週期與庫存循環會影響貢獻速度。",
+      "evidence": [
+        {
+          "sourceId": "phison-solutions",
+          "publisher": "群聯電子 Phison",
+          "title": "解決方案總覽",
+          "url": "https://www.phison.com/zh-tw/solutions",
+          "retrievedAt": "2026-05-28",
+          "claim": "Phison official solutions page lists SSD and storage solution categories, including enterprise and NAND services/storage solutions."
+        }
+      ],
+      "lastVerified": "2026-05-28",
+      "confidence": "medium"
+    }
+  ]
+}
