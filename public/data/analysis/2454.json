@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2454",
   "name": "聯發科",
-  "generatedAt": "2026-05-28T00:35:52.752Z",
+  "generatedAt": "2026-05-28T03:30:13.618Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,15 +39,15 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "summary": "聯發科 在 cxl-technology 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "聯發科 在「Edge AI / AIoT 邊緣智慧」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：cxl-technology · unknown",
+      "V2 題材角色：Edge AI / AIoT 邊緣智慧 · 核心產品/平台 · medium",
+      "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
+      "相關題材：IC 設計與矽智財 · 直接賦能角色",
       "主要產品：Dimensity天璣手機SoC",
       "主要產品：Kompanio Chromebook處理器",
-      "主要產品：Filogic Wi-Fi 7晶片",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：Filogic Wi-Fi 7晶片"
     ],
     "risks": [
       "W：4月營收YoY-4.1%庫存修正",
@@ -56,10 +56,12 @@
       "T：中國手機市場復甦進度不確定"
     ],
     "watch": [
+      "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
+      "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：AI手機/PC換機潮帶動SoC升級",
-      "O：車用工業物聯網布局收成",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：車用工業物聯網布局收成"
     ]
   },
   "knowledge": {
@@ -167,9 +169,74 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "edge-ai",
+        "topicName": "智慧機器人｜Edge AI / AIoT 邊緣智慧",
+        "canonicalTopicId": "edge-ai-aiot",
+        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "聯發科在 Edge AI/AIoT 題材中可透過終端 SoC、AI 加速與連接晶片扮演核心 IC 設計供應商角色；需追蹤端側 AI 功能是否帶動 ASP。"
+      },
+      {
+        "topicId": "mobile",
+        "topicName": "消費終端｜智慧型手機供應鏈",
+        "canonicalTopicId": "consumer-computing-devices",
+        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "聯發科在智慧型手機供應鏈題材中是核心 SoC 與通訊晶片供應商；手機需求、產品組合與旗艦晶片滲透是基本面傳導重點。"
+      },
+      {
+        "topicId": "hpc-networking-ic",
+        "topicName": "IC 設計｜HPC 與網通 IC",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "聯發科與 HPC/網通 IC 題材相關，但受惠程度需依產品線與客戶導入驗證；不應把手機晶片地位直接等同於資料中心 AI 加速器核心供應商。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "edge-ai-aiot",
+        "name": "Edge AI / AIoT 邊緣智慧",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

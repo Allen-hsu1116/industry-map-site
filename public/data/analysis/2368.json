@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2368",
   "name": "金像電",
-  "generatedAt": "2026-05-28T00:35:52.700Z",
+  "generatedAt": "2026-05-28T03:30:13.565Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,14 +38,14 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "金像電 在 hbm 的角色為「high」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "金像電 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：hbm · high",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · medium",
+      "相關題材：AI 伺服器整機與 EMS · 供應商角色",
+      "相關題材：高速交換器與網通設備 · 供應商角色",
       "主要產品：多層印刷電路板之製造加工及買賣業務",
       "主要產品：資訊產品及其週邊設備與電子零件",
-      "主要產品：各種電腦",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：各種電腦"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -53,10 +53,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
+      "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：HBM 高頻寬記憶體需求持續成長",
-      "O：智慧型手機供應鏈需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：智慧型手機供應鏈需求持續成長"
     ]
   },
   "knowledge": {
@@ -179,9 +181,74 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "pcb-manufacturing",
+        "topicName": "電子零組件｜PCB 硬板製造",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "金像電在 PCB 題材中是伺服器/高層數 PCB 供應鏈核心角色；AI 伺服器主板層數、材料與良率會影響價值量。"
+      },
+      {
+        "topicId": "ai-server",
+        "topicName": "AI伺服器與液冷技術",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "金像電不是 AI 伺服器整機 ODM，而是 AI 伺服器 PCB 供應鏈角色；Daily Analysis 應追蹤伺服器 PCB 訂單、材料成本與產能利用率。"
+      },
+      {
+        "topicId": "networking-equipment",
+        "topicName": "網通衛星｜高速交換器與無線網路",
+        "canonicalTopicId": "networking-infrastructure",
+        "canonicalTopicName": "高速交換器與網通設備",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "金像電可供應網通設備 PCB，與高速交換器/網通設備題材的關聯屬材料與板級供應鏈。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "pcb-substrates",
+        "name": "PCB、IC 載板與高階基板材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "networking-infrastructure",
+        "name": "高速交換器與網通設備",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

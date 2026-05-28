@@ -46,7 +46,7 @@ test("normalizeCompanyTopicRoles rejects files with wrong schema", () => {
   assert.equal(normalizeCompanyTopicRoles({ schemaVersion: 2 }), null);
 });
 
-test("company-topic-role batch covers at least 10 companies and maps to canonical topics", async () => {
+test("company-topic-role batch covers at least 20 companies and maps to canonical topics", async () => {
   const fs = await import("node:fs/promises");
   const path = await import("node:path");
   const dir = "public/data/company-topic-roles";
@@ -55,7 +55,7 @@ test("company-topic-role batch covers at least 10 companies and maps to canonica
   const canonical = normalizeCanonicalTopics(canonicalRaw);
 
   assert.ok(canonical);
-  assert.ok(files.length >= 10, `Expected at least 10 company-topic role files, got ${files.length}`);
+  assert.ok(files.length >= 20, `Expected at least 20 company-topic role files, got ${files.length}`);
   const canonicalTopicIds = new Set(canonical.topics.flatMap((topic) => [topic.id, ...topic.legacyTopicIds]));
 
   for (const file of files) {

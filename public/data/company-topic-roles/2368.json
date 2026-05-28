@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2368",
+  "companyName": "金像電",
+  "updatedAt": "2026-05-28",
+  "roles": [
+    {
+      "topicId": "pcb-manufacturing",
+      "topicName": "電子零組件｜PCB 硬板製造",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "pcb",
+      "roleType": "server_pcb_manufacturer",
+      "roleSummary": "金像電在 PCB 題材中是伺服器/高層數 PCB 供應鏈核心角色；AI 伺服器主板層數、材料與良率會影響價值量。",
+      "products": [
+        "高層數伺服器 PCB",
+        "HDI/硬板 PCB",
+        "網通與伺服器板"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "pcb-manufacturing",
+        "groupName": "HDI板與高頻板",
+        "legacyRole": "高層數伺服器板"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "金像電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 金像電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "ai-server",
+      "topicName": "AI伺服器與液冷技術",
+      "topicType": "theme",
+      "directness": "supplier",
+      "supplyChainStage": "pcb",
+      "roleType": "ai_server_pcb_supplier",
+      "roleSummary": "金像電不是 AI 伺服器整機 ODM，而是 AI 伺服器 PCB 供應鏈角色；Daily Analysis 應追蹤伺服器 PCB 訂單、材料成本與產能利用率。",
+      "products": [
+        "AI 伺服器 PCB",
+        "高階伺服器主板"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "pcb-manufacturing",
+        "groupName": "HDI板與高頻板",
+        "legacyRole": "高層數伺服器板"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "金像電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 金像電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "networking-equipment",
+      "topicName": "網通衛星｜高速交換器與無線網路",
+      "topicType": "supply_chain_segment",
+      "directness": "supplier",
+      "supplyChainStage": "pcb",
+      "roleType": "networking_pcb_supplier",
+      "roleSummary": "金像電可供應網通設備 PCB，與高速交換器/網通設備題材的關聯屬材料與板級供應鏈。",
+      "products": [
+        "網通 PCB",
+        "交換器/通訊設備板"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "networking-equipment",
+        "groupName": "終端品牌與IC設計",
+        "legacyRole": "網通PCB"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "金像電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 金像電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

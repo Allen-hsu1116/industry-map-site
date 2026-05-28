@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6415",
   "name": "矽力*-KY",
-  "generatedAt": "2026-05-28T00:35:53.273Z",
+  "generatedAt": "2026-05-28T03:30:14.145Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,10 +40,11 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "summary": "矽力*-KY 在 leo-satellite 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "矽力*-KY 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：leo-satellite · 中",
+      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · medium",
+      "相關題材：低軌衛星通訊 · 供應商角色",
       "主要產品：電源管理IC 之研發設計及銷售",
       "主要產品：衛星電源設備",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -55,9 +56,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
+      "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
+      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：低軌衛星通訊系統需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "知識庫最後驗證：2026-05-26（fresh）"
     ]
   },
   "knowledge": {
@@ -119,9 +123,53 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "analog-power-ic",
+        "topicName": "IC 設計｜類比與功率管理 IC",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "矽力*-KY 在類比與功率管理 IC 題材中是核心 IC 設計供應鏈角色；終端、工業、車用與電源管理需求會透過 PMIC 產品組合傳導。"
+      },
+      {
+        "topicId": "leo-satellite",
+        "topicName": "網通衛星｜低軌衛星通訊系統",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

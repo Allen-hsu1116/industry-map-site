@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5274",
   "name": "信驊",
-  "generatedAt": "2026-05-28T00:35:53.137Z",
+  "generatedAt": "2026-05-28T03:30:14.008Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,15 +40,15 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "summary": "信驊 在 ar-vr-xr-optics 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "信驊 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：ar-vr-xr-optics · 中",
+      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · medium",
+      "相關題材：資安、雲端服務與企業軟體 · 供應商角色",
+      "相關題材：CXL 記憶體池化 · 直接賦能角色",
       "主要產品：多媒體積體電路 電腦周邊積體電路 高階消費性電子積體電路",
       "主要產品：BMC 與 AR/VR 管理 IC",
-      "主要產品：伺服器BMC+CXL管理",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：伺服器BMC+CXL管理"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -56,10 +56,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
+      "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
+      "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：AR/VR/XR 光學供應鏈需求持續成長",
-      "O：CXL 記憶體池化需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：CXL 記憶體池化需求持續成長"
     ]
   },
   "knowledge": {
@@ -196,9 +198,74 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "hpc-networking-ic",
+        "topicName": "IC 設計｜HPC 與網通 IC",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "信驊在伺服器管理晶片/BMC 題材中是核心 IC 設計供應鏈角色；AI 伺服器與資料中心出貨會推動 BMC/管理 IC 需求。"
+      },
+      {
+        "topicId": "enterprise-saas",
+        "topicName": "軟體資安｜企業軟體與 SaaS",
+        "canonicalTopicId": "software-cloud-security",
+        "canonicalTopicName": "資安、雲端服務與企業軟體",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。"
+      },
+      {
+        "topicId": "cxl-technology",
+        "topicName": "記憶體｜CXL 記憶體池化",
+        "canonicalTopicId": "cxl-memory-pooling",
+        "canonicalTopicName": "CXL 記憶體池化",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "software-cloud-security",
+        "name": "資安、雲端服務與企業軟體",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "cxl-memory-pooling",
+        "name": "CXL 記憶體池化",
+        "type": "technology",
+        "status": "watchlist",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

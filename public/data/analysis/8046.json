@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8046",
   "name": "南電",
-  "generatedAt": "2026-05-28T00:35:53.353Z",
+  "generatedAt": "2026-05-28T03:30:14.225Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,13 +39,14 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "南電 在 cowos-advanced-packaging 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "南電 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：cowos-advanced-packaging · 高",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · medium",
+      "相關題材：PCB、IC 載板與高階基板材料 · 核心產品/平台",
+      "相關題材：先進封裝與 CoWoS · 供應商角色",
       "主要產品：CC01080電子零組件製造業 CC01090電池製造業 ZZ99999除許可業務外",
       "主要產品：得經營法令非禁止或限制之業務",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -53,10 +54,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
+      "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：AI 先進封裝 CoWoS需求持續成長",
-      "O：軟板需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：軟板需求持續成長"
     ]
   },
   "knowledge": {
@@ -162,9 +165,63 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "ic-substrate",
+        "topicName": "基板材料｜IC 載板",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "南電在 IC 載板/ABF 題材中是核心供應鏈角色；AI/HPC 晶片封裝需求會透過載板規格、產能與稼動率傳導。"
+      },
+      {
+        "topicId": "pcb-manufacturing",
+        "topicName": "電子零組件｜PCB 硬板製造",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "南電在 PCB/HDI/BGA 載板題材中是板級製造供應鏈角色，需求受電子終端、AI/HPC 與封裝週期影響。"
+      },
+      {
+        "topicId": "cowos-advanced-packaging",
+        "topicName": "先進封測｜AI 先進封裝 CoWoS",
+        "canonicalTopicId": "advanced-packaging",
+        "canonicalTopicName": "先進封裝與 CoWoS",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "南電不是 CoWoS 製程供應商本身，但可作為先進封裝所需載板/基板供應鏈角色；需避免把載板供應商寫成封裝代工。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "pcb-substrates",
+        "name": "PCB、IC 載板與高階基板材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "advanced-packaging",
+        "name": "先進封裝與 CoWoS",
+        "type": "process",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

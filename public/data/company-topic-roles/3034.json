@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "3034",
+  "companyName": "聯詠",
+  "updatedAt": "2026-05-28",
+  "roles": [
+    {
+      "topicId": "ddic",
+      "topicName": "IC 設計｜顯示驅動 IC",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "ic_design",
+      "roleType": "display_driver_ic_provider",
+      "roleSummary": "聯詠在 DDIC 題材中是顯示驅動 IC 核心供應鏈角色；面板、手機、車載與消費顯示需求會透過 IC 出貨、ASP 與庫存循環傳導到營收。",
+      "products": [
+        "顯示驅動 IC",
+        "觸控與顯示整合 IC",
+        "顯示 SoC"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "ddic",
+        "groupName": "顯示驅動IC龍頭",
+        "legacyRole": "全球 DDIC 龍頭"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯詠 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯詠 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "display-panel",
+      "topicName": "光學顯示｜面板產業",
+      "topicType": "supply_chain_segment",
+      "directness": "direct_enabler",
+      "supplyChainStage": "ic_design",
+      "roleType": "display_panel_ic_enabler",
+      "roleSummary": "聯詠不是面板製造商，而是面板驅動與控制 IC 的直接賦能者；Daily Analysis 應把面板價格/需求與 IC 設計庫存循環連動觀察。",
+      "products": [
+        "面板驅動 IC",
+        "顯示控制晶片"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "display-panel",
+        "groupName": "Micro LED與LED封裝",
+        "legacyRole": "面板驅動 IC 龍頭"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯詠 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯詠 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "edge-ai",
+      "topicName": "智慧機器人｜Edge AI / AIoT 邊緣智慧",
+      "topicType": "technology",
+      "directness": "supplier",
+      "supplyChainStage": "ic_design",
+      "roleType": "edge_ai_soc_candidate",
+      "roleSummary": "聯詠可透過顯示 SoC 與邊緣影像/顯示晶片切入 Edge AI 題材，但目前應保守列為供應鏈候選，不應過度放大為 AI 核心晶片。",
+      "products": [
+        "顯示 SoC",
+        "邊緣顯示與影像 IC"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "edge-ai",
+        "groupName": "邊緣AI測試與電源管理",
+        "legacyRole": "邊緣AI SoC"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯詠 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯詠 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

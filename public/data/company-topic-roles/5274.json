@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "5274",
+  "companyName": "信驊",
+  "updatedAt": "2026-05-28",
+  "roles": [
+    {
+      "topicId": "hpc-networking-ic",
+      "topicName": "IC 設計｜HPC 與網通 IC",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "ic_design",
+      "roleType": "server_management_ic_provider",
+      "roleSummary": "信驊在伺服器管理晶片/BMC 題材中是核心 IC 設計供應鏈角色；AI 伺服器與資料中心出貨會推動 BMC/管理 IC 需求。",
+      "products": [
+        "BMC 伺服器管理晶片",
+        "伺服器基礎設施 IC",
+        "遠端管理晶片"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "hpc-networking-ic",
+        "groupName": "伺服器管理與基礎設施 IC",
+        "legacyRole": "伺服器 BMC/CXL 基礎設施 IC 龍頭"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "信驊 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "cxl-technology",
+      "topicName": "記憶體｜CXL 記憶體池化",
+      "topicType": "technology",
+      "directness": "direct_enabler",
+      "supplyChainStage": "ic_design",
+      "roleType": "cxl_management_ic_candidate",
+      "roleSummary": "信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。",
+      "products": [
+        "伺服器管理 IC",
+        "CXL/PCIe 管理相關 IC 候選"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "cxl-technology",
+        "groupName": "CXL模組與記憶體封裝",
+        "legacyRole": "伺服器BMC+CXL管理"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "信驊 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "enterprise-saas",
+      "topicName": "軟體資安｜企業軟體與 SaaS",
+      "topicType": "theme",
+      "directness": "supplier",
+      "supplyChainStage": "server_management",
+      "roleType": "hardware_management_enabler",
+      "roleSummary": "信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。",
+      "products": [
+        "伺服器管理晶片",
+        "遠端管理韌體/硬體平台"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "enterprise-saas",
+        "groupName": "AI影像與管理軟體",
+        "legacyRole": "BMC 晶片與伺服器管理軟體"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "信驊 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

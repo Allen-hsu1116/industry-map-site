@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "8046",
+  "companyName": "南電",
+  "updatedAt": "2026-05-28",
+  "roles": [
+    {
+      "topicId": "ic-substrate",
+      "topicName": "基板材料｜IC 載板",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "ic_substrate",
+      "roleType": "abf_substrate_provider",
+      "roleSummary": "南電在 IC 載板/ABF 題材中是核心供應鏈角色；AI/HPC 晶片封裝需求會透過載板規格、產能與稼動率傳導。",
+      "products": [
+        "ABF 載板",
+        "IC 載板",
+        "BGA/HDI 板"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "ic-substrate",
+        "groupName": "IC載板龍頭",
+        "legacyRole": "ABF 載板第二大廠"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "南電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "cowos-advanced-packaging",
+      "topicName": "先進封測｜AI 先進封裝 CoWoS",
+      "topicType": "process",
+      "directness": "supplier",
+      "supplyChainStage": "ic_substrate",
+      "roleType": "advanced_packaging_substrate_supplier",
+      "roleSummary": "南電不是 CoWoS 製程供應商本身，但可作為先進封裝所需載板/基板供應鏈角色；需避免把載板供應商寫成封裝代工。",
+      "products": [
+        "先進封裝用 IC 載板",
+        "ABF 載板"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "cowos-advanced-packaging",
+        "groupName": "矽中介層與IC載板",
+        "legacyRole": "IC 載板重要供應商"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "南電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "pcb-manufacturing",
+      "topicName": "電子零組件｜PCB 硬板製造",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "pcb",
+      "roleType": "pcb_substrate_manufacturer",
+      "roleSummary": "南電在 PCB/HDI/BGA 載板題材中是板級製造供應鏈角色，需求受電子終端、AI/HPC 與封裝週期影響。",
+      "products": [
+        "HDI 板",
+        "BGA 載板",
+        "PCB 製造"
+      ],
+      "customers": [
+        "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "pcb-manufacturing",
+        "groupName": "消費電子PCB",
+        "legacyRole": "南亞電路板，HDI/BGA載板"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "南電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

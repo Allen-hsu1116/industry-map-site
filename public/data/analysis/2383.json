@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2383",
   "name": "台光電",
-  "generatedAt": "2026-05-28T00:35:52.711Z",
+  "generatedAt": "2026-05-28T03:30:13.578Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -42,15 +42,15 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "summary": "台光電 在 ai-server 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "台光電 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：ai-server · unknown",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · medium",
+      "相關題材：PCB、IC 載板與高階基板材料 · 核心產品/平台",
+      "相關題材：AI 伺服器整機與 EMS · 供應商角色",
       "主要產品：銅箔基板 黏合片 多層壓合板",
       "主要產品：AI伺服器CCL",
-      "主要產品：銅箔基板與散熱材料",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：銅箔基板與散熱材料"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -58,10 +58,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
+      "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：AI伺服器與液冷技術需求持續成長",
-      "O：機殼與滑軌需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：機殼與滑軌需求持續成長"
     ]
   },
   "knowledge": {
@@ -197,9 +199,63 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "fiberglass-cloth",
+        "topicName": "基板材料｜玻纖布",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "台光電在 CCL/基板材料供應鏈中具核心定位；需追蹤高速材料規格升級、產品組合與產能擴充。"
+      },
+      {
+        "topicId": "ic-substrate",
+        "topicName": "基板材料｜IC 載板",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "台光電在高階 CCL/載板上游材料題材中是核心供應鏈角色；AI 伺服器、交換器與高速 PCB 升級會推升低損耗材料需求。"
+      },
+      {
+        "topicId": "ai-server",
+        "topicName": "AI伺服器與液冷技術",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "台光電不是 AI server 整機供應商，而是高速 PCB/CCL 上游材料供應鏈；AI 伺服器升級會透過板材規格與用量傳導。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "pcb-substrates",
+        "name": "PCB、IC 載板與高階基板材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

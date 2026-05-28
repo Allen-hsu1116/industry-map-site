@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3661",
   "name": "世芯-KY",
-  "generatedAt": "2026-05-28T00:35:53.046Z",
+  "generatedAt": "2026-05-28T03:30:13.918Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,9 +40,10 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "世芯-KY 在 asic-ip-design 的角色為「極高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "世芯-KY 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：asic-ip-design · 極高",
+      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · medium",
+      "相關題材：IC 設計與矽智財 · 核心產品/平台",
       "主要產品：AI ASIC 設計龍頭",
       "主要產品：先進製程ASIC龍頭",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -54,6 +55,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
+      "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：客製 ASIC 與矽智財需求持續成長",
       "O：IP授權與客製ASIC設計服務需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
@@ -134,9 +137,42 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "asic-ip-design",
+        "topicName": "IC 設計｜客製 ASIC 與矽智財",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "世芯-KY 在客製 ASIC 題材中是核心設計服務供應鏈角色；AI ASIC 專案會透過 NRE、量產設計服務與先進製程需求傳導。"
+      },
+      {
+        "topicId": "ip-asic",
+        "topicName": "IC 設計｜IP授權與客製ASIC設計服務",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "世芯-KY 的核心受惠邏輯是先進製程 ASIC 設計服務與客戶專案放量，而不是自有標準晶片銷售；需追蹤專案轉量產節奏與客戶集中度。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

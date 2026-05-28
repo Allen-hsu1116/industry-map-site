@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3034",
   "name": "聯詠",
-  "generatedAt": "2026-05-28T00:35:52.905Z",
+  "generatedAt": "2026-05-28T03:30:13.778Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,15 +36,15 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "summary": "聯詠 在 advanced-packaging-automation 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "聯詠 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：advanced-packaging-automation · 中",
+      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · medium",
+      "相關題材：面板、LED、光學鏡頭與感測 · 直接賦能角色",
+      "相關題材：Edge AI / AIoT 邊緣智慧 · 供應商角色",
       "主要產品：半導體量測設備",
       "主要產品：跨足 AR/VR 驅動",
-      "主要產品：DDI 龍頭",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：DDI 龍頭"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -52,10 +52,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
+      "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
+      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：先進封裝量測自動化需求持續成長",
-      "O：AR/VR/XR 光學供應鏈需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：AR/VR/XR 光學供應鏈需求持續成長"
     ]
   },
   "knowledge": {
@@ -192,9 +194,74 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "ddic",
+        "topicName": "IC 設計｜顯示驅動 IC",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "聯詠在 DDIC 題材中是顯示驅動 IC 核心供應鏈角色；面板、手機、車載與消費顯示需求會透過 IC 出貨、ASP 與庫存循環傳導到營收。"
+      },
+      {
+        "topicId": "display-panel",
+        "topicName": "光學顯示｜面板產業",
+        "canonicalTopicId": "display-led-optics",
+        "canonicalTopicName": "面板、LED、光學鏡頭與感測",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "聯詠不是面板製造商，而是面板驅動與控制 IC 的直接賦能者；Daily Analysis 應把面板價格/需求與 IC 設計庫存循環連動觀察。"
+      },
+      {
+        "topicId": "edge-ai",
+        "topicName": "智慧機器人｜Edge AI / AIoT 邊緣智慧",
+        "canonicalTopicId": "edge-ai-aiot",
+        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "聯詠可透過顯示 SoC 與邊緣影像/顯示晶片切入 Edge AI 題材，但目前應保守列為供應鏈候選，不應過度放大為 AI 核心晶片。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "display-led-optics",
+        "name": "面板、LED、光學鏡頭與感測",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "edge-ai-aiot",
+        "name": "Edge AI / AIoT 邊緣智慧",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [
