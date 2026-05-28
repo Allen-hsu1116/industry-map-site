@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-05-28T00:35:52.657Z",
+  "generatedAt": "2026-05-28T01:56:23.488Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,11 +39,11 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "台達電 在「AI 伺服器」的 V2 角色為「直接賦能角色」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "台達電 在「儲能、電芯與電池材料」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "V2 題材角色：AI 伺服器 · 直接賦能角色 · high",
-      "相關題材：AI 伺服器液冷散熱 · 直接賦能角色",
-      "相關題材：綠能環保｜儲能系統整合 · 核心產品/平台",
+      "V2 題材角色：儲能、電芯與電池材料 · 核心產品/平台 · high",
+      "相關題材：工業自動化與 CNC 工具機 · 核心產品/平台",
+      "相關題材：AI 伺服器電源與 BBU · 核心產品/平台",
       "主要產品：AI伺服器高瓦數電源(3kW-5kW+)",
       "主要產品：資料中心UPS不斷電系統",
       "主要產品：電動車充電樁/車載充電機"
@@ -54,10 +54,10 @@
     ],
     "watch": [
       "V2 O：AI 資料中心功率密度提高，使高效率電源、配電、熱管理與液冷相關產品具備中期成長機會。",
-      "追蹤 AI 伺服器：雲端資本支出上修",
-      "追蹤 AI 伺服器：AI server ODM 營收年增擴大",
-      "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
-      "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
+      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善",
+      "追蹤 工業自動化與 CNC 工具機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
@@ -178,10 +178,40 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "ess-storage",
+        "topicName": "綠能環保｜儲能系統整合",
+        "canonicalTopicId": "energy-storage-battery",
+        "canonicalTopicName": "儲能、電芯與電池材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。"
+      },
+      {
+        "topicId": "industrial-automation",
+        "topicName": "智慧機器人｜工業自動化 / 智慧製造",
+        "canonicalTopicId": "industrial-automation",
+        "canonicalTopicName": "工業自動化與 CNC 工具機",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。"
+      },
+      {
+        "topicId": "psu",
+        "topicName": "電子零組件｜電源供應器",
+        "canonicalTopicId": "ai-server-power-backup",
+        "canonicalTopicName": "AI 伺服器電源與 BBU",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。"
+      },
+      {
         "topicId": "ai-server",
         "topicName": "AI伺服器與液冷技術",
         "canonicalTopicId": "ai-server",
-        "canonicalTopicName": "AI 伺服器",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
@@ -198,32 +228,10 @@
         "roleSummary": "台達電在液冷散熱題材中是資料中心與設備端冷卻解決方案供應者；官方資料中心與風扇散熱頁皆列出液冷/氣冷散熱能力，財報也把散熱系統列為主要營業項目。"
       },
       {
-        "topicId": "ess-storage",
-        "topicName": "綠能環保｜儲能系統整合",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。"
-      },
-      {
-        "topicId": "industrial-automation",
-        "topicName": "智慧機器人｜工業自動化 / 智慧製造",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。"
-      },
-      {
-        "topicId": "psu",
-        "topicName": "電子零組件｜電源供應器",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。"
-      },
-      {
         "topicId": "sic-gan-power",
         "topicName": "半導體製造｜第三代半導體",
+        "canonicalTopicId": "wafer-foundry",
+        "canonicalTopicName": "晶圓代工與第三代半導體",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
@@ -291,14 +299,47 @@
     ],
     "topics": [
       {
-        "id": "ai-server",
-        "name": "AI 伺服器",
+        "id": "energy-storage-battery",
+        "name": "儲能、電芯與電池材料",
         "type": "theme",
         "status": "active",
         "activationSignals": [
-          "雲端資本支出上修",
-          "AI server ODM 營收年增擴大",
-          "高功耗 GPU/ASIC 平台帶動散熱與電源規格升級"
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "industrial-automation",
+        "name": "工業自動化與 CNC 工具機",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ai-server-power-backup",
+        "name": "AI 伺服器電源與 BBU",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
         ]
       },
       {
@@ -310,6 +351,17 @@
           "AI GPU/ASIC TDP 升高",
           "客戶導入液冷機櫃或 CDU",
           "散熱廠液冷相關營收揭露增加"
+        ]
+      },
+      {
+        "id": "wafer-foundry",
+        "name": "晶圓代工與第三代半導體",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
         ]
       }
     ]

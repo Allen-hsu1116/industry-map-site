@@ -98,3 +98,17 @@ test("buildTopicCoverageReport highlights unmapped and duplicate legacy topics",
 test("normalizeCanonicalTopics rejects files with wrong schema", () => {
   assert.equal(normalizeCanonicalTopics({ schemaVersion: 2 }), null);
 });
+
+test("canonical-topics.json maps every legacy topic exactly once", async () => {
+  const fs = await import("node:fs/promises");
+  const canonicalRaw = JSON.parse(await fs.readFile("public/data/canonical-topics.json", "utf8"));
+  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
+  const normalized = normalizeCanonicalTopics(canonicalRaw);
+
+  assert.ok(normalized);
+  const report = buildTopicCoverageReport(industriesRaw.topics, normalized.topics);
+
+  assert.equal(report.legacyTopics, 81);
+  assert.equal(report.unmappedLegacyTopics.length, 0, `Unmapped legacy topics: ${report.unmappedLegacyTopics.join(", ")}`);
+  assert.deepEqual(report.duplicateLegacyMappings, []);
+});

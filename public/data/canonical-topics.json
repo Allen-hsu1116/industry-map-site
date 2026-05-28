@@ -12,20 +12,196 @@
   },
   "topics": [
     {
+      "id": "advanced-packaging",
+      "name": "先進封裝與 CoWoS",
+      "type": "process",
+      "status": "active",
+      "definition": "涵蓋 CoWoS、2.5D/3D 封裝、封裝製程機台、自動化、量測、IC 測試、OSAT 與封裝材料。",
+      "whyItMatters": "AI accelerator 對 HBM 與先進封裝產能高度依賴，CoWoS 產能、封測設備與材料是 AI 半導體供應鏈的關鍵瓶頸。",
+      "aliases": [
+        "CoWoS",
+        "先進封裝",
+        "OSAT",
+        "IC測試"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "cowos-advanced-packaging",
+        "advanced-packaging-process",
+        "advanced-packaging-automation",
+        "advanced-packaging-test",
+        "high-end-testing"
+      ],
+      "include": [
+        "先進封裝與 CoWoS 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "tsmc-cowos-platform",
+          "publisher": "TSMC",
+          "title": "CoWoS advanced packaging technology platform",
+          "claim": "TSMC 官方 CoWoS 技術頁可作為先進封裝題材邊界參考。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
       "id": "ai-server",
-      "name": "AI 伺服器",
+      "name": "AI 伺服器整機與 EMS",
       "type": "theme",
       "status": "active",
-      "definition": "以雲端/企業 AI 訓練與推論需求驅動的伺服器供應鏈主題，涵蓋整機、散熱、電源、PCB、連接器、BBU、記憶體與高速互連等子題。",
-      "whyItMatters": "AI 資本支出會透過 GPU/ASIC 平台滲透到伺服器 ODM、散熱、電源與高速材料，影響訂單能見度、營收成長與估值溢價。",
-      "aliases": ["AI server", "AI伺服器", "AI server supply chain"],
-      "childIds": ["ai-server-odm", "ai-server-liquid-cooling", "ai-server-chassis-rails", "bbu", "memory"],
-      "legacyTopicIds": ["ai-server", "ai-server-odm", "ems-smt"],
-      "include": ["AI 伺服器整機與 EMS/SMT", "AI 伺服器電源、散熱、機殼滑軌、BBU", "直接服務資料中心 AI 訓練/推論需求的零組件"],
-      "exclude": ["只賣一般 PC/NB 零組件且沒有 AI server 產品證據的公司", "只有股價跟漲、但無產品或客戶證據的公司"],
-      "activationSignals": ["雲端資本支出上修", "AI server ODM 營收年增擴大", "高功耗 GPU/ASIC 平台帶動散熱與電源規格升級"],
+      "definition": "以雲端與企業 AI 訓練/推論需求驅動的伺服器整機、ODM/OEM、EMS/SMT 與系統整合供應鏈。",
+      "whyItMatters": "AI 資本支出會直接推升整機出貨、組裝價值量、主板/系統整合與供應鏈議價能力，是 Daily Analysis 的核心高權重題材。",
+      "aliases": [
+        "AI server",
+        "AI伺服器",
+        "ODM",
+        "EMS",
+        "SMT"
+      ],
+      "childIds": [
+        "ai-server-liquid-cooling",
+        "ai-server-power-backup",
+        "ai-server-mechanical",
+        "high-speed-interconnect"
+      ],
+      "legacyTopicIds": [
+        "ai-server",
+        "ai-server-odm",
+        "ems-smt"
+      ],
+      "include": [
+        "AI 伺服器整機與 EMS 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
       "evidence": [
-        { "sourceId": "finmind-taiwan-stock-datasets", "publisher": "FinMind", "title": "Taiwan Stock Market Datasets", "claim": "可用月營收、股價、法人與估值資料追蹤 AI 伺服器供應鏈公司基本面與市場反應。" }
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "ai-server-mechanical",
+      "name": "AI 伺服器機構件與滑軌",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "AI server 機殼、滑軌、金屬機構件、精密沖壓與結構件等承載高功耗伺服器平台的機構供應鏈。",
+      "whyItMatters": "伺服器平台規格改版與重量/散熱要求提升，會帶動機殼、滑軌與精密機構件的設計導入與出貨價值量。",
+      "aliases": [
+        "機殼",
+        "滑軌",
+        "精密機構件"
+      ],
+      "parentId": "ai-server",
+      "childIds": [],
+      "legacyTopicIds": [
+        "ai-server-chassis-rails",
+        "precision-metal-casing"
+      ],
+      "include": [
+        "AI 伺服器機構件與滑軌 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "ai-server-power-backup",
+      "name": "AI 伺服器電源與 BBU",
+      "type": "product",
+      "status": "active",
+      "definition": "服務資料中心與 AI server 的高瓦數電源供應器、電源管理、UPS/BBU 電池備援與相關被動元件/電池模組。",
+      "whyItMatters": "AI server 功耗提升會推升 PSU 瓦數、電源效率、備援電池與資料中心電力架構升級，直接影響電源供應鏈價值量。",
+      "aliases": [
+        "PSU",
+        "BBU",
+        "電源供應器",
+        "電池備援"
+      ],
+      "parentId": "ai-server",
+      "childIds": [],
+      "legacyTopicIds": [
+        "psu",
+        "bbu"
+      ],
+      "include": [
+        "AI 伺服器電源與 BBU 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "delta-power-and-system-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 電源及系統",
+          "claim": "台達官方產品頁可作為電源與系統產品分類參考。"
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28"
@@ -35,117 +211,462 @@
       "name": "AI 伺服器液冷散熱",
       "type": "technology",
       "status": "active",
-      "definition": "因 AI 加速器功耗上升而導入的液冷、冷板、CDU、管路、快接頭、散熱模組與熱管理方案。",
-      "whyItMatters": "液冷滲透率提高會改變散熱廠產品組合與 ASP，並可能讓具備液冷設計/量產能力的公司取得較高成長性。",
-      "aliases": ["液冷", "水冷", "liquid cooling", "CDU", "cold plate"],
+      "definition": "因 AI 加速器功耗上升而導入的液冷、冷板、CDU、管路、快接頭、散熱模組、風扇與熱管理方案。",
+      "whyItMatters": "高功耗 AI 平台會提高散熱價值量，液冷滲透率與氣冷升級會改變散熱廠產品組合、ASP 與毛利結構。",
+      "aliases": [
+        "液冷",
+        "水冷",
+        "liquid cooling",
+        "CDU",
+        "cold plate",
+        "氣冷",
+        "散熱"
+      ],
       "parentId": "ai-server",
       "childIds": [],
-      "legacyTopicIds": ["liquid_cooling_advanced", "thermal-solution", "thermal_components_air", "ai-server"],
-      "include": ["AI server 液冷零組件與系統", "冷板/CDU/管路/快接頭/熱管理模組"],
-      "exclude": ["純一般風扇但沒有 AI server 或高功耗平台證據的描述"],
-      "activationSignals": ["AI GPU/ASIC TDP 升高", "客戶導入液冷機櫃或 CDU", "散熱廠液冷相關營收揭露增加"],
+      "legacyTopicIds": [
+        "liquid_cooling_advanced",
+        "thermal-solution",
+        "thermal_components_air"
+      ],
+      "include": [
+        "AI 伺服器散熱與液冷 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "AI GPU/ASIC TDP 升高",
+        "客戶導入液冷機櫃或 CDU",
+        "散熱廠液冷相關營收揭露增加"
+      ],
       "evidence": [
-        { "sourceId": "avc-official-homepage", "publisher": "奇鋐科技", "title": "Asia Vital Components official website", "claim": "奇鋐官網與公司資料可作為散熱產品與技術驗證來源。" },
-        { "sourceId": "delta-fans-thermal-products", "publisher": "台達", "title": "風扇與散熱管理產品", "claim": "台達官方產品頁可作為風扇與散熱管理產品驗證來源。" }
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "delta-fans-thermal-products",
+          "publisher": "台達 Delta Electronics",
+          "title": "產品 - 風扇與散熱管理",
+          "claim": "台達官方產品頁可作為風扇、氣冷與液冷散熱管理產品參考。"
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28"
     },
     {
-      "id": "passive-components",
-      "name": "被動元件",
+      "id": "consumer-computing-devices",
+      "name": "PC、手機與 AR/VR/XR 終端",
+      "type": "end_market",
+      "status": "active",
+      "definition": "筆電/PC/NB、智慧型手機、AR/VR/XR 光學與終端供應鏈，涵蓋品牌、代工、晶片與零組件。",
+      "whyItMatters": "終端裝置景氣循環、AI PC、手機換機與 XR 新產品會影響代工、零組件與品牌公司營收。",
+      "aliases": [
+        "PC",
+        "NB",
+        "手機",
+        "AR",
+        "VR",
+        "XR"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "pc-nb-tablet",
+        "mobile",
+        "ar-vr-xr-optics"
+      ],
+      "include": [
+        "PC、手機與 AR/VR/XR 終端 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "defense-aerospace",
+      "name": "軍工、航太與無人機",
+      "type": "theme",
+      "status": "active",
+      "definition": "國防自主、航空航太、無人機、造船、軍用通訊、光電系統與特殊材料供應鏈。",
+      "whyItMatters": "地緣政治、國防預算與國機國造/國艦國造政策會帶動長約訂單與本土供應鏈機會，但需區分實際產品與概念跟漲。",
+      "aliases": [
+        "軍工",
+        "航太",
+        "無人機",
+        "國防"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "defense_industry"
+      ],
+      "include": [
+        "軍工、航太與無人機 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "display-led-optics",
+      "name": "面板、LED、光學鏡頭與感測",
       "type": "supply_chain_segment",
       "status": "active",
-      "definition": "電子電路中不主動放大訊號的基礎元件族群，主要包含 MLCC/電容、電阻、電感、保護元件與石英頻率元件。",
-      "whyItMatters": "被動元件具備庫存循環與報價循環，且 AI server、車用、工控與消費電子需求復甦會透過規格升級或用量提升影響訂單與毛利率。",
-      "aliases": ["被動元件", "passive components", "MLCC", "電阻", "電感"],
-      "childIds": ["passive-components-mlcc", "passive-components-inductor", "passive-components-resistor", "quartz-components"],
-      "legacyTopicIds": ["mlcc-capacitor", "passive-inductor", "passive-resistor", "quartz-components"],
-      "include": ["MLCC/電容器", "功率電感", "電阻與保護元件", "石英頻率控制元件"],
-      "exclude": ["主動 IC 或模組廠，除非其主要收入來自被動元件", "只使用被動元件的終端組裝廠"],
-      "activationSignals": ["通路庫存去化完成", "MLCC/電阻/電感報價止跌或上漲", "車用、AI server、工控需求拉貨"],
-      "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報與重大訊息可用於驗證被動元件產品與營收分類。" }
+      "definition": "面板、DDIC 周邊、LED/Mini LED/Micro LED、車用照明、光學鏡頭、相機模組與光感測元件供應鏈。",
+      "whyItMatters": "顯示與光學元件受面板報價、車用照明、手機鏡頭與感測應用影響，週期與規格升級會反映到出貨與毛利。",
+      "aliases": [
+        "面板",
+        "LED",
+        "光學鏡頭",
+        "光感測"
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28"
-    },
-    {
-      "id": "passive-components-mlcc",
-      "name": "MLCC / 電容器",
-      "type": "product",
-      "status": "active",
-      "definition": "以積層陶瓷電容與其他電容器為核心的被動元件產品子題。",
-      "whyItMatters": "MLCC 用量與規格受車用電子、AI server、消費電子週期影響，報價與稼動率變化會直接影響供應商毛利。",
-      "aliases": ["MLCC", "積層陶瓷電容", "電容器"],
-      "parentId": "passive-components",
       "childIds": [],
-      "legacyTopicIds": ["mlcc-capacitor"],
-      "include": ["MLCC 供應商", "鋁質/固態/薄膜等電容器供應商"],
-      "exclude": ["只在產品中使用 MLCC 的終端公司"],
-      "activationSignals": ["MLCC 報價止跌回升", "車用/AI server 高規 MLCC 拉貨", "庫存天數下降"],
+      "legacyTopicIds": [
+        "display-panel",
+        "led-automotive",
+        "optical-sensors",
+        "optical-lens-camera"
+      ],
+      "include": [
+        "面板、LED、光學鏡頭與感測 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
       "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報可驗證 MLCC/電容器產品線與營收分類。" }
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28"
     },
     {
-      "id": "passive-components-inductor",
-      "name": "功率電感",
-      "type": "product",
+      "id": "ecommerce-retail-logistics",
+      "name": "電商零售與物流平台",
+      "type": "end_market",
       "status": "active",
-      "definition": "用於電源管理、濾波與能量儲存的電感產品，包含功率電感與相關磁性元件。",
-      "whyItMatters": "AI server、車用電子與高速運算平台的電源設計升級，會推升高電流、低損耗電感需求。",
-      "aliases": ["電感", "功率電感", "inductor", "power inductor"],
-      "parentId": "passive-components",
+      "definition": "電商平台、零售生活百貨、物流、倉儲與最後一哩配送服務供應鏈。",
+      "whyItMatters": "消費景氣、平台流量、物流效率與會員生態會影響電商零售公司的 GMV、費用率與現金流。",
+      "aliases": [
+        "電商",
+        "零售",
+        "物流"
+      ],
       "childIds": [],
-      "legacyTopicIds": ["passive-inductor"],
-      "include": ["功率電感", "磁性元件"],
-      "exclude": ["非主要產品為電感的電源模組廠，除非有明確產品證據"],
-      "activationSignals": ["AI server 電源規格升級", "車用電子需求復甦", "電感稼動率/報價改善"],
+      "legacyTopicIds": [
+        "e-commerce"
+      ],
+      "include": [
+        "電商零售與物流平台 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
       "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報可驗證功率電感與磁性元件產品線。" }
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28"
     },
     {
-      "id": "passive-components-resistor",
-      "name": "電阻與被動保護元件",
-      "type": "product",
+      "id": "edge-ai-aiot",
+      "name": "Edge AI / AIoT 邊緣智慧",
+      "type": "technology",
       "status": "active",
-      "definition": "晶片電阻、精密電阻、保護元件與相關被動元件產品子題。",
-      "whyItMatters": "電阻屬基礎元件，景氣循環與庫存修正會影響出貨量；車用、工控與高階電子可帶動規格升級。",
-      "aliases": ["電阻", "晶片電阻", "保護元件", "resistor"],
-      "parentId": "passive-components",
+      "definition": "邊緣 AI SoC、AIoT 模組、工業電腦、感測、連接與低功耗推論設備供應鏈。",
+      "whyItMatters": "AI 從雲端延伸到終端與工控場景時，會推動邊緣運算晶片、模組與系統整合需求。",
+      "aliases": [
+        "Edge AI",
+        "AIoT",
+        "邊緣智慧"
+      ],
       "childIds": [],
-      "legacyTopicIds": ["passive-resistor"],
-      "include": ["電阻供應商", "保護元件供應商"],
-      "exclude": ["只採購電阻的下游電子產品公司"],
-      "activationSignals": ["通路庫存下降", "電阻報價止跌", "車用/工控需求復甦"],
+      "legacyTopicIds": [
+        "edge-ai"
+      ],
+      "include": [
+        "Edge AI / AIoT 邊緣智慧 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
       "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報可驗證電阻與保護元件產品線。" }
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28"
     },
     {
-      "id": "memory",
-      "name": "記憶體",
+      "id": "electrical-equipment-epc",
+      "name": "重電、電纜與 EPC 工程",
       "type": "supply_chain_segment",
       "status": "active",
-      "definition": "DRAM、NAND、HBM、CXL memory pooling、利基型記憶體與記憶體模組等儲存/記憶體供應鏈。",
-      "whyItMatters": "記憶體是高度循環產業，報價、庫存與 AI server 高頻寬需求會快速反映到營收、毛利率與市場評價。",
-      "aliases": ["記憶體", "memory", "DRAM", "NAND", "HBM"],
-      "childIds": ["hbm", "cxl-memory-pooling", "niche-memory", "memory-modules"],
-      "legacyTopicIds": ["hbm", "cxl-technology", "niche-memory", "memory-modules"],
-      "include": ["記憶體 IC/模組/控制相關供應鏈", "HBM 與 CXL 記憶體池化", "NOR Flash 與利基型記憶體"],
-      "exclude": ["只使用 DRAM/NAND 的一般終端品牌", "沒有記憶體產品或服務證據的半導體公司"],
-      "activationSignals": ["DRAM/NAND 合約價或現貨價上漲", "HBM 產能吃緊", "庫存週期由去化轉補庫存"],
+      "definition": "重電設備、變壓器、電器電纜、電力系統、廠務與 EPC 工程服務供應鏈。",
+      "whyItMatters": "電網升級、資料中心建置、半導體廠務與能源基礎設施投資會帶動重電設備與 EPC 工程訂單。",
+      "aliases": [
+        "重電",
+        "電纜",
+        "變壓器",
+        "EPC"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "electrical_equipment",
+        "epc_engineering"
+      ],
+      "include": [
+        "重電、電纜與 EPC 工程 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
       "evidence": [
-        { "sourceId": "finmind-taiwan-stock-datasets", "publisher": "FinMind", "title": "Taiwan Stock Market Datasets", "claim": "月營收、股價與估值資料可追蹤記憶體景氣循環對公司基本面的影響。" },
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司年報與公告可驗證記憶體產品線與營收分類。" }
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "energy-storage-battery",
+      "name": "儲能、電芯與電池材料",
+      "type": "theme",
+      "status": "active",
+      "definition": "儲能系統、電池模組、BMS、電芯製造與正負極/隔離膜/銅箔等關鍵材料供應鏈。",
+      "whyItMatters": "電網韌性、資料中心備援與電動車需求會推升儲能與電池供應鏈價值量，材料價格與系統訂單會影響獲利。",
+      "aliases": [
+        "儲能",
+        "BMS",
+        "電芯",
+        "電池材料"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "ess-storage",
+        "battery-cell-module",
+        "battery-materials"
+      ],
+      "include": [
+        "儲能、電芯與電池材料 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "environment-water-recycling",
+      "name": "水資源、環保與電子廢料回收",
+      "type": "theme",
+      "status": "active",
+      "definition": "水處理工程、半導體廠務水處理、環保設備、製程化學品回收、貴金屬回收與電子廢料循環經濟。",
+      "whyItMatters": "半導體用水、ESG 法規、電子廢料回收與水資源投資會帶動工程服務、耗材與回收處理需求。",
+      "aliases": [
+        "水資源",
+        "環保",
+        "電子廢料",
+        "回收"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "water-environment",
+        "circular-economy-ewaste"
+      ],
+      "include": [
+        "水資源、環保與電子廢料回收 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "financial-services",
+      "name": "銀行金融與證券期貨",
+      "type": "end_market",
+      "status": "active",
+      "definition": "金控、銀行、證券、期貨與區域金融服務公司，主要受利率、授信品質、手續費與資本市場交易量影響。",
+      "whyItMatters": "金融股獲利與股利政策受利率循環、呆帳、資本適足率與資本市場活絡度影響，是大盤權值與殖利率資金的重要題材。",
+      "aliases": [
+        "銀行",
+        "金控",
+        "證券",
+        "期貨"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "banking-finance"
+      ],
+      "include": [
+        "銀行金融與證券期貨 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28"
@@ -155,17 +676,1044 @@
       "name": "HBM 高頻寬記憶體",
       "type": "product",
       "status": "active",
-      "definition": "用於 AI GPU/ASIC 的高頻寬堆疊式記憶體及其相關供應鏈。",
-      "whyItMatters": "HBM 是 AI accelerator 關鍵瓶頸之一，需求強弱會影響記憶體廠、封裝、材料與測試供應鏈。",
-      "aliases": ["HBM", "HBM3", "HBM3E", "高頻寬記憶體"],
-      "parentId": "memory",
+      "definition": "用於 AI GPU/ASIC 的高頻寬堆疊式記憶體與其相關封裝、測試、載板和材料供應鏈。",
+      "whyItMatters": "HBM 是 AI accelerator 的關鍵瓶頸之一，供需吃緊會影響記憶體、封裝、材料與測試供應鏈的成長性。",
+      "aliases": [
+        "HBM",
+        "HBM3",
+        "HBM3E"
+      ],
       "childIds": [],
-      "legacyTopicIds": ["hbm"],
-      "include": ["HBM 記憶體供應", "HBM 相關封裝/測試/材料"],
-      "exclude": ["一般 DRAM/NAND 公司但沒有 HBM 相關證據者"],
-      "activationSignals": ["AI GPU 出貨上修", "HBM 供需吃緊或價格上漲", "HBM 產能與良率改善"],
+      "legacyTopicIds": [
+        "hbm"
+      ],
+      "include": [
+        "HBM 高頻寬記憶體 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
       "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證 HBM 相關產品、客戶或供應鏈定位。" }
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "high-speed-interconnect",
+      "name": "高速連接器與車工業連接",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "高速連接器、Cable、排線、車用連接器、工業連接器、電源連接器與線束供應鏈。",
+      "whyItMatters": "AI server、車用電子與工業自動化會提高高速/高可靠連接需求，帶動連接器規格升級與出貨價值量。",
+      "aliases": [
+        "連接器",
+        "高速線纜",
+        "車用連接器"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "connector",
+        "connector-highspeed",
+        "connector-automotive"
+      ],
+      "include": [
+        "高速連接器與車工業連接 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "ic-design",
+      "name": "IC 設計與矽智財",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "涵蓋 HPC/網通 IC、類比與功率管理 IC、顯示驅動 IC、客製 ASIC、IP 授權、控制晶片與 IC 通路服務。",
+      "whyItMatters": "IC 設計公司受產品週期、庫存、設計導入與終端需求影響；AI、車用、網通與面板循環會透過晶片出貨與 ASP 反映。",
+      "aliases": [
+        "IC設計",
+        "ASIC",
+        "IP",
+        "PMIC",
+        "DDIC",
+        "HPC IC"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "analog-power-ic",
+        "hpc-networking-ic",
+        "ddic",
+        "asic-ip-design",
+        "ip-asic",
+        "ic-distribution"
+      ],
+      "include": [
+        "IC 設計與矽智財 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "industrial-automation",
+      "name": "工業自動化與 CNC 工具機",
+      "type": "technology",
+      "status": "active",
+      "definition": "馬達驅動、PLC、工業視覺、線性傳動、CNC 工具機與智慧製造系統供應鏈。",
+      "whyItMatters": "製造業自動化、半導體/電子擴產與人力替代需求會推動控制器、傳動、設備與系統整合需求。",
+      "aliases": [
+        "工業自動化",
+        "CNC",
+        "智慧製造"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "industrial-automation",
+        "cnc-machine-tool"
+      ],
+      "include": [
+        "工業自動化與 CNC 工具機 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "leo-satellite-communications",
+      "name": "低軌衛星通訊",
+      "type": "end_market",
+      "status": "active",
+      "definition": "低軌衛星網路相關的衛星通訊、地面設備、天線、RF、網通與系統整合供應鏈。",
+      "whyItMatters": "低軌衛星建置會帶動天線、RF、網通設備、電源與系統整合需求，是中長期通訊基礎建設題材。",
+      "aliases": [
+        "低軌衛星",
+        "LEO",
+        "衛星通訊"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "leo-satellite"
+      ],
+      "include": [
+        "低軌衛星通訊 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "medical-devices",
+      "name": "醫療器材與體外診斷",
+      "type": "end_market",
+      "status": "active",
+      "definition": "醫療耗材、植入物、醫療電子、數位健康、分子診斷與 IVD 檢驗試劑供應鏈。",
+      "whyItMatters": "醫療器材具法規與通路門檻，產品核准、醫院採購與海外市場拓展會影響中長期營收能見度。",
+      "aliases": [
+        "醫療器材",
+        "IVD",
+        "醫療電子"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "medical-consumables",
+        "medical-electronics",
+        "ivd-diagnostics"
+      ],
+      "include": [
+        "醫療器材與體外診斷 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "memory-modules",
+      "name": "記憶體模組",
+      "type": "product",
+      "status": "active",
+      "definition": "DRAM/NAND 模組、工控記憶體、儲存模組與通路品牌等記憶體下游供應鏈。",
+      "whyItMatters": "記憶體模組受報價循環、庫存水位與終端補庫存影響，景氣轉折常快速反映在營收與毛利率。",
+      "aliases": [
+        "DRAM模組",
+        "記憶體模組",
+        "工控記憶體"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "memory-modules"
+      ],
+      "include": [
+        "記憶體模組 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "networking-infrastructure",
+      "name": "高速交換器與網通設備",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "高速交換器、無線網路、路由器、網通設備、網通晶片與企業/資料中心網路基礎設施供應鏈。",
+      "whyItMatters": "AI 資料中心、企業網路升級與寬頻投資會帶動交換器、Wi-Fi、網通晶片與設備需求。",
+      "aliases": [
+        "交換器",
+        "Wi-Fi",
+        "網通設備"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "networking-equipment"
+      ],
+      "include": [
+        "高速交換器與網通設備 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "niche-memory",
+      "name": "NOR Flash 與利基記憶體",
+      "type": "product",
+      "status": "active",
+      "definition": "NOR Flash、利基型 DRAM/NAND、特殊記憶體 IC 與相關晶圓代工或模組供應鏈。",
+      "whyItMatters": "利基記憶體具備供需與報價循環，工控、車用與消費電子需求修復會影響稼動率與毛利率。",
+      "aliases": [
+        "NOR Flash",
+        "利基記憶體"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "niche-memory"
+      ],
+      "include": [
+        "NOR Flash 與利基記憶體 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components",
+      "name": "被動元件",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "電子電路中不主動放大訊號的基礎元件族群，包含 MLCC/電容、電阻、電感、保護元件與石英頻率元件。",
+      "whyItMatters": "被動元件具庫存與報價循環，車用、AI server、工控與消費電子需求復甦會透過規格升級或用量提升影響訂單與毛利。",
+      "aliases": [
+        "被動元件",
+        "passive components"
+      ],
+      "childIds": [
+        "passive-components-mlcc",
+        "passive-components-inductor",
+        "passive-components-resistor",
+        "quartz-components"
+      ],
+      "legacyTopicIds": [],
+      "include": [
+        "被動元件 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components-inductor",
+      "name": "功率電感",
+      "type": "product",
+      "status": "active",
+      "definition": "功率電感 是被動元件供應鏈中的產品子題，涵蓋直接製造、材料、設備與相關通路角色。",
+      "whyItMatters": "功率電感 受車用、AI server、工控與消費電子週期影響，報價、稼動率與規格升級會反映到供應商毛利。",
+      "aliases": [
+        "電感",
+        "功率電感"
+      ],
+      "parentId": "passive-components",
+      "childIds": [],
+      "legacyTopicIds": [
+        "passive-inductor"
+      ],
+      "include": [
+        "功率電感 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components-mlcc",
+      "name": "MLCC / 電容器",
+      "type": "product",
+      "status": "active",
+      "definition": "MLCC / 電容器 是被動元件供應鏈中的產品子題，涵蓋直接製造、材料、設備與相關通路角色。",
+      "whyItMatters": "MLCC / 電容器 受車用、AI server、工控與消費電子週期影響，報價、稼動率與規格升級會反映到供應商毛利。",
+      "aliases": [
+        "MLCC",
+        "電容器"
+      ],
+      "parentId": "passive-components",
+      "childIds": [],
+      "legacyTopicIds": [
+        "mlcc-capacitor"
+      ],
+      "include": [
+        "MLCC / 電容器 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "passive-components-resistor",
+      "name": "電阻與被動保護元件",
+      "type": "product",
+      "status": "active",
+      "definition": "電阻與被動保護元件 是被動元件供應鏈中的產品子題，涵蓋直接製造、材料、設備與相關通路角色。",
+      "whyItMatters": "電阻與被動保護元件 受車用、AI server、工控與消費電子週期影響，報價、稼動率與規格升級會反映到供應商毛利。",
+      "aliases": [
+        "電阻",
+        "保護元件"
+      ],
+      "parentId": "passive-components",
+      "childIds": [],
+      "legacyTopicIds": [
+        "passive-resistor"
+      ],
+      "include": [
+        "電阻與被動保護元件 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "pcb-substrates",
+      "name": "PCB、IC 載板與高階基板材料",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "PCB 硬板、FPC 軟板、IC 載板、玻璃基板、玻纖布、CCL、導線架與封裝化學品等基板材料供應鏈。",
+      "whyItMatters": "AI server、先進封裝、車用與高速通訊會提高板材層數、材料規格與載板需求，影響上游材料與板廠獲利。",
+      "aliases": [
+        "PCB",
+        "FPC",
+        "IC載板",
+        "玻璃基板",
+        "玻纖布"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "pcb-manufacturing",
+        "fpc",
+        "ic-substrate",
+        "glass-core-substrate",
+        "fiberglass-cloth",
+        "packaging-materials"
+      ],
+      "include": [
+        "PCB、IC 載板與高階基板材料 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "petrochem-plastics",
+      "name": "石化、塑橡膠與特用化學",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "石化基本原料、塑橡膠、特用化學品、溶劑與下游材料供應鏈。",
+      "whyItMatters": "石化與塑橡膠受原油、供需循環、價差與中國產能影響，景氣反轉會反映在利差、庫存與稼動率。",
+      "aliases": [
+        "石化",
+        "塑橡膠",
+        "特化"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "petrochem-plastics"
+      ],
+      "include": [
+        "石化、塑橡膠與特用化學 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "quartz-components",
+      "name": "石英頻率控制元件",
+      "type": "product",
+      "status": "active",
+      "definition": "石英頻率控制元件 是被動元件供應鏈中的產品子題，涵蓋直接製造、材料、設備與相關通路角色。",
+      "whyItMatters": "石英頻率控制元件 受車用、AI server、工控與消費電子週期影響，報價、稼動率與規格升級會反映到供應商毛利。",
+      "aliases": [
+        "石英元件",
+        "頻率控制元件"
+      ],
+      "parentId": "passive-components",
+      "childIds": [],
+      "legacyTopicIds": [
+        "quartz-components"
+      ],
+      "include": [
+        "石英頻率控制元件 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "renewable-energy",
+      "name": "太陽能與離岸風電",
+      "type": "theme",
+      "status": "active",
+      "definition": "太陽能材料/設備/系統與離岸風電鋼構、海纜、變壓器、風場開發和運維供應鏈。",
+      "whyItMatters": "再生能源建置、併網與政策補助會帶動設備、工程、電力傳輸與運維需求，是中長期能源轉型題材。",
+      "aliases": [
+        "太陽能",
+        "離岸風電",
+        "再生能源"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "solar-energy",
+        "offshore-wind"
+      ],
+      "include": [
+        "太陽能與離岸風電 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "robotics-physical-ai",
+      "name": "人形機器人與實體 AI",
+      "type": "theme",
+      "status": "active",
+      "definition": "人形機器人與實體 AI 的馬達、減速機、線性傳動、感測、控制、結構件與系統整合供應鏈。",
+      "whyItMatters": "若機器人商用化加速，會帶動精密傳動、感測控制與結構件新需求，但目前仍需嚴格驗證客戶與量產時程。",
+      "aliases": [
+        "人形機器人",
+        "實體AI",
+        "機器人"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "robotics_physical_ai"
+      ],
+      "include": [
+        "人形機器人與實體 AI 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "semiconductor-equipment-materials",
+      "name": "半導體設備與前段材料",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "半導體晶圓廠設備、廠務、量測、特用化學品、光阻、矽晶圓與前段製程材料供應鏈。",
+      "whyItMatters": "晶圓廠擴產、先進製程與稼動率回升會帶動設備、耗材與材料需求，並影響上游供應商訂單週期。",
+      "aliases": [
+        "半導體設備",
+        "前段材料",
+        "矽晶圓",
+        "光阻",
+        "特用化學品"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "wafer-fab-equipment",
+        "semi-process-materials",
+        "silicon-wafer"
+      ],
+      "include": [
+        "半導體設備與前段材料 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "shipping",
+      "name": "貨櫃與散裝航運",
+      "type": "end_market",
+      "status": "active",
+      "definition": "貨櫃航運、貨櫃租賃碼頭、散裝航運與油輪等航運服務供應鏈。",
+      "whyItMatters": "航運運價、船隊供給、全球貿易與地緣風險會快速影響營收、獲利與市場評價。",
+      "aliases": [
+        "貨櫃航運",
+        "散裝航運"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "container-shipping",
+        "dry-bulk-shipping"
+      ],
+      "include": [
+        "貨櫃與散裝航運 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "silicon-photonics-optical-comm",
+      "name": "矽光子、CPO 與高速光通訊",
+      "type": "technology",
+      "status": "active",
+      "definition": "矽光子、CPO、光收發模組、光通訊 IC、連接器與光纖材料等高速資料傳輸供應鏈。",
+      "whyItMatters": "AI cluster 對高速低功耗互連需求提升，會帶動光收發模組、矽光子、CPO 與光通訊零組件滲透。",
+      "aliases": [
+        "矽光子",
+        "CPO",
+        "光收發模組",
+        "光通訊"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "silicon-photonics",
+        "optical-comm",
+        "high-speed-optics"
+      ],
+      "include": [
+        "矽光子、CPO 與高速光通訊 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "software-cloud-security",
+      "name": "資安、雲端服務與企業軟體",
+      "type": "theme",
+      "status": "active",
+      "definition": "資安產品、系統整合、雲端代管、MSP、企業 SaaS、ERP、AI 軟體與 IT 委外服務供應鏈。",
+      "whyItMatters": "企業數位轉型、資安法規、雲端遷移與 AI 軟體導入會推動 recurring revenue 與專案服務需求。",
+      "aliases": [
+        "資安",
+        "雲端",
+        "SaaS",
+        "系統整合"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "cybersecurity",
+        "cloud-msp",
+        "enterprise-saas",
+        "it-si"
+      ],
+      "include": [
+        "資安、雲端服務與企業軟體 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28"
+    },
+    {
+      "id": "wafer-foundry",
+      "name": "晶圓代工與第三代半導體",
+      "type": "supply_chain_segment",
+      "status": "active",
+      "definition": "涵蓋先進製程、特殊製程、利基型晶圓代工與 SiC/GaN 第三代半導體功率元件代工等製造服務。",
+      "whyItMatters": "晶圓代工是半導體供應鏈核心瓶頸，製程需求、稼動率與資本支出會傳導到營收、毛利與估值。",
+      "aliases": [
+        "晶圓代工",
+        "特殊製程",
+        "SiC",
+        "GaN"
+      ],
+      "childIds": [],
+      "legacyTopicIds": [
+        "wafer-foundry",
+        "sic-gan-power"
+      ],
+      "include": [
+        "晶圓代工與第三代半導體 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28"
@@ -177,17 +1725,40 @@
       "status": "watchlist",
       "definition": "基於 Compute Express Link 的記憶體擴充、共享與池化技術，服務資料中心高效資源配置。",
       "whyItMatters": "若資料中心導入 CXL memory pooling，可能帶動控制晶片、模組、伺服器平台與記憶體配置升級。",
-      "aliases": ["CXL", "Compute Express Link", "記憶體池化"],
-      "parentId": "memory",
-      "childIds": [],
-      "legacyTopicIds": ["cxl-technology"],
-      "include": ["CXL 控制晶片", "CXL 記憶體模組", "支援 CXL 的伺服器平台"],
-      "exclude": ["只泛稱高速介面、但無 CXL 產品或客戶證據"],
-      "activationSignals": ["CXL 平台商用導入", "伺服器平台支援 CXL", "公司揭露 CXL 產品量產或設計導入"],
-      "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證 CXL 產品或技術導入狀態。" }
+      "aliases": [
+        "CXL",
+        "Compute Express Link"
       ],
-      "confidence": "low",
+      "childIds": [],
+      "legacyTopicIds": [
+        "cxl-technology"
+      ],
+      "include": [
+        "CXL 記憶體池化 的直接產品、設備、材料、服務或供應鏈角色"
+      ],
+      "exclude": [
+        "只有股價同漲或媒體泛稱，沒有產品、客戶、產能或財報證據的公司"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證產品線、客戶應用、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤題材供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
       "lastVerified": "2026-05-28"
     },
     {
@@ -197,38 +1768,30 @@
       "status": "watchlist",
       "definition": "把 AI 推論、資料預處理或邊緣運算能力部署於衛星、太空載具或地面衛星網路節點，用於低延遲、自主判讀與通訊效率提升。",
       "whyItMatters": "若低軌衛星從通訊鏈路升級到在軌資料處理，受惠對象會從天線/RF/地面設備擴大到耐輻射運算、邊緣 AI、電源、熱控與系統整合。",
-      "aliases": ["軌道AI", "在軌 AI", "space edge AI", "orbital AI", "satellite edge computing"],
-      "childIds": ["leo-satellite-communications", "edge-ai"],
-      "legacyTopicIds": ["leo-satellite", "edge-ai"],
-      "include": ["低軌衛星通訊與地面設備", "衛星邊緣運算/AI 推論", "太空級電源、熱控、運算與通訊模組"],
-      "exclude": ["只有一般 AI PC/AIoT，沒有衛星或太空場景證據", "只有傳統衛星零組件但無運算升級邏輯者需降為低軌衛星通訊"],
-      "activationSignals": ["衛星營運商導入邊緣運算或 AI payload", "低軌衛星地面設備訂單增加", "太空級運算/通訊模組公司揭露新設計導入"],
-      "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證低軌衛星、地面設備或太空應用產品。" },
-        { "sourceId": "finmind-taiwan-stock-datasets", "publisher": "FinMind", "title": "Taiwan Stock Market Datasets", "claim": "可追蹤相關公司營收與股價是否反映衛星/邊緣 AI 設計導入。" }
+      "aliases": [
+        "軌道AI",
+        "space edge AI"
       ],
+      "childIds": [
+        "leo-satellite-communications",
+        "edge-ai-aiot"
+      ],
+      "legacyTopicIds": [],
+      "include": [
+        "衛星邊緣運算/AI 推論",
+        "太空級運算與通訊模組"
+      ],
+      "exclude": [
+        "只有一般 AIoT，沒有衛星或太空場景證據"
+      ],
+      "activationSignals": [
+        "月營收或訂單能見度改善",
+        "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+        "產業報價、資本支出或需求循環出現方向性變化"
+      ],
+      "evidence": [],
       "confidence": "low",
-      "lastVerified": "2026-05-28"
-    },
-    {
-      "id": "leo-satellite-communications",
-      "name": "低軌衛星通訊",
-      "type": "end_market",
-      "status": "active",
-      "definition": "低軌衛星網路相關的衛星通訊、地面設備、天線、RF、網通與系統整合供應鏈。",
-      "whyItMatters": "低軌衛星建置會帶動天線、RF、網通設備、電源與系統整合需求，是軌道 AI 運算的基礎市場。",
-      "aliases": ["低軌衛星", "LEO satellite", "衛星通訊"],
-      "parentId": "orbital-ai-computing",
-      "childIds": [],
-      "legacyTopicIds": ["leo-satellite"],
-      "include": ["衛星通訊地面設備", "天線/RF/網通設備", "衛星相關系統整合"],
-      "exclude": ["一般網通設備但無衛星通訊證據"],
-      "activationSignals": ["衛星營運商建置進度", "地面設備拉貨", "RF/天線/通訊模組訂單揭露"],
-      "evidence": [
-        { "sourceId": "mops-company-disclosures", "publisher": "公開資訊觀測站 MOPS", "title": "上市櫃公司公告與財務資訊", "claim": "公司公告與年報可驗證低軌衛星通訊產品與客戶應用。" }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28"
+      "lastVerified": null
     }
   ]
 }

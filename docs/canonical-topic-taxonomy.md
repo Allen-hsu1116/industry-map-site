@@ -89,21 +89,22 @@ High-overlap examples that need canonical mapping:
 - `hbm` + `cxl-technology` + `niche-memory` + `memory-modules` should roll up under **記憶體** with product/technology children.
 - `leo-satellite` + `edge-ai` can feed **軌道 AI 運算**, but this should remain `watchlist` until role/product evidence proves the AI-computing part, not just satellite communication.
 
-## Initial Canonical Topics Added
+## Canonical Topics Coverage
 
-The first shadow taxonomy covers user-mentioned topics plus existing AI server dependencies:
+The shadow taxonomy now covers all 81 legacy runtime topics exactly once, using 39 canonical topics. This is still a shadow layer: legacy `industries.json` remains the broad fallback, while canonical topics provide cleaner grouping for Daily Analysis, UI filtering, role scoring, and future V2 company knowledge.
 
-- `passive-components`
-- `passive-components-mlcc`
-- `passive-components-inductor`
-- `passive-components-resistor`
-- `memory`
-- `hbm`
-- `cxl-memory-pooling`
-- `orbital-ai-computing`
-- `leo-satellite-communications`
-- `ai-server`
-- `ai-server-liquid-cooling`
+Current coverage groups:
+
+- AI server cluster: `ai-server`, `ai-server-liquid-cooling`, `ai-server-power-backup`, `ai-server-mechanical`
+- Semiconductor / packaging / IC design: `wafer-foundry`, `semiconductor-equipment-materials`, `advanced-packaging`, `ic-design`
+- Memory: `hbm`, `cxl-memory-pooling`, `niche-memory`, `memory-modules`
+- Networking / optics / substrates / interconnect: `leo-satellite-communications`, `networking-infrastructure`, `silicon-photonics-optical-comm`, `pcb-substrates`, `high-speed-interconnect`
+- Passive components: `passive-components` parent plus MLCC, inductor, resistor, quartz children
+- Energy / industrial / automation: `energy-storage-battery`, `renewable-energy`, `electrical-equipment-epc`, `industrial-automation`, `robotics-physical-ai`, `edge-ai-aiot`
+- Software / consumer / display / medical / financial / shipping / traditional sectors: `software-cloud-security`, `consumer-computing-devices`, `display-led-optics`, `medical-devices`, `financial-services`, `shipping`, `defense-aerospace`, `petrochem-plastics`, `environment-water-recycling`, `ecommerce-retail-logistics`
+- Watchlist concepts without direct legacy mapping: `orbital-ai-computing`
+
+Mapping rule: each legacy `slug` should appear in exactly one canonical topic's `legacyTopicIds`. Parent topics may use `childIds` for hierarchy without duplicating a child's legacy mapping.
 
 ## Daily Analysis Adoption Rule
 
@@ -119,10 +120,9 @@ Adoption order:
 ## Not Doing Yet
 
 - Not deleting `industries.json`.
-- Not rewriting all 81 topics in one pass.
-- Not promoting 軌道 AI 運算 to high confidence yet.
 - Not treating current market popularity as evidence of business exposure.
 - Not changing UI/Daily Analysis scoring until canonical topic coverage is validated.
+- Not claiming every company role is V2 evidence-backed just because its legacy topic is now mapped; company-role and SWOT evidence still require separate migration slices.
 
 ## Verification
 
