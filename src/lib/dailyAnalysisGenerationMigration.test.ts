@@ -10,3 +10,8 @@ test("daily analysis generation does not read legacy industries.json runtime fal
   assert.doesNotMatch(script, /buildLegacyCompanyAnalysisFallbacks/);
   assert.doesNotMatch(script, /mergeLegacyCompanyAnalysisFallback/);
 });
+
+test("legacy industry fallback adapter has been retired from source", async () => {
+  await assert.rejects(fs.access("src/lib/legacyIndustryAnalysis.ts"));
+  await assert.rejects(fs.access("src/lib/legacyIndustryAnalysis.test.ts"));
+});
