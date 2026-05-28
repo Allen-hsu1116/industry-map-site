@@ -8,15 +8,11 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -50,7 +46,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 98,
+    "score": 100,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
@@ -85,16 +81,14 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "欣興在封裝材料與耗材領域具備競爭優勢",
-        "欣興為矽中介層與IC載板領導廠商"
+        "HDI、多層板、FPC、FCCSP、FCBGA 與高階封裝基板，使欣興位於 PCB/IC 載板核心供應鏈。"
       ],
       "opportunities": [
-        "先進封裝量測自動化需求持續成長",
-        "AI 先進封裝 CoWoS需求持續成長"
+        "AI/HPC、網通高速板、車用電子與先進封裝基板需求，可提升高階 PCB/載板價值量。"
       ],
       "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
+        "若載板供給過剩、客戶庫存調整或高階製程良率不如預期，毛利與資本回收會承壓。",
+        "PCB/載板屬資本密集且循環性強，產能利用率、良率與價格下行會影響獲利。"
       ]
     },
     "scoringFactors": [
@@ -102,30 +96,31 @@
       "角色信心 high +16",
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
-      "催化訊號 3 項 +12"
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6"
     ],
-    "summary": "欣銓 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "欣銓 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
-      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
+      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
       "主要產品：ABF載板(先進封裝用)",
       "主要產品：IC 載板龍頭",
       "主要產品：CXL用載板",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：PCB/載板屬資本密集且循環性強，產能利用率、良率與價格下行會影響獲利。",
+      "V2 T：若載板供給過剩、客戶庫存調整或高階製程良率不如預期，毛利與資本回收會承壓。"
     ],
     "watch": [
+      "V2 O：AI/HPC、網通高速板、車用電子與先進封裝基板需求，可提升高階 PCB/載板價值量。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：先進封裝量測自動化需求持續成長",
-      "O：AI 先進封裝 CoWoS需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
@@ -263,7 +258,44 @@
         "roleSummary": "欣興在 PCB 與 IC 載板題材中供應 HDI、多層板、FPC、FCCSP、FCBGA 與高階封裝基板，支援 AI/HPC、網通、手機、車用與先進封裝需求。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-topic-demand",
+        "category": "opportunity",
+        "statement": "AI/HPC、網通高速板、車用電子與先進封裝基板需求，可提升高階 PCB/載板價值量。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates"
+        ]
+      },
+      {
+        "id": "strength-core-position",
+        "category": "strength",
+        "statement": "HDI、多層板、FPC、FCCSP、FCBGA 與高階封裝基板，使欣興位於 PCB/IC 載板核心供應鏈。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "pcb-substrates"
+        ]
+      },
+      {
+        "id": "threat-competition-cycle",
+        "category": "threat",
+        "statement": "若載板供給過剩、客戶庫存調整或高階製程良率不如預期，毛利與資本回收會承壓。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates"
+        ]
+      },
+      {
+        "id": "weakness-cycle-exposure",
+        "category": "weakness",
+        "statement": "PCB/載板屬資本密集且循環性強，產能利用率、良率與價格下行會影響獲利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "pcb-substrates",

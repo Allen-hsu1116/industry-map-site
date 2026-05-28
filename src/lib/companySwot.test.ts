@@ -98,6 +98,29 @@ test("company-swot batch covers at least 20 companies with all SWOT categories",
   }
 });
 
+test("Step 18 company SWOT batch covers top high-priority companies with evidence-backed full SWOT", async () => {
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const dir = "public/data/company-swot";
+  const batchCodes = ["6147", "3035", "4966", "6239", "8299", "3311", "2453", "3081", "2059", "3529", "6175", "3037"];
+
+  for (const code of batchCodes) {
+    const raw = JSON.parse(await fs.readFile(path.join(dir, `${code}.json`), "utf8"));
+    const knowledge = normalizeCompanySwot(raw);
+    assert.ok(knowledge, `${code}.json should normalize`);
+    assert.equal(knowledge.companyCode, code);
+    const activeItems = knowledge.items.filter((item) => item.status !== "rejected");
+    const categories = new Set(activeItems.map((item) => item.category));
+    assert.deepEqual([...categories].sort(), ["opportunity", "strength", "threat", "weakness"], `${code} should include S/W/O/T`);
+    for (const item of activeItems) {
+      assert.ok(item.evidence.length > 0, `${code} ${item.id} needs evidence`);
+      assert.ok(item.lastVerified, `${code} ${item.id} needs lastVerified`);
+      assert.ok(item.statement.length >= 20, `${code} ${item.id} needs a concrete statement`);
+      assert.ok(item.rationale.length >= 30, `${code} ${item.id} needs rationale`);
+    }
+  }
+});
+
 const topicScopedKnowledge: CompanySwotKnowledge = {
   schemaVersion: 1,
   companyCode: "2308",

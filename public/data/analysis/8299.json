@@ -8,15 +8,11 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -48,7 +44,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 98,
+    "score": 100,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
@@ -83,16 +79,14 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "群聯在CXL模組與記憶體封裝領域具備競爭優勢",
-        "群聯為工控與利基型記憶體領導廠商"
+        "NAND 控制晶片與 SSD/儲存模組整合能力，使群聯位於 NAND 轉化為終端儲存產品的核心環節。"
       ],
       "opportunities": [
-        "CXL 記憶體池化需求持續成長",
-        "記憶體模組需求持續成長"
+        "企業級 SSD、邊緣 AI 儲存與 aiDAPTIV+ 方案有機會提升高附加價值產品比重。"
       ],
       "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
+        "若 NAND 市況轉弱、控制器競爭加劇或大客戶採購保守，毛利與出貨動能會受壓。",
+        "NAND 價格、庫存與模組需求循環會影響營收與毛利，企業級 SSD 認證週期也會拖延放量。"
       ]
     },
     "scoringFactors": [
@@ -100,30 +94,31 @@
       "角色信心 high +16",
       "題材 記憶體模組（product/active） +16",
       "角色證據 2 則 +12",
-      "催化訊號 3 項 +12"
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6"
     ],
-    "summary": "群聯電子 在「記憶體模組」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "群聯電子 在「記憶體模組」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：記憶體模組 · 核心產品/平台 · high",
-      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 記憶體模組（product/active） +16）",
+      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 記憶體模組（product/active） +16）",
       "主要產品：IC設計業 半導體業 電腦及週邊設備業",
       "主要產品：NAND Flash控制IC，CXL相關",
       "主要產品：NAND Flash 控制IC 與模組全球龍頭",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：NAND 價格、庫存與模組需求循環會影響營收與毛利，企業級 SSD 認證週期也會拖延放量。",
+      "V2 T：若 NAND 市況轉弱、控制器競爭加劇或大客戶採購保守，毛利與出貨動能會受壓。"
     ],
     "watch": [
+      "V2 O：企業級 SSD、邊緣 AI 儲存與 aiDAPTIV+ 方案有機會提升高附加價值產品比重。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 記憶體模組：月營收或訂單能見度改善",
       "追蹤 記憶體模組：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：CXL 記憶體池化需求持續成長",
-      "O：記憶體模組需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
@@ -252,7 +247,44 @@
         "roleSummary": "群聯在記憶體模組題材中提供 NAND 控制晶片、SSD、UFS、eMMC、USB 與記憶卡等儲存解決方案，扮演 NAND 轉化為終端儲存產品的控制器與模組整合者。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-topic-demand",
+        "category": "opportunity",
+        "statement": "企業級 SSD、邊緣 AI 儲存與 aiDAPTIV+ 方案有機會提升高附加價值產品比重。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "memory-modules"
+        ]
+      },
+      {
+        "id": "strength-core-position",
+        "category": "strength",
+        "statement": "NAND 控制晶片與 SSD/儲存模組整合能力，使群聯位於 NAND 轉化為終端儲存產品的核心環節。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "memory-modules"
+        ]
+      },
+      {
+        "id": "threat-competition-cycle",
+        "category": "threat",
+        "statement": "若 NAND 市況轉弱、控制器競爭加劇或大客戶採購保守，毛利與出貨動能會受壓。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "memory-modules"
+        ]
+      },
+      {
+        "id": "weakness-cycle-exposure",
+        "category": "weakness",
+        "statement": "NAND 價格、庫存與模組需求循環會影響營收與毛利，企業級 SSD 認證週期也會拖延放量。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "memory-modules"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "memory-modules",

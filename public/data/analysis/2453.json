@@ -8,15 +8,11 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -86,16 +82,14 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "凌群在電源管理IC(PMIC)領域具備競爭優勢",
-        "凌群在雲端代管與系統整合領域具備競爭優勢"
+        "系統整合、雲端、資安、金融、醫療與企業軟體產品組合，使凌群具備多產業數位轉型專案交付能力。"
       ],
       "opportunities": [
-        "類比與功率管理 IC需求持續成長",
-        "雲端服務與代管需求持續成長"
+        "AI 應用、資安合規、雲端遷移與政府/企業數位化，可擴大系統整合與自有軟體導入機會。"
       ],
       "risks": [
-        "受景氣循環影響",
-        "毛利率偏低（系統整合毛利薄），自有產品比重低"
+        "若大型專案遞延、同業低價競標或人力成本上升，營收認列與專案毛利會受壓。",
+        "專案型收入受驗收時點、人力調度與政府/企業預算週期影響，季節性與毛利波動較高。"
       ]
     },
     "scoringFactors": [
@@ -103,7 +97,9 @@
       "角色信心 high +16",
       "題材 資安、雲端服務與企業軟體（theme/active） +18",
       "角色證據 2 則 +12",
-      "催化訊號 3 項 +12"
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6"
     ],
     "summary": "凌群 在「資安、雲端服務與企業軟體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
@@ -116,18 +112,16 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "W：毛利率偏低（系統整合毛利薄），自有產品比重低",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：專案型收入受驗收時點、人力調度與政府/企業預算週期影響，季節性與毛利波動較高。",
+      "V2 T：若大型專案遞延、同業低價競標或人力成本上升，營收認列與專案毛利會受壓。"
     ],
     "watch": [
+      "V2 O：AI 應用、資安合規、雲端遷移與政府/企業數位化，可擴大系統整合與自有軟體導入機會。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
       "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：類比與功率管理 IC需求持續成長",
-      "O：雲端服務與代管需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
@@ -271,7 +265,44 @@
         "roleSummary": "凌群在軟體雲端資安題材中提供系統整合、雲端、資安、金融、醫療、政府、交通與企業應用方案，並具備 DBMaker、NETCenter、OMFLOW、Ayuda 等自有軟體產品。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-topic-demand",
+        "category": "opportunity",
+        "statement": "AI 應用、資安合規、雲端遷移與政府/企業數位化，可擴大系統整合與自有軟體導入機會。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "software-cloud-security"
+        ]
+      },
+      {
+        "id": "strength-core-position",
+        "category": "strength",
+        "statement": "系統整合、雲端、資安、金融、醫療與企業軟體產品組合，使凌群具備多產業數位轉型專案交付能力。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "software-cloud-security"
+        ]
+      },
+      {
+        "id": "threat-competition-cycle",
+        "category": "threat",
+        "statement": "若大型專案遞延、同業低價競標或人力成本上升，營收認列與專案毛利會受壓。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "software-cloud-security"
+        ]
+      },
+      {
+        "id": "weakness-cycle-exposure",
+        "category": "weakness",
+        "statement": "專案型收入受驗收時點、人力調度與政府/企業預算週期影響，季節性與毛利波動較高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "software-cloud-security"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "software-cloud-security",

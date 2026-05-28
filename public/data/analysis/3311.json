@@ -8,15 +8,11 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -47,7 +43,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 74,
+    "score": 78,
     "knowledgeBasis": "canonical_verified",
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
@@ -97,16 +93,14 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "閎暉在光收發模組與散熱領域具備競爭優勢",
-        "閎暉在車用照明與LED應用領域具備競爭優勢"
+        "外觀光學機構件、按鍵、玻璃與機構整合模組讓閎暉可服務車用、穿戴、智慧鎖與消費電子終端。"
       ],
       "opportunities": [
-        "高速光收發模組需求持續成長",
-        "LED 與車用照明需求持續成長"
+        "車用內裝電子化、穿戴與智慧裝置機構整合需求，可帶動較高規格模組訂單。"
       ],
       "risks": [
-        "受景氣循環影響",
-        "衛星通訊為延伸應用，非主力"
+        "若消費電子需求疲弱、客戶換代不順或機構件價格競爭，接單與毛利會承壓。",
+        "產品偏客製機構件，容易受單一終端平台生命週期與客戶新品拉貨節奏影響。"
       ]
     },
     "scoringFactors": [
@@ -114,31 +108,31 @@
       "角色信心 medium +10",
       "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
       "角色證據 2 則 +12",
-      "催化訊號 3 項 +12"
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6"
     ],
-    "summary": "閎暉 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 74/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "閎暉 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 78/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（medium）",
       "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 供應商角色 · medium",
-      "產業評分：74/100（直接度 供應商角色 +26；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
+      "產業評分：78/100（直接度 供應商角色 +26；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
       "主要產品：按鍵及模組產品 機構整合元件",
       "主要產品：光模組精密零件",
       "主要產品：車用電子與雷達",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "W：衛星通訊為延伸應用，非主力",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：產品偏客製機構件，容易受單一終端平台生命週期與客戶新品拉貨節奏影響。",
+      "V2 T：若消費電子需求疲弱、客戶換代不順或機構件價格競爭，接單與毛利會承壓。"
     ],
     "watch": [
+      "V2 O：車用內裝電子化、穿戴與智慧裝置機構整合需求，可帶動較高規格模組訂單。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：高速光收發模組需求持續成長",
-      "O：LED 與車用照明需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
@@ -291,7 +285,44 @@
         "roleSummary": "閎暉供應外觀光學機構件、按鍵、2D/3D 玻璃與機構整合模組，服務車用內裝、穿戴、智慧鎖、遊戲機與消費電子等終端產品。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-topic-demand",
+        "category": "opportunity",
+        "statement": "車用內裝電子化、穿戴與智慧裝置機構整合需求，可帶動較高規格模組訂單。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "strength-core-position",
+        "category": "strength",
+        "statement": "外觀光學機構件、按鍵、玻璃與機構整合模組讓閎暉可服務車用、穿戴、智慧鎖與消費電子終端。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "threat-competition-cycle",
+        "category": "threat",
+        "statement": "若消費電子需求疲弱、客戶換代不順或機構件價格競爭，接單與毛利會承壓。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "weakness-cycle-exposure",
+        "category": "weakness",
+        "statement": "產品偏客製機構件，容易受單一終端平台生命週期與客戶新品拉貨節奏影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "consumer-computing-devices",

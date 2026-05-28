@@ -7,14 +7,14 @@ Generated: 2026-05-28T13:48:44.053Z
 - Total companies: 505
 - Product knowledge coverage: 9.9%
 - Verified topic-role coverage: 6.3%
-- Complete SWOT coverage: 4.0%
+- Complete SWOT coverage: 6.3%
 - Canonical daily analysis coverage: 6.3%
 - Legacy-only daily analysis: 92.5%
 
 ## Grade distribution
 
-- A complete: 15
-- B usable: 17
+- A complete: 27
+- B usable: 5
 - C weak analysis: 0
 - D legacy only: 467
 - F insufficient: 6
@@ -22,8 +22,8 @@ Generated: 2026-05-28T13:48:44.053Z
 ## Upgrade priorities
 
 - High: 478
-- Medium: 12
-- Low: 15
+- Medium: 0
+- Low: 27
 
 ## Top high-priority companies
 

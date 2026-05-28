@@ -8,15 +8,11 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -52,7 +48,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 98,
+    "score": 100,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
@@ -87,16 +83,14 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "頎邦在封裝材料與耗材領域具備競爭優勢",
-        "頎邦在探針卡與測試介面領域具備競爭優勢"
+        "顯示驅動 IC 凸塊、COF/COG 封裝與測試能力直接對應面板驅動 IC 後段需求。"
       ],
       "opportunities": [
-        "先進封裝量測自動化需求持續成長",
-        "IC 測試服務需求持續成長"
+        "車用螢幕、OLED、高解析顯示與高可靠度測試需求可提高高階封測價值量。"
       ],
       "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
+        "若面板供需轉弱、驅動 IC 庫存調整或同業擴產競爭，封測需求與議價能力會受壓。",
+        "業務高度連動面板驅動 IC 與顯示面板循環，稼動率與產品價格波動會影響毛利。"
       ]
     },
     "scoringFactors": [
@@ -104,30 +98,31 @@
       "角色信心 high +16",
       "題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
-      "催化訊號 3 項 +12"
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6"
     ],
-    "summary": "頎邦 在「面板、LED、光學鏡頭與感測」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "頎邦 在「面板、LED、光學鏡頭與感測」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：面板、LED、光學鏡頭與感測 · 核心產品/平台 · high",
-      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
+      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
       "主要產品：晶圓測試(CP) 捲帶軟板封裝(TCP)",
       "主要產品：錫鉛凸塊(SOLD BUMPING)",
       "主要產品：金凸塊(GOLD BUMPING)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：業務高度連動面板驅動 IC 與顯示面板循環，稼動率與產品價格波動會影響毛利。",
+      "V2 T：若面板供需轉弱、驅動 IC 庫存調整或同業擴產競爭，封測需求與議價能力會受壓。"
     ],
     "watch": [
+      "V2 O：車用螢幕、OLED、高解析顯示與高可靠度測試需求可提高高階封測價值量。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
       "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：先進封裝量測自動化需求持續成長",
-      "O：IC 測試服務需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
@@ -273,7 +268,44 @@
         "roleSummary": "頎邦在顯示供應鏈中提供面板驅動 IC 凸塊、COF/COG 封裝與測試服務，是把驅動 IC 連接到面板與軟板的後段封測核心環節。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-topic-demand",
+        "category": "opportunity",
+        "statement": "車用螢幕、OLED、高解析顯示與高可靠度測試需求可提高高階封測價值量。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "display-led-optics"
+        ]
+      },
+      {
+        "id": "strength-core-position",
+        "category": "strength",
+        "statement": "顯示驅動 IC 凸塊、COF/COG 封裝與測試能力直接對應面板驅動 IC 後段需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "display-led-optics"
+        ]
+      },
+      {
+        "id": "threat-competition-cycle",
+        "category": "threat",
+        "statement": "若面板供需轉弱、驅動 IC 庫存調整或同業擴產競爭，封測需求與議價能力會受壓。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "display-led-optics"
+        ]
+      },
+      {
+        "id": "weakness-cycle-exposure",
+        "category": "weakness",
+        "statement": "業務高度連動面板驅動 IC 與顯示面板循環，稼動率與產品價格波動會影響毛利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "display-led-optics"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "display-led-optics",

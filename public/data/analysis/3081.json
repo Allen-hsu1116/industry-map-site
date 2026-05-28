@@ -8,15 +8,11 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -49,7 +45,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 99,
+    "score": 100,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
@@ -84,16 +80,14 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "聯亞在連接器IC與載板領域具備競爭優勢",
-        "聯亞在國防通訊與軟體資安領域具備競爭優勢"
+        "InP/GaAs MOCVD 磊晶與 LD/PD/EML 光通訊元件能力，使聯亞位於高速光模組上游。"
       ],
       "opportunities": [
-        "AI 互連元件需求持續成長",
-        "資安概念需求持續成長"
+        "800G/1.6T 光模組、資料中心高速互連與矽光子/CPO 發展，可推升高速光元件需求。"
       ],
       "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
+        "若雲端資本支出放緩、客戶認證延後或國際光元件供應商競爭，放量時程會受影響。",
+        "客戶認證、資料中心規格轉換與光通訊投資循環會造成出貨與稼動率波動。"
       ]
     },
     "scoringFactors": [
@@ -101,30 +95,31 @@
       "角色信心 high +16",
       "題材 矽光子、CPO 與高速光通訊（technology/active） +17",
       "角色證據 2 則 +12",
-      "催化訊號 3 項 +12"
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6"
     ],
-    "summary": "聯亞 在「矽光子、CPO 與高速光通訊」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 99/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "聯亞 在「矽光子、CPO 與高速光通訊」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：矽光子、CPO 與高速光通訊 · 核心產品/平台 · high",
-      "產業評分：99/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
+      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
       "主要產品：生產及銷售下列產品: 1.雷射磊晶片 2.檢光器磊晶片 3.兼營前述產品相關之國際貿易業",
       "主要產品：有線通信機械器材製造業",
       "主要產品：電子零組件製造業",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：客戶認證、資料中心規格轉換與光通訊投資循環會造成出貨與稼動率波動。",
+      "V2 T：若雲端資本支出放緩、客戶認證延後或國際光元件供應商競爭，放量時程會受影響。"
     ],
     "watch": [
+      "V2 O：800G/1.6T 光模組、資料中心高速互連與矽光子/CPO 發展，可推升高速光元件需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
       "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AI 互連元件需求持續成長",
-      "O：資安概念需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
@@ -268,7 +263,44 @@
         "roleSummary": "聯亞在高速光通訊題材中以 InP/GaAs MOCVD 磊晶技術供應 LD/PD 磊晶片與高速 EML 相關產品，是光收發模組上游關鍵元件材料供應者。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-topic-demand",
+        "category": "opportunity",
+        "statement": "800G/1.6T 光模組、資料中心高速互連與矽光子/CPO 發展，可推升高速光元件需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "strength-core-position",
+        "category": "strength",
+        "statement": "InP/GaAs MOCVD 磊晶與 LD/PD/EML 光通訊元件能力，使聯亞位於高速光模組上游。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "threat-competition-cycle",
+        "category": "threat",
+        "statement": "若雲端資本支出放緩、客戶認證延後或國際光元件供應商競爭，放量時程會受影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "weakness-cycle-exposure",
+        "category": "weakness",
+        "statement": "客戶認證、資料中心規格轉換與光通訊投資循環會造成出貨與稼動率波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "silicon-photonics-optical-comm",

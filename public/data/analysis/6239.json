@@ -8,15 +8,11 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -52,7 +48,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 98,
+    "score": 100,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
@@ -87,16 +83,14 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "力成在封裝材料與耗材領域具備競爭優勢",
-        "力成在先進封裝濕製程設備領域具備競爭優勢"
+        "記憶體與邏輯 IC 封裝測試、WLCSP、Flip Chip、SiP 等能力使力成具備後段量產服務規模。"
       ],
       "opportunities": [
-        "先進封裝量測自動化需求持續成長",
-        "先進封裝製程機台需求持續成長"
+        "AI 伺服器、企業 SSD 與高階封裝測試複雜度提升，可增加封測服務價值量。"
       ],
       "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
+        "若記憶體價格回落、客戶自建封測或 OSAT 同業擴產，產能利用與價格會面臨壓力。",
+        "封測稼動率高度連動記憶體循環與客戶庫存，景氣下行時固定成本壓力明顯。"
       ]
     },
     "scoringFactors": [
@@ -104,30 +98,31 @@
       "角色信心 high +16",
       "題材 先進封裝與 CoWoS（process/active） +16",
       "角色證據 4 則 +12",
-      "催化訊號 3 項 +12"
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6"
     ],
-    "summary": "力成 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "力成 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
-      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
+      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
       "主要產品：積體電路與半導體元件之測試服務 積體電路與半導體元件自動測試電腦軟體之研發",
       "主要產品：設計與銷售 CC01080電子零組件製造業",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：封測稼動率高度連動記憶體循環與客戶庫存，景氣下行時固定成本壓力明顯。",
+      "V2 T：若記憶體價格回落、客戶自建封測或 OSAT 同業擴產，產能利用與價格會面臨壓力。"
     ],
     "watch": [
+      "V2 O：AI 伺服器、企業 SSD 與高階封裝測試複雜度提升，可增加封測服務價值量。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：先進封裝量測自動化需求持續成長",
-      "O：先進封裝製程機台需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28",
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
@@ -269,7 +264,44 @@
         "roleSummary": "力成在先進封裝與封測題材中提供記憶體與邏輯 IC 的晶圓測試、成品測試、WLCSP、Flip Chip 與 SiP 等服務，是記憶體/邏輯晶片後段量產供應鏈。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-topic-demand",
+        "category": "opportunity",
+        "statement": "AI 伺服器、企業 SSD 與高階封裝測試複雜度提升，可增加封測服務價值量。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging"
+        ]
+      },
+      {
+        "id": "strength-core-position",
+        "category": "strength",
+        "statement": "記憶體與邏輯 IC 封裝測試、WLCSP、Flip Chip、SiP 等能力使力成具備後段量產服務規模。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "advanced-packaging"
+        ]
+      },
+      {
+        "id": "threat-competition-cycle",
+        "category": "threat",
+        "statement": "若記憶體價格回落、客戶自建封測或 OSAT 同業擴產，產能利用與價格會面臨壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging"
+        ]
+      },
+      {
+        "id": "weakness-cycle-exposure",
+        "category": "weakness",
+        "statement": "封測稼動率高度連動記憶體循環與客戶庫存，景氣下行時固定成本壓力明顯。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "advanced-packaging",
