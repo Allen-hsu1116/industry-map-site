@@ -1,6 +1,7 @@
-import { test } from "node:test";
 import assert from "node:assert/strict";
-import { groupCompanySwot, normalizeCompanySwot } from "./companySwot";
+import { describe, it, test } from "node:test";
+
+import { groupCompanySwot, normalizeCompanySwot, selectTopicSwotItems, type CompanySwotKnowledge } from "./companySwot";
 
 test("normalizeCompanySwot keeps evidence-backed items and sorts by category/id", () => {
   const knowledge = normalizeCompanySwot({
@@ -69,4 +70,75 @@ test("groupCompanySwot groups non-rejected items for UI rendering", () => {
 
 test("normalizeCompanySwot rejects files with wrong schema", () => {
   assert.equal(normalizeCompanySwot({ schemaVersion: 2 }), null);
+});
+
+const topicScopedKnowledge: CompanySwotKnowledge = {
+  schemaVersion: 1,
+  companyCode: "2308",
+  companyName: "台達電",
+  updatedAt: "2026-05-28",
+  items: [
+    {
+      id: "strength-liquid-cooling",
+      category: "strength",
+      statement: "液冷與電源組合完整",
+      rationale: "official evidence",
+      timeHorizon: "structural",
+      relatedTopicIds: ["ai-server-liquid-cooling"],
+      evidence: [],
+      confidence: "high",
+      lastVerified: "2026-05-28",
+      status: "verified",
+    },
+    {
+      id: "strength-psu",
+      category: "strength",
+      statement: "電源供應器產品線完整",
+      rationale: "official evidence",
+      timeHorizon: "structural",
+      relatedTopicIds: ["psu"],
+      evidence: [],
+      confidence: "high",
+      lastVerified: "2026-05-28",
+      status: "verified",
+    },
+    {
+      id: "weakness-company-wide",
+      category: "weakness",
+      statement: "題材營收占比需驗證",
+      rationale: "topic attribution risk",
+      timeHorizon: "structural",
+      relatedTopicIds: [],
+      evidence: [],
+      confidence: "medium",
+      lastVerified: "2026-05-28",
+      status: "verified",
+    },
+  ],
+};
+
+describe("selectTopicSwotItems", () => {
+  it("matches SWOT items through canonical topic aliases instead of falling back to all items", () => {
+    const grouped = groupCompanySwot(topicScopedKnowledge);
+
+    const selected = selectTopicSwotItems(grouped, "strengths", ["liquid_cooling_advanced", "ai-server-liquid-cooling"]);
+
+    assert.deepEqual(selected.map((item) => item.id), ["strength-liquid-cooling"]);
+  });
+
+  it("keeps company-wide SWOT items for any topic", () => {
+    const grouped = groupCompanySwot(topicScopedKnowledge);
+
+    const selected = selectTopicSwotItems(grouped, "weaknesses", ["liquid_cooling_advanced", "ai-server-liquid-cooling"]);
+
+    assert.deepEqual(selected.map((item) => item.id), ["weakness-company-wide"]);
+  });
+
+  it("falls back to the category when no topic-specific item matches", () => {
+    const grouped = groupCompanySwot(topicScopedKnowledge);
+
+    const selected = selectTopicSwotItems(grouped, "strengths", ["unmapped-topic"]);
+
+    assert.deepEqual(selected.map((item) => item.id), ["strength-liquid-cooling", "strength-psu"]);
+  });
 });

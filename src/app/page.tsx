@@ -17,8 +17,8 @@ import RealtimeQuote from "./RealtimeQuote";
 import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketData";
 import { generateDailyAnalysis, type DailyAnalysis } from "@/lib/dailyAnalysis";
 import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "@/lib/productKnowledge";
-import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles, type CompanyTopicRolesKnowledge } from "@/lib/companyTopicRoles";
-import { groupCompanySwot, normalizeCompanySwot, type CompanySwotKnowledge, type GroupedSwot } from "@/lib/companySwot";
+import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles, type CompanyTopicRolesKnowledge, type Directness } from "@/lib/companyTopicRoles";
+import { groupCompanySwot, normalizeCompanySwot, selectTopicSwotItems, type CompanySwotKnowledge, type GroupedSwot } from "@/lib/companySwot";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
@@ -2244,26 +2244,36 @@ function CompanyFullPageDetail({
                     const knowledge = resolvedDailyAnalysis?.knowledge;
                     const roleKnowledge = knowledge?.topicRoles.find((item) => item.topicId === role.topic);
                     const canonicalRole = resolvedCompanyTopicRoles?.roles.find((item) => item.topicId === role.topic && item.status !== "rejected");
-                    const canonicalRoleLabel = canonicalRole ? directnessLabel(canonicalRole.directness) : undefined;
-                    const displayRelevance = canonicalRole ? directnessToRelevance(canonicalRole.directness) : role.relevance;
+                    const dailyCanonicalRole = resolvedDailyAnalysis?.canonicalKnowledge.topicRoles.find((item) => item.topicId === role.topic || item.canonicalTopicId === role.topic);
+                    const canonicalRoleLabel = canonicalRole ? directnessLabel(canonicalRole.directness) : dailyCanonicalRole?.directnessLabel;
+                    const displayDirectness = canonicalRole?.directness ?? dailyCanonicalRole?.directness as Directness | undefined;
+                    const displayRelevance = displayDirectness ? directnessToRelevance(displayDirectness) : role.relevance;
                     const displayRelInfo = getRelevanceInfo(displayRelevance);
                     const displayRoleBadge = getRoleBadge(displayRelevance);
-                    const topicSwotFor = (key: keyof GroupedSwot) => {
-                      const items = groupedCompanySwot[key].filter((item) => item.relatedTopicIds.length === 0 || item.relatedTopicIds.includes(role.topic));
-                      return items.length > 0 ? items : groupedCompanySwot[key];
-                    };
+                    const topicMatchIds = [role.topic, canonicalRole?.topicId, dailyCanonicalRole?.topicId, dailyCanonicalRole?.canonicalTopicId]
+                      .filter((item): item is string => Boolean(item));
+                    const topicSwotFor = (key: keyof GroupedSwot) => selectTopicSwotItems(groupedCompanySwot, key, topicMatchIds);
                     const canonicalSwot = resolvedCompanySwot ? {
                       strengths: topicSwotFor("strengths").map((item) => item.statement),
                       weaknesses: topicSwotFor("weaknesses").map((item) => item.statement),
                       opportunities: topicSwotFor("opportunities").map((item) => item.statement),
                       threats: topicSwotFor("threats").map((item) => item.statement),
                     } : undefined;
+                    const dailyCanonicalSwotItems = resolvedDailyAnalysis?.canonicalKnowledge.swot.filter((item) => (
+                      item.relatedTopicIds.length === 0 || item.relatedTopicIds.some((topicId) => topicMatchIds.includes(topicId))
+                    )) ?? [];
+                    const dailyCanonicalSwot = !resolvedCompanySwot && dailyCanonicalSwotItems.length > 0 ? {
+                      strengths: dailyCanonicalSwotItems.filter((item) => item.category === "strength").map((item) => item.statement),
+                      weaknesses: dailyCanonicalSwotItems.filter((item) => item.category === "weakness").map((item) => item.statement),
+                      opportunities: dailyCanonicalSwotItems.filter((item) => item.category === "opportunity").map((item) => item.statement),
+                      threats: dailyCanonicalSwotItems.filter((item) => item.category === "threat").map((item) => item.statement),
+                    } : undefined;
                     const canonicalSwotEvidence = resolvedCompanySwot
                       ? resolvedCompanySwot.items
-                        .filter((item) => item.status !== "rejected" && (item.relatedTopicIds.length === 0 || item.relatedTopicIds.includes(role.topic)))
+                        .filter((item) => item.status !== "rejected" && (item.relatedTopicIds.length === 0 || item.relatedTopicIds.some((topicId) => topicMatchIds.includes(topicId))))
                         .flatMap((item) => item.evidence.map((evidence) => `${evidence.publisher}：${evidence.title}`))
                       : [];
-                    const fallbackSwot = canonicalSwot ?? rawTopicAnalysis?.swot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
+                    const fallbackSwot = canonicalSwot ?? dailyCanonicalSwot ?? rawTopicAnalysis?.swot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
                       strengths: [`已建立「${role.topicName}」題材關聯，角色：${role.role || relInfo.label}`],
                       weaknesses: ["題材別產品、客戶與競爭資料仍需補來源驗證"],
                       opportunities: [`若${role.topicName}需求擴張，${role.group}供應鏈角色可能受惠`],
@@ -2273,9 +2283,9 @@ function CompanyFullPageDetail({
                     const topicCustomers = (canonicalRole?.customers?.length ? canonicalRole.customers : rawTopicAnalysis?.customers?.length ? rawTopicAnalysis.customers : role.customers?.length ? role.customers : knowledge?.customers?.length ? knowledge.customers : data.customers?.length ? data.customers : ["客戶/需求端待補: 需由年報、法說或公開資料驗證"] ) ?? [];
                     const focusText = rawTopicAnalysis?.focus || (role.tech_focus?.length ? role.tech_focus.join('\\n\\n') : `題材技術重心\n- ${role.topicName}：${role.role || relInfo.label}\n- 觀察 ${data.name} 在${role.group}的產品規格、量產進度與客戶導入。`);
                     const topicAnalysis = {
-                      ai_summary: canonicalRole?.roleSummary || rawTopicAnalysis?.ai_summary || roleKnowledge?.summary || analysisText,
+                      ai_summary: canonicalRole?.roleSummary || dailyCanonicalRole?.roleSummary || rawTopicAnalysis?.ai_summary || roleKnowledge?.summary || analysisText,
                       market_position: canonicalRoleLabel || rawTopicAnalysis?.market_position || roleKnowledge?.marketPosition || relInfo.label,
-                      market_position_detail: canonicalRole?.roleSummary || rawTopicAnalysis?.market_position_detail || roleKnowledge?.role || `${data.name}為${role.topicName}題材之${role.group}參與者，在供應鏈中扮演${role.role || relInfo.label}角色。`,
+                      market_position_detail: canonicalRole?.roleSummary || dailyCanonicalRole?.roleSummary || rawTopicAnalysis?.market_position_detail || roleKnowledge?.role || `${data.name}為${role.topicName}題材之${role.group}參與者，在供應鏈中扮演${role.role || relInfo.label}角色。`,
                       focus: focusText,
                       products: topicProducts,
                       customers: topicCustomers,
@@ -2312,9 +2322,9 @@ function CompanyFullPageDetail({
                             <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: displayRoleBadge.color, backgroundColor: displayRoleBadge.bg }}>
                               {displayRelInfo.emoji} {canonicalRoleLabel ?? displayRelInfo.label}
                             </span>
-                            {canonicalRole && (
+                            {(canonicalRole || dailyCanonicalRole) && (
                               <span className="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-cyan-200">
-                                V2 {canonicalRole.directness} · {canonicalRole.confidence}
+                                V2 {canonicalRole?.directness ?? dailyCanonicalRole?.directness} · {canonicalRole?.confidence ?? dailyCanonicalRole?.confidence}
                               </span>
                             )}
                             <span className="text-sm font-semibold text-white">{role.topicName}</span>
@@ -2470,9 +2480,9 @@ function CompanyFullPageDetail({
                           <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
                             <div className="mb-4 flex flex-wrap items-center gap-2">
                               <h4 className="text-sm font-bold text-white">🏛️ SWOT 分析</h4>
-                              {resolvedCompanySwot && (
+                              {(resolvedCompanySwot || dailyCanonicalSwot) && (
                                 <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-200">
-                                  V2 evidence-backed · {resolvedCompanySwot.updatedAt}
+                                  {resolvedCompanySwot ? `V2 evidence-backed · ${resolvedCompanySwot.updatedAt}` : `V2 daily canonical · ${resolvedDailyAnalysis?.sourceUpdatedAt ?? resolvedDailyAnalysis?.generatedAt.slice(0, 10) ?? "未知日期"}`}
                                 </span>
                               )}
                             </div>
@@ -2515,7 +2525,7 @@ function CompanyFullPageDetail({
                             {role.role && (
                               <div className="flex items-center justify-between gap-4">
                                 <span className="text-sm text-[var(--color-text-secondary)]">角色說明</span>
-                                <span className="text-sm text-white font-medium text-right">{canonicalRole?.roleSummary ?? role.role}</span>
+                                <span className="text-sm text-white font-medium text-right">{canonicalRole?.roleSummary ?? dailyCanonicalRole?.roleSummary ?? role.role}</span>
                               </div>
                             )}
                             {canonicalRole && (

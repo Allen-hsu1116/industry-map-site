@@ -112,3 +112,12 @@ export function groupCompanySwot(knowledge: CompanySwotKnowledge | null | undefi
   }
   return grouped;
 }
+
+export function selectTopicSwotItems(grouped: GroupedSwot, key: keyof GroupedSwot, topicIds: string[]): CompanySwotItem[] {
+  const normalizedTopicIds = new Set(topicIds.filter(Boolean));
+  const items = grouped[key];
+  const selected = items.filter((item) => (
+    item.relatedTopicIds.length === 0 || item.relatedTopicIds.some((topicId) => normalizedTopicIds.has(topicId))
+  ));
+  return selected.length > 0 ? selected : items;
+}
