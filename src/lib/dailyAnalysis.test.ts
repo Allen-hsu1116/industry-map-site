@@ -64,6 +64,10 @@ test("generateDailyAnalysis summarizes bullish technical and accumulation chip s
   assert.equal(analysis.chips.stance, "accumulation");
   assert.equal(analysis.industry.label, "題材關聯待驗證");
   assert.equal(analysis.industry.knowledgeBasis, "legacy_unverified");
+  assert.equal(analysis.analysisQuality.grade, "D");
+  assert.equal(analysis.analysisQuality.upgradePriority, "high");
+  assert.ok(analysis.analysisQuality.missingKnowledge.includes("product_knowledge"));
+  assert.ok(analysis.analysisQuality.blockingReasons.includes("legacy_only"));
   assert.ok(analysis.knowledge.products.includes("CoWoS"));
   assert.ok(analysis.knowledge.topicRoles.some((role) => role.topicId === "ai-server"));
   assert.ok(analysis.knowledge.swot.strengths.some((point) => point.includes("先進製程")));
@@ -180,6 +184,9 @@ test("generateDailyAnalysis prefers V2 topic roles, canonical topics, and eviden
   }, new Date("2026-05-31T00:00:00.000Z"));
 
   assert.equal(analysis.industry.label, "核心題材受惠");
+  assert.equal(analysis.analysisQuality.grade, "B");
+  assert.equal(analysis.analysisQuality.upgradePriority, "medium");
+  assert.deepEqual(analysis.analysisQuality.missingKnowledge, ["complete_swot"]);
   assert.match(analysis.industry.summary, /V2 角色/);
   assert.equal(analysis.industry.roleDetail?.topicName, "AI 伺服器");
   assert.equal(analysis.industry.roleDetail?.roleLabel, "直接賦能角色");

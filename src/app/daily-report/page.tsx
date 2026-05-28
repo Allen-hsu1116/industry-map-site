@@ -109,6 +109,13 @@ interface CompanyDailyAnalysis {
   code: string;
   sourceUpdatedAt?: string;
   generatedAt: string;
+  analysisQuality?: {
+    grade: "A" | "B" | "C" | "D" | "F";
+    label: string;
+    upgradePriority: "high" | "medium" | "low";
+    missingKnowledge: Array<"product_knowledge" | "verified_topic_role" | "complete_swot" | "daily_analysis">;
+    blockingReasons: string[];
+  };
   industry?: DailyIndustryAnalysis;
 }
 
@@ -152,6 +159,28 @@ function getKnowledgeBasisClass(basis?: DailyIndustryAnalysis["knowledgeBasis"])
 
 function getKnowledgeBasisText(industry: DailyIndustryAnalysis): string {
   return industry.provenanceLabel ?? (industry.knowledgeBasis === "canonical_verified" ? "V2 已驗證" : industry.knowledgeBasis === "canonical_pending" ? "V2 待驗證" : industry.knowledgeBasis === "legacy_unverified" ? "Legacy 待驗證" : "產業資料待補");
+}
+
+function getAnalysisQualityClass(grade?: NonNullable<CompanyDailyAnalysis["analysisQuality"]>["grade"]): string {
+  if (grade === "A") return "border-emerald-400/40 bg-emerald-400/10 text-emerald-200";
+  if (grade === "B") return "border-cyan-400/40 bg-cyan-400/10 text-cyan-200";
+  if (grade === "C") return "border-amber-400/40 bg-amber-400/10 text-amber-200";
+  if (grade === "D") return "border-orange-400/40 bg-orange-400/10 text-orange-200";
+  return "border-red-400/40 bg-red-400/10 text-red-200";
+}
+
+function getUpgradePriorityText(priority: "high" | "medium" | "low"): string {
+  return priority === "high" ? "高優先補資料" : priority === "medium" ? "中優先補資料" : "資料完整度佳";
+}
+
+function getMissingKnowledgeText(item: "product_knowledge" | "verified_topic_role" | "complete_swot" | "daily_analysis"): string {
+  const labels = {
+    product_knowledge: "缺產品知識",
+    verified_topic_role: "缺已驗證題材角色",
+    complete_swot: "缺完整 SWOT",
+    daily_analysis: "缺 Daily Analysis",
+  };
+  return labels[item];
 }
 
 async function fetchStaticJson<T>(path: string): Promise<T> {
@@ -344,7 +373,9 @@ export default function DailyReportPage() {
         <div className="space-y-6">
           <h2 className="text-xl font-bold text-white">🏆 今日推薦 Top {report.picks.length}</h2>
           {report.picks.map((pick) => {
-            const dailyIndustry = dailyAnalyses[pick.code]?.industry;
+            const dailyAnalysis = dailyAnalyses[pick.code];
+            const dailyIndustry = dailyAnalysis?.industry;
+            const analysisQuality = dailyAnalysis?.analysisQuality;
             return (
             <Card key={pick.code} className={`bg-[#12122a] border ${getScoreBg(pick.score)}`}>
               <CardHeader className="pb-3">
@@ -420,6 +451,11 @@ export default function DailyReportPage() {
                           <Badge variant="outline" className={`text-xs ${getKnowledgeBasisClass(dailyIndustry.knowledgeBasis)}`}>
                             {getKnowledgeBasisText(dailyIndustry)}
                           </Badge>
+                          {analysisQuality && (
+                            <Badge variant="outline" className={`text-xs ${getAnalysisQualityClass(analysisQuality.grade)}`}>
+                              Quality {analysisQuality.grade} · {analysisQuality.label}
+                            </Badge>
+                          )}
                           <span className="text-gray-300 text-sm">{dailyIndustry.label}</span>
                           {typeof dailyIndustry.score === "number" && (
                             <Badge variant="outline" className="border-cyan-400/30 bg-cyan-400/10 text-cyan-200 text-xs">
@@ -430,6 +466,31 @@ export default function DailyReportPage() {
                             <span className="text-[11px] text-gray-500">confidence: {dailyIndustry.confidence}</span>
                           )}
                         </div>
+
+                        {analysisQuality && (
+                          <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-2">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <span className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">分析品質</span>
+                              <Badge variant="outline" className={`text-[11px] ${analysisQuality.upgradePriority === "high" ? "border-red-400/30 bg-red-400/10 text-red-200" : analysisQuality.upgradePriority === "medium" ? "border-amber-400/30 bg-amber-400/10 text-amber-200" : "border-emerald-400/30 bg-emerald-400/10 text-emerald-200"}`}>
+                                {getUpgradePriorityText(analysisQuality.upgradePriority)}
+                              </Badge>
+                            </div>
+                            {analysisQuality.missingKnowledge.length > 0 && (
+                              <div className="mt-2 flex flex-wrap gap-1">
+                                {analysisQuality.missingKnowledge.map((item) => (
+                                  <span key={item} className="rounded border border-slate-600/60 bg-slate-800/80 px-1.5 py-0.5 text-[11px] text-slate-300">
+                                    {getMissingKnowledgeText(item)}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                            {(analysisQuality.grade === "D" || analysisQuality.grade === "F") && (
+                              <p className="mt-2 text-xs leading-relaxed text-amber-200/90">
+                                這檔產業分析尚未 evidence-backed；目前只能觀察，不能把題材敘事當成高信心推薦依據。
+                              </p>
+                            )}
+                          </div>
+                        )}
 
                         {dailyIndustry.roleDetail && (
                           <div className="rounded-lg border border-cyan-400/15 bg-cyan-400/5 p-2">

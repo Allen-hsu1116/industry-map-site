@@ -1,8 +1,9 @@
 import { buildCompanyKnowledge, type CompanyKnowledge, type CompanyKnowledgeInput } from "./companyKnowledge";
 import { directnessLabel, type CompanyTopicRolesKnowledge, type CompanyTopicRoleItem } from "./companyTopicRoles";
-import { groupCompanySwot, type CompanySwotItem, type CompanySwotKnowledge } from "./companySwot";
+import { groupCompanySwot, type CompanySwotItem, type CompanySwotKnowledge, type SwotCategory } from "./companySwot";
 import type { CanonicalTopic, CanonicalTopicsFile } from "./canonicalTopics";
 import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "./productKnowledge";
+import type { AnalysisQualityGrade, MissingKnowledge, UpgradePriority } from "./knowledgeCoverage";
 import { computeTechnicalSummary, safeFloat, type DailyPrice } from "./marketData";
 
 export interface InstitutionalFlowPoint {
@@ -74,6 +75,13 @@ export interface DailyAnalysis {
   marketDataDate?: string;
   chipDataDate?: string;
   mode: "rule-batch";
+  analysisQuality: {
+    grade: AnalysisQualityGrade;
+    label: string;
+    upgradePriority: UpgradePriority;
+    missingKnowledge: MissingKnowledge[];
+    blockingReasons: string[];
+  };
   technical: {
     stance: "bullish" | "bearish" | "neutral" | "insufficient";
     label: string;
@@ -441,6 +449,73 @@ function buildSwotSnapshot(canonicalKnowledge: DailyCanonicalKnowledge, knowledg
   };
 }
 
+function hasEvidenceBackedProductKnowledge(input: AnalysisInput): boolean {
+  return Boolean(input.productKnowledge?.products.some((product) => (
+    product.name
+    && product.plainLanguage
+    && product.whyItMatters
+    && product.evidence.length > 0
+    && product.confidence !== "low"
+  )));
+}
+
+function hasCompleteVerifiedSwot(input: AnalysisInput): boolean {
+  const verifiedItems = input.companySwot?.items.filter((item) => (
+    item.status === "verified"
+    && (item.confidence === "high" || item.confidence === "medium")
+    && item.evidence.length > 0
+  )) ?? [];
+  const categories = new Set(verifiedItems.map((item) => item.category));
+  const requiredCategories: SwotCategory[] = ["strength", "weakness", "opportunity", "threat"];
+  return verifiedItems.length >= 4 && requiredCategories.every((category) => categories.has(category));
+}
+
+function buildAnalysisQuality(input: AnalysisInput, knowledgeBasis: DailyAnalysis["industry"]["knowledgeBasis"]): DailyAnalysis["analysisQuality"] {
+  const hasProductKnowledge = hasEvidenceBackedProductKnowledge(input);
+  const hasVerifiedTopicRole = Boolean(input.companyTopicRoles?.roles.some(isVerifiedCanonicalRole));
+  const hasAnyTopicRole = Boolean(input.companyTopicRoles?.roles.some((role) => role.status !== "rejected"));
+  const hasCompleteSwot = hasCompleteVerifiedSwot(input);
+  const hasAnySwot = Boolean(input.companySwot?.items.some((item) => item.status !== "rejected"));
+  const canonicalDailyAnalysis = knowledgeBasis === "canonical_verified" || knowledgeBasis === "canonical_pending";
+  const missingKnowledge: MissingKnowledge[] = [];
+  if (!hasProductKnowledge) missingKnowledge.push("product_knowledge");
+  if (!hasVerifiedTopicRole) missingKnowledge.push("verified_topic_role");
+  if (!hasCompleteSwot) missingKnowledge.push("complete_swot");
+
+  let grade: AnalysisQualityGrade;
+  if (hasVerifiedTopicRole && hasProductKnowledge && hasCompleteSwot && canonicalDailyAnalysis) grade = "A";
+  else if (hasVerifiedTopicRole && (hasProductKnowledge || hasCompleteSwot) && canonicalDailyAnalysis) grade = "B";
+  else if (knowledgeBasis === "legacy_unverified") grade = "D";
+  else if (knowledgeBasis === "insufficient") grade = hasProductKnowledge || hasAnyTopicRole || hasAnySwot ? "C" : "F";
+  else grade = hasProductKnowledge || hasAnyTopicRole || hasAnySwot || knowledgeBasis === "canonical_pending" ? "C" : "F";
+
+  const upgradePriority: UpgradePriority = grade === "D" || grade === "F"
+    ? "high"
+    : missingKnowledge.includes("product_knowledge") || missingKnowledge.includes("verified_topic_role")
+      ? "high"
+      : grade === "B" || grade === "C" || missingKnowledge.length > 0
+        ? "medium"
+        : "low";
+  const blockingReasons: string[] = [];
+  if (knowledgeBasis === "legacy_unverified") blockingReasons.push("legacy_only");
+  if (knowledgeBasis === "insufficient") blockingReasons.push("insufficient_daily_analysis");
+  if (missingKnowledge.includes("product_knowledge")) blockingReasons.push("missing_product_knowledge");
+  if (missingKnowledge.includes("verified_topic_role")) blockingReasons.push(hasAnyTopicRole ? "topic_role_not_verified" : "missing_topic_role");
+  if (missingKnowledge.includes("complete_swot")) blockingReasons.push(hasAnySwot ? "incomplete_swot" : "missing_swot");
+
+  const label = grade === "A"
+    ? "完整 evidence-backed"
+    : grade === "B"
+      ? "可用但仍有缺口"
+      : grade === "C"
+        ? "弱分析 / 部分資料"
+        : grade === "D"
+          ? "Legacy only"
+          : "資料不足";
+
+  return { grade, label, upgradePriority, missingKnowledge, blockingReasons };
+}
+
 export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): DailyAnalysis {
   const knowledge = buildCompanyKnowledge(input, now);
   const dailyPrices = input.trends?.daily_prices ?? [];
@@ -666,6 +741,7 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     : primaryRole
       ? `${input.name} 在 ${primaryRole.topicId} 的 legacy 角色為「${primaryRole.marketPosition ?? primaryRole.relevance}」，資料基礎為「${provenanceLabel}」，產業 score ${industryScore.score}/100；此題材關聯仍待驗證，不列為核心題材受惠。`
       : `${input.name} 尚未建立完整題材角色，產業 score ${industryScore.score}/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。`;
+  const analysisQuality = buildAnalysisQuality(input, knowledgeBasis);
 
   return {
     schemaVersion: 1,
@@ -676,6 +752,7 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     marketDataDate: latest?.date ?? latestDate(dailyPrices),
     chipDataDate: latestDate(institutional) ?? latestDate(margin),
     mode: "rule-batch",
+    analysisQuality,
     technical: {
       stance: techStance,
       label: techLabel,
