@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-05-28T17:01:43.064Z",
+  "generatedAt": "2026-05-28T17:21:47.473Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -54,233 +54,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "advanced-packaging-test",
-      "roleLabel": "中",
-      "roleSummary": "欣銓在「先進封測｜IC 測試服務」題材的「探針卡與測試介面」中扮演IC 測試/車用 IC 測試角色。",
-      "source": "legacy"
-    },
-    "productNarratives": [
-      {
-        "name": "記憶體 IC 晶圓測試",
-        "description": "記憶體 IC 晶圓測試是在晶圓切割封裝前，先用測試設備確認記憶體晶片功能、速度與可靠度。",
-        "whyItMatters": "記憶體與 AI/HBM 相關需求升溫時，晶圓測試可成為投片到量產之間的重要後段驗證環節。",
-        "businessImpact": "觀察重點是記憶體客戶投片量、測試時間、稼動率與測試單價。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：欣銓 公司基本資料與公開揭露",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      },
-      {
-        "name": "數位與混合訊號 IC 晶圓/成品測試",
-        "description": "數位與混合訊號 IC 測試涵蓋晶圓階段與成品階段的電性、功能與品質驗證。",
-        "whyItMatters": "車用、工控、通訊與消費電子晶片都需要測試服務；測試需求常隨晶片複雜度與可靠度要求提高而增加。",
-        "businessImpact": "需追蹤客戶組合、車用/工控等高可靠度產品比重與測試產能利用率。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：欣銓 公司基本資料與公開揭露",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      },
-      {
-        "name": "晶圓 Burn-in 測試",
-        "description": "晶圓 Burn-in 是在特定條件下加速篩選潛在失效晶片，提升量產品質與可靠度的測試流程。",
-        "whyItMatters": "高可靠度晶片越重視早期失效篩選，Burn-in 測試可提升出貨品質並降低客戶端失效風險。",
-        "businessImpact": "屬專業測試服務，題材強度取決於高可靠度產品需求與測試產能稼動率。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：欣銓 公司基本資料與公開揭露",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      }
-    ],
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
+    "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "欣銓在探針卡與測試介面領域具備競爭優勢",
-        "欣銓在邊緣AI測試與電源管理領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "IC 測試服務需求持續成長",
-        "Edge AI / AIoT 邊緣智慧需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "營收規模相對小，資本支出壓力大"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "欣銓 在 advanced-packaging-test 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "欣銓 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：advanced-packaging-test · 中（待驗證）",
-      "主要產品：記憶體IC之晶圓測試 數位訊號IC及混合訊號IC之晶圓及成品測試 晶圓型式之Burn in 之測試",
-      "主要產品：IC 測試/車用 IC 測試",
-      "主要產品：IC 測試服務（Edge AI 晶片測試）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "W：營收規模相對小，資本支出壓力大",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：IC 測試服務需求持續成長",
-      "O：Edge AI / AIoT 邊緣智慧需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "記憶體IC之晶圓測試 數位訊號IC及混合訊號IC之晶圓及成品測試 晶圓型式之Burn in 之測試",
-      "IC 測試/車用 IC 測試",
-      "IC 測試服務（Edge AI 晶片測試）",
-      "DRAM 晶圓測試(CP)",
-      "NOR/NAND Flash 晶圓測試",
-      "晶圓級 Burn-in 測試",
-      "混合訊號IC成品測試",
-      "利基型封裝廠"
-    ],
-    "customers": [
-      "Tesla",
-      "BYD",
-      "Toyota",
-      "BMW",
-      "Mercedes",
-      "NVIDIA",
-      "AMD",
-      "Google"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "advanced-packaging-test",
-        "role": "IC 測試/車用 IC 測試",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "欣銓在「先進封測｜IC 測試服務」題材的「探針卡與測試介面」中扮演IC 測試/車用 IC 測試角色。"
-      },
-      {
-        "topicId": "edge-ai",
-        "role": "IC 測試服務（Edge AI 晶片測試）",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "欣銓在「智慧機器人｜Edge AI / AIoT 邊緣智慧」題材的「邊緣AI測試與電源管理」中扮演IC 測試服務（Edge AI 晶片測試）角色。"
-      },
-      {
-        "topicId": "hbm",
-        "role": "IC 載板龍頭",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "欣銓在「記憶體｜HBM 高頻寬記憶體」題材的「HBM載板與材料」中扮演IC 載板龍頭角色。"
-      },
-      {
-        "topicId": "high-end-testing",
-        "role": "利基型封裝廠",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "欣銓在「先進封測｜封測代工服務 OSAT」題材的「封裝材料與載板」中扮演利基型封裝廠角色。"
-      },
-      {
-        "topicId": "leo-satellite",
-        "role": "衛星射頻與微波元件",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "欣銓在「網通衛星｜低軌衛星通訊系統」題材的「衛星電源與射頻零組件」中扮演衛星射頻與微波元件角色。"
-      },
-      {
-        "topicId": "mlcc-capacitor",
-        "role": "鋁電解電容/導電性高分子電容",
-        "relevance": "high",
-        "marketPosition": "中",
-        "summary": "欣銓在「被動元件｜電容器」題材的「鋁電解電容與陶瓷電容」中扮演鋁電解電容/導電性高分子電容角色。"
-      },
-      {
-        "topicId": "pcb-manufacturing",
-        "role": "載板 + 高層數板雙引擎",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "欣銓在「電子零組件｜PCB 硬板製造」題材的「HDI板與高頻板」中扮演載板 + 高層數板雙引擎角色。"
-      },
-      {
-        "topicId": "wafer-fab-equipment",
-        "role": "半導體精密零組件",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "欣銓在「半導體製造｜晶圓廠設備」題材的「半導體廠務與量測」中扮演半導體精密零組件角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "欣銓在探針卡與測試介面領域具備競爭優勢",
-        "欣銓在邊緣AI測試與電源管理領域具備競爭優勢",
-        "國內記憶體IC測試專家，客戶黏著度高",
-        "盧志遠(前國研院長)領軍技術能力強",
-        "欣銓在封裝材料與載板領域具備競爭優勢",
-        "半導體測試領導廠商，技術能力完整"
-      ],
-      "weaknesses": [
-        "受景氣循環影響",
-        "營收規模相對小，資本支出壓力大",
-        "客戶集中於台灣記憶體廠",
-        "衛星通訊IC測試為延伸應用",
-        "測試設備資本支出高"
-      ],
-      "opportunities": [
-        "IC 測試服務需求持續成長",
-        "Edge AI / AIoT 邊緣智慧需求持續成長",
-        "HBM需求帶動高頻寬記憶體測試量增",
-        "車用/工控 NOR Flash 測試需求擴張",
-        "封測代工服務 OSAT需求持續成長",
-        "低軌衛星通訊IC測試需求增長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險",
-        "大型測試廠(京元電/矽格)規模優勢壓迫",
-        "記憶體景氣反轉直接衝擊測試需求",
-        "測試同業價格競爭壓力",
-        "衛星IC測試規格變動風險"
-      ],
-      "sources": [
-        "industry_analysis:advanced-packaging-test",
-        "industry_analysis:edge-ai",
-        "industry_analysis:hbm",
-        "industry_analysis:high-end-testing",
-        "industry_analysis:leo-satellite",
-        "industry_analysis:mlcc-capacitor",
-        "industry_analysis:pcb-manufacturing",
-        "industry_analysis:wafer-fab-equipment"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -291,8 +104,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -321,8 +133,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 7,
-    "recommendationState": "blocked",
+    "totalScore": 34,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -330,20 +142,13 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
-      "rationale": [
-        "分析品質不足，策略只能列為觀察"
-      ]
+      "classification": "觀察股",
+      "rationale": []
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
-      },
-      {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

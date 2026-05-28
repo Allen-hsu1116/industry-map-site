@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "1503",
   "name": "士電",
-  "generatedAt": "2026-05-28T17:01:42.632Z",
+  "generatedAt": "2026-05-28T17:21:47.069Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -53,122 +53,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "electrical_equipment",
-      "roleLabel": "中",
-      "roleSummary": "士電在「傳產工業｜電器電纜與重電」題材的「重電設備與電力系統」中扮演重電設備供應商角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "士電在重電設備與電力系統領域具備競爭優勢",
-        "國內重電設備老牌大廠，累計營收YoY+16.3%"
-      ],
-      "opportunities": [
-        "電器電纜與重電需求持續成長",
-        "半導體廠房擴建帶動超高壓變壓器需求"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "4月MoM-19.5%月度波動大"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "士電 在 electrical_equipment 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "士電 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：electrical_equipment · 中（待驗證）",
-      "主要產品：重電機械類 電器機器類 租賃類",
-      "主要產品：重電設備供應商",
-      "主要產品：電力變壓器(161kV/69kV)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "W：4月MoM-19.5%月度波動大",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：電器電纜與重電需求持續成長",
-      "O：半導體廠房擴建帶動超高壓變壓器需求",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "重電機械類 電器機器類 租賃類",
-      "重電設備供應商",
-      "電力變壓器(161kV/69kV)",
-      "EV充電樁變壓器",
-      "低壓斷路器/磁力啟動器",
-      "配電盤/開關箱"
-    ],
-    "customers": [
-      "國內外品牌廠",
-      "系統整合商",
-      "ODM/OEM",
-      "台電",
-      "台積電(廠房配電)",
-      "中華汽車(EV充電)",
-      "日商(Toshiba合作)"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "electrical_equipment",
-        "role": "重電設備供應商",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "士電在「傳產工業｜電器電纜與重電」題材的「重電設備與電力系統」中扮演重電設備供應商角色。"
-      },
-      {
-        "topicId": "ess-storage",
-        "role": "充電樁+電網變壓器",
-        "relevance": "unknown",
-        "summary": "士電在「綠能環保｜儲能系統整合」題材的「儲能電池與BMS零組件」中扮演充電樁+電網變壓器角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "士電在重電設備與電力系統領域具備競爭優勢",
-        "國內重電設備老牌大廠，累計營收YoY+16.3%",
-        "4月YoY+32.5%成長強勁(充電樁/廠房配電)"
-      ],
-      "weaknesses": [
-        "受景氣循環影響",
-        "4月MoM-19.5%月度波動大",
-        "重電設備毛利偏低"
-      ],
-      "opportunities": [
-        "電器電纜與重電需求持續成長",
-        "半導體廠房擴建帶動超高壓變壓器需求",
-        "EV充電基建變壓器新藍海"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險",
-        "士林電機商標爭議影響品牌",
-        "中国變壓器低價競爭"
-      ],
-      "sources": [
-        "industry_analysis:electrical_equipment",
-        "industry_analysis:ess-storage"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -179,8 +103,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -209,7 +132,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 13,
+    "totalScore": 20,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 16,
@@ -232,11 +155,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

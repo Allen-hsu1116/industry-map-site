@@ -67,13 +67,13 @@ test("checked-in daily report never renders D/F picks as top recommendations aft
 
   const gated = gateDailyReportPicks(report.picks, analysesByCode);
 
-  assert.deepEqual(
-    gated.topRecommendations.map((item) => [item.pick.code, item.analysis?.analysisQuality?.grade]),
-    [["2330", "A"]],
-  );
-  assert.deepEqual(
-    gated.observationOnly.map((item) => [item.pick.code, item.analysis?.analysisQuality?.grade]),
-    [["2337", "D"], ["2344", "D"]],
-  );
   assert.equal(gated.topRecommendations.every((item) => isTopRecommendationGrade(item.analysis?.analysisQuality?.grade)), true);
+  assert.equal(
+    gated.observationOnly.every((item) => !isTopRecommendationGrade(item.analysis?.analysisQuality?.grade)),
+    true,
+  );
+  assert.equal(
+    gated.topRecommendations.some((item) => ["D", "F"].includes(item.analysis?.analysisQuality?.grade ?? "")),
+    false,
+  );
 });

@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "1313",
   "name": "聯成",
-  "generatedAt": "2026-05-28T17:01:42.623Z",
+  "generatedAt": "2026-05-28T17:21:47.061Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -52,107 +52,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "petrochem-plastics",
-      "roleLabel": "unknown",
-      "roleSummary": "聯成在「傳產工業｜石化及塑橡膠」題材的「塑橡膠與特化品」中扮演塑膠加工角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "DOP可塑劑台灣最大供應商",
-        "聯華神通集團資源"
-      ],
-      "opportunities": [
-        "非鄰苯二甲酸酯環保可塑劑轉型",
-        "馬來酸酐特用化學品需求"
-      ],
-      "risks": [
-        "可塑劑面臨環保替代壓力",
-        "景氣循環波動大"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "聯成 在 petrochem-plastics 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "聯成 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：petrochem-plastics · unknown（待驗證）",
-      "主要產品：鄰苯二甲酸酯(DOP)可塑劑",
-      "主要產品：聚酯多元醇",
-      "主要產品：丙烯酸酯(AA)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：可塑劑面臨環保替代壓力",
-      "W：景氣循環波動大",
-      "T：中國DOP產能過剩低價競爭",
-      "T：歐盟REACH法規限制塑化劑"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：非鄰苯二甲酸酯環保可塑劑轉型",
-      "O：馬來酸酐特用化學品需求",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "鄰苯二甲酸酯(DOP)可塑劑",
-      "聚酯多元醇",
-      "丙烯酸酯(AA)",
-      "順丁烯二酸酐(MA)",
-      "塑膠增韌劑"
-    ],
-    "customers": [
-      "台塑",
-      "奇美",
-      "遠東新",
-      "國內塑膠加工廠",
-      "海外PVC加工廠"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "petrochem-plastics",
-        "role": "塑膠加工",
-        "relevance": "unknown",
-        "summary": "聯成在「傳產工業｜石化及塑橡膠」題材的「塑橡膠與特化品」中扮演塑膠加工角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "DOP可塑劑台灣最大供應商",
-        "聯華神通集團資源",
-        "產品線涵蓋可塑劑/MA/AA"
-      ],
-      "weaknesses": [
-        "可塑劑面臨環保替代壓力",
-        "景氣循環波動大"
-      ],
-      "opportunities": [
-        "非鄰苯二甲酸酯環保可塑劑轉型",
-        "馬來酸酐特用化學品需求"
-      ],
-      "threats": [
-        "中國DOP產能過剩低價競爭",
-        "歐盟REACH法規限制塑化劑"
-      ],
-      "sources": [
-        "industry_analysis:petrochem-plastics"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -163,8 +102,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -193,7 +131,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 6,
+    "totalScore": 20,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 6,
@@ -214,11 +152,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

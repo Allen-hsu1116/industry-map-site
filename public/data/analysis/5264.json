@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "code": "5264",
   "name": "鎧勝-KY",
-  "generatedAt": "2026-05-28T17:01:43.255Z",
+  "generatedAt": "2026-05-28T17:21:47.653Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -15,7 +15,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -44,101 +44,51 @@
     "watch": []
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "defense_industry",
-      "roleLabel": "中",
-      "roleSummary": "鎧勝-KY在「傳產工業｜軍工產業」題材的「無人機與光電系統」中扮演無人機構體角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "鎧勝-KY在無人機與光電系統領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "軍工產業需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "鎧勝-KY 在 defense_industry 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "鎧勝-KY 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：defense_industry · 中（待驗證）",
-      "主要產品：無人機構體",
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：軍工產業需求持續成長",
       "知識庫最後驗證：2026-05-25（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockMonthRevenue / MOPS monthly revenue、internal topic role map / industry_analysis"
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockMonthRevenue / MOPS monthly revenue"
     ]
   },
   "knowledge": {
-    "products": [
-      "無人機構體"
-    ],
-    "customers": [
-      "國防部",
-      "漢翔",
-      "中科院",
-      "美國國防部",
-      "NASA"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "defense_industry",
-        "role": "無人機構體",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "鎧勝-KY在「傳產工業｜軍工產業」題材的「無人機與光電系統」中扮演無人機構體角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "鎧勝-KY在無人機與光電系統領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "軍工產業需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:defense_industry"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-25"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
-      "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "internal topic role map / industry_analysis"
+      "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue"
     ],
     "finmindSignals": [
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
@@ -162,7 +112,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 6,
+    "totalScore": 14,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -180,11 +130,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

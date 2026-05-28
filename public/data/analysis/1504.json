@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "1504",
   "name": "東元",
-  "generatedAt": "2026-05-28T17:01:42.634Z",
+  "generatedAt": "2026-05-28T17:21:47.071Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -57,167 +57,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "cnc-machine-tool",
-      "roleLabel": "unknown",
-      "roleSummary": "東元在「傳產工業｜CNC工具機」題材的「驅動控制與設備」中扮演馬達+工具機角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "國內馬達/變頻器龍頭，4月YoY+13.6%成長強勁",
-        "跨足工業/家電/車用三引擎"
-      ],
-      "opportunities": [
-        "EV驅動馬達需求攀升",
-        "智慧工廠伺服系統升級潮"
-      ],
-      "risks": [
-        "家電事業面臨中國低價競爭",
-        "CNC馬達佔比小，非核心業務"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "東元 在 cnc-machine-tool 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "東元 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：cnc-machine-tool · unknown（待驗證）",
-      "主要產品：工業用變頻器/伺服驅動器",
-      "主要產品：CNC/工具機主軸馬達",
-      "主要產品：冷凍空調設備(家用/商用)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：家電事業面臨中國低價競爭",
-      "W：CNC馬達佔比小，非核心業務",
-      "T：中国變頻器廠(匯川/英威騰)低價搶市",
-      "T：工具機景氣反轉衝擊馬達需求"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：EV驅動馬達需求攀升",
-      "O：智慧工廠伺服系統升級潮",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "工業用變頻器/伺服驅動器",
-      "CNC/工具機主軸馬達",
-      "冷凍空調設備(家用/商用)",
-      "電動車驅動馬達",
-      "家電(洗衣機/冰箱)",
-      "高壓馬達 (IE3/IE4)",
-      "變頻器與驅動器",
-      "重電設備 (變壓器/開關櫃)"
-    ],
-    "customers": [
-      "台塑",
-      "中鋼",
-      "東隆(工具機廠)",
-      "Toyota/Luxgroup(車用)",
-      "台電",
-      "台積電",
-      "中油",
-      "Tesla"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "cnc-machine-tool",
-        "role": "馬達+工具機",
-        "relevance": "unknown",
-        "summary": "東元在「傳產工業｜CNC工具機」題材的「驅動控制與設備」中扮演馬達+工具機角色。"
-      },
-      {
-        "topicId": "electrical_equipment",
-        "role": "重電設備與線纜",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "東元在「傳產工業｜電器電纜與重電」題材的「重電設備與電力系統」中扮演重電設備與線纜角色。"
-      },
-      {
-        "topicId": "ess-storage",
-        "role": "馬達 + 儲能 PCS",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "東元在「綠能環保｜儲能系統整合」題材的「功率變換與電源管理」中扮演馬達 + 儲能 PCS角色。"
-      },
-      {
-        "topicId": "industrial-automation",
-        "role": "馬達 + 驅動器 + PLC",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "東元在「智慧機器人｜工業自動化 / 智慧製造」題材的「馬達驅動與PLC」中扮演馬達 + 驅動器 + PLC角色。"
-      },
-      {
-        "topicId": "offshore-wind",
-        "role": "風機馬達與變頻器",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "東元在「綠能環保｜離岸風電」題材的「變壓器與電力系統」中扮演風機馬達與變頻器角色。"
-      },
-      {
-        "topicId": "robotics_physical_ai",
-        "role": "工業馬達/伺服馬達大廠",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "東元在「智慧機器人｜人形機器人與實體 AI」題材的「馬達與驅動系統」中扮演工業馬達/伺服馬達大廠角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "國內馬達/變頻器龍頭，4月YoY+13.6%成長強勁",
-        "跨足工業/家電/車用三引擎",
-        "4月營收YoY +13.6%，累計年增6.3%，成長動能佳",
-        "台灣重電設備領導品牌",
-        "東元在功率變換與電源管理領域具備競爭優勢",
-        "東元在馬達驅動與PLC領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "家電事業面臨中國低價競爭",
-        "CNC馬達佔比小，非核心業務",
-        "產品線過度分散",
-        "低毛利家電業務拖累",
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "EV驅動馬達需求攀升",
-        "智慧工廠伺服系統升級潮",
-        "台電強韌電網計畫帶動變壓器需求",
-        "綠能轉型推動IE4馬達升級",
-        "儲能系統整合需求持續成長",
-        "工業自動化 / 智慧製造需求持續成長"
-      ],
-      "threats": [
-        "中国變頻器廠(匯川/英威騰)低價搶市",
-        "工具機景氣反轉衝擊馬達需求",
-        "中東/中國低價馬達競爭",
-        "原物料 (銅/矽鋼片) 價格波動",
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:cnc-machine-tool",
-        "industry_analysis:electrical_equipment",
-        "industry_analysis:ess-storage",
-        "industry_analysis:industrial-automation",
-        "industry_analysis:offshore-wind",
-        "industry_analysis:robotics_physical_ai"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -228,8 +107,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -258,7 +136,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 17,
+    "totalScore": 31,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -282,11 +160,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

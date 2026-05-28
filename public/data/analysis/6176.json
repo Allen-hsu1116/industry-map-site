@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "6176",
   "name": "瑞儀",
-  "generatedAt": "2026-05-28T17:01:43.334Z",
+  "generatedAt": "2026-05-28T17:21:47.726Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -57,159 +57,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 44,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "connector-highspeed",
-      "roleLabel": "中",
-      "roleSummary": "瑞儀在「電子零組件｜AI 互連元件」題材的「高速連接器」中扮演高速傳輸連接器角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "瑞儀在高速連接器領域具備競爭優勢",
-        "瑞儀在Micro LED與LED封裝領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "AI 互連元件需求持續成長",
-        "面板產業需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 high +44",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "瑞儀 在 connector-highspeed 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 44/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "瑞儀 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：44/100（legacy 題材關聯 high +44；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：connector-highspeed · 中（待驗證）",
-      "主要產品：CC01080電子零組件製造業 CQ01010模具製造業 CC01040照明設備製造業",
-      "主要產品：高速傳輸連接器",
-      "主要產品：NB背光模組大廠",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：AI 互連元件需求持續成長",
-      "O：面板產業需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "CC01080電子零組件製造業 CQ01010模具製造業 CC01040照明設備製造業",
-      "高速傳輸連接器",
-      "NB背光模組大廠",
-      "背光模組SMT組裝",
-      "散熱風扇"
-    ],
-    "customers": [
-      "NVIDIA",
-      "AMD",
-      "Google",
-      "AWS",
-      "Microsoft",
-      "Apple",
-      "Qualcomm",
-      "Broadcom"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "connector-highspeed",
-        "role": "高速傳輸連接器",
-        "relevance": "high",
-        "marketPosition": "中",
-        "summary": "瑞儀在「電子零組件｜AI 互連元件」題材的「高速連接器」中扮演高速傳輸連接器角色。"
-      },
-      {
-        "topicId": "display-panel",
-        "role": "NB背光模組大廠",
-        "relevance": "unknown",
-        "summary": "瑞儀在「光學顯示｜面板產業」題材的「Micro LED與LED封裝」中扮演NB背光模組大廠角色。"
-      },
-      {
-        "topicId": "ems-smt",
-        "role": "背光模組SMT組裝",
-        "relevance": "unknown",
-        "marketPosition": "medium",
-        "summary": "瑞儀在「AI 伺服器｜SMT/EMS 電子代工」題材的「封測與EMS整合」中扮演背光模組SMT組裝角色。"
-      },
-      {
-        "topicId": "liquid_cooling_advanced",
-        "role": "散熱風扇",
-        "relevance": "unknown",
-        "summary": "立端在「散熱冷卻｜液冷散熱系統」題材的「液冷系統整合」中扮演散熱風扇角色。"
-      },
-      {
-        "topicId": "pc-nb-tablet",
-        "role": "NB背光模組大廠",
-        "relevance": "unknown",
-        "summary": "瑞儀在「消費終端｜PC」題材的「PC零組件與周邊品牌」中扮演NB背光模組大廠角色。"
-      },
-      {
-        "topicId": "thermal_components_air",
-        "role": "散熱風扇",
-        "relevance": "unknown",
-        "summary": "立端在「散熱冷卻｜氣冷與核心組件」題材的「熱導管與散熱方案」中扮演散熱風扇角色。"
-      },
-      {
-        "topicId": "thermal-solution",
-        "role": "散熱風扇",
-        "relevance": "unknown",
-        "summary": "立端在「散熱冷卻｜液冷與散熱模組」題材的「散熱風扇與導熱材料」中扮演散熱風扇角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "瑞儀在高速連接器領域具備競爭優勢",
-        "瑞儀在Micro LED與LED封裝領域具備競爭優勢",
-        "瑞儀在封測與EMS整合領域具備競爭優勢",
-        "立端在液冷系統整合領域具備競爭優勢",
-        "瑞儀在PC零組件與周邊品牌領域具備競爭優勢",
-        "立端在熱導管與散熱方案領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "AI 互連元件需求持續成長",
-        "面板產業需求持續成長",
-        "SMT/EMS 電子代工需求持續成長",
-        "液冷散熱系統需求持續成長",
-        "PC需求持續成長",
-        "氣冷與核心組件需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:connector-highspeed",
-        "industry_analysis:display-panel",
-        "industry_analysis:ems-smt",
-        "industry_analysis:liquid_cooling_advanced",
-        "industry_analysis:pc-nb-tablet",
-        "industry_analysis:thermal_components_air",
-        "industry_analysis:thermal-solution"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -220,8 +107,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -250,7 +136,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 22,
+    "totalScore": 27,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -269,11 +155,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

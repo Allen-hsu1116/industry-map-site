@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "code": "3450",
   "name": "聯鈞",
-  "generatedAt": "2026-05-28T17:01:43.106Z",
+  "generatedAt": "2026-05-28T17:21:47.513Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -54,213 +54,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "advanced-packaging-test",
-      "roleLabel": "中",
-      "roleSummary": "聯鈞在「先進封測｜IC 測試服務」題材的「探針卡與測試介面」中扮演功率 IC 測試/雷射切割角色。",
-      "source": "legacy"
-    },
-    "productNarratives": [
-      {
-        "name": "功率半導體封裝測試",
-        "description": "功率半導體封裝測試是對電源轉換、驅動與功率控制晶片進行後段封裝與電性/可靠度測試。",
-        "whyItMatters": "功率元件會用在伺服器電源、車用、工控與能源設備；封測能力影響晶片可靠度與量產交付。",
-        "businessImpact": "營運影響取決於功率元件客戶需求、測試規格與封測稼動率。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：聯鈞 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3450",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      },
-      {
-        "name": "光資訊與光通訊產品",
-        "description": "光資訊與光通訊產品是用於高速資料傳輸的光電元件、模組或相關產品，服務資料中心、電信與高速網路連接需求。",
-        "whyItMatters": "AI 資料中心與高速交換器提高頻寬需求，會帶動光通訊鏈中光電元件與封測/模組相關需求。",
-        "businessImpact": "需追蹤光通訊產品出貨、客戶導入與資料中心/電信資本支出循環。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：聯鈞 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3450",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      },
-      {
-        "name": "雷射與光電加工能力",
-        "description": "雷射與光電加工能力是光電公司常見的精密加工與製程能力，可支援光通訊或半導體封測相關製程。",
-        "whyItMatters": "legacy 中的『全球 DRAM 模組龍頭之一』疑似跨公司噪音，僅作低信心別名收斂，不能當成聯鈞主業結論。",
-        "businessImpact": "此項用於承接 legacy 噪音與雷射切割詞彙，投資判斷仍應以光通訊與功率半導體封測兩項主業為主。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：聯鈞 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3450",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "low"
-      }
-    ],
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
+    "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "聯鈞在探針卡與測試介面領域具備競爭優勢",
-        "聯鈞在光通訊IC與測試領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "IC 測試服務需求持續成長",
-        "高速光收發模組需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "聯鈞 在 advanced-packaging-test 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "聯鈞 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：advanced-packaging-test · 中（待驗證）",
-      "主要產品：功率 IC 測試/雷射切割",
-      "主要產品：光通訊 IC 測試",
-      "主要產品：IC 測試服務",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：IC 測試服務需求持續成長",
-      "O：高速光收發模組需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "功率 IC 測試/雷射切割",
-      "光通訊 IC 測試",
-      "IC 測試服務",
-      "全球 DRAM 模組龍頭之一",
-      "光通訊封測",
-      "功率 IC 測試"
-    ],
-    "customers": [
-      "國內外品牌廠",
-      "系統整合商",
-      "ODM/OEM",
-      "Google",
-      "AWS",
-      "Microsoft",
-      "Meta",
-      "中國電信"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "advanced-packaging-test",
-        "role": "功率 IC 測試/雷射切割",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "聯鈞在「先進封測｜IC 測試服務」題材的「探針卡與測試介面」中扮演功率 IC 測試/雷射切割角色。"
-      },
-      {
-        "topicId": "high-speed-optics",
-        "role": "光通訊 IC 測試",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "聯鈞在「網通衛星｜高速光收發模組」題材的「光通訊IC與測試」中扮演光通訊 IC 測試角色。"
-      },
-      {
-        "topicId": "ic-distribution",
-        "role": "IC 測試服務",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "聯鈞在「電子零組件｜IC 通路」題材的「IC設計與通路」中扮演IC 測試服務角色。"
-      },
-      {
-        "topicId": "memory-modules",
-        "role": "全球 DRAM 模組龍頭之一",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "聯鈞在「記憶體｜記憶體模組」題材的「DRAM模組品牌」中扮演全球 DRAM 模組龍頭之一角色。"
-      },
-      {
-        "topicId": "optical-comm",
-        "role": "光通訊封測",
-        "relevance": "unknown",
-        "summary": "聯鈞在「光通訊｜矽光子與CPO」題材的「先進封裝(CPO)」中扮演光通訊封測角色。"
-      },
-      {
-        "topicId": "sic-gan-power",
-        "role": "功率 IC 測試",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "聯鈞在「半導體製造｜第三代半導體」題材的「GaN快充與終端應用」中扮演功率 IC 測試角色。"
-      },
-      {
-        "topicId": "silicon-photonics",
-        "role": "光通訊 IC 測試",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "聯鈞在「網通衛星｜矽光子與 CPO」題材的「矽光IC與晶圓代工」中扮演光通訊 IC 測試角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "聯鈞在探針卡與測試介面領域具備競爭優勢",
-        "聯鈞在光通訊IC與測試領域具備競爭優勢",
-        "聯鈞在IC設計與通路領域具備競爭優勢",
-        "聯鈞為DRAM模組品牌領導廠商",
-        "聯鈞在先進封裝(CPO)領域具備競爭優勢",
-        "聯鈞在GaN快充與終端應用領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "IC 測試服務需求持續成長",
-        "高速光收發模組需求持續成長",
-        "IC 通路需求持續成長",
-        "記憶體模組需求持續成長",
-        "矽光子與CPO需求持續成長",
-        "第三代半導體需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:advanced-packaging-test",
-        "industry_analysis:high-speed-optics",
-        "industry_analysis:ic-distribution",
-        "industry_analysis:memory-modules",
-        "industry_analysis:optical-comm",
-        "industry_analysis:sic-gan-power",
-        "industry_analysis:silicon-photonics"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -271,8 +104,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -301,7 +133,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 26,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -310,18 +142,12 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "分析品質不足，策略只能列為觀察"
+        "技術面符合趨勢股條件"
       ]
     },
     "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
-      },
       {
         "id": "risk.stop-distance",
         "severity": "hard",
@@ -329,7 +155,7 @@
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

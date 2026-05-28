@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "6282",
   "name": "康舒",
-  "generatedAt": "2026-05-28T17:01:43.394Z",
+  "generatedAt": "2026-05-28T17:21:47.782Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -56,132 +56,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "ai-server-odm",
-      "roleLabel": "unknown",
-      "roleSummary": "康舒在「AI 伺服器｜整機組裝」題材的「伺服器主板與周邊」中扮演AI伺服器電源(48V架構)角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "康舒在伺服器主板與周邊領域具備競爭優勢",
-        "康舒在BBU電源供應器與系統領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "整機組裝需求持續成長",
-        "BBU 電池備援系統需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "康舒 在 ai-server-odm 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "康舒 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：ai-server-odm · unknown（待驗證）",
-      "主要產品：交換式電源供應器之研發設計",
-      "主要產品：製造及銷售",
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：整機組裝需求持續成長",
-      "O：BBU 電池備援系統需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "交換式電源供應器之研發設計",
-      "製造及銷售"
-    ],
-    "customers": [
-      "NVIDIA",
-      "AMD",
-      "Google",
-      "AWS",
-      "Microsoft",
-      "國內外品牌廠",
-      "系統整合商",
-      "ODM/OEM"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "ai-server-odm",
-        "role": "AI伺服器電源(48V架構)",
-        "relevance": "unknown",
-        "summary": "康舒在「AI 伺服器｜整機組裝」題材的「伺服器主板與周邊」中扮演AI伺服器電源(48V架構)角色。"
-      },
-      {
-        "topicId": "bbu",
-        "role": "伺服器電源供應器",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "康舒在「AI 伺服器｜BBU 電池備援系統」題材的「BBU電源供應器與系統」中扮演伺服器電源供應器角色。"
-      },
-      {
-        "topicId": "electrical_equipment",
-        "role": "電源/智慧電網設備",
-        "relevance": "unknown",
-        "marketPosition": "medium",
-        "summary": "康舒在「傳產工業｜電器電纜與重電」題材的「電源與材料」中扮演電源/智慧電網設備角色。"
-      },
-      {
-        "topicId": "psu",
-        "role": "電源供應器與綠能布局",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "康舒在「電子零組件｜電源供應器」題材的「伺服器電源龍頭」中扮演電源供應器與綠能布局角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "康舒在伺服器主板與周邊領域具備競爭優勢",
-        "康舒在BBU電源供應器與系統領域具備競爭優勢",
-        "康舒在電源與材料領域具備競爭優勢",
-        "康舒在伺服器電源龍頭領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "整機組裝需求持續成長",
-        "BBU 電池備援系統需求持續成長",
-        "電器電纜與重電需求持續成長",
-        "電源供應器需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:ai-server-odm",
-        "industry_analysis:bbu",
-        "industry_analysis:electrical_equipment",
-        "industry_analysis:psu"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -192,8 +106,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -222,7 +135,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 2,
+    "totalScore": 16,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -242,7 +155,7 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.stop-distance",
@@ -251,7 +164,7 @@
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

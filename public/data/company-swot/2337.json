@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2337",
+  "companyName": "旺宏",
+  "updatedAt": "2026-05-29",
+  "items": [
+    {
+      "id": "strength-nor-flash-product-focus",
+      "category": "strength",
+      "statement": "旺宏具備 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品線，是利基記憶體題材中的直接產品供應商。",
+      "rationale": "product-knowledge/2337 將非揮發性記憶體與積體電路列為 evidence-backed 產品，並以 MOPS 公司基本資料佐證主要業務；此定位支持其在 niche-memory 的 core 角色。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "niche-memory",
+        "ic-design"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "旺宏 公司基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
+          "claim": "MOPS 公司基本資料揭露 旺宏 主要業務為積體電路、各種半導體零組件，及其系統應用產品之研究發展、設計、製造、測試、銷售及顧問諮詢。"
+        },
+        {
+          "sourceId": "product-knowledge-2337",
+          "publisher": "internal evidence-backed product knowledge",
+          "title": "旺宏 product knowledge",
+          "url": "public/data/product-knowledge/2337.json",
+          "claim": "產品知識庫列出 NOR Flash、NAND Flash、ROM 等非揮發性記憶體別名，並說明其用於程式碼儲存、嵌入式系統與工控/車用裝置。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-29",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-memory-cycle-exposure",
+      "category": "weakness",
+      "statement": "記憶體 IC 產品受報價、庫存與終端需求循環影響，旺宏題材分析需持續追蹤月營收、毛利率與估值變化。",
+      "rationale": "產品知識庫明確指出記憶體價格、庫存循環與終端需求會影響記憶體 IC 供應商的稼動率、ASP 與毛利；因此這是結構性弱點而非短線股價結論。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "niche-memory",
+        "memory-modules"
+      ],
+      "evidence": [
+        {
+          "sourceId": "product-knowledge-2337",
+          "publisher": "internal evidence-backed product knowledge",
+          "title": "旺宏 product knowledge",
+          "url": "public/data/product-knowledge/2337.json",
+          "claim": "產品知識庫指出記憶體價格、庫存循環與終端需求會直接影響記憶體 IC 供應商的稼動率、ASP 與毛利。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2337 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-29",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-embedded-auto-industrial-memory",
+      "category": "opportunity",
+      "statement": "NOR Flash 等非揮發性記憶體常用於嵌入式、工控與車用裝置，若終端需求修復，可透過月營收與毛利率改善反映。",
+      "rationale": "產品知識庫說明非揮發性記憶體常用於程式碼儲存、嵌入式系統與工控/車用裝置；canonical topic 的 activation signals 要求以月營收、訂單能見度或官方揭露追蹤需求變化。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "niche-memory"
+      ],
+      "evidence": [
+        {
+          "sourceId": "product-knowledge-2337",
+          "publisher": "internal evidence-backed product knowledge",
+          "title": "旺宏 product knowledge",
+          "url": "public/data/product-knowledge/2337.json",
+          "claim": "產品知識庫說明非揮發性記憶體常用於程式碼儲存、嵌入式系統與工控/車用裝置。"
+        },
+        {
+          "sourceId": "canonical-topic-niche-memory",
+          "publisher": "internal canonical topic taxonomy",
+          "title": "NOR Flash 與利基記憶體",
+          "url": "public/data/canonical-topics.json",
+          "claim": "canonical topic 將 NOR Flash 與利基記憶體列為 active 題材，activation signals 包含月營收或訂單能見度改善、官方揭露新產品/客戶/產能與產業報價/需求循環變化。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-29",
+      "status": "verified"
+    },
+    {
+      "id": "threat-commodity-memory-pricing-competition",
+      "category": "threat",
+      "statement": "利基記憶體仍可能面臨報價循環、同業競爭與替代產品壓力；題材升溫時不可只看概念，需回到營收與毛利驗證。",
+      "rationale": "產品知識庫將營運觀察重點放在記憶體景氣循環、庫存去化、終端應用需求與產品組合變化；這些因素若惡化，會削弱題材受惠。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "niche-memory",
+        "memory-modules"
+      ],
+      "evidence": [
+        {
+          "sourceId": "product-knowledge-2337",
+          "publisher": "internal evidence-backed product knowledge",
+          "title": "旺宏 product knowledge",
+          "url": "public/data/product-knowledge/2337.json",
+          "claim": "產品知識庫指出營運觀察重點是記憶體景氣循環、庫存去化、終端應用需求與產品組合變化。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2337 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-29",
+      "status": "verified"
+    }
+  ]
+}

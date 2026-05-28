@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "3379",
   "name": "彬台",
-  "generatedAt": "2026-05-28T17:01:43.090Z",
+  "generatedAt": "2026-05-28T17:21:47.498Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -53,105 +53,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 18,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "ar-vr-xr-optics",
-      "roleLabel": "低",
-      "roleSummary": "彬台在「消費終端｜AR/VR/XR 光學供應鏈」題材的「AR/VR/XR 光學供應鏈相關」中扮演光學模組與鏡片加工角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "食品飲料整廠自動化利基市場",
-        "設備+原料+系統整合一站式服務"
-      ],
-      "opportunities": [
-        "食品產線數位轉型/智慧製造需求",
-        "生技製藥無菌產線擴張"
-      ],
-      "risks": [
-        "營收規模小(資本額3.8億)",
-        "分類在AR/VR供應鏈明顯不符本公司業務"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 low +18",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "彬台 在 ar-vr-xr-optics 的 legacy 角色為「低」，資料基礎為「Legacy 待驗證」，產業 score 18/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "彬台 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：18/100（legacy 題材關聯 low +18；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：ar-vr-xr-optics · 低（待驗證）",
-      "主要產品：食品整廠自動化設備",
-      "主要產品：飲料整廠自動化產線",
-      "主要產品：生物科技生產系統整合",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：營收規模小(資本額3.8億)",
-      "W：分類在AR/VR供應鏈明顯不符本公司業務",
-      "T：大型自動化設備廠(西門子/ABB)競爭",
-      "T：食品業資本支出保守週期長"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：食品產線數位轉型/智慧製造需求",
-      "O：生技製藥無菌產線擴張",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "食品整廠自動化設備",
-      "飲料整廠自動化產線",
-      "生物科技生產系統整合",
-      "包材/香料機械設備"
-    ],
-    "customers": [
-      "統一企業",
-      "味全",
-      "維他露",
-      "國內食品飲料大廠"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "ar-vr-xr-optics",
-        "role": "光學模組與鏡片加工",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "彬台在「消費終端｜AR/VR/XR 光學供應鏈」題材的「AR/VR/XR 光學供應鏈相關」中扮演光學模組與鏡片加工角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "食品飲料整廠自動化利基市場",
-        "設備+原料+系統整合一站式服務"
-      ],
-      "weaknesses": [
-        "營收規模小(資本額3.8億)",
-        "分類在AR/VR供應鏈明顯不符本公司業務"
-      ],
-      "opportunities": [
-        "食品產線數位轉型/智慧製造需求",
-        "生技製藥無菌產線擴張"
-      ],
-      "threats": [
-        "大型自動化設備廠(西門子/ABB)競爭",
-        "食品業資本支出保守週期長"
-      ],
-      "sources": [
-        "industry_analysis:ar-vr-xr-optics"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -162,8 +103,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -192,7 +132,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 8,
+    "totalScore": 19,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -211,11 +151,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

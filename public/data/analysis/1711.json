@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "code": "1711",
   "name": "永光",
-  "generatedAt": "2026-05-28T17:01:42.680Z",
+  "generatedAt": "2026-05-28T17:21:47.113Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -52,202 +52,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "electrical_equipment",
-      "roleLabel": "中",
-      "roleSummary": "永光在「傳產工業｜電器電纜與重電」題材的「電機與自動化設備」中扮演電機機械供應商角色。",
-      "source": "legacy"
-    },
-    "productNarratives": [
-      {
-        "name": "電子化學品 / 光阻劑用化學品",
-        "description": "電子化學品用於半導體、面板或電子材料製程；光阻劑用化學品屬高潔淨度與配方要求較高的材料。",
-        "whyItMatters": "半導體與面板製程材料國產化、先進製程用料升級會提高電子級化學品的重要性，但需以客戶導入與營收占比驗證。",
-        "businessImpact": "觀察重點是產品驗證、客戶導入、電子級材料占比與半導體景氣。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：永光 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      },
-      {
-        "name": "特用化學品與光安定劑 / 紫外線吸收劑",
-        "description": "特用化學品是針對材料耐候、穩定、加工或功能性需求設計的化學品，光安定劑與紫外線吸收劑可提升材料抗光老化能力。",
-        "whyItMatters": "塑膠、塗料、電子材料與高分子材料升級會需要更高規格添加劑，影響特化產品 ASP 與毛利。",
-        "businessImpact": "受材料景氣、客戶認證週期、原料價格與產品差異化能力影響。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：永光 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      },
-      {
-        "name": "醫藥中間體 / 原料藥",
-        "description": "醫藥中間體與原料藥是藥品製造所需的化學原料或活性成分，屬醫藥化學品產品線。",
-        "whyItMatters": "醫藥化學品可分散傳統化工循環，但受法規、客戶認證與產品管線影響較大。",
-        "businessImpact": "需追蹤法規認證、客戶訂單與產品組合，不能只用題材推論營收。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：永光 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "low"
-      }
-    ],
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
+    "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "電子化學品打入半導體供應鏈",
-        "光安定劑國際品牌客戶穩定"
-      ],
-      "opportunities": [
-        "AI驅動半導體化學品需求增",
-        "光安定劑切入車用塑膠添加劑"
-      ],
-      "risks": [
-        "電器/重電題材關聯度極低(實為化學股)",
-        "4月營收MoM大減13.8%"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "永光 在 electrical_equipment 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "永光 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：electrical_equipment · 中（待驗證）",
-      "主要產品：電子級光阻劑用化學品",
-      "主要產品：光安定劑/紫外線吸收劑",
-      "主要產品：醫藥中間體/API",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：電器/重電題材關聯度極低(實為化學股)",
-      "W：4月營收MoM大減13.8%",
-      "T：半導體客戶自有化學品趨勢",
-      "T：特化品同業競爭"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：AI驅動半導體化學品需求增",
-      "O：光安定劑切入車用塑膠添加劑",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "電子級光阻劑用化學品",
-      "光安定劑/紫外線吸收劑",
-      "醫藥中間體/API",
-      "碳粉用色料化學品",
-      "色料化學品",
-      "特用化學品",
-      "電子化學品",
-      "醫藥化學品"
-    ],
-    "customers": [
-      "台積電",
-      "默克(Merck)",
-      "JSR",
-      "住友化學",
-      "富士軟片",
-      "台電",
-      "Tesla",
-      "CATL"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "electrical_equipment",
-        "role": "電機機械供應商",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "永光在「傳產工業｜電器電纜與重電」題材的「電機與自動化設備」中扮演電機機械供應商角色。"
-      },
-      {
-        "topicId": "ess-storage",
-        "role": "功率 IC",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "永光在「綠能環保｜儲能系統整合」題材的「變壓器與儲能系統整合」中扮演功率 IC角色。"
-      },
-      {
-        "topicId": "petrochem-plastics",
-        "role": "塑膠製品供應商",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "永光在「傳產工業｜石化及塑橡膠」題材的「特用化學品與溶劑」中扮演塑膠製品供應商角色。"
-      },
-      {
-        "topicId": "semi-process-materials",
-        "role": "特用化學品與光阻",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "永光在「半導體製造｜前段製程材料」題材的「特用化學品與光阻」中扮演特用化學品與光阻角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "電子化學品打入半導體供應鏈",
-        "光安定劑國際品牌客戶穩定",
-        "永光在變壓器與儲能系統整合領域具備競爭優勢",
-        "光安定劑全球市佔前五",
-        "電子化學品切入半導體供應鏈",
-        "永光在特用化學品與光阻領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "電器/重電題材關聯度極低(實為化學股)",
-        "4月營收MoM大減13.8%",
-        "受景氣循環影響",
-        "4月YoY-1.4%微衰退",
-        "4月MoM-13.8%月減幅大",
-        "醫藥化學品規模尚小"
-      ],
-      "opportunities": [
-        "AI驅動半導體化學品需求增",
-        "光安定劑切入車用塑膠添加劑",
-        "儲能系統整合需求持續成長",
-        "EUV光阻劑添加劑新商機",
-        "醫藥中間體CDMO代工成長",
-        "前段製程材料需求持續成長"
-      ],
-      "threats": [
-        "半導體客戶自有化學品趨勢",
-        "特化品同業競爭",
-        "國際競爭加劇",
-        "供應鏈重組風險",
-        "中國特用化學品低價競爭",
-        "半導體化學品認證週期長"
-      ],
-      "sources": [
-        "industry_analysis:electrical_equipment",
-        "industry_analysis:ess-storage",
-        "industry_analysis:petrochem-plastics",
-        "industry_analysis:semi-process-materials"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -258,8 +102,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -288,8 +131,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 5,
-    "recommendationState": "blocked",
+    "totalScore": 33,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -297,20 +140,13 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
-      "rationale": [
-        "分析品質不足，策略只能列為觀察"
-      ]
+      "classification": "觀察股",
+      "rationale": []
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
-      },
-      {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

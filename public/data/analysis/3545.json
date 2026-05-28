@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "3545",
   "name": "敦泰",
-  "generatedAt": "2026-05-28T17:01:43.131Z",
+  "generatedAt": "2026-05-28T17:21:47.536Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -54,145 +54,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "ar-vr-xr-optics",
-      "roleLabel": "中",
-      "roleSummary": "敦泰在「消費終端｜AR/VR/XR 光學供應鏈」題材的「晶圓代工」中扮演Apple 產品代工角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "敦泰在晶圓代工領域具備競爭優勢",
-        "敦泰在顯示驅動IC龍頭領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "AR/VR/XR 光學供應鏈需求持續成長",
-        "顯示驅動 IC需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "敦泰 在 ar-vr-xr-optics 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "敦泰 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：ar-vr-xr-optics · 中（待驗證）",
-      "主要產品：Apple 產品代工",
-      "主要產品：觸控 IC 與 TDDI",
-      "主要產品：面板驅動IC",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：AR/VR/XR 光學供應鏈需求持續成長",
-      "O：顯示驅動 IC需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "Apple 產品代工",
-      "觸控 IC 與 TDDI",
-      "面板驅動IC",
-      "面板廠跨足記憶體",
-      "ODM + PCB 需求拉動"
-    ],
-    "customers": [
-      "國內外品牌廠",
-      "系統整合商",
-      "ODM/OEM",
-      "Apple",
-      "NVIDIA",
-      "AMD",
-      "Qualcomm",
-      "Broadcom"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "ar-vr-xr-optics",
-        "role": "Apple 產品代工",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "敦泰在「消費終端｜AR/VR/XR 光學供應鏈」題材的「晶圓代工」中扮演Apple 產品代工角色。"
-      },
-      {
-        "topicId": "ddic",
-        "role": "觸控 IC 與 TDDI",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "敦泰在「IC 設計｜顯示驅動 IC」題材的「顯示驅動IC龍頭」中扮演觸控 IC 與 TDDI角色。"
-      },
-      {
-        "topicId": "display-panel",
-        "role": "面板驅動IC",
-        "relevance": "unknown",
-        "summary": "天鈺在「光學顯示｜面板產業」題材的「Micro LED與LED封裝」中扮演面板驅動IC角色。"
-      },
-      {
-        "topicId": "hbm",
-        "role": "面板廠跨足記憶體",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "敦泰在「記憶體｜HBM 高頻寬記憶體」題材的「記憶體IC與模組」中扮演面板廠跨足記憶體角色。"
-      },
-      {
-        "topicId": "pcb-manufacturing",
-        "role": "ODM + PCB 需求拉動",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "敦泰在「電子零組件｜PCB 硬板製造」題材的「伺服器與通訊PCB」中扮演ODM + PCB 需求拉動角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "敦泰在晶圓代工領域具備競爭優勢",
-        "敦泰在顯示驅動IC龍頭領域具備競爭優勢",
-        "天鈺在Micro LED與LED封裝領域具備競爭優勢",
-        "敦泰在記憶體IC與模組領域具備競爭優勢",
-        "敦泰在伺服器與通訊PCB領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "AR/VR/XR 光學供應鏈需求持續成長",
-        "顯示驅動 IC需求持續成長",
-        "面板產業需求持續成長",
-        "HBM 高頻寬記憶體需求持續成長",
-        "PCB 硬板製造需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:ar-vr-xr-optics",
-        "industry_analysis:ddic",
-        "industry_analysis:display-panel",
-        "industry_analysis:hbm",
-        "industry_analysis:pcb-manufacturing"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -203,8 +104,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -233,7 +133,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 16,
+    "totalScore": 23,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -253,7 +153,7 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.stop-distance",
@@ -262,7 +162,7 @@
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "6664",
   "name": "群翊",
-  "generatedAt": "2026-05-28T17:01:43.450Z",
+  "generatedAt": "2026-05-28T17:21:47.834Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -56,106 +56,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "glass-core-substrate",
-      "roleLabel": "unknown",
-      "roleSummary": "群翊在「基板材料｜玻璃基板」題材的「玻璃基板原料與CCL」中扮演面板設備與自動化製程設備供應商（非玻璃基板原料商）角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "國內面板設備自主研發能力領先",
-        "與台灣面板廠長期合作關係"
-      ],
-      "opportunities": [
-        "OLED新產線設備需求",
-        "Mini/Micro LED設備升級商機"
-      ],
-      "risks": [
-        "營收受面板投資週期影響大",
-        "客戶集中於少數面板大廠"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "群翊 在 glass-core-substrate 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "群翊 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：glass-core-substrate · unknown（待驗證）",
-      "主要產品：面板製程自動化設備",
-      "主要產品：LCD模組組裝設備",
-      "主要產品：精密貼合設備",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：營收受面板投資週期影響大",
-      "W：客戶集中於少數面板大廠",
-      "T：中國面板設備廠低價競爭",
-      "T：面板產業資本支出縮減"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：OLED新產線設備需求",
-      "O：Mini/Micro LED設備升級商機",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "面板製程自動化設備",
-      "LCD模組組裝設備",
-      "精密貼合設備",
-      "OLED製程檢測設備",
-      "設備維修與技術服務"
-    ],
-    "customers": [
-      "友達光電",
-      "群創光電",
-      "彩晶",
-      "京東方（BOE）",
-      "華星光電"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "glass-core-substrate",
-        "role": "面板設備與自動化製程設備供應商（非玻璃基板原料商）",
-        "relevance": "unknown",
-        "summary": "群翊在「基板材料｜玻璃基板」題材的「玻璃基板原料與CCL」中扮演面板設備與自動化製程設備供應商（非玻璃基板原料商）角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "國內面板設備自主研發能力領先",
-        "與台灣面板廠長期合作關係"
-      ],
-      "weaknesses": [
-        "營收受面板投資週期影響大",
-        "客戶集中於少數面板大廠"
-      ],
-      "opportunities": [
-        "OLED新產線設備需求",
-        "Mini/Micro LED設備升級商機"
-      ],
-      "threats": [
-        "中國面板設備廠低價競爭",
-        "面板產業資本支出縮減"
-      ],
-      "sources": [
-        "industry_analysis:glass-core-substrate"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -166,8 +106,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -196,7 +135,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 3,
+    "totalScore": 17,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -215,11 +154,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

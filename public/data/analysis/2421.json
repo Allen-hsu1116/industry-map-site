@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "2421",
   "name": "建準",
-  "generatedAt": "2026-05-28T17:01:42.819Z",
+  "generatedAt": "2026-05-28T17:21:47.244Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -55,125 +55,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "ic-distribution",
-      "roleLabel": "中",
-      "roleSummary": "建準在「電子零組件｜IC 通路」題材的「半導體通路與系統整合」中扮演散熱風扇通路角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "建準在半導體通路與系統整合領域具備競爭優勢",
-        "建準在散熱風扇與系統領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "IC 通路需求持續成長",
-        "電源供應器需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "建準 在 ic-distribution 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "建準 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：ic-distribution · 中（待驗證）",
-      "主要產品：其他電機及電子機械器材製造業",
-      "主要產品：得經營法令非禁止或限制之業務",
-      "主要產品：電器及視聽電子產品製造業",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：IC 通路需求持續成長",
-      "O：電源供應器需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "其他電機及電子機械器材製造業",
-      "得經營法令非禁止或限制之業務",
-      "電器及視聽電子產品製造業",
-      "國際貿易業 除許可業務外"
-    ],
-    "customers": [
-      "Apple",
-      "NVIDIA",
-      "AMD",
-      "Qualcomm",
-      "Intel",
-      "Google",
-      "AWS",
-      "Microsoft"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "ic-distribution",
-        "role": "散熱風扇通路",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "建準在「電子零組件｜IC 通路」題材的「半導體通路與系統整合」中扮演散熱風扇通路角色。"
-      },
-      {
-        "topicId": "psu",
-        "role": "散熱風扇大廠",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "建準在「電子零組件｜電源供應器」題材的「散熱風扇與系統」中扮演散熱風扇大廠角色。"
-      },
-      {
-        "topicId": "thermal-solution",
-        "role": "散熱風扇製造",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "建準在「散熱冷卻｜液冷與散熱模組」題材的「伺服器散熱品牌」中扮演散熱風扇製造角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "建準在半導體通路與系統整合領域具備競爭優勢",
-        "建準在散熱風扇與系統領域具備競爭優勢",
-        "建準在伺服器散熱品牌領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "IC 通路需求持續成長",
-        "電源供應器需求持續成長",
-        "液冷與散熱模組需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:ic-distribution",
-        "industry_analysis:psu",
-        "industry_analysis:thermal-solution"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -184,8 +105,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -214,7 +134,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 29,
+    "totalScore": 37,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 30,
@@ -238,7 +158,7 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.stop-distance",
@@ -247,7 +167,7 @@
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

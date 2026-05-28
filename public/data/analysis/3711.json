@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "code": "3711",
   "name": "日月光投控",
-  "generatedAt": "2026-05-28T17:01:43.177Z",
+  "generatedAt": "2026-05-28T17:21:47.580Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_topic_role",
       "missing_swot"
     ]
@@ -54,174 +54,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 44,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "advanced-packaging-automation",
-      "roleLabel": "high",
-      "roleSummary": "日月光投控在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演先進封裝(OSAT龍頭)角色。",
-      "source": "legacy"
-    },
-    "productNarratives": [
-      {
-        "name": "半導體封裝測試集團服務",
-        "description": "半導體封裝測試是把晶片封裝成可用元件並進行電性、可靠度與品質測試的後段服務；日月光投控代表集團層級的封測曝險。",
-        "whyItMatters": "AI、車用、5G 與高效能運算晶片都需要封測產能；封測龍頭的稼動率與先進封裝能力會影響整體半導體循環。",
-        "businessImpact": "控股公司層級需看集團分部與子公司揭露，不能只用母公司一般投資業登記判斷。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：日月光投控 公司基本資料與公開揭露",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3711",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
-      }
-    ],
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
+    "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "全球封測市佔超過30%",
-        "4月營收YoY+19.2%AI封裝需求強"
-      ],
-      "opportunities": [
-        "AI/HPC晶片帶動先進封裝需求暴增",
-        "車用5G封測新動能"
-      ],
-      "risks": [
-        "毛利率20.1%偏低",
-        "資本支出重折舊壓力大"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 high +44",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "日月光投控 在 advanced-packaging-automation 的 legacy 角色為「high」，資料基礎為「Legacy 待驗證」，產業 score 44/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "日月光投控 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：44/100（legacy 題材關聯 high +44；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：advanced-packaging-automation · high（待驗證）",
-      "主要產品：封裝測試服務(打線/覆晶/扇出型)",
-      "主要產品：SiP系統級封裝",
-      "主要產品：異質整合封裝(2.5D/3D)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：毛利率20.1%偏低",
-      "W：資本支出重折舊壓力大",
-      "T：TSMC自建CoWoS形成競合",
-      "T：中國封測廠低價競爭"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：AI/HPC晶片帶動先進封裝需求暴增",
-      "O：車用5G封測新動能",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "封裝測試服務(打線/覆晶/扇出型)",
-      "SiP系統級封裝",
-      "異質整合封裝(2.5D/3D)",
-      "車用/5G晶片封測"
-    ],
-    "customers": [
-      "Apple",
-      "Qualcomm",
-      "Broadcom",
-      "AMD",
-      "NVIDIA"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "advanced-packaging-automation",
-        "role": "先進封裝(OSAT龍頭)",
-        "relevance": "high",
-        "summary": "日月光投控在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演先進封裝(OSAT龍頭)角色。"
-      },
-      {
-        "topicId": "ai-server",
-        "role": "AI伺服器封測",
-        "relevance": "unknown",
-        "summary": "日月光投控在「AI伺服器與液冷技術」題材的「AI伺服器散熱與零組件」中扮演AI伺服器封測角色。"
-      },
-      {
-        "topicId": "ai-server-odm",
-        "role": "AI伺服器封測",
-        "relevance": "unknown",
-        "summary": "日月光投控在「AI 伺服器｜整機組裝」題材的「伺服器主板與周邊」中扮演AI伺服器封測角色。"
-      },
-      {
-        "topicId": "bbu",
-        "role": "BBU封裝",
-        "relevance": "unknown",
-        "summary": "日月光投控在「AI 伺服器｜BBU 電池備援系統」題材的「BBU電源供應器與系統」中扮演BBU封裝角色。"
-      },
-      {
-        "topicId": "cowos-advanced-packaging",
-        "role": "全球最大封測代工廠",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "日月光投控在「先進封測｜AI 先進封裝 CoWoS」題材的「先進封裝與封測服務」中扮演全球最大封測代工廠角色。"
-      },
-      {
-        "topicId": "cxl-technology",
-        "role": "CXL封裝",
-        "relevance": "unknown",
-        "summary": "日月光投控在「記憶體｜CXL 記憶體池化」題材的「CXL模組與記憶體封裝」中扮演CXL封裝角色。"
-      },
-      {
-        "topicId": "hbm",
-        "role": "全球封測龍頭，HBM 封裝關鍵",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "日月光投控在「記憶體｜HBM 高頻寬記憶體」題材的「HBM封裝與測試」中扮演全球封測龍頭，HBM 封裝關鍵角色。"
-      },
-      {
-        "topicId": "high-end-testing",
-        "role": "全球最大封測代工廠",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "日月光投控在「先進封測｜封測代工服務 OSAT」題材的「封測代工龍頭」中扮演全球最大封測代工廠角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "全球封測市佔超過30%",
-        "4月營收YoY+19.2%AI封裝需求強"
-      ],
-      "weaknesses": [
-        "毛利率20.1%偏低",
-        "資本支出重折舊壓力大"
-      ],
-      "opportunities": [
-        "AI/HPC晶片帶動先進封裝需求暴增",
-        "車用5G封測新動能"
-      ],
-      "threats": [
-        "TSMC自建CoWoS形成競合",
-        "中國封測廠低價競爭"
-      ],
-      "sources": [
-        "industry_analysis:advanced-packaging-automation",
-        "industry_analysis:ai-server",
-        "industry_analysis:ai-server-odm",
-        "industry_analysis:bbu",
-        "industry_analysis:cowos-advanced-packaging",
-        "industry_analysis:cxl-technology",
-        "industry_analysis:hbm",
-        "industry_analysis:high-end-testing"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -232,8 +104,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -262,7 +133,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 8,
+    "totalScore": 33,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 24,
@@ -273,19 +144,13 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
-      },
       {
         "id": "risk.stop-distance",
         "severity": "hard",
@@ -293,7 +158,7 @@
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

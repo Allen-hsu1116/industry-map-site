@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2454",
   "name": "聯發科",
-  "generatedAt": "2026-05-28T17:01:42.835Z",
+  "generatedAt": "2026-05-28T17:21:47.260Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -63,38 +63,19 @@
     },
     "productNarratives": [
       {
-        "name": "Dimensity 天璣手機 SoC",
-        "description": "Dimensity 天璣是聯發科的智慧型手機 SoC 平台，把 CPU/GPU、AI 加速、影像處理、5G 通訊與多媒體功能整合在單一晶片。",
-        "whyItMatters": "手機 SoC 是智慧型手機的核心晶片，決定效能、功耗、通訊與影像體驗；旗艦/中高階滲透會影響聯發科 ASP 與毛利結構。",
-        "topicFit": "端側 AI 運算可透過手機 SoC 功能升級體現。",
-        "businessImpact": "手機 SoC 基本面受 Android 手機需求、客戶新品週期、旗艦占比與通路庫存影響。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：聯發科 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "Edge AI SoC",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
-        "name": "Filogic Wi-Fi 7 與連接晶片",
-        "description": "Filogic 是聯發科的 Wi-Fi/連接晶片平台，Wi-Fi 7 晶片用於路由器、寬頻設備、終端裝置與部分網通設備，提供高速低延遲無線連線。",
-        "whyItMatters": "AI PC、家庭寬頻、企業網通與終端裝置升級都需要更高速連接；連接晶片讓聯發科產品線不只依賴手機 SoC。",
-        "topicFit": "終端與 AIoT 裝置連接能力。",
-        "businessImpact": "連接晶片能分散手機週期風險，但成長取決於 Wi-Fi 7 滲透、客戶設計導入與價格競爭。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：聯發科 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "AIoT 晶片平台",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "終端 AI 加速晶片",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -126,8 +107,8 @@
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 Edge AI / AIoT 邊緣智慧（technology/active） +17）",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
       "相關題材：IC 設計與矽智財 · 直接賦能角色",
-      "主要產品：Dimensity天璣手機SoC",
-      "主要產品：Kompanio Chromebook處理器"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
       "V2 W：手機與消費終端 SoC 仍受終端需求、庫存與競爭價格週期影響，可能稀釋 Edge AI 題材貢獻。",
@@ -143,87 +124,15 @@
     ]
   },
   "knowledge": {
-    "products": [
-      "Dimensity天璣手機SoC",
-      "Kompanio Chromebook處理器",
-      "Filogic Wi-Fi 7晶片",
-      "Dimensity Auto車用SoC"
-    ],
-    "customers": [
-      "Samsung",
-      "Xiaomi",
-      "OPPO",
-      "Vivo",
-      "Dell/Lenovo"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "cxl-technology",
-        "role": "CXL控制器IC",
-        "relevance": "unknown",
-        "summary": "聯發科在「記憶體｜CXL 記憶體池化」題材的「CXL模組與記憶體封裝」中扮演CXL控制器IC角色。"
-      },
-      {
-        "topicId": "edge-ai",
-        "role": "全球 Edge AI SoC 領導廠",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "聯發科在「智慧機器人｜Edge AI / AIoT 邊緣智慧」題材的「Edge AI SoC與晶片」中扮演全球 Edge AI SoC 領導廠角色。"
-      },
-      {
-        "topicId": "hpc-networking-ic",
-        "role": "全球前五大 IC 設計，HPC/ADAS SoC 平台",
-        "relevance": "unknown",
-        "marketPosition": "95",
-        "summary": "聯發科在「IC 設計｜HPC 與網通 IC」題材的「高效能運算 SoC」中扮演全球前五大 IC 設計，HPC/ADAS SoC 平台角色。"
-      },
-      {
-        "topicId": "leo-satellite",
-        "role": "衛星通訊晶片平台",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "聯發科在「網通衛星｜低軌衛星通訊系統」題材的「衛星IC設計」中扮演衛星通訊晶片平台角色。"
-      },
-      {
-        "topicId": "mobile",
-        "role": "手機晶片全球第二大廠",
-        "relevance": "high",
-        "marketPosition": "極高",
-        "summary": "聯發科在「消費終端｜智慧型手機供應鏈」題材的「手機晶片與品牌」中扮演手機晶片全球第二大廠角色。"
-      },
-      {
-        "topicId": "networking-equipment",
-        "role": "🟢 網通晶片巨頭",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "聯發科在「網通衛星｜高速交換器與無線網路」題材的「終端品牌與IC設計」中扮演🟢 網通晶片巨頭角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "手機SoC市佔全球第二",
-        "毛利率46.3%優於同業"
-      ],
-      "weaknesses": [
-        "4月營收YoY-4.1%庫存修正",
-        "PE 51倍估值偏高"
-      ],
-      "opportunities": [
-        "AI手機/PC換機潮帶動SoC升級",
-        "車用工業物聯網布局收成"
-      ],
-      "threats": [
-        "Qualcomm高階市佔優勢",
-        "中國手機市場復甦進度不確定"
-      ],
-      "sources": [
-        "industry_analysis:cxl-technology",
-        "industry_analysis:edge-ai",
-        "industry_analysis:hpc-networking-ic",
-        "industry_analysis:leo-satellite",
-        "industry_analysis:mobile",
-        "industry_analysis:networking-equipment"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -234,8 +143,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

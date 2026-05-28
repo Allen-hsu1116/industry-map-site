@@ -2,24 +2,17 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-05-28T17:01:42.750Z",
+  "generatedAt": "2026-05-28T17:21:47.179Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "verified_topic_role",
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "legacy_only",
-      "missing_topic_role",
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -52,23 +45,27 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 44,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "medium",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "connector-highspeed",
-      "roleLabel": "高",
-      "roleSummary": "旺宏在「電子零組件｜AI 互連元件」題材的「高速連接器」中扮演高速連接器供應商角色。",
-      "source": "legacy"
+      "topicName": "NOR Flash 與利基記憶體",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "旺宏以 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品切入利基記憶體題材；Daily Analysis 應把它視為記憶體 IC 產品供應商，而不是泛半導體概念股。",
+      "supplyChainStage": "memory_ic",
+      "roleType": "nor_flash_and_non_volatile_memory_supplier",
+      "directness": "core",
+      "source": "canonical"
     },
     "productNarratives": [
       {
         "name": "非揮發性記憶體與積體電路",
         "description": "非揮發性記憶體是在斷電後仍能保存資料的積體電路，常用於程式碼儲存、嵌入式系統與工控/車用裝置。",
         "whyItMatters": "記憶體價格、庫存循環與終端需求會直接影響記憶體 IC 供應商的稼動率、ASP 與毛利。",
+        "topicFit": "NOR Flash、NAND Flash、ROM 等非揮發性記憶體產品線，直接對應利基記憶體題材",
         "businessImpact": "營運觀察重點是記憶體景氣循環、庫存去化、終端應用需求與產品組合變化。",
         "sourceLabels": [
           "公開資訊觀測站 MOPS：旺宏 公司基本資料",
@@ -80,66 +77,51 @@
         ],
         "lastVerified": "2026-05-28",
         "confidence": "medium"
-      },
-      {
-        "name": "半導體系統應用與銷售顧問服務",
-        "description": "半導體系統應用與銷售顧問服務是圍繞自家 IC 產品的客戶導入、應用支援與商務銷售活動。",
-        "whyItMatters": "這類服務不是單獨硬體產品，但會影響 IC 產品設計導入、客戶黏著度與出貨轉換。",
-        "businessImpact": "主要反映在設計導入速度、客戶方案採用與長週期產品出貨穩定度。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：旺宏 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "low"
       }
     ],
     "swotSnapshot": {
       "strengths": [
-        "NOR Flash 全球市佔前三",
-        "任天堂 Switch 獨家供應商"
+        "旺宏具備 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品線，是利基記憶體題材中的直接產品供應商。"
       ],
       "opportunities": [
-        "AI 驅動 NOR Flash 需求增加",
-        "車用電子 NOR Flash 需求成長"
+        "NOR Flash 等非揮發性記憶體常用於嵌入式、工控與車用裝置，若終端需求修復，可透過月營收與毛利率改善反映。"
       ],
       "risks": [
-        "近年連續虧損",
-        "產品線較為單一"
+        "利基記憶體仍可能面臨報價循環、同業競爭與替代產品壓力；題材升溫時不可只看概念，需回到營收與毛利驗證。",
+        "記憶體 IC 產品受報價、庫存與終端需求循環影響，旺宏題材分析需持續追蹤月營收、毛利率與估值變化。"
       ]
     },
     "scoringFactors": [
-      "legacy 題材關聯 high +44",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "直接度 核心產品/平台 +42",
+      "角色信心 medium +10",
+      "題材 NOR Flash 與利基記憶體（product/active） +16",
+      "角色證據 3 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "旺宏 在 connector-highspeed 的 legacy 角色為「高」，資料基礎為「Legacy 待驗證」，產業 score 44/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "旺宏 在「NOR Flash 與利基記憶體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：44/100（legacy 題材關聯 high +44；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：connector-highspeed · 高（待驗證）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：NOR Flash 與利基記憶體 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 NOR Flash 與利基記憶體（product/active） +16）",
+      "相關題材：IC 設計與矽智財 · 供應商角色",
       "主要產品：NOR Flash",
       "主要產品：MLC NAND Flash",
-      "主要產品：ROM",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "主要產品：ROM"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：近年連續虧損",
-      "W：產品線較為單一",
-      "T：中國 NOR Flash 廠商低價競爭",
-      "T：記憶體景氣循環波動大"
+      "V2 W：記憶體 IC 產品受報價、庫存與終端需求循環影響，旺宏題材分析需持續追蹤月營收、毛利率與估值變化。",
+      "V2 T：利基記憶體仍可能面臨報價循環、同業競爭與替代產品壓力；題材升溫時不可只看概念，需回到營收與毛利驗證。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：AI 驅動 NOR Flash 需求增加",
-      "O：車用電子 NOR Flash 需求成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：NOR Flash 等非揮發性記憶體常用於嵌入式、工控與車用裝置，若終端需求修復，可透過月營收與毛利率改善反映。",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 NOR Flash 與利基記憶體：月營收或訂單能見度改善",
+      "追蹤 NOR Flash 與利基記憶體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
+      "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -147,76 +129,23 @@
       "NOR Flash",
       "MLC NAND Flash",
       "ROM",
-      "智慧型記憶卡",
-      "及其系統應用產品之 研究發展",
-      "各種半導體零組件",
-      "銷售及顧問諮詢",
-      "積體電路"
+      "智慧型記憶卡"
     ],
     "customers": [
       "任天堂",
       "Sony",
       "汽車電子客戶",
       "物聯網客戶",
-      "NVIDIA",
-      "AMD",
-      "Google",
-      "AWS"
+      "汽車電子廠",
+      "工業控制"
     ],
     "topicRoles": [
       {
-        "topicId": "connector-highspeed",
-        "role": "高速連接器供應商",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "旺宏在「電子零組件｜AI 互連元件」題材的「高速連接器」中扮演高速連接器供應商角色。"
-      },
-      {
-        "topicId": "display-panel",
-        "role": "石英元件與頻率控制",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "旺宏在「光學顯示｜面板產業」題材的「面板驅動IC與周邊零組件」中扮演石英元件與頻率控制角色。"
-      },
-      {
-        "topicId": "hbm",
-        "role": "NOR Flash 與 ROM 領導廠",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "旺宏在「記憶體｜HBM 高頻寬記憶體」題材的「記憶體IC與模組」中扮演NOR Flash 與 ROM 領導廠角色。"
-      },
-      {
-        "topicId": "high-speed-optics",
-        "role": "光通訊 IC + NOR Flash",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "旺宏在「網通衛星｜高速光收發模組」題材的「光通訊IC與測試」中扮演光通訊 IC + NOR Flash角色。"
-      },
-      {
-        "topicId": "hpc-networking-ic",
-        "role": "NOR Flash/網通儲存 IC",
+        "topicId": "semiconductor-memory",
+        "role": "全球 NOR Flash 前三大",
         "relevance": "unknown",
-        "marketPosition": "65",
-        "summary": "旺宏在「IC 設計｜HPC 與網通 IC」題材的「儲存控制器 IC」中扮演NOR Flash/網通儲存 IC角色。"
-      },
-      {
-        "topicId": "ic-distribution",
-        "role": "IC 設計 + 通路布局",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "旺宏在「電子零組件｜IC 通路」題材的「IC設計與通路」中扮演IC 設計 + 通路布局角色。"
-      },
-      {
-        "topicId": "memory-modules",
-        "role": "NOR Flash+ROM",
-        "relevance": "unknown",
-        "summary": "旺宏在「記憶體｜記憶體模組」題材的「工控與利基型記憶體」中扮演NOR Flash+ROM角色。"
-      },
-      {
-        "topicId": "networking-equipment",
-        "role": "網通Flash IC",
-        "relevance": "unknown",
-        "summary": "旺宏在「網通衛星｜高速交換器與無線網路」題材的「終端品牌與IC設計」中扮演網通Flash IC角色。"
+        "marketPosition": "全球 NOR Flash 前三大",
+        "summary": "旺宏電子是全球 NOR Flash 記憶體領導廠商之一，在車用與遊戲機應用具有高市佔率。2026 年 Q1 受惠於任天堂 Switch 2 上市及車用電子需求增長，營收爆發性成長至 104.7 億，EPS 回升至 0.9 元。"
       }
     ],
     "swot": {
@@ -224,42 +153,28 @@
         "NOR Flash 全球市佔前三",
         "任天堂 Switch 獨家供應商",
         "車用 NOR Flash 佈局完整",
-        "ROM 技術領先",
-        "旺宏在高速連接器領域具備競爭優勢",
-        "旺宏在面板驅動IC與周邊零組件領域具備競爭優勢"
+        "ROM 技術領先"
       ],
       "weaknesses": [
         "近年連續虧損",
         "產品線較為單一",
         "NAND Flash 市佔低",
-        "營運槓桿高",
-        "受景氣循環影響"
+        "營運槓桿高"
       ],
       "opportunities": [
         "AI 驅動 NOR Flash 需求增加",
         "車用電子 NOR Flash 需求成長",
         "任天堂新主機 Switch 2 商機",
-        "高容量 NOR Flash 應用擴大",
-        "AI 互連元件需求持續成長",
-        "面板產業需求持續成長"
+        "高容量 NOR Flash 應用擴大"
       ],
       "threats": [
         "中國 NOR Flash 廠商低價競爭",
         "記憶體景氣循環波動大",
         "NAND Flash 技術替代風險",
-        "匯率波動影響外銷營收",
-        "國際競爭加劇",
-        "供應鏈重組風險"
+        "匯率波動影響外銷營收"
       ],
       "sources": [
-        "financials:2337",
-        "industry_analysis:connector-highspeed",
-        "industry_analysis:display-panel",
-        "industry_analysis:hbm",
-        "industry_analysis:high-speed-optics",
-        "industry_analysis:hpc-networking-ic",
-        "industry_analysis:ic-distribution",
-        "industry_analysis:memory-modules"
+        "financials:2337"
       ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
@@ -284,9 +199,93 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "niche-memory",
+        "topicName": "NOR Flash 與利基記憶體",
+        "canonicalTopicId": "niche-memory",
+        "canonicalTopicName": "NOR Flash 與利基記憶體",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "旺宏以 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品切入利基記憶體題材；Daily Analysis 應把它視為記憶體 IC 產品供應商，而不是泛半導體概念股。"
+      },
+      {
+        "topicId": "ic-design",
+        "topicName": "IC 設計與半導體產品",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "旺宏的公開營業項目涵蓋積體電路與半導體零組件之研發、設計、製造、測試與銷售，因此在 IC 設計/半導體產品鏈屬於記憶體 IC 產品供應角色。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-embedded-auto-industrial-memory",
+        "category": "opportunity",
+        "statement": "NOR Flash 等非揮發性記憶體常用於嵌入式、工控與車用裝置，若終端需求修復，可透過月營收與毛利率改善反映。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "niche-memory"
+        ]
+      },
+      {
+        "id": "strength-nor-flash-product-focus",
+        "category": "strength",
+        "statement": "旺宏具備 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品線，是利基記憶體題材中的直接產品供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "niche-memory",
+          "ic-design"
+        ]
+      },
+      {
+        "id": "threat-commodity-memory-pricing-competition",
+        "category": "threat",
+        "statement": "利基記憶體仍可能面臨報價循環、同業競爭與替代產品壓力；題材升溫時不可只看概念，需回到營收與毛利驗證。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "niche-memory",
+          "memory-modules"
+        ]
+      },
+      {
+        "id": "weakness-memory-cycle-exposure",
+        "category": "weakness",
+        "statement": "記憶體 IC 產品受報價、庫存與終端需求循環影響，旺宏題材分析需持續追蹤月營收、毛利率與估值變化。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "niche-memory",
+          "memory-modules"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "niche-memory",
+        "name": "NOR Flash 與利基記憶體",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -301,8 +300,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 12,
-    "recommendationState": "blocked",
+    "totalScore": 64,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
       "label": "基本面偏強",
@@ -313,24 +312,13 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "題材股",
       "rationale": [
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略",
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "hard",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [

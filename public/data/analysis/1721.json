@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "1721",
   "name": "三晃",
-  "generatedAt": "2026-05-28T17:01:42.691Z",
+  "generatedAt": "2026-05-28T17:21:47.122Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -52,142 +52,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "battery-materials",
-      "roleLabel": "unknown",
-      "roleSummary": "三晃在「綠能環保｜電池關鍵材料」題材的「固態電池與新材料」中扮演石墨烯材料角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "特化品合成技術基礎紮實",
-        "4月單月營收YoY +7.65%回溫"
-      ],
-      "opportunities": [
-        "鋰電池隔離膜塗膠需求增加",
-        "UV固化材料替代溶劑法趨勢"
-      ],
-      "risks": [
-        "累計營收年減15.6%，整體景氣待復甦",
-        "電池材料業務占比極低"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "三晃 在 battery-materials 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "三晃 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：battery-materials · unknown（待驗證）",
-      "主要產品：電池隔離膜用高分子樹脂",
-      "主要產品：電池外殼塗裝UV油墨",
-      "主要產品：特用化學品 (電池添加劑)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：累計營收年減15.6%，整體景氣待復甦",
-      "W：電池材料業務占比極低",
-      "T：電池材料市場競爭激烈",
-      "T：原物料價格波動影響毛利"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：鋰電池隔離膜塗膠需求增加",
-      "O：UV固化材料替代溶劑法趨勢",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "電池隔離膜用高分子樹脂",
-      "電池外殼塗裝UV油墨",
-      "特用化學品 (電池添加劑)",
-      "農藥原體 (非電池業務)",
-      "儲能用合成樹脂 (電池模組灌封膠)",
-      "UV光固化膠材 (絕緣密封)",
-      "環保塗料 (儲能櫃防鏽)",
-      "特用化學品"
-    ],
-    "customers": [
-      "長興材料",
-      "康普",
-      "美琪瑪",
-      "國內電池模組廠",
-      "台達電",
-      "華城電機",
-      "中興電工",
-      "台塑"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "battery-materials",
-        "role": "石墨烯材料",
-        "relevance": "unknown",
-        "summary": "三晃在「綠能環保｜電池關鍵材料」題材的「固態電池與新材料」中扮演石墨烯材料角色。"
-      },
-      {
-        "topicId": "ess-storage",
-        "role": "石墨烯材料（提升電池導電性）",
-        "relevance": "unknown",
-        "summary": "三晃在「綠能環保｜儲能系統整合」題材的「儲能電池與BMS零組件」中扮演石墨烯材料（提升電池導電性）角色。"
-      },
-      {
-        "topicId": "petrochem-plastics",
-        "role": "特用化學品供應商",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "三晃在「傳產工業｜石化及塑橡膠」題材的「塑橡膠與特化品」中扮演特用化學品供應商角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "特化品合成技術基礎紮實",
-        "4月單月營收YoY +7.65%回溫",
-        "UV光固化化學品技術領先",
-        "UV油墨為國內主要供應商",
-        "4月單月營收YoY +7.65%"
-      ],
-      "weaknesses": [
-        "累計營收年減15.6%，整體景氣待復甦",
-        "電池材料業務占比極低",
-        "累計營收年減15.6%，農藥業務低迷拖累",
-        "儲能特化品占比尚低",
-        "累計營收年減15.6%，農藥業務景氣低迷",
-        "產品線分散，聚焦度不足"
-      ],
-      "opportunities": [
-        "鋰電池隔離膜塗膠需求增加",
-        "UV固化材料替代溶劑法趨勢",
-        "儲能系統灌封/絕緣材料需求隨裝機量增長",
-        "UV固化膠材替代溶劑型膠水趨勢",
-        "環保法規推動UV油墨替代溶劑型油墨",
-        "新興市場包裝印刷需求增"
-      ],
-      "threats": [
-        "電池材料市場競爭激烈",
-        "原物料價格波動影響毛利",
-        "國際特化大廠 (3M/Henkel) 競爭",
-        "原物料 (石油腦) 成本波動",
-        "中國農藥廠低價競爭",
-        "原物料價格波動"
-      ],
-      "sources": [
-        "industry_analysis:battery-materials",
-        "industry_analysis:ess-storage",
-        "industry_analysis:petrochem-plastics"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -198,8 +102,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -228,7 +131,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 5,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -250,11 +153,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

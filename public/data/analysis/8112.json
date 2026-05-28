@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "8112",
   "name": "至上",
-  "generatedAt": "2026-05-28T17:01:43.507Z",
+  "generatedAt": "2026-05-28T17:21:47.889Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -53,146 +53,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "battery-materials",
-      "roleLabel": "中",
-      "roleSummary": "至上在「綠能環保｜電池關鍵材料」題材的「固態電池與新材料」中扮演固態電池材料研發先驅角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "至上在固態電池與新材料領域具備競爭優勢",
-        "至上在貴金屬回收龍頭領域具備競爭優勢"
-      ],
-      "opportunities": [
-        "電池關鍵材料需求持續成長",
-        "電子廢料與製程回收需求持續成長"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "國際競爭加劇"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "至上 在 battery-materials 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "至上 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：battery-materials · 中（待驗證）",
-      "主要產品：固態電池材料研發先驅",
-      "主要產品：貴金屬回收與電鍍",
-      "主要產品：鋁電解電容",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：電池關鍵材料需求持續成長",
-      "O：電子廢料與製程回收需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "固態電池材料研發先驅",
-      "貴金屬回收與電鍍",
-      "鋁電解電容",
-      "電子零組件通路與精密件",
-      "散熱材料與導熱膠"
-    ],
-    "customers": [
-      "Toyota",
-      "BYD",
-      "CATL",
-      "Samsung SDI",
-      "LG",
-      "台電",
-      "政府機關",
-      "企業用電大戶"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "battery-materials",
-        "role": "固態電池材料研發先驅",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "至上在「綠能環保｜電池關鍵材料」題材的「固態電池與新材料」中扮演固態電池材料研發先驅角色。"
-      },
-      {
-        "topicId": "circular-economy-ewaste",
-        "role": "貴金屬回收與電鍍",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "至上在「綠能環保｜電子廢料與製程回收」題材的「貴金屬回收龍頭」中扮演貴金屬回收與電鍍角色。"
-      },
-      {
-        "topicId": "mlcc-capacitor",
-        "role": "鋁電解電容",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "至上在「被動元件｜電容器」題材的「固態電容與鋁電解電容」中扮演鋁電解電容角色。"
-      },
-      {
-        "topicId": "precision-metal-casing",
-        "role": "電子零組件通路與精密件",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "至上在「電子零組件｜精密機構件」題材的「精密沖壓與IC載板」中扮演電子零組件通路與精密件角色。"
-      },
-      {
-        "topicId": "thermal_components_air",
-        "role": "散熱材料與導熱膠",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "至上在「散熱冷卻｜氣冷與核心組件」題材的「散熱風扇與導熱材料」中扮演散熱材料與導熱膠角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "至上在固態電池與新材料領域具備競爭優勢",
-        "至上在貴金屬回收龍頭領域具備競爭優勢",
-        "至上在固態電容與鋁電解電容領域具備競爭優勢",
-        "至上在精密沖壓與IC載板領域具備競爭優勢",
-        "至上在散熱風扇與導熱材料領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響"
-      ],
-      "opportunities": [
-        "電池關鍵材料需求持續成長",
-        "電子廢料與製程回收需求持續成長",
-        "電容器需求持續成長",
-        "精密機構件需求持續成長",
-        "氣冷與核心組件需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險"
-      ],
-      "sources": [
-        "industry_analysis:battery-materials",
-        "industry_analysis:circular-economy-ewaste",
-        "industry_analysis:mlcc-capacitor",
-        "industry_analysis:precision-metal-casing",
-        "industry_analysis:thermal_components_air"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -203,8 +103,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -251,11 +150,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

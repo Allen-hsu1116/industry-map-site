@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "3380",
   "name": "明泰",
-  "generatedAt": "2026-05-28T17:01:43.092Z",
+  "generatedAt": "2026-05-28T17:21:47.500Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -56,146 +56,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "connector",
-      "roleLabel": "unknown",
-      "roleSummary": "明泰在「電子零組件｜連接器（工業/車用）」題材的「車用與網通連接器」中扮演網通連接器角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "明泰在車用與網通連接器領域具備競爭優勢",
-        "衛星地面站通訊設備研發能力"
-      ],
-      "opportunities": [
-        "連接器（工業/車用）需求持續成長",
-        "低軌衛星地面站需求增加"
-      ],
-      "risks": [
-        "受景氣循環影響",
-        "衛星業務佔比仍小"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "明泰 在 connector 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "明泰 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：connector · unknown（待驗證）",
-      "主要產品：電信管制射頻器材製造業 無線通信機械器材製造業",
-      "主要產品：網通連接器",
-      "主要產品：衛星地面站設備(ODU)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：受景氣循環影響",
-      "W：衛星業務佔比仍小",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：連接器（工業/車用）需求持續成長",
-      "O：低軌衛星地面站需求增加",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "電信管制射頻器材製造業 無線通信機械器材製造業",
-      "網通連接器",
-      "衛星地面站設備(ODU)",
-      "5G/6G基地台設備",
-      "企業級交換器與路由器",
-      "光纖網路設備(FTTH/FTTB)",
-      "Wi-Fi 6E/7無線AP",
-      "🟡 企業級交換器"
-    ],
-    "customers": [
-      "Tesla",
-      "BYD",
-      "Toyota",
-      "BMW",
-      "Mercedes",
-      "OneWeb",
-      "中華電信",
-      "遠傳電信"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "connector",
-        "role": "網通連接器",
-        "relevance": "unknown",
-        "summary": "明泰在「電子零組件｜連接器（工業/車用）」題材的「車用與網通連接器」中扮演網通連接器角色。"
-      },
-      {
-        "topicId": "leo-satellite",
-        "role": "衛星網通設備",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "明泰在「網通衛星｜低軌衛星通訊系統」題材的「衛星終端與網通設備」中扮演衛星網通設備角色。"
-      },
-      {
-        "topicId": "networking-equipment",
-        "role": "🟡 企業級交換器",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "明泰在「網通衛星｜高速交換器與無線網路」題材的「終端品牌與IC設計」中扮演🟡 企業級交換器角色。"
-      },
-      {
-        "topicId": "optical-lens-camera",
-        "role": "網通設備與光學模組",
-        "relevance": "low",
-        "marketPosition": "低",
-        "summary": "明泰在「光學顯示｜光學鏡頭與相機模組」題材的「車用與安防鏡頭」中扮演網通設備與光學模組角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "明泰在車用與網通連接器領域具備競爭優勢",
-        "衛星地面站通訊設備研發能力",
-        "5G企業专網及小型基地台布局完整",
-        "國內電信商長期合作夥伴",
-        "明泰在終端品牌與IC設計領域具備競爭優勢",
-        "明泰在車用與安防鏡頭領域具備競爭優勢"
-      ],
-      "weaknesses": [
-        "受景氣循環影響",
-        "衛星業務佔比仍小",
-        "面臨國際大廠競爭壓力"
-      ],
-      "opportunities": [
-        "連接器（工業/車用）需求持續成長",
-        "低軌衛星地面站需求增加",
-        "5G专網及企業網路升級商機",
-        "高速交換器與無線網路需求持續成長",
-        "光學鏡頭與相機模組需求持續成長"
-      ],
-      "threats": [
-        "國際競爭加劇",
-        "供應鏈重組風險",
-        "衛星通訊市場進入門檻受國際營運商控制",
-        "全球網通設備供應鏈重組"
-      ],
-      "sources": [
-        "industry_analysis:connector",
-        "industry_analysis:leo-satellite",
-        "industry_analysis:networking-equipment",
-        "industry_analysis:optical-lens-camera"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -206,8 +106,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -236,7 +135,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 17,
+    "totalScore": 31,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -255,11 +154,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

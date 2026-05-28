@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "1734",
   "name": "杏輝",
-  "generatedAt": "2026-05-28T17:01:42.699Z",
+  "generatedAt": "2026-05-28T17:21:47.129Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -52,140 +52,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "medical-consumables",
-      "roleLabel": "unknown",
-      "roleSummary": "杏昌在「醫療器材｜醫療耗材與植入物」題材的「生醫材料與耗材」中扮演洗腎耗材+醫材代理角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "累計營收年增3.8%，穩健成長",
-        "完整藥品+醫材+保健食品布局"
-      ],
-      "opportunities": [
-        "高齡化推動慢性病用藥需求",
-        "醫材通路擴展至居家照護"
-      ],
-      "risks": [
-        "4月營收月減8.1%",
-        "醫材業務規模尚小"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "杏輝 在 medical-consumables 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "杏輝 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：medical-consumables · unknown（待驗證）",
-      "主要產品：西藥製劑 (心血管/腸胃科)",
-      "主要產品：抗生素製劑",
-      "主要產品：保健食品及營養補充品",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：4月營收月減8.1%",
-      "W：醫材業務規模尚小",
-      "T：健保藥價調降壓力",
-      "T：新藥開發時程長、風險高"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：高齡化推動慢性病用藥需求",
-      "O：醫材通路擴展至居家照護",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "西藥製劑 (心血管/腸胃科)",
-      "抗生素製劑",
-      "保健食品及營養補充品",
-      "醫療器材 (藥局通路)",
-      "化妝品之製造加工買賣 醫療器材之製造加工買賣",
-      "其他工商服務業(菌種育種之研發)",
-      "藥品原料之合成",
-      "農業服務業"
-    ],
-    "customers": [
-      "長庚醫院",
-      "台大醫院",
-      "榮總體系",
-      "杏昌醫材通路",
-      "國內外客戶",
-      "系統整合商",
-      "品牌廠商",
-      "台灣各級醫院診所"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "medical-consumables",
-        "role": "洗腎耗材+醫材代理",
-        "relevance": "unknown",
-        "summary": "杏昌在「醫療器材｜醫療耗材與植入物」題材的「生醫材料與耗材」中扮演洗腎耗材+醫材代理角色。"
-      },
-      {
-        "topicId": "medical-electronics",
-        "role": "醫療器材代理+洗腎耗材",
-        "relevance": "unknown",
-        "summary": "杏昌在「醫療器材｜醫療電子與數位健康」題材的「醫療設備與系統」中扮演醫療器材代理+洗腎耗材角色。"
-      },
-      {
-        "topicId": "petrochem-plastics",
-        "role": "西藥與醫藥製造商（題材分類有誤，實為生技醫療股）",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "杏輝在「傳產工業｜石化及塑橡膠」題材的「塑橡膠與特化品」中扮演西藥與醫藥製造商（題材分類有誤，實為生技醫療股）角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "累計營收年增3.8%，穩健成長",
-        "完整藥品+醫材+保健食品布局",
-        "杏昌在醫療設備與系統領域具備競爭優勢",
-        "宜蘭研發中心深耕製藥數十年",
-        "中藥與西藥雙線佈局"
-      ],
-      "weaknesses": [
-        "4月營收月減8.1%",
-        "醫材業務規模尚小",
-        "受景氣循環影響",
-        "營收規模偏小，與大型藥廠競爭劣勢",
-        "生技醫療股非石化塑橡膠題材"
-      ],
-      "opportunities": [
-        "高齡化推動慢性病用藥需求",
-        "醫材通路擴展至居家照護",
-        "醫療電子與數位健康需求持續成長",
-        "長照醫療需求增長",
-        "學名藥市場擴張"
-      ],
-      "threats": [
-        "健保藥價調降壓力",
-        "新藥開發時程長、風險高",
-        "國際競爭加劇",
-        "供應鏈重組風險",
-        "藥價政策修正壓縮利潤",
-        "外資藥廠競爭加劇"
-      ],
-      "sources": [
-        "industry_analysis:medical-consumables",
-        "industry_analysis:medical-electronics",
-        "industry_analysis:petrochem-plastics"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -196,8 +102,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -226,7 +131,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 3,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 4,
@@ -248,11 +153,11 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

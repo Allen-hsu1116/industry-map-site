@@ -5,13 +5,11 @@ import { normalizeCompanySwot } from "../src/lib/companySwot";
 import { normalizeCompanyTopicRoles } from "../src/lib/companyTopicRoles";
 import { generateDailyAnalysis, type AnalysisInput } from "../src/lib/dailyAnalysis";
 import { loadStockKnowledgeRules, type StockKnowledgeRulesFile } from "../src/lib/stockKnowledgeRules";
-import { buildLegacyCompanyAnalysisFallbacks, mergeLegacyCompanyAnalysisFallback, type LegacyCompanyAnalysisFallback } from "../src/lib/legacyIndustryAnalysis";
 import type { CompanyProductKnowledge } from "../src/lib/productKnowledge";
 
 const FINANCIALS_DIR = path.resolve("public/data/financials");
 const OUTPUT_DIR = path.resolve("public/data/analysis");
 const CANONICAL_TOPICS_PATH = path.resolve("public/data/canonical-topics.json");
-const INDUSTRIES_PATH = path.resolve("public/data/industries.json");
 const COMPANY_TOPIC_ROLES_DIR = path.resolve("public/data/company-topic-roles");
 const COMPANY_SWOT_DIR = path.resolve("public/data/company-swot");
 const PRODUCT_KNOWLEDGE_DIR = path.resolve("public/data/product-knowledge");
@@ -37,14 +35,13 @@ function normalizeProductKnowledge(raw: unknown, code: string): CompanyProductKn
   return record as CompanyProductKnowledge;
 }
 
-function enrichWithCanonicalKnowledge(input: AnalysisInput, canonicalTopics: AnalysisInput["canonicalTopics"], legacyFallbacks: Map<string, LegacyCompanyAnalysisFallback>, stockKnowledgeRules: StockKnowledgeRulesFile[]): AnalysisInput {
+function enrichWithCanonicalKnowledge(input: AnalysisInput, canonicalTopics: AnalysisInput["canonicalTopics"], stockKnowledgeRules: StockKnowledgeRulesFile[]): AnalysisInput {
   const code = input.code;
   const companyTopicRoles = normalizeCompanyTopicRoles(readOptionalJson(path.join(COMPANY_TOPIC_ROLES_DIR, `${code}.json`)));
   const companySwot = normalizeCompanySwot(readOptionalJson(path.join(COMPANY_SWOT_DIR, `${code}.json`)));
   const productKnowledge = normalizeProductKnowledge(readOptionalJson(path.join(PRODUCT_KNOWLEDGE_DIR, `${code}.json`)), code);
-  const legacyEnrichedInput = mergeLegacyCompanyAnalysisFallback(input, legacyFallbacks.get(code));
   return {
-    ...legacyEnrichedInput,
+    ...input,
     canonicalTopics,
     companyTopicRoles,
     companySwot,
@@ -60,14 +57,13 @@ function main() {
 
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const canonicalTopics = normalizeCanonicalTopics(readOptionalJson(CANONICAL_TOPICS_PATH));
-  const legacyFallbacks = buildLegacyCompanyAnalysisFallbacks(readOptionalJson(INDUSTRIES_PATH));
   const stockKnowledgeRules = loadStockKnowledgeRules(STOCK_KNOWLEDGE_RULES_DIR);
   const files = fs.readdirSync(FINANCIALS_DIR).filter((file) => file.endsWith(".json")).sort();
   const index: IndexItem[] = [];
 
   for (const file of files) {
     const rawInput = JSON.parse(fs.readFileSync(path.join(FINANCIALS_DIR, file), "utf8")) as AnalysisInput;
-    const input = enrichWithCanonicalKnowledge(rawInput, canonicalTopics, legacyFallbacks, stockKnowledgeRules);
+    const input = enrichWithCanonicalKnowledge(rawInput, canonicalTopics, stockKnowledgeRules);
     const analysis = generateDailyAnalysis(input);
     fs.writeFileSync(path.join(OUTPUT_DIR, file), `${JSON.stringify(analysis, null, 2)}\n`);
     index.push({

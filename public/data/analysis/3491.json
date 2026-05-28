@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "code": "3491",
   "name": "昇達科",
-  "generatedAt": "2026-05-28T17:01:43.118Z",
+  "generatedAt": "2026-05-28T17:21:47.523Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
+    "grade": "F",
+    "label": "資料不足",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
@@ -17,7 +17,7 @@
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
+      "insufficient_daily_analysis",
       "missing_product_knowledge",
       "missing_topic_role",
       "missing_swot"
@@ -54,106 +54,46 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 44,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-    "roleDetail": {
-      "topicName": "leo-satellite",
-      "roleLabel": "高",
-      "roleSummary": "昇達科在「網通衛星｜低軌衛星通訊系統」題材的「衛星通訊模組與設備」中扮演微波高頻通訊元件與低軌衛星模組製造商（UMT）角色。",
-      "source": "legacy"
-    },
+    "label": "產業資料待補",
+    "score": 0,
+    "knowledgeBasis": "insufficient",
+    "provenanceLabel": "產業資料待補",
+    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
     "productNarratives": [],
     "swotSnapshot": {
-      "strengths": [
-        "低軌衛星高頻元件少數台灣供應商",
-        "毫米波濾波器技術自主研發"
-      ],
-      "opportunities": [
-        "低軌衛星建置潮帶動高頻元件需求",
-        "6G毫米波通訊商機"
-      ],
-      "risks": [
-        "營收規模偏小",
-        "衛星訂單出貨時程不確定性高"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
-      "legacy 題材關聯 high +44",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "尚未建立 V2 題材角色"
     ],
-    "summary": "昇達科 在 leo-satellite 的 legacy 角色為「高」，資料基礎為「Legacy 待驗證」，產業 score 44/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "昇達科 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：44/100（legacy 題材關聯 high +44；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：leo-satellite · 高（待驗證）",
-      "主要產品：低軌衛星通訊模組",
-      "主要產品：微波高頻濾波器",
-      "主要產品：雙工器（Duplexer）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "資料基礎：產業資料待補（n/a）",
+      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
-      "W：營收規模偏小",
-      "W：衛星訂單出貨時程不確定性高",
-      "T：衛星供應鏈認證週期長",
-      "T：國際競爭對手技術追趕"
+      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "O：低軌衛星建置潮帶動高頻元件需求",
-      "O：6G毫米波通訊商機",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [
-      "低軌衛星通訊模組",
-      "微波高頻濾波器",
-      "雙工器（Duplexer）",
-      "高頻天線被動元件",
-      "Ka/Ku頻段通訊元件"
-    ],
-    "customers": [
-      "SpaceX（星鏈供應鏈）",
-      "OneWeb",
-      "國際衛星通訊設備商",
-      "5G基地台設備商"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "leo-satellite",
-        "role": "微波高頻通訊元件與低軌衛星模組製造商（UMT）",
-        "relevance": "high",
-        "marketPosition": "高",
-        "summary": "昇達科在「網通衛星｜低軌衛星通訊系統」題材的「衛星通訊模組與設備」中扮演微波高頻通訊元件與低軌衛星模組製造商（UMT）角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "低軌衛星高頻元件少數台灣供應商",
-        "毫米波濾波器技術自主研發"
-      ],
-      "weaknesses": [
-        "營收規模偏小",
-        "衛星訂單出貨時程不確定性高"
-      ],
-      "opportunities": [
-        "低軌衛星建置潮帶動高頻元件需求",
-        "6G毫米波通訊商機"
-      ],
-      "threats": [
-        "衛星供應鏈認證週期長",
-        "國際競爭對手技術追趕"
-      ],
-      "sources": [
-        "industry_analysis:leo-satellite"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -164,8 +104,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -194,7 +133,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 7,
+    "totalScore": 12,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -214,7 +153,7 @@
       {
         "id": "risk.analysis-quality",
         "severity": "hard",
-        "message": "AnalysisQuality D 不可列入 Top recommendation"
+        "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
         "id": "risk.stop-distance",
@@ -223,7 +162,7 @@
       },
       {
         "id": "risk.topic-evidence",
-        "severity": "hard",
+        "severity": "soft",
         "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]

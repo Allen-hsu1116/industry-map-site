@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-05-28T17:01:42.729Z",
+  "generatedAt": "2026-05-28T17:21:47.158Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -77,25 +77,6 @@
         ],
         "lastVerified": "2026-05-28",
         "confidence": "high"
-      },
-      {
-        "name": "電動車動力、電力管理與充電設備",
-        "description": "這類產品涵蓋電動車動力系統、車上電力管理、充電設備與車用散熱，把台達的電源轉換、控制與熱管理能力延伸到車輛與充電基礎設施。",
-        "whyItMatters": "電動車產業需要高效率電力轉換、車載電源、充電基礎設施與熱管理；這讓台達除了資料中心外，也能參與交通電動化與充電網建設。",
-        "topicFit": "相鄰能源基礎設施：充電設備與能源管理/儲能可整合成場域解決方案",
-        "businessImpact": "財報列出電動車電源相關系統與電動車充電設備為主要營業項目，並將「交通」列為四大業務範疇之一；114 年度交通部門外部客戶合約收入為新台幣 37,011,276 仟元。",
-        "sourceLabels": [
-          "台達 Delta Electronics：產品 - 交通",
-          "台達 Delta Electronics：產品 - 能源基礎設施",
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：台達電子工業股份有限公司 114 年度合併財務報告書"
-        ],
-        "sourceUrls": [
-          "https://www.deltaww.com/zh-TW/products/mobility",
-          "https://www.deltaww.com/zh-TW/products/Energy-Infrastructure-Industrial-Solutions",
-          "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
       }
     ],
     "swotSnapshot": {
@@ -128,8 +109,8 @@
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 儲能、電芯與電池材料（theme/active） +18）",
       "相關題材：工業自動化與 CNC 工具機 · 核心產品/平台",
       "相關題材：AI 伺服器電源與 BBU · 核心產品/平台",
-      "主要產品：AI伺服器高瓦數電源(3kW-5kW+)",
-      "主要產品：資料中心UPS不斷電系統"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
+      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
       "V2 W：台達電跨題材產品線很廣，若只看單一熱門題材，容易高估該題材對整體營收與獲利的直接貢獻。",
@@ -145,97 +126,15 @@
     ]
   },
   "knowledge": {
-    "products": [
-      "AI伺服器高瓦數電源(3kW-5kW+)",
-      "資料中心UPS不斷電系統",
-      "電動車充電樁/車載充電機",
-      "工業自動化驅動器"
-    ],
-    "customers": [
-      "NVIDIA",
-      "Google",
-      "Microsoft",
-      "AWS",
-      "Tesla"
-    ],
-    "topicRoles": [
-      {
-        "topicId": "ai-server",
-        "role": "AI伺服器電源/散熱",
-        "relevance": "unknown",
-        "summary": "台達電在「AI伺服器與液冷技術」題材的「AI伺服器散熱與零組件」中扮演AI伺服器電源/散熱角色。"
-      },
-      {
-        "topicId": "ai-server-odm",
-        "role": "AI伺服器電源+散熱整合",
-        "relevance": "unknown",
-        "summary": "台達電在「AI 伺服器｜整機組裝」題材的「伺服器主板與周邊」中扮演AI伺服器電源+散熱整合角色。"
-      },
-      {
-        "topicId": "analog-power-ic",
-        "role": "電源與散熱方案供應商",
-        "relevance": "medium",
-        "marketPosition": "中",
-        "summary": "台達電在「IC 設計｜類比與功率管理 IC」題材的「類比IC與感測器」中扮演電源與散熱方案供應商角色。"
-      },
-      {
-        "topicId": "bbu",
-        "role": "BBU電源方案",
-        "relevance": "unknown",
-        "summary": "台達電在「AI 伺服器｜BBU 電池備援系統」題材的「BBU電源供應器與系統」中扮演BBU電源方案角色。"
-      },
-      {
-        "topicId": "edge-ai",
-        "role": "邊緣AI電源方案",
-        "relevance": "low",
-        "summary": "台達電在「智慧機器人｜Edge AI / AIoT 邊緣智慧」題材的「邊緣AI測試與電源管理」中扮演邊緣AI電源方案角色。"
-      },
-      {
-        "topicId": "ess-storage",
-        "role": "儲能系統整合（PCS+EMS）",
-        "relevance": "unknown",
-        "summary": "台達電在「綠能環保｜儲能系統整合」題材的「儲能電池與BMS零組件」中扮演儲能系統整合（PCS+EMS）角色。"
-      },
-      {
-        "topicId": "industrial-automation",
-        "role": "自動化/機器人/機電整合",
-        "relevance": "unknown",
-        "summary": "台達電在「智慧機器人｜工業自動化 / 智慧製造」題材的「工業連接器與系統整合」中扮演自動化/機器人/機電整合角色。"
-      },
-      {
-        "topicId": "liquid_cooling_advanced",
-        "role": "液冷散熱整合方案",
-        "relevance": "unknown",
-        "summary": "台達電在「散熱冷卻｜液冷散熱系統」題材的「液冷系統整合」中扮演液冷散熱整合方案角色。"
-      }
-    ],
+    "products": [],
+    "customers": [],
+    "topicRoles": [],
     "swot": {
-      "strengths": [
-        "全球電源供應器市佔第一",
-        "4月營收YoY+43.9%成長驚人"
-      ],
-      "weaknesses": [
-        "PE 70倍估值極高",
-        "營收基期墊高後增速可能放緩"
-      ],
-      "opportunities": [
-        "AI伺服器電源需求爆發",
-        "電動車充電基礎設施全球擴建"
-      ],
-      "threats": [
-        "中國電源廠低價競爭",
-        "客戶自研電源模組"
-      ],
-      "sources": [
-        "industry_analysis:ai-server",
-        "industry_analysis:ai-server-odm",
-        "industry_analysis:analog-power-ic",
-        "industry_analysis:bbu",
-        "industry_analysis:edge-ai",
-        "industry_analysis:ess-storage",
-        "industry_analysis:industrial-automation",
-        "industry_analysis:liquid_cooling_advanced"
-      ],
+      "strengths": [],
+      "weaknesses": [],
+      "opportunities": [],
+      "threats": [],
+      "sources": [],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -246,8 +145,7 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports",
-      "internal topic role map / industry_analysis"
+      "FinMind financial statements / MOPS quarterly reports"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
