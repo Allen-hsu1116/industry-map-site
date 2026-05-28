@@ -2,6 +2,7 @@ import { buildCompanyKnowledge, type CompanyKnowledge, type CompanyKnowledgeInpu
 import { directnessLabel, type CompanyTopicRolesKnowledge, type CompanyTopicRoleItem } from "./companyTopicRoles";
 import { groupCompanySwot, type CompanySwotItem, type CompanySwotKnowledge } from "./companySwot";
 import type { CanonicalTopic, CanonicalTopicsFile } from "./canonicalTopics";
+import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "./productKnowledge";
 import { computeTechnicalSummary, safeFloat, type DailyPrice } from "./marketData";
 
 export interface InstitutionalFlowPoint {
@@ -34,6 +35,7 @@ export interface AnalysisInput extends CompanyKnowledgeInput {
   companyTopicRoles?: CompanyTopicRolesKnowledge | null;
   companySwot?: CompanySwotKnowledge | null;
   canonicalTopics?: CanonicalTopicsFile | null;
+  productKnowledge?: CompanyProductKnowledge | null;
 }
 
 export interface DailyCanonicalKnowledge {
@@ -97,6 +99,21 @@ export interface DailyAnalysis {
     confidence?: string;
     provenanceLabel: string;
     verificationNote: string;
+    roleDetail?: {
+      topicName: string;
+      roleLabel: string;
+      roleSummary: string;
+      supplyChainStage?: string;
+      roleType?: string;
+      directness?: string;
+      source: "canonical" | "legacy" | "insufficient";
+    };
+    productNarratives?: ProductNarrative[];
+    swotSnapshot?: {
+      strengths: string[];
+      opportunities: string[];
+      risks: string[];
+    };
     scoringFactors: string[];
     summary: string;
     signals: string[];
@@ -351,6 +368,79 @@ function isVerifiedCanonicalRole(role: CompanyTopicRoleItem | undefined): boolea
   );
 }
 
+function buildRoleDetail(
+  primaryV2Role: CompanyTopicRoleItem | undefined,
+  primaryCanonicalRole: DailyCanonicalKnowledge["topicRoles"][number] | undefined,
+  primaryLegacyRole: CompanyKnowledge["topicRoles"][number] | undefined,
+): NonNullable<DailyAnalysis["industry"]["roleDetail"]> | undefined {
+  if (primaryV2Role || primaryCanonicalRole) {
+    const canonicalName = primaryCanonicalRole?.canonicalTopicName ?? primaryCanonicalRole?.topicName;
+    const role = primaryV2Role;
+    return {
+      topicName: canonicalName ?? role?.topicName ?? "V2 題材",
+      roleLabel: role ? directnessLabel(role.directness) : primaryCanonicalRole?.directnessLabel ?? "題材角色",
+      roleSummary: role?.roleSummary ?? primaryCanonicalRole?.roleSummary ?? "已建立 V2 題材角色，但角色摘要待補。",
+      supplyChainStage: role?.supplyChainStage,
+      roleType: role?.roleType,
+      directness: role?.directness ?? primaryCanonicalRole?.directness,
+      source: "canonical",
+    };
+  }
+
+  if (primaryLegacyRole) {
+    return {
+      topicName: primaryLegacyRole.topicId,
+      roleLabel: primaryLegacyRole.marketPosition ?? primaryLegacyRole.relevance,
+      roleSummary: primaryLegacyRole.summary ?? primaryLegacyRole.role,
+      source: "legacy",
+    };
+  }
+
+  return undefined;
+}
+
+function buildProductNarratives(input: AnalysisInput, primaryV2Role: CompanyTopicRoleItem | undefined, primaryTopic: CanonicalTopic | undefined, knowledge: CompanyKnowledge): ProductNarrative[] {
+  const topicIds = [primaryTopic?.id, primaryV2Role?.topicId].filter((item): item is string => Boolean(item));
+  const productNames = [...(primaryV2Role?.products ?? []), ...knowledge.products];
+  const narratives: ProductNarrative[] = [];
+  const seen = new Set<string>();
+
+  for (const productName of productNames) {
+    for (const topicId of topicIds.length > 0 ? topicIds : [undefined]) {
+      const product = findProductKnowledgeItem(productName, input.productKnowledge, topicId);
+      if (!product || seen.has(product.name)) continue;
+      narratives.push(productKnowledgeToNarrative(product, topicId));
+      seen.add(product.name);
+      break;
+    }
+    if (narratives.length >= 3) break;
+  }
+
+  if (narratives.length > 0) return narratives;
+  if (!primaryV2Role) return [];
+
+  return productNames
+    .filter((item, index, array) => item && item.length <= 40 && array.indexOf(item) === index)
+    .slice(0, 3)
+    .map((name) => ({
+      name,
+      description: "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+      confidence: "low" as const,
+    }));
+}
+
+function buildSwotSnapshot(canonicalKnowledge: DailyCanonicalKnowledge, knowledge: CompanyKnowledge): NonNullable<DailyAnalysis["industry"]["swotSnapshot"]> {
+  const canonicalStrengths = canonicalKnowledge.swot.filter((item) => item.category === "strength").map((item) => item.statement);
+  const canonicalOpportunities = canonicalKnowledge.swot.filter((item) => item.category === "opportunity").map((item) => item.statement);
+  const canonicalRisks = canonicalKnowledge.swot.filter((item) => item.category === "weakness" || item.category === "threat").map((item) => item.statement);
+
+  return {
+    strengths: (canonicalStrengths.length > 0 ? canonicalStrengths : knowledge.swot.strengths).slice(0, 2),
+    opportunities: (canonicalOpportunities.length > 0 ? canonicalOpportunities : knowledge.swot.opportunities).slice(0, 2),
+    risks: (canonicalRisks.length > 0 ? canonicalRisks : [...knowledge.swot.weaknesses, ...knowledge.swot.threats]).slice(0, 2),
+  };
+}
+
 export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): DailyAnalysis {
   const knowledge = buildCompanyKnowledge(input, now);
   const dailyPrices = input.trends?.daily_prices ?? [];
@@ -508,6 +598,10 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     .sort((a, b) => roleSortKey(a, input.canonicalTopics).localeCompare(roleSortKey(b, input.canonicalTopics)))[0];
   const primaryRole = knowledge.topicRoles[0];
   const hasVerifiedCanonicalRole = isVerifiedCanonicalRole(primaryV2Role);
+  const primaryTopic = primaryV2Role ? topicForRole(primaryV2Role, input.canonicalTopics) : undefined;
+  const roleDetail = buildRoleDetail(primaryV2Role, primaryCanonicalRole, primaryRole);
+  const productNarratives = buildProductNarratives(input, primaryV2Role, primaryTopic, knowledge);
+  const swotSnapshot = buildSwotSnapshot(canonicalKnowledge, knowledge);
 
   let knowledgeBasis: DailyAnalysis["industry"]["knowledgeBasis"] = "insufficient";
   let provenanceLabel = "產業資料待補";
@@ -607,6 +701,9 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
       confidence: industryConfidence,
       provenanceLabel,
       verificationNote,
+      roleDetail,
+      productNarratives,
+      swotSnapshot,
       scoringFactors: industryScore.factors,
       summary: industrySummary,
       signals: industrySignals.slice(0, 7),

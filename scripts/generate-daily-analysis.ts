@@ -5,6 +5,7 @@ import { normalizeCompanySwot } from "../src/lib/companySwot";
 import { normalizeCompanyTopicRoles } from "../src/lib/companyTopicRoles";
 import { generateDailyAnalysis, type AnalysisInput } from "../src/lib/dailyAnalysis";
 import { buildLegacyCompanyAnalysisFallbacks, mergeLegacyCompanyAnalysisFallback, type LegacyCompanyAnalysisFallback } from "../src/lib/legacyIndustryAnalysis";
+import type { CompanyProductKnowledge } from "../src/lib/productKnowledge";
 
 const FINANCIALS_DIR = path.resolve("public/data/financials");
 const OUTPUT_DIR = path.resolve("public/data/analysis");
@@ -12,6 +13,7 @@ const CANONICAL_TOPICS_PATH = path.resolve("public/data/canonical-topics.json");
 const INDUSTRIES_PATH = path.resolve("public/data/industries.json");
 const COMPANY_TOPIC_ROLES_DIR = path.resolve("public/data/company-topic-roles");
 const COMPANY_SWOT_DIR = path.resolve("public/data/company-swot");
+const PRODUCT_KNOWLEDGE_DIR = path.resolve("public/data/product-knowledge");
 
 interface IndexItem {
   code: string;
@@ -26,16 +28,25 @@ function readOptionalJson(filePath: string): unknown | null {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
+function normalizeProductKnowledge(raw: unknown, code: string): CompanyProductKnowledge | null {
+  if (!raw || typeof raw !== "object") return null;
+  const record = raw as Partial<CompanyProductKnowledge>;
+  if (record.schemaVersion !== 1 || record.code !== code || !Array.isArray(record.products)) return null;
+  return record as CompanyProductKnowledge;
+}
+
 function enrichWithCanonicalKnowledge(input: AnalysisInput, canonicalTopics: AnalysisInput["canonicalTopics"], legacyFallbacks: Map<string, LegacyCompanyAnalysisFallback>): AnalysisInput {
   const code = input.code;
   const companyTopicRoles = normalizeCompanyTopicRoles(readOptionalJson(path.join(COMPANY_TOPIC_ROLES_DIR, `${code}.json`)));
   const companySwot = normalizeCompanySwot(readOptionalJson(path.join(COMPANY_SWOT_DIR, `${code}.json`)));
+  const productKnowledge = normalizeProductKnowledge(readOptionalJson(path.join(PRODUCT_KNOWLEDGE_DIR, `${code}.json`)), code);
   const legacyEnrichedInput = mergeLegacyCompanyAnalysisFallback(input, legacyFallbacks.get(code));
   return {
     ...legacyEnrichedInput,
     canonicalTopics,
     companyTopicRoles,
     companySwot,
+    productKnowledge,
   };
 }
 

@@ -88,6 +88,23 @@ test("generateDailyAnalysis prefers V2 topic roles, canonical topics, and eviden
     })),
     margin_history: [],
     products: ["電源供應器"],
+    productKnowledge: {
+      schemaVersion: 1,
+      code: "2308",
+      name: "台達電",
+      updatedAt: "2026-05-28",
+      products: [{
+        name: "AI 伺服器電源供應器",
+        category: "power",
+        plainLanguage: "把交流電轉換成 AI 伺服器 GPU、CPU 與周邊模組可用的高效率電源。",
+        whyItMatters: "AI 伺服器功耗快速上升，電源效率與可靠度會直接影響整機穩定度、能源成本與資料中心部署速度。",
+        topicFit: { "ai-server": "直接供應 AI 伺服器電力轉換與電源管理，是整機能否穩定運作的關鍵環節。" },
+        businessImpact: "高功率電源規格升級提高單機價值量。",
+        evidence: [{ sourceId: "delta-2025-ar", publisher: "Delta", title: "Annual Report", url: "https://example.com", claim: "AI server power" }],
+        lastVerified: "2026-05-28",
+        confidence: "high",
+      }],
+    },
     industry_analysis: {
       "ai-server": {
         market_position: "legacy high",
@@ -164,6 +181,13 @@ test("generateDailyAnalysis prefers V2 topic roles, canonical topics, and eviden
 
   assert.equal(analysis.industry.label, "核心題材受惠");
   assert.match(analysis.industry.summary, /V2 角色/);
+  assert.equal(analysis.industry.roleDetail?.topicName, "AI 伺服器");
+  assert.equal(analysis.industry.roleDetail?.roleLabel, "直接賦能角色");
+  assert.match(analysis.industry.roleDetail?.roleSummary ?? "", /高功率電源/);
+  assert.equal(analysis.industry.productNarratives?.[0]?.name, "AI 伺服器電源供應器");
+  assert.match(analysis.industry.productNarratives?.[0]?.description ?? "", /交流電/);
+  assert.match(analysis.industry.productNarratives?.[0]?.whyItMatters ?? "", /功耗快速上升/);
+  assert.ok(analysis.industry.swotSnapshot?.opportunities.some((item) => item.includes("AI 伺服器功耗提升")));
   assert.ok(analysis.industry.signals.some((signal) => signal.includes("V2 題材角色：AI 伺服器")));
   assert.ok(analysis.industry.watch.some((item) => item.includes("V2 O：AI 伺服器功耗提升")));
   assert.equal(analysis.canonicalKnowledge.topicRoles[0].canonicalTopicId, "ai-server");

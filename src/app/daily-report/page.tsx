@@ -75,6 +75,29 @@ interface DailyIndustryAnalysis {
   confidence?: string;
   provenanceLabel?: string;
   verificationNote?: string;
+  roleDetail?: {
+    topicName: string;
+    roleLabel: string;
+    roleSummary: string;
+    supplyChainStage?: string;
+    roleType?: string;
+    directness?: string;
+    source: "canonical" | "legacy" | "insufficient";
+  };
+  productNarratives?: Array<{
+    name: string;
+    description: string;
+    whyItMatters?: string;
+    topicFit?: string;
+    businessImpact?: string;
+    confidence?: string;
+    lastVerified?: string;
+  }>;
+  swotSnapshot?: {
+    strengths: string[];
+    opportunities: string[];
+    risks: string[];
+  };
   scoringFactors?: string[];
   summary: string;
   signals: string[];
@@ -392,35 +415,88 @@ export default function DailyReportPage() {
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-cyan-400">🏭 產業題材</h4>
                     {dailyIndustry ? (
-                      <div className="space-y-2">
+                      <div className="space-y-3">
                         <div className="flex flex-wrap items-center gap-2">
                           <Badge variant="outline" className={`text-xs ${getKnowledgeBasisClass(dailyIndustry.knowledgeBasis)}`}>
                             {getKnowledgeBasisText(dailyIndustry)}
                           </Badge>
-                          {dailyIndustry.confidence && (
-                            <span className="text-[11px] text-gray-500">confidence: {dailyIndustry.confidence}</span>
-                          )}
-                        </div>
-                        <div className="flex flex-wrap items-center gap-2">
                           <span className="text-gray-300 text-sm">{dailyIndustry.label}</span>
                           {typeof dailyIndustry.score === "number" && (
                             <Badge variant="outline" className="border-cyan-400/30 bg-cyan-400/10 text-cyan-200 text-xs">
                               {dailyIndustry.score}/100
                             </Badge>
                           )}
+                          {dailyIndustry.confidence && (
+                            <span className="text-[11px] text-gray-500">confidence: {dailyIndustry.confidence}</span>
+                          )}
                         </div>
-                        <p className="text-xs leading-relaxed text-gray-400 line-clamp-3">{dailyIndustry.summary}</p>
+
+                        {dailyIndustry.roleDetail && (
+                          <div className="rounded-lg border border-cyan-400/15 bg-cyan-400/5 p-2">
+                            <div className="flex flex-wrap items-center gap-2 mb-1">
+                              <span className="text-[11px] font-semibold uppercase tracking-wide text-cyan-300">角色</span>
+                              <Badge variant="outline" className="border-slate-500/30 bg-slate-800/70 text-[11px] text-slate-200">
+                                {dailyIndustry.roleDetail.topicName}
+                              </Badge>
+                              <span className="text-[11px] text-cyan-100">{dailyIndustry.roleDetail.roleLabel}</span>
+                            </div>
+                            <p className="text-xs leading-relaxed text-gray-300 line-clamp-3">{dailyIndustry.roleDetail.roleSummary}</p>
+                            {(dailyIndustry.roleDetail.supplyChainStage || dailyIndustry.roleDetail.roleType) && (
+                              <p className="mt-1 text-[11px] text-gray-500">
+                                {dailyIndustry.roleDetail.supplyChainStage}{dailyIndustry.roleDetail.supplyChainStage && dailyIndustry.roleDetail.roleType ? " · " : ""}{dailyIndustry.roleDetail.roleType}
+                              </p>
+                            )}
+                          </div>
+                        )}
+
+                        {dailyIndustry.productNarratives && dailyIndustry.productNarratives.length > 0 && (
+                          <div className="space-y-2">
+                            {dailyIndustry.productNarratives.slice(0, 2).map((product) => (
+                              <div key={product.name} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-2">
+                                <div className="flex flex-wrap items-center gap-2 mb-1">
+                                  <span className="text-[11px] font-semibold uppercase tracking-wide text-indigo-300">產品</span>
+                                  <span className="text-xs font-semibold text-white">{product.name}</span>
+                                  {product.confidence && <span className="text-[11px] text-gray-500">{product.confidence}</span>}
+                                </div>
+                                <p className="text-xs leading-relaxed text-gray-300 line-clamp-2">是什麼：{product.description}</p>
+                                {product.whyItMatters && (
+                                  <p className="mt-1 text-xs leading-relaxed text-cyan-100/90 line-clamp-2">為什麼重要：{product.whyItMatters}</p>
+                                )}
+                                {(product.topicFit || product.businessImpact) && (
+                                  <p className="mt-1 text-[11px] leading-relaxed text-gray-500 line-clamp-2">{product.topicFit ?? product.businessImpact}</p>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {dailyIndustry.swotSnapshot && (dailyIndustry.swotSnapshot.strengths.length + dailyIndustry.swotSnapshot.opportunities.length + dailyIndustry.swotSnapshot.risks.length > 0) && (
+                          <div className="grid grid-cols-1 gap-2 text-xs">
+                            {dailyIndustry.swotSnapshot.strengths.length > 0 && (
+                              <div className="rounded border border-emerald-400/15 bg-emerald-400/5 px-2 py-1">
+                                <span className="font-semibold text-emerald-300">S</span>
+                                <span className="text-gray-300"> {dailyIndustry.swotSnapshot.strengths[0]}</span>
+                              </div>
+                            )}
+                            {dailyIndustry.swotSnapshot.opportunities.length > 0 && (
+                              <div className="rounded border border-sky-400/15 bg-sky-400/5 px-2 py-1">
+                                <span className="font-semibold text-sky-300">O</span>
+                                <span className="text-gray-300"> {dailyIndustry.swotSnapshot.opportunities[0]}</span>
+                              </div>
+                            )}
+                            {dailyIndustry.swotSnapshot.risks.length > 0 && (
+                              <div className="rounded border border-amber-400/15 bg-amber-400/5 px-2 py-1">
+                                <span className="font-semibold text-amber-300">W/T</span>
+                                <span className="text-gray-300"> {dailyIndustry.swotSnapshot.risks[0]}</span>
+                              </div>
+                            )}
+                          </div>
+                        )}
+
                         {dailyIndustry.verificationNote && dailyIndustry.knowledgeBasis !== "canonical_verified" && (
                           <p className="rounded border border-amber-400/20 bg-amber-400/5 px-2 py-1 text-xs leading-relaxed text-amber-200/90">
                             {dailyIndustry.verificationNote}
                           </p>
-                        )}
-                        {dailyIndustry.scoringFactors && dailyIndustry.scoringFactors.length > 0 && (
-                          <ul className="space-y-1">
-                            {dailyIndustry.scoringFactors.slice(0, 3).map((factor, factorIndex) => (
-                              <li key={factorIndex} className="text-xs leading-relaxed text-gray-400">• {factor}</li>
-                            ))}
-                          </ul>
                         )}
                       </div>
                     ) : (
