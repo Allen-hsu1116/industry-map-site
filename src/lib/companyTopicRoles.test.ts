@@ -72,3 +72,23 @@ test("company-topic-role batch covers at least 20 companies and maps to canonica
     }
   }
 });
+
+test("Step 17 company-topic-role batch covers top high-priority companies with verified evidence-backed roles", async () => {
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const dir = "public/data/company-topic-roles";
+  const batchCodes = ["6147", "3035", "4966", "6239", "8299", "3311", "2453", "3081", "2059", "3529", "6175", "3037"];
+
+  for (const code of batchCodes) {
+    const raw = JSON.parse(await fs.readFile(path.join(dir, `${code}.json`), "utf8"));
+    const knowledge = normalizeCompanyTopicRoles(raw);
+    assert.ok(knowledge, `${code}.json should normalize`);
+    assert.equal(knowledge.companyCode, code);
+    assert.ok(knowledge.roles.length >= 1, `${code} should include at least one topic role`);
+    assert.ok(knowledge.roles.some((role) => role.status === "verified" && role.evidence.length > 0 && role.lastVerified), `${code} should include verified evidence-backed roles`);
+    for (const role of knowledge.roles) {
+      assert.ok(role.products.length > 0, `${code} ${role.topicId} should list related products`);
+      assert.ok(role.roleSummary.length >= 30, `${code} ${role.topicId} should explain company role`);
+    }
+  }
+});

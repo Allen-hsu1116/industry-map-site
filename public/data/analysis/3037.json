@@ -8,16 +8,13 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -52,23 +49,27 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "label": "核心題材受惠",
+    "score": 98,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "advanced-packaging-automation",
-      "roleLabel": "unknown",
-      "roleSummary": "欣興在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演ABF載板(先進封裝用)角色。",
-      "source": "legacy"
+      "topicName": "PCB、IC 載板與高階基板材料",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "欣興在 PCB 與 IC 載板題材中供應 HDI、多層板、FPC、FCCSP、FCBGA 與高階封裝基板，支援 AI/HPC、網通、手機、車用與先進封裝需求。",
+      "supplyChainStage": "pcb_ic_substrate",
+      "roleType": "pcb_ic_substrate_provider",
+      "directness": "core",
+      "source": "canonical"
     },
     "productNarratives": [
       {
         "name": "PCB、IC 載板與先進封裝基板",
         "description": "欣興是大型印刷電路板與 IC 載板廠，產品包含 HDI 高密度連結板、多層板、軟硬結合板、FPC，以及 FCCSP、FCBGA、CSP、記憶卡類載板等封裝基板。",
         "whyItMatters": "AI、5G、高速運算與先進封裝需要高層數、高密度、低損耗材料與精細線寬線距的板材與載板；欣興的 PCB 與 FCBGA/FCCSP 載板連結伺服器、網通、手機、車用與高效能運算晶片封裝需求。",
+        "topicFit": "HDI、多層板、FPC 與 IC 載板是 PCB/載板供應鏈核心產品。",
         "businessImpact": "AI/HPC、先進封裝與高速網通需求提升時，高階 HDI、低損耗 PCB 與 FCBGA 載板的產品組合價值上升；但載板與 PCB 產業資本密集，獲利受產能利用率、良率、客戶庫存與價格週期影響。",
         "sourceLabels": [
           "Unimicron Technology：HDI",
@@ -97,32 +98,34 @@
       ]
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12"
     ],
-    "summary": "欣銓 在 advanced-packaging-automation 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "欣銓 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：advanced-packaging-automation · unknown（待驗證）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
+      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
       "主要產品：ABF載板(先進封裝用)",
       "主要產品：IC 載板龍頭",
       "主要產品：CXL用載板",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：受景氣循環影響",
       "T：國際競爭加劇",
       "T：供應鏈重組風險"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
+      "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：先進封裝量測自動化需求持續成長",
       "O：AI 先進封裝 CoWoS需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "知識庫最後驗證：2026-05-26（fresh）"
     ]
   },
   "knowledge": {
@@ -248,9 +251,32 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "欣興在 PCB 與 IC 載板題材中供應 HDI、多層板、FPC、FCCSP、FCBGA 與高階封裝基板，支援 AI/HPC、網通、手機、車用與先進封裝需求。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "pcb-substrates",
+        "name": "PCB、IC 載板與高階基板材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

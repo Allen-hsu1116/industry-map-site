@@ -8,16 +8,13 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -53,23 +50,27 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "label": "核心題材受惠",
+    "score": 100,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "analog-power-ic",
-      "roleLabel": "中",
-      "roleSummary": "凌群在「IC 設計｜類比與功率管理 IC」題材的「電源管理IC(PMIC)」中扮演電源管理 IC角色。",
-      "source": "legacy"
+      "topicName": "資安、雲端服務與企業軟體",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "凌群在軟體雲端資安題材中提供系統整合、雲端、資安、金融、醫療、政府、交通與企業應用方案，並具備 DBMaker、NETCenter、OMFLOW、Ayuda 等自有軟體產品。",
+      "supplyChainStage": "enterprise_software_system_integration",
+      "roleType": "system_integrator_enterprise_software_provider",
+      "directness": "core",
+      "source": "canonical"
     },
     "productNarratives": [
       {
         "name": "系統整合、AI 應用與企業軟體服務",
         "description": "凌群提供企業與政府需要的資訊系統整合、專案服務、委外維運、雲端、資安、金融、醫療、交通與企業應用解決方案，也有自研資料庫 DBMaker、IT 監控 NETCenter、流程自動化 OMFLOW、服務機器人 Ayuda 與生成式 AI 相關應用。",
         "whyItMatters": "當企業與政府導入 AI、雲端、資安與數位轉型時，需要把軟體、硬體、資料、流程與維運整合起來；凌群扮演大型資訊系統建置與長期服務商角色。",
+        "topicFit": "系統整合、雲端、資安、資料庫、IT 監控與流程自動化都屬軟體雲端資安服務題材。",
         "businessImpact": "營收受政府與企業大型資訊專案、維運委外、資安/雲端/AI 導入需求影響；專案型收入可帶來規模，但也受驗收時點、預算與人力交付能力影響。",
         "sourceLabels": [
           "凌群電腦 SYSCOM：產品與服務－解決方案",
@@ -98,33 +99,35 @@
       ]
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 資安、雲端服務與企業軟體（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12"
     ],
-    "summary": "凌群 在 analog-power-ic 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "凌群 在「資安、雲端服務與企業軟體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：analog-power-ic · 中（待驗證）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：資安、雲端服務與企業軟體 · 核心產品/平台 · high",
+      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 資安、雲端服務與企業軟體（theme/active） +18）",
       "主要產品：電源管理 IC",
       "主要產品：IT系統整合+雲端",
       "主要產品：記憶體與面板封測",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：受景氣循環影響",
       "W：毛利率偏低（系統整合毛利薄），自有產品比重低",
       "T：國際競爭加劇",
       "T：供應鏈重組風險"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
+      "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：類比與功率管理 IC需求持續成長",
       "O：雲端服務與代管需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "知識庫最後驗證：2026-05-26（fresh）"
     ]
   },
   "knowledge": {
@@ -256,9 +259,32 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "software-cloud-security",
+        "topicName": "資安、雲端服務與企業軟體",
+        "canonicalTopicId": "software-cloud-security",
+        "canonicalTopicName": "資安、雲端服務與企業軟體",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "凌群在軟體雲端資安題材中提供系統整合、雲端、資安、金融、醫療、政府、交通與企業應用方案，並具備 DBMaker、NETCenter、OMFLOW、Ayuda 等自有軟體產品。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "software-cloud-security",
+        "name": "資安、雲端服務與企業軟體",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

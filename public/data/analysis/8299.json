@@ -8,16 +8,13 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -50,19 +47,40 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 18,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "label": "核心題材受惠",
+    "score": 98,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "cxl-technology",
-      "roleLabel": "low",
-      "roleSummary": "群聯在「記憶體｜CXL 記憶體池化」題材的「CXL模組與記憶體封裝」中扮演NAND Flash控制IC，CXL相關角色。",
-      "source": "legacy"
+      "topicName": "記憶體模組",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "群聯在記憶體模組題材中提供 NAND 控制晶片、SSD、UFS、eMMC、USB 與記憶卡等儲存解決方案，扮演 NAND 轉化為終端儲存產品的控制器與模組整合者。",
+      "supplyChainStage": "nand_controller_storage_module",
+      "roleType": "nand_controller_ssd_solution_provider",
+      "directness": "core",
+      "source": "canonical"
     },
-    "productNarratives": [],
+    "productNarratives": [
+      {
+        "name": "NAND 控制晶片與儲存解決方案",
+        "description": "群聯設計 NAND Flash 控制晶片，並把 NAND、韌體與控制器整合成 SSD、UFS、eMMC、USB、記憶卡與企業級儲存產品；近年也推 aiDAPTIV+ 邊緣 AI 儲存方案與高速訊號調節 IC。",
+        "whyItMatters": "AI、伺服器、PC、手機、車用與工控都需要高速且可靠的儲存；群聯的控制晶片與模組是把 NAND Flash 變成可用儲存裝置的核心元件。",
+        "topicFit": "SSD、UFS、eMMC、USB、記憶卡與企業級儲存產品直接連到 NAND Flash 儲存供應鏈。",
+        "businessImpact": "快閃記憶體模組、控制晶片與積體電路是公司核心營收來源；NAND 報價、客戶庫存、企業級 SSD 導入、AI/PC/車用儲存需求會影響營收與毛利。",
+        "sourceLabels": [
+          "群聯電子 Phison：解決方案總覽",
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：群聯電子 113 年股東會年報"
+        ],
+        "sourceUrls": [
+          "https://www.phison.com/zh-tw/solutions",
+          "https://doc.twse.com.tw/"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [
         "群聯在CXL模組與記憶體封裝領域具備競爭優勢",
@@ -78,32 +96,34 @@
       ]
     },
     "scoringFactors": [
-      "legacy 題材關聯 low +18",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 記憶體模組（product/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12"
     ],
-    "summary": "群聯電子 在 cxl-technology 的 legacy 角色為「low」，資料基礎為「Legacy 待驗證」，產業 score 18/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "群聯電子 在「記憶體模組」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：18/100（legacy 題材關聯 low +18；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：cxl-technology · low（待驗證）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：記憶體模組 · 核心產品/平台 · high",
+      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 記憶體模組（product/active） +16）",
       "主要產品：IC設計業 半導體業 電腦及週邊設備業",
       "主要產品：NAND Flash控制IC，CXL相關",
       "主要產品：NAND Flash 控制IC 與模組全球龍頭",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：受景氣循環影響",
       "T：國際競爭加劇",
       "T：供應鏈重組風險"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 記憶體模組：月營收或訂單能見度改善",
+      "追蹤 記憶體模組：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：CXL 記憶體池化需求持續成長",
       "O：記憶體模組需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "知識庫最後驗證：2026-05-26（fresh）"
     ]
   },
   "knowledge": {
@@ -220,9 +240,32 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "memory-modules",
+        "topicName": "記憶體模組",
+        "canonicalTopicId": "memory-modules",
+        "canonicalTopicName": "記憶體模組",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "群聯在記憶體模組題材中提供 NAND 控制晶片、SSD、UFS、eMMC、USB 與記憶卡等儲存解決方案，扮演 NAND 轉化為終端儲存產品的控制器與模組整合者。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "memory-modules",
+        "name": "記憶體模組",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

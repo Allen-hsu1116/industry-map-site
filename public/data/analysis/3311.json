@@ -8,16 +8,13 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -49,23 +46,27 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 34,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "label": "核心題材受惠",
+    "score": 74,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "medium",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "high-speed-optics",
-      "roleLabel": "中",
-      "roleSummary": "閎暉在「網通衛星｜高速光收發模組」題材的「光收發模組與散熱」中扮演光模組精密零件角色。",
-      "source": "legacy"
+      "topicName": "PC、手機與 AR/VR/XR 終端",
+      "roleLabel": "供應商角色",
+      "roleSummary": "閎暉供應外觀光學機構件、按鍵、2D/3D 玻璃與機構整合模組，服務車用內裝、穿戴、智慧鎖、遊戲機與消費電子等終端產品。",
+      "supplyChainStage": "mechanical_module_components",
+      "roleType": "consumer_automotive_mechanical_module_supplier",
+      "directness": "supplier",
+      "source": "canonical"
     },
     "productNarratives": [
       {
         "name": "外觀光學機構件與機構整合模組",
         "description": "閎暉把橡膠、塑膠、玻璃、薄膜、光學外觀件、按鍵、電路板、背光與 IC 等材料和零件整合成客戶產品用的機構件與模組，應用在車用內裝、穿戴裝置、智慧鎖、網通與遊戲機等。",
         "whyItMatters": "許多終端產品不只需要電子功能，也需要耐用、好看、可量產的外觀與操作介面；閎暉的價值在材料、製程與模組整合能力。",
+        "topicFit": "遊戲機、穿戴與消費性電子機構件需求會影響公司訂單。",
         "businessImpact": "年報揭露汽車零組件與機構整合元件為主要營收來源；業績受車用內裝、穿戴、智慧鎖、網通光學機構零組件與遊戲機產品導入節奏影響。",
         "sourceLabels": [
           "閎暉實業 Silitech：Product",
@@ -73,6 +74,21 @@
         ],
         "sourceUrls": [
           "https://www.silitech.com/CH/product.aspx",
+          "https://doc.twse.com.tw/"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      },
+      {
+        "name": "車用內裝與智慧裝置機構模組",
+        "description": "閎暉將玻璃、塑膠、薄膜、按鍵、背光與電子零件做成車用內裝、穿戴式產品、智慧鎖、網通光學機構件與遊戲機等應用的模組。",
+        "whyItMatters": "車用座艙、智慧穿戴與 IoT 裝置需要結合外觀、觸控、按鍵、耐用度與量產良率的機構模組，這決定終端產品的人機介面與可靠度。",
+        "topicFit": "穿戴式產品、遊戲機與消費電子機構模組屬消費硬體供應鏈。",
+        "businessImpact": "車用與穿戴模組導入可提高訂單穩定性，但營收仍受終端產品生命週期與大客戶新品節奏影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：閎暉實業 113 年股東會年報"
+        ],
+        "sourceUrls": [
           "https://doc.twse.com.tw/"
         ],
         "lastVerified": "2026-05-28",
@@ -94,33 +110,35 @@
       ]
     },
     "scoringFactors": [
-      "legacy 題材關聯 medium +34",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "直接度 供應商角色 +26",
+      "角色信心 medium +10",
+      "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12"
     ],
-    "summary": "閎暉 在 high-speed-optics 的 legacy 角色為「中」，資料基礎為「Legacy 待驗證」，產業 score 34/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "閎暉 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 74/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：34/100（legacy 題材關聯 medium +34；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：high-speed-optics · 中（待驗證）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 供應商角色 · medium",
+      "產業評分：74/100（直接度 供應商角色 +26；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
       "主要產品：按鍵及模組產品 機構整合元件",
       "主要產品：光模組精密零件",
       "主要產品：車用電子與雷達",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：受景氣循環影響",
       "W：衛星通訊為延伸應用，非主力",
       "T：國際競爭加劇",
       "T：供應鏈重組風險"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：高速光收發模組需求持續成長",
       "O：LED 與車用照明需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "知識庫最後驗證：2026-05-26（fresh）"
     ]
   },
   "knowledge": {
@@ -261,9 +279,32 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "consumer-computing-devices",
+        "topicName": "PC、手機與 AR/VR/XR 終端",
+        "canonicalTopicId": "consumer-computing-devices",
+        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "閎暉供應外觀光學機構件、按鍵、2D/3D 玻璃與機構整合模組，服務車用內裝、穿戴、智慧鎖、遊戲機與消費電子等終端產品。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

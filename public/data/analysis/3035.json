@@ -8,16 +8,13 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -53,19 +50,40 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 44,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "label": "核心題材受惠",
+    "score": 98,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "asic-ip-design",
-      "roleLabel": "高",
-      "roleSummary": "智原在「IC 設計｜客製 ASIC 與矽智財」題材的「ASIC設計服務」中扮演ASIC 設計與 IP 平台服務角色。",
-      "source": "legacy"
+      "topicName": "IC 設計與矽智財",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "智原在 IC 設計題材中扮演 ASIC 設計服務與矽智財 IP 供應者，協助客戶從規格、IP、設計實作到量產導入客製晶片。",
+      "supplyChainStage": "asic_design_ip",
+      "roleType": "asic_design_service_ip_provider",
+      "directness": "core",
+      "source": "canonical"
     },
-    "productNarratives": [],
+    "productNarratives": [
+      {
+        "name": "ASIC 設計服務與矽智財 IP",
+        "description": "智原幫客戶把晶片想法做成可量產的客製化 ASIC，也提供自有矽智財 IP、FPGA 轉 ASIC、先進封裝整合等服務。",
+        "whyItMatters": "ASIC 是 AI、HPC、網通、工控、IoT 等系統降低成本、功耗並提高整合度的重要路徑；智原的價值在於設計服務、IP 庫與晶圓代工/封裝供應鏈整合能力。",
+        "topicFit": "官方定位為 ASIC Design Service 與 Silicon IP 供應者，屬 IC 設計服務與矽智財題材。",
+        "businessImpact": "NRE、IP 授權、量產 royalty/turnkey 收入受客戶新案量、先進製程設計需求、AI/HPC ASIC 專案進度與量產放量影響；大型 ASIC 專案成功量產可帶來長尾營收，但設計週期長、專案波動較大。",
+        "sourceLabels": [
+          "Faraday Technology：ASIC Design Service",
+          "Faraday Technology：Silicon IP"
+        ],
+        "sourceUrls": [
+          "https://www.faraday-tech.com/en/entry/ASICService",
+          "https://www.faraday-tech.com/en/entry/SiliconIP"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [
         "智原在ASIC設計服務領域具備競爭優勢",
@@ -81,32 +99,34 @@
       ]
     },
     "scoringFactors": [
-      "legacy 題材關聯 high +44",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12"
     ],
-    "summary": "智原 在 asic-ip-design 的 legacy 角色為「高」，資料基礎為「Legacy 待驗證」，產業 score 44/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "智原 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：44/100（legacy 題材關聯 high +44；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：asic-ip-design · 高（待驗證）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · high",
+      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 IC 設計與矽智財（supply_chain_segment/active） +16）",
       "主要產品：ASIC 設計與 IP 平台服務",
       "主要產品：ASIC 與連接器方案",
       "主要產品：CXL IP 與 ASIC 平台",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：受景氣循環影響",
       "T：國際競爭加劇",
       "T：供應鏈重組風險"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
+      "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：客製 ASIC 與矽智財需求持續成長",
       "O：AI 互連元件需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "知識庫最後驗證：2026-05-26（fresh）"
     ]
   },
   "knowledge": {
@@ -245,9 +265,32 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "ic-design",
+        "topicName": "IC 設計與矽智財",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "智原在 IC 設計題材中扮演 ASIC 設計服務與矽智財 IP 供應者，協助客戶從規格、IP、設計實作到量產導入客製晶片。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

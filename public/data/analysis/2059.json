@@ -8,16 +8,13 @@
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "D",
-    "label": "Legacy only",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "legacy_only",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -53,23 +50,27 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 8,
-    "knowledgeBasis": "legacy_unverified",
-    "confidence": "unverified",
-    "provenanceLabel": "Legacy 待驗證",
-    "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "label": "核心題材受惠",
+    "score": 98,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "ai-server",
-      "roleLabel": "unknown",
-      "roleSummary": "川湖在「AI伺服器與液冷技術」題材的「AI伺服器散熱與零組件」中扮演AI伺服器導軌角色。",
-      "source": "legacy"
+      "topicName": "AI 伺服器機構件與滑軌",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "川湖在 AI 伺服器機構件題材中提供高承重伺服器滑軌、理線器與電子設備導軌，支援資料中心伺服器與網通/儲存設備上架維護。",
+      "supplyChainStage": "server_mechanical_rails",
+      "roleType": "server_rail_cable_management_supplier",
+      "directness": "core",
+      "source": "canonical"
     },
     "productNarratives": [
       {
         "name": "伺服器滑軌與理線器",
         "description": "川湖主要做伺服器、電子設備與家具用的滑軌、鉸鏈與理線器；其中伺服器導軌可讓機櫃中的伺服器被安全拉出維修，理線器則協助整理機櫃線材。",
         "whyItMatters": "AI 伺服器與雲端資料中心需要大量高承重、薄型、可快速安裝維修的導軌與理線設計；這類機構件雖不是晶片，但直接影響伺服器上架、散熱、維護效率與可靠度。",
+        "topicFit": "伺服器導軌與理線器直接對應雲端資料中心與 AI 伺服器機櫃需求。",
         "businessImpact": "資料中心伺服器升級與 AI 伺服器高重量、高維修頻率需求，有利於高承重、免工具、客製化滑軌與理線器價值提升；但需求仍受雲端資本支出與主要伺服器客戶拉貨節奏影響。",
         "sourceLabels": [
           "川湖科技 King Slide：超薄伺服器導軌與理線器",
@@ -78,6 +79,21 @@
         "sourceUrls": [
           "https://www.kingslide.com/products_cloud",
           "https://mops.twse.com.tw/mops/web/t05st03"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      },
+      {
+        "name": "電子設備導軌與機架安裝套件",
+        "description": "川湖也提供交換器、儲存設備、UPS、KVM 等電子設備的導軌與機架安裝套件，讓資料中心設備能固定於機櫃並支援維護抽拉。",
+        "whyItMatters": "資料中心不只有伺服器，也包含網通、儲存與供電設備；機架安裝與維護效率會影響資料中心部署速度與可靠度。",
+        "topicFit": "儲存、UPS、KVM 與伺服器周邊機架件屬資料中心機構件供應鏈。",
+        "businessImpact": "資料中心設備種類增加與高密度部署，會擴大客製機架件與導軌需求，但仍受大型客戶資本支出節奏影響。",
+        "sourceLabels": [
+          "川湖科技 King Slide：超薄伺服器導軌與理線器"
+        ],
+        "sourceUrls": [
+          "https://www.kingslide.com/products_cloud"
         ],
         "lastVerified": "2026-05-28",
         "confidence": "high"
@@ -98,32 +114,34 @@
       ]
     },
     "scoringFactors": [
-      "legacy 題材關聯 unknown +8",
-      "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 AI 伺服器機構件與滑軌（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12"
     ],
-    "summary": "川湖 在 ai-server 的 legacy 角色為「unknown」，資料基礎為「Legacy 待驗證」，產業 score 8/100；此題材關聯仍待驗證，不列為核心題材受惠。",
+    "summary": "川湖 在「AI 伺服器機構件與滑軌」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：Legacy 待驗證（unverified）",
-      "產業評分：8/100（legacy 題材關聯 unknown +8；legacy industry_analysis 待驗證上限（不得列為核心題材受惠））",
-      "legacy 題材角色：ai-server · unknown（待驗證）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器機構件與滑軌 · 核心產品/平台 · high",
+      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器機構件與滑軌（supply_chain_segment/active） +16）",
       "主要產品：製造和銷售伺服器等用導軌及其週邊零組件生產及買賣 鉸鏈(筆記型電腦鉸鏈)及其零組件之製造生產及買賣 滑軌之製造生產及買賣",
       "主要產品：AI伺服器導軌",
       "主要產品：全球伺服器滑軌龍頭",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
       "W：受景氣循環影響",
       "T：國際競爭加劇",
       "T：供應鏈重組風險"
     ],
     "watch": [
-      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 AI 伺服器機構件與滑軌：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器機構件與滑軌：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：AI伺服器與液冷技術需求持續成長",
       "O：機殼與滑軌需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "知識庫最後驗證：2026-05-26（fresh）"
     ]
   },
   "knowledge": {
@@ -253,9 +271,32 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "ai-server-mechanical",
+        "topicName": "AI 伺服器機構件與滑軌",
+        "canonicalTopicId": "ai-server-mechanical",
+        "canonicalTopicName": "AI 伺服器機構件與滑軌",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "川湖在 AI 伺服器機構件題材中提供高承重伺服器滑軌、理線器與電子設備導軌，支援資料中心伺服器與網通/儲存設備上架維護。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ai-server-mechanical",
+        "name": "AI 伺服器機構件與滑軌",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [
