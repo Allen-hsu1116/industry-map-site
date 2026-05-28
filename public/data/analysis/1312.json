@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1312",
   "name": "國喬",
-  "generatedAt": "2026-05-28T11:45:36.821Z",
+  "generatedAt": "2026-05-28T17:01:42.619Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -177,6 +177,53 @@
     "topicRoles": [],
     "swot": [],
     "topics": []
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 0,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": -8,
+      "label": "基本面中性",
+      "signals": [],
+      "risks": [
+        "月營收 MoM -20.0%，短期動能轉弱"
+      ]
+    },
+    "strategy": {
+      "classification": "觀察股 / 題材待驗證",
+      "rationale": [
+        "分析品質不足，策略只能列為觀察"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.analysis-quality",
+        "severity": "hard",
+        "message": "AnalysisQuality D 不可列入 Top recommendation"
+      },
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 9.2%，部位需降速"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "hard",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

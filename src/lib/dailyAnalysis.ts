@@ -5,6 +5,7 @@ import type { CanonicalTopic, CanonicalTopicsFile } from "./canonicalTopics";
 import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "./productKnowledge";
 import type { AnalysisQualityGrade, MissingKnowledge, UpgradePriority } from "./knowledgeCoverage";
 import { computeTechnicalSummary, safeFloat, type DailyPrice } from "./marketData";
+import type { StockKnowledgeRulesFile, StockKnowledgeRuleCategory } from "./stockKnowledgeRules";
 
 export interface InstitutionalFlowPoint {
   date: string;
@@ -37,6 +38,7 @@ export interface AnalysisInput extends CompanyKnowledgeInput {
   companySwot?: CompanySwotKnowledge | null;
   canonicalTopics?: CanonicalTopicsFile | null;
   productKnowledge?: CompanyProductKnowledge | null;
+  stockKnowledgeRules?: StockKnowledgeRulesFile[];
 }
 
 export interface DailyCanonicalKnowledge {
@@ -130,6 +132,31 @@ export interface DailyAnalysis {
   };
   knowledge: CompanyKnowledge;
   canonicalKnowledge: DailyCanonicalKnowledge;
+  scoring: {
+    version: 3;
+    rulePack: {
+      categories: StockKnowledgeRuleCategory[];
+      ruleCount: number;
+      updatedAt?: string;
+    };
+    totalScore: number;
+    recommendationState: "top_candidate" | "watchlist" | "blocked";
+    fundamental: {
+      score: number;
+      label: string;
+      signals: string[];
+      risks: string[];
+    };
+    strategy: {
+      classification: string;
+      rationale: string[];
+    };
+    riskGates: Array<{
+      id: string;
+      severity: "hard" | "soft";
+      message: string;
+    }>;
+  };
   nextSession: {
     focus: string[];
     triggerRules: string[];
@@ -516,6 +543,148 @@ function buildAnalysisQuality(input: AnalysisInput, knowledgeBasis: DailyAnalysi
   return { grade, label, upgradePriority, missingKnowledge, blockingReasons };
 }
 
+function daysBetween(later: Date, yyyyMmDd?: string): number | undefined {
+  if (!yyyyMmDd) return undefined;
+  const parsed = new Date(`${yyyyMmDd}T00:00:00.000Z`);
+  if (Number.isNaN(parsed.getTime())) return undefined;
+  return Math.floor((later.getTime() - parsed.getTime()) / 86_400_000);
+}
+
+function buildFundamentalV3(input: AnalysisInput): DailyAnalysis["scoring"]["fundamental"] {
+  let score = 0;
+  const signals: string[] = [];
+  const risks: string[] = [];
+  const yoy = safeFloat(input.monthly_revenue?.yoy, 0);
+  const mom = safeFloat(input.monthly_revenue?.mom, 0);
+  const pe = safeFloat(input.valuation?.pe, 0);
+  const pb = safeFloat(input.valuation?.pb, 0);
+  const dividendYield = safeFloat(input.valuation?.dividendYield, 0);
+
+  if (yoy >= 15) {
+    score += 24;
+    signals.push(`月營收 YoY +${yoy.toFixed(1)}%，成長動能明確`);
+  } else if (yoy > 0) {
+    score += 12;
+    signals.push(`月營收 YoY +${yoy.toFixed(1)}%，溫和成長`);
+  } else if (yoy < -10) {
+    score -= 20;
+    risks.push(`月營收 YoY ${yoy.toFixed(1)}%，基本面承壓`);
+  }
+
+  if (mom >= 3) {
+    score += 6;
+    signals.push(`月營收 MoM +${mom.toFixed(1)}%，短期動能改善`);
+  } else if (mom <= -8) {
+    score -= 8;
+    risks.push(`月營收 MoM ${mom.toFixed(1)}%，短期動能轉弱`);
+  }
+
+  if (pe > 0 && pe <= 22) {
+    score += 8;
+    signals.push(`本益比 ${pe.toFixed(1)} 倍，估值尚可對照成長`);
+  } else if (pe >= 45) {
+    score -= 12;
+    risks.push(`本益比 ${pe.toFixed(1)} 倍，需防估值壓縮`);
+  }
+
+  if (pb > 0 && pb >= 6) risks.push(`股價淨值比 ${pb.toFixed(1)} 倍偏高，需和 ROE/成長性比對`);
+  if (dividendYield >= 3) signals.push(`殖利率 ${dividendYield.toFixed(1)}%，提供部分下檔支撐`);
+
+  const label = score >= 25 ? "基本面偏強" : score <= -15 ? "基本面偏弱" : signals.length || risks.length ? "基本面中性" : "基本面資料不足";
+  return { score: Math.max(-100, Math.min(100, score)), label, signals: signals.slice(0, 5), risks: risks.slice(0, 5) };
+}
+
+function buildStrategyV3(
+  analysisQuality: DailyAnalysis["analysisQuality"],
+  techStance: DailyAnalysis["technical"]["stance"],
+  chipStance: DailyAnalysis["chips"]["stance"],
+  industry: DailyAnalysis["industry"],
+  fundamental: DailyAnalysis["scoring"]["fundamental"],
+): DailyAnalysis["scoring"]["strategy"] {
+  const rationale: string[] = [];
+  if (techStance === "bullish") rationale.push("技術面符合趨勢股條件");
+  if (chipStance === "accumulation") rationale.push("籌碼面有法人/信用籌碼支撐");
+  if (industry.knowledgeBasis === "canonical_verified") rationale.push("題材角色已 evidence-backed，可納入題材股策略");
+  if (fundamental.score > 15) rationale.push("基本面成長可支撐估值與題材敘事");
+  if (analysisQuality.grade === "D" || analysisQuality.grade === "F") rationale.push("分析品質不足，策略只能列為觀察");
+
+  const classification = analysisQuality.grade === "D" || analysisQuality.grade === "F"
+    ? "觀察股 / 題材待驗證"
+    : techStance === "bullish" && industry.score >= 70
+      ? "趨勢題材股"
+      : techStance === "bullish"
+        ? "趨勢股"
+        : industry.score >= 70
+          ? "題材股"
+          : "觀察股";
+  return { classification, rationale: rationale.slice(0, 5) };
+}
+
+function buildScoringV3(params: {
+  input: AnalysisInput;
+  now: Date;
+  analysisQuality: DailyAnalysis["analysisQuality"];
+  technical: DailyAnalysis["technical"];
+  chips: DailyAnalysis["chips"];
+  industry: DailyAnalysis["industry"];
+  marketDataDate?: string;
+  chipDataDate?: string;
+  latest?: DailyPrice;
+  technicalSummary: ReturnType<typeof computeTechnicalSummary>;
+}): DailyAnalysis["scoring"] {
+  const ruleFiles = params.input.stockKnowledgeRules ?? [];
+  const categories = ruleFiles.map((file) => file.category).sort();
+  const ruleCount = ruleFiles.reduce((total, file) => total + file.rules.length, 0);
+  const updatedAt = ruleFiles.map((file) => file.updatedAt).sort().at(-1);
+  const fundamental = buildFundamentalV3(params.input);
+  const strategy = buildStrategyV3(params.analysisQuality, params.technical.stance, params.chips.stance, params.industry, fundamental);
+  const riskGates: DailyAnalysis["scoring"]["riskGates"] = [];
+
+  if (params.analysisQuality.grade === "D" || params.analysisQuality.grade === "F") {
+    riskGates.push({ id: "risk.analysis-quality", severity: "hard", message: `AnalysisQuality ${params.analysisQuality.grade} 不可列入 Top recommendation` });
+  }
+
+  const marketAge = daysBetween(params.now, params.marketDataDate);
+  if (marketAge != null && marketAge > 7) {
+    riskGates.push({ id: "risk.market-data-stale", severity: marketAge > 14 ? "hard" : "soft", message: `股價資料已 ${marketAge} 天未更新` });
+  }
+  const chipAge = daysBetween(params.now, params.chipDataDate);
+  if (chipAge != null && chipAge > 5) {
+    riskGates.push({ id: "risk.chip-data-stale", severity: chipAge > 10 ? "hard" : "soft", message: `籌碼資料已 ${chipAge} 天未更新` });
+  }
+
+  if (params.latest && params.latest.volume < 500) {
+    riskGates.push({ id: "risk.liquidity", severity: "hard", message: "成交量過低，流動性不足，不推薦" });
+  }
+
+  if (params.latest && params.technicalSummary.ma20) {
+    const stopDistance = Math.abs((params.latest.close - params.technicalSummary.ma20) / params.latest.close) * 100;
+    if (stopDistance > 15) {
+      riskGates.push({ id: "risk.stop-distance", severity: "hard", message: `距離 MA20 約 ${stopDistance.toFixed(1)}%，停損距離過大` });
+    } else if (stopDistance > 9) {
+      riskGates.push({ id: "risk.stop-distance", severity: "soft", message: `距離 MA20 約 ${stopDistance.toFixed(1)}%，部位需降速` });
+    }
+  }
+
+  if (params.industry.knowledgeBasis !== "canonical_verified") {
+    riskGates.push({ id: "risk.topic-evidence", severity: params.industry.knowledgeBasis === "legacy_unverified" ? "hard" : "soft", message: "題材角色尚未 evidence-backed，只能保守參考" });
+  }
+
+  const totalScore = clampScore(
+    50
+    + params.technical.score * 0.22
+    + params.chips.score * 0.18
+    + (params.industry.score - 50) * 0.25
+    + fundamental.score * 0.20
+    - riskGates.filter((gate) => gate.severity === "soft").length * 4
+    - riskGates.filter((gate) => gate.severity === "hard").length * 20,
+  );
+  const hasHardGate = riskGates.some((gate) => gate.severity === "hard");
+  const recommendationState = hasHardGate ? "blocked" : totalScore >= 70 ? "top_candidate" : "watchlist";
+
+  return { version: 3, rulePack: { categories, ruleCount, updatedAt }, totalScore, recommendationState, fundamental, strategy, riskGates };
+}
+
 export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): DailyAnalysis {
   const knowledge = buildCompanyKnowledge(input, now);
   const dailyPrices = input.trends?.daily_prices ?? [];
@@ -748,6 +917,43 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
       ? `${input.name} 在 ${primaryRole.topicId} 的 legacy 角色為「${primaryRole.marketPosition ?? primaryRole.relevance}」，資料基礎為「${provenanceLabel}」，產業 score ${industryScore.score}/100；此題材關聯仍待驗證，不列為核心題材受惠。`
       : `${input.name} 尚未建立完整題材角色，產業 score ${industryScore.score}/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。`;
   const analysisQuality = buildAnalysisQuality(input, knowledgeBasis);
+  const technicalSection: DailyAnalysis["technical"] = {
+    stance: techStance,
+    label: techLabel,
+    score: Math.max(-100, Math.min(100, techScore)),
+    summary: `${input.name} 技術面目前為「${techLabel}」：${[...techSignals, ...techRisks].slice(0, 2).join("；") || "資料仍需累積"}。`,
+    signals: techSignals.slice(0, 5),
+    risks: techRisks.slice(0, 5),
+    watch: techWatch.slice(0, 5),
+  };
+  const chipsSection: DailyAnalysis["chips"] = {
+    stance: chipStance,
+    label: chipLabel,
+    score: Math.max(-100, Math.min(100, chipScore)),
+    summary: `${input.name} 籌碼面目前為「${chipLabel}」：${[...chipSignals, ...chipRisks].slice(0, 2).join("；") || "資料仍需累積"}。`,
+    signals: chipSignals.slice(0, 5),
+    risks: chipRisks.slice(0, 5),
+    watch: chipWatch.slice(0, 5),
+  };
+  const industrySection: DailyAnalysis["industry"] = {
+    label: industryLabel,
+    score: industryScore.score,
+    knowledgeBasis,
+    confidence: industryConfidence,
+    provenanceLabel,
+    verificationNote,
+    roleDetail,
+    productNarratives,
+    swotSnapshot,
+    scoringFactors: industryScore.factors,
+    summary: industrySummary,
+    signals: industrySignals.slice(0, 7),
+    risks: industryRisks.slice(0, 6),
+    watch: industryWatch.slice(0, 6),
+  };
+  const marketDataDate = latest?.date ?? latestDate(dailyPrices);
+  const chipDataDate = latestDate(institutional) ?? latestDate(margin);
+  const scoring = buildScoringV3({ input, now, analysisQuality, technical: technicalSection, chips: chipsSection, industry: industrySection, marketDataDate, chipDataDate, latest, technicalSummary: technical });
 
   return {
     schemaVersion: 1,
@@ -755,46 +961,16 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     name: input.name,
     generatedAt: now.toISOString(),
     sourceUpdatedAt: input.updatedAt ?? latestDate(dailyPrices) ?? latestDate(institutional) ?? latestDate(margin),
-    marketDataDate: latest?.date ?? latestDate(dailyPrices),
-    chipDataDate: latestDate(institutional) ?? latestDate(margin),
+    marketDataDate,
+    chipDataDate,
     mode: "rule-batch",
     analysisQuality,
-    technical: {
-      stance: techStance,
-      label: techLabel,
-      score: Math.max(-100, Math.min(100, techScore)),
-      summary: `${input.name} 技術面目前為「${techLabel}」：${[...techSignals, ...techRisks].slice(0, 2).join("；") || "資料仍需累積"}。`,
-      signals: techSignals.slice(0, 5),
-      risks: techRisks.slice(0, 5),
-      watch: techWatch.slice(0, 5),
-    },
-    chips: {
-      stance: chipStance,
-      label: chipLabel,
-      score: Math.max(-100, Math.min(100, chipScore)),
-      summary: `${input.name} 籌碼面目前為「${chipLabel}」：${[...chipSignals, ...chipRisks].slice(0, 2).join("；") || "資料仍需累積"}。`,
-      signals: chipSignals.slice(0, 5),
-      risks: chipRisks.slice(0, 5),
-      watch: chipWatch.slice(0, 5),
-    },
-    industry: {
-      label: industryLabel,
-      score: industryScore.score,
-      knowledgeBasis,
-      confidence: industryConfidence,
-      provenanceLabel,
-      verificationNote,
-      roleDetail,
-      productNarratives,
-      swotSnapshot,
-      scoringFactors: industryScore.factors,
-      summary: industrySummary,
-      signals: industrySignals.slice(0, 7),
-      risks: industryRisks.slice(0, 6),
-      watch: industryWatch.slice(0, 6),
-    },
+    technical: technicalSection,
+    chips: chipsSection,
+    industry: industrySection,
     knowledge,
     canonicalKnowledge,
+    scoring,
     nextSession: {
       focus: nextFocus.slice(0, 5),
       triggerRules,

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2382",
   "name": "廣達",
-  "generatedAt": "2026-05-28T11:45:36.980Z",
+  "generatedAt": "2026-05-28T17:01:42.789Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -46,7 +46,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 98,
+    "score": 94,
     "knowledgeBasis": "canonical_verified",
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
@@ -98,13 +98,14 @@
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6"
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "廣達 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "廣達 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（medium）",
       "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
-      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：AI 伺服器整機與 EMS · 核心產品/平台",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
       "主要產品：電子 筆記型電腦及相關產品",
@@ -318,6 +319,39 @@
         ]
       }
     ]
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 63,
+    "recommendationState": "watchlist",
+    "fundamental": {
+      "score": 30,
+      "label": "基本面偏強",
+      "signals": [
+        "月營收 YoY +94.5%，成長動能明確",
+        "月營收 MoM +41.2%，短期動能改善"
+      ],
+      "risks": []
+    },
+    "strategy": {
+      "classification": "題材股",
+      "rationale": [
+        "題材角色已 evidence-backed，可納入題材股策略",
+        "基本面成長可支撐估值與題材敘事"
+      ]
+    },
+    "riskGates": []
   },
   "nextSession": {
     "focus": [

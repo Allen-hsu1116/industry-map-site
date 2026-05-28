@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6175",
   "name": "立敦",
-  "generatedAt": "2026-05-28T11:45:37.480Z",
+  "generatedAt": "2026-05-28T17:01:43.332Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -335,6 +335,42 @@
           "官方公告、年報或重大訊息揭露新產品/客戶/產能",
           "產業報價、資本支出或需求循環出現方向性變化"
         ]
+      }
+    ]
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 49,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": 0,
+      "label": "基本面資料不足",
+      "signals": [],
+      "risks": []
+    },
+    "strategy": {
+      "classification": "趨勢題材股",
+      "rationale": [
+        "技術面符合趨勢股條件",
+        "題材角色已 evidence-backed，可納入題材股策略"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "hard",
+        "message": "距離 MA20 約 24.4%，停損距離過大"
       }
     ]
   },

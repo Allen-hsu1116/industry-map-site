@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5269",
   "name": "祥碩",
-  "generatedAt": "2026-05-28T11:45:37.409Z",
+  "generatedAt": "2026-05-28T17:01:43.256Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -175,6 +175,54 @@
     "topicRoles": [],
     "swot": [],
     "topics": []
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 17,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": -20,
+      "label": "基本面偏弱",
+      "signals": [
+        "本益比 18.2 倍，估值尚可對照成長",
+        "殖利率 3.0%，提供部分下檔支撐"
+      ],
+      "risks": [
+        "月營收 YoY -17.6%，基本面承壓",
+        "月營收 MoM -23.8%，短期動能轉弱"
+      ]
+    },
+    "strategy": {
+      "classification": "觀察股 / 題材待驗證",
+      "rationale": [
+        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
+        "分析品質不足，策略只能列為觀察"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.analysis-quality",
+        "severity": "hard",
+        "message": "AnalysisQuality D 不可列入 Top recommendation"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "hard",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

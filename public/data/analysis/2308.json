@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-05-28T11:45:36.925Z",
+  "generatedAt": "2026-05-28T17:01:42.729Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -46,7 +46,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 100,
+    "score": 94,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
@@ -118,13 +118,14 @@
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 3 項 +10",
-      "風險 SWOT 扣分 -6"
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "台達電 在「儲能、電芯與電池材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "台達電 在「儲能、電芯與電池材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：儲能、電芯與電池材料 · 核心產品/平台 · high",
-      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 儲能、電芯與電池材料（theme/active） +18）",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 儲能、電芯與電池材料（theme/active） +18）",
       "相關題材：工業自動化與 CNC 工具機 · 核心產品/平台",
       "相關題材：AI 伺服器電源與 BBU · 核心產品/平台",
       "主要產品：AI伺服器高瓦數電源(3kW-5kW+)",
@@ -447,6 +448,42 @@
         ]
       }
     ]
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 68,
+    "recommendationState": "watchlist",
+    "fundamental": {
+      "score": 18,
+      "label": "基本面中性",
+      "signals": [
+        "月營收 YoY +38.6%，成長動能明確",
+        "月營收 MoM +6.2%，短期動能改善"
+      ],
+      "risks": [
+        "本益比 70.6 倍，需防估值壓縮",
+        "股價淨值比 16.6 倍偏高，需和 ROE/成長性比對"
+      ]
+    },
+    "strategy": {
+      "classification": "題材股",
+      "rationale": [
+        "題材角色已 evidence-backed，可納入題材股策略",
+        "基本面成長可支撐估值與題材敘事"
+      ]
+    },
+    "riskGates": []
   },
   "nextSession": {
     "focus": [

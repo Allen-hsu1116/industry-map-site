@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2356",
   "name": "英業達",
-  "generatedAt": "2026-05-28T11:45:36.960Z",
+  "generatedAt": "2026-05-28T17:01:42.767Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,7 +48,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 98,
+    "score": 94,
     "knowledgeBasis": "canonical_verified",
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
@@ -100,13 +100,14 @@
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6"
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "英業達 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 98/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "英業達 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（medium）",
       "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
-      "產業評分：98/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：AI 伺服器整機與 EMS · 核心產品/平台",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
       "主要產品：筆記型電腦 伺服器",
@@ -316,6 +317,47 @@
           "官方公告、年報或重大訊息揭露新產品/客戶/產能",
           "產業報價、資本支出或需求循環出現方向性變化"
         ]
+      }
+    ]
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 61,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": -14,
+      "label": "基本面中性",
+      "signals": [
+        "月營收 MoM +23.4%，短期動能改善"
+      ],
+      "risks": [
+        "月營收 YoY -10.9%，基本面承壓"
+      ]
+    },
+    "strategy": {
+      "classification": "趨勢題材股",
+      "rationale": [
+        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "hard",
+        "message": "距離 MA20 約 22.1%，停損距離過大"
       }
     ]
   },

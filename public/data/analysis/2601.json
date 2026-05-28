@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2601",
   "name": "益航",
-  "generatedAt": "2026-05-28T11:45:37.082Z",
+  "generatedAt": "2026-05-28T17:01:42.901Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -181,6 +181,48 @@
     "topicRoles": [],
     "swot": [],
     "topics": []
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 14,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": 0,
+      "label": "基本面資料不足",
+      "signals": [],
+      "risks": []
+    },
+    "strategy": {
+      "classification": "觀察股 / 題材待驗證",
+      "rationale": [
+        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
+        "分析品質不足，策略只能列為觀察"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.analysis-quality",
+        "severity": "hard",
+        "message": "AnalysisQuality D 不可列入 Top recommendation"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "hard",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-05-28T11:45:36.943Z",
+  "generatedAt": "2026-05-28T17:01:42.748Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,7 +48,7 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 100,
+    "score": 94,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
@@ -128,13 +128,14 @@
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6"
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "台積電 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 100/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "台積電 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
-      "產業評分：100/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
       "相關題材：晶圓代工與第三代半導體 · 核心產品/平台",
       "相關題材：AI 伺服器整機與 EMS · 直接賦能角色",
       "主要產品：先進製程晶圓代工(3nm/5nm)",
@@ -432,6 +433,41 @@
         ]
       }
     ]
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 68,
+    "recommendationState": "watchlist",
+    "fundamental": {
+      "score": 24,
+      "label": "基本面中性",
+      "signals": [
+        "月營收 YoY +20.4%，成長動能明確"
+      ],
+      "risks": [
+        "股價淨值比 9.9 倍偏高，需和 ROE/成長性比對"
+      ]
+    },
+    "strategy": {
+      "classification": "趨勢題材股",
+      "rationale": [
+        "技術面符合趨勢股條件",
+        "題材角色已 evidence-backed，可納入題材股策略",
+        "基本面成長可支撐估值與題材敘事"
+      ]
+    },
+    "riskGates": []
   },
   "nextSession": {
     "focus": [

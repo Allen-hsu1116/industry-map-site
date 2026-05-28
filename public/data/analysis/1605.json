@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1605",
   "name": "華新",
-  "generatedAt": "2026-05-28T11:45:36.862Z",
+  "generatedAt": "2026-05-28T17:01:42.661Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -211,6 +211,57 @@
     "topicRoles": [],
     "swot": [],
     "topics": []
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 27,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": 18,
+      "label": "基本面中性",
+      "signals": [
+        "月營收 YoY +13.6%，溫和成長",
+        "月營收 MoM +21.6%，短期動能改善"
+      ],
+      "risks": []
+    },
+    "strategy": {
+      "classification": "觀察股 / 題材待驗證",
+      "rationale": [
+        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
+        "基本面成長可支撐估值與題材敘事",
+        "分析品質不足，策略只能列為觀察"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.analysis-quality",
+        "severity": "hard",
+        "message": "AnalysisQuality D 不可列入 Top recommendation"
+      },
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 11.2%，部位需降速"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "hard",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

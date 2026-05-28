@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { generateDailyAnalysis } from "./dailyAnalysis";
+import { loadStockKnowledgeRules } from "./stockKnowledgeRules";
 
 function makePrices(days = 30) {
   return Array.from({ length: days }, (_, index) => {
@@ -399,4 +400,136 @@ test("generateDailyAnalysis returns insufficient labels when data is sparse", ()
   assert.equal(analysis.industry.label, "產業資料待補");
   assert.equal(analysis.knowledge.swot.freshness, "unknown");
   assert.ok(analysis.technical.signals[0].includes("資料不足"));
+});
+
+test("generateDailyAnalysis scoring v3 applies stock knowledge rules and blocks low-quality recommendations", () => {
+  const analysis = generateDailyAnalysis({
+    code: "9999",
+    name: "Legacy 測試股",
+    trends: { daily_prices: makePrices(30) },
+    institutional_history: [],
+    margin_history: [],
+    stockKnowledgeRules: loadStockKnowledgeRules(),
+    industry_analysis: {
+      "hot-ai-topic": {
+        market_position: "市場龍頭",
+        relevance: "high",
+        products: ["legacy product"],
+        swot: { strengths: ["legacy strength"], opportunities: ["legacy opportunity"] },
+      },
+    },
+  }, new Date("2026-05-31T00:00:00.000Z"));
+
+  assert.equal(analysis.scoring.version, 3);
+  assert.equal(analysis.scoring.rulePack.ruleCount, 25);
+  assert.deepEqual(analysis.scoring.rulePack.categories.sort(), ["chips", "fundamental", "risk", "strategy", "technical"].sort());
+  assert.equal(analysis.scoring.recommendationState, "blocked");
+  assert.ok(analysis.scoring.riskGates.some((gate) => gate.id === "risk.analysis-quality" && gate.severity === "hard"));
+  assert.ok(analysis.scoring.strategy.classification.includes("題材"));
+});
+
+test("generateDailyAnalysis scoring v3 rewards aligned technical, chip, fundamental, and evidence-backed industry inputs", () => {
+  const analysis = generateDailyAnalysis({
+    code: "2308",
+    name: "台達電",
+    updatedAt: "2026-05-30",
+    trends: { daily_prices: makePrices(30) },
+    valuation: { date: "2026-05-30", pe: 18, pb: 2.2, dividendYield: 3.1 },
+    monthly_revenue: { latestMonth: "2026-05", yoy: 18, mom: 4 },
+    institutional_history: Array.from({ length: 20 }, (_, index) => ({
+      date: `2026-05-${String(index + 11).padStart(2, "0")}`,
+      foreign_net: 1000,
+      investment_trust_net: 500,
+      dealer_net: 100,
+      total_net: 1600,
+    })),
+    margin_history: Array.from({ length: 10 }, (_, index) => ({
+      date: `2026-05-${String(index + 21).padStart(2, "0")}`,
+      margin_buy: 100,
+      margin_sell: 150,
+      margin_balance: 10000 - index * 150,
+      short_sell: 10,
+      short_buy: 8,
+      short_balance: 400,
+    })),
+    stockKnowledgeRules: loadStockKnowledgeRules(),
+    products: ["AI 伺服器電源供應器"],
+    productKnowledge: {
+      schemaVersion: 1,
+      code: "2308",
+      name: "台達電",
+      updatedAt: "2026-05-28",
+      products: [{
+        name: "AI 伺服器電源供應器",
+        category: "power",
+        plainLanguage: "把交流電轉換成 AI 伺服器 GPU、CPU 與周邊模組可用的高效率電源。",
+        whyItMatters: "AI 伺服器功耗快速上升，電源效率與可靠度會直接影響整機穩定度。",
+        topicFit: { "ai-server": "直接供應 AI 伺服器電力轉換與電源管理。" },
+        businessImpact: "高功率電源規格升級提高單機價值量。",
+        evidence: [{ sourceId: "delta-2025-ar", publisher: "Delta", title: "Annual Report", url: "https://example.com", claim: "AI server power" }],
+        lastVerified: "2026-05-28",
+        confidence: "high",
+      }],
+    },
+    companyTopicRoles: {
+      schemaVersion: 1,
+      companyCode: "2308",
+      companyName: "台達電",
+      updatedAt: "2026-05-28",
+      roles: [{
+        topicId: "ai-server-power",
+        topicName: "AI 伺服器電源",
+        topicType: "supply_chain_segment",
+        directness: "direct_enabler",
+        supplyChainStage: "power",
+        roleType: "power supplier",
+        roleSummary: "提供 AI 伺服器高功率電源與電源管理方案。",
+        products: ["AI 伺服器電源供應器"],
+        evidence: [{ sourceId: "delta-2025-ar", publisher: "Delta", title: "Annual Report", url: "https://example.com", claim: "power" }],
+        confidence: "high",
+        lastVerified: "2026-05-28",
+        status: "verified",
+      }],
+    },
+    companySwot: {
+      schemaVersion: 1,
+      companyCode: "2308",
+      companyName: "台達電",
+      updatedAt: "2026-05-28",
+      items: [
+        { id: "s", category: "strength", statement: "高效率電源與散熱整合能力強。", rationale: "產品組合完整。", timeHorizon: "structural", relatedTopicIds: ["ai-server"], evidence: [{ sourceId: "e", publisher: "Delta", title: "AR", url: "https://example.com", claim: "strength" }], confidence: "high", lastVerified: "2026-05-28", status: "verified" },
+        { id: "w", category: "weakness", statement: "部分高階產品仍受客戶認證週期影響。", rationale: "認證週期長。", timeHorizon: "cyclical", relatedTopicIds: ["ai-server"], evidence: [{ sourceId: "e", publisher: "Delta", title: "AR", url: "https://example.com", claim: "weakness" }], confidence: "medium", lastVerified: "2026-05-28", status: "verified" },
+        { id: "o", category: "opportunity", statement: "AI 伺服器功耗提升推升高效率電源需求。", rationale: "GPU 功耗增加。", timeHorizon: "structural", relatedTopicIds: ["ai-server"], evidence: [{ sourceId: "e", publisher: "Delta", title: "AR", url: "https://example.com", claim: "opportunity" }], confidence: "high", lastVerified: "2026-05-28", status: "verified" },
+        { id: "t", category: "threat", statement: "競爭者也投入高功率電源市場。", rationale: "市場競爭升高。", timeHorizon: "structural", relatedTopicIds: ["ai-server"], evidence: [{ sourceId: "e", publisher: "Delta", title: "AR", url: "https://example.com", claim: "threat" }], confidence: "medium", lastVerified: "2026-05-28", status: "verified" },
+      ],
+    },
+    canonicalTopics: {
+      schemaVersion: 1,
+      updatedAt: "2026-05-28",
+      topicDefinition: { rule: "test", notTopic: [] },
+      topics: [{
+        id: "ai-server",
+        name: "AI 伺服器",
+        type: "theme",
+        status: "active",
+        definition: "AI server topic",
+        whyItMatters: "AI server demand",
+        aliases: [],
+        legacyTopicIds: ["ai-server-power"],
+        childIds: [],
+        include: [],
+        exclude: [],
+        activationSignals: ["CSP capex", "電源規格升級", "GPU 平台換代"],
+        evidence: [],
+        confidence: "high",
+        lastVerified: "2026-05-28",
+      }],
+    },
+  }, new Date("2026-05-31T00:00:00.000Z"));
+
+  assert.equal(analysis.analysisQuality.grade, "A");
+  assert.ok(analysis.scoring.totalScore >= 70, `expected strong v3 score, got ${analysis.scoring.totalScore}`);
+  assert.notEqual(analysis.scoring.recommendationState, "blocked");
+  assert.ok(analysis.scoring.fundamental.signals.some((signal) => signal.includes("月營收 YoY")));
+  assert.ok(analysis.scoring.riskGates.every((gate) => gate.severity !== "hard"));
 });

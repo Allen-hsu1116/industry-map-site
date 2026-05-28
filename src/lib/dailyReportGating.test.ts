@@ -34,6 +34,22 @@ test("gateDailyReportPicks separates D/F and missing analysis into observation-o
   assert.match(gated.observationOnly[2].reason ?? "", /缺 Daily Analysis/);
 });
 
+test("gateDailyReportPicks demotes A/B/C picks when scoring v3 has a hard risk gate", () => {
+  const gated = gateDailyReportPicks([{ rank: 1, code: "2330" }], {
+    "2330": {
+      analysisQuality: { grade: "A", label: "完整 evidence-backed", blockingReasons: [] },
+      scoring: {
+        recommendationState: "blocked",
+        riskGates: [{ id: "risk.stop-distance", severity: "hard", message: "停損距離過大，不推薦" }],
+      },
+    },
+  });
+
+  assert.deepEqual(gated.topRecommendations, []);
+  assert.deepEqual(gated.observationOnly.map((item) => item.pick.code), ["2330"]);
+  assert.match(gated.observationOnly[0].reason ?? "", /風控硬閘門|停損距離/);
+});
+
 test("checked-in daily report never renders D/F picks as top recommendations after gating", () => {
   const dataDir = join(process.cwd(), "public", "data");
   const report = JSON.parse(readFileSync(join(dataDir, "daily-report.json"), "utf8")) as {

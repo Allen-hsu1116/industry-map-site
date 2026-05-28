@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "4967",
   "name": "十銓",
-  "generatedAt": "2026-05-28T11:45:37.397Z",
+  "generatedAt": "2026-05-28T17:01:43.243Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -200,6 +200,53 @@
     "topicRoles": [],
     "swot": [],
     "topics": []
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 0,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": 24,
+      "label": "基本面中性",
+      "signals": [
+        "月營收 YoY +78.6%，成長動能明確",
+        "本益比 6.9 倍，估值尚可對照成長",
+        "殖利率 3.7%，提供部分下檔支撐"
+      ],
+      "risks": [
+        "月營收 MoM -59.0%，短期動能轉弱"
+      ]
+    },
+    "strategy": {
+      "classification": "觀察股 / 題材待驗證",
+      "rationale": [
+        "基本面成長可支撐估值與題材敘事",
+        "分析品質不足，策略只能列為觀察"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.analysis-quality",
+        "severity": "hard",
+        "message": "AnalysisQuality D 不可列入 Top recommendation"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "hard",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

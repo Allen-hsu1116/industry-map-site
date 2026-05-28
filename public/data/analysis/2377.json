@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2377",
   "name": "微星",
-  "generatedAt": "2026-05-28T11:45:36.977Z",
+  "generatedAt": "2026-05-28T17:01:42.786Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -171,6 +171,57 @@
     "topicRoles": [],
     "swot": [],
     "topics": []
+  },
+  "scoring": {
+    "version": 3,
+    "rulePack": {
+      "categories": [
+        "chips",
+        "fundamental",
+        "risk",
+        "strategy",
+        "technical"
+      ],
+      "ruleCount": 25,
+      "updatedAt": "2026-05-29"
+    },
+    "totalScore": 4,
+    "recommendationState": "blocked",
+    "fundamental": {
+      "score": 16,
+      "label": "基本面中性",
+      "signals": [
+        "月營收 YoY +33.9%，成長動能明確"
+      ],
+      "risks": [
+        "月營收 MoM -16.2%，短期動能轉弱"
+      ]
+    },
+    "strategy": {
+      "classification": "觀察股 / 題材待驗證",
+      "rationale": [
+        "技術面符合趨勢股條件",
+        "基本面成長可支撐估值與題材敘事",
+        "分析品質不足，策略只能列為觀察"
+      ]
+    },
+    "riskGates": [
+      {
+        "id": "risk.analysis-quality",
+        "severity": "hard",
+        "message": "AnalysisQuality D 不可列入 Top recommendation"
+      },
+      {
+        "id": "risk.stop-distance",
+        "severity": "hard",
+        "message": "距離 MA20 約 15.9%，停損距離過大"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "hard",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
