@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-05-28T03:20:29.723Z",
+  "generatedAt": "2026-05-28T03:36:38.083Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,18 +49,16 @@
       "主要產品：AI 伺服器與主機板品牌"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "W：營收高度集中AI伺服器業務",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：品牌與通路產品較容易受終端需求、庫存週期與價格競爭影響，AI server 之外的 PC 業務可能稀釋題材純度。",
+      "V2 T：伺服器客戶驗證進度、GPU 供給與 PC 通路庫存循環，是技嘉題材轉化成營收與獲利的主要威脅。"
     ],
     "watch": [
+      "V2 O：AI 伺服器功耗提升與液冷導入，可推升技嘉 GPU server platforms 與液冷伺服器方案需求。",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AI伺服器與液冷技術需求持續成長",
-      "O：整機組裝需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -239,7 +237,49 @@
         "roleSummary": "技嘉與液冷題材的關聯來自 AI 伺服器/液冷機櫃方案；需用官方產品頁或法說補強具體規格、客戶與營收占比。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-liquid-cooling-ai-server-platforms",
+        "category": "opportunity",
+        "statement": "AI 伺服器功耗提升與液冷導入，可推升技嘉 GPU server platforms 與液冷伺服器方案需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server",
+          "liquid_cooling_advanced"
+        ]
+      },
+      {
+        "id": "strength-ai-server-brand-and-pc-platform",
+        "category": "strength",
+        "statement": "技嘉同時具 AI 伺服器平台、伺服器主機板與 PC 零組件品牌基礎，能跨 AI server 與 PC 題材。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server",
+          "liquid_cooling_advanced",
+          "pc-nb-tablet"
+        ]
+      },
+      {
+        "id": "threat-server-validation-and-channel-inventory",
+        "category": "threat",
+        "statement": "伺服器客戶驗證進度、GPU 供給與 PC 通路庫存循環，是技嘉題材轉化成營收與獲利的主要威脅。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "pc-nb-tablet"
+        ]
+      },
+      {
+        "id": "weakness-brand-channel-demand-volatility",
+        "category": "weakness",
+        "statement": "品牌與通路產品較容易受終端需求、庫存週期與價格競爭影響，AI server 之外的 PC 業務可能稀釋題材純度。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pc-nb-tablet",
+          "ai-server"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server",

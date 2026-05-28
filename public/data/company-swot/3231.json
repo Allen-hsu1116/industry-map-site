@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "3231",
+  "companyName": "緯創",
+  "updatedAt": "2026-05-28",
+  "items": [
+    {
+      "id": "strength-server-ems-and-mechanical-integration",
+      "category": "strength",
+      "statement": "緯創具 AI 伺服器 ODM、EMS 製造與伺服器機構整合角色，可承接系統組裝與部分機構整合需求。",
+      "rationale": "company-topic-roles 同時列出 ai-server-odm、ems-smt、pc-nb-tablet 與 ai-server-chassis-rails，顯示其從製造到系統/機構整合的題材覆蓋。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "ems-smt",
+        "ai-server-chassis-rails"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "緯創 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3231",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯創 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-odm-margin-and-validation-risk",
+      "category": "weakness",
+      "statement": "ODM/EMS 角色使緯創受惠於出貨量，但獲利仍受客戶議價、產品組合與新平台驗證進度限制。",
+      "rationale": "緯創的主要供應鏈階段為 system_assembly 與 ems，這類角色通常需承擔交付與成本控制壓力。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "ems-smt"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "緯創 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3231",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯創 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ai-server-order-mix-upgrade",
+      "category": "opportunity",
+      "statement": "AI 伺服器出貨占比提升可改善緯創產品組合，帶來高階伺服器與系統整合成長機會。",
+      "rationale": "V2 角色將其列為 AI 伺服器 ODM core，產品含 AI 伺服器 ODM、伺服器系統組裝與 EMS 製造服務。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "ai-server"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "緯創 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3231",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯創 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "threat-supply-chain-and-customer-concentration",
+      "category": "threat",
+      "statement": "若關鍵零組件供應、客戶平台轉換或大客戶訂單集中度變化，緯創 AI 伺服器題材可能出現出貨與毛利波動。",
+      "rationale": "系統組裝廠位於供應鏈中段，對上游 GPU/PCB/機構件供應與下游客戶排程高度敏感。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "ai-server-chassis-rails"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "緯創 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3231",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯創 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

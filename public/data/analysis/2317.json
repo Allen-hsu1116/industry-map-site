@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2317",
   "name": "鴻海",
-  "generatedAt": "2026-05-28T03:20:29.682Z",
+  "generatedAt": "2026-05-28T03:36:38.042Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,18 +50,16 @@
       "主要產品：通用伺服器主機板"
     ],
     "risks": [
-      "W：毛利率僅6.2%獲利受限",
-      "W：客戶議價力強利潤壓縮",
-      "T：ODM同業搶食AI伺服器訂單",
-      "T：地緣政治迫使供應鏈重組"
+      "V2 W：EMS/ODM 商業模式通常毛利率較品牌或核心 IC 低，題材放量未必等比例轉化成獲利彈性。",
+      "V2 T：大型客戶拉貨週期、產品切換與高階伺服器良率/交付進度，是鴻海 AI 伺服器題材的主要威脅。"
     ],
     "watch": [
+      "V2 O：AI 伺服器整機與雲端資料中心硬體需求成長，可帶動鴻海伺服器 ODM/EMS 接單與產能利用率。",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AI伺服器佔營收比重快速提升",
-      "O：電動車MIH平台新業務量產"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -192,7 +190,49 @@
         "roleSummary": "鴻海在智慧型手機供應鏈中是核心組裝與製造服務商；此題材與 AI server 題材需分開看，避免把消費電子循環與伺服器成長混在一起。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-odm-ramp",
+        "category": "opportunity",
+        "statement": "AI 伺服器整機與雲端資料中心硬體需求成長，可帶動鴻海伺服器 ODM/EMS 接單與產能利用率。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-global-ems-ai-server-scale",
+        "category": "strength",
+        "statement": "鴻海具全球 EMS、SMT 與系統組裝規模，能在 AI 伺服器、消費電子與伺服器製造間調配產能。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ems-smt",
+          "mobile"
+        ]
+      },
+      {
+        "id": "threat-customer-cycle-and-execution",
+        "category": "threat",
+        "statement": "大型客戶拉貨週期、產品切換與高階伺服器良率/交付進度，是鴻海 AI 伺服器題材的主要威脅。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ems-smt"
+        ]
+      },
+      {
+        "id": "weakness-low-margin-manufacturing-mix",
+        "category": "weakness",
+        "statement": "EMS/ODM 商業模式通常毛利率較品牌或核心 IC 低，題材放量未必等比例轉化成獲利彈性。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ems-smt"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server",

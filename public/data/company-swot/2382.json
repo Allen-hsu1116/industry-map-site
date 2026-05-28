@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2382",
+  "companyName": "廣達",
+  "updatedAt": "2026-05-28",
+  "items": [
+    {
+      "id": "strength-cloud-ai-server-odm-position",
+      "category": "strength",
+      "statement": "廣達是雲端與 AI 伺服器 ODM 核心供應商，同時具筆電 ODM 基礎，具備系統設計與量產能力。",
+      "rationale": "company-topic-roles 將廣達在 ai-server-odm 與 ai-server 皆列為 core，產品含 AI 伺服器 ODM、雲端伺服器與資料中心系統。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "ai-server"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "廣達 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 廣達 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2382 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-platform-cycle-dependence",
+      "category": "weakness",
+      "statement": "伺服器 ODM 對 GPU/CPU 平台切換與 CSP 拉貨節奏敏感，短期營運容易受平台轉換空窗影響。",
+      "rationale": "其核心角色集中在雲端伺服器與 AI server system integration；因此分析需追蹤新舊平台轉換與客戶驗證節奏。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "ai-server"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "廣達 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 廣達 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2382 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-csp-ai-infrastructure-buildout",
+      "category": "opportunity",
+      "statement": "CSP AI 基礎建設投資擴張，可推升廣達雲端伺服器與 AI server system integration 需求。",
+      "rationale": "廣達在 V2 role 中被歸類為 cloud_server_odm/system_assembly，與資料中心硬體資本支出高度連動。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "cloud-msp"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "廣達 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 廣達 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2382 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "threat-odm-competition-and-margin",
+      "category": "threat",
+      "statement": "AI 伺服器 ODM 競爭者眾多，若價格競爭或客戶議價加劇，可能壓縮廣達題材受惠的利潤率。",
+      "rationale": "同一供應鏈中還有多家 ODM/EMS 角色公司；即使需求成長，競爭與成本轉嫁能力仍需驗證。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ai-server-odm",
+        "ai-server"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "廣達 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 廣達 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2382 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

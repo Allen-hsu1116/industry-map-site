@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6669",
   "name": "緯穎",
-  "generatedAt": "2026-05-28T03:20:30.334Z",
+  "generatedAt": "2026-05-28T03:36:38.690Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,17 +49,16 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：高度聚焦 CSP/雲端伺服器使緯穎對少數大型客戶資本支出與平台切換更敏感。",
+      "V2 T：新一代 AI 伺服器平台切換若延遲，或 ODM 競爭加劇，可能造成緯穎出貨與估值波動。"
     ],
     "watch": [
+      "V2 O：雲端服務商 AI 基礎建設擴張，可直接帶動緯穎 CSP AI server 與資料中心硬體平台需求。",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
       "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：整機組裝需求持續成長",
-      "O：雲端服務與代管需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -166,7 +165,49 @@
         "roleSummary": "緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-cloud-ai-capex-growth",
+        "category": "opportunity",
+        "statement": "雲端服務商 AI 基礎建設擴張，可直接帶動緯穎 CSP AI server 與資料中心硬體平台需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "cloud-msp"
+        ]
+      },
+      {
+        "id": "strength-csp-ai-server-focus",
+        "category": "strength",
+        "statement": "緯穎聚焦 CSP 雲端與 AI 伺服器，題材純度高，與資料中心硬體投資直接連動。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "cloud-msp",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-platform-transition-and-competition",
+        "category": "threat",
+        "statement": "新一代 AI 伺服器平台切換若延遲，或 ODM 競爭加劇，可能造成緯穎出貨與估值波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "cloud-msp"
+        ]
+      },
+      {
+        "id": "weakness-high-csp-cycle-sensitivity",
+        "category": "weakness",
+        "statement": "高度聚焦 CSP/雲端伺服器使緯穎對少數大型客戶資本支出與平台切換更敏感。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "cloud-msp"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server",

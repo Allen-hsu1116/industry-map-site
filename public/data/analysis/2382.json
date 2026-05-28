@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2382",
   "name": "廣達",
-  "generatedAt": "2026-05-28T03:20:29.727Z",
+  "generatedAt": "2026-05-28T03:36:38.088Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,17 +49,16 @@
       "主要產品：全球伺服器 ODM 龍頭"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：伺服器 ODM 對 GPU/CPU 平台切換與 CSP 拉貨節奏敏感，短期營運容易受平台轉換空窗影響。",
+      "V2 T：AI 伺服器 ODM 競爭者眾多，若價格競爭或客戶議價加劇，可能壓縮廣達題材受惠的利潤率。"
     ],
     "watch": [
+      "V2 O：CSP AI 基礎建設投資擴張，可推升廣達雲端伺服器與 AI server system integration 需求。",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AI伺服器與液冷技術需求持續成長",
-      "O：整機組裝需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -191,7 +190,48 @@
         "roleSummary": "廣達仍具筆電 ODM 角色，PC 循環對基本面有影響；需要和 AI server 成長題材拆開評估。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-csp-ai-infrastructure-buildout",
+        "category": "opportunity",
+        "statement": "CSP AI 基礎建設投資擴張，可推升廣達雲端伺服器與 AI server system integration 需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "cloud-msp"
+        ]
+      },
+      {
+        "id": "strength-cloud-ai-server-odm-position",
+        "category": "strength",
+        "statement": "廣達是雲端與 AI 伺服器 ODM 核心供應商，同時具筆電 ODM 基礎，具備系統設計與量產能力。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-odm-competition-and-margin",
+        "category": "threat",
+        "statement": "AI 伺服器 ODM 競爭者眾多，若價格競爭或客戶議價加劇，可能壓縮廣達題材受惠的利潤率。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-platform-cycle-dependence",
+        "category": "weakness",
+        "statement": "伺服器 ODM 對 GPU/CPU 平台切換與 CSP 拉貨節奏敏感，短期營運容易受平台轉換空窗影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ai-server"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server",

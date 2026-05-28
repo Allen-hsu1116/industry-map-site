@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-05-28T03:20:29.691Z",
+  "generatedAt": "2026-05-28T03:36:38.051Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,18 +51,16 @@
       "主要產品：InFO 封裝"
     ],
     "risks": [
-      "W：設備採購成本高：影響毛利率",
-      "W：產能持續緊張：AI伺服器需求超過供給",
-      "T：設備供應商議價力：KLA壟斷地位",
-      "T：散熱技術競爭：其他封裝方案可能切入"
+      "V2 W：先進製程與先進封裝屬重資本投入，景氣循環、客戶投片節奏或資本支出變化會放大營運波動。",
+      "V2 T：地緣政治、海外設廠執行、先進節點良率與競爭者追趕，是台積電在高估值核心題材下的主要威脅。"
     ],
     "watch": [
+      "V2 O：AI/HPC 晶片需要先進製程與高頻寬記憶體整合，提升晶圓代工與 CoWoS/SoIC 等先進封裝需求。",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
       "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：SoIC量產：3D IC量測需求新增長點",
-      "O：AI加速器封裝：每顆GPU都要完整量測流程"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -252,7 +250,52 @@
         "roleSummary": "台積電不是 HBM 記憶體供應商，但在 AI 加速器與 HBM 的先進封裝整合中扮演直接賦能角色；需避免把封裝整合誤寫成記憶體製造。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-hpc-advanced-packaging",
+        "category": "opportunity",
+        "statement": "AI/HPC 晶片需要先進製程與高頻寬記憶體整合，提升晶圓代工與 CoWoS/SoIC 等先進封裝需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "cowos-advanced-packaging",
+          "hbm",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-foundry-packaging-platform",
+        "category": "strength",
+        "statement": "台積電同時具備先進邏輯晶圓代工、先進封裝與 AI/HPC 晶片製造相關能力，是 AI 半導體供應鏈的核心平台型公司。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "cowos-advanced-packaging",
+          "hbm",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-geopolitics-and-node-execution",
+        "category": "threat",
+        "statement": "地緣政治、海外設廠執行、先進節點良率與競爭者追趕，是台積電在高估值核心題材下的主要威脅。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "cowos-advanced-packaging"
+        ]
+      },
+      {
+        "id": "weakness-capex-cycle-and-customer-concentration",
+        "category": "weakness",
+        "statement": "先進製程與先進封裝屬重資本投入，景氣循環、客戶投片節奏或資本支出變化會放大營運波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "cowos-advanced-packaging",
+          "ai-server"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "advanced-packaging",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2356",
   "name": "英業達",
-  "generatedAt": "2026-05-28T03:20:29.708Z",
+  "generatedAt": "2026-05-28T03:36:38.068Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,17 +51,16 @@
       "主要產品：AI 伺服器與筆電 ODM"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：相較更聚焦或規模更大的 AI 伺服器 ODM，英業達的題材直接性與客戶組合仍需用出貨與財報持續驗證。",
+      "V2 T：筆電需求循環、ODM 競爭與客戶議價，可能壓抑英業達整體營收成長與毛利率。"
     ],
     "watch": [
+      "V2 O：若 AI 伺服器 ODM 訂單擴散到更多供應商，英業達有機會憑伺服器製造與 EMS 能力承接增量。",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：機殼與滑軌需求持續成長",
-      "O：整機組裝需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -190,7 +189,49 @@
         "roleSummary": "英業達的 PC/NB ODM 角色仍影響基本面，Daily Analysis 應把 PC 循環和 AI server 成長分開。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-odm-share-gain",
+        "category": "opportunity",
+        "statement": "若 AI 伺服器 ODM 訂單擴散到更多供應商，英業達有機會憑伺服器製造與 EMS 能力承接增量。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-server-notebook-odm-base",
+        "category": "strength",
+        "statement": "英業達具伺服器、筆電 ODM/EMS 製造基礎，可在 AI 伺服器與 PC/NB 需求間承接量產訂單。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ems-smt",
+          "pc-nb-tablet"
+        ]
+      },
+      {
+        "id": "threat-notebook-cycle-and-margin-pressure",
+        "category": "threat",
+        "statement": "筆電需求循環、ODM 競爭與客戶議價，可能壓抑英業達整體營收成長與毛利率。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pc-nb-tablet",
+          "ai-server-odm"
+        ]
+      },
+      {
+        "id": "weakness-lower-directness-vs-leaders",
+        "category": "weakness",
+        "statement": "相較更聚焦或規模更大的 AI 伺服器 ODM，英業達的題材直接性與客戶組合仍需用出貨與財報持續驗證。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "pc-nb-tablet"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3324",
   "name": "雙鴻",
-  "generatedAt": "2026-05-28T03:20:29.996Z",
+  "generatedAt": "2026-05-28T03:36:38.351Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,16 +50,14 @@
       "主要產品：液冷散熱模組龍頭"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：散熱零組件需通過客戶平台驗證，且單價與毛利受材料、良率與競爭影響，題材熱度不等於立即獲利。",
+      "V2 T：液冷方案競爭、客戶自研/多供應商策略或散熱技術路線變化，可能削弱雙鴻訂單能見度與毛利。"
     ],
     "watch": [
+      "V2 O：AI 伺服器功耗與熱密度提升，推動氣冷升級與液冷方案滲透，雙鴻可受惠散熱規格升級。",
       "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
       "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
-      "O：機殼與滑軌需求持續成長",
-      "O：液冷散熱系統需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
+      "V2 SWOT 最後驗證：2026-05-28",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -188,7 +186,50 @@
         "roleSummary": "雙鴻在散熱解決方案題材中是核心散熱供應鏈角色；AI 伺服器高功耗平台會提高散熱規格與價值量。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-power-density-thermal-upgrade",
+        "category": "opportunity",
+        "statement": "AI 伺服器功耗與熱密度提升，推動氣冷升級與液冷方案滲透，雙鴻可受惠散熱規格升級。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "liquid_cooling_advanced",
+          "thermal-solution",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-thermal-liquid-cooling-focus",
+        "category": "strength",
+        "statement": "雙鴻聚焦散熱模組、熱管理與液冷方案，是 AI 伺服器散熱升級題材中的高直接性零組件供應商。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "liquid_cooling_advanced",
+          "thermal-solution",
+          "thermal_components_air"
+        ]
+      },
+      {
+        "id": "threat-competition-and-technology-transition",
+        "category": "threat",
+        "statement": "液冷方案競爭、客戶自研/多供應商策略或散熱技術路線變化，可能削弱雙鴻訂單能見度與毛利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "liquid_cooling_advanced",
+          "thermal-solution"
+        ]
+      },
+      {
+        "id": "weakness-thermal-component-customer-validation",
+        "category": "weakness",
+        "statement": "散熱零組件需通過客戶平台驗證，且單價與毛利受材料、良率與競爭影響，題材熱度不等於立即獲利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "liquid_cooling_advanced",
+          "thermal-solution"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server-liquid-cooling",

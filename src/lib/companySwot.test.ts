@@ -72,6 +72,32 @@ test("normalizeCompanySwot rejects files with wrong schema", () => {
   assert.equal(normalizeCompanySwot({ schemaVersion: 2 }), null);
 });
 
+test("company-swot batch covers at least 10 companies with all SWOT categories", async () => {
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const dir = "public/data/company-swot";
+  const files = (await fs.readdir(dir)).filter((file) => file.endsWith(".json")).sort();
+
+  assert.ok(files.length >= 10, `Expected at least 10 company-swot files, got ${files.length}`);
+
+  for (const file of files) {
+    const raw = JSON.parse(await fs.readFile(path.join(dir, file), "utf8"));
+    const knowledge = normalizeCompanySwot(raw);
+    assert.ok(knowledge, `${file} should normalize`);
+    const categories = new Set(knowledge.items.filter((item) => item.status !== "rejected").map((item) => item.category));
+    assert.ok(categories.has("strength"), `${file} should include strength`);
+    assert.ok(categories.has("weakness"), `${file} should include weakness`);
+    assert.ok(categories.has("opportunity"), `${file} should include opportunity`);
+    assert.ok(categories.has("threat"), `${file} should include threat`);
+    for (const item of knowledge.items) {
+      if (item.confidence === "high" || item.confidence === "medium") {
+        assert.ok(item.evidence.length > 0, `${file} item ${item.id} needs evidence`);
+        assert.ok(item.lastVerified, `${file} item ${item.id} needs lastVerified`);
+      }
+    }
+  }
+});
+
 const topicScopedKnowledge: CompanySwotKnowledge = {
   schemaVersion: 1,
   companyCode: "2308",

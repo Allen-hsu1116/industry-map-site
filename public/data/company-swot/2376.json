@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2376",
+  "companyName": "技嘉",
+  "updatedAt": "2026-05-28",
+  "items": [
+    {
+      "id": "strength-ai-server-brand-and-pc-platform",
+      "category": "strength",
+      "statement": "技嘉同時具 AI 伺服器平台、伺服器主機板與 PC 零組件品牌基礎，能跨 AI server 與 PC 題材。",
+      "rationale": "company-topic-roles 將技嘉列為 ai-server core、液冷伺服器方案 direct_enabler 與 PC component brand core。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ai-server",
+        "liquid_cooling_advanced",
+        "pc-nb-tablet"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "技嘉 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 技嘉 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-brand-channel-demand-volatility",
+      "category": "weakness",
+      "statement": "品牌與通路產品較容易受終端需求、庫存週期與價格競爭影響，AI server 之外的 PC 業務可能稀釋題材純度。",
+      "rationale": "技嘉角色同時包含 PC component brand 與 AI server platform brand；分析時需拆分伺服器與 PC/通路需求循環。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "pc-nb-tablet",
+        "ai-server"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "技嘉 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 技嘉 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-liquid-cooling-ai-server-platforms",
+      "category": "opportunity",
+      "statement": "AI 伺服器功耗提升與液冷導入，可推升技嘉 GPU server platforms 與液冷伺服器方案需求。",
+      "rationale": "V2 role 明確列出液冷伺服器方案、AI 伺服器散熱整合與 GPU server platforms，支撐其在散熱與伺服器題材中的機會。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ai-server",
+        "liquid_cooling_advanced"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "技嘉 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 技嘉 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "threat-server-validation-and-channel-inventory",
+      "category": "threat",
+      "statement": "伺服器客戶驗證進度、GPU 供給與 PC 通路庫存循環，是技嘉題材轉化成營收與獲利的主要威脅。",
+      "rationale": "技嘉橫跨伺服器與 PC 通路，若 AI server 導入不如預期或 PC 庫存修正，可能抵銷題材成長。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ai-server",
+        "pc-nb-tablet"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "技嘉 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 技嘉 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

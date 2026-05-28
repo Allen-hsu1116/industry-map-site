@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-05-28T03:20:29.970Z",
+  "generatedAt": "2026-05-28T03:36:38.326Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,17 +51,16 @@
       "主要產品：AI伺服器ODM"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：ODM/EMS 角色使緯創受惠於出貨量，但獲利仍受客戶議價、產品組合與新平台驗證進度限制。",
+      "V2 T：若關鍵零組件供應、客戶平台轉換或大客戶訂單集中度變化，緯創 AI 伺服器題材可能出現出貨與毛利波動。"
     ],
     "watch": [
+      "V2 O：AI 伺服器出貨占比提升可改善緯創產品組合，帶來高階伺服器與系統整合成長機會。",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：先進封裝量測自動化需求持續成長",
-      "O：AI伺服器與液冷技術需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -242,7 +241,49 @@
         "roleSummary": "緯創可透過伺服器 ODM 垂直整合機構件需求，但不是純機殼/滑軌專門供應商；此角色保守列為 supplier。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-order-mix-upgrade",
+        "category": "opportunity",
+        "statement": "AI 伺服器出貨占比提升可改善緯創產品組合，帶來高階伺服器與系統整合成長機會。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-server-ems-and-mechanical-integration",
+        "category": "strength",
+        "statement": "緯創具 AI 伺服器 ODM、EMS 製造與伺服器機構整合角色，可承接系統組裝與部分機構整合需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ems-smt",
+          "ai-server-chassis-rails"
+        ]
+      },
+      {
+        "id": "threat-supply-chain-and-customer-concentration",
+        "category": "threat",
+        "statement": "若關鍵零組件供應、客戶平台轉換或大客戶訂單集中度變化，緯創 AI 伺服器題材可能出現出貨與毛利波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ai-server-chassis-rails"
+        ]
+      },
+      {
+        "id": "weakness-odm-margin-and-validation-risk",
+        "category": "weakness",
+        "statement": "ODM/EMS 角色使緯創受惠於出貨量，但獲利仍受客戶議價、產品組合與新平台驗證進度限制。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-odm",
+          "ems-smt"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server",
