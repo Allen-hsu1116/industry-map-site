@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3324",
   "name": "雙鴻",
-  "generatedAt": "2026-05-28T00:35:52.976Z",
+  "generatedAt": "2026-05-28T03:20:29.996Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,15 +39,15 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "summary": "雙鴻 在 ai-server-chassis-rails 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "雙鴻 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：ai-server-chassis-rails · 中",
+      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · medium",
+      "相關題材：AI 伺服器液冷散熱 · 核心產品/平台",
+      "相關題材：AI 伺服器液冷散熱 · 核心產品/平台",
       "主要產品：散熱模組",
       "主要產品：散熱模組與熱管",
-      "主要產品：液冷散熱模組龍頭",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：液冷散熱模組龍頭"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -55,6 +55,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
+      "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
       "O：機殼與滑軌需求持續成長",
       "O：液冷散熱系統需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
@@ -154,9 +156,52 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "liquid_cooling_advanced",
+        "topicName": "散熱冷卻｜液冷散熱系統",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "雙鴻在液冷散熱題材中屬散熱模組與液冷方案核心候選供應商；需持續補官方產品、法說與客戶專案證據來提高信心。"
+      },
+      {
+        "topicId": "thermal_components_air",
+        "topicName": "散熱冷卻｜氣冷與核心組件",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "雙鴻在氣冷與核心散熱元件題材中具熱管、均熱板、模組等供應鏈定位；需要把氣冷升級與液冷滲透分開追蹤。"
+      },
+      {
+        "topicId": "thermal-solution",
+        "topicName": "散熱冷卻｜液冷與散熱模組",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "雙鴻在散熱解決方案題材中是核心散熱供應鏈角色；AI 伺服器高功耗平台會提高散熱規格與價值量。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ai-server-liquid-cooling",
+        "name": "AI 伺服器液冷散熱",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "AI GPU/ASIC TDP 升高",
+          "客戶導入液冷機櫃或 CDU",
+          "散熱廠液冷相關營收揭露增加"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

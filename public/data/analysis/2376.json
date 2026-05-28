@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-05-28T00:35:52.705Z",
+  "generatedAt": "2026-05-28T03:20:29.723Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,14 +39,14 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "技嘉 在 ai-server 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "技嘉 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：ai-server · 高",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
+      "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
+      "相關題材：AI 伺服器液冷散熱 · 直接賦能角色",
       "主要產品：電腦硬體及其零件之製造加工及買賣 電腦系統週邊設備(包括軟體)之製造加工及買賣 前項有關商品進口及代理國內外廠商之投標報價及經營業務",
       "主要產品：AI伺服器領導品牌",
-      "主要產品：AI 伺服器與主機板品牌",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：AI 伺服器與主機板品牌"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -55,10 +55,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：AI伺服器與液冷技術需求持續成長",
-      "O：整機組裝需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：整機組裝需求持續成長"
     ]
   },
   "knowledge": {
@@ -205,9 +207,74 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "ai-server",
+        "topicName": "AI伺服器與液冷技術",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "技嘉在 AI 伺服器題材中具伺服器、主機板與系統品牌角色；受惠需追蹤伺服器平台出貨、液冷解決方案與通路需求。"
+      },
+      {
+        "topicId": "pc-nb-tablet",
+        "topicName": "消費終端｜PC",
+        "canonicalTopicId": "consumer-computing-devices",
+        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "技嘉在 PC 題材中是主機板、顯示卡與 PC 零組件品牌；該題材與 AI server 題材需分開監控需求循環。"
+      },
+      {
+        "topicId": "liquid_cooling_advanced",
+        "topicName": "散熱冷卻｜液冷散熱系統",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "技嘉與液冷題材的關聯來自 AI 伺服器/液冷機櫃方案；需用官方產品頁或法說補強具體規格、客戶與營收占比。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ai-server-liquid-cooling",
+        "name": "AI 伺服器液冷散熱",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "AI GPU/ASIC TDP 升高",
+          "客戶導入液冷機櫃或 CDU",
+          "散熱廠液冷相關營收揭露增加"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6669",
   "name": "緯穎",
-  "generatedAt": "2026-05-28T00:35:53.316Z",
+  "generatedAt": "2026-05-28T03:20:30.334Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,14 +39,14 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "緯穎 在 ai-server-odm 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "緯穎 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：ai-server-odm · 高",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
+      "相關題材：資安、雲端服務與企業軟體 · 直接賦能角色",
       "主要產品：資料中心產品",
       "主要產品：CSP 專用 AI 伺服器 ODM",
       "主要產品：雲端伺服器",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -54,10 +54,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
+      "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：整機組裝需求持續成長",
-      "O：雲端服務與代管需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：雲端服務與代管需求持續成長"
     ]
   },
   "knowledge": {
@@ -142,9 +144,53 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "ai-server-odm",
+        "topicName": "AI 伺服器｜整機組裝",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "緯穎在 AI 伺服器題材中是雲端資料中心與 CSP 伺服器 ODM 核心角色；重點追蹤 AI server 出貨、CSP capex 與客戶集中風險。"
+      },
+      {
+        "topicId": "cloud-msp",
+        "topicName": "軟體資安｜雲端服務與代管",
+        "canonicalTopicId": "software-cloud-security",
+        "canonicalTopicName": "資安、雲端服務與企業軟體",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "software-cloud-security",
+        "name": "資安、雲端服務與企業軟體",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

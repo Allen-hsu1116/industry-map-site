@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-05-28T00:35:52.950Z",
+  "generatedAt": "2026-05-28T03:20:29.970Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,15 +40,15 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "summary": "緯創 在 advanced-packaging-automation 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "緯創 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：advanced-packaging-automation · 中",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
+      "相關題材：AI 伺服器整機與 EMS · 核心產品/平台",
+      "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
       "主要產品：3C電子產品 其他",
       "主要產品：半導體自動化設備",
-      "主要產品：AI伺服器ODM",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：AI伺服器ODM"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -56,10 +56,12 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：先進封裝量測自動化需求持續成長",
-      "O：AI伺服器與液冷技術需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：AI伺服器與液冷技術需求持續成長"
     ]
   },
   "knowledge": {
@@ -198,9 +200,84 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "ai-server-odm",
+        "topicName": "AI 伺服器｜整機組裝",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "緯創在 AI 伺服器題材中屬 ODM/EMS 製造與系統整合角色；受惠需以 AI server 出貨、產品組合與客戶訂單能見度驗證。"
+      },
+      {
+        "topicId": "ems-smt",
+        "topicName": "AI 伺服器｜SMT/EMS 電子代工",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "緯創具大型 EMS/ODM 製造基礎，AI server 與終端產品需求會透過產能利用率、產品組合與客戶拉貨反映。"
+      },
+      {
+        "topicId": "pc-nb-tablet",
+        "topicName": "消費終端｜PC",
+        "canonicalTopicId": "consumer-computing-devices",
+        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "緯創同時是 PC/NB ODM 供應鏈成員；PC 循環與 AI server 題材需分開計分。"
+      },
+      {
+        "topicId": "ai-server-chassis-rails",
+        "topicName": "AI 伺服器｜機殼與滑軌",
+        "canonicalTopicId": "ai-server-mechanical",
+        "canonicalTopicName": "AI 伺服器機構件與滑軌",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "緯創可透過伺服器 ODM 垂直整合機構件需求，但不是純機殼/滑軌專門供應商；此角色保守列為 supplier。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ai-server-mechanical",
+        "name": "AI 伺服器機構件與滑軌",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

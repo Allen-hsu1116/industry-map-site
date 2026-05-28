@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-05-28T00:35:52.674Z",
+  "generatedAt": "2026-05-28T03:20:29.691Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -41,14 +41,14 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "台積電 在 advanced-packaging-automation 的角色為「🟢 產業龍頭」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "summary": "台積電 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：advanced-packaging-automation · 🟢 產業龍頭",
+      "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
+      "相關題材：晶圓代工與第三代半導體 · 核心產品/平台",
+      "相關題材：AI 伺服器整機與 EMS · 直接賦能角色",
       "主要產品：先進製程晶圓代工(3nm/5nm)",
       "主要產品：CoWoS 先進封裝",
-      "主要產品：InFO 封裝",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：InFO 封裝"
     ],
     "risks": [
       "W：設備採購成本高：影響毛利率",
@@ -57,10 +57,12 @@
       "T：散熱技術競爭：其他封裝方案可能切入"
     ],
     "watch": [
+      "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
+      "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "O：SoIC量產：3D IC量測需求新增長點",
-      "O：AI加速器封裝：每顆GPU都要完整量測流程",
-      "知識庫最後驗證：2026-05-26（needs_review）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "O：AI加速器封裝：每顆GPU都要完整量測流程"
     ]
   },
   "knowledge": {
@@ -208,9 +210,95 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "cowos-advanced-packaging",
+        "topicName": "先進封測｜AI 先進封裝 CoWoS",
+        "canonicalTopicId": "advanced-packaging",
+        "canonicalTopicName": "先進封裝與 CoWoS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "台積電在 CoWoS/先進封裝題材中是核心製程與產能供應者；AI GPU/ASIC 與 HBM 整合需求會推動先進封裝產能、瓶頸與資本支出成為每日追蹤重點。"
+      },
+      {
+        "topicId": "wafer-foundry",
+        "topicName": "半導體製造｜晶圓代工",
+        "canonicalTopicId": "wafer-foundry",
+        "canonicalTopicName": "晶圓代工與第三代半導體",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "台積電在晶圓代工題材中是核心供應商；AI/HPC、手機、車用與工業晶片需求會透過先進製程與成熟製程稼動率傳導到營收與毛利。"
+      },
+      {
+        "topicId": "ai-server",
+        "topicName": "AI伺服器與液冷技術",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "high",
+        "roleSummary": "台積電透過 AI GPU/ASIC 晶圓代工與先進封裝賦能 AI 伺服器供應鏈，但不是伺服器整機 ODM；Daily Analysis 應把它歸為上游核心賦能。"
+      },
+      {
+        "topicId": "hbm",
+        "topicName": "記憶體｜HBM 高頻寬記憶體",
+        "canonicalTopicId": "hbm",
+        "canonicalTopicName": "HBM 高頻寬記憶體",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "high",
+        "roleSummary": "台積電不是 HBM 記憶體供應商，但在 AI 加速器與 HBM 的先進封裝整合中扮演直接賦能角色；需避免把封裝整合誤寫成記憶體製造。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "advanced-packaging",
+        "name": "先進封裝與 CoWoS",
+        "type": "process",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "wafer-foundry",
+        "name": "晶圓代工與第三代半導體",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "hbm",
+        "name": "HBM 高頻寬記憶體",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "nextSession": {
     "focus": [

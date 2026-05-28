@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles } from "./companyTopicRoles";
+import { normalizeCanonicalTopics } from "./canonicalTopics";
 
 test("normalizeCompanyTopicRoles keeps verified evidence-backed roles and sorts by topic", () => {
   const knowledge = normalizeCompanyTopicRoles({
@@ -43,4 +44,31 @@ test("directness helpers expose UI-friendly relevance and labels", () => {
 
 test("normalizeCompanyTopicRoles rejects files with wrong schema", () => {
   assert.equal(normalizeCompanyTopicRoles({ schemaVersion: 2 }), null);
+});
+
+test("company-topic-role batch covers at least 10 companies and maps to canonical topics", async () => {
+  const fs = await import("node:fs/promises");
+  const path = await import("node:path");
+  const dir = "public/data/company-topic-roles";
+  const files = (await fs.readdir(dir)).filter((file) => file.endsWith(".json")).sort();
+  const canonicalRaw = JSON.parse(await fs.readFile("public/data/canonical-topics.json", "utf8"));
+  const canonical = normalizeCanonicalTopics(canonicalRaw);
+
+  assert.ok(canonical);
+  assert.ok(files.length >= 10, `Expected at least 10 company-topic role files, got ${files.length}`);
+  const canonicalTopicIds = new Set(canonical.topics.flatMap((topic) => [topic.id, ...topic.legacyTopicIds]));
+
+  for (const file of files) {
+    const raw = JSON.parse(await fs.readFile(path.join(dir, file), "utf8"));
+    const knowledge = normalizeCompanyTopicRoles(raw);
+    assert.ok(knowledge, `${file} should normalize`);
+    assert.ok(knowledge.roles.length > 0, `${file} should contain roles`);
+    for (const role of knowledge.roles) {
+      assert.ok(canonicalTopicIds.has(role.topicId), `${file} role ${role.topicId} should map to a canonical topic`);
+      if (role.confidence === "high" || role.confidence === "medium") {
+        assert.ok(role.evidence.length > 0, `${file} role ${role.topicId} needs evidence`);
+        assert.ok(role.lastVerified, `${file} role ${role.topicId} needs lastVerified`);
+      }
+    }
+  }
 });

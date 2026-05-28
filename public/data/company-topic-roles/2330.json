@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2330",
+  "companyName": "台積電",
+  "updatedAt": "2026-05-28",
+  "roles": [
+    {
+      "topicId": "wafer-foundry",
+      "topicName": "半導體製造｜晶圓代工",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "wafer_fabrication",
+      "roleType": "advanced_logic_foundry",
+      "roleSummary": "台積電在晶圓代工題材中是核心供應商；AI/HPC、手機、車用與工業晶片需求會透過先進製程與成熟製程稼動率傳導到營收與毛利。",
+      "products": [
+        "先進邏輯晶圓代工",
+        "N2/A16 等先進製程",
+        "特殊製程與成熟製程"
+      ],
+      "customers": [
+        "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "wafer-foundry",
+        "groupName": "先進製程晶圓代工",
+        "legacyRole": "全球晶圓代工霸主"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台積電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "cowos-advanced-packaging",
+      "topicName": "先進封測｜AI 先進封裝 CoWoS",
+      "topicType": "process",
+      "directness": "core",
+      "supplyChainStage": "advanced_packaging",
+      "roleType": "cowos_advanced_packaging_provider",
+      "roleSummary": "台積電在 CoWoS/先進封裝題材中是核心製程與產能供應者；AI GPU/ASIC 與 HBM 整合需求會推動先進封裝產能、瓶頸與資本支出成為每日追蹤重點。",
+      "products": [
+        "CoWoS",
+        "SoIC",
+        "先進封裝平台"
+      ],
+      "customers": [
+        "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "cowos-advanced-packaging",
+        "groupName": "CoWoS封裝技術(台積電)",
+        "legacyRole": "CoWoS 封裝技術獨佔龍頭"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台積電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "hbm",
+      "topicName": "記憶體｜HBM 高頻寬記憶體",
+      "topicType": "product",
+      "directness": "direct_enabler",
+      "supplyChainStage": "advanced_packaging",
+      "roleType": "hbm_integration_packaging",
+      "roleSummary": "台積電不是 HBM 記憶體供應商，但在 AI 加速器與 HBM 的先進封裝整合中扮演直接賦能角色；需避免把封裝整合誤寫成記憶體製造。",
+      "products": [
+        "CoWoS HBM/GPU 整合",
+        "先進封裝服務"
+      ],
+      "customers": [
+        "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "hbm",
+        "groupName": "記憶體IC與模組",
+        "legacyRole": "CoWoS先進封裝，HBM與GPU整合"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台積電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "ai-server",
+      "topicName": "AI伺服器與液冷技術",
+      "topicType": "theme",
+      "directness": "direct_enabler",
+      "supplyChainStage": "semiconductor",
+      "roleType": "ai_accelerator_foundry_enabler",
+      "roleSummary": "台積電透過 AI GPU/ASIC 晶圓代工與先進封裝賦能 AI 伺服器供應鏈，但不是伺服器整機 ODM；Daily Analysis 應把它歸為上游核心賦能。",
+      "products": [
+        "AI/HPC 晶片晶圓代工",
+        "先進封裝"
+      ],
+      "customers": [
+        "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "ai-server",
+        "groupName": "AI伺服器散熱與零組件",
+        "legacyRole": "AI伺服器核心晶圓代工"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "台積電 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

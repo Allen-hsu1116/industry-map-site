@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2317",
+  "companyName": "鴻海",
+  "updatedAt": "2026-05-28",
+  "roles": [
+    {
+      "topicId": "ai-server-odm",
+      "topicName": "AI 伺服器｜整機組裝",
+      "topicType": "theme",
+      "directness": "core",
+      "supplyChainStage": "system_assembly",
+      "roleType": "ai_server_ems_odm",
+      "roleSummary": "鴻海在 AI 伺服器題材中屬於整機組裝、EMS 與系統整合核心角色；需追蹤 AI server 出貨、雲端客戶資本支出與產品組合。",
+      "products": [
+        "AI 伺服器整機組裝",
+        "EMS/SMT 電子代工",
+        "伺服器系統整合"
+      ],
+      "customers": [
+        "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "ai-server-odm",
+        "groupName": "伺服器品牌與系統整合",
+        "legacyRole": "全球最大電子代工廠，AI 伺服器布局"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "鴻海 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2317",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 鴻海 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2317 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "ems-smt",
+      "topicName": "AI 伺服器｜SMT/EMS 電子代工",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "ems",
+      "roleType": "global_ems_provider",
+      "roleSummary": "鴻海在 EMS/SMT 題材中是大型電子代工平台，AI 伺服器、手機與消費電子需求會透過組裝量與產品組合傳導。",
+      "products": [
+        "EMS電子代工",
+        "SMT組裝",
+        "伺服器與終端產品製造"
+      ],
+      "customers": [
+        "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "ems-smt",
+        "groupName": "封測與EMS整合",
+        "legacyRole": "全球最大EMS代工"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "鴻海 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2317",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 鴻海 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2317 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "topicId": "mobile",
+      "topicName": "消費終端｜智慧型手機供應鏈",
+      "topicType": "end_market",
+      "directness": "core",
+      "supplyChainStage": "system_assembly",
+      "roleType": "smartphone_assembly_provider",
+      "roleSummary": "鴻海在智慧型手機供應鏈中是核心組裝與製造服務商；此題材與 AI server 題材需分開看，避免把消費電子循環與伺服器成長混在一起。",
+      "products": [
+        "智慧型手機組裝",
+        "消費電子製造服務"
+      ],
+      "customers": [
+        "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+      ],
+      "competitors": [
+        "同題材供應鏈公司",
+        "國際同業與替代供應商"
+      ],
+      "risks": [
+        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
+        "不得用短線股價或題材熱度反推營運事實。"
+      ],
+      "legacy": {
+        "topicSlug": "mobile",
+        "groupName": "手機零組件與鏡頭",
+        "legacyRole": "手機代工龍頭(iPhone組裝)"
+      },
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "鴻海 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2317",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 鴻海 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2317 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}
