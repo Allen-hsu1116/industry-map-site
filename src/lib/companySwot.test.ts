@@ -72,13 +72,13 @@ test("normalizeCompanySwot rejects files with wrong schema", () => {
   assert.equal(normalizeCompanySwot({ schemaVersion: 2 }), null);
 });
 
-test("company-swot batch covers at least 10 companies with all SWOT categories", async () => {
+test("company-swot batch covers at least 20 companies with all SWOT categories", async () => {
   const fs = await import("node:fs/promises");
   const path = await import("node:path");
   const dir = "public/data/company-swot";
   const files = (await fs.readdir(dir)).filter((file) => file.endsWith(".json")).sort();
 
-  assert.ok(files.length >= 10, `Expected at least 10 company-swot files, got ${files.length}`);
+  assert.ok(files.length >= 20, `Expected at least 20 company-swot files, got ${files.length}`);
 
   for (const file of files) {
     const raw = JSON.parse(await fs.readFile(path.join(dir, file), "utf8"));

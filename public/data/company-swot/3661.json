@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "3661",
+  "companyName": "世芯-KY",
+  "updatedAt": "2026-05-28",
+  "items": [
+    {
+      "id": "strength-advanced-custom-asic-service",
+      "category": "strength",
+      "statement": "世芯-KY 聚焦客製 ASIC 與 SoC 設計服務，是高階 AI/HPC ASIC 題材的核心 IC 設計服務商。",
+      "rationale": "V2 role 將世芯-KY 在 asic-ip-design 與 ip-asic 皆列為 core，產品含客製 ASIC、SoC 與先進製程 ASIC。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "asic-ip-design",
+        "ip-asic"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "世芯-KY 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3661",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 世芯-KY 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3661 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-project-based-revenue-volatility",
+      "category": "weakness",
+      "statement": "ASIC 設計服務具專案型特徵，營收認列與獲利可能受大客戶 tape-out、NRE 與量產時程影響而波動。",
+      "rationale": "世芯-KY 的角色集中在客製 ASIC 設計服務，題材價值需由專案進度、量產轉換與客戶集中度驗證。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "asic-ip-design",
+        "ip-asic"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "世芯-KY 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3661",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 世芯-KY 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3661 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ai-custom-silicon-demand",
+      "category": "opportunity",
+      "statement": "雲端與 AI 客戶增加自研 ASIC/加速器需求，可推升世芯-KY 先進節點 ASIC 設計服務機會。",
+      "rationale": "V2 role 中的 advanced_node_asic_service_provider 直接對應 AI custom silicon 與高階 SoC 設計需求。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "asic-ip-design",
+        "ai-server"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "世芯-KY 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3661",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 世芯-KY 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3661 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "threat-tapeout-delay-and-foundry-dependence",
+      "category": "threat",
+      "statement": "若客戶 ASIC tape-out 延遲、先進製程產能受限或設計驗證失敗，會影響世芯-KY 訂單與評價。",
+      "rationale": "ASIC 服務依賴客戶專案與晶圓代工生態，任何設計或製程時程變動都會放大營運不確定性。",
+      "timeHorizon": "event_driven",
+      "relatedTopicIds": [
+        "asic-ip-design",
+        "wafer-foundry"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "世芯-KY 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3661",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 世芯-KY 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3661 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

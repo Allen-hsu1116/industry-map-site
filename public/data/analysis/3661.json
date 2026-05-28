@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3661",
   "name": "世芯-KY",
-  "generatedAt": "2026-05-28T03:30:13.918Z",
+  "generatedAt": "2026-05-28T03:41:08.442Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,16 +50,14 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：ASIC 設計服務具專案型特徵，營收認列與獲利可能受大客戶 tape-out、NRE 與量產時程影響而波動。",
+      "V2 T：若客戶 ASIC tape-out 延遲、先進製程產能受限或設計驗證失敗，會影響世芯-KY 訂單與評價。"
     ],
     "watch": [
+      "V2 O：雲端與 AI 客戶增加自研 ASIC/加速器需求，可推升世芯-KY 先進節點 ASIC 設計服務機會。",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：客製 ASIC 與矽智財需求持續成長",
-      "O：IP授權與客製ASIC設計服務需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
+      "V2 SWOT 最後驗證：2026-05-28",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -159,7 +157,48 @@
         "roleSummary": "世芯-KY 的核心受惠邏輯是先進製程 ASIC 設計服務與客戶專案放量，而不是自有標準晶片銷售；需追蹤專案轉量產節奏與客戶集中度。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-custom-silicon-demand",
+        "category": "opportunity",
+        "statement": "雲端與 AI 客戶增加自研 ASIC/加速器需求，可推升世芯-KY 先進節點 ASIC 設計服務機會。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-advanced-custom-asic-service",
+        "category": "strength",
+        "statement": "世芯-KY 聚焦客製 ASIC 與 SoC 設計服務，是高階 AI/HPC ASIC 題材的核心 IC 設計服務商。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "ip-asic"
+        ]
+      },
+      {
+        "id": "threat-tapeout-delay-and-foundry-dependence",
+        "category": "threat",
+        "statement": "若客戶 ASIC tape-out 延遲、先進製程產能受限或設計驗證失敗，會影響世芯-KY 訂單與評價。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "weakness-project-based-revenue-volatility",
+        "category": "weakness",
+        "statement": "ASIC 設計服務具專案型特徵，營收認列與獲利可能受大客戶 tape-out、NRE 與量產時程影響而波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "ip-asic"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ic-design",

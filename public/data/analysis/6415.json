@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6415",
   "name": "矽力*-KY",
-  "generatedAt": "2026-05-28T03:30:14.145Z",
+  "generatedAt": "2026-05-28T03:41:08.668Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,17 +51,16 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：類比/電源管理 IC 受終端市場庫存、價格與產品組合影響，復甦速度可能不如熱門 AI 題材。",
+      "V2 T：類比 IC 價格競爭、客戶庫存調整與中國供應商替代，可能壓抑矽力*-KY 成長與毛利。"
     ],
     "watch": [
+      "V2 O：AI、通訊與工業設備提升電源效率與功率密度需求，可帶動高階電源管理 IC 升級。",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
       "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：低軌衛星通訊系統需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -145,7 +144,45 @@
         "roleSummary": "矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-power-efficiency-upgrade",
+        "category": "opportunity",
+        "statement": "AI、通訊與工業設備提升電源效率與功率密度需求，可帶動高階電源管理 IC 升級。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "analog-power-ic",
+          "leo-satellite"
+        ]
+      },
+      {
+        "id": "strength-power-management-ic-focus",
+        "category": "strength",
+        "statement": "矽力*-KY 聚焦電源管理 IC 與類比 IC，是功率管理與類比 IC 題材的核心 IC 設計公司。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "analog-power-ic"
+        ]
+      },
+      {
+        "id": "threat-analog-price-competition-and-inventory",
+        "category": "threat",
+        "statement": "類比 IC 價格競爭、客戶庫存調整與中國供應商替代，可能壓抑矽力*-KY 成長與毛利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "analog-power-ic"
+        ]
+      },
+      {
+        "id": "weakness-analog-cycle-and-end-market-mix",
+        "category": "weakness",
+        "statement": "類比/電源管理 IC 受終端市場庫存、價格與產品組合影響，復甦速度可能不如熱門 AI 題材。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "analog-power-ic"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ic-design",

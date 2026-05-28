@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2368",
   "name": "金像電",
-  "generatedAt": "2026-05-28T03:30:13.565Z",
+  "generatedAt": "2026-05-28T03:41:08.092Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,17 +48,16 @@
       "主要產品：各種電腦"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：高階 PCB 需要製程、良率與材料成本控制，若擴產或良率不順會削弱 AI 題材獲利。",
+      "V2 T：伺服器需求波動、CCL/銅箔等材料供應與 PCB 同業競爭，可能造成金像電毛利波動。"
     ],
     "watch": [
+      "V2 O：AI 伺服器主板層數、訊號完整性與規格升級，可推升高階 PCB 單價與需求。",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：HBM 高頻寬記憶體需求持續成長",
-      "O：智慧型手機供應鏈需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -213,7 +212,49 @@
         "roleSummary": "金像電可供應網通設備 PCB，與高速交換器/網通設備題材的關聯屬材料與板級供應鏈。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-pcb-layer-upgrade",
+        "category": "opportunity",
+        "statement": "AI 伺服器主板層數、訊號完整性與規格升級，可推升高階 PCB 單價與需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server",
+          "pcb-manufacturing",
+          "networking-equipment"
+        ]
+      },
+      {
+        "id": "strength-high-layer-server-pcb",
+        "category": "strength",
+        "statement": "金像電具高層數伺服器 PCB、HDI/硬板 PCB 與 AI server PCB 供應角色，是高階伺服器板材供應鏈核心公司之一。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "pcb-manufacturing",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-server-demand-and-ccl-supply",
+        "category": "threat",
+        "statement": "伺服器需求波動、CCL/銅箔等材料供應與 PCB 同業競爭，可能造成金像電毛利波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-manufacturing",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-pcb-capex-yield-material-cost",
+        "category": "weakness",
+        "statement": "高階 PCB 需要製程、良率與材料成本控制，若擴產或良率不順會削弱 AI 題材獲利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-manufacturing",
+          "ai-server"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "pcb-substrates",

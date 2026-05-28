@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5274",
   "name": "信驊",
-  "generatedAt": "2026-05-28T03:30:14.008Z",
+  "generatedAt": "2026-05-28T03:41:08.532Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,17 +51,16 @@
       "主要產品：伺服器BMC+CXL管理"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：利基型伺服器管理 IC 題材純度高，但也使營收對伺服器平台週期與客戶採購節奏高度敏感。",
+      "V2 T：伺服器管理規格變化、客戶自研或同業替代，可能影響信驊利基產品的市占與定價能力。"
     ],
     "watch": [
+      "V2 O：AI 伺服器與資料中心硬體複雜度提升，增加遠端管理、BMC 與平台監控 IC 的重要性。",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
       "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AR/VR/XR 光學供應鏈需求持續成長",
-      "O：CXL 記憶體池化需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -230,7 +229,48 @@
         "roleSummary": "信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-management-complexity",
+        "category": "opportunity",
+        "statement": "AI 伺服器與資料中心硬體複雜度提升，增加遠端管理、BMC 與平台監控 IC 的重要性。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "hpc-networking-ic",
+          "cxl-technology"
+        ]
+      },
+      {
+        "id": "strength-server-management-ic-niche",
+        "category": "strength",
+        "statement": "信驊聚焦 BMC 伺服器管理晶片與伺服器基礎設施 IC，是資料中心硬體管理題材的核心利基 IC 公司。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "hpc-networking-ic",
+          "enterprise-saas"
+        ]
+      },
+      {
+        "id": "threat-platform-standard-and-competition",
+        "category": "threat",
+        "statement": "伺服器管理規格變化、客戶自研或同業替代，可能影響信驊利基產品的市占與定價能力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hpc-networking-ic",
+          "cxl-technology"
+        ]
+      },
+      {
+        "id": "weakness-niche-server-cycle-dependence",
+        "category": "weakness",
+        "statement": "利基型伺服器管理 IC 題材純度高，但也使營收對伺服器平台週期與客戶採購節奏高度敏感。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hpc-networking-ic"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ic-design",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6213",
   "name": "聯茂",
-  "generatedAt": "2026-05-28T03:30:14.099Z",
+  "generatedAt": "2026-05-28T03:41:08.624Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,16 +48,14 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：上游材料廠受原物料價格、客戶議價與庫存週期影響，題材需求不一定等比例轉化為毛利。",
+      "V2 T：CCL 材料同業競爭、原料價格波動與客戶降價壓力，可能壓縮聯茂獲利。"
     ],
     "watch": [
+      "V2 O：AI 伺服器、高速網通與封裝基板升級提高高階 CCL 與基板材料需求，聯茂有機會受惠規格提升。",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：先進封裝量測自動化需求持續成長",
-      "O：IC 測試服務需求持續成長",
-      "知識庫最後驗證：2026-05-26（fresh）",
+      "V2 SWOT 最後驗證：2026-05-28",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -207,7 +205,50 @@
         "roleSummary": "聯茂與封裝材料題材的關聯偏向 PCB/基板材料供應，不應被誤寫成導線架或封測廠核心角色。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-high-end-ccl-upgrade",
+        "category": "opportunity",
+        "statement": "AI 伺服器、高速網通與封裝基板升級提高高階 CCL 與基板材料需求，聯茂有機會受惠規格提升。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "ic-substrate",
+          "packaging-materials"
+        ]
+      },
+      {
+        "id": "strength-ccl-upstream-materials",
+        "category": "strength",
+        "statement": "聯茂供應高階 CCL、載板上游材料與封裝/PCB 基板材料，是 PCB/載板材料鏈的重要上游。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-substrate",
+          "fiberglass-cloth",
+          "packaging-materials"
+        ]
+      },
+      {
+        "id": "threat-material-competition-and-price-cycle",
+        "category": "threat",
+        "statement": "CCL 材料同業競爭、原料價格波動與客戶降價壓力，可能壓縮聯茂獲利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "fiberglass-cloth",
+          "ic-substrate"
+        ]
+      },
+      {
+        "id": "weakness-upstream-material-margin-sensitivity",
+        "category": "weakness",
+        "statement": "上游材料廠受原物料價格、客戶議價與庫存週期影響，題材需求不一定等比例轉化為毛利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "fiberglass-cloth",
+          "packaging-materials"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "pcb-substrates",

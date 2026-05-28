@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2383",
   "name": "台光電",
-  "generatedAt": "2026-05-28T03:30:13.578Z",
+  "generatedAt": "2026-05-28T03:41:08.105Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -53,17 +53,16 @@
       "主要產品：銅箔基板與散熱材料"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：高階材料需通過客戶與平台驗證，且受原物料成本、庫存週期與規格轉換影響。",
+      "V2 T：同業擴產、材料替代或客戶規格變動，可能壓縮台光電高階材料毛利與市占。"
     ],
     "watch": [
+      "V2 O：AI 伺服器與高速網通提升低損耗、高頻高速材料需求，台光電可受惠 CCL 規格升級。",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AI伺服器與液冷技術需求持續成長",
-      "O：機殼與滑軌需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -231,7 +230,50 @@
         "roleSummary": "台光電不是 AI server 整機供應商，而是高速 PCB/CCL 上游材料供應鏈；AI 伺服器升級會透過板材規格與用量傳導。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-high-speed-low-loss-ai-server-materials",
+        "category": "opportunity",
+        "statement": "AI 伺服器與高速網通提升低損耗、高頻高速材料需求，台光電可受惠 CCL 規格升級。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server",
+          "networking-equipment",
+          "ic-substrate"
+        ]
+      },
+      {
+        "id": "strength-high-end-ccl-materials",
+        "category": "strength",
+        "statement": "台光電供應高階 CCL、低損耗高速材料與 AI 伺服器 CCL，是高速 PCB/載板材料題材核心公司。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-substrate",
+          "fiberglass-cloth",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-material-substitution-and-competition",
+        "category": "threat",
+        "statement": "同業擴產、材料替代或客戶規格變動，可能壓縮台光電高階材料毛利與市占。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ic-substrate",
+          "fiberglass-cloth"
+        ]
+      },
+      {
+        "id": "weakness-material-cycle-and-customer-qualification",
+        "category": "weakness",
+        "statement": "高階材料需通過客戶與平台驗證，且受原物料成本、庫存週期與規格轉換影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ic-substrate",
+          "ai-server"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "pcb-substrates",

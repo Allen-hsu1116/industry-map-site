@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3034",
   "name": "聯詠",
-  "generatedAt": "2026-05-28T03:30:13.778Z",
+  "generatedAt": "2026-05-28T03:41:08.299Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -47,17 +47,16 @@
       "主要產品：DDI 龍頭"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：顯示驅動 IC 與面板需求高度連動，易受消費電子、面板庫存與價格週期影響。",
+      "V2 T：面板價格循環與中國 IC 設計競爭，可能壓縮聯詠 DDIC 訂單與價格。"
     ],
     "watch": [
+      "V2 O：邊緣顯示、車用/高階顯示與 AIoT 影像應用升級，可能推升顯示 SoC 與整合型 IC 需求。",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
       "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：先進封裝量測自動化需求持續成長",
-      "O：AR/VR/XR 光學供應鏈需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -226,7 +225,48 @@
         "roleSummary": "聯詠可透過顯示 SoC 與邊緣影像/顯示晶片切入 Edge AI 題材，但目前應保守列為供應鏈候選，不應過度放大為 AI 核心晶片。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-edge-display-ai-upgrade",
+        "category": "opportunity",
+        "statement": "邊緣顯示、車用/高階顯示與 AIoT 影像應用升級，可能推升顯示 SoC 與整合型 IC 需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "edge-ai",
+          "ddic"
+        ]
+      },
+      {
+        "id": "strength-ddic-display-ic-leadership",
+        "category": "strength",
+        "statement": "聯詠在顯示驅動 IC、觸控與顯示整合 IC 具核心角色，是面板與終端顯示供應鏈的重要 IC 設計公司。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ddic",
+          "display-panel"
+        ]
+      },
+      {
+        "id": "threat-panel-price-and-china-competition",
+        "category": "threat",
+        "statement": "面板價格循環與中國 IC 設計競爭，可能壓縮聯詠 DDIC 訂單與價格。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ddic",
+          "display-panel"
+        ]
+      },
+      {
+        "id": "weakness-display-cycle-exposure",
+        "category": "weakness",
+        "statement": "顯示驅動 IC 與面板需求高度連動，易受消費電子、面板庫存與價格週期影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ddic",
+          "display-panel"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ic-design",

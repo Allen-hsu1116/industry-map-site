@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "2454",
+  "companyName": "聯發科",
+  "updatedAt": "2026-05-28",
+  "items": [
+    {
+      "id": "strength-mobile-edge-ai-soc-scale",
+      "category": "strength",
+      "statement": "聯發科具手機 SoC、5G 通訊晶片與 Edge AI/AIoT 平台規模，是台灣 IC 設計中少數跨終端與邊緣 AI 的大型平台公司。",
+      "rationale": "V2 role 將聯發科列為 mobile core、edge-ai core 與 hpc-networking-ic direct_enabler，產品涵蓋手機 SoC、AIoT 與網通 SoC。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "mobile",
+        "edge-ai",
+        "hpc-networking-ic"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯發科 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯發科 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-consumer-device-cycle",
+      "category": "weakness",
+      "statement": "手機與消費終端 SoC 仍受終端需求、庫存與競爭價格週期影響，可能稀釋 Edge AI 題材貢獻。",
+      "rationale": "聯發科主要角色含 smartphone_soc_provider；即使 Edge AI 成長，整體營運仍需面對手機與消費電子循環。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "mobile",
+        "edge-ai"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯發科 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯發科 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-edge-ai-aiot-upgrade",
+      "category": "opportunity",
+      "statement": "終端裝置導入生成式 AI、AIoT 與高階連接功能，可推升聯發科 Edge AI SoC 與通訊晶片升級需求。",
+      "rationale": "V2 role 將其列為 edge_ai_soc_provider，產品含 Edge AI SoC、AIoT 晶片平台與 HPC/網通 SoC。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "edge-ai",
+        "aiot",
+        "hpc-networking-ic"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯發科 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯發科 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "threat-flagship-competition-and-node-cost",
+      "category": "threat",
+      "statement": "高階手機 SoC 競爭、先進製程成本與品牌客戶採用變化，可能壓縮聯發科市占與毛利率。",
+      "rationale": "IC 設計平台需同時面對競爭者、製程成本與客戶產品週期；題材成長不保證利潤率提升。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "mobile",
+        "edge-ai"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯發科 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯發科 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-05-28",
+      "status": "verified"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3443",
   "name": "創意",
-  "generatedAt": "2026-05-28T03:30:13.869Z",
+  "generatedAt": "2026-05-28T03:41:08.392Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,18 +48,16 @@
       "主要產品：3.設計用自動化工具 二"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "W：高度依賴台積電生態系",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：設計服務收入可能受少數大型專案、IP 授權與量產轉換時程影響，季度波動較高。",
+      "V2 T：大型客戶自建設計能力、同業設計服務競爭與 IP 授權價格壓力，可能壓縮創意成長空間。"
     ],
     "watch": [
+      "V2 O：AI/HPC 客製晶片設計需求提升，增加 ASIC design service 與先進製程 design enablement 的機會。",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
       "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：IC 測試服務需求持續成長",
-      "O：AI/HPC ASIC設計服務需求持續爆發"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -225,7 +223,49 @@
         "roleSummary": "創意與晶圓代工題材的關聯是設計服務與 foundry ecosystem 賦能，不應被誤寫成晶圓製造商。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-advanced-node-design-enablement",
+        "category": "opportunity",
+        "statement": "AI/HPC 客製晶片設計需求提升，增加 ASIC design service 與先進製程 design enablement 的機會。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-foundry-ecosystem-asic-design",
+        "category": "strength",
+        "statement": "創意具 ASIC/SoC 設計服務與晶圓代工生態系設計支援角色，是先進製程 ASIC 題材的直接賦能者。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "ip-asic",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "threat-customer-insourcing-and-ip-competition",
+        "category": "threat",
+        "statement": "大型客戶自建設計能力、同業設計服務競爭與 IP 授權價格壓力，可能壓縮創意成長空間。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "ip-asic"
+        ]
+      },
+      {
+        "id": "weakness-service-project-lumpiness",
+        "category": "weakness",
+        "statement": "設計服務收入可能受少數大型專案、IP 授權與量產轉換時程影響，季度波動較高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "asic-ip-design",
+          "ip-asic"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ic-design",

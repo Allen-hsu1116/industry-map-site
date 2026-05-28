@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2454",
   "name": "聯發科",
-  "generatedAt": "2026-05-28T03:30:13.618Z",
+  "generatedAt": "2026-05-28T03:41:08.146Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,18 +50,16 @@
       "主要產品：Filogic Wi-Fi 7晶片"
     ],
     "risks": [
-      "W：4月營收YoY-4.1%庫存修正",
-      "W：PE 51倍估值偏高",
-      "T：Qualcomm高階市佔優勢",
-      "T：中國手機市場復甦進度不確定"
+      "V2 W：手機與消費終端 SoC 仍受終端需求、庫存與競爭價格週期影響，可能稀釋 Edge AI 題材貢獻。",
+      "V2 T：高階手機 SoC 競爭、先進製程成本與品牌客戶採用變化，可能壓縮聯發科市占與毛利率。"
     ],
     "watch": [
+      "V2 O：終端裝置導入生成式 AI、AIoT 與高階連接功能，可推升聯發科 Edge AI SoC 與通訊晶片升級需求。",
       "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
       "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AI手機/PC換機潮帶動SoC升級",
-      "O：車用工業物聯網布局收成"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -201,7 +199,50 @@
         "roleSummary": "聯發科與 HPC/網通 IC 題材相關，但受惠程度需依產品線與客戶導入驗證；不應把手機晶片地位直接等同於資料中心 AI 加速器核心供應商。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-edge-ai-aiot-upgrade",
+        "category": "opportunity",
+        "statement": "終端裝置導入生成式 AI、AIoT 與高階連接功能，可推升聯發科 Edge AI SoC 與通訊晶片升級需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "edge-ai",
+          "aiot",
+          "hpc-networking-ic"
+        ]
+      },
+      {
+        "id": "strength-mobile-edge-ai-soc-scale",
+        "category": "strength",
+        "statement": "聯發科具手機 SoC、5G 通訊晶片與 Edge AI/AIoT 平台規模，是台灣 IC 設計中少數跨終端與邊緣 AI 的大型平台公司。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "mobile",
+          "edge-ai",
+          "hpc-networking-ic"
+        ]
+      },
+      {
+        "id": "threat-flagship-competition-and-node-cost",
+        "category": "threat",
+        "statement": "高階手機 SoC 競爭、先進製程成本與品牌客戶採用變化，可能壓縮聯發科市占與毛利率。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "mobile",
+          "edge-ai"
+        ]
+      },
+      {
+        "id": "weakness-consumer-device-cycle",
+        "category": "weakness",
+        "statement": "手機與消費終端 SoC 仍受終端需求、庫存與競爭價格週期影響，可能稀釋 Edge AI 題材貢獻。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "mobile",
+          "edge-ai"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "edge-ai-aiot",

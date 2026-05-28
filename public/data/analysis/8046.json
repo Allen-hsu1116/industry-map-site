@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8046",
   "name": "南電",
-  "generatedAt": "2026-05-28T03:30:14.225Z",
+  "generatedAt": "2026-05-28T03:41:08.750Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,17 +49,16 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：受景氣循環影響",
-      "T：國際競爭加劇",
-      "T：供應鏈重組風險"
+      "V2 W：ABF/IC 載板屬資本密集且景氣循環明顯，產能利用率與價格變動會放大獲利波動。",
+      "V2 T：若 ABF 載板供給過剩、客戶庫存調整或封裝技術路線改變，南電可能面臨價格與稼動率壓力。"
     ],
     "watch": [
+      "V2 O：AI 加速器與先進封裝需求提升，可帶動先進封裝用 IC 載板與 ABF 載板需求。",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：AI 先進封裝 CoWoS需求持續成長",
-      "O：軟板需求持續成長"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -197,7 +196,50 @@
         "roleSummary": "南電不是 CoWoS 製程供應商本身，但可作為先進封裝所需載板/基板供應鏈角色；需避免把載板供應商寫成封裝代工。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-advanced-packaging-substrate-demand",
+        "category": "opportunity",
+        "statement": "AI 加速器與先進封裝需求提升，可帶動先進封裝用 IC 載板與 ABF 載板需求。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "cowos-advanced-packaging",
+          "ic-substrate",
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-abf-ic-substrate-platform",
+        "category": "strength",
+        "statement": "南電具 ABF 載板、IC 載板與 HDI/BGA 板能力，是先進封裝與高階 IC substrate 題材的核心供應商。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-substrate",
+          "cowos-advanced-packaging",
+          "pcb-manufacturing"
+        ]
+      },
+      {
+        "id": "threat-abf-supply-demand-reversal",
+        "category": "threat",
+        "statement": "若 ABF 載板供給過剩、客戶庫存調整或封裝技術路線改變，南電可能面臨價格與稼動率壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ic-substrate",
+          "cowos-advanced-packaging"
+        ]
+      },
+      {
+        "id": "weakness-substrate-capex-and-utilization",
+        "category": "weakness",
+        "statement": "ABF/IC 載板屬資本密集且景氣循環明顯，產能利用率與價格變動會放大獲利波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ic-substrate",
+          "pcb-manufacturing"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "pcb-substrates",
