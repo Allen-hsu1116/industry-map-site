@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
@@ -71,6 +71,10 @@ interface MarketOverview {
 interface DailyIndustryAnalysis {
   label: string;
   score?: number;
+  knowledgeBasis?: "canonical_verified" | "canonical_pending" | "legacy_unverified" | "insufficient";
+  confidence?: string;
+  provenanceLabel?: string;
+  verificationNote?: string;
   scoringFactors?: string[];
   summary: string;
   signals: string[];
@@ -114,6 +118,17 @@ function getTrendBadge(trend: string): "default" | "secondary" | "destructive" |
   if (trend.includes("多") || trend.includes("漲")) return "default";
   if (trend.includes("空") || trend.includes("跌")) return "destructive";
   return "secondary";
+}
+
+function getKnowledgeBasisClass(basis?: DailyIndustryAnalysis["knowledgeBasis"]): string {
+  if (basis === "canonical_verified") return "border-emerald-400/30 bg-emerald-400/10 text-emerald-200";
+  if (basis === "canonical_pending") return "border-amber-400/30 bg-amber-400/10 text-amber-200";
+  if (basis === "legacy_unverified") return "border-orange-400/30 bg-orange-400/10 text-orange-200";
+  return "border-slate-500/30 bg-slate-500/10 text-slate-300";
+}
+
+function getKnowledgeBasisText(industry: DailyIndustryAnalysis): string {
+  return industry.provenanceLabel ?? (industry.knowledgeBasis === "canonical_verified" ? "V2 已驗證" : industry.knowledgeBasis === "canonical_pending" ? "V2 待驗證" : industry.knowledgeBasis === "legacy_unverified" ? "Legacy 待驗證" : "產業資料待補");
 }
 
 async function fetchStaticJson<T>(path: string): Promise<T> {
@@ -379,6 +394,14 @@ export default function DailyReportPage() {
                     {dailyIndustry ? (
                       <div className="space-y-2">
                         <div className="flex flex-wrap items-center gap-2">
+                          <Badge variant="outline" className={`text-xs ${getKnowledgeBasisClass(dailyIndustry.knowledgeBasis)}`}>
+                            {getKnowledgeBasisText(dailyIndustry)}
+                          </Badge>
+                          {dailyIndustry.confidence && (
+                            <span className="text-[11px] text-gray-500">confidence: {dailyIndustry.confidence}</span>
+                          )}
+                        </div>
+                        <div className="flex flex-wrap items-center gap-2">
                           <span className="text-gray-300 text-sm">{dailyIndustry.label}</span>
                           {typeof dailyIndustry.score === "number" && (
                             <Badge variant="outline" className="border-cyan-400/30 bg-cyan-400/10 text-cyan-200 text-xs">
@@ -386,6 +409,12 @@ export default function DailyReportPage() {
                             </Badge>
                           )}
                         </div>
+                        <p className="text-xs leading-relaxed text-gray-400 line-clamp-3">{dailyIndustry.summary}</p>
+                        {dailyIndustry.verificationNote && dailyIndustry.knowledgeBasis !== "canonical_verified" && (
+                          <p className="rounded border border-amber-400/20 bg-amber-400/5 px-2 py-1 text-xs leading-relaxed text-amber-200/90">
+                            {dailyIndustry.verificationNote}
+                          </p>
+                        )}
                         {dailyIndustry.scoringFactors && dailyIndustry.scoringFactors.length > 0 && (
                           <ul className="space-y-1">
                             {dailyIndustry.scoringFactors.slice(0, 3).map((factor, factorIndex) => (

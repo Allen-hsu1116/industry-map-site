@@ -62,7 +62,8 @@ test("generateDailyAnalysis summarizes bullish technical and accumulation chip s
   assert.equal(analysis.mode, "rule-batch");
   assert.equal(analysis.technical.stance, "bullish");
   assert.equal(analysis.chips.stance, "accumulation");
-  assert.equal(analysis.industry.label, "核心題材受惠");
+  assert.equal(analysis.industry.label, "題材關聯待驗證");
+  assert.equal(analysis.industry.knowledgeBasis, "legacy_unverified");
   assert.ok(analysis.knowledge.products.includes("CoWoS"));
   assert.ok(analysis.knowledge.topicRoles.some((role) => role.topicId === "ai-server"));
   assert.ok(analysis.knowledge.swot.strengths.some((point) => point.includes("先進製程")));
@@ -262,6 +263,92 @@ test("generateDailyAnalysis scores industry quality with directness, topic statu
   assert.ok(strong.industry.signals.some((signal) => signal.includes("產業評分")));
   assert.ok(strong.industry.watch.some((item) => item.includes("催化訊號")));
   assert.match(strong.industry.summary, /score/);
+});
+
+test("generateDailyAnalysis marks legacy fallback as unverified and caps it below core benefit", () => {
+  const analysis = generateDailyAnalysis({
+    code: "9999",
+    name: "Legacy 測試股",
+    trends: { daily_prices: makePrices(30) },
+    institutional_history: [],
+    margin_history: [],
+    industry_analysis: {
+      "hot-ai-topic": {
+        market_position: "市場龍頭",
+        relevance: "high",
+        products: ["legacy product"],
+        swot: {
+          strengths: ["legacy strength"],
+          opportunities: ["legacy opportunity"],
+        },
+      },
+    },
+  }, new Date("2026-05-31T00:00:00.000Z"));
+
+  assert.equal(analysis.industry.knowledgeBasis, "legacy_unverified");
+  assert.equal(analysis.industry.provenanceLabel, "Legacy 待驗證");
+  assert.notEqual(analysis.industry.label, "核心題材受惠");
+  assert.ok(analysis.industry.score < 70);
+  assert.ok(analysis.industry.watch.some((item) => item.includes("legacy industry_analysis")));
+  assert.match(analysis.industry.summary, /待驗證/);
+});
+
+test("generateDailyAnalysis marks candidate or low-confidence canonical roles as pending verification", () => {
+  const analysis = generateDailyAnalysis({
+    code: "8888",
+    name: "待驗證測試股",
+    trends: { daily_prices: makePrices(30) },
+    institutional_history: [],
+    margin_history: [],
+    companyTopicRoles: {
+      schemaVersion: 1,
+      companyCode: "8888",
+      companyName: "待驗證測試股",
+      updatedAt: "2026-05-28",
+      roles: [{
+        topicId: "ai-server-power",
+        topicName: "AI 伺服器電源",
+        topicType: "supply_chain_segment",
+        directness: "core",
+        supplyChainStage: "power",
+        roleType: "power supplier",
+        roleSummary: "疑似供應 AI 伺服器電源，但尚缺 evidence。",
+        products: ["AI 伺服器電源供應器"],
+        evidence: [],
+        confidence: "low",
+        lastVerified: "2026-05-28",
+        status: "candidate",
+      }],
+    },
+    canonicalTopics: {
+      schemaVersion: 1,
+      updatedAt: "2026-05-28",
+      topicDefinition: { rule: "test", notTopic: [] },
+      topics: [{
+        id: "ai-server",
+        name: "AI 伺服器",
+        type: "theme",
+        status: "active",
+        definition: "AI server topic",
+        whyItMatters: "AI server demand",
+        aliases: [],
+        legacyTopicIds: ["ai-server-power"],
+        include: [],
+        exclude: [],
+        activationSignals: ["CSP capex"],
+        evidence: [],
+        confidence: "medium",
+        lastVerified: "2026-05-28",
+      }],
+    },
+  }, new Date("2026-05-31T00:00:00.000Z"));
+
+  assert.equal(analysis.industry.knowledgeBasis, "canonical_pending");
+  assert.equal(analysis.industry.provenanceLabel, "V2 待驗證");
+  assert.equal(analysis.industry.confidence, "low");
+  assert.notEqual(analysis.industry.label, "核心題材受惠");
+  assert.ok(analysis.industry.score < 70);
+  assert.ok(analysis.industry.scoringFactors.some((factor) => factor.includes("待驗證上限")));
 });
 
 test("generateDailyAnalysis returns insufficient labels when data is sparse", () => {

@@ -93,6 +93,10 @@ export interface DailyAnalysis {
   industry: {
     label: string;
     score: number;
+    knowledgeBasis: "canonical_verified" | "canonical_pending" | "legacy_unverified" | "insufficient";
+    confidence?: string;
+    provenanceLabel: string;
+    verificationNote: string;
     scoringFactors: string[];
     summary: string;
     signals: string[];
@@ -316,6 +320,37 @@ function buildIndustryScore(input: AnalysisInput, canonicalKnowledge: DailyCanon
   return { score: finalScore, label, factors, watch };
 }
 
+function capIndustryScore(
+  industryScore: { score: number; label: string; factors: string[]; watch: string[] },
+  maxScore: number,
+  reason: string,
+  forcedLabel = "題材關聯待驗證",
+): { score: number; label: string; factors: string[]; watch: string[] } {
+  if (industryScore.score <= maxScore) {
+    return {
+      ...industryScore,
+      label: forcedLabel,
+      factors: [...industryScore.factors, `${reason}（上限 ${maxScore}）`],
+    };
+  }
+  return {
+    ...industryScore,
+    score: maxScore,
+    label: forcedLabel,
+    factors: [...industryScore.factors, `${reason}（原 ${industryScore.score}，上限 ${maxScore}）`],
+  };
+}
+
+function isVerifiedCanonicalRole(role: CompanyTopicRoleItem | undefined): boolean {
+  return Boolean(
+    role
+    && role.status === "verified"
+    && (role.confidence === "high" || role.confidence === "medium")
+    && role.evidence.length > 0
+    && role.directness !== "rejected"
+  );
+}
+
 export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): DailyAnalysis {
   const knowledge = buildCompanyKnowledge(input, now);
   const dailyPrices = input.trends?.daily_prices ?? [];
@@ -468,20 +503,45 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
   const canonicalKnowledge = buildDailyCanonicalKnowledge(input);
   let industryScore = buildIndustryScore(input, canonicalKnowledge);
   const primaryCanonicalRole = canonicalKnowledge.topicRoles[0];
+  const primaryV2Role = input.companyTopicRoles?.roles
+    ?.filter((role) => role.status !== "rejected" && role.directness !== "rejected")
+    .sort((a, b) => roleSortKey(a, input.canonicalTopics).localeCompare(roleSortKey(b, input.canonicalTopics)))[0];
   const primaryRole = knowledge.topicRoles[0];
-  if (industryScore.score === 0 && primaryRole) {
-    const legacyScore = primaryRole.relevance === "high" ? 55 : primaryRole.relevance === "medium" ? 38 : primaryRole.relevance === "low" ? 18 : 8;
+  const hasVerifiedCanonicalRole = isVerifiedCanonicalRole(primaryV2Role);
+
+  let knowledgeBasis: DailyAnalysis["industry"]["knowledgeBasis"] = "insufficient";
+  let provenanceLabel = "產業資料待補";
+  let verificationNote = "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。";
+  let industryConfidence: string | undefined = primaryV2Role?.confidence;
+
+  if (hasVerifiedCanonicalRole) {
+    knowledgeBasis = "canonical_verified";
+    provenanceLabel = "V2 已驗證";
+    verificationNote = `角色已由 company-topic-roles 驗證，含 ${primaryV2Role?.evidence.length ?? 0} 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。`;
+  } else if (primaryV2Role) {
+    knowledgeBasis = "canonical_pending";
+    provenanceLabel = "V2 待驗證";
+    verificationNote = `已有 V2 role，但 status=${primaryV2Role.status}、confidence=${primaryV2Role.confidence}、evidence=${primaryV2Role.evidence.length}；只做保守參考。`;
+    industryScore = capIndustryScore(industryScore, 64, "V2 角色待驗證上限");
+  } else if (primaryRole) {
+    knowledgeBasis = "legacy_unverified";
+    provenanceLabel = "Legacy 待驗證";
+    industryConfidence = "unverified";
+    verificationNote = "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。";
+    const legacyScore = primaryRole.relevance === "high" ? 44 : primaryRole.relevance === "medium" ? 34 : primaryRole.relevance === "low" ? 18 : 8;
     industryScore = {
       score: legacyScore,
-      label: primaryRole.relevance === "high" ? "核心題材受惠" : primaryRole.relevance === "medium" ? "題材關聯明確" : "題材關聯待驗證",
-      factors: [`legacy 題材關聯 ${primaryRole.relevance} +${legacyScore}`],
+      label: "題材關聯待驗證",
+      factors: [`legacy 題材關聯 ${primaryRole.relevance} +${legacyScore}`, "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"],
       watch: ["V2 題材角色待補：目前以 legacy industry_analysis 保守評分", ...industryScore.watch],
     };
   }
+
   const industrySignals = [
+    `資料基礎：${provenanceLabel}（${industryConfidence ?? "n/a"}）`,
     ...(primaryCanonicalRole ? [`V2 題材角色：${primaryCanonicalRole.canonicalTopicName ?? primaryCanonicalRole.topicName} · ${primaryCanonicalRole.directnessLabel} · ${primaryCanonicalRole.confidence}`] : []),
     `產業評分：${industryScore.score}/100（${industryScore.factors.slice(0, 3).join("；")}）`,
-    ...(!primaryCanonicalRole && primaryRole ? [`題材角色：${primaryRole.topicId} · ${primaryRole.marketPosition ?? primaryRole.relevance}`] : []),
+    ...(!primaryCanonicalRole && primaryRole ? [`legacy 題材角色：${primaryRole.topicId} · ${primaryRole.marketPosition ?? primaryRole.relevance}（待驗證）`] : []),
     ...canonicalKnowledge.topicRoles.slice(1, 3).map((role) => `相關題材：${role.canonicalTopicName ?? role.topicName} · ${role.directnessLabel}`),
     ...knowledge.products.slice(0, 3).map((item) => `主要產品：${item}`),
     ...knowledge.finmindSignals.slice(0, 2),
@@ -490,6 +550,7 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
   const canonicalThreats = canonicalKnowledge.swot.filter((item) => item.category === "threat").slice(0, 2).map((item) => `V2 T：${item.statement}`);
   const canonicalOpportunities = canonicalKnowledge.swot.filter((item) => item.category === "opportunity").slice(0, 2).map((item) => `V2 O：${item.statement}`);
   const industryRisks = [
+    ...(knowledgeBasis !== "canonical_verified" ? [verificationNote] : []),
     ...canonicalWeaknesses,
     ...canonicalThreats,
     ...(canonicalWeaknesses.length + canonicalThreats.length === 0 ? [
@@ -507,9 +568,9 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
   ];
   const industryLabel = industryScore.label;
   const industrySummary = primaryCanonicalRole
-    ? `${input.name} 在「${primaryCanonicalRole.canonicalTopicName ?? primaryCanonicalRole.topicName}」的 V2 角色為「${primaryCanonicalRole.directnessLabel}」，產業 score ${industryScore.score}/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。`
+    ? `${input.name} 在「${primaryCanonicalRole.canonicalTopicName ?? primaryCanonicalRole.topicName}」的 V2 角色為「${primaryCanonicalRole.directnessLabel}」，資料基礎為「${provenanceLabel}」，產業 score ${industryScore.score}/100；${knowledgeBasis === "canonical_verified" ? "Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。" : "Daily analysis 只保守參考，待補 evidence 後才提高權重。"}`
     : primaryRole
-      ? `${input.name} 在 ${primaryRole.topicId} 的角色為「${primaryRole.marketPosition ?? primaryRole.relevance}」，產業 score ${industryScore.score}/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。`
+      ? `${input.name} 在 ${primaryRole.topicId} 的 legacy 角色為「${primaryRole.marketPosition ?? primaryRole.relevance}」，資料基礎為「${provenanceLabel}」，產業 score ${industryScore.score}/100；此題材關聯仍待驗證，不列為核心題材受惠。`
       : `${input.name} 尚未建立完整題材角色，產業 score ${industryScore.score}/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。`;
 
   return {
@@ -542,9 +603,13 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     industry: {
       label: industryLabel,
       score: industryScore.score,
+      knowledgeBasis,
+      confidence: industryConfidence,
+      provenanceLabel,
+      verificationNote,
       scoringFactors: industryScore.factors,
       summary: industrySummary,
-      signals: industrySignals.slice(0, 6),
+      signals: industrySignals.slice(0, 7),
       risks: industryRisks.slice(0, 6),
       watch: industryWatch.slice(0, 6),
     },
