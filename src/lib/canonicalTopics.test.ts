@@ -127,3 +127,30 @@ test("CoWoS legacy topic groups TSMC with the advanced packaging value chain, no
   assert.ok(packagingServiceGroup, "CoWoS topic should keep a value-chain group for advanced packaging/foundry services");
   assert.ok(packagingServiceGroup.companies.some((company) => company.code === "2330"), "TSMC belongs in the value-chain service group, not its own group");
 });
+
+test("legacy industry groups use neutral value-chain names instead of market nicknames", async () => {
+  const fs = await import("node:fs/promises");
+  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
+  const displayTopic = industriesRaw.topics.find((topic: { slug?: string }) => topic.slug === "display-panel");
+
+  assert.ok(displayTopic, "display-panel topic should exist");
+  const groups = displayTopic.groups as Array<{ name: string; companies: Array<{ code: string }> }>;
+  assert.equal(groups.some((group) => group.name === "面板雙虎"), false, "market nickname should not be used as the group name");
+
+  const panelManufacturing = groups.find((group) => group.name === "面板製造");
+  assert.ok(panelManufacturing, "display-panel should use a neutral panel manufacturing group");
+  assert.deepEqual(panelManufacturing.companies.map((company) => company.code).sort(), ["2409", "3481"]);
+});
+
+test("legacy duplicate groups are merged before they become canonical fallback data", async () => {
+  const fs = await import("node:fs/promises");
+  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
+  const memoryTopic = industriesRaw.topics.find((topic: { slug?: string }) => topic.slug === "niche-memory");
+
+  assert.ok(memoryTopic, "niche-memory topic should exist");
+  const groups = memoryTopic.groups as Array<{ name: string; companies: Array<{ code: string }> }>;
+  assert.equal(groups.filter((group) => group.name.includes("NOR Flash")).length, 1, "NOR Flash / niche-memory companies should not be split across duplicate groups");
+  const idmGroup = groups.find((group) => group.name === "NOR Flash 與利基型記憶體 IDM");
+  assert.ok(idmGroup);
+  assert.deepEqual(idmGroup.companies.map((company) => company.code).sort(), ["2337", "2344", "2408"]);
+});

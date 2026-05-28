@@ -265,6 +265,52 @@ function normalizeRelevance(value: unknown): string | undefined {
   return asString(value);
 }
 
+const BROAD_SINGLETON_GROUP_PATTERN = /代工|材料|平台|製造|服務|供應鏈|相關|雙虎|三雄|龍頭/;
+
+const TAXONOMY_MISMATCH_RULES: Array<{ group: RegExp; text: RegExp; label: string }> = [
+  { group: /SaaS|企業軟體/, text: /伺服器|硬體|運算平台/, label: "software topic contains hardware infrastructure wording" },
+  { group: /膠材|封裝材料/, text: /功率IC|電源管理|半導體功率IC/, label: "packaging-material bucket contains power-IC wording" },
+  { group: /銅箔|集流/, text: /矽晶圓|半導體材料/, label: "battery copper-foil bucket contains silicon-wafer wording" },
+  { group: /IC設計|IC 設計|代工/, text: /檢測|分析服務/, label: "IC design/foundry bucket contains testing-analysis wording" },
+  { group: /Micro LED|LED封裝/, text: /LCD|OLED面板|面板雙虎/, label: "LED bucket contains panel-maker wording" },
+];
+
+function roleText(company: TopicCompany): string {
+  return [
+    asString(company.role),
+    ...asArray(company.products).map(asString),
+    ...asArray(company.tech_focus).map(asString),
+  ]
+    .filter((value): value is string => Boolean(value))
+    .join(" ");
+}
+
+function collectTaxonomyWarnings(groupName: string, companies: TopicCompany[]): Array<{ code: string; message: string }> {
+  const warnings: Array<{ code: string; message: string }> = [];
+  if (companies.length === 1 && BROAD_SINGLETON_GROUP_PATTERN.test(groupName) && !/待驗證/.test(groupName)) {
+    warnings.push({ code: "group.singleton_broad_bucket", message: `Single-company group "${groupName}" uses a broad value-chain label; verify whether peers are missing or the company is misclassified` });
+  }
+  if (/雙虎|三雄/.test(groupName) && companies.length < 2) {
+    warnings.push({ code: "group.nickname_label_incomplete", message: `Group "${groupName}" is a market nickname but only has ${companies.length} company; use a neutral value-chain name or add missing peers` });
+  }
+  if (/待驗證/.test(groupName)) {
+    warnings.push({ code: "group.taxonomy_needs_review", message: `Group "${groupName}" is explicitly marked for taxonomy review` });
+  }
+
+  companies.forEach((company, index) => {
+    const text = roleText(company);
+    for (const rule of TAXONOMY_MISMATCH_RULES) {
+      if (rule.group.test(groupName) && rule.text.test(text)) {
+        warnings.push({
+          code: "company.role_group_mismatch",
+          message: `Company ${asString(company.code) ?? index} in group "${groupName}" may be misclassified: ${rule.label}`,
+        });
+      }
+    }
+  });
+  return warnings;
+}
+
 function collectIndustryGraph(industries: IndustriesFile, issues: QualityIssue[], productKnowledgeAliases = new Map<string, Set<string>>()) {
   const topics = asArray(industries.topics) as Topic[];
   const topicSlugs = new Set<string>();
@@ -299,6 +345,10 @@ function collectIndustryGraph(industries: IndustriesFile, issues: QualityIssue[]
       if (!asString(group.name)) addIssue(issues, "warning", "group.missing_name", `${groupPath}.name`, `Group in ${slug} is missing name`);
       const companies = asArray(group.companies) as TopicCompany[];
       if (companies.length === 0) addIssue(issues, "warning", "group.no_companies", `${groupPath}.companies`, `Group in ${slug} has no companies`);
+      const groupName = asString(group.name) ?? "";
+      for (const warning of collectTaxonomyWarnings(groupName, companies)) {
+        addIssue(issues, "warning", warning.code, groupPath, warning.message);
+      }
 
       companies.forEach((company, companyIndex) => {
         const companyPath = `${groupPath}.companies[${companyIndex}]`;
