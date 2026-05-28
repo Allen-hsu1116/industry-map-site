@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5349",
   "name": "先豐",
-  "generatedAt": "2026-05-28T00:35:53.144Z",
+  "generatedAt": "2026-05-28T11:45:37.419Z",
   "sourceUpdatedAt": "2026-05-22",
   "mode": "rule-batch",
   "technical": {
@@ -29,8 +29,13 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "先豐 在 ic-substrate 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "先豐 在 ic-substrate 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：ic-substrate · 中",
       "主要產品：PCB 與載板上游材料"
     ],
@@ -40,6 +45,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：IC 載板需求持續成長",
       "知識庫最後驗證：2026-05-22（fresh）",
       "資料來源：MOPS company profile / financial statements、internal topic role map / industry_analysis"

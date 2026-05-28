@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5403",
   "name": "中菲",
-  "generatedAt": "2026-05-28T00:35:53.151Z",
+  "generatedAt": "2026-05-28T11:45:37.426Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,14 +39,18 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "中菲 在 enterprise-saas 的角色為「medium」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "中菲 在 enterprise-saas 的角色為「medium」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：enterprise-saas · medium",
       "主要產品：DIMERCO ERP 物流管理系統",
       "主要產品：供應鏈管理(SCM)軟體",
       "主要產品：倉儲管理系統(WMS)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：營收規模小(資本額7.8億)",
@@ -55,6 +59,8 @@
       "T：AI自動化壓縮傳統ERP需求"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：跨境電商物流帶動SCM需求",
       "O：冷鏈物流數位化新市場",
       "知識庫最後驗證：2026-05-26（fresh）",

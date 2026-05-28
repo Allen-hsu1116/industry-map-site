@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6462",
   "name": "神盾",
-  "generatedAt": "2026-05-28T00:35:53.285Z",
+  "generatedAt": "2026-05-28T11:45:37.560Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -41,8 +41,13 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "神盾 在 ip-asic 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 55,
+    "scoringFactors": [
+      "legacy 題材關聯 high +55"
+    ],
+    "summary": "神盾 在 ip-asic 的角色為「高」，產業 score 55/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：55/100（legacy 題材關聯 high +55）",
       "題材角色：ip-asic · 高",
       "主要產品：I301010 資訊軟體服務業 I301020 資料處理服務業 I301030 電子資訊供應服務業",
       "主要產品：安全ASIC設計",
@@ -55,6 +60,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：IP授權與客製ASIC設計服務需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"

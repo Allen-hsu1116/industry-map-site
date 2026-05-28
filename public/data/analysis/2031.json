@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2031",
   "name": "新光鋼",
-  "generatedAt": "2026-05-28T00:35:52.645Z",
+  "generatedAt": "2026-05-28T11:45:36.914Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,14 +39,18 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "新光鋼 在 electrical_equipment 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "新光鋼 在 electrical_equipment 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：electrical_equipment · 中",
       "主要產品：鋼板整平裁剪加工",
       "主要產品：鋼構構件製作",
       "主要產品：電線電纜用鋼帶",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：4月營收YoY -10.7%，累計年減9.4%，衰退明顯",
@@ -55,6 +59,8 @@
       "T：中國低價鋼材傾銷"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：台電變電所擴建帶動鋼構需求",
       "O：離岸風電基座鋼構商機",
       "知識庫最後驗證：2026-05-26（fresh）",

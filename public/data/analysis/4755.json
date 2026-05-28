@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "4755",
   "name": "三福化",
-  "generatedAt": "2026-05-28T00:35:53.098Z",
+  "generatedAt": "2026-05-28T11:45:37.372Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,14 +39,18 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "三福化 在 cybersecurity 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "三福化 在 cybersecurity 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：cybersecurity · 中",
       "主要產品：半導體級電子化學品",
       "主要產品：高純度蝕刻液與顯影液",
       "主要產品：工業級化學品",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：資安僅為化學品供應鏈管理延伸，非核心",
@@ -55,6 +59,8 @@
       "T：半導體庫存調整風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：先進製程帶動高純度化學品需求",
       "O：半導體供應鏈資安管控需求增加",
       "知識庫最後驗證：2026-05-26（fresh）",

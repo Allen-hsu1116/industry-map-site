@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6239",
   "name": "力成",
-  "generatedAt": "2026-05-28T00:35:53.243Z",
+  "generatedAt": "2026-05-28T11:45:37.517Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -41,8 +41,13 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "力成 在 advanced-packaging-automation 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "力成 在 advanced-packaging-automation 的角色為「unknown」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：advanced-packaging-automation · unknown",
       "主要產品：積體電路與半導體元件之測試服務 積體電路與半導體元件自動測試電腦軟體之研發",
       "主要產品：設計與銷售 CC01080電子零組件製造業",
@@ -55,6 +60,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：先進封裝量測自動化需求持續成長",
       "O：先進封裝製程機台需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",

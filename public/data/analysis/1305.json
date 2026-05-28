@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1305",
   "name": "華夏",
-  "generatedAt": "2026-05-28T00:35:52.549Z",
+  "generatedAt": "2026-05-28T11:45:36.812Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,14 +37,18 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "華夏 在 petrochem-plastics 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "華夏 在 petrochem-plastics 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：petrochem-plastics · 中",
       "主要產品：PVC塑膠布",
       "主要產品：PVC塑膠皮",
       "主要產品：PVC塑膠管",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：產品大宗化毛利偏低",
@@ -53,6 +57,8 @@
       "T：環保法規日趨嚴格"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：全球基建帶動PVC管材需求",
       "O：ESG趨勢推動綠色塑膠",
       "知識庫最後驗證：2026-05-26（fresh）",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2413",
   "name": "環科",
-  "generatedAt": "2026-05-28T00:35:52.733Z",
+  "generatedAt": "2026-05-28T11:45:37.004Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,8 +37,13 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "環科 在 leo-satellite 的角色為「low」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 18,
+    "scoringFactors": [
+      "legacy 題材關聯 low +18"
+    ],
+    "summary": "環科 在 leo-satellite 的角色為「low」，產業 score 18/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：18/100（legacy 題材關聯 low +18）",
       "題材角色：leo-satellite · low",
       "主要產品：交換式電源供應器 資訊通訊產品 其他電子零組件之製造加工及內外銷",
       "主要產品：電磁零件",
@@ -51,6 +56,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：低軌衛星通訊系統需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"

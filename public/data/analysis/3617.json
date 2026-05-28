@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3617",
   "name": "碩天",
-  "generatedAt": "2026-05-28T00:35:53.044Z",
+  "generatedAt": "2026-05-28T11:45:37.318Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,8 +40,13 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "碩天 在 connector-highspeed 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "碩天 在 connector-highspeed 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：connector-highspeed · 中",
       "主要產品：連接器與線材供應商",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -53,6 +58,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：AI 互連元件需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"

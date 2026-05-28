@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1514",
   "name": "亞力",
-  "generatedAt": "2026-05-28T00:35:52.577Z",
+  "generatedAt": "2026-05-28T11:45:36.842Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,14 +38,18 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "亞力 在 electrical_equipment 的角色為「high」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "亞力 在 electrical_equipment 的角色為「high」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：electrical_equipment · high",
       "主要產品：高壓配電盤(MVC/MCC)",
       "主要產品：低壓配電盤",
       "主要產品：電力變壓器",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：台電標案毛利偏低",
@@ -54,6 +58,8 @@
       "T：韓國重電大廠競爭"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：電網升級+離岸風電併網帶動重電需求",
       "O：綠能變電站新增商機",
       "知識庫最後驗證：2026-05-26（fresh）",

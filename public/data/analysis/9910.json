@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "9910",
   "name": "世紀鋼",
-  "generatedAt": "2026-05-28T00:35:53.405Z",
+  "generatedAt": "2026-05-28T11:45:37.681Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -42,14 +42,18 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "世紀鋼 在 offshore-wind 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "世紀鋼 在 offshore-wind 的角色為「unknown」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：offshore-wind · unknown",
       "主要產品：企業經營管理顧問 除許可業務外",
       "主要產品：得經營法令非禁止或限制之業務",
       "主要產品：模具製造 產品設計",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -57,6 +61,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：離岸風電需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"

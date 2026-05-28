@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3230",
   "name": "錦明",
-  "generatedAt": "2026-05-28T00:35:52.949Z",
+  "generatedAt": "2026-05-28T11:45:37.220Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,8 +37,13 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "錦明 在 wafer-fab-equipment 的角色為「低」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 18,
+    "scoringFactors": [
+      "legacy 題材關聯 low +18"
+    ],
+    "summary": "錦明 在 wafer-fab-equipment 的角色為「低」，產業 score 18/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：18/100（legacy 題材關聯 low +18）",
       "題材角色：wafer-fab-equipment · 低",
       "主要產品：五金及鎂合金製品(LCD 及NB等零組件)之製造加工買賣業務 塑膠射出成型製品製造加工買賣業務 TFT LCD TV & Monitor之Base 與Hinge之研究開發製造加工及買賣",
       "主要產品：NOR Flash 與 ROM",
@@ -51,6 +56,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：晶圓廠設備需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"

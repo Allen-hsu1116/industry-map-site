@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6269",
   "name": "台郡",
-  "generatedAt": "2026-05-28T00:35:53.252Z",
+  "generatedAt": "2026-05-28T11:45:37.527Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,14 +37,18 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "台郡 在 fpc 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 55,
+    "scoringFactors": [
+      "legacy 題材關聯 high +55"
+    ],
+    "summary": "台郡 在 fpc 的角色為「高」，產業 score 55/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：55/100（legacy 題材關聯 high +55）",
       "題材角色：fpc · 高",
       "主要產品：智慧型手機FPC軟板",
       "主要產品：LCP天線軟板",
       "主要產品：穿戴裝置微型FPC",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：Apple佔比高，客戶集中風險",
@@ -53,6 +57,8 @@
       "T：軟板技術門檻降低，新進入者增加"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：AI手機帶動LCP天線軟板升級",
       "O：AR/VR裝置FPC用量倍增",
       "知識庫最後驗證：2026-05-26（fresh）",

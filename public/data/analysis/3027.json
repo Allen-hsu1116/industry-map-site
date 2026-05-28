@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3027",
   "name": "盛達",
-  "generatedAt": "2026-05-28T00:35:52.900Z",
+  "generatedAt": "2026-05-28T11:45:37.171Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,14 +37,18 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "盛達 在 leo-satellite 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "盛達 在 leo-satellite 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：leo-satellite · 中",
       "主要產品：衛星寬頻路由器",
       "主要產品：工業級衛星通訊閘道器",
       "主要產品：車載衛星通訊終端",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：衛星通訊佔整體營收比重低",
@@ -53,6 +57,8 @@
       "T：太陽能電廠政策變動風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：低軌衛星寬頻路由器需求增加",
       "O：新興市場通訊基礎建設需求",
       "知識庫最後驗證：2026-05-26（fresh）",

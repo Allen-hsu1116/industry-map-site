@@ -169,6 +169,101 @@ test("generateDailyAnalysis prefers V2 topic roles, canonical topics, and eviden
   assert.equal(analysis.canonicalKnowledge.swot[0].id, "2308-o-ai-power-demand");
 });
 
+test("generateDailyAnalysis scores industry quality with directness, topic status, evidence confidence, and catalysts", () => {
+  const baseInput = {
+    code: "2308",
+    name: "台達電",
+    trends: { daily_prices: makePrices(30) },
+    institutional_history: [],
+    margin_history: [],
+    products: ["電源供應器"],
+    companyTopicRoles: {
+      schemaVersion: 1 as const,
+      companyCode: "2308",
+      companyName: "台達電",
+      updatedAt: "2026-05-28",
+      roles: [{
+        topicId: "ai-server-power",
+        topicName: "AI 伺服器電源",
+        topicType: "supply_chain_segment" as const,
+        directness: "direct_enabler" as const,
+        supplyChainStage: "power",
+        roleType: "power supplier",
+        roleSummary: "提供 AI 伺服器高功率電源與電源管理方案。",
+        products: ["AI 伺服器電源供應器"],
+        evidence: [{ sourceId: "delta-2025-ar", publisher: "Delta", title: "Annual Report", url: "https://example.com", claim: "power" }],
+        confidence: "high" as const,
+        lastVerified: "2026-05-28",
+        status: "verified" as const,
+      }],
+    },
+    canonicalTopics: {
+      schemaVersion: 1 as const,
+      updatedAt: "2026-05-28",
+      topicDefinition: { rule: "test", notTopic: [] },
+      topics: [{
+        id: "ai-server",
+        name: "AI 伺服器",
+        type: "theme" as const,
+        status: "active" as const,
+        definition: "AI server topic",
+        whyItMatters: "AI server demand",
+        aliases: [],
+        legacyTopicIds: ["ai-server-power"],
+        include: [],
+        exclude: [],
+        activationSignals: ["CSP capex", "電源規格升級", "GPU 平台換代"],
+        evidence: [],
+        confidence: "high" as const,
+        lastVerified: "2026-05-28",
+      }],
+    },
+    companySwot: {
+      schemaVersion: 1 as const,
+      companyCode: "2308",
+      companyName: "台達電",
+      updatedAt: "2026-05-28",
+      items: [{
+        id: "2308-o-ai-power-demand",
+        category: "opportunity" as const,
+        statement: "AI 伺服器功耗提升推升高效率電源需求。",
+        rationale: "高功率 GPU 伺服器需要更高瓦數的電源架構。",
+        timeHorizon: "structural" as const,
+        relatedTopicIds: ["ai-server"],
+        evidence: [{ sourceId: "delta-2025-ar", publisher: "Delta", title: "Annual Report", url: "https://example.com", claim: "AI power demand" }],
+        confidence: "high" as const,
+        lastVerified: "2026-05-28",
+        status: "verified" as const,
+      }],
+    },
+  };
+
+  const strong = generateDailyAnalysis(baseInput, new Date("2026-05-31T00:00:00.000Z"));
+  const weak = generateDailyAnalysis({
+    ...baseInput,
+    companyTopicRoles: {
+      ...baseInput.companyTopicRoles,
+      roles: [{
+        ...baseInput.companyTopicRoles.roles[0],
+        directness: "indirect" as const,
+        confidence: "low" as const,
+        evidence: [],
+      }],
+    },
+    canonicalTopics: {
+      ...baseInput.canonicalTopics,
+      topics: [{ ...baseInput.canonicalTopics.topics[0], status: "legacy_candidate" as const, activationSignals: [] }],
+    },
+  }, new Date("2026-05-31T00:00:00.000Z"));
+
+  assert.ok(strong.industry.score > weak.industry.score, `expected strong ${strong.industry.score} > weak ${weak.industry.score}`);
+  assert.ok(strong.industry.score >= 70);
+  assert.equal(strong.industry.label, "核心題材受惠");
+  assert.ok(strong.industry.signals.some((signal) => signal.includes("產業評分")));
+  assert.ok(strong.industry.watch.some((item) => item.includes("催化訊號")));
+  assert.match(strong.industry.summary, /score/);
+});
+
 test("generateDailyAnalysis returns insufficient labels when data is sparse", () => {
   const analysis = generateDailyAnalysis({
     code: "0000",

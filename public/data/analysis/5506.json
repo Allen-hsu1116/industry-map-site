@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5506",
   "name": "中聯資源",
-  "generatedAt": "2026-05-28T00:35:53.157Z",
+  "generatedAt": "2026-05-28T11:45:37.432Z",
   "sourceUpdatedAt": "2026-05-22",
   "mode": "rule-batch",
   "technical": {
@@ -29,8 +29,13 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "中聯資源 在 circular-economy-ewaste 的角色為「high」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "中聯資源 在 circular-economy-ewaste 的角色為「high」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：circular-economy-ewaste · high",
       "主要產品：鋼鐵爐渣資源化",
       "主要產品：鋼構與配管工程"
@@ -41,6 +46,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：電子廢料與製程回收需求持續成長",
       "O：EPC 工程服務需求持續成長",
       "知識庫最後驗證：2026-05-22（fresh）",

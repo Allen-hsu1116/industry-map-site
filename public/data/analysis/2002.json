@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2002",
   "name": "中鋼",
-  "generatedAt": "2026-05-28T00:35:52.639Z",
+  "generatedAt": "2026-05-28T11:45:36.908Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -42,14 +42,18 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "中鋼 在 defense_industry 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "中鋼 在 defense_industry 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：defense_industry · 中",
       "主要產品：軍規高強度鋼板",
       "主要產品：不鏽鋼及特殊合金鋼",
       "主要產品：船用鋼板(潛艦等級)",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：鋼鐵景氣循環明顯，碳費壓力漸增",
@@ -58,6 +62,8 @@
       "T：國際競爭加劇"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：潛艦國造帶動軍規鋼材需求，綠能鋼材轉型",
       "O：離岸風電需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6192",
   "name": "巨路",
-  "generatedAt": "2026-05-28T00:35:53.218Z",
+  "generatedAt": "2026-05-28T11:45:37.493Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,14 +36,18 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "巨路 在 medical-consumables 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "巨路 在 medical-consumables 的角色為「unknown」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：medical-consumables · unknown",
       "主要產品：程控儀器系統整合",
       "主要產品：電子及通信元件經銷代理",
       "主要產品：工業自動化控制設備",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：客戶集中石化業景氣循環風險",
@@ -52,6 +56,8 @@
       "T：石化資本支出縮減風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：AI製程優化帶動升級需求",
       "O：半導體廠務程控需求擴增",
       "知識庫最後驗證：2026-05-26（fresh）",

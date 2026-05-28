@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2409",
   "name": "友達",
-  "generatedAt": "2026-05-28T00:35:52.729Z",
+  "generatedAt": "2026-05-28T11:45:37.000Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,14 +40,18 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "友達 在 display-panel 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 55,
+    "scoringFactors": [
+      "legacy 題材關聯 high +55"
+    ],
+    "summary": "友達 在 display-panel 的角色為「高」，產業 score 55/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：55/100（legacy 題材關聯 high +55）",
       "題材角色：display-panel · 高",
       "主要產品：TFT-LCD大尺寸面板（電視/監視器）",
       "主要產品：AMOLED面板（手機/穿戴）",
       "主要產品：車用顯示面板",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：LCD面板價格循環波動劇烈",
@@ -56,6 +60,8 @@
       "T：OLED面板市場被Samsung/LG壟斷"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：車用顯示面板雙位數成長",
       "O：Micro LED AR/VR應用商機",
       "知識庫最後驗證：2026-05-26（fresh）",

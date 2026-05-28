@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2456",
   "name": "奇力新",
-  "generatedAt": "2026-05-28T00:35:52.754Z",
+  "generatedAt": "2026-05-28T11:45:37.025Z",
   "sourceUpdatedAt": "2026-05-25",
   "marketDataDate": "2021-12-28",
   "mode": "rule-batch",
@@ -35,8 +35,13 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "奇力新 在 passive-inductor 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 55,
+    "scoringFactors": [
+      "legacy 題材關聯 high +55"
+    ],
+    "summary": "奇力新 在 passive-inductor 的角色為「高」，產業 score 55/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：55/100（legacy 題材關聯 high +55）",
       "題材角色：passive-inductor · 高",
       "主要產品：電感全球龍頭",
       "主要產品：被動元件集團（含石英元件）",
@@ -49,6 +54,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：功率電感需求持續成長",
       "O：石英頻率控制元件需求持續成長",
       "知識庫最後驗證：2026-05-25（fresh）",

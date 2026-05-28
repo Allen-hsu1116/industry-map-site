@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2401",
   "name": "凌陽",
-  "generatedAt": "2026-05-28T00:35:52.722Z",
+  "generatedAt": "2026-05-28T11:45:36.993Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -41,14 +41,18 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "凌陽 在 asic-ip-design 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "凌陽 在 asic-ip-design 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：asic-ip-design · 中",
       "主要產品：各種積體電路及模組之設計.製造.測試及銷售 各種積體電路應用軟體之研究.開發及銷售 各積積體電路之貿易及代理業務",
       "主要產品：消費性 IC 設計與 IP",
       "主要產品：IC 設計 + 通路",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：受景氣循環影響",
@@ -56,6 +60,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：客製 ASIC 與矽智財需求持續成長",
       "O：IC 通路需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",

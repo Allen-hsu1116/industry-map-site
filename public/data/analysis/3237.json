@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3237",
   "name": "汎銓",
-  "generatedAt": "2026-05-28T00:35:52.955Z",
+  "generatedAt": "2026-05-28T11:45:37.227Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "technical": {
@@ -29,8 +29,13 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "汎銓 在 defense_industry 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "汎銓 在 defense_industry 的角色為「unknown」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：defense_industry · unknown",
       "主要產品：材料分析檢測服務(FA)",
       "主要產品：軍規材料失效分析",
@@ -41,6 +46,8 @@
       "T：大型財團實驗室競爭，設備折舊成本高"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：軍規材料驗證需求穩定成長，半導體先進製程分析需求增加",
       "知識庫最後驗證：2026-05-25（fresh）",
       "資料來源：MOPS company profile / financial statements、internal topic role map / industry_analysis"

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1609",
   "name": "大亞",
-  "generatedAt": "2026-05-28T00:35:52.600Z",
+  "generatedAt": "2026-05-28T11:45:36.866Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,14 +40,18 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "summary": "大亞 在 electrical_equipment 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 38,
+    "scoringFactors": [
+      "legacy 題材關聯 medium +38"
+    ],
+    "summary": "大亞 在 electrical_equipment 的角色為「中」，產業 score 38/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：38/100（legacy 題材關聯 medium +38）",
       "題材角色：electrical_equipment · 中",
       "主要產品：高壓電力電纜(69kV~345kV)",
       "主要產品：低壓建築用電纜",
       "主要產品：漆包線/電磁線",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
       "W：銅/鋁原物料成本佔比高",
@@ -56,6 +60,8 @@
       "T：中國低價電纜競爭"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：電網強韌計畫高壓電纜需求",
       "O：AI伺服器用漆包線變壓器增",
       "知識庫最後驗證：2026-05-26（fresh）",

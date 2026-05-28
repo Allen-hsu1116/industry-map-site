@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2448",
   "name": "晶電",
-  "generatedAt": "2026-05-28T00:35:52.745Z",
+  "generatedAt": "2026-05-28T11:45:37.015Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "technical": {
@@ -29,8 +29,13 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "summary": "晶電 在 display-panel 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 55,
+    "scoringFactors": [
+      "legacy 題材關聯 high +55"
+    ],
+    "summary": "晶電 在 display-panel 的角色為「高」，產業 score 55/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：55/100（legacy 題材關聯 high +55）",
       "題材角色：display-panel · 高",
       "主要產品：全球 LED 晶片龍頭",
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
@@ -41,6 +46,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：面板產業需求持續成長",
       "O：LED 與車用照明需求持續成長",
       "知識庫最後驗證：2026-05-25（fresh）",

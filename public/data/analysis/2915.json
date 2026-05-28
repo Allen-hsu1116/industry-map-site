@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2915",
   "name": "潤弘",
-  "generatedAt": "2026-05-28T00:35:52.877Z",
+  "generatedAt": "2026-05-28T11:45:37.149Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,8 +39,13 @@
   },
   "industry": {
     "label": "題材關聯待驗證",
-    "summary": "潤弘 在 offshore-wind 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "score": 8,
+    "scoringFactors": [
+      "legacy 題材關聯 unknown +8"
+    ],
+    "summary": "潤弘 在 offshore-wind 的角色為「unknown」，產業 score 8/100；今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "產業評分：8/100（legacy 題材關聯 unknown +8）",
       "題材角色：offshore-wind · unknown",
       "主要產品：天然棉．纖維．紡織品之製造加工染整印花營銷及進出口貿易業務 農畜水產品．雜貨．衣著．建材．家具及裝飾品之批發及零售業務 委託營造商興建國民住宅．商業大樓出租．出售業務",
       "主要產品：離岸風電基礎工程",
@@ -53,6 +58,8 @@
       "T：供應鏈重組風險"
     ],
     "watch": [
+      "V2 題材角色待補：目前以 legacy industry_analysis 保守評分",
+      "補齊公司題材角色、產品知識與 SWOT 後再評分",
       "O：離岸風電需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
