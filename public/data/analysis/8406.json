@@ -6,6 +6,22 @@
   "sourceUpdatedAt": "2026-05-25",
   "marketDataDate": "2022-04-20",
   "mode": "rule-batch",
+  "analysisQuality": {
+    "grade": "D",
+    "label": "Legacy only",
+    "upgradePriority": "high",
+    "missingKnowledge": [
+      "product_knowledge",
+      "verified_topic_role",
+      "complete_swot"
+    ],
+    "blockingReasons": [
+      "legacy_only",
+      "missing_product_knowledge",
+      "missing_topic_role",
+      "missing_swot"
+    ]
+  },
   "technical": {
     "stance": "bullish",
     "label": "偏多",

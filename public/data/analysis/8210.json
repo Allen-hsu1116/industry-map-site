@@ -7,6 +7,20 @@
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
+  "analysisQuality": {
+    "grade": "D",
+    "label": "Legacy only",
+    "upgradePriority": "high",
+    "missingKnowledge": [
+      "verified_topic_role",
+      "complete_swot"
+    ],
+    "blockingReasons": [
+      "legacy_only",
+      "missing_topic_role",
+      "missing_swot"
+    ]
+  },
   "technical": {
     "stance": "bullish",
     "label": "偏多",
