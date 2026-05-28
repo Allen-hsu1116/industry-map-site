@@ -112,3 +112,18 @@ test("canonical-topics.json maps every legacy topic exactly once", async () => {
   assert.equal(report.unmappedLegacyTopics.length, 0, `Unmapped legacy topics: ${report.unmappedLegacyTopics.join(", ")}`);
   assert.deepEqual(report.duplicateLegacyMappings, []);
 });
+
+test("CoWoS legacy topic groups TSMC with the advanced packaging value chain, not a single-company bucket", async () => {
+  const fs = await import("node:fs/promises");
+  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
+  const cowosTopic = industriesRaw.topics.find((topic: { slug?: string }) => topic.slug === "cowos-advanced-packaging");
+
+  assert.ok(cowosTopic, "cowos-advanced-packaging topic should exist");
+  const groups = cowosTopic.groups as Array<{ name: string; companies: Array<{ code: string }> }>;
+  const singletonCompanyBuckets = groups.filter((group) => group.companies.length === 1 && /[（(].+[）)]/.test(group.name));
+  assert.deepEqual(singletonCompanyBuckets.map((group) => group.name), [], "company-specific singleton groups should not appear in the CoWoS topic");
+
+  const packagingServiceGroup = groups.find((group) => group.name === "先進封裝與封測服務");
+  assert.ok(packagingServiceGroup, "CoWoS topic should keep a value-chain group for advanced packaging/foundry services");
+  assert.ok(packagingServiceGroup.companies.some((company) => company.code === "2330"), "TSMC belongs in the value-chain service group, not its own group");
+});
