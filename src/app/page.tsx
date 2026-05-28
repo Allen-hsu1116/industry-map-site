@@ -2295,7 +2295,7 @@ function CompanyFullPageDetail({
                     const primaryTopicId = knowledge?.topicRoles[0]?.topicId;
                     const dailyIndustryApplies = Boolean(dailyIndustry && primaryTopicId === role.topic);
                     const integratedDailyNote = dailyIndustryApplies && dailyIndustry
-                      ? ` 收盤後資料日 ${resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"} 的題材檢查結果為「${dailyIndustry.label}」，後續會用下方觀察重點輔助驗證這個題材角色是否反映到營收、籌碼與價格。`
+                      ? ` 收盤後資料日 ${resolvedDailyAnalysis?.sourceUpdatedAt ?? "未知"} 的題材檢查結果為「${dailyIndustry.label}」${typeof dailyIndustry.score === "number" ? `，產業分數 ${dailyIndustry.score}/100` : ""}，後續會用下方觀察重點輔助驗證這個題材角色是否反映到營收、籌碼與價格。`
                       : "";
                     const sourceChips = [
                       ...(canonicalRole?.evidence.map((item) => `${item.publisher}：${item.title}`) ?? []),
@@ -2318,6 +2318,28 @@ function CompanyFullPageDetail({
                           <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                             {topicAnalysis.ai_summary || analysisText}{integratedDailyNote}
                           </p>
+                          {dailyIndustryApplies && dailyIndustry && typeof dailyIndustry.score === "number" && (
+                            <div className="mt-4 rounded-xl border border-cyan-400/10 bg-cyan-400/[0.04] p-4">
+                              <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                                <div>
+                                  <div className="text-[11px] font-bold uppercase tracking-widest text-cyan-200">Daily industry score</div>
+                                  <div className="mt-1 text-xs text-[var(--color-text-tertiary)]">由直接度、題材狀態、證據信心、催化與 SWOT 風險加權</div>
+                                </div>
+                                <span className="rounded-full border border-cyan-300/20 bg-cyan-300/10 px-3 py-1 text-sm font-bold text-cyan-100">
+                                  {dailyIndustry.score}/100
+                                </span>
+                              </div>
+                              {dailyIndustry.scoringFactors?.length > 0 && (
+                                <div className="flex flex-wrap gap-2">
+                                  {dailyIndustry.scoringFactors.slice(0, 6).map((factor, factorIndex) => (
+                                    <span key={factorIndex} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[11px] text-[var(--color-text-secondary)]">
+                                      {factor}
+                                    </span>
+                                  ))}
+                                </div>
+                              )}
+                            </div>
+                          )}
                           <div className="mt-4 flex flex-wrap items-center gap-3">
                             <span className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-full" style={{ color: displayRoleBadge.color, backgroundColor: displayRoleBadge.bg }}>
                               {displayRelInfo.emoji} {canonicalRoleLabel ?? displayRelInfo.label}

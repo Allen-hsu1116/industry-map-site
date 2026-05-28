@@ -68,6 +68,23 @@ interface MarketOverview {
   declining: number | null;
 }
 
+interface DailyIndustryAnalysis {
+  label: string;
+  score?: number;
+  scoringFactors?: string[];
+  summary: string;
+  signals: string[];
+  risks: string[];
+  watch: string[];
+}
+
+interface CompanyDailyAnalysis {
+  code: string;
+  sourceUpdatedAt?: string;
+  generatedAt: string;
+  industry?: DailyIndustryAnalysis;
+}
+
 interface DailyReport {
   date: string;
   weekday: string;
@@ -99,18 +116,29 @@ function getTrendBadge(trend: string): "default" | "secondary" | "destructive" |
   return "secondary";
 }
 
+async function fetchStaticJson<T>(path: string): Promise<T> {
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  const candidates = [`/industry-map-site${normalizedPath}`, normalizedPath];
+
+  for (const candidate of candidates) {
+    const response = await fetch(candidate);
+    if (response.ok) return await response.json() as T;
+  }
+
+  throw new Error(`Failed to load ${normalizedPath}`);
+}
+
 /* ─── Main Page ─── */
 export default function DailyReportPage() {
   const [report, setReport] = useState<DailyReport | null>(null);
+  const [dailyAnalyses, setDailyAnalyses] = useState<Record<string, CompanyDailyAnalysis>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchReport() {
       try {
-        const res = await fetch("/industry-map-site/data/daily-report.json");
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        const data: DailyReport = await res.json();
+        const data = await fetchStaticJson<DailyReport>("/data/daily-report.json");
         setReport(data);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load report");
@@ -120,6 +148,34 @@ export default function DailyReportPage() {
     }
     fetchReport();
   }, []);
+
+  useEffect(() => {
+    if (!report?.picks?.length) return;
+    const picks = report.picks;
+    let cancelled = false;
+
+    async function fetchPickAnalyses() {
+      const entries = await Promise.all(
+        picks.map(async (pick): Promise<[string, CompanyDailyAnalysis] | null> => {
+          try {
+            const analysis = await fetchStaticJson<CompanyDailyAnalysis>(`/data/analysis/${pick.code}.json`);
+            return [pick.code, analysis];
+          } catch {
+            return null;
+          }
+        })
+      );
+
+      if (!cancelled) {
+        setDailyAnalyses(Object.fromEntries(entries.filter((entry): entry is [string, CompanyDailyAnalysis] => entry !== null)));
+      }
+    }
+
+    fetchPickAnalyses();
+    return () => {
+      cancelled = true;
+    };
+  }, [report]);
 
   if (loading) {
     return (
@@ -249,7 +305,9 @@ export default function DailyReportPage() {
         {/* Stock Picks */}
         <div className="space-y-6">
           <h2 className="text-xl font-bold text-white">🏆 今日推薦 Top {report.picks.length}</h2>
-          {report.picks.map((pick) => (
+          {report.picks.map((pick) => {
+            const dailyIndustry = dailyAnalyses[pick.code]?.industry;
+            return (
             <Card key={pick.code} className={`bg-[#12122a] border ${getScoreBg(pick.score)}`}>
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
@@ -281,8 +339,8 @@ export default function DailyReportPage() {
                 )}
               </CardHeader>
               <CardContent className="space-y-4">
-                {/* Three columns: Technicals / Fundamentals / Chips */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Four columns: Technicals / Fundamentals / Chips / Industry */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                   {/* Technicals */}
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold text-indigo-400">📈 技術面</h4>
@@ -315,6 +373,31 @@ export default function DailyReportPage() {
                     </p>
                     <p className="text-gray-300 text-sm">{pick.chip_analysis.summary}</p>
                   </div>
+                  {/* Industry */}
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-semibold text-cyan-400">🏭 產業題材</h4>
+                    {dailyIndustry ? (
+                      <div className="space-y-2">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-gray-300 text-sm">{dailyIndustry.label}</span>
+                          {typeof dailyIndustry.score === "number" && (
+                            <Badge variant="outline" className="border-cyan-400/30 bg-cyan-400/10 text-cyan-200 text-xs">
+                              {dailyIndustry.score}/100
+                            </Badge>
+                          )}
+                        </div>
+                        {dailyIndustry.scoringFactors && dailyIndustry.scoringFactors.length > 0 && (
+                          <ul className="space-y-1">
+                            {dailyIndustry.scoringFactors.slice(0, 3).map((factor, factorIndex) => (
+                              <li key={factorIndex} className="text-xs leading-relaxed text-gray-400">• {factor}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ) : (
+                      <p className="text-gray-500 text-sm">產業分數載入中</p>
+                    )}
+                  </div>
                 </div>
 
                 <Separator className="bg-slate-700" />
@@ -346,7 +429,8 @@ export default function DailyReportPage() {
                 </div>
               </CardContent>
             </Card>
-          ))}
+            );
+          })}
         </div>
 
         {/* Risk Alerts */}
