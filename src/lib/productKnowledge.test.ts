@@ -55,13 +55,13 @@ test("productKnowledgeToNarrative exposes source and freshness metadata", () => 
   assert.deepEqual(narrative.sourceLabels, ["TSMC：CoWoS technology platform"]);
 });
 
-test("product-knowledge batch covers at least 15 companies with evidence-backed product narratives", async () => {
+test("product-knowledge batch covers at least 20 companies with evidence-backed product narratives", async () => {
   const fs = await import("node:fs/promises");
   const path = await import("node:path");
   const dir = "public/data/product-knowledge";
   const files = (await fs.readdir(dir)).filter((file) => file.endsWith(".json")).sort();
 
-  assert.ok(files.length >= 15, `Expected at least 15 product-knowledge files, got ${files.length}`);
+  assert.ok(files.length >= 20, `Expected at least 20 product-knowledge files, got ${files.length}`);
 
   for (const file of files) {
     const raw = JSON.parse(await fs.readFile(path.join(dir, file), "utf8")) as CompanyProductKnowledge;
