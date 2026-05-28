@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6169",
   "name": "昱泉",
-  "generatedAt": "2026-05-27T17:40:56.753Z",
+  "generatedAt": "2026-05-28T00:35:53.200Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,111 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "昱泉 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "昱泉 在 ddic 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：ddic · 中",
+      "主要產品：遊戲及教育軟體研究開發",
+      "主要產品：代理及銷售",
+      "主要產品：手機遊戲開發營運",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：與光收發模組產業無關聯",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：顯示驅動 IC需求持續成長",
+      "O：Edge AI / AIoT 邊緣智慧需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "遊戲及教育軟體研究開發",
+      "代理及銷售",
+      "手機遊戲開發營運",
+      "線上遊戲開發",
+      "遊戲IP授權",
+      "教育軟體"
+    ],
+    "customers": [
+      "Apple",
+      "Intel",
+      "AMD",
+      "NVIDIA",
+      "三星",
+      "Google",
+      "AWS",
+      "Microsoft"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ddic",
+        "role": "高速介面與 TCON IC",
+        "relevance": "high",
+        "marketPosition": "中",
+        "summary": "昱泉在「IC 設計｜顯示驅動 IC」題材的「面板周邊IC與高速傳輸」中扮演高速介面與 TCON IC角色。"
+      },
+      {
+        "topicId": "edge-ai",
+        "role": "工業電腦與 Edge AI 平台",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "昱泉在「智慧機器人｜Edge AI / AIoT 邊緣智慧」題材的「AIoT模組與工業電腦」中扮演工業電腦與 Edge AI 平台角色。"
+      },
+      {
+        "topicId": "high-speed-optics",
+        "role": "利基型光模組",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "昱泉在「網通衛星｜高速光收發模組」題材的「光學元件與光模組零組件」中扮演利基型光模組角色。"
+      },
+      {
+        "topicId": "pcb-manufacturing",
+        "role": "利基型 PCB",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "昱泉在「電子零組件｜PCB 硬板製造」題材的「HDI板與高頻板」中扮演利基型 PCB角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "昱泉在面板周邊IC與高速傳輸領域具備競爭優勢",
+        "昱泉在AIoT模組與工業電腦領域具備競爭優勢",
+        "遊戲開發經驗豐富",
+        "跨平台IP授權布局",
+        "昱泉在HDI板與高頻板領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "與光收發模組產業無關聯",
+        "遊戲營收波動大",
+        "小規模營運"
+      ],
+      "opportunities": [
+        "顯示驅動 IC需求持續成長",
+        "Edge AI / AIoT 邊緣智慧需求持續成長",
+        "手機遊戲市場持續成長",
+        "IP授權商業模式",
+        "PCB 硬板製造需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "大型遊戲公司競爭",
+        "單一遊戲生命週期風險"
+      ],
+      "sources": [
+        "industry_analysis:ddic",
+        "industry_analysis:edge-ai",
+        "industry_analysis:high-speed-optics",
+        "industry_analysis:pcb-manufacturing"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +154,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

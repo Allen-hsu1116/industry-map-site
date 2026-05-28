@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5608",
   "name": "四維航",
-  "generatedAt": "2026-05-27T17:40:56.715Z",
+  "generatedAt": "2026-05-28T00:35:53.160Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,76 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "四維航 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "四維航 在 container-shipping 的角色為「低」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：container-shipping · 低",
+      "主要產品：船舶及其零件批發/零售業",
+      "主要產品：船務代理業",
+      "主要產品：船舶運送業",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：貨櫃航運需求持續成長",
+      "O：散裝航運需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "船舶及其零件批發/零售業",
+      "船務代理業",
+      "船舶運送業"
+    ],
+    "customers": [
+      "散戶",
+      "法人",
+      "企業客戶",
+      "政府機關"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "container-shipping",
+        "role": "散雜貨航運",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "四維航在「金融航運｜貨櫃航運」題材的「貨櫃租賃與碼頭」中扮演散雜貨航運角色。"
+      },
+      {
+        "topicId": "dry-bulk-shipping",
+        "role": "散裝航運輕便型船",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "四維航在「金融航運｜散裝航運」題材的「中型散裝船隊」中扮演散裝航運輕便型船角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "四維航在貨櫃租賃與碼頭領域具備競爭優勢",
+        "四維航在中型散裝船隊領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "貨櫃航運需求持續成長",
+        "散裝航運需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:container-shipping",
+        "industry_analysis:dry-bulk-shipping"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +119,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

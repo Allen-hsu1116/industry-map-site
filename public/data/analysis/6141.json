@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6141",
   "name": "柏承",
-  "generatedAt": "2026-05-27T17:40:56.741Z",
+  "generatedAt": "2026-05-28T00:35:53.186Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,28 +36,78 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "柏承 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "柏承 在 ic-substrate 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：ic-substrate · 中",
+      "主要產品：利基型 IC 載板",
+      "主要產品：光學鏡頭（PC 攝影機）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：IC 載板需求持續成長",
+      "O：PC需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "利基型 IC 載板",
+      "光學鏡頭（PC 攝影機）"
+    ],
+    "customers": [
+      "Apple",
+      "Tesla",
+      "NVIDIA",
+      "AMD",
+      "Intel",
+      "國內外品牌廠",
+      "系統整合商",
+      "ODM/OEM"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ic-substrate",
+        "role": "利基型 IC 載板",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "柏承在「基板材料｜IC 載板」題材的「PCB跨入載板與EMS」中扮演利基型 IC 載板角色。"
+      },
+      {
+        "topicId": "pc-nb-tablet",
+        "role": "光學鏡頭（PC 攝影機）",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "柏承在「消費終端｜PC」題材的「PC零組件與周邊品牌」中扮演光學鏡頭（PC 攝影機）角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "柏承在PCB跨入載板與EMS領域具備競爭優勢",
+        "柏承在PC零組件與周邊品牌領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "IC 載板需求持續成長",
+        "PC需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:ic-substrate",
+        "industry_analysis:pc-nb-tablet"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -68,7 +118,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

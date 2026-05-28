@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3029",
   "name": "零壹",
-  "generatedAt": "2026-05-27T17:40:56.462Z",
+  "generatedAt": "2026-05-28T00:35:52.901Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,94 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "零壹 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "零壹 在 cloud-msp 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：cloud-msp · unknown",
+      "主要產品：雲端基礎設施代理",
+      "主要產品：資安代理龍頭(端點/防火牆)",
+      "主要產品：資安/系統整合",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：雲端服務與代管需求持續成長",
+      "O：資安概念需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "雲端基礎設施代理",
+      "資安代理龍頭(端點/防火牆)",
+      "資安/系統整合",
+      "資安與雲端代理經銷龍頭"
+    ],
+    "customers": [
+      "國內外品牌廠",
+      "系統整合商",
+      "ODM/OEM"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "cloud-msp",
+        "role": "雲端基礎設施代理",
+        "relevance": "unknown",
+        "summary": "零壹在「軟體資安｜雲端服務與代管」題材的「雲端代管與系統整合」中扮演雲端基礎設施代理角色。"
+      },
+      {
+        "topicId": "cybersecurity",
+        "role": "資安代理龍頭(端點/防火牆)",
+        "relevance": "high",
+        "summary": "零壹在「軟體資安｜資安概念」題材的「軟體資安與國防通訊」中扮演資安代理龍頭(端點/防火牆)角色。"
+      },
+      {
+        "topicId": "enterprise-saas",
+        "role": "資安/系統整合",
+        "relevance": "unknown",
+        "marketPosition": "high",
+        "summary": "零壹在「軟體資安｜企業軟體與 SaaS」題材的「IT設備與系統整合」中扮演資安/系統整合角色。"
+      },
+      {
+        "topicId": "it-si",
+        "role": "資安與雲端代理經銷龍頭",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "零壹在「軟體資安｜系統整合與委外」題材的「資安與雲端代理」中扮演資安與雲端代理經銷龍頭角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "零壹在雲端代管與系統整合領域具備競爭優勢",
+        "零壹為軟體資安與國防通訊領導廠商",
+        "零壹在IT設備與系統整合領域具備競爭優勢",
+        "零壹為資安與雲端代理領導廠商"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "雲端服務與代管需求持續成長",
+        "資安概念需求持續成長",
+        "企業軟體與 SaaS需求持續成長",
+        "系統整合與委外需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:cloud-msp",
+        "industry_analysis:cybersecurity",
+        "industry_analysis:enterprise-saas",
+        "industry_analysis:it-si"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +135,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

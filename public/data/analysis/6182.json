@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6182",
   "name": "合晶",
-  "generatedAt": "2026-05-27T17:40:56.765Z",
+  "generatedAt": "2026-05-28T00:35:53.211Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,126 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "合晶 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "合晶 在 battery-materials 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：battery-materials · 中",
+      "主要產品：半導體及其材料之研發",
+      "主要產品：進出口及代理銷售等",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：電池關鍵材料需求持續成長",
+      "O：儲能系統整合需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "半導體及其材料之研發",
+      "進出口及代理銷售等"
+    ],
+    "customers": [
+      "台電",
+      "政府機關",
+      "企業用電大戶",
+      "綠電需求者",
+      "Tesla",
+      "CATL",
+      "比亞迪",
+      "國內外電廠"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "battery-materials",
+        "role": "銅箔與矽晶圓材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "合晶在「綠能環保｜電池關鍵材料」題材的「銅箔與集流材料」中扮演銅箔與矽晶圓材料角色。"
+      },
+      {
+        "topicId": "ess-storage",
+        "role": "功率模組",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "合晶在「綠能環保｜儲能系統整合」題材的「變壓器與儲能系統整合」中扮演功率模組角色。"
+      },
+      {
+        "topicId": "fiberglass-cloth",
+        "role": "銅箔製造商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "合晶在「基板材料｜玻纖布」題材的「銅箔與CCL材料」中扮演銅箔製造商角色。"
+      },
+      {
+        "topicId": "packaging-materials",
+        "role": "環氧樹脂/EMC 封膠",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "合晶在「基板材料｜導線架與化學品」題材的「環氧樹脂與封膠材料」中扮演環氧樹脂/EMC 封膠角色。"
+      },
+      {
+        "topicId": "semi-process-materials",
+        "role": "特用氣體與化學品",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "合晶在「半導體製造｜前段製程材料」題材的「特用化學品與光阻」中扮演特用氣體與化學品角色。"
+      },
+      {
+        "topicId": "silicon-wafer",
+        "role": "矽晶圓重要供應商",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "合晶在「半導體製造｜矽晶圓」題材的「半導體」中扮演矽晶圓重要供應商角色。"
+      },
+      {
+        "topicId": "water-environment",
+        "role": "水處理化學品/加藥系統",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "合晶在「綠能環保｜水資源工程與環保」題材的「水處理化學品」中扮演水處理化學品/加藥系統角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "合晶在銅箔與集流材料領域具備競爭優勢",
+        "合晶在變壓器與儲能系統整合領域具備競爭優勢",
+        "合晶在銅箔與CCL材料領域具備競爭優勢",
+        "合晶在環氧樹脂與封膠材料領域具備競爭優勢",
+        "合晶在特用化學品與光阻領域具備競爭優勢",
+        "合晶在半導體領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "電池關鍵材料需求持續成長",
+        "儲能系統整合需求持續成長",
+        "玻纖布需求持續成長",
+        "導線架與化學品需求持續成長",
+        "前段製程材料需求持續成長",
+        "矽晶圓需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:battery-materials",
+        "industry_analysis:ess-storage",
+        "industry_analysis:fiberglass-cloth",
+        "industry_analysis:packaging-materials",
+        "industry_analysis:semi-process-materials",
+        "industry_analysis:silicon-wafer",
+        "industry_analysis:water-environment"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +169,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "9955",
   "name": "佳龍",
-  "generatedAt": "2026-05-27T17:40:56.962Z",
+  "generatedAt": "2026-05-28T00:35:53.411Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,28 +36,66 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "佳龍 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "佳龍 在 circular-economy-ewaste 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：circular-economy-ewaste · 高",
+      "主要產品：混合五金處理及銷售 貴金屬之銷售",
+      "主要產品：機械零件及零組件之買賣業務",
+      "主要產品：資源再生品之銷售 五金",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：電子廢料與製程回收需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "混合五金處理及銷售 貴金屬之銷售",
+      "機械零件及零組件之買賣業務",
+      "資源再生品之銷售 五金",
+      "廢資訊品清運及處理"
+    ],
+    "customers": [
+      "台電",
+      "政府機關",
+      "企業用電大戶",
+      "綠電需求者"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "circular-economy-ewaste",
+        "role": "電子廢料回收處理龍頭",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "佳龍在「綠能環保｜電子廢料與製程回收」題材的「貴金屬回收龍頭」中扮演電子廢料回收處理龍頭角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "佳龍為貴金屬回收龍頭領導廠商"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "電子廢料與製程回收需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:circular-economy-ewaste"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -68,7 +106,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

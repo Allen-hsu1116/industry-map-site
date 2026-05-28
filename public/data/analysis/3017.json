@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3017",
   "name": "奇鋐",
-  "generatedAt": "2026-05-27T17:40:56.454Z",
+  "generatedAt": "2026-05-28T00:35:52.892Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -44,8 +44,9 @@
       "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · medium",
       "相關題材：AI 伺服器液冷散熱 · 核心產品/平台",
       "相關題材：AI 伺服器 · 直接賦能角色",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "主要產品：3C電子產品",
+      "主要產品：封裝材料供應商",
+      "主要產品：散熱模組/封測散熱"
     ],
     "risks": [
       "V2 W：奇鋐液冷與 AI 伺服器相關營收占比仍需依賴後續財報、法說或重大訊息驗證，不能只因題材關聯就假設高度獲利貢獻。",
@@ -61,15 +62,116 @@
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "3C電子產品",
+      "封裝材料供應商",
+      "散熱模組/封測散熱",
+      "AI散熱模組",
+      "散熱與機殼零組件",
+      "AI伺服器散熱+機殼",
+      "微控制器設計領導廠",
+      "BBU散熱+機殼"
+    ],
+    "customers": [
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm",
+      "Broadcom",
+      "Google",
+      "AWS",
+      "Microsoft"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-automation",
+        "role": "封裝材料供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "奇鋐在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演封裝材料供應商角色。"
+      },
+      {
+        "topicId": "advanced-packaging-test",
+        "role": "散熱模組/封測散熱",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "奇鋐在「先進封測｜IC 測試服務」題材的「封裝測試與IC設計」中扮演散熱模組/封測散熱角色。"
+      },
+      {
+        "topicId": "ai-server",
+        "role": "AI散熱模組",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "奇鋐在「AI伺服器與液冷技術」題材的「AI伺服器散熱與零組件」中扮演AI散熱模組角色。"
+      },
+      {
+        "topicId": "ai-server-chassis-rails",
+        "role": "散熱與機殼零組件",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "奇鋐在「AI 伺服器｜機殼與滑軌」題材的「散熱與機殼零組件」中扮演散熱與機殼零組件角色。"
+      },
+      {
+        "topicId": "ai-server-odm",
+        "role": "AI伺服器散熱+機殼",
+        "relevance": "unknown",
+        "summary": "奇鋐在「AI 伺服器｜整機組裝」題材的「伺服器主板與周邊」中扮演AI伺服器散熱+機殼角色。"
+      },
+      {
+        "topicId": "analog-power-ic",
+        "role": "微控制器設計領導廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "奇鋐在「IC 設計｜類比與功率管理 IC」題材的「微控制器(MCU)」中扮演微控制器設計領導廠角色。"
+      },
+      {
+        "topicId": "bbu",
+        "role": "BBU散熱+機殼",
+        "relevance": "unknown",
+        "summary": "奇鋐在「AI 伺服器｜BBU 電池備援系統」題材的「BBU電源供應器與系統」中扮演BBU散熱+機殼角色。"
+      },
+      {
+        "topicId": "high-speed-optics",
+        "role": "散熱模組 + 光模組零組件",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "奇鋐在「網通衛星｜高速光收發模組」題材的「光收發模組與散熱」中扮演散熱模組 + 光模組零組件角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "奇鋐在封裝材料與耗材領域具備競爭優勢",
+        "奇鋐在封裝測試與IC設計領域具備競爭優勢",
+        "奇鋐在AI伺服器散熱與零組件領域具備競爭優勢",
+        "奇鋐在散熱與機殼零組件領域具備競爭優勢",
+        "奇鋐在伺服器主板與周邊領域具備競爭優勢",
+        "奇鋐為微控制器(MCU)領導廠商"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "先進封裝量測自動化需求持續成長",
+        "IC 測試服務需求持續成長",
+        "AI伺服器與液冷技術需求持續成長",
+        "機殼與滑軌需求持續成長",
+        "整機組裝需求持續成長",
+        "類比與功率管理 IC需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-automation",
+        "industry_analysis:advanced-packaging-test",
+        "industry_analysis:ai-server",
+        "industry_analysis:ai-server-chassis-rails",
+        "industry_analysis:ai-server-odm",
+        "industry_analysis:analog-power-ic",
+        "industry_analysis:bbu",
+        "industry_analysis:high-speed-optics"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -80,7 +182,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

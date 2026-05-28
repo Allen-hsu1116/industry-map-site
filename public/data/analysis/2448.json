@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2448",
   "name": "晶電",
-  "generatedAt": "2026-05-27T17:40:56.304Z",
+  "generatedAt": "2026-05-28T00:35:52.745Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "technical": {
@@ -28,33 +28,82 @@
     "watch": []
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "晶電 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "晶電 在 display-panel 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：display-panel · 高",
+      "主要產品：全球 LED 晶片龍頭",
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：面板產業需求持續成長",
+      "O：LED 與車用照明需求持續成長",
       "知識庫最後驗證：2026-05-25（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockMonthRevenue / MOPS monthly revenue"
+      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockMonthRevenue / MOPS monthly revenue、internal topic role map / industry_analysis"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "全球 LED 晶片龍頭"
+    ],
+    "customers": [
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm",
+      "Broadcom",
+      "Tesla",
+      "BYD",
+      "Toyota"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "display-panel",
+        "role": "全球 LED 晶片龍頭",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "晶電在「光學顯示｜面板產業」題材的「Micro LED與LED封裝」中扮演全球 LED 晶片龍頭角色。"
+      },
+      {
+        "topicId": "led-automotive",
+        "role": "全球 LED 晶片龍頭",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "晶電在「光學顯示｜LED 與車用照明」題材的「LED晶片與光電代工」中扮演全球 LED 晶片龍頭角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "晶電為Micro LED與LED封裝領導廠商",
+        "晶電為LED晶片與光電代工領導廠商"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "面板產業需求持續成長",
+        "LED 與車用照明需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:display-panel",
+        "industry_analysis:led-automotive"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-25"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
-      "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue"
+      "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"

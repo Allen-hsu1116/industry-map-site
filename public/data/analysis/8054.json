@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8054",
   "name": "安國",
-  "generatedAt": "2026-05-27T17:40:56.906Z",
+  "generatedAt": "2026-05-28T00:35:53.355Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,9 +40,10 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "安國 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "安國 在 hpc-networking-ic 的角色為「60」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：hpc-networking-ic · 60",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -55,13 +56,23 @@
   "knowledge": {
     "products": [],
     "customers": [],
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "hpc-networking-ic",
+        "role": "USB Flash 控制器 IC",
+        "relevance": "unknown",
+        "marketPosition": "60",
+        "summary": "安國在「IC 設計｜HPC 與網通 IC」題材的「儲存控制器 IC」中扮演USB Flash 控制器 IC角色。"
+      }
+    ],
     "swot": {
       "strengths": [],
       "weaknesses": [],
       "opportunities": [],
       "threats": [],
-      "sources": [],
+      "sources": [
+        "industry_analysis:hpc-networking-ic"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -72,7 +83,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

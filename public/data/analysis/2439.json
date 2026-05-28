@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2439",
   "name": "美律",
-  "generatedAt": "2026-05-27T17:40:56.303Z",
+  "generatedAt": "2026-05-28T00:35:52.744Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,28 +40,73 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "美律 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "美律 在 fiberglass-cloth 的角色為「低」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：fiberglass-cloth · 低",
+      "主要產品：揚聲器/喇叭",
+      "主要產品：電聲元件",
+      "主要產品：電池模組",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：消費性電子需求波動",
+      "W：與玻纖布產業關聯度低",
+      "T：中國電聲元件低價競爭",
+      "T：客戶集中單一品牌風險"
+    ],
     "watch": [
+      "O：AR/VR頭戴式裝置聲學需求",
+      "O：車載音響市場擴張",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "揚聲器/喇叭",
+      "電聲元件",
+      "電池模組",
+      "聲學模組",
+      "免持聽筒"
+    ],
+    "customers": [
+      "Apple",
+      "Bose",
+      "Harman",
+      "三星",
+      "Sony"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "fiberglass-cloth",
+        "role": "特用化學品（CCL 用光起始劑）",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "美律在「基板材料｜玻纖布」題材的「銅箔與CCL材料」中扮演特用化學品（CCL 用光起始劑）角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "電聲元件領導廠商",
+        "累計營收YoY+17%穩健成長"
+      ],
+      "weaknesses": [
+        "消費性電子需求波動",
+        "與玻纖布產業關聯度低"
+      ],
+      "opportunities": [
+        "AR/VR頭戴式裝置聲學需求",
+        "車載音響市場擴張"
+      ],
+      "threats": [
+        "中國電聲元件低價競爭",
+        "客戶集中單一品牌風險"
+      ],
+      "sources": [
+        "industry_analysis:fiberglass-cloth"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -72,7 +117,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

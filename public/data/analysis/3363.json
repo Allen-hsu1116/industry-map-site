@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3363",
   "name": "上詮",
-  "generatedAt": "2026-05-27T17:40:56.540Z",
+  "generatedAt": "2026-05-28T00:35:52.982Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,99 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "上詮 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "上詮 在 circular-economy-ewaste 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：circular-economy-ewaste · 中",
+      "主要產品：生產與銷售服務 光纖相關之生產測試儀器設備之設計",
+      "主要產品：生產與銷售服務 光纖模組及整合系統之設計",
+      "主要產品：光纖被動元件之設計",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：電子廢料與製程回收需求持續成長",
+      "O：高速光收發模組需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "生產與銷售服務 光纖相關之生產測試儀器設備之設計",
+      "生產與銷售服務 光纖模組及整合系統之設計",
+      "光纖被動元件之設計",
+      "生產與銷售服務"
+    ],
+    "customers": [
+      "台電",
+      "政府機關",
+      "企業用電大戶",
+      "綠電需求者",
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "circular-economy-ewaste",
+        "role": "環保樹脂與回收材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "上詮在「綠能環保｜電子廢料與製程回收」題材的「製程化學品回收」中扮演環保樹脂與回收材料角色。"
+      },
+      {
+        "topicId": "high-speed-optics",
+        "role": "光纖陣列/CPO封裝，與台積電技術合作",
+        "relevance": "unknown",
+        "summary": "上詮在「網通衛星｜高速光收發模組」題材的「光學元件與光模組零組件」中扮演光纖陣列/CPO封裝，與台積電技術合作角色。"
+      },
+      {
+        "topicId": "optical-comm",
+        "role": "光通訊模組製造",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "上詮在「光通訊｜矽光子與CPO」題材的「光收發模組與連接器」中扮演光通訊模組製造角色。"
+      },
+      {
+        "topicId": "silicon-photonics",
+        "role": "FAU 封裝（與台積電合作矽光子）",
+        "relevance": "unknown",
+        "summary": "上詮在「網通衛星｜矽光子與 CPO」題材的「矽光IC與晶圓代工」中扮演FAU 封裝（與台積電合作矽光子）角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "上詮在製程化學品回收領域具備競爭優勢",
+        "上詮在光學元件與光模組零組件領域具備競爭優勢",
+        "上詮在光收發模組與連接器領域具備競爭優勢",
+        "上詮在矽光IC與晶圓代工領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "電子廢料與製程回收需求持續成長",
+        "高速光收發模組需求持續成長",
+        "矽光子與CPO需求持續成長",
+        "矽光子與 CPO需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:circular-economy-ewaste",
+        "industry_analysis:high-speed-optics",
+        "industry_analysis:optical-comm",
+        "industry_analysis:silicon-photonics"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +140,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

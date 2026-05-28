@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5388",
   "name": "中磊",
-  "generatedAt": "2026-05-27T17:40:56.705Z",
+  "generatedAt": "2026-05-28T00:35:53.149Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -41,28 +41,132 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "中磊 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "中磊 在 ar-vr-xr-optics 的角色為「低」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：ar-vr-xr-optics · 低",
+      "主要產品：網通與 AR/VR 裝置代工",
+      "主要產品：軍規無線通訊設備",
+      "主要產品：小型基站與射頻模組",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：軍工訂單佔比不高，消費性產品為主",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：AR/VR/XR 光學供應鏈需求持續成長",
+      "O：軍用通訊設備國際需求增長，低軌衛星地面站商機",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "網通與 AR/VR 裝置代工",
+      "軍規無線通訊設備",
+      "小型基站與射頻模組",
+      "網路安全閘道器",
+      "無人機通訊模組",
+      "EV充電樁(AC/DC)",
+      "智慧電表通訊模組(AMI)",
+      "家用儲能逆變器"
+    ],
+    "customers": [
+      "國內外品牌廠",
+      "系統整合商",
+      "ODM/OEM",
+      "國防部",
+      "中科院",
+      "美國國防承包商",
+      "電信运营商",
+      "思科"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ar-vr-xr-optics",
+        "role": "網通與 AR/VR 裝置代工",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "中磊在「消費終端｜AR/VR/XR 光學供應鏈」題材的「晶圓代工」中扮演網通與 AR/VR 裝置代工角色。"
+      },
+      {
+        "topicId": "defense_industry",
+        "role": "航空零組件",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "中磊在「傳產工業｜軍工產業」題材的「航空航太與無人機系統」中扮演航空零組件角色。"
+      },
+      {
+        "topicId": "ess-storage",
+        "role": "充電樁 + 儲能",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "中磊在「綠能環保｜儲能系統整合」題材的「電池模組與BMS」中扮演充電樁 + 儲能角色。"
+      },
+      {
+        "topicId": "ic-distribution",
+        "role": "資通訊通路",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "中磊在「電子零組件｜IC 通路」題材的「半導體通路與系統整合」中扮演資通訊通路角色。"
+      },
+      {
+        "topicId": "industrial-automation",
+        "role": "自動化設備",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "中磊在「智慧機器人｜工業自動化 / 智慧製造」題材的「馬達驅動與PLC」中扮演自動化設備角色。"
+      },
+      {
+        "topicId": "networking-equipment",
+        "role": "🟡 網通設備 ODM",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "中磊在「網通衛星｜高速交換器與無線網路」題材的「終端品牌與IC設計」中扮演🟡 網通設備 ODM角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "中磊在晶圓代工領域具備競爭優勢",
+        "全球前十大網通設備ODM，軍規通訊具技術門檻",
+        "4月營收YoY+65.5%北美訂單強勁",
+        "累計營收YoY+51.7%高速成長",
+        "中磊在半導體通路與系統整合領域具備競爭優勢",
+        "中磊在馬達驅動與PLC領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "軍工訂單佔比不高，消費性產品為主",
+        "網通代工毛利偏低",
+        "充電樁市場競爭者眾"
+      ],
+      "opportunities": [
+        "AR/VR/XR 光學供應鏈需求持續成長",
+        "軍用通訊設備國際需求增長，低軌衛星地面站商機",
+        "北美EV充電樁基建投資加速",
+        "智慧電表AMI全球升級潮",
+        "IC 通路需求持續成長",
+        "工業自動化 / 智慧製造需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "地緣政治影響海外訂單，客戶集中度高",
+        "大型EMS廠切入充電樁市場",
+        "充電樁規格標準變動風險"
+      ],
+      "sources": [
+        "industry_analysis:ar-vr-xr-optics",
+        "industry_analysis:defense_industry",
+        "industry_analysis:ess-storage",
+        "industry_analysis:ic-distribution",
+        "industry_analysis:industrial-automation",
+        "industry_analysis:networking-equipment"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -73,7 +177,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

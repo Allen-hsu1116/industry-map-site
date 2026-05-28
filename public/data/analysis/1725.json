@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1725",
   "name": "元禎",
-  "generatedAt": "2026-05-27T17:40:56.186Z",
+  "generatedAt": "2026-05-28T00:35:52.628Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,72 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "元禎 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "元禎 在 petrochem-plastics 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：petrochem-plastics · 中",
+      "主要產品：化工原料物流倉儲",
+      "主要產品：塑膠添加劑",
+      "主要產品：特用化學品經銷",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：毛利偏低大宗物流業務",
+      "W：規模相對小",
+      "T：原物料價格波動",
+      "T：大型物流集團競爭"
+    ],
     "watch": [
+      "O：半導體電子級化學品物流需求",
+      "O：ESG綠色運輸轉型",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "化工原料物流倉儲",
+      "塑膠添加劑",
+      "特用化學品經銷",
+      "液體化學品槽車運輸"
+    ],
+    "customers": [
+      "台塑",
+      "長春",
+      "奇美",
+      "國內石化下游廠",
+      "電子級化學品廠"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "petrochem-plastics",
+        "role": "塑膠添加劑供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "元禎在「傳產工業｜石化及塑橡膠」題材的「塑橡膠與特化品」中扮演塑膠添加劑供應商角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "化工原料物流市占率高",
+        "危險品運輸配送網完整"
+      ],
+      "weaknesses": [
+        "毛利偏低大宗物流業務",
+        "規模相對小"
+      ],
+      "opportunities": [
+        "半導體電子級化學品物流需求",
+        "ESG綠色運輸轉型"
+      ],
+      "threats": [
+        "原物料價格波動",
+        "大型物流集團競爭"
+      ],
+      "sources": [
+        "industry_analysis:petrochem-plastics"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +113,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

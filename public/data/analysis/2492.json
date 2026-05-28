@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2492",
   "name": "華新科",
-  "generatedAt": "2026-05-27T17:40:56.341Z",
+  "generatedAt": "2026-05-28T00:35:52.783Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,28 +40,111 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "華新科 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "華新科 在 mlcc-capacitor 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：mlcc-capacitor · 高",
+      "主要產品：MLCC/陶瓷電容大廠",
+      "主要產品：被動元件/封裝材料",
+      "主要產品：被動元件通路",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：電容器需求持續成長",
+      "O：導線架與化學品需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "MLCC/陶瓷電容大廠",
+      "被動元件/封裝材料",
+      "被動元件通路",
+      "石英元件+被動元件",
+      "太陽能材料供應商"
+    ],
+    "customers": [
+      "Apple",
+      "Tesla",
+      "NVIDIA",
+      "Samsung",
+      "Intel",
+      "AMD",
+      "Qualcomm",
+      "Broadcom"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "mlcc-capacitor",
+        "role": "MLCC/陶瓷電容大廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "華新科在「被動元件｜電容器」題材的「鋁電解電容與陶瓷電容」中扮演MLCC/陶瓷電容大廠角色。"
+      },
+      {
+        "topicId": "packaging-materials",
+        "role": "被動元件/封裝材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "華新科在「基板材料｜導線架與化學品」題材的「被動元件材料與導線架」中扮演被動元件/封裝材料角色。"
+      },
+      {
+        "topicId": "passive-resistor",
+        "role": "被動元件通路",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "華新科在「被動元件｜電阻與被動保護元件」題材的「被動元件設備與材料」中扮演被動元件通路角色。"
+      },
+      {
+        "topicId": "quartz-components",
+        "role": "石英元件+被動元件",
+        "relevance": "unknown",
+        "summary": "華新科在「被動元件｜石英頻率控制元件」題材的「石英元件與利基被動元件」中扮演石英元件+被動元件角色。"
+      },
+      {
+        "topicId": "solar-energy",
+        "role": "太陽能材料供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "華新科在「綠能環保｜太陽能產業」題材的「太陽能材料與耗材」中扮演太陽能材料供應商角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "華新科在鋁電解電容與陶瓷電容領域具備競爭優勢",
+        "華新科在被動元件材料與導線架領域具備競爭優勢",
+        "華新科在被動元件設備與材料領域具備競爭優勢",
+        "華新科在石英元件與利基被動元件領域具備競爭優勢",
+        "華新科在太陽能材料與耗材領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "電容器需求持續成長",
+        "導線架與化學品需求持續成長",
+        "電阻與被動保護元件需求持續成長",
+        "石英頻率控制元件需求持續成長",
+        "太陽能產業需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:mlcc-capacitor",
+        "industry_analysis:packaging-materials",
+        "industry_analysis:passive-resistor",
+        "industry_analysis:quartz-components",
+        "industry_analysis:solar-energy"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -72,7 +155,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "7402",
   "name": "邑錡",
-  "generatedAt": "2026-05-27T17:40:56.894Z",
+  "generatedAt": "2026-05-28T00:35:53.342Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,28 +38,66 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "邑錡 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "邑錡 在 defense_industry 的角色為「medium」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：defense_industry · medium",
+      "主要產品：具備產品軟硬體開發製造 AI影像機器人視覺產品: 建築工程縮時相機",
+      "主要產品：自有ASIC晶片與低功耗相機模組",
+      "主要產品：低照度與航拍軍工影像設備",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：軍工產業需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "具備產品軟硬體開發製造 AI影像機器人視覺產品: 建築工程縮時相機",
+      "自有ASIC晶片與低功耗相機模組",
+      "低照度與航拍軍工影像設備",
+      "雲端相機與AI分析平台"
+    ],
+    "customers": [
+      "國防部",
+      "漢翔",
+      "中科院",
+      "美國國防部",
+      "NASA"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "defense_industry",
+        "role": "無人機關鍵零組件",
+        "relevance": "medium",
+        "summary": "邑錡在「傳產工業｜軍工產業」題材的「航空航太與無人機系統」中扮演無人機關鍵零組件角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "邑錡在航空航太與無人機系統領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "軍工產業需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:defense_industry"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -70,7 +108,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

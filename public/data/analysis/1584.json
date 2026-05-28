@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1584",
   "name": "精剛",
-  "generatedAt": "2026-05-27T17:40:56.150Z",
+  "generatedAt": "2026-05-28T00:35:52.593Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,64 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "精剛 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "精剛 在 defense_industry 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：defense_industry · unknown",
+      "主要產品：鈦合金棒線材",
+      "主要產品：特殊合金鋼棒材",
+      "主要產品：航太級鈦合金線材",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：鈦合金市場規模小，受航太景氣影響大",
+      "T：國際鈦材價格波動大，中國鈦材低價競爭"
+    ],
     "watch": [
+      "O：航太用鈦合金需求增長，3D列印鈦粉末新應用",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "鈦合金棒線材",
+      "特殊合金鋼棒材",
+      "航太級鈦合金線材",
+      "國防用合金鋼"
+    ],
+    "customers": [
+      "漢翔",
+      "波音",
+      "國防部軍備局",
+      "中鋼",
+      "國際航太零件廠"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "defense_industry",
+        "role": "特殊鋼材（國防用合金鋼）",
+        "relevance": "unknown",
+        "summary": "精剛在「傳產工業｜軍工產業」題材的「軍用材料與特殊鋼材」中扮演特殊鋼材（國防用合金鋼）角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "台灣唯一鈦合金材料上市廠，航太認證齊全"
+      ],
+      "weaknesses": [
+        "鈦合金市場規模小，受航太景氣影響大"
+      ],
+      "opportunities": [
+        "航太用鈦合金需求增長，3D列印鈦粉末新應用"
+      ],
+      "threats": [
+        "國際鈦材價格波動大，中國鈦材低價競爭"
+      ],
+      "sources": [
+        "industry_analysis:defense_industry"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +105,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

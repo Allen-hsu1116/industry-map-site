@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1609",
   "name": "大亞",
-  "generatedAt": "2026-05-27T17:40:56.158Z",
+  "generatedAt": "2026-05-28T00:35:52.600Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,111 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "大亞 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "大亞 在 electrical_equipment 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：electrical_equipment · 中",
+      "主要產品：高壓電力電纜(69kV~345kV)",
+      "主要產品：低壓建築用電纜",
+      "主要產品：漆包線/電磁線",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：銅/鋁原物料成本佔比高",
+      "W：台電標案毛利偏低",
+      "T：國際銅價高檔擠壓毛利",
+      "T：中國低價電纜競爭"
+    ],
     "watch": [
+      "O：電網強韌計畫高壓電纜需求",
+      "O：AI伺服器用漆包線變壓器增",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "高壓電力電纜(69kV~345kV)",
+      "低壓建築用電纜",
+      "漆包線/電磁線",
+      "鋁電纜/鋼芯鋁絞線",
+      "離岸風電海底電纜",
+      "高壓電力電纜(161kV/345kV)",
+      "鋁包鋼線/鋼芯鋁纜",
+      "光纖電纜(單模/多模)"
+    ],
+    "customers": [
+      "台電",
+      "中華電信",
+      "台塑",
+      "中鋼",
+      "友達",
+      "Ørsted",
+      "CIP",
+      "wpd"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "electrical_equipment",
+        "role": "電線電纜供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "大亞在「傳產工業｜電器電纜與重電」題材的「電器電纜與重電相關」中扮演電線電纜供應商角色。"
+      },
+      {
+        "topicId": "offshore-wind",
+        "role": "電力電纜",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "大亞在「綠能環保｜離岸風電」題材的「海纜與電力傳輸」中扮演電力電纜角色。"
+      },
+      {
+        "topicId": "silicon-photonics",
+        "role": "光纖電纜",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "大亞在「網通衛星｜矽光子與 CPO」題材的「光纖與軟板材料」中扮演光纖電纜角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "累計YoY+17.2%強勁成長",
+        "電力電纜+漆包線雙引擎",
+        "累計YoY+17.2%穩定成長",
+        "4月YoY+16.2%動能佳",
+        "全台唯一海纜製造商",
+        "累計YoY+17.2%成長穩健"
+      ],
+      "weaknesses": [
+        "銅/鋁原物料成本佔比高",
+        "台電標案毛利偏低",
+        "海纜投資金額大回收期長",
+        "海纜施工風險高",
+        "矽光子CPO題材關聯為光纖傳輸層",
+        "非核心受惠股"
+      ],
+      "opportunities": [
+        "電網強韌計畫高壓電纜需求",
+        "AI伺服器用漆包線變壓器增",
+        "離岸風電場海纜需求暴增",
+        "電網升級345kV電纜新商機",
+        "CPO高速交換機光纖互連需求",
+        "資料中心光纖骨幹升級"
+      ],
+      "threats": [
+        "國際銅價高檔擠壓毛利",
+        "中國低價電纜競爭",
+        "國際海纜大廠(Prysmian/Nexans)競爭",
+        "風場開發進度不確定性",
+        "光纖價格持續下滑",
+        "中國長飛光纖低價競爭"
+      ],
+      "sources": [
+        "industry_analysis:electrical_equipment",
+        "industry_analysis:offshore-wind",
+        "industry_analysis:silicon-photonics"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +154,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

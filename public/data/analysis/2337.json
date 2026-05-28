@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-05-27T17:40:56.235Z",
+  "generatedAt": "2026-05-28T00:35:52.675Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,10 +38,10 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "summary": "旺宏 在 semiconductor-memory 的角色為「全球 NOR Flash 前三大」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "label": "核心題材受惠",
+    "summary": "旺宏 在 connector-highspeed 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
-      "題材角色：semiconductor-memory · 全球 NOR Flash 前三大",
+      "題材角色：connector-highspeed · 高",
       "主要產品：NOR Flash",
       "主要產品：MLC NAND Flash",
       "主要產品：ROM",
@@ -66,23 +66,76 @@
       "NOR Flash",
       "MLC NAND Flash",
       "ROM",
-      "智慧型記憶卡"
+      "智慧型記憶卡",
+      "及其系統應用產品之 研究發展",
+      "各種半導體零組件",
+      "銷售及顧問諮詢",
+      "積體電路"
     ],
     "customers": [
       "任天堂",
       "Sony",
       "汽車電子客戶",
       "物聯網客戶",
-      "汽車電子廠",
-      "工業控制"
+      "NVIDIA",
+      "AMD",
+      "Google",
+      "AWS"
     ],
     "topicRoles": [
       {
-        "topicId": "semiconductor-memory",
-        "role": "全球 NOR Flash 前三大",
+        "topicId": "connector-highspeed",
+        "role": "高速連接器供應商",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "旺宏在「電子零組件｜AI 互連元件」題材的「高速連接器」中扮演高速連接器供應商角色。"
+      },
+      {
+        "topicId": "display-panel",
+        "role": "石英元件與頻率控制",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "旺宏在「光學顯示｜面板產業」題材的「面板驅動IC與周邊零組件」中扮演石英元件與頻率控制角色。"
+      },
+      {
+        "topicId": "hbm",
+        "role": "NOR Flash 與 ROM 領導廠",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "旺宏在「記憶體｜HBM 高頻寬記憶體」題材的「記憶體IC與模組」中扮演NOR Flash 與 ROM 領導廠角色。"
+      },
+      {
+        "topicId": "high-speed-optics",
+        "role": "光通訊 IC + NOR Flash",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "旺宏在「網通衛星｜高速光收發模組」題材的「光通訊IC與測試」中扮演光通訊 IC + NOR Flash角色。"
+      },
+      {
+        "topicId": "hpc-networking-ic",
+        "role": "NOR Flash/網通儲存 IC",
         "relevance": "unknown",
-        "marketPosition": "全球 NOR Flash 前三大",
-        "summary": "旺宏電子是全球 NOR Flash 記憶體領導廠商之一，在車用與遊戲機應用具有高市佔率。2026 年 Q1 受惠於任天堂 Switch 2 上市及車用電子需求增長，營收爆發性成長至 104.7 億，EPS 回升至 0.9 元。"
+        "marketPosition": "65",
+        "summary": "旺宏在「IC 設計｜HPC 與網通 IC」題材的「儲存控制器 IC」中扮演NOR Flash/網通儲存 IC角色。"
+      },
+      {
+        "topicId": "ic-distribution",
+        "role": "IC 設計 + 通路布局",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "旺宏在「電子零組件｜IC 通路」題材的「IC設計與通路」中扮演IC 設計 + 通路布局角色。"
+      },
+      {
+        "topicId": "memory-modules",
+        "role": "NOR Flash+ROM",
+        "relevance": "unknown",
+        "summary": "旺宏在「記憶體｜記憶體模組」題材的「工控與利基型記憶體」中扮演NOR Flash+ROM角色。"
+      },
+      {
+        "topicId": "networking-equipment",
+        "role": "網通Flash IC",
+        "relevance": "unknown",
+        "summary": "旺宏在「網通衛星｜高速交換器與無線網路」題材的「終端品牌與IC設計」中扮演網通Flash IC角色。"
       }
     ],
     "swot": {
@@ -90,28 +143,42 @@
         "NOR Flash 全球市佔前三",
         "任天堂 Switch 獨家供應商",
         "車用 NOR Flash 佈局完整",
-        "ROM 技術領先"
+        "ROM 技術領先",
+        "旺宏在高速連接器領域具備競爭優勢",
+        "旺宏在面板驅動IC與周邊零組件領域具備競爭優勢"
       ],
       "weaknesses": [
         "近年連續虧損",
         "產品線較為單一",
         "NAND Flash 市佔低",
-        "營運槓桿高"
+        "營運槓桿高",
+        "受景氣循環影響"
       ],
       "opportunities": [
         "AI 驅動 NOR Flash 需求增加",
         "車用電子 NOR Flash 需求成長",
         "任天堂新主機 Switch 2 商機",
-        "高容量 NOR Flash 應用擴大"
+        "高容量 NOR Flash 應用擴大",
+        "AI 互連元件需求持續成長",
+        "面板產業需求持續成長"
       ],
       "threats": [
         "中國 NOR Flash 廠商低價競爭",
         "記憶體景氣循環波動大",
         "NAND Flash 技術替代風險",
-        "匯率波動影響外銷營收"
+        "匯率波動影響外銷營收",
+        "國際競爭加劇",
+        "供應鏈重組風險"
       ],
       "sources": [
-        "financials:2337"
+        "financials:2337",
+        "industry_analysis:connector-highspeed",
+        "industry_analysis:display-panel",
+        "industry_analysis:hbm",
+        "industry_analysis:high-speed-optics",
+        "industry_analysis:hpc-networking-ic",
+        "industry_analysis:ic-distribution",
+        "industry_analysis:memory-modules"
       ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2644",
   "name": "中信造船",
-  "generatedAt": "2026-05-27T17:40:56.395Z",
+  "generatedAt": "2026-05-28T00:35:52.836Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -35,28 +35,63 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "中信造船 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "中信造船 在 defense_industry 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：defense_industry · unknown",
+      "主要產品：軍用巡邏艇",
+      "主要產品：商用漁船與貨船",
+      "主要產品：船舶維修改裝",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：規模較小，大型軍艦建造能力有限",
+      "T：台船競爭大型訂單，物料成本上漲"
+    ],
     "watch": [
+      "O：海巡艦艇更新需求，國艦國造政策受惠",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "軍用巡邏艇",
+      "商用漁船與貨船",
+      "船舶維修改裝",
+      "冷凍倉儲出租"
+    ],
+    "customers": [
+      "國防部海軍司令部",
+      "海巡署",
+      "漁業業者",
+      "中鋼"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "defense_industry",
+        "role": "軍用艦艇製造",
+        "relevance": "unknown",
+        "summary": "中信造船在「傳產工業｜軍工產業」題材的「造船與海事工程」中扮演軍用艦艇製造角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "台灣少數具軍用船艇建造能力的民營船廠"
+      ],
+      "weaknesses": [
+        "規模較小，大型軍艦建造能力有限"
+      ],
+      "opportunities": [
+        "海巡艦艇更新需求，國艦國造政策受惠"
+      ],
+      "threats": [
+        "台船競爭大型訂單，物料成本上漲"
+      ],
+      "sources": [
+        "industry_analysis:defense_industry"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -65,7 +100,8 @@
       "FinMind TaiwanStockPrice daily OHLCV",
       "FinMind TaiwanStockInstitutionalInvestorsBuySell",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

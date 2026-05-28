@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2486",
   "name": "一詮",
-  "generatedAt": "2026-05-27T17:40:56.339Z",
+  "generatedAt": "2026-05-28T00:35:52.781Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,64 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "一詮 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "一詮 在 packaging-materials 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：packaging-materials · 中",
+      "主要產品：TV背光模組及陶瓷電路板 智能服務機器人及其他電子零組件",
+      "主要產品：散熱元件 LED及SMD導線架",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：導線架與化學品需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "TV背光模組及陶瓷電路板 智能服務機器人及其他電子零組件",
+      "散熱元件 LED及SMD導線架"
+    ],
+    "customers": [
+      "Apple",
+      "Tesla",
+      "NVIDIA",
+      "Samsung",
+      "Intel"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "packaging-materials",
+        "role": "導線架/基板材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "一詮在「基板材料｜導線架與化學品」題材的「被動元件材料與導線架」中扮演導線架/基板材料角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "一詮在被動元件材料與導線架領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "導線架與化學品需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:packaging-materials"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +105,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

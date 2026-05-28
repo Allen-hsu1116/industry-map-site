@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6806",
   "name": "森崴能源",
-  "generatedAt": "2026-05-27T17:40:56.884Z",
+  "generatedAt": "2026-05-28T00:35:53.331Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,106 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "森崴能源 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "森崴能源 在 battery-cell-module 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：battery-cell-module · unknown",
+      "主要產品：能源開發工程服務 電廠維運(設備維修)太陽能發電廠 節能",
+      "主要產品：儲能服務工程等全方位專業能源服務",
+      "主要產品：離岸風電統包工程",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：4月MoM-63.8%極端波動(工程認列時點影響)",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：電芯製造與電池模組需求持續成長",
+      "O：離岸風電第三區塊開發釋出",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "能源開發工程服務 電廠維運(設備維修)太陽能發電廠 節能",
+      "儲能服務工程等全方位專業能源服務",
+      "離岸風電統包工程",
+      "太陽能電廠EPC",
+      "儲能系統工程",
+      "電廠維運(O&M)服務"
+    ],
+    "customers": [
+      "台電",
+      "Tesla",
+      "CATL",
+      "比亞迪",
+      "國內外電廠",
+      "沃旭能源(Ørsted)",
+      "CIP(哥本哈根基礎建設)",
+      "經濟部能源局"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "battery-cell-module",
+        "role": "儲能系統整合",
+        "relevance": "unknown",
+        "summary": "森崴能源在「綠能環保｜電芯製造與電池模組」題材的「電池測試與充電設備」中扮演儲能系統整合角色。"
+      },
+      {
+        "topicId": "ess-storage",
+        "role": "儲能案場開發+維運",
+        "relevance": "unknown",
+        "summary": "森崴能源在「綠能環保｜儲能系統整合」題材的「儲能電池與BMS零組件」中扮演儲能案場開發+維運角色。"
+      },
+      {
+        "topicId": "offshore-wind",
+        "role": "離岸風電案場開發",
+        "relevance": "unknown",
+        "summary": "森崴能源在「綠能環保｜離岸風電」題材的「風場開發與運維」中扮演離岸風電案場開發角色。"
+      },
+      {
+        "topicId": "solar-energy",
+        "role": "太陽能電廠開發+維運",
+        "relevance": "unknown",
+        "summary": "森崴能源在「綠能環保｜太陽能產業」題材的「系統整合與終端品牌」中扮演太陽能電廠開發+維運角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "森崴能源在電池測試與充電設備領域具備競爭優勢",
+        "離岸風電EPC少數本土廠商",
+        "郭台強(正崴集團)資源支持",
+        "森崴能源在風場開發與運維領域具備競爭優勢",
+        "森崴能源在系統整合與終端品牌領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "4月MoM-63.8%極端波動(工程認列時點影響)",
+        "累計營收YoY-25.8%衰退"
+      ],
+      "opportunities": [
+        "電芯製造與電池模組需求持續成長",
+        "離岸風電第三區塊開發釋出",
+        "儲能系統工程需求大爆發",
+        "離岸風電需求持續成長",
+        "太陽能產業需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "離岸風電工程受天候/海象延遲風險",
+        "國際風電開發商自建EPC團隊"
+      ],
+      "sources": [
+        "industry_analysis:battery-cell-module",
+        "industry_analysis:ess-storage",
+        "industry_analysis:offshore-wind",
+        "industry_analysis:solar-energy"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +149,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

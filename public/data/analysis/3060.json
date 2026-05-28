@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3060",
   "name": "銘異",
-  "generatedAt": "2026-05-27T17:40:56.477Z",
+  "generatedAt": "2026-05-28T00:35:52.916Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,28 +36,62 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "銘異 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "銘異 在 passive-inductor 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：passive-inductor · 高",
+      "主要產品：電感/射頻元件大廠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：功率電感需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "電感/射頻元件大廠"
+    ],
+    "customers": [
+      "Apple",
+      "Tesla",
+      "NVIDIA",
+      "Samsung",
+      "Intel"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "passive-inductor",
+        "role": "電感/射頻元件大廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "銘異在「被動元件｜功率電感」題材的「電感與電源模組」中扮演電感/射頻元件大廠角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "銘異在電感與電源模組領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "功率電感需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:passive-inductor"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -68,7 +102,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3583",
   "name": "辛耘",
-  "generatedAt": "2026-05-27T17:40:56.587Z",
+  "generatedAt": "2026-05-28T00:35:53.028Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,110 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "辛耘 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "辛耘 在 advanced-packaging-automation 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：advanced-packaging-automation · unknown",
+      "主要產品：半導體設備代理商+先進封裝設備",
+      "主要產品：半導體濕製程設備",
+      "主要產品：半導體設備代理商與製程服務",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：先進封裝量測自動化需求持續成長",
+      "O：先進封裝製程機台需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "半導體設備代理商+先進封裝設備",
+      "半導體濕製程設備",
+      "半導體設備代理商與製程服務",
+      "半導體設備/光感測晶圓代工",
+      "半導體設備代理商"
+    ],
+    "customers": [
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm",
+      "Intel",
+      "Google",
+      "AWS",
+      "Microsoft"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-automation",
+        "role": "半導體設備代理商+先進封裝設備",
+        "relevance": "unknown",
+        "summary": "辛耘在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演半導體設備代理商+先進封裝設備角色。"
+      },
+      {
+        "topicId": "advanced-packaging-process",
+        "role": "半導體濕製程設備",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "辛耘在「先進封測｜先進封裝製程機台」題材的「先進封裝濕製程設備」中扮演半導體濕製程設備角色。"
+      },
+      {
+        "topicId": "cowos-advanced-packaging",
+        "role": "半導體設備代理商與製程服務",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "辛耘在「先進封測｜AI 先進封裝 CoWoS」題材的「封裝製程設備」中扮演半導體設備代理商與製程服務角色。"
+      },
+      {
+        "topicId": "optical-sensors",
+        "role": "半導體設備/光感測晶圓代工",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "辛耘在「光學顯示｜光感測與元件」題材的「半導體設備與光感測代工」中扮演半導體設備/光感測晶圓代工角色。"
+      },
+      {
+        "topicId": "wafer-fab-equipment",
+        "role": "半導體設備代理商",
+        "relevance": "unknown",
+        "summary": "辛耘在「半導體製造｜晶圓廠設備」題材的「半導體廠務與量測」中扮演半導體設備代理商角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "辛耘在封裝材料與耗材領域具備競爭優勢",
+        "辛耘在先進封裝濕製程設備領域具備競爭優勢",
+        "辛耘在封裝製程設備領域具備競爭優勢",
+        "辛耘在半導體設備與光感測代工領域具備競爭優勢",
+        "辛耘在半導體廠務與量測領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "先進封裝量測自動化需求持續成長",
+        "先進封裝製程機台需求持續成長",
+        "AI 先進封裝 CoWoS需求持續成長",
+        "光感測與元件需求持續成長",
+        "晶圓廠設備需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-automation",
+        "industry_analysis:advanced-packaging-process",
+        "industry_analysis:cowos-advanced-packaging",
+        "industry_analysis:optical-sensors",
+        "industry_analysis:wafer-fab-equipment"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +151,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

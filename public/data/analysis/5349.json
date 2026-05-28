@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5349",
   "name": "先豐",
-  "generatedAt": "2026-05-27T17:40:56.700Z",
+  "generatedAt": "2026-05-28T00:35:53.144Z",
   "sourceUpdatedAt": "2026-05-22",
   "mode": "rule-batch",
   "technical": {
@@ -28,30 +28,66 @@
     "watch": []
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "先豐 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
-    "signals": [],
-    "risks": [],
+    "label": "題材關聯明確",
+    "summary": "先豐 在 ic-substrate 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "signals": [
+      "題材角色：ic-substrate · 中",
+      "主要產品：PCB 與載板上游材料"
+    ],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：IC 載板需求持續成長",
       "知識庫最後驗證：2026-05-22（fresh）",
-      "資料來源：MOPS company profile / financial statements"
+      "資料來源：MOPS company profile / financial statements、internal topic role map / industry_analysis"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "PCB 與載板上游材料"
+    ],
+    "customers": [
+      "Apple",
+      "Tesla",
+      "NVIDIA",
+      "AMD",
+      "Intel"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ic-substrate",
+        "role": "PCB 與載板上游材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "先豐在「基板材料｜IC 載板」題材的「CCL與載板上游材料」中扮演PCB 與載板上游材料角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "先豐在CCL與載板上游材料領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "IC 載板需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:ic-substrate"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-22"
     },
     "dataSources": [
-      "MOPS company profile / financial statements"
+      "MOPS company profile / financial statements",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": []
   },

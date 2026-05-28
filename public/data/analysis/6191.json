@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6191",
   "name": "精成科",
-  "generatedAt": "2026-05-27T17:40:56.770Z",
+  "generatedAt": "2026-05-28T00:35:53.216Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,79 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "精成科 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "精成科 在 glass-core-substrate 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：glass-core-substrate · 中",
+      "主要產品：印刷電路板及組裝 資訊軟體服務業有線通信機械器材製造業無線通信機械器材製造業等",
+      "主要產品：光阻與化學品供應商",
+      "主要產品：PCB製造(大陸廠)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：玻璃基板需求持續成長",
+      "O：PCB 硬板製造需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "印刷電路板及組裝 資訊軟體服務業有線通信機械器材製造業無線通信機械器材製造業等",
+      "光阻與化學品供應商",
+      "PCB製造(大陸廠)"
+    ],
+    "customers": [
+      "國內外品牌廠",
+      "系統整合商",
+      "ODM/OEM",
+      "Apple",
+      "Tesla",
+      "NVIDIA",
+      "AMD",
+      "Intel"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "glass-core-substrate",
+        "role": "光阻與化學品供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "精成科在「基板材料｜玻璃基板」題材的「玻璃基板原料與CCL」中扮演光阻與化學品供應商角色。"
+      },
+      {
+        "topicId": "pcb-manufacturing",
+        "role": "PCB製造(大陸廠)",
+        "relevance": "unknown",
+        "summary": "精成科在「電子零組件｜PCB 硬板製造」題材的「消費電子PCB」中扮演PCB製造(大陸廠)角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "精成科在玻璃基板原料與CCL領域具備競爭優勢",
+        "精成科在消費電子PCB領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "玻璃基板需求持續成長",
+        "PCB 硬板製造需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:glass-core-substrate",
+        "industry_analysis:pcb-manufacturing"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +122,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

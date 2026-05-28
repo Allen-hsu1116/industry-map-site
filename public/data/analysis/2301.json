@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2301",
   "name": "光寶科",
-  "generatedAt": "2026-05-27T17:40:56.212Z",
+  "generatedAt": "2026-05-28T00:35:52.653Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,28 +36,98 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "光寶科 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "光寶科 在 ai-server-odm 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：ai-server-odm · unknown",
+      "主要產品：電腦資訊系統及週邊設備之製造加工及買賣業務 多功能事務機",
+      "主要產品：系統設備及其他影像處理設備之製造加工及買賣業務",
+      "主要產品：資料儲存設備之製造加工及買賣業務 網路設備",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：整機組裝需求持續成長",
+      "O：LED 與車用照明需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "電腦資訊系統及週邊設備之製造加工及買賣業務 多功能事務機",
+      "系統設備及其他影像處理設備之製造加工及買賣業務",
+      "資料儲存設備之製造加工及買賣業務 網路設備"
+    ],
+    "customers": [
+      "NVIDIA",
+      "AMD",
+      "Google",
+      "AWS",
+      "Microsoft",
+      "Tesla",
+      "BYD",
+      "Toyota"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ai-server-odm",
+        "role": "AI伺服器電源+光收發模組",
+        "relevance": "unknown",
+        "summary": "光寶科在「AI 伺服器｜整機組裝」題材的「伺服器主板與周邊」中扮演AI伺服器電源+光收發模組角色。"
+      },
+      {
+        "topicId": "led-automotive",
+        "role": "LED封裝+車用照明",
+        "relevance": "unknown",
+        "summary": "光寶科在「光學顯示｜LED 與車用照明」題材的「車用照明與LED應用」中扮演LED封裝+車用照明角色。"
+      },
+      {
+        "topicId": "optical-sensors",
+        "role": "光感測/光耦合器領導廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "光寶科在「光學顯示｜光感測與元件」題材的「光學鏡頭與感測模組」中扮演光感測/光耦合器領導廠角色。"
+      },
+      {
+        "topicId": "psu",
+        "role": "全球電源與光電零組件大廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "光寶科在「電子零組件｜電源供應器」題材的「伺服器電源龍頭」中扮演全球電源與光電零組件大廠角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "光寶科在伺服器主板與周邊領域具備競爭優勢",
+        "光寶科在車用照明與LED應用領域具備競爭優勢",
+        "光寶科為光學鏡頭與感測模組領導廠商",
+        "光寶科為伺服器電源龍頭領導廠商"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "整機組裝需求持續成長",
+        "LED 與車用照明需求持續成長",
+        "光感測與元件需求持續成長",
+        "電源供應器需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:ai-server-odm",
+        "industry_analysis:led-automotive",
+        "industry_analysis:optical-sensors",
+        "industry_analysis:psu"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -68,7 +138,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3230",
   "name": "錦明",
-  "generatedAt": "2026-05-27T17:40:56.508Z",
+  "generatedAt": "2026-05-28T00:35:52.949Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,28 +36,64 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "錦明 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "錦明 在 wafer-fab-equipment 的角色為「低」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：wafer-fab-equipment · 低",
+      "主要產品：五金及鎂合金製品(LCD 及NB等零組件)之製造加工買賣業務 塑膠射出成型製品製造加工買賣業務 TFT LCD TV & Monitor之Base 與Hinge之研究開發製造加工及買賣",
+      "主要產品：NOR Flash 與 ROM",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：晶圓廠設備需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "五金及鎂合金製品(LCD 及NB等零組件)之製造加工買賣業務 塑膠射出成型製品製造加工買賣業務 TFT LCD TV & Monitor之Base 與Hinge之研究開發製造加工及買賣",
+      "NOR Flash 與 ROM"
+    ],
+    "customers": [
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm",
+      "Intel"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "wafer-fab-equipment",
+        "role": "NOR Flash 與 ROM",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "錦明在「半導體製造｜晶圓廠設備」題材的「半導體精密設備與零件」中扮演NOR Flash 與 ROM角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "錦明在半導體精密設備與零件領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "晶圓廠設備需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:wafer-fab-equipment"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -68,7 +104,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

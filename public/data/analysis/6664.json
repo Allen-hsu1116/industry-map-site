@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6664",
   "name": "群翊",
-  "generatedAt": "2026-05-27T17:40:56.865Z",
+  "generatedAt": "2026-05-28T00:35:53.314Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,28 +40,72 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "群翊 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "群翊 在 glass-core-substrate 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：glass-core-substrate · unknown",
+      "主要產品：面板製程自動化設備",
+      "主要產品：LCD模組組裝設備",
+      "主要產品：精密貼合設備",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：營收受面板投資週期影響大",
+      "W：客戶集中於少數面板大廠",
+      "T：中國面板設備廠低價競爭",
+      "T：面板產業資本支出縮減"
+    ],
     "watch": [
+      "O：OLED新產線設備需求",
+      "O：Mini/Micro LED設備升級商機",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "面板製程自動化設備",
+      "LCD模組組裝設備",
+      "精密貼合設備",
+      "OLED製程檢測設備",
+      "設備維修與技術服務"
+    ],
+    "customers": [
+      "友達光電",
+      "群創光電",
+      "彩晶",
+      "京東方（BOE）",
+      "華星光電"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "glass-core-substrate",
+        "role": "面板設備與自動化製程設備供應商（非玻璃基板原料商）",
+        "relevance": "unknown",
+        "summary": "群翊在「基板材料｜玻璃基板」題材的「玻璃基板原料與CCL」中扮演面板設備與自動化製程設備供應商（非玻璃基板原料商）角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "國內面板設備自主研發能力領先",
+        "與台灣面板廠長期合作關係"
+      ],
+      "weaknesses": [
+        "營收受面板投資週期影響大",
+        "客戶集中於少數面板大廠"
+      ],
+      "opportunities": [
+        "OLED新產線設備需求",
+        "Mini/Micro LED設備升級商機"
+      ],
+      "threats": [
+        "中國面板設備廠低價競爭",
+        "面板產業資本支出縮減"
+      ],
+      "sources": [
+        "industry_analysis:glass-core-substrate"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -72,7 +116,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

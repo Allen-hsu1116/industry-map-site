@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3138",
   "name": "耀登",
-  "generatedAt": "2026-05-27T17:40:56.485Z",
+  "generatedAt": "2026-05-28T00:35:52.925Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,28 +36,74 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "耀登 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "耀登 在 leo-satellite 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：leo-satellite · 中",
+      "主要產品：低軌衛星通訊天線",
+      "主要產品：車用/物聯網天線模組",
+      "主要產品：5G毫米波天線",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：資本額相對較小，擴產能力有限",
+      "W：衛星天線營收佔比仍低",
+      "T：國際天線大廠競爭",
+      "T：衛星頻段規格尚未統一"
+    ],
     "watch": [
+      "O：低軌衛星地面天線需求爆發",
+      "O：5G mmWave天線在車聯網應用",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "低軌衛星通訊天線",
+      "車用/物聯網天線模組",
+      "5G毫米波天線",
+      "射頻量測與EMC測試服務",
+      "衛星地面站天線系統"
+    ],
+    "customers": [
+      "OneWeb",
+      "SpaceX",
+      "聯發科",
+      "啟碁",
+      "車廠一階供應商"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "leo-satellite",
+        "role": "衛星通訊天線設備",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "耀登在「網通衛星｜低軌衛星通訊系統」題材的「衛星終端與網通設備」中扮演衛星通訊天線設備角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "台灣天線研發製造領導廠商",
+        "EMC/SAR量測實驗室認證完整",
+        "衛星通訊天線已有出貨實績"
+      ],
+      "weaknesses": [
+        "資本額相對較小，擴產能力有限",
+        "衛星天線營收佔比仍低"
+      ],
+      "opportunities": [
+        "低軌衛星地面天線需求爆發",
+        "5G mmWave天線在車聯網應用"
+      ],
+      "threats": [
+        "國際天線大廠競爭",
+        "衛星頻段規格尚未統一"
+      ],
+      "sources": [
+        "industry_analysis:leo-satellite"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -68,7 +114,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

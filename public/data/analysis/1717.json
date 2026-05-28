@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1717",
   "name": "長興",
-  "generatedAt": "2026-05-27T17:40:56.178Z",
+  "generatedAt": "2026-05-28T00:35:52.619Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,28 +38,109 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "長興 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "長興 在 advanced-packaging-process 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：advanced-packaging-process · 中",
+      "主要產品：各種工業用合成樹脂之產銷 印刷電路基板",
+      "主要產品：光阻材料之產銷 特殊化學品",
+      "主要產品：合成樹脂 (尿素/酚醛/環氧)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：PCB產業景氣波動大",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：先進封裝製程機台需求持續成長",
+      "O：玻璃基板需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "各種工業用合成樹脂之產銷 印刷電路基板",
+      "光阻材料之產銷 特殊化學品",
+      "合成樹脂 (尿素/酚醛/環氧)",
+      "光阻材料 (TFT-LCD用)",
+      "PCB乾膜光阻劑",
+      "特用化學品 (半導體用)"
+    ],
+    "customers": [
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm",
+      "Broadcom",
+      "國內外品牌廠",
+      "系統整合商",
+      "ODM/OEM"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-process",
+        "role": "封裝化學材料供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "長興在「先進封測｜先進封裝製程機台」題材的「封裝化學材料」中扮演封裝化學材料供應商角色。"
+      },
+      {
+        "topicId": "glass-core-substrate",
+        "role": "玻璃纖維布供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "長興在「基板材料｜玻璃基板」題材的「玻璃基板原料與CCL」中扮演玻璃纖維布供應商角色。"
+      },
+      {
+        "topicId": "petrochem-plastics",
+        "role": "橡膠材料供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "長興在「傳產工業｜石化及塑橡膠」題材的「塑橡膠與特化品」中扮演橡膠材料供應商角色。"
+      },
+      {
+        "topicId": "semi-process-materials",
+        "role": "半導體用光阻劑",
+        "relevance": "unknown",
+        "summary": "長興在「半導體製造｜前段製程材料」題材的「半導體散熱與封裝材料」中扮演半導體用光阻劑角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "長興在封裝化學材料領域具備競爭優勢",
+        "長興在玻璃基板原料與CCL領域具備競爭優勢",
+        "4月營收YoY +13%，累計年增4.8%，景氣復甦帶動",
+        "光阻材料為國內領導供應商",
+        "長興在半導體散熱與封裝材料領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "PCB產業景氣波動大",
+        "原物料成本受石化價格影響"
+      ],
+      "opportunities": [
+        "先進封裝製程機台需求持續成長",
+        "玻璃基板需求持續成長",
+        "半導體先進製程化學品需求增",
+        "Mini/Micro LED光阻新應用",
+        "前段製程材料需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "日韓化學大廠競爭",
+        "環保法規趋嚴"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-process",
+        "industry_analysis:glass-core-substrate",
+        "industry_analysis:petrochem-plastics",
+        "industry_analysis:semi-process-materials"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -70,7 +151,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8402",
   "name": "奧泰科技",
-  "generatedAt": "2026-05-27T17:40:56.941Z",
+  "generatedAt": "2026-05-28T00:35:53.390Z",
   "mode": "rule-batch",
   "technical": {
     "stance": "insufficient",
@@ -27,29 +27,73 @@
     "watch": []
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "奧泰科技 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
-    "signals": [],
-    "risks": [],
+    "label": "題材關聯明確",
+    "summary": "奧泰科技 在 cybersecurity 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "signals": [
+      "題材角色：cybersecurity · 中",
+      "主要產品：資安雲端監控平台",
+      "主要產品：SIEM資安事件管理",
+      "主要產品：威脅情資分析服務"
+    ],
+    "risks": [
+      "W：規模小市占有限",
+      "W：品牌知名度不足",
+      "T：國際資安大廠競爭",
+      "T：資安人才短缺"
+    ],
     "watch": [
+      "O：台灣資安法規驅動需求",
+      "O：AI資安應用成長",
       "知識庫尚未建立驗證日期",
-      "資料來源：MOPS company profile / financial statements"
+      "資料來源：MOPS company profile / financial statements、internal topic role map / industry_analysis"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "資安雲端監控平台",
+      "SIEM資安事件管理",
+      "威脅情資分析服務",
+      "資安合規稽核工具"
+    ],
+    "customers": [
+      "政府機關",
+      "金融機構",
+      "電信業者",
+      "大型企業資安部門"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "cybersecurity",
+        "role": "資安雲端平台",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "奧泰科技在「軟體資安｜資安概念」題材的「軟體資安與國防通訊」中扮演資安雲端平台角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "資安雲端平台專注度"
+      ],
+      "weaknesses": [
+        "規模小市占有限",
+        "品牌知名度不足"
+      ],
+      "opportunities": [
+        "台灣資安法規驅動需求",
+        "AI資安應用成長"
+      ],
+      "threats": [
+        "國際資安大廠競爭",
+        "資安人才短缺"
+      ],
+      "sources": [
+        "industry_analysis:cybersecurity"
+      ],
       "freshness": "unknown"
     },
     "dataSources": [
-      "MOPS company profile / financial statements"
+      "MOPS company profile / financial statements",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": []
   },

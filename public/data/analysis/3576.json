@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3576",
   "name": "聯合再生",
-  "generatedAt": "2026-05-27T17:40:56.583Z",
+  "generatedAt": "2026-05-28T00:35:53.024Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,111 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "聯合再生 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "聯合再生 在 battery-cell-module 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：battery-cell-module · 中",
+      "主要產品：電池正極材料供應商",
+      "主要產品：太陽能電池(矽晶電池片)",
+      "主要產品：太陽能模組(Module)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：累計營收YoY-37.8%嚴重衰退",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：電芯製造與電池模組需求持續成長",
+      "O：台灣太陽能電廠建置量持續增",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "電池正極材料供應商",
+      "太陽能電池(矽晶電池片)",
+      "太陽能模組(Module)",
+      "太陽能電廠(EPC)",
+      "儲能系統整合",
+      "半導體材料與綠能",
+      "太陽能電池龍頭"
+    ],
+    "customers": [
+      "台電",
+      "政府機關",
+      "企業用電大戶",
+      "綠電需求者",
+      "台電(躉購費率)",
+      "經濟部能源局",
+      "民間太陽能電廠開發商",
+      "新日光(自用/集團內)"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "battery-cell-module",
+        "role": "電池正極材料供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "聯合再生在「綠能環保｜電芯製造與電池模組」題材的「正極材料與電池化學」中扮演電池正極材料供應商角色。"
+      },
+      {
+        "topicId": "ess-storage",
+        "role": "太陽能 + 儲能系統",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "聯合再生在「綠能環保｜儲能系統整合」題材的「電池模組與BMS」中扮演太陽能 + 儲能系統角色。"
+      },
+      {
+        "topicId": "semi-process-materials",
+        "role": "半導體材料與綠能",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "聯合再生在「半導體製造｜前段製程材料」題材的「半導體散熱與封裝材料」中扮演半導體材料與綠能角色。"
+      },
+      {
+        "topicId": "solar-energy",
+        "role": "太陽能電池龍頭",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "聯合再生在「綠能環保｜太陽能產業」題材的「太陽能與國防通訊」中扮演太陽能電池龍頭角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "聯合再生在正極材料與電池化學領域具備競爭優勢",
+        "新日光+昇陽+旺能三合一國內太陽能龍頭",
+        "太陽能模組國產化政策受惠",
+        "聯合再生在半導體散熱與封裝材料領域具備競爭優勢",
+        "聯合再生為太陽能與國防通訊領導廠商"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "累計營收YoY-37.8%嚴重衰退",
+        "持續虧損，太陽能電池價格崩跌"
+      ],
+      "opportunities": [
+        "電芯製造與電池模組需求持續成長",
+        "台灣太陽能電廠建置量持續增",
+        "儲能系統需求帶動新營收來源",
+        "前段製程材料需求持續成長",
+        "太陽能產業需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "中國太陽能電池/模組低價傾銷",
+        "台電躉購費率下調壓力"
+      ],
+      "sources": [
+        "industry_analysis:battery-cell-module",
+        "industry_analysis:ess-storage",
+        "industry_analysis:semi-process-materials",
+        "industry_analysis:solar-energy"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +152,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

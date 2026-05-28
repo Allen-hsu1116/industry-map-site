@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-05-27T17:40:56.520Z",
+  "generatedAt": "2026-05-28T00:35:52.959Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,28 +40,150 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "欣銓 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "欣銓 在 advanced-packaging-test 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：advanced-packaging-test · 中",
+      "主要產品：記憶體IC之晶圓測試 數位訊號IC及混合訊號IC之晶圓及成品測試 晶圓型式之Burn in 之測試",
+      "主要產品：IC 測試/車用 IC 測試",
+      "主要產品：IC 測試服務（Edge AI 晶片測試）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：營收規模相對小，資本支出壓力大",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：IC 測試服務需求持續成長",
+      "O：Edge AI / AIoT 邊緣智慧需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "記憶體IC之晶圓測試 數位訊號IC及混合訊號IC之晶圓及成品測試 晶圓型式之Burn in 之測試",
+      "IC 測試/車用 IC 測試",
+      "IC 測試服務（Edge AI 晶片測試）",
+      "DRAM 晶圓測試(CP)",
+      "NOR/NAND Flash 晶圓測試",
+      "晶圓級 Burn-in 測試",
+      "混合訊號IC成品測試",
+      "利基型封裝廠"
+    ],
+    "customers": [
+      "Tesla",
+      "BYD",
+      "Toyota",
+      "BMW",
+      "Mercedes",
+      "NVIDIA",
+      "AMD",
+      "Google"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-test",
+        "role": "IC 測試/車用 IC 測試",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "欣銓在「先進封測｜IC 測試服務」題材的「探針卡與測試介面」中扮演IC 測試/車用 IC 測試角色。"
+      },
+      {
+        "topicId": "edge-ai",
+        "role": "IC 測試服務（Edge AI 晶片測試）",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "欣銓在「智慧機器人｜Edge AI / AIoT 邊緣智慧」題材的「邊緣AI測試與電源管理」中扮演IC 測試服務（Edge AI 晶片測試）角色。"
+      },
+      {
+        "topicId": "hbm",
+        "role": "IC 載板龍頭",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "欣銓在「記憶體｜HBM 高頻寬記憶體」題材的「HBM載板與材料」中扮演IC 載板龍頭角色。"
+      },
+      {
+        "topicId": "high-end-testing",
+        "role": "利基型封裝廠",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "欣銓在「先進封測｜封測代工服務 OSAT」題材的「封裝材料與載板」中扮演利基型封裝廠角色。"
+      },
+      {
+        "topicId": "leo-satellite",
+        "role": "衛星射頻與微波元件",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "欣銓在「網通衛星｜低軌衛星通訊系統」題材的「衛星電源與射頻零組件」中扮演衛星射頻與微波元件角色。"
+      },
+      {
+        "topicId": "mlcc-capacitor",
+        "role": "鋁電解電容/導電性高分子電容",
+        "relevance": "high",
+        "marketPosition": "中",
+        "summary": "欣銓在「被動元件｜電容器」題材的「鋁電解電容與陶瓷電容」中扮演鋁電解電容/導電性高分子電容角色。"
+      },
+      {
+        "topicId": "pcb-manufacturing",
+        "role": "載板 + 高層數板雙引擎",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "欣銓在「電子零組件｜PCB 硬板製造」題材的「HDI板與高頻板」中扮演載板 + 高層數板雙引擎角色。"
+      },
+      {
+        "topicId": "wafer-fab-equipment",
+        "role": "半導體精密零組件",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "欣銓在「半導體製造｜晶圓廠設備」題材的「半導體廠務與量測」中扮演半導體精密零組件角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "欣銓在探針卡與測試介面領域具備競爭優勢",
+        "欣銓在邊緣AI測試與電源管理領域具備競爭優勢",
+        "國內記憶體IC測試專家，客戶黏著度高",
+        "盧志遠(前國研院長)領軍技術能力強",
+        "欣銓在封裝材料與載板領域具備競爭優勢",
+        "半導體測試領導廠商，技術能力完整"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "營收規模相對小，資本支出壓力大",
+        "客戶集中於台灣記憶體廠",
+        "衛星通訊IC測試為延伸應用",
+        "測試設備資本支出高"
+      ],
+      "opportunities": [
+        "IC 測試服務需求持續成長",
+        "Edge AI / AIoT 邊緣智慧需求持續成長",
+        "HBM需求帶動高頻寬記憶體測試量增",
+        "車用/工控 NOR Flash 測試需求擴張",
+        "封測代工服務 OSAT需求持續成長",
+        "低軌衛星通訊IC測試需求增長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "大型測試廠(京元電/矽格)規模優勢壓迫",
+        "記憶體景氣反轉直接衝擊測試需求",
+        "測試同業價格競爭壓力",
+        "衛星IC測試規格變動風險"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-test",
+        "industry_analysis:edge-ai",
+        "industry_analysis:hbm",
+        "industry_analysis:high-end-testing",
+        "industry_analysis:leo-satellite",
+        "industry_analysis:mlcc-capacitor",
+        "industry_analysis:pcb-manufacturing",
+        "industry_analysis:wafer-fab-equipment"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -72,7 +194,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

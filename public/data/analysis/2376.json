@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-05-27T17:40:56.265Z",
+  "generatedAt": "2026-05-28T00:35:52.705Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,28 +38,150 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "技嘉 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "技嘉 在 ai-server 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：ai-server · 高",
+      "主要產品：電腦硬體及其零件之製造加工及買賣 電腦系統週邊設備(包括軟體)之製造加工及買賣 前項有關商品進口及代理國內外廠商之投標報價及經營業務",
+      "主要產品：AI伺服器領導品牌",
+      "主要產品：AI 伺服器與主機板品牌",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：營收高度集中AI伺服器業務",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：AI伺服器與液冷技術需求持續成長",
+      "O：整機組裝需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "電腦硬體及其零件之製造加工及買賣 電腦系統週邊設備(包括軟體)之製造加工及買賣 前項有關商品進口及代理國內外廠商之投標報價及經營業務",
+      "AI伺服器領導品牌",
+      "AI 伺服器與主機板品牌",
+      "主機板/顯示卡SMT代工",
+      "AI伺服器主機板",
+      "GPU運算卡 (NVIDIA合作)",
+      "主機板 (消費/電競)",
+      "伺服器系統整合方案"
+    ],
+    "customers": [
+      "NVIDIA",
+      "AMD",
+      "Google",
+      "AWS",
+      "Microsoft",
+      "Intel",
+      "Meta",
+      "Tesla"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ai-server",
+        "role": "AI伺服器領導品牌",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "技嘉在「AI伺服器與液冷技術」題材的「AI伺服器ODM與品牌」中扮演AI伺服器領導品牌角色。"
+      },
+      {
+        "topicId": "ai-server-odm",
+        "role": "AI 伺服器與主機板品牌",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "技嘉在「AI 伺服器｜整機組裝」題材的「伺服器品牌與系統整合」中扮演AI 伺服器與主機板品牌角色。"
+      },
+      {
+        "topicId": "ems-smt",
+        "role": "主機板/顯示卡SMT代工",
+        "relevance": "unknown",
+        "marketPosition": "medium",
+        "summary": "技嘉在「AI 伺服器｜SMT/EMS 電子代工」題材的「封測與EMS整合」中扮演主機板/顯示卡SMT代工角色。"
+      },
+      {
+        "topicId": "ic-distribution",
+        "role": "電子零組件 + 通路",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "技嘉在「電子零組件｜IC 通路」題材的「IC設計與通路」中扮演電子零組件 + 通路角色。"
+      },
+      {
+        "topicId": "industrial-automation",
+        "role": "工業電源 + 感測器",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "技嘉在「智慧機器人｜工業自動化 / 智慧製造」題材的「滾珠螺桿與線性傳動」中扮演工業電源 + 感測器角色。"
+      },
+      {
+        "topicId": "liquid_cooling_advanced",
+        "role": "AI 伺服器與液冷機櫃方案",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "技嘉在「散熱冷卻｜液冷散熱系統」題材的「液冷系統整合」中扮演AI 伺服器與液冷機櫃方案角色。"
+      },
+      {
+        "topicId": "pc-nb-tablet",
+        "role": "主機板與顯示卡品牌",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "技嘉在「消費終端｜PC」題材的「PC品牌與主機板」中扮演主機板與顯示卡品牌角色。"
+      },
+      {
+        "topicId": "psu",
+        "role": "主機板/顯卡/伺服器系統",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "技嘉在「電子零組件｜電源供應器」題材的「散熱風扇與系統」中扮演主機板/顯卡/伺服器系統角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "技嘉為AI伺服器ODM與品牌領導廠商",
+        "技嘉在伺服器品牌與系統整合領域具備競爭優勢",
+        "技嘉在封測與EMS整合領域具備競爭優勢",
+        "4月營收YoY +73.7%，累計年增64.2%，AI訂單爆發",
+        "NVIDIA認證伺服器合作夥伴",
+        "技嘉在滾珠螺桿與線性傳動領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "營收高度集中AI伺服器業務",
+        "IC通路代理毛利偏低",
+        "AI伺服器營收佔比快速提升但毛利仍待驗證",
+        "消費型PC主機板受景氣影響"
+      ],
+      "opportunities": [
+        "AI伺服器與液冷技術需求持續成長",
+        "整機組裝需求持續成長",
+        "SMT/EMS 電子代工需求持續成長",
+        "AI伺服器需求持續爆發",
+        "L40S/H200 GPU運算卡放量",
+        "工業自動化 / 智慧製造需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "競爭對手 (緯創/英業達) 搶食AI訂單",
+        "NVIDIA平台認證門檻變動",
+        "AI伺服器競爭者(緯創/英業達)規模遠大",
+        "GPU供貨受NVIDIA分配限制"
+      ],
+      "sources": [
+        "industry_analysis:ai-server",
+        "industry_analysis:ai-server-odm",
+        "industry_analysis:ems-smt",
+        "industry_analysis:ic-distribution",
+        "industry_analysis:industrial-automation",
+        "industry_analysis:liquid_cooling_advanced",
+        "industry_analysis:pc-nb-tablet",
+        "industry_analysis:psu"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -70,7 +192,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8074",
   "name": "鉅橡",
-  "generatedAt": "2026-05-27T17:40:56.910Z",
+  "generatedAt": "2026-05-28T00:35:53.358Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,64 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "鉅橡 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "鉅橡 在 edge-ai 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：edge-ai · 中",
+      "主要產品：印刷電路基板之製造加工買賣業務 絕緣材料之製造加工買賣業務 電木管.電木棒之製造加工買賣業務",
+      "主要產品：工業 AIoT 模組",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：Edge AI / AIoT 邊緣智慧需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "印刷電路基板之製造加工買賣業務 絕緣材料之製造加工買賣業務 電木管.電木棒之製造加工買賣業務",
+      "工業 AIoT 模組"
+    ],
+    "customers": [
+      "NVIDIA",
+      "AMD",
+      "Google",
+      "AWS",
+      "Microsoft"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "edge-ai",
+        "role": "工業 AIoT 模組",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "鉅橡在「智慧機器人｜Edge AI / AIoT 邊緣智慧」題材的「AIoT模組與工業電腦」中扮演工業 AIoT 模組角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "鉅橡在AIoT模組與工業電腦領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "Edge AI / AIoT 邊緣智慧需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:edge-ai"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +105,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

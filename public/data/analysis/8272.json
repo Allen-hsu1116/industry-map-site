@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8272",
   "name": "全景",
-  "generatedAt": "2026-05-27T17:40:56.937Z",
+  "generatedAt": "2026-05-28T00:35:53.386Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-22",
@@ -38,28 +38,72 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "全景 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "全景 在 cybersecurity 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：cybersecurity · unknown",
+      "主要產品：數位身分辨識管理（SSO/MFA）",
+      "主要產品：資安合規管理平台",
+      "主要產品：身分辨識與存取管理（IAM）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：營收規模小，成長動能有限",
+      "W：高度依賴政府標案",
+      "T：國際資安大廠（Fortinet/CrowdStrike）進軍台灣",
+      "T：政府資安預算可能緊縮"
+    ],
     "watch": [
+      "O：零信任資安架構需求上升",
+      "O：金融FIDO身分辨識規範推動",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "數位身分辨識管理（SSO/MFA）",
+      "資安合規管理平台",
+      "身分辨識與存取管理（IAM）",
+      "資料庫安全監控",
+      "PKI/APKI數位憑證解決方案"
+    ],
+    "customers": [
+      "政府機關",
+      "金融機構",
+      "電信業者",
+      "醫療院所"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "cybersecurity",
+        "role": "資訊安全軟體與數位身分辨識解決方案商（Changingtec）",
+        "relevance": "unknown",
+        "summary": "全景在「軟體資安｜資安概念」題材的「軟體資安與國防通訊」中扮演資訊安全軟體與數位身分辨識解決方案商（Changingtec）角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "台灣PKI/APKI數位身分領域市占高",
+        "政府資安標案經驗豐富"
+      ],
+      "weaknesses": [
+        "營收規模小，成長動能有限",
+        "高度依賴政府標案"
+      ],
+      "opportunities": [
+        "零信任資安架構需求上升",
+        "金融FIDO身分辨識規範推動",
+        "數位發展部資安政策利多"
+      ],
+      "threats": [
+        "國際資安大廠（Fortinet/CrowdStrike）進軍台灣",
+        "政府資安預算可能緊縮"
+      ],
+      "sources": [
+        "industry_analysis:cybersecurity"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +113,8 @@
       "FinMind TaiwanStockInstitutionalInvestorsBuySell",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

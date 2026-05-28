@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3607",
   "name": "谷崧",
-  "generatedAt": "2026-05-27T17:40:56.599Z",
+  "generatedAt": "2026-05-28T00:35:53.040Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,28 +38,77 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "谷崧 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "谷崧 在 liquid_cooling_advanced 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：liquid_cooling_advanced · 中",
+      "主要產品：金屬零件之製造加工及買賣 各種塑膠成型製品及其零件之製造加工及買賣 各種電子",
+      "主要產品：電機及其零件之開發製造加工及買賣",
+      "主要產品：各種模具",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：液冷散熱系統需求持續成長",
+      "O：氣冷與核心組件需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "金屬零件之製造加工及買賣 各種塑膠成型製品及其零件之製造加工及買賣 各種電子",
+      "電機及其零件之開發製造加工及買賣",
+      "各種模具"
+    ],
+    "customers": [
+      "NVIDIA",
+      "AMD",
+      "Intel",
+      "Google",
+      "AWS"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "liquid_cooling_advanced",
+        "role": "冷板與液冷散熱零組件",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "谷崧在「散熱冷卻｜液冷散熱系統」題材的「冷板加工與液冷零件」中扮演冷板與液冷散熱零組件角色。"
+      },
+      {
+        "topicId": "thermal_components_air",
+        "role": "冷板與液冷零組件加工",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "谷崧在「散熱冷卻｜氣冷與核心組件」題材的「散熱模組與均溫片」中扮演冷板與液冷零組件加工角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "谷崧在冷板加工與液冷零件領域具備競爭優勢",
+        "谷崧在散熱模組與均溫片領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "液冷散熱系統需求持續成長",
+        "氣冷與核心組件需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:liquid_cooling_advanced",
+        "industry_analysis:thermal_components_air"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -70,7 +119,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

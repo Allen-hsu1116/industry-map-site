@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2634",
   "name": "漢翔",
-  "generatedAt": "2026-05-27T17:40:56.388Z",
+  "generatedAt": "2026-05-28T00:35:52.829Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,92 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "漢翔 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "漢翔 在 defense_industry 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：defense_industry · 高",
+      "主要產品：協助國內航空工業建立中心衛星體系與制度",
+      "主要產品：民用航空及相關工業產品之發展",
+      "主要產品：提供對航空工業系統之規劃",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "W：風電訂單佔比尚低",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：軍工產業需求持續成長",
+      "O：國產化政策帶動風電零組件商機",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "協助國內航空工業建立中心衛星體系與制度",
+      "民用航空及相關工業產品之發展",
+      "提供對航空工業系統之規劃",
+      "發展及管理之技術服務",
+      "風機塔架段組件",
+      "風機機艙罩殼",
+      "離岸風電結構件",
+      "航太級精密銑削件"
+    ],
+    "customers": [
+      "國防部",
+      "漢翔",
+      "中科院",
+      "美國國防部",
+      "NASA",
+      "西門子歌美颯(Siemens Gamesa)",
+      "Ørsted",
+      "CIP"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "defense_industry",
+        "role": "國機國造龍頭，IDF 戰機製造商",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "漢翔在「傳產工業｜軍工產業」題材的「航空航太與無人機系統」中扮演國機國造龍頭，IDF 戰機製造商角色。"
+      },
+      {
+        "topicId": "offshore-wind",
+        "role": "風機葉片模具",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "漢翔在「綠能環保｜離岸風電」題材的「水下基礎與海事工程」中扮演風機葉片模具角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "漢翔為航空航太與無人機系統領導廠商",
+        "4月營收YoY+12.3%成長穩健",
+        "航太級精密加工能量跨足風電"
+      ],
+      "weaknesses": [
+        "受景氣循環影響",
+        "風電訂單佔比尚低",
+        "風場開發進度延遲風險"
+      ],
+      "opportunities": [
+        "軍工產業需求持續成長",
+        "國產化政策帶動風電零組件商機",
+        "浮式風機新應用"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險",
+        "風電開發商縮減投資",
+        "國際風電供應鏈競爭激烈"
+      ],
+      "sources": [
+        "industry_analysis:defense_industry",
+        "industry_analysis:offshore-wind"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +135,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

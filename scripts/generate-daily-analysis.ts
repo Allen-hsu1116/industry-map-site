@@ -4,10 +4,12 @@ import { normalizeCanonicalTopics } from "../src/lib/canonicalTopics";
 import { normalizeCompanySwot } from "../src/lib/companySwot";
 import { normalizeCompanyTopicRoles } from "../src/lib/companyTopicRoles";
 import { generateDailyAnalysis, type AnalysisInput } from "../src/lib/dailyAnalysis";
+import { buildLegacyCompanyAnalysisFallbacks, mergeLegacyCompanyAnalysisFallback, type LegacyCompanyAnalysisFallback } from "../src/lib/legacyIndustryAnalysis";
 
 const FINANCIALS_DIR = path.resolve("public/data/financials");
 const OUTPUT_DIR = path.resolve("public/data/analysis");
 const CANONICAL_TOPICS_PATH = path.resolve("public/data/canonical-topics.json");
+const INDUSTRIES_PATH = path.resolve("public/data/industries.json");
 const COMPANY_TOPIC_ROLES_DIR = path.resolve("public/data/company-topic-roles");
 const COMPANY_SWOT_DIR = path.resolve("public/data/company-swot");
 
@@ -24,12 +26,13 @@ function readOptionalJson(filePath: string): unknown | null {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-function enrichWithCanonicalKnowledge(input: AnalysisInput, canonicalTopics: AnalysisInput["canonicalTopics"]): AnalysisInput {
+function enrichWithCanonicalKnowledge(input: AnalysisInput, canonicalTopics: AnalysisInput["canonicalTopics"], legacyFallbacks: Map<string, LegacyCompanyAnalysisFallback>): AnalysisInput {
   const code = input.code;
   const companyTopicRoles = normalizeCompanyTopicRoles(readOptionalJson(path.join(COMPANY_TOPIC_ROLES_DIR, `${code}.json`)));
   const companySwot = normalizeCompanySwot(readOptionalJson(path.join(COMPANY_SWOT_DIR, `${code}.json`)));
+  const legacyEnrichedInput = mergeLegacyCompanyAnalysisFallback(input, legacyFallbacks.get(code));
   return {
-    ...input,
+    ...legacyEnrichedInput,
     canonicalTopics,
     companyTopicRoles,
     companySwot,
@@ -43,12 +46,13 @@ function main() {
 
   fs.mkdirSync(OUTPUT_DIR, { recursive: true });
   const canonicalTopics = normalizeCanonicalTopics(readOptionalJson(CANONICAL_TOPICS_PATH));
+  const legacyFallbacks = buildLegacyCompanyAnalysisFallbacks(readOptionalJson(INDUSTRIES_PATH));
   const files = fs.readdirSync(FINANCIALS_DIR).filter((file) => file.endsWith(".json")).sort();
   const index: IndexItem[] = [];
 
   for (const file of files) {
     const rawInput = JSON.parse(fs.readFileSync(path.join(FINANCIALS_DIR, file), "utf8")) as AnalysisInput;
-    const input = enrichWithCanonicalKnowledge(rawInput, canonicalTopics);
+    const input = enrichWithCanonicalKnowledge(rawInput, canonicalTopics, legacyFallbacks);
     const analysis = generateDailyAnalysis(input);
     fs.writeFileSync(path.join(OUTPUT_DIR, file), `${JSON.stringify(analysis, null, 2)}\n`);
     index.push({

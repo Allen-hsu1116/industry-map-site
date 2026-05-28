@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6117",
   "name": "迎廣",
-  "generatedAt": "2026-05-27T17:40:56.734Z",
+  "generatedAt": "2026-05-28T00:35:53.180Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,66 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "迎廣 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "迎廣 在 ai-server-chassis-rails 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：ai-server-chassis-rails · 中",
+      "主要產品：塑膠成品等之加工製造及買賣 機械五金零件之製造烤漆及買賣業務",
+      "主要產品：電腦及其週邊設備",
+      "主要產品：電腦機殼",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：機殼與滑軌需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "塑膠成品等之加工製造及買賣 機械五金零件之製造烤漆及買賣業務",
+      "電腦及其週邊設備",
+      "電腦機殼"
+    ],
+    "customers": [
+      "NVIDIA",
+      "AMD",
+      "Google",
+      "AWS",
+      "Microsoft"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ai-server-chassis-rails",
+        "role": "PC/Server 機殼品牌與代工",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "迎廣在「AI 伺服器｜機殼與滑軌」題材的「伺服器機殼製造」中扮演PC/Server 機殼品牌與代工角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "迎廣在伺服器機殼製造領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "機殼與滑軌需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:ai-server-chassis-rails"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +109,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2404",
   "name": "漢唐",
-  "generatedAt": "2026-05-27T17:40:56.286Z",
+  "generatedAt": "2026-05-28T00:35:52.726Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,28 +40,80 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "漢唐 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "漢唐 在 ic-distribution 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：ic-distribution · 高",
+      "主要產品：紅外線應用及多頻道雷射治療儀等醫療器材之研發",
+      "主要產品：規劃工作及維護運轉服務",
+      "主要產品：光電等高科技廠房整廠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：IC 通路需求持續成長",
+      "O：功率電感需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "紅外線應用及多頻道雷射治療儀等醫療器材之研發",
+      "規劃工作及維護運轉服務",
+      "光電等高科技廠房整廠",
+      "特殊製程 系統建造"
+    ],
+    "customers": [
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm",
+      "Intel",
+      "Tesla",
+      "Samsung"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "ic-distribution",
+        "role": "半導體廠務工程通路",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "漢唐在「電子零組件｜IC 通路」題材的「半導體通路與系統整合」中扮演半導體廠務工程通路角色。"
+      },
+      {
+        "topicId": "passive-inductor",
+        "role": "無塵室工程/電感（集團）",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "漢唐在「被動元件｜功率電感」題材的「電感材料與被動元件集團」中扮演無塵室工程/電感（集團）角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "漢唐在半導體通路與系統整合領域具備競爭優勢",
+        "漢唐在電感材料與被動元件集團領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "IC 通路需求持續成長",
+        "功率電感需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:ic-distribution",
+        "industry_analysis:passive-inductor"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -72,7 +124,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

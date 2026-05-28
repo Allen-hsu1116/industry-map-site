@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "9136",
   "name": "巨騰-DR",
-  "generatedAt": "2026-05-27T17:40:56.953Z",
+  "generatedAt": "2026-05-28T00:35:53.401Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,28 +38,62 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "巨騰-DR 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "巨騰-DR 在 precision-metal-casing 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：precision-metal-casing · 中",
+      "主要產品：筆電金屬機殼",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：精密機構件需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "筆電金屬機殼"
+    ],
+    "customers": [
+      "NVIDIA",
+      "AMD",
+      "Intel",
+      "Google",
+      "AWS"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "precision-metal-casing",
+        "role": "筆電金屬機殼",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "巨騰-DR在「電子零組件｜精密機構件」題材的「金屬機殼與散熱機構」中扮演筆電金屬機殼角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "巨騰-DR在金屬機殼與散熱機構領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "精密機構件需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:precision-metal-casing"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -67,7 +101,8 @@
       "MOPS company profile / financial statements",
       "FinMind TaiwanStockPrice daily OHLCV",
       "FinMind TaiwanStockInstitutionalInvestorsBuySell",
-      "FinMind TaiwanStockMarginPurchaseShortSale"
+      "FinMind TaiwanStockMarginPurchaseShortSale",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2454",
   "name": "聯發科",
-  "generatedAt": "2026-05-27T17:40:56.310Z",
+  "generatedAt": "2026-05-28T00:35:52.752Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,111 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "聯發科 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "聯發科 在 cxl-technology 的角色為「unknown」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：cxl-technology · unknown",
+      "主要產品：Dimensity天璣手機SoC",
+      "主要產品：Kompanio Chromebook處理器",
+      "主要產品：Filogic Wi-Fi 7晶片",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：4月營收YoY-4.1%庫存修正",
+      "W：PE 51倍估值偏高",
+      "T：Qualcomm高階市佔優勢",
+      "T：中國手機市場復甦進度不確定"
+    ],
     "watch": [
+      "O：AI手機/PC換機潮帶動SoC升級",
+      "O：車用工業物聯網布局收成",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "Dimensity天璣手機SoC",
+      "Kompanio Chromebook處理器",
+      "Filogic Wi-Fi 7晶片",
+      "Dimensity Auto車用SoC"
+    ],
+    "customers": [
+      "Samsung",
+      "Xiaomi",
+      "OPPO",
+      "Vivo",
+      "Dell/Lenovo"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "cxl-technology",
+        "role": "CXL控制器IC",
+        "relevance": "unknown",
+        "summary": "聯發科在「記憶體｜CXL 記憶體池化」題材的「CXL模組與記憶體封裝」中扮演CXL控制器IC角色。"
+      },
+      {
+        "topicId": "edge-ai",
+        "role": "全球 Edge AI SoC 領導廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "聯發科在「智慧機器人｜Edge AI / AIoT 邊緣智慧」題材的「Edge AI SoC與晶片」中扮演全球 Edge AI SoC 領導廠角色。"
+      },
+      {
+        "topicId": "hpc-networking-ic",
+        "role": "全球前五大 IC 設計，HPC/ADAS SoC 平台",
+        "relevance": "unknown",
+        "marketPosition": "95",
+        "summary": "聯發科在「IC 設計｜HPC 與網通 IC」題材的「高效能運算 SoC」中扮演全球前五大 IC 設計，HPC/ADAS SoC 平台角色。"
+      },
+      {
+        "topicId": "leo-satellite",
+        "role": "衛星通訊晶片平台",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "聯發科在「網通衛星｜低軌衛星通訊系統」題材的「衛星IC設計」中扮演衛星通訊晶片平台角色。"
+      },
+      {
+        "topicId": "mobile",
+        "role": "手機晶片全球第二大廠",
+        "relevance": "high",
+        "marketPosition": "極高",
+        "summary": "聯發科在「消費終端｜智慧型手機供應鏈」題材的「手機晶片與品牌」中扮演手機晶片全球第二大廠角色。"
+      },
+      {
+        "topicId": "networking-equipment",
+        "role": "🟢 網通晶片巨頭",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "聯發科在「網通衛星｜高速交換器與無線網路」題材的「終端品牌與IC設計」中扮演🟢 網通晶片巨頭角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "手機SoC市佔全球第二",
+        "毛利率46.3%優於同業"
+      ],
+      "weaknesses": [
+        "4月營收YoY-4.1%庫存修正",
+        "PE 51倍估值偏高"
+      ],
+      "opportunities": [
+        "AI手機/PC換機潮帶動SoC升級",
+        "車用工業物聯網布局收成"
+      ],
+      "threats": [
+        "Qualcomm高階市佔優勢",
+        "中國手機市場復甦進度不確定"
+      ],
+      "sources": [
+        "industry_analysis:cxl-technology",
+        "industry_analysis:edge-ai",
+        "industry_analysis:hpc-networking-ic",
+        "industry_analysis:leo-satellite",
+        "industry_analysis:mobile",
+        "industry_analysis:networking-equipment"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +154,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3711",
   "name": "日月光投控",
-  "generatedAt": "2026-05-27T17:40:56.620Z",
+  "generatedAt": "2026-05-28T00:35:53.062Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -40,28 +40,123 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "日月光投控 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "日月光投控 在 advanced-packaging-automation 的角色為「high」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：advanced-packaging-automation · high",
+      "主要產品：封裝測試服務(打線/覆晶/扇出型)",
+      "主要產品：SiP系統級封裝",
+      "主要產品：異質整合封裝(2.5D/3D)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：毛利率20.1%偏低",
+      "W：資本支出重折舊壓力大",
+      "T：TSMC自建CoWoS形成競合",
+      "T：中國封測廠低價競爭"
+    ],
     "watch": [
+      "O：AI/HPC晶片帶動先進封裝需求暴增",
+      "O：車用5G封測新動能",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "封裝測試服務(打線/覆晶/扇出型)",
+      "SiP系統級封裝",
+      "異質整合封裝(2.5D/3D)",
+      "車用/5G晶片封測"
+    ],
+    "customers": [
+      "Apple",
+      "Qualcomm",
+      "Broadcom",
+      "AMD",
+      "NVIDIA"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-automation",
+        "role": "先進封裝(OSAT龍頭)",
+        "relevance": "high",
+        "summary": "日月光投控在「先進封測｜先進封裝量測自動化」題材的「封裝材料與耗材」中扮演先進封裝(OSAT龍頭)角色。"
+      },
+      {
+        "topicId": "ai-server",
+        "role": "AI伺服器封測",
+        "relevance": "unknown",
+        "summary": "日月光投控在「AI伺服器與液冷技術」題材的「AI伺服器散熱與零組件」中扮演AI伺服器封測角色。"
+      },
+      {
+        "topicId": "ai-server-odm",
+        "role": "AI伺服器封測",
+        "relevance": "unknown",
+        "summary": "日月光投控在「AI 伺服器｜整機組裝」題材的「伺服器主板與周邊」中扮演AI伺服器封測角色。"
+      },
+      {
+        "topicId": "bbu",
+        "role": "BBU封裝",
+        "relevance": "unknown",
+        "summary": "日月光投控在「AI 伺服器｜BBU 電池備援系統」題材的「BBU電源供應器與系統」中扮演BBU封裝角色。"
+      },
+      {
+        "topicId": "cowos-advanced-packaging",
+        "role": "全球最大封測代工廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "日月光投控在「先進封測｜AI 先進封裝 CoWoS」題材的「先進封測代工」中扮演全球最大封測代工廠角色。"
+      },
+      {
+        "topicId": "cxl-technology",
+        "role": "CXL封裝",
+        "relevance": "unknown",
+        "summary": "日月光投控在「記憶體｜CXL 記憶體池化」題材的「CXL模組與記憶體封裝」中扮演CXL封裝角色。"
+      },
+      {
+        "topicId": "hbm",
+        "role": "全球封測龍頭，HBM 封裝關鍵",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "日月光投控在「記憶體｜HBM 高頻寬記憶體」題材的「HBM封裝與測試」中扮演全球封測龍頭，HBM 封裝關鍵角色。"
+      },
+      {
+        "topicId": "high-end-testing",
+        "role": "全球最大封測代工廠",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "日月光投控在「先進封測｜封測代工服務 OSAT」題材的「封測代工龍頭」中扮演全球最大封測代工廠角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "全球封測市佔超過30%",
+        "4月營收YoY+19.2%AI封裝需求強"
+      ],
+      "weaknesses": [
+        "毛利率20.1%偏低",
+        "資本支出重折舊壓力大"
+      ],
+      "opportunities": [
+        "AI/HPC晶片帶動先進封裝需求暴增",
+        "車用5G封測新動能"
+      ],
+      "threats": [
+        "TSMC自建CoWoS形成競合",
+        "中國封測廠低價競爭"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-automation",
+        "industry_analysis:ai-server",
+        "industry_analysis:ai-server-odm",
+        "industry_analysis:bbu",
+        "industry_analysis:cowos-advanced-packaging",
+        "industry_analysis:cxl-technology",
+        "industry_analysis:hbm",
+        "industry_analysis:high-end-testing"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -72,7 +167,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

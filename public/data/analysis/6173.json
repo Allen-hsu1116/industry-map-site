@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-05-27T17:40:56.755Z",
+  "generatedAt": "2026-05-28T00:35:53.202Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -39,28 +39,135 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "信昌電 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "信昌電 在 advanced-packaging-automation 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：advanced-packaging-automation · 中",
+      "主要產品：晶片電容",
+      "主要產品：晶片電阻",
+      "主要產品：介電瓷粉",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：先進封裝量測自動化需求持續成長",
+      "O：電芯製造與電池模組需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "晶片電容",
+      "晶片電阻",
+      "介電瓷粉"
+    ],
+    "customers": [
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm",
+      "Intel",
+      "台電",
+      "政府機關",
+      "企業用電大戶"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-automation",
+        "role": "半導體測試服務",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信昌電在「先進封測｜先進封裝量測自動化」題材的「封裝AOI與測試設備」中扮演半導體測試服務角色。"
+      },
+      {
+        "topicId": "battery-cell-module",
+        "role": "電池管理系統",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信昌電在「綠能環保｜電芯製造與電池模組」題材的「電池管理IC與BMS」中扮演電池管理系統角色。"
+      },
+      {
+        "topicId": "bbu",
+        "role": "被動元件與 BBU 電源模組",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信昌電在「AI 伺服器｜BBU 電池備援系統」題材的「BBU電源管理IC與被動元件」中扮演被動元件與 BBU 電源模組角色。"
+      },
+      {
+        "topicId": "glass-core-substrate",
+        "role": "陶瓷基板",
+        "relevance": "unknown",
+        "summary": "信昌電在「基板材料｜玻璃基板」題材的「玻璃基板原料與CCL」中扮演陶瓷基板角色。"
+      },
+      {
+        "topicId": "led-automotive",
+        "role": "MLCC 與 Micro LED 布局",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信昌電在「光學顯示｜LED 與車用照明」題材的「LED封裝與Mini/Micro LED」中扮演MLCC 與 Micro LED 布局角色。"
+      },
+      {
+        "topicId": "mlcc-capacitor",
+        "role": "MLCC 陶瓷粉體/電子材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信昌電在「被動元件｜電容器」題材的「MLCC材料與被動元件測試」中扮演MLCC 陶瓷粉體/電子材料角色。"
+      },
+      {
+        "topicId": "packaging-materials",
+        "role": "MLCC 粉體/電子材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信昌電在「基板材料｜導線架與化學品」題材的「導線架材料與化學品」中扮演MLCC 粉體/電子材料角色。"
+      },
+      {
+        "topicId": "solar-energy",
+        "role": "太陽能逆變器供應商",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信昌電在「綠能環保｜太陽能產業」題材的「設備與太陽能」中扮演太陽能逆變器供應商角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "信昌電在封裝AOI與測試設備領域具備競爭優勢",
+        "信昌電在電池管理IC與BMS領域具備競爭優勢",
+        "信昌電在BBU電源管理IC與被動元件領域具備競爭優勢",
+        "信昌電在玻璃基板原料與CCL領域具備競爭優勢",
+        "信昌電在LED封裝與Mini/Micro LED領域具備競爭優勢",
+        "信昌電在MLCC材料與被動元件測試領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "先進封裝量測自動化需求持續成長",
+        "電芯製造與電池模組需求持續成長",
+        "BBU 電池備援系統需求持續成長",
+        "玻璃基板需求持續成長",
+        "LED 與車用照明需求持續成長",
+        "電容器需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-automation",
+        "industry_analysis:battery-cell-module",
+        "industry_analysis:bbu",
+        "industry_analysis:glass-core-substrate",
+        "industry_analysis:led-automotive",
+        "industry_analysis:mlcc-capacitor",
+        "industry_analysis:packaging-materials",
+        "industry_analysis:solar-energy"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -71,7 +178,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5506",
   "name": "中聯資源",
-  "generatedAt": "2026-05-27T17:40:56.712Z",
+  "generatedAt": "2026-05-28T00:35:53.157Z",
   "sourceUpdatedAt": "2026-05-22",
   "mode": "rule-batch",
   "technical": {
@@ -28,30 +28,82 @@
     "watch": []
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "中聯資源 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
-    "signals": [],
-    "risks": [],
+    "label": "題材關聯待驗證",
+    "summary": "中聯資源 在 circular-economy-ewaste 的角色為「high」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "signals": [
+      "題材角色：circular-economy-ewaste · high",
+      "主要產品：鋼鐵爐渣資源化",
+      "主要產品：鋼構與配管工程"
+    ],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：電子廢料與製程回收需求持續成長",
+      "O：EPC 工程服務需求持續成長",
       "知識庫最後驗證：2026-05-22（fresh）",
-      "資料來源：MOPS company profile / financial statements"
+      "資料來源：MOPS company profile / financial statements、internal topic role map / industry_analysis"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "鋼鐵爐渣資源化",
+      "鋼構與配管工程"
+    ],
+    "customers": [
+      "台電",
+      "政府機關",
+      "企業用電大戶",
+      "綠電需求者",
+      "Apple",
+      "NVIDIA",
+      "AMD",
+      "Qualcomm"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "circular-economy-ewaste",
+        "role": "鋼鐵爐渣資源化",
+        "relevance": "unknown",
+        "marketPosition": "high",
+        "summary": "中聯資源在「綠能環保｜電子廢料與製程回收」題材的「電子廢料與鋼鐵回收」中扮演鋼鐵爐渣資源化角色。"
+      },
+      {
+        "topicId": "epc_engineering",
+        "role": "鋼構與配管工程",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "中聯資源在「傳產工業｜EPC 工程服務」題材的「終端品牌與半導體」中扮演鋼構與配管工程角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "中聯資源在電子廢料與鋼鐵回收領域具備競爭優勢",
+        "中聯資源在終端品牌與半導體領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "電子廢料與製程回收需求持續成長",
+        "EPC 工程服務需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:circular-economy-ewaste",
+        "industry_analysis:epc_engineering"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-22"
     },
     "dataSources": [
-      "MOPS company profile / financial statements"
+      "MOPS company profile / financial statements",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": []
   },

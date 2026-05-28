@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6211",
   "name": "矽格",
-  "generatedAt": "2026-05-27T17:40:56.781Z",
+  "generatedAt": "2026-05-28T00:35:53.227Z",
   "sourceUpdatedAt": "2026-05-22",
   "mode": "rule-batch",
   "technical": {
@@ -28,30 +28,64 @@
     "watch": []
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "矽格 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
-    "signals": [],
-    "risks": [],
+    "label": "核心題材受惠",
+    "summary": "矽格 在 advanced-packaging-test 的角色為「高」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
+    "signals": [
+      "題材角色：advanced-packaging-test · 高",
+      "主要產品：IC 測試服務/高階測試"
+    ],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：IC 測試服務需求持續成長",
       "知識庫最後驗證：2026-05-22（fresh）",
-      "資料來源：MOPS company profile / financial statements"
+      "資料來源：MOPS company profile / financial statements、internal topic role map / industry_analysis"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "IC 測試服務/高階測試"
+    ],
+    "customers": [
+      "國內外品牌廠",
+      "系統整合商",
+      "ODM/OEM"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-test",
+        "role": "IC 測試服務/高階測試",
+        "relevance": "high",
+        "marketPosition": "高",
+        "summary": "矽格在「先進封測｜IC 測試服務」題材的「驅動IC封測與功率IC測試」中扮演IC 測試服務/高階測試角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "矽格在驅動IC封測與功率IC測試領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "IC 測試服務需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-test"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-22"
     },
     "dataSources": [
-      "MOPS company profile / financial statements"
+      "MOPS company profile / financial statements",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": []
   },

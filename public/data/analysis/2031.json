@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2031",
   "name": "新光鋼",
-  "generatedAt": "2026-05-27T17:40:56.205Z",
+  "generatedAt": "2026-05-28T00:35:52.645Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -38,28 +38,90 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "新光鋼 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯明確",
+    "summary": "新光鋼 在 electrical_equipment 的角色為「中」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：electrical_equipment · 中",
+      "主要產品：鋼板整平裁剪加工",
+      "主要產品：鋼構構件製作",
+      "主要產品：電線電纜用鋼帶",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：4月營收YoY -10.7%，累計年減9.4%，衰退明顯",
+      "W：鋼價下跌導致庫存跌價損失",
+      "T：鋼鐵景氣循環風險高",
+      "T：中國低價鋼材傾銷"
+    ],
     "watch": [
+      "O：台電變電所擴建帶動鋼構需求",
+      "O：離岸風電基座鋼構商機",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "鋼板整平裁剪加工",
+      "鋼構構件製作",
+      "電線電纜用鋼帶",
+      "鍍鋅鋼板",
+      "各種鋼鐵整平裁剪加工買賣 各種鋼構構件製作加工買賣 各種鋼鐵代理報價買賣",
+      "鋼構及基樁材料"
+    ],
+    "customers": [
+      "中鋼",
+      "台電 (變電所鋼構)",
+      "中華電信 (基地台鋼構)",
+      "各大營造廠",
+      "Ørsted",
+      "CIP",
+      "Wpd",
+      "北陸"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "electrical_equipment",
+        "role": "電線電纜及材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "新光鋼在「傳產工業｜電器電纜與重電」題材的「電源與材料」中扮演電線電纜及材料角色。"
+      },
+      {
+        "topicId": "offshore-wind",
+        "role": "鋼構及基樁材料",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "新光鋼在「綠能環保｜離岸風電」題材的「鋼材與基礎結構」中扮演鋼構及基樁材料角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "鋼板裁剪加工市佔穩固",
+        "物流與加工一條龍服務",
+        "新光鋼在鋼材與基礎結構領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "4月營收YoY -10.7%，累計年減9.4%，衰退明顯",
+        "鋼價下跌導致庫存跌價損失",
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "台電變電所擴建帶動鋼構需求",
+        "離岸風電基座鋼構商機",
+        "離岸風電需求持續成長"
+      ],
+      "threats": [
+        "鋼鐵景氣循環風險高",
+        "中國低價鋼材傾銷",
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:electrical_equipment",
+        "industry_analysis:offshore-wind"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -70,7 +132,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

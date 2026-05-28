@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6205",
   "name": "詮欣",
-  "generatedAt": "2026-05-27T17:40:56.780Z",
+  "generatedAt": "2026-05-28T00:35:53.226Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -37,28 +37,78 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "詮欣 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "核心題材受惠",
+    "summary": "詮欣 在 advanced-packaging-test 的角色為「低」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：advanced-packaging-test · 低",
+      "主要產品：電子線)等製造加工買賣業務 一般進出口貿易業務(期貨除外) 有關前項業務之代理經銷報價及投標業務",
+      "主要產品：各種電子零件(連接器",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：IC 測試服務需求持續成長",
+      "O：連接器（工業/車用）需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "電子線)等製造加工買賣業務 一般進出口貿易業務(期貨除外) 有關前項業務之代理經銷報價及投標業務",
+      "各種電子零件(連接器"
+    ],
+    "customers": [
+      "Apple",
+      "Tesla",
+      "NVIDIA",
+      "Intel",
+      "Samsung",
+      "BYD",
+      "Toyota",
+      "BMW"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging-test",
+        "role": "測試連接器/高速連接器",
+        "relevance": "high",
+        "marketPosition": "低",
+        "summary": "詮欣在「先進封測｜IC 測試服務」題材的「ASIC封測整合服務」中扮演測試連接器/高速連接器角色。"
+      },
+      {
+        "topicId": "connector",
+        "role": "高速連接器與 Cable",
+        "relevance": "high",
+        "marketPosition": "中",
+        "summary": "詮欣在「電子零組件｜連接器（工業/車用）」題材的「高速連接器與Cable」中扮演高速連接器與 Cable角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "詮欣在ASIC封測整合服務領域具備競爭優勢",
+        "詮欣在高速連接器與Cable領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "IC 測試服務需求持續成長",
+        "連接器（工業/車用）需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:advanced-packaging-test",
+        "industry_analysis:connector"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -69,7 +119,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",

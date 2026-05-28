@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6126",
   "name": "信音",
-  "generatedAt": "2026-05-27T17:40:56.736Z",
+  "generatedAt": "2026-05-28T00:35:53.181Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -36,28 +36,78 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "summary": "信音 尚未建立完整題材角色，Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "label": "題材關聯待驗證",
+    "summary": "信音 在 connector 的角色為「低」，今日分析會用產品/題材/SWOT 知識庫校正技術與籌碼訊號。",
     "signals": [
+      "題材角色：connector · 低",
+      "主要產品：各種電子電腦及週邊設備之零件製造裝配及買賣",
+      "主要產品：電池玩具(電動玩具除外)之製造裝配及買賣",
+      "主要產品：各種鋼模及金屬沖品之製造及買賣",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "W：受景氣循環影響",
+      "T：國際競爭加劇",
+      "T：供應鏈重組風險"
+    ],
     "watch": [
+      "O：連接器（工業/車用）需求持續成長",
+      "O：車用連接器需求持續成長",
       "知識庫最後驗證：2026-05-26（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
-    "topicRoles": [],
+    "products": [
+      "各種電子電腦及週邊設備之零件製造裝配及買賣",
+      "電池玩具(電動玩具除外)之製造裝配及買賣",
+      "各種鋼模及金屬沖品之製造及買賣",
+      "塑膠玩具"
+    ],
+    "customers": [
+      "Tesla",
+      "BYD",
+      "Toyota",
+      "BMW",
+      "Mercedes"
+    ],
+    "topicRoles": [
+      {
+        "topicId": "connector",
+        "role": "音響/耳機連接器",
+        "relevance": "low",
+        "marketPosition": "低",
+        "summary": "信音在「電子零組件｜連接器（工業/車用）」題材的「FPC與精密連接器」中扮演音響/耳機連接器角色。"
+      },
+      {
+        "topicId": "connector-automotive",
+        "role": "防水連接器專業廠",
+        "relevance": "medium",
+        "marketPosition": "中",
+        "summary": "信音在「電子零組件｜車用連接器」題材的「車用線束與防水連接器」中扮演防水連接器專業廠角色。"
+      }
+    ],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "信音在FPC與精密連接器領域具備競爭優勢",
+        "信音在車用線束與防水連接器領域具備競爭優勢"
+      ],
+      "weaknesses": [
+        "受景氣循環影響"
+      ],
+      "opportunities": [
+        "連接器（工業/車用）需求持續成長",
+        "車用連接器需求持續成長"
+      ],
+      "threats": [
+        "國際競爭加劇",
+        "供應鏈重組風險"
+      ],
+      "sources": [
+        "industry_analysis:connector",
+        "industry_analysis:connector-automotive"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -68,7 +118,8 @@
       "FinMind TaiwanStockMarginPurchaseShortSale",
       "FinMind TaiwanStockPER valuation history",
       "FinMind TaiwanStockMonthRevenue / MOPS monthly revenue",
-      "FinMind financial statements / MOPS quarterly reports"
+      "FinMind financial statements / MOPS quarterly reports",
+      "internal topic role map / industry_analysis"
     ],
     "finmindSignals": [
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
