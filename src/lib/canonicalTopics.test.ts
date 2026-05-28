@@ -142,15 +142,22 @@ test("legacy industry groups use neutral value-chain names instead of market nic
   assert.deepEqual(panelManufacturing.companies.map((company) => company.code).sort(), ["2409", "3481"]);
 });
 
-test("legacy duplicate groups are merged before they become canonical fallback data", async () => {
+test("legacy duplicate groups are normalized without mixing NOR Flash and DRAM companies", async () => {
   const fs = await import("node:fs/promises");
   const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
   const memoryTopic = industriesRaw.topics.find((topic: { slug?: string }) => topic.slug === "niche-memory");
 
   assert.ok(memoryTopic, "niche-memory topic should exist");
-  const groups = memoryTopic.groups as Array<{ name: string; companies: Array<{ code: string }> }>;
-  assert.equal(groups.filter((group) => group.name.includes("NOR Flash")).length, 1, "NOR Flash / niche-memory companies should not be split across duplicate groups");
-  const idmGroup = groups.find((group) => group.name === "NOR Flash 與利基型記憶體 IDM");
-  assert.ok(idmGroup);
-  assert.deepEqual(idmGroup.companies.map((company) => company.code).sort(), ["2337", "2344", "2408"]);
+  const groups = memoryTopic.groups as Array<{ name: string; companies: Array<{ code: string; role?: string }> }>;
+  assert.equal(groups.some((group) => group.name === "NOR Flash 與利基型記憶體 IDM"), false, "mixed NOR Flash / DRAM IDM label should not hide product-family differences");
+
+  const norFlashGroup = groups.find((group) => group.name === "NOR Flash IDM");
+  assert.ok(norFlashGroup);
+  assert.deepEqual(norFlashGroup.companies.map((company) => company.code).sort(), ["2337", "2344"]);
+
+  const dramGroup = groups.find((group) => group.name === "DRAM IDM");
+  assert.ok(dramGroup);
+  assert.deepEqual(dramGroup.companies.map((company) => company.code), ["2408"]);
+  assert.match(dramGroup.companies[0].role ?? "", /DRAM/);
+  assert.doesNotMatch(dramGroup.companies[0].role ?? "", /NOR Flash/);
 });
