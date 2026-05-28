@@ -290,7 +290,10 @@ test("generateDailyAnalysis scores industry quality with directness, topic statu
 
   assert.ok(strong.industry.score > weak.industry.score, `expected strong ${strong.industry.score} > weak ${weak.industry.score}`);
   assert.ok(strong.industry.score >= 70);
+  assert.ok(strong.industry.score <= 94, `verified V2 should be rewarded but not auto-maxed: ${strong.industry.score}`);
   assert.equal(strong.industry.label, "核心題材受惠");
+  assert.ok(strong.industry.scoringFactors.some((factor) => factor.includes("V2 已驗證 bonus")));
+  assert.ok(weak.industry.score <= 40, `low-confidence/no-evidence canonical role should stay conservative: ${weak.industry.score}`);
   assert.ok(strong.industry.signals.some((signal) => signal.includes("產業評分")));
   assert.ok(strong.industry.watch.some((item) => item.includes("催化訊號")));
   assert.match(strong.industry.summary, /score/);

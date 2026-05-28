@@ -684,6 +684,12 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
   let industryConfidence: string | undefined = primaryV2Role?.confidence;
 
   if (hasVerifiedCanonicalRole) {
+    const verifiedBonus = 8;
+    industryScore = {
+      ...industryScore,
+      score: Math.min(94, industryScore.score + verifiedBonus),
+      factors: [...industryScore.factors, `V2 已驗證 bonus +${verifiedBonus}（上限 94，避免 evidence-backed 直接滿分）`],
+    };
     knowledgeBasis = "canonical_verified";
     provenanceLabel = "V2 已驗證";
     verificationNote = `角色已由 company-topic-roles 驗證，含 ${primaryV2Role?.evidence.length ?? 0} 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。`;
@@ -691,7 +697,7 @@ export function generateDailyAnalysis(input: AnalysisInput, now = new Date()): D
     knowledgeBasis = "canonical_pending";
     provenanceLabel = "V2 待驗證";
     verificationNote = `已有 V2 role，但 status=${primaryV2Role.status}、confidence=${primaryV2Role.confidence}、evidence=${primaryV2Role.evidence.length}；只做保守參考。`;
-    industryScore = capIndustryScore(industryScore, 64, "V2 角色待驗證上限");
+    industryScore = capIndustryScore(industryScore, 40, "V2 角色待驗證上限 / 缺 evidence 降權");
   } else if (primaryRole) {
     knowledgeBasis = "legacy_unverified";
     provenanceLabel = "Legacy 待驗證";
