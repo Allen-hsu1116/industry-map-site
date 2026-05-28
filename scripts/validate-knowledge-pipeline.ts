@@ -214,12 +214,58 @@ function isBareNounProduct(product: string): boolean {
   return text.length <= 18 && !hasExplanationPunctuation && !hasExplanationVerb;
 }
 
+function normalizeProductToken(raw: string): string {
+  return raw
+    .split(/[:：]/)[0]
+    .toLowerCase()
+    .replace(/[\s\-_/+()（）:：，,。.;；]/g, "")
+    .trim();
+}
+
+function buildProductKnowledgeAliasMap(): Map<string, Set<string>> {
+  const aliasesByCompany = new Map<string, Set<string>>();
+  if (!fs.existsSync(PRODUCT_KNOWLEDGE_DIR)) return aliasesByCompany;
+
+  const files = fs.readdirSync(PRODUCT_KNOWLEDGE_DIR).filter((file) => file.endsWith(".json")).sort();
+  for (const file of files) {
+    const knowledge = readJson<ProductKnowledgeFile>(path.join(PRODUCT_KNOWLEDGE_DIR, file));
+    const code = asString(knowledge.code);
+    if (!code) continue;
+
+    const aliases = aliasesByCompany.get(code) ?? new Set<string>();
+    const products = asArray(knowledge.products) as ProductKnowledgeItem[];
+    for (const product of products) {
+      const candidates = [asString(product.name), ...asArray(product.aliases).map(asString)].filter((value): value is string => Boolean(value));
+      for (const candidate of candidates) {
+        const token = normalizeProductToken(candidate);
+        if (token) aliases.add(token);
+      }
+    }
+    aliasesByCompany.set(code, aliases);
+  }
+
+  return aliasesByCompany;
+}
+
+function hasProductKnowledgeAlias(code: string | undefined, product: string, aliasesByCompany: Map<string, Set<string>>): boolean {
+  if (!code) return false;
+  const productToken = normalizeProductToken(product);
+  if (!productToken) return false;
+  const aliases = aliasesByCompany.get(code);
+  if (!aliases?.size) return false;
+
+  for (const alias of aliases) {
+    if (productToken === alias || productToken.includes(alias) || alias.includes(productToken)) return true;
+  }
+  return false;
+}
+
 function normalizeRelevance(value: unknown): string | undefined {
   if (typeof value === "number") return String(value);
   return asString(value);
 }
 
-function collectIndustryGraph(industries: IndustriesFile, issues: QualityIssue[]) {
+function collectIndustryGraph(industries: IndustriesFile, issues: QualityIssue[], productKnowledgeAliases = new Map<string, Set<string>>()) {
   const topics = asArray(industries.topics) as Topic[];
   const topicSlugs = new Set<string>();
   const companyToTopics = new Map<string, { name: string; topics: Set<string> }>();
@@ -266,7 +312,7 @@ function collectIndustryGraph(industries: IndustriesFile, issues: QualityIssue[]
         const products = asArray(company.products).filter((item): item is string => typeof item === "string");
         productCount += products.length;
         for (const product of products) {
-          if (isBareNounProduct(product)) {
+          if (isBareNounProduct(product) && !hasProductKnowledgeAlias(code, product, productKnowledgeAliases)) {
             addIssue(issues, "warning", "product.bare_noun", `${companyPath}.products`, `${code ?? name ?? "Company"} product "${product}" should explain what it is and why it matters`);
           }
         }
@@ -583,7 +629,8 @@ function main() {
   const companies = readJson<CompanyIndexItem[]>(COMPANIES_PATH);
   const sources = fs.existsSync(SOURCES_PATH) ? readJson<KnowledgeSource[]>(SOURCES_PATH) : [];
 
-  const graph = collectIndustryGraph(industries, issues);
+  const productKnowledgeAliases = buildProductKnowledgeAliasMap();
+  const graph = collectIndustryGraph(industries, issues, productKnowledgeAliases);
   validateCompaniesIndex(companies, graph.companyToTopics, issues);
   const sourceIds = validateSources(sources, issues);
   const productKnowledgeItems = validateProductKnowledge(sourceIds, issues);
