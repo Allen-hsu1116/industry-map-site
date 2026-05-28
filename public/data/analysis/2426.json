@@ -43,6 +43,60 @@
     "confidence": "unverified",
     "provenanceLabel": "Legacy 待驗證",
     "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "roleDetail": {
+      "topicName": "defense_industry",
+      "roleLabel": "中",
+      "roleSummary": "鼎元在「傳產工業｜軍工產業」題材的「軍用材料與特殊鋼材」中扮演軍規功率元件代工角色。",
+      "source": "legacy"
+    },
+    "productNarratives": [
+      {
+        "name": "光電系統研發製造",
+        "description": "光電系統是把光源、感測、控制或模組整合成可應用於終端設備的系統產品。",
+        "whyItMatters": "系統化產品可能提高單品價值，但目前需以公司具體產品與營收揭露驗證，不宜過度推論。",
+        "businessImpact": "作為低信心延伸產品線追蹤，避免把泛用研發/銷售文字直接當成高價值題材。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：鼎元 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=2426",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "low"
+      },
+      {
+        "name": "LED / 雷射二極體晶粒",
+        "description": "LED 與雷射二極體晶粒是把電能轉換成光的半導體光電元件，晶粒與磊晶品質決定亮度、效率與波長特性。",
+        "whyItMatters": "顯示、感測、照明、通訊與特殊光源需求會影響 LED/LD 晶粒出貨與產品組合。",
+        "businessImpact": "營運觀察重點是終端應用需求、產品規格升級、價格競爭與稼動率。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：鼎元 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=2426",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "鼎元在軍用材料與特殊鋼材領域具備競爭優勢",
+        "鼎元在LED晶片與光電代工領域具備競爭優勢"
+      ],
+      "opportunities": [
+        "軍工產業需求持續成長",
+        "LED 與車用照明需求持續成長"
+      ],
+      "risks": [
+        "受景氣循環影響",
+        "國際競爭加劇"
+      ]
+    },
     "scoringFactors": [
       "legacy 題材關聯 medium +34",
       "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"

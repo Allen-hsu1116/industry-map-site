@@ -42,6 +42,63 @@
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "IC 設計與矽智財",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "聯詠在 DDIC 題材中是顯示驅動 IC 核心供應鏈角色；面板、手機、車載與消費顯示需求會透過 IC 出貨、ASP 與庫存循環傳導到營收。",
+      "supplyChainStage": "ic_design",
+      "roleType": "display_driver_ic_provider",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "顯示驅動 IC 與觸控顯示整合 IC",
+        "description": "顯示驅動 IC 是把影像訊號轉成面板像素驅動訊號的晶片，觸控顯示整合 IC 則把觸控感測與顯示控制整合，常用於手機、車載、IT 與消費顯示產品。",
+        "whyItMatters": "面板本身需要驅動與控制晶片才能顯示影像，因此 DDIC 出貨、ASP 與庫存循環會直接連動面板與終端需求。",
+        "topicFit": "核心產品：顯示驅動 IC/觸控顯示 IC。",
+        "businessImpact": "DDIC 受面板價格、終端需求與庫存循環影響；高階 OLED、車載與高刷新應用可改善產品組合。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：聯詠 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "顯示 SoC 與邊緣影像/顯示 IC",
+        "description": "顯示 SoC 與邊緣影像/顯示 IC 是把顯示控制、影像處理與部分運算功能整合到單一晶片，用於電視、監視器、AR/VR 或終端顯示設備。",
+        "whyItMatters": "端側顯示設備若加入 AI 影像處理、互動或感測功能，顯示 SoC 的規格與 ASP 可能提升；但它不是資料中心 AI 加速器，必須保守定位。",
+        "topicFit": "顯示 IC 產品線延伸。",
+        "businessImpact": "Edge AI 題材貢獻要看實際產品導入與 ASP，而不是把所有顯示 IC 都泛稱 AI 晶片。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：聯詠 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "聯詠在顯示驅動 IC、觸控與顯示整合 IC 具核心角色，是面板與終端顯示供應鏈的重要 IC 設計公司。"
+      ],
+      "opportunities": [
+        "邊緣顯示、車用/高階顯示與 AIoT 影像應用升級，可能推升顯示 SoC 與整合型 IC 需求。"
+      ],
+      "risks": [
+        "面板價格循環與中國 IC 設計競爭，可能壓縮聯詠 DDIC 訂單與價格。",
+        "顯示驅動 IC 與面板需求高度連動，易受消費電子、面板庫存與價格週期影響。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",

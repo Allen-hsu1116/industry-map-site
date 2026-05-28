@@ -46,6 +46,44 @@
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "IC 設計與矽智財",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "信驊在伺服器管理晶片/BMC 題材中是核心 IC 設計供應鏈角色；AI 伺服器與資料中心出貨會推動 BMC/管理 IC 需求。",
+      "supplyChainStage": "ic_design",
+      "roleType": "server_management_ic_provider",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "BMC 伺服器管理晶片",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "伺服器基礎設施 IC",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "遠端管理晶片",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "信驊聚焦 BMC 伺服器管理晶片與伺服器基礎設施 IC，是資料中心硬體管理題材的核心利基 IC 公司。"
+      ],
+      "opportunities": [
+        "AI 伺服器與資料中心硬體複雜度提升，增加遠端管理、BMC 與平台監控 IC 的重要性。"
+      ],
+      "risks": [
+        "伺服器管理規格變化、客戶自研或同業替代，可能影響信驊利基產品的市占與定價能力。",
+        "利基型伺服器管理 IC 題材純度高，但也使營收對伺服器平台週期與客戶採購節奏高度敏感。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",

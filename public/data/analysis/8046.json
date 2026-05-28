@@ -44,6 +44,46 @@
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "PCB、IC 載板與高階基板材料",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "南電在 IC 載板/ABF 題材中是核心供應鏈角色；AI/HPC 晶片封裝需求會透過載板規格、產能與稼動率傳導。",
+      "supplyChainStage": "ic_substrate",
+      "roleType": "abf_substrate_provider",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "ABF 載板與 IC 載板",
+        "description": "ABF 載板是高階 IC 封裝中連接晶片與 PCB 的關鍵基板，常用於 CPU、GPU、ASIC 與高階網通晶片封裝。",
+        "whyItMatters": "AI/HPC 晶片尺寸、I/O 與功耗上升後，對高階載板面積、層數與良率要求提高，ABF 載板成為先進封裝供應鏈的重要瓶頸之一。",
+        "topicFit": "核心產品：ABF/IC 載板。",
+        "businessImpact": "ABF 載板景氣受 AI/HPC 晶片需求、產能利用率與封裝週期影響，具有高規格價值但也有供需循環。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：南電 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "南電具 ABF 載板、IC 載板與 HDI/BGA 板能力，是先進封裝與高階 IC substrate 題材的核心供應商。"
+      ],
+      "opportunities": [
+        "AI 加速器與先進封裝需求提升，可帶動先進封裝用 IC 載板與 ABF 載板需求。"
+      ],
+      "risks": [
+        "若 ABF 載板供給過剩、客戶庫存調整或封裝技術路線改變，南電可能面臨價格與稼動率壓力。",
+        "ABF/IC 載板屬資本密集且景氣循環明顯，產能利用率與價格變動會放大獲利波動。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",

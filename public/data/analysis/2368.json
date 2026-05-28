@@ -43,6 +43,46 @@
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "PCB、IC 載板與高階基板材料",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "金像電在 PCB 題材中是伺服器/高層數 PCB 供應鏈核心角色；AI 伺服器主板層數、材料與良率會影響價值量。",
+      "supplyChainStage": "pcb",
+      "roleType": "server_pcb_manufacturer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "高層數伺服器 PCB 與 AI 伺服器主板",
+        "description": "高層數伺服器 PCB 是承載 CPU/GPU、記憶體、電源與高速訊號的多層印刷電路板；AI 伺服器主板需要更高層數、更嚴格材料與良率控制。",
+        "whyItMatters": "AI 伺服器功耗與訊號速度提升後，PCB 從普通板材變成系統穩定度與量產良率的關鍵零組件，金像電的角色是板級供應鏈而不是整機 ODM。",
+        "topicFit": "核心產品：高層數伺服器 PCB 製造。",
+        "businessImpact": "高階伺服器 PCB 可提高產品 ASP，但材料成本、良率、客戶認證與產能利用率會決定實際獲利。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：金像電 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "金像電具高層數伺服器 PCB、HDI/硬板 PCB 與 AI server PCB 供應角色，是高階伺服器板材供應鏈核心公司之一。"
+      ],
+      "opportunities": [
+        "AI 伺服器主板層數、訊號完整性與規格升級，可推升高階 PCB 單價與需求。"
+      ],
+      "risks": [
+        "伺服器需求波動、CCL/銅箔等材料供應與 PCB 同業競爭，可能造成金像電毛利波動。",
+        "高階 PCB 需要製程、良率與材料成本控制，若擴產或良率不順會削弱 AI 題材獲利。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",

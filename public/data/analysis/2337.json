@@ -44,6 +44,60 @@
     "confidence": "unverified",
     "provenanceLabel": "Legacy 待驗證",
     "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "roleDetail": {
+      "topicName": "connector-highspeed",
+      "roleLabel": "高",
+      "roleSummary": "旺宏在「電子零組件｜AI 互連元件」題材的「高速連接器」中扮演高速連接器供應商角色。",
+      "source": "legacy"
+    },
+    "productNarratives": [
+      {
+        "name": "非揮發性記憶體與積體電路",
+        "description": "非揮發性記憶體是在斷電後仍能保存資料的積體電路，常用於程式碼儲存、嵌入式系統與工控/車用裝置。",
+        "whyItMatters": "記憶體價格、庫存循環與終端需求會直接影響記憶體 IC 供應商的稼動率、ASP 與毛利。",
+        "businessImpact": "營運觀察重點是記憶體景氣循環、庫存去化、終端應用需求與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：旺宏 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "半導體系統應用與銷售顧問服務",
+        "description": "半導體系統應用與銷售顧問服務是圍繞自家 IC 產品的客戶導入、應用支援與商務銷售活動。",
+        "whyItMatters": "這類服務不是單獨硬體產品，但會影響 IC 產品設計導入、客戶黏著度與出貨轉換。",
+        "businessImpact": "主要反映在設計導入速度、客戶方案採用與長週期產品出貨穩定度。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：旺宏 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "low"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "NOR Flash 全球市佔前三",
+        "任天堂 Switch 獨家供應商"
+      ],
+      "opportunities": [
+        "AI 驅動 NOR Flash 需求增加",
+        "車用電子 NOR Flash 需求成長"
+      ],
+      "risks": [
+        "近年連續虧損",
+        "產品線較為單一"
+      ]
+    },
     "scoringFactors": [
       "legacy 題材關聯 high +44",
       "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"

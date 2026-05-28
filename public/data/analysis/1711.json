@@ -44,6 +44,76 @@
     "confidence": "unverified",
     "provenanceLabel": "Legacy 待驗證",
     "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "roleDetail": {
+      "topicName": "electrical_equipment",
+      "roleLabel": "中",
+      "roleSummary": "永光在「傳產工業｜電器電纜與重電」題材的「電機與自動化設備」中扮演電機機械供應商角色。",
+      "source": "legacy"
+    },
+    "productNarratives": [
+      {
+        "name": "電子化學品 / 光阻劑用化學品",
+        "description": "電子化學品用於半導體、面板或電子材料製程；光阻劑用化學品屬高潔淨度與配方要求較高的材料。",
+        "whyItMatters": "半導體與面板製程材料國產化、先進製程用料升級會提高電子級化學品的重要性，但需以客戶導入與營收占比驗證。",
+        "businessImpact": "觀察重點是產品驗證、客戶導入、電子級材料占比與半導體景氣。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：永光 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "特用化學品與光安定劑 / 紫外線吸收劑",
+        "description": "特用化學品是針對材料耐候、穩定、加工或功能性需求設計的化學品，光安定劑與紫外線吸收劑可提升材料抗光老化能力。",
+        "whyItMatters": "塑膠、塗料、電子材料與高分子材料升級會需要更高規格添加劑，影響特化產品 ASP 與毛利。",
+        "businessImpact": "受材料景氣、客戶認證週期、原料價格與產品差異化能力影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：永光 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "醫藥中間體 / 原料藥",
+        "description": "醫藥中間體與原料藥是藥品製造所需的化學原料或活性成分，屬醫藥化學品產品線。",
+        "whyItMatters": "醫藥化學品可分散傳統化工循環，但受法規、客戶認證與產品管線影響較大。",
+        "businessImpact": "需追蹤法規認證、客戶訂單與產品組合，不能只用題材推論營收。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：永光 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "low"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "電子化學品打入半導體供應鏈",
+        "光安定劑國際品牌客戶穩定"
+      ],
+      "opportunities": [
+        "AI驅動半導體化學品需求增",
+        "光安定劑切入車用塑膠添加劑"
+      ],
+      "risks": [
+        "電器/重電題材關聯度極低(實為化學股)",
+        "4月營收MoM大減13.8%"
+      ]
+    },
     "scoringFactors": [
       "legacy 題材關聯 medium +34",
       "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"

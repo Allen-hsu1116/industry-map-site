@@ -46,6 +46,76 @@
     "confidence": "unverified",
     "provenanceLabel": "Legacy 待驗證",
     "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "roleDetail": {
+      "topicName": "fiberglass-cloth",
+      "roleLabel": "極高",
+      "roleSummary": "南亞在「基板材料｜玻纖布」題材的「CCL與玻纖布龍頭」中扮演玻纖布與 CCL 垂直整合大廠角色。",
+      "source": "legacy"
+    },
+    "productNarratives": [
+      {
+        "name": "聚酯纖維與染整加工",
+        "description": "聚酯纖維與染整加工是把聚酯材料製成纖維、加工絲並進行染整處理的紡織材料業務。",
+        "whyItMatters": "該業務受紡織需求、原料價格與景氣循環影響，可用來區分南亞的塑化/纖維業務曝險。",
+        "businessImpact": "屬循環型材料業務，需追蹤價差與終端需求。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南亞 公司基本資料與公開揭露",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1303",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "塑膠加工品與塑膠原料",
+        "description": "塑膠加工品與塑膠原料是南亞石化與塑膠材料業務的基礎，涵蓋原料、加工材料與下游應用產品。",
+        "whyItMatters": "塑化產品受油價、供需循環、加工價差與中國/全球產能影響，是南亞基本營運循環的重要來源。",
+        "businessImpact": "觀察重點是產品利差、庫存循環、下游需求與原料成本。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南亞 公司基本資料與公開揭露",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1303",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "電子材料",
+        "description": "電子材料是供應 PCB、半導體或電子零組件製造所需的材料類產品。",
+        "whyItMatters": "電子材料讓南亞不只是傳統塑化公司，也連到 PCB、IC 載板與半導體材料需求循環。",
+        "businessImpact": "需用財報分部或產品營收確認電子材料比重與景氣循環，避免只用題材詞放大影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南亞 公司基本資料與公開揭露",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1303",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "南亞在CCL與玻纖布龍頭領域具備競爭優勢",
+        "南亞在海纜與電力傳輸領域具備競爭優勢"
+      ],
+      "opportunities": [
+        "玻纖布需求持續成長",
+        "離岸風電需求持續成長"
+      ],
+      "risks": [
+        "受景氣循環影響",
+        "塑化循環波動大"
+      ]
+    },
     "scoringFactors": [
       "legacy 題材關聯 high +44",
       "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"

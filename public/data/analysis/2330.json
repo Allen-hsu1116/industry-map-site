@@ -46,6 +46,74 @@
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "先進封裝與 CoWoS",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "台積電在 CoWoS/先進封裝題材中是核心製程與產能供應者；AI GPU/ASIC 與 HBM 整合需求會推動先進封裝產能、瓶頸與資本支出成為每日追蹤重點。",
+      "supplyChainStage": "advanced_packaging",
+      "roleType": "cowos_advanced_packaging_provider",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "CoWoS-S",
+        "description": "CoWoS-S 是台積電 CoWoS 先進封裝家族中使用矽中介層的 2.5D 封裝路線，用來把 AI 加速器、ASIC 與 HBM 高頻寬記憶體放在同一封裝內高速互連。",
+        "whyItMatters": "AI 晶片效能不只取決於運算核心，也卡在 GPU/ASIC 與 HBM 之間的資料搬移。CoWoS-S 能提供高密度、高頻寬互連，因此是 NVIDIA、AMD、Broadcom 等高階 AI 晶片能否大量出貨的關鍵封裝瓶頸。",
+        "topicFit": "直接產品平台：台積電就是 CoWoS 先進封裝的核心供應者，CoWoS-S 是目前 AI 加速器封裝的主流路線之一。",
+        "businessImpact": "CoWoS 產能與良率會影響 AI/HPC 客戶出貨節奏，也支撐台積電在先進封裝與先進製程綁定銷售上的議價能力。",
+        "sourceLabels": [
+          "TSMC：CoWoS advanced packaging technology platform"
+        ],
+        "sourceUrls": [
+          "https://www.tsmc.com/english/dedicatedFoundry/technology/cowos"
+        ],
+        "lastVerified": "2026-05-27",
+        "confidence": "high"
+      },
+      {
+        "name": "SoIC",
+        "description": "SoIC 是台積電的 3D IC 晶片堆疊技術，透過晶片對晶片的垂直堆疊與鍵合，縮短訊號傳輸距離，提升系統效能與能源效率。",
+        "whyItMatters": "先進製程微縮越來越昂貴後，效能提升不只靠電晶體變小，也靠封裝與 3D 堆疊把不同晶片更緊密整合。SoIC 是台積電延長高階 HPC、AI 與行動晶片效能成長曲線的重要技術。",
+        "topicFit": "先進封裝延伸平台：與 CoWoS 互補，負責更高密度的 3D 晶片堆疊整合。",
+        "businessImpact": "SoIC 強化台積電從晶圓代工走向系統級整合的護城河，讓客戶更難只用單一製程節點替代台積電方案。",
+        "sourceLabels": [
+          "TSMC：SoIC 3D silicon stacking technology"
+        ],
+        "sourceUrls": [
+          "https://www.tsmc.com/english/dedicatedFoundry/technology/soic"
+        ],
+        "lastVerified": "2026-05-27",
+        "confidence": "high"
+      },
+      {
+        "name": "N2 製程",
+        "description": "N2 是台積電 2 奈米級邏輯製程平台，導入奈米片電晶體架構，目標是在效能、功耗與晶片密度上延續先進製程領先。",
+        "whyItMatters": "高階 AI、HPC 與手機晶片的功耗和效能上限高度依賴先進製程。N2 若順利量產，會延續台積電在先進製程代工的定價能力與客戶黏著度。",
+        "topicFit": "與先進封裝形成一站式方案：高階 AI 晶片需要先進製程加上 CoWoS/SoIC 等封裝整合。",
+        "businessImpact": "N2 代表下一輪先進製程 ASP 與資本支出回收能力；量產進度、良率與客戶導入會直接影響中長期毛利率與成長敘事。",
+        "sourceLabels": [
+          "TSMC：N2 process technology"
+        ],
+        "sourceUrls": [
+          "https://www.tsmc.com/english/dedicatedFoundry/technology/logic/l_2nm"
+        ],
+        "lastVerified": "2026-05-27",
+        "confidence": "high"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "台積電同時具備先進邏輯晶圓代工、先進封裝與 AI/HPC 晶片製造相關能力，是 AI 半導體供應鏈的核心平台型公司。"
+      ],
+      "opportunities": [
+        "AI/HPC 晶片需要先進製程與高頻寬記憶體整合，提升晶圓代工與 CoWoS/SoIC 等先進封裝需求。"
+      ],
+      "risks": [
+        "地緣政治、海外設廠執行、先進節點良率與競爭者追趕，是台積電在高估值核心題材下的主要威脅。",
+        "先進製程與先進封裝屬重資本投入，景氣循環、客戶投片節奏或資本支出變化會放大營運波動。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",

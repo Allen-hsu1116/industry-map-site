@@ -48,6 +48,46 @@
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "PCB、IC 載板與高階基板材料",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "台光電在 CCL/基板材料供應鏈中具核心定位；需追蹤高速材料規格升級、產品組合與產能擴充。",
+      "supplyChainStage": "substrate_materials",
+      "roleType": "ccl_material_provider",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "高階銅箔基板 CCL 與低損耗高速材料",
+        "description": "高階銅箔基板 CCL 是 PCB 的關鍵基礎材料，用樹脂、玻纖布與銅箔做成可承載高速訊號的板材；低損耗材料則用來降低高速傳輸時的訊號衰減。",
+        "whyItMatters": "AI 伺服器、交換器與高速網通設備的傳輸速率提高後，PCB 材料損耗、耐熱與穩定性會成為瓶頸，因此高階 CCL 是高速運算硬體升級的上游關鍵材料。",
+        "topicFit": "與玻纖布、樹脂等基板材料規格升級連動。",
+        "businessImpact": "產品組合往高頻高速 CCL 移動時，ASP 與毛利結構通常優於一般板材；但仍需追蹤 AI server/交換器放量、材料認證與產能利用率。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：台光電 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2383",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "台光電供應高階 CCL、低損耗高速材料與 AI 伺服器 CCL，是高速 PCB/載板材料題材核心公司。"
+      ],
+      "opportunities": [
+        "AI 伺服器與高速網通提升低損耗、高頻高速材料需求，台光電可受惠 CCL 規格升級。"
+      ],
+      "risks": [
+        "同業擴產、材料替代或客戶規格變動，可能壓縮台光電高階材料毛利與市占。",
+        "高階材料需通過客戶與平台驗證，且受原物料成本、庫存週期與規格轉換影響。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",

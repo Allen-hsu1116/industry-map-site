@@ -44,6 +44,66 @@
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "儲能、電芯與電池材料",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。",
+      "supplyChainStage": "system_integration",
+      "roleType": "energy_storage_and_management_solution_provider",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "能源基礎設施、儲能與能源管理",
+        "description": "能源基礎設施把電力轉換、儲能、能源管理、再生能源逆變器、微電網與充電系統整合起來，讓場域能更有效率地用電、備援與接入再生能源。",
+        "whyItMatters": "AI 資料中心、工廠、商辦與充電站都需要更高供電韌性與能源效率。儲能、能源管理與微電網可平滑尖峰負載、整合再生能源，也可能與 EV 充電和資料中心用電需求連動。",
+        "topicFit": "核心產品線：儲能系統與能源管理",
+        "businessImpact": "官方能源基礎設施頁面列出電動車充電設備、儲能系統、太陽能逆變器、能源管理、風力發電變流器等產品；財報也把可再生能源應用、能源技術服務列為主要營業項目。",
+        "sourceLabels": [
+          "台達 Delta Electronics：產品 - 能源基礎設施",
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：台達電子工業股份有限公司 114 年度合併財務報告書"
+        ],
+        "sourceUrls": [
+          "https://www.deltaww.com/zh-TW/products/Energy-Infrastructure-Industrial-Solutions",
+          "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      },
+      {
+        "name": "電動車動力、電力管理與充電設備",
+        "description": "這類產品涵蓋電動車動力系統、車上電力管理、充電設備與車用散熱，把台達的電源轉換、控制與熱管理能力延伸到車輛與充電基礎設施。",
+        "whyItMatters": "電動車產業需要高效率電力轉換、車載電源、充電基礎設施與熱管理；這讓台達除了資料中心外，也能參與交通電動化與充電網建設。",
+        "topicFit": "相鄰能源基礎設施：充電設備與能源管理/儲能可整合成場域解決方案",
+        "businessImpact": "財報列出電動車電源相關系統與電動車充電設備為主要營業項目，並將「交通」列為四大業務範疇之一；114 年度交通部門外部客戶合約收入為新台幣 37,011,276 仟元。",
+        "sourceLabels": [
+          "台達 Delta Electronics：產品 - 交通",
+          "台達 Delta Electronics：產品 - 能源基礎設施",
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：台達電子工業股份有限公司 114 年度合併財務報告書"
+        ],
+        "sourceUrls": [
+          "https://www.deltaww.com/zh-TW/products/mobility",
+          "https://www.deltaww.com/zh-TW/products/Energy-Infrastructure-Industrial-Solutions",
+          "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "台達電主要業務不侷限單一題材，財報揭露的事業範圍可支持其跨電源、基礎設施、自動化與能源應用的多元定位。",
+        "台達電同時具備電源、資料中心基礎設施、風扇散熱與工業自動化產品組合，能跨多個高成長題材提供系統級解決方案。"
+      ],
+      "opportunities": [
+        "AI 資料中心功率密度提高，使高效率電源、配電、熱管理與液冷相關產品具備中期成長機會。"
+      ],
+      "risks": [
+        "電源、散熱、工業自動化與能源基礎設施市場競爭激烈，若高階產品放量、成本控制或客戶驗證進度不如預期，題材受惠可能無法完整轉化為獲利。",
+        "台達電跨題材產品線很廣，若只看單一熱門題材，容易高估該題材對整體營收與獲利的直接貢獻。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",

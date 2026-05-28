@@ -42,6 +42,76 @@
     "confidence": "unverified",
     "provenanceLabel": "Legacy 待驗證",
     "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "roleDetail": {
+      "topicName": "battery-cell-module",
+      "roleLabel": "中",
+      "roleSummary": "南茂在「綠能環保｜電芯製造與電池模組」題材的「電池模組與系統」中扮演電池材料供應商角色。",
+      "source": "legacy"
+    },
+    "productNarratives": [
+      {
+        "name": "混合訊號 IC 封裝測試",
+        "description": "混合訊號 IC 封裝測試處理同時包含類比與數位訊號的晶片後段封裝與測試。",
+        "whyItMatters": "車用、工控、消費電子與通訊晶片常含混合訊號 IC，產品組合可分散單一記憶體或面板週期。",
+        "businessImpact": "legacy 中部分電池/被動元件詞彙非主業，僅以低信心別名收斂噪音，後續需拆分驗證。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南茂 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8150",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "顯示器驅動 IC 封裝測試",
+        "description": "顯示器驅動 IC 封裝測試是面板驅動晶片的後段封裝、金凸塊與測試服務。",
+        "whyItMatters": "面板需求、OLED/LCD 規格變化與驅動 IC 供需會影響 DDIC 封測量與價格。",
+        "businessImpact": "需追蹤面板景氣、DDIC 客戶庫存與金凸塊產能利用率。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南茂 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8150",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "記憶體封裝與測試服務",
+        "description": "記憶體封裝與測試是把記憶體晶粒封裝成可使用元件，並進行電性、可靠度與品質測試的後段服務。",
+        "whyItMatters": "記憶體景氣、客戶投片與庫存循環會直接影響封測稼動率；高精密度封測也牽動毛利結構。",
+        "businessImpact": "營運觀察重點是記憶體循環、稼動率、客戶組合與封測 ASP。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南茂 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8150",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "南茂在電池模組與系統領域具備競爭優勢",
+        "南茂在電子廢料與鋼鐵回收領域具備競爭優勢"
+      ],
+      "opportunities": [
+        "電芯製造與電池模組需求持續成長",
+        "電子廢料與製程回收需求持續成長"
+      ],
+      "risks": [
+        "受景氣循環影響",
+        "國際競爭加劇"
+      ]
+    },
     "scoringFactors": [
       "legacy 題材關聯 medium +34",
       "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"

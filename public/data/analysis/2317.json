@@ -45,6 +45,46 @@
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "鴻海在 AI 伺服器題材中屬於整機組裝、EMS 與系統整合核心角色；需追蹤 AI server 出貨、雲端客戶資本支出與產品組合。",
+      "supplyChainStage": "system_assembly",
+      "roleType": "ai_server_ems_odm",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "AI 伺服器整機組裝與系統整合",
+        "description": "AI 伺服器整機組裝是把 GPU/CPU、主板、電源、散熱、機構件與網路模組整合成可交付給雲端或企業客戶的伺服器系統。",
+        "whyItMatters": "AI 伺服器價值鏈不只在晶片，還需要大規模製造、供應鏈協調與交付能力；鴻海的意義是把高階零組件轉成可量產的資料中心硬體。",
+        "topicFit": "應用端硬體平台：受 AI 資料中心建置需求帶動。",
+        "businessImpact": "AI 伺服器可提高鴻海伺服器業務比重，但仍需觀察毛利率、客戶拉貨與高階平台量產節奏。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：鴻海 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2317",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "鴻海具全球 EMS、SMT 與系統組裝規模，能在 AI 伺服器、消費電子與伺服器製造間調配產能。"
+      ],
+      "opportunities": [
+        "AI 伺服器整機與雲端資料中心硬體需求成長，可帶動鴻海伺服器 ODM/EMS 接單與產能利用率。"
+      ],
+      "risks": [
+        "大型客戶拉貨週期、產品切換與高階伺服器良率/交付進度，是鴻海 AI 伺服器題材的主要威脅。",
+        "EMS/ODM 商業模式通常毛利率較品牌或核心 IC 低，題材放量未必等比例轉化成獲利彈性。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",

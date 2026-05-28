@@ -43,6 +43,76 @@
     "confidence": "unverified",
     "provenanceLabel": "Legacy 待驗證",
     "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "roleDetail": {
+      "topicName": "battery-materials",
+      "roleLabel": "中",
+      "roleSummary": "雙鍵在「綠能環保｜電池關鍵材料」題材的「負極材料與碳素」中扮演鋰電池負極材料專業廠角色。",
+      "source": "legacy"
+    },
+    "productNarratives": [
+      {
+        "name": "legacy 雜訊收斂：電池材料",
+        "description": "legacy 資料中的鋰電池負極材料詞彙與 MOPS 主業揭露不完全一致，先以低信心收斂避免裸名詞污染。",
+        "whyItMatters": "這類詞彙不能作為雙鍵投資結論；若要納入儲能/電池題材，必須另找公司揭露或財報佐證。",
+        "businessImpact": "不把短線題材或跨公司詞彙寫成高信心 SWOT。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：雙鍵 公司基本資料與公開揭露",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=4764",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "low"
+      },
+      {
+        "name": "塑膠添加劑與特用化學品",
+        "description": "塑膠添加劑與特用化學品是改善塑膠材料加工性、耐候性、功能性或下游製程表現的化學材料。",
+        "whyItMatters": "特用化學品通常比大宗化學品更重視配方與客戶認證，能提供較差異化的材料曝險。",
+        "businessImpact": "水處理詞彙需再驗證，現階段只作低信心 legacy 收斂；主軸仍是塑膠添加劑與 UV 光固化材料。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：雙鍵 公司基本資料與公開揭露",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=4764",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "UV 光固化樹脂與光起始劑",
+        "description": "UV 光固化材料是在紫外光照射下快速固化的樹脂、單體或光起始劑，常用於塗料、油墨、電子材料與工業加工。",
+        "whyItMatters": "UV 固化材料可提高製程效率、降低溶劑使用，並延伸到電子與半導體材料應用，是特用化學品的重要產品線。",
+        "businessImpact": "觀察重點是產品組合、電子材料導入進度、原料成本與下游客戶需求。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：雙鍵 公司基本資料與公開揭露",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=4764",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "雙鍵在負極材料與碳素領域具備競爭優勢",
+        "4月營收YoY+20.9%強勁成長"
+      ],
+      "opportunities": [
+        "電池關鍵材料需求持續成長",
+        "UV固化應用從印刷擴及3D列印/塗裝"
+      ],
+      "risks": [
+        "受景氣循環影響",
+        "資本額8.5億規模小"
+      ]
+    },
     "scoringFactors": [
       "legacy 題材關聯 medium +34",
       "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"

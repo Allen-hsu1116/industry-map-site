@@ -44,6 +44,63 @@
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "緯穎在 AI 伺服器題材中是雲端資料中心與 CSP 伺服器 ODM 核心角色；重點追蹤 AI server 出貨、CSP capex 與客戶集中風險。",
+      "supplyChainStage": "system_assembly",
+      "roleType": "csp_ai_server_odm",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "CSP AI 伺服器",
+        "description": "CSP AI 伺服器是為雲端服務商資料中心設計與量產的高階運算伺服器，通常搭配 GPU/加速器、高速網路與高功率散熱。",
+        "whyItMatters": "緯穎題材純度高，產品直接對應雲端客戶 AI 基礎建設投資，是觀察 AI server ODM 景氣的重要標的。",
+        "topicFit": "直接產品/服務：CSP AI server ODM。",
+        "businessImpact": "若 CSP capex 擴張與 AI 平台放量順利，緯穎營收彈性較高；反面是客戶集中與平台轉換風險也較高。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：緯穎 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6669",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "資料中心硬體平台",
+        "description": "資料中心硬體平台包含雲端伺服器、儲存、網路與機櫃內部系統整合，是雲端服務大規模運算的基礎設備。",
+        "whyItMatters": "AI 服務要落地需要大量資料中心硬體，緯穎的價值是把客戶規格轉成可量產、可維運的硬體平台。",
+        "topicFit": "AI 資料中心建置的系統端環節。",
+        "businessImpact": "硬體平台需求受雲端客戶資本支出影響，營收能見度取決於大客戶建置節奏。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：緯穎 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6669",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "緯穎聚焦 CSP 雲端與 AI 伺服器，題材純度高，與資料中心硬體投資直接連動。"
+      ],
+      "opportunities": [
+        "雲端服務商 AI 基礎建設擴張，可直接帶動緯穎 CSP AI server 與資料中心硬體平台需求。"
+      ],
+      "risks": [
+        "新一代 AI 伺服器平台切換若延遲，或 ODM 競爭加劇，可能造成緯穎出貨與估值波動。",
+        "高度聚焦 CSP/雲端伺服器使緯穎對少數大型客戶資本支出與平台切換更敏感。"
+      ]
+    },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",

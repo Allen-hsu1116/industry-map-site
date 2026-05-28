@@ -42,6 +42,60 @@
     "confidence": "unverified",
     "provenanceLabel": "Legacy 待驗證",
     "verificationNote": "目前只來自 legacy industry_analysis / industries.json fallback；題材角色尚未 evidence-backed 驗證。",
+    "roleDetail": {
+      "topicName": "cybersecurity",
+      "roleLabel": "中",
+      "roleSummary": "嘉聯益在「軟體資安｜資安概念」題材的「軟體資安與國防通訊」中扮演軟式印刷電路板（FPC）製造商（分類為資安概念有誤）角色。",
+      "source": "legacy"
+    },
+    "productNarratives": [
+      {
+        "name": "軟性電路板 FPC",
+        "description": "FPC 軟性電路板是可彎折的電路連接板，用於手機、穿戴、車用與高密度電子產品內部連接。",
+        "whyItMatters": "終端產品越薄型化、模組化，高密度連接需求越高；FPC 供應商受新品設計導入與終端出貨週期影響。",
+        "businessImpact": "營運受手機/穿戴/車用新品導入、客戶集中度、良率與價格競爭影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：嘉聯益 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6153",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      },
+      {
+        "name": "高頻 FPC / LCP 天線軟板模組",
+        "description": "高頻 FPC / LCP 軟板模組用於高頻訊號、天線與高速傳輸模組內部連接，強調低損耗與尺寸整合。",
+        "whyItMatters": "衛星通訊、毫米波、高速光通訊與高階手機會提高材料與製程要求，讓高頻軟板具備題材槓桿。",
+        "businessImpact": "觀察重點是高頻材料導入、客戶設計案、光通訊/衛星通訊需求與量產良率。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：嘉聯益 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6153",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "low"
+      }
+    ],
+    "swotSnapshot": {
+      "strengths": [
+        "FPC產線完整，高頻軟板技術成熟",
+        "手機大廠認證供應鏈地位"
+      ],
+      "opportunities": [
+        "AR/VR頭戴裝置帶動FPC用量增加",
+        "車用軟板新應用成長"
+      ],
+      "risks": [
+        "手機FPC市場競爭激烈，毛利偏低",
+        "分類為資安概念完全不符本業"
+      ]
+    },
     "scoringFactors": [
       "legacy 題材關聯 medium +34",
       "legacy industry_analysis 待驗證上限（不得列為核心題材受惠）"
