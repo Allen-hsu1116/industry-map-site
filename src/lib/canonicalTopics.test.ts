@@ -101,63 +101,61 @@ test("normalizeCanonicalTopics rejects files with wrong schema", () => {
 
 test("canonical-topics.json maps every legacy topic exactly once", async () => {
   const fs = await import("node:fs/promises");
-  const canonicalRaw = JSON.parse(await fs.readFile("public/data/canonical-topics.json", "utf8"));
-  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
+  const [canonicalRaw, legacyTopicRefs] = await Promise.all([
+    fs.readFile("public/data/canonical-topics.json", "utf8").then(JSON.parse),
+    fs.readFile("src/lib/__fixtures__/legacy-topic-refs.json", "utf8").then(JSON.parse),
+  ]);
   const normalized = normalizeCanonicalTopics(canonicalRaw);
 
   assert.ok(normalized);
-  const report = buildTopicCoverageReport(industriesRaw.topics, normalized.topics);
+  const report = buildTopicCoverageReport(legacyTopicRefs.topics, normalized.topics);
 
   assert.equal(report.legacyTopics, 81);
   assert.equal(report.unmappedLegacyTopics.length, 0, `Unmapped legacy topics: ${report.unmappedLegacyTopics.join(", ")}`);
   assert.deepEqual(report.duplicateLegacyMappings, []);
 });
 
-test("CoWoS legacy topic groups TSMC with the advanced packaging value chain, not a single-company bucket", async () => {
+test("CoWoS legacy topic maps to the canonical advanced-packaging value chain, not a company-specific bucket", async () => {
   const fs = await import("node:fs/promises");
-  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
-  const cowosTopic = industriesRaw.topics.find((topic: { slug?: string }) => topic.slug === "cowos-advanced-packaging");
+  const canonicalRaw = JSON.parse(await fs.readFile("public/data/canonical-topics.json", "utf8"));
+  const normalized = normalizeCanonicalTopics(canonicalRaw);
 
-  assert.ok(cowosTopic, "cowos-advanced-packaging topic should exist");
-  const groups = cowosTopic.groups as Array<{ name: string; companies: Array<{ code: string }> }>;
-  const singletonCompanyBuckets = groups.filter((group) => group.companies.length === 1 && /[（(].+[）)]/.test(group.name));
-  assert.deepEqual(singletonCompanyBuckets.map((group) => group.name), [], "company-specific singleton groups should not appear in the CoWoS topic");
+  assert.ok(normalized);
+  const cowosTopic = normalized.topics.find((topic) => topic.legacyTopicIds.includes("cowos-advanced-packaging"));
 
-  const packagingServiceGroup = groups.find((group) => group.name === "先進封裝與封測服務");
-  assert.ok(packagingServiceGroup, "CoWoS topic should keep a value-chain group for advanced packaging/foundry services");
-  assert.ok(packagingServiceGroup.companies.some((company) => company.code === "2330"), "TSMC belongs in the value-chain service group, not its own group");
+  assert.ok(cowosTopic, "cowos-advanced-packaging should map to a canonical topic");
+  assert.equal(cowosTopic.id, "advanced-packaging");
+  assert.match(cowosTopic.name, /先進封裝|CoWoS/);
+  assert.doesNotMatch(cowosTopic.name, /[（(].+[）)]/, "canonical topic names must not be company-specific buckets");
 });
 
-test("legacy industry groups use neutral value-chain names instead of market nicknames", async () => {
+test("display-panel legacy topic uses a neutral canonical topic instead of market nicknames", async () => {
   const fs = await import("node:fs/promises");
-  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
-  const displayTopic = industriesRaw.topics.find((topic: { slug?: string }) => topic.slug === "display-panel");
+  const canonicalRaw = JSON.parse(await fs.readFile("public/data/canonical-topics.json", "utf8"));
+  const normalized = normalizeCanonicalTopics(canonicalRaw);
 
-  assert.ok(displayTopic, "display-panel topic should exist");
-  const groups = displayTopic.groups as Array<{ name: string; companies: Array<{ code: string }> }>;
-  assert.equal(groups.some((group) => group.name === "面板雙虎"), false, "market nickname should not be used as the group name");
+  assert.ok(normalized);
+  const displayTopic = normalized.topics.find((topic) => topic.legacyTopicIds.includes("display-panel"));
 
-  const panelManufacturing = groups.find((group) => group.name === "面板製造");
-  assert.ok(panelManufacturing, "display-panel should use a neutral panel manufacturing group");
-  assert.deepEqual(panelManufacturing.companies.map((company) => company.code).sort(), ["2409", "3481"]);
+  assert.ok(displayTopic, "display-panel should map to a canonical topic");
+  assert.equal(displayTopic.id, "display-led-optics");
+  assert.equal(displayTopic.name.includes("面板雙虎"), false, "market nickname should not be used as the canonical topic name");
+  assert.equal(displayTopic.aliases.includes("面板雙虎"), false, "market nickname should not be used as a canonical alias");
 });
 
-test("legacy duplicate groups are normalized without mixing NOR Flash and DRAM companies", async () => {
+test("canonical memory topics keep NOR Flash and DRAM-oriented topics separate", async () => {
   const fs = await import("node:fs/promises");
-  const industriesRaw = JSON.parse(await fs.readFile("public/data/industries.json", "utf8"));
-  const memoryTopic = industriesRaw.topics.find((topic: { slug?: string }) => topic.slug === "niche-memory");
+  const canonicalRaw = JSON.parse(await fs.readFile("public/data/canonical-topics.json", "utf8"));
+  const normalized = normalizeCanonicalTopics(canonicalRaw);
 
-  assert.ok(memoryTopic, "niche-memory topic should exist");
-  const groups = memoryTopic.groups as Array<{ name: string; companies: Array<{ code: string; role?: string }> }>;
-  assert.equal(groups.some((group) => group.name === "NOR Flash 與利基型記憶體 IDM"), false, "mixed NOR Flash / DRAM IDM label should not hide product-family differences");
+  assert.ok(normalized);
+  const nicheMemory = normalized.topics.find((topic) => topic.id === "niche-memory");
+  const memoryModules = normalized.topics.find((topic) => topic.id === "memory-modules");
 
-  const norFlashGroup = groups.find((group) => group.name === "NOR Flash IDM");
-  assert.ok(norFlashGroup);
-  assert.deepEqual(norFlashGroup.companies.map((company) => company.code).sort(), ["2337", "2344"]);
-
-  const dramGroup = groups.find((group) => group.name === "DRAM IDM");
-  assert.ok(dramGroup);
-  assert.deepEqual(dramGroup.companies.map((company) => company.code), ["2408"]);
-  assert.match(dramGroup.companies[0].role ?? "", /DRAM/);
-  assert.doesNotMatch(dramGroup.companies[0].role ?? "", /NOR Flash/);
+  assert.ok(nicheMemory);
+  assert.ok(memoryModules);
+  assert.equal(nicheMemory.legacyTopicIds.includes("niche-memory"), true);
+  assert.equal(memoryModules.legacyTopicIds.includes("niche-memory"), false, "DRAM/memory-module topic must not absorb the NOR Flash legacy topic");
+  assert.match(nicheMemory.name, /NOR Flash/);
+  assert.doesNotMatch(memoryModules.name, /NOR Flash/);
 });

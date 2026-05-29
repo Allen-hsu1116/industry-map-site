@@ -10,8 +10,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, AreaChart, Area, Legend, ComposedChart } from "recharts";
-import industriesData from "../../public/data/industries.json";
-import companiesData from "../../public/data/companies.json";
+import topicMapData from "../../public/data/canonical-topic-map.json";
 import TradingViewChart from "./TradingViewChart";
 import RealtimeQuote from "./RealtimeQuote";
 import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketData";
@@ -295,7 +294,7 @@ function mapGroupNames(groups: Group[]): Group[] {
   const levelNames = ["上游原料與設備", "中游製造與組件", "下游系統與應用", "周邊與服務", "其他"];
   const named = groups.map((g, i) => ({ ...g, name: g.name || levelNames[i] || `群組 ${i + 1}` }));
   // Sort by supply chain level: upstream → midstream → downstream
-  // Use the level field from industries.json if available, otherwise fall back to classifyGroupLevel
+  // Use checked-in supply-chain level metadata when available; otherwise classify from group text.
   const levelOrder: Record<string, number> = { upstream: 0, midstream: 1, downstream: 2, peripheral: 3 };
   return named.sort((a, b) => {
     const la = levelOrder[a.level || classifyGroupLevel(a)] ?? 1;
@@ -3118,9 +3117,9 @@ export default function Home() {
   const searchRef = useRef<HTMLDivElement>(null);
   const companyListScrollRef = useRef<number>(0);
 
-  const topics: TopicData[] = industriesData.topics as TopicData[];
-  const companies: CompanyData[] = companiesData as CompanyData[];
-  const stats = industriesData.stats;
+  const topics: TopicData[] = topicMapData.topics as TopicData[];
+  const companies: CompanyData[] = topicMapData.companies as CompanyData[];
+  const stats = topicMapData.stats;
 
   const categories = useMemo(() => { const cats = new Set<string>(); topics.forEach((t) => cats.add(getCategory(t.name))); return ["全部", ...Array.from(cats)]; }, [topics]);
 
