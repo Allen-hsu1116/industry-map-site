@@ -15,3 +15,13 @@ test("legacy industry fallback adapter has been retired from source", async () =
   await assert.rejects(fs.access("src/lib/legacyIndustryAnalysis.ts"));
   await assert.rejects(fs.access("src/lib/legacyIndustryAnalysis.test.ts"));
 });
+
+test("legacy inventory extraction pipeline has been retired from source", async () => {
+  await assert.rejects(fs.access("scripts/generate-v2-inventory.ts"));
+  await assert.rejects(fs.access("src/lib/legacyKnowledgeInventory.ts"));
+  await assert.rejects(fs.access("src/lib/canonicalRoles.ts"));
+  await assert.rejects(fs.access("src/lib/canonicalProducts.ts"));
+
+  const packageJson = await fs.readFile("package.json", "utf8");
+  assert.doesNotMatch(packageJson, /knowledge:v2:inventory/);
+});

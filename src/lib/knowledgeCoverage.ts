@@ -1,6 +1,6 @@
 export type AnalysisQualityGrade = "A" | "B" | "C" | "D" | "F";
 export type UpgradePriority = "high" | "medium" | "low";
-export type KnowledgeBasis = "canonical_verified" | "canonical_pending" | "legacy_unverified" | "insufficient";
+export type KnowledgeBasis = "canonical_verified" | "canonical_pending" | "insufficient";
 export type MissingKnowledge = "product_knowledge" | "verified_topic_role" | "complete_swot" | "daily_analysis";
 
 export interface CoverageCompanyInput {
@@ -44,7 +44,6 @@ export interface KnowledgeCoverageCompany {
   hasAnyTopicRole: boolean;
   hasCompleteSwot: boolean;
   hasAnySwot: boolean;
-  legacyOnly: boolean;
   analysisQuality: AnalysisQualityGrade;
   missingKnowledge: MissingKnowledge[];
   upgradePriority: UpgradePriority;
@@ -60,7 +59,6 @@ export interface KnowledgeCoverageSummary {
     completeSwot: number;
     anySwot: number;
     canonicalDailyAnalysis: number;
-    legacyOnly: number;
   };
   gradeDistribution: Record<AnalysisQualityGrade, number>;
   highPriorityCount: number;
@@ -96,7 +94,6 @@ function gradeCompany(args: {
   const canonicalDailyAnalysis = args.knowledgeBasis === "canonical_verified" || args.knowledgeBasis === "canonical_pending";
   if (args.hasVerifiedTopicRole && args.hasProductKnowledge && args.hasCompleteSwot && canonicalDailyAnalysis) return "A";
   if (args.hasVerifiedTopicRole && (args.hasProductKnowledge || args.hasCompleteSwot) && canonicalDailyAnalysis) return "B";
-  if (args.knowledgeBasis === "legacy_unverified") return "D";
   if (args.knowledgeBasis === "insufficient" || args.knowledgeBasis === "missing") {
     if (args.hasProductKnowledge || args.hasAnyTopicRole || args.hasAnySwot) return "C";
     return "F";
@@ -114,13 +111,11 @@ function priorityForCompany(grade: AnalysisQualityGrade, missingKnowledge: Missi
 
 function blockingReasonsForCompany(args: {
   knowledgeBasis: KnowledgeCoverageCompany["analysisKnowledgeBasis"];
-  legacyOnly: boolean;
   missingKnowledge: MissingKnowledge[];
   hasAnyTopicRole: boolean;
   hasAnySwot: boolean;
 }): string[] {
   const reasons: string[] = [];
-  if (args.legacyOnly) reasons.push("legacy_only");
   if (args.knowledgeBasis === "insufficient" || args.knowledgeBasis === "missing") reasons.push("insufficient_daily_analysis");
   if (args.missingKnowledge.includes("product_knowledge")) reasons.push("missing_product_knowledge");
   if (args.missingKnowledge.includes("verified_topic_role")) {
@@ -142,7 +137,6 @@ export function buildKnowledgeCoverageReport(input: KnowledgeCoverageInput, gene
       const hasAnyTopicRole = (roleStats?.anyRoleCount ?? 0) > 0;
       const hasCompleteSwot = Boolean(swotStats && swotStats.verifiedItemCount >= 4 && hasAllSwotCategories(swotStats.categories));
       const hasAnySwot = (swotStats?.itemCount ?? 0) > 0;
-      const legacyOnly = analysisKnowledgeBasis === "legacy_unverified";
       const missingKnowledge: MissingKnowledge[] = [];
       if (!hasProductKnowledge) missingKnowledge.push("product_knowledge");
       if (!hasVerifiedTopicRole) missingKnowledge.push("verified_topic_role");
@@ -159,7 +153,6 @@ export function buildKnowledgeCoverageReport(input: KnowledgeCoverageInput, gene
       const upgradePriority = priorityForCompany(analysisQuality, missingKnowledge);
       const blockingReasons = blockingReasonsForCompany({
         knowledgeBasis: analysisKnowledgeBasis,
-        legacyOnly,
         missingKnowledge,
         hasAnyTopicRole,
         hasAnySwot,
@@ -175,7 +168,6 @@ export function buildKnowledgeCoverageReport(input: KnowledgeCoverageInput, gene
         hasAnyTopicRole,
         hasCompleteSwot,
         hasAnySwot,
-        legacyOnly,
         analysisQuality,
         missingKnowledge,
         upgradePriority,
@@ -197,7 +189,6 @@ export function buildKnowledgeCoverageReport(input: KnowledgeCoverageInput, gene
       completeSwot: ratio(companies.filter((company) => company.hasCompleteSwot).length, total),
       anySwot: ratio(companies.filter((company) => company.hasAnySwot).length, total),
       canonicalDailyAnalysis: ratio(companies.filter((company) => company.analysisKnowledgeBasis === "canonical_verified" || company.analysisKnowledgeBasis === "canonical_pending").length, total),
-      legacyOnly: ratio(companies.filter((company) => company.legacyOnly).length, total),
     },
     gradeDistribution,
     highPriorityCount: priorityCount("high"),
@@ -239,14 +230,13 @@ export function formatKnowledgeCoverageSummary(report: KnowledgeCoverageReport):
     `- Verified topic-role coverage: ${percent(report.summary.coverageRatios.verifiedTopicRole)}`,
     `- Complete SWOT coverage: ${percent(report.summary.coverageRatios.completeSwot)}`,
     `- Canonical daily analysis coverage: ${percent(report.summary.coverageRatios.canonicalDailyAnalysis)}`,
-    `- Legacy-only daily analysis: ${percent(report.summary.coverageRatios.legacyOnly)}`,
     "",
     "## Grade distribution",
     "",
     `- A complete: ${report.summary.gradeDistribution.A}`,
     `- B usable: ${report.summary.gradeDistribution.B}`,
     `- C weak analysis: ${report.summary.gradeDistribution.C}`,
-    `- D legacy only: ${report.summary.gradeDistribution.D}`,
+    `- D blocked: ${report.summary.gradeDistribution.D}`,
     `- F insufficient: ${report.summary.gradeDistribution.F}`,
     "",
     "## Upgrade priorities",

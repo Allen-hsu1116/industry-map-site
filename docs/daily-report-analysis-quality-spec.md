@@ -40,7 +40,7 @@ For each Daily Report pick industry card:
 2. Show upgrade priority.
 3. For D/F, show an explicit warning that the industry analysis is not evidence-backed enough for strong recommendation confidence.
 4. Show missing knowledge chips in human-readable labels.
-5. Keep existing provenance label (`V2 已驗證`, `Legacy 待驗證`, etc.) because provenance and quality answer different questions.
+5. Keep existing provenance label (`V2 已驗證`, `V2 待驗證`, `產業資料待補`, etc.) because provenance and quality answer different questions.
 
 ## Non-goals
 

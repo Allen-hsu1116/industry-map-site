@@ -13,7 +13,7 @@ The goal is aistockmap-style analysis: explain what the company actually sells, 
 
 - **Always prefer official/structured sources:** MOPS/TWSE/TPEX and FinMind datasets.
 - **Use FinMind aggressively where available:** daily price, institutional history, margin history, PER/PBR/dividend yield history, market value, monthly revenue, financial statements, cash flow, balance sheet.
-- **Use internal topic maps:** `public/data/industries.json` and each financial file's `industry_analysis` for topic role, products, customers, and topic-level SWOT.
+- **Use canonical internal knowledge:** `canonical-topics`, `company-topic-roles`, `product-knowledge`, and `company-swot` for topic role, products, customers, and SWOT. Legacy `industry_analysis` snapshots are ignored for recommendation confidence.
 - **Use news only as event delta:** news can trigger `needs_review`, but should not silently rewrite long-term SWOT.
 - **Never treat AI-generated prose as the source of truth:** AI may summarize and classify, but output must carry source/freshness metadata.
 

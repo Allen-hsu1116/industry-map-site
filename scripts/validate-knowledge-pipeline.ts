@@ -2,8 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const DATA_DIR = path.resolve("public/data");
-const INDUSTRIES_PATH = path.join(DATA_DIR, "industries.json");
-const COMPANIES_PATH = path.join(DATA_DIR, "companies.json");
+const LEGACY_TOPIC_REFS_PATH = path.resolve("src/lib/__fixtures__/legacy-topic-refs.json");
 const SOURCES_PATH = path.join(DATA_DIR, "knowledge-sources.json");
 const PRODUCT_KNOWLEDGE_DIR = path.join(DATA_DIR, "product-knowledge");
 const COMPANY_TOPIC_ROLES_DIR = path.join(DATA_DIR, "company-topic-roles");
@@ -18,40 +17,6 @@ interface QualityIssue {
   code: string;
   message: string;
   path: string;
-}
-
-interface TopicCompany {
-  code?: unknown;
-  name?: unknown;
-  role?: unknown;
-  relevance?: unknown;
-  products?: unknown;
-  customers?: unknown;
-  tech_focus?: unknown;
-  swot?: unknown;
-}
-
-interface TopicGroup {
-  name?: unknown;
-  companies?: unknown;
-}
-
-interface Topic {
-  slug?: unknown;
-  name?: unknown;
-  description?: unknown;
-  groups?: unknown;
-}
-
-interface IndustriesFile {
-  topics?: unknown;
-}
-
-interface CompanyIndexItem {
-  code?: unknown;
-  name?: unknown;
-  topic_count?: unknown;
-  topics?: unknown;
 }
 
 interface KnowledgeSource {
@@ -204,219 +169,6 @@ function asArray(value: unknown): unknown[] {
 
 function addIssue(issues: QualityIssue[], severity: Severity, code: string, pathLabel: string, message: string) {
   issues.push({ severity, code, path: pathLabel, message });
-}
-
-function isBareNounProduct(product: string): boolean {
-  const text = product.trim();
-  if (!text) return false;
-  const hasExplanationPunctuation = /[，。；：,.;:()（）]/.test(text);
-  const hasExplanationVerb = /提供|用於|支援|應用|負責|整合|製造|設計|服務|平台|解決方案|系統|技術|為|是/.test(text);
-  return text.length <= 18 && !hasExplanationPunctuation && !hasExplanationVerb;
-}
-
-function normalizeProductToken(raw: string): string {
-  return raw
-    .split(/[:：]/)[0]
-    .toLowerCase()
-    .replace(/[\s\-_/+()（）:：，,。.;；]/g, "")
-    .trim();
-}
-
-function buildProductKnowledgeAliasMap(): Map<string, Set<string>> {
-  const aliasesByCompany = new Map<string, Set<string>>();
-  if (!fs.existsSync(PRODUCT_KNOWLEDGE_DIR)) return aliasesByCompany;
-
-  const files = fs.readdirSync(PRODUCT_KNOWLEDGE_DIR).filter((file) => file.endsWith(".json")).sort();
-  for (const file of files) {
-    const knowledge = readJson<ProductKnowledgeFile>(path.join(PRODUCT_KNOWLEDGE_DIR, file));
-    const code = asString(knowledge.code);
-    if (!code) continue;
-
-    const aliases = aliasesByCompany.get(code) ?? new Set<string>();
-    const products = asArray(knowledge.products) as ProductKnowledgeItem[];
-    for (const product of products) {
-      const candidates = [asString(product.name), ...asArray(product.aliases).map(asString)].filter((value): value is string => Boolean(value));
-      for (const candidate of candidates) {
-        const token = normalizeProductToken(candidate);
-        if (token) aliases.add(token);
-      }
-    }
-    aliasesByCompany.set(code, aliases);
-  }
-
-  return aliasesByCompany;
-}
-
-function hasProductKnowledgeAlias(code: string | undefined, product: string, aliasesByCompany: Map<string, Set<string>>): boolean {
-  if (!code) return false;
-  const productToken = normalizeProductToken(product);
-  if (!productToken) return false;
-  const aliases = aliasesByCompany.get(code);
-  if (!aliases?.size) return false;
-
-  for (const alias of aliases) {
-    if (productToken === alias || productToken.includes(alias) || alias.includes(productToken)) return true;
-  }
-  return false;
-}
-
-function normalizeRelevance(value: unknown): string | undefined {
-  if (typeof value === "number") return String(value);
-  return asString(value);
-}
-
-const BROAD_SINGLETON_GROUP_PATTERN = /代工|材料|平台|製造|服務|供應鏈|相關|雙虎|三雄|龍頭/;
-
-const TAXONOMY_MISMATCH_RULES: Array<{ group: RegExp; text: RegExp; label: string }> = [
-  { group: /SaaS|企業軟體/, text: /伺服器|硬體|運算平台/, label: "software topic contains hardware infrastructure wording" },
-  { group: /膠材|封裝材料/, text: /功率IC|電源管理|半導體功率IC/, label: "packaging-material bucket contains power-IC wording" },
-  { group: /銅箔|集流/, text: /矽晶圓|半導體材料/, label: "battery copper-foil bucket contains silicon-wafer wording" },
-  { group: /IC設計|IC 設計|代工/, text: /檢測|分析服務/, label: "IC design/foundry bucket contains testing-analysis wording" },
-  { group: /Micro LED|LED封裝/, text: /LCD|OLED面板|面板雙虎/, label: "LED bucket contains panel-maker wording" },
-];
-
-function roleText(company: TopicCompany): string {
-  return [
-    asString(company.role),
-    ...asArray(company.products).map(asString),
-    ...asArray(company.tech_focus).map(asString),
-  ]
-    .filter((value): value is string => Boolean(value))
-    .join(" ");
-}
-
-function collectTaxonomyWarnings(groupName: string, companies: TopicCompany[]): Array<{ code: string; message: string }> {
-  const warnings: Array<{ code: string; message: string }> = [];
-  if (companies.length === 1 && BROAD_SINGLETON_GROUP_PATTERN.test(groupName) && !/待驗證/.test(groupName)) {
-    warnings.push({ code: "group.singleton_broad_bucket", message: `Single-company group "${groupName}" uses a broad value-chain label; verify whether peers are missing or the company is misclassified` });
-  }
-  if (/雙虎|三雄/.test(groupName) && companies.length < 2) {
-    warnings.push({ code: "group.nickname_label_incomplete", message: `Group "${groupName}" is a market nickname but only has ${companies.length} company; use a neutral value-chain name or add missing peers` });
-  }
-  if (/待驗證/.test(groupName)) {
-    warnings.push({ code: "group.taxonomy_needs_review", message: `Group "${groupName}" is explicitly marked for taxonomy review` });
-  }
-
-  companies.forEach((company, index) => {
-    const text = roleText(company);
-    for (const rule of TAXONOMY_MISMATCH_RULES) {
-      if (rule.group.test(groupName) && rule.text.test(text)) {
-        warnings.push({
-          code: "company.role_group_mismatch",
-          message: `Company ${asString(company.code) ?? index} in group "${groupName}" may be misclassified: ${rule.label}`,
-        });
-      }
-    }
-  });
-  return warnings;
-}
-
-function collectIndustryGraph(industries: IndustriesFile, issues: QualityIssue[], productKnowledgeAliases = new Map<string, Set<string>>()) {
-  const topics = asArray(industries.topics) as Topic[];
-  const topicSlugs = new Set<string>();
-  const companyToTopics = new Map<string, { name: string; topics: Set<string> }>();
-  let companyRoleCount = 0;
-  let productCount = 0;
-
-  if (topics.length === 0) {
-    addIssue(issues, "error", "industries.no_topics", "industries.topics", "industries.json must contain a non-empty topics array");
-  }
-
-  topics.forEach((topic, topicIndex) => {
-    const topicPath = `industries.topics[${topicIndex}]`;
-    const slug = asString(topic.slug);
-    if (!slug) {
-      addIssue(issues, "error", "topic.missing_slug", topicPath, "Topic is missing slug");
-      return;
-    }
-    if (topicSlugs.has(slug)) {
-      addIssue(issues, "error", "topic.duplicate_slug", `${topicPath}.slug`, `Duplicate topic slug: ${slug}`);
-    }
-    topicSlugs.add(slug);
-
-    if (!asString(topic.name)) addIssue(issues, "error", "topic.missing_name", `${topicPath}.name`, `Topic ${slug} is missing name`);
-    if (!asString(topic.description)) addIssue(issues, "warning", "topic.missing_description", `${topicPath}.description`, `Topic ${slug} is missing description`);
-
-    const groups = asArray(topic.groups) as TopicGroup[];
-    if (groups.length === 0) addIssue(issues, "warning", "topic.no_groups", `${topicPath}.groups`, `Topic ${slug} has no groups`);
-
-    groups.forEach((group, groupIndex) => {
-      const groupPath = `${topicPath}.groups[${groupIndex}]`;
-      if (!asString(group.name)) addIssue(issues, "warning", "group.missing_name", `${groupPath}.name`, `Group in ${slug} is missing name`);
-      const companies = asArray(group.companies) as TopicCompany[];
-      if (companies.length === 0) addIssue(issues, "warning", "group.no_companies", `${groupPath}.companies`, `Group in ${slug} has no companies`);
-      const groupName = asString(group.name) ?? "";
-      for (const warning of collectTaxonomyWarnings(groupName, companies)) {
-        addIssue(issues, "warning", warning.code, groupPath, warning.message);
-      }
-
-      companies.forEach((company, companyIndex) => {
-        const companyPath = `${groupPath}.companies[${companyIndex}]`;
-        const code = asString(company.code);
-        const name = asString(company.name);
-        if (!code) addIssue(issues, "error", "company.missing_code", `${companyPath}.code`, `Company in ${slug} is missing code`);
-        if (!name) addIssue(issues, "error", "company.missing_name", `${companyPath}.name`, `Company ${code ?? "(unknown)"} in ${slug} is missing name`);
-        if (!asString(company.role)) addIssue(issues, "warning", "company.missing_role", `${companyPath}.role`, `Company ${code ?? "(unknown)"} in ${slug} is missing role`);
-        if (!normalizeRelevance(company.relevance)) addIssue(issues, "warning", "company.missing_relevance", `${companyPath}.relevance`, `Company ${code ?? "(unknown)"} in ${slug} is missing relevance`);
-
-        const products = asArray(company.products).filter((item): item is string => typeof item === "string");
-        productCount += products.length;
-        for (const product of products) {
-          if (isBareNounProduct(product) && !hasProductKnowledgeAlias(code, product, productKnowledgeAliases)) {
-            addIssue(issues, "warning", "product.bare_noun", `${companyPath}.products`, `${code ?? name ?? "Company"} product "${product}" should explain what it is and why it matters`);
-          }
-        }
-
-        if (code && name) {
-          companyRoleCount += 1;
-          const existing = companyToTopics.get(code) ?? { name, topics: new Set<string>() };
-          existing.topics.add(slug);
-          companyToTopics.set(code, existing);
-        }
-      });
-    });
-  });
-
-  return { topics, topicSlugs, companyToTopics, companyRoleCount, productCount };
-}
-
-function validateCompaniesIndex(companies: CompanyIndexItem[], companyToTopics: Map<string, { name: string; topics: Set<string> }>, issues: QualityIssue[]) {
-  const indexCodes = new Set<string>();
-
-  companies.forEach((item, index) => {
-    const itemPath = `companies[${index}]`;
-    const code = asString(item.code);
-    const name = asString(item.name);
-    if (!code) {
-      addIssue(issues, "error", "index.missing_code", `${itemPath}.code`, "Company index item is missing code");
-      return;
-    }
-    indexCodes.add(code);
-    if (!name) addIssue(issues, "warning", "index.missing_name", `${itemPath}.name`, `Company index item ${code} is missing name`);
-
-    const graphEntry = companyToTopics.get(code);
-    if (!graphEntry) {
-      addIssue(issues, "warning", "index.extra_company", itemPath, `Company index contains ${code}, but it is absent from industries.json`);
-      return;
-    }
-
-    const expectedTopics = [...graphEntry.topics].sort();
-    const actualTopics = asArray(item.topics).filter((topic): topic is string => typeof topic === "string").sort();
-    const topicCount = typeof item.topic_count === "number" ? item.topic_count : undefined;
-
-    if (topicCount !== expectedTopics.length) {
-      addIssue(issues, "warning", "index.topic_count_drift", `${itemPath}.topic_count`, `${code} topic_count=${topicCount ?? "missing"}, expected ${expectedTopics.length}`);
-    }
-    if (JSON.stringify(actualTopics) !== JSON.stringify(expectedTopics)) {
-      addIssue(issues, "warning", "index.topics_drift", `${itemPath}.topics`, `${code} topics drift from industries graph`);
-    }
-  });
-
-  for (const code of companyToTopics.keys()) {
-    if (!indexCodes.has(code)) {
-      addIssue(issues, "warning", "index.missing_company", "companies.json", `Company ${code} exists in industries.json but is missing from companies.json`);
-    }
-  }
 }
 
 function validateSources(sources: KnowledgeSource[], issues: QualityIssue[]): Set<string> {
@@ -675,26 +427,22 @@ function validateCanonicalTopics(sourceIds: Set<string>, legacyTopicIds: Set<str
 
 function main() {
   const issues: QualityIssue[] = [];
-  const industries = readJson<IndustriesFile>(INDUSTRIES_PATH);
-  const companies = readJson<CompanyIndexItem[]>(COMPANIES_PATH);
   const sources = fs.existsSync(SOURCES_PATH) ? readJson<KnowledgeSource[]>(SOURCES_PATH) : [];
+  const legacyTopicRefs = fs.existsSync(LEGACY_TOPIC_REFS_PATH)
+    ? asArray(readJson<{ topics?: unknown }>(LEGACY_TOPIC_REFS_PATH).topics).map((topic) => asString((topic as { slug?: unknown }).slug)).filter((topicId): topicId is string => Boolean(topicId))
+    : [];
+  const legacyTopicIds = new Set(legacyTopicRefs);
 
-  const productKnowledgeAliases = buildProductKnowledgeAliasMap();
-  const graph = collectIndustryGraph(industries, issues, productKnowledgeAliases);
-  validateCompaniesIndex(companies, graph.companyToTopics, issues);
   const sourceIds = validateSources(sources, issues);
   const productKnowledgeItems = validateProductKnowledge(sourceIds, issues);
   const companyTopicRoles = validateCompanyTopicRoles(sourceIds, issues);
   const companySwotItems = validateCompanySwot(sourceIds, issues);
-  const canonicalTopics = validateCanonicalTopics(sourceIds, graph.topicSlugs, issues);
+  const canonicalTopics = validateCanonicalTopics(sourceIds, legacyTopicIds, issues);
 
   const report = {
     generatedAt: new Date().toISOString(),
     summary: {
-      topics: graph.topics.length,
-      companiesInGraph: graph.companyToTopics.size,
-      companyRoles: graph.companyRoleCount,
-      products: graph.productCount,
+      legacyTopicRefs: legacyTopicIds.size,
       productKnowledgeItems,
       companyTopicRoles,
       companySwotItems,
@@ -709,8 +457,8 @@ function main() {
   fs.writeFileSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`);
 
   console.log(`Knowledge validation report written to ${path.relative(process.cwd(), REPORT_PATH)}`);
-  console.log(`Topics: ${report.summary.topics}, companies: ${report.summary.companiesInGraph}, roles: ${report.summary.companyRoles}`);
-  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, company topic roles: ${report.summary.companyTopicRoles}, company SWOT items: ${report.summary.companySwotItems}, canonical topics: ${report.summary.canonicalTopics}, sources: ${report.summary.knowledgeSources}`);
+  console.log(`Canonical topics: ${report.summary.canonicalTopics}, legacy topic refs: ${report.summary.legacyTopicRefs}`);
+  console.log(`Product knowledge items: ${report.summary.productKnowledgeItems}, company topic roles: ${report.summary.companyTopicRoles}, company SWOT items: ${report.summary.companySwotItems}, sources: ${report.summary.knowledgeSources}`);
   console.log(`Errors: ${report.summary.errors}, warnings: ${report.summary.warnings}`);
 
   if (report.summary.errors > 0) {

@@ -105,14 +105,6 @@ function classifyFreshness(lastVerified: string | undefined, now: Date, hasMajor
   return "stale";
 }
 
-function relevanceFromPosition(position?: string): TopicRoleKnowledge["relevance"] {
-  const text = position ?? "";
-  if (/龍頭|核心|主導|絕對|高/.test(text)) return "high";
-  if (/成長|關鍵|中/.test(text)) return "medium";
-  if (/利基|相關|低|邊緣/.test(text)) return "low";
-  return "unknown";
-}
-
 export function buildCompanyKnowledge(input: CompanyKnowledgeInput, now = new Date()): CompanyKnowledge {
   const products: string[] = [];
   const customers: string[] = [];
@@ -134,23 +126,6 @@ export function buildCompanyKnowledge(input: CompanyKnowledgeInput, now = new Da
   for (const item of input.swot?.threats ?? []) mergeSwotPoint(swot.threats, item);
   if ((input.swot?.strengths?.length ?? 0) + (input.swot?.weaknesses?.length ?? 0) + (input.swot?.opportunities?.length ?? 0) + (input.swot?.threats?.length ?? 0) > 0) {
     swot.sources.push(`financials:${input.code}`);
-  }
-
-  for (const [topicId, analysis] of Object.entries(input.industry_analysis ?? {})) {
-    (analysis.products ?? []).forEach((item) => uniquePush(products, item));
-    (analysis.customers ?? []).forEach((item) => uniquePush(customers, item));
-    for (const item of analysis.swot?.strengths ?? []) mergeSwotPoint(swot.strengths, item);
-    for (const item of analysis.swot?.weaknesses ?? []) mergeSwotPoint(swot.weaknesses, item);
-    for (const item of analysis.swot?.opportunities ?? []) mergeSwotPoint(swot.opportunities, item);
-    for (const item of analysis.swot?.threats ?? []) mergeSwotPoint(swot.threats, item);
-    if (analysis.swot) swot.sources.push(`industry_analysis:${topicId}`);
-    topicRoles.push({
-      topicId,
-      role: analysis.market_position_detail || analysis.market_position || analysis.ai_summary || `${input.name} 已建立 ${topicId} 題材關聯`,
-      relevance: relevanceFromPosition(`${analysis.market_position ?? ""} ${analysis.market_position_detail ?? ""}`),
-      marketPosition: analysis.market_position,
-      summary: analysis.ai_summary,
-    });
   }
 
   const lastVerified = latestLexDate([
@@ -191,7 +166,6 @@ export function buildCompanyKnowledge(input: CompanyKnowledgeInput, now = new Da
     dataSources.push("FinMind financial statements / MOPS quarterly reports");
     finmindSignals.push("季損益可由 FinMind/MOPS 追蹤毛利率、營益率與 EPS 趨勢");
   }
-  if (topicRoles.length > 0) dataSources.push("internal topic role map / industry_analysis");
 
   return {
     products: products.slice(0, 8),

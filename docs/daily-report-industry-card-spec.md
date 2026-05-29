@@ -6,7 +6,7 @@
 1. 公司在主要題材內扮演什麼角色。
 2. 主要產品/技術是什麼，以及為什麼對該題材重要。
 3. SWOT 摘要：優勢、機會、弱點/威脅。
-4. 同時保留 V2 已驗證 / V2 待驗證 / Legacy 待驗證 provenance，避免未驗證資料被說成確定結論。
+4. 同時保留 V2 已驗證 / V2 待驗證 / 產業資料待補 provenance，避免未驗證資料被說成確定結論。
 
 ## Commands
 - Focused test: `npm test -- src/lib/dailyAnalysis.test.ts`
@@ -60,5 +60,5 @@ swotSnapshot?: {
 ## Success Criteria
 - Daily analysis JSON for a verified company such as 2330 contains `roleDetail`, `productNarratives`, and `swotSnapshot`.
 - `/daily-report` visually shows role, product what/why, and SWOT compactly for top picks.
-- Legacy-only companies still render safely and keep Legacy 待驗證.
+- Missing-canonical-coverage companies still render safely as 產業資料待補 / insufficient.
 - Tests, knowledge validation, build, lint, and browser console check pass.

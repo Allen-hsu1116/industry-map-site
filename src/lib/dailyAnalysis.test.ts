@@ -63,15 +63,15 @@ test("generateDailyAnalysis summarizes bullish technical and accumulation chip s
   assert.equal(analysis.mode, "rule-batch");
   assert.equal(analysis.technical.stance, "bullish");
   assert.equal(analysis.chips.stance, "accumulation");
-  assert.equal(analysis.industry.label, "題材關聯待驗證");
-  assert.equal(analysis.industry.knowledgeBasis, "legacy_unverified");
-  assert.equal(analysis.analysisQuality.grade, "D");
+  assert.equal(analysis.industry.label, "產業資料待補");
+  assert.equal(analysis.industry.knowledgeBasis, "insufficient");
+  assert.equal(analysis.analysisQuality.grade, "F");
   assert.equal(analysis.analysisQuality.upgradePriority, "high");
   assert.ok(analysis.analysisQuality.missingKnowledge.includes("product_knowledge"));
-  assert.ok(analysis.analysisQuality.blockingReasons.includes("legacy_only"));
+  assert.ok(analysis.analysisQuality.blockingReasons.includes("missing_product_knowledge"));
   assert.ok(analysis.knowledge.products.includes("CoWoS"));
-  assert.ok(analysis.knowledge.topicRoles.some((role) => role.topicId === "ai-server"));
-  assert.ok(analysis.knowledge.swot.strengths.some((point) => point.includes("先進製程")));
+  assert.deepEqual(analysis.knowledge.topicRoles, []);
+  assert.deepEqual(analysis.knowledge.swot.strengths, []);
   assert.ok(analysis.knowledge.dataSources.some((source) => source.includes("FinMind")));
   assert.equal(analysis.marketDataDate, "2026-05-30");
   assert.equal(analysis.chipDataDate, "2026-05-20");
@@ -300,10 +300,10 @@ test("generateDailyAnalysis scores industry quality with directness, topic statu
   assert.match(strong.industry.summary, /score/);
 });
 
-test("generateDailyAnalysis marks legacy fallback as unverified and caps it below core benefit", () => {
+test("generateDailyAnalysis ignores legacy industry_analysis and keeps industry data insufficient", () => {
   const analysis = generateDailyAnalysis({
     code: "9999",
-    name: "Legacy 測試股",
+    name: "舊資料測試股",
     trends: { daily_prices: makePrices(30) },
     institutional_history: [],
     margin_history: [],
@@ -320,12 +320,12 @@ test("generateDailyAnalysis marks legacy fallback as unverified and caps it belo
     },
   }, new Date("2026-05-31T00:00:00.000Z"));
 
-  assert.equal(analysis.industry.knowledgeBasis, "legacy_unverified");
-  assert.equal(analysis.industry.provenanceLabel, "Legacy 待驗證");
-  assert.notEqual(analysis.industry.label, "核心題材受惠");
-  assert.ok(analysis.industry.score < 70);
-  assert.ok(analysis.industry.watch.some((item) => item.includes("legacy industry_analysis")));
-  assert.match(analysis.industry.summary, /待驗證/);
+  assert.equal(analysis.industry.knowledgeBasis, "insufficient");
+  assert.equal(analysis.industry.provenanceLabel, "產業資料待補");
+  assert.equal(analysis.industry.label, "產業資料待補");
+  assert.equal(analysis.industry.score, 0);
+  assert.ok(analysis.industry.watch.some((item) => item.includes("補齊公司題材角色")));
+  assert.doesNotMatch(JSON.stringify(analysis.industry), /legacy|Legacy|industries\.json/);
 });
 
 test("generateDailyAnalysis marks candidate or low-confidence canonical roles as pending verification", () => {
@@ -405,7 +405,7 @@ test("generateDailyAnalysis returns insufficient labels when data is sparse", ()
 test("generateDailyAnalysis scoring v3 applies stock knowledge rules and blocks low-quality recommendations", () => {
   const analysis = generateDailyAnalysis({
     code: "9999",
-    name: "Legacy 測試股",
+    name: "舊資料測試股",
     trends: { daily_prices: makePrices(30) },
     institutional_history: [],
     margin_history: [],

@@ -54,17 +54,15 @@ test("buildKnowledgeCoverageReport grades verified role with partial pillars as 
   assert.deepEqual(company.missingKnowledge, ["complete_swot"]);
 });
 
-test("buildKnowledgeCoverageReport distinguishes partial, legacy-only, and insufficient companies", () => {
+test("buildKnowledgeCoverageReport distinguishes partial and insufficient companies", () => {
   const input: KnowledgeCoverageInput = {
     companies: [
       { code: "1001", name: "產品股", topics: ["ai-server"] },
-      { code: "1002", name: "舊資料股", topics: ["memory"] },
-      { code: "1003", name: "空資料股", topics: [] },
+      { code: "1002", name: "空資料股", topics: [] },
     ],
     analysisByCode: {
       "1001": { label: "題材關聯明確", knowledgeBasis: "canonical_pending" },
-      "1002": { label: "題材關聯待驗證", knowledgeBasis: "legacy_unverified" },
-      "1003": { label: "產業資料待補", knowledgeBasis: "insufficient" },
+      "1002": { label: "產業資料待補", knowledgeBasis: "insufficient" },
     },
     productKnowledgeCodes: new Set(["1001"]),
     topicRoleByCode: new Map([
@@ -80,17 +78,12 @@ test("buildKnowledgeCoverageReport distinguishes partial, legacy-only, and insuf
   assert.equal(byCode["1001"].upgradePriority, "high");
   assert.deepEqual(byCode["1001"].missingKnowledge, ["verified_topic_role", "complete_swot"]);
 
-  assert.equal(byCode["1002"].analysisQuality, "D");
-  assert.equal(byCode["1002"].legacyOnly, true);
+  assert.equal(byCode["1002"].analysisQuality, "F");
   assert.equal(byCode["1002"].upgradePriority, "high");
-  assert.ok(byCode["1002"].blockingReasons.includes("legacy_only"));
-
-  assert.equal(byCode["1003"].analysisQuality, "F");
-  assert.equal(byCode["1003"].upgradePriority, "high");
-  assert.ok(byCode["1003"].blockingReasons.includes("insufficient_daily_analysis"));
+  assert.ok(byCode["1002"].blockingReasons.includes("insufficient_daily_analysis"));
 
   assert.equal(report.summary.gradeDistribution.C, 1);
-  assert.equal(report.summary.gradeDistribution.D, 1);
+  assert.equal(report.summary.gradeDistribution.D, 0);
   assert.equal(report.summary.gradeDistribution.F, 1);
-  assert.equal(report.summary.highPriorityCount, 3);
+  assert.equal(report.summary.highPriorityCount, 2);
 });

@@ -72,7 +72,7 @@ interface MarketOverview {
 interface DailyIndustryAnalysis {
   label: string;
   score?: number;
-  knowledgeBasis?: "canonical_verified" | "canonical_pending" | "legacy_unverified" | "insufficient";
+  knowledgeBasis?: "canonical_verified" | "canonical_pending" | "insufficient";
   confidence?: string;
   provenanceLabel?: string;
   verificationNote?: string;
@@ -83,7 +83,7 @@ interface DailyIndustryAnalysis {
     supplyChainStage?: string;
     roleType?: string;
     directness?: string;
-    source: "canonical" | "legacy" | "insufficient";
+    source: "canonical" | "insufficient";
   };
   productNarratives?: Array<{
     name: string;
@@ -154,12 +154,11 @@ function getTrendBadge(trend: string): "default" | "secondary" | "destructive" |
 function getKnowledgeBasisClass(basis?: DailyIndustryAnalysis["knowledgeBasis"]): string {
   if (basis === "canonical_verified") return "border-emerald-400/30 bg-emerald-400/10 text-emerald-200";
   if (basis === "canonical_pending") return "border-amber-400/30 bg-amber-400/10 text-amber-200";
-  if (basis === "legacy_unverified") return "border-orange-400/30 bg-orange-400/10 text-orange-200";
   return "border-slate-500/30 bg-slate-500/10 text-slate-300";
 }
 
 function getKnowledgeBasisText(industry: DailyIndustryAnalysis): string {
-  return industry.provenanceLabel ?? (industry.knowledgeBasis === "canonical_verified" ? "V2 已驗證" : industry.knowledgeBasis === "canonical_pending" ? "V2 待驗證" : industry.knowledgeBasis === "legacy_unverified" ? "Legacy 待驗證" : "產業資料待補");
+  return industry.provenanceLabel ?? (industry.knowledgeBasis === "canonical_verified" ? "V2 已驗證" : industry.knowledgeBasis === "canonical_pending" ? "V2 待驗證" : "產業資料待補");
 }
 
 function getAnalysisQualityClass(grade?: NonNullable<CompanyDailyAnalysis["analysisQuality"]>["grade"]): string {

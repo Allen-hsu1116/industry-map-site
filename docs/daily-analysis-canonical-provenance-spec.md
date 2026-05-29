@@ -8,7 +8,7 @@
 
 - 已有 `company-topic-roles` 且 role `status=verified`、`confidence=high|medium`、有 evidence：顯示為 **V2 已驗證**。
 - 只有 candidate / low / insufficient / no evidence：顯示為 **V2 待驗證**，分數與文案保守。
-- 沒有 V2 role、只靠 legacy `industry_analysis`：顯示為 **Legacy 待驗證**，分數上限不進「核心題材受惠」。
+- 沒有 V2 role：顯示為 **產業資料待補 / insufficient**，不使用 legacy `industry_analysis` 作為產業加分來源。
 - rejected role 不進產業正向訊號。
 - UI 顯示資料基礎 badge、confidence、來源/驗證提示、score factors。
 
