@@ -30,6 +30,32 @@ test("formatTWSEQuote maps TWSE five-level asks/bids without confusing stock cod
   assert.deepEqual(quote.orderBook?.bids[0], { price: 2270, volume: 50 });
 });
 
+test("formatTWSEQuote uses live five-level book when last-traded price is temporarily unavailable", () => {
+  const quote = formatTWSEQuote({
+    c: "2330",
+    n: "台積電",
+    z: "-",
+    y: "2295.0000",
+    o: "2340.0000",
+    h: "2360.0000",
+    l: "2330.0000",
+    v: "14217",
+    a: "2360.0000_2365.0000_2370.0000_2375.0000_2380.0000_",
+    f: "2085_959_1070_475_807_",
+    b: "2355.0000_2350.0000_2345.0000_2340.0000_2335.0000_",
+    g: "355_453_474_383_379_",
+    d: "20260529",
+    t: "09:56:30",
+  }, "TSE");
+
+  assert.equal(quote.price, 2357.5);
+  assert.equal(quote.previousClose, 2295);
+  assert.equal(quote.change, 62.5);
+  assert.equal(quote.changePercent, 2.72);
+  assert.equal(quote.buyPrice, 2355);
+  assert.equal(quote.sellPrice, 2360);
+});
+
 test("computeTechnicalSummary returns latest moving averages and volume metrics", () => {
   const daily = Array.from({ length: 20 }, (_, i) => ({
     date: `2026-05-${String(i + 1).padStart(2, "0")}`,

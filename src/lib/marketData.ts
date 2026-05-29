@@ -91,14 +91,22 @@ function buildLevels(prices: number[], volumes: number[]): OrderBookLevel[] {
 export function formatTWSEQuote(info: Record<string, unknown>, exchange: string): QuoteResult {
   const tradedPrice = safeFloat(info.z);
   const ydPrice = safeFloat(info.y);
-  const finalPrice = tradedPrice > 0 ? tradedPrice : ydPrice;
-  const change = finalPrice > 0 && ydPrice > 0 ? finalPrice - ydPrice : 0;
-  const changePercent = ydPrice > 0 ? (change / ydPrice) * 100 : 0;
 
   // TWSE MIS: a/f = ask prices/volumes, b/g = bid prices/volumes.
   // Field c is stock code, not ask volume.
   const asks = buildLevels(splitTWSELevels(info.a), splitTWSELevels(info.f));
   const bids = buildLevels(splitTWSELevels(info.b), splitTWSELevels(info.g));
+  const bestAsk = asks[0]?.price ?? 0;
+  const bestBid = bids[0]?.price ?? 0;
+  const quoteMidpoint = bestAsk > 0 && bestBid > 0 ? round2((bestAsk + bestBid) / 2) : 0;
+  const quotePrice = quoteMidpoint || bestBid || bestAsk;
+
+  // During live trading TWSE MIS sometimes returns z/pz as "-" even while the
+  // five-level book is current. Falling back straight to yesterday's close makes
+  // the header price stale; use the live book as a conservative proxy first.
+  const finalPrice = tradedPrice > 0 ? tradedPrice : quotePrice || ydPrice;
+  const change = finalPrice > 0 && ydPrice > 0 ? finalPrice - ydPrice : 0;
+  const changePercent = ydPrice > 0 ? (change / ydPrice) * 100 : 0;
   const volume = safeInt(info.v) || safeInt(info.tv) * 1000;
 
   return {
