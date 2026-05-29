@@ -2,7 +2,7 @@
 
 ## Objective
 
-Before wiring more knowledge into Daily Analysis, define what counts as a 「題材」 and separate durable analytical topics from noisy legacy buckets. The current `industries.json` has 81 runtime topics, but many are mixed levels: some are market themes, some are products, some are supply-chain segments, and some overlap.
+Before wiring more knowledge into Daily Analysis, define what counts as a 「題材」 and separate durable analytical topics from noisy legacy buckets. The removed legacy `industries.json` had 81 topics with mixed levels: some were market themes, some products, some supply-chain segments, and some overlapped. Canonical topics replace that runtime source.
 
 Success means Daily Analysis can answer:
 
@@ -76,11 +76,11 @@ Each topic contains:
 
 ## Initial Audit of Legacy Topics
 
-Current legacy runtime:
+Retired legacy baseline:
 
-- `industries.json` topics: 81 actual records.
-- `stats.total_topics`: 82, inconsistent with actual record count.
-- Legacy graph remains fallback; canonical topics are shadow layer.
+- `industries.json` had 81 actual topic records.
+- `stats.total_topics` said 82, inconsistent with the actual record count.
+- As of S28, the legacy graph is deleted and no longer a fallback; canonical topics and company-topic-roles are the runtime layer.
 
 High-overlap examples that need canonical mapping:
 
@@ -91,7 +91,7 @@ High-overlap examples that need canonical mapping:
 
 ## Canonical Topics Coverage
 
-The shadow taxonomy now covers all 81 legacy runtime topics exactly once, using 39 canonical topics. This is still a shadow layer: legacy `industries.json` remains the broad fallback, while canonical topics provide cleaner grouping for Daily Analysis, UI filtering, role scoring, and future V2 company knowledge.
+The canonical taxonomy covers all 81 retired legacy topic ids exactly once, using 39 canonical topics. It is the runtime topic layer for Daily Analysis, UI filtering, role scoring, and future company knowledge expansion.
 
 Current coverage groups:
 
@@ -115,13 +115,12 @@ Adoption order:
 1. Use canonical topic if the company has v2 topic role evidence.
 2. Use canonical topic activation signals as watch items.
 3. Use product knowledge and SWOT only if `relatedTopicIds` map to canonical topics or accepted legacy aliases.
-4. If only legacy topic exists, label it as `legacy_candidate` or `unverified`, not a confident industry thesis.
+4. If only a retired legacy alias exists, keep it as a mapping hint only; do not create a confident industry thesis without evidence-backed company-topic-role data.
 
 ## Not Doing Yet
 
-- Not deleting `industries.json`.
 - Not treating current market popularity as evidence of business exposure.
-- Not changing UI/Daily Analysis scoring until canonical topic coverage is validated.
+- Not claiming every company role is evidence-backed just because its retired legacy topic id is mapped.
 - Not claiming every company role is V2 evidence-backed just because its legacy topic is now mapped; company-role and SWOT evidence still require separate migration slices.
 
 ## Verification

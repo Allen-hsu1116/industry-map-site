@@ -30,8 +30,8 @@ The goal is aistockmap-style analysis: explain what the company actually sells, 
 
 The builder merges:
 
-- root `products`, `customers`, `swot`
-- per-topic `industry_analysis` products/customers/SWOT/market position
+- root `products`, `customers`, `swot` compatibility fields when present
+- canonical source availability signals from product knowledge, topic roles, company SWOT, and source registry outputs
 - FinMind-backed data availability signals inferred from existing financial JSON
 - freshness state: `fresh`, `normal`, `stale`, `needs_review`, `unknown`
 

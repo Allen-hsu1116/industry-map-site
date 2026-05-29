@@ -23,11 +23,13 @@ We need a pipeline that can ingest evidence, normalize it, validate it, and only
 
 Use a three-layer knowledge architecture:
 
-1. **Canonical topic graph**: `public/data/industries.json`
-   - Defines topics, groups, company roles, relevance, products, customers, tech focus, and topic SWOT.
+1. **Canonical topic and role graph**:
+   - `public/data/canonical-topics.json` defines durable analytical topics.
+   - `public/data/company-topic-roles/{code}.json` defines evidence-backed company/topic roles, directness, supply-chain stage, products, customers, competitors, risks, and citations.
+   - `public/data/company-swot/{code}.json` defines versioned evidence-backed SWOT.
 2. **Generated company index/rollup**:
-   - `public/data/companies.json` should be generated from the topic graph.
-   - `public/data/company-knowledge/{code}.json` is generated from financial snapshots and topic analysis.
+   - `public/data/companies.json` should be generated from canonical topic/role coverage.
+   - `public/data/company-knowledge/{code}.json` is generated from financial snapshots and canonical knowledge; legacy `industry_analysis` fields are not a source.
 3. **Daily analysis**:
    - Consumes canonical knowledge and daily market data.
    - Does not rewrite canonical roles, product descriptions, relevance, or SWOT.
@@ -58,6 +60,6 @@ LLMs may be used only as extraction/classification/summarization workers. They c
 
 - Validation becomes a required step before regenerating daily analysis.
 - Future product descriptions should become evidence-backed objects, not plain strings.
-- `companies.json` drift must be detected and eventually removed by generating it from `industries.json`.
+- `companies.json` drift must be detected and eventually removed by generating it from canonical topic/role coverage.
 - UI should display stable knowledge cleanly and hide internal pipeline labels.
 - The first implementation slice is intentionally static-file based and rollback-friendly.

@@ -25,3 +25,24 @@ test("legacy inventory extraction pipeline has been retired from source", async 
   const packageJson = await fs.readFile("package.json", "utf8");
   assert.doesNotMatch(packageJson, /knowledge:v2:inventory/);
 });
+
+test("runtime and checked-in snapshots no longer keep legacy industry_analysis fallbacks", async () => {
+  await assert.rejects(fs.access("public/data/industries.json"));
+
+  const homepage = await fs.readFile("src/app/page.tsx", "utf8");
+  assert.doesNotMatch(homepage, /data\.industry_analysis/);
+  assert.doesNotMatch(homepage, /rawTopicAnalysis/);
+
+  const checkedSnapshotPaths = [
+    "public/data/financials/2330.json",
+    "public/data/financials/2337.json",
+    "public/data/company-knowledge/2330.json",
+    "public/data/company-knowledge/2337.json",
+  ];
+
+  for (const snapshotPath of checkedSnapshotPaths) {
+    const snapshot = await fs.readFile(snapshotPath, "utf8");
+    assert.doesNotMatch(snapshot, /industry_analysis/);
+    assert.doesNotMatch(snapshot, /internal topic role map/);
+  }
+});

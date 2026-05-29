@@ -109,15 +109,6 @@ interface FinancialData {
     dividend_yield: number;
   }[];
   major_news?: MajorNewsItem[];
-  industry_analysis?: Record<string, {
-    ai_summary?: string;
-    market_position?: string;
-    market_position_detail?: string;
-    focus?: string;
-    products?: string[];
-    customers?: string[];
-    swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] };
-  }>;
   updatedAt: string;
 }
 
@@ -2237,9 +2228,6 @@ function CompanyFullPageDetail({
                     const cat = getCategory(role.topicName);
                     const analysisText = role.analysis || generateIndustryAnalysis(relInfo.label, role.topicName, role.relevance, role.role, data);
 
-                    // Per-topic analysis is the source of truth when present.
-                    // Fallbacks intentionally stay scoped to the selected topic so the panel updates on sub-tab changes.
-                    const rawTopicAnalysis = data.industry_analysis?.[role.topic];
                     const knowledge = resolvedDailyAnalysis?.knowledge;
                     const roleKnowledge = knowledge?.topicRoles.find((item) => item.topicId === role.topic);
                     const canonicalRole = resolvedCompanyTopicRoles?.roles.find((item) => item.topicId === role.topic && item.status !== "rejected");
@@ -2272,19 +2260,19 @@ function CompanyFullPageDetail({
                         .filter((item) => item.status !== "rejected" && (item.relatedTopicIds.length === 0 || item.relatedTopicIds.some((topicId) => topicMatchIds.includes(topicId))))
                         .flatMap((item) => item.evidence.map((evidence) => `${evidence.publisher}：${evidence.title}`))
                       : [];
-                    const fallbackSwot = canonicalSwot ?? dailyCanonicalSwot ?? rawTopicAnalysis?.swot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
+                    const fallbackSwot = canonicalSwot ?? dailyCanonicalSwot ?? role.swot ?? knowledge?.swot ?? data.swot ?? {
                       strengths: [`已建立「${role.topicName}」題材關聯，角色：${role.role || relInfo.label}`],
                       weaknesses: ["題材別產品、客戶與競爭資料仍需補來源驗證"],
                       opportunities: [`若${role.topicName}需求擴張，${role.group}供應鏈角色可能受惠`],
                       threats: ["題材熱度若未反映到營收或訂單，估值重評風險升高"],
                     };
-                    const topicProducts = (canonicalRole?.products?.length ? canonicalRole.products : rawTopicAnalysis?.products?.length ? rawTopicAnalysis.products : role.products?.length ? role.products : knowledge?.products?.length ? knowledge.products : data.products?.length ? data.products : [`${role.group}相關產品/服務: ${role.role || role.topicName}`]) ?? [];
-                    const topicCustomers = (canonicalRole?.customers?.length ? canonicalRole.customers : rawTopicAnalysis?.customers?.length ? rawTopicAnalysis.customers : role.customers?.length ? role.customers : knowledge?.customers?.length ? knowledge.customers : data.customers?.length ? data.customers : ["客戶/需求端待補: 需由年報、法說或公開資料驗證"] ) ?? [];
-                    const focusText = rawTopicAnalysis?.focus || (role.tech_focus?.length ? role.tech_focus.join('\\n\\n') : `題材技術重心\n- ${role.topicName}：${role.role || relInfo.label}\n- 觀察 ${data.name} 在${role.group}的產品規格、量產進度與客戶導入。`);
+                    const topicProducts = (canonicalRole?.products?.length ? canonicalRole.products : role.products?.length ? role.products : knowledge?.products?.length ? knowledge.products : data.products?.length ? data.products : [`${role.group}相關產品/服務: ${role.role || role.topicName}`]) ?? [];
+                    const topicCustomers = (canonicalRole?.customers?.length ? canonicalRole.customers : role.customers?.length ? role.customers : knowledge?.customers?.length ? knowledge.customers : data.customers?.length ? data.customers : ["客戶/需求端待補: 需由年報、法說或公開資料驗證"] ) ?? [];
+                    const focusText = role.tech_focus?.length ? role.tech_focus.join('\\n\\n') : `題材技術重心\n- ${role.topicName}：${role.role || relInfo.label}\n- 觀察 ${data.name} 在${role.group}的產品規格、量產進度與客戶導入。`;
                     const topicAnalysis = {
-                      ai_summary: canonicalRole?.roleSummary || dailyCanonicalRole?.roleSummary || rawTopicAnalysis?.ai_summary || roleKnowledge?.summary || analysisText,
-                      market_position: canonicalRoleLabel || rawTopicAnalysis?.market_position || roleKnowledge?.marketPosition || relInfo.label,
-                      market_position_detail: canonicalRole?.roleSummary || dailyCanonicalRole?.roleSummary || rawTopicAnalysis?.market_position_detail || roleKnowledge?.role || `${data.name}為${role.topicName}題材之${role.group}參與者，在供應鏈中扮演${role.role || relInfo.label}角色。`,
+                      ai_summary: canonicalRole?.roleSummary || dailyCanonicalRole?.roleSummary || roleKnowledge?.summary || analysisText,
+                      market_position: canonicalRoleLabel || roleKnowledge?.marketPosition || relInfo.label,
+                      market_position_detail: canonicalRole?.roleSummary || dailyCanonicalRole?.roleSummary || roleKnowledge?.role || `${data.name}為${role.topicName}題材之${role.group}參與者，在供應鏈中扮演${role.role || relInfo.label}角色。`,
                       focus: focusText,
                       products: topicProducts,
                       customers: topicCustomers,

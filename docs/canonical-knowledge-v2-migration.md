@@ -2,7 +2,7 @@
 
 ## Objective
 
-Rebuild the industry-map knowledge layer without deleting the current website data first. The existing `industries.json` and `companies.json` remain the legacy runtime baseline while a v2 canonical layer is built, validated, compared, and gradually adopted.
+Rebuild the industry-map knowledge layer through a strangler migration. As of S28, `public/data/industries.json` has been removed; runtime uses canonical topic/role/SWOT/product sources, while `companies.json` remains a compatibility index until it is generated from canonical sources.
 
 Success means Daily Analysis and company pages can explain:
 
@@ -30,23 +30,20 @@ npm test
 npm run knowledge:validate
 npm run lint
 npm run build
-npm run knowledge:v2:inventory
 ```
 
 ## Project Structure
 
 ```text
-public/data/industries.json                  Legacy topic/company-role graph; do not delete yet
-public/data/companies.json                   Legacy company index; do not delete yet
-public/data/product-knowledge/{code}.json    Evidence-backed product knowledge, already hybrid-consumed by UI
-public/data/v2/                              Future canonical topic/role graph; not runtime-default until validated
-reports/v2-canonical-products.json            Generated canonical product/alias candidates; review artifact
-reports/v2-canonical-role-candidates.json     Generated v2 role ontology candidates; review artifact
-reports/v2-source-discovery-plan.json         Generated source discovery plan for pilot companies
-reports/                                     Generated migration reports; review artifacts, not runtime source
-src/lib/legacyKnowledgeInventory.ts          Pure inventory/candidate extraction logic
-scripts/generate-v2-inventory.ts             CLI that reads legacy data and writes reports
-scripts/validate-knowledge-pipeline.ts       Existing quality gate, extended as v2 matures
+public/data/canonical-topics.json           Canonical topic taxonomy
+public/data/company-topic-roles/{code}.json  Evidence-backed company/topic role graph
+public/data/company-swot/{code}.json         Evidence-backed SWOT knowledge
+public/data/product-knowledge/{code}.json    Evidence-backed product knowledge consumed by UI and Daily Analysis
+public/data/canonical-topic-map.json         Generated UI topic map derived from canonical topics and roles
+public/data/companies.json                   Compatibility company index; still static until generated from canonical sources
+reports/                                     Generated migration/coverage reports; review artifacts, not runtime source
+scripts/validate-knowledge-pipeline.ts       Canonical quality gate
+scripts/generate-canonical-topic-map.ts      Builds runtime topic map from canonical sources
 docs/canonical-knowledge-v2-migration.md     This spec and execution plan
 ```
 
@@ -58,7 +55,7 @@ Prefer explicit JSON contracts and small pure functions. Generated reports shoul
 export interface CanonicalRoleCandidate {
   companyCode: string;
   topicId: string;
-  source: "legacy_industries_json";
+  source: "canonical_extraction";
   status: "candidate";
   needsVerification: true;
   confidence: "unverified";
@@ -152,10 +149,7 @@ Rules:
 
 ### Phase 0 — Freeze legacy runtime baseline
 
-- Do not delete `industries.json` or `companies.json`.
-- Do not hand-edit legacy fields for new canonical claims.
-- New knowledge goes into v2/product-knowledge paths.
-- Legacy remains fallback until v2 coverage and quality are measurable.
+Completed. `industries.json` stayed in place during migration but is no longer present after S28. New knowledge belongs in canonical topic, company-topic-role, company-SWOT, and product-knowledge paths; legacy `industry_analysis` snapshots are no longer runtime inputs.
 
 ### Phase 1 — Inventory and candidate extraction
 
@@ -278,7 +272,6 @@ Verification:
 
 ```bash
 npm test
-npm run knowledge:v2:inventory
 ```
 
 ### Task 2: Ontology mapping draft
@@ -292,7 +285,6 @@ Verification:
 
 ```bash
 npm test
-npm run knowledge:v2:inventory
 ```
 
 ### Task 3: Top 30 pilot report
@@ -305,7 +297,6 @@ Acceptance:
 Verification:
 
 ```bash
-npm run knowledge:v2:inventory
 ```
 
 ### Task 4: V2 candidate JSON draft
@@ -319,7 +310,6 @@ Verification:
 
 ```bash
 npm test
-npm run knowledge:v2:inventory
 ```
 
 ### Task 5: Validator integration

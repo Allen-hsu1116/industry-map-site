@@ -49,7 +49,7 @@ industry: {
 - Always: reveal whether analysis is verified canonical or legacy fallback.
 - Always: keep legacy fallback conservative and visibly待驗證.
 - Always: keep generated timestamp-only churn out of commit unless required.
-- Ask first: deleting `industries.json`, changing cron delivery, adding dependencies.
+- Ask first: changing cron delivery or adding dependencies.
 - Never: treat AI wording as evidence; never present rejected/low-confidence roles as core受惠.
 
 ## Success Criteria

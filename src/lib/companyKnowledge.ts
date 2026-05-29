@@ -5,16 +5,6 @@ export interface KnowledgeSWOT {
   threats?: string[];
 }
 
-export interface TopicIndustryAnalysis {
-  ai_summary?: string;
-  market_position?: string;
-  market_position_detail?: string;
-  focus?: string;
-  products?: string[];
-  customers?: string[];
-  swot?: KnowledgeSWOT;
-}
-
 export interface CompanyKnowledgeInput {
   code: string;
   name: string;
@@ -24,7 +14,6 @@ export interface CompanyKnowledgeInput {
   customers?: string[];
   swot?: KnowledgeSWOT;
   market_position?: string;
-  industry_analysis?: Record<string, TopicIndustryAnalysis>;
   major_news?: { date?: string; subject?: string }[];
   trends?: {
     daily_prices?: { date: string }[];
