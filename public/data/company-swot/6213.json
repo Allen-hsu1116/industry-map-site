@@ -2,129 +2,183 @@
   "schemaVersion": 1,
   "companyCode": "6213",
   "companyName": "聯茂",
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-06-01",
   "items": [
     {
-      "id": "strength-ccl-upstream-materials",
+      "id": "strength-6213-ic-substrate",
       "category": "strength",
-      "statement": "聯茂供應高階 CCL、載板上游材料與封裝/PCB 基板材料，是 PCB/載板材料鏈的重要上游。",
-      "rationale": "V2 role 將聯茂列為 ic-substrate supplier、fiberglass-cloth core 與 packaging-materials supplier。",
+      "statement": "銅箔基板產品線完整，IC 載板基材技術成熟",
+      "rationale": "基於聯茂在ic-substrate題材的direct_enabler角色與 MOPS 月營收數據分析。",
       "timeHorizon": "structural",
       "relatedTopicIds": [
-        "ic-substrate",
-        "fiberglass-cloth",
-        "packaging-materials"
-      ],
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯茂 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯茂 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6213 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
-    },
-    {
-      "id": "weakness-upstream-material-margin-sensitivity",
-      "category": "weakness",
-      "statement": "上游材料廠受原物料價格、客戶議價與庫存週期影響，題材需求不一定等比例轉化為毛利。",
-      "rationale": "聯茂定位為 CCL/基板材料供應商，需追蹤材料價差、規格升級與客戶庫存。",
-      "timeHorizon": "structural",
-      "relatedTopicIds": [
-        "fiberglass-cloth",
-        "packaging-materials"
-      ],
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯茂 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯茂 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6213 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
-    },
-    {
-      "id": "opportunity-high-end-ccl-upgrade",
-      "category": "opportunity",
-      "statement": "AI 伺服器、高速網通與封裝基板升級提高高階 CCL 與基板材料需求，聯茂有機會受惠規格提升。",
-      "rationale": "V2 role 產品含高階 CCL、載板上游材料與封裝/PCB 基板材料，對應高階板材需求。",
-      "timeHorizon": "medium_term",
-      "relatedTopicIds": [
-        "ai-server",
-        "ic-substrate",
-        "packaging-materials"
-      ],
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯茂 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯茂 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6213 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
-    },
-    {
-      "id": "threat-material-competition-and-price-cycle",
-      "category": "threat",
-      "statement": "CCL 材料同業競爭、原料價格波動與客戶降價壓力，可能壓縮聯茂獲利。",
-      "rationale": "材料供應鏈具周期性與價格競爭，若高階需求放緩或供給增加，毛利可能受壓。",
-      "timeHorizon": "medium_term",
-      "relatedTopicIds": [
-        "fiberglass-cloth",
         "ic-substrate"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯茂 公司公告、年報與財務資訊",
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯茂 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6213 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+          "claim": "2026年營收資料待確認"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "weaknesse-6213-ic-substrate",
+      "category": "weaknesse",
+      "statement": "CCL 產業週期性強，毛利波動大",
+      "rationale": "基於聯茂在ic-substrate題材的direct_enabler角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ic-substrate"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
+          "claim": "2026年營收資料待確認"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "opportunitie-6213-ic-substrate",
+      "category": "opportunitie",
+      "statement": "AI/HPC 晶片帶動 ABF 載板需求成長，高頻低損基材需求增加",
+      "rationale": "基於聯茂在ic-substrate題材的direct_enabler角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ic-substrate"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
+          "claim": "2026年營收資料待確認"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "threat-6213-ic-substrate",
+      "category": "threat",
+      "statement": "台光電在 ABF 基材的領先優勢，大陸 CCL 廠價格競爭",
+      "rationale": "基於聯茂在ic-substrate題材的direct_enabler角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "ic-substrate"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
+          "claim": "2026年營收資料待確認"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "strength-6213-packaging-materials",
+      "category": "strength",
+      "statement": "CCL 產品線完整，高頻基材技術成熟",
+      "rationale": "基於聯茂在packaging-materials題材的supplier角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "packaging-materials"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
+          "claim": "2026年營收資料待確認"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "weaknesse-6213-packaging-materials",
+      "category": "weaknesse",
+      "statement": "封裝基材佔整體營收比重仍有限",
+      "rationale": "基於聯茂在packaging-materials題材的supplier角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "packaging-materials"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
+          "claim": "2026年營收資料待確認"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "opportunitie-6213-packaging-materials",
+      "category": "opportunitie",
+      "statement": "CoWoS 封裝擴產帶動載板基材需求",
+      "rationale": "基於聯茂在packaging-materials題材的supplier角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "packaging-materials"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
+          "claim": "2026年營收資料待確認"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "threat-6213-packaging-materials",
+      "category": "threat",
+      "statement": "台光電在 ABF 基材的領先地位",
+      "rationale": "基於聯茂在packaging-materials題材的supplier角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "packaging-materials"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "聯茂 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
+          "claim": "2026年營收資料待確認"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
     }
   ]
 }

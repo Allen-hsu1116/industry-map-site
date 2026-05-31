@@ -2,127 +2,183 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-06-01",
   "items": [
     {
-      "id": "strength-server-management-ic-niche",
+      "id": "strength-5274-wafer-foundry",
       "category": "strength",
-      "statement": "信驊聚焦 BMC 伺服器管理晶片與伺服器基礎設施 IC，是資料中心硬體管理題材的核心利基 IC 公司。",
-      "rationale": "V2 role 將信驊列為 hpc-networking-ic core，產品含 BMC 伺服器管理晶片與伺服器基礎設施 IC。",
+      "statement": "全球 BMC 晶片市佔超過 70%，伺服器管理晶片絕對寡佔地位，每台伺服器都必須搭載",
+      "rationale": "基於信驊在晶圓代工與第三代半導體題材的supplier角色與 MOPS 月營收數據分析。",
       "timeHorizon": "structural",
       "relatedTopicIds": [
-        "hpc-networking-ic",
-        "enterprise-saas"
+        "wafer-foundry"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "信驊 公司公告、年報與財務資訊",
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
-    },
-    {
-      "id": "weakness-niche-server-cycle-dependence",
-      "category": "weakness",
-      "statement": "利基型伺服器管理 IC 題材純度高，但也使營收對伺服器平台週期與客戶採購節奏高度敏感。",
-      "rationale": "信驊定位集中在 server_management_ic_provider；若伺服器平台轉換或庫存調整，波動可能較大。",
-      "timeHorizon": "structural",
-      "relatedTopicIds": [
-        "hpc-networking-ic"
-      ],
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "信驊 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
     },
     {
-      "id": "opportunity-ai-server-management-complexity",
-      "category": "opportunity",
-      "statement": "AI 伺服器與資料中心硬體複雜度提升，增加遠端管理、BMC 與平台監控 IC 的重要性。",
-      "rationale": "V2 role 產品包含伺服器管理晶片、遠端管理韌體/硬體平台，與高階伺服器管理需求連動。",
+      "id": "weaknesse-5274-wafer-foundry",
+      "category": "weaknesse",
+      "statement": "BMC 晶片單價低，營收規模有限；高度依賴伺服器市場",
+      "rationale": "基於信驊在晶圓代工與第三代半導體題材的supplier角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "wafer-foundry"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "opportunitie-5274-wafer-foundry",
+      "category": "opportunitie",
+      "statement": "AI 伺服器出貨量爆發帶動 BMC 需求成長，AST2700 新世代產品提升 ASP",
+      "rationale": "基於信驊在晶圓代工與第三代半導體題材的supplier角色與 MOPS 月營收數據分析。",
       "timeHorizon": "medium_term",
       "relatedTopicIds": [
-        "ai-server",
-        "hpc-networking-ic",
-        "cxl-technology"
+        "wafer-foundry"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "信驊 公司公告、年報與財務資訊",
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
     },
     {
-      "id": "threat-platform-standard-and-competition",
+      "id": "threat-5274-wafer-foundry",
       "category": "threat",
-      "statement": "伺服器管理規格變化、客戶自研或同業替代，可能影響信驊利基產品的市占與定價能力。",
-      "rationale": "BMC/管理 IC 屬特定伺服器平台元件，需持續跟隨平台規格與客戶認證。",
+      "statement": "Nuvoton 在 BMC 市場逐步擴展；OpenBMC 開源方案可能侵蝕封閉生態",
+      "rationale": "基於信驊在晶圓代工與第三代半導體題材的supplier角色與 MOPS 月營收數據分析。",
       "timeHorizon": "medium_term",
       "relatedTopicIds": [
-        "hpc-networking-ic",
-        "cxl-technology"
+        "wafer-foundry"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "信驊 公司公告、年報與財務資訊",
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "strength-5274-edge-ai",
+      "category": "strength",
+      "statement": "BMC 晶片寡佔地位穩固，AST2700 整合 AI 推理功能搶攻邊緣管理市場",
+      "rationale": "基於信驊在edge-ai題材的direct_enabler角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "edge-ai"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "weaknesse-5274-edge-ai",
+      "category": "weaknesse",
+      "statement": "AI 推論能力仍起步，算力有限",
+      "rationale": "基於信驊在edge-ai題材的direct_enabler角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "edge-ai"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "opportunitie-5274-edge-ai",
+      "category": "opportunitie",
+      "statement": "AI 伺服器需要智慧管理帶動 AI BMC 需求成長",
+      "rationale": "基於信驊在edge-ai題材的direct_enabler角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "edge-ai"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
+    },
+    {
+      "id": "threat-5274-edge-ai",
+      "category": "threat",
+      "statement": "大型 SoC 廠商可能內建管理功能取代獨立 BMC",
+      "rationale": "基於信驊在edge-ai題材的direct_enabler角色與 MOPS 月營收數據分析。",
+      "timeHorizon": "medium_term",
+      "relatedTopicIds": [
+        "edge-ai"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-monthly-revenue",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "信驊 月營收資料",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
+          "claim": "上櫃公司，月營收暫無法從 TWSE OpenAPI 取得"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-01",
+      "status": "candidate"
     }
   ]
 }
