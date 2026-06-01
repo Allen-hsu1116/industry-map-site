@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
 import test from "node:test";
 import { computeTechnicalSummary, formatTWSEQuote, normalizeFinancialData } from "./marketData";
 
@@ -74,6 +76,41 @@ test("computeTechnicalSummary returns latest moving averages and volume metrics"
   assert.equal(summary.volume, 2900);
   assert.equal(summary.avgVolume20, 1950);
   assert.equal(summary.aboveMa20, true);
+});
+
+test("checked-in high-priority financial K-lines are fresh and OHLC-valid", () => {
+  const repoRoot = path.resolve(__dirname, "../..");
+  const companies = JSON.parse(fs.readFileSync(path.join(repoRoot, "public/data/companies.json"), "utf-8")) as { code: string; name: string; topic_count: number }[];
+  const targetCompanies = companies
+    .slice()
+    .sort((a, b) => b.topic_count - a.topic_count)
+    .slice(0, 30);
+
+  assert.equal(targetCompanies.length, 30);
+
+  for (const company of targetCompanies) {
+    const file = path.join(repoRoot, "public/data/financials", `${company.code}.json`);
+    const data = JSON.parse(fs.readFileSync(file, "utf-8")) as { trends?: { daily_prices?: { date: string; open: number; high: number; low: number; close: number; volume: number }[] }; price?: { date?: string; open?: number; high?: number; low?: number; close?: number; volume?: number }; updatedAt?: string };
+    const prices = data.trends?.daily_prices ?? [];
+    assert.ok(prices.length >= 5, `${company.code} ${company.name} should have at least 5 K-line rows`);
+
+    const sorted = prices.slice().sort((a, b) => a.date.localeCompare(b.date));
+    assert.deepEqual(prices.map((row) => row.date), sorted.map((row) => row.date), `${company.code} K-line dates must be ascending`);
+    assert.ok(sorted.at(-1)?.date >= "2026-06-01", `${company.code} ${company.name} K-line latest date is stale: ${sorted.at(-1)?.date}`);
+
+    for (const row of sorted.slice(-10)) {
+      assert.ok(row.low <= row.open && row.open <= row.high, `${company.code} invalid open range on ${row.date}`);
+      assert.ok(row.low <= row.close && row.close <= row.high, `${company.code} invalid close range on ${row.date}`);
+      assert.ok(row.volume >= 0, `${company.code} negative volume on ${row.date}`);
+    }
+
+    const latest = sorted.at(-1)!;
+    assert.equal(data.price?.date, latest.date, `${company.code} top-level price date should mirror latest K-line date`);
+    assert.equal(data.price?.open, latest.open, `${company.code} top-level price open should mirror latest K-line open`);
+    assert.equal(data.price?.high, latest.high, `${company.code} top-level price high should mirror latest K-line high`);
+    assert.equal(data.price?.low, latest.low, `${company.code} top-level price low should mirror latest K-line low`);
+    assert.equal(data.price?.close, latest.close, `${company.code} top-level price close should mirror latest K-line close`);
+  }
 });
 
 test("normalizeFinancialData deep-fills missing nested fields so detail tabs do not crash", () => {

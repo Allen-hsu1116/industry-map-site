@@ -2061,6 +2061,9 @@ function CompanyFullPageDetail({
   const yoyNum = parseFloat(data.monthly_revenue.yoy) || 0;
   const marketPos = getMarketPosition(data.market_position);
   const trends = data.trends;
+  const latestKLineDate = trends?.daily_prices?.length
+    ? [...trends.daily_prices].sort((a, b) => a.date.localeCompare(b.date)).at(-1)?.date
+    : null;
 
   const aiSummary = (() => {
     const name = data.name;
@@ -2940,6 +2943,9 @@ function CompanyFullPageDetail({
                             </button>
                           ))}
                         </div>
+                        <div className="mb-3 rounded-xl border border-cyan-500/20 bg-cyan-500/8 px-3 py-2 text-xs text-cyan-100/85">
+                          K 線最新日期：<span className="font-semibold text-white">{sorted[sorted.length - 1].date}</span> · Source: FinMind TaiwanStockPrice checked-in OHLCV；只更新官方/FinMind 日 K，不用 AI 補 K 線。
+                        </div>
                         <TradingViewChart
                           candleData={candleData}
                           volumeData={volumeData}
@@ -3010,7 +3016,7 @@ function CompanyFullPageDetail({
                   risks={resolvedDailyAnalysis.technical.risks}
                   watch={resolvedDailyAnalysis.technical.watch}
                   generatedAt={resolvedDailyAnalysis.generatedAt}
-                  description={`依日 K、均線與成交量規則判讀 · 價格資料日 ${resolvedDailyAnalysis.marketDataDate ?? resolvedDailyAnalysis.sourceUpdatedAt ?? "未知"}`}
+                  description={`依日 K、均線與成交量規則判讀 · 價格資料日 ${latestKLineDate ?? resolvedDailyAnalysis.marketDataDate ?? resolvedDailyAnalysis.sourceUpdatedAt ?? "未知"}`}
                 />
               )}
 
