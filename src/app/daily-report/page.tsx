@@ -5,6 +5,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { gateDailyReportPicks } from "@/lib/dailyReportGating";
+import { buildMajorNewsFilterOptions, filterEventFocusItems, type MajorNewsFilters } from "@/lib/majorNewsFilters";
 
 /* ─── Types ─── */
 interface TechnicalAnalysis {
@@ -120,9 +121,26 @@ interface CompanyDailyAnalysis {
   industry?: DailyIndustryAnalysis;
 }
 
+interface DailyReportFreshnessSource {
+  module: string;
+  source: string;
+  latestDate: string;
+  status: "verified" | "partial" | "empty";
+  scope: string;
+}
+
+interface DailyReportFreshness {
+  generatedAt: string;
+  marketDataDate: string;
+  eventDataDate: string;
+  analysisGeneratedAt: string;
+  sources: DailyReportFreshnessSource[];
+}
+
 interface DailyReport {
   date: string;
   weekday: string;
+  freshness?: DailyReportFreshness;
   knowledge_applied: KnowledgeApplied;
   market_overview: MarketOverview;
   picks: StockPick[];
@@ -147,7 +165,7 @@ interface EventFocusItem {
   }>;
   mappingMethod: "derived_from_company_topic_roles" | "unmapped_official_event";
   verificationNote: string;
-  source: string;
+  source: "TWSE OpenAPI t187ap04_L" | "local financials snapshot";
 }
 
 interface EventFocusSnapshot {
@@ -219,6 +237,17 @@ function getMissingKnowledgeText(item: "product_knowledge" | "verified_topic_rol
   return labels[item];
 }
 
+function getSourceStatusClass(status: DailyReportFreshnessSource["status"]): string {
+  if (status === "verified") return "border-emerald-400/30 bg-emerald-400/10 text-emerald-200";
+  if (status === "partial") return "border-amber-400/30 bg-amber-400/10 text-amber-200";
+  return "border-slate-500/30 bg-slate-500/10 text-slate-300";
+}
+
+function formatTimestamp(timestamp?: string): string {
+  if (!timestamp) return "—";
+  return timestamp.replace("T", " ").replace(/\.\d{3}Z$/, "Z");
+}
+
 async function fetchStaticJson<T>(path: string): Promise<T> {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const candidates = [`/industry-map-site${normalizedPath}`, normalizedPath];
@@ -235,6 +264,7 @@ async function fetchStaticJson<T>(path: string): Promise<T> {
 export default function DailyReportPage() {
   const [report, setReport] = useState<DailyReport | null>(null);
   const [eventFocus, setEventFocus] = useState<EventFocusSnapshot | null>(null);
+  const [eventFilters, setEventFilters] = useState<MajorNewsFilters>({});
   const [dailyAnalyses, setDailyAnalyses] = useState<Record<string, CompanyDailyAnalysis>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -313,6 +343,8 @@ export default function DailyReportPage() {
   }
 
   const gatedPicks = gateDailyReportPicks(report.picks, dailyAnalyses);
+  const eventFilterOptions = eventFocus ? buildMajorNewsFilterOptions(eventFocus.items) : { dates: [], companies: [], topics: [] };
+  const visibleEventItems = eventFocus ? filterEventFocusItems(eventFocus.items, eventFilters) : [];
 
   return (
     <div className="min-h-screen bg-[#0a0a1a]">
@@ -329,6 +361,42 @@ export default function DailyReportPage() {
             {report.date}（{report.weekday}）
           </p>
         </div>
+
+        {/* Freshness / Source Status */}
+        {report.freshness && (
+          <Card className="bg-[#12122a] border-emerald-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                <CardTitle className="text-lg text-white">🟢 資料狀態</CardTitle>
+                <Badge variant="outline" className="w-fit border-emerald-400/30 bg-emerald-400/10 text-emerald-200">
+                  freshness metadata checked-in
+                </Badge>
+              </div>
+              <p className="text-xs text-gray-500">
+                市場資料日 {report.freshness.marketDataDate} · 事件資料日 {report.freshness.eventDataDate} · 報告產生日 {formatTimestamp(report.freshness.generatedAt)} · Daily analysis {formatTimestamp(report.freshness.analysisGeneratedAt)}
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+                {report.freshness.sources.map((source) => (
+                  <div key={source.module} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <p className="text-sm font-semibold text-white">{source.module}</p>
+                        <p className="mt-1 text-xs text-gray-400">{source.source}</p>
+                      </div>
+                      <Badge variant="outline" className={`${getSourceStatusClass(source.status)} text-xs`}>
+                        {source.status}
+                      </Badge>
+                    </div>
+                    <p className="mt-2 text-xs text-gray-500">最新日：{source.latestDate || "—"}</p>
+                    <p className="mt-1 text-xs text-gray-500">範圍：{source.scope}</p>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Knowledge Applied */}
         {report.knowledge_applied && (
@@ -368,7 +436,53 @@ export default function DailyReportPage() {
                 <p className="text-sm text-gray-400">{eventFocus.emptyReason ?? "目前追蹤公司沒有官方重大訊息。"}</p>
               ) : (
                 <div className="space-y-3">
-                  {eventFocus.items.slice(0, 6).map((item) => (
+                  <div className="rounded-lg border border-cyan-400/20 bg-cyan-400/[0.04] p-3">
+                    <div className="mb-2 flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+                      <p className="text-sm font-semibold text-cyan-200">事件篩選</p>
+                      <button
+                        type="button"
+                        className="w-fit text-xs text-cyan-300 hover:text-cyan-100"
+                        onClick={() => setEventFilters({})}
+                      >
+                        清除篩選
+                      </button>
+                    </div>
+                    <div className="grid gap-2 md:grid-cols-3">
+                      <select
+                        aria-label="事件日期篩選"
+                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
+                        value={eventFilters.date ?? ""}
+                        onChange={(event) => setEventFilters((current) => ({ ...current, date: event.target.value || undefined }))}
+                      >
+                        <option value="">全部日期</option>
+                        {eventFilterOptions.dates.map((date) => <option key={date} value={date}>{date}</option>)}
+                      </select>
+                      <select
+                        aria-label="事件公司篩選"
+                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
+                        value={eventFilters.companyCode ?? ""}
+                        onChange={(event) => setEventFilters((current) => ({ ...current, companyCode: event.target.value || undefined }))}
+                      >
+                        <option value="">全部公司</option>
+                        {eventFilterOptions.companies.map((company) => <option key={company.code} value={company.code}>{company.name} ({company.code})</option>)}
+                      </select>
+                      <select
+                        aria-label="事件題材篩選"
+                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
+                        value={eventFilters.topicId ?? ""}
+                        onChange={(event) => setEventFilters((current) => ({ ...current, topicId: event.target.value || undefined }))}
+                      >
+                        <option value="">全部題材</option>
+                        {eventFilterOptions.topics.map((topic) => <option key={topic.id} value={topic.id}>{topic.name}</option>)}
+                      </select>
+                    </div>
+                    <p className="mt-2 text-xs text-gray-500">共用 major-news filter view model：company/date/topic。結果 {visibleEventItems.length} / {eventFocus.items.length} 筆。</p>
+                  </div>
+                  {visibleEventItems.length === 0 ? (
+                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                      目前篩選條件下沒有官方重大訊息；不代表公司沒有公告，請以公開資訊觀測站為準。
+                    </div>
+                  ) : visibleEventItems.slice(0, 12).map((item) => (
                     <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
                       <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
                         <div>

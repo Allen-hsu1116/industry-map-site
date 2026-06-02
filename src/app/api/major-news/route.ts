@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { NextRequest, NextResponse } from "next/server";
+import { normalizeMajorNewsFilters } from "@/lib/majorNewsFilters";
 
 interface MajorNewsItem {
   date: string;
@@ -13,7 +14,12 @@ type TwseMajorNewsRecord = Record<string, unknown>;
 export const dynamic = "force-dynamic";
 
 export async function GET(req: NextRequest) {
-  const symbol = req.nextUrl.searchParams.get("symbol")?.trim() || "";
+  const filters = normalizeMajorNewsFilters({
+    companyCode: req.nextUrl.searchParams.get("symbol")?.trim() || "",
+    date: req.nextUrl.searchParams.get("date")?.trim() || "",
+    topicId: req.nextUrl.searchParams.get("topic")?.trim() || "",
+  });
+  const symbol = filters.companyCode ?? "";
 
   if (!symbol) {
     return NextResponse.json({ error: "Missing symbol" }, { status: 400 });
@@ -24,11 +30,14 @@ export async function GET(req: NextRequest) {
     readSnapshotMajorNews(symbol),
   ]);
 
-  const merged = dedupeMajorNews([...liveNews, ...snapshotNews]).slice(0, 30);
+  const merged = dedupeMajorNews([...liveNews, ...snapshotNews])
+    .filter((item) => !filters.date || item.date.startsWith(filters.date))
+    .slice(0, 30);
 
   return NextResponse.json(
     {
       symbol,
+      filters,
       source: liveNews.length > 0 ? "TWSE OpenAPI + local snapshot" : "local snapshot",
       fetchedAt: new Date().toISOString(),
       liveCount: liveNews.length,
@@ -99,7 +108,8 @@ function dedupeMajorNews(items: MajorNewsItem[]): MajorNewsItem[] {
 
 function formatTwseDateTime(date: string, time: string): string {
   const d = date.replace(/\D/g, "");
-  const t = time.replace(/\D/g, "").padStart(6, "0");
+  const rawTime = time.replace(/\D/g, "");
+  const t = rawTime.length <= 4 ? rawTime.padStart(4, "0") + "00" : rawTime.padStart(6, "0");
   if (d.length !== 7) return date;
   const rocYear = Number(d.slice(0, 3));
   const month = d.slice(3, 5);
@@ -108,7 +118,7 @@ function formatTwseDateTime(date: string, time: string): string {
   const mm = t.slice(2, 4);
   const ss = t.slice(4, 6);
   if (!Number.isFinite(rocYear)) return date;
-  return `${rocYear}/${month}/${day} ${hh}:${mm}:${ss}`;
+  return `${rocYear + 1911}-${month}-${day} ${hh}:${mm}:${ss}`;
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
