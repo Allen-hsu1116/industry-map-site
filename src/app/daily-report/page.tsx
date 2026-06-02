@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -119,6 +120,16 @@ interface CompanyDailyAnalysis {
     blockingReasons: string[];
   };
   industry?: DailyIndustryAnalysis;
+  canonicalKnowledge?: {
+    topicRoles?: Array<{
+      topicId?: string;
+      canonicalTopicId?: string;
+      topicName?: string;
+      canonicalTopicName?: string;
+      directnessLabel?: string;
+      confidence?: string;
+    }>;
+  };
 }
 
 interface DailyReportFreshnessSource {
@@ -243,6 +254,19 @@ function getSourceStatusClass(status: DailyReportFreshnessSource["status"]): str
   return "border-slate-500/30 bg-slate-500/10 text-slate-300";
 }
 
+function analysisMatchesTopic(analysis: CompanyDailyAnalysis | undefined, topicId: string): boolean {
+  if (!topicId) return true;
+  return (analysis?.canonicalKnowledge?.topicRoles ?? []).some((role) => role.canonicalTopicId === topicId || role.topicId === topicId);
+}
+
+function getTopicRoleBadge(analysis: CompanyDailyAnalysis | undefined, topicId: string): string | null {
+  if (!topicId) return null;
+  const role = (analysis?.canonicalKnowledge?.topicRoles ?? []).find((item) => item.canonicalTopicId === topicId || item.topicId === topicId);
+  if (!role) return null;
+  const topicName = role.canonicalTopicName ?? role.topicName ?? topicId;
+  return `${topicName}${role.directnessLabel ? ` · ${role.directnessLabel}` : ""}${role.confidence ? ` · ${role.confidence}` : ""}`;
+}
+
 function formatTimestamp(timestamp?: string): string {
   if (!timestamp) return "—";
   return timestamp.replace("T", " ").replace(/\.\d{3}Z$/, "Z");
@@ -262,6 +286,8 @@ async function fetchStaticJson<T>(path: string): Promise<T> {
 
 /* ─── Main Page ─── */
 export default function DailyReportPage() {
+  const searchParams = useSearchParams();
+  const activeTopicId = searchParams.get("topic")?.trim() ?? "";
   const [report, setReport] = useState<DailyReport | null>(null);
   const [eventFocus, setEventFocus] = useState<EventFocusSnapshot | null>(null);
   const [eventFilters, setEventFilters] = useState<MajorNewsFilters>({});
@@ -342,9 +368,14 @@ export default function DailyReportPage() {
     );
   }
 
-  const gatedPicks = gateDailyReportPicks(report.picks, dailyAnalyses);
+  const topicFilteredPicks = activeTopicId
+    ? report.picks.filter((pick) => analysisMatchesTopic(dailyAnalyses[pick.code], activeTopicId))
+    : report.picks;
+  const gatedPicks = gateDailyReportPicks(topicFilteredPicks, dailyAnalyses);
   const eventFilterOptions = eventFocus ? buildMajorNewsFilterOptions(eventFocus.items) : { dates: [], companies: [], topics: [] };
-  const visibleEventItems = eventFocus ? filterEventFocusItems(eventFocus.items, eventFilters) : [];
+  const effectiveEventFilters = activeTopicId ? { ...eventFilters, topicId: activeTopicId } : eventFilters;
+  const visibleEventItems = eventFocus ? filterEventFocusItems(eventFocus.items, effectiveEventFilters) : [];
+  const activeTopicName = activeTopicId ? eventFilterOptions.topics.find((topic) => topic.id === activeTopicId)?.name ?? activeTopicId : "";
 
   return (
     <div className="min-h-screen bg-[#0a0a1a]">
@@ -360,6 +391,21 @@ export default function DailyReportPage() {
           <p className="text-gray-400 mt-1">
             {report.date}（{report.weekday}）
           </p>
+          {activeTopicId && (
+            <div className="mt-4 rounded-2xl border border-indigo-400/25 bg-indigo-400/10 p-4">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                <div>
+                  <p className="text-sm font-semibold text-indigo-100">Topic-filtered Daily analysis：{activeTopicName}</p>
+                  <p className="mt-1 text-xs leading-relaxed text-indigo-100/70">
+                    只顯示 daily analysis 中 canonicalKnowledge.topicRoles 命中此題材的公司；重大訊息同時套用 topicId filter，官方主旨仍保留原文。
+                  </p>
+                </div>
+                <a href="/industry-map-site/daily-report" className="w-fit rounded-lg border border-indigo-300/30 px-3 py-1.5 text-xs font-medium text-indigo-100 hover:bg-indigo-300/10">
+                  清除題材篩選
+                </a>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Freshness / Source Status */}
@@ -442,7 +488,7 @@ export default function DailyReportPage() {
                       <button
                         type="button"
                         className="w-fit text-xs text-cyan-300 hover:text-cyan-100"
-                        onClick={() => setEventFilters({})}
+                        onClick={() => setEventFilters(activeTopicId ? { topicId: activeTopicId } : {})}
                       >
                         清除篩選
                       </button>
@@ -451,7 +497,7 @@ export default function DailyReportPage() {
                       <select
                         aria-label="事件日期篩選"
                         className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
-                        value={eventFilters.date ?? ""}
+                        value={effectiveEventFilters.date ?? ""}
                         onChange={(event) => setEventFilters((current) => ({ ...current, date: event.target.value || undefined }))}
                       >
                         <option value="">全部日期</option>
@@ -460,7 +506,7 @@ export default function DailyReportPage() {
                       <select
                         aria-label="事件公司篩選"
                         className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
-                        value={eventFilters.companyCode ?? ""}
+                        value={effectiveEventFilters.companyCode ?? ""}
                         onChange={(event) => setEventFilters((current) => ({ ...current, companyCode: event.target.value || undefined }))}
                       >
                         <option value="">全部公司</option>
@@ -469,7 +515,7 @@ export default function DailyReportPage() {
                       <select
                         aria-label="事件題材篩選"
                         className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
-                        value={eventFilters.topicId ?? ""}
+                        value={effectiveEventFilters.topicId ?? ""}
                         onChange={(event) => setEventFilters((current) => ({ ...current, topicId: event.target.value || undefined }))}
                       >
                         <option value="">全部題材</option>
@@ -598,6 +644,7 @@ export default function DailyReportPage() {
             const dailyAnalysis = dailyAnalyses[pick.code];
             const dailyIndustry = dailyAnalysis?.industry;
             const analysisQuality = dailyAnalysis?.analysisQuality;
+            const topicRoleBadge = getTopicRoleBadge(dailyAnalysis, activeTopicId);
             return (
             <Card key={pick.code} className={`bg-[#12122a] border ${getScoreBg(pick.score)}`}>
               <CardHeader className="pb-3">
@@ -611,6 +658,11 @@ export default function DailyReportPage() {
                       <span className="text-gray-500 ml-2 text-sm">({pick.code})</span>
                     </div>
                     <Badge variant="secondary" className="text-xs">{pick.industry}</Badge>
+                    {topicRoleBadge && (
+                      <Badge variant="outline" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-200 text-xs">
+                        {topicRoleBadge}
+                      </Badge>
+                    )}
                   </div>
                   <div className={`text-3xl font-bold ${getScoreColor(pick.score)}`}>
                     {pick.score}分
