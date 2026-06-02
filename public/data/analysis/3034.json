@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3034",
   "name": "聯詠",
-  "generatedAt": "2026-05-28T17:21:47.417Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.346Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,29 +17,33 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 45,
-    "summary": "聯詠 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.6%。",
+    "score": 55,
+    "summary": "聯詠 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 4.0%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 6.6%"
+      "收盤站上 MA20 4.0%"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "接近 20 日高點 503.00，觀察是否突破"
+    ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 36,
-    "summary": "聯詠 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +4.7千張；近 20 日法人偏買，合計 +2.1萬張。",
+    "summary": "聯詠 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.6千張；近 20 日法人偏買，合計 +2.4萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +4.7千張",
-      "近 20 日法人偏買，合計 +2.1萬張",
-      "投信近 5 日買超 +225張",
-      "外資近 5 日買超 +4.4千張"
+      "三大法人近 5 日合計買超 +1.6千張",
+      "近 20 日法人偏買，合計 +2.4萬張",
+      "投信近 5 日買超 +4.3千張"
     ],
-    "risks": [],
+    "risks": [
+      "外資近 5 日賣超 -3.2千張"
+    ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01",
+      "融券近 5 日增加 87.5%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -52,7 +56,7 @@
     "roleDetail": {
       "topicName": "IC 設計與矽智財",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "聯詠在 DDIC 題材中是顯示驅動 IC 核心供應鏈角色；面板、手機、車載與消費顯示需求會透過 IC 出貨、ASP 與庫存循環傳導到營收。",
+      "roleSummary": "聯詠是全球 OLED DDI 出貨量龍頭；4 月營收 9.2 億年增 1.2%，累計年減 10.7%。OLED DDI 成長抵消部分面板衰退。",
       "supplyChainStage": "ic_design",
       "roleType": "display_driver_ic_provider",
       "directness": "core",
@@ -60,51 +64,25 @@
     },
     "productNarratives": [
       {
-        "name": "顯示驅動 IC 與觸控顯示整合 IC",
-        "description": "顯示驅動 IC 是把影像訊號轉成面板像素驅動訊號的晶片，觸控顯示整合 IC 則把觸控感測與顯示控制整合，常用於手機、車載、IT 與消費顯示產品。",
-        "whyItMatters": "面板本身需要驅動與控制晶片才能顯示影像，因此 DDIC 出貨、ASP 與庫存循環會直接連動面板與終端需求。",
-        "topicFit": "核心產品：顯示驅動 IC/觸控顯示 IC。",
-        "businessImpact": "DDIC 受面板價格、終端需求與庫存循環影響；高階 OLED、車載與高刷新應用可改善產品組合。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：聯詠 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "顯示驅動 IC",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
-        "name": "顯示 SoC 與邊緣影像/顯示 IC",
-        "description": "顯示 SoC 與邊緣影像/顯示 IC 是把顯示控制、影像處理與部分運算功能整合到單一晶片，用於電視、監視器、AR/VR 或終端顯示設備。",
-        "whyItMatters": "端側顯示設備若加入 AI 影像處理、互動或感測功能，顯示 SoC 的規格與 ASP 可能提升；但它不是資料中心 AI 加速器，必須保守定位。",
-        "topicFit": "顯示 IC 產品線延伸。",
-        "businessImpact": "Edge AI 題材貢獻要看實際產品導入與 ASP，而不是把所有顯示 IC 都泛稱 AI 晶片。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：聯詠 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "觸控與顯示整合 IC",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "顯示 SoC",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
-      "strengths": [
-        "聯詠在顯示驅動 IC、觸控與顯示整合 IC 具核心角色，是面板與終端顯示供應鏈的重要 IC 設計公司。"
-      ],
-      "opportunities": [
-        "邊緣顯示、車用/高階顯示與 AIoT 影像應用升級，可能推升顯示 SoC 與整合型 IC 需求。"
-      ],
-      "risks": [
-        "面板價格循環與中國 IC 設計競爭，可能壓縮聯詠 DDIC 訂單與價格。",
-        "顯示驅動 IC 與面板需求高度連動，易受消費電子、面板庫存與價格週期影響。"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -112,8 +90,6 @@
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "聯詠 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -126,17 +102,14 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "V2 W：顯示驅動 IC 與面板需求高度連動，易受消費電子、面板庫存與價格週期影響。",
-      "V2 T：面板價格循環與中國 IC 設計競爭，可能壓縮聯詠 DDIC 訂單與價格。"
-    ],
+    "risks": [],
     "watch": [
-      "V2 O：邊緣顯示、車用/高階顯示與 AIoT 影像應用升級，可能推升顯示 SoC 與整合型 IC 需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
-      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -150,7 +123,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -173,78 +146,37 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "ddic",
-        "topicName": "IC 設計｜顯示驅動 IC",
+        "topicId": "ic-design",
+        "topicName": "IC 設計與矽智財",
         "canonicalTopicId": "ic-design",
         "canonicalTopicName": "IC 設計與矽智財",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "聯詠在 DDIC 題材中是顯示驅動 IC 核心供應鏈角色；面板、手機、車載與消費顯示需求會透過 IC 出貨、ASP 與庫存循環傳導到營收。"
+        "roleSummary": "聯詠是全球 OLED DDI 出貨量龍頭；4 月營收 9.2 億年增 1.2%，累計年減 10.7%。OLED DDI 成長抵消部分面板衰退。"
       },
       {
-        "topicId": "display-panel",
-        "topicName": "光學顯示｜面板產業",
+        "topicId": "display-led-optics",
+        "topicName": "面板、LED、光學鏡頭與感測",
         "canonicalTopicId": "display-led-optics",
         "canonicalTopicName": "面板、LED、光學鏡頭與感測",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "聯詠不是面板製造商，而是面板驅動與控制 IC 的直接賦能者；Daily Analysis 應把面板價格/需求與 IC 設計庫存循環連動觀察。"
+        "roleSummary": "聯詠在面板驅動 IC 題材中是全球出貨量最大供應商；4 月營收年增 1.2%，OLED DDI 是主要成長引擎。"
       },
       {
-        "topicId": "edge-ai",
-        "topicName": "智慧機器人｜Edge AI / AIoT 邊緣智慧",
+        "topicId": "edge-ai-aiot",
+        "topicName": "Edge AI / AIoT 邊緣智慧",
         "canonicalTopicId": "edge-ai-aiot",
         "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "聯詠可透過顯示 SoC 與邊緣影像/顯示晶片切入 Edge AI 題材，但目前應保守列為供應鏈候選，不應過度放大為 AI 核心晶片。"
+        "roleSummary": "聯詠在邊緣 AI SoC 題材中是安防/物聯網核心供應商；內嵌 NPU 的 SoC 搶攻邊緣推論。4 月營收年增 1.2%。"
       }
     ],
-    "swot": [
-      {
-        "id": "opportunity-edge-display-ai-upgrade",
-        "category": "opportunity",
-        "statement": "邊緣顯示、車用/高階顯示與 AIoT 影像應用升級，可能推升顯示 SoC 與整合型 IC 需求。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "edge-ai",
-          "ddic"
-        ]
-      },
-      {
-        "id": "strength-ddic-display-ic-leadership",
-        "category": "strength",
-        "statement": "聯詠在顯示驅動 IC、觸控與顯示整合 IC 具核心角色，是面板與終端顯示供應鏈的重要 IC 設計公司。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "ddic",
-          "display-panel"
-        ]
-      },
-      {
-        "id": "threat-panel-price-and-china-competition",
-        "category": "threat",
-        "statement": "面板價格循環與中國 IC 設計競爭，可能壓縮聯詠 DDIC 訂單與價格。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ddic",
-          "display-panel"
-        ]
-      },
-      {
-        "id": "weakness-display-cycle-exposure",
-        "category": "weakness",
-        "statement": "顯示驅動 IC 與面板需求高度連動，易受消費電子、面板庫存與價格週期影響。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ddic",
-          "display-panel"
-        ]
-      }
-    ],
+    "swot": [],
     "topics": [
       {
         "id": "ic-design",
@@ -294,7 +226,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 83,
+    "totalScore": 85,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 26,
@@ -302,8 +234,8 @@
       "signals": [
         "月營收 YoY +1.2%，溫和成長",
         "月營收 MoM +8.9%，短期動能改善",
-        "本益比 19.9 倍，估值尚可對照成長",
-        "殖利率 4.7%，提供部分下檔支撐"
+        "本益比 20.4 倍，估值尚可對照成長",
+        "殖利率 4.6%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -320,15 +252,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：479.50",
-      "波段多空分水嶺看 MA20：458.85",
-      "追蹤法人是否延續 買超：最近 +719張",
+      "短線支撐/壓力先看 MA5：485.70",
+      "波段多空分水嶺看 MA20：477.18",
+      "追蹤法人是否延續 買超：最近 +1.6千張",
       "月營收年增率 +1.2%，觀察基本面是否支撐估值",
-      "本益比 19.9 倍，需和同族群估值比較"
+      "本益比 20.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 503.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 406.50：列為轉弱警訊",
+      "收盤跌破 20 日低點 412.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

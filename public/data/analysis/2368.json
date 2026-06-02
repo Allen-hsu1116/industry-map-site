@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2368",
   "name": "金像電",
-  "generatedAt": "2026-05-28T17:21:47.205Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.085Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,32 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 15,
-    "summary": "金像電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 4.1%。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 4.1%"
-    ],
-    "risks": [],
-    "watch": []
-  },
-  "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -20,
-    "summary": "金像電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +99張；三大法人近 5 日合計賣超 -1.1千張。",
-    "signals": [
-      "投信近 5 日買超 +99張"
-    ],
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -30,
+    "summary": "金像電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
+    "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.1千張",
-      "近 20 日法人偏賣，合計 -2千張",
-      "外資近 5 日賣超 -845張"
+      "收盤價、MA5、MA20 呈空頭排列"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "股價貼近 MA20，留意方向選擇"
+    ]
+  },
+  "chips": {
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "金像電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +839張；外資近 5 日買超 +2.1千張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +839張",
+      "外資近 5 日買超 +2.1千張"
+    ],
+    "risks": [
+      "近 20 日法人偏賣，合計 -269張",
+      "投信近 5 日賣超 -978張"
+    ],
+    "watch": [
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -53,7 +54,7 @@
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "金像電在 PCB 題材中是伺服器/高層數 PCB 供應鏈核心角色；AI 伺服器主板層數、材料與良率會影響價值量。",
+      "roleSummary": "金像電是高層數伺服器 PCB 龍頭；4 月營收 7.3 億年增 58.4%，累計年增 60.8%。AI 伺服器用高階 PCB 供不應求，接單量增加。",
       "supplyChainStage": "pcb",
       "roleType": "server_pcb_manufacturer",
       "directness": "core",
@@ -61,21 +62,19 @@
     },
     "productNarratives": [
       {
-        "name": "高層數伺服器 PCB 與 AI 伺服器主板",
-        "description": "高層數伺服器 PCB 是承載 CPU/GPU、記憶體、電源與高速訊號的多層印刷電路板；AI 伺服器主板需要更高層數、更嚴格材料與良率控制。",
-        "whyItMatters": "AI 伺服器功耗與訊號速度提升後，PCB 從普通板材變成系統穩定度與量產良率的關鍵零組件，金像電的角色是板級供應鏈而不是整機 ODM。",
-        "topicFit": "核心產品：高層數伺服器 PCB 製造。",
-        "businessImpact": "高階伺服器 PCB 可提高產品 ASP，但材料成本、良率、客戶認證與產能利用率會決定實際獲利。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：金像電 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "高層數伺服器 PCB",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "HDI/硬板 PCB",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "網通與伺服器板",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -134,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -157,14 +156,14 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "pcb-manufacturing",
-        "topicName": "電子零組件｜PCB 硬板製造",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "金像電在 PCB 題材中是伺服器/高層數 PCB 供應鏈核心角色；AI 伺服器主板層數、材料與良率會影響價值量。"
+        "roleSummary": "金像電是高層數伺服器 PCB 龍頭；4 月營收 7.3 億年增 58.4%，累計年增 60.8%。AI 伺服器用高階 PCB 供不應求，接單量增加。"
       },
       {
         "topicId": "ai-server",
@@ -174,17 +173,17 @@
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "金像電不是 AI 伺服器整機 ODM，而是 AI 伺服器 PCB 供應鏈角色；Daily Analysis 應追蹤伺服器 PCB 訂單、材料成本與產能利用率。"
+        "roleSummary": "金像電在 AI 伺服器 PCB 題材中是高層數板核心供應商；4 月營收年增 58.4%，受惠 AI 伺服器高階 PCB 訂單爆量。"
       },
       {
-        "topicId": "networking-equipment",
-        "topicName": "網通衛星｜高速交換器與無線網路",
+        "topicId": "networking-infrastructure",
+        "topicName": "高速交換器與網通設備",
         "canonicalTopicId": "networking-infrastructure",
         "canonicalTopicName": "高速交換器與網通設備",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "金像電可供應網通設備 PCB，與高速交換器/網通設備題材的關聯屬材料與板級供應鏈。"
+        "roleSummary": "金像電在高速網通 PCB 也是主要供應商；交換器/光模組 PCB 需要高層數低損耗材，4 月營收年增 58.4%。"
       }
     ],
     "swot": [
@@ -279,7 +278,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 63,
+    "totalScore": 57,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 12,
@@ -288,8 +287,8 @@
         "月營收 YoY +46.3%，成長動能明確"
       ],
       "risks": [
-        "本益比 58.0 倍，需防估值壓縮",
-        "股價淨值比 18.8 倍偏高，需和 ROE/成長性比對"
+        "本益比 59.8 倍，需防估值壓縮",
+        "股價淨值比 19.4 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -302,11 +301,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：1312.00",
-      "波段多空分水嶺看 MA20：1368.75",
-      "追蹤法人是否延續 賣超：最近 -472張",
+      "短線支撐/壓力先看 MA5：1354.00",
+      "波段多空分水嶺看 MA20：1357.25",
+      "追蹤法人是否延續 買超：最近 +281張",
       "月營收年增率 +46.3%，觀察基本面是否支撐估值",
-      "本益比 58.0 倍，需和同族群估值比較"
+      "本益比 59.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 1520.00 且量比 > 1.5：列為轉強訊號",

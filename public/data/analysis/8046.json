@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8046",
   "name": "南電",
-  "generatedAt": "2026-05-28T17:21:47.874Z",
+  "generatedAt": "2026-06-02T03:20:20.905Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,7 +54,7 @@
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "南電在 IC 載板/ABF 題材中是核心供應鏈角色；AI/HPC 晶片封裝需求會透過載板規格、產能與稼動率傳導。",
+      "roleSummary": "南電是台灣 PCB/IC 載板大廠；4 月營收 4.5 億年增 39.5%，累計年增 34.2%。AI 伺服器高階 PCB 與 IC 載板雙引擎成長。",
       "supplyChainStage": "ic_substrate",
       "roleType": "abf_substrate_provider",
       "directness": "core",
@@ -62,34 +62,25 @@
     },
     "productNarratives": [
       {
-        "name": "ABF 載板與 IC 載板",
-        "description": "ABF 載板是高階 IC 封裝中連接晶片與 PCB 的關鍵基板，常用於 CPU、GPU、ASIC 與高階網通晶片封裝。",
-        "whyItMatters": "AI/HPC 晶片尺寸、I/O 與功耗上升後，對高階載板面積、層數與良率要求提高，ABF 載板成為先進封裝供應鏈的重要瓶頸之一。",
-        "topicFit": "核心產品：ABF/IC 載板。",
-        "businessImpact": "ABF 載板景氣受 AI/HPC 晶片需求、產能利用率與封裝週期影響，具有高規格價值但也有供需循環。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：南電 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "ABF 載板",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "IC 載板",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "BGA/HDI 板",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
-      "strengths": [
-        "南電具 ABF 載板、IC 載板與 HDI/BGA 板能力，是先進封裝與高階 IC substrate 題材的核心供應商。"
-      ],
-      "opportunities": [
-        "AI 加速器與先進封裝需求提升，可帶動先進封裝用 IC 載板與 ABF 載板需求。"
-      ],
-      "risks": [
-        "若 ABF 載板供給過剩、客戶庫存調整或封裝技術路線改變，南電可能面臨價格與稼動率壓力。",
-        "ABF/IC 載板屬資本密集且景氣循環明顯，產能利用率與價格變動會放大獲利波動。"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -97,8 +88,6 @@
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "南電 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -111,17 +100,14 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "V2 W：ABF/IC 載板屬資本密集且景氣循環明顯，產能利用率與價格變動會放大獲利波動。",
-      "V2 T：若 ABF 載板供給過剩、客戶庫存調整或封裝技術路線改變，南電可能面臨價格與稼動率壓力。"
-    ],
+    "risks": [],
     "watch": [
-      "V2 O：AI 加速器與先進封裝需求提升，可帶動先進封裝用 IC 載板與 ABF 載板需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
-      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -158,18 +144,18 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "ic-substrate",
-        "topicName": "基板材料｜IC 載板",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "南電在 IC 載板/ABF 題材中是核心供應鏈角色；AI/HPC 晶片封裝需求會透過載板規格、產能與稼動率傳導。"
+        "roleSummary": "南電是台灣 PCB/IC 載板大廠；4 月營收 4.5 億年增 39.5%，累計年增 34.2%。AI 伺服器高階 PCB 與 IC 載板雙引擎成長。"
       },
       {
-        "topicId": "pcb-manufacturing",
-        "topicName": "電子零組件｜PCB 硬板製造",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "core",
@@ -178,8 +164,8 @@
         "roleSummary": "南電在 PCB/HDI/BGA 載板題材中是板級製造供應鏈角色，需求受電子終端、AI/HPC 與封裝週期影響。"
       },
       {
-        "topicId": "cowos-advanced-packaging",
-        "topicName": "先進封測｜AI 先進封裝 CoWoS",
+        "topicId": "advanced-packaging",
+        "topicName": "先進封裝與 CoWoS",
         "canonicalTopicId": "advanced-packaging",
         "canonicalTopicName": "先進封裝與 CoWoS",
         "directness": "supplier",
@@ -188,50 +174,7 @@
         "roleSummary": "南電不是 CoWoS 製程供應商本身，但可作為先進封裝所需載板/基板供應鏈角色；需避免把載板供應商寫成封裝代工。"
       }
     ],
-    "swot": [
-      {
-        "id": "opportunity-advanced-packaging-substrate-demand",
-        "category": "opportunity",
-        "statement": "AI 加速器與先進封裝需求提升，可帶動先進封裝用 IC 載板與 ABF 載板需求。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "cowos-advanced-packaging",
-          "ic-substrate",
-          "ai-server"
-        ]
-      },
-      {
-        "id": "strength-abf-ic-substrate-platform",
-        "category": "strength",
-        "statement": "南電具 ABF 載板、IC 載板與 HDI/BGA 板能力，是先進封裝與高階 IC substrate 題材的核心供應商。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "ic-substrate",
-          "cowos-advanced-packaging",
-          "pcb-manufacturing"
-        ]
-      },
-      {
-        "id": "threat-abf-supply-demand-reversal",
-        "category": "threat",
-        "statement": "若 ABF 載板供給過剩、客戶庫存調整或封裝技術路線改變，南電可能面臨價格與稼動率壓力。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ic-substrate",
-          "cowos-advanced-packaging"
-        ]
-      },
-      {
-        "id": "weakness-substrate-capex-and-utilization",
-        "category": "weakness",
-        "statement": "ABF/IC 載板屬資本密集且景氣循環明顯，產能利用率與價格變動會放大獲利波動。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ic-substrate",
-          "pcb-manufacturing"
-        ]
-      }
-    ],
+    "swot": [],
     "topics": [
       {
         "id": "pcb-substrates",
@@ -270,7 +213,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 57,
+    "totalScore": 49,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -284,7 +227,18 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

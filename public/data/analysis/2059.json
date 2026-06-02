@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2059",
   "name": "川湖",
-  "generatedAt": "2026-05-28T17:21:47.148Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.016Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,31 +18,30 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "川湖 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.5%。",
+    "summary": "川湖 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.0%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 6.5%"
+      "收盤站上 MA20 6.0%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 20,
-    "summary": "川湖 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +36張；近 20 日法人偏買，合計 +279張。",
+    "score": 41,
+    "summary": "川湖 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +64張；近 20 日法人偏買，合計 +911張。",
     "signals": [
-      "三大法人近 5 日合計買超 +36張",
-      "近 20 日法人偏買，合計 +279張",
-      "外資近 5 日買超 +61張"
+      "三大法人近 5 日合計買超 +64張",
+      "近 20 日法人偏買，合計 +911張",
+      "投信近 5 日買超 +138張",
+      "融資近 5 日下降 24.0%，籌碼壓力下降"
     ],
     "risks": [
-      "投信近 5 日賣超 -34張"
+      "外資近 5 日賣超 -85張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -55,7 +54,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器機構件與滑軌",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "川湖在 AI 伺服器機構件題材中提供高承重伺服器滑軌、理線器與電子設備導軌，支援資料中心伺服器與網通/儲存設備上架維護。",
+      "roleSummary": "川湖是全球伺服器導軌龍頭；4 月營收 2.6 億年增 79.1%，累計年增 48.9%。AI 伺服器帶動 GPU 機架導軌需求大增。",
       "supplyChainStage": "server_mechanical_rails",
       "roleType": "server_rail_cable_management_supplier",
       "directness": "core",
@@ -149,7 +148,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -179,7 +178,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "川湖在 AI 伺服器機構件題材中提供高承重伺服器滑軌、理線器與電子設備導軌，支援資料中心伺服器與網通/儲存設備上架維護。"
+        "roleSummary": "川湖是全球伺服器導軌龍頭；4 月營收 2.6 億年增 79.1%，累計年增 48.9%。AI 伺服器帶動 GPU 機架導軌需求大增。"
       }
     ],
     "swot": [
@@ -247,17 +246,18 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 81,
+    "totalScore": 82,
     "recommendationState": "top_candidate",
     "fundamental": {
-      "score": 30,
-      "label": "基本面偏強",
+      "score": 18,
+      "label": "基本面中性",
       "signals": [
         "月營收 YoY +53.5%，成長動能明確",
         "月營收 MoM +3.8%，短期動能改善"
       ],
       "risks": [
-        "股價淨值比 13.4 倍偏高，需和 ROE/成長性比對"
+        "本益比 46.0 倍，需防估值壓縮",
+        "股價淨值比 15.8 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -273,15 +273,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：4783.00",
-      "波段多空分水嶺看 MA20：4676.50",
-      "追蹤法人是否延續 賣超：最近 -102張",
+      "短線支撐/壓力先看 MA5：4987.00",
+      "波段多空分水嶺看 MA20：4920.00",
+      "追蹤法人是否延續 買超：最近 +6張",
       "月營收年增率 +53.5%，觀察基本面是否支撐估值",
-      "本益比 39.2 倍，需和同族群估值比較"
+      "本益比 46.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 5615.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 3745.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 4000.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

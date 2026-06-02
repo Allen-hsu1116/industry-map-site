@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "code": "2301",
   "name": "光寶科",
-  "generatedAt": "2026-05-28T17:21:47.154Z",
+  "generatedAt": "2026-06-02T03:20:20.021Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "topic_role_not_verified",
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -52,46 +49,127 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "medium",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "roleDetail": {
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "直接賦能角色",
+      "roleSummary": "光寶科是全球前三大電源供應器廠，AI伺服器電源(800W+)為新成長引擎，配合Dell/HP/Microsoft等客戶。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "server_psu_maker",
+      "directness": "direct_enabler",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "電源供應器(SPS/Server PSU)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "LED照明模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "車用電子(ADAS/車用鏡頭)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "全球電源供應器龍頭(含server PSU)",
+        "車用電子產品線多元(ADAS/鏡頭)"
+      ],
+      "opportunities": [
+        "AI伺服器電源需求(800W+)爆發",
+        "電動車滲透率提升帶動車用電子"
+      ],
+      "risks": [
+        "中國電源廠低價競爭",
+        "台達電在server PSU的強勢競爭"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 直接賦能角色 +36",
+      "角色信心 medium +10",
+      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 6 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 88，上限 40）"
     ],
-    "summary": "光寶科 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "光寶科 在「AI 伺服器整機與 EMS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · medium",
+      "產業評分：40/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "主要產品：電源供應器(SPS/Server PSU)",
+      "主要產品：LED照明模組",
+      "主要產品：車用電子(ADAS/車用鏡頭)",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+      "V2 W：PC/NB電源市場成熟成長有限",
+      "V2 W：車用電子驗證週期長",
+      "V2 T：中國電源廠低價競爭",
+      "V2 T：台達電在server PSU的強勢競爭"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：AI伺服器電源需求(800W+)爆發",
+      "V2 O：電動車滲透率提升帶動車用電子",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-02"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
+    "products": [
+      "電源供應器(SPS/Server PSU)",
+      "LED照明模組",
+      "車用電子(ADAS/車用鏡頭)",
+      "多功能事務機(MFP)",
+      "光耦合器"
+    ],
+    "customers": [
+      "Dell",
+      "HP",
+      "Microsoft",
+      "Cisco",
+      "Toyota"
+    ],
     "topicRoles": [],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "全球電源供應器龍頭(含server PSU)",
+        "車用電子產品線多元(ADAS/鏡頭)",
+        "多元品牌客戶分散風險"
+      ],
+      "weaknesses": [
+        "PC/NB電源市場成熟成長有限",
+        "車用電子驗證週期長"
+      ],
+      "opportunities": [
+        "AI伺服器電源需求(800W+)爆發",
+        "電動車滲透率提升帶動車用電子",
+        "LED車用照明升級"
+      ],
+      "threats": [
+        "中國電源廠低價競爭",
+        "台達電在server PSU的強勢競爭",
+        "消費性電子需求疲弱"
+      ],
+      "sources": [
+        "financials:2301"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -114,9 +192,132 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "光寶科是全球前三大電源供應器廠，AI伺服器電源(800W+)為新成長引擎，配合Dell/HP/Microsoft等客戶。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2301-0",
+        "category": "opportunity",
+        "statement": "AI伺服器電源需求(800W+)爆發",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2301-1",
+        "category": "opportunity",
+        "statement": "電動車滲透率提升帶動車用電子",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2301-2",
+        "category": "opportunity",
+        "statement": "LED車用照明升級",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2301-0",
+        "category": "strength",
+        "statement": "全球電源供應器龍頭(含server PSU)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2301-1",
+        "category": "strength",
+        "statement": "車用電子產品線多元(ADAS/鏡頭)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2301-2",
+        "category": "strength",
+        "statement": "多元品牌客戶分散風險",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2301-0",
+        "category": "threat",
+        "statement": "中國電源廠低價競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2301-1",
+        "category": "threat",
+        "statement": "台達電在server PSU的強勢競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2301-2",
+        "category": "threat",
+        "statement": "消費性電子需求疲弱",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2301-0",
+        "category": "weakness",
+        "statement": "PC/NB電源市場成熟成長有限",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2301-1",
+        "category": "weakness",
+        "statement": "車用電子驗證週期長",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -131,8 +332,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 29,
-    "recommendationState": "blocked",
+    "totalScore": 51,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -143,19 +344,23 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.stop-distance",

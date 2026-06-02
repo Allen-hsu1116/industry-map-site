@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3664",
   "name": "安瑞-KY",
-  "generatedAt": "2026-05-28T17:21:47.564Z",
+  "generatedAt": "2026-06-02T03:20:20.520Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-20",
@@ -132,7 +132,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 8,
+    "totalScore": 0,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -153,9 +153,14 @@
         "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
-        "id": "risk.chip-data-stale",
+        "id": "risk.market-data-stale",
         "severity": "soft",
-        "message": "籌碼資料已 9 天未更新"
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "hard",
+        "message": "籌碼資料已 13 天未更新"
       },
       {
         "id": "risk.topic-evidence",

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2383",
   "name": "台光電",
-  "generatedAt": "2026-05-28T17:21:47.218Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.100Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,37 +15,32 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 55,
-    "summary": "台光電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 15.7%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 15,
+    "summary": "台光電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 3.3%。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 15.7%"
+      "均線結構偏震盪，尚未形成明確排列",
+      "收盤站上 MA20 3.3%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低",
-      "接近 20 日高點 5505.00，觀察是否突破"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 25,
-    "summary": "台光電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.4千張；近 20 日法人偏買，合計 +3.9千張。",
+    "score": 20,
+    "summary": "台光電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +166張；近 20 日法人偏買，合計 +4千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.4千張",
-      "近 20 日法人偏買，合計 +3.9千張",
-      "外資近 5 日買超 +1.8千張",
-      "融資近 5 日下降 13.4%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +166張",
+      "近 20 日法人偏買，合計 +4千張",
+      "外資近 5 日買超 +716張"
     ],
     "risks": [
-      "投信近 5 日賣超 -275張"
+      "投信近 5 日賣超 -438張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25",
-      "融券近 5 日增加 97.8%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -58,29 +53,27 @@
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台光電在 CCL/基板材料供應鏈中具核心定位；需追蹤高速材料規格升級、產品組合與產能擴充。",
+      "roleSummary": "台光電是全球極低損耗銅箔基板龍頭；4 月營收 13.9 億年增 93.6%，累計年增 62.7%。AI 伺服器高頻高速 CCL 需求爆發。",
       "supplyChainStage": "substrate_materials",
-      "roleType": "ccl_material_provider",
+      "roleType": "high_end_ccl_supplier",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "高階銅箔基板 CCL 與低損耗高速材料",
-        "description": "高階銅箔基板 CCL 是 PCB 的關鍵基礎材料，用樹脂、玻纖布與銅箔做成可承載高速訊號的板材；低損耗材料則用來降低高速傳輸時的訊號衰減。",
-        "whyItMatters": "AI 伺服器、交換器與高速網通設備的傳輸速率提高後，PCB 材料損耗、耐熱與穩定性會成為瓶頸，因此高階 CCL 是高速運算硬體升級的上游關鍵材料。",
-        "topicFit": "與玻纖布、樹脂等基板材料規格升級連動。",
-        "businessImpact": "產品組合往高頻高速 CCL 移動時，ASP 與毛利結構通常優於一般板材；但仍需追蹤 AI server/交換器放量、材料認證與產能利用率。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：台光電 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2383",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "高階銅箔基板 CCL",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "低損耗高速材料",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "IC 載板上游材料",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -91,7 +84,6 @@
         "AI 伺服器與高速網通提升低損耗、高頻高速材料需求，台光電可受惠 CCL 規格升級。"
       ],
       "risks": [
-        "同業擴產、材料替代或客戶規格變動，可能壓縮台光電高階材料毛利與市占。",
         "高階材料需通過客戶與平台驗證，且受原物料成本、庫存週期與規格轉換影響。"
       ]
     },
@@ -102,7 +94,7 @@
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "風險 SWOT 扣分 -3",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "台光電 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -116,8 +108,7 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "V2 W：高階材料需通過客戶與平台驗證，且受原物料成本、庫存週期與規格轉換影響。",
-      "V2 T：同業擴產、材料替代或客戶規格變動，可能壓縮台光電高階材料毛利與市占。"
+      "V2 W：高階材料需通過客戶與平台驗證，且受原物料成本、庫存週期與規格轉換影響。"
     ],
     "watch": [
       "V2 O：AI 伺服器與高速網通提升低損耗、高頻高速材料需求，台光電可受惠 CCL 規格升級。",
@@ -139,7 +130,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -162,24 +153,24 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "fiberglass-cloth",
-        "topicName": "基板材料｜玻纖布",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "台光電在 CCL/基板材料供應鏈中具核心定位；需追蹤高速材料規格升級、產品組合與產能擴充。"
+        "roleSummary": "台光電是全球極低損耗銅箔基板龍頭；4 月營收 13.9 億年增 93.6%，累計年增 62.7%。AI 伺服器高頻高速 CCL 需求爆發。"
       },
       {
-        "topicId": "ic-substrate",
-        "topicName": "基板材料｜IC 載板",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "台光電在高階 CCL/載板上游材料題材中是核心供應鏈角色；AI 伺服器、交換器與高速 PCB 升級會推升低損耗材料需求。"
+        "roleSummary": "台光電在極低損耗玻纖布垂直整合；自製自用降低成本，AI 伺服器帶動極低損耗規格需求。4 月營收年增 93.6%。"
       },
       {
         "topicId": "ai-server",
@@ -189,7 +180,7 @@
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "台光電不是 AI server 整機供應商，而是高速 PCB/CCL 上游材料供應鏈；AI 伺服器升級會透過板材規格與用量傳導。"
+        "roleSummary": "台光電是 AI 伺服器 CCL 最核心供應商；極低損耗基板是 AI PCB 關鍵材料。4 月營收年增 93.6%，備註「受惠於AI伺服器成長力道」。"
       }
     ],
     "swot": [
@@ -213,16 +204,6 @@
           "ic-substrate",
           "fiberglass-cloth",
           "ai-server"
-        ]
-      },
-      {
-        "id": "threat-material-substitution-and-competition",
-        "category": "threat",
-        "statement": "同業擴產、材料替代或客戶規格變動，可能壓縮台光電高階材料毛利與市占。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ic-substrate",
-          "fiberglass-cloth"
         ]
       },
       {
@@ -274,7 +255,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 77,
+    "totalScore": 72,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 18,
@@ -284,38 +265,31 @@
         "月營收 MoM +15.9%，短期動能改善"
       ],
       "risks": [
-        "本益比 98.4 倍，需防估值壓縮",
-        "股價淨值比 33.9 倍偏高，需和 ROE/成長性比對"
+        "本益比 110.0 倍，需防估值壓縮",
+        "股價淨值比 37.9 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 13.6%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：4826.00",
-      "波段多空分水嶺看 MA20：4756.25",
-      "追蹤法人是否延續 買超：最近 +360張",
+      "短線支撐/壓力先看 MA5：5168.00",
+      "波段多空分水嶺看 MA20：4906.00",
+      "追蹤法人是否延續 買超：最近 +40張",
       "月營收年增率 +93.6%，觀察基本面是否支撐估值",
-      "本益比 98.4 倍，需和同族群估值比較"
+      "本益比 110.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 5505.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 4160.00：列為轉弱警訊",
+      "收盤突破 20 日高點 5635.00 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 4300.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

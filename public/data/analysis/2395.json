@@ -2,25 +2,20 @@
   "schemaVersion": 1,
   "code": "2395",
   "name": "研華",
-  "generatedAt": "2026-05-28T17:21:47.228Z",
+  "generatedAt": "2026-06-02T03:20:20.113Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -54,34 +49,81 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "Edge AI / AIoT 邊緣智慧",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "研華在邊緣 AI 題材中是工業電腦平台龍頭；4 月營收 82.7 億年增 34.6%，累計年增 22%，Edge AI 推論平台是成長主軸。",
+      "supplyChainStage": "edge_ai",
+      "roleType": "edge_ai_platform",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "Edge AI 推論平台（NVIDIA Jetson 整合）",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "工業 GPU 運算平台",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "邊緣 AI 軟體 Platform",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "工業自動化邊緣平台全球領先，軟硬體整合能力強"
+      ],
+      "opportunities": [
+        "工業 4.0 與智慧製造帶動邊緣平台需求持續成長"
+      ],
+      "risks": [
+        "Siemens/Rockwell 在高階 PLC/DCS 市場的垂直整合優勢",
+        "工業自動化設備單價高、導入週期長"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 Edge AI / AIoT 邊緣智慧（technology/active） +17",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "研華 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "研華 在「Edge AI / AIoT 邊緣智慧」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：Edge AI / AIoT 邊緣智慧 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 Edge AI / AIoT 邊緣智慧（technology/active） +17）",
+      "相關題材：工業自動化與 CNC 工具機 · 核心產品/平台",
+      "相關題材：人形機器人與實體 AI · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：工業自動化設備單價高、導入週期長",
+      "V2 T：Siemens/Rockwell 在高階 PLC/DCS 市場的垂直整合優勢"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：工業 4.0 與智慧製造帶動邊緣平台需求持續成長",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
+      "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善",
+      "追蹤 工業自動化與 CNC 工具機：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -116,9 +158,111 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "edge-ai-aiot",
+        "topicName": "Edge AI / AIoT 邊緣智慧",
+        "canonicalTopicId": "edge-ai-aiot",
+        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "研華在邊緣 AI 題材中是工業電腦平台龍頭；4 月營收 82.7 億年增 34.6%，累計年增 22%，Edge AI 推論平台是成長主軸。"
+      },
+      {
+        "topicId": "industrial-automation",
+        "topicName": "工業自動化與 CNC 工具機",
+        "canonicalTopicId": "industrial-automation",
+        "canonicalTopicName": "工業自動化與 CNC 工具機",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "研華在工業自動化題材中提供 IPC 平台與 IoT 閘道器；工業 4.0 與 ESG 監控驅動需求。"
+      },
+      {
+        "topicId": "robotics-physical-ai",
+        "topicName": "人形機器人與實體 AI",
+        "canonicalTopicId": "robotics-physical-ai",
+        "canonicalTopicName": "人形機器人與實體 AI",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "研華在 Physical AI/機器人題材中提供機器人控制平台與周邊模組。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2395-industrial-automation",
+        "category": "opportunity",
+        "statement": "工業 4.0 與智慧製造帶動邊緣平台需求持續成長",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "industrial-automation"
+        ]
+      },
+      {
+        "id": "strength-2395-industrial-automation",
+        "category": "strength",
+        "statement": "工業自動化邊緣平台全球領先，軟硬體整合能力強",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "industrial-automation"
+        ]
+      },
+      {
+        "id": "threat-2395-industrial-automation",
+        "category": "threat",
+        "statement": "Siemens/Rockwell 在高階 PLC/DCS 市場的垂直整合優勢",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "industrial-automation"
+        ]
+      },
+      {
+        "id": "weakness-2395-industrial-automation",
+        "category": "weakness",
+        "statement": "工業自動化設備單價高、導入週期長",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "industrial-automation"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "edge-ai-aiot",
+        "name": "Edge AI / AIoT 邊緣智慧",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "industrial-automation",
+        "name": "工業自動化與 CNC 工具機",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "robotics-physical-ai",
+        "name": "人形機器人與實體 AI",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -133,8 +277,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 25,
-    "recommendationState": "blocked",
+    "totalScore": 65,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 12,
       "label": "基本面中性",
@@ -144,28 +288,28 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.stop-distance",
         "severity": "soft",
         "message": "距離 MA20 約 12.2%，部位需降速"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

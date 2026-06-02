@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3680",
   "name": "家登",
-  "generatedAt": "2026-05-28T17:21:47.568Z",
+  "generatedAt": "2026-06-02T03:20:20.524Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -129,7 +129,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 43,
+    "totalScore": 35,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -144,6 +144,16 @@
       ]
     },
     "riskGates": [
+      {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
+      },
       {
         "id": "risk.topic-evidence",
         "severity": "soft",

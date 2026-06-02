@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "4966",
   "name": "譜瑞-KY",
-  "generatedAt": "2026-05-28T17:21:47.639Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.613Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,31 +18,30 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "譜瑞-KY 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 17.7%。",
+    "summary": "譜瑞-KY 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 13.0%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 17.7%"
+      "收盤站上 MA20 13.0%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "譜瑞-KY 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +8.2千張；三大法人近 5 日合計賣超 -255張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 41,
+    "summary": "譜瑞-KY 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.1千張；近 20 日法人偏買，合計 +1.2萬張。",
     "signals": [
-      "近 20 日法人偏買，合計 +8.2千張"
+      "三大法人近 5 日合計買超 +1.1千張",
+      "近 20 日法人偏買，合計 +1.2萬張",
+      "投信近 5 日買超 +1.5千張",
+      "融資近 5 日下降 10.2%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -255張",
-      "投信近 5 日賣超 -200張",
-      "外資近 5 日賣超 -172張"
+      "外資近 5 日賣超 -564張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -134,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -232,8 +231,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 50,
-    "recommendationState": "blocked",
+    "totalScore": 77,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 12,
       "label": "基本面中性",
@@ -246,27 +245,28 @@
       "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "hard",
-        "message": "距離 MA20 約 15.0%，停損距離過大"
+        "severity": "soft",
+        "message": "距離 MA20 約 11.5%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：777.40",
-      "波段多空分水嶺看 MA20：695.15",
-      "追蹤法人是否延續 賣超：最近 -428張",
+      "短線支撐/壓力先看 MA5：843.00",
+      "波段多空分水嶺看 MA20：759.85",
+      "追蹤法人是否延續 賣超：最近 -616張",
       "月營收年增率 +8.2%，觀察基本面是否支撐估值",
-      "本益比 24.6 倍，需和同族群估值比較"
+      "本益比 26.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 835.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 929.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 553.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

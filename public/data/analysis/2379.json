@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "code": "2379",
   "name": "瑞昱",
-  "generatedAt": "2026-05-28T17:21:47.214Z",
+  "generatedAt": "2026-06-02T03:20:20.096Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "topic_role_not_verified",
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -54,46 +51,128 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "medium",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "roleDetail": {
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "直接賦能角色",
+      "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。4月營收127億年增11.3%，10G/5G PHY與WiFi 7是成長動能。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "ethernet_phy_chip_maker",
+      "directness": "direct_enabler",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "乙太網路PHY晶片(1G/2.5G/5G/10G)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "Wi-Fi 6/7晶片",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "USB PD控製器",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "全球乙太網路PHY晶片市佔第一",
+        "4月營收127億年增11.3%，穩定成長"
+      ],
+      "opportunities": [
+        "AI資料中心網路升級驅動10G PHY需求",
+        "Wi-Fi 7換機潮"
+      ],
+      "risks": [
+        "Broadcom/Marvell在高速PHY競爭",
+        "中國IC設計(裕太微)低價搶市"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 直接賦能角色 +36",
+      "角色信心 medium +10",
+      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 6 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 88，上限 40）"
     ],
-    "summary": "瑞昱 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "瑞昱 在「AI 伺服器整機與 EMS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · medium",
+      "產業評分：40/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "相關題材：晶圓代工與第三代半導體 · 客戶/通路角色",
+      "主要產品：乙太網路PHY晶片(1G/2.5G/5G/10G)",
+      "主要產品：Wi-Fi 6/7晶片",
+      "主要產品：USB PD控製器"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+      "V2 W：毛利率約40-50%，低於同業IC設計公司",
+      "V2 W：消費性WiFi晶片價格競爭激烈",
+      "V2 T：Broadcom/Marvell在高速PHY競爭",
+      "V2 T：中國IC設計(裕太微)低價搶市"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（needs_review）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：AI資料中心網路升級驅動10G PHY需求",
+      "V2 O：Wi-Fi 7換機潮",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
+    "products": [
+      "乙太網路PHY晶片(1G/2.5G/5G/10G)",
+      "Wi-Fi 6/7晶片",
+      "USB PD控製器",
+      "音訊编解碼器(Codec)",
+      "車用乙太網路晶片"
+    ],
+    "customers": [
+      "智邦(2345)",
+      "Dell",
+      "HP",
+      "Lenovo",
+      "ASUS"
+    ],
     "topicRoles": [],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "全球乙太網路PHY晶片市佔第一",
+        "4月營收127億年增11.3%，穩定成長",
+        "產品線完整(PHY/Switch/WiFi/PD/Codec)"
+      ],
+      "weaknesses": [
+        "毛利率約40-50%，低於同業IC設計公司",
+        "消費性WiFi晶片價格競爭激烈",
+        "車用晶片驗證週期長"
+      ],
+      "opportunities": [
+        "AI資料中心網路升級驅動10G PHY需求",
+        "Wi-Fi 7換機潮",
+        "車用乙太網路標準化(100base-T1/1000base-T1)"
+      ],
+      "threats": [
+        "Broadcom/Marvell在高速PHY競爭",
+        "中國IC設計(裕太微)低價搶市",
+        "WiFi晶片價格戰壓縮毛利"
+      ],
+      "sources": [
+        "financials:2379"
+      ],
       "freshness": "needs_review",
       "lastVerified": "2026-05-26"
     },
@@ -116,9 +195,174 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。4月營收127億年增11.3%，10G/5G PHY與WiFi 7是成長動能。"
+      },
+      {
+        "topicId": "wafer-foundry",
+        "topicName": "半導體製造｜晶圓代工",
+        "canonicalTopicId": "wafer-foundry",
+        "canonicalTopicName": "晶圓代工與第三代半導體",
+        "directness": "customer_or_channel",
+        "directnessLabel": "客戶/通路角色",
+        "confidence": "medium",
+        "roleSummary": "瑞昱是Fabless IC設計公司，在聯電/台積電投片生產乙太網路PHY、WiFi、USB PD等晶片。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2379-0",
+        "category": "opportunity",
+        "statement": "AI資料中心網路升級驅動10G PHY需求",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "opportunity-2379-1",
+        "category": "opportunity",
+        "statement": "Wi-Fi 7換機潮",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "opportunity-2379-2",
+        "category": "opportunity",
+        "statement": "車用乙太網路標準化(100base-T1/1000base-T1)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "strength-2379-0",
+        "category": "strength",
+        "statement": "全球乙太網路PHY晶片市佔第一",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "strength-2379-1",
+        "category": "strength",
+        "statement": "4月營收127億年增11.3%，穩定成長",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "strength-2379-2",
+        "category": "strength",
+        "statement": "產品線完整(PHY/Switch/WiFi/PD/Codec)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "threat-2379-0",
+        "category": "threat",
+        "statement": "Broadcom/Marvell在高速PHY競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "threat-2379-1",
+        "category": "threat",
+        "statement": "中國IC設計(裕太微)低價搶市",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "threat-2379-2",
+        "category": "threat",
+        "statement": "WiFi晶片價格戰壓縮毛利",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "weakness-2379-0",
+        "category": "weakness",
+        "statement": "毛利率約40-50%，低於同業IC設計公司",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "weakness-2379-1",
+        "category": "weakness",
+        "statement": "消費性WiFi晶片價格競爭激烈",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "weakness-2379-2",
+        "category": "weakness",
+        "statement": "車用晶片驗證週期長",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server",
+          "wafer-foundry"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "wafer-foundry",
+        "name": "晶圓代工與第三代半導體",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -133,8 +377,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 31,
-    "recommendationState": "blocked",
+    "totalScore": 53,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 20,
       "label": "基本面中性",
@@ -148,19 +392,23 @@
       ]
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.topic-evidence",

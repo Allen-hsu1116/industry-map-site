@@ -2,52 +2,49 @@
   "schemaVersion": 1,
   "code": "5274",
   "name": "信驊",
-  "generatedAt": "2026-05-28T17:21:47.656Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.632Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
     "label": "可用但仍有缺口",
-    "upgradePriority": "high",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "product_knowledge"
+      "complete_swot"
     ],
     "blockingReasons": [
-      "missing_product_knowledge"
+      "incomplete_swot"
     ]
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 15,
-    "summary": "信驊 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 3.6%。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "信驊 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 5.6%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 3.6%"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 5.6%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 25,
-    "summary": "信驊 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +128張；近 20 日法人偏買，合計 +238張。",
+    "score": 20,
+    "summary": "信驊 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +86張；近 20 日法人偏買，合計 +129張。",
     "signals": [
-      "三大法人近 5 日合計買超 +128張",
-      "近 20 日法人偏買，合計 +238張",
-      "外資近 5 日買超 +347張",
-      "融資近 5 日下降 11.3%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +86張",
+      "近 20 日法人偏買，合計 +129張",
+      "外資近 5 日買超 +213張"
     ],
     "risks": [
-      "投信近 5 日賣超 -208張"
+      "投信近 5 日賣超 -128張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -60,7 +57,7 @@
     "roleDetail": {
       "topicName": "IC 設計與矽智財",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "信驊在伺服器管理晶片/BMC 題材中是核心 IC 設計供應鏈角色；AI 伺服器與資料中心出貨會推動 BMC/管理 IC 需求。",
+      "roleSummary": "信驊是全球伺服器 BMC 幾乎獨佔供應商；AST2600/AST2700 出貨隨 AI 伺服器放量。OTC 上櫃公司。",
       "supplyChainStage": "ic_design",
       "roleType": "server_management_ic_provider",
       "directness": "core",
@@ -84,16 +81,9 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [
-        "信驊聚焦 BMC 伺服器管理晶片與伺服器基礎設施 IC，是資料中心硬體管理題材的核心利基 IC 公司。"
-      ],
-      "opportunities": [
-        "AI 伺服器與資料中心硬體複雜度提升，增加遠端管理、BMC 與平台監控 IC 的重要性。"
-      ],
-      "risks": [
-        "伺服器管理規格變化、客戶自研或同業替代，可能影響信驊利基產品的市占與定價能力。",
-        "利基型伺服器管理 IC 題材純度高，但也使營收對伺服器平台週期與客戶採購節奏高度敏感。"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -101,8 +91,6 @@
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "信驊 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -115,17 +103,14 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "V2 W：利基型伺服器管理 IC 題材純度高，但也使營收對伺服器平台週期與客戶採購節奏高度敏感。",
-      "V2 T：伺服器管理規格變化、客戶自研或同業替代，可能影響信驊利基產品的市占與定價能力。"
-    ],
+    "risks": [],
     "watch": [
-      "V2 O：AI 伺服器與資料中心硬體複雜度提升，增加遠端管理、BMC 與平台監控 IC 的重要性。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
-      "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-01"
     ]
   },
   "knowledge": {
@@ -139,7 +124,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -162,18 +147,18 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "hpc-networking-ic",
-        "topicName": "IC 設計｜HPC 與網通 IC",
+        "topicId": "ic-design",
+        "topicName": "IC 設計與矽智財",
         "canonicalTopicId": "ic-design",
         "canonicalTopicName": "IC 設計與矽智財",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "信驊在伺服器管理晶片/BMC 題材中是核心 IC 設計供應鏈角色；AI 伺服器與資料中心出貨會推動 BMC/管理 IC 需求。"
+        "roleSummary": "信驊是全球伺服器 BMC 幾乎獨佔供應商；AST2600/AST2700 出貨隨 AI 伺服器放量。OTC 上櫃公司。"
       },
       {
-        "topicId": "enterprise-saas",
-        "topicName": "軟體資安｜企業軟體與 SaaS",
+        "topicId": "software-cloud-security",
+        "topicName": "資安、雲端服務與企業軟體",
         "canonicalTopicId": "software-cloud-security",
         "canonicalTopicName": "資安、雲端服務與企業軟體",
         "directness": "supplier",
@@ -182,8 +167,8 @@
         "roleSummary": "信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。"
       },
       {
-        "topicId": "cxl-technology",
-        "topicName": "記憶體｜CXL 記憶體池化",
+        "topicId": "cxl-memory-pooling",
+        "topicName": "CXL 記憶體池化",
         "canonicalTopicId": "cxl-memory-pooling",
         "canonicalTopicName": "CXL 記憶體池化",
         "directness": "direct_enabler",
@@ -192,48 +177,7 @@
         "roleSummary": "信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。"
       }
     ],
-    "swot": [
-      {
-        "id": "opportunity-ai-server-management-complexity",
-        "category": "opportunity",
-        "statement": "AI 伺服器與資料中心硬體複雜度提升，增加遠端管理、BMC 與平台監控 IC 的重要性。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ai-server",
-          "hpc-networking-ic",
-          "cxl-technology"
-        ]
-      },
-      {
-        "id": "strength-server-management-ic-niche",
-        "category": "strength",
-        "statement": "信驊聚焦 BMC 伺服器管理晶片與伺服器基礎設施 IC，是資料中心硬體管理題材的核心利基 IC 公司。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "hpc-networking-ic",
-          "enterprise-saas"
-        ]
-      },
-      {
-        "id": "threat-platform-standard-and-competition",
-        "category": "threat",
-        "statement": "伺服器管理規格變化、客戶自研或同業替代，可能影響信驊利基產品的市占與定價能力。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "hpc-networking-ic",
-          "cxl-technology"
-        ]
-      },
-      {
-        "id": "weakness-niche-server-cycle-dependence",
-        "category": "weakness",
-        "statement": "利基型伺服器管理 IC 題材純度高，但也使營收對伺服器平台週期與客戶採購節奏高度敏感。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "hpc-networking-ic"
-        ]
-      }
-    ],
+    "swot": [],
     "topics": [
       {
         "id": "ic-design",
@@ -283,22 +227,23 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 71,
+    "totalScore": 77,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 12,
       "label": "基本面中性",
       "signals": [
-        "月營收 YoY +18.4%，成長動能明確",
-        "殖利率 112.8%，提供部分下檔支撐"
+        "月營收 YoY +18.4%，成長動能明確"
       ],
       "risks": [
-        "本益比 150.9 倍，需防估值壓縮"
+        "本益比 157.0 倍，需防估值壓縮",
+        "股價淨值比 117.3 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
@@ -307,14 +252,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：16686.00",
-      "波段多空分水嶺看 MA20：17112.00",
-      "追蹤法人是否延續 買超：最近 +14張",
+      "短線支撐/壓力先看 MA5：18151.00",
+      "波段多空分水嶺看 MA20：17516.25",
+      "追蹤法人是否延續 賣超：最近 -108張",
       "月營收年增率 +18.4%，觀察基本面是否支撐估值",
-      "本益比 150.9 倍，需和同族群估值比較"
+      "本益比 157.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 19195.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 19510.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 15140.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

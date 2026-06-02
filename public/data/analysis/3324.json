@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3324",
   "name": "雙鴻",
-  "generatedAt": "2026-05-28T17:21:47.489Z",
+  "generatedAt": "2026-06-02T03:20:20.431Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -55,7 +55,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "雙鴻在液冷散熱題材中屬散熱模組與液冷方案核心候選供應商；需持續補官方產品、法說與客戶專案證據來提高信心。",
+      "roleSummary": "雙鴻是台灣散熱模組龍頭；冷板/3D VC/液冷接頭為 AI 伺服器必備零組件。受惠液冷滲透率快速拉升。",
       "supplyChainStage": "thermal",
       "roleType": "liquid_cooling_module_provider",
       "directness": "core",
@@ -63,34 +63,25 @@
     },
     "productNarratives": [
       {
-        "name": "液冷散熱模組與解決方案",
-        "description": "液冷散熱模組是用液體帶走高功率晶片與伺服器系統熱量的散熱方案，通常用於高熱密度 AI 伺服器。",
-        "whyItMatters": "AI 伺服器功耗提高使傳統氣冷壓力上升，液冷滲透率是散熱廠升級單價與題材彈性的關鍵。",
-        "topicFit": "直接產品：液冷散熱模組與方案。",
-        "businessImpact": "液冷導入可提高單機散熱價值，但客戶認證、平台時程與競爭會影響落地速度。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：雙鴻 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3324",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "液冷散熱模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "散熱解決方案",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "熱管/均熱板相關散熱產品",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
-      "strengths": [
-        "雙鴻聚焦散熱模組、熱管理與液冷方案，是 AI 伺服器散熱升級題材中的高直接性零組件供應商。"
-      ],
-      "opportunities": [
-        "AI 伺服器功耗與熱密度提升，推動氣冷升級與液冷方案滲透，雙鴻可受惠散熱規格升級。"
-      ],
-      "risks": [
-        "液冷方案競爭、客戶自研/多供應商策略或散熱技術路線變化，可能削弱雙鴻訂單能見度與毛利。",
-        "散熱零組件需通過客戶平台驗證，且單價與毛利受材料、良率與競爭影響，題材熱度不等於立即獲利。"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -98,8 +89,6 @@
       "題材 AI 伺服器液冷散熱（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "雙鴻 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -112,12 +101,8 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "V2 W：散熱零組件需通過客戶平台驗證，且單價與毛利受材料、良率與競爭影響，題材熱度不等於立即獲利。",
-      "V2 T：液冷方案競爭、客戶自研/多供應商策略或散熱技術路線變化，可能削弱雙鴻訂單能見度與毛利。"
-    ],
+    "risks": [],
     "watch": [
-      "V2 O：AI 伺服器功耗與熱密度提升，推動氣冷升級與液冷方案滲透，雙鴻可受惠散熱規格升級。",
       "催化訊號：AI GPU/ASIC TDP 升高、客戶導入液冷機櫃或 CDU、散熱廠液冷相關營收揭露增加",
       "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
       "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
@@ -159,80 +144,37 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "liquid_cooling_advanced",
-        "topicName": "散熱冷卻｜液冷散熱系統",
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "雙鴻在液冷散熱題材中屬散熱模組與液冷方案核心候選供應商；需持續補官方產品、法說與客戶專案證據來提高信心。"
+        "roleSummary": "雙鴻是台灣散熱模組龍頭；冷板/3D VC/液冷接頭為 AI 伺服器必備零組件。受惠液冷滲透率快速拉升。"
       },
       {
-        "topicId": "thermal_components_air",
-        "topicName": "散熱冷卻｜氣冷與核心組件",
-        "canonicalTopicId": "ai-server-liquid-cooling",
-        "canonicalTopicName": "AI 伺服器液冷散熱",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "雙鴻在氣冷與核心散熱元件題材中具熱管、均熱板、模組等供應鏈定位；需要把氣冷升級與液冷滲透分開追蹤。"
-      },
-      {
-        "topicId": "thermal-solution",
-        "topicName": "散熱冷卻｜液冷與散熱模組",
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
         "roleSummary": "雙鴻在散熱解決方案題材中是核心散熱供應鏈角色；AI 伺服器高功耗平台會提高散熱規格與價值量。"
+      },
+      {
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "雙鴻在氣冷與核心散熱元件題材中具熱管、均熱板、模組等供應鏈定位；需要把氣冷升級與液冷滲透分開追蹤。"
       }
     ],
-    "swot": [
-      {
-        "id": "opportunity-ai-power-density-thermal-upgrade",
-        "category": "opportunity",
-        "statement": "AI 伺服器功耗與熱密度提升，推動氣冷升級與液冷方案滲透，雙鴻可受惠散熱規格升級。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "liquid_cooling_advanced",
-          "thermal-solution",
-          "ai-server"
-        ]
-      },
-      {
-        "id": "strength-thermal-liquid-cooling-focus",
-        "category": "strength",
-        "statement": "雙鴻聚焦散熱模組、熱管理與液冷方案，是 AI 伺服器散熱升級題材中的高直接性零組件供應商。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "liquid_cooling_advanced",
-          "thermal-solution",
-          "thermal_components_air"
-        ]
-      },
-      {
-        "id": "threat-competition-and-technology-transition",
-        "category": "threat",
-        "statement": "液冷方案競爭、客戶自研/多供應商策略或散熱技術路線變化，可能削弱雙鴻訂單能見度與毛利。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "liquid_cooling_advanced",
-          "thermal-solution"
-        ]
-      },
-      {
-        "id": "weakness-thermal-component-customer-validation",
-        "category": "weakness",
-        "statement": "散熱零組件需通過客戶平台驗證，且單價與毛利受材料、良率與競爭影響，題材熱度不等於立即獲利。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "liquid_cooling_advanced",
-          "thermal-solution"
-        ]
-      }
-    ],
+    "swot": [],
     "topics": [
       {
         "id": "ai-server-liquid-cooling",
@@ -260,7 +202,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 51,
+    "totalScore": 43,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -274,7 +216,18 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

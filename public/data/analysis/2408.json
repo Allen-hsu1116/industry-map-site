@@ -2,84 +2,127 @@
   "schemaVersion": 1,
   "code": "2408",
   "name": "南亞科",
-  "generatedAt": "2026-05-28T17:21:47.235Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.122Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "incomplete_swot"
     ]
   },
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 45,
-    "summary": "南亞科 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 5.7%。",
+    "score": 55,
+    "summary": "南亞科 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 24.7%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 5.7%"
+      "收盤站上 MA20 24.7%"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "接近 20 日高點 381.50，觀察是否突破"
+    ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "南亞科 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +8.6萬張；三大法人近 5 日合計賣超 -4.8萬張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 41,
+    "summary": "南亞科 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +12.6萬張；近 20 日法人偏買，合計 +17.1萬張。",
     "signals": [
-      "近 20 日法人偏買，合計 +8.6萬張"
+      "三大法人近 5 日合計買超 +12.6萬張",
+      "近 20 日法人偏買，合計 +17.1萬張",
+      "投信近 5 日買超 +4.7千張",
+      "外資近 5 日買超 +12.2萬張",
+      "融資近 5 日下降 5.0%，籌碼壓力下降"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -4.8萬張",
-      "投信近 5 日賣超 -1.8萬張",
-      "外資近 5 日賣超 -2.4萬張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01",
+      "融券近 5 日增加 68.4%，留意軋空或空方壓力"
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "HBM 高頻寬記憶體",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "南亞科在 HBM 題材中是 DRAM 供應商；4 月營收 25.5 億月增 40%，年增 717%（含美光合資認列），受惠 DRAM 景氣反轉。",
+      "supplyChainStage": "hbm",
+      "roleType": "dram_hbm_developer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "DDR5 DRAM 晶片",
+        "description": "DDR5 DRAM 晶片：南亞科的核心產品。",
+        "whyItMatters": "台灣唯一 DRAM 製造商，提供 DRAM Die 供應 HBM 堆疊，是 HBM 供應鏈中 DRAM 顆粒的來源之一。2026年營收 YoY+717% 反映 DRAM 景氣強勁反轉。",
+        "topicFit": "在 HBM 高頻寬記憶體 題材中：台灣唯一 DRAM 製造商，提供 DRAM Die 供應 HBM 堆疊，是 HBM 供應鏈中 DRAM 顆粒的來源之一。2026年營收 YoY+717% 反映 ",
+        "businessImpact": "該產品貢獻南亞科在相關題材的營收。2026年4月營收25.49億元，YoY+717%，累計YoY+624%，DRAM價格回升與出貨成長帶動",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南亞科 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2408"
+        ],
+        "lastVerified": "2026-06-01",
+        "confidence": "medium"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "台灣唯一 DRAM 製造商，DRAM 景氣反轉帶動營收爆增 YoY+717%，掌握台積電製程優勢"
+      ],
+      "opportunities": [
+        "HBM 需求帶動高階 DRAM Die 需求成長，DDR5 滲透率提升帶動 ASP 上揚"
+      ],
+      "risks": [
+        "SK Hynix/Samsung 在 HBM 市場具主導地位，南亞科 HBM 技術仍落後",
+        "HBM 堆疊技術落後 SK Hynix/Micron，僅能供應 DRAM Die 非完成品"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 HBM 高頻寬記憶體（product/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "南亞科 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "南亞科 在「HBM 高頻寬記憶體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：HBM 高頻寬記憶體 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 HBM 高頻寬記憶體（product/active） +16）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：HBM 堆疊技術落後 SK Hynix/Micron，僅能供應 DRAM Die 非完成品",
+      "V2 T：SK Hynix/Samsung 在 HBM 市場具主導地位，南亞科 HBM 技術仍落後"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
+      "V2 O：HBM 需求帶動高階 DRAM Die 需求成長，DDR5 滲透率提升帶動 ASP 上揚",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 HBM 高頻寬記憶體：月營收或訂單能見度改善",
+      "追蹤 HBM 高頻寬記憶體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-01",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -94,7 +137,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -115,9 +158,69 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "hbm",
+        "topicName": "HBM 高頻寬記憶體",
+        "canonicalTopicId": "hbm",
+        "canonicalTopicName": "HBM 高頻寬記憶體",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "南亞科在 HBM 題材中是 DRAM 供應商；4 月營收 25.5 億月增 40%，年增 717%（含美光合資認列），受惠 DRAM 景氣反轉。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2408-hbm",
+        "category": "opportunity",
+        "statement": "HBM 需求帶動高階 DRAM Die 需求成長，DDR5 滲透率提升帶動 ASP 上揚",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "strength-2408-hbm",
+        "category": "strength",
+        "statement": "台灣唯一 DRAM 製造商，DRAM 景氣反轉帶動營收爆增 YoY+717%，掌握台積電製程優勢",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "threat-2408-hbm",
+        "category": "threat",
+        "statement": "SK Hynix/Samsung 在 HBM 市場具主導地位，南亞科 HBM 技術仍落後",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "weakness-2408-hbm",
+        "category": "weakness",
+        "statement": "HBM 堆疊技術落後 SK Hynix/Micron，僅能供應 DRAM Die 非完成品",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "hbm",
+        "name": "HBM 高頻寬記憶體",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,7 +235,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 27,
+    "totalScore": 66,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 30,
@@ -141,40 +244,38 @@
         "月營收 YoY +444.9%，成長動能明確",
         "月營收 MoM +18.2%，短期動能改善"
       ],
-      "risks": []
+      "risks": [
+        "股價淨值比 6.1 倍偏高，需和 ROE/成長性比對"
+      ]
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略",
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
+        "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "距離 MA20 約 19.8%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：289.80",
-      "波段多空分水嶺看 MA20：280.02",
-      "追蹤法人是否延續 賣超：最近 -1.4萬張",
+      "短線支撐/壓力先看 MA5：333.60",
+      "波段多空分水嶺看 MA20：305.85",
+      "追蹤法人是否延續 買超：最近 +3萬張",
       "月營收年增率 +444.9%，觀察基本面是否支撐估值",
-      "本益比 24.6 倍，需和同族群估值比較"
+      "本益比 34.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 353.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 214.50：列為轉弱警訊",
+      "收盤突破 20 日高點 381.50 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 242.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

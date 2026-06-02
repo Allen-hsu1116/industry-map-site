@@ -2,25 +2,23 @@
   "schemaVersion": 1,
   "code": "3131",
   "name": "弘塑",
-  "generatedAt": "2026-05-28T17:21:47.436Z",
+  "generatedAt": "2026-06-02T03:20:20.367Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
       "insufficient_daily_analysis",
-      "missing_product_knowledge",
       "missing_topic_role",
-      "missing_swot"
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -81,7 +79,7 @@
     ],
     "watch": [
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
+      "V2 SWOT 最後驗證：2026-06-01",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -134,8 +132,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 10,
-    "recommendationState": "blocked",
+    "totalScore": 22,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -143,16 +141,19 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
-      "rationale": [
-        "分析品質不足，策略只能列為觀察"
-      ]
+      "classification": "觀察股",
+      "rationale": []
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.topic-evidence",

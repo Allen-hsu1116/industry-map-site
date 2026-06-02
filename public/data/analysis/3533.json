@@ -2,25 +2,20 @@
   "schemaVersion": 1,
   "code": "3533",
   "name": "嘉澤",
-  "generatedAt": "2026-05-28T17:21:47.534Z",
+  "generatedAt": "2026-06-02T03:20:20.481Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -56,34 +51,68 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "高速連接器與車工業連接",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "嘉澤在高速連接器題材中是台灣最大連接器廠；4 月營收 33.9 億年增 15.2%，累計年增 19.4%，AI 伺服器高速傳輸需求是成長主力。",
+      "supplyChainStage": "high_speed_connector",
+      "roleType": "high_speed_connector_leader",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "AI 伺服器 MCIO 連接器",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "DDR5 DIMM 插槽",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "PCIe Gen5/6 連接器",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 高速連接器與車工業連接（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "嘉澤 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "嘉澤 在「高速連接器與車工業連接」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：高速連接器與車工業連接 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 高速連接器與車工業連接（supply_chain_segment/active） +16）",
+      "相關題材：矽光子、CPO 與高速光通訊 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 高速連接器與車工業連接：月營收或訂單能見度改善",
+      "追蹤 高速連接器與車工業連接：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
+      "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-01"
     ]
   },
   "knowledge": {
@@ -118,9 +147,53 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "high-speed-interconnect",
+        "topicName": "高速連接器與車工業連接",
+        "canonicalTopicId": "high-speed-interconnect",
+        "canonicalTopicName": "高速連接器與車工業連接",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "嘉澤在高速連接器題材中是台灣最大連接器廠；4 月營收 33.9 億年增 15.2%，累計年增 19.4%，AI 伺服器高速傳輸需求是成長主力。"
+      },
+      {
+        "topicId": "silicon-photonics-optical-comm",
+        "topicName": "矽光子、CPO 與高速光通訊",
+        "canonicalTopicId": "silicon-photonics-optical-comm",
+        "canonicalTopicName": "矽光子、CPO 與高速光通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "嘉澤在矽光子題材中供應 CPO/矽光子模組用光連接器；CPO 封裝密度提升帶動新連接器規格需求。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "high-speed-interconnect",
+        "name": "高速連接器與車工業連接",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "silicon-photonics-optical-comm",
+        "name": "矽光子、CPO 與高速光通訊",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -135,8 +208,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 14,
-    "recommendationState": "blocked",
+    "totalScore": 54,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -144,21 +217,21 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "題材股",
       "rationale": [
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
       },
       {
-        "id": "risk.topic-evidence",
+        "id": "risk.chip-data-stale",
         "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 8 天未更新"
       }
     ]
   },

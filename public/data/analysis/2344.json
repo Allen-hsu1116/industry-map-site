@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "code": "2344",
   "name": "華邦電",
-  "generatedAt": "2026-05-28T17:21:47.185Z",
+  "generatedAt": "2026-06-02T03:20:20.061Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "topic_role_not_verified",
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -53,46 +50,128 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "medium",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "roleDetail": {
+      "topicName": "HBM 高頻寬記憶體",
+      "roleLabel": "供應商角色",
+      "roleSummary": "華邦電是台灣唯一自主DRAM廠，4月營收年增182%反映DRAM景氣回升。LPDDR5/NOR Flash為AI邊緣裝置關鍵零組件。車规記憶體是未來成長引擎。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "dram_nor_flash_maker",
+      "directness": "supplier",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "DRAM(LPD4/LPD5)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "NOR Flash",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "NAND Flash(SLC)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "3nm以下先進製程記憶體技術自主",
+        "4月營收年增182%反映DRAM景氣回升"
+      ],
+      "opportunities": [
+        "AI邊緣裝置帶動LPDDR需求",
+        "車用DRAM/Flash升級(ADAS/IVI)"
+      ],
+      "risks": [
+        "三星/SK海力士DRAM降價競爭",
+        "記憶體景氣循環劇烈"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 供應商角色 +26",
+      "角色信心 medium +10",
+      "題材 HBM 高頻寬記憶體（product/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 6 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 76，上限 40）"
     ],
-    "summary": "華邦電 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "華邦電 在「HBM 高頻寬記憶體」的 V2 角色為「供應商角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：HBM 高頻寬記憶體 · 供應商角色 · medium",
+      "產業評分：40/100（直接度 供應商角色 +26；角色信心 medium +10；題材 HBM 高頻寬記憶體（product/active） +16）",
+      "主要產品：DRAM(LPD4/LPD5)",
+      "主要產品：NOR Flash",
+      "主要產品：NAND Flash(SLC)",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+      "V2 W：DRAM價格波動大影響獲利",
+      "V2 W：與三星/SK海力士在DRAM的規模差距大",
+      "V2 T：三星/SK海力士DRAM降價競爭",
+      "V2 T：記憶體景氣循環劇烈"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：AI邊緣裝置帶動LPDDR需求",
+      "V2 O：車用DRAM/Flash升級(ADAS/IVI)",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 HBM 高頻寬記憶體：月營收或訂單能見度改善",
+      "追蹤 HBM 高頻寬記憶體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-02"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
+    "products": [
+      "DRAM(LPD4/LPD5)",
+      "NOR Flash",
+      "NAND Flash(SLC)",
+      "Code Storage Flash",
+      "車用DRAM"
+    ],
+    "customers": [
+      "Qualcomm",
+      "聯發科(2454)",
+      "Intel",
+      "Samsung(授權)",
+      "車用Tier 1客戶"
+    ],
     "topicRoles": [],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "3nm以下先進製程記憶體技術自主",
+        "4月營收年增182%反映DRAM景氣回升",
+        "車用記憶體產品線完整"
+      ],
+      "weaknesses": [
+        "DRAM價格波動大影響獲利",
+        "與三星/SK海力士在DRAM的規模差距大",
+        "先進製程資本支出壓力重"
+      ],
+      "opportunities": [
+        "AI邊緣裝置帶動LPDDR需求",
+        "車用DRAM/Flash升級(ADAS/IVI)",
+        "HPC用高頻寬記憶體新應用"
+      ],
+      "threats": [
+        "三星/SK海力士DRAM降價競爭",
+        "記憶體景氣循環劇烈",
+        "中國長鑫存儲崛起威脅"
+      ],
+      "sources": [
+        "financials:2344"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -115,9 +194,141 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "hbm",
+        "topicName": "記憶體｜HBM",
+        "canonicalTopicId": "hbm",
+        "canonicalTopicName": "HBM 高頻寬記憶體",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "華邦電是台灣唯一自主DRAM廠，4月營收年增182%反映DRAM景氣回升。LPDDR5/NOR Flash為AI邊緣裝置關鍵零組件。車规記憶體是未來成長引擎。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2344-0",
+        "category": "opportunity",
+        "statement": "AI邊緣裝置帶動LPDDR需求",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "opportunity-2344-1",
+        "category": "opportunity",
+        "statement": "車用DRAM/Flash升級(ADAS/IVI)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "opportunity-2344-2",
+        "category": "opportunity",
+        "statement": "HPC用高頻寬記憶體新應用",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "strength-2344-0",
+        "category": "strength",
+        "statement": "3nm以下先進製程記憶體技術自主",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "strength-2344-1",
+        "category": "strength",
+        "statement": "4月營收年增182%反映DRAM景氣回升",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "strength-2344-2",
+        "category": "strength",
+        "statement": "車用記憶體產品線完整",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "threat-2344-0",
+        "category": "threat",
+        "statement": "三星/SK海力士DRAM降價競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "threat-2344-1",
+        "category": "threat",
+        "statement": "記憶體景氣循環劇烈",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "threat-2344-2",
+        "category": "threat",
+        "statement": "中國長鑫存儲崛起威脅",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "weakness-2344-0",
+        "category": "weakness",
+        "statement": "DRAM價格波動大影響獲利",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "weakness-2344-1",
+        "category": "weakness",
+        "statement": "與三星/SK海力士在DRAM的規模差距大",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      },
+      {
+        "id": "weakness-2344-2",
+        "category": "weakness",
+        "statement": "先進製程資本支出壓力重",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "hbm"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "hbm",
+        "name": "HBM 高頻寬記憶體",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,8 +343,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 33,
-    "recommendationState": "blocked",
+    "totalScore": 55,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
       "label": "基本面偏強",
@@ -144,19 +355,23 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.stop-distance",

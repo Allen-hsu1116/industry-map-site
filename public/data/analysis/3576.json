@@ -2,25 +2,20 @@
   "schemaVersion": 1,
   "code": "3576",
   "name": "聯合再生",
-  "generatedAt": "2026-05-28T17:21:47.541Z",
+  "generatedAt": "2026-06-02T03:20:20.490Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -53,34 +48,68 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "太陽能與離岸風電",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "聯合再生在太陽能題材中是台灣最大太陽能電池/模組廠；4 月營收 2.25 億年增 2.2%，但累計年減 37.8%，產業仍處低谷。",
+      "supplyChainStage": "solar",
+      "roleType": "solar_cell_manufacturer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "PERC 太陽能電池",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "太陽能模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "太陽能電廠 EPC",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 太陽能與離岸風電（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "聯合再生 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "聯合再生 在「太陽能與離岸風電」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：太陽能與離岸風電 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 太陽能與離岸風電（theme/active） +18）",
+      "相關題材：儲能、電芯與電池材料 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
+      "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
+      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-01"
     ]
   },
   "knowledge": {
@@ -115,9 +144,53 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "聯合再生在太陽能題材中是台灣最大太陽能電池/模組廠；4 月營收 2.25 億年增 2.2%，但累計年減 37.8%，產業仍處低谷。"
+      },
+      {
+        "topicId": "energy-storage-battery",
+        "topicName": "儲能、電芯與電池材料",
+        "canonicalTopicId": "energy-storage-battery",
+        "canonicalTopicName": "儲能、電芯與電池材料",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "聯合再生跨入儲能系統整合；太陽能+儲能案場一條龍服務。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "energy-storage-battery",
+        "name": "儲能、電芯與電池材料",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,8 +205,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 27,
-    "recommendationState": "blocked",
+    "totalScore": 66,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -141,28 +214,28 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.stop-distance",
         "severity": "soft",
         "message": "距離 MA20 約 12.4%，部位需降速"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "code": "2352",
   "name": "佳世達",
-  "generatedAt": "2026-05-28T17:21:47.189Z",
+  "generatedAt": "2026-06-02T03:20:20.066Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "topic_role_not_verified",
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -55,46 +52,128 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "medium",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "roleDetail": {
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "間接受惠",
+      "roleSummary": "佳世達以商用顯示器與投影機為主，4月營收168億年減1.8%。AI伺服器相關性低，但其智慧零售方案有企業AI應用場景。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "display_peripheral_supplier",
+      "directness": "indirect",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "LCD監視器",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "商務/教育投影機",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "醫療器材(超音波/內視鏡)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "投影機全球前三大",
+        "醫療事業轉型有成(明基醫院)"
+      ],
+      "opportunities": [
+        "教育/商務互動投影需求增長",
+        "醫療器材國產化政策"
+      ],
+      "risks": [
+        "LCD監視器需求持續下滑",
+        "中國投影機品牌低價競爭"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
+      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 6 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 60，上限 40）"
     ],
-    "summary": "佳世達 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "佳世達 在「AI 伺服器整機與 EMS」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 間接受惠 · medium",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "主要產品：LCD監視器",
+      "主要產品：商務/教育投影機",
+      "主要產品：醫療器材(超音波/內視鏡)",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+      "V2 W：LCD監視器毛利低",
+      "V2 W：醫療事業占比仍低",
+      "V2 T：LCD監視器需求持續下滑",
+      "V2 T：中國投影機品牌低價競爭"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：教育/商務互動投影需求增長",
+      "V2 O：醫療器材國產化政策",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-02"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
+    "products": [
+      "LCD監視器",
+      "商務/教育投影機",
+      "醫療器材(超音波/內視鏡)",
+      "智慧零售解決方案",
+      "車載顯示器"
+    ],
+    "customers": [
+      "Dell",
+      "HP",
+      "醫療院所(長庚/三總)",
+      "連鎖零售商",
+      "車廠Tier 1"
+    ],
     "topicRoles": [],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "投影機全球前三大",
+        "醫療事業轉型有成(明基醫院)",
+        "集團資源整合(友達/Liteon)"
+      ],
+      "weaknesses": [
+        "LCD監視器毛利低",
+        "醫療事業占比仍低",
+        "營收年減1.8%成長動能不足"
+      ],
+      "opportunities": [
+        "教育/商務互動投影需求增長",
+        "醫療器材國產化政策",
+        "智慧零售/企業AI解決方案"
+      ],
+      "threats": [
+        "LCD監視器需求持續下滑",
+        "中國投影機品牌低價競爭",
+        "醫療器材認證周期長"
+      ],
+      "sources": [
+        "financials:2352"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -117,9 +196,141 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "佳世達以商用顯示器與投影機為主，4月營收168億年減1.8%。AI伺服器相關性低，但其智慧零售方案有企業AI應用場景。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2352-0",
+        "category": "opportunity",
+        "statement": "教育/商務互動投影需求增長",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2352-1",
+        "category": "opportunity",
+        "statement": "醫療器材國產化政策",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2352-2",
+        "category": "opportunity",
+        "statement": "智慧零售/企業AI解決方案",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2352-0",
+        "category": "strength",
+        "statement": "投影機全球前三大",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2352-1",
+        "category": "strength",
+        "statement": "醫療事業轉型有成(明基醫院)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2352-2",
+        "category": "strength",
+        "statement": "集團資源整合(友達/Liteon)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2352-0",
+        "category": "threat",
+        "statement": "LCD監視器需求持續下滑",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2352-1",
+        "category": "threat",
+        "statement": "中國投影機品牌低價競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2352-2",
+        "category": "threat",
+        "statement": "醫療器材認證周期長",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2352-0",
+        "category": "weakness",
+        "statement": "LCD監視器毛利低",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2352-1",
+        "category": "weakness",
+        "statement": "醫療事業占比仍低",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2352-2",
+        "category": "weakness",
+        "statement": "營收年減1.8%成長動能不足",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -134,8 +345,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 26,
-    "recommendationState": "blocked",
+    "totalScore": 48,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -146,19 +357,23 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.stop-distance",

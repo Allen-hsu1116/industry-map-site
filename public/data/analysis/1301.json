@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "code": "1301",
   "name": "台塑",
-  "generatedAt": "2026-05-28T17:21:47.042Z",
+  "generatedAt": "2026-06-02T03:20:19.882Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "topic_role_not_verified",
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -54,46 +51,161 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "medium",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "roleDetail": {
+      "topicName": "石化、塑橡膠與特用化學",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒，成本結構具全球競爭力。4月營收183億年增13.3%，但累計年減4.8%。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "pvc_pp_producer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "PVC聚氯乙烯",
+        "description": "PVC、建材管材、電線電纜外皮與工業用塑膠原料，是台塑石化與塑膠材料鏈的代表性量產產品。",
+        "whyItMatters": "PVC 需求連動建築、基礎建設與工業材料景氣，可用來觀察台塑石化價差與下游拉貨強弱。",
+        "topicFit": "石化與塑橡膠材料鏈產品",
+        "businessImpact": "大宗石化產品，營收受價差、稼動率與下游建材/工業需求影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報系統：公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-06-02",
+        "confidence": "medium"
+      },
+      {
+        "name": "聚丙烯(PP)",
+        "description": "PP 是包材、家電、汽車與民生塑膠件常用樹脂，屬台塑大宗塑膠原料產品線。",
+        "whyItMatters": "PP 價差與稼動率反映石化循環與終端消費需求，會影響台塑營收與毛利彈性。",
+        "topicFit": "石化與塑橡膠材料鏈產品",
+        "businessImpact": "大宗塑膠樹脂，影響台塑塑膠材料鏈的量價表現。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報系統：公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-06-02",
+        "confidence": "medium"
+      },
+      {
+        "name": "高密度聚乙烯(HDPE)",
+        "description": "HDPE 用於管材、容器、薄膜與工業包材，是台塑聚乙烯產品組合的一部分。",
+        "whyItMatters": "HDPE 可追蹤塑膠材料需求與原料成本傳導，對石化景氣循環與庫存調整敏感。",
+        "topicFit": "石化與塑橡膠材料鏈產品",
+        "businessImpact": "大宗聚乙烯產品，反映包材、管材與工業材料需求。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報系統：公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-06-02",
+        "confidence": "medium"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "六輕一貫化生產成本優勢",
+        "PVC全球市佔領先"
+      ],
+      "opportunities": [
+        "碳素纖維新應用(航太/車用)",
+        "美中貿易轉單效益"
+      ],
+      "risks": [
+        "碳稅/碳費政策壓力",
+        "中國產能過剩競爭"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 medium +10",
+      "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 92，上限 40）"
     ],
-    "summary": "台塑 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "台塑 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · medium",
+      "產業評分：40/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
+      "主要產品：PVC聚氯乙烯",
+      "主要產品：聚丙烯(PP)",
+      "主要產品：高密度聚乙烯(HDPE)",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+      "W：碳稅/碳費政策壓力",
+      "W：中國產能過剩競爭",
+      "T：中國石化產能傾銷",
+      "T：ESG法規趨嚴增加成本"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
+      "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "O：碳素纖維新應用(航太/車用)",
+      "O：美中貿易轉單效益",
+      "V2 SWOT 最後驗證：2026-06-02"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
+    "products": [
+      "PVC聚氯乙烯",
+      "聚丙烯(PP)",
+      "高密度聚乙烯(HDPE)",
+      "碳素纖維",
+      "液鹼"
+    ],
+    "customers": [
+      "台塑化(6505)",
+      "南亞(1303)",
+      "台化(1326)",
+      "大陸內需市場",
+      "東南亞石化廠"
+    ],
     "topicRoles": [],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "六輕一貫化生產成本優勢",
+        "PVC全球市佔領先",
+        "石化上游原料自給率高"
+      ],
+      "weaknesses": [
+        "碳稅/碳費政策壓力",
+        "中國產能過剩競爭"
+      ],
+      "opportunities": [
+        "碳素纖維新應用(航太/車用)",
+        "美中貿易轉單效益",
+        "印度/東南亞需求增長"
+      ],
+      "threats": [
+        "中國石化產能傾銷",
+        "ESG法規趨嚴增加成本",
+        "油價波動侵蝕利差"
+      ],
+      "sources": [
+        "financials:1301"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -116,9 +228,32 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "petrochem-plastics",
+        "topicName": "石化、塑橡膠與特用化學",
+        "canonicalTopicId": "petrochem-plastics",
+        "canonicalTopicName": "石化、塑橡膠與特用化學",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒，成本結構具全球競爭力。4月營收183億年增13.3%，但累計年減4.8%。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "petrochem-plastics",
+        "name": "石化、塑橡膠與特用化學",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -133,8 +268,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
-    "recommendationState": "blocked",
+    "totalScore": 21,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -145,17 +280,21 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "觀察股",
       "rationale": [
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.topic-evidence",

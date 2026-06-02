@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6213",
   "name": "聯茂",
-  "generatedAt": "2026-05-28T17:21:47.747Z",
+  "generatedAt": "2026-06-02T03:20:20.744Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -10,12 +10,12 @@
   "analysisQuality": {
     "grade": "B",
     "label": "可用但仍有缺口",
-    "upgradePriority": "high",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "product_knowledge"
+      "complete_swot"
     ],
     "blockingReasons": [
-      "missing_product_knowledge"
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -81,16 +81,9 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [
-        "聯茂供應高階 CCL、載板上游材料與封裝/PCB 基板材料，是 PCB/載板材料鏈的重要上游。"
-      ],
-      "opportunities": [
-        "AI 伺服器、高速網通與封裝基板升級提高高階 CCL 與基板材料需求，聯茂有機會受惠規格提升。"
-      ],
-      "risks": [
-        "CCL 材料同業競爭、原料價格波動與客戶降價壓力，可能壓縮聯茂獲利。",
-        "上游材料廠受原物料價格、客戶議價與庫存週期影響，題材需求不一定等比例轉化為毛利。"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -98,8 +91,6 @@
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "聯茂 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -112,16 +103,12 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "V2 W：上游材料廠受原物料價格、客戶議價與庫存週期影響，題材需求不一定等比例轉化為毛利。",
-      "V2 T：CCL 材料同業競爭、原料價格波動與客戶降價壓力，可能壓縮聯茂獲利。"
-    ],
+    "risks": [],
     "watch": [
-      "V2 O：AI 伺服器、高速網通與封裝基板升級提高高階 CCL 與基板材料需求，聯茂有機會受惠規格提升。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-05-28",
+      "V2 SWOT 最後驗證：2026-06-01",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -159,8 +146,8 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "fiberglass-cloth",
-        "topicName": "基板材料｜玻纖布",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "core",
@@ -169,18 +156,18 @@
         "roleSummary": "聯茂在 CCL/玻纖布相關基板材料題材中具直接供應鏈角色；需追蹤高速材料需求、報價與產能利用率。"
       },
       {
-        "topicId": "ic-substrate",
-        "topicName": "基板材料｜IC 載板",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "聯茂在 IC 載板/高階基板材料題材中屬 CCL 上游材料供應鏈角色；高速材料規格升級與載板需求會影響產品組合。"
+        "roleSummary": "聯茂是中高階 CCL 供應商；4 月營收 3.5 億年增 13.8%，累計年增 18.6%。AI 伺服器高速 CCL 為成長動能但技術定位次於台光電。"
       },
       {
-        "topicId": "packaging-materials",
-        "topicName": "基板材料｜導線架與化學品",
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "supplier",
@@ -189,50 +176,7 @@
         "roleSummary": "聯茂與封裝材料題材的關聯偏向 PCB/基板材料供應，不應被誤寫成導線架或封測廠核心角色。"
       }
     ],
-    "swot": [
-      {
-        "id": "opportunity-high-end-ccl-upgrade",
-        "category": "opportunity",
-        "statement": "AI 伺服器、高速網通與封裝基板升級提高高階 CCL 與基板材料需求，聯茂有機會受惠規格提升。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ai-server",
-          "ic-substrate",
-          "packaging-materials"
-        ]
-      },
-      {
-        "id": "strength-ccl-upstream-materials",
-        "category": "strength",
-        "statement": "聯茂供應高階 CCL、載板上游材料與封裝/PCB 基板材料，是 PCB/載板材料鏈的重要上游。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "ic-substrate",
-          "fiberglass-cloth",
-          "packaging-materials"
-        ]
-      },
-      {
-        "id": "threat-material-competition-and-price-cycle",
-        "category": "threat",
-        "statement": "CCL 材料同業競爭、原料價格波動與客戶降價壓力，可能壓縮聯茂獲利。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "fiberglass-cloth",
-          "ic-substrate"
-        ]
-      },
-      {
-        "id": "weakness-upstream-material-margin-sensitivity",
-        "category": "weakness",
-        "statement": "上游材料廠受原物料價格、客戶議價與庫存週期影響，題材需求不一定等比例轉化為毛利。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "fiberglass-cloth",
-          "packaging-materials"
-        ]
-      }
-    ],
+    "swot": [],
     "topics": [
       {
         "id": "pcb-substrates",
@@ -260,7 +204,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 47,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -274,7 +218,18 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

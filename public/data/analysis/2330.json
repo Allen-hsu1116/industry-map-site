@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-05-28T17:21:47.177Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.051Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,33 +17,30 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 25,
-    "summary": "台積電 技術面目前為「偏多」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 3.0%。",
+    "score": 45,
+    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.9%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 3.0%"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 3.9%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低",
-      "接近 20 日高點 2345.00，觀察是否突破"
-    ]
+    "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -20,
-    "summary": "台積電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +1萬張；三大法人近 5 日合計賣超 -1.2萬張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 16,
+    "summary": "台積電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +6.9千張；投信近 5 日買超 +676張。",
     "signals": [
-      "投信近 5 日買超 +1萬張"
+      "三大法人近 5 日合計買超 +6.9千張",
+      "投信近 5 日買超 +676張",
+      "外資近 5 日買超 +4千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.2萬張",
-      "近 20 日法人偏賣，合計 -9.8萬張",
-      "外資近 5 日賣超 -2.2萬張"
+      "近 20 日法人偏賣，合計 -3.1萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -56,7 +53,7 @@
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台積電在 CoWoS/先進封裝題材中是核心製程與產能供應者；AI GPU/ASIC 與 HBM 整合需求會推動先進封裝產能、瓶頸與資本支出成為每日追蹤重點。",
+      "roleSummary": "台積電在 CoWoS 先進封裝領域是獨佔龍頭；AI GPU 與 HBM 整合離不開 CoWoS。4 月營收年增 17.5%，先進封裝是成長引擎。",
       "supplyChainStage": "advanced_packaging",
       "roleType": "cowos_advanced_packaging_provider",
       "directness": "core",
@@ -64,34 +61,19 @@
     },
     "productNarratives": [
       {
-        "name": "CoWoS-S",
-        "description": "CoWoS-S 是台積電 CoWoS 先進封裝家族中使用矽中介層的 2.5D 封裝路線，用來把 AI 加速器、ASIC 與 HBM 高頻寬記憶體放在同一封裝內高速互連。",
-        "whyItMatters": "AI 晶片效能不只取決於運算核心，也卡在 GPU/ASIC 與 HBM 之間的資料搬移。CoWoS-S 能提供高密度、高頻寬互連，因此是 NVIDIA、AMD、Broadcom 等高階 AI 晶片能否大量出貨的關鍵封裝瓶頸。",
-        "topicFit": "直接產品平台：台積電就是 CoWoS 先進封裝的核心供應者，CoWoS-S 是目前 AI 加速器封裝的主流路線之一。",
-        "businessImpact": "CoWoS 產能與良率會影響 AI/HPC 客戶出貨節奏，也支撐台積電在先進封裝與先進製程綁定銷售上的議價能力。",
-        "sourceLabels": [
-          "TSMC：CoWoS advanced packaging technology platform"
-        ],
-        "sourceUrls": [
-          "https://www.tsmc.com/english/dedicatedFoundry/technology/cowos"
-        ],
-        "lastVerified": "2026-05-27",
-        "confidence": "high"
+        "name": "CoWoS",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
         "name": "SoIC",
-        "description": "SoIC 是台積電的 3D IC 晶片堆疊技術，透過晶片對晶片的垂直堆疊與鍵合，縮短訊號傳輸距離，提升系統效能與能源效率。",
-        "whyItMatters": "先進製程微縮越來越昂貴後，效能提升不只靠電晶體變小，也靠封裝與 3D 堆疊把不同晶片更緊密整合。SoIC 是台積電延長高階 HPC、AI 與行動晶片效能成長曲線的重要技術。",
-        "topicFit": "先進封裝延伸平台：與 CoWoS 互補，負責更高密度的 3D 晶片堆疊整合。",
-        "businessImpact": "SoIC 強化台積電從晶圓代工走向系統級整合的護城河，讓客戶更難只用單一製程節點替代台積電方案。",
-        "sourceLabels": [
-          "TSMC：SoIC 3D silicon stacking technology"
-        ],
-        "sourceUrls": [
-          "https://www.tsmc.com/english/dedicatedFoundry/technology/soic"
-        ],
-        "lastVerified": "2026-05-27",
-        "confidence": "high"
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "先進封裝平台",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -150,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -173,14 +155,14 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "cowos-advanced-packaging",
-        "topicName": "先進封測｜AI 先進封裝 CoWoS",
+        "topicId": "advanced-packaging",
+        "topicName": "先進封裝與 CoWoS",
         "canonicalTopicId": "advanced-packaging",
         "canonicalTopicName": "先進封裝與 CoWoS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電在 CoWoS/先進封裝題材中是核心製程與產能供應者；AI GPU/ASIC 與 HBM 整合需求會推動先進封裝產能、瓶頸與資本支出成為每日追蹤重點。"
+        "roleSummary": "台積電在 CoWoS 先進封裝領域是獨佔龍頭；AI GPU 與 HBM 整合離不開 CoWoS。4 月營收年增 17.5%，先進封裝是成長引擎。"
       },
       {
         "topicId": "wafer-foundry",
@@ -190,7 +172,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電在晶圓代工題材中是核心供應商；AI/HPC、手機、車用與工業晶片需求會透過先進製程與成熟製程稼動率傳導到營收與毛利。"
+        "roleSummary": "台積電是全球晶圓代工霸主；4 月營收 4,107 億年增 17.5%，累計年增近 30%。N5/N3 先進製程供不應求，N2 預計 2025 量產。"
       },
       {
         "topicId": "ai-server",
@@ -200,17 +182,17 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
-        "roleSummary": "台積電透過 AI GPU/ASIC 晶圓代工與先進封裝賦能 AI 伺服器供應鏈，但不是伺服器整機 ODM；Daily Analysis 應把它歸為上游核心賦能。"
+        "roleSummary": "台積電是 AI 伺服器上游核心賦能者；NVIDIA/AMD AI GPU 皆由台積電代工+封裝。4 月營收年增 17.5%，累計年增近 30%。"
       },
       {
         "topicId": "hbm",
-        "topicName": "記憶體｜HBM 高頻寬記憶體",
+        "topicName": "HBM 高頻寬記憶體",
         "canonicalTopicId": "hbm",
         "canonicalTopicName": "HBM 高頻寬記憶體",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
-        "roleSummary": "台積電不是 HBM 記憶體供應商，但在 AI 加速器與 HBM 的先進封裝整合中扮演直接賦能角色；需避免把封裝整合誤寫成記憶體製造。"
+        "roleSummary": "台積電不製造 HBM 記憶體，但在 HBM 與 AI GPU 的 CoWoS 整合封裝中是唯一量產供應商；4 月營收年增 17.5%。"
       }
     ],
     "swot": [
@@ -319,8 +301,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 68,
-    "recommendationState": "watchlist",
+    "totalScore": 79,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 24,
       "label": "基本面中性",
@@ -328,7 +310,7 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 9.9 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 10.4 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -343,15 +325,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2237.00",
-      "波段多空分水嶺看 MA20：2242.00",
-      "追蹤法人是否延續 買超：最近 +8.3千張",
+      "短線支撐/壓力先看 MA5：2315.00",
+      "波段多空分水嶺看 MA20：2267.25",
+      "追蹤法人是否延續 賣超：最近 -1.9千張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 30.1 倍，需和同族群估值比較"
+      "本益比 31.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 2345.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 2135.00：列為轉弱警訊",
+      "收盤突破 20 日高點 2415.00 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 2185.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

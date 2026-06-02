@@ -113,6 +113,46 @@ test("checked-in high-priority financial K-lines are fresh and OHLC-valid", () =
   }
 });
 
+test("checked-in high-priority financial chip feeds are fresh and sourced", () => {
+  const repoRoot = path.resolve(__dirname, "../..");
+  const companies = JSON.parse(fs.readFileSync(path.join(repoRoot, "public/data/companies.json"), "utf-8")) as { code: string; name: string; topic_count: number }[];
+  const targetCompanies = companies
+    .slice()
+    .sort((a, b) => b.topic_count - a.topic_count)
+    .slice(0, 30);
+
+  for (const company of targetCompanies) {
+    const file = path.join(repoRoot, "public/data/financials", `${company.code}.json`);
+    const data = JSON.parse(fs.readFileSync(file, "utf-8")) as {
+      institutional_history?: { date: string; total_net?: number; foreign_net?: number; investment_trust_net?: number; dealer_net?: number }[];
+      margin_history?: { date: string; margin_buy?: number; margin_sell?: number; margin_balance?: number; short_sell?: number; short_buy?: number; short_balance?: number }[];
+      per_history?: { date: string; pe?: number; pb?: number; dividend_yield?: number }[];
+      valuation?: { date?: string; pe?: string; pb?: string; dividendYield?: string };
+      marketFeedSource?: string;
+    };
+    const institutional = data.institutional_history ?? [];
+    const margin = data.margin_history ?? [];
+    const per = data.per_history ?? [];
+    assert.ok(institutional.length >= 5, `${company.code} ${company.name} should have institutional history rows`);
+    assert.ok(margin.length >= 5, `${company.code} ${company.name} should have margin history rows`);
+    assert.ok(per.length >= 5, `${company.code} ${company.name} should have PER/PBR/dividend-yield rows`);
+    const latestInstitutional = institutional.at(-1);
+    const latestMargin = margin.at(-1);
+    const latestPer = per.at(-1);
+    assert.ok(latestInstitutional, `${company.code} institutional should have latest row`);
+    assert.ok(latestMargin, `${company.code} margin should have latest row`);
+    assert.ok(latestPer, `${company.code} PER should have latest row`);
+    assert.ok(latestInstitutional.date >= "2026-06-01", `${company.code} institutional latest date is stale: ${latestInstitutional.date}`);
+    assert.ok(latestMargin.date >= "2026-06-01", `${company.code} margin latest date is stale: ${latestMargin.date}`);
+    assert.ok(latestPer.date >= "2026-06-01", `${company.code} PER latest date is stale: ${latestPer.date}`);
+    assert.equal(data.valuation?.date, latestPer.date.replaceAll("-", ""), `${company.code} valuation date should mirror latest PER row`);
+    assert.match(String(data.marketFeedSource), /FinMind TaiwanStockInstitutionalInvestorsBuySell/);
+    assert.match(String(data.marketFeedSource), /FinMind TaiwanStockMarginPurchaseShortSale/);
+    assert.match(String(data.marketFeedSource), /FinMind TaiwanStockPER/);
+    assert.match(String(data.marketFeedSource), /no AI-filled chip rows/);
+  }
+});
+
 test("normalizeFinancialData deep-fills missing nested fields so detail tabs do not crash", () => {
   const data = normalizeFinancialData({ code: "9999", name: "測試", trends: { daily_prices: undefined } });
 

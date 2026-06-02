@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3017",
   "name": "奇鋐",
-  "generatedAt": "2026-05-28T17:21:47.403Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.330Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "奇鋐 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "奇鋐 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 9.5%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 9.5%"
     ],
     "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇"
-    ]
+    "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -20,
-    "summary": "奇鋐 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +729張；三大法人近 5 日合計賣超 -1.8千張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 21,
+    "summary": "奇鋐 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +3.1千張；投信近 5 日買超 +1.3千張。",
     "signals": [
-      "投信近 5 日買超 +729張"
+      "三大法人近 5 日合計買超 +3.1千張",
+      "投信近 5 日買超 +1.3千張",
+      "外資近 5 日買超 +1.7千張",
+      "融資近 5 日下降 6.1%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.8千張",
-      "近 20 日法人偏賣，合計 -1.1萬張",
-      "外資近 5 日賣超 -2.5千張"
+      "近 20 日法人偏賣，合計 -7.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -63,20 +63,18 @@
     "productNarratives": [
       {
         "name": "整體散熱解決方案",
-        "description": "把伺服器、電腦或電子設備運作時產生的熱帶走，通常會結合風扇、散熱片、熱導管、均熱板、機構件與系統設計，目標是讓高功耗元件維持可運作溫度。",
-        "whyItMatters": "AI 伺服器與高效能運算晶片功耗升高後，散熱能力會影響系統能否穩定運作、是否能提高機櫃功率密度，也會影響資料中心導入新平台的速度。",
-        "topicFit": "供應鏈角色：氣冷與核心散熱組件",
-        "businessImpact": "奇鋐 114 年度合併營收 139,639,362 仟元，年報揭露主要業務包含電子零件、電子材料、通訊類電子機械產品與電腦週邊設備製造加工買賣；官方網站則將公司定位為整體散熱解決方案供應商。",
-        "sourceLabels": [
-          "奇鋐科技 Asia Vital Components：Asia Vital Components official website",
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：奇鋐科技股份有限公司 114 年度合併財務報告書"
-        ],
-        "sourceUrls": [
-          "https://www.avc.co/",
-          "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "散熱模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "電子零件與電腦週邊設備製造",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -135,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -158,8 +156,8 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "thermal_components_air",
-        "topicName": "散熱冷卻｜氣冷與核心組件",
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "core",
@@ -168,8 +166,8 @@
         "roleSummary": "奇鋐在氣冷與核心散熱組件題材中的角色最直接：公司官方定位為整體散熱解決方案供應商，年報也支撐電子零件、通訊電子與電腦週邊設備製造營運背景。"
       },
       {
-        "topicId": "thermal-solution",
-        "topicName": "散熱冷卻｜液冷與散熱模組",
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "core",
@@ -188,8 +186,8 @@
         "roleSummary": "奇鋐在 AI 伺服器題材中的核心不是設計 GPU 或組裝整機，而是提供高功耗伺服器需要的散熱模組與熱管理能力；目前以官方整體散熱定位與年報營運範圍建立中等信心，液冷營收占比仍需後續法說或產品頁補證。"
       },
       {
-        "topicId": "liquid_cooling_advanced",
-        "topicName": "散熱冷卻｜液冷散熱系統",
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "direct_enabler",
@@ -281,17 +279,22 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 57,
-    "recommendationState": "watchlist",
+    "totalScore": 72,
+    "recommendationState": "top_candidate",
     "fundamental": {
-      "score": 0,
-      "label": "基本面資料不足",
+      "score": -12,
+      "label": "基本面中性",
       "signals": [],
-      "risks": []
+      "risks": [
+        "本益比 45.8 倍，需防估值壓縮",
+        "股價淨值比 24.2 倍偏高，需和 ROE/成長性比對"
+      ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -299,12 +302,13 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2469.00",
-      "波段多空分水嶺看 MA20：2579.75",
-      "追蹤法人是否延續 賣超：最近 -818張"
+      "短線支撐/壓力先看 MA5：2691.00",
+      "波段多空分水嶺看 MA20：2544.00",
+      "追蹤法人是否延續 買超：最近 +777張",
+      "本益比 45.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 3010.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 2845.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 2300.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

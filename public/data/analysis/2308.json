@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-05-28T17:21:47.158Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.027Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,30 +18,31 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": 15,
-    "summary": "台達電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 7.4%。",
+    "summary": "台達電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 9.8%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 7.4%"
+      "收盤站上 MA20 9.8%"
     ],
     "risks": [],
     "watch": []
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 0,
-    "summary": "台達電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.9千張；外資近 5 日買超 +3.8千張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 21,
+    "summary": "台達電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +4.4千張；投信近 5 日買超 +1.1千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.9千張",
-      "外資近 5 日買超 +3.8千張"
+      "三大法人近 5 日合計買超 +4.4千張",
+      "投信近 5 日買超 +1.1千張",
+      "外資近 5 日買超 +3.4千張",
+      "融資近 5 日下降 5.1%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -7.7千張",
-      "投信近 5 日賣超 -2.3千張"
+      "近 20 日法人偏賣，合計 -1.8千張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25",
-      "融券近 5 日增加 12.9%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-01",
+      "融券近 5 日增加 11.4%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -52,31 +53,29 @@
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "儲能、電芯與電池材料",
+      "topicName": "AI 伺服器電源與 BBU",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。",
-      "supplyChainStage": "system_integration",
-      "roleType": "energy_storage_and_management_solution_provider",
+      "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。",
+      "supplyChainStage": "power",
+      "roleType": "power_supply_system_provider",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "能源基礎設施、儲能與能源管理",
-        "description": "能源基礎設施把電力轉換、儲能、能源管理、再生能源逆變器、微電網與充電系統整合起來，讓場域能更有效率地用電、備援與接入再生能源。",
-        "whyItMatters": "AI 資料中心、工廠、商辦與充電站都需要更高供電韌性與能源效率。儲能、能源管理與微電網可平滑尖峰負載、整合再生能源，也可能與 EV 充電和資料中心用電需求連動。",
-        "topicFit": "核心產品線：儲能系統與能源管理",
-        "businessImpact": "官方能源基礎設施頁面列出電動車充電設備、儲能系統、太陽能逆變器、能源管理、風力發電變流器等產品；財報也把可再生能源應用、能源技術服務列為主要營業項目。",
-        "sourceLabels": [
-          "台達 Delta Electronics：產品 - 能源基礎設施",
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：台達電子工業股份有限公司 114 年度合併財務報告書"
-        ],
-        "sourceUrls": [
-          "https://www.deltaww.com/zh-TW/products/Energy-Infrastructure-Industrial-Solutions",
-          "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
+        "name": "電源供應系統與高效電源",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "伺服器電源",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "嵌入式電源",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -95,20 +94,20 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 儲能、電芯與電池材料（theme/active） +18",
+      "題材 AI 伺服器電源與 BBU（product/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 3 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "台達電 在「儲能、電芯與電池材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "台達電 在「AI 伺服器電源與 BBU」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：儲能、電芯與電池材料 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 儲能、電芯與電池材料（theme/active） +18）",
+      "V2 題材角色：AI 伺服器電源與 BBU · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器電源與 BBU（product/active） +16）",
+      "相關題材：儲能、電芯與電池材料 · 核心產品/平台",
       "相關題材：工業自動化與 CNC 工具機 · 核心產品/平台",
-      "相關題材：AI 伺服器電源與 BBU · 核心產品/平台",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -119,10 +118,10 @@
     "watch": [
       "V2 O：AI 資料中心功率密度提高，使高效率電源、配電、熱管理與液冷相關產品具備中期成長機會。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 AI 伺服器電源與 BBU：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器電源與 BBU：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善",
-      "追蹤 工業自動化與 CNC 工具機：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -136,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -159,8 +158,18 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "ess-storage",
-        "topicName": "綠能環保｜儲能系統整合",
+        "topicId": "ai-server-power-backup",
+        "topicName": "AI 伺服器電源與 BBU",
+        "canonicalTopicId": "ai-server-power-backup",
+        "canonicalTopicName": "AI 伺服器電源與 BBU",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。"
+      },
+      {
+        "topicId": "energy-storage-battery",
+        "topicName": "儲能、電芯與電池材料",
         "canonicalTopicId": "energy-storage-battery",
         "canonicalTopicName": "儲能、電芯與電池材料",
         "directness": "core",
@@ -179,16 +188,6 @@
         "roleSummary": "台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。"
       },
       {
-        "topicId": "psu",
-        "topicName": "電子零組件｜電源供應器",
-        "canonicalTopicId": "ai-server-power-backup",
-        "canonicalTopicName": "AI 伺服器電源與 BBU",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。"
-      },
-      {
         "topicId": "ai-server",
         "topicName": "AI伺服器與液冷技術",
         "canonicalTopicId": "ai-server",
@@ -199,8 +198,8 @@
         "roleSummary": "台達電在 AI 伺服器題材中的角色是電源、散熱與資料中心基礎設施的直接賦能者，不是 GPU/ASIC 或整機 ODM；官方產品頁明確提到 AI 時代資料中心基礎設施，並列出電源、配電、液冷/氣冷散熱、機櫃與環境管理。"
       },
       {
-        "topicId": "liquid_cooling_advanced",
-        "topicName": "散熱冷卻｜液冷散熱系統",
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "direct_enabler",
@@ -209,8 +208,8 @@
         "roleSummary": "台達電在液冷散熱題材中是資料中心與設備端冷卻解決方案供應者；官方資料中心與風扇散熱頁皆列出液冷/氣冷散熱能力，財報也把散熱系統列為主要營業項目。"
       },
       {
-        "topicId": "sic-gan-power",
-        "topicName": "半導體製造｜第三代半導體",
+        "topicId": "wafer-foundry",
+        "topicName": "晶圓代工與第三代半導體",
         "canonicalTopicId": "wafer-foundry",
         "canonicalTopicName": "晶圓代工與第三代半導體",
         "directness": "indirect",
@@ -280,6 +279,17 @@
     ],
     "topics": [
       {
+        "id": "ai-server-power-backup",
+        "name": "AI 伺服器電源與 BBU",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
         "id": "energy-storage-battery",
         "name": "儲能、電芯與電池材料",
         "type": "theme",
@@ -294,17 +304,6 @@
         "id": "industrial-automation",
         "name": "工業自動化與 CNC 工具機",
         "type": "technology",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
-      {
-        "id": "ai-server-power-backup",
-        "name": "AI 伺服器電源與 BBU",
-        "type": "product",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -360,8 +359,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 68,
-    "recommendationState": "watchlist",
+    "totalScore": 72,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -370,13 +369,14 @@
         "月營收 MoM +6.2%，短期動能改善"
       ],
       "risks": [
-        "本益比 70.6 倍，需防估值壓縮",
-        "股價淨值比 16.6 倍偏高，需和 ROE/成長性比對"
+        "本益比 89.2 倍，需防估值壓縮",
+        "股價淨值比 21.0 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -385,14 +385,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2049.00",
-      "波段多空分水嶺看 MA20：2132.50",
-      "追蹤法人是否延續 買超：最近 +4.9千張",
+      "短線支撐/壓力先看 MA5：2425.00",
+      "波段多空分水嶺看 MA20：2204.00",
+      "追蹤法人是否延續 賣超：最近 -770張",
       "月營收年增率 +38.6%，觀察基本面是否支撐估值",
-      "本益比 70.6 倍，需和同族群估值比較"
+      "本益比 89.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 2370.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 2585.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 1880.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

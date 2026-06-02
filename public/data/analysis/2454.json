@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2454",
   "name": "聯發科",
-  "generatedAt": "2026-05-28T17:21:47.260Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.152Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,32 +17,30 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 55,
-    "summary": "聯發科 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 28.8%。",
+    "score": 45,
+    "summary": "聯發科 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 21.5%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 28.8%"
+      "收盤站上 MA20 21.5%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低",
-      "接近 20 日高點 4245.00，觀察是否突破"
-    ]
+    "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -36,
-    "summary": "聯發科 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -5.5千張；近 20 日法人偏賣，合計 -1.3千張。",
-    "signals": [],
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "聯發科 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +943張；外資近 5 日買超 +5千張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +943張",
+      "外資近 5 日買超 +5千張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -5.5千張",
-      "近 20 日法人偏賣，合計 -1.3千張",
-      "投信近 5 日賣超 -340張",
-      "外資近 5 日賣超 -5.9千張"
+      "近 20 日法人偏賣，合計 -3.4千張",
+      "投信近 5 日賣超 -4千張"
     ],
     "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -53,74 +51,62 @@
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "Edge AI / AIoT 邊緣智慧",
+      "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "聯發科在 Edge AI/AIoT 題材中可透過終端 SoC、AI 加速與連接晶片扮演核心 IC 設計供應商角色；需追蹤端側 AI 功能是否帶動 ASP。",
+      "roleSummary": "聯發科是全球手機 SoC 出貨量龍頭；4 月營收 47 億年減 4.1%，累計年減 3.1%。Dimensity 9400 搶攻旗艦市場但仍受景氣影響。",
       "supplyChainStage": "ic_design",
-      "roleType": "edge_ai_soc_provider",
+      "roleType": "smartphone_soc_provider",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "Edge AI SoC",
+        "name": "手機 SoC",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "AIoT 晶片平台",
+        "name": "5G 通訊晶片",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "終端 AI 加速晶片",
+        "name": "Wi-Fi/藍牙連接晶片",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
     ],
     "swotSnapshot": {
-      "strengths": [
-        "聯發科具手機 SoC、5G 通訊晶片與 Edge AI/AIoT 平台規模，是台灣 IC 設計中少數跨終端與邊緣 AI 的大型平台公司。"
-      ],
-      "opportunities": [
-        "終端裝置導入生成式 AI、AIoT 與高階連接功能，可推升聯發科 Edge AI SoC 與通訊晶片升級需求。"
-      ],
-      "risks": [
-        "高階手機 SoC 競爭、先進製程成本與品牌客戶採用變化，可能壓縮聯發科市占與毛利率。",
-        "手機與消費終端 SoC 仍受終端需求、庫存與競爭價格週期影響，可能稀釋 Edge AI 題材貢獻。"
-      ]
+      "strengths": [],
+      "opportunities": [],
+      "risks": []
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",
-      "題材 Edge AI / AIoT 邊緣智慧（technology/active） +17",
+      "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "聯發科 在「Edge AI / AIoT 邊緣智慧」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "聯發科 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：Edge AI / AIoT 邊緣智慧 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 Edge AI / AIoT 邊緣智慧（technology/active） +17）",
-      "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
+      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
+      "相關題材：Edge AI / AIoT 邊緣智慧 · 核心產品/平台",
       "相關題材：IC 設計與矽智財 · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "V2 W：手機與消費終端 SoC 仍受終端需求、庫存與競爭價格週期影響，可能稀釋 Edge AI 題材貢獻。",
-      "V2 T：高階手機 SoC 競爭、先進製程成本與品牌客戶採用變化，可能壓縮聯發科市占與毛利率。"
-    ],
+    "risks": [],
     "watch": [
-      "V2 O：終端裝置導入生成式 AI、AIoT 與高階連接功能，可推升聯發科 Edge AI SoC 與通訊晶片升級需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
       "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
-      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -134,7 +120,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -157,85 +143,42 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "edge-ai",
-        "topicName": "智慧機器人｜Edge AI / AIoT 邊緣智慧",
-        "canonicalTopicId": "edge-ai-aiot",
-        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "聯發科在 Edge AI/AIoT 題材中可透過終端 SoC、AI 加速與連接晶片扮演核心 IC 設計供應商角色；需追蹤端側 AI 功能是否帶動 ASP。"
-      },
-      {
-        "topicId": "mobile",
-        "topicName": "消費終端｜智慧型手機供應鏈",
+        "topicId": "consumer-computing-devices",
+        "topicName": "PC、手機與 AR/VR/XR 終端",
         "canonicalTopicId": "consumer-computing-devices",
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "聯發科在智慧型手機供應鏈題材中是核心 SoC 與通訊晶片供應商；手機需求、產品組合與旗艦晶片滲透是基本面傳導重點。"
+        "roleSummary": "聯發科是全球手機 SoC 出貨量龍頭；4 月營收 47 億年減 4.1%，累計年減 3.1%。Dimensity 9400 搶攻旗艦市場但仍受景氣影響。"
       },
       {
-        "topicId": "hpc-networking-ic",
-        "topicName": "IC 設計｜HPC 與網通 IC",
+        "topicId": "edge-ai-aiot",
+        "topicName": "Edge AI / AIoT 邊緣智慧",
+        "canonicalTopicId": "edge-ai-aiot",
+        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "聯發科在邊緣 AI SoC 題材中是手機端側 AI 推論核心供應商；Dimensity 9400 內建 NPU 支援端側大模型運算。4 月營收年減 4.1%。"
+      },
+      {
+        "topicId": "ic-design",
+        "topicName": "IC 設計與矽智財",
         "canonicalTopicId": "ic-design",
         "canonicalTopicName": "IC 設計與矽智財",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "聯發科與 HPC/網通 IC 題材相關，但受惠程度需依產品線與客戶導入驗證；不應把手機晶片地位直接等同於資料中心 AI 加速器核心供應商。"
+        "roleSummary": "聯發科在 Wi-Fi 7 網通 SoC 題材是挑戰者；Filogic 系列搶攻家用/企業 Wi-Fi 7 市場。4 月營收年減 4.1%，網通晶片為成長動能。"
       }
     ],
-    "swot": [
-      {
-        "id": "opportunity-edge-ai-aiot-upgrade",
-        "category": "opportunity",
-        "statement": "終端裝置導入生成式 AI、AIoT 與高階連接功能，可推升聯發科 Edge AI SoC 與通訊晶片升級需求。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "edge-ai",
-          "aiot",
-          "hpc-networking-ic"
-        ]
-      },
-      {
-        "id": "strength-mobile-edge-ai-soc-scale",
-        "category": "strength",
-        "statement": "聯發科具手機 SoC、5G 通訊晶片與 Edge AI/AIoT 平台規模，是台灣 IC 設計中少數跨終端與邊緣 AI 的大型平台公司。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "mobile",
-          "edge-ai",
-          "hpc-networking-ic"
-        ]
-      },
-      {
-        "id": "threat-flagship-competition-and-node-cost",
-        "category": "threat",
-        "statement": "高階手機 SoC 競爭、先進製程成本與品牌客戶採用變化，可能壓縮聯發科市占與毛利率。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "mobile",
-          "edge-ai"
-        ]
-      },
-      {
-        "id": "weakness-consumer-device-cycle",
-        "category": "weakness",
-        "statement": "手機與消費終端 SoC 仍受終端需求、庫存與競爭價格週期影響，可能稀釋 Edge AI 題材貢獻。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "mobile",
-          "edge-ai"
-        ]
-      }
-    ],
+    "swot": [],
     "topics": [
       {
-        "id": "edge-ai-aiot",
-        "name": "Edge AI / AIoT 邊緣智慧",
-        "type": "technology",
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -244,9 +187,9 @@
         ]
       },
       {
-        "id": "consumer-computing-devices",
-        "name": "PC、手機與 AR/VR/XR 終端",
-        "type": "end_market",
+        "id": "edge-ai-aiot",
+        "name": "Edge AI / AIoT 邊緣智慧",
+        "type": "technology",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -280,7 +223,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 43,
+    "totalScore": 47,
     "recommendationState": "blocked",
     "fundamental": {
       "score": -20,
@@ -288,8 +231,8 @@
       "signals": [],
       "risks": [
         "月營收 MoM -26.1%，短期動能轉弱",
-        "本益比 61.5 倍，需防估值壓縮",
-        "股價淨值比 15.8 倍偏高，需和 ROE/成長性比對"
+        "本益比 72.6 倍，需防估值壓縮",
+        "股價淨值比 18.6 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -303,21 +246,21 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 22.4%，停損距離過大"
+        "message": "距離 MA20 約 17.7%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：3608.00",
-      "波段多空分水嶺看 MA20：3296.00",
-      "追蹤法人是否延續 賣超：最近 -2千張",
+      "短線支撐/壓力先看 MA5：4436.00",
+      "波段多空分水嶺看 MA20：3749.75",
+      "追蹤法人是否延續 買超：最近 +3.1千張",
       "月營收年增率 -4.1%，觀察基本面是否支撐估值",
-      "本益比 61.5 倍，需和同族群估值比較"
+      "本益比 72.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 4245.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 2410.00：列為轉弱警訊",
+      "收盤突破 20 日高點 4710.00 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 3100.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2382",
   "name": "廣達",
-  "generatedAt": "2026-05-28T17:21:47.216Z",
+  "generatedAt": "2026-06-02T03:20:20.099Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,38 +54,34 @@
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "廣達的 AI 伺服器角色是整機/系統 ODM，不是 GPU 或關鍵半導體製造；Daily Analysis 應追蹤伺服器營收、雲端需求與客戶拉貨週期。",
+      "roleSummary": "廣達是全球最大 AI 伺服器 ODM；4 月營收 340 億年增 120.7%，累計年增 79.6%。備註「產品組合變更」反映 AI 伺服器占比急升。",
       "supplyChainStage": "system_assembly",
-      "roleType": "cloud_server_odm",
+      "roleType": "ai_server_odm",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "AI 伺服器 ODM 與雲端伺服器",
-        "description": "AI 伺服器 ODM 是依雲端服務商或品牌客戶需求設計、整合並量產伺服器平台，包含主機板、GPU 模組、電源、散熱與機構整合。",
-        "whyItMatters": "CSP 擴建 AI 資料中心時，需要能快速導入新平台並大量交付的 ODM；廣達的產品知識重點是雲端伺服器系統能力。",
-        "topicFit": "資料中心 AI 設備需求的系統端受益者。",
-        "businessImpact": "AI 伺服器產品組合提升可改善營收結構，但平台轉換、客戶驗證與 GPU 供給仍會影響出貨節奏。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：廣達 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "AI GPU 伺服器 ODM（GB200/NVL36）",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "大型機櫃式 AI 叢集",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "雲端資料中心伺服器",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
       "strengths": [
         "廣達是雲端與 AI 伺服器 ODM 核心供應商，同時具筆電 ODM 基礎，具備系統設計與量產能力。"
       ],
-      "opportunities": [
-        "CSP AI 基礎建設投資擴張，可推升廣達雲端伺服器與 AI server system integration 需求。"
-      ],
+      "opportunities": [],
       "risks": [
         "AI 伺服器 ODM 競爭者眾多，若價格競爭或客戶議價加劇，可能壓縮廣達題材受惠的利潤率。",
         "伺服器 ODM 對 GPU/CPU 平台切換與 CSP 拉貨節奏敏感，短期營運容易受平台轉換空窗影響。"
@@ -97,7 +93,7 @@
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
+      "正向 SWOT 1 項 +5",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -116,12 +112,12 @@
       "V2 T：AI 伺服器 ODM 競爭者眾多，若價格競爭或客戶議價加劇，可能壓縮廣達題材受惠的利潤率。"
     ],
     "watch": [
-      "V2 O：CSP AI 基礎建設投資擴張，可推升廣達雲端伺服器與 AI server system integration 需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
-      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
   "knowledge": {
@@ -159,46 +155,36 @@
     "topicRoles": [
       {
         "topicId": "ai-server",
+        "topicName": "AI 伺服器整機與 EMS",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "medium",
+        "roleSummary": "廣達是全球最大 AI 伺服器 ODM；4 月營收 340 億年增 120.7%，累計年增 79.6%。備註「產品組合變更」反映 AI 伺服器占比急升。"
+      },
+      {
+        "topicId": "ai-server",
         "topicName": "AI伺服器與液冷技術",
         "canonicalTopicId": "ai-server",
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "廣達的 AI 伺服器角色是整機/系統 ODM，不是 GPU 或關鍵半導體製造；Daily Analysis 應追蹤伺服器營收、雲端需求與客戶拉貨週期。"
+        "roleSummary": "廣達在 AI 伺服器題材中是 NVIDIA 最重要的 ODM 夥伴；4 月營收年增 120.7%，AI 伺服器已成營收主力。"
       },
       {
-        "topicId": "ai-server-odm",
-        "topicName": "AI 伺服器｜整機組裝",
-        "canonicalTopicId": "ai-server",
-        "canonicalTopicName": "AI 伺服器整機與 EMS",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "廣達在 AI 伺服器題材中是雲端伺服器 ODM 核心角色；受惠邏輯主要來自 CSP AI 伺服器平台出貨、ASP 提升與產品組合變化。"
-      },
-      {
-        "topicId": "pc-nb-tablet",
-        "topicName": "消費終端｜PC",
+        "topicId": "consumer-computing-devices",
+        "topicName": "PC、手機與 AR/VR/XR 終端",
         "canonicalTopicId": "consumer-computing-devices",
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "廣達仍具筆電 ODM 角色，PC 循環對基本面有影響；需要和 AI server 成長題材拆開評估。"
+        "roleSummary": "廣達是全球最大 NB ODM；NB 營收穩定但 AI 伺服器成長遠超 PC。4 月整體營收年增 120.7%。"
       }
     ],
     "swot": [
-      {
-        "id": "opportunity-csp-ai-infrastructure-buildout",
-        "category": "opportunity",
-        "statement": "CSP AI 基礎建設投資擴張，可推升廣達雲端伺服器與 AI server system integration 需求。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "ai-server-odm",
-          "cloud-msp"
-        ]
-      },
       {
         "id": "strength-cloud-ai-server-odm-position",
         "category": "strength",
@@ -268,7 +254,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 63,
+    "totalScore": 55,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
@@ -286,7 +272,18 @@
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

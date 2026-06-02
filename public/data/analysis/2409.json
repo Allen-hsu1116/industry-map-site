@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "code": "2409",
   "name": "友達",
-  "generatedAt": "2026-05-28T17:21:47.237Z",
+  "generatedAt": "2026-06-02T03:20:20.124Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "topic_role_not_verified",
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -55,46 +52,128 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "medium",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "roleDetail": {
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "間接受惠",
+      "roleSummary": "友達以面板為主，4月營收221億年減4.5%。AI伺服器相關性低，但AI PC/監視器面板需求可能間接受惠。主力在車用顯示器與LTPS手機面板。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "display_panel_supplier",
+      "directness": "indirect",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "LTPS高解析手機面板",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "AMOLED手機面板(6代線)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "車用顯示器(儀表/中控)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "LTPS手機面板全球前二",
+        "車用顯示器市佔穩步提升"
+      ],
+      "opportunities": [
+        "車用顯示器滲透率提升(OLED/LTPS)",
+        "Micro LED商用化加速"
+      ],
+      "risks": [
+        "京東方(BOE)低價競爭",
+        "OLED面板侵蝕LCD市場"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
+      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 6 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 60，上限 40）"
     ],
-    "summary": "友達 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "友達 在「AI 伺服器整機與 EMS」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 間接受惠 · medium",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "主要產品：LTPS高解析手機面板",
+      "主要產品：AMOLED手機面板(6代線)",
+      "主要產品：車用顯示器(儀表/中控)",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+      "V2 W：4月營收221億年減4.5%，面板景氣仍在底部",
+      "V2 W：LCD面板價格長期下降趨勢",
+      "V2 T：京東方(BOE)低價競爭",
+      "V2 T：OLED面板侵蝕LCD市場"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：車用顯示器滲透率提升(OLED/LTPS)",
+      "V2 O：Micro LED商用化加速",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-02"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
+    "products": [
+      "LTPS高解析手機面板",
+      "AMOLED手機面板(6代線)",
+      "車用顯示器(儀表/中控)",
+      "8K4K大尺寸電視面板",
+      "Micro LED顯示技術"
+    ],
+    "customers": [
+      "Apple",
+      "Samsung",
+      "Tesla",
+      "BMW",
+      "Sony"
+    ],
     "topicRoles": [],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "LTPS手機面板全球前二",
+        "車用顯示器市佔穩步提升",
+        "Micro LED技術領先(與錼創合作)"
+      ],
+      "weaknesses": [
+        "4月營收221億年減4.5%，面板景氣仍在底部",
+        "LCD面板價格長期下降趨勢",
+        "8.5代線折舊壓力"
+      ],
+      "opportunities": [
+        "車用顯示器滲透率提升(OLED/LTPS)",
+        "Micro LED商用化加速",
+        "IT顯示器換機潮(高解析/高刷新)"
+      ],
+      "threats": [
+        "京東方(BOE)低價競爭",
+        "OLED面板侵蝕LCD市場",
+        "中國面板廠產能持續擴增"
+      ],
+      "sources": [
+        "financials:2409"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -117,9 +196,141 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "友達以面板為主，4月營收221億年減4.5%。AI伺服器相關性低，但AI PC/監視器面板需求可能間接受惠。主力在車用顯示器與LTPS手機面板。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2409-0",
+        "category": "opportunity",
+        "statement": "車用顯示器滲透率提升(OLED/LTPS)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2409-1",
+        "category": "opportunity",
+        "statement": "Micro LED商用化加速",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2409-2",
+        "category": "opportunity",
+        "statement": "IT顯示器換機潮(高解析/高刷新)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2409-0",
+        "category": "strength",
+        "statement": "LTPS手機面板全球前二",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2409-1",
+        "category": "strength",
+        "statement": "車用顯示器市佔穩步提升",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2409-2",
+        "category": "strength",
+        "statement": "Micro LED技術領先(與錼創合作)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2409-0",
+        "category": "threat",
+        "statement": "京東方(BOE)低價競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2409-1",
+        "category": "threat",
+        "statement": "OLED面板侵蝕LCD市場",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2409-2",
+        "category": "threat",
+        "statement": "中國面板廠產能持續擴增",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2409-0",
+        "category": "weakness",
+        "statement": "4月營收221億年減4.5%，面板景氣仍在底部",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2409-1",
+        "category": "weakness",
+        "statement": "LCD面板價格長期下降趨勢",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2409-2",
+        "category": "weakness",
+        "statement": "8.5代線折舊壓力",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -134,7 +345,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 16,
+    "totalScore": 38,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -146,19 +357,23 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "基本面成長可支撐估值與題材敘事",
-        "分析品質不足，策略只能列為觀察"
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.stop-distance",

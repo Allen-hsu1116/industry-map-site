@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6005",
   "name": "群益證",
-  "generatedAt": "2026-05-28T17:21:47.689Z",
+  "generatedAt": "2026-06-02T03:20:20.675Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -135,7 +135,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 27,
+    "totalScore": 19,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -155,6 +155,16 @@
         "id": "risk.analysis-quality",
         "severity": "hard",
         "message": "AnalysisQuality F 不可列入 Top recommendation"
+      },
+      {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.topic-evidence",

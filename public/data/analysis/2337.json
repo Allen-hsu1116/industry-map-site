@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-05-28T17:21:47.179Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.053Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,31 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "旺宏 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "旺宏 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.0%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 6.0%"
+    ],
+    "risks": [],
+    "watch": []
+  },
+  "chips": {
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 36,
+    "summary": "旺宏 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +9.4萬張；近 20 日法人偏買，合計 +6.4萬張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +9.4萬張",
+      "近 20 日法人偏買，合計 +6.4萬張",
+      "投信近 5 日買超 +5.8千張",
+      "外資近 5 日買超 +8.8萬張"
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
-    ]
-  },
-  "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "旺宏 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +3.4萬張；三大法人近 5 日合計賣超 -5.3萬張。",
-    "signals": [
-      "近 20 日法人偏買，合計 +3.4萬張"
-    ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -5.3萬張",
-      "投信近 5 日賣超 -1.4萬張",
-      "外資近 5 日賣超 -3.6萬張"
-    ],
-    "watch": [
-      "最近法人資料日：2026-05-25"
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
@@ -54,7 +52,7 @@
     "roleDetail": {
       "topicName": "NOR Flash 與利基記憶體",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "旺宏以 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品切入利基記憶體題材；Daily Analysis 應把它視為記憶體 IC 產品供應商，而不是泛半導體概念股。",
+      "roleSummary": "旺宏是全球 NOR Flash 龍頭；4 月營收 5.9 億年增 153.7%，累計年增 93.5%。車用/5G NOR Flash 需求爆發。",
       "supplyChainStage": "memory_ic",
       "roleType": "nor_flash_and_non_volatile_memory_supplier",
       "directness": "core",
@@ -167,7 +165,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -197,7 +195,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "旺宏以 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品切入利基記憶體題材；Daily Analysis 應把它視為記憶體 IC 產品供應商，而不是泛半導體概念股。"
+        "roleSummary": "旺宏是全球 NOR Flash 龍頭；4 月營收 5.9 億年增 153.7%，累計年增 93.5%。車用/5G NOR Flash 需求爆發。"
       },
       {
         "topicId": "ic-design",
@@ -289,8 +287,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 64,
-    "recommendationState": "watchlist",
+    "totalScore": 83,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 30,
       "label": "基本面偏強",
@@ -298,11 +296,15 @@
         "月營收 YoY +44.9%，成長動能明確",
         "月營收 MoM +7.7%，短期動能改善"
       ],
-      "risks": []
+      "risks": [
+        "股價淨值比 6.5 倍偏高，需和 ROE/成長性比對"
+      ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -311,9 +313,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：145.60",
-      "波段多空分水嶺看 MA20：156.50",
-      "追蹤法人是否延續 買超：最近 +1.1萬張",
+      "短線支撐/壓力先看 MA5：162.00",
+      "波段多空分水嶺看 MA20：158.00",
+      "追蹤法人是否延續 買超：最近 +1.9萬張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值"
     ],
     "triggerRules": [

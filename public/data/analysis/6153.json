@@ -2,82 +2,117 @@
   "schemaVersion": 1,
   "code": "6153",
   "name": "嘉聯益",
-  "generatedAt": "2026-05-28T17:21:47.710Z",
-  "sourceUpdatedAt": "2026-05-26",
-  "marketDataDate": "2026-05-25",
-  "chipDataDate": "2026-05-25",
+  "generatedAt": "2026-06-02T03:20:20.699Z",
+  "sourceUpdatedAt": "2026-06-01",
+  "marketDataDate": "2026-06-01",
+  "chipDataDate": "2026-06-01",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 45,
-    "summary": "嘉聯益 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 5.4%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "嘉聯益 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 5.4%"
-    ],
-    "risks": [],
-    "watch": []
-  },
-  "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 28,
-    "summary": "嘉聯益 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +8.8千張；近 20 日法人偏買，合計 +4.1千張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +8.8千張",
-      "近 20 日法人偏買，合計 +4.1千張",
-      "外資近 5 日買超 +8.6千張"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-05-25",
-      "融券近 5 日增加 113.0%，留意軋空或空方壓力"
+      "股價貼近 MA20，留意方向選擇"
+    ]
+  },
+  "chips": {
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": -3,
+    "summary": "嘉聯益 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +4.9千張；融資近 5 日下降 5.4%，籌碼壓力下降。",
+    "signals": [
+      "近 20 日法人偏買，合計 +4.9千張",
+      "融資近 5 日下降 5.4%，籌碼壓力下降"
+    ],
+    "risks": [
+      "三大法人近 5 日合計賣超 -233張",
+      "外資近 5 日賣超 -203張"
+    ],
+    "watch": [
+      "最近法人資料日：2026-06-01"
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "PCB、IC 載板與高階基板材料",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "嘉聯益在軟板題材中是主要供應商；智慧手機與可穿戴裝置 FPC 需求驅動營收，4 月營收 4.52 億但年減 14.4%。",
+      "supplyChainStage": "fpc",
+      "roleType": "fpc_manufacturer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "軟性電路板 FPC",
+        "description": "FPC 軟性電路板是可彎折的電路連接板，用於手機、穿戴、車用與高密度電子產品內部連接。",
+        "whyItMatters": "終端產品越薄型化、模組化，高密度連接需求越高；FPC 供應商受新品設計導入與終端出貨週期影響。",
+        "topicFit": "FPC 屬 PCB/基板供應鏈的一環",
+        "businessImpact": "營運受手機/穿戴/車用新品導入、客戶集中度、良率與價格競爭影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：嘉聯益 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6153",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "嘉聯益 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "嘉聯益 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
+      "相關題材：低軌衛星通訊 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
+      "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
+      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "知識庫最後驗證：2026-06-01（fresh）"
     ]
   },
   "knowledge": {
@@ -91,7 +126,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-05-26"
+      "lastVerified": "2026-06-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -112,9 +147,53 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "嘉聯益在軟板題材中是主要供應商；智慧手機與可穿戴裝置 FPC 需求驅動營收，4 月營收 4.52 億但年減 14.4%。"
+      },
+      {
+        "topicId": "leo-satellite-communications",
+        "topicName": "低軌衛星通訊",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "嘉聯益供應低軌衛星通訊設備用高頻軟板；Starlink/OneWeb 等衛星計畫帶動新需求。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "pcb-substrates",
+        "name": "PCB、IC 載板與高階基板材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -129,7 +208,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 48,
+    "totalScore": 60,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -138,25 +217,18 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：18.41",
-      "波段多空分水嶺看 MA20：18.12",
-      "追蹤法人是否延續 賣超：最近 -12張"
+      "短線支撐/壓力先看 MA5：18.16",
+      "波段多空分水嶺看 MA20：18.17",
+      "追蹤法人是否延續 買超：最近 +1.1千張"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 20.00 且量比 > 1.5：列為轉強訊號",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2356",
   "name": "英業達",
-  "generatedAt": "2026-05-28T17:21:47.196Z",
+  "generatedAt": "2026-06-02T03:20:20.074Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -56,7 +56,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "英業達在 AI 伺服器題材中是伺服器/筆電 ODM 供應鏈角色；需追蹤伺服器產品組合、客戶拉貨與毛利改善。",
+      "roleSummary": "英業達是 AI 伺服器 ODM 要角；4 月營收 85 億年增 36.5%，累計年增 30%。NVIDIA AI 伺服器為主要成長動能。",
       "supplyChainStage": "system_assembly",
       "roleType": "server_notebook_odm",
       "directness": "core",
@@ -64,34 +64,27 @@
     },
     "productNarratives": [
       {
-        "name": "AI 伺服器 ODM 與伺服器製造",
-        "description": "AI 伺服器 ODM 是替客戶設計、製造與測試高階伺服器系統，英業達的定位偏伺服器與 EMS 製造。",
-        "whyItMatters": "AI 伺服器訂單擴散時，具伺服器製造基礎的 ODM/EMS 廠有機會承接增量。",
-        "topicFit": "直接產品/服務：AI server ODM 與伺服器製造。",
-        "businessImpact": "伺服器業務成長可改善產品組合，但題材貢獻需靠出貨、毛利與客戶結構驗證。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：英業達 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2356",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "AI 訓練伺服器（OCP/IGX 架構）",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "GPU 伺服器整機",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "AI 推論伺服器",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
-      "strengths": [
-        "英業達具伺服器、筆電 ODM/EMS 製造基礎，可在 AI 伺服器與 PC/NB 需求間承接量產訂單。"
-      ],
+      "strengths": [],
       "opportunities": [
         "若 AI 伺服器 ODM 訂單擴散到更多供應商，英業達有機會憑伺服器製造與 EMS 能力承接增量。"
       ],
-      "risks": [
-        "筆電需求循環、ODM 競爭與客戶議價，可能壓抑英業達整體營收成長與毛利率。",
-        "相較更聚焦或規模更大的 AI 伺服器 ODM，英業達的題材直接性與客戶組合仍需用出貨與財報持續驗證。"
-      ]
+      "risks": []
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -99,8 +92,7 @@
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 1 項 +5",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "英業達 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -113,10 +105,7 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "V2 W：相較更聚焦或規模更大的 AI 伺服器 ODM，英業達的題材直接性與客戶組合仍需用出貨與財報持續驗證。",
-      "V2 T：筆電需求循環、ODM 競爭與客戶議價，可能壓抑英業達整體營收成長與毛利率。"
-    ],
+    "risks": [],
     "watch": [
       "V2 O：若 AI 伺服器 ODM 訂單擴散到更多供應商，英業達有機會憑伺服器製造與 EMS 能力承接增量。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
@@ -160,34 +149,34 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "ai-server-odm",
-        "topicName": "AI 伺服器｜整機組裝",
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器整機與 EMS",
         "canonicalTopicId": "ai-server",
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "英業達在 AI 伺服器題材中是伺服器/筆電 ODM 供應鏈角色；需追蹤伺服器產品組合、客戶拉貨與毛利改善。"
+        "roleSummary": "英業達是 AI 伺服器 ODM 要角；4 月營收 85 億年增 36.5%，累計年增 30%。NVIDIA AI 伺服器為主要成長動能。"
       },
       {
-        "topicId": "ems-smt",
-        "topicName": "AI 伺服器｜SMT/EMS 電子代工",
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器整機與 EMS",
         "canonicalTopicId": "ai-server",
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "英業達在 EMS/ODM 製造中提供伺服器與筆電代工，題材傳導需要用產品組合與營收資料驗證。"
+        "roleSummary": "英業達是二線 EMS 大廠；NB 與伺服器並重，AI 伺服器帶動營收跳升。4 月營收年增 36.5%。"
       },
       {
-        "topicId": "pc-nb-tablet",
-        "topicName": "消費終端｜PC",
+        "topicId": "consumer-computing-devices",
+        "topicName": "PC、手機與 AR/VR/XR 終端",
         "canonicalTopicId": "consumer-computing-devices",
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "英業達的 PC/NB ODM 角色仍影響基本面，Daily Analysis 應把 PC 循環和 AI server 成長分開。"
+        "roleSummary": "英業達是 NB ODM 四大之一；NB 營收穩定但成長有限，AI 伺服器為新亮點。4 月整體營收年增 36.5%。"
       }
     ],
     "swot": [
@@ -199,37 +188,6 @@
         "relatedTopicIds": [
           "ai-server-odm",
           "ai-server"
-        ]
-      },
-      {
-        "id": "strength-server-notebook-odm-base",
-        "category": "strength",
-        "statement": "英業達具伺服器、筆電 ODM/EMS 製造基礎，可在 AI 伺服器與 PC/NB 需求間承接量產訂單。",
-        "confidence": "high",
-        "relatedTopicIds": [
-          "ai-server-odm",
-          "ems-smt",
-          "pc-nb-tablet"
-        ]
-      },
-      {
-        "id": "threat-notebook-cycle-and-margin-pressure",
-        "category": "threat",
-        "statement": "筆電需求循環、ODM 競爭與客戶議價，可能壓抑英業達整體營收成長與毛利率。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "pc-nb-tablet",
-          "ai-server-odm"
-        ]
-      },
-      {
-        "id": "weakness-lower-directness-vs-leaders",
-        "category": "weakness",
-        "statement": "相較更聚焦或規模更大的 AI 伺服器 ODM，英業達的題材直接性與客戶組合仍需用出貨與財報持續驗證。",
-        "confidence": "medium",
-        "relatedTopicIds": [
-          "ai-server-odm",
-          "pc-nb-tablet"
         ]
       }
     ],
@@ -271,7 +229,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 61,
+    "totalScore": 53,
     "recommendationState": "blocked",
     "fundamental": {
       "score": -14,
@@ -292,6 +250,16 @@
       ]
     },
     "riskGates": [
+      {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
+      },
       {
         "id": "risk.stop-distance",
         "severity": "hard",

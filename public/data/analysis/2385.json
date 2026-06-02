@@ -2,25 +2,22 @@
   "schemaVersion": 1,
   "code": "2385",
   "name": "群光",
-  "generatedAt": "2026-05-28T17:21:47.220Z",
+  "generatedAt": "2026-06-02T03:20:20.103Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
       "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "topic_role_not_verified",
+      "incomplete_swot"
     ]
   },
   "technical": {
@@ -54,46 +51,128 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "medium",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "roleDetail": {
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "供應商角色",
+      "roleSummary": "群光提供伺服器電源(2kW+)，同時是全球NB鍵盤龍頭。AI伺服器電源為新成長動能。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "server_psu_keyboard_supplier",
+      "directness": "supplier",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "NB鍵盤(全球第一)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "電源供應器(Adapter/充電器)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "PC Camera/Webcam",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "全球NB鍵盤市佔超過50%",
+        "電源供應器(Adapter)全球前三大"
+      ],
+      "opportunities": [
+        "AI伺服器2kW+電源需求",
+        "GaN快充電源升級"
+      ],
+      "risks": [
+        "NB出貨量持續下滑影響鍵盤業務",
+        "中國電源廠低價競爭"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 供應商角色 +26",
+      "角色信心 medium +10",
+      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 6 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 78，上限 40）"
     ],
-    "summary": "群光 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "群光 在「AI 伺服器整機與 EMS」的 V2 角色為「供應商角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
-      "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 供應商角色 · medium",
+      "產業評分：40/100（直接度 供應商角色 +26；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "主要產品：NB鍵盤(全球第一)",
+      "主要產品：電源供應器(Adapter/充電器)",
+      "主要產品：PC Camera/Webcam",
+      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+      "V2 W：NB鍵盤為成熟產品成長有限",
+      "V2 W：電源產品毛利偏低",
+      "V2 T：NB出貨量持續下滑影響鍵盤業務",
+      "V2 T：中國電源廠低價競爭"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：AI伺服器2kW+電源需求",
+      "V2 O：GaN快充電源升級",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-02"
     ]
   },
   "knowledge": {
-    "products": [],
-    "customers": [],
+    "products": [
+      "NB鍵盤(全球第一)",
+      "電源供應器(Adapter/充電器)",
+      "PC Camera/Webcam",
+      "伺服器電源(2kW+)",
+      "車用鏡頭模組"
+    ],
+    "customers": [
+      "Apple",
+      "Dell",
+      "HP",
+      "Lenovo",
+      "ASUS"
+    ],
     "topicRoles": [],
     "swot": {
-      "strengths": [],
-      "weaknesses": [],
-      "opportunities": [],
-      "threats": [],
-      "sources": [],
+      "strengths": [
+        "全球NB鍵盤市佔超過50%",
+        "電源供應器(Adapter)全球前三大",
+        "客戶為一線品牌(Apple/Dell/HP)"
+      ],
+      "weaknesses": [
+        "NB鍵盤為成熟產品成長有限",
+        "電源產品毛利偏低",
+        "客戶集中度偏高"
+      ],
+      "opportunities": [
+        "AI伺服器2kW+電源需求",
+        "GaN快充電源升級",
+        "車用鏡頭/車載電子新產品"
+      ],
+      "threats": [
+        "NB出貨量持續下滑影響鍵盤業務",
+        "中國電源廠低價競爭",
+        "地緣政治影響生產基地"
+      ],
+      "sources": [
+        "financials:2385"
+      ],
       "freshness": "fresh",
       "lastVerified": "2026-05-26"
     },
@@ -116,9 +195,141 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "群光提供伺服器電源(2kW+)，同時是全球NB鍵盤龍頭。AI伺服器電源為新成長動能。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-2385-0",
+        "category": "opportunity",
+        "statement": "AI伺服器2kW+電源需求",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2385-1",
+        "category": "opportunity",
+        "statement": "GaN快充電源升級",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-2385-2",
+        "category": "opportunity",
+        "statement": "車用鏡頭/車載電子新產品",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2385-0",
+        "category": "strength",
+        "statement": "全球NB鍵盤市佔超過50%",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2385-1",
+        "category": "strength",
+        "statement": "電源供應器(Adapter)全球前三大",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-2385-2",
+        "category": "strength",
+        "statement": "客戶為一線品牌(Apple/Dell/HP)",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2385-0",
+        "category": "threat",
+        "statement": "NB出貨量持續下滑影響鍵盤業務",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2385-1",
+        "category": "threat",
+        "statement": "中國電源廠低價競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-2385-2",
+        "category": "threat",
+        "statement": "地緣政治影響生產基地",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2385-0",
+        "category": "weakness",
+        "statement": "NB鍵盤為成熟產品成長有限",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2385-1",
+        "category": "weakness",
+        "statement": "電源產品毛利偏低",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-2385-2",
+        "category": "weakness",
+        "statement": "客戶集中度偏高",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -133,8 +344,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 14,
-    "recommendationState": "blocked",
+    "totalScore": 36,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -142,17 +353,21 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "分析品質不足，策略只能列為觀察"
+        "技術面符合趨勢股條件"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
+        "id": "risk.chip-data-stale",
+        "severity": "soft",
+        "message": "籌碼資料已 8 天未更新"
       },
       {
         "id": "risk.topic-evidence",

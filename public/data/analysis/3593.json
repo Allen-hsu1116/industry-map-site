@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3593",
   "name": "力銘",
-  "generatedAt": "2026-05-28T17:21:47.552Z",
+  "generatedAt": "2026-06-02T03:20:20.503Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-14",
@@ -151,9 +151,14 @@
         "message": "AnalysisQuality F 不可列入 Top recommendation"
       },
       {
+        "id": "risk.market-data-stale",
+        "severity": "soft",
+        "message": "股價資料已 8 天未更新"
+      },
+      {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 15 天未更新"
+        "message": "籌碼資料已 19 天未更新"
       },
       {
         "id": "risk.topic-evidence",
