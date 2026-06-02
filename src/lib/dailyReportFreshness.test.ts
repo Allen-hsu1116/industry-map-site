@@ -65,7 +65,8 @@ test("checked-in daily report exposes explicit freshness metadata aligned with m
   assert.match(report.freshness?.analysisGeneratedAt ?? "", /^\d{4}-\d{2}-\d{2}T/);
   assert.deepEqual(
     report.freshness?.sources.map((source) => source.module).sort(),
-    ["daily-analysis", "event-focus", "institutional", "kline", "margin", "valuation"].sort(),
+    ["company-swot", "company-topic-roles", "daily-analysis", "event-focus", "institutional", "kline", "margin", "product-knowledge", "valuation"].sort(),
   );
-  assert.ok(report.freshness?.sources.every((source) => source.source && source.latestDate && source.status && source.scope));
+  assert.ok(report.freshness?.sources.every((source) => source.source && source.status && source.scope));
+  assert.ok(report.freshness?.sources.some((source) => "warning" in source || "emptyReason" in source));
 });

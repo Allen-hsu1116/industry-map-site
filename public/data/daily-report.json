@@ -150,7 +150,7 @@
     "2330 2150支撐若跌破，短期轉弱"
   ],
   "freshness": {
-    "generatedAt": "2026-06-02T12:31:28.998Z",
+    "generatedAt": "2026-06-02T16:42:36.682Z",
     "marketDataDate": "2026-06-01",
     "eventDataDate": "2026-06-01",
     "analysisGeneratedAt": "2026-06-02T12:31:28.810Z",
@@ -160,35 +160,36 @@
         "source": "FinMind TaiwanStockPrice",
         "latestDate": "2026-06-02",
         "status": "verified",
-        "scope": "top 30 companies by topic_count"
+        "scope": "top 30 companies by topic_count · coverage 30 / 30"
       },
       {
         "module": "institutional",
         "source": "FinMind TaiwanStockInstitutionalInvestorsBuySell",
         "latestDate": "2026-06-02",
         "status": "verified",
-        "scope": "top 30 companies by topic_count"
+        "scope": "top 30 companies by topic_count · coverage 30 / 30"
       },
       {
         "module": "margin",
         "source": "FinMind TaiwanStockMarginPurchaseShortSale",
         "latestDate": "2026-06-01",
         "status": "verified",
-        "scope": "top 30 companies by topic_count"
+        "scope": "top 30 companies by topic_count · coverage 30 / 30"
       },
       {
         "module": "valuation",
         "source": "FinMind TaiwanStockPER",
         "latestDate": "2026-06-02",
         "status": "verified",
-        "scope": "top 30 companies by topic_count"
+        "scope": "top 30 companies by topic_count · coverage 30 / 30"
       },
       {
         "module": "event-focus",
         "source": "TWSE OpenAPI t187ap04_L",
         "latestDate": "2026-06-01",
         "status": "partial",
-        "scope": "listed-company-major-news"
+        "scope": "listed-company-major-news · 72 official rows",
+        "warning": "official subject preserved; topic mapping is derived, not official"
       },
       {
         "module": "daily-analysis",
@@ -196,6 +197,30 @@
         "latestDate": "2026-06-02",
         "status": "verified",
         "scope": "504 company analysis snapshots"
+      },
+      {
+        "module": "product-knowledge",
+        "source": "checked-in product-knowledge/*.json",
+        "latestDate": "2026-06-02",
+        "status": "partial",
+        "scope": "checked-in company knowledge files · coverage 88 / 505",
+        "warning": "product-knowledge 目前不是全市場覆蓋；缺資料公司只能顯示 insufficient/empty state。"
+      },
+      {
+        "module": "company-topic-roles",
+        "source": "checked-in company-topic-roles/*.json",
+        "latestDate": "2026-06-02",
+        "status": "partial",
+        "scope": "checked-in company knowledge files · coverage 66 / 505",
+        "warning": "company-topic-roles 目前不是全市場覆蓋；缺資料公司只能顯示 insufficient/empty state。"
+      },
+      {
+        "module": "company-swot",
+        "source": "checked-in company-swot/*.json",
+        "latestDate": "2026-06-02",
+        "status": "partial",
+        "scope": "checked-in company knowledge files · coverage 68 / 505",
+        "warning": "company-swot 目前不是全市場覆蓋；缺資料公司只能顯示 insufficient/empty state。"
       }
     ]
   }

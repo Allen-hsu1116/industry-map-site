@@ -138,6 +138,8 @@ interface DailyReportFreshnessSource {
   latestDate: string;
   status: "verified" | "partial" | "empty";
   scope: string;
+  warning?: string;
+  emptyReason?: string;
 }
 
 interface DailyReportFreshness {
@@ -408,7 +410,7 @@ export default function DailyReportPage() {
           )}
         </div>
 
-        {/* Freshness / Source Status */}
+        {/* Unified source-status rail */}
         {report.freshness && (
           <Card className="bg-[#12122a] border-emerald-500/20 mb-6">
             <CardHeader className="pb-2">
@@ -437,6 +439,16 @@ export default function DailyReportPage() {
                     </div>
                     <p className="mt-2 text-xs text-gray-500">最新日：{source.latestDate || "—"}</p>
                     <p className="mt-1 text-xs text-gray-500">範圍：{source.scope}</p>
+                    {source.warning && (
+                      <p className="mt-2 rounded-md border border-amber-400/20 bg-amber-400/[0.06] px-2 py-1 text-xs text-amber-100">
+                        ⚠ {source.warning}
+                      </p>
+                    )}
+                    {source.emptyReason && (
+                      <p className="mt-2 rounded-md border border-slate-600/50 bg-slate-950/40 px-2 py-1 text-xs text-gray-400">
+                        {source.emptyReason}
+                      </p>
+                    )}
                   </div>
                 ))}
               </div>
