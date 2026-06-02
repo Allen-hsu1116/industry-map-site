@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-06-02T03:20:20.411Z",
+  "generatedAt": "2026-06-02T12:31:28.192Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-01",
-  "chipDataDate": "2026-06-01",
+  "marketDataDate": "2026-06-02",
+  "chipDataDate": "2026-06-02",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "C",
@@ -24,33 +24,32 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": -18,
-    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；帶量下跌，量比 1.99x。",
+    "score": -15,
+    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 5.3%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [
-      "帶量下跌，量比 1.99x"
+      "收盤跌破 MA20 5.3%"
     ],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -44,
-    "summary": "欣銓 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1.2萬張；近 20 日法人偏賣，合計 -1.9萬張。",
-    "signals": [],
+    "summary": "欣銓 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +979張；三大法人近 5 日合計賣超 -1.7萬張。",
+    "signals": [
+      "外資近 5 日買超 +979張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.2萬張",
-      "近 20 日法人偏賣，合計 -1.9萬張",
-      "投信近 5 日賣超 -5.8千張",
-      "外資近 5 日賣超 -5.8千張",
+      "三大法人近 5 日合計賣超 -1.7萬張",
+      "近 20 日法人偏賣，合計 -2.4萬張",
+      "投信近 5 日賣超 -1.7萬張",
       "融資近 5 日增加 35.8%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-06-01"
+      "最近法人資料日：2026-06-02"
     ]
   },
   "industry": {
@@ -80,7 +79,7 @@
     ],
     "watch": [
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-06-01（fresh）",
+      "知識庫最後驗證：2026-06-02（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -95,7 +94,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-01"
+      "lastVerified": "2026-06-02"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -155,10 +154,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：232.50",
-      "波段多空分水嶺看 MA20：227.55",
-      "追蹤法人是否延續 賣超：最近 -1.4萬張",
-      "本益比 34.6 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：229.20",
+      "波段多空分水嶺看 MA20：226.50",
+      "追蹤法人是否延續 賣超：最近 -3.5千張",
+      "本益比 33.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 259.00 且量比 > 1.5：列為轉強訊號",

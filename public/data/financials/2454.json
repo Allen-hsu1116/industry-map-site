@@ -9754,6 +9754,14 @@
         "low": 4440,
         "close": 4555,
         "volume": 20083897
+      },
+      {
+        "date": "2026-06-02",
+        "open": 4970,
+        "high": 4970,
+        "low": 4380,
+        "close": 4525,
+        "volume": 15626708
       }
     ],
     "monthly_price": [
@@ -18148,18 +18156,18 @@
   },
   "code": "2454",
   "valuation": {
-    "pe": "72.59",
-    "dividendYield": "1.17",
-    "pb": "18.63",
-    "date": "20260601"
+    "pe": "72.11",
+    "dividendYield": "1.18",
+    "pb": "18.51",
+    "date": "20260602"
   },
   "price": {
-    "date": "2026-06-01",
-    "open": 4440,
-    "high": 4710,
-    "low": 4440,
-    "close": 4555,
-    "volume": 20083897
+    "date": "2026-06-02",
+    "open": 4970,
+    "high": 4970,
+    "low": 4380,
+    "close": 4525,
+    "volume": 15626708
   },
   "dividend": {
     "cashDividendPerShare": 53.5,
@@ -18631,15 +18639,20 @@
     },
     {
       "date": "2026-05-25",
-      "foreign_net": -1174508,
       "foreign_buy": 447751,
       "foreign_sell": 1622259,
-      "investment_trust_net": -961000,
+      "foreign_net": -1174508,
       "investment_trust_buy": 28000,
       "investment_trust_sell": 989000,
-      "dealer_net": 169131,
+      "investment_trust_net": -961000,
       "dealer_buy": 185131,
       "dealer_sell": 16000,
+      "dealer_net": 169131,
+      "dealer_hedge_buy": 180831,
+      "dealer_hedge_sell": 14000,
+      "dealer_hedge_net": 166831,
+      "total_buy": 660882,
+      "total_sell": 2627259,
       "total_net": -1966377
     },
     {
@@ -18731,6 +18744,24 @@
       "total_buy": 12805243,
       "total_sell": 9656407,
       "total_net": 3148836
+    },
+    {
+      "date": "2026-06-02",
+      "foreign_buy": 7671780,
+      "foreign_sell": 8332840,
+      "foreign_net": -661060,
+      "investment_trust_buy": 285852,
+      "investment_trust_sell": 1031624,
+      "investment_trust_net": -745772,
+      "dealer_buy": 533117,
+      "dealer_sell": 924981,
+      "dealer_net": -391864,
+      "dealer_hedge_buy": 423104,
+      "dealer_hedge_sell": 462071,
+      "dealer_hedge_net": -38967,
+      "total_buy": 8490749,
+      "total_sell": 10289445,
+      "total_net": -1798696
     }
   ],
   "margin_history": [
@@ -19086,11 +19117,15 @@
       "date": "2026-05-25",
       "margin_buy": 815,
       "margin_sell": 216,
+      "margin_cash_repayment": 1,
       "margin_balance": 11526,
+      "margin_yesterday_balance": 10928,
       "margin_limit": 400976,
       "short_sell": 21,
       "short_buy": 3,
+      "short_cash_repayment": 1,
       "short_balance": 119,
+      "short_yesterday_balance": 102,
       "short_limit": 400976,
       "offset": 0
     },
@@ -19385,6 +19420,12 @@
       "pe": 72.59,
       "pb": 18.63,
       "dividend_yield": 1.17
+    },
+    {
+      "date": "2026-06-02",
+      "pe": 72.11,
+      "pb": 18.51,
+      "dividend_yield": 1.18
     }
   ],
   "shareholding_history": [
@@ -19539,6 +19580,6 @@
       "foreign_shares": 897828575
     }
   ],
-  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-06-01; raw daily OHLCV only, no AI-filled K-line rows",
+  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-06-02; raw daily OHLCV only, no AI-filled K-line rows",
   "marketFeedSource": "FinMind TaiwanStockInstitutionalInvestorsBuySell + FinMind TaiwanStockMarginPurchaseShortSale + FinMind TaiwanStockPER via api.finmindtrade.com; updated batch 2026-06-02; raw daily institutional/margin/valuation rows only, no AI-filled chip rows"
 }

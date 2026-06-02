@@ -14,12 +14,12 @@
   },
   "marketCap": "112億",
   "price": {
-    "date": "2026-06-01",
-    "open": 18.1,
-    "high": 18.9,
-    "low": 17.95,
-    "close": 18.5,
-    "volume": 5484332
+    "date": "2026-06-02",
+    "open": 18.75,
+    "high": 19.3,
+    "low": 18.35,
+    "close": 19,
+    "volume": 7623080
   },
   "monthly_price_avg": "17.99",
   "trends": {
@@ -9775,6 +9775,14 @@
         "low": 17.95,
         "close": 18.5,
         "volume": 5484332
+      },
+      {
+        "date": "2026-06-02",
+        "open": 18.75,
+        "high": 19.3,
+        "low": 18.35,
+        "close": 19,
+        "volume": 7623080
       }
     ],
     "monthly_price": [
@@ -18583,15 +18591,20 @@
     },
     {
       "date": "2026-05-25",
-      "foreign_net": 34974,
       "foreign_buy": 1989974,
       "foreign_sell": 1955000,
-      "investment_trust_net": 0,
+      "foreign_net": 34974,
       "investment_trust_buy": 0,
       "investment_trust_sell": 0,
-      "dealer_net": -47000,
+      "investment_trust_net": 0,
       "dealer_buy": 22000,
       "dealer_sell": 69000,
+      "dealer_net": -47000,
+      "dealer_hedge_buy": 0,
+      "dealer_hedge_sell": 1000,
+      "dealer_hedge_net": -1000,
+      "total_buy": 2011974,
+      "total_sell": 2024000,
       "total_net": -12026
     },
     {
@@ -18683,6 +18696,24 @@
       "total_buy": 2415532,
       "total_sell": 1268914,
       "total_net": 1146618
+    },
+    {
+      "date": "2026-06-02",
+      "foreign_buy": 2590000,
+      "foreign_sell": 2430079,
+      "foreign_net": 159921,
+      "investment_trust_buy": 0,
+      "investment_trust_sell": 0,
+      "investment_trust_net": 0,
+      "dealer_buy": 18055,
+      "dealer_sell": 32028,
+      "dealer_net": -13973,
+      "dealer_hedge_buy": 0,
+      "dealer_hedge_sell": 0,
+      "dealer_hedge_net": 0,
+      "total_buy": 2608055,
+      "total_sell": 2462107,
+      "total_net": 145948
     }
   ],
   "margin_history": [
@@ -19038,11 +19069,15 @@
       "date": "2026-05-25",
       "margin_buy": 616,
       "margin_sell": 488,
+      "margin_cash_repayment": 0,
       "margin_balance": 8778,
+      "margin_yesterday_balance": 8650,
       "margin_limit": 136837,
       "short_sell": 2,
       "short_buy": 26,
+      "short_cash_repayment": 0,
       "short_balance": 262,
+      "short_yesterday_balance": 286,
       "short_limit": 136837,
       "offset": 2
     },
@@ -19337,6 +19372,12 @@
       "pe": 0,
       "pb": 1.38,
       "dividend_yield": 0
+    },
+    {
+      "date": "2026-06-02",
+      "pe": 0,
+      "pb": 1.42,
+      "dividend_yield": 0
     }
   ],
   "shareholding_history": [
@@ -19491,12 +19532,12 @@
       "foreign_shares": 75264087
     }
   ],
-  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-06-01; raw daily OHLCV only, no AI-filled K-line rows",
+  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-06-02; raw daily OHLCV only, no AI-filled K-line rows",
   "marketFeedSource": "FinMind TaiwanStockInstitutionalInvestorsBuySell + FinMind TaiwanStockMarginPurchaseShortSale + FinMind TaiwanStockPER via api.finmindtrade.com; updated batch 2026-06-02; raw daily institutional/margin/valuation rows only, no AI-filled chip rows",
   "valuation": {
-    "date": "20260601",
+    "date": "20260602",
     "pe": "0",
-    "pb": "1.38",
+    "pb": "1.42",
     "dividendYield": "0"
   }
 }
