@@ -16,6 +16,22 @@ test("legacy industry fallback adapter has been retired from source", async () =
   await assert.rejects(fs.access("src/lib/legacyIndustryAnalysis.test.ts"));
 });
 
+test("package scripts expose a daily refresh workflow that updates K-lines before regenerating analysis", async () => {
+  const packageJson = JSON.parse(await fs.readFile("package.json", "utf8")) as { scripts: Record<string, string> };
+
+  assert.equal(packageJson.scripts["data:kline:update"], "tsx scripts/update-kline-data.ts");
+  assert.equal(
+    packageJson.scripts["data:daily-refresh"],
+    "npm run data:kline:update -- --limit=30 && npm run analysis:daily && npm run knowledge:validate",
+  );
+  assert.equal(
+    packageJson.scripts["data:daily-refresh:dry-run"],
+    "npm run data:kline:update -- --dry-run --limit=2 && npm run knowledge:validate",
+  );
+  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:kline:update") < packageJson.scripts["data:daily-refresh"].indexOf("analysis:daily"));
+  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("analysis:daily") < packageJson.scripts["data:daily-refresh"].indexOf("knowledge:validate"));
+});
+
 test("legacy inventory extraction pipeline has been retired from source", async () => {
   await assert.rejects(fs.access("scripts/generate-v2-inventory.ts"));
   await assert.rejects(fs.access("src/lib/legacyKnowledgeInventory.ts"));

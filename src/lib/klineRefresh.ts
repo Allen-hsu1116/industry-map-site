@@ -95,6 +95,15 @@ function stableStringify(value: unknown): string {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
 
+function hasFinMindKLineSource(source: unknown): boolean {
+  const text = String(source ?? "");
+  return text.includes("FinMind TaiwanStockPrice") && text.includes("no AI-filled K-line rows");
+}
+
+function sameDailyPrice(a: Partial<KLineDailyPrice> | undefined, b: KLineDailyPrice): boolean {
+  return a?.date === b.date && a.open === b.open && a.high === b.high && a.low === b.low && a.close === b.close && a.volume === b.volume;
+}
+
 export function planKLineUpdate(
   financial: FinancialKLineInput,
   fetchedRows: KLineDailyPrice[],
@@ -117,9 +126,10 @@ export function planKLineUpdate(
     },
   };
 
-  const before = stableStringify({ ...financial, trends: { ...(financial.trends ?? {}), daily_prices: existingPrices } });
   const after = stableStringify(next);
-  const changed = before !== after;
+  const hasSemanticPriceChange = stableStringify(existingPrices) !== stableStringify(mergedPrices) || !sameDailyPrice(financial.price, latest);
+  const needsSourceStamp = !hasFinMindKLineSource(financial.priceSource);
+  const changed = hasSemanticPriceChange || needsSourceStamp;
 
   return {
     changed,

@@ -60,12 +60,12 @@ test("planKLineUpdate mirrors latest K-line into top-level price and supports dr
   assert.match(writePlan.writableJson ?? "", /\"date\": \"2026-06-01\"/);
 });
 
-test("planKLineUpdate returns unchanged when fetched rows add no semantic data", () => {
+test("planKLineUpdate returns unchanged when fetched rows add no semantic data even if refresh date changed", () => {
   const alreadyCurrent = {
     ...existingFinancial,
     priceSource: "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-06-01; raw daily OHLCV only, no AI-filled K-line rows",
   };
-  const unchanged = planKLineUpdate(alreadyCurrent, [alreadyCurrent.trends.daily_prices.at(-1)!], { asOfDate: "2026-06-01", dryRun: false });
+  const unchanged = planKLineUpdate(alreadyCurrent, [alreadyCurrent.trends.daily_prices.at(-1)!], { asOfDate: "2026-06-02", dryRun: false });
   assert.equal(unchanged.changed, false);
   assert.equal(unchanged.writableJson, null);
 });
