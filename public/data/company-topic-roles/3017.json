@@ -12,77 +12,188 @@
       "supplyChainStage": "thermal",
       "roleType": "ai_server_thermal_solution_provider",
       "roleSummary": "奇鋐在 AI 伺服器題材中的核心不是設計 GPU 或組裝整機，而是提供高功耗伺服器需要的散熱模組與熱管理能力；目前以官方整體散熱定位與年報營運範圍建立中等信心，液冷營收占比仍需後續法說或產品頁補證。",
-      "products": ["整體散熱解決方案", "散熱模組", "液冷散熱方案", "電子零件與電腦週邊設備製造"],
-      "customers": ["客戶 A / C / B：年報揭露單一客戶收入占比較高，但未揭露名稱", "AI 伺服器與高功耗電子設備供應鏈：需以法說或客戶公告補強"],
-      "competitors": ["其他散熱模組與液冷方案供應商", "機構件/散熱整合廠"],
-      "risks": ["官方可驗證資料尚未量化 AI 伺服器或液冷營收占比", "年報顯示客戶集中度，單一客戶需求變化可能放大營收波動", "題材熱度若未反映到接單、營收或毛利率，估值重評風險升高"],
-      "legacy": { "topicSlug": "ai-server", "groupName": "AI伺服器散熱與零組件", "legacyRole": "AI散熱模組" },
+      "products": [
+        "整體散熱解決方案",
+        "散熱模組",
+        "液冷散熱方案",
+        "電子零件與電腦週邊設備製造"
+      ],
+      "customers": [
+        "客戶 A / C / B：年報揭露單一客戶收入占比較高，但未揭露名稱",
+        "AI 伺服器與高功耗電子設備供應鏈：需以法說或客戶公告補強"
+      ],
+      "competitors": [
+        "其他散熱模組與液冷方案供應商",
+        "機構件/散熱整合廠"
+      ],
+      "risks": [
+        "官方可驗證資料尚未量化 AI 伺服器或液冷營收占比",
+        "年報顯示客戶集中度，單一客戶需求變化可能放大營收波動",
+        "題材熱度若未反映到接單、營收或毛利率，估值重評風險升高"
+      ],
+      "legacy": {
+        "topicSlug": "ai-server",
+        "groupName": "AI伺服器散熱與零組件",
+        "legacyRole": "AI散熱模組"
+      },
       "evidence": [
-        { "sourceId": "avc-official-homepage", "publisher": "奇鋐科技 Asia Vital Components", "title": "Asia Vital Components official website", "url": "https://www.avc.co/", "claim": "Official site identifies AVC as a supplier of overall thermal solutions." },
-        { "sourceId": "mops-3017-2025-financial-report", "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統", "title": "奇鋐科技股份有限公司 114 年度合併財務報告書", "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf", "claim": "Financial report confirms 114 revenue scale and main business scope covering electronic parts/materials, communication electronics and computer peripherals manufacturing/processing/trading." }
+        {
+          "sourceId": "avc-official-homepage",
+          "publisher": "奇鋐科技 Asia Vital Components",
+          "title": "Asia Vital Components official website",
+          "url": "https://www.avc.co/",
+          "claim": "Official site identifies AVC as a supplier of overall thermal solutions."
+        },
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "Financial report confirms 114 revenue scale and main business scope covering electronic parts/materials, communication electronics and computer peripherals manufacturing/processing/trading."
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
       "status": "verified"
     },
     {
-      "topicId": "liquid_cooling_advanced",
-      "topicName": "散熱冷卻｜液冷散熱系統",
+      "topicId": "ai-server-liquid-cooling",
+      "topicName": "AI 伺服器液冷散熱",
       "topicType": "technology",
       "directness": "direct_enabler",
       "supplyChainStage": "thermal",
       "roleType": "liquid_cooling_solution_candidate",
       "roleSummary": "奇鋐被 legacy 題材歸為液冷系統整合供應鏈，產品知識庫也已把液冷散熱方案標為題材候選；但目前公開證據以整體散熱定位與財報主業務為主，尚未把液冷營收或特定客戶專案寫成確定事實。",
-      "products": ["液冷散熱方案", "整體散熱解決方案"],
-      "customers": ["高功耗伺服器與資料中心設備供應鏈：待來源驗證"],
-      "competitors": ["液冷模組供應商", "資料中心冷卻系統整合商"],
-      "risks": ["液冷仍標為候選供應鏈角色，需要官方產品頁、法說或客戶導入證據提高信心", "液冷題材容易被市場傳聞放大，需避免用股價熱度反推營運事實"],
-      "legacy": { "topicSlug": "liquid_cooling_advanced", "groupName": "液冷系統整合", "legacyRole": "AI散熱+液冷方案" },
+      "products": [
+        "液冷散熱方案",
+        "整體散熱解決方案"
+      ],
+      "customers": [
+        "高功耗伺服器與資料中心設備供應鏈：待來源驗證"
+      ],
+      "competitors": [
+        "液冷模組供應商",
+        "資料中心冷卻系統整合商"
+      ],
+      "risks": [
+        "液冷仍標為候選供應鏈角色，需要官方產品頁、法說或客戶導入證據提高信心",
+        "液冷題材容易被市場傳聞放大，需避免用股價熱度反推營運事實"
+      ],
+      "legacy": {
+        "topicSlug": "liquid_cooling_advanced",
+        "groupName": "液冷系統整合",
+        "legacyRole": "AI散熱+液冷方案"
+      },
       "evidence": [
-        { "sourceId": "avc-official-homepage", "publisher": "奇鋐科技 Asia Vital Components", "title": "Asia Vital Components official website", "url": "https://www.avc.co/", "claim": "Official site positions AVC as an overall thermal solution supplier; liquid cooling remains marked as a topic-specific candidate until stronger product-page or investor-presentation evidence is collected." },
-        { "sourceId": "mops-3017-2025-financial-report", "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統", "title": "奇鋐科技股份有限公司 114 年度合併財務報告書", "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf", "claim": "Financial report confirms electronics/computer-peripheral manufacturing scope but does not quantify liquid-cooling revenue contribution." }
+        {
+          "sourceId": "avc-official-homepage",
+          "publisher": "奇鋐科技 Asia Vital Components",
+          "title": "Asia Vital Components official website",
+          "url": "https://www.avc.co/",
+          "claim": "Official site positions AVC as an overall thermal solution supplier; liquid cooling remains marked as a topic-specific candidate until stronger product-page or investor-presentation evidence is collected."
+        },
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "Financial report confirms electronics/computer-peripheral manufacturing scope but does not quantify liquid-cooling revenue contribution."
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
       "status": "verified"
     },
     {
-      "topicId": "thermal_components_air",
-      "topicName": "散熱冷卻｜氣冷與核心組件",
+      "topicId": "ai-server-liquid-cooling",
+      "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "thermal",
       "roleType": "air_cooling_and_thermal_module_provider",
       "roleSummary": "奇鋐在氣冷與核心散熱組件題材中的角色最直接：公司官方定位為整體散熱解決方案供應商，年報也支撐電子零件、通訊電子與電腦週邊設備製造營運背景。",
-      "products": ["整體散熱解決方案", "散熱模組", "電子零件與電腦週邊設備製造"],
-      "customers": ["電子設備、通訊設備與電腦週邊設備客戶：年報未揭露具名客戶"],
-      "competitors": ["其他散熱模組廠", "風扇/熱導管/均熱板供應鏈"],
-      "risks": ["需補更細的產品組合與毛利率來源，避免把寬口徑電子零件業務全部視為高階散熱受惠"],
-      "legacy": { "topicSlug": "thermal_components_air", "groupName": "熱導管與散熱方案", "legacyRole": "AI散熱+機殼" },
+      "products": [
+        "整體散熱解決方案",
+        "散熱模組",
+        "電子零件與電腦週邊設備製造"
+      ],
+      "customers": [
+        "電子設備、通訊設備與電腦週邊設備客戶：年報未揭露具名客戶"
+      ],
+      "competitors": [
+        "其他散熱模組廠",
+        "風扇/熱導管/均熱板供應鏈"
+      ],
+      "risks": [
+        "需補更細的產品組合與毛利率來源，避免把寬口徑電子零件業務全部視為高階散熱受惠"
+      ],
+      "legacy": {
+        "topicSlug": "thermal_components_air",
+        "groupName": "熱導管與散熱方案",
+        "legacyRole": "AI散熱+機殼"
+      },
       "evidence": [
-        { "sourceId": "avc-official-homepage", "publisher": "奇鋐科技 Asia Vital Components", "title": "Asia Vital Components official website", "url": "https://www.avc.co/", "claim": "Official site identifies AVC as a supplier of overall thermal solutions." },
-        { "sourceId": "mops-3017-2025-financial-report", "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統", "title": "奇鋐科技股份有限公司 114 年度合併財務報告書", "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf", "claim": "Financial report company history lists electronic parts/materials and computer peripherals manufacturing/processing/trading/import-export scope." }
+        {
+          "sourceId": "avc-official-homepage",
+          "publisher": "奇鋐科技 Asia Vital Components",
+          "title": "Asia Vital Components official website",
+          "url": "https://www.avc.co/",
+          "claim": "Official site identifies AVC as a supplier of overall thermal solutions."
+        },
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "Financial report company history lists electronic parts/materials and computer peripherals manufacturing/processing/trading/import-export scope."
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
       "status": "verified"
     },
     {
-      "topicId": "thermal-solution",
-      "topicName": "散熱冷卻｜液冷與散熱模組",
+      "topicId": "ai-server-liquid-cooling",
+      "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "thermal",
       "roleType": "thermal_solution_provider",
       "roleSummary": "奇鋐在散熱解決方案題材中屬於核心供應鏈角色，重點是整體熱管理與散熱模組，而不是單純的題材沾邊。",
-      "products": ["整體散熱解決方案", "液冷散熱方案", "散熱模組"],
-      "customers": ["高功耗電子設備與電腦週邊設備客戶：需以公開資料補名稱"],
-      "competitors": ["散熱模組與液冷方案供應商"],
-      "risks": ["液冷與 AI 伺服器占比仍需分開驗證，不能只用散熱公司定位推導全部題材受惠"],
-      "legacy": { "topicSlug": "thermal-solution", "groupName": "散熱模組與液冷方案", "legacyRole": "AI散熱模組龍頭" },
+      "products": [
+        "整體散熱解決方案",
+        "液冷散熱方案",
+        "散熱模組"
+      ],
+      "customers": [
+        "高功耗電子設備與電腦週邊設備客戶：需以公開資料補名稱"
+      ],
+      "competitors": [
+        "散熱模組與液冷方案供應商"
+      ],
+      "risks": [
+        "液冷與 AI 伺服器占比仍需分開驗證，不能只用散熱公司定位推導全部題材受惠"
+      ],
+      "legacy": {
+        "topicSlug": "thermal-solution",
+        "groupName": "散熱模組與液冷方案",
+        "legacyRole": "AI散熱模組龍頭"
+      },
       "evidence": [
-        { "sourceId": "avc-official-homepage", "publisher": "奇鋐科技 Asia Vital Components", "title": "Asia Vital Components official website", "url": "https://www.avc.co/", "claim": "Official site identifies AVC as a supplier of overall thermal solutions." },
-        { "sourceId": "mops-3017-2025-financial-report", "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統", "title": "奇鋐科技股份有限公司 114 年度合併財務報告書", "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf", "claim": "Financial report provides revenue scale and operating scope evidence; it does not by itself prove named AI customers." }
+        {
+          "sourceId": "avc-official-homepage",
+          "publisher": "奇鋐科技 Asia Vital Components",
+          "title": "Asia Vital Components official website",
+          "url": "https://www.avc.co/",
+          "claim": "Official site identifies AVC as a supplier of overall thermal solutions."
+        },
+        {
+          "sourceId": "mops-3017-2025-financial-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
+          "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
+          "claim": "Financial report provides revenue scale and operating scope evidence; it does not by itself prove named AI customers."
+        }
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
