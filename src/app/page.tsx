@@ -17,7 +17,7 @@ import { computeTechnicalSummary, normalizeFinancialData } from "@/lib/marketDat
 import { generateDailyAnalysis, type DailyAnalysis } from "@/lib/dailyAnalysis";
 import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProductKnowledge, type ProductNarrative } from "@/lib/productKnowledge";
 import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles, type CompanyTopicRolesKnowledge, type Directness } from "@/lib/companyTopicRoles";
-import { groupCompanySwot, normalizeCompanySwot, selectTopicSwotItems, type CompanySwotKnowledge, type GroupedSwot } from "@/lib/companySwot";
+import { groupCompanySwot, normalizeCompanySwot, selectTopicSwotItems, type CompanySwotItem, type CompanySwotKnowledge, type GroupedSwot } from "@/lib/companySwot";
 
 /* ─── Types ─── */
 interface CompanyInGroup { code: string; name: string; role: string; relevance: string; analysis?: string; products?: string[]; customers?: string[]; tech_focus?: string[]; swot?: { strengths?: string[]; weaknesses?: string[]; opportunities?: string[]; threats?: string[] }; }
@@ -2243,11 +2243,17 @@ function CompanyFullPageDetail({
                     const topicMatchIds = [role.topic, canonicalRole?.topicId, dailyCanonicalRole?.topicId, dailyCanonicalRole?.canonicalTopicId]
                       .filter((item): item is string => Boolean(item));
                     const topicSwotFor = (key: keyof GroupedSwot) => selectTopicSwotItems(groupedCompanySwot, key, topicMatchIds);
+                    const canonicalSwotItemsByKey: Record<keyof GroupedSwot, CompanySwotItem[]> = {
+                      strengths: topicSwotFor("strengths"),
+                      weaknesses: topicSwotFor("weaknesses"),
+                      opportunities: topicSwotFor("opportunities"),
+                      threats: topicSwotFor("threats"),
+                    };
                     const canonicalSwot = resolvedCompanySwot ? {
-                      strengths: topicSwotFor("strengths").map((item) => item.statement),
-                      weaknesses: topicSwotFor("weaknesses").map((item) => item.statement),
-                      opportunities: topicSwotFor("opportunities").map((item) => item.statement),
-                      threats: topicSwotFor("threats").map((item) => item.statement),
+                      strengths: canonicalSwotItemsByKey.strengths.map((item) => item.statement),
+                      weaknesses: canonicalSwotItemsByKey.weaknesses.map((item) => item.statement),
+                      opportunities: canonicalSwotItemsByKey.opportunities.map((item) => item.statement),
+                      threats: canonicalSwotItemsByKey.threats.map((item) => item.statement),
                     } : undefined;
                     const dailyCanonicalSwotItems = resolvedDailyAnalysis?.canonicalKnowledge.swot.filter((item) => (
                       item.relatedTopicIds.length === 0 || item.relatedTopicIds.some((topicId) => topicMatchIds.includes(topicId))
@@ -2292,6 +2298,31 @@ function CompanyFullPageDetail({
                       ...canonicalSwotEvidence,
                       ...(knowledge?.dataSources ?? []),
                       ...(knowledge?.swot.sources ?? []),
+                    ];
+                    const matchedProductKnowledge = topicProducts
+                      .map((product) => findProductKnowledgeItem(product, resolvedProductKnowledge, role.topic))
+                      .filter((item): item is NonNullable<typeof item> => Boolean(item));
+                    const hasCanonicalSwot = Boolean(resolvedCompanySwot && Object.values(canonicalSwotItemsByKey).some((items) => items.length > 0));
+                    const isFallbackSwotObservation = !hasCanonicalSwot;
+                    const evidenceCoverageCards = [
+                      {
+                        label: "產品知識",
+                        value: `${matchedProductKnowledge.length}/${topicProducts.length}`,
+                        note: matchedProductKnowledge.length > 0 ? "有 evidence/citation/lastVerified" : "尚未 evidence-backed，只做觀察，不升級成推薦",
+                        tone: matchedProductKnowledge.length > 0 ? "text-emerald-200" : "text-amber-200",
+                      },
+                      {
+                        label: "題材角色",
+                        value: canonicalRole ? `${canonicalRole.confidence}` : dailyCanonicalRole ? `${dailyCanonicalRole.confidence}` : "insufficient",
+                        note: canonicalRole ? `${canonicalRole.status} · 驗證 ${canonicalRole.lastVerified ?? "未知"}` : "尚未 evidence-backed，只做觀察，不升級成推薦",
+                        tone: canonicalRole ? "text-cyan-200" : "text-amber-200",
+                      },
+                      {
+                        label: "SWOT 覆蓋",
+                        value: hasCanonicalSwot ? `${Object.values(canonicalSwotItemsByKey).reduce((sum, items) => sum + items.length, 0)} items` : "insufficient",
+                        note: hasCanonicalSwot ? `V2 evidence-backed · ${resolvedCompanySwot?.updatedAt}` : "Fallback SWOT observation · 尚未 evidence-backed，只做觀察，不升級成推薦",
+                        tone: hasCanonicalSwot ? "text-emerald-200" : "text-amber-200",
+                      },
                     ];
 
                     return (
@@ -2341,6 +2372,27 @@ function CompanyFullPageDetail({
                             )}
                             <span className="text-sm font-semibold text-white">{role.topicName}</span>
                             <span className="text-xs text-[var(--color-text-tertiary)]">— {cat}</span>
+                          </div>
+                        </div>
+
+                        <div className="rounded-2xl border border-sky-300/15 bg-sky-300/[0.04] p-5">
+                          <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+                            <div>
+                              <div className="text-[11px] font-bold uppercase tracking-widest text-sky-200">Evidence-backed coverage</div>
+                              <h4 className="mt-1 text-sm font-bold text-white">證據覆蓋與資料信心水位</h4>
+                            </div>
+                            <span className="rounded-full border border-amber-300/20 bg-amber-300/10 px-2.5 py-1 text-[10px] font-bold text-amber-100">
+                              資料不足項目只做觀察，不升級成推薦
+                            </span>
+                          </div>
+                          <div className="grid gap-3 md:grid-cols-3">
+                            {evidenceCoverageCards.map((card) => (
+                              <div key={card.label} className="rounded-xl border border-white/[0.06] bg-black/[0.12] p-4">
+                                <div className="text-[11px] text-[var(--color-text-tertiary)]">{card.label}</div>
+                                <div className={cn("mt-1 text-lg font-bold", card.tone)}>{card.value}</div>
+                                <p className="mt-2 text-xs leading-relaxed text-[var(--color-text-secondary)]">{card.note}</p>
+                              </div>
+                            ))}
                           </div>
                         </div>
 
@@ -2498,20 +2550,51 @@ function CompanyFullPageDetail({
                                 </span>
                               )}
                             </div>
-                            <div className="grid grid-cols-2 gap-4">
+                            {isFallbackSwotObservation && (
+                              <div className="mb-4 rounded-xl border border-amber-300/15 bg-amber-300/[0.06] p-3 text-[11px] leading-relaxed text-amber-100/85">
+                                Fallback SWOT observation：這組 SWOT 尚未 evidence-backed；只能協助觀察，不可升級成推薦或高信心結論。
+                              </div>
+                            )}
+                            <div className="grid gap-4 md:grid-cols-2">
                               {[
-                                { label: "優勢 (S)", items: topicAnalysis.swot.strengths || [], color: "#34d399" },
-                                { label: "劣勢 (W)", items: topicAnalysis.swot.weaknesses || [], color: "#f87171" },
-                                { label: "機會 (O)", items: topicAnalysis.swot.opportunities || [], color: "#818cf8" },
-                                { label: "威脅 (T)", items: topicAnalysis.swot.threats || [], color: "#fbbf24" },
+                                { label: "優勢 (S)", items: topicAnalysis.swot.strengths || [], canonicalItems: canonicalSwotItemsByKey.strengths, color: "#34d399" },
+                                { label: "劣勢 (W)", items: topicAnalysis.swot.weaknesses || [], canonicalItems: canonicalSwotItemsByKey.weaknesses, color: "#f87171" },
+                                { label: "機會 (O)", items: topicAnalysis.swot.opportunities || [], canonicalItems: canonicalSwotItemsByKey.opportunities, color: "#818cf8" },
+                                { label: "威脅 (T)", items: topicAnalysis.swot.threats || [], canonicalItems: canonicalSwotItemsByKey.threats, color: "#fbbf24" },
                               ].map((sw) => (
                                 <div key={sw.label} className="bg-white/[0.02] rounded-xl p-4">
-                                  <h5 className="text-xs font-bold mb-2" style={{ color: sw.color }}>{sw.label}</h5>
-                                  <ul className="space-y-1">
-                                    {sw.items.map((item, i) => (
-                                      <li key={i} className="text-xs text-[var(--color-text-secondary)]">• {item}</li>
-                                    ))}
-                                  </ul>
+                                  <h5 className="text-xs font-bold mb-3" style={{ color: sw.color }}>{sw.label}</h5>
+                                  {hasCanonicalSwot && sw.canonicalItems.length > 0 ? (
+                                    <div className="space-y-3">
+                                      {sw.canonicalItems.map((item) => (
+                                        <div key={item.id} className="rounded-lg border border-white/[0.05] bg-black/[0.10] p-3">
+                                          <div className="mb-2 flex flex-wrap items-center gap-2">
+                                            <span className="text-[10px] font-bold uppercase tracking-wide text-[var(--color-text-tertiary)]">Canonical SWOT item</span>
+                                            <span className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-[var(--color-text-secondary)]">信心：{item.confidence}</span>
+                                            <span className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-[var(--color-text-secondary)]">驗證：{item.lastVerified ?? "未知"}</span>
+                                          </div>
+                                          <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item.statement}</p>
+                                          <p className="mt-2 text-[11px] leading-relaxed text-[var(--color-text-tertiary)]">理由：{item.rationale}</p>
+                                          {item.evidence.length > 0 && (
+                                            <div className="mt-2 flex flex-wrap gap-1.5">
+                                              <span className="text-[10px] font-bold uppercase tracking-wide text-[var(--color-text-tertiary)]">SWOT evidence</span>
+                                              {item.evidence.slice(0, 2).map((evidence) => (
+                                                <a key={evidence.sourceId} href={evidence.url} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-[var(--color-text-tertiary)] hover:text-white">
+                                                  {evidence.publisher}：{evidence.title} <ExternalIcon />
+                                                </a>
+                                              ))}
+                                            </div>
+                                          )}
+                                        </div>
+                                      ))}
+                                    </div>
+                                  ) : (
+                                    <ul className="space-y-1">
+                                      {sw.items.map((item, i) => (
+                                        <li key={i} className="text-xs text-[var(--color-text-secondary)]">• {item}</li>
+                                      ))}
+                                    </ul>
+                                  )}
                                 </div>
                               ))}
                             </div>
