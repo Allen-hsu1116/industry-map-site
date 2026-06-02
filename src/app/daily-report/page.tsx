@@ -130,6 +130,42 @@ interface DailyReport {
   risk_alerts: string[];
 }
 
+interface EventFocusItem {
+  id: string;
+  date: string;
+  announcedAt: string;
+  companyCode: string;
+  companyName: string;
+  officialSubject: string;
+  clause?: string;
+  derivedTopics: Array<{
+    topicId: string;
+    topicName: string;
+    roleLabel?: string;
+    confidence?: string;
+    status?: string;
+  }>;
+  mappingMethod: "derived_from_company_topic_roles" | "unmapped_official_event";
+  verificationNote: string;
+  source: string;
+}
+
+interface EventFocusSnapshot {
+  schemaVersion: 1;
+  generatedAt: string;
+  status: "verified" | "partial" | "empty";
+  latestDate?: string;
+  itemCount: number;
+  items: EventFocusItem[];
+  source: {
+    name: string;
+    url: string;
+    scope: string;
+    semantics: string;
+  };
+  emptyReason?: string;
+}
+
 /* ─── Score Color ─── */
 function getScoreColor(score: number): string {
   if (score >= 80) return "text-rose-400";
@@ -198,6 +234,7 @@ async function fetchStaticJson<T>(path: string): Promise<T> {
 /* ─── Main Page ─── */
 export default function DailyReportPage() {
   const [report, setReport] = useState<DailyReport | null>(null);
+  const [eventFocus, setEventFocus] = useState<EventFocusSnapshot | null>(null);
   const [dailyAnalyses, setDailyAnalyses] = useState<Record<string, CompanyDailyAnalysis>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -205,8 +242,12 @@ export default function DailyReportPage() {
   useEffect(() => {
     async function fetchReport() {
       try {
-        const data = await fetchStaticJson<DailyReport>("/data/daily-report.json");
+        const [data, eventData] = await Promise.all([
+          fetchStaticJson<DailyReport>("/data/daily-report.json"),
+          fetchStaticJson<EventFocusSnapshot>("/data/event-focus.json").catch(() => null),
+        ]);
         setReport(data);
+        setEventFocus(eventData);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load report");
       } finally {
@@ -304,6 +345,56 @@ export default function DailyReportPage() {
                   </li>
                 ))}
               </ul>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Event Focus */}
+        {eventFocus && (
+          <Card className="bg-[#12122a] border-cyan-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                <CardTitle className="text-lg text-white">🧭 事件驅動焦點</CardTitle>
+                <Badge variant="outline" className="w-fit border-cyan-400/30 bg-cyan-400/10 text-cyan-200">
+                  {eventFocus.status === "empty" ? "no official event" : "official TWSE · derived topic mapping"}
+                </Badge>
+              </div>
+              <p className="text-xs text-gray-500">
+                Source: {eventFocus.source.name} · 最新公告日 {eventFocus.latestDate ?? "—"} · {eventFocus.source.semantics}
+              </p>
+            </CardHeader>
+            <CardContent>
+              {eventFocus.items.length === 0 ? (
+                <p className="text-sm text-gray-400">{eventFocus.emptyReason ?? "目前追蹤公司沒有官方重大訊息。"}</p>
+              ) : (
+                <div className="space-y-3">
+                  {eventFocus.items.slice(0, 6).map((item) => (
+                    <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
+                      <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
+                        <div>
+                          <p className="text-sm font-semibold text-white">
+                            {item.companyName} <span className="text-gray-500">({item.companyCode})</span>
+                          </p>
+                          <p className="mt-1 text-sm text-gray-300">{item.officialSubject}</p>
+                        </div>
+                        <span className="text-xs text-gray-500">{item.announcedAt}</span>
+                      </div>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {item.derivedTopics.length > 0 ? item.derivedTopics.map((topic) => (
+                          <Badge key={`${item.id}-${topic.topicId}`} variant="outline" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-200 text-xs">
+                            {topic.topicName}{topic.roleLabel ? ` · ${topic.roleLabel}` : ""}
+                          </Badge>
+                        )) : (
+                          <Badge variant="outline" className="border-amber-400/30 bg-amber-400/10 text-amber-200 text-xs">
+                            未對應已驗證題材角色
+                          </Badge>
+                        )}
+                      </div>
+                      <p className="mt-2 text-xs text-gray-500">{item.verificationNote}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </CardContent>
           </Card>
         )}
