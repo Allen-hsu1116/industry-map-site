@@ -83,6 +83,7 @@ export interface TopicOverviewCard {
   emptyReason?: string;
   sourceStatus: TopicOverviewSourceStatus;
   links: {
+    detail: string;
     industryMap: string;
     dailyReport: string;
   };
@@ -218,6 +219,7 @@ export function buildTopicOverview(input: {
         emptyReason: coverageStatus === "empty" ? "此 canonical topic 尚無 evidence-backed topic-map 公司角色；不可用 AI 補成既定事實。" : undefined,
         sourceStatus: cardSourceStatus,
         links: {
+          detail: `/topics/${encodeURIComponent(topic.id)}`,
           industryMap: `/?topic=${encodeURIComponent(topic.id)}`,
           dailyReport: `/daily-report?topic=${encodeURIComponent(topic.id)}`,
         },

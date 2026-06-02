@@ -145,8 +145,9 @@ export default function TopicsPage() {
               </div>
 
               <div className="mt-auto flex gap-2 pt-5">
+                <Link href={card.links.detail} className="flex-1 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-center text-sm font-medium text-emerald-200 hover:bg-emerald-400/15">題材細節</Link>
                 <Link href={card.links.industryMap} className="flex-1 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-center text-sm text-slate-200 hover:border-white/20">產業地圖</Link>
-                <Link href={`/daily-report?topic=${card.id}`} className="flex-1 rounded-xl border border-indigo-400/30 bg-indigo-400/10 px-3 py-2 text-center text-sm font-medium text-indigo-200 hover:bg-indigo-400/15">Daily analysis</Link>
+                <Link href={`/daily-report?topic=${card.id}`} className="flex-1 rounded-xl border border-indigo-400/30 bg-indigo-400/10 px-3 py-2 text-center text-sm font-medium text-indigo-200 hover:bg-indigo-400/15">Daily</Link>
               </div>
             </article>
           ))}

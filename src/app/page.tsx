@@ -1,6 +1,7 @@
 "use client";
 
 import { Component, type ErrorInfo, type ReactNode, useState, useMemo, useRef, useEffect } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -3484,8 +3485,8 @@ export default function Home() {
             </div>
             {/* External links */}
             <div className="flex items-center gap-2 shrink-0">
-              <a href="/topics" className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors px-3 py-1.5 rounded-lg hover:bg-cyan-500/10">🧭 Evidence 題材</a>
-              <a href="/daily-report" className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors px-3 py-1.5 rounded-lg hover:bg-indigo-500/10">📊 每日報告</a>
+              <Link href="/topics" className="text-xs text-cyan-400 hover:text-cyan-300 transition-colors px-3 py-1.5 rounded-lg hover:bg-cyan-500/10">🧭 Evidence 題材</Link>
+              <Link href="/daily-report" className="text-xs text-indigo-400 hover:text-indigo-300 transition-colors px-3 py-1.5 rounded-lg hover:bg-indigo-500/10">📊 每日報告</Link>
               <a href="https://allen-hsu1116.github.io/stock-knowledge-site/" target="_blank" rel="noopener noreferrer" className="text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-secondary)] transition-colors px-3 py-1.5 rounded-lg hover:bg-white/[0.04]">📚 知識庫</a>
             </div>
           </div>
