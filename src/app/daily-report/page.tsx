@@ -239,6 +239,54 @@ interface StrongStockRankingArtifact {
   rankings: StrongStockRankingView[];
 }
 
+type LargeHolderTier = "1m_plus" | "400k_plus";
+type LargeHolderWindow = "1w" | "4w";
+
+interface LargeHolderRankingItem {
+  rank: number;
+  code: string;
+  name: string;
+  latestDate: string;
+  baselineDate: string;
+  tier: LargeHolderTier;
+  tierLabel: string;
+  latestPercent: number;
+  baselinePercent: number;
+  changePctPoint: number;
+  latestPeople: number;
+  baselinePeople: number;
+  peopleChange: number;
+  score: number;
+  reason: string;
+}
+
+interface LargeHolderRankingView {
+  tier: LargeHolderTier;
+  window: LargeHolderWindow;
+  status: "verified" | "partial" | "empty";
+  generatedAt: string;
+  items: LargeHolderRankingItem[];
+  emptyReason?: string;
+  source: {
+    name: string;
+    latestDate: string;
+    scope: string;
+    warning: string;
+  };
+}
+
+interface LargeHolderRankingArtifact {
+  schemaVersion: 1;
+  generatedAt: string;
+  source: {
+    name: string;
+    scope: string;
+    semantics: string;
+    warning: string;
+  };
+  rankings: LargeHolderRankingView[];
+}
+
 /* ─── Score Color ─── */
 function getScoreColor(score: number): string {
   if (score >= 80) return "text-rose-400";
@@ -335,7 +383,10 @@ export default function DailyReportPage() {
   const [report, setReport] = useState<DailyReport | null>(null);
   const [eventFocus, setEventFocus] = useState<EventFocusSnapshot | null>(null);
   const [strongStocks, setStrongStocks] = useState<StrongStockRankingArtifact | null>(null);
+  const [largeHolders, setLargeHolders] = useState<LargeHolderRankingArtifact | null>(null);
   const [strongStockTimeframe, setStrongStockTimeframe] = useState<StrongStockTimeframe>("5d");
+  const [largeHolderTier, setLargeHolderTier] = useState<LargeHolderTier>("1m_plus");
+  const [largeHolderWindow, setLargeHolderWindow] = useState<LargeHolderWindow>("1w");
   const [eventFilters, setEventFilters] = useState<MajorNewsFilters>({});
   const [dailyAnalyses, setDailyAnalyses] = useState<Record<string, CompanyDailyAnalysis>>({});
   const [loading, setLoading] = useState(true);
@@ -344,14 +395,16 @@ export default function DailyReportPage() {
   useEffect(() => {
     async function fetchReport() {
       try {
-        const [data, eventData, strongStockData] = await Promise.all([
+        const [data, eventData, strongStockData, largeHolderData] = await Promise.all([
           fetchStaticJson<DailyReport>("/data/daily-report.json"),
           fetchStaticJson<EventFocusSnapshot>("/data/event-focus.json").catch(() => null),
           fetchStaticJson<StrongStockRankingArtifact>("/data/strong-stock-ranking.json").catch(() => null),
+          fetchStaticJson<LargeHolderRankingArtifact>("/data/large-holder-ranking.json").catch(() => null),
         ]);
         setReport(data);
         setEventFocus(eventData);
         setStrongStocks(strongStockData);
+        setLargeHolders(largeHolderData);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load report");
       } finally {
@@ -425,6 +478,7 @@ export default function DailyReportPage() {
   const visibleEventItems = eventFocus ? filterEventFocusItems(eventFocus.items, effectiveEventFilters) : [];
   const activeTopicName = activeTopicId ? eventFilterOptions.topics.find((topic) => topic.id === activeTopicId)?.name ?? activeTopicId : "";
   const selectedStrongStockRanking = strongStocks?.rankings.find((ranking) => ranking.timeframe === strongStockTimeframe) ?? strongStocks?.rankings[0];
+  const selectedLargeHolderRanking = largeHolders?.rankings.find((ranking) => ranking.tier === largeHolderTier && ranking.window === largeHolderWindow) ?? largeHolders?.rankings[0];
 
   return (
     <div className="min-h-screen bg-[#0a0a1a]">
@@ -599,8 +653,8 @@ export default function DailyReportPage() {
                         <span className="text-xs text-gray-500">{item.announcedAt}</span>
                       </div>
                       <div className="mt-2 flex flex-wrap gap-2">
-                        {item.derivedTopics.length > 0 ? item.derivedTopics.map((topic) => (
-                          <Badge key={`${item.id}-${topic.topicId}`} variant="outline" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-200 text-xs">
+                        {item.derivedTopics.length > 0 ? item.derivedTopics.map((topic, topicIndex) => (
+                          <Badge key={`${item.id}-${topic.topicId}-${topicIndex}`} variant="outline" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-200 text-xs">
                             {topic.topicName}{topic.roleLabel ? ` · ${topic.roleLabel}` : ""}
                           </Badge>
                         )) : (
@@ -718,6 +772,91 @@ export default function DailyReportPage() {
                         <div>
                           <p className="text-gray-500">型態</p>
                           <p className="font-semibold text-gray-200">{item.high20Breakout ? "20日高" : item.aboveMa20 ? "MA20上" : "觀察"}</p>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Large Holder Ranking */}
+        {selectedLargeHolderRanking && (
+          <Card className="bg-[#12122a] border-purple-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <CardTitle className="text-lg text-white">🐋 大戶分級排行</CardTitle>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Source: {selectedLargeHolderRanking.source.name} · 最新分級日 {selectedLargeHolderRanking.source.latestDate || "—"} · {selectedLargeHolderRanking.source.scope}
+                  </p>
+                  <p className="mt-1 text-xs text-amber-200/80">⚠ {selectedLargeHolderRanking.source.warning}</p>
+                  <p className="mt-1 text-xs text-gray-500">tracked sample；not full market。只排行 checked-in FinMind share-tier percentage changes，缺資料或過期公司直接排除。</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
+                    {(["1m_plus", "400k_plus"] as LargeHolderTier[]).map((tier) => (
+                      <button
+                        key={tier}
+                        type="button"
+                        className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${largeHolderTier === tier ? "bg-purple-400/20 text-purple-100" : "text-gray-400 hover:text-gray-100"}`}
+                        onClick={() => setLargeHolderTier(tier)}
+                      >
+                        {tier === "1m_plus" ? "1m+" : "400k+"}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
+                    {(["1w", "4w"] as LargeHolderWindow[]).map((window) => (
+                      <button
+                        key={window}
+                        type="button"
+                        className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${largeHolderWindow === window ? "bg-purple-400/20 text-purple-100" : "text-gray-400 hover:text-gray-100"}`}
+                        onClick={() => setLargeHolderWindow(window)}
+                      >
+                        {window}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {selectedLargeHolderRanking.items.length === 0 ? (
+                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                  {selectedLargeHolderRanking.emptyReason ?? "目前沒有符合此 tier/window 的 fresh 大戶分級樣本。"}
+                </div>
+              ) : (
+                <div className="grid gap-3 md:grid-cols-2">
+                  {selectedLargeHolderRanking.items.slice(0, 8).map((item) => (
+                    <a key={`${selectedLargeHolderRanking.tier}-${selectedLargeHolderRanking.window}-${item.code}`} href={`/industry-map-site/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-purple-400/40 hover:bg-purple-400/[0.04]">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
+                          <p className="mt-1 text-xs text-gray-400">{item.reason}</p>
+                        </div>
+                        <Badge variant="outline" className="border-purple-400/30 bg-purple-400/10 text-purple-200 text-xs">
+                          {item.score}分
+                        </Badge>
+                      </div>
+                      <div className="mt-3 grid grid-cols-4 gap-2 text-xs">
+                        <div>
+                          <p className="text-gray-500">分級</p>
+                          <p className="font-semibold text-white">{item.tierLabel}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">占比變化</p>
+                          <p className={`font-semibold ${item.changePctPoint >= 0 ? "text-rose-300" : "text-emerald-300"}`}>{item.changePctPoint >= 0 ? "+" : ""}{item.changePctPoint}pp</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">最新占比</p>
+                          <p className="font-semibold text-indigo-200">{item.latestPercent}%</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">比較日</p>
+                          <p className="font-semibold text-gray-200">{item.baselineDate}</p>
                         </div>
                       </div>
                     </a>

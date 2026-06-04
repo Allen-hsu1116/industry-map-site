@@ -24,19 +24,21 @@ test("package scripts expose a daily refresh workflow that updates K-lines, chip
   assert.equal(packageJson.scripts["data:event-focus:update"], "tsx scripts/update-event-focus.ts");
   assert.equal(packageJson.scripts["report:daily"], "tsx scripts/generate-daily-report.ts");
   assert.equal(packageJson.scripts["report:strong-stocks"], "tsx scripts/generate-strong-stock-ranking.ts");
+  assert.equal(packageJson.scripts["report:large-holders"], "tsx scripts/generate-large-holder-ranking.ts");
   assert.equal(
     packageJson.scripts["data:daily-refresh"],
-    "npm run data:kline:update -- --limit=30 && npm run data:market-feeds:update -- --limit=30 && npm run data:event-focus:update && npm run analysis:daily && npm run report:strong-stocks && npm run report:daily && npm run knowledge:validate",
+    "npm run data:kline:update -- --limit=30 && npm run data:market-feeds:update -- --limit=30 && npm run data:event-focus:update && npm run analysis:daily && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate",
   );
   assert.equal(
     packageJson.scripts["data:daily-refresh:dry-run"],
-    "npm run data:kline:update -- --dry-run --limit=2 && npm run data:market-feeds:update -- --dry-run --limit=2 && npm run data:event-focus:update -- --dry-run --limit=10 && npm run report:strong-stocks && npm run report:daily && npm run knowledge:validate",
+    "npm run data:kline:update -- --dry-run --limit=2 && npm run data:market-feeds:update -- --dry-run --limit=2 && npm run data:event-focus:update -- --dry-run --limit=10 && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate",
   );
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:kline:update") < packageJson.scripts["data:daily-refresh"].indexOf("data:market-feeds:update"));
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:market-feeds:update") < packageJson.scripts["data:daily-refresh"].indexOf("data:event-focus:update"));
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:event-focus:update") < packageJson.scripts["data:daily-refresh"].indexOf("analysis:daily"));
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("analysis:daily") < packageJson.scripts["data:daily-refresh"].indexOf("report:strong-stocks"));
-  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("report:strong-stocks") < packageJson.scripts["data:daily-refresh"].indexOf("report:daily"));
+  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("report:strong-stocks") < packageJson.scripts["data:daily-refresh"].indexOf("report:large-holders"));
+  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("report:large-holders") < packageJson.scripts["data:daily-refresh"].indexOf("report:daily"));
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("report:daily") < packageJson.scripts["data:daily-refresh"].indexOf("knowledge:validate"));
 });
 

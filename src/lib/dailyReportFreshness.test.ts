@@ -39,8 +39,9 @@ test("daily refresh workflow regenerates the checked-in daily report after analy
 
   assert.equal(packageJson.scripts["report:daily"], "tsx scripts/generate-daily-report.ts");
   assert.equal(packageJson.scripts["report:strong-stocks"], "tsx scripts/generate-strong-stock-ranking.ts");
+  assert.equal(packageJson.scripts["report:large-holders"], "tsx scripts/generate-large-holder-ranking.ts");
   const refresh = packageJson.scripts["data:daily-refresh"];
-  assert.ok(refresh.includes("analysis:daily && npm run report:strong-stocks && npm run report:daily && npm run knowledge:validate"));
+  assert.ok(refresh.includes("analysis:daily && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate"));
 });
 
 test("daily report page renders freshness source-status metadata", () => {
