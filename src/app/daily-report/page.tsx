@@ -197,6 +197,48 @@ interface EventFocusSnapshot {
   emptyReason?: string;
 }
 
+type StrongStockTimeframe = "1d" | "5d" | "20d";
+
+interface StrongStockRankingItem {
+  rank: number;
+  code: string;
+  name: string;
+  score: number;
+  latestDate: string;
+  close: number;
+  returnPct: number;
+  changePct1d: number;
+  volumeRatio20: number;
+  aboveMa20: boolean | null;
+  high20Breakout: boolean;
+  reason: string;
+}
+
+interface StrongStockRankingView {
+  timeframe: StrongStockTimeframe;
+  status: "verified" | "partial" | "empty";
+  generatedAt: string;
+  items: StrongStockRankingItem[];
+  emptyReason?: string;
+  source: {
+    name: string;
+    latestDate: string;
+    scope: string;
+    warning: string;
+  };
+}
+
+interface StrongStockRankingArtifact {
+  schemaVersion: 1;
+  generatedAt: string;
+  source: {
+    name: string;
+    scope: string;
+    semantics: string;
+  };
+  rankings: StrongStockRankingView[];
+}
+
 /* ─── Score Color ─── */
 function getScoreColor(score: number): string {
   if (score >= 80) return "text-rose-400";
@@ -292,6 +334,8 @@ export default function DailyReportPage() {
   const activeTopicId = searchParams.get("topic")?.trim() ?? "";
   const [report, setReport] = useState<DailyReport | null>(null);
   const [eventFocus, setEventFocus] = useState<EventFocusSnapshot | null>(null);
+  const [strongStocks, setStrongStocks] = useState<StrongStockRankingArtifact | null>(null);
+  const [strongStockTimeframe, setStrongStockTimeframe] = useState<StrongStockTimeframe>("5d");
   const [eventFilters, setEventFilters] = useState<MajorNewsFilters>({});
   const [dailyAnalyses, setDailyAnalyses] = useState<Record<string, CompanyDailyAnalysis>>({});
   const [loading, setLoading] = useState(true);
@@ -300,12 +344,14 @@ export default function DailyReportPage() {
   useEffect(() => {
     async function fetchReport() {
       try {
-        const [data, eventData] = await Promise.all([
+        const [data, eventData, strongStockData] = await Promise.all([
           fetchStaticJson<DailyReport>("/data/daily-report.json"),
           fetchStaticJson<EventFocusSnapshot>("/data/event-focus.json").catch(() => null),
+          fetchStaticJson<StrongStockRankingArtifact>("/data/strong-stock-ranking.json").catch(() => null),
         ]);
         setReport(data);
         setEventFocus(eventData);
+        setStrongStocks(strongStockData);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load report");
       } finally {
@@ -378,6 +424,7 @@ export default function DailyReportPage() {
   const effectiveEventFilters = activeTopicId ? { ...eventFilters, topicId: activeTopicId } : eventFilters;
   const visibleEventItems = eventFocus ? filterEventFocusItems(eventFocus.items, effectiveEventFilters) : [];
   const activeTopicName = activeTopicId ? eventFilterOptions.topics.find((topic) => topic.id === activeTopicId)?.name ?? activeTopicId : "";
+  const selectedStrongStockRanking = strongStocks?.rankings.find((ranking) => ranking.timeframe === strongStockTimeframe) ?? strongStocks?.rankings[0];
 
   return (
     <div className="min-h-screen bg-[#0a0a1a]">
@@ -606,6 +653,77 @@ export default function DailyReportPage() {
                 </div>
                 )}
               </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Strong Stock Ranking */}
+        {selectedStrongStockRanking && (
+          <Card className="bg-[#12122a] border-rose-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <CardTitle className="text-lg text-white">🚀 強勢股排行</CardTitle>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Source: {selectedStrongStockRanking.source.name} · 最新 K 線 {selectedStrongStockRanking.source.latestDate || "—"} · {selectedStrongStockRanking.source.scope}
+                  </p>
+                  <p className="mt-1 text-xs text-amber-200/80">⚠ {selectedStrongStockRanking.source.warning}</p>
+                  <p className="mt-1 text-xs text-gray-500">price/technical only；不混入籌碼、基本面、新聞、ETF 成分或 AI 判斷。</p>
+                </div>
+                <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
+                  {(["1d", "5d", "20d"] as StrongStockTimeframe[]).map((timeframe) => (
+                    <button
+                      key={timeframe}
+                      type="button"
+                      className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${strongStockTimeframe === timeframe ? "bg-rose-400/20 text-rose-100" : "text-gray-400 hover:text-gray-100"}`}
+                      onClick={() => setStrongStockTimeframe(timeframe)}
+                    >
+                      {timeframe}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {selectedStrongStockRanking.items.length === 0 ? (
+                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                  {selectedStrongStockRanking.emptyReason ?? "目前沒有符合此 timeframe 的 fresh K-line 強勢股。"}
+                </div>
+              ) : (
+                <div className="grid gap-3 md:grid-cols-2">
+                  {selectedStrongStockRanking.items.slice(0, 8).map((item) => (
+                    <a key={`${selectedStrongStockRanking.timeframe}-${item.code}`} href={`/industry-map-site/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-rose-400/40 hover:bg-rose-400/[0.04]">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
+                          <p className="mt-1 text-xs text-gray-400">{item.reason}</p>
+                        </div>
+                        <Badge variant="outline" className="border-rose-400/30 bg-rose-400/10 text-rose-200 text-xs">
+                          {item.score}分
+                        </Badge>
+                      </div>
+                      <div className="mt-3 grid grid-cols-4 gap-2 text-xs">
+                        <div>
+                          <p className="text-gray-500">收盤</p>
+                          <p className="font-semibold text-white">{item.close.toLocaleString()}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">{selectedStrongStockRanking.timeframe}</p>
+                          <p className={`font-semibold ${item.returnPct >= 0 ? "text-rose-300" : "text-emerald-300"}`}>{item.returnPct >= 0 ? "+" : ""}{item.returnPct}%</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">量比</p>
+                          <p className="font-semibold text-indigo-200">{item.volumeRatio20}x</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">型態</p>
+                          <p className="font-semibold text-gray-200">{item.high20Breakout ? "20日高" : item.aboveMa20 ? "MA20上" : "觀察"}</p>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              )}
             </CardContent>
           </Card>
         )}

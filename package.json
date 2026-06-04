@@ -14,11 +14,12 @@
     "knowledge:topic-map": "tsx scripts/generate-canonical-topic-map.ts",
     "analysis:daily": "tsx scripts/generate-daily-analysis.ts",
     "report:daily": "tsx scripts/generate-daily-report.ts",
+    "report:strong-stocks": "tsx scripts/generate-strong-stock-ranking.ts",
     "data:kline:update": "tsx scripts/update-kline-data.ts",
     "data:market-feeds:update": "tsx scripts/update-market-feeds.ts",
     "data:event-focus:update": "tsx scripts/update-event-focus.ts",
-    "data:daily-refresh": "npm run data:kline:update -- --limit=30 && npm run data:market-feeds:update -- --limit=30 && npm run data:event-focus:update && npm run analysis:daily && npm run report:daily && npm run knowledge:validate",
-    "data:daily-refresh:dry-run": "npm run data:kline:update -- --dry-run --limit=2 && npm run data:market-feeds:update -- --dry-run --limit=2 && npm run data:event-focus:update -- --dry-run --limit=10 && npm run report:daily && npm run knowledge:validate"
+    "data:daily-refresh": "npm run data:kline:update -- --limit=30 && npm run data:market-feeds:update -- --limit=30 && npm run data:event-focus:update && npm run analysis:daily && npm run report:strong-stocks && npm run report:daily && npm run knowledge:validate",
+    "data:daily-refresh:dry-run": "npm run data:kline:update -- --dry-run --limit=2 && npm run data:market-feeds:update -- --dry-run --limit=2 && npm run data:event-focus:update -- --dry-run --limit=10 && npm run report:strong-stocks && npm run report:daily && npm run knowledge:validate"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
