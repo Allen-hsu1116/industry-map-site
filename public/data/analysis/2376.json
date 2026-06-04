@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-06-03T12:31:30.417Z",
+  "generatedAt": "2026-06-04T12:30:47.026Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-03",
-  "chipDataDate": "2026-06-03",
+  "marketDataDate": "2026-06-04",
+  "chipDataDate": "2026-06-04",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 55,
-    "summary": "技嘉 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 19.0%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 15,
+    "summary": "技嘉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 10.5%。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 19.0%"
+      "均線結構偏震盪，尚未形成明確排列",
+      "收盤站上 MA20 10.5%"
     ],
     "risks": [],
-    "watch": [
-      "接近 20 日高點 402.00，觀察是否突破"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 36,
-    "summary": "技嘉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.2萬張；近 20 日法人偏買，合計 +2.4萬張。",
+    "summary": "技嘉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +7.9千張；近 20 日法人偏買，合計 +2萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.2萬張",
-      "近 20 日法人偏買，合計 +2.4萬張",
-      "投信近 5 日買超 +1.1萬張",
-      "外資近 5 日買超 +26張"
+      "三大法人近 5 日合計買超 +7.9千張",
+      "近 20 日法人偏買，合計 +2萬張",
+      "投信近 5 日買超 +1.1萬張"
     ],
-    "risks": [],
+    "risks": [
+      "外資近 5 日賣超 -3.4千張"
+    ],
     "watch": [
-      "最近法人資料日：2026-06-03",
-      "融券近 5 日增加 36.4%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-04",
+      "融券近 5 日增加 52.8%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -134,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-03"
+      "lastVerified": "2026-06-04"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -279,22 +278,21 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 66,
-    "recommendationState": "blocked",
+    "totalScore": 73,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 32,
       "label": "基本面偏強",
       "signals": [
         "月營收 YoY +72.2%，成長動能明確",
-        "本益比 18.6 倍，估值尚可對照成長",
-        "殖利率 3.0%，提供部分下檔支撐"
+        "本益比 17.5 倍，估值尚可對照成長",
+        "殖利率 3.2%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
@@ -303,18 +301,18 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "hard",
-        "message": "距離 MA20 約 16.0%，停損距離過大"
+        "severity": "soft",
+        "message": "距離 MA20 約 9.5%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：376.80",
-      "波段多空分水嶺看 MA20：335.20",
-      "追蹤法人是否延續 賣超：最近 -684張",
+      "短線支撐/壓力先看 MA5：384.10",
+      "波段多空分水嶺看 MA20：338.45",
+      "追蹤法人是否延續 賣超：最近 -1.9千張",
       "月營收年增率 +72.2%，觀察基本面是否支撐估值",
-      "本益比 18.6 倍，需和同族群估值比較"
+      "本益比 17.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 402.00 且量比 > 1.5：列為轉強訊號",

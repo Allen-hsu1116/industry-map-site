@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "8299",
   "name": "群聯電子",
-  "generatedAt": "2026-06-03T12:31:31.352Z",
+  "generatedAt": "2026-06-04T12:30:47.955Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-03",
-  "chipDataDate": "2026-06-03",
+  "marketDataDate": "2026-06-04",
+  "chipDataDate": "2026-06-04",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,32 +15,32 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 45,
-    "summary": "群聯電子 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 4.6%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "群聯電子 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 4.6%"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "股價貼近 MA20，留意方向選擇"
+    ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "群聯電子 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1.6千張；近 20 日法人偏賣，合計 -1.6萬張。",
+    "summary": "群聯電子 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -2.4千張；近 20 日法人偏賣，合計 -1.7萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.6千張",
-      "近 20 日法人偏賣，合計 -1.6萬張",
-      "投信近 5 日賣超 -813張",
-      "外資近 5 日賣超 -990張"
+      "三大法人近 5 日合計賣超 -2.4千張",
+      "近 20 日法人偏賣，合計 -1.7萬張",
+      "投信近 5 日賣超 -1千張",
+      "外資近 5 日賣超 -1.6千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-03",
-      "融券近 5 日增加 16.9%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-04"
     ]
   },
   "industry": {
@@ -132,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-03"
+      "lastVerified": "2026-06-04"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -230,7 +230,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
+    "totalScore": 59,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 24,
@@ -239,13 +239,12 @@
         "月營收 YoY +92.7%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 8.0 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 7.7 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -254,11 +253,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2660.00",
-      "波段多空分水嶺看 MA20：2568.00",
-      "追蹤法人是否延續 賣超：最近 -2.7千張",
+      "短線支撐/壓力先看 MA5：2686.00",
+      "波段多空分水嶺看 MA20：2577.50",
+      "追蹤法人是否延續 賣超：最近 -439張",
       "月營收年增率 +92.7%，觀察基本面是否支撐估值",
-      "本益比 25.7 倍，需和同族群估值比較"
+      "本益比 24.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2880.00 且量比 > 1.5：列為轉強訊號",
