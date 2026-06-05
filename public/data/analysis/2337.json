@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-06-04T12:30:46.981Z",
+  "generatedAt": "2026-06-05T12:30:38.088Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-04",
-  "chipDataDate": "2026-06-04",
+  "marketDataDate": "2026-06-05",
+  "chipDataDate": "2026-06-05",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,33 +17,32 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": 0,
-    "summary": "旺宏 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "score": -15,
+    "summary": "旺宏 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 4.9%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
-    "risks": [],
+    "risks": [
+      "收盤跌破 MA20 4.9%"
+    ],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 41,
-    "summary": "旺宏 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +3.8萬張；近 20 日法人偏買，合計 +8.4萬張。",
+    "score": 36,
+    "summary": "旺宏 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +2.6萬張；近 20 日法人偏買，合計 +8.1萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +3.8萬張",
-      "近 20 日法人偏買，合計 +8.4萬張",
-      "投信近 5 日買超 +6千張",
-      "外資近 5 日買超 +3.4萬張",
-      "融資近 5 日下降 7.0%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +2.6萬張",
+      "近 20 日法人偏買，合計 +8.1萬張",
+      "投信近 5 日買超 +5.9千張",
+      "外資近 5 日買超 +2.4萬張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-04",
-      "融券近 5 日增加 19.3%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-05"
     ]
   },
   "industry": {
@@ -169,7 +168,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-06-04"
+      "lastVerified": "2026-06-05"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -291,7 +290,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 74,
+    "totalScore": 70,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 30,
@@ -300,9 +299,7 @@
         "月營收 YoY +44.9%，成長動能明確",
         "月營收 MoM +7.7%，短期動能改善"
       ],
-      "risks": [
-        "股價淨值比 6.1 倍偏高，需和 ROE/成長性比對"
-      ]
+      "risks": []
     },
     "strategy": {
       "classification": "題材股",
@@ -316,9 +313,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：165.60",
-      "波段多空分水嶺看 MA20：157.85",
-      "追蹤法人是否延續 賣超：最近 -1.1萬張",
+      "短線支撐/壓力先看 MA5：162.30",
+      "波段多空分水嶺看 MA20：157.70",
+      "追蹤法人是否延續 賣超：最近 -4.2千張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值"
     ],
     "triggerRules": [

@@ -69,7 +69,13 @@ test("checked-in daily report never renders D/F picks as top recommendations aft
 
   assert.equal(gated.topRecommendations.every((item) => isTopRecommendationGrade(item.analysis?.analysisQuality?.grade)), true);
   assert.equal(
-    gated.observationOnly.every((item) => !isTopRecommendationGrade(item.analysis?.analysisQuality?.grade)),
+    gated.observationOnly.every((item) => {
+      const hasHardRiskGate = Boolean(
+        item.analysis?.scoring?.recommendationState === "blocked" ||
+          item.analysis?.scoring?.riskGates?.some((gate) => gate.severity === "hard"),
+      );
+      return !isTopRecommendationGrade(item.analysis?.analysisQuality?.grade) || hasHardRiskGate;
+    }),
     true,
   );
   assert.equal(

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3529",
   "name": "力旺",
-  "generatedAt": "2026-06-04T12:30:47.441Z",
+  "generatedAt": "2026-06-05T12:30:38.533Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-04",
-  "chipDataDate": "2026-06-04",
+  "marketDataDate": "2026-06-05",
+  "chipDataDate": "2026-06-05",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,35 +15,35 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -15,
-    "summary": "力旺 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 3.1%。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
-    ],
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "力旺 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 5.0%。",
+    "signals": [],
     "risks": [
-      "收盤跌破 MA20 3.1%"
-    ],
-    "watch": []
-  },
-  "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -11,
-    "summary": "力旺 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.3千張；外資近 5 日買超 +234張。",
-    "signals": [
-      "近 20 日法人偏買，合計 +1.3千張",
-      "外資近 5 日買超 +234張",
-      "融資近 5 日下降 6.8%，籌碼壓力下降"
-    ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -26張",
-      "投信近 5 日賣超 -287張"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 5.0%"
     ],
     "watch": [
-      "最近法人資料日：2026-06-04",
-      "融券近 5 日增加 200.0%，留意軋空或空方壓力"
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
+  },
+  "chips": {
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 20,
+    "summary": "力旺 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +45張；近 20 日法人偏買，合計 +1.5千張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +45張",
+      "近 20 日法人偏買，合計 +1.5千張",
+      "外資近 5 日買超 +302張"
+    ],
+    "risks": [
+      "投信近 5 日賣超 -259張"
+    ],
+    "watch": [
+      "最近法人資料日：2026-06-05",
+      "融券近 5 日增加 69.2%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -135,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-04"
+      "lastVerified": "2026-06-05"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -233,7 +233,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 49,
+    "totalScore": 48,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": -32,
@@ -241,13 +241,14 @@
       "signals": [],
       "risks": [
         "月營收 YoY -36.9%，基本面承壓",
-        "本益比 129.4 倍，需防估值壓縮",
-        "股價淨值比 59.6 倍偏高，需和 ROE/成長性比對"
+        "本益比 125.4 倍，需防估值壓縮",
+        "股價淨值比 57.8 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -255,11 +256,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：3467.00",
-      "波段多空分水嶺看 MA20：3660.00",
-      "追蹤法人是否延續 賣超：最近 -184張",
+      "短線支撐/壓力先看 MA5：3472.00",
+      "波段多空分水嶺看 MA20：3615.00",
+      "追蹤法人是否延續 買超：最近 +13張",
       "月營收年增率 -36.9%，觀察基本面是否支撐估值",
-      "本益比 129.4 倍，需和同族群估值比較"
+      "本益比 125.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 4665.00 且量比 > 1.5：列為轉強訊號",

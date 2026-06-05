@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6153",
   "name": "嘉聯益",
-  "generatedAt": "2026-06-04T12:30:47.681Z",
+  "generatedAt": "2026-06-05T12:30:38.766Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-04",
-  "chipDataDate": "2026-06-04",
+  "marketDataDate": "2026-06-05",
+  "chipDataDate": "2026-06-05",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -32,19 +32,19 @@
     ]
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 28,
-    "summary": "嘉聯益 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +512張；近 20 日法人偏買，合計 +3.3千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": -8,
+    "summary": "嘉聯益 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +3.6千張；三大法人近 5 日合計賣超 -171張。",
     "signals": [
-      "三大法人近 5 日合計買超 +512張",
-      "近 20 日法人偏買，合計 +3.3千張",
-      "外資近 5 日買超 +325張"
+      "近 20 日法人偏買，合計 +3.6千張"
     ],
-    "risks": [],
+    "risks": [
+      "三大法人近 5 日合計賣超 -171張",
+      "外資近 5 日賣超 -312張"
+    ],
     "watch": [
-      "最近法人資料日：2026-06-04",
-      "融券近 5 日增加 19.2%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-05"
     ]
   },
   "industry": {
@@ -111,7 +111,7 @@
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
       "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-06-04（fresh）"
+      "知識庫最後驗證：2026-06-05（fresh）"
     ]
   },
   "knowledge": {
@@ -125,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-04"
+      "lastVerified": "2026-06-05"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -207,7 +207,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 66,
+    "totalScore": 60,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -218,7 +218,6 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -226,9 +225,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：18.69",
-      "波段多空分水嶺看 MA20：18.22",
-      "追蹤法人是否延續 賣超：最近 -3千張"
+      "短線支撐/壓力先看 MA5：18.81",
+      "波段多空分水嶺看 MA20：18.23",
+      "追蹤法人是否延續 賣超：最近 -407張"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 20.00 且量比 > 1.5：列為轉強訊號",

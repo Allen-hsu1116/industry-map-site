@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6182",
   "name": "合晶",
-  "generatedAt": "2026-06-04T12:30:47.707Z",
+  "generatedAt": "2026-06-05T12:30:38.791Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -132,7 +132,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 23,
+    "totalScore": 7,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -151,12 +151,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "soft",
-        "message": "股價資料已 10 天未更新"
+        "message": "股價資料已 11 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
-        "severity": "soft",
-        "message": "籌碼資料已 10 天未更新"
+        "severity": "hard",
+        "message": "籌碼資料已 11 天未更新"
       },
       {
         "id": "risk.stop-distance",

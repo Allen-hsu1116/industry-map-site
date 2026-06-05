@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2301",
   "name": "光寶科",
-  "generatedAt": "2026-06-04T12:30:46.946Z",
+  "generatedAt": "2026-06-05T12:30:38.053Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -332,8 +332,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 51,
-    "recommendationState": "watchlist",
+    "totalScore": 35,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -355,12 +355,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "soft",
-        "message": "股價資料已 10 天未更新"
+        "message": "股價資料已 11 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
-        "severity": "soft",
-        "message": "籌碼資料已 10 天未更新"
+        "severity": "hard",
+        "message": "籌碼資料已 11 天未更新"
       },
       {
         "id": "risk.stop-distance",
