@@ -3440,12 +3440,12 @@ export default function Home() {
 
   /* ─── Render ─── */
   return (
-    <div className="min-h-screen text-[var(--color-text-primary)] flex flex-col" style={{ background: "var(--color-bg)" }}>
+    <div className="taste-shell min-h-screen text-[var(--color-text-primary)] flex flex-col">
       {/* ─── Background gradient decoration ─── */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-indigo-600/[0.04] blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-purple-600/[0.04] blur-3xl" />
-        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-blue-600/[0.02] blur-3xl" />
+        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full bg-emerald-500/[0.06] blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-sky-500/[0.06] blur-3xl" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-emerald-400/[0.025] blur-3xl" />
       </div>
 
       {/* ─── Top Nav ─── */}
@@ -3453,7 +3453,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex items-center h-16 gap-8">
             <div className="flex items-center gap-3.5 shrink-0">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-lg shadow-lg shadow-indigo-500/15">🏭</div>
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-sky-500 flex items-center justify-center text-lg shadow-lg shadow-emerald-500/15">🏭</div>
               <div className="leading-tight">
                 <h1 className="text-[15px] font-bold text-white tracking-tight">台股產業鏈知識圖譜</h1>
                 <p className="text-[11px] text-[var(--color-text-tertiary)] mt-0.5">{stats.total_topics} 題材 · {stats.unique_companies} 公司</p>

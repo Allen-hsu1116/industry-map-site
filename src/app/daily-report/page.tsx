@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -488,7 +489,7 @@ export default function DailyReportPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center">
+      <div className="taste-shell min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin w-12 h-12 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full mx-auto mb-4" />
           <p className="text-gray-400 text-lg">載入選股報告中...</p>
@@ -499,8 +500,8 @@ export default function DailyReportPage() {
 
   if (error || !report) {
     return (
-      <div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center">
-        <Card className="bg-[#12122a] border-red-500/20 max-w-md">
+      <div className="taste-shell min-h-screen flex items-center justify-center">
+        <Card className="taste-card border-red-500/20 max-w-md">
           <CardContent className="pt-6">
             <h2 className="text-xl font-bold text-red-400 mb-2">📊 報告載入失敗</h2>
             <p className="text-gray-400">{error || "尚無報告資料"}</p>
@@ -525,13 +526,13 @@ export default function DailyReportPage() {
   const selectedLargeHolderRanking = largeHolders?.rankings.find((ranking) => ranking.tier === largeHolderTier && ranking.window === largeHolderWindow) ?? largeHolders?.rankings[0];
 
   return (
-    <div className="min-h-screen bg-[#0a0a1a]">
+    <div className="taste-shell min-h-screen">
       <div className="max-w-5xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <a href="/industry-map-site/" className="text-indigo-400 hover:text-indigo-300 text-sm mb-2 inline-block">
+          <Link href="/" className="text-emerald-400 hover:text-emerald-300 text-sm mb-2 inline-block">
             ← 返回產業地圖
-          </a>
+          </Link>
           <h1 className="text-3xl font-bold text-white mt-2">
             📊 每日選股報告
           </h1>
@@ -547,9 +548,9 @@ export default function DailyReportPage() {
                     只顯示 daily analysis 中 canonicalKnowledge.topicRoles 命中此題材的公司；重大訊息同時套用 topicId filter，官方主旨仍保留原文。
                   </p>
                 </div>
-                <a href="/industry-map-site/daily-report" className="w-fit rounded-lg border border-indigo-300/30 px-3 py-1.5 text-xs font-medium text-indigo-100 hover:bg-indigo-300/10">
+                <Link href="/daily-report" className="w-fit rounded-lg border border-emerald-300/30 px-3 py-1.5 text-xs font-medium text-emerald-100 hover:bg-emerald-300/10">
                   清除題材篩選
-                </a>
+                </Link>
               </div>
             </div>
           )}
@@ -557,7 +558,7 @@ export default function DailyReportPage() {
 
         {/* Unified source-status rail */}
         {report.freshness && (
-          <Card className="bg-[#12122a] border-emerald-500/20 mb-6">
+          <Card className="taste-card border-emerald-500/20 mb-6">
             <CardHeader className="pb-2">
               <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                 <CardTitle className="text-lg text-white">🟢 資料狀態</CardTitle>
@@ -603,7 +604,7 @@ export default function DailyReportPage() {
 
         {/* Market Indicator Strip */}
         {marketIndicators && (
-          <Card className="bg-[#12122a] border-sky-500/20 mb-6">
+          <Card className="taste-card border-sky-500/20 mb-6">
             <CardHeader className="pb-2">
               <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
                 <div>
@@ -661,7 +662,7 @@ export default function DailyReportPage() {
 
         {/* Knowledge Applied */}
         {report.knowledge_applied && (
-          <Card className="bg-[#12122a] border-indigo-500/20 mb-6">
+          <Card className="taste-card border-indigo-500/20 mb-6">
             <CardContent className="pt-6">
               <h3 className="text-sm font-semibold text-indigo-400 mb-2">
                 📚 今日應用知識：{report.knowledge_applied.topic}
@@ -680,7 +681,7 @@ export default function DailyReportPage() {
 
         {/* Event Focus */}
         {eventFocus && (
-          <Card className="bg-[#12122a] border-cyan-500/20 mb-6">
+          <Card className="taste-card border-cyan-500/20 mb-6">
             <CardHeader className="pb-2">
               <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                 <CardTitle className="text-lg text-white">🧭 事件驅動焦點</CardTitle>
@@ -776,7 +777,7 @@ export default function DailyReportPage() {
 
         {/* Market Overview */}
         {report.market_overview && report.market_overview.close && (
-          <Card className="bg-[#12122a] border-slate-700 mb-6">
+          <Card className="taste-card border-slate-700 mb-6">
             <CardHeader className="pb-2">
               <CardTitle className="text-lg text-white">📈 市場概況</CardTitle>
             </CardHeader>
@@ -815,7 +816,7 @@ export default function DailyReportPage() {
 
         {/* Strong Stock Ranking */}
         {selectedStrongStockRanking && (
-          <Card className="bg-[#12122a] border-rose-500/20 mb-6">
+          <Card className="taste-card border-rose-500/20 mb-6">
             <CardHeader className="pb-2">
               <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
@@ -848,7 +849,7 @@ export default function DailyReportPage() {
               ) : (
                 <div className="grid gap-3 md:grid-cols-2">
                   {selectedStrongStockRanking.items.slice(0, 8).map((item) => (
-                    <a key={`${selectedStrongStockRanking.timeframe}-${item.code}`} href={`/industry-map-site/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-rose-400/40 hover:bg-rose-400/[0.04]">
+                    <Link key={`${selectedStrongStockRanking.timeframe}-${item.code}`} href={`/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-rose-400/40 hover:bg-rose-400/[0.04]">
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
@@ -876,7 +877,7 @@ export default function DailyReportPage() {
                           <p className="font-semibold text-gray-200">{item.high20Breakout ? "20日高" : item.aboveMa20 ? "MA20上" : "觀察"}</p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -886,7 +887,7 @@ export default function DailyReportPage() {
 
         {/* Large Holder Ranking */}
         {selectedLargeHolderRanking && (
-          <Card className="bg-[#12122a] border-purple-500/20 mb-6">
+          <Card className="taste-card border-purple-500/20 mb-6">
             <CardHeader className="pb-2">
               <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                 <div>
@@ -933,7 +934,7 @@ export default function DailyReportPage() {
               ) : (
                 <div className="grid gap-3 md:grid-cols-2">
                   {selectedLargeHolderRanking.items.slice(0, 8).map((item) => (
-                    <a key={`${selectedLargeHolderRanking.tier}-${selectedLargeHolderRanking.window}-${item.code}`} href={`/industry-map-site/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-purple-400/40 hover:bg-purple-400/[0.04]">
+                    <Link key={`${selectedLargeHolderRanking.tier}-${selectedLargeHolderRanking.window}-${item.code}`} href={`/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-purple-400/40 hover:bg-purple-400/[0.04]">
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
@@ -961,7 +962,7 @@ export default function DailyReportPage() {
                           <p className="font-semibold text-gray-200">{item.baselineDate}</p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   ))}
                 </div>
               )}
@@ -971,7 +972,7 @@ export default function DailyReportPage() {
 
         {/* Hot Sectors */}
         {report.hot_sectors && report.hot_sectors.length > 0 && (
-          <Card className="bg-[#12122a] border-slate-700 mb-6">
+          <Card className="taste-card border-slate-700 mb-6">
             <CardHeader className="pb-2">
               <CardTitle className="text-lg text-white">🔥 熱門族群</CardTitle>
             </CardHeader>
@@ -1005,7 +1006,7 @@ export default function DailyReportPage() {
             </Badge>
           </div>
           {gatedPicks.topRecommendations.length === 0 && (
-            <Card className="border-amber-500/20 bg-[#12122a]">
+            <Card className="border-amber-500/20 taste-card">
               <CardContent className="pt-6">
                 <p className="text-sm text-amber-200">今天沒有符合 A/B/C 品質門檻的 Top recommendation；請只參考下方觀察清單，等資料補齊後再提高信心。</p>
               </CardContent>
@@ -1017,15 +1018,15 @@ export default function DailyReportPage() {
             const analysisQuality = dailyAnalysis?.analysisQuality;
             const topicRoleBadge = getTopicRoleBadge(dailyAnalysis, activeTopicId);
             return (
-            <Card key={pick.code} className={`bg-[#12122a] border ${getScoreBg(pick.score)}`}>
+            <Card key={pick.code} className={`taste-card border ${getScoreBg(pick.score)}`}>
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl font-bold text-gray-500">#{pick.rank}</span>
                     <div>
-                      <a href={`/industry-map-site/?company=${pick.code}`} className="text-xl font-bold text-white hover:text-indigo-400 transition-colors">
+                      <Link href={`/?company=${pick.code}`} className="text-xl font-bold text-white hover:text-emerald-400 transition-colors">
                         {pick.name}
-                      </a>
+                      </Link>
                       <span className="text-gray-500 ml-2 text-sm">({pick.code})</span>
                     </div>
                     <Badge variant="secondary" className="text-xs">{pick.industry}</Badge>
@@ -1245,7 +1246,7 @@ export default function DailyReportPage() {
         </div>
 
         {gatedPicks.observationOnly.length > 0 && (
-          <Card className="mt-6 border-orange-500/20 bg-[#12122a]">
+          <Card className="mt-6 border-orange-500/20 taste-card">
             <CardHeader className="pb-2">
               <CardTitle className="text-lg text-orange-300">👀 觀察 / 資料不足（不列入 Top recommendation）</CardTitle>
             </CardHeader>
@@ -1261,9 +1262,9 @@ export default function DailyReportPage() {
                       <div>
                         <div className="flex flex-wrap items-center gap-2">
                           <span className="text-sm font-bold text-gray-500">原候選 #{pick.rank}</span>
-                          <a href={`/industry-map-site/?company=${pick.code}`} className="font-bold text-white hover:text-indigo-300">
+                          <Link href={`/?company=${pick.code}`} className="font-bold text-white hover:text-emerald-300">
                             {pick.name} <span className="text-gray-500">({pick.code})</span>
-                          </a>
+                          </Link>
                           <Badge variant="outline" className={`text-xs ${getAnalysisQualityClass(quality?.grade)}`}>
                             Quality {quality?.grade ?? "?"} · {quality?.label ?? "未載入"}
                           </Badge>
@@ -1289,7 +1290,7 @@ export default function DailyReportPage() {
 
         {/* Risk Alerts */}
         {report.risk_alerts && report.risk_alerts.length > 0 && (
-          <Card className="bg-[#12122a] border-amber-500/20 mt-6">
+          <Card className="taste-card border-amber-500/20 mt-6">
             <CardHeader className="pb-2">
               <CardTitle className="text-lg text-amber-400">⚠️ 風險提醒</CardTitle>
             </CardHeader>
@@ -1309,7 +1310,7 @@ export default function DailyReportPage() {
         {/* Footer */}
         <div className="mt-8 space-y-4">
           {/* Knowledge Base Links */}
-          <Card className="bg-[#12122a] border-indigo-500/20">
+          <Card className="taste-card border-indigo-500/20">
             <CardContent className="pt-6">
               <h3 className="text-sm font-semibold text-indigo-400 mb-3">📚 知識庫參考</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -1340,9 +1341,9 @@ export default function DailyReportPage() {
             <p className="mt-1">
               本報告由 AI 自動產生，僅供參考，不構成投資建議。
             </p>
-            <a href="/industry-map-site/" className="text-indigo-400 hover:text-indigo-300 mt-2 inline-block">
+            <Link href="/" className="text-emerald-400 hover:text-emerald-300 mt-2 inline-block">
               ← 返回產業地圖
-            </a>
+            </Link>
           </div>
         </div>
       </div>
