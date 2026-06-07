@@ -41,7 +41,9 @@ test("daily refresh workflow regenerates the checked-in daily report after analy
   assert.equal(packageJson.scripts["report:market-indicators"], "tsx scripts/generate-market-indicator-strip.ts");
   assert.equal(packageJson.scripts["report:strong-stocks"], "tsx scripts/generate-strong-stock-ranking.ts");
   assert.equal(packageJson.scripts["report:large-holders"], "tsx scripts/generate-large-holder-ranking.ts");
+  assert.equal(packageJson.scripts["data:large-holders:update"], "tsx scripts/update-large-holder-sample.ts");
   const refresh = packageJson.scripts["data:daily-refresh"];
+  assert.ok(refresh.includes("data:large-holders:update -- --limit=30 && npm run data:event-focus:update"));
   assert.ok(refresh.includes("analysis:daily && npm run report:market-indicators && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate"));
 });
 

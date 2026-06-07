@@ -21,6 +21,7 @@ test("package scripts expose a daily refresh workflow that updates K-lines, chip
 
   assert.equal(packageJson.scripts["data:kline:update"], "tsx scripts/update-kline-data.ts");
   assert.equal(packageJson.scripts["data:market-feeds:update"], "tsx scripts/update-market-feeds.ts");
+  assert.equal(packageJson.scripts["data:large-holders:update"], "tsx scripts/update-large-holder-sample.ts");
   assert.equal(packageJson.scripts["data:event-focus:update"], "tsx scripts/update-event-focus.ts");
   assert.equal(packageJson.scripts["report:daily"], "tsx scripts/generate-daily-report.ts");
   assert.equal(packageJson.scripts["report:market-indicators"], "tsx scripts/generate-market-indicator-strip.ts");
@@ -28,14 +29,15 @@ test("package scripts expose a daily refresh workflow that updates K-lines, chip
   assert.equal(packageJson.scripts["report:large-holders"], "tsx scripts/generate-large-holder-ranking.ts");
   assert.equal(
     packageJson.scripts["data:daily-refresh"],
-    "npm run data:kline:update -- --limit=30 && npm run data:market-feeds:update -- --limit=30 && npm run data:event-focus:update && npm run analysis:daily && npm run report:market-indicators && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate",
+    "npm run data:kline:update -- --limit=30 && npm run data:market-feeds:update -- --limit=30 && npm run data:large-holders:update -- --limit=30 && npm run data:event-focus:update && npm run analysis:daily && npm run report:market-indicators && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate",
   );
   assert.equal(
     packageJson.scripts["data:daily-refresh:dry-run"],
-    "npm run data:kline:update -- --dry-run --limit=2 && npm run data:market-feeds:update -- --dry-run --limit=2 && npm run data:event-focus:update -- --dry-run --limit=10 && npm run report:market-indicators && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate",
+    "npm run data:kline:update -- --dry-run --limit=2 && npm run data:market-feeds:update -- --dry-run --limit=2 && npm run data:large-holders:update -- --dry-run --limit=2 && npm run data:event-focus:update -- --dry-run --limit=10 && npm run report:market-indicators && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate",
   );
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:kline:update") < packageJson.scripts["data:daily-refresh"].indexOf("data:market-feeds:update"));
-  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:market-feeds:update") < packageJson.scripts["data:daily-refresh"].indexOf("data:event-focus:update"));
+  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:market-feeds:update") < packageJson.scripts["data:daily-refresh"].indexOf("data:large-holders:update"));
+  assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:large-holders:update") < packageJson.scripts["data:daily-refresh"].indexOf("data:event-focus:update"));
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("data:event-focus:update") < packageJson.scripts["data:daily-refresh"].indexOf("analysis:daily"));
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("analysis:daily") < packageJson.scripts["data:daily-refresh"].indexOf("report:market-indicators"));
   assert.ok(packageJson.scripts["data:daily-refresh"].indexOf("report:market-indicators") < packageJson.scripts["data:daily-refresh"].indexOf("report:strong-stocks"));
