@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-07T22:57:40.573Z",
+  "latestDate": "2026-06-05",
+  "status": "partial",
+  "source": {
+    "name": "TWSE Exchange Report + TWSE MI_INDEX Advance/Decline Report",
+    "scope": "Taiwan listed market official daily close and breadth; no ADR/VIX/global proxy source verified",
+    "warning": "Taiwan official indicators only; ADR/VIX/global proxy source not verified, so missing global cards stay unavailable instead of being AI-filled."
+  },
+  "indicators": [
+    {
+      "id": "twse-weighted",
+      "label": "發行量加權股價指數",
+      "value": 45070.94,
+      "valueLabel": "45,070.94",
+      "change": -606.52,
+      "changePercent": -1.33,
+      "date": "2026-06-05",
+      "status": "verified",
+      "source": "TWSE Exchange Report + TWSE MI_INDEX Advance/Decline Report",
+      "note": "official TWSE close index row; no special handling note"
+    },
+    {
+      "id": "taiwan-50",
+      "label": "臺灣50指數",
+      "value": 41701.67,
+      "valueLabel": "41,701.67",
+      "change": -543.35,
+      "changePercent": -1.29,
+      "date": "2026-06-05",
+      "status": "verified",
+      "source": "TWSE Exchange Report + TWSE MI_INDEX Advance/Decline Report",
+      "note": "official TWSE close index row; no special handling note"
+    },
+    {
+      "id": "breadth",
+      "label": "上市股票漲跌家數",
+      "value": 342,
+      "valueLabel": "342 / 671",
+      "secondaryValue": 671,
+      "secondaryLabel": "平盤 59 · 漲停 19 · 跌停 10",
+      "date": "2026-06-05",
+      "status": "verified",
+      "source": "TWSE Exchange Report + TWSE MI_INDEX Advance/Decline Report",
+      "note": "TWSE MI_INDEX breadth; stocks only, not all listed securities/warrants."
+    },
+    {
+      "id": "turnover",
+      "label": "市場成交值",
+      "value": 13198.22,
+      "valueLabel": "13,198.22 億元",
+      "secondaryValue": 160.2,
+      "secondaryLabel": "成交量 160.2 億股",
+      "unit": "億元",
+      "date": "2026-06-05",
+      "status": "verified",
+      "source": "TWSE Exchange Report + TWSE MI_INDEX Advance/Decline Report",
+      "note": "TWSE MI_INDEX market_total value/volume; official daily market aggregate."
+    }
+  ],
+  "unavailable": [
+    {
+      "id": "global-vix",
+      "label": "VIX / global risk",
+      "reason": "Global/VIX source not verified in checked-in pipeline yet; do not fill with AI or unsourced web snippets."
+    },
+    {
+      "id": "adr",
+      "label": "ADR / overseas proxy",
+      "reason": "ADR source not verified in checked-in pipeline yet; Taiwan official indicators are shown instead."
+    }
+  ]
+}

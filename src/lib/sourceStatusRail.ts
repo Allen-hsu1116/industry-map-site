@@ -24,10 +24,21 @@ export interface SourceStatusRailKnowledgeModuleInput {
   latestDate?: string;
 }
 
+export interface SourceStatusRailExternalModuleInput {
+  module: string;
+  source: string;
+  latestDate?: string;
+  status: SourceStatusRailStatus;
+  scope: string;
+  warning?: string;
+  emptyReason?: string;
+}
+
 export interface SourceStatusRailInput {
   totalCompanies: number;
   priorityCompanyCount: number;
   marketModules: SourceStatusRailMarketModuleInput[];
+  externalModules?: SourceStatusRailExternalModuleInput[];
   eventFocus: {
     source: string;
     latestDate?: string;
@@ -106,6 +117,15 @@ function knowledgeItem(input: SourceStatusRailKnowledgeModuleInput, totalCompani
 export function buildUnifiedSourceStatusRail(input: SourceStatusRailInput): SourceStatusRail {
   const items: SourceStatusRailItem[] = [
     ...input.marketModules.map((module) => marketItem(module, input.priorityCompanyCount)),
+    ...(input.externalModules ?? []).map((module) => ({
+      module: module.module,
+      source: module.source,
+      latestDate: module.latestDate ?? "",
+      status: module.status,
+      scope: module.scope,
+      ...(module.warning ? { warning: module.warning } : {}),
+      ...(module.emptyReason ? { emptyReason: module.emptyReason } : {}),
+    })),
     {
       module: "event-focus",
       source: input.eventFocus.source,

@@ -97,7 +97,7 @@ test("checked-in daily report uses the unified source-status rail and covers Sli
 
   assert.deepEqual(
     modules,
-    ["company-swot", "company-topic-roles", "daily-analysis", "event-focus", "institutional", "kline", "margin", "product-knowledge", "valuation"].sort(),
+    ["company-swot", "company-topic-roles", "daily-analysis", "event-focus", "institutional", "kline", "margin", "market-indicator-strip", "product-knowledge", "valuation"].sort(),
   );
 
   const page = fs.readFileSync("src/app/daily-report/page.tsx", "utf8");

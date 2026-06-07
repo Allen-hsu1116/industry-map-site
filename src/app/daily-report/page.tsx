@@ -287,6 +287,37 @@ interface LargeHolderRankingArtifact {
   rankings: LargeHolderRankingView[];
 }
 
+interface MarketIndicatorItem {
+  id: string;
+  label: string;
+  value: number;
+  valueLabel: string;
+  unit?: string;
+  change?: number;
+  changePercent?: number;
+  secondaryValue?: number;
+  secondaryLabel?: string;
+  date: string;
+  status: "verified";
+  source: string;
+  note: string;
+}
+
+interface MarketIndicatorStripArtifact {
+  schemaVersion: 1;
+  generatedAt: string;
+  latestDate: string;
+  status: "verified" | "partial" | "empty";
+  source: {
+    name: string;
+    scope: string;
+    warning: string;
+  };
+  indicators: MarketIndicatorItem[];
+  unavailable: Array<{ id: string; label: string; reason: string }>;
+  emptyReason?: string;
+}
+
 /* ─── Score Color ─── */
 function getScoreColor(score: number): string {
   if (score >= 80) return "text-rose-400";
@@ -346,6 +377,16 @@ function getSourceStatusClass(status: DailyReportFreshnessSource["status"]): str
   return "border-slate-500/30 bg-slate-500/10 text-slate-300";
 }
 
+function getMarketChangeClass(value?: number): string {
+  if (value == null) return "text-gray-300";
+  return value >= 0 ? "text-rose-300" : "text-emerald-300";
+}
+
+function formatMarketChange(value?: number, suffix = ""): string {
+  if (value == null) return "—";
+  return `${value >= 0 ? "+" : ""}${value.toLocaleString("zh-TW")}${suffix}`;
+}
+
 function analysisMatchesTopic(analysis: CompanyDailyAnalysis | undefined, topicId: string): boolean {
   if (!topicId) return true;
   return (analysis?.canonicalKnowledge?.topicRoles ?? []).some((role) => role.canonicalTopicId === topicId || role.topicId === topicId);
@@ -382,6 +423,7 @@ export default function DailyReportPage() {
   const activeTopicId = searchParams.get("topic")?.trim() ?? "";
   const [report, setReport] = useState<DailyReport | null>(null);
   const [eventFocus, setEventFocus] = useState<EventFocusSnapshot | null>(null);
+  const [marketIndicators, setMarketIndicators] = useState<MarketIndicatorStripArtifact | null>(null);
   const [strongStocks, setStrongStocks] = useState<StrongStockRankingArtifact | null>(null);
   const [largeHolders, setLargeHolders] = useState<LargeHolderRankingArtifact | null>(null);
   const [strongStockTimeframe, setStrongStockTimeframe] = useState<StrongStockTimeframe>("5d");
@@ -395,14 +437,16 @@ export default function DailyReportPage() {
   useEffect(() => {
     async function fetchReport() {
       try {
-        const [data, eventData, strongStockData, largeHolderData] = await Promise.all([
+        const [data, eventData, marketIndicatorData, strongStockData, largeHolderData] = await Promise.all([
           fetchStaticJson<DailyReport>("/data/daily-report.json"),
           fetchStaticJson<EventFocusSnapshot>("/data/event-focus.json").catch(() => null),
+          fetchStaticJson<MarketIndicatorStripArtifact>("/data/market-indicator-strip.json").catch(() => null),
           fetchStaticJson<StrongStockRankingArtifact>("/data/strong-stock-ranking.json").catch(() => null),
           fetchStaticJson<LargeHolderRankingArtifact>("/data/large-holder-ranking.json").catch(() => null),
         ]);
         setReport(data);
         setEventFocus(eventData);
+        setMarketIndicators(marketIndicatorData);
         setStrongStocks(strongStockData);
         setLargeHolders(largeHolderData);
       } catch (err) {
@@ -553,6 +597,64 @@ export default function DailyReportPage() {
                   </div>
                 ))}
               </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Market Indicator Strip */}
+        {marketIndicators && (
+          <Card className="bg-[#12122a] border-sky-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <CardTitle className="text-lg text-white">🌐 市場指標列</CardTitle>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Source: {marketIndicators.source.name} · 最新日 {marketIndicators.latestDate || "—"} · {marketIndicators.source.scope}
+                  </p>
+                  <p className="mt-1 text-xs text-amber-200/80">⚠ {marketIndicators.source.warning}</p>
+                </div>
+                <Badge variant="outline" className={`${getSourceStatusClass(marketIndicators.status)} w-fit text-xs`}>
+                  {marketIndicators.status}
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {marketIndicators.indicators.length === 0 ? (
+                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                  {marketIndicators.emptyReason ?? "No verified TWSE market indicator rows; skip instead of AI-filling."}
+                </div>
+              ) : (
+                <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+                  {marketIndicators.indicators.map((item) => (
+                    <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
+                      <div className="flex items-start justify-between gap-2">
+                        <p className="text-xs font-semibold text-sky-100">{item.label}</p>
+                        <Badge variant="outline" className="border-emerald-400/30 bg-emerald-400/10 text-emerald-200 text-[10px]">
+                          {item.status}
+                        </Badge>
+                      </div>
+                      <p className="mt-2 text-2xl font-bold text-white">{item.valueLabel}</p>
+                      {(item.change != null || item.changePercent != null) && (
+                        <p className={`mt-1 text-sm font-semibold ${getMarketChangeClass(item.changePercent ?? item.change)}`}>
+                          {formatMarketChange(item.change)} · {formatMarketChange(item.changePercent, "%")}
+                        </p>
+                      )}
+                      {item.secondaryLabel && <p className="mt-1 text-xs text-gray-400">{item.secondaryLabel}</p>}
+                      <p className="mt-2 text-[11px] leading-relaxed text-gray-500">{item.note}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {marketIndicators.unavailable.length > 0 && (
+                <div className="mt-3 grid gap-2 md:grid-cols-2" aria-label="source not verified market indicator cards">
+                  {marketIndicators.unavailable.map((item) => (
+                    <div key={item.id} className="rounded-lg border border-slate-700/60 bg-slate-950/40 p-3 text-xs text-gray-400">
+                      <p className="font-semibold text-gray-300">{item.label}：unavailable</p>
+                      <p className="mt-1">{item.reason}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </CardContent>
           </Card>
         )}

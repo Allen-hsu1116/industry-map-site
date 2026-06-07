@@ -5,6 +5,7 @@ import { buildUnifiedSourceStatusRail, type SourceStatusRailItem } from "../src/
 const COMPANIES_PATH = path.resolve("public/data/companies.json");
 const FINANCIALS_DIR = path.resolve("public/data/financials");
 const EVENT_FOCUS_PATH = path.resolve("public/data/event-focus.json");
+const MARKET_INDICATOR_STRIP_PATH = path.resolve("public/data/market-indicator-strip.json");
 const ANALYSIS_INDEX_PATH = path.resolve("public/data/analysis/index.json");
 const DAILY_REPORT_PATH = path.resolve("public/data/daily-report.json");
 const PRODUCT_KNOWLEDGE_DIR = path.resolve("public/data/product-knowledge");
@@ -71,6 +72,7 @@ function main() {
     .map((company) => company.code);
   const financials = loadPriorityFinancials(priorityCodes);
   const eventFocus = readJson<{ latestDate?: string; generatedAt: string; status: "verified" | "partial" | "empty"; itemCount: number; emptyReason?: string; source: { name: string; scope: string; semantics?: string } }>(EVENT_FOCUS_PATH);
+  const marketIndicators = readJson<{ latestDate?: string; status: "verified" | "partial" | "empty"; indicators: unknown[]; emptyReason?: string; source: { name: string; scope: string; warning?: string } }>(MARKET_INDICATOR_STRIP_PATH);
   const analysisIndex = readJson<{ generatedAt: string; count: number }>(ANALYSIS_INDEX_PATH);
   const report = readJson<Record<string, unknown>>(DAILY_REPORT_PATH);
 
@@ -89,6 +91,17 @@ function main() {
       { module: "institutional", source: "FinMind TaiwanStockInstitutionalInvestorsBuySell", scope: "top 30 companies by topic_count", datesByCompany: new Map(priorityCodes.map((code, index) => [code, institutionalDates[index]])) },
       { module: "margin", source: "FinMind TaiwanStockMarginPurchaseShortSale", scope: "top 30 companies by topic_count", datesByCompany: new Map(priorityCodes.map((code, index) => [code, marginDates[index]])) },
       { module: "valuation", source: "FinMind TaiwanStockPER", scope: "top 30 companies by topic_count", datesByCompany: new Map(priorityCodes.map((code, index) => [code, valuationDates[index]])) },
+    ],
+    externalModules: [
+      {
+        module: "market-indicator-strip",
+        source: marketIndicators.source.name,
+        latestDate: marketIndicators.latestDate ?? "",
+        status: marketIndicators.status,
+        scope: `${marketIndicators.source.scope} · ${marketIndicators.indicators.length} verified cards`,
+        warning: marketIndicators.source.warning,
+        emptyReason: marketIndicators.emptyReason,
+      },
     ],
     eventFocus: {
       source: eventFocus.source.name,

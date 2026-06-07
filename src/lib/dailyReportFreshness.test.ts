@@ -38,10 +38,11 @@ test("daily refresh workflow regenerates the checked-in daily report after analy
   const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")) as { scripts: Record<string, string> };
 
   assert.equal(packageJson.scripts["report:daily"], "tsx scripts/generate-daily-report.ts");
+  assert.equal(packageJson.scripts["report:market-indicators"], "tsx scripts/generate-market-indicator-strip.ts");
   assert.equal(packageJson.scripts["report:strong-stocks"], "tsx scripts/generate-strong-stock-ranking.ts");
   assert.equal(packageJson.scripts["report:large-holders"], "tsx scripts/generate-large-holder-ranking.ts");
   const refresh = packageJson.scripts["data:daily-refresh"];
-  assert.ok(refresh.includes("analysis:daily && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate"));
+  assert.ok(refresh.includes("analysis:daily && npm run report:market-indicators && npm run report:strong-stocks && npm run report:large-holders && npm run report:daily && npm run knowledge:validate"));
 });
 
 test("daily report page renders freshness source-status metadata", () => {
@@ -67,7 +68,7 @@ test("checked-in daily report exposes explicit freshness metadata aligned with m
   assert.match(report.freshness?.analysisGeneratedAt ?? "", /^\d{4}-\d{2}-\d{2}T/);
   assert.deepEqual(
     report.freshness?.sources.map((source) => source.module).sort(),
-    ["company-swot", "company-topic-roles", "daily-analysis", "event-focus", "institutional", "kline", "margin", "product-knowledge", "valuation"].sort(),
+    ["company-swot", "company-topic-roles", "daily-analysis", "event-focus", "institutional", "kline", "margin", "market-indicator-strip", "product-knowledge", "valuation"].sort(),
   );
   assert.ok(report.freshness?.sources.every((source) => source.source && source.status && source.scope));
   assert.ok(report.freshness?.sources.some((source) => "warning" in source || "emptyReason" in source));
