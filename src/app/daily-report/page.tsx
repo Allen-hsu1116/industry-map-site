@@ -505,7 +505,7 @@ export default function DailyReportPage() {
     return (
       <div className="taste-shell min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin w-12 h-12 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full mx-auto mb-4" />
+          <div className="animate-spin w-12 h-12 border-4 border-emerald-500/30 border-t-sky-400 rounded-full mx-auto mb-4" />
           <p className="text-gray-400 text-lg">載入選股報告中...</p>
         </div>
       </div>

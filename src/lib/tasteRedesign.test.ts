@@ -32,3 +32,39 @@ test("daily report uses Next Link for internal navigation and the redesigned rep
   assert.doesNotMatch(page, /<a key=\{`\$\{selectedStrongStockRanking\.timeframe/);
   assert.doesNotMatch(page, /<a key=\{`\$\{selectedLargeHolderRanking\.tier/);
 });
+
+test("all major standalone pages use the shared taste shell and panel primitives", () => {
+  const pages = [
+    "src/app/topics/page.tsx",
+    "src/app/topics/[id]/page.tsx",
+    "src/app/companies/CompaniesClient.tsx",
+  ];
+
+  for (const pagePath of pages) {
+    const page = fs.readFileSync(pagePath, "utf8");
+    assert.match(page, /taste-shell/, `${pagePath} should inherit the same emerald-sky shell as home/daily report`);
+    assert.match(page, /app-panel/, `${pagePath} should use shared glass panel primitives instead of one-off cards`);
+    assert.doesNotMatch(page, /bg-\[#0a0a1a\]/, `${pagePath} should not carry the old flat purple-black background`);
+    assert.doesNotMatch(page, /bg-\[#12122a\]/, `${pagePath} should not carry old one-off panel backgrounds`);
+    assert.doesNotMatch(page, /text-indigo-300 hover:text-indigo-200/, `${pagePath} should use emerald/sky navigation links, not old indigo links`);
+  }
+});
+
+test("global CSS defines reusable page and panel primitives for visual consistency", () => {
+  const css = fs.readFileSync("src/app/globals.css", "utf8");
+
+  assert.match(css, /\.app-page/);
+  assert.match(css, /\.app-container/);
+  assert.match(css, /\.app-panel/);
+  assert.match(css, /\.app-link/);
+  assert.match(css, /\.app-primary-action/);
+});
+
+test("root suspense fallback uses the shared taste shell instead of the old flat background", () => {
+  const layout = fs.readFileSync("src/app/layout.tsx", "utf8");
+
+  assert.match(layout, /taste-shell/);
+  assert.match(layout, /border-emerald-500\/30 border-t-sky-400/);
+  assert.doesNotMatch(layout, /bg-\[#0a0a1a\]/);
+  assert.doesNotMatch(layout, /border-indigo-500/);
+});

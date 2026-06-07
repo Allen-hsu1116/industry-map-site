@@ -95,23 +95,23 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
   if (!detail) notFound();
 
   return (
-    <main className="min-h-screen bg-[#0a0a1a] px-4 py-8 text-slate-100">
-      <div className="mx-auto max-w-7xl">
+    <main className="taste-shell app-page">
+      <div className="app-container">
         <div className="mb-8 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="mb-3 flex flex-wrap gap-2 text-sm">
-              <Link href="/topics" className="text-indigo-300 hover:text-indigo-200">← 回題材總覽</Link>
+              <Link href="/topics" className="app-link">← 回題材總覽</Link>
               <span className="text-slate-600">/</span>
-              <Link href={detail.links.dailyReport} className="text-indigo-300 hover:text-indigo-200">Daily analysis filter</Link>
+              <Link href={detail.links.dailyReport} className="app-link">Daily analysis filter</Link>
               <span className="text-slate-600">/</span>
-              <Link href={detail.links.industryMap} className="text-indigo-300 hover:text-indigo-200">產業地圖 filter</Link>
+              <Link href={detail.links.industryMap} className="app-link">產業地圖 filter</Link>
             </div>
             <div className="text-xs uppercase tracking-[0.18em] text-slate-500">{detail.type} · {detail.confidence}</div>
             <h1 className="mt-2 text-3xl font-bold text-white">{detail.title}</h1>
             <p className="mt-3 max-w-4xl text-sm leading-relaxed text-slate-300">{detail.definition}</p>
             <p className="mt-2 max-w-4xl text-sm leading-relaxed text-slate-500">{detail.whyItMatters}</p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-slate-300">
+          <div className="rounded-2xl border border-white/10 app-panel-soft p-4 text-sm text-slate-300">
             <div className="font-semibold text-white">sourceStatus: {detail.sourceStatus.status}</div>
             <div className="mt-1 text-xs text-slate-500">驗證：{formatDate(detail.lastVerified)} · 公司 {detail.companyCount}</div>
             <span className={`mt-3 inline-block rounded-full border px-2.5 py-1 text-xs font-semibold ${coverageClass[detail.coverageStatus]}`}>{detail.coverageStatus} coverage</span>
@@ -120,7 +120,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
 
         <section className="mb-8 grid gap-3 md:grid-cols-2 xl:grid-cols-5">
           {detail.sourceStatus.sources.map((source) => (
-            <div key={`${source.name}-${source.scope}`} className="rounded-2xl border border-white/10 bg-[#12122a] p-4">
+            <div key={`${source.name}-${source.scope}`} className="rounded-2xl border border-white/10 app-panel p-4">
               <div className="flex items-center justify-between gap-3">
                 <div className="text-sm font-semibold text-white">{source.name}</div>
                 <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[11px] text-slate-300">{source.status}</span>
@@ -138,7 +138,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
         )}
 
         <section className="mb-8 grid gap-5 xl:grid-cols-[1.3fr_0.7fr]">
-          <div className="rounded-3xl border border-white/10 bg-[#12122a] p-5">
+          <div className="rounded-3xl border border-white/10 app-panel p-5">
             <div className="mb-5 flex items-center justify-between gap-3">
               <div>
                 <h2 className="text-xl font-bold text-white">Value-chain stage view</h2>
@@ -155,10 +155,10 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
                   {stage.companies.length > 0 ? (
                     <div className="grid gap-3 md:grid-cols-2">
                       {stage.companies.map((company) => (
-                        <Link key={`${stage.stage}-${company.code}`} href={`/?company=${company.code}&topic=${detail.id}`} className="rounded-2xl border border-white/10 bg-black/20 p-4 hover:border-indigo-400/40">
+                        <Link key={`${stage.stage}-${company.code}`} href={`/?company=${company.code}&topic=${detail.id}`} className="rounded-2xl border border-white/10 bg-black/20 p-4 hover:border-sky-400/40">
                           <div className="flex items-start justify-between gap-3">
                             <div>
-                              <div className="font-mono text-sm text-indigo-200">{company.code}</div>
+                              <div className="font-mono text-sm text-cyan-200">{company.code}</div>
                               <div className="mt-1 text-base font-semibold text-white">{company.name}</div>
                             </div>
                             <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[11px] text-slate-300">{company.confidence}</span>
@@ -183,7 +183,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
           </div>
 
           <aside className="space-y-5">
-            <section className="rounded-3xl border border-white/10 bg-[#12122a] p-5">
+            <section className="rounded-3xl border border-white/10 app-panel p-5">
               <h2 className="text-lg font-bold text-white">題材邊界</h2>
               <div className="mt-4 space-y-3 text-sm text-slate-300">
                 <div>
@@ -197,7 +197,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
               </div>
             </section>
 
-            <section className="rounded-3xl border border-white/10 bg-[#12122a] p-5">
+            <section className="rounded-3xl border border-white/10 app-panel p-5">
               <h2 className="text-lg font-bold text-white">Common risks / SWOT</h2>
               <p className="mt-1 text-xs text-slate-500">來自 company-swot 的 weakness/threat；不是每日短線股價反應。</p>
               <div className="mt-4 space-y-3">
@@ -214,7 +214,7 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
         </section>
 
         {detail.recentEvents.length > 0 && (
-          <section className="rounded-3xl border border-white/10 bg-[#12122a] p-5">
+          <section className="rounded-3xl border border-white/10 app-panel p-5">
             <h2 className="text-xl font-bold text-white">近期官方重大訊息</h2>
             <p className="mt-1 text-xs text-slate-500">官方主旨原文保留；topic tag 是 derived topic mapping，不是 TWSE 官方分類。</p>
             <div className="mt-4 grid gap-3 md:grid-cols-2">

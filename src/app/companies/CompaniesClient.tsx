@@ -87,17 +87,17 @@ export function CompaniesClient({ database }: { database: CompanyDatabase }) {
   const summary = visibleSummary(rows);
 
   return (
-    <main className="min-h-screen bg-[#0a0a1a] px-4 py-8 text-slate-100">
-      <div className="mx-auto max-w-7xl">
+    <main className="taste-shell app-page">
+      <div className="app-container">
         <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <Link href="/" className="mb-3 inline-block text-sm text-indigo-300 hover:text-indigo-200">← 返回首頁產業地圖</Link>
+            <Link href="/" className="mb-3 inline-block text-sm app-link">← 返回首頁產業地圖</Link>
             <h1 className="text-3xl font-bold text-white">公司資料庫</h1>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-400">
               Dedicated searchable/filterable database：每一列都從 checked-in financials、product-knowledge、company-topic-roles、company-swot 推導；缺資料就標 partial/empty，不讓網站裝懂。這是 aistockmap-style company database 的 Slice 5，先把證據語義打穩。
             </p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-slate-300">
+          <div className="rounded-2xl border border-white/10 app-panel-soft p-4 text-sm text-slate-300">
             <div className="font-semibold text-white">Source status: {database.sourceStatus.status}</div>
             <div className="mt-1 text-xs text-slate-500">Latest market date {formatDate(database.latestMarketDate)}</div>
           </div>
@@ -105,7 +105,7 @@ export function CompaniesClient({ database }: { database: CompanyDatabase }) {
 
         <section className="mb-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
           {database.sourceStatus.sources.map((source) => (
-            <div key={`${source.name}-${source.scope}`} className="rounded-2xl border border-white/10 bg-[#12122a] p-4">
+            <div key={`${source.name}-${source.scope}`} className="rounded-2xl border border-white/10 app-panel p-4">
               <div className="flex items-center justify-between gap-3">
                 <div className="text-sm font-semibold text-white">{source.name}</div>
                 <span className={`rounded-full border px-2 py-0.5 text-[11px] ${statusClass[source.status]}`}>{source.status}</span>
@@ -117,18 +117,18 @@ export function CompaniesClient({ database }: { database: CompanyDatabase }) {
         </section>
 
         <section className="mb-6 grid gap-3 md:grid-cols-5">
-          <div className="rounded-2xl border border-white/10 bg-[#12122a] p-4"><div className="text-2xl font-bold text-white">{database.summary.totalCompanies}</div><div className="text-xs text-slate-500">總公司</div></div>
-          <div className="rounded-2xl border border-white/10 bg-[#12122a] p-4"><div className="text-2xl font-bold text-white">{summary.visibleCompanies}</div><div className="text-xs text-slate-500">目前篩選</div></div>
-          <div className="rounded-2xl border border-white/10 bg-[#12122a] p-4"><div className="text-2xl font-bold text-emerald-200">{summary.freshMarketFeedCount}</div><div className="text-xs text-slate-500">fresh market feed</div></div>
-          <div className="rounded-2xl border border-white/10 bg-[#12122a] p-4"><div className="text-2xl font-bold text-cyan-200">{summary.verifiedSourceCount}</div><div className="text-xs text-slate-500">verified rows</div></div>
-          <div className="rounded-2xl border border-white/10 bg-[#12122a] p-4"><div className="text-2xl font-bold text-slate-300">{summary.emptyKnowledgeCount}</div><div className="text-xs text-slate-500">F / insufficient</div></div>
+          <div className="rounded-2xl border border-white/10 app-panel p-4"><div className="text-2xl font-bold text-white">{database.summary.totalCompanies}</div><div className="text-xs text-slate-500">總公司</div></div>
+          <div className="rounded-2xl border border-white/10 app-panel p-4"><div className="text-2xl font-bold text-white">{summary.visibleCompanies}</div><div className="text-xs text-slate-500">目前篩選</div></div>
+          <div className="rounded-2xl border border-white/10 app-panel p-4"><div className="text-2xl font-bold text-emerald-200">{summary.freshMarketFeedCount}</div><div className="text-xs text-slate-500">fresh market feed</div></div>
+          <div className="rounded-2xl border border-white/10 app-panel p-4"><div className="text-2xl font-bold text-cyan-200">{summary.verifiedSourceCount}</div><div className="text-xs text-slate-500">verified rows</div></div>
+          <div className="rounded-2xl border border-white/10 app-panel p-4"><div className="text-2xl font-bold text-slate-300">{summary.emptyKnowledgeCount}</div><div className="text-xs text-slate-500">F / insufficient</div></div>
         </section>
 
-        <form action="/companies" className="mb-6 rounded-3xl border border-white/10 bg-[#12122a] p-4">
+        <form action="/companies" className="mb-6 rounded-3xl border border-white/10 app-panel p-4">
           <div className="grid gap-3 md:grid-cols-3 xl:grid-cols-6">
             <label className="md:col-span-2 xl:col-span-2 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
               Search
-              <input name="q" defaultValue={filters.search ?? ""} placeholder="公司、代碼、題材" className="mt-2 h-10 w-full rounded-xl border border-white/10 bg-black/20 px-3 text-sm text-white outline-none focus:border-indigo-400/50" />
+              <input name="q" defaultValue={filters.search ?? ""} placeholder="公司、代碼、題材" className="mt-2 h-10 w-full rounded-xl border border-white/10 bg-black/20 px-3 text-sm text-white outline-none focus:border-sky-400/50" />
             </label>
             <label className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">Topic
               <select name="topic" defaultValue={filters.topic ?? ""} className="mt-2 h-10 w-full rounded-xl border border-white/10 bg-black/80 px-3 text-sm text-white"><option value="">全部</option>{database.filters.topics.map((topic) => <option key={topic.id} value={topic.id}>{topic.name}</option>)}</select>
@@ -144,10 +144,10 @@ export function CompaniesClient({ database }: { database: CompanyDatabase }) {
             </label>
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-2">
-            <button className="rounded-xl border border-indigo-400/30 bg-indigo-400/10 px-4 py-2 text-sm font-medium text-indigo-200 hover:bg-indigo-400/15">套用篩選</button>
+            <button className="rounded-xl app-primary-action px-4 py-2 text-sm font-medium">套用篩選</button>
             <Link href="/companies" className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-slate-300 hover:border-white/20">清除</Link>
             <div className="ml-auto flex flex-wrap gap-2 text-xs">
-              {database.filters.sourceStatuses.map((status) => <Link key={status} href={filterHref({ status: filters.sourceStatus === status ? undefined : status }, filters)} className={`rounded-full border px-2.5 py-1 ${filters.sourceStatus === status ? statusClass[status] : "border-white/10 bg-white/[0.03] text-slate-400"}`}>source {status}</Link>)}
+              {database.filters.sourceStatuses.map((status) => <Link key={status} href={filterHref({ status: filters.sourceStatus === status ? undefined : status }, filters)} className={`rounded-full border px-2.5 py-1 ${filters.sourceStatus === status ? statusClass[status] : "border-white/10 app-panel-soft text-slate-400"}`}>source {status}</Link>)}
             </div>
           </div>
         </form>
@@ -156,19 +156,19 @@ export function CompaniesClient({ database }: { database: CompanyDatabase }) {
           {rows.length === 0 ? (
             <div className="rounded-3xl border border-amber-400/20 bg-amber-400/[0.06] p-8 text-center text-amber-100/90">沒有符合條件的公司；請放寬篩選。不是沒資料就亂編，這點蛇蛇很堅持。</div>
           ) : rows.map((row) => (
-            <article key={row.code} className="rounded-3xl border border-white/10 bg-[#12122a] p-5">
+            <article key={row.code} className="rounded-3xl border border-white/10 app-panel p-5">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2">
-                    <Link href={row.links.detail} className="font-mono text-lg font-bold text-indigo-200 hover:text-indigo-100">{row.code}</Link>
+                    <Link href={row.links.detail} className="font-mono text-lg font-bold text-cyan-200 hover:text-emerald-100">{row.code}</Link>
                     <h2 className="text-lg font-bold text-white">{row.name}</h2>
                     <span className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold ${gradeClass[row.coverageGrade]}`}>Coverage {row.coverageGrade}</span>
                     <span className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold ${statusClass[row.sourceStatus.status]}`}>{row.sourceStatus.status}</span>
                     <span className={`rounded-full border px-2.5 py-1 text-[11px] font-semibold ${freshnessClass[row.marketFreshness.status]}`}>{row.marketFreshness.status}</span>
                   </div>
                   <div className="mt-3 flex flex-wrap gap-2">
-                    {row.topics.slice(0, 6).map((topic) => <Link key={`${row.code}-${topic.id}`} href={filterHref({ topic: topic.id }, filters)} className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-slate-300 hover:border-emerald-400/30 hover:text-emerald-100">{topic.name}</Link>)}
-                    {row.topics.length > 6 && <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-slate-500">+{row.topics.length - 6}</span>}
+                    {row.topics.slice(0, 6).map((topic) => <Link key={`${row.code}-${topic.id}`} href={filterHref({ topic: topic.id }, filters)} className="rounded-full border border-white/10 app-panel-soft px-2.5 py-1 text-xs text-slate-300 hover:border-emerald-400/30 hover:text-emerald-100">{topic.name}</Link>)}
+                    {row.topics.length > 6 && <span className="rounded-full border border-white/10 app-panel-soft px-2.5 py-1 text-xs text-slate-500">+{row.topics.length - 6}</span>}
                   </div>
                   {row.emptyReason && <p className="mt-3 rounded-xl border border-slate-500/20 bg-slate-500/10 p-3 text-xs leading-relaxed text-slate-300">{row.emptyReason}</p>}
                 </div>
@@ -182,7 +182,7 @@ export function CompaniesClient({ database }: { database: CompanyDatabase }) {
               <details className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-3 text-xs text-slate-400">
                 <summary className="cursor-pointer font-semibold text-slate-200">來源細節 / source rail</summary>
                 <div className="mt-3 grid gap-2 md:grid-cols-4">
-                  {row.sourceStatus.sources.map((source) => <div key={`${row.code}-${source.name}`} className="rounded-xl bg-white/[0.03] p-3"><div className="flex justify-between gap-2"><span className="font-semibold text-white">{source.name}</span><span className={statusClass[source.status].split(" ").slice(-1).join(" ")}>{source.status}</span></div><div className="mt-1 text-slate-500">{source.scope}</div><div className="mt-1 text-slate-400">{formatDate(source.updatedAt)}</div></div>)}
+                  {row.sourceStatus.sources.map((source) => <div key={`${row.code}-${source.name}`} className="rounded-xl app-panel-soft p-3"><div className="flex justify-between gap-2"><span className="font-semibold text-white">{source.name}</span><span className={statusClass[source.status].split(" ").slice(-1).join(" ")}>{source.status}</span></div><div className="mt-1 text-slate-500">{source.scope}</div><div className="mt-1 text-slate-400">{formatDate(source.updatedAt)}</div></div>)}
                 </div>
               </details>
             </article>

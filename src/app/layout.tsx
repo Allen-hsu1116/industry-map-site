@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body className="antialiased">
-        <Suspense fallback={<div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center"><div className="animate-spin w-12 h-12 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full" /></div>}>
+        <Suspense fallback={<div className="taste-shell min-h-screen flex items-center justify-center"><div className="animate-spin w-12 h-12 border-4 border-emerald-500/30 border-t-sky-400 rounded-full" /></div>}>
           {children}
         </Suspense>
       </body>

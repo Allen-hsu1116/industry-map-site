@@ -39,17 +39,17 @@ function formatDate(value?: string | null): string {
 
 export default function TopicsPage() {
   return (
-    <main className="min-h-screen bg-[#0a0a1a] px-4 py-8 text-slate-100">
-      <div className="mx-auto max-w-7xl">
+    <main className="taste-shell app-page">
+      <div className="app-container">
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <Link href="/" className="mb-3 inline-block text-sm text-indigo-300 hover:text-indigo-200">← 返回首頁產業地圖</Link>
+            <Link href="/" className="mb-3 inline-block text-sm app-link">← 返回首頁產業地圖</Link>
             <h1 className="text-3xl font-bold text-white">題材總覽</h1>
             <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-400">
               以 canonical-topic 定義作為題材名稱與邊界，topic-map 只提供公司角色覆蓋；重大訊息保留官方主旨，題材標籤為派生 mapping，不當成官方分類。蛇蛇幫你把假裝懂的部分關起來了，省得網站胡說八道。
             </p>
           </div>
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 text-sm text-slate-300">
+          <div className="rounded-2xl border border-white/10 app-panel-soft p-4 text-sm text-slate-300">
             <div className="font-semibold text-white">Source status: {overview.sourceStatus.status}</div>
             <div className="mt-1 text-xs text-slate-500">Generated {formatDate(overview.generatedAt)}</div>
           </div>
@@ -57,7 +57,7 @@ export default function TopicsPage() {
 
         <section className="mb-8 grid gap-3 md:grid-cols-3">
           {overview.sourceStatus.sources.map((source) => (
-            <div key={`${source.name}-${source.scope}`} className="rounded-2xl border border-white/10 bg-[#12122a] p-4">
+            <div key={`${source.name}-${source.scope}`} className="rounded-2xl border border-white/10 app-panel p-4">
               <div className="flex items-center justify-between gap-3">
                 <div className="text-sm font-semibold text-white">{source.name}</div>
                 <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[11px] text-slate-300">{source.status}</span>
@@ -70,12 +70,12 @@ export default function TopicsPage() {
 
         <div className="mb-5 flex items-center justify-between gap-3">
           <p className="text-sm text-slate-400">共 <span className="font-semibold text-white">{overview.cards.length}</span> 個 canonical topics</p>
-          <Link href="/daily-report" className="rounded-xl border border-indigo-400/30 bg-indigo-400/10 px-4 py-2 text-sm font-medium text-indigo-200 hover:bg-indigo-400/15">查看 Daily Report</Link>
+          <Link href="/daily-report" className="rounded-xl app-primary-action px-4 py-2 text-sm font-medium">查看 Daily Report</Link>
         </div>
 
         <section className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {overview.cards.map((card) => (
-            <article key={card.id} className="flex min-h-full flex-col rounded-3xl border border-white/10 bg-[#12122a] p-5 shadow-xl shadow-black/10">
+            <article key={card.id} className="flex min-h-full flex-col rounded-3xl border border-white/10 app-panel p-5 shadow-xl shadow-black/10">
               <div className="mb-3 flex items-start justify-between gap-3">
                 <div>
                   <div className="text-xs uppercase tracking-[0.18em] text-slate-500">{card.type} · {card.confidence}</div>
@@ -106,12 +106,12 @@ export default function TopicsPage() {
 
               <div className="mt-4 flex flex-wrap gap-2">
                 {Object.entries(card.stageCounts).filter(([, count]) => count > 0).map(([stage, count]) => (
-                  <span key={stage} className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-xs text-slate-300">
+                  <span key={stage} className="rounded-full border border-white/10 app-panel-soft px-2.5 py-1 text-xs text-slate-300">
                     {stageLabels[stage as TopicStage]} {count}
                   </span>
                 ))}
                 {card.childTopics.length > 0 && (
-                  <span className="rounded-full border border-indigo-400/20 bg-indigo-400/10 px-2.5 py-1 text-xs text-indigo-200">
+                  <span className="rounded-full border border-sky-400/20 bg-sky-400/10 px-2.5 py-1 text-xs text-cyan-200">
                     已合併 {card.childTopics.length} 個子題材
                   </span>
                 )}
@@ -119,11 +119,11 @@ export default function TopicsPage() {
               </div>
 
               {card.childTopics.length > 0 && (
-                <div className="mt-3 rounded-2xl border border-indigo-400/15 bg-indigo-400/[0.05] p-3">
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-200/80">Clustered child topics</div>
+                <div className="mt-3 rounded-2xl border border-sky-400/15 bg-sky-400/[0.05] p-3">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-cyan-200/80">Clustered child topics</div>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {card.childTopics.map((child) => (
-                      <Link key={`${card.id}-${child.id}`} href={`/topics/${child.id}`} className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-xs text-slate-300 hover:border-indigo-400/40 hover:text-white">
+                      <Link key={`${card.id}-${child.id}`} href={`/topics/${child.id}`} className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-xs text-slate-300 hover:border-sky-400/40 hover:text-white">
                         {child.title} · {child.companyCount}家公司
                       </Link>
                     ))}
@@ -137,8 +137,8 @@ export default function TopicsPage() {
                 {card.representativeCompanies.length > 0 ? (
                   <div className="flex flex-wrap gap-2">
                     {card.representativeCompanies.map((company) => (
-                      <Link key={`${card.id}-${company.code}`} href={`/?company=${company.code}`} className="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-xs text-slate-300 hover:border-indigo-400/40 hover:text-white">
-                        <span className="font-mono text-indigo-200">{company.code}</span> {company.name} · {company.relevanceLabel}
+                      <Link key={`${card.id}-${company.code}`} href={`/?company=${company.code}`} className="rounded-xl border border-white/10 bg-black/20 px-3 py-2 text-xs text-slate-300 hover:border-sky-400/40 hover:text-white">
+                        <span className="font-mono text-cyan-200">{company.code}</span> {company.name} · {company.relevanceLabel}
                       </Link>
                     ))}
                   </div>
@@ -164,9 +164,9 @@ export default function TopicsPage() {
               </div>
 
               <div className="mt-auto flex gap-2 pt-5">
-                <Link href={card.links.detail} className="flex-1 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-center text-sm font-medium text-emerald-200 hover:bg-emerald-400/15">題材細節</Link>
+                <Link href={card.links.detail} className="flex-1 rounded-xl app-primary-action px-3 py-2 text-center text-sm font-medium">題材細節</Link>
                 <Link href={card.links.industryMap} className="flex-1 rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-center text-sm text-slate-200 hover:border-white/20">產業地圖</Link>
-                <Link href={`/daily-report?topic=${card.id}`} className="flex-1 rounded-xl border border-indigo-400/30 bg-indigo-400/10 px-3 py-2 text-center text-sm font-medium text-indigo-200 hover:bg-indigo-400/15">Daily</Link>
+                <Link href={`/daily-report?topic=${card.id}`} className="flex-1 rounded-xl app-primary-action px-3 py-2 text-center text-sm font-medium">Daily</Link>
               </div>
             </article>
           ))}
