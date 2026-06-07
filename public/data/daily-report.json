@@ -2,155 +2,265 @@
   "date": "2026-06-04",
   "weekday": "週四",
   "knowledge_applied": {
-    "topic": "技術分析",
+    "topic": "被動元件 / AI 伺服器機構件與滑軌 / PC、手機與 AR/VR/XR 終端",
     "key_insights": [
-      "KD指標低檔金叉為買進訊號，配合量能確認更可靠",
-      "均線多頭排列（MA5>MA10>MA20）為強勢股特徵"
+      "Daily picks 由 checked-in strong-stock ranking + Daily Analysis A/B/C quality gate 產生，不沿用舊模板。",
+      "公司產品、題材角色與 SWOT 來自 canonical knowledge；AI 只整理摘要，不當資料來源。",
+      "月營收/財報/股利不是每日 feed；每日報告只標示可驗證市場資料與已建檔知識。"
     ]
   },
   "market_overview": {
     "index": "發行量加權股價指數",
-    "close": 40020.82,
-    "change": -154.74,
-    "change_pct": -0.39,
-    "advancing": 452,
-    "declining": 530,
-    "note": "market data will be filled by cron job from MCP"
+    "close": 45070.94,
+    "change": -606.52,
+    "change_pct": -1.33,
+    "advancing": 342,
+    "declining": 671
   },
   "picks": [
     {
       "rank": 1,
-      "code": "2330",
-      "name": "台積電",
-      "score": 82,
-      "industry": "半導體",
-      "price": 2185,
-      "change_pct": -0.91,
+      "code": "6175",
+      "name": "立敦",
+      "score": 72,
+      "industry": "被動元件",
+      "price": 96.6,
+      "change_pct": 9.9,
       "technicals": {
-        "summary": "KD低檔金叉形成中，均線MA5下彎但MA10/MA20仍多頭排列，放量後縮量回測支撐",
-        "support": 2150,
-        "resistance": 2340,
-        "trend": "偏多回測"
+        "summary": "立敦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 12.5%。；strong-stock ranking：1d return +9.90% · volume ratio 1.35x · above MA20",
+        "support": 64.2,
+        "resistance": 115.5,
+        "trend": "偏多"
       },
       "fundamentals": {
-        "revenue_mom": "+5.2%",
-        "revenue_yoy": "+28.3%",
-        "pe": 22.5,
-        "market_cap": "25.2兆"
+        "revenue_mom": "非每日 feed",
+        "revenue_yoy": "非每日 feed",
+        "pe": 36.04,
+        "market_cap": "—"
       },
       "chip_analysis": {
-        "foreign_net_buy": "+15,230張",
-        "summary": "外資連續3日買超，投信小幅賣超"
+        "foreign_net_buy": "—",
+        "summary": "立敦 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +575張；近 20 日法人偏買，合計 +3.3千張。"
       },
       "recommendation": {
-        "action": "偏多操作",
-        "entry_price": 2200,
-        "stop_loss": 2150,
-        "take_profit": "2340-2400",
-        "position_size": "3成",
-        "reasoning": "KD低檔金叉形成中，外資持續買超，營收月增5.2%優於預期，建議回測MA10(約2180)附近進場"
+        "action": "可列 Top recommendation",
+        "entry_price": 96.6,
+        "stop_loss": 64.2,
+        "take_profit": "115.5",
+        "position_size": "1成以內",
+        "reasoning": "由 strong-stock ranking（1d return +9.90% · volume ratio 1.35x · above MA20）與 Daily Analysis quality gate（A / 完整 evidence-backed）產生；題材角色：被動元件；非投資建議。"
       }
     },
     {
       "rank": 2,
-      "code": "2337",
-      "name": "旺宏",
-      "score": 78,
-      "industry": "記憶體IC設計",
-      "price": 283,
-      "change_pct": 2.17,
+      "code": "2059",
+      "name": "川湖",
+      "score": 69,
+      "industry": "AI 伺服器機構件與滑軌",
+      "price": 5620,
+      "change_pct": 5.05,
       "technicals": {
-        "summary": "股價站上MA5與MA10，MACD金叉確認，成交量放大",
-        "support": 270,
-        "resistance": 300,
-        "trend": "轉多"
+        "summary": "川湖 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 11.2%。；strong-stock ranking：1d return +5.05% · volume ratio 2.60x · above MA20 · 20d high breakout",
+        "support": 4450,
+        "resistance": 5805,
+        "trend": "偏多"
       },
       "fundamentals": {
-        "revenue_mom": "+8.1%",
-        "revenue_yoy": "+15.6%",
-        "pe": 18.2,
-        "market_cap": "5,242.5億"
+        "revenue_mom": "非每日 feed",
+        "revenue_yoy": "非每日 feed",
+        "pe": 49.54,
+        "market_cap": "—"
       },
       "chip_analysis": {
-        "foreign_net_buy": "+2,840張",
-        "summary": "外資與投信同步買超"
+        "foreign_net_buy": "—",
+        "summary": "川湖 籌碼面目前為「籌碼中性」：投信近 5 日買超 +195張；融資近 5 日下降 10.2%，籌碼壓力下降。"
       },
       "recommendation": {
-        "action": "積極做多",
-        "entry_price": 280,
-        "stop_loss": 268,
-        "take_profit": "300-310",
-        "position_size": "2成",
-        "reasoning": "MACD金叉確認，量價齊揚，外資投信同步買超，記憶體族群受惠報價回升"
+        "action": "可列 Top recommendation",
+        "entry_price": 5620,
+        "stop_loss": 4450,
+        "take_profit": "5805",
+        "position_size": "1成以內",
+        "reasoning": "由 strong-stock ranking（1d return +5.05% · volume ratio 2.60x · above MA20 · 20d high breakout）與 Daily Analysis quality gate（A / 完整 evidence-backed）產生；題材角色：AI 伺服器機構件與滑軌；非投資建議。"
       }
     },
     {
       "rank": 3,
-      "code": "2344",
-      "name": "華邦電",
-      "score": 72,
-      "industry": "記憶體",
-      "price": 27.7,
-      "change_pct": 1.47,
+      "code": "3311",
+      "name": "閎暉",
+      "score": 47,
+      "industry": "PC、手機與 AR/VR/XR 終端",
+      "price": 39.75,
+      "change_pct": -1,
       "technicals": {
-        "summary": "股價長期底部整理後突破MA20，量能溫和放大",
-        "support": 26.5,
-        "resistance": 29.5,
-        "trend": "底部翻揚"
+        "summary": "閎暉 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 15.4%。；strong-stock ranking：1d return -1.00% · volume ratio 4.94x · above MA20",
+        "support": 30.6,
+        "resistance": 42.75,
+        "trend": "偏多"
       },
       "fundamentals": {
-        "revenue_mom": "+3.8%",
-        "revenue_yoy": "+12.1%",
-        "pe": 25.3,
-        "market_cap": "1,130億"
+        "revenue_mom": "非每日 feed",
+        "revenue_yoy": "非每日 feed",
+        "pe": 25.65,
+        "market_cap": "—"
       },
       "chip_analysis": {
-        "foreign_net_buy": "+5,120張",
-        "summary": "外資大幅買超，融資餘額下降"
+        "foreign_net_buy": "—",
+        "summary": "閎暉 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +82張；三大法人近 5 日合計賣超 -692張。"
       },
       "recommendation": {
-        "action": "試探性做多",
-        "entry_price": 27.5,
-        "stop_loss": 26.3,
-        "take_profit": "29-30",
-        "position_size": "1成",
-        "reasoning": "底部整理後突破MA20，外資大買，DRAM報價回穩，注意29.5壓力"
+        "action": "觀察偏多",
+        "entry_price": 39.75,
+        "stop_loss": 30.6,
+        "take_profit": "42.75",
+        "position_size": "1成以內",
+        "reasoning": "由 strong-stock ranking（1d return -1.00% · volume ratio 4.94x · above MA20）與 Daily Analysis quality gate（A / 完整 evidence-backed）產生；題材角色：PC、手機與 AR/VR/XR 終端；非投資建議。"
+      }
+    },
+    {
+      "rank": 4,
+      "code": "6173",
+      "name": "信昌電",
+      "score": 20,
+      "industry": "未分類題材",
+      "price": 223.5,
+      "change_pct": 3.71,
+      "technicals": {
+        "summary": "信昌電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 15.3%。；strong-stock ranking：1d return +3.71% · volume ratio 0.26x · above MA20",
+        "support": 115.5,
+        "resistance": 256.5,
+        "trend": "中性震盪"
+      },
+      "fundamentals": {
+        "revenue_mom": "非每日 feed",
+        "revenue_yoy": "非每日 feed",
+        "pe": 59.92,
+        "market_cap": "—"
+      },
+      "chip_analysis": {
+        "foreign_net_buy": "—",
+        "summary": "信昌電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +271張；近 20 日法人偏買，合計 +1.2萬張。"
+      },
+      "recommendation": {
+        "action": "觀察偏多",
+        "entry_price": 223.5,
+        "stop_loss": 115.5,
+        "take_profit": "256.5",
+        "position_size": "1成以內",
+        "reasoning": "由 strong-stock ranking（1d return +3.71% · volume ratio 0.26x · above MA20）與 Daily Analysis quality gate（C / 弱分析 / 部分資料）產生；題材角色：未分類題材；非投資建議。"
+      }
+    },
+    {
+      "rank": 5,
+      "code": "3189",
+      "name": "景碩",
+      "score": 45,
+      "industry": "PCB、IC 載板與高階基板材料",
+      "price": 712,
+      "change_pct": 2.89,
+      "technicals": {
+        "summary": "景碩 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 15.5%。；strong-stock ranking：1d return +2.89% · volume ratio 0.33x · above MA20",
+        "support": 460,
+        "resistance": 778,
+        "trend": "中性震盪"
+      },
+      "fundamentals": {
+        "revenue_mom": "非每日 feed",
+        "revenue_yoy": "非每日 feed",
+        "pe": 200.56,
+        "market_cap": "—"
+      },
+      "chip_analysis": {
+        "foreign_net_buy": "—",
+        "summary": "景碩 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +2.6萬張；外資近 5 日買超 +4.1千張。"
+      },
+      "recommendation": {
+        "action": "觀察偏多",
+        "entry_price": 712,
+        "stop_loss": 460,
+        "take_profit": "778",
+        "position_size": "1成以內",
+        "reasoning": "由 strong-stock ranking（1d return +2.89% · volume ratio 0.33x · above MA20）與 Daily Analysis quality gate（B / 可用但仍有缺口）產生；題材角色：PCB、IC 載板與高階基板材料；非投資建議。"
+      }
+    },
+    {
+      "rank": 6,
+      "code": "3081",
+      "name": "聯亞",
+      "score": 42,
+      "industry": "矽光子、CPO 與高速光通訊",
+      "price": 2655,
+      "change_pct": 2.91,
+      "technicals": {
+        "summary": "聯亞 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 3.2%。；strong-stock ranking：1d return +2.91% · volume ratio 1.17x · below MA20",
+        "support": 2445,
+        "resistance": 3215,
+        "trend": "偏空"
+      },
+      "fundamentals": {
+        "revenue_mom": "非每日 feed",
+        "revenue_yoy": "非每日 feed",
+        "pe": 348.88,
+        "market_cap": "—"
+      },
+      "chip_analysis": {
+        "foreign_net_buy": "—",
+        "summary": "聯亞 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -730張；近 20 日法人偏賣，合計 -1千張。"
+      },
+      "recommendation": {
+        "action": "觀察偏多",
+        "entry_price": 2655,
+        "stop_loss": 2445,
+        "take_profit": "3215",
+        "position_size": "1成以內",
+        "reasoning": "由 strong-stock ranking（1d return +2.91% · volume ratio 1.17x · below MA20）與 Daily Analysis quality gate（A / 完整 evidence-backed）產生；題材角色：矽光子、CPO 與高速光通訊；非投資建議。"
       }
     }
   ],
   "hot_sectors": [
     {
-      "name": "半導體",
-      "change_pct": "+1.5%",
+      "name": "被動元件",
+      "change_pct": "+9.90%",
       "leaders": [
-        "2330",
-        "2337"
+        "6175"
       ]
     },
     {
-      "name": "AI伺服器",
-      "change_pct": "+2.3%",
+      "name": "AI 伺服器機構件與滑軌",
+      "change_pct": "+5.05%",
       "leaders": [
-        "2368",
-        "2453"
+        "2059"
       ]
     },
     {
-      "name": "記憶體",
-      "change_pct": "+0.8%",
+      "name": "未分類題材",
+      "change_pct": "+3.71%",
       "leaders": [
-        "2344",
-        "3034"
+        "6173"
+      ]
+    },
+    {
+      "name": "矽光子、CPO 與高速光通訊",
+      "change_pct": "+2.91%",
+      "leaders": [
+        "3081"
+      ]
+    },
+    {
+      "name": "PCB、IC 載板與高階基板材料",
+      "change_pct": "+2.89%",
+      "leaders": [
+        "3189"
       ]
     }
   ],
   "risk_alerts": [
-    "本週台指期結算，留意波動風險",
-    "Fed會議紀錄公布，注意外資動向",
-    "2330 2150支撐若跌破，短期轉弱"
+    "Daily picks 只代表 checked-in 技術強勢 + Daily Analysis quality gate；不是投資建議。",
+    "若分析品質為 D/F、缺產品/題材角色/SWOT 證據，UI 會降為 observation-only。",
+    "Source-status rail 若顯示 partial/empty，代表該模組不可被當成完整市場事實。"
   ],
   "freshness": {
-    "generatedAt": "2026-06-07T15:02:26.891Z",
+    "generatedAt": "2026-06-07T16:20:57.041Z",
     "marketDataDate": "2026-06-04",
     "eventDataDate": "2026-06-04",
     "analysisGeneratedAt": "2026-06-05T12:30:39.064Z",

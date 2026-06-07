@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { gateDailyReportPicks } from "@/lib/dailyReportGating";
 import { buildMajorNewsFilterOptions, filterEventFocusItems, type MajorNewsFilters } from "@/lib/majorNewsFilters";
+import canonicalTopicsData from "../../../public/data/canonical-topics.json";
 
 /* ─── Types ─── */
 interface TechnicalAnalysis {
@@ -388,14 +389,27 @@ function formatMarketChange(value?: number, suffix = ""): string {
   return `${value >= 0 ? "+" : ""}${value.toLocaleString("zh-TW")}${suffix}`;
 }
 
+function topicClusterIds(topicId: string): string[] {
+  const topics = (canonicalTopicsData as { topics?: Array<{ id: string; parentId?: string; childIds?: string[] }> }).topics ?? [];
+  const topic = topics.find((item) => item.id === topicId);
+  if (!topic) return [topicId];
+  return Array.from(new Set([topic.id, ...(topic.childIds ?? []), ...topics.filter((item) => item.parentId === topic.id).map((item) => item.id)]));
+}
+
+function topicRoleMatches(role: { canonicalTopicId?: string; topicId?: string }, topicIds: Set<string>): boolean {
+  return Boolean((role.canonicalTopicId && topicIds.has(role.canonicalTopicId)) || (role.topicId && topicIds.has(role.topicId)));
+}
+
 function analysisMatchesTopic(analysis: CompanyDailyAnalysis | undefined, topicId: string): boolean {
   if (!topicId) return true;
-  return (analysis?.canonicalKnowledge?.topicRoles ?? []).some((role) => role.canonicalTopicId === topicId || role.topicId === topicId);
+  const topicIds = new Set(topicClusterIds(topicId));
+  return (analysis?.canonicalKnowledge?.topicRoles ?? []).some((role) => topicRoleMatches(role, topicIds));
 }
 
 function getTopicRoleBadge(analysis: CompanyDailyAnalysis | undefined, topicId: string): string | null {
   if (!topicId) return null;
-  const role = (analysis?.canonicalKnowledge?.topicRoles ?? []).find((item) => item.canonicalTopicId === topicId || item.topicId === topicId);
+  const topicIds = new Set(topicClusterIds(topicId));
+  const role = (analysis?.canonicalKnowledge?.topicRoles ?? []).find((item) => topicRoleMatches(item, topicIds));
   if (!role) return null;
   const topicName = role.canonicalTopicName ?? role.topicName ?? topicId;
   return `${topicName}${role.directnessLabel ? ` · ${role.directnessLabel}` : ""}${role.confidence ? ` · ${role.confidence}` : ""}`;
@@ -556,225 +570,6 @@ export default function DailyReportPage() {
           )}
         </div>
 
-        {/* Unified source-status rail */}
-        {report.freshness && (
-          <Card className="taste-card border-emerald-500/20 mb-6">
-            <CardHeader className="pb-2">
-              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                <CardTitle className="text-lg text-white">🟢 資料狀態</CardTitle>
-                <Badge variant="outline" className="w-fit border-emerald-400/30 bg-emerald-400/10 text-emerald-200">
-                  freshness metadata checked-in
-                </Badge>
-              </div>
-              <p className="text-xs text-gray-500">
-                市場資料日 {report.freshness.marketDataDate} · 事件資料日 {report.freshness.eventDataDate} · 報告產生日 {formatTimestamp(report.freshness.generatedAt)} · Daily analysis {formatTimestamp(report.freshness.analysisGeneratedAt)}
-              </p>
-            </CardHeader>
-            <CardContent>
-              <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
-                {report.freshness.sources.map((source) => (
-                  <div key={source.module} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
-                    <div className="flex items-start justify-between gap-2">
-                      <div>
-                        <p className="text-sm font-semibold text-white">{source.module}</p>
-                        <p className="mt-1 text-xs text-gray-400">{source.source}</p>
-                      </div>
-                      <Badge variant="outline" className={`${getSourceStatusClass(source.status)} text-xs`}>
-                        {source.status}
-                      </Badge>
-                    </div>
-                    <p className="mt-2 text-xs text-gray-500">最新日：{source.latestDate || "—"}</p>
-                    <p className="mt-1 text-xs text-gray-500">範圍：{source.scope}</p>
-                    {source.warning && (
-                      <p className="mt-2 rounded-md border border-amber-400/20 bg-amber-400/[0.06] px-2 py-1 text-xs text-amber-100">
-                        ⚠ {source.warning}
-                      </p>
-                    )}
-                    {source.emptyReason && (
-                      <p className="mt-2 rounded-md border border-slate-600/50 bg-slate-950/40 px-2 py-1 text-xs text-gray-400">
-                        {source.emptyReason}
-                      </p>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Market Indicator Strip */}
-        {marketIndicators && (
-          <Card className="taste-card border-sky-500/20 mb-6">
-            <CardHeader className="pb-2">
-              <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <CardTitle className="text-lg text-white">🌐 市場指標列</CardTitle>
-                  <p className="mt-1 text-xs text-gray-500">
-                    Source: {marketIndicators.source.name} · 最新日 {marketIndicators.latestDate || "—"} · {marketIndicators.source.scope}
-                  </p>
-                  <p className="mt-1 text-xs text-amber-200/80">⚠ {marketIndicators.source.warning}</p>
-                </div>
-                <Badge variant="outline" className={`${getSourceStatusClass(marketIndicators.status)} w-fit text-xs`}>
-                  {marketIndicators.status}
-                </Badge>
-              </div>
-            </CardHeader>
-            <CardContent>
-              {marketIndicators.indicators.length === 0 ? (
-                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
-                  {marketIndicators.emptyReason ?? "No verified TWSE market indicator rows; skip instead of AI-filling."}
-                </div>
-              ) : (
-                <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
-                  {marketIndicators.indicators.map((item) => (
-                    <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
-                      <div className="flex items-start justify-between gap-2">
-                        <p className="text-xs font-semibold text-sky-100">{item.label}</p>
-                        <Badge variant="outline" className="border-emerald-400/30 bg-emerald-400/10 text-emerald-200 text-[10px]">
-                          {item.status}
-                        </Badge>
-                      </div>
-                      <p className="mt-2 text-2xl font-bold text-white">{item.valueLabel}</p>
-                      {(item.change != null || item.changePercent != null) && (
-                        <p className={`mt-1 text-sm font-semibold ${getMarketChangeClass(item.changePercent ?? item.change)}`}>
-                          {formatMarketChange(item.change)} · {formatMarketChange(item.changePercent, "%")}
-                        </p>
-                      )}
-                      {item.secondaryLabel && <p className="mt-1 text-xs text-gray-400">{item.secondaryLabel}</p>}
-                      <p className="mt-2 text-[11px] leading-relaxed text-gray-500">{item.note}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-              {marketIndicators.unavailable.length > 0 && (
-                <div className="mt-3 grid gap-2 md:grid-cols-2" aria-label="source not verified market indicator cards">
-                  {marketIndicators.unavailable.map((item) => (
-                    <div key={item.id} className="rounded-lg border border-slate-700/60 bg-slate-950/40 p-3 text-xs text-gray-400">
-                      <p className="font-semibold text-gray-300">{item.label}：unavailable</p>
-                      <p className="mt-1">{item.reason}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Knowledge Applied */}
-        {report.knowledge_applied && (
-          <Card className="taste-card border-indigo-500/20 mb-6">
-            <CardContent className="pt-6">
-              <h3 className="text-sm font-semibold text-indigo-400 mb-2">
-                📚 今日應用知識：{report.knowledge_applied.topic}
-              </h3>
-              <ul className="space-y-1">
-                {report.knowledge_applied.key_insights.map((insight, i) => (
-                  <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
-                    <span className="text-indigo-400 mt-0.5">•</span>
-                    {insight}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Event Focus */}
-        {eventFocus && (
-          <Card className="taste-card border-cyan-500/20 mb-6">
-            <CardHeader className="pb-2">
-              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                <CardTitle className="text-lg text-white">🧭 事件驅動焦點</CardTitle>
-                <Badge variant="outline" className="w-fit border-cyan-400/30 bg-cyan-400/10 text-cyan-200">
-                  {eventFocus.status === "empty" ? "no official event" : "official TWSE · derived topic mapping"}
-                </Badge>
-              </div>
-              <p className="text-xs text-gray-500">
-                Source: {eventFocus.source.name} · 最新公告日 {eventFocus.latestDate ?? "—"} · {eventFocus.source.semantics}
-              </p>
-            </CardHeader>
-            <CardContent>
-              {eventFocus.items.length === 0 ? (
-                <p className="text-sm text-gray-400">{eventFocus.emptyReason ?? "目前追蹤公司沒有官方重大訊息。"}</p>
-              ) : (
-                <div className="space-y-3">
-                  <div className="rounded-lg border border-cyan-400/20 bg-cyan-400/[0.04] p-3">
-                    <div className="mb-2 flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
-                      <p className="text-sm font-semibold text-cyan-200">事件篩選</p>
-                      <button
-                        type="button"
-                        className="w-fit text-xs text-cyan-300 hover:text-cyan-100"
-                        onClick={() => setEventFilters(activeTopicId ? { topicId: activeTopicId } : {})}
-                      >
-                        清除篩選
-                      </button>
-                    </div>
-                    <div className="grid gap-2 md:grid-cols-3">
-                      <select
-                        aria-label="事件日期篩選"
-                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
-                        value={effectiveEventFilters.date ?? ""}
-                        onChange={(event) => setEventFilters((current) => ({ ...current, date: event.target.value || undefined }))}
-                      >
-                        <option value="">全部日期</option>
-                        {eventFilterOptions.dates.map((date) => <option key={date} value={date}>{date}</option>)}
-                      </select>
-                      <select
-                        aria-label="事件公司篩選"
-                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
-                        value={effectiveEventFilters.companyCode ?? ""}
-                        onChange={(event) => setEventFilters((current) => ({ ...current, companyCode: event.target.value || undefined }))}
-                      >
-                        <option value="">全部公司</option>
-                        {eventFilterOptions.companies.map((company) => <option key={company.code} value={company.code}>{company.name} ({company.code})</option>)}
-                      </select>
-                      <select
-                        aria-label="事件題材篩選"
-                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
-                        value={effectiveEventFilters.topicId ?? ""}
-                        onChange={(event) => setEventFilters((current) => ({ ...current, topicId: event.target.value || undefined }))}
-                      >
-                        <option value="">全部題材</option>
-                        {eventFilterOptions.topics.map((topic) => <option key={topic.id} value={topic.id}>{topic.name}</option>)}
-                      </select>
-                    </div>
-                    <p className="mt-2 text-xs text-gray-500">共用 major-news filter view model：company/date/topic。結果 {visibleEventItems.length} / {eventFocus.items.length} 筆。</p>
-                  </div>
-                  {visibleEventItems.length === 0 ? (
-                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
-                      目前篩選條件下沒有官方重大訊息；不代表公司沒有公告，請以公開資訊觀測站為準。
-                    </div>
-                  ) : visibleEventItems.slice(0, 12).map((item) => (
-                    <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
-                      <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
-                        <div>
-                          <p className="text-sm font-semibold text-white">
-                            {item.companyName} <span className="text-gray-500">({item.companyCode})</span>
-                          </p>
-                          <p className="mt-1 text-sm text-gray-300">{item.officialSubject}</p>
-                        </div>
-                        <span className="text-xs text-gray-500">{item.announcedAt}</span>
-                      </div>
-                      <div className="mt-2 flex flex-wrap gap-2">
-                        {item.derivedTopics.length > 0 ? item.derivedTopics.map((topic, topicIndex) => (
-                          <Badge key={`${item.id}-${topic.topicId}-${topicIndex}`} variant="outline" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-200 text-xs">
-                            {topic.topicName}{topic.roleLabel ? ` · ${topic.roleLabel}` : ""}
-                          </Badge>
-                        )) : (
-                          <Badge variant="outline" className="border-amber-400/30 bg-amber-400/10 text-amber-200 text-xs">
-                            未對應已驗證題材角色
-                          </Badge>
-                        )}
-                      </div>
-                      <p className="mt-2 text-xs text-gray-500">{item.verificationNote}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        )}
-
         {/* Market Overview */}
         {report.market_overview && report.market_overview.close && (
           <Card className="taste-card border-slate-700 mb-6">
@@ -814,182 +609,21 @@ export default function DailyReportPage() {
           </Card>
         )}
 
-        {/* Strong Stock Ranking */}
-        {selectedStrongStockRanking && (
-          <Card className="taste-card border-rose-500/20 mb-6">
-            <CardHeader className="pb-2">
-              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <CardTitle className="text-lg text-white">🚀 強勢股排行</CardTitle>
-                  <p className="mt-1 text-xs text-gray-500">
-                    Source: {selectedStrongStockRanking.source.name} · 最新 K 線 {selectedStrongStockRanking.source.latestDate || "—"} · {selectedStrongStockRanking.source.scope}
-                  </p>
-                  <p className="mt-1 text-xs text-amber-200/80">⚠ {selectedStrongStockRanking.source.warning}</p>
-                  <p className="mt-1 text-xs text-gray-500">price/technical only；不混入籌碼、基本面、新聞、ETF 成分或 AI 判斷。</p>
-                </div>
-                <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
-                  {(["1d", "5d", "20d"] as StrongStockTimeframe[]).map((timeframe) => (
-                    <button
-                      key={timeframe}
-                      type="button"
-                      className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${strongStockTimeframe === timeframe ? "bg-rose-400/20 text-rose-100" : "text-gray-400 hover:text-gray-100"}`}
-                      onClick={() => setStrongStockTimeframe(timeframe)}
-                    >
-                      {timeframe}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent>
-              {selectedStrongStockRanking.items.length === 0 ? (
-                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
-                  {selectedStrongStockRanking.emptyReason ?? "目前沒有符合此 timeframe 的 fresh K-line 強勢股。"}
-                </div>
-              ) : (
-                <div className="grid gap-3 md:grid-cols-2">
-                  {selectedStrongStockRanking.items.slice(0, 8).map((item) => (
-                    <Link key={`${selectedStrongStockRanking.timeframe}-${item.code}`} href={`/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-rose-400/40 hover:bg-rose-400/[0.04]">
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
-                          <p className="mt-1 text-xs text-gray-400">{item.reason}</p>
-                        </div>
-                        <Badge variant="outline" className="border-rose-400/30 bg-rose-400/10 text-rose-200 text-xs">
-                          {item.score}分
-                        </Badge>
-                      </div>
-                      <div className="mt-3 grid grid-cols-4 gap-2 text-xs">
-                        <div>
-                          <p className="text-gray-500">收盤</p>
-                          <p className="font-semibold text-white">{item.close.toLocaleString()}</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">{selectedStrongStockRanking.timeframe}</p>
-                          <p className={`font-semibold ${item.returnPct >= 0 ? "text-rose-300" : "text-emerald-300"}`}>{item.returnPct >= 0 ? "+" : ""}{item.returnPct}%</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">量比</p>
-                          <p className="font-semibold text-indigo-200">{item.volumeRatio20}x</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">型態</p>
-                          <p className="font-semibold text-gray-200">{item.high20Breakout ? "20日高" : item.aboveMa20 ? "MA20上" : "觀察"}</p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Large Holder Ranking */}
-        {selectedLargeHolderRanking && (
-          <Card className="taste-card border-purple-500/20 mb-6">
-            <CardHeader className="pb-2">
-              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                <div>
-                  <CardTitle className="text-lg text-white">🐋 大戶分級排行</CardTitle>
-                  <p className="mt-1 text-xs text-gray-500">
-                    Source: {selectedLargeHolderRanking.source.name} · 最新分級日 {selectedLargeHolderRanking.source.latestDate || "—"} · {selectedLargeHolderRanking.source.scope}
-                  </p>
-                  <p className="mt-1 text-xs text-amber-200/80">⚠ {selectedLargeHolderRanking.source.warning}</p>
-                  <p className="mt-1 text-xs text-gray-500">tracked sample；not full market。只排行 checked-in FinMind share-tier percentage changes，缺資料或過期公司直接排除。</p>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
-                    {(["1m_plus", "400k_plus"] as LargeHolderTier[]).map((tier) => (
-                      <button
-                        key={tier}
-                        type="button"
-                        className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${largeHolderTier === tier ? "bg-purple-400/20 text-purple-100" : "text-gray-400 hover:text-gray-100"}`}
-                        onClick={() => setLargeHolderTier(tier)}
-                      >
-                        {tier === "1m_plus" ? "1m+" : "400k+"}
-                      </button>
-                    ))}
-                  </div>
-                  <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
-                    {(["1w", "4w"] as LargeHolderWindow[]).map((window) => (
-                      <button
-                        key={window}
-                        type="button"
-                        className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${largeHolderWindow === window ? "bg-purple-400/20 text-purple-100" : "text-gray-400 hover:text-gray-100"}`}
-                        onClick={() => setLargeHolderWindow(window)}
-                      >
-                        {window}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent>
-              {selectedLargeHolderRanking.items.length === 0 ? (
-                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
-                  {selectedLargeHolderRanking.emptyReason ?? "目前沒有符合此 tier/window 的 fresh 大戶分級樣本。"}
-                </div>
-              ) : (
-                <div className="grid gap-3 md:grid-cols-2">
-                  {selectedLargeHolderRanking.items.slice(0, 8).map((item) => (
-                    <Link key={`${selectedLargeHolderRanking.tier}-${selectedLargeHolderRanking.window}-${item.code}`} href={`/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-purple-400/40 hover:bg-purple-400/[0.04]">
-                      <div className="flex items-start justify-between gap-3">
-                        <div>
-                          <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
-                          <p className="mt-1 text-xs text-gray-400">{item.reason}</p>
-                        </div>
-                        <Badge variant="outline" className="border-purple-400/30 bg-purple-400/10 text-purple-200 text-xs">
-                          {item.score}分
-                        </Badge>
-                      </div>
-                      <div className="mt-3 grid grid-cols-4 gap-2 text-xs">
-                        <div>
-                          <p className="text-gray-500">分級</p>
-                          <p className="font-semibold text-white">{item.tierLabel}</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">占比變化</p>
-                          <p className={`font-semibold ${item.changePctPoint >= 0 ? "text-rose-300" : "text-emerald-300"}`}>{item.changePctPoint >= 0 ? "+" : ""}{item.changePctPoint}pp</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">最新占比</p>
-                          <p className="font-semibold text-indigo-200">{item.latestPercent}%</p>
-                        </div>
-                        <div>
-                          <p className="text-gray-500">比較日</p>
-                          <p className="font-semibold text-gray-200">{item.baselineDate}</p>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
-        )}
-
-        {/* Hot Sectors */}
-        {report.hot_sectors && report.hot_sectors.length > 0 && (
-          <Card className="taste-card border-slate-700 mb-6">
-            <CardHeader className="pb-2">
-              <CardTitle className="text-lg text-white">🔥 熱門族群</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-wrap gap-3">
-                {report.hot_sectors.map((sector, i) => (
-                  <div key={i} className="bg-slate-800/50 rounded-lg px-4 py-2 flex items-center gap-3">
-                    <span className="text-white font-semibold">{sector.name}</span>
-                    <span className={`font-bold ${sector.change_pct.startsWith("+") ? "text-rose-400" : "text-emerald-400"}`}>
-                      {sector.change_pct}
-                    </span>
-                    <span className="text-gray-500 text-sm">
-                      {sector.leaders.join(", ")}
-                    </span>
-                  </div>
+        {/* Knowledge Applied */}
+        {report.knowledge_applied && (
+          <Card className="taste-card border-indigo-500/20 mb-6">
+            <CardContent className="pt-6">
+              <h3 className="text-sm font-semibold text-indigo-400 mb-2">
+                📚 今日應用知識：{report.knowledge_applied.topic}
+              </h3>
+              <ul className="space-y-1">
+                {report.knowledge_applied.key_insights.map((insight, i) => (
+                  <li key={i} className="text-gray-300 text-sm flex items-start gap-2">
+                    <span className="text-indigo-400 mt-0.5">•</span>
+                    {insight}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </CardContent>
           </Card>
         )}
@@ -1288,6 +922,340 @@ export default function DailyReportPage() {
           </Card>
         )}
 
+        {/* Strong Stock Ranking */}
+        {selectedStrongStockRanking && (
+          <Card className="taste-card border-rose-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <CardTitle className="text-lg text-white">🚀 強勢股排行</CardTitle>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Source: {selectedStrongStockRanking.source.name} · 最新 K 線 {selectedStrongStockRanking.source.latestDate || "—"} · {selectedStrongStockRanking.source.scope}
+                  </p>
+                  <p className="mt-1 text-xs text-amber-200/80">⚠ {selectedStrongStockRanking.source.warning}</p>
+                  <p className="mt-1 text-xs text-gray-500">price/technical only；不混入籌碼、基本面、新聞、ETF 成分或 AI 判斷。</p>
+                </div>
+                <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
+                  {(["1d", "5d", "20d"] as StrongStockTimeframe[]).map((timeframe) => (
+                    <button
+                      key={timeframe}
+                      type="button"
+                      className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${strongStockTimeframe === timeframe ? "bg-rose-400/20 text-rose-100" : "text-gray-400 hover:text-gray-100"}`}
+                      onClick={() => setStrongStockTimeframe(timeframe)}
+                    >
+                      {timeframe}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {selectedStrongStockRanking.items.length === 0 ? (
+                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                  {selectedStrongStockRanking.emptyReason ?? "目前沒有符合此 timeframe 的 fresh K-line 強勢股。"}
+                </div>
+              ) : (
+                <div className="grid gap-3 md:grid-cols-2">
+                  {selectedStrongStockRanking.items.slice(0, 8).map((item) => (
+                    <Link key={`${selectedStrongStockRanking.timeframe}-${item.code}`} href={`/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-rose-400/40 hover:bg-rose-400/[0.04]">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
+                          <p className="mt-1 text-xs text-gray-400">{item.reason}</p>
+                        </div>
+                        <Badge variant="outline" className="border-rose-400/30 bg-rose-400/10 text-rose-200 text-xs">
+                          {item.score}分
+                        </Badge>
+                      </div>
+                      <div className="mt-3 grid grid-cols-4 gap-2 text-xs">
+                        <div>
+                          <p className="text-gray-500">收盤</p>
+                          <p className="font-semibold text-white">{item.close.toLocaleString()}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">{selectedStrongStockRanking.timeframe}</p>
+                          <p className={`font-semibold ${item.returnPct >= 0 ? "text-rose-300" : "text-emerald-300"}`}>{item.returnPct >= 0 ? "+" : ""}{item.returnPct}%</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">量比</p>
+                          <p className="font-semibold text-indigo-200">{item.volumeRatio20}x</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">型態</p>
+                          <p className="font-semibold text-gray-200">{item.high20Breakout ? "20日高" : item.aboveMa20 ? "MA20上" : "觀察"}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Event Focus */}
+        {eventFocus && (
+          <Card className="taste-card border-cyan-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                <CardTitle className="text-lg text-white">🧭 事件驅動焦點</CardTitle>
+                <Badge variant="outline" className="w-fit border-cyan-400/30 bg-cyan-400/10 text-cyan-200">
+                  {eventFocus.status === "empty" ? "no official event" : "official TWSE · derived topic mapping"}
+                </Badge>
+              </div>
+              <p className="text-xs text-gray-500">
+                Source: {eventFocus.source.name} · 最新公告日 {eventFocus.latestDate ?? "—"} · {eventFocus.source.semantics}
+              </p>
+            </CardHeader>
+            <CardContent>
+              {eventFocus.items.length === 0 ? (
+                <p className="text-sm text-gray-400">{eventFocus.emptyReason ?? "目前追蹤公司沒有官方重大訊息。"}</p>
+              ) : (
+                <div className="space-y-3">
+                  <div className="rounded-lg border border-cyan-400/20 bg-cyan-400/[0.04] p-3">
+                    <div className="mb-2 flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
+                      <p className="text-sm font-semibold text-cyan-200">事件篩選</p>
+                      <button
+                        type="button"
+                        className="w-fit text-xs text-cyan-300 hover:text-cyan-100"
+                        onClick={() => setEventFilters(activeTopicId ? { topicId: activeTopicId } : {})}
+                      >
+                        清除篩選
+                      </button>
+                    </div>
+                    <div className="grid gap-2 md:grid-cols-3">
+                      <select
+                        aria-label="事件日期篩選"
+                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
+                        value={effectiveEventFilters.date ?? ""}
+                        onChange={(event) => setEventFilters((current) => ({ ...current, date: event.target.value || undefined }))}
+                      >
+                        <option value="">全部日期</option>
+                        {eventFilterOptions.dates.map((date) => <option key={date} value={date}>{date}</option>)}
+                      </select>
+                      <select
+                        aria-label="事件公司篩選"
+                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
+                        value={effectiveEventFilters.companyCode ?? ""}
+                        onChange={(event) => setEventFilters((current) => ({ ...current, companyCode: event.target.value || undefined }))}
+                      >
+                        <option value="">全部公司</option>
+                        {eventFilterOptions.companies.map((company) => <option key={company.code} value={company.code}>{company.name} ({company.code})</option>)}
+                      </select>
+                      <select
+                        aria-label="事件題材篩選"
+                        className="rounded-md border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-gray-200"
+                        value={effectiveEventFilters.topicId ?? ""}
+                        onChange={(event) => setEventFilters((current) => ({ ...current, topicId: event.target.value || undefined }))}
+                      >
+                        <option value="">全部題材</option>
+                        {eventFilterOptions.topics.map((topic) => <option key={topic.id} value={topic.id}>{topic.name}</option>)}
+                      </select>
+                    </div>
+                    <p className="mt-2 text-xs text-gray-500">共用 major-news filter view model：company/date/topic。結果 {visibleEventItems.length} / {eventFocus.items.length} 筆。</p>
+                  </div>
+                  {visibleEventItems.length === 0 ? (
+                    <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                      目前篩選條件下沒有官方重大訊息；不代表公司沒有公告，請以公開資訊觀測站為準。
+                    </div>
+                  ) : visibleEventItems.slice(0, 12).map((item) => (
+                    <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
+                      <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
+                        <div>
+                          <p className="text-sm font-semibold text-white">
+                            {item.companyName} <span className="text-gray-500">({item.companyCode})</span>
+                          </p>
+                          <p className="mt-1 text-sm text-gray-300">{item.officialSubject}</p>
+                        </div>
+                        <span className="text-xs text-gray-500">{item.announcedAt}</span>
+                      </div>
+                      <div className="mt-2 flex flex-wrap gap-2">
+                        {item.derivedTopics.length > 0 ? item.derivedTopics.map((topic, topicIndex) => (
+                          <Badge key={`${item.id}-${topic.topicId}-${topicIndex}`} variant="outline" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-200 text-xs">
+                            {topic.topicName}{topic.roleLabel ? ` · ${topic.roleLabel}` : ""}
+                          </Badge>
+                        )) : (
+                          <Badge variant="outline" className="border-amber-400/30 bg-amber-400/10 text-amber-200 text-xs">
+                            未對應已驗證題材角色
+                          </Badge>
+                        )}
+                      </div>
+                      <p className="mt-2 text-xs text-gray-500">{item.verificationNote}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Large Holder Ranking */}
+        {selectedLargeHolderRanking && (
+          <Card className="taste-card border-purple-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <CardTitle className="text-lg text-white">🐋 大戶分級排行</CardTitle>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Source: {selectedLargeHolderRanking.source.name} · 最新分級日 {selectedLargeHolderRanking.source.latestDate || "—"} · {selectedLargeHolderRanking.source.scope}
+                  </p>
+                  <p className="mt-1 text-xs text-amber-200/80">⚠ {selectedLargeHolderRanking.source.warning}</p>
+                  <p className="mt-1 text-xs text-gray-500">tracked sample；not full market。只排行 checked-in FinMind share-tier percentage changes，缺資料或過期公司直接排除。</p>
+                </div>
+                <div className="flex flex-col gap-2">
+                  <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
+                    {(["1m_plus", "400k_plus"] as LargeHolderTier[]).map((tier) => (
+                      <button
+                        key={tier}
+                        type="button"
+                        className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${largeHolderTier === tier ? "bg-purple-400/20 text-purple-100" : "text-gray-400 hover:text-gray-100"}`}
+                        onClick={() => setLargeHolderTier(tier)}
+                      >
+                        {tier === "1m_plus" ? "1m+" : "400k+"}
+                      </button>
+                    ))}
+                  </div>
+                  <div className="flex w-fit rounded-lg border border-slate-700 bg-slate-950/80 p-1">
+                    {(["1w", "4w"] as LargeHolderWindow[]).map((window) => (
+                      <button
+                        key={window}
+                        type="button"
+                        className={`rounded-md px-3 py-1.5 text-xs font-medium transition ${largeHolderWindow === window ? "bg-purple-400/20 text-purple-100" : "text-gray-400 hover:text-gray-100"}`}
+                        onClick={() => setLargeHolderWindow(window)}
+                      >
+                        {window}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {selectedLargeHolderRanking.items.length === 0 ? (
+                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                  {selectedLargeHolderRanking.emptyReason ?? "目前沒有符合此 tier/window 的 fresh 大戶分級樣本。"}
+                </div>
+              ) : (
+                <div className="grid gap-3 md:grid-cols-2">
+                  {selectedLargeHolderRanking.items.slice(0, 8).map((item) => (
+                    <Link key={`${selectedLargeHolderRanking.tier}-${selectedLargeHolderRanking.window}-${item.code}`} href={`/?company=${item.code}`} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3 transition hover:border-purple-400/40 hover:bg-purple-400/[0.04]">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p className="text-sm font-semibold text-white">#{item.rank} {item.name} <span className="text-gray-500">({item.code})</span></p>
+                          <p className="mt-1 text-xs text-gray-400">{item.reason}</p>
+                        </div>
+                        <Badge variant="outline" className="border-purple-400/30 bg-purple-400/10 text-purple-200 text-xs">
+                          {item.score}分
+                        </Badge>
+                      </div>
+                      <div className="mt-3 grid grid-cols-4 gap-2 text-xs">
+                        <div>
+                          <p className="text-gray-500">分級</p>
+                          <p className="font-semibold text-white">{item.tierLabel}</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">占比變化</p>
+                          <p className={`font-semibold ${item.changePctPoint >= 0 ? "text-rose-300" : "text-emerald-300"}`}>{item.changePctPoint >= 0 ? "+" : ""}{item.changePctPoint}pp</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">最新占比</p>
+                          <p className="font-semibold text-indigo-200">{item.latestPercent}%</p>
+                        </div>
+                        <div>
+                          <p className="text-gray-500">比較日</p>
+                          <p className="font-semibold text-gray-200">{item.baselineDate}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Hot Sectors */}
+        {report.hot_sectors && report.hot_sectors.length > 0 && (
+          <Card className="taste-card border-slate-700 mb-6">
+            <CardHeader className="pb-2">
+              <CardTitle className="text-lg text-white">🔥 熱門族群</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap gap-3">
+                {report.hot_sectors.map((sector, i) => (
+                  <div key={i} className="bg-slate-800/50 rounded-lg px-4 py-2 flex items-center gap-3">
+                    <span className="text-white font-semibold">{sector.name}</span>
+                    <span className={`font-bold ${sector.change_pct.startsWith("+") ? "text-rose-400" : "text-emerald-400"}`}>
+                      {sector.change_pct}
+                    </span>
+                    <span className="text-gray-500 text-sm">
+                      {sector.leaders.join(", ")}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Market Indicator Strip */}
+        {marketIndicators && (
+          <Card className="taste-card border-sky-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
+                <div>
+                  <CardTitle className="text-lg text-white">🌐 市場指標列</CardTitle>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Source: {marketIndicators.source.name} · 最新日 {marketIndicators.latestDate || "—"} · {marketIndicators.source.scope}
+                  </p>
+                  <p className="mt-1 text-xs text-amber-200/80">⚠ {marketIndicators.source.warning}</p>
+                </div>
+                <Badge variant="outline" className={`${getSourceStatusClass(marketIndicators.status)} w-fit text-xs`}>
+                  {marketIndicators.status}
+                </Badge>
+              </div>
+            </CardHeader>
+            <CardContent>
+              {marketIndicators.indicators.length === 0 ? (
+                <div className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-4 text-sm text-gray-400">
+                  {marketIndicators.emptyReason ?? "No verified TWSE market indicator rows; skip instead of AI-filling."}
+                </div>
+              ) : (
+                <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+                  {marketIndicators.indicators.map((item) => (
+                    <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
+                      <div className="flex items-start justify-between gap-2">
+                        <p className="text-xs font-semibold text-sky-100">{item.label}</p>
+                        <Badge variant="outline" className="border-emerald-400/30 bg-emerald-400/10 text-emerald-200 text-[10px]">
+                          {item.status}
+                        </Badge>
+                      </div>
+                      <p className="mt-2 text-2xl font-bold text-white">{item.valueLabel}</p>
+                      {(item.change != null || item.changePercent != null) && (
+                        <p className={`mt-1 text-sm font-semibold ${getMarketChangeClass(item.changePercent ?? item.change)}`}>
+                          {formatMarketChange(item.change)} · {formatMarketChange(item.changePercent, "%")}
+                        </p>
+                      )}
+                      {item.secondaryLabel && <p className="mt-1 text-xs text-gray-400">{item.secondaryLabel}</p>}
+                      <p className="mt-2 text-[11px] leading-relaxed text-gray-500">{item.note}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {marketIndicators.unavailable.length > 0 && (
+                <div className="mt-3 grid gap-2 md:grid-cols-2" aria-label="source not verified market indicator cards">
+                  {marketIndicators.unavailable.map((item) => (
+                    <div key={item.id} className="rounded-lg border border-slate-700/60 bg-slate-950/40 p-3 text-xs text-gray-400">
+                      <p className="font-semibold text-gray-300">{item.label}：unavailable</p>
+                      <p className="mt-1">{item.reason}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </CardContent>
+          </Card>
+        )}
+
         {/* Risk Alerts */}
         {report.risk_alerts && report.risk_alerts.length > 0 && (
           <Card className="taste-card border-amber-500/20 mt-6">
@@ -1306,6 +1274,53 @@ export default function DailyReportPage() {
             </CardContent>
           </Card>
         )}
+
+        {/* Unified source-status rail */}
+        {report.freshness && (
+          <Card className="taste-card border-emerald-500/20 mb-6">
+            <CardHeader className="pb-2">
+              <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+                <CardTitle className="text-lg text-white">🟢 資料狀態</CardTitle>
+                <Badge variant="outline" className="w-fit border-emerald-400/30 bg-emerald-400/10 text-emerald-200">
+                  freshness metadata checked-in
+                </Badge>
+              </div>
+              <p className="text-xs text-gray-500">
+                市場資料日 {report.freshness.marketDataDate} · 事件資料日 {report.freshness.eventDataDate} · 報告產生日 {formatTimestamp(report.freshness.generatedAt)} · Daily analysis {formatTimestamp(report.freshness.analysisGeneratedAt)}
+              </p>
+            </CardHeader>
+            <CardContent>
+              <div className="grid gap-2 md:grid-cols-2 lg:grid-cols-3">
+                {report.freshness.sources.map((source) => (
+                  <div key={source.module} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <p className="text-sm font-semibold text-white">{source.module}</p>
+                        <p className="mt-1 text-xs text-gray-400">{source.source}</p>
+                      </div>
+                      <Badge variant="outline" className={`${getSourceStatusClass(source.status)} text-xs`}>
+                        {source.status}
+                      </Badge>
+                    </div>
+                    <p className="mt-2 text-xs text-gray-500">最新日：{source.latestDate || "—"}</p>
+                    <p className="mt-1 text-xs text-gray-500">範圍：{source.scope}</p>
+                    {source.warning && (
+                      <p className="mt-2 rounded-md border border-amber-400/20 bg-amber-400/[0.06] px-2 py-1 text-xs text-amber-100">
+                        ⚠ {source.warning}
+                      </p>
+                    )}
+                    {source.emptyReason && (
+                      <p className="mt-2 rounded-md border border-slate-600/50 bg-slate-950/40 px-2 py-1 text-xs text-gray-400">
+                        {source.emptyReason}
+                      </p>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        )}
+
 
         {/* Footer */}
         <div className="mt-8 space-y-4">

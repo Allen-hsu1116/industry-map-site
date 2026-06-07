@@ -61,6 +61,14 @@ export interface TopicOverviewSourceStatus {
   note: string;
 }
 
+export interface TopicOverviewChildTopic {
+  id: string;
+  title: string;
+  type: CanonicalTopic["type"];
+  companyCount: number;
+  coverageStatus: TopicCoverageStatus;
+}
+
 export interface TopicOverviewCard {
   id: string;
   title: string;
@@ -70,6 +78,7 @@ export interface TopicOverviewCard {
   definition: string;
   whyItMatters: string;
   aliases: string[];
+  childTopics: TopicOverviewChildTopic[];
   companyCount: number;
   stageCounts: Record<TopicStage, number>;
   representativeCompanies: TopicOverviewCompany[];
@@ -130,9 +139,10 @@ function sourceStatus(statuses: TopicOverviewStatus[], sources: TopicOverviewSou
   return { status, sources, note };
 }
 
-function eventsForTopic(eventFocus: EventFocusSnapshot | null | undefined, topicId: string): TopicOverviewEvent[] {
+function eventsForTopicCluster(eventFocus: EventFocusSnapshot | null | undefined, topicIds: string[]): TopicOverviewEvent[] {
+  const topicIdSet = new Set(topicIds);
   return (eventFocus?.items ?? [])
-    .filter((item) => item.derivedTopics.some((topic) => topic.topicId === topicId))
+    .filter((item) => item.derivedTopics.some((topic) => topicIdSet.has(topic.topicId)))
     .slice(0, 3)
     .map((item) => ({
       id: item.id,
@@ -174,18 +184,48 @@ function companiesForTopic(mapTopic: TopicMapTopic | undefined): { companies: To
   return { companies, stageCounts };
 }
 
+function mergeCompaniesForTopicCluster(mapTopics: Array<TopicMapTopic | undefined>): { companies: TopicOverviewCompany[]; stageCounts: Record<TopicStage, number> } {
+  const stageCounts: Record<TopicStage, number> = { upstream: 0, midstream: 0, downstream: 0, end_market: 0, unknown: 0 };
+  const bestByCode = new Map<string, TopicOverviewCompany>();
+
+  for (const mapTopic of mapTopics) {
+    const topicCompanies = companiesForTopic(mapTopic);
+    for (const company of topicCompanies.companies) {
+      const existing = bestByCode.get(company.code);
+      if (!existing || relevanceRank(company.relevanceLabel) < relevanceRank(existing.relevanceLabel)) {
+        bestByCode.set(company.code, company);
+      }
+    }
+  }
+
+  const companies = Array.from(bestByCode.values()).sort((a, b) => stageOrder.indexOf(a.stage) - stageOrder.indexOf(b.stage) || relevanceRank(a.relevanceLabel) - relevanceRank(b.relevanceLabel) || a.code.localeCompare(b.code));
+  for (const company of companies) {
+    stageCounts[company.stage] += 1;
+  }
+
+  return { companies, stageCounts };
+}
+
 export function buildTopicOverview(input: {
   canonicalTopics: CanonicalTopicsFile;
   topicMap: TopicMapSnapshot;
   eventFocus?: EventFocusSnapshot | null;
 }): TopicOverview {
   const topicMapBySlug = new Map((input.topicMap.topics ?? []).map((topic) => [topic.slug, topic]));
+  const topicById = new Map(input.canonicalTopics.topics.map((topic) => [topic.id, topic]));
   const cards = input.canonicalTopics.topics
     .filter((topic) => topic.status !== "deprecated" && topic.status !== "rejected")
+    .filter((topic) => !topic.parentId)
     .map((topic): TopicOverviewCard => {
+      const childTopics = (topic.childIds ?? []).flatMap((childId) => {
+        const child = topicById.get(childId);
+        return child && child.status !== "deprecated" && child.status !== "rejected" ? [child] : [];
+      });
+      const clusterTopicIds = [topic.id, ...childTopics.map((child) => child.id)];
+      const clusterMapTopics = clusterTopicIds.map((topicId) => topicMapBySlug.get(topicId));
       const mapTopic = topicMapBySlug.get(topic.id);
-      const { companies, stageCounts } = companiesForTopic(mapTopic);
-      const recentEvents = eventsForTopic(input.eventFocus, topic.id);
+      const { companies, stageCounts } = mergeCompaniesForTopicCluster(clusterMapTopics);
+      const recentEvents = eventsForTopicCluster(input.eventFocus, clusterTopicIds);
       const hasCanonicalEvidence = topic.evidence.length > 0 && Boolean(topic.lastVerified);
       const hasTopicMap = companies.length > 0;
       const coverageStatus: TopicCoverageStatus = hasCanonicalEvidence && hasTopicMap ? "verified" : hasCanonicalEvidence || hasTopicMap ? "partial" : "empty";
@@ -195,7 +235,9 @@ export function buildTopicOverview(input: {
         { name: "canonical-topics", updatedAt: input.canonicalTopics.updatedAt, status: hasCanonicalEvidence ? "verified" : "empty", scope: "topic definition/evidence" },
         { name: input.topicMap.source ?? "canonical-topic-map", updatedAt: input.topicMap.generatedAt, status: hasTopicMap ? "verified" : "empty", scope: "company role coverage" },
         ...(input.eventFocus ? [{ name: input.eventFocus.source.name, updatedAt: input.eventFocus.latestDate ?? input.eventFocus.generatedAt, status: recentEvents.length > 0 ? "partial" as const : "empty" as const, scope: "official major news with derived topic mapping" }] : []),
-      ], "canonical-topic defines labels/evidence; topic-map supplies checked-in company roles; event-focus preserves official subjects with derived topic mapping.");
+      ], childTopics.length > 0
+        ? "canonical-topic defines parent cluster labels/evidence; clustered child topics are aggregated for top-level display; topic-map supplies checked-in company roles; event-focus preserves official subjects with derived topic mapping."
+        : "canonical-topic defines labels/evidence; topic-map supplies checked-in company roles; event-focus preserves official subjects with derived topic mapping.");
 
       return {
         id: topic.id,
@@ -206,6 +248,12 @@ export function buildTopicOverview(input: {
         definition: topic.definition,
         whyItMatters: topic.whyItMatters,
         aliases: topic.aliases,
+        childTopics: childTopics.map((child) => {
+          const childCompanies = companiesForTopic(topicMapBySlug.get(child.id)).companies;
+          const childHasEvidence = child.evidence.length > 0 && Boolean(child.lastVerified);
+          const childCoverageStatus: TopicCoverageStatus = childHasEvidence && childCompanies.length > 0 ? "verified" : childHasEvidence || childCompanies.length > 0 ? "partial" : "empty";
+          return { id: child.id, title: child.name, type: child.type, companyCount: childCompanies.length, coverageStatus: childCoverageStatus };
+        }),
         companyCount: companies.length || mapTopic?.total || 0,
         stageCounts,
         representativeCompanies: companies.slice(0, 6),

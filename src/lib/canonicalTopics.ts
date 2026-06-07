@@ -19,7 +19,7 @@ export interface CanonicalTopic {
   whyItMatters: string;
   aliases: string[];
   parentId?: string;
-  childIds: string[];
+  childIds?: string[];
   legacyTopicIds: string[];
   include: string[];
   exclude: string[];

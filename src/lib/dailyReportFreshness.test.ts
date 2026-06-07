@@ -51,10 +51,32 @@ test("daily report page renders freshness source-status metadata", () => {
   const page = fs.readFileSync("src/app/daily-report/page.tsx", "utf8");
 
   assert.match(page, /interface DailyReportFreshness/);
-  assert.match(page, /資料狀態/);
+  assert.match(page, /report\.freshness\.sources\.map/);
+  assert.match(page, /getSourceStatusClass/);
   assert.match(page, /marketDataDate/);
-  assert.match(page, /eventDataDate/);
   assert.match(page, /analysisGeneratedAt/);
+  assert.ok(page.indexOf("{/* Market Overview */}") < page.indexOf("{/* Stock Picks */}"), "market summary should appear before picks");
+  assert.ok(page.indexOf("{/* Stock Picks */}") < page.indexOf("{/* Strong Stock Ranking */}"), "daily picks should be above strong-stock detail ranking");
+  assert.ok(page.indexOf("{/* Event Focus */}") < page.indexOf("{/* Large Holder Ranking */}"), "event focus should be above large-holder module");
+  assert.ok(page.indexOf("{/* Unified source-status rail */}") > page.indexOf("{/* Risk Alerts */}"), "source-status rail belongs near bottom, not first-screen decision area");
+  assert.match(page, /topicClusterIds/);
+});
+
+test("checked-in daily report regenerates picks from strong-stock ranking instead of preserving stale template picks", () => {
+  const report = JSON.parse(fs.readFileSync("public/data/daily-report.json", "utf8")) as {
+    picks: Array<{ code: string; name: string; score: number; recommendation: { reasoning: string } }>;
+    hot_sectors: Array<{ name: string; leaders: string[] }>;
+  };
+  const strongStocks = JSON.parse(fs.readFileSync("public/data/strong-stock-ranking.json", "utf8")) as {
+    rankings: Array<{ timeframe: string; items: Array<{ code: string; name: string }> }>;
+  };
+  const topDailyRankingCodes = strongStocks.rankings.find((ranking) => ranking.timeframe === "1d")?.items.map((item) => item.code) ?? [];
+
+  assert.notDeepEqual(report.picks.map((pick) => pick.code), ["2330", "2337", "2344"], "daily picks must not preserve the original hard-coded template");
+  assert.ok(report.picks.length >= 3, "daily report should publish multiple current candidates");
+  assert.ok(report.picks.every((pick) => topDailyRankingCodes.includes(pick.code)), "daily picks should be drawn from strong-stock ranking candidates");
+  assert.ok(report.picks.every((pick) => /strong-stock ranking|Daily Analysis|quality gate/i.test(pick.recommendation.reasoning)), "pick reasoning should disclose strong-stock + Daily Analysis inputs");
+  assert.ok(report.hot_sectors.every((sector) => sector.leaders.some((leader) => report.picks.some((pick) => pick.code === leader))), "hot sectors should be derived from current picks, not stale leaders");
 });
 
 test("checked-in daily report exposes explicit freshness metadata aligned with market and event feeds", () => {

@@ -126,6 +126,84 @@ test("buildTopicOverview creates evidence-backed topic cards without market nick
   assert.equal(uncovered.emptyReason, "此 canonical topic 尚無 evidence-backed topic-map 公司角色；不可用 AI 補成既定事實。");
 });
 
+test("buildTopicOverview clusters child topics into the parent card to avoid over-fragmented top-level themes", () => {
+  const clusteredTopics: CanonicalTopicsFile = {
+    ...canonicalTopics,
+    topics: [
+      {
+        id: "memory",
+        name: "記憶體與儲存",
+        type: "theme",
+        status: "active",
+        definition: "DRAM、NAND、NOR Flash、HBM 與 CXL 記憶體池化的上位觀察框架。",
+        whyItMatters: "記憶體報價、AI/HBM 需求與利基型儲存循環會共同影響台股記憶體供應鏈。",
+        aliases: ["記憶體"],
+        childIds: ["hbm", "niche-memory"],
+        legacyTopicIds: [],
+        include: ["記憶體製造、模組、封裝與控制/整合供應鏈"],
+        exclude: ["只是終端產品使用記憶體、但沒有記憶體營收或供應鏈角色的公司"],
+        activationSignals: ["DRAM/NAND/HBM 報價或供需變化"],
+        evidence: [{ sourceId: "mops-company-disclosures", publisher: "MOPS", title: "公司公告", claim: "可驗證記憶體產品與供應鏈角色" }],
+        confidence: "medium",
+        lastVerified: "2026-05-28",
+      },
+      {
+        id: "hbm",
+        name: "HBM 高頻寬記憶體",
+        type: "product",
+        status: "active",
+        definition: "AI GPU 使用的高頻寬記憶體與封裝整合供應鏈。",
+        whyItMatters: "AI accelerator 對 HBM 供給高度敏感。",
+        aliases: ["HBM"],
+        parentId: "memory",
+        childIds: [],
+        legacyTopicIds: ["hbm"],
+        include: [],
+        exclude: [],
+        activationSignals: [],
+        evidence: [],
+        confidence: "medium",
+        lastVerified: "2026-05-28",
+      },
+      {
+        id: "niche-memory",
+        name: "NOR Flash 與利基記憶體",
+        type: "product",
+        status: "active",
+        definition: "NOR Flash 與特殊應用記憶體。",
+        whyItMatters: "利基型記憶體循環與一般 DRAM/HBM 不完全相同。",
+        aliases: ["NOR Flash"],
+        parentId: "memory",
+        childIds: [],
+        legacyTopicIds: ["niche-memory"],
+        include: [],
+        exclude: [],
+        activationSignals: [],
+        evidence: [],
+        confidence: "medium",
+        lastVerified: "2026-05-28",
+      },
+    ],
+  };
+  const clusteredMap = {
+    schemaVersion: 1,
+    generatedAt: "2026-06-01T20:30:00.000Z",
+    source: "canonical-topics+company-topic-roles",
+    topics: [
+      { slug: "hbm", name: "HBM 高頻寬記憶體", groups: [{ name: "HBM", level: "upstream", companies: [{ code: "2330", name: "台積電", relevance: "高", role: "CoWoS/HBM 整合" }] }] },
+      { slug: "niche-memory", name: "NOR Flash 與利基記憶體", groups: [{ name: "NOR Flash", level: "midstream", companies: [{ code: "2337", name: "旺宏", relevance: "高", role: "NOR Flash" }] }] },
+    ],
+  };
+
+  const overview = buildTopicOverview({ canonicalTopics: clusteredTopics, topicMap: clusteredMap });
+
+  assert.deepEqual(overview.cards.map((card) => card.id), ["memory"]);
+  assert.equal(overview.cards[0].companyCount, 2);
+  assert.deepEqual(overview.cards[0].childTopics.map((topic) => topic.id), ["hbm", "niche-memory"]);
+  assert.deepEqual(overview.cards[0].representativeCompanies.map((company) => company.code), ["2330", "2337"]);
+  assert.match(overview.cards[0].sourceStatus.note, /clustered child topics/);
+});
+
 test("checked-in topic overview exposes source status and daily-report topic links", async () => {
   const [canonicalRaw, topicMapRaw, eventFocusRaw, topicsPage] = await Promise.all([
     readFile("public/data/canonical-topics.json", "utf8").then(JSON.parse),

@@ -110,8 +110,27 @@ export default function TopicsPage() {
                     {stageLabels[stage as TopicStage]} {count}
                   </span>
                 ))}
+                {card.childTopics.length > 0 && (
+                  <span className="rounded-full border border-indigo-400/20 bg-indigo-400/10 px-2.5 py-1 text-xs text-indigo-200">
+                    已合併 {card.childTopics.length} 個子題材
+                  </span>
+                )}
                 {card.companyCount === 0 && <span className="rounded-full border border-slate-500/20 bg-slate-500/10 px-2.5 py-1 text-xs text-slate-400">尚無公司角色覆蓋</span>}
               </div>
+
+              {card.childTopics.length > 0 && (
+                <div className="mt-3 rounded-2xl border border-indigo-400/15 bg-indigo-400/[0.05] p-3">
+                  <div className="text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-200/80">Clustered child topics</div>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {card.childTopics.map((child) => (
+                      <Link key={`${card.id}-${child.id}`} href={`/topics/${child.id}`} className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-xs text-slate-300 hover:border-indigo-400/40 hover:text-white">
+                        {child.title} · {child.companyCount}家公司
+                      </Link>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-[11px] leading-relaxed text-slate-500">首頁與題材總覽以 parent cluster 顯示，避免同一產業（例如記憶體）拆成多張重複主題；子題材細節仍保留在題材細節頁。</p>
+                </div>
+              )}
 
               <div className="mt-4 space-y-2">
                 <div className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">代表公司 / 角色比較</div>

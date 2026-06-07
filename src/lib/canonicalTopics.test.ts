@@ -158,4 +158,9 @@ test("canonical memory topics keep NOR Flash and DRAM-oriented topics separate",
   assert.equal(memoryModules.legacyTopicIds.includes("niche-memory"), false, "DRAM/memory-module topic must not absorb the NOR Flash legacy topic");
   assert.match(nicheMemory.name, /NOR Flash/);
   assert.doesNotMatch(memoryModules.name, /NOR Flash/);
+  const memoryCluster = normalized.topics.find((topic) => topic.id === "memory");
+  assert.ok(memoryCluster, "memory parent cluster should exist for top-level UI grouping");
+  assert.deepEqual(memoryCluster.childIds?.sort(), ["cxl-memory-pooling", "hbm", "memory-modules", "niche-memory"].sort());
+  assert.equal(nicheMemory.parentId, "memory");
+  assert.equal(memoryModules.parentId, "memory");
 });

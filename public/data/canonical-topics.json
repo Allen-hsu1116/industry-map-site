@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-06-08",
   "topicDefinition": {
     "rule": "題材是可投資、可追蹤、可證據化的分析鏡頭：必須能連到需求催化、供應鏈位置、公司產品/角色、基本面傳導路徑與可觀測觸發訊號。",
     "notTopic": [
@@ -713,7 +713,8 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-05-28",
+      "parentId": "memory"
     },
     {
       "id": "high-speed-interconnect",
@@ -990,7 +991,8 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-05-28",
+      "parentId": "memory"
     },
     {
       "id": "networking-infrastructure",
@@ -1077,7 +1079,8 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-05-28",
+      "parentId": "memory"
     },
     {
       "id": "passive-components",
@@ -1759,7 +1762,8 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28"
+      "lastVerified": "2026-05-28",
+      "parentId": "memory"
     },
     {
       "id": "orbital-ai-computing",
@@ -1792,6 +1796,57 @@
       "evidence": [],
       "confidence": "low",
       "lastVerified": null
+    },
+    {
+      "id": "memory",
+      "name": "記憶體與儲存",
+      "type": "theme",
+      "status": "active",
+      "definition": "上位整合 DRAM/NAND 模組、NOR Flash/利基記憶體、HBM 高頻寬記憶體與 CXL 記憶體池化；首頁與題材總覽用此 cluster 避免把記憶體拆成過細主題。",
+      "whyItMatters": "記憶體報價循環、AI/HBM 供需、CXL 架構與利基型記憶體需求會共同影響台股記憶體供應鏈，但子題材驅動因子不同，需保留子題材角色與證據。",
+      "aliases": [
+        "記憶體",
+        "Memory",
+        "DRAM",
+        "NAND",
+        "HBM",
+        "NOR Flash",
+        "CXL memory"
+      ],
+      "childIds": [
+        "hbm",
+        "memory-modules",
+        "niche-memory",
+        "cxl-memory-pooling"
+      ],
+      "legacyTopicIds": [],
+      "include": [
+        "記憶體製造、模組、利基儲存、HBM/先進封裝整合、CXL 記憶體池化與直接供應鏈角色"
+      ],
+      "exclude": [
+        "只是終端產品使用記憶體、但沒有記憶體營收或供應鏈角色的公司"
+      ],
+      "activationSignals": [
+        "DRAM/NAND/HBM 報價或供需變化",
+        "官方公告、年報或法說揭露記憶體產品/產能/客戶變化",
+        "AI server/HPC 對 HBM 或高階模組需求變化"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "上市櫃公司公告與財務資訊",
+          "claim": "公司年報、重大訊息與財務公告可用於驗證記憶體產品線、供應鏈角色與營收分類。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "claim": "可用月營收、股價、法人、估值與財務資料追蹤記憶體供應鏈公司基本面與市場反應。"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-06-08"
     }
   ]
 }
