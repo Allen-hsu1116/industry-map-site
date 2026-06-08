@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2408",
   "name": "南亞科",
-  "generatedAt": "2026-06-05T12:30:38.162Z",
+  "generatedAt": "2026-06-08T12:31:39.128Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-05",
-  "chipDataDate": "2026-06-05",
+  "marketDataDate": "2026-06-08",
+  "chipDataDate": "2026-06-08",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -21,30 +21,33 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": 15,
-    "summary": "南亞科 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 9.2%。",
+    "score": 0,
+    "summary": "南亞科 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 9.2%"
-    ],
-    "risks": [],
-    "watch": []
-  },
-  "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 41,
-    "summary": "南亞科 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.3萬張；近 20 日法人偏買，合計 +8.4萬張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +1.3萬張",
-      "近 20 日法人偏買，合計 +8.4萬張",
-      "投信近 5 日買超 +7.9千張",
-      "外資近 5 日買超 +7.7千張",
-      "融資近 5 日下降 5.5%，籌碼壓力下降"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-05"
+      "股價貼近 MA20，留意方向選擇",
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
+  },
+  "chips": {
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 5,
+    "summary": "南亞科 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +6.2萬張；投信近 5 日買超 +5.9千張。",
+    "signals": [
+      "近 20 日法人偏買，合計 +6.2萬張",
+      "投信近 5 日買超 +5.9千張",
+      "融資近 5 日下降 13.2%，籌碼壓力下降"
+    ],
+    "risks": [
+      "三大法人近 5 日合計賣超 -1.5萬張",
+      "外資近 5 日賣超 -1.7萬張"
+    ],
+    "watch": [
+      "最近法人資料日：2026-06-08"
     ]
   },
   "industry": {
@@ -134,7 +137,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-05"
+      "lastVerified": "2026-06-08"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -232,8 +235,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 78,
-    "recommendationState": "top_candidate",
+    "totalScore": 68,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
       "label": "基本面偏強",
@@ -246,7 +249,6 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -255,11 +257,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：391.50",
-      "波段多空分水嶺看 MA20：329.68",
-      "追蹤法人是否延續 賣超：最近 -1.3萬張",
+      "短線支撐/壓力先看 MA5：383.10",
+      "波段多空分水嶺看 MA20：331.60",
+      "追蹤法人是否延續 買超：最近 +1.7千張",
       "月營收年增率 +444.9%，觀察基本面是否支撐估值",
-      "本益比 32.2 倍，需和同族群估值比較"
+      "本益比 30.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 430.50 且量比 > 1.5：列為轉強訊號",
