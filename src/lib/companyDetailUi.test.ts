@@ -13,6 +13,7 @@ const dividendPolicyPanelComponentPath = "src/components/company-detail/Dividend
 const revenueAnalysisPanelComponentPath = "src/components/company-detail/RevenueAnalysisPanel.tsx";
 const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/ProfitabilityAnalysisPanel.tsx";
 const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnalysisPanel.tsx";
+const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -421,4 +422,36 @@ test("Slice M1.11 extracts batch analysis panel without changing analysis labels
   assert.ok(chipsBatchIndex > chipsTabIndex, "chips batch analysis should remain inside chips tab");
   assert.ok(techBatchIndex > techTabIndex, "technical batch analysis should remain inside technical tab");
   assert.ok(newsTabIndex > techBatchIndex, "technical batch analysis should still precede the news tab");
+});
+
+test("Slice M1.12 extracts technical next-session panel without changing trigger copy or route behavior", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const technicalNextSessionPanelComponent = await readFile(technicalNextSessionPanelComponentPath, "utf8");
+  const batchAnalysisPanelComponent = await readFile(batchAnalysisPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${technicalNextSessionPanelComponent}\n${batchAnalysisPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/TechnicalNextSessionPanel/);
+  assert.match(page, /<TechnicalNextSessionPanel\s+nextSession=\{resolvedDailyAnalysis\.nextSession\}\s+\/>/);
+  assert.doesNotMatch(page, /🎯 明日觀察與盤中觸發條件[\s\S]*resolvedDailyAnalysis\.nextSession\.focus\.map/);
+  assert.match(technicalNextSessionPanelComponent, /export interface TechnicalNextSessionPanelProps/);
+  assert.match(technicalNextSessionPanelComponent, /export function TechnicalNextSessionPanel/);
+
+  for (const label of ["🎯 明日觀察與盤中觸發條件", "觀察重點", "觸發條件"]) {
+    assert.match(technicalNextSessionPanelComponent, new RegExp(label));
+  }
+
+  for (const prop of ["nextSession", "focus", "triggerRules"]) {
+    assert.match(technicalNextSessionPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(technicalNextSessionPanelComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const techTabIndex = page.indexOf("{/* ─── 技術分析 Tab ─── */}");
+  const techBatchIndex = page.indexOf("title=\"📊 技術分析判讀\"");
+  const nextSessionIndex = page.indexOf("<TechnicalNextSessionPanel");
+  const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
+  assert.ok(techBatchIndex > techTabIndex, "technical batch analysis should remain inside technical tab");
+  assert.ok(nextSessionIndex > techBatchIndex, "next-session panel should still follow technical batch analysis");
+  assert.ok(newsTabIndex > nextSessionIndex, "next-session panel should still precede the news tab");
 });

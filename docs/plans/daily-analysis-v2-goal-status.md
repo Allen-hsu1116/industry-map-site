@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-09 22:11 CST
+Updated: 2026-06-10 01:13 CST
 
 ## Purpose
 
@@ -575,6 +575,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with a boundary that can stay behavior-preserving and reviewable; likely next candidates are a render-only `TechnicalNextSessionPanel` or a carefully separated news/major-news split.
 - `NewsTabContent` and `DynamicMajorNewsPanel` still own client-side API fetches, so they should not be treated as render-only presentational components unless split into container + render panel in a named slice.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+### 2026-06-10 — Slice M1.12 TechnicalNextSessionPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/TechnicalNextSessionPanel.tsx` as a render-only technical next-session card for the technical-analysis tab.
+- Removed the inline `🎯 明日觀察與盤中觸發條件` JSX block from `src/app/page.tsx` and imported/rendered the extracted component with the existing prepared `resolvedDailyAnalysis.nextSession` prop.
+- Preserved existing copy and labels: `🎯 明日觀察與盤中觸發條件`, `觀察重點`, and `觸發條件`.
+- Preserved existing list rendering, `focus` / `triggerRules` data ownership, technical-tab ordering, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.12 guardrails proving the extracted component does not fetch, import checked-in JSON, build view models, import app/data modules, call API routes, or introduce `/companies/[code]`; it also verifies the next-session panel still follows the technical `BatchAnalysisPanel` and precedes the news tab.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.12"` failed because `src/components/company-detail/TechnicalNextSessionPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.12"` → 161/161 passing under Node test filtering behavior.
+- `npm test` → 161/161 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --port 3048` → company detail renders Human Editorial brief/source rail, tabs, technical tab, `📊 技術分析判讀`, and extracted `🎯 明日觀察與盤中觸發條件` with `觀察重點` / `觸發條件`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next behavior-preserving boundary.
+- Avoid treating `NewsTabContent` / `DynamicMajorNewsPanel` as render-only because they own `useState`, `useEffect`, and `/api/*` fetches; split container + presentational panel in a named slice if tackling news next.
+- Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 ## Recommended operating rule from now on
