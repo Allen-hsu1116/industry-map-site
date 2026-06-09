@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-09 19:59 CST
+Updated: 2026-06-09 20:46 CST
 
 ## Purpose
 
@@ -228,7 +228,7 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 2. **Checkpointed working tree.** Goal 1–7 implementation changes are now split into atomic commits, but the branch is ahead of `origin/main` until pushed/merged.
 3. **Goal numbering mismatch.** `goal-driven-website-completion.md` calls them Goal 5/6/7, while `daily-analysis-v2-implementation-plan.md` still labels related work as Task 5.1/5.2/5.3/5.4. Cross-reference notes were added, but future edits still need to preserve both labels until the plan is renumbered.
 4. **Partial goals may look complete.** Each goal-run implements the next smallest vertical slice, not necessarily the entire goal description.
-5. **Monolithic pages.** `src/app/page.tsx` and `src/app/daily-report/page.tsx` remain large, increasing edit risk.
+5. **Monolithic pages.** `src/app/page.tsx` and `src/app/daily-report/page.tsx` remain large, increasing edit risk. The new architecture migration plan is `docs/plans/human-editorial-ui-migration-plan.md`.
 
 ## Governance/checkpoint updates
 
@@ -278,6 +278,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - Goal 5/6/7 remain Partial rather than full-goal Done.
 - Goal 8 and Goal 9 remain not started.
 - Component extraction remains needed for `src/app/page.tsx` and `src/app/daily-report/page.tsx`.
+
+### 2026-06-09 — Human Editorial UI architecture migration plan
+
+**Status:** Done.
+
+**Changed:**
+- Added `docs/plans/human-editorial-ui-migration-plan.md`.
+- Defined Human Editorial UI Architecture Migration mode as behavior-preserving component/view-model extraction, distinct from feature vertical-slice mode.
+- Recorded current monolith sizes:
+  - `src/app/page.tsx` — 4,178 lines.
+  - `src/app/daily-report/page.tsx` — 1,469 lines.
+  - `src/app/topics/[id]/page.tsx` — 294 lines.
+- Defined target component boundaries under `src/components/shared/editorial`, `src/components/company-detail`, `src/components/daily-report`, and `src/components/topic-detail`.
+- Defined target view-model/formatter boundaries under `src/lib/view-models` and `src/lib/formatters`.
+- Defined route strategy: keep `/?company=CODE`, add `/companies/[code]` only after route-agnostic component extraction, verify both before migrating internal links.
+- Defined migration phases M1–M6, verification gates, risk register, and acceptance criteria.
+
+**Verification:**
+- `npm test` → 149/149 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke not required because this was docs-only planning and no app code changed.
+
+**Remaining:**
+- Begin Slice M1.1: extract `CompanyEditorialBrief` from `src/app/page.tsx` into `src/components/company-detail/CompanyEditorialBrief.tsx` without behavior change.
+- Keep Goal 5/6/7 marked Partial until their remaining sections and extraction work are complete.
 
 ## Recommended operating rule from now on
 
