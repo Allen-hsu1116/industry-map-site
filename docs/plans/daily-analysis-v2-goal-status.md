@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 01:22 CST
+Updated: 2026-06-10 01:28 CST
 
 ## Purpose
 
@@ -625,6 +625,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with a named container/presentational split for news or another safe render-only boundary.
 - Avoid moving `NewsTabContent` / `DynamicMajorNewsPanel` as a single render-only component because they own `useState`, `useEffect`, and `/api/*` fetches.
+- Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+### 2026-06-10 — Slice M1.14 MajorNewsListPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/MajorNewsListPanel.tsx` as a render-only presentational component for the major-news card/list inside the overview `重大資訊` sub-tab.
+- Kept `DynamicMajorNewsPanel` in `src/app/page.tsx` as the state/effect/fetch container for `/api/major-news`, then delegated prepared `majorNews`, `loading`, `error`, `source`, and `fetchedAt` props to the extracted panel.
+- Preserved existing major-news copy and labels: `📋 重大訊息公告`, `即時查詢公開資訊觀測站中...`, `資料來源：`, `⏳ 載入重大訊息中...`, and the honest empty-state copy telling users to use 公開資訊觀測站 as source of truth.
+- Preserved local-snapshot fallback behavior, source/fetched-at display, 15-row cap, row source badges, overview `重大資訊` sub-tab behavior, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.14 guardrails proving the new component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no app/data imports, no API route calls, and no `/companies/[code]` route/link introduction.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.14"` failed because `src/components/company-detail/MajorNewsListPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.14"` → 163/163 passing under Node test filtering behavior.
+- `npm test` → 163/163 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard across changed files found no `/companies/[code]`, `/companies/${...}`, or new `/companies` href string in this slice.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --port 3048` → company detail renders Human Editorial brief/source rail, overview `重大資訊` sub-tab, extracted `📋 重大訊息公告`, `資料來源：local snapshot`, fetched-at copy, and snapshot major-news rows.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the related-news list presentational split or another safe behavior-preserving boundary.
+- Keep `/api/news` fetch/state inside `NewsTabContent` unless a named container/presentational split moves only the render card/list.
 - Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 

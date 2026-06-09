@@ -15,6 +15,7 @@ const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/P
 const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnalysisPanel.tsx";
 const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
 const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/ChipValuationSnapshotPanel.tsx";
+const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -128,7 +129,8 @@ test("Slice M1.5 extracts the overview tab shell without changing overview copy 
   const sectionInventoryComponent = await readFile(sectionInventoryComponentPath, "utf8");
   const detailTabsComponent = await readFile(detailTabsComponentPath, "utf8");
   const overviewComponent = await readFile(overviewComponentPath, "utf8");
-  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}`;
+  const majorNewsListPanelComponent = await readFile(majorNewsListPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${majorNewsListPanelComponent}`;
 
   assert.match(page, /@\/components\/company-detail\/CompanyOverviewTab/);
   assert.match(page, /<CompanyOverviewTab\s+financialContent=/m);
@@ -489,4 +491,40 @@ test("Slice M1.13 extracts chip valuation snapshot without changing chips labels
   assert.ok(chipSnapshotIndex > chipsTabIndex, "chip valuation snapshot should remain inside chips tab");
   assert.ok(chipsBatchIndex > chipSnapshotIndex, "chips batch analysis should still follow valuation snapshot");
   assert.ok(institutionalIndex > chipsBatchIndex, "institutional trend should still follow chips batch analysis");
+});
+
+test("Slice M1.14 extracts major news list panel while keeping dynamic fetch container unchanged", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const majorNewsListPanelComponent = await readFile(majorNewsListPanelComponentPath, "utf8");
+  const overviewTabComponent = await readFile(overviewComponentPath, "utf8");
+  const combinedSource = `${page}\n${majorNewsListPanelComponent}\n${overviewTabComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/MajorNewsListPanel/);
+  assert.match(page, /function DynamicMajorNewsPanel/);
+  assert.match(page, /fetch\(`\/api\/major-news\?symbol=/);
+  assert.match(page, /<MajorNewsListPanel[\s\S]*majorNews=\{majorNews\}[\s\S]*loading=\{loading\}[\s\S]*error=\{error\}[\s\S]*source=\{source\}[\s\S]*fetchedAt=\{fetchedAt\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /📋 重大訊息公告[\s\S]*majorNews\.slice\(0, 15\)\.map/);
+
+  assert.match(majorNewsListPanelComponent, /export interface MajorNewsListPanelProps/);
+  assert.match(majorNewsListPanelComponent, /export function MajorNewsListPanel/);
+  assert.match(majorNewsListPanelComponent, /majorNews\.slice\(0, 15\)\.map/);
+
+  for (const label of ["📋 重大訊息公告", "即時查詢公開資訊觀測站中", "資料來源：", "⏳ 載入重大訊息中", "尚未載入重大訊息資料", "公開資訊觀測站為準"]) {
+    assert.match(majorNewsListPanelComponent, new RegExp(label));
+  }
+
+  for (const prop of ["majorNews", "loading", "error", "source", "fetchedAt"]) {
+    assert.match(majorNewsListPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(majorNewsListPanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const dynamicContainerIndex = page.indexOf("function DynamicMajorNewsPanel");
+  const fetchIndex = page.indexOf("fetch(`/api/major-news?symbol=");
+  const panelIndex = page.indexOf("<MajorNewsListPanel");
+  const newsTabIndex = page.indexOf("function NewsTabContent");
+  assert.ok(fetchIndex > dynamicContainerIndex, "major news fetch should stay in the dynamic container");
+  assert.ok(panelIndex > fetchIndex, "presentational panel should render after container state is prepared");
+  assert.ok(newsTabIndex > panelIndex, "news tab container should still follow major news container definition");
 });
