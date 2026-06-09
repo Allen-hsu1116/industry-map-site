@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-09 20:46 CST
+Updated: 2026-06-09 21:00 CST
 
 ## Purpose
 
@@ -303,6 +303,27 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Begin Slice M1.1: extract `CompanyEditorialBrief` from `src/app/page.tsx` into `src/components/company-detail/CompanyEditorialBrief.tsx` without behavior change.
 - Keep Goal 5/6/7 marked Partial until their remaining sections and extraction work are complete.
+
+### 2026-06-09 — Slice M1.1 CompanyEditorialBrief extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyEditorialBrief.tsx`.
+- Moved the existing Goal 7 Human Editorial company brief JSX out of `src/app/page.tsx` into the dedicated component.
+- Kept `buildCompanyEditorialBrief` and all existing copy, labels, source semantics, approved-section inventory, and `/?company=CODE` route behavior unchanged.
+- Updated `src/lib/companyDetailUi.test.ts` so the regression test follows the extracted component while still proving the brief renders before `DETAIL_TABS.map`.
+
+**Verification:**
+- `npm test -- --test-name-pattern "Goal 7|Slice M1.1"` → 150/150 passing under Node test filtering behavior.
+- `npm test` → 150/150 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` → company detail renders the extracted Human Editorial brief before dense tabs, with approved sections and source semantics still visible.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 component extraction with the next company-detail slice; do not add `/companies/[code]` until the planned route compatibility phase.
+- `src/app/page.tsx` remains monolithic even after this first extracted component.
 
 ## Recommended operating rule from now on
 
