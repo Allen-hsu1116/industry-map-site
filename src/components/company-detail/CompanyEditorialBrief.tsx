@@ -1,17 +1,5 @@
+import type { CompanyEditorialBriefViewModel } from "@/lib/view-models/companyEditorialBrief";
 import { cn } from "@/lib/utils";
-
-export type CompanyEditorialBriefSource = {
-  label: string;
-  status: string;
-  freshness: string;
-  source: string;
-};
-
-export type CompanyEditorialBriefViewModel = {
-  items: Array<{ label: string; value: string; tone: string }>;
-  approvedSections: string[];
-  sources: CompanyEditorialBriefSource[];
-};
 
 type CompanyEditorialBriefProps = {
   editorialBrief: CompanyEditorialBriefViewModel;

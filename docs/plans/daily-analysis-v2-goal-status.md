@@ -325,6 +325,29 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - Continue M1 component extraction with the next company-detail slice; do not add `/companies/[code]` until the planned route compatibility phase.
 - `src/app/page.tsx` remains monolithic even after this first extracted component.
 
+### 2026-06-09 — Slice M1.2 CompanyEditorialBrief view-model extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/lib/view-models/companyEditorialBrief.ts` and moved `buildCompanyEditorialBrief()` plus its helper and view-model types out of `src/app/page.tsx`.
+- Kept `CompanyEditorialBrief` as a render-only component receiving prepared view-model props.
+- Preserved the existing `/?company=CODE` route behavior; no `/companies/[code]` route or link was added in this slice.
+- Preserved Goal 7 copy, approved section labels, source/freshness/status labels, fallback text, and recommendation semantics.
+- Added focused view-model tests covering both happy path priority/source semantics and insufficient-data fallback behavior.
+- Updated component-boundary regression tests so labels/source semantics are verified across page, component, and view-model files.
+
+**Verification:**
+- `npm test -- --test-name-pattern "Goal 7|company editorial brief"` → 152/152 passing under Node test filtering behavior.
+- `npm test` → 152/152 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` → company detail renders the Human Editorial brief with `AI-derived`, `checked-in evidence`, approved sections, and prepared view-model content visible; console check reported 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with source/section inventory and tab shell slices before introducing canonical `/companies/[code]` routing.
+- `src/app/page.tsx` still owns most company-detail rendering and data-loading effects.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:
