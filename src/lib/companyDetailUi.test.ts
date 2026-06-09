@@ -14,6 +14,7 @@ const revenueAnalysisPanelComponentPath = "src/components/company-detail/Revenue
 const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/ProfitabilityAnalysisPanel.tsx";
 const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnalysisPanel.tsx";
 const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
+const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/ChipValuationSnapshotPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -454,4 +455,38 @@ test("Slice M1.12 extracts technical next-session panel without changing trigger
   assert.ok(techBatchIndex > techTabIndex, "technical batch analysis should remain inside technical tab");
   assert.ok(nextSessionIndex > techBatchIndex, "next-session panel should still follow technical batch analysis");
   assert.ok(newsTabIndex > nextSessionIndex, "next-session panel should still precede the news tab");
+});
+
+test("Slice M1.13 extracts chip valuation snapshot without changing chips labels or route behavior", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const chipValuationSnapshotPanelComponent = await readFile(chipValuationSnapshotPanelComponentPath, "utf8");
+  const batchAnalysisPanelComponent = await readFile(batchAnalysisPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${chipValuationSnapshotPanelComponent}\n${batchAnalysisPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/ChipValuationSnapshotPanel/);
+  assert.match(page, /<ChipValuationSnapshotPanel\s+data=\{data\}\s+\/>/);
+  assert.doesNotMatch(page, /<StatItem label="本益比 \(P\/E\)"[\s\S]*<StatItem label="負債比"/);
+  assert.doesNotMatch(page, /function StatItem/);
+  assert.match(chipValuationSnapshotPanelComponent, /export interface ChipValuationSnapshotPanelProps/);
+  assert.match(chipValuationSnapshotPanelComponent, /export function ChipValuationSnapshotPanel/);
+  assert.match(chipValuationSnapshotPanelComponent, /function StatItem/);
+
+  for (const label of ["🎰 籌碼分析", "本益比 (P/E)", "股價淨值比 (P/B)", "現金殖利率", "負債比"]) {
+    assert.match(chipValuationSnapshotPanelComponent, new RegExp(label.replace(/[()]/g, "\\$&")));
+  }
+
+  for (const prop of ["valuation", "balance", "totalAssets", "totalLiabilities", "dividendYield"]) {
+    assert.match(chipValuationSnapshotPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(chipValuationSnapshotPanelComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const chipsTabIndex = page.indexOf("{/* ─── 籌碼分析 Tab ─── */}");
+  const chipSnapshotIndex = page.indexOf("<ChipValuationSnapshotPanel");
+  const chipsBatchIndex = page.indexOf("title=\"🧠 籌碼收盤後判讀\"");
+  const institutionalIndex = page.indexOf("{/* ─── 三大法人歷史趨勢（圖+表） ─── */}");
+  assert.ok(chipSnapshotIndex > chipsTabIndex, "chip valuation snapshot should remain inside chips tab");
+  assert.ok(chipsBatchIndex > chipSnapshotIndex, "chips batch analysis should still follow valuation snapshot");
+  assert.ok(institutionalIndex > chipsBatchIndex, "institutional trend should still follow chips batch analysis");
 });

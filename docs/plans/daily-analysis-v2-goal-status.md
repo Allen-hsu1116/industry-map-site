@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 01:13 CST
+Updated: 2026-06-10 01:22 CST
 
 ## Purpose
 
@@ -599,6 +599,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with the next behavior-preserving boundary.
 - Avoid treating `NewsTabContent` / `DynamicMajorNewsPanel` as render-only because they own `useState`, `useEffect`, and `/api/*` fetches; split container + presentational panel in a named slice if tackling news next.
+- Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+### 2026-06-10 — Slice M1.13 ChipValuationSnapshotPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/ChipValuationSnapshotPanel.tsx` as a render-only valuation/debt snapshot component for the chips tab.
+- Removed the inline chips-tab valuation card and local `StatItem` helper from `src/app/page.tsx`, replacing them with `<ChipValuationSnapshotPanel data={data} />`.
+- Preserved existing chips copy and labels: `🎰 籌碼分析`, `本益比 (P/E)`, `股價淨值比 (P/B)`, `現金殖利率`, and `負債比`.
+- Preserved existing P/E/P/B suffix behavior, dividend-yield percent display, debt-ratio calculation, chips-tab ordering, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.13 guardrails proving the extracted component does not fetch, import checked-in JSON, build view models, import app/data modules, call API routes, or introduce `/companies/[code]`; it also verifies the chips snapshot still precedes the chips `BatchAnalysisPanel` and institutional trend section.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.13"` failed because `src/components/company-detail/ChipValuationSnapshotPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.13"` → 162/162 passing under Node test filtering behavior.
+- `npm test` → 162/162 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard across changed files found no `/companies/[code]`, `/companies/${...}`, or new `/companies` href string in this slice.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --port 3048` → company detail renders Human Editorial brief/source rail, tabs, chips tab, extracted `🎰 籌碼分析` card with `本益比 (P/E)`, `股價淨值比 (P/B)`, `現金殖利率`, `負債比`, followed by `🧠 籌碼收盤後判讀`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with a named container/presentational split for news or another safe render-only boundary.
+- Avoid moving `NewsTabContent` / `DynamicMajorNewsPanel` as a single render-only component because they own `useState`, `useEffect`, and `/api/*` fetches.
 - Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 

@@ -29,6 +29,7 @@ import { RevenueAnalysisPanel } from "@/components/company-detail/RevenueAnalysi
 import { ProfitabilityAnalysisPanel } from "@/components/company-detail/ProfitabilityAnalysisPanel";
 import { BatchAnalysisPanel } from "@/components/company-detail/BatchAnalysisPanel";
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
+import { ChipValuationSnapshotPanel } from "@/components/company-detail/ChipValuationSnapshotPanel";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -795,17 +796,6 @@ function ExternalIcon() {
 }
 function AiIcon() {
   return <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" /></svg>;
-}
-
-/* ─── Financial Detail Components ─── */
-function StatItem({ label, value, sub, className = "", trend }: { label: string; value: string | React.ReactNode; sub?: string; className?: string; trend?: React.ReactNode }) {
-  return (
-    <div className={cn("bg-white/[0.02] rounded-xl p-4", className)}>
-      <div className="text-xs text-[var(--color-text-tertiary)] mb-1.5 flex items-center gap-1.5">{label}{trend}</div>
-      <div className="text-lg font-bold text-white">{value}</div>
-      {sub && <div className="text-xs text-[var(--color-text-tertiary)] mt-1">{sub}</div>}
-    </div>
-  );
 }
 
 /* ─── Profitability Trend Panel (aistockmap style) ─── */
@@ -2055,20 +2045,7 @@ function CompanyFullPageDetail({
           {/* ─── 籌碼分析 Tab ─── */}
           {detailTab === "chips" && (
             <div className="space-y-6">
-              <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                <h4 className="text-sm font-bold text-white mb-4">🎰 籌碼分析</h4>
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <StatItem label="本益比 (P/E)" value={data.valuation.pe || "-"} sub={data.valuation.pe ? "倍" : undefined} />
-                  <StatItem label="股價淨值比 (P/B)" value={data.valuation.pb || "-"} sub={data.valuation.pb ? "倍" : undefined} />
-                  <StatItem label="現金殖利率" value={data.valuation.dividendYield ? `${data.valuation.dividendYield}%` : "-"} />
-                  <StatItem label="負債比" value={(() => {
-                    const assets = parseFloat(data.balance.totalAssets);
-                    const liabilities = parseFloat(data.balance.totalLiabilities);
-                    if (assets > 0 && liabilities > 0) return ((liabilities / assets) * 100).toFixed(1) + "%";
-                    return "-";
-                  })()} />
-                </div>
-              </div>
+              <ChipValuationSnapshotPanel data={data} />
               {resolvedDailyAnalysis && (
                 <BatchAnalysisPanel
                   title="🧠 籌碼收盤後判讀"
