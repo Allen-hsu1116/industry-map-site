@@ -8,6 +8,7 @@ const sectionInventoryComponentPath = "src/components/company-detail/CompanySect
 const detailTabsComponentPath = "src/components/company-detail/CompanyDetailTabs.tsx";
 const overviewComponentPath = "src/components/company-detail/CompanyOverviewTab.tsx";
 const companyInfoHeaderComponentPath = "src/components/company-detail/CompanyInfoHeader.tsx";
+const financialOverviewCardsComponentPath = "src/components/company-detail/FinancialOverviewCards.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -190,4 +191,43 @@ test("Slice M1.6 extracts the company info header without changing identity labe
   assert.ok(overviewIndex > tabsIndex, "overview tab content should remain inside the extracted tabs shell");
   assert.ok(companyInfoIndex > overviewIndex, "company info header should remain inside the overview financial slot");
   assert.ok(financialCardsIndex > companyInfoIndex, "company info header should still precede financial overview cards");
+});
+
+test("Slice M1.7 extracts financial overview cards without changing financial labels or route behavior", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const briefComponent = await readFile(briefComponentPath, "utf8");
+  const sectionInventoryComponent = await readFile(sectionInventoryComponentPath, "utf8");
+  const detailTabsComponent = await readFile(detailTabsComponentPath, "utf8");
+  const overviewComponent = await readFile(overviewComponentPath, "utf8");
+  const companyInfoHeaderComponent = await readFile(companyInfoHeaderComponentPath, "utf8");
+  const financialOverviewCardsComponent = await readFile(financialOverviewCardsComponentPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/FinancialOverviewCards/);
+  assert.match(page, /<FinancialOverviewCards data=\{data\} \/>/);
+  assert.doesNotMatch(page, /function FinancialOverviewCards/);
+  assert.match(financialOverviewCardsComponent, /export function FinancialOverviewCards/);
+
+  for (const label of ["最新財務概況", "季營收", "市值", "本益比", "股價淨值比", "毛利率", "營益率", "淨利率", "EPS"]) {
+    assert.match(financialOverviewCardsComponent, new RegExp(label));
+  }
+
+  assert.match(financialOverviewCardsComponent, /revenueYoy/);
+  assert.match(financialOverviewCardsComponent, /formatQuarterLabel/);
+  assert.match(financialOverviewCardsComponent, /formatRevenueDisplay/);
+  assert.doesNotMatch(financialOverviewCardsComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const briefIndex = page.indexOf("<CompanyEditorialBrief editorialBrief={editorialBrief} />");
+  const tabsIndex = page.indexOf("<CompanyDetailTabs");
+  const overviewIndex = page.indexOf("<CompanyOverviewTab");
+  const companyInfoIndex = page.indexOf("<CompanyInfoHeader data={data} />");
+  const financialCardsIndex = page.indexOf("<FinancialOverviewCards data={data} />");
+  const dividendIndex = page.indexOf("<DividendPolicyPanel data={data} />");
+  assert.ok(briefIndex > 0, "company editorial brief should still render from the page");
+  assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
+  assert.ok(overviewIndex > tabsIndex, "overview tab content should remain inside the extracted tabs shell");
+  assert.ok(companyInfoIndex > overviewIndex, "company info header should remain inside the overview financial slot");
+  assert.ok(financialCardsIndex > companyInfoIndex, "financial overview cards should still follow company info header");
+  assert.ok(dividendIndex > financialCardsIndex, "dividend panel should still follow financial overview cards");
 });
