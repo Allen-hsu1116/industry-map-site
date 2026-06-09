@@ -798,6 +798,69 @@ function StatItem({ label, value, sub, className = "", trend }: { label: string;
   );
 }
 
+type CompanyEditorialBriefSource = {
+  label: string;
+  status: string;
+  freshness: string;
+  source: string;
+};
+
+type CompanyEditorialBrief = {
+  items: Array<{ label: string; value: string; tone: string }>;
+  approvedSections: string[];
+  sources: CompanyEditorialBriefSource[];
+};
+
+function firstText(...groups: Array<Array<string | null | undefined> | null | undefined>): string | null {
+  for (const group of groups) {
+    const value = group?.find((item) => typeof item === "string" && item.trim().length > 0)?.trim();
+    if (value) return value;
+  }
+  return null;
+}
+
+function buildCompanyEditorialBrief({
+  data,
+  analysis,
+  industryInsights,
+  latestKLineDate,
+}: {
+  data: FinancialData;
+  analysis: DailyAnalysis;
+  industryInsights: ReturnType<typeof buildCompanyIndustryInsights>;
+  latestKLineDate: string | null | undefined;
+}): CompanyEditorialBrief {
+  const primaryRole = industryInsights.panels.topicRoles.items.find((role) => role.status === "verified") ?? industryInsights.panels.topicRoles.items[0];
+  const primaryProduct = industryInsights.panels.products.items[0];
+  const swotRisks = [...industryInsights.panels.swot.groups.weaknesses, ...industryInsights.panels.swot.groups.threats];
+  const hardGate = analysis.scoring.riskGates.find((gate) => gate.severity === "hard") ?? analysis.scoring.riskGates[0];
+  const dailyChange = firstText(
+    analysis.technical.signals,
+    analysis.chips.signals,
+    [analysis.technical.summary, analysis.chips.summary],
+  ) ?? "今日變化資料不足；只顯示已載入的行情、技術與籌碼欄位，不補 AI 結論。";
+  const longTermRole = primaryRole?.roleSummary ?? primaryProduct?.whyItMatters ?? analysis.industry.roleDetail?.roleSummary ?? "尚未建立 verified topic role；不可把同漲題材視為公司長期角色。";
+  const biggestRisk = hardGate?.message ?? swotRisks[0]?.statement ?? firstText(analysis.industry.risks, analysis.technical.risks, analysis.chips.risks) ?? "尚無已驗證風險；請看 SWOT 與 source rail 的 partial/empty 狀態。";
+  const watchNext = firstText(analysis.nextSession.focus, analysis.technical.watch, analysis.chips.watch, analysis.industry.watch) ?? "等待下一筆可信市場資料、公司公告或已驗證題材角色更新。";
+
+  return {
+    items: [
+      { label: "What changed today?", value: dailyChange, tone: "text-sky-100" },
+      { label: "Long-term role", value: longTermRole, tone: "text-emerald-100" },
+      { label: "Biggest risk", value: biggestRisk, tone: "text-rose-100" },
+      { label: "Watch next", value: watchNext, tone: "text-amber-100" },
+    ],
+    approvedSections: ["Overview", "Daily AI Analysis", "Fundamentals", "Technicals", "Chip / Ownership", "News / Events", "Products", "Topic Roles", "SWOT", "Sources"],
+    sources: [
+      { label: "Daily AI Analysis", status: "AI-derived", freshness: analysis.generatedAt, source: "rule-batch daily analysis artifact" },
+      { label: "Fundamentals", status: "checked-in evidence", freshness: data.updatedAt, source: "financial JSON / MOPS-derived fields" },
+      { label: "Technicals", status: latestKLineDate ? "checked-in market data" : "partial", freshness: latestKLineDate ?? "unknown", source: "daily K-line history" },
+      { label: "Chip / Ownership", status: data.institutional?.date || data.margin_history?.length ? "checked-in market data" : "partial", freshness: data.institutional?.date ?? data.margin_history?.at(-1)?.date ?? "unknown", source: "institutional / margin feeds" },
+      ...industryInsights.sourceStatus.map((source) => ({ label: source.label, status: source.status, freshness: source.latestVerifiedAt ?? "unknown", source: source.source })),
+    ],
+  };
+}
+
 function BatchAnalysisPanel({
   title,
   badge,
@@ -2073,6 +2136,12 @@ function CompanyFullPageDetail({
   const latestKLineDate = trends?.daily_prices?.length
     ? [...trends.daily_prices].sort((a, b) => a.date.localeCompare(b.date)).at(-1)?.date
     : null;
+  const editorialBrief = buildCompanyEditorialBrief({
+    data,
+    analysis: resolvedDailyAnalysis,
+    industryInsights,
+    latestKLineDate,
+  });
 
   const aiSummary = (() => {
     const name = data.name;
@@ -2167,6 +2236,55 @@ function CompanyFullPageDetail({
             </span>
           ))}
         </div>
+
+        {/* ─── Goal 7 Human Editorial company brief ─── */}
+        <section className="company-detail-editorial-brief app-panel mb-6 rounded-3xl border border-white/10 p-5">
+          <div className="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <div className="text-[11px] font-bold uppercase tracking-[0.22em] text-sky-200">Company Detail · Human Editorial UI</div>
+              <h2 className="mt-2 text-xl font-bold text-white">Daily AI Analysis 先講人話，再看證據模組</h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[var(--color-text-secondary)]">
+                AI-derived 摘要只整理 checked-in evidence、行情與知識檔；不是買賣建議。資料不足會顯示 partial / empty，不讓網站裝懂，也不可用 AI 或短線股價硬補公司角色。
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/[0.06] bg-black/20 p-3 text-xs text-[var(--color-text-tertiary)]">
+              Sources · {editorialBrief.sources.length} modules
+            </div>
+          </div>
+
+          <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {editorialBrief.items.map((item) => (
+              <div key={item.label} className="taste-card rounded-2xl border border-white/[0.08] bg-black/20 p-4">
+                <div className="text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-tertiary)]">{item.label}</div>
+                <p className={cn("mt-2 text-sm leading-relaxed", item.tone)}>{item.value}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-5 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="rounded-2xl border border-white/[0.06] bg-black/15 p-4">
+              <div className="text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-tertiary)]">Goal 7 approved sections</div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {editorialBrief.approvedSections.map((section) => (
+                  <span key={section} className="rounded-full border border-white/[0.08] bg-white/[0.035] px-3 py-1 text-[11px] font-semibold text-slate-200">
+                    {section}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl border border-white/[0.06] bg-black/15 p-4">
+              <div className="text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-tertiary)]">Sources</div>
+              <div className="mt-3 space-y-2">
+                {editorialBrief.sources.slice(0, 6).map((source) => (
+                  <div key={`${source.label}-${source.source}`} className="flex items-center justify-between gap-3 text-xs">
+                    <span className="text-slate-300">{source.label}</span>
+                    <span className="text-right text-[var(--color-text-tertiary)]">{source.status} · {source.freshness}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* ─── Main Tabs (aistockmap pill style) ─── */}
         <div className="flex items-center gap-1 bg-white/[0.03] rounded-xl p-1 mb-8 overflow-x-auto">
