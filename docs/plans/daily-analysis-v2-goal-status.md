@@ -399,6 +399,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/page.tsx` still owns dense company-detail tab contents and data-loading effects.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
+### 2026-06-09 — Slice M1.5 CompanyOverviewTab shell extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyOverviewTab.tsx` for the overview tab's `財務數據` / `重大資訊` sub-tab shell.
+- Removed the inline `OverviewTabContent` function from `src/app/page.tsx` and replaced it with `<CompanyOverviewTab>` receiving prepared render slots for the existing financial overview panels and major-news panel.
+- Kept financial panel JSX, major-news fetch behavior, `revenueTab` state ownership, dense tab contents, Goal 7 Human Editorial brief, `CompanySectionInventory`, `CompanyDetailTabs`, and active company route behavior unchanged.
+- Preserved `/?company=CODE`; no `/companies/[code]` route or link was added in this slice.
+- Preserved overview copy and labels including `財務數據`, `重大資訊`, company info, `最新財務概況`, `股利政策`, `營收分析趨勢`, `獲利能力趨勢`, and `重大訊息公告`.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.5 guardrails proving the overview shell boundary does not fetch, import checked-in JSON, build view models, import app/data modules, or introduce `/companies/[code]`; it also verifies `CompanyEditorialBrief` / `CompanySectionInventory` remain before dense tab modules.
+
+**Verification:**
+- `npm test -- --test-name-pattern "Goal 7|company editorial brief|section inventory|company detail tabs|overview tab"` → 154/154 passing under Node test filtering behavior.
+- `npm test` → 154/154 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard search across `src/` found only the pre-existing `/companies/${input.companyCode}` reference in `src/lib/productNavigation.ts`; no new `/companies/[code]` route/link was introduced by this slice.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run dev -- --hostname 127.0.0.1 --port 3048` → company detail renders the Human Editorial brief first, approved source rail, extracted tab shell, overview sub-tabs `財務數據` / `重大資訊`, and existing overview financial modules.
+- Browser console after smoke check → 0 JS errors; only React DevTools/HMR informational messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next dense overview sub-panel or remaining tab content slice; keep behavior-preserving extraction only.
+- `src/app/page.tsx` still owns many overview sub-panels (`CompanyInfoHeader`, `FinancialOverviewCards`, `DividendPolicyPanel`, `RevenueAnalysisPanel`, `ProfitabilityAnalysisPanel`) and other dense tab contents.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:

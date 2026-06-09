@@ -21,6 +21,7 @@ import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles, typ
 import { groupCompanySwot, normalizeCompanySwot, selectTopicSwotItems, type CompanySwotItem, type CompanySwotKnowledge, type GroupedSwot } from "@/lib/companySwot";
 import { CompanyEditorialBrief } from "@/components/company-detail/CompanyEditorialBrief";
 import { CompanyDetailTabs, type CompanyDetailTab } from "@/components/company-detail/CompanyDetailTabs";
+import { CompanyOverviewTab } from "@/components/company-detail/CompanyOverviewTab";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -1147,64 +1148,6 @@ function ProfitabilityTrendPanel({ data }: { data: FinancialData }) {
   );
 }
 
-/* ─── Overview Tab Content (aistockmap style) ─── */
-function OverviewTabContent({ data, revenueTab, onRevenueTabChange }: { data: FinancialData; revenueTab: "monthly" | "quarterly" | "yearly"; onRevenueTabChange: (tab: "monthly" | "quarterly" | "yearly") => void }) {
-  const [profitTab, setProfitTab] = useState<"quarterly" | "yearly">("quarterly");
-  const [overviewSubTab, setOverviewSubTab] = useState<"financial" | "news">("financial");
-  return (
-    <div className="space-y-6">
-      {/* Sub-tabs: 財務數據 | 重大資訊 */}
-      <div className="flex items-center gap-1 bg-white/[0.03] rounded-xl p-1">
-        <button
-          className={cn(
-            "px-4 py-2 text-sm font-medium rounded-lg transition-all",
-            overviewSubTab === "financial"
-              ? "bg-indigo-500/20 text-indigo-400"
-              : "text-gray-400 hover:text-[var(--color-text-secondary)]"
-          )}
-          onClick={() => setOverviewSubTab("financial")}
-        >
-          財務數據
-        </button>
-        <button
-          className={cn(
-            "px-4 py-2 text-sm font-medium rounded-lg transition-all",
-            overviewSubTab === "news"
-              ? "bg-indigo-500/20 text-indigo-400"
-              : "text-gray-400 hover:text-[var(--color-text-secondary)]"
-          )}
-          onClick={() => setOverviewSubTab("news")}
-        >
-          重大資訊
-        </button>
-      </div>
-
-      {overviewSubTab === "financial" && (
-        <>
-          {/* 1. 公司基本資料卡片 */}
-          <CompanyInfoHeader data={data} />
-
-          {/* 2. 最新財務概況 8 卡片 */}
-          <FinancialOverviewCards data={data} />
-
-          {/* 3. 股利政策 */}
-          <DividendPolicyPanel data={data} />
-
-          {/* 4. 營收分析趨勢 */}
-          <RevenueAnalysisPanel data={data} revenueTab={revenueTab} onRevenueTabChange={onRevenueTabChange} />
-
-          {/* 5. 獲利能力趨勢 */}
-          <ProfitabilityAnalysisPanel data={data} profitTab={profitTab} onProfitTabChange={setProfitTab} />
-        </>
-      )}
-
-      {overviewSubTab === "news" && (
-        <DynamicMajorNewsPanel code={data.code} initialMajorNews={data.major_news} />
-      )}
-    </div>
-  );
-}
-
 /* ─── Major News Panel (dynamic MOPS/TWSE fetch with snapshot fallback) ─── */
 function DynamicMajorNewsPanel({ code, initialMajorNews }: { code: string; initialMajorNews?: MajorNewsItem[] }) {
   const [majorNews, setMajorNews] = useState<MajorNewsItem[]>(initialMajorNews ?? []);
@@ -2176,7 +2119,27 @@ function CompanyFullPageDetail({
             <div className="min-h-[400px]">
           {/* ─── 基本資料 Tab (aistockmap style) ─── */}
           {detailTab === "overview" && (
-            <OverviewTabContent data={data} revenueTab={revenueTab} onRevenueTabChange={setRevenueTab} />
+            <CompanyOverviewTab
+              financialContent={(profitTab, setProfitTab) => (
+                <>
+                  {/* 1. 公司基本資料卡片 */}
+                  <CompanyInfoHeader data={data} />
+
+                  {/* 2. 最新財務概況 8 卡片 */}
+                  <FinancialOverviewCards data={data} />
+
+                  {/* 3. 股利政策 */}
+                  <DividendPolicyPanel data={data} />
+
+                  {/* 4. 營收分析趨勢 */}
+                  <RevenueAnalysisPanel data={data} revenueTab={revenueTab} onRevenueTabChange={setRevenueTab} />
+
+                  {/* 5. 獲利能力趨勢 */}
+                  <ProfitabilityAnalysisPanel data={data} profitTab={profitTab} onProfitTabChange={setProfitTab} />
+                </>
+              )}
+              majorNewsContent={<DynamicMajorNewsPanel code={data.code} initialMajorNews={data.major_news} />}
+            />
           )}
 
           {/* ─── 產業分析 Tab ─── */}
