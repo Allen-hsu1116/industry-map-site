@@ -526,6 +526,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/page.tsx` still owns `ProfitabilityAnalysisPanel` and other dense tab contents.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
+### 2026-06-10 — Slice M1.10 ProfitabilityAnalysisPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/ProfitabilityAnalysisPanel.tsx` as a render-only profitability analysis component for the overview financial slot.
+- Moved the coupled `ProfitabilityQuarterlyView` and `ProfitabilityChartAndTable` helpers into the extracted component so margin/EPS chart and table rendering stay co-located with the profitability panel.
+- Removed the inline `ProfitabilityAnalysisPanel`, `ProfitabilityQuarterlyView`, and `ProfitabilityChartAndTable` functions from `src/app/page.tsx` and imported/rendered the extracted component with the existing prepared `data`, `profitTab`, and `setProfitTab` props.
+- Preserved existing profitability copy and labels: `獲利能力趨勢`, `季度`, `年度`, `毛利率`, `營益率`, `淨利率`, `EPS`, and `📋 季度資料累積中`.
+- Preserved existing quarterly/yearly tab behavior, ROC quarter label formatting, yearly aggregation, chart/table behavior, empty state, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.10 guardrails proving the extracted component does not fetch, import checked-in JSON, build view models, import app/data modules, call API routes, or introduce `/companies/[code]`; it also verifies the overview order remains `RevenueAnalysisPanel` → `ProfitabilityAnalysisPanel`.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.10"` failed because `src/components/company-detail/ProfitabilityAnalysisPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.10"` → 159/159 passing under Node test filtering behavior.
+- `npm test` → 159/159 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard remains unchanged: canonical company detail behavior stays on `/?company=CODE`; `/companies/[code]` remains deferred to M2.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → company detail renders Human Editorial brief/source rail, tabs, overview sub-tabs, extracted company info header, extracted financial overview cards, extracted dividend policy panel, extracted revenue analysis panel, and extracted profitability analysis panel.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next dense tab/content boundary after the overview financial sub-panels; keep behavior-preserving extraction only.
+- `src/app/page.tsx` still owns other dense tab contents and shared helper duplication remains intentionally deferred until a named helper-consolidation slice.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:

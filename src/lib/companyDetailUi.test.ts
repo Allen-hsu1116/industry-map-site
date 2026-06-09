@@ -11,6 +11,7 @@ const companyInfoHeaderComponentPath = "src/components/company-detail/CompanyInf
 const financialOverviewCardsComponentPath = "src/components/company-detail/FinancialOverviewCards.tsx";
 const dividendPolicyPanelComponentPath = "src/components/company-detail/DividendPolicyPanel.tsx";
 const revenueAnalysisPanelComponentPath = "src/components/company-detail/RevenueAnalysisPanel.tsx";
+const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/ProfitabilityAnalysisPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -304,6 +305,57 @@ test("Slice M1.9 extracts revenue analysis panel without changing revenue labels
   }
 
   assert.doesNotMatch(revenueAnalysisPanelComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const briefIndex = page.indexOf("<CompanyEditorialBrief editorialBrief={editorialBrief} />");
+  const tabsIndex = page.indexOf("<CompanyDetailTabs");
+  const overviewIndex = page.indexOf("<CompanyOverviewTab");
+  const companyInfoIndex = page.indexOf("<CompanyInfoHeader data={data} />");
+  const financialCardsIndex = page.indexOf("<FinancialOverviewCards data={data} />");
+  const dividendIndex = page.indexOf("<DividendPolicyPanel data={data} />");
+  const revenueIndex = page.indexOf("<RevenueAnalysisPanel");
+  const profitabilityIndex = page.indexOf("<ProfitabilityAnalysisPanel");
+  assert.ok(briefIndex > 0, "company editorial brief should still render from the page");
+  assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
+  assert.ok(overviewIndex > tabsIndex, "overview tab content should remain inside the extracted tabs shell");
+  assert.ok(companyInfoIndex > overviewIndex, "company info header should remain inside the overview financial slot");
+  assert.ok(financialCardsIndex > companyInfoIndex, "financial overview cards should still follow company info header");
+  assert.ok(dividendIndex > financialCardsIndex, "dividend panel should still follow financial overview cards");
+  assert.ok(revenueIndex > dividendIndex, "revenue analysis should still follow dividend policy panel");
+  assert.ok(profitabilityIndex > revenueIndex, "profitability analysis should still follow revenue analysis");
+});
+
+test("Slice M1.10 extracts profitability analysis panel without changing profitability labels or route behavior", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const briefComponent = await readFile(briefComponentPath, "utf8");
+  const sectionInventoryComponent = await readFile(sectionInventoryComponentPath, "utf8");
+  const detailTabsComponent = await readFile(detailTabsComponentPath, "utf8");
+  const overviewComponent = await readFile(overviewComponentPath, "utf8");
+  const companyInfoHeaderComponent = await readFile(companyInfoHeaderComponentPath, "utf8");
+  const financialOverviewCardsComponent = await readFile(financialOverviewCardsComponentPath, "utf8");
+  const dividendPolicyPanelComponent = await readFile(dividendPolicyPanelComponentPath, "utf8");
+  const revenueAnalysisPanelComponent = await readFile(revenueAnalysisPanelComponentPath, "utf8");
+  const profitabilityAnalysisPanelComponent = await readFile(profitabilityAnalysisPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}\n${dividendPolicyPanelComponent}\n${revenueAnalysisPanelComponent}\n${profitabilityAnalysisPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/ProfitabilityAnalysisPanel/);
+  assert.match(page, /<ProfitabilityAnalysisPanel[\s\S]*data=\{data\}[\s\S]*profitTab=\{profitTab\}[\s\S]*onProfitTabChange=\{setProfitTab\}/);
+  assert.doesNotMatch(page, /function ProfitabilityAnalysisPanel/);
+  assert.doesNotMatch(page, /function ProfitabilityQuarterlyView/);
+  assert.doesNotMatch(page, /function ProfitabilityChartAndTable/);
+  assert.match(profitabilityAnalysisPanelComponent, /export function ProfitabilityAnalysisPanel/);
+  assert.match(profitabilityAnalysisPanelComponent, /function ProfitabilityQuarterlyView/);
+  assert.match(profitabilityAnalysisPanelComponent, /function ProfitabilityChartAndTable/);
+
+  for (const label of ["獲利能力趨勢", "季度", "年度", "毛利率", "營益率", "淨利率", "EPS", "📋 季度資料累積中"]) {
+    assert.match(profitabilityAnalysisPanelComponent, new RegExp(label));
+  }
+
+  for (const helper of ["formatQuarterLabel", "rechartsAxisStyle", "ComposedChart", "grossMargin", "operatingMargin", "netMargin"]) {
+    assert.match(profitabilityAnalysisPanelComponent, new RegExp(helper));
+  }
+
+  assert.doesNotMatch(profitabilityAnalysisPanelComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
   assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
 
   const briefIndex = page.indexOf("<CompanyEditorialBrief editorialBrief={editorialBrief} />");
