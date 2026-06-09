@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-09 21:00 CST
+Updated: 2026-06-09 22:02 CST
 
 ## Purpose
 
@@ -345,6 +345,29 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Remaining:**
 - Continue M1 company-detail extraction with source/section inventory and tab shell slices before introducing canonical `/companies/[code]` routing.
+- `src/app/page.tsx` still owns most company-detail rendering and data-loading effects.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+### 2026-06-09 — Slice M1.3 CompanySectionInventory and source rail extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanySectionInventory.tsx` for the Goal 7 approved section inventory and source-semantic rail.
+- Kept `CompanyEditorialBrief` as a composition-only render component receiving prepared `CompanyEditorialBriefViewModel` props and delegating `approvedSections` / `sources` to the new component.
+- Preserved the existing `/?company=CODE` route behavior; no `/companies/[code]` route or link was added in this slice.
+- Preserved Goal 7 approved section labels, `AI-derived`, `checked-in evidence`, `checked-in market data`, `partial` / `empty` guardrail copy, source freshness text, and recommendation semantics.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.3 guardrails proving the extracted component boundary does not fetch, import checked-in JSON, build view models, or introduce `/companies/[code]`.
+
+**Verification:**
+- `npm test -- --test-name-pattern "Goal 7|company editorial brief|section inventory"` → 152/152 passing under Node test filtering behavior.
+- `npm test` → 152/152 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with production `npm run start -- --port 3048` → company detail renders the Human Editorial brief, approved section inventory, `AI-derived`, `checked-in evidence`, `checked-in market data`, and `partial / empty` guardrail copy.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with `CompanyDetailTabs` shell before introducing canonical `/companies/[code]` routing.
 - `src/app/page.tsx` still owns most company-detail rendering and data-loading effects.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 

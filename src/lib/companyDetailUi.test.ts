@@ -4,6 +4,7 @@ import test from "node:test";
 
 const pagePath = "src/app/page.tsx";
 const briefComponentPath = "src/components/company-detail/CompanyEditorialBrief.tsx";
+const sectionInventoryComponentPath = "src/components/company-detail/CompanySectionInventory.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -28,8 +29,9 @@ test("Goal 7 company detail opens with a Human Editorial brief before tabbed evi
 test("Goal 7 company detail exposes the approved section inventory without hiding source semantics", async () => {
   const page = await readFile(pagePath, "utf8");
   const briefComponent = await readFile(briefComponentPath, "utf8");
+  const sectionInventoryComponent = await readFile(sectionInventoryComponentPath, "utf8");
   const briefViewModel = await readFile(briefViewModelPath, "utf8");
-  const combinedSource = `${page}\n${briefComponent}\n${briefViewModel}`;
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${briefViewModel}`;
 
   for (const label of [
     "Overview",
@@ -48,20 +50,30 @@ test("Goal 7 company detail exposes the approved section inventory without hidin
 
   assert.match(combinedSource, /AI-derived/);
   assert.match(combinedSource, /checked-in evidence/);
+  assert.match(combinedSource, /checked-in market data/);
+  assert.match(combinedSource, /partial|empty/);
   assert.match(combinedSource, /不可用 AI|不可用短線|不讓網站裝懂/);
 });
 
-test("Slice M1.2 keeps CompanyEditorialBrief rendering separated from its view model", async () => {
+test("Slice M1.3 extracts approved sections and source rail without changing the prepared-props boundary", async () => {
   const page = await readFile(pagePath, "utf8");
   const briefComponent = await readFile(briefComponentPath, "utf8");
+  const sectionInventoryComponent = await readFile(sectionInventoryComponentPath, "utf8");
   const briefViewModel = await readFile(briefViewModelPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${briefViewModel}`;
 
   assert.match(page, /@\/components\/company-detail\/CompanyEditorialBrief/);
   assert.match(page, /@\/lib\/view-models\/companyEditorialBrief/);
+  assert.match(briefComponent, /import \{ CompanySectionInventory \} from "@\/components\/company-detail\/CompanySectionInventory"/);
+  assert.match(briefComponent, /<CompanySectionInventory\s+approvedSections=\{editorialBrief\.approvedSections\}\s+sources=\{editorialBrief\.sources\}/m);
   assert.match(briefComponent, /export function CompanyEditorialBrief/);
+  assert.match(sectionInventoryComponent, /export function CompanySectionInventory/);
+  assert.match(sectionInventoryComponent, /Goal 7 approved sections/);
+  assert.match(sectionInventoryComponent, /Sources/);
   assert.match(briefViewModel, /export function buildCompanyEditorialBrief/);
   assert.doesNotMatch(page, /function buildCompanyEditorialBrief/);
-  assert.doesNotMatch(briefComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief/);
+  assert.doesNotMatch(briefComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|editorialBrief\.approvedSections\.map|editorialBrief\.sources\.slice/);
+  assert.doesNotMatch(sectionInventoryComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data/);
   assert.doesNotMatch(briefViewModel, /fetch\(|import .*\.json|from "@\/components/);
-  assert.doesNotMatch(`${page}\n${briefComponent}\n${briefViewModel}`, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
 });
