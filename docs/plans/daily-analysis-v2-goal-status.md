@@ -552,6 +552,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/page.tsx` still owns other dense tab contents and shared helper duplication remains intentionally deferred until a named helper-consolidation slice.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
+### 2026-06-10 — Slice M1.11 BatchAnalysisPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/BatchAnalysisPanel.tsx` as a render-only batch-analysis card component shared by the chips and technical tabs.
+- Removed the inline `BatchAnalysisPanel` function from `src/app/page.tsx` and imported/rendered the extracted component at the existing chips and technical analysis call sites.
+- Preserved existing analysis copy and labels: `規則式判讀`, `正向訊號`, `風險訊號`, `觀察重點`, `暫無明顯訊號`, `即時計算`, `🧠 籌碼收盤後判讀`, and `📊 技術分析判讀`.
+- Preserved existing score-tone behavior, generated-at display, optional description override, empty list fallback, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.11 guardrails proving the extracted component does not fetch, import checked-in JSON, build view models, import app/data modules, call API routes, or introduce `/companies/[code]`; it also verifies chips and technical batch cards stay inside their existing tab boundaries.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.11"` failed because `src/components/company-detail/BatchAnalysisPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.11"` → 160/160 passing under Node test filtering behavior.
+- `npm test` → 160/160 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard search across `src/` found only the pre-existing `/companies/${input.companyCode}` reference in `src/lib/productNavigation.ts`; no new `/companies/[code]` route/link was introduced by this slice.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --port 3048` → company detail renders Human Editorial brief/source rail, tabs, overview financial modules, and the extracted `BatchAnalysisPanel` in the chips tab (`🧠 籌碼收盤後判讀`).
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with a boundary that can stay behavior-preserving and reviewable; likely next candidates are a render-only `TechnicalNextSessionPanel` or a carefully separated news/major-news split.
+- `NewsTabContent` and `DynamicMajorNewsPanel` still own client-side API fetches, so they should not be treated as render-only presentational components unless split into container + render panel in a named slice.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:

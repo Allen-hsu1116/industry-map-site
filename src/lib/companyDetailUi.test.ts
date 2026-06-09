@@ -12,6 +12,7 @@ const financialOverviewCardsComponentPath = "src/components/company-detail/Finan
 const dividendPolicyPanelComponentPath = "src/components/company-detail/DividendPolicyPanel.tsx";
 const revenueAnalysisPanelComponentPath = "src/components/company-detail/RevenueAnalysisPanel.tsx";
 const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/ProfitabilityAnalysisPanel.tsx";
+const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnalysisPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -374,4 +375,50 @@ test("Slice M1.10 extracts profitability analysis panel without changing profita
   assert.ok(dividendIndex > financialCardsIndex, "dividend panel should still follow financial overview cards");
   assert.ok(revenueIndex > dividendIndex, "revenue analysis should still follow dividend policy panel");
   assert.ok(profitabilityIndex > revenueIndex, "profitability analysis should still follow revenue analysis");
+});
+
+test("Slice M1.11 extracts batch analysis panel without changing analysis labels or route behavior", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const briefComponent = await readFile(briefComponentPath, "utf8");
+  const sectionInventoryComponent = await readFile(sectionInventoryComponentPath, "utf8");
+  const detailTabsComponent = await readFile(detailTabsComponentPath, "utf8");
+  const overviewComponent = await readFile(overviewComponentPath, "utf8");
+  const companyInfoHeaderComponent = await readFile(companyInfoHeaderComponentPath, "utf8");
+  const financialOverviewCardsComponent = await readFile(financialOverviewCardsComponentPath, "utf8");
+  const dividendPolicyPanelComponent = await readFile(dividendPolicyPanelComponentPath, "utf8");
+  const revenueAnalysisPanelComponent = await readFile(revenueAnalysisPanelComponentPath, "utf8");
+  const profitabilityAnalysisPanelComponent = await readFile(profitabilityAnalysisPanelComponentPath, "utf8");
+  const batchAnalysisPanelComponent = await readFile(batchAnalysisPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}\n${dividendPolicyPanelComponent}\n${revenueAnalysisPanelComponent}\n${profitabilityAnalysisPanelComponent}\n${batchAnalysisPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/BatchAnalysisPanel/);
+  assert.match(page, /<BatchAnalysisPanel[\s\S]*title="🧠 籌碼收盤後判讀"[\s\S]*badge=\{resolvedDailyAnalysis\.chips\.label\}/);
+  assert.match(page, /<BatchAnalysisPanel[\s\S]*title="📊 技術分析判讀"[\s\S]*badge=\{resolvedDailyAnalysis\.technical\.label\}/);
+  assert.doesNotMatch(page, /function BatchAnalysisPanel/);
+  assert.match(batchAnalysisPanelComponent, /export interface BatchAnalysisPanelProps/);
+  assert.match(batchAnalysisPanelComponent, /export function BatchAnalysisPanel/);
+
+  for (const label of ["規則式判讀", "正向訊號", "風險訊號", "觀察重點", "暫無明顯訊號", "即時計算"]) {
+    assert.match(batchAnalysisPanelComponent, new RegExp(label));
+  }
+
+  for (const prop of ["title", "badge", "score", "summary", "signals", "risks", "watch", "generatedAt", "description"]) {
+    assert.match(batchAnalysisPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(batchAnalysisPanelComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const briefIndex = page.indexOf("<CompanyEditorialBrief editorialBrief={editorialBrief} />");
+  const tabsIndex = page.indexOf("<CompanyDetailTabs");
+  const chipsTabIndex = page.indexOf("{/* ─── 籌碼分析 Tab ─── */}");
+  const chipsBatchIndex = page.indexOf("title=\"🧠 籌碼收盤後判讀\"");
+  const techTabIndex = page.indexOf("{/* ─── 技術分析 Tab ─── */}");
+  const techBatchIndex = page.indexOf("title=\"📊 技術分析判讀\"");
+  const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
+  assert.ok(briefIndex > 0, "company editorial brief should still render from the page");
+  assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
+  assert.ok(chipsBatchIndex > chipsTabIndex, "chips batch analysis should remain inside chips tab");
+  assert.ok(techBatchIndex > techTabIndex, "technical batch analysis should remain inside technical tab");
+  assert.ok(newsTabIndex > techBatchIndex, "technical batch analysis should still precede the news tab");
 });
