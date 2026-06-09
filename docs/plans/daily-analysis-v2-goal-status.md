@@ -475,6 +475,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/page.tsx` still owns `DividendPolicyPanel`, `RevenueAnalysisPanel`, `ProfitabilityAnalysisPanel`, and other dense tab contents.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
+### 2026-06-10 — Slice M1.8 DividendPolicyPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/DividendPolicyPanel.tsx` as a render-only dividend policy component for the overview financial slot.
+- Removed the inline `DividendPolicyPanel` function from `src/app/page.tsx` and imported/rendered the extracted component with the existing prepared `data` prop.
+- Preserved existing dividend copy and labels: `股利政策`, `配息頻率: 季`, `歷年股利發放`, `最新現金股利`, `所屬年度`, `現金股利`, `股票股利`, `合計股利`, `股利年度`, and `📋 歷年股利資料準備中`.
+- Preserved existing dividend-history chart/table behavior, ROC-year display, current-cash fallback, dividend-year fallback, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.8 guardrails proving the extracted component does not fetch, import checked-in JSON, build view models, import app/data modules, call API routes, or introduce `/companies/[code]`; it also verifies the overview order remains `FinancialOverviewCards` → `DividendPolicyPanel` → `RevenueAnalysisPanel`.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.8"` failed because `src/components/company-detail/DividendPolicyPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.8"` → 157/157 passing under Node test filtering behavior.
+- `npm test` → 157/157 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard search across `src/` found only the pre-existing `/companies/${input.companyCode}` reference in `src/lib/productNavigation.ts`; no new `/companies/[code]` route/link was introduced by this slice.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run dev -- --hostname 127.0.0.1 --port 3048` → company detail renders Human Editorial brief/source rail, tabs, overview sub-tabs, extracted company info header, extracted financial overview cards, extracted dividend policy panel, and the following revenue module.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with `RevenueAnalysisPanel`; keep behavior-preserving extraction only.
+- `src/app/page.tsx` still owns `RevenueAnalysisPanel`, `ProfitabilityAnalysisPanel`, and other dense tab contents.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:

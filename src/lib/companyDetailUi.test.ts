@@ -9,6 +9,7 @@ const detailTabsComponentPath = "src/components/company-detail/CompanyDetailTabs
 const overviewComponentPath = "src/components/company-detail/CompanyOverviewTab.tsx";
 const companyInfoHeaderComponentPath = "src/components/company-detail/CompanyInfoHeader.tsx";
 const financialOverviewCardsComponentPath = "src/components/company-detail/FinancialOverviewCards.tsx";
+const dividendPolicyPanelComponentPath = "src/components/company-detail/DividendPolicyPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -230,4 +231,46 @@ test("Slice M1.7 extracts financial overview cards without changing financial la
   assert.ok(companyInfoIndex > overviewIndex, "company info header should remain inside the overview financial slot");
   assert.ok(financialCardsIndex > companyInfoIndex, "financial overview cards should still follow company info header");
   assert.ok(dividendIndex > financialCardsIndex, "dividend panel should still follow financial overview cards");
+});
+
+test("Slice M1.8 extracts dividend policy panel without changing dividend labels or route behavior", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const briefComponent = await readFile(briefComponentPath, "utf8");
+  const sectionInventoryComponent = await readFile(sectionInventoryComponentPath, "utf8");
+  const detailTabsComponent = await readFile(detailTabsComponentPath, "utf8");
+  const overviewComponent = await readFile(overviewComponentPath, "utf8");
+  const companyInfoHeaderComponent = await readFile(companyInfoHeaderComponentPath, "utf8");
+  const financialOverviewCardsComponent = await readFile(financialOverviewCardsComponentPath, "utf8");
+  const dividendPolicyPanelComponent = await readFile(dividendPolicyPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}\n${dividendPolicyPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/DividendPolicyPanel/);
+  assert.match(page, /<DividendPolicyPanel data=\{data\} \/>/);
+  assert.doesNotMatch(page, /function DividendPolicyPanel/);
+  assert.match(dividendPolicyPanelComponent, /export function DividendPolicyPanel/);
+
+  for (const label of ["股利政策", "配息頻率: 季", "歷年股利發放", "最新現金股利", "所屬年度", "現金股利", "股票股利", "合計股利", "股利年度", "📋 歷年股利資料準備中"]) {
+    assert.match(dividendPolicyPanelComponent, new RegExp(label));
+  }
+
+  assert.match(dividendPolicyPanelComponent, /formatROCYear/);
+  assert.match(dividendPolicyPanelComponent, /ResponsiveContainer/);
+  assert.match(dividendPolicyPanelComponent, /BarChart/);
+  assert.doesNotMatch(dividendPolicyPanelComponent, /fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const briefIndex = page.indexOf("<CompanyEditorialBrief editorialBrief={editorialBrief} />");
+  const tabsIndex = page.indexOf("<CompanyDetailTabs");
+  const overviewIndex = page.indexOf("<CompanyOverviewTab");
+  const companyInfoIndex = page.indexOf("<CompanyInfoHeader data={data} />");
+  const financialCardsIndex = page.indexOf("<FinancialOverviewCards data={data} />");
+  const dividendIndex = page.indexOf("<DividendPolicyPanel data={data} />");
+  const revenueIndex = page.indexOf("<RevenueAnalysisPanel");
+  assert.ok(briefIndex > 0, "company editorial brief should still render from the page");
+  assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
+  assert.ok(overviewIndex > tabsIndex, "overview tab content should remain inside the extracted tabs shell");
+  assert.ok(companyInfoIndex > overviewIndex, "company info header should remain inside the overview financial slot");
+  assert.ok(financialCardsIndex > companyInfoIndex, "financial overview cards should still follow company info header");
+  assert.ok(dividendIndex > financialCardsIndex, "dividend panel should still follow financial overview cards");
+  assert.ok(revenueIndex > dividendIndex, "revenue analysis should still follow dividend policy panel");
 });
