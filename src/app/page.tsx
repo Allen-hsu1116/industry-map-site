@@ -20,6 +20,7 @@ import { findProductKnowledgeItem, productKnowledgeToNarrative, type CompanyProd
 import { directnessLabel, directnessToRelevance, normalizeCompanyTopicRoles, type CompanyTopicRolesKnowledge, type Directness } from "@/lib/companyTopicRoles";
 import { groupCompanySwot, normalizeCompanySwot, selectTopicSwotItems, type CompanySwotItem, type CompanySwotKnowledge, type GroupedSwot } from "@/lib/companySwot";
 import { CompanyEditorialBrief } from "@/components/company-detail/CompanyEditorialBrief";
+import { CompanyDetailTabs, type CompanyDetailTab } from "@/components/company-detail/CompanyDetailTabs";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -477,7 +478,6 @@ function formatRevenueDisplay(num: number): string {
 
 type TabId = "focus" | "topics" | "map" | "companies";
 type CompanyViewMode = "list" | "detail";
-type CompanyDetailTab = "overview" | "industry" | "chips" | "tech" | "news" | "charts";
 
 /* ─── Recharts Helpers ─── */
 const CHART_COLORS = {
@@ -2117,15 +2117,6 @@ function CompanyFullPageDetail({
   /* Industry sub-tabs */
   const industryRoles = roles || [];
 
-  const DETAIL_TABS: { id: CompanyDetailTab; label: string; icon: string }[] = [
-    { id: "overview", label: "基本資料", icon: "📋" },
-    { id: "industry", label: "產業分析", icon: "🏭" },
-    { id: "chips", label: "籌碼分析", icon: "🎰" },
-    { id: "tech", label: "技術分析", icon: "📊" },
-    { id: "news", label: "相關新聞", icon: "📰" },
-    { id: "charts", label: "研究圖表", icon: "📈" },
-  ];
-
   return (
     <div className="fade-in">
       <div className="max-w-6xl mx-auto">
@@ -2179,27 +2170,10 @@ function CompanyFullPageDetail({
         {/* ─── Goal 7 Human Editorial company brief ─── */}
         <CompanyEditorialBrief editorialBrief={editorialBrief} />
 
-        {/* ─── Main Tabs (aistockmap pill style) ─── */}
-        <div className="flex items-center gap-1 bg-white/[0.03] rounded-xl p-1 mb-8 overflow-x-auto">
-          {DETAIL_TABS.map((tab) => (
-            <button
-              key={tab.id}
-              className={cn(
-                "px-4 py-2.5 text-sm font-medium whitespace-nowrap transition-all rounded-lg",
-                detailTab === tab.id
-                  ? "bg-indigo-500/20 text-indigo-400"
-                  : "text-gray-400 hover:text-[var(--color-text-secondary)]"
-              )}
-              onClick={() => setDetailTab(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
-        {/* ─── Tab Content ─── */}
-        <TabErrorBoundary tabKey={detailTab}>
-          <div className="min-h-[400px]">
+        <CompanyDetailTabs activeTab={detailTab} onTabChange={setDetailTab}>
+          {/* ─── Tab Content ─── */}
+          <TabErrorBoundary tabKey={detailTab}>
+            <div className="min-h-[400px]">
           {/* ─── 基本資料 Tab (aistockmap style) ─── */}
           {detailTab === "overview" && (
             <OverviewTabContent data={data} revenueTab={revenueTab} onRevenueTabChange={setRevenueTab} />
@@ -3301,8 +3275,9 @@ function CompanyFullPageDetail({
               </div>
             </div>
           )}
-          </div>
-        </TabErrorBoundary>
+            </div>
+          </TabErrorBoundary>
+        </CompanyDetailTabs>
       </div>
     </div>
   );

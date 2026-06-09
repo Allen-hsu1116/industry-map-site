@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-09 22:02 CST
+Updated: 2026-06-09 22:11 CST
 
 ## Purpose
 
@@ -178,6 +178,10 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Evidence in code/tests:**
 - `src/app/page.tsx`
+- `src/components/company-detail/CompanyDetailTabs.tsx`
+- `src/components/company-detail/CompanyEditorialBrief.tsx`
+- `src/components/company-detail/CompanySectionInventory.tsx`
+- `src/lib/view-models/companyEditorialBrief.ts`
 - `src/lib/companyDetailUi.test.ts`
 
 **Checkpoint commit:**
@@ -369,6 +373,30 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with `CompanyDetailTabs` shell before introducing canonical `/companies/[code]` routing.
 - `src/app/page.tsx` still owns most company-detail rendering and data-loading effects.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+### 2026-06-09 — Slice M1.4 CompanyDetailTabs shell extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyDetailTabs.tsx` for the company detail tab-button shell and exported `CompanyDetailTab` / `COMPANY_DETAIL_TABS` from that boundary.
+- Moved the existing tab labels and pill-button styling semantics out of `src/app/page.tsx` without rewriting dense section contents.
+- Kept active tab state owned by the existing company detail page (`detailTab` / `setDetailTab`) and passed it into the extracted shell via `activeTab` / `onTabChange` props.
+- Preserved the existing `/?company=CODE` route behavior; no `/companies/[code]` route or link was added in this slice.
+- Preserved existing tab labels, button active/inactive styling, section content rendering order, Goal 7 Human Editorial brief, approved-section labels, source/freshness/confidence labels, fallback text, and recommendation semantics.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.4 guardrails proving tab labels remain, route behavior is unchanged, the extracted shell does not fetch/import checked-in JSON/build view models, and `CompanyEditorialBrief` / `CompanySectionInventory` remain before dense tab modules.
+
+**Verification:**
+- `npm test -- --test-name-pattern "Goal 7|company editorial brief|section inventory|company detail tabs"` → 153/153 passing under Node test filtering behavior.
+- `npm test` → 153/153 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with production `npm run start -- --port 3048` → company detail renders the Human Editorial brief first, then the extracted tabs shell with `基本資料`, `產業分析`, `籌碼分析`, `技術分析`, `相關新聞`, `研究圖表`, followed by the existing overview content.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction by moving the overview tab content into a render-only component without changing copy, labels, source semantics, or tab behavior.
+- `src/app/page.tsx` still owns dense company-detail tab contents and data-loading effects.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 ## Recommended operating rule from now on
