@@ -32,6 +32,29 @@ export interface StockKnowledgeRulesFile {
   rules: StockKnowledgeRule[];
 }
 
+export const dailyAnalysisKnowledgeRuleCategories = ["technical", "chip", "fundamental", "industry", "risk", "position_sizing", "market_regime"] as const;
+export type DailyAnalysisKnowledgeRuleCategory = typeof dailyAnalysisKnowledgeRuleCategories[number];
+
+export interface DailyAnalysisStockKnowledgeRule {
+  id: string;
+  category: DailyAnalysisKnowledgeRuleCategory;
+  title: string;
+  summary: string;
+  appliesWhen: string[];
+  bullishImplications: string[];
+  bearishImplications: string[];
+  riskWarnings: string[];
+  evidenceBasis: string[];
+  confidence: "high" | "medium" | "low";
+}
+
+export interface StockKnowledgeRuleStatus {
+  status: "verified" | "partial" | "insufficient";
+  ruleCount: number;
+  categories: DailyAnalysisKnowledgeRuleCategory[];
+  warning?: string;
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
@@ -92,4 +115,45 @@ export function loadStockKnowledgeRules(rulesDir = join(process.cwd(), "public/d
       if (!normalized) throw new Error(`Invalid stock knowledge rules file: ${file}`);
       return normalized;
     });
+}
+
+const dailyAnalysisCategoryMap: Record<StockKnowledgeRuleCategory, DailyAnalysisKnowledgeRuleCategory> = {
+  technical: "technical",
+  fundamental: "fundamental",
+  chips: "chip",
+  strategy: "position_sizing",
+  risk: "risk",
+};
+
+export function adaptStockKnowledgeRuleContract(rule: StockKnowledgeRule): DailyAnalysisStockKnowledgeRule | null {
+  const category = dailyAnalysisCategoryMap[rule.category];
+  if (!category) return null;
+  const evidenceBasis = [rule.source.title, rule.source.url].filter((item) => item.trim().length > 0);
+  if (evidenceBasis.length === 0) return null;
+  return {
+    id: rule.id,
+    category,
+    title: rule.title,
+    summary: rule.principle,
+    appliesWhen: [...rule.positiveSignals, ...rule.negativeSignals],
+    bullishImplications: rule.positiveSignals,
+    bearishImplications: rule.negativeSignals,
+    riskWarnings: rule.riskControls,
+    evidenceBasis,
+    confidence: "medium",
+  };
+}
+
+export function summarizeStockKnowledgeRuleStatus(files: StockKnowledgeRulesFile[]): StockKnowledgeRuleStatus {
+  const rules = files.flatMap((file) => file.rules.map(adaptStockKnowledgeRuleContract).filter((rule): rule is DailyAnalysisStockKnowledgeRule => Boolean(rule)));
+  if (rules.length === 0) {
+    return { status: "insufficient", ruleCount: 0, categories: [], warning: "Missing stock knowledge rules; Daily Analysis should degrade source status instead of failing." };
+  }
+  const categories = Array.from(new Set(rules.map((rule) => rule.category))).sort() as DailyAnalysisKnowledgeRuleCategory[];
+  return {
+    status: categories.length >= 5 ? "verified" : "partial",
+    ruleCount: rules.length,
+    categories,
+    warning: categories.length >= 5 ? undefined : "Partial stock knowledge coverage; avoid overconfident rule-based synthesis.",
+  };
 }
