@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-09 19:21 CST
+Updated: 2026-06-09 19:59 CST
 
 ## Purpose
 
@@ -17,7 +17,7 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 ### Goal 1 — Contracts foundation
 
-**Status:** Partial/implemented in current working tree; needs final review/commit.
+**Status:** Partial; contracts checkpointed in git, final full-goal review still remains.
 
 **Evidence in code/tests:**
 - `src/lib/dailyAnalysisV2.ts`
@@ -28,13 +28,21 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/lib/productNavigation.ts`
 - `src/lib/productNavigation.test.ts`
 
+**Checkpoint commit:**
+- `aa6b11e feat: add daily analysis v2 contracts`
+
+**Verification:**
+- Focused contract tests passed during checkpointing.
+- `npm test` → 149/149 passing after all checkpoint commits.
+- `npm run build` → passing after all checkpoint commits.
+
 **Remaining:**
 - Confirm all contract docs/spec references are synchronized.
-- Commit or otherwise mark reviewed.
+- Keep future scoring/gating threshold changes spec-first.
 
 ### Goal 2 — Context adapters
 
-**Status:** Partial/implemented in current working tree; needs final review/commit.
+**Status:** Partial; context adapters checkpointed in git, final source-semantics review still remains.
 
 **Evidence in code/tests:**
 - `src/lib/companyAnalysisContext.ts`
@@ -44,34 +52,58 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/lib/industryChainMap.ts`
 - `src/lib/industryChainMap.test.ts`
 
+**Checkpoint commit:**
+- `91ed21a feat: add daily analysis context adapters`
+
+**Verification:**
+- Focused adapter tests passed during checkpointing.
+- `npm test` → 149/149 passing after all checkpoint commits.
+- `npm run build` → passing after all checkpoint commits.
+
 **Remaining:**
 - Confirm adapters cover the final intended source semantics.
-- Commit or otherwise mark reviewed.
+- Continue moving page-local data shaping toward reusable view models.
 
 ### Goal 3 — Grade gating
 
-**Status:** Partial/implemented in current working tree; needs final review/commit.
+**Status:** Partial; grade-gating contract checkpointed in git, threshold governance remains.
 
 **Evidence in code/tests:**
 - `src/lib/dailyAnalysisV2.ts`
 - `src/lib/dailyAnalysisV2.test.ts`
 - Daily report gating tests in existing report-related test files.
 
+**Checkpoint commit:**
+- `aa6b11e feat: add daily analysis v2 contracts`
+
 **Known guardrail:** D/F grades must never render as recommendations.
+
+**Verification:**
+- Focused gating tests passed during checkpointing.
+- `npm test` → 149/149 passing after all checkpoint commits.
+- `npm run build` → passing after all checkpoint commits.
 
 **Remaining:**
 - Keep threshold changes gated by spec updates.
-- Commit or otherwise mark reviewed.
+- Keep D/F visibility as observation-only, never recommendation copy.
 
 ### Goal 4 — Daily V2 artifacts
 
-**Status:** Partial/implemented in current working tree; UI integration still incomplete.
+**Status:** Partial; V2 artifact generator checkpointed in git, UI/automation integration still incomplete.
 
 **Evidence in code/tests:**
 - `src/lib/dailyAnalysisV2Generator.ts`
 - `src/lib/dailyAnalysisV2Generator.test.ts`
 - `scripts/generate-daily-analysis-v2.ts`
 - `package.json` script changes.
+
+**Checkpoint commit:**
+- `a5ecb94 feat: add daily analysis v2 generator`
+
+**Verification:**
+- `npm test -- --test-name-pattern "DailyAnalysisV2 generator|DailyAnalysisV2 dry-run artifact command"` → 149/149 passing under Node test filtering behavior.
+- `npm test` → 149/149 passing after all checkpoint commits.
+- `npm run build` → passing after all checkpoint commits.
 
 **Remaining:**
 - Daily Report V2 view-model integration is not fully extracted.
@@ -92,10 +124,14 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/daily-report/page.tsx`
 - `src/lib/dailyFocusUi.test.ts`
 
-**Verified previously:**
-- `npm test`
-- `npm run build`
-- Browser smoke `/daily-report`
+**Checkpoint commit:**
+- `eba4a7e feat: add daily focus editorial UI`
+
+**Verification:**
+- `npm test -- --test-name-pattern "Daily Focus"` → 149/149 passing under Node test filtering behavior.
+- `npm test` → 149/149 passing after all checkpoint commits.
+- `npm run build` → passing after all checkpoint commits.
+- Browser smoke `http://127.0.0.1:3048/daily-report` → editorial hero, decision brief, topic links, company links, and stage-unavailable guardrail present; browser console had 0 JS errors/messages.
 
 **Remaining:**
 - Extract monolithic `daily-report/page.tsx` into smaller components.
@@ -116,10 +152,14 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/topics/[id]/page.tsx`
 - `src/lib/industryChainUi.test.ts`
 
-**Verified previously:**
-- `npm test`
-- `npm run build`
-- Browser smoke `/topics/ic-design?stage=upstream&view=all`
+**Checkpoint commit:**
+- `3d27cb0 feat: add industry chain map UI slice`
+
+**Verification:**
+- `npm test -- --test-name-pattern "Goal 6"` → 149/149 passing under Node test filtering behavior.
+- `npm test` → 149/149 passing after all checkpoint commits.
+- `npm run build` → passing after all checkpoint commits.
+- Browser smoke `http://127.0.0.1:3048/topics/ic-design?stage=upstream&view=all` → show-all upstream table, narrative-only labels, and no-fake-company copy present; browser console had 0 JS errors/messages.
 
 **Remaining:**
 - Additional URL-state filters: directness, confidence, freshness, market lens.
@@ -140,11 +180,14 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/page.tsx`
 - `src/lib/companyDetailUi.test.ts`
 
-**Verified:**
-- `npm test -- --test-name-pattern "Goal 7"` → pass
-- `npm test` → pass
-- `npm run build` → pass
-- Browser smoke `/?company=2330` → pass, no console errors
+**Checkpoint commit:**
+- `d0c5261 feat: add company detail editorial brief`
+
+**Verification:**
+- `npm test -- --test-name-pattern "Goal 7"` → 149/149 passing under Node test filtering behavior.
+- `npm test` → 149/149 passing after all checkpoint commits.
+- `npm run build` → passing after all checkpoint commits.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` → editorial brief, approved section inventory, and source semantics present; browser console had 0 JS errors/messages.
 
 **Remaining:**
 - Dedicated Sources/Evidence section or tab with complete module table.
@@ -182,7 +225,7 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 ## Cross-cutting risks
 
 1. **No prior durable goal ledger.** Before this file, completion state existed mostly in chat summaries, tests, and uncommitted diffs. This ledger is now referenced by both `goal-driven-website-completion.md` and `daily-analysis-v2-implementation-plan.md`.
-2. **Large uncommitted working tree.** Many files are modified or untracked, so status can be lost or conflated if not committed/checkpointed.
+2. **Checkpointed working tree.** Goal 1–7 implementation changes are now split into atomic commits, but the branch is ahead of `origin/main` until pushed/merged.
 3. **Goal numbering mismatch.** `goal-driven-website-completion.md` calls them Goal 5/6/7, while `daily-analysis-v2-implementation-plan.md` still labels related work as Task 5.1/5.2/5.3/5.4. Cross-reference notes were added, but future edits still need to preserve both labels until the plan is renumbered.
 4. **Partial goals may look complete.** Each goal-run implements the next smallest vertical slice, not necessarily the entire goal description.
 5. **Monolithic pages.** `src/app/page.tsx` and `src/app/daily-report/page.tsx` remain large, increasing edit risk.
@@ -203,8 +246,38 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain
 
 **Remaining:**
-- Commit/checkpoint the accumulated Goal 1–7 implementation changes after review.
 - Decide whether to renumber implementation-plan Task 5.x items or keep cross-references only.
+
+### 2026-06-09 — Goal 1–7 checkpoint review slice
+
+**Status:** Done.
+
+**Changed:**
+- Split accumulated implementation into atomic checkpoint commits:
+  - `664cecf docs: add daily intelligence specs and sketches`
+  - `aa6b11e feat: add daily analysis v2 contracts`
+  - `91ed21a feat: add daily analysis context adapters`
+  - `a5ecb94 feat: add daily analysis v2 generator`
+  - `eba4a7e feat: add daily focus editorial UI`
+  - `3d27cb0 feat: add industry chain map UI slice`
+  - `d0c5261 feat: add company detail editorial brief`
+- Updated this ledger with checkpoint commits, exact verification commands, browser-smoke URLs, and remaining risks.
+
+**Verification:**
+- Focused pre-commit test gates were run for contract/generator/UI checkpoint groups.
+- Secret scan and `git diff --cached --check` passed before each feature/UI commit.
+- `npm test` → 149/149 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/daily-report` → Daily Focus editorial hero, decision brief, topic/company links, and stage-unavailable guardrail present.
+- Browser smoke `http://127.0.0.1:3048/topics/ic-design?stage=upstream&view=all` → show-all table, narrative-only labels, and no-fake-company copy present.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` → Company Detail editorial brief, approved sections, and source semantics present.
+- Browser console after smoke checks → 0 JS errors/messages.
+
+**Remaining:**
+- Branch is ahead of `origin/main` by checkpoint commits; push/merge still required if deployment or remote backup is desired.
+- Goal 5/6/7 remain Partial rather than full-goal Done.
+- Goal 8 and Goal 9 remain not started.
+- Component extraction remains needed for `src/app/page.tsx` and `src/app/daily-report/page.tsx`.
 
 ## Recommended operating rule from now on
 
