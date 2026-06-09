@@ -18,6 +18,8 @@ const eventFocus = eventFocusData as unknown as EventFocusSnapshot;
 
 export const dynamicParams = false;
 
+const REPRESENTATIVE_COMPANY_LIMIT = 6;
+
 const stageLabels: Record<TopicStage, string> = {
   upstream: "上游",
   midstream: "中游",
@@ -81,8 +83,15 @@ export function generateStaticParams() {
     .map((topic) => ({ id: topic.id }));
 }
 
-export default async function TopicDetailPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function TopicDetailPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ id: string }>;
+  searchParams?: Promise<{ stage?: string; view?: string }>;
+}) {
   const { id } = await params;
+  const query = await searchParams;
   const detail = buildTopicDetail({
     topicId: id,
     canonicalTopics,
@@ -93,6 +102,10 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
   });
 
   if (!detail) notFound();
+
+  const selectedStage = detail.stages.find((stage) => stage.stage === query?.stage) ?? detail.stages.find((stage) => stage.companies.length > 0) ?? detail.stages[0];
+  const selectedStageCompanies = selectedStage?.companies ?? [];
+  const showAllTable = query?.view === "all" && selectedStageCompanies.length > 0;
 
   return (
     <main className="taste-shell app-page">
@@ -146,39 +159,50 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
               </div>
             </div>
             <div className="space-y-4">
-              {detail.stages.map((stage) => (
-                <section key={stage.stage} className={`rounded-2xl border p-4 ${stageStatusClass[stage.status]}`}>
-                  <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                    <h3 className="text-base font-bold text-white">{stageLabels[stage.stage]}</h3>
-                    <span className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-xs">{stage.status} · {stage.companyCount} companies</span>
-                  </div>
-                  {stage.companies.length > 0 ? (
-                    <div className="grid gap-3 md:grid-cols-2">
-                      {stage.companies.map((company) => (
-                        <Link key={`${stage.stage}-${company.code}`} href={`/?company=${company.code}&topic=${detail.id}`} className="rounded-2xl border border-white/10 bg-black/20 p-4 hover:border-sky-400/40">
-                          <div className="flex items-start justify-between gap-3">
-                            <div>
-                              <div className="font-mono text-sm text-cyan-200">{company.code}</div>
-                              <div className="mt-1 text-base font-semibold text-white">{company.name}</div>
-                            </div>
-                            <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[11px] text-slate-300">{company.confidence}</span>
-                          </div>
-                          <div className="mt-2 text-xs text-slate-500">{company.groupName} · {company.directnessLabel ?? company.relevanceLabel} · {company.status}</div>
-                          <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-slate-300">{company.roleSummary}</p>
-                          {company.products.length > 0 && (
-                            <div className="mt-3 flex flex-wrap gap-1.5">
-                              {company.products.slice(0, 3).map((product) => <span key={product} className="rounded-full bg-white/[0.06] px-2 py-0.5 text-[11px] text-slate-300">{product}</span>)}
-                            </div>
-                          )}
-                          <div className="mt-3 text-[11px] text-slate-500">evidence {company.evidenceCount} · lastVerified {formatDate(company.lastVerified)}</div>
-                        </Link>
-                      ))}
+              {detail.stages.map((stage) => {
+                const representativeCompanies = stage.companies.slice(0, REPRESENTATIVE_COMPANY_LIMIT);
+                return (
+                  <section key={stage.stage} className={`rounded-2xl border p-4 ${stageStatusClass[stage.status]}`}>
+                    <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                      <div>
+                        <h3 className="text-base font-bold text-white">{stageLabels[stage.stage]}</h3>
+                        <div className="mt-1 text-[11px] text-slate-500">代表公司優先顯示 verified / partial 角色；完整清單用 URL state 開啟。</div>
+                      </div>
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-xs">{stage.status} · {stage.companyCount} companies</span>
+                        {stage.companies.length > REPRESENTATIVE_COMPANY_LIMIT && (
+                          <Link href={`/topics/${detail.id}?stage=${stage.stage}&view=all`} className="app-link rounded-full border border-sky-400/30 px-2.5 py-1 text-xs">show all</Link>
+                        )}
+                      </div>
                     </div>
-                  ) : (
-                    <p className="rounded-xl border border-white/10 bg-black/20 p-3 text-sm leading-relaxed text-slate-400">{stage.emptyReason}</p>
-                  )}
-                </section>
-              ))}
+                    {stage.companies.length > 0 ? (
+                      <div className="grid gap-3 md:grid-cols-2">
+                        {representativeCompanies.map((company) => (
+                          <Link key={`${stage.stage}-${company.code}`} href={`/?company=${company.code}&topic=${detail.id}`} className="rounded-2xl border border-white/10 bg-black/20 p-4 hover:border-sky-400/40">
+                            <div className="flex items-start justify-between gap-3">
+                              <div>
+                                <div className="font-mono text-sm text-cyan-200">{company.code}</div>
+                                <div className="mt-1 text-base font-semibold text-white">{company.name}</div>
+                              </div>
+                              <span className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[11px] text-slate-300">{company.confidence}</span>
+                            </div>
+                            <div className="mt-2 text-xs text-slate-500">{company.groupName} · {company.directnessLabel ?? company.relevanceLabel} · {company.status}</div>
+                            <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-slate-300">{company.roleSummary}</p>
+                            {company.products.length > 0 && (
+                              <div className="mt-3 flex flex-wrap gap-1.5">
+                                {company.products.slice(0, 3).map((product) => <span key={product} className="rounded-full bg-white/[0.06] px-2 py-0.5 text-[11px] text-slate-300">{product}</span>)}
+                              </div>
+                            )}
+                            <div className="mt-3 text-[11px] text-slate-500">evidence {company.evidenceCount} · lastVerified {formatDate(company.lastVerified)}</div>
+                          </Link>
+                        ))}
+                      </div>
+                    ) : (
+                      <p className="rounded-xl border border-white/10 bg-black/20 p-3 text-sm leading-relaxed text-slate-400"><span className="mr-2 rounded-full border border-white/10 px-2 py-0.5 text-[11px]">narrative-only</span>{stage.emptyReason}</p>
+                    )}
+                  </section>
+                );
+              })}
             </div>
           </div>
 
@@ -212,6 +236,42 @@ export default async function TopicDetailPage({ params }: { params: Promise<{ id
             </section>
           </aside>
         </section>
+
+        {showAllTable && selectedStage && (
+          <section className="industry-chain-show-all-table mb-8 rounded-3xl border border-white/10 app-panel p-5">
+            <div className="mb-4 flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <h2 className="text-xl font-bold text-white">完整清單 · {stageLabels[selectedStage.stage]}</h2>
+                <p className="mt-1 text-xs leading-relaxed text-slate-500">URL state：stage={selectedStage.stage} & view=all。此表只展開已存在的 checked-in company-role / topic-map 資料，不補假公司。</p>
+              </div>
+              <Link href={`/topics/${detail.id}`} className="app-link text-sm">回代表公司 view</Link>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[720px] text-left text-sm text-slate-300">
+                <thead className="text-xs uppercase tracking-[0.14em] text-slate-500">
+                  <tr className="border-b border-white/10">
+                    <th className="py-3 pr-4">公司</th>
+                    <th className="py-3 pr-4">角色</th>
+                    <th className="py-3 pr-4">信心</th>
+                    <th className="py-3 pr-4">來源狀態</th>
+                    <th className="py-3 pr-4">驗證日</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {selectedStageCompanies.map((company) => (
+                    <tr key={`${selectedStage.stage}-all-${company.code}`} className="border-b border-white/10 last:border-0">
+                      <td className="py-3 pr-4"><Link href={`/?company=${company.code}&topic=${detail.id}`} className="app-link font-mono">{company.code} {company.name}</Link></td>
+                      <td className="py-3 pr-4">{company.roleSummary}</td>
+                      <td className="py-3 pr-4">{company.confidence}</td>
+                      <td className="py-3 pr-4">{company.status} · evidence {company.evidenceCount}</td>
+                      <td className="py-3 pr-4">{formatDate(company.lastVerified)}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
 
         {detail.recentEvents.length > 0 && (
           <section className="rounded-3xl border border-white/10 app-panel p-5">
