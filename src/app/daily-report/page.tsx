@@ -389,6 +389,44 @@ function formatMarketChange(value?: number, suffix = ""): string {
   return `${value >= 0 ? "+" : ""}${value.toLocaleString("zh-TW")}${suffix}`;
 }
 
+function buildMarketThesis(report: DailyReport, topRecommendationsCount: number, observationCount: number): string {
+  const change = report.market_overview?.change_pct;
+  const breadth = report.market_overview?.advancing != null && report.market_overview?.declining != null
+    ? `上漲 ${report.market_overview.advancing} 家、下跌 ${report.market_overview.declining} 家`
+    : "市場廣度資料不足";
+  const posture = change == null
+    ? "大盤方向仍待官方收盤資料確認"
+    : change >= 0
+      ? `加權指數收漲 ${formatMarketChange(change, "%")}`
+      : `加權指數收跌 ${formatMarketChange(change, "%")}`;
+  return `${posture}，${breadth}；今日先看 ${topRecommendationsCount} 檔 A/B/C 品質候選，${observationCount} 檔留在觀察或資料不足區。`;
+}
+
+function buildTodayStory(report: DailyReport, eventCount: number): string {
+  const topic = report.knowledge_applied?.topic || "今日焦點題材";
+  return `今日市場筆記：把 ${topic} 放在同一張研究桌上看。事件焦點先保留官方公告原文，再用 derived topic mapping 連到題材與公司；技術/籌碼排行只作當日訊號，不取代產品、題材角色與 SWOT 證據。${eventCount > 0 ? `目前有 ${eventCount} 則事件焦點可往下追。` : "目前沒有可用事件焦點，頁面不會補假資料。"}`;
+}
+
+function buildCandidateDecisionBrief(pick: StockPick, dailyAnalysis?: CompanyDailyAnalysis) {
+  const industry = dailyAnalysis?.industry;
+  const role = industry?.roleDetail;
+  const quality = dailyAnalysis?.analysisQuality;
+  const primaryProduct = industry?.productNarratives?.[0];
+  const primaryRisk = industry?.swotSnapshot?.risks?.[0] ?? industry?.risks?.[0] ?? quality?.blockingReasons?.[0];
+  const nextWatch = industry?.watch?.[0] ?? `觀察 ${pick.recommendation.stop_loss?.toLocaleString()} 停損與 ${pick.recommendation.take_profit} 停利區是否被有效確認。`;
+
+  return {
+    whyNow: `${pick.technicals.summary} ${pick.chip_analysis.summary}`.trim(),
+    companyRole: role
+      ? `${role.topicName}：${role.roleLabel}。${role.roleSummary}`
+      : primaryProduct
+        ? `${pick.industry}：核心產品為「${primaryProduct.name}」，${primaryProduct.whyItMatters ?? primaryProduct.description}`
+        : `${pick.industry} 題材角色尚待更多 evidence-backed 產品/角色資料確認。`,
+    risk: primaryRisk ?? "目前未看到完整阻擋風險，但仍需用產品、題材角色、SWOT 與來源新鮮度交叉確認，不能只靠價格訊號。",
+    nextWatch,
+  };
+}
+
 function topicClusterIds(topicId: string): string[] {
   const topics = (canonicalTopicsData as { topics?: Array<{ id: string; parentId?: string; childIds?: string[] }> }).topics ?? [];
   const topic = topics.find((item) => item.id === topicId);
@@ -538,6 +576,8 @@ export default function DailyReportPage() {
   const activeTopicName = activeTopicId ? eventFilterOptions.topics.find((topic) => topic.id === activeTopicId)?.name ?? activeTopicId : "";
   const selectedStrongStockRanking = strongStocks?.rankings.find((ranking) => ranking.timeframe === strongStockTimeframe) ?? strongStocks?.rankings[0];
   const selectedLargeHolderRanking = largeHolders?.rankings.find((ranking) => ranking.tier === largeHolderTier && ranking.window === largeHolderWindow) ?? largeHolders?.rankings[0];
+  const marketThesis = buildMarketThesis(report, gatedPicks.topRecommendations.length, gatedPicks.observationOnly.length);
+  const todayStory = buildTodayStory(report, visibleEventItems.length);
 
   return (
     <div className="taste-shell min-h-screen">
@@ -569,6 +609,37 @@ export default function DailyReportPage() {
             </div>
           )}
         </div>
+
+        <section
+          aria-labelledby="daily-focus-editorial-title"
+          className="daily-focus-editorial-hero mb-6 rounded-[24px] border border-amber-200/40 bg-[#fffaf2] p-6 text-[#24211d] shadow-[0_18px_50px_rgba(70,45,22,.12)]"
+        >
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#b75e3a]">Daily Focus · Human Editorial</p>
+              <h1 id="daily-focus-editorial-title" className="mt-3 font-serif text-3xl font-bold leading-tight text-[#24211d] md:text-5xl">
+                每日產業情報
+              </h1>
+              <p className="mt-4 text-lg leading-relaxed text-[#24211d]">
+                {marketThesis}
+              </p>
+              <p className="mt-4 text-sm leading-7 text-[#6d665c]">
+                {todayStory}
+              </p>
+            </div>
+            <div className="grid min-w-[220px] gap-2 text-sm">
+              <Link href="/topics" className="rounded-xl border border-[#ded4c5] bg-[#fffdf8] px-4 py-3 font-semibold text-[#7e3c26] hover:border-[#b75e3a]">
+                進入 Topic Overview
+              </Link>
+              <Link href="/companies" className="rounded-xl border border-[#ded4c5] bg-[#fffdf8] px-4 py-3 font-semibold text-[#7e3c26] hover:border-[#b75e3a]">
+                開啟 Company Database
+              </Link>
+              <p className="rounded-xl border border-[#ded4c5] bg-[#f5f1e8] px-4 py-3 text-xs leading-5 text-[#6d665c]">
+                Source status 與 evidence metadata 保留在後段；若資料不足，候選會留在觀察區，不補假結論。
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Market Overview */}
         {report.market_overview && report.market_overview.close && (
@@ -651,6 +722,7 @@ export default function DailyReportPage() {
             const dailyIndustry = dailyAnalysis?.industry;
             const analysisQuality = dailyAnalysis?.analysisQuality;
             const topicRoleBadge = getTopicRoleBadge(dailyAnalysis, activeTopicId);
+            const decisionBrief = buildCandidateDecisionBrief(pick, dailyAnalysis);
             return (
             <Card key={pick.code} className={`taste-card border ${getScoreBg(pick.score)}`}>
               <CardHeader className="pb-3">
@@ -688,6 +760,33 @@ export default function DailyReportPage() {
                 )}
               </CardHeader>
               <CardContent className="space-y-4">
+                <section className="daily-candidate-decision-brief rounded-2xl border border-[#ded4c5]/20 bg-[#fffaf2]/10 p-4">
+                  <div className="mb-3 flex flex-wrap items-center gap-2">
+                    <span className="rounded-full border border-[#b75e3a]/30 bg-[#b75e3a]/10 px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-[#f5c6a8]">
+                      Decision Brief
+                    </span>
+                    <span className="text-xs text-gray-400">先讀判斷，再看下方技術 / 籌碼 / 產業證據。</span>
+                  </div>
+                  <div className="grid gap-3 md:grid-cols-2">
+                    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-amber-200">為何今天看</p>
+                      <p className="mt-2 text-sm leading-relaxed text-gray-200">{decisionBrief.whyNow}</p>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-cyan-200">公司角色</p>
+                      <p className="mt-2 text-sm leading-relaxed text-gray-200 line-clamp-3">{decisionBrief.companyRole}</p>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-orange-200">可能錯在哪</p>
+                      <p className="mt-2 text-sm leading-relaxed text-gray-200">{decisionBrief.risk}</p>
+                    </div>
+                    <div className="rounded-xl border border-white/10 bg-black/20 p-3">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-emerald-200">下一步觀察</p>
+                      <p className="mt-2 text-sm leading-relaxed text-gray-200">{decisionBrief.nextWatch}</p>
+                    </div>
+                  </div>
+                </section>
+
                 {/* Four columns: Technicals / Fundamentals / Chips / Industry */}
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                   {/* Technicals */}
@@ -1062,24 +1161,28 @@ export default function DailyReportPage() {
                     <div key={item.id} className="rounded-lg border border-slate-700/70 bg-slate-900/40 p-3">
                       <div className="flex flex-col gap-1 md:flex-row md:items-start md:justify-between">
                         <div>
-                          <p className="text-sm font-semibold text-white">
+                          <Link href={`/?company=${item.companyCode}`} className="text-sm font-semibold text-white hover:text-emerald-300">
                             {item.companyName} <span className="text-gray-500">({item.companyCode})</span>
-                          </p>
+                          </Link>
                           <p className="mt-1 text-sm text-gray-300">{item.officialSubject}</p>
                         </div>
                         <span className="text-xs text-gray-500">{item.announcedAt}</span>
                       </div>
                       <div className="mt-2 flex flex-wrap gap-2">
                         {item.derivedTopics.length > 0 ? item.derivedTopics.map((topic, topicIndex) => (
-                          <Badge key={`${item.id}-${topic.topicId}-${topicIndex}`} variant="outline" className="border-indigo-400/30 bg-indigo-400/10 text-indigo-200 text-xs">
+                          <Link key={`${item.id}-${topic.topicId}-${topicIndex}`} href={`/topics/${topic.topicId}`} className="rounded-full border border-indigo-400/30 bg-indigo-400/10 px-2.5 py-0.5 text-xs text-indigo-200 transition hover:border-indigo-300/60 hover:bg-indigo-400/20">
                             {topic.topicName}{topic.roleLabel ? ` · ${topic.roleLabel}` : ""}
-                          </Badge>
+                          </Link>
                         )) : (
                           <Badge variant="outline" className="border-amber-400/30 bg-amber-400/10 text-amber-200 text-xs">
                             未對應已驗證題材角色
                           </Badge>
                         )}
+                        <Badge variant="outline" className="border-slate-500/30 bg-slate-800/70 text-slate-300 text-xs">
+                          stage unavailable
+                        </Badge>
                       </div>
+                      <p className="mt-2 text-xs text-indigo-200/80">derived topic mapping；目前事件 feed 沒有 verified stageId，因此不建立產業鏈階段假連結。</p>
                       <p className="mt-2 text-xs text-gray-500">{item.verificationNote}</p>
                     </div>
                   ))}
