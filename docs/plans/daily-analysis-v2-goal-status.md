@@ -424,6 +424,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/page.tsx` still owns many overview sub-panels (`CompanyInfoHeader`, `FinancialOverviewCards`, `DividendPolicyPanel`, `RevenueAnalysisPanel`, `ProfitabilityAnalysisPanel`) and other dense tab contents.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
+### 2026-06-09 — Slice M1.6 CompanyInfoHeader extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyInfoHeader.tsx` as a render-only company identity/header component for the overview financial slot.
+- Removed the inline `CompanyInfoHeader` function from `src/app/page.tsx` and imported/rendered the extracted component with the existing prepared `data` prop.
+- Preserved existing company identity copy and labels: `市值`, `產業分類`, `成立年份`, `董事長`, `總部`, `官方網站`, company name/code rendering, market-cap fallback, ROC/CE established-year formatting, headquarters `N/A` fallback, and website display/link behavior.
+- Kept `CompanyEditorialBrief`, `CompanySectionInventory`, `CompanyDetailTabs`, `CompanyOverviewTab`, dense overview panels, data loading, recommendation semantics, source/freshness/confidence labels, and `/?company=CODE` route behavior unchanged.
+- Preserved `/?company=CODE`; no `/companies/[code]` route or link was added in this slice.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.6 guardrails proving the extracted header does not fetch, import checked-in JSON, build view models, import app/data modules, call API routes, or introduce `/companies/[code]`; it also verifies the Human Editorial brief and section inventory remain before dense modules and the company info header still precedes financial overview cards.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "Goal 7|company editorial brief|section inventory|company detail tabs|overview tab|company info header"` failed because `src/components/company-detail/CompanyInfoHeader.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "Goal 7|company editorial brief|section inventory|company detail tabs|overview tab|company info header"` → 155/155 passing under Node test filtering behavior.
+- `npm test` → 155/155 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard search across `src/` found only the pre-existing `/companies/${input.companyCode}` reference in `src/lib/productNavigation.ts`; no new `/companies/[code]` route/link was introduced by this slice.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run dev -- --hostname 127.0.0.1 --port 3048` → company detail renders Human Editorial brief/source rail, tabs, overview sub-tabs, and extracted company info header with 台積電 identity labels/website before financial overview cards.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next dense overview sub-panel; keep behavior-preserving extraction only.
+- `src/app/page.tsx` still owns `FinancialOverviewCards`, `DividendPolicyPanel`, `RevenueAnalysisPanel`, `ProfitabilityAnalysisPanel`, and other dense tab contents.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:
