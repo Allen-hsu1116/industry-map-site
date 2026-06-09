@@ -500,6 +500,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - `src/app/page.tsx` still owns `RevenueAnalysisPanel`, `ProfitabilityAnalysisPanel`, and other dense tab contents.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
+### 2026-06-10 — Slice M1.9 RevenueAnalysisPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/RevenueAnalysisPanel.tsx` as a render-only revenue analysis component for the overview financial slot.
+- Moved the coupled `RevenueComposedChart` helper into the extracted component so monthly/quarterly revenue charts stay co-located with the revenue panel.
+- Removed the inline `RevenueAnalysisPanel` and `RevenueComposedChart` functions from `src/app/page.tsx` and imported/rendered the extracted component with the existing prepared `data`, `revenueTab`, and `setRevenueTab` props.
+- Preserved existing revenue copy and labels: `營收分析趨勢`, `月份`, `季度`, `年度`, `營收（元→億）`, `MoM`, `YoY`, `QoQ`, `年度YoY%`, `📋 月營收資料累積中`, `📋 季度資料累積中`, and `📋 年度資料準備中`.
+- Preserved existing monthly/quarterly/yearly tab behavior, revenue formatting, quarter/month labels, YoY/QoQ/MoM calculations, chart/table behavior, empty states, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.9 guardrails proving the extracted component does not fetch, import checked-in JSON, build view models, import app/data modules, call API routes, or introduce `/companies/[code]`; it also verifies the overview order remains `DividendPolicyPanel` → `RevenueAnalysisPanel` → `ProfitabilityAnalysisPanel`.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.9"` failed because `src/components/company-detail/RevenueAnalysisPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.9"` → 158/158 passing under Node test filtering behavior.
+- `npm test` → 158/158 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Route guard search across `src/` found only the pre-existing `/companies/${input.companyCode}` reference in `src/lib/productNavigation.ts`; no new `/companies/[code]` route/link was introduced by this slice.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run dev -- --hostname 127.0.0.1 --port 3048` → company detail renders Human Editorial brief/source rail, tabs, overview sub-tabs, extracted company info header, extracted financial overview cards, extracted dividend policy panel, extracted revenue analysis panel, and the following profitability module.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with `ProfitabilityAnalysisPanel`; keep behavior-preserving extraction only.
+- `src/app/page.tsx` still owns `ProfitabilityAnalysisPanel` and other dense tab contents.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:
