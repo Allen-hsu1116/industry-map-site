@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2303",
   "name": "聯電",
-  "generatedAt": "2026-06-08T12:31:39.020Z",
+  "generatedAt": "2026-06-09T12:40:02.911Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -345,7 +345,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 10,
+    "totalScore": 0,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 4,
@@ -366,13 +366,13 @@
     "riskGates": [
       {
         "id": "risk.market-data-stale",
-        "severity": "soft",
-        "message": "股價資料已 14 天未更新"
+        "severity": "hard",
+        "message": "股價資料已 15 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 14 天未更新"
+        "message": "籌碼資料已 15 天未更新"
       },
       {
         "id": "risk.stop-distance",

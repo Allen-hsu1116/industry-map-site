@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3035",
   "name": "智原",
-  "generatedAt": "2026-06-08T12:31:39.365Z",
+  "generatedAt": "2026-06-09T12:40:03.149Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-08",
-  "chipDataDate": "2026-06-08",
+  "marketDataDate": "2026-06-09",
+  "chipDataDate": "2026-06-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,31 +17,32 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -55,
-    "summary": "智原 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 12.2%。",
+    "score": -45,
+    "summary": "智原 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 6.7%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 12.2%"
+      "收盤跌破 MA20 6.7%"
     ],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低",
-      "接近 20 日低點 173.00，留意支撐是否失守"
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
-    "score": -28,
-    "summary": "智原 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -2.6千張；近 20 日法人偏賣，合計 -6.5千張。",
-    "signals": [],
+    "score": -20,
+    "summary": "智原 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2張；三大法人近 5 日合計賣超 -2.5千張。",
+    "signals": [
+      "投信近 5 日買超 +2張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.6千張",
-      "近 20 日法人偏賣，合計 -6.5千張",
-      "外資近 5 日賣超 -2.1千張"
+      "三大法人近 5 日合計賣超 -2.5千張",
+      "近 20 日法人偏賣，合計 -5.8千張",
+      "外資近 5 日賣超 -2.4千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-08"
+      "最近法人資料日：2026-06-09"
     ]
   },
   "industry": {
@@ -133,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-08"
+      "lastVerified": "2026-06-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -231,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 32,
+    "totalScore": 40,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": -40,
@@ -240,7 +241,7 @@
       "risks": [
         "月營收 YoY -43.1%，基本面承壓",
         "月營收 MoM -9.3%，短期動能轉弱",
-        "本益比 93.6 倍，需防估值壓縮"
+        "本益比 98.9 倍，需防估值壓縮"
       ]
     },
     "strategy": {
@@ -249,21 +250,15 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 13.9%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：194.40",
-      "波段多空分水嶺看 MA20：200.43",
-      "追蹤法人是否延續 買超：最近 +17張",
+      "短線支撐/壓力先看 MA5：189.70",
+      "波段多空分水嶺看 MA20：199.30",
+      "追蹤法人是否延續 賣超：最近 -282張",
       "月營收年增率 -43.1%，觀察基本面是否支撐估值",
-      "本益比 93.6 倍，需和同族群估值比較"
+      "本益比 98.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 231.00 且量比 > 1.5：列為轉強訊號",
