@@ -36,6 +36,7 @@ import { CompanyDetailHeroHeader } from "@/components/company-detail/CompanyDeta
 import { CompanyIndustryKnowledgeOverview } from "@/components/company-detail/CompanyIndustryKnowledgeOverview";
 import { CompanyIndustryRoleNavigation } from "@/components/company-detail/CompanyIndustryRoleNavigation";
 import { CompanyIndustryRoleSummaryPanel } from "@/components/company-detail/CompanyIndustryRoleSummaryPanel";
+import { CompanyIndustryMarketPositionPanel } from "@/components/company-detail/CompanyIndustryMarketPositionPanel";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -1468,19 +1469,10 @@ function CompanyFullPageDetail({
                           category={cat}
                         />
 
-                        {/* 市場定位 */}
-                        <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                          <h4 className="text-sm font-bold text-white mb-3">🎯 市場定位</h4>
-                          <div className="flex items-center gap-3 mb-3">
-                            <span className="w-3 h-3 rounded-full inline-block flex-shrink-0" style={{ backgroundColor: topicAnalysis?.market_position?.includes('龍頭') ? '#34d399' : topicAnalysis?.market_position?.includes('成長') ? '#fbbf24' : '#60a5fa' }}></span>
-                            <span className="text-lg font-bold" style={{ color: topicAnalysis?.market_position?.includes('龍頭') ? '#34d399' : topicAnalysis?.market_position?.includes('成長') ? '#fbbf24' : '#60a5fa' }}>
-                              {stripLeadingStatusIcon(topicAnalysis?.market_position) || marketPos.label}
-                            </span>
-                          </div>
-                          <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                            {topicAnalysis?.market_position_detail || `${data.name}為${role.topicName}產業之關鍵參與者，在供應鏈中扮演${relInfo.label}角色。`}
-                          </p>
-                        </div>
+                        <CompanyIndustryMarketPositionPanel
+                          marketPosition={stripLeadingStatusIcon(topicAnalysis?.market_position) || marketPos.label}
+                          detail={topicAnalysis?.market_position_detail || `${data.name}為${role.topicName}產業之關鍵參與者，在供應鏈中扮演${relInfo.label}角色。`}
+                        />
 
                         {/* 技術重心 */}
                         {topicAnalysis?.focus ? (

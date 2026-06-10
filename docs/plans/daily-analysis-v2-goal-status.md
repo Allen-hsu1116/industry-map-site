@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 19:55 CST
+Updated: 2026-06-10 20:04 CST
 
 ## Purpose
 
@@ -780,6 +780,33 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside selected industry detail; likely `CompanyIndustryMarketPositionPanel` for `🎯 市場定位` and maybe the daily-industry signal/risk/watch detail only if it stays render-only.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, product/customer/SWOT rendering, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.20 CompanyIndustryMarketPositionPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyIndustryMarketPositionPanel.tsx` as a render-only presentational component for the selected industry-role `🎯 市場定位` card.
+- Replaced the inline market-position JSX in `src/app/page.tsx` with `<CompanyIndustryMarketPositionPanel />`, passing prepared `marketPosition` and `detail` props.
+- Kept all selected-role data assembly in `src/app/page.tsx`: `topicAnalysis`, `market_position`, `market_position_detail`, `stripLeadingStatusIcon(...)`, role fallback text, canonical role matching, and route/tab state remain in the page container.
+- Preserved existing market-position copy and color semantics: `龍頭` → `#34d399`, `成長` → `#fbbf24`, fallback → `#60a5fa`.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.20 guardrails proving the extracted component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no product-knowledge lookup, no app/data imports, no API route calls, no `stripLeadingStatusIcon`, and no `/companies/[code]` route/link introduction.
+- Repaired the adjacent M1.19 ordering guardrail so it now follows `<CompanyIndustryMarketPositionPanel />` instead of the removed `{/* 市場定位 */}` inline marker.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.20"` failed because `src/components/company-detail/CompanyIndustryMarketPositionPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.20|M1.19"` → 169/169 passing under Node test filtering behavior.
+- `npm test` → 169/169 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → after switching to `產業分析`, company detail renders extracted `題材角色統整摘要`, evidence coverage heading, observation-only warning, extracted `市場定位`, and following `技術重心` in the expected order.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside selected industry detail; likely the `🔬 技術重心` card and its daily-industry signal/risk/watch subgrid, while keeping `dailyIndustryApplies`, `dailyIndustry`, `topicAnalysis.focus`, and all matching/data assembly in `src/app/page.tsx`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, product/customer/SWOT rendering, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 
 
 ## Recommended operating rule from now on

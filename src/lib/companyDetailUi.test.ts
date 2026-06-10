@@ -21,6 +21,7 @@ const companyDetailHeroHeaderComponentPath = "src/components/company-detail/Comp
 const companyIndustryKnowledgeOverviewComponentPath = "src/components/company-detail/CompanyIndustryKnowledgeOverview.tsx";
 const companyIndustryRoleNavigationComponentPath = "src/components/company-detail/CompanyIndustryRoleNavigation.tsx";
 const companyIndustryRoleSummaryPanelComponentPath = "src/components/company-detail/CompanyIndustryRoleSummaryPanel.tsx";
+const companyIndustryMarketPositionPanelComponentPath = "src/components/company-detail/CompanyIndustryMarketPositionPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -742,8 +743,51 @@ test("Slice M1.19 extracts industry role summary and evidence coverage as a pres
   const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
   const roleNavigationIndex = page.indexOf("<CompanyIndustryRoleNavigation");
   const summaryPanelIndex = page.indexOf("<CompanyIndustryRoleSummaryPanel");
-  const marketPositionIndex = page.indexOf("{/* 市場定位 */}");
+  const marketPositionIndex = page.indexOf("<CompanyIndustryMarketPositionPanel");
   assert.ok(summaryPanelIndex > selectedDetailIndex, "role summary panel should remain in the selected industry detail block");
   assert.ok(summaryPanelIndex > roleNavigationIndex, "role summary panel should follow role navigation");
   assert.ok(marketPositionIndex > summaryPanelIndex, "market positioning panel should still follow the extracted summary/coverage panel");
+});
+
+test("Slice M1.20 extracts industry market positioning as a presentational panel", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryMarketPositionPanelComponent = await readFile(companyIndustryMarketPositionPanelComponentPath, "utf8");
+  const roleSummaryPanelComponent = await readFile(companyIndustryRoleSummaryPanelComponentPath, "utf8");
+  const combinedSource = `${page}
+${companyIndustryMarketPositionPanelComponent}
+${roleSummaryPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryMarketPositionPanel/);
+  assert.match(page, /<CompanyIndustryMarketPositionPanel[\s\S]*marketPosition=\{stripLeadingStatusIcon\(topicAnalysis\?\.market_position\) \|\| marketPos\.label\}[\s\S]*detail=\{topicAnalysis\?\.market_position_detail \|\| `\$\{data\.name\}為\$\{role\.topicName\}產業之關鍵參與者，在供應鏈中扮演\$\{relInfo\.label\}角色。`\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /🎯 市場定位[\s\S]*stripLeadingStatusIcon\(topicAnalysis\?\.market_position\)/);
+
+  assert.match(companyIndustryMarketPositionPanelComponent, /export interface CompanyIndustryMarketPositionPanelProps/);
+  assert.match(companyIndustryMarketPositionPanelComponent, /export function CompanyIndustryMarketPositionPanel/);
+
+  for (const label of [
+    "🎯 市場定位",
+    "marketPosition",
+    "detail",
+    "龍頭",
+    "成長",
+    "#34d399",
+    "#fbbf24",
+    "#60a5fa",
+  ]) {
+    assert.match(companyIndustryMarketPositionPanelComponent, new RegExp(label));
+  }
+
+  assert.match(page, /const topicAnalysis = \{/);
+  assert.match(page, /market_position: canonicalRoleLabel \|\| roleKnowledge\?\.marketPosition \|\| relInfo\.label/);
+  assert.match(page, /market_position_detail: canonicalRole\?\.roleSummary \|\| dailyCanonicalRole\?\.roleSummary \|\| roleKnowledge\?\.role/);
+  assert.doesNotMatch(companyIndustryMarketPositionPanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|findProductKnowledgeItem|productKnowledgeToNarrative|stripLeadingStatusIcon|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  const roleSummaryPanelIndex = page.indexOf("<CompanyIndustryRoleSummaryPanel");
+  const marketPositionPanelIndex = page.indexOf("<CompanyIndustryMarketPositionPanel");
+  const technologyFocusIndex = page.indexOf("{/* 技術重心 */}");
+  assert.ok(marketPositionPanelIndex > selectedDetailIndex, "market positioning panel should remain in selected industry detail block");
+  assert.ok(marketPositionPanelIndex > roleSummaryPanelIndex, "market positioning panel should follow role summary/evidence panel");
+  assert.ok(technologyFocusIndex > marketPositionPanelIndex, "technology focus should still follow market positioning");
 });
