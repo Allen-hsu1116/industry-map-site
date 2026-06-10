@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 01:28 CST
+Updated: 2026-06-10 19:27 CST
 
 ## Purpose
 
@@ -679,6 +679,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary; avoid moving fetch/state containers unless the slice explicitly splits container and presentational panel.
 - `src/app/page.tsx` still owns `NewsTabContent` as the `/api/news` container and other dense tab contents.
 - Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+### 2026-06-10 — Slice M1.16 CompanyDetailHeroHeader extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyDetailHeroHeader.tsx` as a render-only presentational component for the top company-detail hero/header block.
+- Replaced the inline back button, favorite button, company code/name/industry/market-position title, quote slot, and dynamic badge rendering in `src/app/page.tsx` with `<CompanyDetailHeroHeader />`.
+- Kept state/data ownership in `src/app/page.tsx`: `data`, `marketPos`, `badges`, `onBack`, and the prepared `<RealtimeQuote code={data.code} />` node are passed into the extracted component.
+- Preserved existing copy/labels: `返回`, `加入收藏`, company code/name, industry + market position, real-time quote placement, and dynamic badges such as `月營收年增`, `連三月年增`, `投信買超`, and `有股票期貨`.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.16 guardrails proving the component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no app/data imports, no API route calls, and no `/companies/[code]` route/link introduction.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.16"` failed because `src/components/company-detail/CompanyDetailHeroHeader.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.16"` → 165/165 passing under Node test filtering behavior.
+- `npm test` → 165/165 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- `git diff --check` → passing.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → company detail renders `台積電`, `返回`, `加入收藏`, live quote/book, `月營收年增`, Human Editorial brief, and tabs.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary below the hero/header, likely another dense tab/view-only block while keeping fetch/state containers in `src/app/page.tsx` unless explicitly split.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 ## Recommended operating rule from now on

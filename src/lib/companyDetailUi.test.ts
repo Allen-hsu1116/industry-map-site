@@ -17,6 +17,7 @@ const technicalNextSessionPanelComponentPath = "src/components/company-detail/Te
 const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/ChipValuationSnapshotPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
+const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -564,4 +565,42 @@ test("Slice M1.15 extracts related news list panel while keeping /api/news conta
   assert.ok(fetchIndex > newsContainerIndex, "related news fetch should stay in the news tab container");
   assert.ok(relatedPanelIndex > fetchIndex, "related-news panel should render after container state is prepared");
   assert.ok(majorPanelIndex > relatedPanelIndex, "major-news panel should still follow related-news panel inside the news tab");
+});
+
+test("Slice M1.16 extracts company detail hero header without moving quote/state ownership", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyDetailHeroHeaderComponent = await readFile(companyDetailHeroHeaderComponentPath, "utf8");
+  const briefComponent = await readFile(briefComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyDetailHeroHeaderComponent}\n${briefComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyDetailHeroHeader/);
+  assert.match(page, /<CompanyDetailHeroHeader[\s\S]*data=\{data\}[\s\S]*marketPosition=\{marketPos\}[\s\S]*badges=\{badges\}[\s\S]*onBack=\{onBack\}[\s\S]*quoteContent=\{<RealtimeQuote code=\{data\.code\} \/>\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /Top Bar: Back \+ Company Header[\s\S]*加入收藏[\s\S]*CompanyEditorialBrief/);
+
+  assert.match(companyDetailHeroHeaderComponent, /export interface CompanyDetailHeroHeaderProps/);
+  assert.match(companyDetailHeroHeaderComponent, /export function CompanyDetailHeroHeader/);
+
+  for (const label of ["返回", "加入收藏"]) {
+    assert.match(companyDetailHeroHeaderComponent, new RegExp(label));
+  }
+
+  for (const dynamicBadgeSource of ["月營收年增", "連三月年增", "投信買超", "有股票期貨"]) {
+    assert.match(combinedSource, new RegExp(dynamicBadgeSource));
+  }
+
+  for (const prop of ["data", "marketPosition", "badges", "onBack", "quoteContent", "profile", "industry"]) {
+    assert.match(companyDetailHeroHeaderComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(companyDetailHeroHeaderComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const headerIndex = page.indexOf("<CompanyDetailHeroHeader");
+  const quoteIndex = page.indexOf("quoteContent={<RealtimeQuote code={data.code} />}");
+  const briefIndex = page.indexOf("<CompanyEditorialBrief editorialBrief={editorialBrief} />");
+  const tabsIndex = page.indexOf("<CompanyDetailTabs");
+  assert.ok(headerIndex > 0, "company detail hero header should render from the page");
+  assert.ok(quoteIndex > headerIndex, "realtime quote should stay owned by the page and be passed as prepared content");
+  assert.ok(briefIndex > headerIndex, "human editorial brief should still follow the company hero header");
+  assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
 });
