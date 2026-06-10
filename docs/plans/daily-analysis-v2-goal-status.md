@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 21:18 CST
+Updated: 2026-06-10 21:35 CST
 
 ## Purpose
 
@@ -908,6 +908,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside selected industry detail, likely the following supply-chain role / role-detail render block, while keeping selected-role data assembly and URL state in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, supply-chain rendering, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.25 CompanyIndustrySupplyChainRolePanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyIndustrySupplyChainRolePanel.tsx` as a render-only presentational component for the selected industry-role `🔗 在此產業的角色` card.
+- Replaced the inline supply-chain role JSX in `src/app/page.tsx` with `<CompanyIndustrySupplyChainRolePanel />`, passing prepared `role.group`, `role.role`, display badge/relevance metadata, canonical role label/summary, V2 supply-chain stage/type, prepared role risks, and prepared source chips.
+- Kept all supply-chain role data assembly in `src/app/page.tsx`: `topicAnalysis` creation, selected industry role state, canonical role matching, `dailyCanonicalRole`, `canonicalRoleLabel`, directness/relevance display derivation, `sourceChips` construction, fetch/useEffect/useState ownership, and `/?company=CODE` route behavior remain in the page container.
+- Preserved existing copy/labels and caps: `🔗 在此產業的角色`, `供應鏈群組`, `角色定位`, `角色說明`, `V2 供應鏈階段`, `V2 角色類型`, `題材角色風險`, risk `.slice(0, 3)`, source-chip de-duplication with `new Set(sourceChips)`, source-chip `.slice(0, 8)`, and `資料來源 / 校正依據`.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.25 guardrails proving the extracted component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no product-knowledge lookup, no canonical role ownership, no app/data imports, no API route calls, and no `/companies/[code]` route/link introduction.
+- Repaired the adjacent M1.24 ordering guardrail so it now follows `<CompanyIndustrySupplyChainRolePanel />` instead of the removed inline supply-chain role marker.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.25"` failed because `src/components/company-detail/CompanyIndustrySupplyChainRolePanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.25|M1.24"` → 174/174 passing under Node test filtering behavior.
+- `npm test` → 174/174 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → after switching to `產業分析`, company detail renders extracted `題材角色統整摘要`, evidence coverage heading, extracted `市場定位`, extracted `技術重心`, extracted `主要產品`, extracted `主要客戶`, extracted `SWOT 分析`, extracted `在此產業的角色`, V2 supply-chain stage/type, role risk rows, source chips, and all sections stay in expected order.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary after the selected industry detail block; likely extract the no-industry fallback / industry-tab shell only if it can stay render-only, otherwise move to the next company-detail tab slice.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 

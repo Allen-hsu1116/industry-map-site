@@ -41,6 +41,7 @@ import { CompanyIndustryTechnologyFocusPanel } from "@/components/company-detail
 import { CompanyIndustryProductsPanel } from "@/components/company-detail/CompanyIndustryProductsPanel";
 import { CompanyIndustryCustomersPanel } from "@/components/company-detail/CompanyIndustryCustomersPanel";
 import { CompanyIndustrySwotPanel } from "@/components/company-detail/CompanyIndustrySwotPanel";
+import { CompanyIndustrySupplyChainRolePanel } from "@/components/company-detail/CompanyIndustrySupplyChainRolePanel";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -1522,58 +1523,18 @@ function CompanyFullPageDetail({
                           swotBadgeLabel={swotBadgeLabel}
                         />
 
-                        {/* 供應鏈角色 */}
-                        <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                          <h4 className="text-sm font-bold text-white mb-3">🔗 在此產業的角色</h4>
-                          <div className="space-y-3">
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm text-[var(--color-text-secondary)]">供應鏈群組</span>
-                              <span className="text-sm text-white font-medium">{role.group}</span>
-                            </div>
-                            <div className="flex items-center justify-between">
-                              <span className="text-sm text-[var(--color-text-secondary)]">角色定位</span>
-                              <span className="text-xs px-2.5 py-1 rounded-full font-bold whitespace-nowrap" style={{ color: displayRoleBadge.color, backgroundColor: displayRoleBadge.bg }}>
-                                {displayRelInfo.emoji} {canonicalRoleLabel ?? displayRelInfo.label}
-                              </span>
-                            </div>
-                            {role.role && (
-                              <div className="flex items-center justify-between gap-4">
-                                <span className="text-sm text-[var(--color-text-secondary)]">角色說明</span>
-                                <span className="text-sm text-white font-medium text-right">{canonicalRole?.roleSummary ?? dailyCanonicalRole?.roleSummary ?? role.role}</span>
-                              </div>
-                            )}
-                            {canonicalRole && (
-                              <>
-                                <div className="flex items-center justify-between gap-4">
-                                  <span className="text-sm text-[var(--color-text-secondary)]">V2 供應鏈階段</span>
-                                  <span className="text-sm text-white font-medium text-right">{canonicalRole.supplyChainStage}</span>
-                                </div>
-                                <div className="flex items-center justify-between gap-4">
-                                  <span className="text-sm text-[var(--color-text-secondary)]">V2 角色類型</span>
-                                  <span className="text-sm text-white font-medium text-right">{canonicalRole.roleType}</span>
-                                </div>
-                                {canonicalRole.risks && canonicalRole.risks.length > 0 && (
-                                  <div className="rounded-xl border border-amber-300/10 bg-amber-300/[0.04] p-3">
-                                    <div className="mb-1 text-[11px] font-bold uppercase tracking-widest text-amber-200">題材角色風險</div>
-                                    <ul className="space-y-1">
-                                      {canonicalRole.risks.slice(0, 3).map((risk, i) => <li key={i} className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {risk}</li>)}
-                                    </ul>
-                                  </div>
-                                )}
-                              </>
-                            )}
-                            {sourceChips.length > 0 && (
-                              <div className="pt-3 border-t border-white/[0.04]">
-                                <div className="mb-2 text-[11px] font-bold uppercase tracking-widest text-[var(--color-text-tertiary)]">資料來源 / 校正依據</div>
-                                <div className="flex flex-wrap gap-2">
-                                  {[...new Set(sourceChips)].slice(0, 8).map((source) => (
-                                    <span key={source} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[11px] text-[var(--color-text-secondary)]">{source}</span>
-                                  ))}
-                                </div>
-                              </div>
-                            )}
-                          </div>
-                        </div>
+                        <CompanyIndustrySupplyChainRolePanel
+                          group={role.group}
+                          role={role.role}
+                          displayRoleBadge={displayRoleBadge}
+                          displayRelInfo={displayRelInfo}
+                          roleLabel={canonicalRoleLabel}
+                          roleSummary={canonicalRole?.roleSummary ?? dailyCanonicalRole?.roleSummary ?? role.role}
+                          v2SupplyChainStage={canonicalRole?.supplyChainStage}
+                          v2RoleType={canonicalRole?.roleType}
+                          roleRisks={canonicalRole?.risks ?? []}
+                          sourceChips={sourceChips}
+                        />
                       </div>
                     );
                   })()}

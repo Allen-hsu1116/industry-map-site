@@ -26,6 +26,7 @@ const companyIndustryTechnologyFocusPanelComponentPath = "src/components/company
 const companyIndustryProductsPanelComponentPath = "src/components/company-detail/CompanyIndustryProductsPanel.tsx";
 const companyIndustryCustomersPanelComponentPath = "src/components/company-detail/CompanyIndustryCustomersPanel.tsx";
 const companyIndustrySwotPanelComponentPath = "src/components/company-detail/CompanyIndustrySwotPanel.tsx";
+const companyIndustrySupplyChainRolePanelComponentPath = "src/components/company-detail/CompanyIndustrySupplyChainRolePanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -985,8 +986,61 @@ test("Slice M1.24 extracts industry SWOT as a prepared-props presentational pane
   const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
   const customersPanelIndex = page.indexOf("<CompanyIndustryCustomersPanel");
   const swotPanelIndex = page.indexOf("<CompanyIndustrySwotPanel");
-  const supplyChainRoleIndex = page.indexOf("{/* 供應鏈角色 */}");
+  const supplyChainRolePanelIndex = page.indexOf("<CompanyIndustrySupplyChainRolePanel");
   assert.ok(swotPanelIndex > selectedDetailIndex, "SWOT panel should remain in selected industry detail block");
   assert.ok(swotPanelIndex > customersPanelIndex, "SWOT panel should follow customers");
-  assert.ok(supplyChainRoleIndex > swotPanelIndex, "supply-chain role section should still follow SWOT");
+  assert.ok(supplyChainRolePanelIndex > swotPanelIndex, "supply-chain role panel should still follow SWOT");
+});
+
+test("Slice M1.25 extracts industry supply-chain role as a prepared-props presentational panel", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustrySwotPanelComponent = await readFile(companyIndustrySwotPanelComponentPath, "utf8");
+  const companyIndustrySupplyChainRolePanelComponent = await readFile(companyIndustrySupplyChainRolePanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustrySwotPanelComponent}\n${companyIndustrySupplyChainRolePanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustrySupplyChainRolePanel/);
+  assert.match(page, /<CompanyIndustrySupplyChainRolePanel[\s\S]*group=\{role\.group\}[\s\S]*role=\{role\.role\}[\s\S]*displayRoleBadge=\{displayRoleBadge\}[\s\S]*displayRelInfo=\{displayRelInfo\}[\s\S]*roleLabel=\{canonicalRoleLabel\}[\s\S]*roleSummary=\{canonicalRole\?\.roleSummary \?\? dailyCanonicalRole\?\.roleSummary \?\? role\.role\}[\s\S]*v2SupplyChainStage=\{canonicalRole\?\.supplyChainStage\}[\s\S]*v2RoleType=\{canonicalRole\?\.roleType\}[\s\S]*roleRisks=\{canonicalRole\?\.risks \?\? \[\]\}[\s\S]*sourceChips=\{sourceChips\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /🔗 在此產業的角色[\s\S]*資料來源 \/ 校正依據/);
+
+  assert.match(companyIndustrySupplyChainRolePanelComponent, /export interface CompanyIndustrySupplyChainRolePanelProps/);
+  assert.match(companyIndustrySupplyChainRolePanelComponent, /export function CompanyIndustrySupplyChainRolePanel/);
+
+  for (const label of [
+    "🔗 在此產業的角色",
+    "供應鏈群組",
+    "角色定位",
+    "角色說明",
+    "V2 供應鏈階段",
+    "V2 角色類型",
+    "題材角色風險",
+    "資料來源 / 校正依據",
+    "slice(0, 3)",
+    "slice(0, 8)",
+    "new Set(sourceChips)",
+  ]) {
+    assert.match(companyIndustrySupplyChainRolePanelComponent, new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(page, /const canonicalRole = resolvedCompanyTopicRoles\?\.roles\.find/);
+  assert.match(page, /const dailyCanonicalRole = resolvedDailyAnalysis\?\.canonicalKnowledge\.topicRoles\.find/);
+  assert.match(page, /const canonicalRoleLabel = canonicalRole \? directnessLabel\(canonicalRole\.directness\) : dailyCanonicalRole\?\.directnessLabel/);
+  assert.match(page, /const displayDirectness = canonicalRole\?\.directness \?\? dailyCanonicalRole\?\.directness as Directness \| undefined/);
+  assert.match(page, /const displayRelevance = displayDirectness \? directnessToRelevance\(displayDirectness\) : role\.relevance/);
+  assert.match(page, /const displayRelInfo = getRelevanceInfo\(displayRelevance\)/);
+  assert.match(page, /const displayRoleBadge = getRoleBadge\(displayRelevance\)/);
+  assert.match(page, /const sourceChips = \[/);
+  assert.match(page, /canonicalRole\?\.evidence\.map/);
+  assert.match(page, /canonicalSwotEvidence/);
+  assert.match(page, /knowledge\?\.dataSources/);
+  assert.match(page, /knowledge\?\.swot\.sources/);
+  assert.doesNotMatch(companyIndustrySupplyChainRolePanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|selectTopicSwotItems|groupCompanySwot|findProductKnowledgeItem|productKnowledgeToNarrative|describeProduct|resolvedCompanyTopicRoles|resolvedDailyAnalysis|resolvedCompanySwot|dailyCanonicalRole|canonicalRole|topicAnalysis|sourceChips =|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  const swotPanelIndex = page.indexOf("<CompanyIndustrySwotPanel");
+  const supplyChainRolePanelIndex = page.indexOf("<CompanyIndustrySupplyChainRolePanel");
+  const selectedDetailEndIndex = page.indexOf("{/* ─── 籌碼分析 Tab ─── */}");
+  assert.ok(supplyChainRolePanelIndex > selectedDetailIndex, "supply-chain role panel should remain in selected industry detail block");
+  assert.ok(supplyChainRolePanelIndex > swotPanelIndex, "supply-chain role panel should follow SWOT");
+  assert.ok(selectedDetailEndIndex > supplyChainRolePanelIndex, "selected-detail block should still continue after supply-chain role panel");
 });
