@@ -40,6 +40,7 @@ import { CompanyIndustryMarketPositionPanel } from "@/components/company-detail/
 import { CompanyIndustryTechnologyFocusPanel } from "@/components/company-detail/CompanyIndustryTechnologyFocusPanel";
 import { CompanyIndustryProductsPanel } from "@/components/company-detail/CompanyIndustryProductsPanel";
 import { CompanyIndustryCustomersPanel } from "@/components/company-detail/CompanyIndustryCustomersPanel";
+import { CompanyIndustrySwotPanel } from "@/components/company-detail/CompanyIndustrySwotPanel";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -1441,6 +1442,11 @@ function CompanyFullPageDetail({
                     });
                     const hasCanonicalSwot = Boolean(resolvedCompanySwot && Object.values(canonicalSwotItemsByKey).some((items) => items.length > 0));
                     const isFallbackSwotObservation = !hasCanonicalSwot;
+                    const swotBadgeLabel = resolvedCompanySwot
+                      ? `V2 evidence-backed · ${resolvedCompanySwot.updatedAt}`
+                      : dailyCanonicalSwot
+                        ? `V2 daily canonical · ${resolvedDailyAnalysis?.sourceUpdatedAt ?? resolvedDailyAnalysis?.generatedAt.slice(0, 10) ?? "未知日期"}`
+                        : undefined;
                     const evidenceCoverageCards = [
                       {
                         label: "產品知識",
@@ -1508,69 +1514,13 @@ function CompanyFullPageDetail({
                           <PlaceholderSection title="主要客戶" icon="👥" />
                         )}
 
-                        {/* SWOT 分析 */}
-                        {topicAnalysis.swot && ((topicAnalysis.swot.strengths?.length ?? 0) > 0 || (topicAnalysis.swot.weaknesses?.length ?? 0) > 0 || (topicAnalysis.swot.opportunities?.length ?? 0) > 0 || (topicAnalysis.swot.threats?.length ?? 0) > 0) ? (
-                          <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                            <div className="mb-4 flex flex-wrap items-center gap-2">
-                              <h4 className="text-sm font-bold text-white">🏛️ SWOT 分析</h4>
-                              {(resolvedCompanySwot || dailyCanonicalSwot) && (
-                                <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-200">
-                                  {resolvedCompanySwot ? `V2 evidence-backed · ${resolvedCompanySwot.updatedAt}` : `V2 daily canonical · ${resolvedDailyAnalysis?.sourceUpdatedAt ?? resolvedDailyAnalysis?.generatedAt.slice(0, 10) ?? "未知日期"}`}
-                                </span>
-                              )}
-                            </div>
-                            {isFallbackSwotObservation && (
-                              <div className="mb-4 rounded-xl border border-amber-300/15 bg-amber-300/[0.06] p-3 text-[11px] leading-relaxed text-amber-100/85">
-                                Fallback SWOT observation：這組 SWOT 尚未 evidence-backed；只能協助觀察，不可升級成推薦或高信心結論。
-                              </div>
-                            )}
-                            <div className="grid gap-4 md:grid-cols-2">
-                              {[
-                                { label: "優勢 (S)", items: topicAnalysis.swot.strengths || [], canonicalItems: canonicalSwotItemsByKey.strengths, color: "#34d399" },
-                                { label: "劣勢 (W)", items: topicAnalysis.swot.weaknesses || [], canonicalItems: canonicalSwotItemsByKey.weaknesses, color: "#f87171" },
-                                { label: "機會 (O)", items: topicAnalysis.swot.opportunities || [], canonicalItems: canonicalSwotItemsByKey.opportunities, color: "#818cf8" },
-                                { label: "威脅 (T)", items: topicAnalysis.swot.threats || [], canonicalItems: canonicalSwotItemsByKey.threats, color: "#fbbf24" },
-                              ].map((sw) => (
-                                <div key={sw.label} className="bg-white/[0.02] rounded-xl p-4">
-                                  <h5 className="text-xs font-bold mb-3" style={{ color: sw.color }}>{sw.label}</h5>
-                                  {hasCanonicalSwot && sw.canonicalItems.length > 0 ? (
-                                    <div className="space-y-3">
-                                      {sw.canonicalItems.map((item) => (
-                                        <div key={item.id} className="rounded-lg border border-white/[0.05] bg-black/[0.10] p-3">
-                                          <div className="mb-2 flex flex-wrap items-center gap-2">
-                                            <span className="text-[10px] font-bold uppercase tracking-wide text-[var(--color-text-tertiary)]">Canonical SWOT item</span>
-                                            <span className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-[var(--color-text-secondary)]">信心：{item.confidence}</span>
-                                            <span className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-[var(--color-text-secondary)]">驗證：{item.lastVerified ?? "未知"}</span>
-                                          </div>
-                                          <p className="text-xs leading-relaxed text-[var(--color-text-secondary)]">• {item.statement}</p>
-                                          <p className="mt-2 text-[11px] leading-relaxed text-[var(--color-text-tertiary)]">理由：{item.rationale}</p>
-                                          {item.evidence.length > 0 && (
-                                            <div className="mt-2 flex flex-wrap gap-1.5">
-                                              <span className="text-[10px] font-bold uppercase tracking-wide text-[var(--color-text-tertiary)]">SWOT evidence</span>
-                                              {item.evidence.slice(0, 2).map((evidence) => (
-                                                <a key={evidence.sourceId} href={evidence.url} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2 py-0.5 text-[10px] text-[var(--color-text-tertiary)] hover:text-white">
-                                                  {evidence.publisher}：{evidence.title} <ExternalIcon />
-                                                </a>
-                                              ))}
-                                            </div>
-                                          )}
-                                        </div>
-                                      ))}
-                                    </div>
-                                  ) : (
-                                    <ul className="space-y-1">
-                                      {sw.items.map((item, i) => (
-                                        <li key={i} className="text-xs text-[var(--color-text-secondary)]">• {item}</li>
-                                      ))}
-                                    </ul>
-                                  )}
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        ) : (
-                          <PlaceholderSection title="SWOT 分析" icon="🏛️" />
-                        )}
+                        <CompanyIndustrySwotPanel
+                          swot={topicAnalysis.swot}
+                          canonicalSwotItemsByKey={canonicalSwotItemsByKey}
+                          hasCanonicalSwot={hasCanonicalSwot}
+                          isFallbackSwotObservation={isFallbackSwotObservation}
+                          swotBadgeLabel={swotBadgeLabel}
+                        />
 
                         {/* 供應鏈角色 */}
                         <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">

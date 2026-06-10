@@ -25,6 +25,7 @@ const companyIndustryMarketPositionPanelComponentPath = "src/components/company-
 const companyIndustryTechnologyFocusPanelComponentPath = "src/components/company-detail/CompanyIndustryTechnologyFocusPanel.tsx";
 const companyIndustryProductsPanelComponentPath = "src/components/company-detail/CompanyIndustryProductsPanel.tsx";
 const companyIndustryCustomersPanelComponentPath = "src/components/company-detail/CompanyIndustryCustomersPanel.tsx";
+const companyIndustrySwotPanelComponentPath = "src/components/company-detail/CompanyIndustrySwotPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -924,8 +925,68 @@ test("Slice M1.23 extracts industry customers as a prepared-props presentational
   const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
   const productsPanelIndex = page.indexOf("<CompanyIndustryProductsPanel");
   const customersPanelIndex = page.indexOf("<CompanyIndustryCustomersPanel");
-  const swotSectionIndex = page.indexOf("{/* SWOT 分析 */}");
+  const swotPanelIndex = page.indexOf("<CompanyIndustrySwotPanel");
   assert.ok(customersPanelIndex > selectedDetailIndex, "customers panel should remain in selected industry detail block");
   assert.ok(customersPanelIndex > productsPanelIndex, "customers panel should follow products");
-  assert.ok(swotSectionIndex > customersPanelIndex, "SWOT section should still follow customers");
+  assert.ok(swotPanelIndex > customersPanelIndex, "SWOT panel should still follow customers");
+});
+
+test("Slice M1.24 extracts industry SWOT as a prepared-props presentational panel", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryCustomersPanelComponent = await readFile(companyIndustryCustomersPanelComponentPath, "utf8");
+  const companyIndustrySwotPanelComponent = await readFile(companyIndustrySwotPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustryCustomersPanelComponent}\n${companyIndustrySwotPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustrySwotPanel/);
+  assert.match(page, /<CompanyIndustrySwotPanel[\s\S]*swot=\{topicAnalysis\.swot\}[\s\S]*canonicalSwotItemsByKey=\{canonicalSwotItemsByKey\}[\s\S]*hasCanonicalSwot=\{hasCanonicalSwot\}[\s\S]*isFallbackSwotObservation=\{isFallbackSwotObservation\}[\s\S]*swotBadgeLabel=\{swotBadgeLabel\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /🏛️ SWOT 分析[\s\S]*Canonical SWOT item/);
+
+  assert.match(companyIndustrySwotPanelComponent, /export interface CompanyIndustrySwotPanelProps/);
+  assert.match(companyIndustrySwotPanelComponent, /export interface CompanyIndustryCanonicalSwotItem/);
+  assert.match(companyIndustrySwotPanelComponent, /export function CompanyIndustrySwotPanel/);
+
+  for (const label of [
+    "🏛️ SWOT 分析",
+    "swotBadgeLabel",
+    "Fallback SWOT observation",
+    "優勢 (S)",
+    "劣勢 (W)",
+    "機會 (O)",
+    "威脅 (T)",
+    "Canonical SWOT item",
+    "信心：",
+    "驗證：",
+    "理由：",
+    "SWOT evidence",
+    "slice(0, 2)",
+    "ExternalIcon",
+    "📋 資料準備中",
+    "🔒 升級解鎖",
+  ]) {
+    assert.match(companyIndustrySwotPanelComponent, new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(page, /const topicSwotFor = \(key: keyof GroupedSwot\) => selectTopicSwotItems\(groupedCompanySwot, key, topicMatchIds\)/);
+  assert.match(page, /const canonicalSwotItemsByKey: Record<keyof GroupedSwot, CompanySwotItem\[]> = \{/);
+  assert.match(page, /const canonicalSwot = resolvedCompanySwot \? \{/);
+  assert.match(page, /const dailyCanonicalSwotItems = resolvedDailyAnalysis\?\.canonicalKnowledge\.swot\.filter/);
+  assert.match(page, /const dailyCanonicalSwot = !resolvedCompanySwot && dailyCanonicalSwotItems\.length > 0 \? \{/);
+  assert.match(page, /const canonicalSwotEvidence = resolvedCompanySwot/);
+  assert.match(page, /const fallbackSwot = canonicalSwot \?\? dailyCanonicalSwot \?\? role\.swot \?\? knowledge\?\.swot \?\? data\.swot/);
+  assert.match(page, /swot: fallbackSwot/);
+  assert.match(page, /const hasCanonicalSwot = Boolean\(resolvedCompanySwot && Object\.values\(canonicalSwotItemsByKey\)\.some/);
+  assert.match(page, /const isFallbackSwotObservation = !hasCanonicalSwot/);
+  assert.match(page, /const swotBadgeLabel = resolvedCompanySwot/);
+  assert.match(page, /V2 evidence-backed/);
+  assert.match(page, /V2 daily canonical/);
+  assert.doesNotMatch(companyIndustrySwotPanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|selectTopicSwotItems|groupCompanySwot|resolvedCompanySwot|dailyCanonicalSwot|resolvedDailyAnalysis|topicAnalysis|topicSwotFor|fallbackSwot|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  const customersPanelIndex = page.indexOf("<CompanyIndustryCustomersPanel");
+  const swotPanelIndex = page.indexOf("<CompanyIndustrySwotPanel");
+  const supplyChainRoleIndex = page.indexOf("{/* 供應鏈角色 */}");
+  assert.ok(swotPanelIndex > selectedDetailIndex, "SWOT panel should remain in selected industry detail block");
+  assert.ok(swotPanelIndex > customersPanelIndex, "SWOT panel should follow customers");
+  assert.ok(supplyChainRoleIndex > swotPanelIndex, "supply-chain role section should still follow SWOT");
 });

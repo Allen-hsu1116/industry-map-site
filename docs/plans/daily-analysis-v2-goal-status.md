@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 21:01 CST
+Updated: 2026-06-10 21:18 CST
 
 ## Purpose
 
@@ -881,6 +881,33 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside selected industry detail; likely `CompanyIndustrySwotPanel` for `🏛️ SWOT 分析`, while keeping `topicAnalysis.swot`, canonical SWOT matching, fallback-observation state, `resolvedCompanySwot`, `dailyCanonicalSwot`, source/evidence selection, and all selected-role data assembly in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, SWOT/supply-chain rendering, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.24 CompanyIndustrySwotPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyIndustrySwotPanel.tsx` as a render-only presentational component for the selected industry-role `🏛️ SWOT 分析` card.
+- Replaced the inline SWOT JSX in `src/app/page.tsx` with `<CompanyIndustrySwotPanel />`, passing prepared `topicAnalysis.swot`, `canonicalSwotItemsByKey`, `hasCanonicalSwot`, fallback/source labels, and source metadata.
+- Kept all SWOT data assembly in `src/app/page.tsx`: `topicAnalysis.swot` construction, `canonicalSwotItemsByKey`, `hasCanonicalSwot`, `isFallbackSwotObservation`, `resolvedCompanySwot`, `dailyCanonicalSwot`, `resolvedDailyAnalysis`, canonical SWOT evidence/source selection, selected industry role state, topic analysis creation, fetch/useEffect/useState, and `/?company=CODE` route behavior remain in the page container.
+- Preserved existing copy/labels and source semantics: `🏛️ SWOT 分析`, `V2 EVIDENCE-BACKED`, `DAILY ANALYSIS`, `Fallback SWOT observation`, `Canonical SWOT item`, confidence/verified chips, rationale, `SWOT evidence`, source-link rendering, all four SWOT quadrants, and `PlaceholderSection` fallback.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.24 guardrails proving the extracted component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no product-knowledge lookup, no canonical SWOT matching ownership, no app/data imports, no API route calls, and no `/companies/[code]` route/link introduction.
+- Repaired the adjacent M1.23 ordering guardrail so it now follows `<CompanyIndustrySwotPanel />` instead of the removed inline SWOT marker.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.24"` failed because `src/components/company-detail/CompanyIndustrySwotPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.24|M1.23"` → 173/173 passing under Node test filtering behavior.
+- `npm test` → 173/173 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- `git diff --check` → passing.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → after switching to `產業分析`, company detail renders extracted `題材角色統整摘要`, evidence coverage heading, extracted `市場定位`, extracted `技術重心`, extracted `主要產品`, extracted `主要客戶`, extracted `SWOT 分析`, all four SWOT quadrants, canonical SWOT item labels, source/evidence metadata, and following `在此產業的角色` in the expected order.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside selected industry detail, likely the following supply-chain role / role-detail render block, while keeping selected-role data assembly and URL state in `src/app/page.tsx`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, supply-chain rendering, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 
