@@ -38,6 +38,7 @@ import { CompanyIndustryRoleNavigation } from "@/components/company-detail/Compa
 import { CompanyIndustryRoleSummaryPanel } from "@/components/company-detail/CompanyIndustryRoleSummaryPanel";
 import { CompanyIndustryMarketPositionPanel } from "@/components/company-detail/CompanyIndustryMarketPositionPanel";
 import { CompanyIndustryTechnologyFocusPanel } from "@/components/company-detail/CompanyIndustryTechnologyFocusPanel";
+import { CompanyIndustryProductsPanel } from "@/components/company-detail/CompanyIndustryProductsPanel";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -1431,6 +1432,12 @@ function CompanyFullPageDetail({
                     const matchedProductKnowledge = topicProducts
                       .map((product) => findProductKnowledgeItem(product, resolvedProductKnowledge, role.topic))
                       .filter((item): item is NonNullable<typeof item> => Boolean(item));
+                    const productNarrativeRows = topicAnalysis.products.map((product) => {
+                      const knowledgeItem = findProductKnowledgeItem(product, resolvedProductKnowledge, role.topic);
+                      return knowledgeItem
+                        ? productKnowledgeToNarrative(knowledgeItem, role.topic)
+                        : describeProduct(product, { companyName: data.name, topicName: role.topicName, group: role.group });
+                    });
                     const hasCanonicalSwot = Boolean(resolvedCompanySwot && Object.values(canonicalSwotItemsByKey).some((items) => items.length > 0));
                     const isFallbackSwotObservation = !hasCanonicalSwot;
                     const evidenceCoverageCards = [
@@ -1488,50 +1495,7 @@ function CompanyFullPageDetail({
 
                         {/* 主要產品 */}
                         {topicAnalysis?.products && topicAnalysis.products.length > 0 ? (
-                          <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                            <h4 className="text-sm font-bold text-white mb-3">📦 主要產品</h4>
-                            <div className="space-y-3">
-                              {topicAnalysis.products.map((p, i) => {
-                                const knowledgeItem = findProductKnowledgeItem(p, resolvedProductKnowledge, role.topic);
-                                const item = knowledgeItem
-                                  ? productKnowledgeToNarrative(knowledgeItem, role.topic)
-                                  : describeProduct(p, { companyName: data.name, topicName: role.topicName, group: role.group });
-                                return (
-                                  <div key={i} className="rounded-xl border border-white/[0.04] bg-white/[0.015] p-4">
-                                    <div className="flex flex-wrap items-center gap-2">
-                                      <p className="text-sm font-semibold text-white">{item.name}</p>
-                                      {item.confidence && <span className="rounded-full bg-emerald-400/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-emerald-200">{item.confidence}</span>}
-                                      {item.lastVerified && <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-[10px] text-[var(--color-text-tertiary)]">驗證 {item.lastVerified}</span>}
-                                    </div>
-                                    <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-text-secondary)]">{item.description}</p>
-                                    {item.topicFit && (
-                                      <p className="mt-2 text-xs leading-relaxed text-violet-200/80">題材角色：{item.topicFit}</p>
-                                    )}
-                                    {item.whyItMatters && (
-                                      <p className="mt-2 text-xs leading-relaxed text-cyan-200/80">為什麼重要：{item.whyItMatters}</p>
-                                    )}
-                                    {item.businessImpact && (
-                                      <p className="mt-2 text-xs leading-relaxed text-amber-100/80">營運影響：{item.businessImpact}</p>
-                                    )}
-                                    {item.sourceLabels && item.sourceLabels.length > 0 && (
-                                      <div className="mt-3 flex flex-wrap gap-2">
-                                        {item.sourceLabels.slice(0, 2).map((label, sourceIndex) => {
-                                          const url = item.sourceUrls?.[sourceIndex];
-                                          return url ? (
-                                            <a key={sourceIndex} href={url} target="_blank" rel="noopener noreferrer" className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[11px] text-[var(--color-text-tertiary)] hover:text-white">
-                                              來源：{label} <ExternalIcon />
-                                            </a>
-                                          ) : (
-                                            <span key={sourceIndex} className="rounded-full border border-white/[0.06] bg-white/[0.03] px-2.5 py-1 text-[11px] text-[var(--color-text-tertiary)]">來源：{label}</span>
-                                          );
-                                        })}
-                                      </div>
-                                    )}
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
+                          <CompanyIndustryProductsPanel products={productNarrativeRows} />
                         ) : (
                           <PlaceholderSection title="主要產品" icon="📦" />
                         )}
