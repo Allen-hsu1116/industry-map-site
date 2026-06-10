@@ -18,6 +18,7 @@ const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/C
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
+const companyIndustryKnowledgeOverviewComponentPath = "src/components/company-detail/CompanyIndustryKnowledgeOverview.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -603,4 +604,50 @@ test("Slice M1.16 extracts company detail hero header without moving quote/state
   assert.ok(quoteIndex > headerIndex, "realtime quote should stay owned by the page and be passed as prepared content");
   assert.ok(briefIndex > headerIndex, "human editorial brief should still follow the company hero header");
   assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
+});
+
+
+test("Slice M1.17 extracts industry knowledge overview without changing evidence semantics", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryKnowledgeOverviewComponent = await readFile(companyIndustryKnowledgeOverviewComponentPath, "utf8");
+  const heroHeaderComponent = await readFile(companyDetailHeroHeaderComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustryKnowledgeOverviewComponent}\n${heroHeaderComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryKnowledgeOverview/);
+  assert.match(page, /<CompanyIndustryKnowledgeOverview\s+industryInsights=\{industryInsights\}\s+\/>/);
+  assert.doesNotMatch(page, /Industrial analysis knowledge base[\s\S]*Object\.values\(industryInsights\.panels\.swot\.groups\)\.flat\(\)\.length[\s\S]*Industry sub-tabs/);
+
+  assert.match(companyIndustryKnowledgeOverviewComponent, /export interface CompanyIndustryKnowledgeOverviewProps/);
+  assert.match(companyIndustryKnowledgeOverviewComponent, /export function CompanyIndustryKnowledgeOverview/);
+
+  for (const label of [
+    "Industrial analysis knowledge base",
+    "產品 / 題材角色 / SWOT 產業知識總覽",
+    "checked-in evidence-backed",
+    "partial/empty",
+    "產品知識",
+    "題材角色",
+    "SWOT",
+    "products",
+    "verified",
+    "candidate",
+    "尚未驗證",
+  ]) {
+    assert.match(companyIndustryKnowledgeOverviewComponent, new RegExp(label.replace(/[ /]/g, ".*")));
+  }
+
+  for (const prop of ["industryInsights", "sourceStatus", "panels", "products", "topicRoles", "swot", "groups"]) {
+    assert.match(companyIndustryKnowledgeOverviewComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(companyIndustryKnowledgeOverviewComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
+  const knowledgeOverviewIndex = page.indexOf("<CompanyIndustryKnowledgeOverview");
+  const rolesSummaryIndex = page.indexOf("產業定位總覽");
+  const industrySubTabsIndex = page.indexOf("{/* Industry sub-tabs */}");
+  assert.ok(knowledgeOverviewIndex > industryTabIndex, "industry knowledge overview should remain inside industry tab");
+  assert.ok(rolesSummaryIndex > knowledgeOverviewIndex, "industry role summary should still follow the knowledge overview");
+  assert.ok(industrySubTabsIndex > rolesSummaryIndex, "industry sub-tabs should still follow the role summary");
 });

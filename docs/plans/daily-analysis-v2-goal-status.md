@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 19:27 CST
+Updated: 2026-06-10 19:38 CST
 
 ## Purpose
 
@@ -704,6 +704,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary below the hero/header, likely another dense tab/view-only block while keeping fetch/state containers in `src/app/page.tsx` unless explicitly split.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.17 CompanyIndustryKnowledgeOverview extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyIndustryKnowledgeOverview.tsx` as a render-only presentational component for the industry-analysis tab's product/topic-role/SWOT knowledge overview.
+- Replaced the inline `產品 / 題材角色 / SWOT 產業知識總覽`, `產品知識`, `題材角色`, and `SWOT` cards in `src/app/page.tsx` with `<CompanyIndustryKnowledgeOverview industryInsights={industryInsights} />`.
+- Kept data ownership in `src/app/page.tsx`: `buildCompanyIndustryInsights()` still prepares `industryInsights`, and the extracted component only renders the prepared evidence-backed panels.
+- Preserved existing evidence semantics and copy, including checked-in knowledge wording, `partial/empty` guardrails, source/status/freshness labels, product source links, topic role confidence/status labels, and SWOT grouping/empty states.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.17 guardrails proving the component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no app/data imports, no API route calls, and no `/companies/[code]` route/link introduction.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.17"` failed because `src/components/company-detail/CompanyIndustryKnowledgeOverview.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.17"` → 166/166 passing under Node test filtering behavior.
+- `npm test` → 166/166 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → company detail renders `台積電`, tabs, industry-analysis tab, extracted `產品 / 題材角色 / SWOT 產業知識總覽`, `產品知識`, `題材角色`, `SWOT`, and the following `產業定位總覽` content.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary below the industry knowledge overview, likely the industry role/positioning content or another dense render-only tab block.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 ## Recommended operating rule from now on
