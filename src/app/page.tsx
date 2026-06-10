@@ -29,7 +29,7 @@ import { RevenueAnalysisPanel } from "@/components/company-detail/RevenueAnalysi
 import { ProfitabilityAnalysisPanel } from "@/components/company-detail/ProfitabilityAnalysisPanel";
 import { BatchAnalysisPanel } from "@/components/company-detail/BatchAnalysisPanel";
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
-import { ChipValuationSnapshotPanel } from "@/components/company-detail/ChipValuationSnapshotPanel";
+import { CompanyChipsTabShell } from "@/components/company-detail/CompanyChipsTabShell";
 import { MajorNewsListPanel } from "@/components/company-detail/MajorNewsListPanel";
 import { RelatedNewsListPanel } from "@/components/company-detail/RelatedNewsListPanel";
 import { CompanyDetailHeroHeader } from "@/components/company-detail/CompanyDetailHeroHeader";
@@ -1542,20 +1542,7 @@ function CompanyFullPageDetail({
 
           {/* ─── 籌碼分析 Tab ─── */}
           {detailTab === "chips" && (
-            <div className="space-y-6">
-              <ChipValuationSnapshotPanel data={data} />
-              {resolvedDailyAnalysis && (
-                <BatchAnalysisPanel
-                  title="🧠 籌碼收盤後判讀"
-                  badge={resolvedDailyAnalysis.chips.label}
-                  score={resolvedDailyAnalysis.chips.score}
-                  summary={resolvedDailyAnalysis.chips.summary}
-                  signals={resolvedDailyAnalysis.chips.signals}
-                  risks={resolvedDailyAnalysis.chips.risks}
-                  watch={resolvedDailyAnalysis.chips.watch}
-                  generatedAt={resolvedDailyAnalysis.generatedAt}
-                />
-              )}
+            <CompanyChipsTabShell data={data} dailyAnalysis={resolvedDailyAnalysis}>
               {/* ─── 三大法人歷史趨勢（圖+表） ─── */}
               {data.institutional_history && data.institutional_history.length > 0 && (() => {
                 const hist = data.institutional_history;
@@ -1765,7 +1752,7 @@ function CompanyFullPageDetail({
                   </div>
                 );
               })()}
-            </div>
+            </CompanyChipsTabShell>
           )}
 
           {/* ─── 技術分析 Tab ─── */}

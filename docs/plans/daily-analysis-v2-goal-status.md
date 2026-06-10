@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 21:46 CST
+Updated: 2026-06-10 22:03 CST
 
 ## Purpose
 
@@ -959,6 +959,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary after the industry tab shell; likely move to the next company-detail tab shell/panel slice or extract another presentational route-local shell while keeping data/state in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.27 CompanyChipsTabShell extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyChipsTabShell.tsx` as a render-only shell for the company-detail `籌碼分析` tab.
+- Moved the tab-level `space-y-6` wrapper, `<ChipValuationSnapshotPanel />` placement, and optional `🧠 籌碼收盤後判讀` `<BatchAnalysisPanel />` out of `src/app/page.tsx`.
+- Replaced the inline shell in `src/app/page.tsx` with `<CompanyChipsTabShell data={data} dailyAnalysis={resolvedDailyAnalysis}>...</CompanyChipsTabShell>` while leaving the dense ownership-history / margin / PER-PBR chart/table JSX as children.
+- Kept all chip-tab data/chart assembly in `src/app/page.tsx`: `institutional_history`, `margin_history`, `per_history`, recent-window slicing, chart-data mapping, table rows, formatting helpers, `darkTooltipProps`, tab state, URL query behavior, and `/?company=CODE` route behavior remain in the page container.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.27 shell guardrails and repaired adjacent M1.11/M1.13 ordering checks so they follow `<CompanyChipsTabShell />` while still proving snapshot → batch analysis → dense chip children order.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.27"` failed because `src/components/company-detail/CompanyChipsTabShell.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.27|M1.26|M1.13|M1.11"` → 176/176 passing under Node test filtering behavior.
+- `npm test` → 176/176 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `籌碼分析`, company detail renders `🎰 籌碼分析`, `🧠 籌碼收盤後判讀`, `📊 三大法人買賣超趨勢（近30日）`, `💰 融資融券`, `📐 本益比 / 淨值比 / 殖利率趨勢`, and valuation labels (`本益比 (P/E)`, `股價淨值比 (P/B)`, `現金殖利率`, `負債比`).
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary after the chips tab shell; likely extract one dense chip presentational panel such as institutional history trend or margin history while keeping data preparation in `src/app/page.tsx`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, chip chart/table data shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 

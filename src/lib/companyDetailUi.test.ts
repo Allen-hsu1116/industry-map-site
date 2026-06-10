@@ -15,6 +15,7 @@ const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/P
 const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnalysisPanel.tsx";
 const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
 const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/ChipValuationSnapshotPanel.tsx";
+const companyChipsTabShellComponentPath = "src/components/company-detail/CompanyChipsTabShell.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
@@ -405,10 +406,12 @@ test("Slice M1.11 extracts batch analysis panel without changing analysis labels
   const revenueAnalysisPanelComponent = await readFile(revenueAnalysisPanelComponentPath, "utf8");
   const profitabilityAnalysisPanelComponent = await readFile(profitabilityAnalysisPanelComponentPath, "utf8");
   const batchAnalysisPanelComponent = await readFile(batchAnalysisPanelComponentPath, "utf8");
-  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}\n${dividendPolicyPanelComponent}\n${revenueAnalysisPanelComponent}\n${profitabilityAnalysisPanelComponent}\n${batchAnalysisPanelComponent}`;
+  const companyChipsTabShellComponent = await readFile(companyChipsTabShellComponentPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}\n${dividendPolicyPanelComponent}\n${revenueAnalysisPanelComponent}\n${profitabilityAnalysisPanelComponent}\n${batchAnalysisPanelComponent}\n${companyChipsTabShellComponent}`;
 
   assert.match(page, /@\/components\/company-detail\/BatchAnalysisPanel/);
-  assert.match(page, /<BatchAnalysisPanel[\s\S]*title="🧠 籌碼收盤後判讀"[\s\S]*badge=\{resolvedDailyAnalysis\.chips\.label\}/);
+  assert.match(page, /@\/components\/company-detail\/CompanyChipsTabShell/);
+  assert.match(companyChipsTabShellComponent, /<BatchAnalysisPanel[\s\S]*title="🧠 籌碼收盤後判讀"[\s\S]*badge=\{dailyAnalysis\.chips\.label\}/);
   assert.match(page, /<BatchAnalysisPanel[\s\S]*title="📊 技術分析判讀"[\s\S]*badge=\{resolvedDailyAnalysis\.technical\.label\}/);
   assert.doesNotMatch(page, /function BatchAnalysisPanel/);
   assert.match(batchAnalysisPanelComponent, /export interface BatchAnalysisPanelProps/);
@@ -428,13 +431,16 @@ test("Slice M1.11 extracts batch analysis panel without changing analysis labels
   const briefIndex = page.indexOf("<CompanyEditorialBrief editorialBrief={editorialBrief} />");
   const tabsIndex = page.indexOf("<CompanyDetailTabs");
   const chipsTabIndex = page.indexOf("{/* ─── 籌碼分析 Tab ─── */}");
-  const chipsBatchIndex = page.indexOf("title=\"🧠 籌碼收盤後判讀\"");
+  const chipsShellIndex = page.indexOf("<CompanyChipsTabShell");
+  const chipSnapshotInShellIndex = companyChipsTabShellComponent.indexOf("<ChipValuationSnapshotPanel");
+  const chipsBatchInShellIndex = companyChipsTabShellComponent.indexOf("title=\"🧠 籌碼收盤後判讀\"");
   const techTabIndex = page.indexOf("{/* ─── 技術分析 Tab ─── */}");
   const techBatchIndex = page.indexOf("title=\"📊 技術分析判讀\"");
   const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
   assert.ok(briefIndex > 0, "company editorial brief should still render from the page");
   assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
-  assert.ok(chipsBatchIndex > chipsTabIndex, "chips batch analysis should remain inside chips tab");
+  assert.ok(chipsShellIndex > chipsTabIndex, "chips shell should remain inside chips tab");
+  assert.ok(chipsBatchInShellIndex > chipSnapshotInShellIndex, "chips batch analysis should still follow valuation snapshot inside chips shell");
   assert.ok(techBatchIndex > techTabIndex, "technical batch analysis should remain inside technical tab");
   assert.ok(newsTabIndex > techBatchIndex, "technical batch analysis should still precede the news tab");
 });
@@ -475,10 +481,12 @@ test("Slice M1.13 extracts chip valuation snapshot without changing chips labels
   const page = await readFile(pagePath, "utf8");
   const chipValuationSnapshotPanelComponent = await readFile(chipValuationSnapshotPanelComponentPath, "utf8");
   const batchAnalysisPanelComponent = await readFile(batchAnalysisPanelComponentPath, "utf8");
-  const combinedSource = `${page}\n${chipValuationSnapshotPanelComponent}\n${batchAnalysisPanelComponent}`;
+  const companyChipsTabShellComponent = await readFile(companyChipsTabShellComponentPath, "utf8");
+  const combinedSource = `${page}\n${chipValuationSnapshotPanelComponent}\n${batchAnalysisPanelComponent}\n${companyChipsTabShellComponent}`;
 
-  assert.match(page, /@\/components\/company-detail\/ChipValuationSnapshotPanel/);
-  assert.match(page, /<ChipValuationSnapshotPanel\s+data=\{data\}\s+\/>/);
+  assert.match(page, /@\/components\/company-detail\/CompanyChipsTabShell/);
+  assert.match(companyChipsTabShellComponent, /@\/components\/company-detail\/ChipValuationSnapshotPanel/);
+  assert.match(companyChipsTabShellComponent, /<ChipValuationSnapshotPanel\s+data=\{data\}\s+\/>/);
   assert.doesNotMatch(page, /<StatItem label="本益比 \(P\/E\)"[\s\S]*<StatItem label="負債比"/);
   assert.doesNotMatch(page, /function StatItem/);
   assert.match(chipValuationSnapshotPanelComponent, /export interface ChipValuationSnapshotPanelProps/);
@@ -497,12 +505,16 @@ test("Slice M1.13 extracts chip valuation snapshot without changing chips labels
   assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
 
   const chipsTabIndex = page.indexOf("{/* ─── 籌碼分析 Tab ─── */}");
-  const chipSnapshotIndex = page.indexOf("<ChipValuationSnapshotPanel");
-  const chipsBatchIndex = page.indexOf("title=\"🧠 籌碼收盤後判讀\"");
+  const chipsShellIndex = page.indexOf("<CompanyChipsTabShell");
+  const chipSnapshotInShellIndex = companyChipsTabShellComponent.indexOf("<ChipValuationSnapshotPanel");
+  const chipsBatchInShellIndex = companyChipsTabShellComponent.indexOf("title=\"🧠 籌碼收盤後判讀\"");
+  const childrenInShellIndex = companyChipsTabShellComponent.indexOf("{children}");
   const institutionalIndex = page.indexOf("{/* ─── 三大法人歷史趨勢（圖+表） ─── */}");
-  assert.ok(chipSnapshotIndex > chipsTabIndex, "chip valuation snapshot should remain inside chips tab");
-  assert.ok(chipsBatchIndex > chipSnapshotIndex, "chips batch analysis should still follow valuation snapshot");
-  assert.ok(institutionalIndex > chipsBatchIndex, "institutional trend should still follow chips batch analysis");
+  assert.ok(chipsShellIndex > chipsTabIndex, "chips shell should remain inside chips tab");
+  assert.ok(chipSnapshotInShellIndex >= 0, "chip valuation snapshot should render from chips shell");
+  assert.ok(chipsBatchInShellIndex > chipSnapshotInShellIndex, "chips batch analysis should still follow valuation snapshot");
+  assert.ok(childrenInShellIndex > chipsBatchInShellIndex, "dense chip children should still follow chips batch analysis");
+  assert.ok(institutionalIndex > chipsShellIndex, "institutional trend should still render inside chips shell children");
 });
 
 test("Slice M1.14 extracts major news list panel while keeping dynamic fetch container unchanged", async () => {
@@ -1101,4 +1113,59 @@ test("Slice M1.26 extracts industry tab shell without moving role state or selec
   assert.ok(supplyChainRolePanelIndex > selectedDetailIndex, "selected detail content should stay inside shell");
   assert.ok(shellCloseIndex > supplyChainRolePanelIndex, "shell should wrap selected-detail content");
   assert.ok(chipsTabIndex > shellCloseIndex, "chips tab should still follow industry tab shell");
+});
+
+test("Slice M1.27 extracts chips tab shell without moving ownership-history chart assembly", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyChipsTabShellComponent = await readFile(companyChipsTabShellComponentPath, "utf8");
+  const chipValuationSnapshotPanelComponent = await readFile(chipValuationSnapshotPanelComponentPath, "utf8");
+  const batchAnalysisPanelComponent = await readFile(batchAnalysisPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyChipsTabShellComponent}\n${chipValuationSnapshotPanelComponent}\n${batchAnalysisPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyChipsTabShell/);
+  assert.match(page, /<CompanyChipsTabShell[\s\S]*data=\{data\}[\s\S]*dailyAnalysis=\{resolvedDailyAnalysis\}[\s\S]*>/);
+  assert.match(page, /<\/CompanyChipsTabShell>/);
+  assert.doesNotMatch(page, /<ChipValuationSnapshotPanel data=\{data\} \/>/);
+  assert.doesNotMatch(page, /title="🧠 籌碼收盤後判讀"/);
+
+  assert.match(companyChipsTabShellComponent, /export interface CompanyChipsTabShellProps/);
+  assert.match(companyChipsTabShellComponent, /export function CompanyChipsTabShell/);
+  assert.match(companyChipsTabShellComponent, /<ChipValuationSnapshotPanel data=\{data\} \/>/);
+  assert.match(companyChipsTabShellComponent, /<BatchAnalysisPanel[\s\S]*title="🧠 籌碼收盤後判讀"[\s\S]*badge=\{dailyAnalysis\.chips\.label\}[\s\S]*generatedAt=\{dailyAnalysis\.generatedAt\}[\s\S]*\/>/);
+  assert.match(companyChipsTabShellComponent, /\{children\}/);
+  for (const label of [
+    "space-y-6",
+    "籌碼收盤後判讀",
+    "dailyAnalysis.chips.signals",
+    "dailyAnalysis.chips.risks",
+    "dailyAnalysis.chips.watch",
+  ]) {
+    assert.match(companyChipsTabShellComponent, new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(page, /const \[detailTab, setDetailTab\] = useState<CompanyDetailTab>\("overview"\)/);
+  assert.match(page, /data\.institutional_history && data\.institutional_history\.length > 0/);
+  assert.match(page, /const hist = data\.institutional_history/);
+  assert.match(page, /const fmtShares = \(s: number\) => \{/);
+  assert.match(page, /const fmtColor = \(n: number\) =>/);
+  assert.match(page, /data\.margin_history && data\.margin_history\.length > 0/);
+  assert.match(page, /const allMargin = data\.margin_history/);
+  assert.match(page, /data\.per_history && data\.per_history\.length > 0/);
+  assert.match(page, /const recentPer = data\.per_history\.slice\(-30\)/);
+  assert.doesNotMatch(companyChipsTabShellComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|data\.institutional_history|data\.margin_history|data\.per_history|ComposedChart|ResponsiveContainer|darkTooltipProps|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const chipsTabIndex = page.indexOf("{/* ─── 籌碼分析 Tab ─── */}");
+  const chipsShellIndex = page.indexOf("<CompanyChipsTabShell");
+  const institutionalHistoryIndex = page.indexOf("{/* ─── 三大法人歷史趨勢（圖+表） ─── */}");
+  const marginHistoryIndex = page.indexOf("{/* ─── 融資融券（圖+表+券資比） ─── */}");
+  const perHistoryIndex = page.indexOf("{/* ─── 本益比/淨值比趨勢（近1個月） ─── */}");
+  const chipsShellCloseIndex = page.indexOf("</CompanyChipsTabShell>");
+  const techTabIndex = page.indexOf("{/* ─── 技術分析 Tab ─── */}");
+  assert.ok(chipsShellIndex > chipsTabIndex, "chips tab shell should remain inside chips tab");
+  assert.ok(institutionalHistoryIndex > chipsShellIndex, "institutional ownership chart should render inside chips shell children");
+  assert.ok(marginHistoryIndex > institutionalHistoryIndex, "margin history should still follow institutional ownership");
+  assert.ok(perHistoryIndex > marginHistoryIndex, "valuation trend should still follow margin history");
+  assert.ok(chipsShellCloseIndex > perHistoryIndex, "chips shell should wrap existing dense chip panels");
+  assert.ok(techTabIndex > chipsShellCloseIndex, "tech tab should still follow chips tab shell");
 });
