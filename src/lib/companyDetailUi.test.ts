@@ -20,6 +20,7 @@ const relatedNewsListPanelComponentPath = "src/components/company-detail/Related
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
 const companyIndustryKnowledgeOverviewComponentPath = "src/components/company-detail/CompanyIndustryKnowledgeOverview.tsx";
 const companyIndustryRoleNavigationComponentPath = "src/components/company-detail/CompanyIndustryRoleNavigation.tsx";
+const companyIndustryRoleSummaryPanelComponentPath = "src/components/company-detail/CompanyIndustryRoleSummaryPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -692,4 +693,57 @@ test("Slice M1.18 extracts industry role navigation without moving selected-deta
   assert.ok(knowledgeOverviewIndex > industryTabIndex, "industry knowledge overview should remain first in industry tab");
   assert.ok(roleNavigationIndex > knowledgeOverviewIndex, "industry role navigation should follow the knowledge overview");
   assert.ok(selectedDetailIndex > roleNavigationIndex, "selected industry detail should still follow role navigation");
+});
+
+
+test("Slice M1.19 extracts industry role summary and evidence coverage as a presentational panel", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryRoleSummaryPanelComponent = await readFile(companyIndustryRoleSummaryPanelComponentPath, "utf8");
+  const roleNavigationComponent = await readFile(companyIndustryRoleNavigationComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustryRoleSummaryPanelComponent}\n${roleNavigationComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryRoleSummaryPanel/);
+  assert.match(page, /<CompanyIndustryRoleSummaryPanel[\s\S]*summary=\{topicAnalysis\.ai_summary \|\| analysisText\}[\s\S]*integratedDailyNote=\{integratedDailyNote\}[\s\S]*dailyIndustry=\{dailyIndustryApplies \? dailyIndustry : undefined\}[\s\S]*evidenceCoverageCards=\{evidenceCoverageCards\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /題材角色統整摘要[\s\S]*Evidence-backed coverage[\s\S]*evidenceCoverageCards\.map/);
+
+  assert.match(companyIndustryRoleSummaryPanelComponent, /export interface CompanyIndustryRoleSummaryPanelProps/);
+  assert.match(companyIndustryRoleSummaryPanelComponent, /export function CompanyIndustryRoleSummaryPanel/);
+
+  for (const label of [
+    "題材角色統整摘要",
+    "來源整合",
+    "Daily industry score",
+    "Evidence-backed coverage",
+    "證據覆蓋與資料信心水位",
+    "資料不足項目只做觀察，不升級成推薦",
+  ]) {
+    assert.match(companyIndustryRoleSummaryPanelComponent, new RegExp(label));
+  }
+
+  for (const prop of [
+    "summary",
+    "integratedDailyNote",
+    "dailyIndustry",
+    "evidenceCoverageCards",
+    "displayRoleBadge",
+    "displayRelInfo",
+    "canonicalRoleLabel",
+    "topicName",
+    "category",
+  ]) {
+    assert.match(companyIndustryRoleSummaryPanelComponent, new RegExp(prop));
+  }
+
+  assert.match(page, /const evidenceCoverageCards = \[/);
+  assert.match(page, /const topicAnalysis = \{/);
+  assert.doesNotMatch(companyIndustryRoleSummaryPanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|findProductKnowledgeItem|productKnowledgeToNarrative|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  const roleNavigationIndex = page.indexOf("<CompanyIndustryRoleNavigation");
+  const summaryPanelIndex = page.indexOf("<CompanyIndustryRoleSummaryPanel");
+  const marketPositionIndex = page.indexOf("{/* 市場定位 */}");
+  assert.ok(summaryPanelIndex > selectedDetailIndex, "role summary panel should remain in the selected industry detail block");
+  assert.ok(summaryPanelIndex > roleNavigationIndex, "role summary panel should follow role navigation");
+  assert.ok(marketPositionIndex > summaryPanelIndex, "market positioning panel should still follow the extracted summary/coverage panel");
 });
