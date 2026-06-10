@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-06-09T12:40:02.936Z",
+  "generatedAt": "2026-06-10T12:32:58.546Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-09",
-  "chipDataDate": "2026-06-09",
+  "marketDataDate": "2026-06-10",
+  "chipDataDate": "2026-06-10",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,33 +17,34 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -45,
-    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 7.0%。",
+    "score": -55,
+    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 12.8%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 7.0%"
+      "收盤跌破 MA20 12.8%"
     ],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "量能低於 20 日均量，突破訊號可信度較低",
+      "接近 20 日低點 135.00，留意支撐是否失守"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": -11,
-    "summary": "旺宏 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +8.2萬張；融資近 5 日下降 17.8%，籌碼壓力下降。",
+    "summary": "旺宏 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +2.6萬張；融資近 5 日下降 18.8%，籌碼壓力下降。",
     "signals": [
-      "近 20 日法人偏買，合計 +8.2萬張",
-      "融資近 5 日下降 17.8%，籌碼壓力下降"
+      "近 20 日法人偏買，合計 +2.6萬張",
+      "融資近 5 日下降 18.8%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.8萬張",
-      "投信近 5 日賣超 -1.3千張",
-      "外資近 5 日賣超 -1.6萬張"
+      "三大法人近 5 日合計賣超 -2.5萬張",
+      "投信近 5 日賣超 -1.7千張",
+      "外資近 5 日賣超 -1.2萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-09"
+      "最近法人資料日：2026-06-10"
     ]
   },
   "industry": {
@@ -169,7 +170,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-06-09"
+      "lastVerified": "2026-06-10"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -291,7 +292,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 49,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
@@ -309,13 +310,19 @@
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 14.7%，部位需降速"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：151.50",
-      "波段多空分水嶺看 MA20：156.53",
-      "追蹤法人是否延續 賣超：最近 -3.2千張",
+      "短線支撐/壓力先看 MA5：146.10",
+      "波段多空分水嶺看 MA20：154.88",
+      "追蹤法人是否延續 賣超：最近 -6.1千張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值"
     ],
     "triggerRules": [
