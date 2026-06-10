@@ -19,6 +19,7 @@ const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNews
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
 const companyIndustryKnowledgeOverviewComponentPath = "src/components/company-detail/CompanyIndustryKnowledgeOverview.tsx";
+const companyIndustryTabShellComponentPath = "src/components/company-detail/CompanyIndustryTabShell.tsx";
 const companyIndustryRoleNavigationComponentPath = "src/components/company-detail/CompanyIndustryRoleNavigation.tsx";
 const companyIndustryRoleSummaryPanelComponentPath = "src/components/company-detail/CompanyIndustryRoleSummaryPanel.tsx";
 const companyIndustryMarketPositionPanelComponentPath = "src/components/company-detail/CompanyIndustryMarketPositionPanel.tsx";
@@ -618,11 +619,14 @@ test("Slice M1.16 extracts company detail hero header without moving quote/state
 test("Slice M1.17 extracts industry knowledge overview without changing evidence semantics", async () => {
   const page = await readFile(pagePath, "utf8");
   const companyIndustryKnowledgeOverviewComponent = await readFile(companyIndustryKnowledgeOverviewComponentPath, "utf8");
+  const companyIndustryTabShellComponent = await readFile(companyIndustryTabShellComponentPath, "utf8");
   const heroHeaderComponent = await readFile(companyDetailHeroHeaderComponentPath, "utf8");
-  const combinedSource = `${page}\n${companyIndustryKnowledgeOverviewComponent}\n${heroHeaderComponent}`;
+  const combinedSource = `${page}\n${companyIndustryTabShellComponent}\n${companyIndustryKnowledgeOverviewComponent}\n${heroHeaderComponent}`;
 
-  assert.match(page, /@\/components\/company-detail\/CompanyIndustryKnowledgeOverview/);
-  assert.match(page, /<CompanyIndustryKnowledgeOverview\s+industryInsights=\{industryInsights\}\s+\/>/);
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryTabShell/);
+  assert.match(page, /<CompanyIndustryTabShell[\s\S]*industryInsights=\{industryInsights\}[\s\S]*hasIndustryRoles=\{industryRoles\.length > 0\}/);
+  assert.match(combinedSource, /@\/components\/company-detail\/CompanyIndustryKnowledgeOverview/);
+  assert.match(combinedSource, /<CompanyIndustryKnowledgeOverview\s+industryInsights=\{industryInsights\}\s+\/>/);
   assert.doesNotMatch(page, /Industrial analysis knowledge base[\s\S]*Object\.values\(industryInsights\.panels\.swot\.groups\)\.flat\(\)\.length[\s\S]*Industry sub-tabs/);
 
   assert.match(companyIndustryKnowledgeOverviewComponent, /export interface CompanyIndustryKnowledgeOverviewProps/);
@@ -652,11 +656,11 @@ test("Slice M1.17 extracts industry knowledge overview without changing evidence
   assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
 
   const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
-  const knowledgeOverviewIndex = page.indexOf("<CompanyIndustryKnowledgeOverview");
+  const tabShellIndex = page.indexOf("<CompanyIndustryTabShell");
   const rolesSummaryIndex = page.indexOf("<CompanyIndustryRoleNavigation");
   const industrySubTabsIndex = page.indexOf("{/* Selected industry detail */}");
-  assert.ok(knowledgeOverviewIndex > industryTabIndex, "industry knowledge overview should remain inside industry tab");
-  assert.ok(rolesSummaryIndex > knowledgeOverviewIndex, "industry role summary should still follow the knowledge overview");
+  assert.ok(tabShellIndex > industryTabIndex, "industry tab shell should remain inside industry tab");
+  assert.ok(rolesSummaryIndex > tabShellIndex, "industry role summary should still follow the shell overview");
   assert.ok(industrySubTabsIndex > rolesSummaryIndex, "industry sub-tabs should still follow the role summary");
 });
 
@@ -693,11 +697,11 @@ test("Slice M1.18 extracts industry role navigation without moving selected-deta
   assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
 
   const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
-  const knowledgeOverviewIndex = page.indexOf("<CompanyIndustryKnowledgeOverview");
+  const tabShellIndex = page.indexOf("<CompanyIndustryTabShell");
   const roleNavigationIndex = page.indexOf("<CompanyIndustryRoleNavigation");
   const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
-  assert.ok(knowledgeOverviewIndex > industryTabIndex, "industry knowledge overview should remain first in industry tab");
-  assert.ok(roleNavigationIndex > knowledgeOverviewIndex, "industry role navigation should follow the knowledge overview");
+  assert.ok(tabShellIndex > industryTabIndex, "industry tab shell should remain first in industry tab");
+  assert.ok(roleNavigationIndex > tabShellIndex, "industry role navigation should follow the shell overview");
   assert.ok(selectedDetailIndex > roleNavigationIndex, "selected industry detail should still follow role navigation");
 });
 
@@ -1043,4 +1047,58 @@ test("Slice M1.25 extracts industry supply-chain role as a prepared-props presen
   assert.ok(supplyChainRolePanelIndex > selectedDetailIndex, "supply-chain role panel should remain in selected industry detail block");
   assert.ok(supplyChainRolePanelIndex > swotPanelIndex, "supply-chain role panel should follow SWOT");
   assert.ok(selectedDetailEndIndex > supplyChainRolePanelIndex, "selected-detail block should still continue after supply-chain role panel");
+});
+
+test("Slice M1.26 extracts industry tab shell without moving role state or selected-detail data assembly", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryTabShellComponent = await readFile(companyIndustryTabShellComponentPath, "utf8");
+  const companyIndustryKnowledgeOverviewComponent = await readFile(companyIndustryKnowledgeOverviewComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustryTabShellComponent}\n${companyIndustryKnowledgeOverviewComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryTabShell/);
+  assert.match(page, /<CompanyIndustryTabShell[\s\S]*industryInsights=\{industryInsights\}[\s\S]*hasIndustryRoles=\{industryRoles\.length > 0\}[\s\S]*>/);
+  assert.match(page, /<CompanyIndustryRoleNavigation[\s\S]*roles=\{industryRoles\}[\s\S]*activeIndex=\{industrySubTab\}[\s\S]*onRoleChange=\{setIndustrySubTab\}/);
+  assert.match(page, /<\/CompanyIndustryTabShell>/);
+  assert.doesNotMatch(page, /<CompanyIndustryKnowledgeOverview\s+industryInsights=\{industryInsights\}\s+\/>/);
+  assert.doesNotMatch(page, /尚無產業關聯[\s\S]*此公司尚未建立產業關聯分析。/);
+
+  assert.match(companyIndustryTabShellComponent, /export interface CompanyIndustryTabShellProps/);
+  assert.match(companyIndustryTabShellComponent, /export function CompanyIndustryTabShell/);
+  assert.match(companyIndustryTabShellComponent, /<CompanyIndustryKnowledgeOverview\s+industryInsights=\{industryInsights\}\s+\/>/);
+  assert.match(companyIndustryTabShellComponent, /hasIndustryRoles \?/);
+  assert.match(companyIndustryTabShellComponent, /\{children\}/);
+  for (const label of [
+    "space-y-6",
+    "尚無產業關聯",
+    "此公司尚未建立產業關聯分析。",
+    "🏭",
+  ]) {
+    assert.match(companyIndustryTabShellComponent, new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(page, /const \[detailTab, setDetailTab\] = useState<CompanyDetailTab>\("overview"\)/);
+  assert.match(page, /const \[industrySubTab, setIndustrySubTab\] = useState\(0\)/);
+  assert.match(page, /const role = industryRoles\[industrySubTab\]/);
+  assert.match(page, /const topicAnalysis = \{/);
+  assert.match(page, /const canonicalRole = resolvedCompanyTopicRoles\?\.roles\.find/);
+  assert.match(page, /const dailyCanonicalRole = resolvedDailyAnalysis\?\.canonicalKnowledge\.topicRoles\.find/);
+  assert.match(page, /const canonicalSwotItemsByKey/);
+  assert.match(page, /const productNarrativeRows = topicAnalysis\.products\.map/);
+  assert.match(page, /<CompanyIndustrySupplyChainRolePanel/);
+  assert.doesNotMatch(companyIndustryTabShellComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|selectTopicSwotItems|groupCompanySwot|findProductKnowledgeItem|productKnowledgeToNarrative|describeProduct|resolvedCompanyTopicRoles|resolvedDailyAnalysis|resolvedCompanySwot|dailyCanonicalRole|canonicalRole|topicAnalysis|industrySubTab|setIndustrySubTab|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
+  const shellIndex = page.indexOf("<CompanyIndustryTabShell");
+  const roleNavigationIndex = page.indexOf("<CompanyIndustryRoleNavigation");
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  const supplyChainRolePanelIndex = page.indexOf("<CompanyIndustrySupplyChainRolePanel");
+  const shellCloseIndex = page.indexOf("</CompanyIndustryTabShell>");
+  const chipsTabIndex = page.indexOf("{/* ─── 籌碼分析 Tab ─── */}");
+  assert.ok(shellIndex > industryTabIndex, "industry tab shell should remain inside industry tab");
+  assert.ok(roleNavigationIndex > shellIndex, "role navigation should render inside industry tab shell");
+  assert.ok(selectedDetailIndex > roleNavigationIndex, "selected detail should still follow role navigation");
+  assert.ok(supplyChainRolePanelIndex > selectedDetailIndex, "selected detail content should stay inside shell");
+  assert.ok(shellCloseIndex > supplyChainRolePanelIndex, "shell should wrap selected-detail content");
+  assert.ok(chipsTabIndex > shellCloseIndex, "chips tab should still follow industry tab shell");
 });

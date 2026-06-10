@@ -33,7 +33,7 @@ import { ChipValuationSnapshotPanel } from "@/components/company-detail/ChipValu
 import { MajorNewsListPanel } from "@/components/company-detail/MajorNewsListPanel";
 import { RelatedNewsListPanel } from "@/components/company-detail/RelatedNewsListPanel";
 import { CompanyDetailHeroHeader } from "@/components/company-detail/CompanyDetailHeroHeader";
-import { CompanyIndustryKnowledgeOverview } from "@/components/company-detail/CompanyIndustryKnowledgeOverview";
+import { CompanyIndustryTabShell } from "@/components/company-detail/CompanyIndustryTabShell";
 import { CompanyIndustryRoleNavigation } from "@/components/company-detail/CompanyIndustryRoleNavigation";
 import { CompanyIndustryRoleSummaryPanel } from "@/components/company-detail/CompanyIndustryRoleSummaryPanel";
 import { CompanyIndustryMarketPositionPanel } from "@/components/company-detail/CompanyIndustryMarketPositionPanel";
@@ -1346,19 +1346,18 @@ function CompanyFullPageDetail({
 
           {/* ─── 產業分析 Tab ─── */}
           {detailTab === "industry" && (
-            <div className="space-y-6">
-              <CompanyIndustryKnowledgeOverview industryInsights={industryInsights} />
+            <CompanyIndustryTabShell
+              industryInsights={industryInsights}
+              hasIndustryRoles={industryRoles.length > 0}
+            >
+              <CompanyIndustryRoleNavigation
+                roles={industryRoles}
+                activeIndex={industrySubTab}
+                onRoleChange={setIndustrySubTab}
+              />
 
-              {industryRoles.length > 0 ? (
-                <>
-                  <CompanyIndustryRoleNavigation
-                    roles={industryRoles}
-                    activeIndex={industrySubTab}
-                    onRoleChange={setIndustrySubTab}
-                  />
-
-                  {/* Selected industry detail */}
-                  {industryRoles[industrySubTab] && (() => {
+              {/* Selected industry detail */}
+              {industryRoles[industrySubTab] && (() => {
                     const role = industryRoles[industrySubTab];
                     const relInfo = getRelevanceInfo(role.relevance);
                     const cat = getCategory(role.topicName);
@@ -1537,16 +1536,8 @@ function CompanyFullPageDetail({
                         />
                       </div>
                     );
-                  })()}
-                </>
-              ) : (
-                <div className="text-center py-16">
-                  <div className="text-5xl mb-4">🏭</div>
-                  <h3 className="text-lg font-semibold text-white mb-2">尚無產業關聯</h3>
-                  <p className="text-sm text-[var(--color-text-tertiary)]">此公司尚未建立產業關聯分析。</p>
-                </div>
-              )}
-            </div>
+              })()}
+            </CompanyIndustryTabShell>
           )}
 
           {/* ─── 籌碼分析 Tab ─── */}

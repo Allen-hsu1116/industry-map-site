@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 21:35 CST
+Updated: 2026-06-10 21:46 CST
 
 ## Purpose
 
@@ -933,6 +933,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary after the selected industry detail block; likely extract the no-industry fallback / industry-tab shell only if it can stay render-only, otherwise move to the next company-detail tab slice.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.26 CompanyIndustryTabShell extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyIndustryTabShell.tsx` as a render-only shell for the company-detail `產業分析` tab.
+- Moved the tab-level `space-y-6` wrapper, `<CompanyIndustryKnowledgeOverview />` placement, and no-industry fallback copy (`尚無產業關聯` / `此公司尚未建立產業關聯分析。`) out of `src/app/page.tsx`.
+- Replaced the inline shell in `src/app/page.tsx` with `<CompanyIndustryTabShell industryInsights={industryInsights} hasIndustryRoles={industryRoles.length > 0}>...</CompanyIndustryTabShell>` while leaving `CompanyIndustryRoleNavigation` and selected-detail JSX as children.
+- Kept all industry state/data ownership in `src/app/page.tsx`: `detailTab`, `industrySubTab`, `setIndustrySubTab`, `industryRoles`, selected role lookup, `topicAnalysis`, canonical role/SWOT matching, product narrative mapping, `sourceChips`, fetch/useEffect/useState ownership, and `/?company=CODE` route behavior remain in the page container.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.26 shell guardrails and repaired adjacent M1.17/M1.18 ordering checks so they follow `<CompanyIndustryTabShell />` while still proving the knowledge overview and role navigation stay in the correct order.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.26"` failed because `src/components/company-detail/CompanyIndustryTabShell.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.26|M1.25|M1.18|M1.17"` → 175/175 passing under Node test filtering behavior.
+- `npm test` → 175/175 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `產業分析`, company detail renders the shell-owned knowledge overview, role navigation, selected-detail panels through `在此產業的角色`, and no no-industry fallback for 2330.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary after the industry tab shell; likely move to the next company-detail tab shell/panel slice or extract another presentational route-local shell while keeping data/state in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
