@@ -39,6 +39,7 @@ import { CompanyIndustryRoleSummaryPanel } from "@/components/company-detail/Com
 import { CompanyIndustryMarketPositionPanel } from "@/components/company-detail/CompanyIndustryMarketPositionPanel";
 import { CompanyIndustryTechnologyFocusPanel } from "@/components/company-detail/CompanyIndustryTechnologyFocusPanel";
 import { CompanyIndustryProductsPanel } from "@/components/company-detail/CompanyIndustryProductsPanel";
+import { CompanyIndustryCustomersPanel } from "@/components/company-detail/CompanyIndustryCustomersPanel";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -1502,21 +1503,7 @@ function CompanyFullPageDetail({
 
                         {/* 主要客戶 */}
                         {topicAnalysis?.customers && topicAnalysis.customers.length > 0 ? (
-                          <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                            <h4 className="text-sm font-bold text-white mb-3">👥 主要客戶</h4>
-                            <div className="space-y-3">
-                              {topicAnalysis.customers.map((c, i) => {
-                                const [name, ...descParts] = c.split(': ');
-                                const desc = descParts.join(': ');
-                                return (
-                                  <div key={i}>
-                                    <p className="text-sm font-semibold text-white">{name}</p>
-                                    {desc && <p className="text-xs text-[var(--color-text-tertiary)] mt-0.5">{desc}</p>}
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
+                          <CompanyIndustryCustomersPanel customers={topicAnalysis.customers} />
                         ) : (
                           <PlaceholderSection title="主要客戶" icon="👥" />
                         )}

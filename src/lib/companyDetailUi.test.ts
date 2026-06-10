@@ -24,6 +24,7 @@ const companyIndustryRoleSummaryPanelComponentPath = "src/components/company-det
 const companyIndustryMarketPositionPanelComponentPath = "src/components/company-detail/CompanyIndustryMarketPositionPanel.tsx";
 const companyIndustryTechnologyFocusPanelComponentPath = "src/components/company-detail/CompanyIndustryTechnologyFocusPanel.tsx";
 const companyIndustryProductsPanelComponentPath = "src/components/company-detail/CompanyIndustryProductsPanel.tsx";
+const companyIndustryCustomersPanelComponentPath = "src/components/company-detail/CompanyIndustryCustomersPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -883,4 +884,48 @@ test("Slice M1.22 extracts industry products as a prepared-props presentational 
   assert.ok(productsPanelIndex > selectedDetailIndex, "products panel should remain in selected industry detail block");
   assert.ok(productsPanelIndex > technologyFocusPanelIndex, "products panel should follow technology focus");
   assert.ok(customersSectionIndex > productsPanelIndex, "customers section should still follow products");
+});
+
+test("Slice M1.23 extracts industry customers as a prepared-props presentational panel", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryProductsPanelComponent = await readFile(companyIndustryProductsPanelComponentPath, "utf8");
+  const companyIndustryCustomersPanelComponent = await readFile(companyIndustryCustomersPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustryProductsPanelComponent}\n${companyIndustryCustomersPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryCustomersPanel/);
+  assert.match(page, /<CompanyIndustryCustomersPanel[\s\S]*customers=\{topicAnalysis\.customers\}[\s\S]*\/>/);
+  assert.match(page, /<PlaceholderSection title="主要客戶" icon="👥" \/>/);
+  assert.doesNotMatch(page, /👥 主要客戶[\s\S]*split\(': '\)/);
+
+  assert.match(companyIndustryCustomersPanelComponent, /export interface CompanyIndustryCustomersPanelProps/);
+  assert.match(companyIndustryCustomersPanelComponent, /export function CompanyIndustryCustomersPanel/);
+
+  for (const label of [
+    "👥 主要客戶",
+    "customers",
+    "split(': ')",
+    "descParts.join(': ')",
+    "text-sm font-semibold text-white",
+    "text-xs text-[var(--color-text-tertiary)] mt-0.5",
+  ]) {
+    assert.match(companyIndustryCustomersPanelComponent, new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(page, /const topicCustomers = \(/);
+  assert.match(page, /canonicalRole\?\.customers\?\.length/);
+  assert.match(page, /role\.customers\?\.length/);
+  assert.match(page, /knowledge\?\.customers\?\.length/);
+  assert.match(page, /data\.customers\?\.length/);
+  assert.match(page, /客戶\/需求端待補/);
+  assert.match(page, /customers: topicCustomers/);
+  assert.doesNotMatch(companyIndustryCustomersPanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|findProductKnowledgeItem|productKnowledgeToNarrative|describeProduct|resolvedProductKnowledge|canonicalRole|knowledge|topicCustomers|topicAnalysis|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  const productsPanelIndex = page.indexOf("<CompanyIndustryProductsPanel");
+  const customersPanelIndex = page.indexOf("<CompanyIndustryCustomersPanel");
+  const swotSectionIndex = page.indexOf("{/* SWOT 分析 */}");
+  assert.ok(customersPanelIndex > selectedDetailIndex, "customers panel should remain in selected industry detail block");
+  assert.ok(customersPanelIndex > productsPanelIndex, "customers panel should follow products");
+  assert.ok(swotSectionIndex > customersPanelIndex, "SWOT section should still follow customers");
 });
