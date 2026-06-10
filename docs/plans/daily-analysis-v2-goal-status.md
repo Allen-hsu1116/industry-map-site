@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 20:04 CST
+Updated: 2026-06-10 20:11 CST
 
 ## Purpose
 
@@ -804,6 +804,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside selected industry detail; likely the `🔬 技術重心` card and its daily-industry signal/risk/watch subgrid, while keeping `dailyIndustryApplies`, `dailyIndustry`, `topicAnalysis.focus`, and all matching/data assembly in `src/app/page.tsx`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, product/customer/SWOT rendering, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.21 CompanyIndustryTechnologyFocusPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyIndustryTechnologyFocusPanel.tsx` as a render-only presentational component for the selected industry-role `🔬 技術重心` card and its daily-industry signal/risk/watch subgrid.
+- Replaced the inline technology-focus JSX in `src/app/page.tsx` with `<CompanyIndustryTechnologyFocusPanel />`, passing prepared `focus`, `dailyIndustrySignals`, `dailyIndustryRisks`, and `dailyIndustryWatch` props.
+- Kept all selected-role data assembly in `src/app/page.tsx`: `focusText`, `topicAnalysis.focus`, `dailyIndustry`, `dailyIndustryApplies`, primary-topic matching, canonical role/SWOT/product matching, and route/tab state remain in the page container.
+- Preserved existing copy/labels and row-cap semantics: `🔬 技術重心`, `題材正向訊號`, `題材風險`, `觀察重點`, bullet parsing, and `.slice(0, 3)` caps for daily-industry signal/risk/watch rows.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.21 guardrails proving the extracted component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no product-knowledge lookup, no app/data imports, no API route calls, no `topicAnalysis` / `dailyIndustryApplies` ownership, and no `/companies/[code]` route/link introduction.
+- Repaired the adjacent M1.20 ordering guardrail so it now follows `<CompanyIndustryTechnologyFocusPanel />` instead of the removed `{/* 技術重心 */}` inline marker.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.21"` failed because `src/components/company-detail/CompanyIndustryTechnologyFocusPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.21|M1.20"` → 170/170 passing under Node test filtering behavior.
+- `npm test` → 170/170 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → after switching to `產業分析`, company detail renders extracted `題材角色統整摘要`, evidence coverage heading, extracted `市場定位`, extracted `技術重心`, and following `主要產品` in the expected order. On the default 2330 selected topic, the daily-industry signal/risk/watch labels are absent because no matching daily-industry rows apply; source guardrails still lock the render-only subgrid in the component.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside selected industry detail; likely `CompanyIndustryProductsPanel` for `📦 主要產品`, while keeping `topicProducts`, `findProductKnowledgeItem(...)`, `productKnowledgeToNarrative(...)`, `describeProduct(...)`, product evidence matching, and all data assembly in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, product/customer/SWOT rendering, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 

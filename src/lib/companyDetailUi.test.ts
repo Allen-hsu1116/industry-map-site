@@ -22,6 +22,7 @@ const companyIndustryKnowledgeOverviewComponentPath = "src/components/company-de
 const companyIndustryRoleNavigationComponentPath = "src/components/company-detail/CompanyIndustryRoleNavigation.tsx";
 const companyIndustryRoleSummaryPanelComponentPath = "src/components/company-detail/CompanyIndustryRoleSummaryPanel.tsx";
 const companyIndustryMarketPositionPanelComponentPath = "src/components/company-detail/CompanyIndustryMarketPositionPanel.tsx";
+const companyIndustryTechnologyFocusPanelComponentPath = "src/components/company-detail/CompanyIndustryTechnologyFocusPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -786,8 +787,50 @@ ${roleSummaryPanelComponent}`;
   const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
   const roleSummaryPanelIndex = page.indexOf("<CompanyIndustryRoleSummaryPanel");
   const marketPositionPanelIndex = page.indexOf("<CompanyIndustryMarketPositionPanel");
-  const technologyFocusIndex = page.indexOf("{/* 技術重心 */}");
+  const technologyFocusIndex = page.indexOf("<CompanyIndustryTechnologyFocusPanel");
   assert.ok(marketPositionPanelIndex > selectedDetailIndex, "market positioning panel should remain in selected industry detail block");
   assert.ok(marketPositionPanelIndex > roleSummaryPanelIndex, "market positioning panel should follow role summary/evidence panel");
   assert.ok(technologyFocusIndex > marketPositionPanelIndex, "technology focus should still follow market positioning");
+});
+
+test("Slice M1.21 extracts industry technology focus as a presentational panel", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryTechnologyFocusPanelComponent = await readFile(companyIndustryTechnologyFocusPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustryTechnologyFocusPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryTechnologyFocusPanel/);
+  assert.match(page, /<CompanyIndustryTechnologyFocusPanel[\s\S]*focus=\{topicAnalysis\.focus\}[\s\S]*dailyIndustrySignals=\{dailyIndustryApplies && dailyIndustry \? dailyIndustry\.signals : \[\]\}[\s\S]*dailyIndustryRisks=\{dailyIndustryApplies && dailyIndustry \? dailyIndustry\.risks : \[\]\}[\s\S]*dailyIndustryWatch=\{dailyIndustryApplies && dailyIndustry \? dailyIndustry\.watch : \[\]\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /🔬 技術重心[\s\S]*topicAnalysis\.focus\.split/);
+
+  assert.match(companyIndustryTechnologyFocusPanelComponent, /export interface CompanyIndustryTechnologyFocusPanelProps/);
+  assert.match(companyIndustryTechnologyFocusPanelComponent, /export function CompanyIndustryTechnologyFocusPanel/);
+
+  for (const label of [
+    "🔬 技術重心",
+    "focus",
+    "dailyIndustrySignals",
+    "dailyIndustryRisks",
+    "dailyIndustryWatch",
+    "題材正向訊號",
+    "題材風險",
+    "觀察重點",
+    "slice(0, 3)",
+  ]) {
+    assert.match(companyIndustryTechnologyFocusPanelComponent, new RegExp(label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+  }
+
+  assert.match(page, /const focusText = role\.tech_focus\?\.length \? role\.tech_focus\.join/);
+  assert.match(page, /focus: focusText/);
+  assert.match(page, /const dailyIndustry = resolvedDailyAnalysis\?\.industry/);
+  assert.match(page, /const dailyIndustryApplies = Boolean\(dailyIndustry && primaryTopicId === role\.topic\)/);
+  assert.doesNotMatch(companyIndustryTechnologyFocusPanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|findProductKnowledgeItem|productKnowledgeToNarrative|stripLeadingStatusIcon|dailyIndustryApplies|topicAnalysis|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  const marketPositionPanelIndex = page.indexOf("<CompanyIndustryMarketPositionPanel");
+  const technologyFocusPanelIndex = page.indexOf("<CompanyIndustryTechnologyFocusPanel");
+  const productSectionIndex = page.indexOf("{/* 主要產品 */}");
+  assert.ok(technologyFocusPanelIndex > selectedDetailIndex, "technology focus panel should remain in selected industry detail block");
+  assert.ok(technologyFocusPanelIndex > marketPositionPanelIndex, "technology focus panel should follow market positioning");
+  assert.ok(productSectionIndex > technologyFocusPanelIndex, "products section should still follow technology focus");
 });
