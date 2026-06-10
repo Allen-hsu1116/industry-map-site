@@ -31,6 +31,7 @@ import { BatchAnalysisPanel } from "@/components/company-detail/BatchAnalysisPan
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
 import { ChipValuationSnapshotPanel } from "@/components/company-detail/ChipValuationSnapshotPanel";
 import { MajorNewsListPanel } from "@/components/company-detail/MajorNewsListPanel";
+import { RelatedNewsListPanel } from "@/components/company-detail/RelatedNewsListPanel";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -998,41 +999,13 @@ function NewsTabContent({ code, name, majorNews }: { code: string; name: string;
 
   return (
     <div className="space-y-6">
-      {/* New search results */}
-      <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-        <div className="flex items-center justify-between mb-4">
-          <h4 className="text-sm font-bold text-white">📰 相關新聞</h4>
-          <div className="text-xs text-[var(--color-text-tertiary)]">
-            搜尋「{name} {code}」近 30 日報導
-          </div>
-        </div>
-        {loading ? (
-          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">
-            <div className="animate-pulse">⏳ 載入中...</div>
-          </div>
-        ) : error ? (
-          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">⚠️ {error}</div>
-        ) : news.length > 0 ? (
-          <div className="space-y-3">
-            {news.map((item, i) => (
-              <a key={i} href={item.link} target="_blank" rel="noopener noreferrer"
-                className="block bg-white/[0.03] rounded-xl p-4 border border-white/[0.04] hover:border-indigo-500/30 hover:bg-white/[0.05] transition-all group">
-                <div className="flex items-start gap-3">
-                  <div className="text-xs shrink-0 pt-0.5">
-                    <span className="px-1.5 py-0.5 rounded bg-white/[0.06] text-[var(--color-text-tertiary)] font-medium">{item.source}</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-sm text-[var(--color-text-secondary)] group-hover:text-white leading-relaxed line-clamp-2 transition-colors">{item.title}</div>
-                    <div className="text-xs text-[var(--color-text-tertiary)] mt-1 font-mono">{item.date}</div>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        ) : (
-          <div className="text-center py-8 text-[var(--color-text-tertiary)] text-sm">📋 近期無相關新聞</div>
-        )}
-      </div>
+      <RelatedNewsListPanel
+        news={news}
+        loading={loading}
+        error={error}
+        name={name}
+        code={code}
+      />
 
       <DynamicMajorNewsPanel code={code} initialMajorNews={majorNews} />
     </div>

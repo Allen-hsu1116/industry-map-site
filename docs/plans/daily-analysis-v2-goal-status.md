@@ -654,6 +654,33 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
+### 2026-06-10 — Slice M1.15 RelatedNewsListPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/RelatedNewsListPanel.tsx` as a render-only presentational component for the related-news card/list inside the `相關新聞` tab.
+- Kept `NewsTabContent` in `src/app/page.tsx` as the state/effect/fetch container for `/api/news`, then delegated prepared `news`, `loading`, `error`, `name`, and `code` props to the extracted panel.
+- Preserved existing related-news copy and labels: `搜尋「{name} {code}」近 30 日報導`, loading skeleton rows, `新聞資料暫時無法取得`, and `暫無相關新聞`.
+- Preserved article source/date/link rendering, `/api/news` fetch behavior, related-news tab behavior, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.15 guardrails proving the new component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no app/data imports, no API route calls, and no `/companies/[code]` route/link introduction.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.15"` failed because `src/components/company-detail/RelatedNewsListPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.15"` → 164/164 passing under Node test filtering behavior.
+- `npm test` → 164/164 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- `git diff --check` → passing.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → company detail renders Human Editorial brief/source rail, tab shell, and the extracted related-news panel after switching to `相關新聞`, including `搜尋「台積電 2330」近 30 日報導` and current article rows from `/api/news`.
+- Browser console after smoke check → 0 JS errors; only React DevTools informational messages.
+- Note: the first smoke attempt used `npm run dev -- --port 3048`; that Turbopack dev session served the static markup but did not hydrate tab/query interactions in the browser tool. Restarting with the production build (`npm run start`) restored the expected `/?company=2330` smoke behavior, matching previous slices' verification pattern.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary; avoid moving fetch/state containers unless the slice explicitly splits container and presentational panel.
+- `src/app/page.tsx` still owns `NewsTabContent` as the `/api/news` container and other dense tab contents.
+- Inspect whether the legacy inline `ProfitabilityTrendPanel` is still referenced before deciding whether to extract, retire, or defer it.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 ## Recommended operating rule from now on
 
 After each goal-run:

@@ -16,6 +16,7 @@ const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnal
 const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
 const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/ChipValuationSnapshotPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
+const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -527,4 +528,40 @@ test("Slice M1.14 extracts major news list panel while keeping dynamic fetch con
   assert.ok(fetchIndex > dynamicContainerIndex, "major news fetch should stay in the dynamic container");
   assert.ok(panelIndex > fetchIndex, "presentational panel should render after container state is prepared");
   assert.ok(newsTabIndex > panelIndex, "news tab container should still follow major news container definition");
+});
+
+test("Slice M1.15 extracts related news list panel while keeping /api/news container unchanged", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const relatedNewsListPanelComponent = await readFile(relatedNewsListPanelComponentPath, "utf8");
+  const majorNewsListPanelComponent = await readFile(majorNewsListPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${relatedNewsListPanelComponent}\n${majorNewsListPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/RelatedNewsListPanel/);
+  assert.match(page, /function NewsTabContent/);
+  assert.match(page, /fetch\(`\/api\/news\?symbol=/);
+  assert.match(page, /<RelatedNewsListPanel[\s\S]*news=\{news\}[\s\S]*loading=\{loading\}[\s\S]*error=\{error\}[\s\S]*name=\{name\}[\s\S]*code=\{code\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /📰 相關新聞[\s\S]*news\.map\(\(item, i\)/);
+
+  assert.match(relatedNewsListPanelComponent, /export interface RelatedNewsListPanelProps/);
+  assert.match(relatedNewsListPanelComponent, /export function RelatedNewsListPanel/);
+  assert.match(relatedNewsListPanelComponent, /news\.map\(\(item, i\)/);
+
+  for (const label of ["📰 相關新聞", "近 30 日報導", "⏳ 載入中", "新聞載入失敗", "📋 近期無相關新聞"]) {
+    assert.match(relatedNewsListPanelComponent, new RegExp(label));
+  }
+
+  for (const prop of ["news", "loading", "error", "name", "code", "title", "link", "source", "date"]) {
+    assert.match(relatedNewsListPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(relatedNewsListPanelComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const newsContainerIndex = page.indexOf("function NewsTabContent");
+  const fetchIndex = page.indexOf("fetch(`/api/news?symbol=");
+  const relatedPanelIndex = page.indexOf("<RelatedNewsListPanel");
+  const majorPanelIndex = page.indexOf("<DynamicMajorNewsPanel");
+  assert.ok(fetchIndex > newsContainerIndex, "related news fetch should stay in the news tab container");
+  assert.ok(relatedPanelIndex > fetchIndex, "related-news panel should render after container state is prepared");
+  assert.ok(majorPanelIndex > relatedPanelIndex, "major-news panel should still follow related-news panel inside the news tab");
 });
