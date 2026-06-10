@@ -34,6 +34,7 @@ import { MajorNewsListPanel } from "@/components/company-detail/MajorNewsListPan
 import { RelatedNewsListPanel } from "@/components/company-detail/RelatedNewsListPanel";
 import { CompanyDetailHeroHeader } from "@/components/company-detail/CompanyDetailHeroHeader";
 import { CompanyIndustryKnowledgeOverview } from "@/components/company-detail/CompanyIndustryKnowledgeOverview";
+import { CompanyIndustryRoleNavigation } from "@/components/company-detail/CompanyIndustryRoleNavigation";
 import { buildCompanyIndustryInsights } from "@/lib/companyIndustryInsights";
 import { buildCompanyEditorialBrief } from "@/lib/view-models/companyEditorialBrief";
 
@@ -1343,39 +1344,11 @@ function CompanyFullPageDetail({
 
               {industryRoles.length > 0 ? (
                 <>
-                  <div className="rounded-2xl border border-cyan-400/10 bg-cyan-400/[0.04] p-5">
-                    <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-                      <h4 className="text-sm font-bold text-white">產業定位總覽</h4>
-                      <span className="text-[11px] text-cyan-300">已過濾間接受惠題材 · {industryRoles.length} 個直接角色</span>
-                    </div>
-                    <p className="text-sm leading-relaxed text-[var(--color-text-secondary)]">
-                      這裡先把公司在題材中的「直接產品/技術平台/供應鏈角色」統整後再呈現；下方題材卡只保留可點擊的核心歸屬，避免把所有終端應用題材都算成公司本業。
-                    </p>
-                  </div>
-
-                  {/* Industry sub-tabs */}
-                  <div className="grid gap-2 pb-2 sm:grid-cols-2 lg:grid-cols-3">
-                    {industryRoles.map((role, i) => {
-                      const topicShort = role.topicName.includes("｜") ? role.topicName.split("｜")[1] || role.topicName : role.topicName;
-                      const cat = getCategory(role.topicName);
-                      const color = CATEGORY_COLORS[cat] || DEFAULT_COLOR;
-                      return (
-                        <button
-                          key={i}
-                          className={cn(
-                            "px-4 py-2.5 rounded-xl text-sm font-medium text-left transition-all border",
-                            industrySubTab === i
-                              ? "bg-[var(--color-primary)]/15 text-[var(--color-primary-hover)] border-indigo-500/40"
-                              : "bg-[var(--color-surface)] text-[var(--color-text-tertiary)] border-[var(--color-border)] hover:text-[var(--color-text-secondary)] hover:border-[var(--color-border-hover)]"
-                          )}
-                          onClick={() => setIndustrySubTab(i)}
-                        >
-                          <span className="inline-block w-2 h-2 rounded-full mr-1.5" style={{ backgroundColor: color.solid }} />
-                          {topicShort}
-                        </button>
-                      );
-                    })}
-                  </div>
+                  <CompanyIndustryRoleNavigation
+                    roles={industryRoles}
+                    activeIndex={industrySubTab}
+                    onRoleChange={setIndustrySubTab}
+                  />
 
                   {/* Selected industry detail */}
                   {industryRoles[industrySubTab] && (() => {

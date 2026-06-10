@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 19:38 CST
+Updated: 2026-06-10 19:46 CST
 
 ## Purpose
 
@@ -730,6 +730,32 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary below the industry knowledge overview, likely the industry role/positioning content or another dense render-only tab block.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-10 — Slice M1.18 CompanyIndustryRoleNavigation extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyIndustryRoleNavigation.tsx` as a render-only presentational component for the industry-analysis tab's `產業定位總覽` explainer and direct-role sub-tab buttons.
+- Replaced the inline `產業定位總覽` block and `industryRoles.map(...)` role-button grid in `src/app/page.tsx` with `<CompanyIndustryRoleNavigation roles={industryRoles} activeIndex={industrySubTab} onRoleChange={setIndustrySubTab} />`.
+- Kept state/data ownership in `src/app/page.tsx`: `industryRoles`, `industrySubTab`, `setIndustrySubTab`, and selected role detail assembly remain in the page container.
+- Preserved existing copy/labels, topic short-name behavior, active/inactive button styling, category color dots, selected-detail ordering, and `/?company=CODE` route behavior.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.18 guardrails proving the extracted component is presentational-only: no `useState`, no `useEffect`, no `fetch`, no checked-in JSON import, no view-model building, no app/data imports, no API route calls, and no `/companies/[code]` route/link introduction.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.18"` failed because `src/components/company-detail/CompanyIndustryRoleNavigation.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.18|M1.17"` → 167/167 passing under Node test filtering behavior.
+- `npm test` → 167/167 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `npm run start -- --hostname 127.0.0.1 --port 3048` → company detail renders `台積電`, tabs, industry-analysis tab, extracted `產品 / 題材角色 / SWOT 產業知識總覽`, extracted `產業定位總覽`, direct-role buttons such as `晶圓代工與第三代半導體`, `HBM 高頻寬記憶體`, `先進封裝與 CoWoS`, and following `題材角色統整摘要`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe behavior-preserving boundary inside the selected industry detail; likely a render-only `CompanyIndustryRoleSummaryPanel` for `題材角色統整摘要` + evidence coverage while keeping all selected-role data assembly in `src/app/page.tsx`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
 
 ## Recommended operating rule from now on
 

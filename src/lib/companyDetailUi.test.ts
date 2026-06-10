@@ -19,6 +19,7 @@ const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNews
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
 const companyIndustryKnowledgeOverviewComponentPath = "src/components/company-detail/CompanyIndustryKnowledgeOverview.tsx";
+const companyIndustryRoleNavigationComponentPath = "src/components/company-detail/CompanyIndustryRoleNavigation.tsx";
 const briefViewModelPath = "src/lib/view-models/companyEditorialBrief.ts";
 
 test("Goal 7 company detail opens with a Human Editorial brief before tabbed evidence modules", async () => {
@@ -645,9 +646,50 @@ test("Slice M1.17 extracts industry knowledge overview without changing evidence
 
   const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
   const knowledgeOverviewIndex = page.indexOf("<CompanyIndustryKnowledgeOverview");
-  const rolesSummaryIndex = page.indexOf("產業定位總覽");
-  const industrySubTabsIndex = page.indexOf("{/* Industry sub-tabs */}");
+  const rolesSummaryIndex = page.indexOf("<CompanyIndustryRoleNavigation");
+  const industrySubTabsIndex = page.indexOf("{/* Selected industry detail */}");
   assert.ok(knowledgeOverviewIndex > industryTabIndex, "industry knowledge overview should remain inside industry tab");
   assert.ok(rolesSummaryIndex > knowledgeOverviewIndex, "industry role summary should still follow the knowledge overview");
   assert.ok(industrySubTabsIndex > rolesSummaryIndex, "industry sub-tabs should still follow the role summary");
+});
+
+
+test("Slice M1.18 extracts industry role navigation without moving selected-detail state ownership", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyIndustryRoleNavigationComponent = await readFile(companyIndustryRoleNavigationComponentPath, "utf8");
+  const knowledgeOverviewComponent = await readFile(companyIndustryKnowledgeOverviewComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyIndustryRoleNavigationComponent}\n${knowledgeOverviewComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyIndustryRoleNavigation/);
+  assert.match(page, /<CompanyIndustryRoleNavigation[\s\S]*roles=\{industryRoles\}[\s\S]*activeIndex=\{industrySubTab\}[\s\S]*onRoleChange=\{setIndustrySubTab\}[\s\S]*\/>/);
+  assert.doesNotMatch(page, /產業定位總覽[\s\S]*Industry sub-tabs[\s\S]*industryRoles\.map\(\(role, i\) =>/);
+
+  assert.match(companyIndustryRoleNavigationComponent, /export interface CompanyIndustryRoleNavigationProps/);
+  assert.match(companyIndustryRoleNavigationComponent, /export function CompanyIndustryRoleNavigation/);
+
+  for (const label of [
+    "產業定位總覽",
+    "已過濾間接受惠題材",
+    "個直接角色",
+    "直接產品/技術平台/供應鏈角色",
+    "核心歸屬",
+  ]) {
+    assert.match(companyIndustryRoleNavigationComponent, new RegExp(label));
+  }
+
+  for (const prop of ["roles", "activeIndex", "onRoleChange", "topicName", "solid"]) {
+    assert.match(companyIndustryRoleNavigationComponent, new RegExp(prop));
+  }
+
+  assert.match(page, /const industryRoles = roles \|\| \[\];/);
+  assert.doesNotMatch(companyIndustryRoleNavigationComponent, /useState|useEffect|fetch\(|import .*\.json|buildCompanyIndustryInsights|buildCompanyEditorialBrief|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
+  const knowledgeOverviewIndex = page.indexOf("<CompanyIndustryKnowledgeOverview");
+  const roleNavigationIndex = page.indexOf("<CompanyIndustryRoleNavigation");
+  const selectedDetailIndex = page.indexOf("{/* Selected industry detail */}");
+  assert.ok(knowledgeOverviewIndex > industryTabIndex, "industry knowledge overview should remain first in industry tab");
+  assert.ok(roleNavigationIndex > knowledgeOverviewIndex, "industry role navigation should follow the knowledge overview");
+  assert.ok(selectedDetailIndex > roleNavigationIndex, "selected industry detail should still follow role navigation");
 });
