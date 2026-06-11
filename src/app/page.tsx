@@ -29,6 +29,7 @@ import { RevenueAnalysisPanel } from "@/components/company-detail/RevenueAnalysi
 import { ProfitabilityAnalysisPanel } from "@/components/company-detail/ProfitabilityAnalysisPanel";
 import { BatchAnalysisPanel } from "@/components/company-detail/BatchAnalysisPanel";
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
+import { CompanyTechnicalTrendPanel, type TechnicalMaLineKey, type TechnicalScope, type TechnicalTrendChartMode } from "@/components/company-detail/CompanyTechnicalTrendPanel";
 import { CompanyChipsTabShell } from "@/components/company-detail/CompanyChipsTabShell";
 import { CompanyInstitutionalTrendPanel } from "@/components/company-detail/CompanyInstitutionalTrendPanel";
 import { CompanyMarginTradingPanel } from "@/components/company-detail/CompanyMarginTradingPanel";
@@ -1147,8 +1148,8 @@ function CompanyFullPageDetail({
   const [detailTab, setDetailTab] = useState<CompanyDetailTab>("overview");
   const [industrySubTab, setIndustrySubTab] = useState(0);
   const [revenueTab, setRevenueTab] = useState<"monthly" | "quarterly" | "yearly">("monthly");
-  const [techScope, setTechScope] = useState<"1M" | "3M" | "6M" | "YTD" | "1Y" | "5Y">("1Y");
-  const [maLines, setMaLines] = useState<{ ma5: boolean; ma10: boolean; ma20: boolean; ma60: boolean }>({ ma5: true, ma10: true, ma20: true, ma60: false });
+  const [techScope, setTechScope] = useState<TechnicalScope>("1Y");
+  const [maLines, setMaLines] = useState<Record<TechnicalMaLineKey, boolean>>({ ma5: true, ma10: true, ma20: true, ma60: false });
   const [loadedDailyAnalysis, setLoadedDailyAnalysis] = useState<DailyAnalysis | null>(null);
   const [productKnowledge, setProductKnowledge] = useState<CompanyProductKnowledge | null>(null);
   const [companyTopicRoles, setCompanyTopicRoles] = useState<CompanyTopicRolesKnowledge | null>(null);
@@ -1639,150 +1640,108 @@ function CompanyFullPageDetail({
           {detailTab === "tech" && (
             <div className="space-y-6">
               {/* Price Chart — K-line with lightweight-charts, fallback to monthly area chart */}
-              <div className="bg-[var(--color-surface)] rounded-2xl p-6 border border-[var(--color-border)]">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-sm font-bold text-white">📈 技術走勢圖</h4>
-                  <a
-                    href={`https://www.tradingview.com/symbols/TWSE-${data.code}/`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-blue-400 border border-blue-500/30 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all"
-                  >
-                    在 TradingView 開啟完整圖表 ↗
-                  </a>
-                </div>
-                {(() => {
-                  const dp = trends?.daily_prices;
-                  if (dp && dp.length >= 5) {
-                    const sorted = [...dp].sort((a, b) => a.date.localeCompare(b.date));
-                    
-                    // Compute scope date boundaries
-                    const today = new Date(sorted[sorted.length - 1].date);
-                    const scopeDays: Record<string, number> = { "1M": 30, "3M": 90, "6M": 180, "YTD": 0, "1Y": 365, "5Y": 1825 };
-                    let filtered = sorted;
-                    if (techScope !== "5Y") {
-                      const cutoff = new Date(today);
-                      if (techScope === "YTD") {
-                        cutoff.setMonth(0); cutoff.setDate(1);
-                      } else {
-                        cutoff.setDate(cutoff.getDate() - (scopeDays[techScope] || 365));
-                      }
-                      const cutoffStr = cutoff.toISOString().slice(0, 10);
-                      filtered = sorted.filter(d => d.date >= cutoffStr);
+              {(() => {
+                const dp = trends?.daily_prices;
+                const scopeOptions: { id: TechnicalScope; label: string }[] = [
+                  { id: "1M", label: "1M" },
+                  { id: "3M", label: "3M" },
+                  { id: "6M", label: "6M" },
+                  { id: "YTD", label: "YTD" },
+                  { id: "1Y", label: "1Y" },
+                  { id: "5Y", label: "5Y" },
+                ];
+                const maOptions: { key: TechnicalMaLineKey; label: string; color: string; enabled: boolean }[] = [
+                  { key: "ma5", label: "MA5", color: "#818cf8", enabled: maLines.ma5 },
+                  { key: "ma10", label: "MA10", color: "#f472b6", enabled: maLines.ma10 },
+                  { key: "ma20", label: "MA20", color: "#fbbf24", enabled: maLines.ma20 },
+                  { key: "ma60", label: "MA60", color: "#34d399", enabled: maLines.ma60 },
+                ];
+                let chartMode: TechnicalTrendChartMode = "empty";
+                let chartContent: ReactNode = null;
+                let latestKLineDate: string | null = null;
+
+                if (dp && dp.length >= 5) {
+                  const sorted = [...dp].sort((a, b) => a.date.localeCompare(b.date));
+                  latestKLineDate = sorted[sorted.length - 1].date;
+
+                  // Compute scope date boundaries
+                  const today = new Date(latestKLineDate);
+                  const scopeDays: Record<string, number> = { "1M": 30, "3M": 90, "6M": 180, "YTD": 0, "1Y": 365, "5Y": 1825 };
+                  let filtered = sorted;
+                  if (techScope !== "5Y") {
+                    const cutoff = new Date(today);
+                    if (techScope === "YTD") {
+                      cutoff.setMonth(0); cutoff.setDate(1);
+                    } else {
+                      cutoff.setDate(cutoff.getDate() - (scopeDays[techScope] || 365));
                     }
-                    if (filtered.length < 5) filtered = sorted.slice(-Math.min(sorted.length, 60));
-                    
-                    // Compute MA lines on full data then filter
-                    const computeMA = (period: number, data: typeof sorted) =>
-                      data.slice(period - 1).map((d, i) => {
-                        const window = data.slice(i, i + period);
-                        const avg = window.reduce((s, x) => s + x.close, 0) / period;
-                        return { time: d.date, value: Math.round(avg * 100) / 100 };
-                      });
-                    const ma5Full = computeMA(5, sorted);
-                    const ma10Full = sorted.length >= 10 ? computeMA(10, sorted) : [];
-                    const ma20Full = sorted.length >= 20 ? computeMA(20, sorted) : [];
-                    const ma60Full = sorted.length >= 60 ? computeMA(60, sorted) : [];
-                    
-                    const filteredDates = new Set(filtered.map(d => d.date));
-                    const ma5 = maLines.ma5 ? ma5Full.filter(m => filteredDates.has(m.time)) : [];
-                    const ma10 = maLines.ma10 ? ma10Full.filter(m => filteredDates.has(m.time)) : [];
-                    const ma20 = maLines.ma20 ? ma20Full.filter(m => filteredDates.has(m.time)) : [];
-                    const ma60 = maLines.ma60 ? ma60Full.filter(m => filteredDates.has(m.time)) : [];
-
-                    const candleData = filtered.map(d => ({
-                      time: d.date,
-                      open: d.open,
-                      high: d.high,
-                      low: d.low,
-                      close: d.close,
-                    }));
-                    const volumeData = filtered.map(d => ({
-                      time: d.date,
-                      value: d.volume,
-                      color: d.close >= d.open ? "rgba(34,171,148,0.4)" : "rgba(247,82,95,0.4)",
-                    }));
-
-                    const scopeOptions: { id: typeof techScope; label: string }[] = [
-                      { id: "1M", label: "1M" },
-                      { id: "3M", label: "3M" },
-                      { id: "6M", label: "6M" },
-                      { id: "YTD", label: "YTD" },
-                      { id: "1Y", label: "1Y" },
-                      { id: "5Y", label: "5Y" },
-                    ];
-                    const maOptions: { key: keyof typeof maLines; label: string; color: string }[] = [
-                      { key: "ma5", label: "MA5", color: "#818cf8" },
-                      { key: "ma10", label: "MA10", color: "#f472b6" },
-                      { key: "ma20", label: "MA20", color: "#fbbf24" },
-                      { key: "ma60", label: "MA60", color: "#34d399" },
-                    ];
-
-                    return (
-                      <div>
-                        {/* Scope buttons */}
-                        <div className="flex items-center gap-1 mb-3">
-                          {scopeOptions.map(opt => (
-                            <button key={opt.id}
-                              className={cn(
-                                "px-2.5 py-1 text-xs font-medium rounded-md transition-all",
-                                techScope === opt.id
-                                  ? "bg-indigo-500/20 text-indigo-400 border border-indigo-500/30"
-                                  : "text-gray-400 hover:text-[var(--color-text-secondary)] border border-transparent"
-                              )}
-                              onClick={() => setTechScope(opt.id)}
-                            >{opt.label}</button>
-                          ))}
-                        </div>
-                        {/* MA toggle buttons */}
-                        <div className="flex items-center gap-3 mb-3 text-xs">
-                          <span className="text-[#22ab94]">● 漲</span>
-                          <span className="text-[#f7525f]">● 跌</span>
-                          {maOptions.map(opt => (
-                            <button key={opt.key}
-                              className={cn(
-                                "flex items-center gap-1 px-1.5 py-0.5 rounded transition-all",
-                                maLines[opt.key] ? "opacity-100" : "opacity-30 line-through"
-                              )}
-                              onClick={() => setMaLines(prev => ({ ...prev, [opt.key]: !prev[opt.key] }))}
-                            >
-                              <span style={{ color: opt.color }}>━</span>
-                              <span style={{ color: maLines[opt.key] ? opt.color : '#9ca3af' }}>{opt.label}</span>
-                            </button>
-                          ))}
-                        </div>
-                        <div className="mb-3 rounded-xl border border-cyan-500/20 bg-cyan-500/8 px-3 py-2 text-xs text-cyan-100/85">
-                          K 線最新日期：<span className="font-semibold text-white">{sorted[sorted.length - 1].date}</span> · Source: FinMind TaiwanStockPrice checked-in OHLCV；只更新官方/FinMind 日 K，不用 AI 補 K 線。
-                        </div>
-                        <TradingViewChart
-                          candleData={candleData}
-                          volumeData={volumeData}
-                          ma5Data={ma5}
-                          ma10Data={ma10}
-                          ma20Data={ma20}
-                          ma60Data={ma60}
-                          height={420}
-                        />
-                      </div>
-                    );
-                  } else if (trends?.monthly_price && trends.monthly_price.length > 1) {
-                    return (
-                      <>
-                        <PriceAreaChart data={trends.monthly_price} />
-                        <p className="text-xs text-[var(--color-text-tertiary)] mt-3 text-center">💡 每日 K 線資料累積中（需 ≥5 個交易日），目前顯示月均價趨勢圖</p>
-                      </>
-                    );
-                  } else {
-                    return (
-                      <div className="text-center py-12 rounded-xl bg-white/[0.02] border border-white/[0.04]">
-                        <div className="text-4xl mb-3">📈</div>
-                        <p className="text-sm text-[var(--color-text-tertiary)]">股價走勢資料累積中</p>
-                        <p className="text-xs text-[var(--color-text-tertiary)] mt-1">需要更多歷史資料才能生成走勢圖</p>
-                      </div>
-                    );
+                    const cutoffStr = cutoff.toISOString().slice(0, 10);
+                    filtered = sorted.filter(d => d.date >= cutoffStr);
                   }
-                })()}
-              </div>
+                  if (filtered.length < 5) filtered = sorted.slice(-Math.min(sorted.length, 60));
+
+                  // Compute MA lines on full data then filter
+                  const computeMA = (period: number, data: typeof sorted) =>
+                    data.slice(period - 1).map((d, i) => {
+                      const window = data.slice(i, i + period);
+                      const avg = window.reduce((s, x) => s + x.close, 0) / period;
+                      return { time: d.date, value: Math.round(avg * 100) / 100 };
+                    });
+                  const ma5Full = computeMA(5, sorted);
+                  const ma10Full = sorted.length >= 10 ? computeMA(10, sorted) : [];
+                  const ma20Full = sorted.length >= 20 ? computeMA(20, sorted) : [];
+                  const ma60Full = sorted.length >= 60 ? computeMA(60, sorted) : [];
+
+                  const filteredDates = new Set(filtered.map(d => d.date));
+                  const ma5 = maLines.ma5 ? ma5Full.filter(m => filteredDates.has(m.time)) : [];
+                  const ma10 = maLines.ma10 ? ma10Full.filter(m => filteredDates.has(m.time)) : [];
+                  const ma20 = maLines.ma20 ? ma20Full.filter(m => filteredDates.has(m.time)) : [];
+                  const ma60 = maLines.ma60 ? ma60Full.filter(m => filteredDates.has(m.time)) : [];
+
+                  const candleData = filtered.map(d => ({
+                    time: d.date,
+                    open: d.open,
+                    high: d.high,
+                    low: d.low,
+                    close: d.close,
+                  }));
+                  const volumeData = filtered.map(d => ({
+                    time: d.date,
+                    value: d.volume,
+                    color: d.close >= d.open ? "rgba(34,171,148,0.4)" : "rgba(247,82,95,0.4)",
+                  }));
+
+                  chartMode = "daily";
+                  chartContent = (
+                    <TradingViewChart
+                      candleData={candleData}
+                      volumeData={volumeData}
+                      ma5Data={ma5}
+                      ma10Data={ma10}
+                      ma20Data={ma20}
+                      ma60Data={ma60}
+                      height={420}
+                    />
+                  );
+                } else if (trends?.monthly_price && trends.monthly_price.length > 1) {
+                  chartMode = "monthly";
+                  chartContent = <PriceAreaChart data={trends.monthly_price} />;
+                }
+
+                return (
+                  <CompanyTechnicalTrendPanel
+                    code={data.code}
+                    chartMode={chartMode}
+                    chartContent={chartContent}
+                    latestKLineDate={latestKLineDate}
+                    scopeOptions={scopeOptions}
+                    activeScope={techScope}
+                    onScopeChange={setTechScope}
+                    maOptions={maOptions}
+                    onMaToggle={(key) => setMaLines(prev => ({ ...prev, [key]: !prev[key] }))}
+                  />
+                );
+              })()}
 
               {/* Technical Indicators */}
               {(() => {

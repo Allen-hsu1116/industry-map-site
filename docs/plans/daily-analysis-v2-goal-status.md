@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-11 21:51 CST
+Updated: 2026-06-11 22:13 CST
 
 ## Purpose
 
@@ -1057,6 +1057,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Chips-tab dense panel extraction is complete for the three chart/table panels: `CompanyInstitutionalTrendPanel`, `CompanyMarginTradingPanel`, and `CompanyValuationTrendPanel`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, technical tab chart shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-11 — Slice M1.31 CompanyTechnicalTrendPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyTechnicalTrendPanel.tsx` as a render-only panel wrapper for the `📈 技術走勢圖` card inside the company-detail `技術分析` tab.
+- Replaced the inline technical trend card JSX in `src/app/page.tsx` with `<CompanyTechnicalTrendPanel ... />`, passing prepared chart content, scope controls, MA toggle controls, chart mode, and latest K-line date.
+- Kept technical data ownership and shaping in `src/app/page.tsx`: `trends?.daily_prices`, `trends.monthly_price`, scope date filtering, `computeMA`, `candleData`, `volumeData`, MA-line arrays, `techScope`, and `maLines` state remain in the page container.
+- The new component owns only presentational card chrome, TradingView outbound link, scope/MA button rendering, official FinMind K-line source copy, monthly fallback copy, and empty-state copy. It does not import app/data modules or `TradingViewChart`/`PriceAreaChart`.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.31 guardrails proving the component has no fetch/effect/data imports/API routes/future `/companies/[code]` route, that K-line shaping and tech state remain in the page, and that technical indicators still follow the technical trend panel.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.31"` failed because `src/components/company-detail/CompanyTechnicalTrendPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.31|M1.30|M1.12"` → 180/180 passing under Node test filtering behavior.
+- `npm test` → 180/180 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `技術分析`, company detail renders `📈 技術走勢圖`, scope buttons (`1M`, `3M`, `6M`, `YTD`, `1Y`, `5Y`), MA toggles (`MA5`, `MA10`, `MA20`, `MA60`), official source copy (`K 線最新日期`, `Source: FinMind TaiwanStockPrice checked-in OHLCV`, `只更新官方/FinMind 日 K，不用 AI 補 K 線`), `📈 技術指標數值`, and `📊 技術分析判讀`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue technical-tab extraction with the next safe panel, likely `CompanyTechnicalIndicatorsPanel`, while keeping `computeTechnicalSummary(trends?.daily_prices)`, numeric formatting, and `indicatorCards` shaping in `src/app/page.tsx`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, technical indicator shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 

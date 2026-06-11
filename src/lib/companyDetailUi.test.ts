@@ -19,6 +19,7 @@ const companyChipsTabShellComponentPath = "src/components/company-detail/Company
 const companyInstitutionalTrendPanelComponentPath = "src/components/company-detail/CompanyInstitutionalTrendPanel.tsx";
 const companyMarginTradingPanelComponentPath = "src/components/company-detail/CompanyMarginTradingPanel.tsx";
 const companyValuationTrendPanelComponentPath = "src/components/company-detail/CompanyValuationTrendPanel.tsx";
+const companyTechnicalTrendPanelComponentPath = "src/components/company-detail/CompanyTechnicalTrendPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
@@ -1285,4 +1286,45 @@ test("Slice M1.30 extracts valuation trend panel while keeping PER history shapi
   assert.ok(valuationPanelIndex > marginPanelIndex, "valuation trend panel should follow margin trading panel");
   assert.ok(chipsShellCloseIndex > valuationPanelIndex, "chips shell should still wrap valuation trend panel");
   assert.ok(techTabIndex > chipsShellCloseIndex, "tech tab should still follow chips tab shell");
+});
+
+test("Slice M1.31 extracts technical trend panel while keeping K-line shaping and tech state in page", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyTechnicalTrendPanelComponent = await readFile(companyTechnicalTrendPanelComponentPath, "utf8");
+  const companyValuationTrendPanelComponent = await readFile(companyValuationTrendPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyValuationTrendPanelComponent}\n${companyTechnicalTrendPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyTechnicalTrendPanel/);
+  assert.match(page, /<CompanyTechnicalTrendPanel[\s\S]*code=\{data\.code\}[\s\S]*chartMode=\{chartMode\}[\s\S]*chartContent=\{chartContent\}[\s\S]*latestKLineDate=\{latestKLineDate\}[\s\S]*scopeOptions=\{scopeOptions\}[\s\S]*activeScope=\{techScope\}[\s\S]*onScopeChange=\{setTechScope\}[\s\S]*maOptions=\{maOptions\}[\s\S]*onMaToggle=/m);
+  assert.doesNotMatch(page, /<h4 className="text-sm font-bold text-white">📈 技術走勢圖<\/h4>/);
+  assert.match(page, /const \[techScope, setTechScope\] = useState/);
+  assert.match(page, /const \[maLines, setMaLines\] = useState/);
+  assert.match(page, /const dp = trends\?\.daily_prices/);
+  assert.match(page, /const sorted = \[\.\.\.dp\]\.sort/);
+  assert.match(page, /const scopeDays: Record<string, number>/);
+  assert.match(page, /const computeMA = \(period: number, data: typeof sorted\)/);
+  assert.match(page, /const candleData = filtered\.map/);
+  assert.match(page, /const volumeData = filtered\.map/);
+  assert.match(page, /<TradingViewChart/);
+  assert.match(page, /<PriceAreaChart data=\{trends\.monthly_price\}/);
+
+  assert.match(companyTechnicalTrendPanelComponent, /export interface CompanyTechnicalTrendPanelProps/);
+  assert.match(companyTechnicalTrendPanelComponent, /export function CompanyTechnicalTrendPanel/);
+  for (const label of ["📈 技術走勢圖", "在 TradingView 開啟完整圖表", "K 線最新日期", "Source: FinMind TaiwanStockPrice checked-in OHLCV", "只更新官方/FinMind 日 K，不用 AI 補 K 線", "● 漲", "● 跌", "每日 K 線資料累積中", "股價走勢資料累積中", "需要更多歷史資料才能生成走勢圖"]) {
+    assert.match(companyTechnicalTrendPanelComponent, new RegExp(label));
+  }
+  for (const prop of ["chartMode", "chartContent", "scopeOptions", "activeScope", "onScopeChange", "maOptions", "onMaToggle", "latestKLineDate"]) {
+    assert.match(companyTechnicalTrendPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(companyTechnicalTrendPanelComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|trends\?\.daily_prices|computeMA|TradingViewChart|PriceAreaChart|from "@\/app|from "\.\.\/\.\.\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const valuationPanelIndex = page.indexOf("<CompanyValuationTrendPanel");
+  const technicalPanelIndex = page.indexOf("<CompanyTechnicalTrendPanel");
+  const indicatorsIndex = page.indexOf("{/* Technical Indicators */}");
+  const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
+  assert.ok(technicalPanelIndex > valuationPanelIndex, "technical trend panel should follow chips valuation panel in source order");
+  assert.ok(indicatorsIndex > technicalPanelIndex, "technical indicators should still follow technical trend panel");
+  assert.ok(newsTabIndex > indicatorsIndex, "news tab should still follow technical tab content");
 });
