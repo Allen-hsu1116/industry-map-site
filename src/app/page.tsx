@@ -31,6 +31,7 @@ import { BatchAnalysisPanel } from "@/components/company-detail/BatchAnalysisPan
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
 import { CompanyChipsTabShell } from "@/components/company-detail/CompanyChipsTabShell";
 import { CompanyInstitutionalTrendPanel } from "@/components/company-detail/CompanyInstitutionalTrendPanel";
+import { CompanyMarginTradingPanel } from "@/components/company-detail/CompanyMarginTradingPanel";
 import { MajorNewsListPanel } from "@/components/company-detail/MajorNewsListPanel";
 import { RelatedNewsListPanel } from "@/components/company-detail/RelatedNewsListPanel";
 import { CompanyDetailHeroHeader } from "@/components/company-detail/CompanyDetailHeroHeader";
@@ -1591,7 +1592,7 @@ function CompanyFullPageDetail({
                 const allMargin = data.margin_history;
                 const recent30 = allMargin.slice(-30);
                 const last10 = allMargin.slice(-10);
-                const chartData = recent30.map(d => ({
+                const marginChartData = recent30.map(d => ({
                   date: d.date.slice(5),
                   shortMarginRatio: d.margin_balance > 0 ? Number(((d.short_balance / d.margin_balance) * 100).toFixed(2)) : null,
                   marginBuy: d.margin_buy,
@@ -1599,69 +1600,24 @@ function CompanyFullPageDetail({
                 }));
                 const latest = allMargin[allMargin.length - 1];
                 const ratio = latest && latest.margin_balance > 0 ? `${((latest.short_balance / latest.margin_balance) * 100).toFixed(2)}%` : "-";
+                const marginRows = last10.map((d, i) => {
+                  const rowRatio = d.margin_balance > 0 ? `${((d.short_balance / d.margin_balance) * 100).toFixed(2)}%` : "-";
+                  return {
+                    date: d.date.slice(5),
+                    marginBalanceText: d.margin_balance.toLocaleString(),
+                    shortBalanceText: d.short_balance.toLocaleString(),
+                    ratioText: rowRatio,
+                    marginBuyText: d.margin_buy.toLocaleString(),
+                    marginSellText: d.margin_sell.toLocaleString(),
+                    isStriped: i % 2 === 1,
+                  };
+                });
                 return (
-                  <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                    <div className="flex items-center justify-between mb-4">
-                      <h4 className="text-sm font-bold text-white">💰 融資融券</h4>
-                      {latest && (
-                        <span className="text-xs px-2.5 py-1 rounded-full bg-indigo-500/15 text-indigo-400 border border-indigo-500/25">
-                          券資比：<span className="font-bold">{ratio}</span>
-                        </span>
-                      )}
-                    </div>
-                    <div className="h-56">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
-                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
-                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
-                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => `${v}%`} domain={[0, 'auto']} />
-                          <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} />
-                          <Tooltip {...darkTooltipProps} formatter={(v: unknown, name: unknown) => {
-                            const labels: Record<string,string> = { shortMarginRatio: "券資比", marginBuy: "融資買", marginSell: "融資賣" };
-                            const value = Number(v);
-                            return [String(name) === "shortMarginRatio" ? `${value.toFixed(2)}%` : value.toLocaleString(), labels[String(name)] || String(name)];
-                          }} />
-                          <Legend formatter={(v: string) => {
-                            const labels: Record<string,string> = { shortMarginRatio: "券資比", marginBuy: "融資買", marginSell: "融資賣" };
-                            return labels[v] || v;
-                          }} />
-                          <Line type="monotone" dataKey="shortMarginRatio" yAxisId="left" stroke="#fbbf24" strokeWidth={2.5} dot={{ r: 2 }} name="券資比" connectNulls />
-                          <Bar dataKey="marginBuy" yAxisId="right" fill="rgba(34,197,94,0.45)" name="融資買" />
-                          <Bar dataKey="marginSell" yAxisId="right" fill="rgba(239,68,68,0.45)" name="融資賣" />
-                        </ComposedChart>
-                      </ResponsiveContainer>
-                    </div>
-                    {/* 融資融券明細表 */}
-                    <div className="overflow-hidden rounded-xl mt-4">
-                      <table className="w-full text-xs">
-                        <thead>
-                          <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
-                            <th className="px-2 py-1.5 text-left">日期</th>
-                            <th className="px-2 py-1.5 text-right">融資餘額</th>
-                            <th className="px-2 py-1.5 text-right">融券餘額</th>
-                            <th className="px-2 py-1.5 text-right">券資比</th>
-                            <th className="px-2 py-1.5 text-right">融資買</th>
-                            <th className="px-2 py-1.5 text-right">融資賣</th>
-                          </tr>
-                        </thead>
-                        <tbody className="max-h-48 overflow-y-auto">
-                          {last10.map((d, i) => {
-                            const r = d.margin_balance > 0 ? `${((d.short_balance / d.margin_balance) * 100).toFixed(2)}%` : "-";
-                            return (
-                              <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
-                                <td className="px-2 py-1 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
-                                <td className="px-2 py-1 text-right text-indigo-400 font-medium">{d.margin_balance.toLocaleString()}</td>
-                                <td className="px-2 py-1 text-right text-pink-400 font-medium">{d.short_balance.toLocaleString()}</td>
-                                <td className="px-2 py-1 text-right font-bold text-white">{r}</td>
-                                <td className="px-2 py-1 text-right text-emerald-400">{d.margin_buy.toLocaleString()}</td>
-                                <td className="px-2 py-1 text-right text-rose-400">{d.margin_sell.toLocaleString()}</td>
-                              </tr>
-                            );
-                          })}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                  <CompanyMarginTradingPanel
+                    chartData={marginChartData}
+                    rows={marginRows}
+                    shortMarginRatio={ratio}
+                  />
                 );
               })()}
 
