@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-11 22:13 CST
+Updated: 2026-06-11 22:27 CST
 
 ## Purpose
 
@@ -1082,6 +1082,30 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue technical-tab extraction with the next safe panel, likely `CompanyTechnicalIndicatorsPanel`, while keeping `computeTechnicalSummary(trends?.daily_prices)`, numeric formatting, and `indicatorCards` shaping in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, technical indicator shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-11 — Slice M1.32 CompanyTechnicalIndicatorsPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyTechnicalIndicatorsPanel.tsx` as a render-only panel for the `📈 技術指標數值` grid inside the company-detail `技術分析` tab.
+- Replaced the inline technical-indicator card grid in `src/app/page.tsx` with `<CompanyTechnicalIndicatorsPanel cards={indicatorCards} />`.
+- Kept technical summary ownership and shaping in `src/app/page.tsx`: `computeTechnicalSummary(trends?.daily_prices)`, `fmtNum`, `indicatorCards`, trend/MA/volume/valuation display text, and color-class decisions remain in the page container.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.32 guardrails proving the component has no fetch/effect/data imports/API routes/future `/companies/[code]` route, that technical summary shaping remains in the page, and that technical analysis/next-session panels still follow the indicators panel.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.32"` failed because `src/components/company-detail/CompanyTechnicalIndicatorsPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.32|M1.31|M1.12"` → 181/181 passing under Node test filtering behavior.
+- `npm test` → 181/181 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `技術分析`, company detail renders `📈 技術指標數值`, all indicator labels (`趨勢判讀`, `最新收盤`, `MA5 / MA10`, `MA20 / MA60`, `成交量`, `量比`, `20日高 / 低`, `估值`), `📊 技術分析判讀`, and `🎯 明日觀察與盤中觸發條件`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue technical-tab extraction with the next safe panel boundary, likely a dedicated wrapper for the technical analysis batch block if it can stay render-only without moving `resolvedDailyAnalysis` ownership.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 

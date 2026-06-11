@@ -20,6 +20,7 @@ const companyInstitutionalTrendPanelComponentPath = "src/components/company-deta
 const companyMarginTradingPanelComponentPath = "src/components/company-detail/CompanyMarginTradingPanel.tsx";
 const companyValuationTrendPanelComponentPath = "src/components/company-detail/CompanyValuationTrendPanel.tsx";
 const companyTechnicalTrendPanelComponentPath = "src/components/company-detail/CompanyTechnicalTrendPanel.tsx";
+const companyTechnicalIndicatorsPanelComponentPath = "src/components/company-detail/CompanyTechnicalIndicatorsPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
@@ -1327,4 +1328,42 @@ test("Slice M1.31 extracts technical trend panel while keeping K-line shaping an
   assert.ok(technicalPanelIndex > valuationPanelIndex, "technical trend panel should follow chips valuation panel in source order");
   assert.ok(indicatorsIndex > technicalPanelIndex, "technical indicators should still follow technical trend panel");
   assert.ok(newsTabIndex > indicatorsIndex, "news tab should still follow technical tab content");
+});
+
+test("Slice M1.32 extracts technical indicators panel while keeping summary shaping in page", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyTechnicalTrendPanelComponent = await readFile(companyTechnicalTrendPanelComponentPath, "utf8");
+  const companyTechnicalIndicatorsPanelComponent = await readFile(companyTechnicalIndicatorsPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyTechnicalTrendPanelComponent}\n${companyTechnicalIndicatorsPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyTechnicalIndicatorsPanel/);
+  assert.match(page, /<CompanyTechnicalIndicatorsPanel\s+cards=\{indicatorCards\}\s+\/>/m);
+  assert.doesNotMatch(page, /<h4 className="text-sm font-bold text-white mb-4">📈 技術指標數值<\/h4>/);
+  assert.match(page, /const technical = computeTechnicalSummary\(trends\?\.daily_prices\)/);
+  assert.match(page, /const fmtNum = \(value: number \| undefined, digits = 2\)/);
+  assert.match(page, /const indicatorCards = \[/);
+  for (const label of ["趨勢判讀", "最新收盤", "MA5 / MA10", "MA20 / MA60", "成交量", "量比", "20日高 / 低", "估值"]) {
+    assert.match(page, new RegExp(label));
+  }
+  assert.match(page, /PE \$\{data\.valuation\.pe \|\| "-"\}/);
+  assert.match(page, /PB \$\{data\.valuation\.pb \|\| "-"\} \/ 殖利率 \$\{data\.valuation\.dividendYield \|\| "-"\}%/);
+
+  assert.match(companyTechnicalIndicatorsPanelComponent, /export interface CompanyTechnicalIndicatorCard/);
+  assert.match(companyTechnicalIndicatorsPanelComponent, /export interface CompanyTechnicalIndicatorsPanelProps/);
+  assert.match(companyTechnicalIndicatorsPanelComponent, /export function CompanyTechnicalIndicatorsPanel/);
+  assert.match(companyTechnicalIndicatorsPanelComponent, /📈 技術指標數值/);
+  for (const prop of ["cards", "label", "value", "sub", "color"]) {
+    assert.match(companyTechnicalIndicatorsPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(companyTechnicalIndicatorsPanelComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|trends\?\.daily_prices|data\.valuation|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const technicalTrendPanelIndex = page.indexOf("<CompanyTechnicalTrendPanel");
+  const indicatorsPanelIndex = page.indexOf("<CompanyTechnicalIndicatorsPanel");
+  const batchAnalysisIndex = page.indexOf("<BatchAnalysisPanel");
+  const nextSessionIndex = page.indexOf("<TechnicalNextSessionPanel");
+  assert.ok(indicatorsPanelIndex > technicalTrendPanelIndex, "technical indicators panel should follow technical trend panel");
+  assert.ok(batchAnalysisIndex > indicatorsPanelIndex, "technical analysis panel should still follow technical indicators");
+  assert.ok(nextSessionIndex > batchAnalysisIndex, "next-session panel should still follow technical analysis panel");
 });
