@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-11 22:27 CST
+Updated: 2026-06-11 23:35 CST
 
 ## Purpose
 
@@ -1106,6 +1106,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue technical-tab extraction with the next safe panel boundary, likely a dedicated wrapper for the technical analysis batch block if it can stay render-only without moving `resolvedDailyAnalysis` ownership.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-11 — Slice M1.33 CompanyTechnicalAnalysisPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyTechnicalAnalysisPanel.tsx` as a render-only wrapper for the `📊 技術分析判讀` `BatchAnalysisPanel` usage inside the company-detail `技術分析` tab.
+- Replaced the direct technical-tab `<BatchAnalysisPanel title="📊 技術分析判讀" ... />` call in `src/app/page.tsx` with `<CompanyTechnicalAnalysisPanel ... />`.
+- Kept Daily Analysis ownership and date/source fallback selection in `src/app/page.tsx`: `resolvedDailyAnalysis`, `resolvedDailyAnalysis.technical.*`, `resolvedDailyAnalysis.generatedAt`, `latestKLineDate ?? resolvedDailyAnalysis.marketDataDate ?? resolvedDailyAnalysis.sourceUpdatedAt ?? "未知"`, tab state, and all analysis wiring remain in the page container.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.33 guardrails proving the wrapper has no fetch/effect/data imports/API routes/future `/companies/[code]` route, that Daily Analysis data/date ownership remains in the page, and that technical analysis still appears after indicators and before next-session triggers.
+- Repaired adjacent source guardrails for M1.11, M1.12, and M1.32 so they track the new wrapper boundary instead of the intentionally removed direct `BatchAnalysisPanel` usage in `page.tsx`.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.33"` failed because `src/components/company-detail/CompanyTechnicalAnalysisPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.33|M1.32|M1.12|M1.11"` → 182/182 passing under Node test filtering behavior.
+- `npm test` → 182/182 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `技術分析`, company detail renders `📊 技術分析判讀`, the exact description `依日 K、均線與成交量規則判讀 · 價格資料日 2026-06-11`, `正向訊號`, `風險訊號`, `觀察重點`, and `🎯 明日觀察與盤中觸發條件`; order remained indicators → technical analysis → next-session triggers.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue technical-tab extraction with the final visible next-session panel wrapper already extracted in M1.12; the next practical slice is likely moving remaining `技術分析` tab render orchestration into a technical-tab shell only if it can stay render-only without moving `techScope`, `maLines`, K-line shaping, `indicatorCards`, or `resolvedDailyAnalysis` ownership.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 

@@ -21,6 +21,7 @@ const companyMarginTradingPanelComponentPath = "src/components/company-detail/Co
 const companyValuationTrendPanelComponentPath = "src/components/company-detail/CompanyValuationTrendPanel.tsx";
 const companyTechnicalTrendPanelComponentPath = "src/components/company-detail/CompanyTechnicalTrendPanel.tsx";
 const companyTechnicalIndicatorsPanelComponentPath = "src/components/company-detail/CompanyTechnicalIndicatorsPanel.tsx";
+const companyTechnicalAnalysisPanelComponentPath = "src/components/company-detail/CompanyTechnicalAnalysisPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
@@ -412,12 +413,13 @@ test("Slice M1.11 extracts batch analysis panel without changing analysis labels
   const profitabilityAnalysisPanelComponent = await readFile(profitabilityAnalysisPanelComponentPath, "utf8");
   const batchAnalysisPanelComponent = await readFile(batchAnalysisPanelComponentPath, "utf8");
   const companyChipsTabShellComponent = await readFile(companyChipsTabShellComponentPath, "utf8");
-  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}\n${dividendPolicyPanelComponent}\n${revenueAnalysisPanelComponent}\n${profitabilityAnalysisPanelComponent}\n${batchAnalysisPanelComponent}\n${companyChipsTabShellComponent}`;
+  const companyTechnicalAnalysisPanelComponent = await readFile(companyTechnicalAnalysisPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${briefComponent}\n${sectionInventoryComponent}\n${detailTabsComponent}\n${overviewComponent}\n${companyInfoHeaderComponent}\n${financialOverviewCardsComponent}\n${dividendPolicyPanelComponent}\n${revenueAnalysisPanelComponent}\n${profitabilityAnalysisPanelComponent}\n${batchAnalysisPanelComponent}\n${companyChipsTabShellComponent}\n${companyTechnicalAnalysisPanelComponent}`;
 
-  assert.match(page, /@\/components\/company-detail\/BatchAnalysisPanel/);
+  assert.match(page, /@\/components\/company-detail\/CompanyTechnicalAnalysisPanel/);
   assert.match(page, /@\/components\/company-detail\/CompanyChipsTabShell/);
   assert.match(companyChipsTabShellComponent, /<BatchAnalysisPanel[\s\S]*title="🧠 籌碼收盤後判讀"[\s\S]*badge=\{dailyAnalysis\.chips\.label\}/);
-  assert.match(page, /<BatchAnalysisPanel[\s\S]*title="📊 技術分析判讀"[\s\S]*badge=\{resolvedDailyAnalysis\.technical\.label\}/);
+  assert.match(companyTechnicalAnalysisPanelComponent, /<BatchAnalysisPanel[\s\S]*title="📊 技術分析判讀"[\s\S]*badge=\{badge\}/);
   assert.doesNotMatch(page, /function BatchAnalysisPanel/);
   assert.match(batchAnalysisPanelComponent, /export interface BatchAnalysisPanelProps/);
   assert.match(batchAnalysisPanelComponent, /export function BatchAnalysisPanel/);
@@ -440,7 +442,7 @@ test("Slice M1.11 extracts batch analysis panel without changing analysis labels
   const chipSnapshotInShellIndex = companyChipsTabShellComponent.indexOf("<ChipValuationSnapshotPanel");
   const chipsBatchInShellIndex = companyChipsTabShellComponent.indexOf("title=\"🧠 籌碼收盤後判讀\"");
   const techTabIndex = page.indexOf("{/* ─── 技術分析 Tab ─── */}");
-  const techBatchIndex = page.indexOf("title=\"📊 技術分析判讀\"");
+  const techBatchIndex = page.indexOf("<CompanyTechnicalAnalysisPanel");
   const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
   assert.ok(briefIndex > 0, "company editorial brief should still render from the page");
   assert.ok(tabsIndex > briefIndex, "company tabs should remain after the Human Editorial brief");
@@ -474,7 +476,7 @@ test("Slice M1.12 extracts technical next-session panel without changing trigger
   assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
 
   const techTabIndex = page.indexOf("{/* ─── 技術分析 Tab ─── */}");
-  const techBatchIndex = page.indexOf("title=\"📊 技術分析判讀\"");
+  const techBatchIndex = page.indexOf("<CompanyTechnicalAnalysisPanel");
   const nextSessionIndex = page.indexOf("<TechnicalNextSessionPanel");
   const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
   assert.ok(techBatchIndex > techTabIndex, "technical batch analysis should remain inside technical tab");
@@ -1361,9 +1363,41 @@ test("Slice M1.32 extracts technical indicators panel while keeping summary shap
 
   const technicalTrendPanelIndex = page.indexOf("<CompanyTechnicalTrendPanel");
   const indicatorsPanelIndex = page.indexOf("<CompanyTechnicalIndicatorsPanel");
-  const batchAnalysisIndex = page.indexOf("<BatchAnalysisPanel");
+  const technicalAnalysisIndex = page.indexOf("<CompanyTechnicalAnalysisPanel");
   const nextSessionIndex = page.indexOf("<TechnicalNextSessionPanel");
   assert.ok(indicatorsPanelIndex > technicalTrendPanelIndex, "technical indicators panel should follow technical trend panel");
-  assert.ok(batchAnalysisIndex > indicatorsPanelIndex, "technical analysis panel should still follow technical indicators");
-  assert.ok(nextSessionIndex > batchAnalysisIndex, "next-session panel should still follow technical analysis panel");
+  assert.ok(technicalAnalysisIndex > indicatorsPanelIndex, "technical analysis panel should still follow technical indicators");
+  assert.ok(nextSessionIndex > technicalAnalysisIndex, "next-session panel should still follow technical analysis panel");
+});
+
+test("Slice M1.33 extracts technical analysis panel while keeping Daily Analysis ownership in page", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyTechnicalIndicatorsPanelComponent = await readFile(companyTechnicalIndicatorsPanelComponentPath, "utf8");
+  const companyTechnicalAnalysisPanelComponent = await readFile(companyTechnicalAnalysisPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyTechnicalIndicatorsPanelComponent}\n${companyTechnicalAnalysisPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyTechnicalAnalysisPanel/);
+  assert.match(page, /<CompanyTechnicalAnalysisPanel[\s\S]*badge=\{resolvedDailyAnalysis\.technical\.label\}[\s\S]*score=\{resolvedDailyAnalysis\.technical\.score\}[\s\S]*summary=\{resolvedDailyAnalysis\.technical\.summary\}[\s\S]*signals=\{resolvedDailyAnalysis\.technical\.signals\}[\s\S]*risks=\{resolvedDailyAnalysis\.technical\.risks\}[\s\S]*watch=\{resolvedDailyAnalysis\.technical\.watch\}[\s\S]*generatedAt=\{resolvedDailyAnalysis\.generatedAt\}[\s\S]*description=\{`依日 K、均線與成交量規則判讀 · 價格資料日 \$\{latestKLineDate \?\? resolvedDailyAnalysis\.marketDataDate \?\? resolvedDailyAnalysis\.sourceUpdatedAt \?\? "未知"\}`\}/m);
+  assert.doesNotMatch(page, /<BatchAnalysisPanel\s+title="📊 技術分析判讀"/);
+  assert.match(page, /resolvedDailyAnalysis && \(/);
+  assert.match(page, /latestKLineDate \?\? resolvedDailyAnalysis\.marketDataDate \?\? resolvedDailyAnalysis\.sourceUpdatedAt \?\? "未知"/);
+
+  assert.match(companyTechnicalAnalysisPanelComponent, /import \{ BatchAnalysisPanel \}/);
+  assert.match(companyTechnicalAnalysisPanelComponent, /export interface CompanyTechnicalAnalysisPanelProps/);
+  assert.match(companyTechnicalAnalysisPanelComponent, /export function CompanyTechnicalAnalysisPanel/);
+  assert.match(companyTechnicalAnalysisPanelComponent, /title="📊 技術分析判讀"/);
+  for (const prop of ["badge", "score", "summary", "signals", "risks", "watch", "generatedAt", "description"]) {
+    assert.match(companyTechnicalAnalysisPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(companyTechnicalAnalysisPanelComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|resolvedDailyAnalysis|latestKLineDate|trends\?\.daily_prices|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const indicatorsPanelIndex = page.indexOf("<CompanyTechnicalIndicatorsPanel");
+  const technicalAnalysisPanelIndex = page.indexOf("<CompanyTechnicalAnalysisPanel");
+  const nextSessionIndex = page.indexOf("<TechnicalNextSessionPanel");
+  const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
+  assert.ok(technicalAnalysisPanelIndex > indicatorsPanelIndex, "technical analysis panel should follow technical indicators panel");
+  assert.ok(nextSessionIndex > technicalAnalysisPanelIndex, "next-session panel should still follow technical analysis panel");
+  assert.ok(newsTabIndex > nextSessionIndex, "news tab should still follow technical tab content");
 });

@@ -27,10 +27,10 @@ import { FinancialOverviewCards } from "@/components/company-detail/FinancialOve
 import { DividendPolicyPanel } from "@/components/company-detail/DividendPolicyPanel";
 import { RevenueAnalysisPanel } from "@/components/company-detail/RevenueAnalysisPanel";
 import { ProfitabilityAnalysisPanel } from "@/components/company-detail/ProfitabilityAnalysisPanel";
-import { BatchAnalysisPanel } from "@/components/company-detail/BatchAnalysisPanel";
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
 import { CompanyTechnicalTrendPanel, type TechnicalMaLineKey, type TechnicalScope, type TechnicalTrendChartMode } from "@/components/company-detail/CompanyTechnicalTrendPanel";
 import { CompanyTechnicalIndicatorsPanel } from "@/components/company-detail/CompanyTechnicalIndicatorsPanel";
+import { CompanyTechnicalAnalysisPanel } from "@/components/company-detail/CompanyTechnicalAnalysisPanel";
 import { CompanyChipsTabShell } from "@/components/company-detail/CompanyChipsTabShell";
 import { CompanyInstitutionalTrendPanel } from "@/components/company-detail/CompanyInstitutionalTrendPanel";
 import { CompanyMarginTradingPanel } from "@/components/company-detail/CompanyMarginTradingPanel";
@@ -1766,8 +1766,7 @@ function CompanyFullPageDetail({
               })()}
 
               {resolvedDailyAnalysis && (
-                <BatchAnalysisPanel
-                  title="📊 技術分析判讀"
+                <CompanyTechnicalAnalysisPanel
                   badge={resolvedDailyAnalysis.technical.label}
                   score={resolvedDailyAnalysis.technical.score}
                   summary={resolvedDailyAnalysis.technical.summary}
