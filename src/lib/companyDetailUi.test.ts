@@ -20,6 +20,7 @@ const companyInstitutionalTrendPanelComponentPath = "src/components/company-deta
 const companyMarginTradingPanelComponentPath = "src/components/company-detail/CompanyMarginTradingPanel.tsx";
 const companyValuationTrendPanelComponentPath = "src/components/company-detail/CompanyValuationTrendPanel.tsx";
 const companyTechnicalTrendPanelComponentPath = "src/components/company-detail/CompanyTechnicalTrendPanel.tsx";
+const priceAreaChartComponentPath = "src/components/company-detail/PriceAreaChart.tsx";
 const companyTechnicalIndicatorsPanelComponentPath = "src/components/company-detail/CompanyTechnicalIndicatorsPanel.tsx";
 const companyTechnicalAnalysisPanelComponentPath = "src/components/company-detail/CompanyTechnicalAnalysisPanel.tsx";
 const companyResearchChartsPlaceholderPanelComponentPath = "src/components/company-detail/CompanyResearchChartsPlaceholderPanel.tsx";
@@ -1430,4 +1431,40 @@ test("Slice M1.34 extracts research charts placeholder while keeping charts tab 
   assert.ok(chartsTabIndex > newsTabIndex, "research charts tab should still follow news tab");
   assert.ok(chartsPanelIndex > chartsTabIndex, "research charts placeholder should remain inside charts tab");
   assert.ok(tabsCloseIndex > chartsPanelIndex, "company detail tabs should still wrap research charts placeholder");
+});
+
+test("Slice M1.35 extracts monthly price area chart while keeping technical fallback ownership in page", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const priceAreaChartComponent = await readFile(priceAreaChartComponentPath, "utf8");
+  const companyTechnicalTrendPanelComponent = await readFile(companyTechnicalTrendPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${priceAreaChartComponent}\n${companyTechnicalTrendPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/PriceAreaChart/);
+  assert.doesNotMatch(page, /function PriceAreaChart\s*\(/);
+  assert.match(page, /const dp = trends\?\.daily_prices/);
+  assert.match(page, /const scopeOptions: \{ id: TechnicalScope; label: string \}\[\]/);
+  assert.match(page, /const maOptions: \{ key: TechnicalMaLineKey; label: string; color: string; enabled: boolean \}\[\]/);
+  assert.match(page, /const computeMA = \(period: number, data: typeof sorted\) =>/);
+  assert.match(page, /const candleData = filtered\.map/);
+  assert.match(page, /const volumeData = filtered\.map/);
+  assert.match(page, /<TradingViewChart[\s\S]*candleData=\{candleData\}[\s\S]*volumeData=\{volumeData\}[\s\S]*ma5Data=\{ma5\}/m);
+  assert.match(page, /trends\?\.monthly_price && trends\.monthly_price\.length > 1[\s\S]*chartMode = "monthly";[\s\S]*chartContent = <PriceAreaChart data=\{trends\.monthly_price\} \/>;/m);
+  assert.match(page, /<CompanyTechnicalTrendPanel[\s\S]*chartContent=\{chartContent\}[\s\S]*activeScope=\{techScope\}[\s\S]*onScopeChange=\{setTechScope\}/m);
+
+  assert.match(priceAreaChartComponent, /export interface PriceAreaChartDataPoint/);
+  assert.match(priceAreaChartComponent, /export function PriceAreaChart/);
+  assert.match(priceAreaChartComponent, /function formatTrendMonth/);
+  for (const label of ["均價", "最高", "最低", "priceGrad", "avg", "high", "low"]) {
+    assert.match(priceAreaChartComponent, new RegExp(label));
+  }
+  assert.match(priceAreaChartComponent, /<ResponsiveContainer[\s\S]*<AreaChart[\s\S]*<Area[\s\S]*dataKey="avg"[\s\S]*<Line[\s\S]*dataKey="high"[\s\S]*<Line[\s\S]*dataKey="low"/m);
+
+  assert.doesNotMatch(priceAreaChartComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|resolvedDailyAnalysis|techScope|maLines|TradingViewChart|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const trendPanelIndex = page.indexOf("<CompanyTechnicalTrendPanel");
+  const indicatorsPanelIndex = page.indexOf("<CompanyTechnicalIndicatorsPanel");
+  const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
+  assert.ok(indicatorsPanelIndex > trendPanelIndex, "technical indicators panel should still follow technical trend panel");
+  assert.ok(newsTabIndex > indicatorsPanelIndex, "news tab should still follow technical tab content");
 });

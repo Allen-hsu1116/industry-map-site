@@ -29,6 +29,7 @@ import { RevenueAnalysisPanel } from "@/components/company-detail/RevenueAnalysi
 import { ProfitabilityAnalysisPanel } from "@/components/company-detail/ProfitabilityAnalysisPanel";
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
 import { CompanyTechnicalTrendPanel, type TechnicalMaLineKey, type TechnicalScope, type TechnicalTrendChartMode } from "@/components/company-detail/CompanyTechnicalTrendPanel";
+import { PriceAreaChart } from "@/components/company-detail/PriceAreaChart";
 import { CompanyTechnicalIndicatorsPanel } from "@/components/company-detail/CompanyTechnicalIndicatorsPanel";
 import { CompanyTechnicalAnalysisPanel } from "@/components/company-detail/CompanyTechnicalAnalysisPanel";
 import { CompanyResearchChartsPlaceholderPanel } from "@/components/company-detail/CompanyResearchChartsPlaceholderPanel";
@@ -519,42 +520,6 @@ function formatRevShort(num: number): string {
 
 function formatRevShortNTD(num: number): string {
   return formatRevenueNTDDisplay(num);
-}
-
-/* ─── Monthly Price Chart ─── */
-function PriceAreaChart({ data }: { data: TrendMonthlyPrice[] }) {
-  const chartData = data.map(d => ({
-    month: formatTrendMonth(d.month),
-    avg: d.avg,
-    high: d.high,
-    low: d.low,
-  }));
-  return (
-    <ResponsiveContainer width="100%" height={280}>
-      <AreaChart data={chartData} margin={{ top: 5, right: 10, left: -10, bottom: 5 }}>
-        <defs>
-          <linearGradient id="priceGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="5%" stopColor="#818cf8" stopOpacity={0.3} />
-            <stop offset="95%" stopColor="#818cf8" stopOpacity={0.02} />
-          </linearGradient>
-        </defs>
-        <CartesianGrid strokeDasharray="3,3" stroke="rgba(255,255,255,0.06)" />
-        <XAxis dataKey="month" tick={rechartsAxisStyle} tickLine={false} axisLine={false} />
-        <YAxis tick={rechartsAxisStyle} tickLine={false} axisLine={false} tickFormatter={(v: number) => `${v}`} domain={["auto", "auto"]} />
-        <Tooltip
-          contentStyle={{ backgroundColor: "#1e1e2e", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
-          labelStyle={{ color: "#94a3b8" }}
-          formatter={(value: unknown, name: unknown) => {
-            const label = String(name) === "avg" ? "均價" : String(name) === "high" ? "最高" : "最低";
-            return [`${Number(value).toLocaleString()} 元`, label];
-          }}
-        />
-        <Area type="monotone" dataKey="avg" stroke="#818cf8" strokeWidth={2} fill="url(#priceGrad)" dot={{ r: 3, fill: "#818cf8", stroke: "#1e1e2e", strokeWidth: 1.5 }} activeDot={{ r: 5 }} name="avg" />
-        <Line type="monotone" dataKey="high" stroke="#34d399" strokeWidth={1} strokeDasharray="4 4" dot={false} name="high" />
-        <Line type="monotone" dataKey="low" stroke="#f87171" strokeWidth={1} strokeDasharray="4 4" dot={false} name="low" />
-      </AreaChart>
-    </ResponsiveContainer>
-  );
 }
 
 function RevenueAreaChart({ data }: { data: TrendMonthlyRevenue[] }) {

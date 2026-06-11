@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-11 23:52 CST
+Updated: 2026-06-12 00:07 CST
 
 ## Purpose
 
@@ -1154,6 +1154,30 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Remaining:**
 - Continue shrinking `src/app/page.tsx` by extracting the next safe visible boundary. Since current `financial` and `announcements` tab buttons do not yet have dedicated content branches, the next practical slices are likely remaining dense helpers/render blocks elsewhere in the company detail page, or a shell extraction only if it can stay behavior-preserving without moving tab state/data ownership.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-12 — Slice M1.35 PriceAreaChart extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/PriceAreaChart.tsx` as a render-only Recharts monthly-price fallback chart for the company-detail technical trend panel.
+- Removed the route-local `PriceAreaChart` helper from `src/app/page.tsx` and imported the extracted component instead.
+- Kept technical chart ownership in `src/app/page.tsx`: `trends?.daily_prices`, sorting/filtering by `techScope`, MA computation, `candleData`, `volumeData`, `TradingViewChart` daily rendering, `maLines`, `setTechScope`, monthly fallback branch selection, `chartMode`, and `chartContent` assembly remain in the page container.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.35 guardrails proving the extracted chart has no state/effects/fetch/data imports/API routes/future `/companies/[code]` route, that page-level daily K-line/fallback ownership remains in `page.tsx`, and that technical indicators still follow the trend panel.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.35"` failed because `src/components/company-detail/PriceAreaChart.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.35|M1.34|M1.31"` → 184/184 passing under Node test filtering behavior.
+- `npm test` → 184/184 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `技術分析`, company detail renders `📈 技術走勢圖`, scope buttons, MA toggles, `K 線最新日期：2026-06-11`, `📈 技術指標數值`, `📊 技術分析判讀`, and `🎯 明日觀察與盤中觸發條件`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue shrinking `src/app/page.tsx` by extracting the next safe route-local render helper. Good candidates are chart helpers still defined inline in `page.tsx`, such as `RevenueAreaChart` or adjacent revenue/profitability chart helpers, provided the slice keeps revenue/profit tab state and financial data ownership in the page or existing overview shell.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
