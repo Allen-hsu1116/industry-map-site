@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3311",
   "name": "閎暉",
-  "generatedAt": "2026-06-10T12:32:58.845Z",
+  "generatedAt": "2026-06-11T12:35:02.018Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-10",
-  "chipDataDate": "2026-06-10",
+  "marketDataDate": "2026-06-11",
+  "chipDataDate": "2026-06-11",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,28 +18,30 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": 15,
-    "summary": "閎暉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 5.4%。",
+    "summary": "閎暉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 3.6%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 5.4%"
-    ],
-    "risks": [],
-    "watch": []
-  },
-  "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 28,
-    "summary": "閎暉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +33張；近 20 日法人偏買，合計 +479張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +33張",
-      "近 20 日法人偏買，合計 +479張",
-      "外資近 5 日買超 +35張"
+      "收盤站上 MA20 3.6%"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-10",
-      "融券近 5 日增加 130.0%，留意軋空或空方壓力"
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
+  },
+  "chips": {
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": -8,
+    "summary": "閎暉 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +673張；三大法人近 5 日合計賣超 -320張。",
+    "signals": [
+      "近 20 日法人偏買，合計 +673張"
+    ],
+    "risks": [
+      "三大法人近 5 日合計賣超 -320張",
+      "外資近 5 日賣超 -323張"
+    ],
+    "watch": [
+      "最近法人資料日：2026-06-11"
     ]
   },
   "industry": {
@@ -146,7 +148,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-10"
+      "lastVerified": "2026-06-11"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -244,7 +246,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 67,
+    "totalScore": 61,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -255,7 +257,6 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -263,10 +264,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：39.51",
-      "波段多空分水嶺看 MA20：35.45",
-      "追蹤法人是否延續 買超：最近 +358張",
-      "本益比 24.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：38.88",
+      "波段多空分水嶺看 MA20：35.72",
+      "追蹤法人是否延續 買超：最近 +132張",
+      "本益比 23.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 42.75 且量比 > 1.5：列為轉強訊號",
