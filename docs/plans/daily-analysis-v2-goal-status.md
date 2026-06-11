@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-11 23:35 CST
+Updated: 2026-06-11 23:52 CST
 
 ## Purpose
 
@@ -1130,6 +1130,30 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Remaining:**
 - Continue technical-tab extraction with the final visible next-session panel wrapper already extracted in M1.12; the next practical slice is likely moving remaining `技術分析` tab render orchestration into a technical-tab shell only if it can stay render-only without moving `techScope`, `maLines`, K-line shaping, `indicatorCards`, or `resolvedDailyAnalysis` ownership.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-11 — Slice M1.34 CompanyResearchChartsPlaceholderPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyResearchChartsPlaceholderPanel.tsx` as a render-only static placeholder for the company-detail `研究圖表` tab.
+- Replaced the inline placeholder card in `src/app/page.tsx` with `<CompanyResearchChartsPlaceholderPanel />`.
+- Kept tab and routing ownership in `src/app/page.tsx`: `detailTab`, `setDetailTab`, `CompanyDetailTabs`, URL query behavior, and all company-detail data ownership remain in the page container.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.34 guardrails proving the placeholder has no state/effects/fetch/data imports/API routes/future `/companies/[code]` route, that charts-tab state remains in the page, and that the placeholder remains inside the `charts` tab branch.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.34"` failed because `src/components/company-detail/CompanyResearchChartsPlaceholderPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.34|M1.33"` → 183/183 passing under Node test filtering behavior.
+- `npm test` → 183/183 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `研究圖表`, company detail renders `研究圖表`, `功能規劃中，敬請期待`, and `將提供更多進階分析圖表與研究工具`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue shrinking `src/app/page.tsx` by extracting the next safe visible boundary. Since current `financial` and `announcements` tab buttons do not yet have dedicated content branches, the next practical slices are likely remaining dense helpers/render blocks elsewhere in the company detail page, or a shell extraction only if it can stay behavior-preserving without moving tab state/data ownership.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 

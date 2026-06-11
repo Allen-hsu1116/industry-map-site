@@ -22,6 +22,7 @@ const companyValuationTrendPanelComponentPath = "src/components/company-detail/C
 const companyTechnicalTrendPanelComponentPath = "src/components/company-detail/CompanyTechnicalTrendPanel.tsx";
 const companyTechnicalIndicatorsPanelComponentPath = "src/components/company-detail/CompanyTechnicalIndicatorsPanel.tsx";
 const companyTechnicalAnalysisPanelComponentPath = "src/components/company-detail/CompanyTechnicalAnalysisPanel.tsx";
+const companyResearchChartsPlaceholderPanelComponentPath = "src/components/company-detail/CompanyResearchChartsPlaceholderPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
@@ -1400,4 +1401,33 @@ test("Slice M1.33 extracts technical analysis panel while keeping Daily Analysis
   assert.ok(technicalAnalysisPanelIndex > indicatorsPanelIndex, "technical analysis panel should follow technical indicators panel");
   assert.ok(nextSessionIndex > technicalAnalysisPanelIndex, "next-session panel should still follow technical analysis panel");
   assert.ok(newsTabIndex > nextSessionIndex, "news tab should still follow technical tab content");
+});
+
+test("Slice M1.34 extracts research charts placeholder while keeping charts tab state in page", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyTechnicalAnalysisPanelComponent = await readFile(companyTechnicalAnalysisPanelComponentPath, "utf8");
+  const companyResearchChartsPlaceholderPanelComponent = await readFile(companyResearchChartsPlaceholderPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyTechnicalAnalysisPanelComponent}\n${companyResearchChartsPlaceholderPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyResearchChartsPlaceholderPanel/);
+  assert.match(page, /detailTab === "charts" && \([\s\S]*<CompanyResearchChartsPlaceholderPanel\s+\/>[\s\S]*\)/m);
+  assert.doesNotMatch(page, /<h4 className="text-lg font-bold text-white mb-2">研究圖表<\/h4>/);
+  assert.match(page, /const \[detailTab, setDetailTab\] = useState<CompanyDetailTab>/);
+  assert.match(page, /<CompanyDetailTabs[\s\S]*activeTab=\{detailTab\}[\s\S]*onTabChange=\{setDetailTab\}/m);
+
+  assert.match(companyResearchChartsPlaceholderPanelComponent, /export function CompanyResearchChartsPlaceholderPanel/);
+  for (const label of ["📈", "研究圖表", "功能規劃中，敬請期待", "將提供更多進階分析圖表與研究工具"]) {
+    assert.match(companyResearchChartsPlaceholderPanelComponent, new RegExp(label));
+  }
+
+  assert.doesNotMatch(companyResearchChartsPlaceholderPanelComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|resolvedDailyAnalysis|detailTab|setDetailTab|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
+  const chartsTabIndex = page.indexOf("{/* ─── 研究圖表 Tab ─── */}");
+  const chartsPanelIndex = page.indexOf("<CompanyResearchChartsPlaceholderPanel");
+  const tabsCloseIndex = page.indexOf("</CompanyDetailTabs>");
+  assert.ok(chartsTabIndex > newsTabIndex, "research charts tab should still follow news tab");
+  assert.ok(chartsPanelIndex > chartsTabIndex, "research charts placeholder should remain inside charts tab");
+  assert.ok(tabsCloseIndex > chartsPanelIndex, "company detail tabs should still wrap research charts placeholder");
 });
