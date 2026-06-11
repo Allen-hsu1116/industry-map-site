@@ -18,6 +18,7 @@ const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/C
 const companyChipsTabShellComponentPath = "src/components/company-detail/CompanyChipsTabShell.tsx";
 const companyInstitutionalTrendPanelComponentPath = "src/components/company-detail/CompanyInstitutionalTrendPanel.tsx";
 const companyMarginTradingPanelComponentPath = "src/components/company-detail/CompanyMarginTradingPanel.tsx";
+const companyValuationTrendPanelComponentPath = "src/components/company-detail/CompanyValuationTrendPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
@@ -1247,4 +1248,41 @@ test("Slice M1.29 extracts margin trading panel while keeping margin history sha
   assert.ok(marginPanelIndex > institutionalPanelIndex, "margin trading panel should follow institutional trend panel");
   assert.ok(perHistoryIndex > marginPanelIndex, "valuation trend should still follow margin trading panel");
   assert.ok(chipsShellCloseIndex > perHistoryIndex, "chips shell should still wrap remaining valuation trend panel");
+});
+
+test("Slice M1.30 extracts valuation trend panel while keeping PER history shaping in page", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyChipsTabShellComponent = await readFile(companyChipsTabShellComponentPath, "utf8");
+  const companyMarginTradingPanelComponent = await readFile(companyMarginTradingPanelComponentPath, "utf8");
+  const companyValuationTrendPanelComponent = await readFile(companyValuationTrendPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyChipsTabShellComponent}\n${companyMarginTradingPanelComponent}\n${companyValuationTrendPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyValuationTrendPanel/);
+  assert.match(page, /<CompanyValuationTrendPanel\s+chartData=\{valuationChartData\}\s+rows=\{valuationRows\}\s+\/>/m);
+  assert.doesNotMatch(page, /<h4 className="text-sm font-bold text-white mb-4">📐 本益比 \/ 淨值比 \/ 殖利率趨勢<\/h4>/);
+  assert.match(page, /data\.per_history && data\.per_history\.length > 0/);
+  assert.match(page, /const recentPer = data\.per_history\.slice\(-30\)/);
+  assert.match(page, /const valuationChartData = recentPer\.map/);
+  assert.match(page, /const valuationRows = data\.per_history\.slice\(-10\)\.reverse\(\)\.map/);
+  assert.doesNotMatch(page, /darkTooltipProps/);
+
+  assert.match(companyValuationTrendPanelComponent, /export interface CompanyValuationTrendPanelProps/);
+  assert.match(companyValuationTrendPanelComponent, /export function CompanyValuationTrendPanel/);
+  for (const label of ["📐 本益比 / 淨值比 / 殖利率趨勢", "日期", "本益比", "淨值比", "殖利率%"] ) {
+    assert.match(companyValuationTrendPanelComponent, new RegExp(label));
+  }
+  for (const prop of ["chartData", "rows", "peText", "pbText", "dividendYieldText", "isStriped"]) {
+    assert.match(companyValuationTrendPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(companyValuationTrendPanelComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|data\.institutional_history|data\.margin_history|data\.per_history|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const marginPanelIndex = page.indexOf("<CompanyMarginTradingPanel");
+  const valuationPanelIndex = page.indexOf("<CompanyValuationTrendPanel");
+  const chipsShellCloseIndex = page.indexOf("</CompanyChipsTabShell>");
+  const techTabIndex = page.indexOf("{/* ─── 技術分析 Tab ─── */}");
+  assert.ok(valuationPanelIndex > marginPanelIndex, "valuation trend panel should follow margin trading panel");
+  assert.ok(chipsShellCloseIndex > valuationPanelIndex, "chips shell should still wrap valuation trend panel");
+  assert.ok(techTabIndex > chipsShellCloseIndex, "tech tab should still follow chips tab shell");
 });

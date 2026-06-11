@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-11 21:35 CST
+Updated: 2026-06-11 21:51 CST
 
 ## Purpose
 
@@ -1032,6 +1032,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe dense chips panel, likely `CompanyValuationTrendPanel`, while keeping `data.per_history`, recent-window slicing, chart-data mapping, and table-row shaping in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, remaining PER/PBR chart-table data shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-11 — Slice M1.30 CompanyValuationTrendPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyValuationTrendPanel.tsx` as a render-only panel for the `📐 本益比 / 淨值比 / 殖利率趨勢` chart/table inside the company-detail `籌碼分析` tab.
+- Replaced the inline PER/PBR/yield chart/table JSX in `src/app/page.tsx` with `<CompanyValuationTrendPanel chartData={valuationChartData} rows={valuationRows} />`.
+- Kept valuation data ownership and shaping in `src/app/page.tsx`: `data.per_history`, recent-window slicing, `valuationChartData`, and `valuationRows` remain in the page container.
+- Removed the route-local `darkTooltipProps` constant after extracting the final chips-tab panel that used it; the new component owns only static presentational tooltip styling.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.30 guardrails proving the component has no fetch/effect/data imports/API routes/future `/companies/[code]` route, that PER history shaping remains in the page, and that valuation trend stays after margin trading within `CompanyChipsTabShell`.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.30"` failed because `src/components/company-detail/CompanyValuationTrendPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.30|M1.29|M1.28"` → 179/179 passing under Node test filtering behavior.
+- `npm test` → 179/179 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `籌碼分析`, company detail renders `📊 三大法人買賣超趨勢（近30日）`, `💰 融資融券`, `📐 本益比 / 淨值比 / 殖利率趨勢`, and valuation table/chart labels (`日期`, `本益比`, `淨值比`, `殖利率%`).
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Chips-tab dense panel extraction is complete for the three chart/table panels: `CompanyInstitutionalTrendPanel`, `CompanyMarginTradingPanel`, and `CompanyValuationTrendPanel`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, technical tab chart shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 

@@ -32,6 +32,7 @@ import { TechnicalNextSessionPanel } from "@/components/company-detail/Technical
 import { CompanyChipsTabShell } from "@/components/company-detail/CompanyChipsTabShell";
 import { CompanyInstitutionalTrendPanel } from "@/components/company-detail/CompanyInstitutionalTrendPanel";
 import { CompanyMarginTradingPanel } from "@/components/company-detail/CompanyMarginTradingPanel";
+import { CompanyValuationTrendPanel } from "@/components/company-detail/CompanyValuationTrendPanel";
 import { MajorNewsListPanel } from "@/components/company-detail/MajorNewsListPanel";
 import { RelatedNewsListPanel } from "@/components/company-detail/RelatedNewsListPanel";
 import { CompanyDetailHeroHeader } from "@/components/company-detail/CompanyDetailHeroHeader";
@@ -166,19 +167,6 @@ const CATEGORY_COLORS: Record<string, { gradient: string; solid: string; light: 
 };
 
 const DEFAULT_COLOR = { gradient: "from-gray-500 to-gray-700", solid: "#6b7280", light: "#d1d5db", bg: "bg-gray-500/10" };
-
-const darkTooltipProps = {
-  contentStyle: {
-    backgroundColor: "rgba(15, 23, 42, 0.96)",
-    border: "1px solid rgba(148, 163, 184, 0.28)",
-    borderRadius: 12,
-    color: "#e5e7eb",
-    fontSize: 12,
-    boxShadow: "0 18px 45px rgba(0,0,0,0.35)",
-  },
-  labelStyle: { color: "#cbd5e1", fontWeight: 700 },
-  itemStyle: { color: "#e5e7eb" },
-} as const;
 
 function getCategory(topicName: string): string {
   if (topicName.includes("｜")) return topicName.split("｜")[0];
@@ -1624,57 +1612,24 @@ function CompanyFullPageDetail({
               {/* ─── 本益比/淨值比趨勢（近1個月） ─── */}
               {data.per_history && data.per_history.length > 0 && (() => {
                 const recentPer = data.per_history.slice(-30);
-                const chartData = recentPer.map(d => ({
+                const valuationChartData = recentPer.map(d => ({
                   date: d.date.slice(5),
                   pe: d.pe,
                   pb: d.pb,
-                  yield: d.dividend_yield,
+                  dividendYield: d.dividend_yield,
+                }));
+                const valuationRows = data.per_history.slice(-10).reverse().map((d, i) => ({
+                  date: d.date.slice(5),
+                  peText: d.pe?.toFixed(2) ?? "-",
+                  pbText: d.pb?.toFixed(2) ?? "-",
+                  dividendYieldText: d.dividend_yield?.toFixed(2) ?? "-",
+                  isStriped: i % 2 === 1,
                 }));
                 return (
-                  <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                    <h4 className="text-sm font-bold text-white mb-4">📐 本益比 / 淨值比 / 殖利率趨勢</h4>
-                    <div className="h-56">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
-                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
-                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
-                          <YAxis yAxisId="left" tick={{ fill: "#94a3b8", fontSize: 10 }} />
-                          <YAxis yAxisId="right" orientation="right" tick={{ fill: "#94a3b8", fontSize: 10 }} domain={[0, 'auto']} />
-                          <Tooltip {...darkTooltipProps} />
-                          <Legend formatter={(v: string) => {
-                            const labels: Record<string,string> = { pe: "本益比", pb: "淨值比", yield: "殖利率%" };
-                            return labels[v] || v;
-                          }} />
-                          <Line type="monotone" dataKey="pe" yAxisId="left" stroke="#818cf8" strokeWidth={2} dot={false} name="本益比" />
-                          <Line type="monotone" dataKey="pb" yAxisId="left" stroke="#f472b6" strokeWidth={2} dot={false} name="淨值比" />
-                          <Line type="monotone" dataKey="yield" yAxisId="right" stroke="#22ab94" strokeWidth={2} dot={false} name="殖利率%" />
-                        </ComposedChart>
-                      </ResponsiveContainer>
-                    </div>
-                    {/* PER/PBR/Yield detail table */}
-                    <div className="mt-4 overflow-hidden rounded-xl">
-                      <table className="w-full text-xs">
-                        <thead>
-                          <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
-                            <th className="px-3 py-2 text-left">日期</th>
-                            <th className="px-3 py-2 text-right">本益比</th>
-                            <th className="px-3 py-2 text-right">淨值比</th>
-                            <th className="px-3 py-2 text-right">殖利率%</th>
-                          </tr>
-                        </thead>
-                        <tbody className="max-h-52 overflow-y-auto">
-                          {data.per_history!.slice(-10).reverse().map((d, i) => (
-                            <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
-                              <td className="px-3 py-1.5 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
-                              <td className="px-3 py-1.5 text-right text-white font-medium">{d.pe?.toFixed(2) ?? "-"}</td>
-                              <td className="px-3 py-1.5 text-right text-white font-medium">{d.pb?.toFixed(2) ?? "-"}</td>
-                              <td className="px-3 py-1.5 text-right text-white font-medium">{d.dividend_yield?.toFixed(2) ?? "-"}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                  <CompanyValuationTrendPanel
+                    chartData={valuationChartData}
+                    rows={valuationRows}
+                  />
                 );
               })()}
             </CompanyChipsTabShell>
