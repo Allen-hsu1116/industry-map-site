@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-12 00:07 CST
+Updated: 2026-06-12 00:17 CST
 
 ## Purpose
 
@@ -1178,6 +1178,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Remaining:**
 - Continue shrinking `src/app/page.tsx` by extracting the next safe route-local render helper. Good candidates are chart helpers still defined inline in `page.tsx`, such as `RevenueAreaChart` or adjacent revenue/profitability chart helpers, provided the slice keeps revenue/profit tab state and financial data ownership in the page or existing overview shell.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-12 — Slice M1.36 RevenueAreaChart dead-helper extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/RevenueAreaChart.tsx` as a render-only extraction of the old route-local monthly revenue area chart helper.
+- Removed the unused route-local `RevenueAreaChart` helper from `src/app/page.tsx`, plus helper-only `formatTrendMonth` / `formatRevShortNTD` wrappers that were only serving that moved helper.
+- Did **not** rewire the live `RevenueAnalysisPanel` to use the old area chart because the current revenue UI already uses the extracted `RevenueAnalysisPanel` + `RevenueComposedChart`; replacing it would change the visible monthly revenue chart from the current bar/line composite behavior.
+- Kept revenue UI ownership unchanged in `src/components/company-detail/RevenueAnalysisPanel.tsx`: `revenueTab`, `trends?.monthly_revenue`, `RevenueComposedChart`, monthly/quarterly/yearly tables, and accumulation fallback copy remain where they were.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.36 guardrails proving the page no longer defines the old route-local helper, revenue state/wiring remains in the page, the live revenue panel remains unchanged, and the extracted helper has no state/effects/fetch/data imports/API routes/future `/companies/[code]` route.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.36"` failed because `src/components/company-detail/RevenueAreaChart.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.36|M1.35|M1.9"` → 185/185 passing under Node test filtering behavior.
+- `npm test` → 185/185 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → company overview still renders `營收分析趨勢`, `月份`, `季度`, `年度`, monthly chart/table labels `營收（元→億）`, `MoM`, `YoY`, and latest monthly row `2026-05 / 4107.3億`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue shrinking `src/app/page.tsx` by extracting the next safe route-local render helper. Good candidates are chart helpers still defined inline in `page.tsx`, such as `QuarterlyIncomeChart` or `MarginTrendChart`, provided the slice keeps live profitability panel behavior intact and does not replace already-extracted panel internals.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 

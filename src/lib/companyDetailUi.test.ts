@@ -11,6 +11,7 @@ const companyInfoHeaderComponentPath = "src/components/company-detail/CompanyInf
 const financialOverviewCardsComponentPath = "src/components/company-detail/FinancialOverviewCards.tsx";
 const dividendPolicyPanelComponentPath = "src/components/company-detail/DividendPolicyPanel.tsx";
 const revenueAnalysisPanelComponentPath = "src/components/company-detail/RevenueAnalysisPanel.tsx";
+const revenueAreaChartComponentPath = "src/components/company-detail/RevenueAreaChart.tsx";
 const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/ProfitabilityAnalysisPanel.tsx";
 const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnalysisPanel.tsx";
 const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
@@ -1467,4 +1468,41 @@ test("Slice M1.35 extracts monthly price area chart while keeping technical fall
   const newsTabIndex = page.indexOf("{/* ─── 相關新聞 Tab ─── */}");
   assert.ok(indicatorsPanelIndex > trendPanelIndex, "technical indicators panel should still follow technical trend panel");
   assert.ok(newsTabIndex > indicatorsPanelIndex, "news tab should still follow technical tab content");
+});
+
+test("Slice M1.36 extracts revenue area chart helper while keeping revenue panel ownership unchanged", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const revenueAnalysisPanelComponent = await readFile(revenueAnalysisPanelComponentPath, "utf8");
+  const revenueAreaChartComponent = await readFile(revenueAreaChartComponentPath, "utf8");
+  const combinedSource = `${page}\n${revenueAnalysisPanelComponent}\n${revenueAreaChartComponent}`;
+
+  assert.doesNotMatch(page, /function RevenueAreaChart\s*\(/);
+  assert.match(page, /@\/components\/company-detail\/RevenueAnalysisPanel/);
+  assert.match(page, /const \[revenueTab, setRevenueTab\] = useState<"monthly" \| "quarterly" \| "yearly">/);
+  assert.match(page, /<RevenueAnalysisPanel[\s\S]*data=\{data\}[\s\S]*revenueTab=\{revenueTab\}[\s\S]*onRevenueTabChange=\{setRevenueTab\}/m);
+  assert.match(page, /<CompanyOverviewTab[\s\S]*<RevenueAnalysisPanel[\s\S]*<ProfitabilityAnalysisPanel/m);
+
+  assert.match(revenueAnalysisPanelComponent, /export function RevenueAnalysisPanel/);
+  assert.match(revenueAnalysisPanelComponent, /revenueTab === "monthly" && trends\?\.monthly_revenue/);
+  assert.match(revenueAnalysisPanelComponent, /<RevenueComposedChart data=\{trends\.monthly_revenue\} mode="monthly" \/>/);
+  assert.match(revenueAnalysisPanelComponent, /月份[\s\S]*營收（元→億）[\s\S]*MoM[\s\S]*YoY/m);
+  assert.match(revenueAnalysisPanelComponent, /📋 月營收資料累積中/);
+
+  assert.match(revenueAreaChartComponent, /export interface RevenueAreaChartDataPoint/);
+  assert.match(revenueAreaChartComponent, /export function RevenueAreaChart/);
+  assert.match(revenueAreaChartComponent, /function formatTrendMonth/);
+  assert.match(revenueAreaChartComponent, /function formatRevenueNTDDisplay/);
+  for (const label of ["月營收趨勢", "📈 資料累積中，敬請期待完整走勢圖", "營收", "revGrad", "revenue"]) {
+    assert.match(revenueAreaChartComponent, new RegExp(label));
+  }
+  assert.match(revenueAreaChartComponent, /<ResponsiveContainer[\s\S]*<AreaChart[\s\S]*<Area[\s\S]*dataKey="revenue"/m);
+
+  assert.doesNotMatch(revenueAreaChartComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|resolvedDailyAnalysis|revenueTab|setRevenueTab|FinancialData|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const revenueIndex = page.indexOf("<RevenueAnalysisPanel");
+  const profitabilityIndex = page.indexOf("<ProfitabilityAnalysisPanel");
+  const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
+  assert.ok(profitabilityIndex > revenueIndex, "profitability panel should still follow revenue panel");
+  assert.ok(industryTabIndex > profitabilityIndex, "industry tab should still follow overview tab content");
 });
