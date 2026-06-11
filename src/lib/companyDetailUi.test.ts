@@ -12,6 +12,7 @@ const financialOverviewCardsComponentPath = "src/components/company-detail/Finan
 const dividendPolicyPanelComponentPath = "src/components/company-detail/DividendPolicyPanel.tsx";
 const revenueAnalysisPanelComponentPath = "src/components/company-detail/RevenueAnalysisPanel.tsx";
 const revenueAreaChartComponentPath = "src/components/company-detail/RevenueAreaChart.tsx";
+const quarterlyIncomeChartComponentPath = "src/components/company-detail/QuarterlyIncomeChart.tsx";
 const profitabilityAnalysisPanelComponentPath = "src/components/company-detail/ProfitabilityAnalysisPanel.tsx";
 const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnalysisPanel.tsx";
 const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
@@ -1498,6 +1499,46 @@ test("Slice M1.36 extracts revenue area chart helper while keeping revenue panel
   assert.match(revenueAreaChartComponent, /<ResponsiveContainer[\s\S]*<AreaChart[\s\S]*<Area[\s\S]*dataKey="revenue"/m);
 
   assert.doesNotMatch(revenueAreaChartComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|resolvedDailyAnalysis|revenueTab|setRevenueTab|FinancialData|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const revenueIndex = page.indexOf("<RevenueAnalysisPanel");
+  const profitabilityIndex = page.indexOf("<ProfitabilityAnalysisPanel");
+  const industryTabIndex = page.indexOf("{/* ─── 產業分析 Tab ─── */}");
+  assert.ok(profitabilityIndex > revenueIndex, "profitability panel should still follow revenue panel");
+  assert.ok(industryTabIndex > profitabilityIndex, "industry tab should still follow overview tab content");
+});
+
+test("Slice M1.37 extracts quarterly income chart helper while keeping profitability panel ownership unchanged", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const quarterlyIncomeChartComponent = await readFile(quarterlyIncomeChartComponentPath, "utf8");
+  const profitabilityAnalysisPanelComponent = await readFile(profitabilityAnalysisPanelComponentPath, "utf8");
+  const revenueAnalysisPanelComponent = await readFile(revenueAnalysisPanelComponentPath, "utf8");
+  const overviewComponent = await readFile(overviewComponentPath, "utf8");
+  const combinedSource = `${page}\n${quarterlyIncomeChartComponent}\n${profitabilityAnalysisPanelComponent}\n${revenueAnalysisPanelComponent}\n${overviewComponent}`;
+
+  assert.doesNotMatch(page, /function QuarterlyIncomeChart\s*\(/);
+  assert.match(page, /<RevenueAnalysisPanel[\s\S]*data=\{data\}[\s\S]*revenueTab=\{revenueTab\}[\s\S]*onRevenueTabChange=\{setRevenueTab\}/m);
+  assert.match(page, /financialContent=\{\(profitTab, setProfitTab\) => \(/);
+  assert.match(page, /<ProfitabilityAnalysisPanel[\s\S]*data=\{data\}[\s\S]*profitTab=\{profitTab\}[\s\S]*onProfitTabChange=\{setProfitTab\}/m);
+  assert.match(overviewComponent, /const \[profitTab, setProfitTab\] = useState<CompanyOverviewProfitTab>\("quarterly"\)/);
+
+  assert.match(profitabilityAnalysisPanelComponent, /export function ProfitabilityAnalysisPanel/);
+  assert.match(profitabilityAnalysisPanelComponent, /profitTab === "quarterly"[\s\S]*<ProfitabilityQuarterlyView data=\{trends\.quarterly_income\} \/>/m);
+  assert.match(profitabilityAnalysisPanelComponent, /function ProfitabilityChartAndTable/);
+  for (const label of ["獲利能力趨勢", "季度", "年度", "毛利率", "營益率", "淨利率", "EPS", "📋 季度資料累積中"]) {
+    assert.match(profitabilityAnalysisPanelComponent, new RegExp(label));
+  }
+  assert.match(revenueAnalysisPanelComponent, /<RevenueComposedChart data=\{trends\.monthly_revenue\} mode="monthly" \/>/);
+
+  assert.match(quarterlyIncomeChartComponent, /export interface QuarterlyIncomeChartDataPoint/);
+  assert.match(quarterlyIncomeChartComponent, /export function QuarterlyIncomeChart/);
+  assert.match(quarterlyIncomeChartComponent, /function formatRevenueThousandsDisplay/);
+  for (const label of ["季度損益趨勢", "營收", "毛利", "淨利", "毛利率", "📈 資料累積中", "grossMargin", "netIncome"]) {
+    assert.match(quarterlyIncomeChartComponent, new RegExp(label));
+  }
+  assert.match(quarterlyIncomeChartComponent, /<ResponsiveContainer[\s\S]*<BarChart[\s\S]*<Bar[\s\S]*dataKey="revenue"[\s\S]*<Bar[\s\S]*dataKey="grossProfit"[\s\S]*<Bar[\s\S]*dataKey="netIncome"[\s\S]*<Line[\s\S]*dataKey="grossMargin"/m);
+
+  assert.doesNotMatch(quarterlyIncomeChartComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|resolvedDailyAnalysis|profitTab|setProfitTab|revenueTab|setRevenueTab|FinancialData|from "@\/app|from "@\/data|\/api\//);
   assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
 
   const revenueIndex = page.indexOf("<RevenueAnalysisPanel");

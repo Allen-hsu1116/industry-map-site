@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-12 00:17 CST
+Updated: 2026-06-12 00:29 CST
 
 ## Purpose
 
@@ -1203,6 +1203,31 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 
 **Remaining:**
 - Continue shrinking `src/app/page.tsx` by extracting the next safe route-local render helper. Good candidates are chart helpers still defined inline in `page.tsx`, such as `QuarterlyIncomeChart` or `MarginTrendChart`, provided the slice keeps live profitability panel behavior intact and does not replace already-extracted panel internals.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-12 — Slice M1.37 QuarterlyIncomeChart dead-helper extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/QuarterlyIncomeChart.tsx` as a render-only extraction of the old route-local quarterly income chart helper.
+- Removed the unused route-local `QuarterlyIncomeChart` helper from `src/app/page.tsx`, plus helper-only `formatRev` / `formatRevShort` wrappers that were no longer serving live UI.
+- Did **not** rewire the live `ProfitabilityAnalysisPanel` to use the old helper because the current profitability UI already uses `ProfitabilityQuarterlyView` + `ProfitabilityChartAndTable`; replacing it would change the visible quarterly profitability chart/table behavior.
+- Kept overview/profitability ownership unchanged: `CompanyOverviewTab` still owns `profitTab`; `src/app/page.tsx` still passes `profitTab`/`setProfitTab` through the financial render slot; `ProfitabilityAnalysisPanel` still owns quarterly/yearly views, margin/EPS chart/table labels, and fallback copy.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.37 guardrails proving the page no longer defines the old route-local helper, live revenue/profitability wiring remains unchanged, the extracted helper has the expected legacy chart copy, and the extracted helper has no state/effects/fetch/data imports/API routes/future `/companies/[code]` route.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.37"` failed because `src/components/company-detail/QuarterlyIncomeChart.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.37|M1.36|M1.10|M1.9"` → 186/186 passing under Node test filtering behavior.
+- `npm test` → 186/186 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → company overview still renders `營收分析趨勢` plus live `獲利能力趨勢`, `季度`, `年度`, `毛利率`, `營益率`, `淨利率`, `EPS`, and latest quarterly row `2026年 Q1`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue shrinking `src/app/page.tsx` by handling the next safe route-local render helper. `MarginTrendChart` is the next obvious candidate; inspect whether it is still live-used before extracting. If already superseded by `ProfitabilityAnalysisPanel`, treat it as another dead-helper shrink slice and do not rewire live profitability behavior.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, `resolvedDailyAnalysis` wiring, technical chart/indicator shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
