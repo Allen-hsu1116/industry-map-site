@@ -1,6 +1,6 @@
 # Daily Analysis V2 Goal Status Ledger
 
-Updated: 2026-06-10 22:03 CST
+Updated: 2026-06-11 20:49 CST
 
 ## Purpose
 
@@ -984,6 +984,30 @@ Persistent record of which Daily Industry Intelligence goal slices have been imp
 **Remaining:**
 - Continue M1 company-detail extraction with the next safe behavior-preserving boundary after the chips tab shell; likely extract one dense chip presentational panel such as institutional history trend or margin history while keeping data preparation in `src/app/page.tsx`.
 - `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, chip chart/table data shaping, and other company-detail data shaping.
+- Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
+
+
+### 2026-06-11 — Slice M1.28 CompanyInstitutionalTrendPanel extraction
+
+**Status:** Done.
+
+**Changed:**
+- Added `src/components/company-detail/CompanyInstitutionalTrendPanel.tsx` as a render-only panel for the `📊 三大法人買賣超趨勢（近30日）` chart/table inside the company-detail `籌碼分析` tab.
+- Replaced the inline institutional chart/table JSX in `src/app/page.tsx` with `<CompanyInstitutionalTrendPanel chartData={institutionalChartData} rows={institutionalRows} formatShares={fmtShares} />`.
+- Kept institutional data ownership and shaping in `src/app/page.tsx`: `data.institutional_history`, recent-window slicing, `fmtShares`, `fmtColor`, `institutionalChartData`, and `institutionalRows` remain in the page container.
+- Updated `src/lib/companyDetailUi.test.ts` with Slice M1.28 guardrails proving the component has no fetch/effect/data imports/API routes/future `/companies/[code]` route and that institutional panel order remains before margin and PER/PBR panels.
+
+**Verification:**
+- Initial focused RED check: `npm test -- --test-name-pattern "M1.28"` failed because `src/components/company-detail/CompanyInstitutionalTrendPanel.tsx` did not exist yet.
+- Focused post-extraction check: `npm test -- --test-name-pattern "M1.28|M1.27|M1.13"` → 177/177 passing under Node test filtering behavior.
+- `npm test` → 177/177 passing.
+- `npm run build` → passing; pre-existing Next.js workspace-root and edge-runtime warnings remain.
+- Browser smoke `http://127.0.0.1:3048/?company=2330` with `PORT=3048 npm run start` → after switching to `籌碼分析`, company detail renders `🎰 籌碼分析`, `🧠 籌碼收盤後判讀`, `📊 三大法人買賣超趨勢（近30日）`, institutional table labels (`日期`, `外資`, `投信`, `自營商`, `合計`), `💰 融資融券`, and `📐 本益比 / 淨值比 / 殖利率趨勢`.
+- Browser console after smoke check → 0 JS errors/messages.
+
+**Remaining:**
+- Continue M1 company-detail extraction with the next safe dense chips panel, likely `CompanyMarginTradingPanel`, while keeping `data.margin_history`, recent-window slicing, ratio calculation, chart-data mapping, and table-row shaping in `src/app/page.tsx`.
+- `src/app/page.tsx` still owns `RealtimeQuote`, `NewsTabContent`, tab state, URL query behavior, `buildCompanyIndustryInsights()` invocation, selected industry-role detail shaping, remaining chip margin/PER chart-table data shaping, and other company-detail data shaping.
 - Existing `/companies` overview route remains, but canonical `/companies/[code]` is intentionally deferred to M2.
 
 

@@ -30,6 +30,7 @@ import { ProfitabilityAnalysisPanel } from "@/components/company-detail/Profitab
 import { BatchAnalysisPanel } from "@/components/company-detail/BatchAnalysisPanel";
 import { TechnicalNextSessionPanel } from "@/components/company-detail/TechnicalNextSessionPanel";
 import { CompanyChipsTabShell } from "@/components/company-detail/CompanyChipsTabShell";
+import { CompanyInstitutionalTrendPanel } from "@/components/company-detail/CompanyInstitutionalTrendPanel";
 import { MajorNewsListPanel } from "@/components/company-detail/MajorNewsListPanel";
 import { RelatedNewsListPanel } from "@/components/company-detail/RelatedNewsListPanel";
 import { CompanyDetailHeroHeader } from "@/components/company-detail/CompanyDetailHeroHeader";
@@ -1557,63 +1558,31 @@ function CompanyFullPageDetail({
                   return `${s}`;
                 };
                 const fmtColor = (n: number) => n > 0 ? "text-emerald-400" : n < 0 ? "text-rose-400" : "text-[var(--color-text-tertiary)]";
-                const chartData = recent30.map(d => ({
+                const institutionalChartData = recent30.map(d => ({
                   date: d.date.slice(5),
                   foreign: d.foreign_net / 1000,
                   trust: d.investment_trust_net / 1000,
                   dealer: d.dealer_net / 1000,
                   total: d.total_net / 1000,
                 }));
+                const institutionalRows = last10.map((d, i) => ({
+                  date: d.date.slice(5),
+                  foreignText: fmtShares(d.foreign_net),
+                  foreignClassName: fmtColor(d.foreign_net),
+                  trustText: fmtShares(d.investment_trust_net),
+                  trustClassName: fmtColor(d.investment_trust_net),
+                  dealerText: fmtShares(d.dealer_net),
+                  dealerClassName: fmtColor(d.dealer_net),
+                  totalText: fmtShares(d.total_net),
+                  totalClassName: fmtColor(d.total_net),
+                  isStriped: i % 2 === 1,
+                }));
                 return (
-                  <div className="bg-white/[0.02] rounded-2xl p-6 border border-white/[0.04]">
-                    <h4 className="text-sm font-bold text-white mb-4">📊 三大法人買賣超趨勢（近30日）</h4>
-                    <div className="h-64">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <ComposedChart data={chartData} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
-                          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.06)" />
-                          <XAxis dataKey="date" tick={{ fill: "#94a3b8", fontSize: 10 }} interval={6} />
-                          <YAxis tick={{ fill: "#94a3b8", fontSize: 10 }} tickFormatter={v => v >= 1000 ? `${(v/1000).toFixed(0)}千` : v <= -1000 ? `${(v/1000).toFixed(0)}千` : `${v}`} />
-                          <Tooltip {...darkTooltipProps} formatter={(v: unknown, name: unknown) => {
-                            const labels: Record<string,string> = { foreign: "外資", trust: "投信", dealer: "自營商", total: "合計" };
-                            return [`${fmtShares(Number(v) * 1000)}張`, labels[String(name)] || String(name)];
-                          }} />
-                          <Legend formatter={(v: string) => {
-                            const labels: Record<string,string> = { foreign: "外資", trust: "投信", dealer: "自營商", total: "合計" };
-                            return labels[v] || v;
-                          }} />
-                          <Bar dataKey="foreign" fill="rgba(99,102,241,0.6)" name="外資" />
-                          <Bar dataKey="trust" fill="rgba(34,211,238,0.6)" name="投信" />
-                          <Bar dataKey="dealer" fill="rgba(251,191,36,0.6)" name="自營商" />
-                          <Line type="monotone" dataKey="total" stroke="#f472b6" strokeWidth={2} dot={false} name="合計" />
-                        </ComposedChart>
-                      </ResponsiveContainer>
-                    </div>
-                    {/* 三大法人明細表 */}
-                    <div className="overflow-hidden rounded-xl mt-4">
-                      <table className="w-full text-xs">
-                        <thead>
-                          <tr className="bg-white/[0.03] text-[11px] font-semibold text-[var(--color-text-tertiary)]">
-                            <th className="px-2 py-1.5 text-left">日期</th>
-                            <th className="px-2 py-1.5 text-right">外資</th>
-                            <th className="px-2 py-1.5 text-right">投信</th>
-                            <th className="px-2 py-1.5 text-right">自營商</th>
-                            <th className="px-2 py-1.5 text-right">合計</th>
-                          </tr>
-                        </thead>
-                        <tbody className="max-h-48 overflow-y-auto">
-                          {last10.map((d, i) => (
-                            <tr key={i} className={cn("border-t border-white/[0.03] hover:bg-white/[0.02]", i % 2 === 1 ? "bg-white/[0.01]" : "")}>
-                              <td className="px-2 py-1 text-[var(--color-text-secondary)]">{d.date.slice(5)}</td>
-                              <td className={`px-2 py-1 text-right font-medium ${fmtColor(d.foreign_net)}`}>{fmtShares(d.foreign_net)}</td>
-                              <td className={`px-2 py-1 text-right font-medium ${fmtColor(d.investment_trust_net)}`}>{fmtShares(d.investment_trust_net)}</td>
-                              <td className={`px-2 py-1 text-right font-medium ${fmtColor(d.dealer_net)}`}>{fmtShares(d.dealer_net)}</td>
-                              <td className={`px-2 py-1 text-right font-bold ${fmtColor(d.total_net)}`}>{fmtShares(d.total_net)}</td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                  <CompanyInstitutionalTrendPanel
+                    chartData={institutionalChartData}
+                    rows={institutionalRows}
+                    formatShares={fmtShares}
+                  />
                 );
               })()}
 

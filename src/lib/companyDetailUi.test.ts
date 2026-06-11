@@ -16,6 +16,7 @@ const batchAnalysisPanelComponentPath = "src/components/company-detail/BatchAnal
 const technicalNextSessionPanelComponentPath = "src/components/company-detail/TechnicalNextSessionPanel.tsx";
 const chipValuationSnapshotPanelComponentPath = "src/components/company-detail/ChipValuationSnapshotPanel.tsx";
 const companyChipsTabShellComponentPath = "src/components/company-detail/CompanyChipsTabShell.tsx";
+const companyInstitutionalTrendPanelComponentPath = "src/components/company-detail/CompanyInstitutionalTrendPanel.tsx";
 const majorNewsListPanelComponentPath = "src/components/company-detail/MajorNewsListPanel.tsx";
 const relatedNewsListPanelComponentPath = "src/components/company-detail/RelatedNewsListPanel.tsx";
 const companyDetailHeroHeaderComponentPath = "src/components/company-detail/CompanyDetailHeroHeader.tsx";
@@ -1168,4 +1169,42 @@ test("Slice M1.27 extracts chips tab shell without moving ownership-history char
   assert.ok(perHistoryIndex > marginHistoryIndex, "valuation trend should still follow margin history");
   assert.ok(chipsShellCloseIndex > perHistoryIndex, "chips shell should wrap existing dense chip panels");
   assert.ok(techTabIndex > chipsShellCloseIndex, "tech tab should still follow chips tab shell");
+});
+
+test("Slice M1.28 extracts institutional ownership trend panel while keeping chart/table data shaping in page", async () => {
+  const page = await readFile(pagePath, "utf8");
+  const companyChipsTabShellComponent = await readFile(companyChipsTabShellComponentPath, "utf8");
+  const companyInstitutionalTrendPanelComponent = await readFile(companyInstitutionalTrendPanelComponentPath, "utf8");
+  const combinedSource = `${page}\n${companyChipsTabShellComponent}\n${companyInstitutionalTrendPanelComponent}`;
+
+  assert.match(page, /@\/components\/company-detail\/CompanyInstitutionalTrendPanel/);
+  assert.match(page, /<CompanyInstitutionalTrendPanel\s+chartData=\{institutionalChartData\}\s+rows=\{institutionalRows\}\s+formatShares=\{fmtShares\}\s+\/>/m);
+  assert.doesNotMatch(page, /<h4 className="text-sm font-bold text-white mb-4">📊 三大法人買賣超趨勢（近30日）<\/h4>/);
+  assert.match(page, /const hist = data\.institutional_history/);
+  assert.match(page, /const recent30 = hist\.slice\(-30\)/);
+  assert.match(page, /const last10 = hist\.slice\(-10\)/);
+  assert.match(page, /const fmtShares = \(s: number\) => \{/);
+  assert.match(page, /const fmtColor = \(n: number\) =>/);
+  assert.match(page, /const institutionalChartData = recent30\.map/);
+  assert.match(page, /const institutionalRows = last10\.map/);
+
+  assert.match(companyInstitutionalTrendPanelComponent, /export interface CompanyInstitutionalTrendPanelProps/);
+  assert.match(companyInstitutionalTrendPanelComponent, /export function CompanyInstitutionalTrendPanel/);
+  for (const label of ["📊 三大法人買賣超趨勢（近30日）", "日期", "外資", "投信", "自營商", "合計"]) {
+    assert.match(companyInstitutionalTrendPanelComponent, new RegExp(label));
+  }
+  for (const prop of ["chartData", "rows", "formatShares", "foreignClassName", "trustClassName", "dealerClassName", "totalClassName"]) {
+    assert.match(companyInstitutionalTrendPanelComponent, new RegExp(prop));
+  }
+
+  assert.doesNotMatch(companyInstitutionalTrendPanelComponent, /useState|useEffect|fetch\(|import .*\.json|generateDailyAnalysis|computeTechnicalSummary|data\.institutional_history|data\.margin_history|data\.per_history|from "@\/app|from "@\/data|\/api\//);
+  assert.doesNotMatch(combinedSource, /\/companies\/\[code\]|\/companies\/\$\{|href=\{`\/companies/);
+
+  const chipsShellIndex = page.indexOf("<CompanyChipsTabShell");
+  const institutionalPanelIndex = page.indexOf("<CompanyInstitutionalTrendPanel");
+  const marginHistoryIndex = page.indexOf("{/* ─── 融資融券（圖+表+券資比） ─── */}");
+  const perHistoryIndex = page.indexOf("{/* ─── 本益比/淨值比趨勢（近1個月） ─── */}");
+  assert.ok(institutionalPanelIndex > chipsShellIndex, "institutional trend panel should render inside chips shell children");
+  assert.ok(marginHistoryIndex > institutionalPanelIndex, "margin history should still follow institutional trend panel");
+  assert.ok(perHistoryIndex > marginHistoryIndex, "valuation trend should still follow margin history");
 });
