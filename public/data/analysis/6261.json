@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6261",
   "name": "久元",
-  "generatedAt": "2026-06-11T12:35:02.378Z",
+  "generatedAt": "2026-06-12T12:31:45.808Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-11",
-  "chipDataDate": "2026-06-11",
+  "marketDataDate": "2026-06-12",
+  "chipDataDate": "2026-06-12",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "C",
@@ -25,11 +25,11 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "久元 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 15.5%。",
+    "summary": "久元 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 12.3%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 15.5%"
+      "收盤跌破 MA20 12.3%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
@@ -39,17 +39,17 @@
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 13,
-    "summary": "久元 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.8千張；外資近 5 日買超 +4.3千張。",
+    "summary": "久元 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1千張；外資近 5 日買超 +3.4千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.8千張",
-      "外資近 5 日買超 +4.3千張",
-      "融資近 5 日下降 10.3%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +1千張",
+      "外資近 5 日買超 +3.4千張",
+      "融資近 5 日下降 13.9%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -1.2千張"
+      "近 20 日法人偏賣，合計 -1.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-11"
+      "最近法人資料日：2026-06-12"
     ]
   },
   "industry": {
@@ -79,7 +79,7 @@
     ],
     "watch": [
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-06-11（fresh）",
+      "知識庫最後驗證：2026-06-12（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -94,7 +94,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-11"
+      "lastVerified": "2026-06-12"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -132,8 +132,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 6,
-    "recommendationState": "blocked",
+    "totalScore": 22,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -147,8 +147,8 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "hard",
-        "message": "距離 MA20 約 18.3%，停損距離過大"
+        "severity": "soft",
+        "message": "距離 MA20 約 14.1%，部位需降速"
       },
       {
         "id": "risk.topic-evidence",
@@ -159,10 +159,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：99.64",
-      "波段多空分水嶺看 MA20：111.84",
-      "追蹤法人是否延續 買超：最近 +1.3千張",
-      "本益比 22.7 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：97.60",
+      "波段多空分水嶺看 MA20：110.98",
+      "追蹤法人是否延續 賣超：最近 -208張",
+      "本益比 23.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 129.00 且量比 > 1.5：列為轉強訊號",
