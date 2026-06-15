@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { buildEventFocusSnapshot, normalizeTwseMajorNewsRows, type CompanyTopicRoleForEvent } from "../src/lib/eventFocus";
+import { buildEventFocusSnapshot, normalizeTwseMajorNewsRows, type CompanyTopicRoleForEvent, type EventFocusSnapshot, type OfficialMajorNewsRow } from "../src/lib/eventFocus";
 import { normalizeCompanyTopicRoles } from "../src/lib/companyTopicRoles";
 
 const COMPANIES_PATH = path.resolve("public/data/companies.json");
@@ -61,18 +61,56 @@ async function fetchTwseMajorNews(): Promise<unknown[]> {
   return json;
 }
 
+function rowsFromPreviousSnapshot(snapshot: EventFocusSnapshot | undefined): OfficialMajorNewsRow[] {
+  return (snapshot?.items ?? [])
+    .filter((item) => item.source === "TWSE OpenAPI t187ap04_L")
+    .map((item) => ({
+      id: item.id,
+      date: item.date,
+      announcedAt: item.announcedAt,
+      companyCode: item.companyCode,
+      companyName: item.companyName,
+      subject: item.officialSubject,
+      clause: item.clause,
+      source: item.source,
+      sourceUrl: item.sourceUrl,
+    }));
+}
+
+function mergeOfficialRows(fetchedRows: OfficialMajorNewsRow[], previousRows: OfficialMajorNewsRow[]): OfficialMajorNewsRow[] {
+  const merged: OfficialMajorNewsRow[] = [];
+  const seen = new Set<string>();
+  for (const row of [...fetchedRows, ...previousRows]) {
+    if (seen.has(row.id)) continue;
+    seen.add(row.id);
+    merged.push(row);
+  }
+  return merged.sort((a, b) => b.announcedAt.localeCompare(a.announcedAt));
+}
+
+function parsePreviousSnapshot(serialized: string): EventFocusSnapshot | undefined {
+  if (!serialized) return undefined;
+  try {
+    return JSON.parse(serialized) as EventFocusSnapshot;
+  } catch {
+    return undefined;
+  }
+}
+
 async function main() {
   const options = parseArgs(process.argv.slice(2));
   const trackedCodes = loadTrackedCompanyCodes();
+  const previous = fs.existsSync(OUTPUT_PATH) ? fs.readFileSync(OUTPUT_PATH, "utf8") : "";
+  const previousSnapshot = parsePreviousSnapshot(previous);
   const rawRows = await fetchTwseMajorNews();
-  const officialRows = normalizeTwseMajorNewsRows(rawRows, trackedCodes);
+  const fetchedRows = normalizeTwseMajorNewsRows(rawRows, trackedCodes);
+  const officialRows = mergeOfficialRows(fetchedRows, rowsFromPreviousSnapshot(previousSnapshot));
   const snapshot = buildEventFocusSnapshot({
     officialRows,
     companyTopicRoles: loadCompanyTopicRoles(),
     limit: options.limit,
   });
   const serialized = `${JSON.stringify(snapshot, null, 2)}\n`;
-  const previous = fs.existsSync(OUTPUT_PATH) ? fs.readFileSync(OUTPUT_PATH, "utf8") : "";
   const changed = previous !== serialized;
 
   console.log(JSON.stringify({
@@ -80,6 +118,7 @@ async function main() {
     status: snapshot.status,
     latestDate: snapshot.latestDate,
     itemCount: snapshot.itemCount,
+    fetchedItemCount: fetchedRows.length,
     changed,
     outputPath: path.relative(process.cwd(), OUTPUT_PATH),
   }, null, 2));
