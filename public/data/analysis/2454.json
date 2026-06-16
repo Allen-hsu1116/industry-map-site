@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2454",
   "name": "聯發科",
-  "generatedAt": "2026-06-15T12:34:40.114Z",
+  "generatedAt": "2026-06-16T12:32:50.433Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-15",
-  "chipDataDate": "2026-06-15",
+  "marketDataDate": "2026-06-16",
+  "chipDataDate": "2026-06-16",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,29 +18,30 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "聯發科 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 7.1%。",
+    "summary": "聯發科 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 7.5%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 7.1%"
+      "收盤站上 MA20 7.5%"
     ],
     "risks": [],
     "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -20,
-    "summary": "聯發科 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2.2千張；三大法人近 5 日合計賣超 -1.2千張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 21,
+    "summary": "聯發科 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +796張；投信近 5 日買超 +1.5千張。",
     "signals": [
-      "投信近 5 日買超 +2.2千張"
+      "三大法人近 5 日合計買超 +796張",
+      "投信近 5 日買超 +1.5千張",
+      "融資近 5 日下降 5.0%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.2千張",
-      "近 20 日法人偏賣，合計 -1萬張",
-      "外資近 5 日賣超 -4千張"
+      "近 20 日法人偏賣，合計 -6.8千張",
+      "外資近 5 日賣超 -1.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-15"
+      "最近法人資料日：2026-06-16"
     ]
   },
   "industry": {
@@ -120,7 +121,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-06-16"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -223,22 +224,23 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 63,
-    "recommendationState": "watchlist",
+    "totalScore": 71,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": -20,
       "label": "基本面偏弱",
       "signals": [],
       "risks": [
         "月營收 MoM -26.1%，短期動能轉弱",
-        "本益比 71.2 倍，需防估值壓縮",
-        "股價淨值比 18.3 倍偏高，需和 ROE/成長性比對"
+        "本益比 72.7 倍，需防估值壓縮",
+        "股價淨值比 18.6 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -246,15 +248,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：4273.00",
-      "波段多空分水嶺看 MA20：4172.75",
-      "追蹤法人是否延續 買超：最近 +2千張",
+      "短線支撐/壓力先看 MA5：4290.00",
+      "波段多空分水嶺看 MA20：4243.00",
+      "追蹤法人是否延續 買超：最近 +1.5千張",
       "月營收年增率 -4.1%，觀察基本面是否支撐估值",
-      "本益比 71.2 倍，需和同族群估值比較"
+      "本益比 72.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 4970.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 3100.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 3155.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

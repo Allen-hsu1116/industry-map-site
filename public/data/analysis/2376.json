@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-06-15T12:34:40.069Z",
+  "generatedAt": "2026-06-16T12:32:50.369Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-15",
-  "chipDataDate": "2026-06-15",
+  "marketDataDate": "2026-06-16",
+  "chipDataDate": "2026-06-16",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -29,22 +29,20 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 5,
-    "summary": "技嘉 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1萬張；投信近 5 日買超 +844張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 41,
+    "summary": "技嘉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.2千張；近 20 日法人偏買，合計 +1.7萬張。",
     "signals": [
-      "近 20 日法人偏買，合計 +1萬張",
-      "投信近 5 日買超 +844張",
-      "融資近 5 日下降 14.3%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +1.2千張",
+      "近 20 日法人偏買，合計 +1.7萬張",
+      "投信近 5 日買超 +514張",
+      "外資近 5 日買超 +982張",
+      "融資近 5 日下降 6.4%，籌碼壓力下降"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -661張",
-      "外資近 5 日賣超 -1.3千張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-15",
-      "融券近 5 日增加 51.9%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-16"
     ]
   },
   "industry": {
@@ -136,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-15"
+      "lastVerified": "2026-06-16"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -281,21 +279,22 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 68,
-    "recommendationState": "watchlist",
+    "totalScore": 75,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 32,
       "label": "基本面偏強",
       "signals": [
         "月營收 YoY +72.2%，成長動能明確",
         "本益比 16.3 倍，估值尚可對照成長",
-        "殖利率 3.4%，提供部分下檔支撐"
+        "殖利率 3.5%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -304,9 +303,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：347.00",
-      "波段多空分水嶺看 MA20：347.90",
-      "追蹤法人是否延續 買超：最近 +417張",
+      "短線支撐/壓力先看 MA5：344.80",
+      "波段多空分水嶺看 MA20：350.05",
+      "追蹤法人是否延續 賣超：最近 -72張",
       "月營收年增率 +72.2%，觀察基本面是否支撐估值",
       "本益比 16.3 倍，需和同族群估值比較"
     ],
