@@ -10271,6 +10271,14 @@
         "low": 2220,
         "close": 2230,
         "volume": 9190426
+      },
+      {
+        "date": "2026-06-17",
+        "open": 2220,
+        "high": 2220,
+        "low": 2140,
+        "close": 2155,
+        "volume": 11613654
       }
     ],
     "monthly_revenue": [
@@ -18234,18 +18242,18 @@
     "yoy": 38.59
   },
   "valuation": {
-    "date": "20260616",
-    "pe": "82.23",
-    "pb": "19.34",
-    "dividendYield": "0.52"
+    "date": "20260617",
+    "pe": "79.46",
+    "pb": "18.69",
+    "dividendYield": "0.54"
   },
   "price": {
-    "date": "2026-06-16",
-    "open": 2265,
-    "high": 2270,
-    "low": 2220,
-    "close": 2230,
-    "volume": 9190426
+    "date": "2026-06-17",
+    "open": 2220,
+    "high": 2220,
+    "low": 2140,
+    "close": 2155,
+    "volume": 11613654
   },
   "dividend": {
     "cashYield": 11.6,
@@ -19000,21 +19008,39 @@
     },
     {
       "date": "2026-06-16",
-      "foreign_buy": 7198958,
-      "foreign_sell": 5405194,
-      "foreign_net": 1793764,
-      "investment_trust_buy": 5000,
-      "investment_trust_sell": 638005,
-      "investment_trust_net": -633005,
-      "dealer_buy": 120949,
-      "dealer_sell": 183645,
-      "dealer_net": -62696,
-      "dealer_hedge_buy": 51949,
-      "dealer_hedge_sell": 52644,
-      "dealer_hedge_net": -695,
-      "total_buy": 7324907,
-      "total_sell": 6226844,
-      "total_net": 1098063
+      "foreign_buy": 7218958,
+      "foreign_sell": 6234749,
+      "foreign_net": 984209,
+      "investment_trust_buy": -62696,
+      "investment_trust_sell": 69000,
+      "investment_trust_net": -131696,
+      "dealer_buy": 973462,
+      "dealer_sell": 52644,
+      "dealer_net": 920818,
+      "dealer_hedge_buy": 921513,
+      "dealer_hedge_sell": 0,
+      "dealer_hedge_net": 921513,
+      "total_buy": 8129724,
+      "total_sell": 6356393,
+      "total_net": 1773331
+    },
+    {
+      "date": "2026-06-17",
+      "foreign_buy": 3807293,
+      "foreign_sell": 5719903,
+      "foreign_net": -1912610,
+      "investment_trust_buy": 15000,
+      "investment_trust_sell": 1351027,
+      "investment_trust_net": -1336027,
+      "dealer_buy": 842097,
+      "dealer_sell": 949859,
+      "dealer_net": -107762,
+      "dealer_hedge_buy": 757937,
+      "dealer_hedge_sell": 691217,
+      "dealer_hedge_net": 66720,
+      "total_buy": 4664390,
+      "total_sell": 8020789,
+      "total_net": -3356399
     }
   ],
   "margin_history": [
@@ -19621,6 +19647,22 @@
       "short_yesterday_balance": 0,
       "short_limit": 649385,
       "offset": 0
+    },
+    {
+      "date": "2026-06-16",
+      "margin_buy": 185,
+      "margin_sell": 326,
+      "margin_cash_repayment": 1,
+      "margin_balance": 5901,
+      "margin_yesterday_balance": 6043,
+      "margin_limit": 649385,
+      "short_sell": 0,
+      "short_buy": 0,
+      "short_cash_repayment": 0,
+      "short_balance": 0,
+      "short_yesterday_balance": 0,
+      "short_limit": 649385,
+      "offset": 0
     }
   ],
   "per_history": [
@@ -19899,6 +19941,12 @@
       "pe": 82.23,
       "pb": 19.34,
       "dividend_yield": 0.52
+    },
+    {
+      "date": "2026-06-17",
+      "pe": 79.46,
+      "pb": 18.69,
+      "dividend_yield": 0.54
     }
   ],
   "shareholding_history": [
@@ -20053,6 +20101,6 @@
       "foreign_shares": 1669855733
     }
   ],
-  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-06-16; raw daily OHLCV only, no AI-filled K-line rows",
-  "marketFeedSource": "FinMind TaiwanStockInstitutionalInvestorsBuySell + FinMind TaiwanStockMarginPurchaseShortSale + FinMind TaiwanStockPER via api.finmindtrade.com; updated batch 2026-06-16; raw daily institutional/margin/valuation rows only, no AI-filled chip rows"
+  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-06-17; raw daily OHLCV only, no AI-filled K-line rows",
+  "marketFeedSource": "FinMind TaiwanStockInstitutionalInvestorsBuySell + FinMind TaiwanStockMarginPurchaseShortSale + FinMind TaiwanStockPER via api.finmindtrade.com; updated batch 2026-06-17; raw daily institutional/margin/valuation rows only, no AI-filled chip rows"
 }
