@@ -67,15 +67,19 @@
       "directness": "core",
       "supplyChainStage": "power",
       "roleType": "power_supply_system_provider",
-      "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。",
+      "roleSummary": "台達電是全球最大伺服器電源供應商，CRPS市佔超過50%。5月營收589.6億年增43.7%，電源及零組件為最大營收部門，AI伺服器高功耗驅動3000W+電源需求。",
       "products": [
-        "電源供應系統與高效電源",
-        "伺服器電源",
-        "嵌入式電源",
-        "工業與醫療電源"
+        "CRPS伺服器電源(800W-3000W)",
+        "BBU電池備援模組",
+        "PDU電力分配單元",
+        "UPS不斷電系統(Modular UPS)"
       ],
       "customers": [
-        "AI、ICT、工業、醫療與商用設備客戶：官方產品頁描述應用領域但未逐一揭露客戶名稱"
+        "NVIDIA(GB200供電)",
+        "Dell(伺服器電源)",
+        "HPE(伺服器電源)",
+        "Google(資料中心供電)",
+        "Microsoft(資料中心UPS)"
       ],
       "competitors": [
         "伺服器電源供應器廠",
@@ -107,7 +111,7 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-28",
+      "lastVerified": "2026-06-22",
       "status": "verified"
     },
     {
@@ -174,15 +178,19 @@
       "directness": "direct_enabler",
       "supplyChainStage": "thermal",
       "roleType": "data_center_liquid_air_cooling_provider",
-      "roleSummary": "台達電在液冷散熱題材中是資料中心與設備端冷卻解決方案供應者；官方資料中心與風扇散熱頁皆列出液冷/氣冷散熱能力，財報也把散熱系統列為主要營業項目。",
+      "roleSummary": "台達電提供伺服器氣冷與液冷散熱全方案，從風扇、VC到CDU一條龍。5月營收589.6億年增43.7%，散熱系統為主要營業項目之一，AI伺服器帶動高階散熱需求。",
       "products": [
-        "風扇、氣冷與液冷散熱管理",
-        "資料中心液冷及氣冷散熱解決方案",
-        "無刷直流風扇",
-        "散熱系統"
+        "液冷CDU(冷卻液分配單元)",
+        "無刷直流風扇(PF系列)",
+        "氣冷散熱模組(VC+熱管)",
+        "伺服器背板風扇牆"
       ],
       "customers": [
-        "資料中心、消費電子、車輛、工業與商用建築應用客戶：官方頁揭露應用領域"
+        "NVIDIA(GB200散熱)",
+        "Dell(伺服器散熱)",
+        "HPE(伺服器散熱)",
+        "Google(資料中心散熱)",
+        "Microsoft(資料中心散熱)"
       ],
       "competitors": [
         "資料中心冷卻系統供應商",
@@ -221,7 +229,7 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-28",
+      "lastVerified": "2026-06-22",
       "status": "verified"
     },
     {
@@ -231,17 +239,19 @@
       "directness": "core",
       "supplyChainStage": "system_integration",
       "roleType": "industrial_automation_solution_provider",
-      "roleSummary": "台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。",
+      "roleSummary": "台達電是台灣最大工業自動化品牌，產品涵蓋伺服、PLC、變頻器、機器人與工業通訊。5月營收589.6億年增43.7%，工業自動化為核心成長引擎之一，DIASCS平台整合驅動/運動控制/機器視覺。",
       "products": [
-        "工業自動化與智慧製造產品",
-        "交流馬達驅動器",
-        "伺服系統",
-        "PLC",
-        "工業機器人",
-        "系統軟體"
+        "交流伺服馬達(ASDA-A3系列)",
+        "PLC可程式控制器(DVP/AH500系列)",
+        "變頻器(C2000系列)",
+        "工業機器人(DRSA/DRAS六軸)",
+        "DIASCS工業通訊平台(EtherCAT/PROFINET)"
       ],
       "customers": [
-        "工廠自動化、智慧製造、製程設備與工業能源管理客戶"
+        "Foxconn(鴻海自動化產線)",
+        "台達電子(集團內部自動化)",
+        "Schunk(機器手臂夾爪整合)",
+        "西門子(工業通訊協議授權)"
       ],
       "competitors": [
         "工業自動化控制與驅動系統供應商",
@@ -273,7 +283,7 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-28",
+      "lastVerified": "2026-06-22",
       "status": "verified"
     },
     {
@@ -283,16 +293,18 @@
       "directness": "core",
       "supplyChainStage": "system_integration",
       "roleType": "energy_storage_and_management_solution_provider",
-      "roleSummary": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。",
+      "roleSummary": "台達電在儲能領域提供PCS變流器、BMS與微電網系統整合，全球儲能專案超過2GWh。5月營收589.6億年增43.7%，能源基礎設施為成長動能之一。",
       "products": [
-        "能源基礎設施、儲能與能源管理",
-        "儲能系統",
-        "能源管理解決方案",
-        "太陽能逆變器",
-        "微電網"
+        "MW級儲能變流器(PCS)",
+        "電池管理系統(BMS)",
+        "微電網控制系統",
+        "V2G雙向充電樁"
       ],
       "customers": [
-        "再生能源、微電網、充電場域、工廠與商辦能源管理客戶"
+        "台電(儲能標案)",
+        "Tesla(Powerwall逆變器)",
+        "Delta Electronics USA(美國微電網)",
+        "NextEra Energy(公用儲能)"
       ],
       "competitors": [
         "儲能系統整合商",
@@ -324,7 +336,7 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-28",
+      "lastVerified": "2026-06-22",
       "status": "verified"
     }
   ]
