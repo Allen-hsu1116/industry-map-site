@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-06-18T12:32:11.094Z",
+  "generatedAt": "2026-06-22T12:32:47.061Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-18",
-  "chipDataDate": "2026-06-18",
+  "marketDataDate": "2026-06-22",
+  "chipDataDate": "2026-06-22",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,30 +17,32 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 45,
-    "summary": "旺宏 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 8.2%。",
+    "score": 55,
+    "summary": "旺宏 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 17.5%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 8.2%"
+      "收盤站上 MA20 17.5%"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "接近 20 日高點 185.50，觀察是否突破"
+    ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 20,
-    "summary": "旺宏 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +2.7萬張；近 20 日法人偏買，合計 +14.2萬張。",
+    "summary": "旺宏 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +3.8萬張；近 20 日法人偏買，合計 +13.8萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2.7萬張",
-      "近 20 日法人偏買，合計 +14.2萬張",
-      "外資近 5 日買超 +2.7萬張"
+      "三大法人近 5 日合計買超 +3.8萬張",
+      "近 20 日法人偏買，合計 +13.8萬張",
+      "外資近 5 日買超 +3.6萬張"
     ],
     "risks": [
-      "投信近 5 日賣超 -3.9千張"
+      "投信近 5 日賣超 -543張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-18"
+      "最近法人資料日：2026-06-22"
     ]
   },
   "industry": {
@@ -166,7 +168,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-06-18"
+      "lastVerified": "2026-06-22"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -206,7 +208,7 @@
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "旺宏的公開營業項目涵蓋積體電路與半導體零組件之研發、設計、製造、測試與銷售，因此在 IC 設計/半導體產品鏈屬於記憶體 IC 產品供應角色。"
+        "roleSummary": "旺宏為全球最大Mask ROM與車用NOR Flash供應商。5月營收62.6億年增175.8%，累計年增110.9%，受惠AI/車用/消費電子需求爆發。"
       }
     ],
     "swot": [
@@ -288,7 +290,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 81,
+    "totalScore": 79,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 30,
@@ -298,7 +300,7 @@
         "月營收 MoM +7.7%，短期動能改善"
       ],
       "risks": [
-        "股價淨值比 6.6 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 7.3 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -310,17 +312,23 @@
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 14.9%，部位需降速"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：160.50",
-      "波段多空分水嶺看 MA20：156.13",
-      "追蹤法人是否延續 買超：最近 +3.1萬張",
+      "短線支撐/壓力先看 MA5：168.30",
+      "波段多空分水嶺看 MA20：157.93",
+      "追蹤法人是否延續 買超：最近 +1.5萬張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 180.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 185.50 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 132.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

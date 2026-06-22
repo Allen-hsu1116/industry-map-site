@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-06-18T12:32:11.065Z",
+  "generatedAt": "2026-06-22T12:32:47.041Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-18",
-  "chipDataDate": "2026-06-18",
+  "marketDataDate": "2026-06-22",
+  "chipDataDate": "2026-06-22",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,11 +18,11 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "台達電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 6.6%。",
+    "summary": "台達電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 6.7%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 6.6%"
+      "收盤跌破 MA20 6.7%"
     ],
     "watch": []
   },
@@ -30,16 +30,17 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "台達電 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -4.3千張；近 20 日法人偏賣，合計 -1.8千張。",
+    "summary": "台達電 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -6千張；近 20 日法人偏賣，合計 -1萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -4.3千張",
-      "近 20 日法人偏賣，合計 -1.8千張",
-      "投信近 5 日賣超 -3.6千張",
-      "外資近 5 日賣超 -1.6千張"
+      "三大法人近 5 日合計賣超 -6千張",
+      "近 20 日法人偏賣，合計 -1萬張",
+      "投信近 5 日賣超 -4.6千張",
+      "外資近 5 日賣超 -186張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-18"
+      "最近法人資料日：2026-06-22",
+      "融券近 5 日增加 300.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -52,7 +53,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器電源與 BBU",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。",
+      "roleSummary": "台達電是全球最大伺服器電源供應商，CRPS市佔超過50%。5月營收589.6億年增43.7%，電源及零組件為最大營收部門，AI伺服器高功耗驅動3000W+電源需求。",
       "supplyChainStage": "power",
       "roleType": "power_supply_system_provider",
       "directness": "core",
@@ -60,17 +61,17 @@
     },
     "productNarratives": [
       {
-        "name": "電源供應系統與高效電源",
+        "name": "CRPS伺服器電源(800W-3000W)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "伺服器電源",
+        "name": "BBU電池備援模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "嵌入式電源",
+        "name": "PDU電力分配單元",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -132,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-18"
+      "lastVerified": "2026-06-22"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -162,7 +163,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。"
+        "roleSummary": "台達電是全球最大伺服器電源供應商，CRPS市佔超過50%。5月營收589.6億年增43.7%，電源及零組件為最大營收部門，AI伺服器高功耗驅動3000W+電源需求。"
       },
       {
         "topicId": "energy-storage-battery",
@@ -172,7 +173,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。"
+        "roleSummary": "台達電在儲能領域提供PCS變流器、BMS與微電網系統整合，全球儲能專案超過2GWh。5月營收589.6億年增43.7%，能源基礎設施為成長動能之一。"
       },
       {
         "topicId": "industrial-automation",
@@ -182,7 +183,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。"
+        "roleSummary": "台達電是台灣最大工業自動化品牌，產品涵蓋伺服、PLC、變頻器、機器人與工業通訊。5月營收589.6億年增43.7%，工業自動化為核心成長引擎之一，DIASCS平台整合驅動/運動控制/機器視覺。"
       },
       {
         "topicId": "ai-server",
@@ -202,7 +203,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
-        "roleSummary": "台達電在液冷散熱題材中是資料中心與設備端冷卻解決方案供應者；官方資料中心與風扇散熱頁皆列出液冷/氣冷散熱能力，財報也把散熱系統列為主要營業項目。"
+        "roleSummary": "台達電提供伺服器氣冷與液冷散熱全方案，從風扇、VC到CDU一條龍。5月營收589.6億年增43.7%，散熱系統為主要營業項目之一，AI伺服器帶動高階散熱需求。"
       },
       {
         "topicId": "wafer-foundry",
@@ -381,15 +382,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2192.00",
-      "波段多空分水嶺看 MA20：2302.00",
-      "追蹤法人是否延續 賣超：最近 -613張",
+      "短線支撐/壓力先看 MA5：2179.00",
+      "波段多空分水嶺看 MA20：2304.75",
+      "追蹤法人是否延續 賣超：最近 -1.8千張",
       "月營收年增率 +38.6%，觀察基本面是否支撐估值",
       "本益比 79.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2585.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 2050.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 2080.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

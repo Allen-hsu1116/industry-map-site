@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3017",
   "name": "奇鋐",
-  "generatedAt": "2026-06-18T12:32:11.387Z",
+  "generatedAt": "2026-06-22T12:32:47.257Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-18",
-  "chipDataDate": "2026-06-18",
+  "marketDataDate": "2026-06-22",
+  "chipDataDate": "2026-06-22",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,12 +18,12 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": -15,
-    "summary": "奇鋐 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 6.3%。",
+    "summary": "奇鋐 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 5.2%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [
-      "收盤跌破 MA20 6.3%"
+      "收盤跌破 MA20 5.2%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
@@ -33,17 +33,18 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "奇鋐 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +759張；三大法人近 5 日合計賣超 -1.8千張。",
+    "summary": "奇鋐 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +1.2千張；三大法人近 5 日合計賣超 -1.6千張。",
     "signals": [
-      "外資近 5 日買超 +759張"
+      "外資近 5 日買超 +1.2千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.8千張",
+      "三大法人近 5 日合計賣超 -1.6千張",
       "近 20 日法人偏賣，合計 -1.1千張",
-      "投信近 5 日賣超 -2.7千張"
+      "投信近 5 日賣超 -2.9千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-18"
+      "最近法人資料日：2026-06-22",
+      "融券近 5 日增加 31.6%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -56,7 +57,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "奇鋐在氣冷與核心散熱組件題材中的角色最直接：公司官方定位為整體散熱解決方案供應商，年報也支撐電子零件、通訊電子與電腦週邊設備製造營運背景。",
+      "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
       "supplyChainStage": "thermal",
       "roleType": "air_cooling_and_thermal_module_provider",
       "directness": "core",
@@ -64,17 +65,17 @@
     },
     "productNarratives": [
       {
-        "name": "整體散熱解決方案",
+        "name": "液冷冷板(Copper Cold Plate)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "散熱模組",
+        "name": "液冷散熱模組(CDU搭配)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "電子零件與電腦週邊設備製造",
+        "name": "均熱板(VC)散熱方案",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -135,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-18"
+      "lastVerified": "2026-06-22"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -165,7 +166,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "奇鋐在氣冷與核心散熱組件題材中的角色最直接：公司官方定位為整體散熱解決方案供應商，年報也支撐電子零件、通訊電子與電腦週邊設備製造營運背景。"
+        "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -175,7 +176,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "奇鋐在散熱解決方案題材中屬於核心供應鏈角色，重點是整體熱管理與散熱模組，而不是單純的題材沾邊。"
+        "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。"
       },
       {
         "topicId": "ai-server",
@@ -185,7 +186,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "奇鋐在 AI 伺服器題材中的核心不是設計 GPU 或組裝整機，而是提供高功耗伺服器需要的散熱模組與熱管理能力；目前以官方整體散熱定位與年報營運範圍建立中等信心，液冷營收占比仍需後續法說或產品頁補證。"
+        "roleSummary": "奇鋐是全球前三大伺服器散熱模組供應商，AI伺服器高功耗推動VC均熱板需求爆發。5月營收158.7億年增60.6%，累計年增90.3%，客戶需求增加為主要成長動能。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -195,7 +196,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "奇鋐被 legacy 題材歸為液冷系統整合供應鏈，產品知識庫也已把液冷散熱方案標為題材候選；但目前公開證據以整體散熱定位與財報主業務為主，尚未把液冷營收或特定客戶專案寫成確定事實。"
+        "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。"
       }
     ],
     "swot": [
@@ -288,7 +289,7 @@
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "股價淨值比 20.9 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 21.0 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -301,10 +302,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2390.00",
-      "波段多空分水嶺看 MA20：2560.00",
-      "追蹤法人是否延續 賣超：最近 -138張",
-      "本益比 39.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：2393.00",
+      "波段多空分水嶺看 MA20：2553.75",
+      "追蹤法人是否延續 買超：最近 +87張",
+      "本益比 39.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2965.00 且量比 > 1.5：列為轉強訊號",

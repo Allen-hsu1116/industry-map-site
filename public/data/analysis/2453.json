@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2453",
   "name": "凌群",
-  "generatedAt": "2026-06-18T12:32:11.200Z",
+  "generatedAt": "2026-06-22T12:32:47.132Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-18",
-  "chipDataDate": "2026-06-18",
+  "marketDataDate": "2026-06-22",
+  "chipDataDate": "2026-06-22",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,16 +15,16 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "凌群 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.1%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 4.1%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "凌群 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
+      "股價貼近 MA20，留意方向選擇",
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
@@ -32,15 +32,15 @@
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 28,
-    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +178張；近 20 日法人偏買，合計 +337張。",
+    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +264張；近 20 日法人偏買，合計 +632張。",
     "signals": [
-      "三大法人近 5 日合計買超 +178張",
-      "近 20 日法人偏買，合計 +337張",
-      "外資近 5 日買超 +186張"
+      "三大法人近 5 日合計買超 +264張",
+      "近 20 日法人偏買，合計 +632張",
+      "外資近 5 日買超 +265張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-18"
+      "最近法人資料日：2026-06-22"
     ]
   },
   "industry": {
@@ -53,7 +53,7 @@
     "roleDetail": {
       "topicName": "資安、雲端服務與企業軟體",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "凌群在軟體雲端資安題材中提供系統整合、雲端、資安、金融、醫療、政府、交通與企業應用方案，並具備 DBMaker、NETCenter、OMFLOW、Ayuda 等自有軟體產品。",
+      "roleSummary": "凌群為台灣老牌系統整合商，提供政府/金融/交通領域的資安與軟體服務。5月營收5.4億年增6.8%，累計年增6.3%，自有軟體產品DBMaker/OMFLOW為差異化利基。",
       "supplyChainStage": "enterprise_software_system_integration",
       "roleType": "system_integrator_enterprise_software_provider",
       "directness": "core",
@@ -132,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-18"
+      "lastVerified": "2026-06-22"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -162,7 +162,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "凌群在軟體雲端資安題材中提供系統整合、雲端、資安、金融、醫療、政府、交通與企業應用方案，並具備 DBMaker、NETCenter、OMFLOW、Ayuda 等自有軟體產品。"
+        "roleSummary": "凌群為台灣老牌系統整合商，提供政府/金融/交通領域的資安與軟體服務。5月營收5.4億年增6.8%，累計年增6.3%，自有軟體產品DBMaker/OMFLOW為差異化利基。"
       }
     ],
     "swot": [
@@ -230,14 +230,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 58,
+    "totalScore": 68,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 18.0 倍，估值尚可對照成長",
-        "殖利率 5.0%，提供部分下檔支撐"
+        "本益比 18.3 倍，估值尚可對照成長",
+        "殖利率 4.9%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -252,10 +252,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：56.70",
-      "波段多空分水嶺看 MA20：59.01",
-      "追蹤法人是否延續 買超：最近 +53張",
-      "本益比 18.0 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：56.92",
+      "波段多空分水嶺看 MA20：59.02",
+      "追蹤法人是否延續 買超：最近 +178張",
+      "本益比 18.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 65.60 且量比 > 1.5：列為轉強訊號",

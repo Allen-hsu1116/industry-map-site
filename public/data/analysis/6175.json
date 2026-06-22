@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6175",
   "name": "立敦",
-  "generatedAt": "2026-06-18T12:32:11.798Z",
+  "generatedAt": "2026-06-22T12:32:47.538Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-18",
-  "chipDataDate": "2026-06-18",
+  "marketDataDate": "2026-06-22",
+  "chipDataDate": "2026-06-22",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,12 +17,11 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 63,
-    "summary": "立敦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 14.8%。",
+    "score": 45,
+    "summary": "立敦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 8.6%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 14.8%",
-      "帶量上漲，量比 1.87x"
+      "收盤站上 MA20 8.6%"
     ],
     "risks": [],
     "watch": []
@@ -30,18 +29,18 @@
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": 0,
-    "summary": "立敦 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.2千張；投信近 5 日買超 +1張。",
+    "score": 16,
+    "summary": "立敦 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.7千張；投信近 5 日買超 +1張。",
     "signals": [
-      "近 20 日法人偏買，合計 +1.2千張",
-      "投信近 5 日買超 +1張"
+      "三大法人近 5 日合計買超 +1.7千張",
+      "投信近 5 日買超 +1張",
+      "外資近 5 日買超 +1.5千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -83張",
-      "外資近 5 日賣超 -228張"
+      "近 20 日法人偏賣，合計 -2千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-18"
+      "最近法人資料日：2026-06-22"
     ]
   },
   "industry": {
@@ -54,7 +53,7 @@
     "roleDetail": {
       "topicName": "被動元件",
       "roleLabel": "供應商角色",
-      "roleSummary": "立敦在被動元件題材中供應鋁電解電容器上游化成鋁箔與電蝕鋁箔材料，影響電容器容量、耐壓、壽命與可靠度。",
+      "roleSummary": "立敦是全球前三大鋁電解電容器上游化成鋁箔供應商，產品影響電容器容量、耐壓與壽命。MOPS主業為化成鋁箔與電蝕鋁箔生產銷售。",
       "supplyChainStage": "capacitor_upstream_materials",
       "roleType": "aluminum_electrolytic_capacitor_foil_supplier",
       "directness": "supplier",
@@ -77,21 +76,6 @@
         ],
         "lastVerified": "2026-05-28",
         "confidence": "high"
-      },
-      {
-        "name": "高壓與長壽命電容材料應用",
-        "description": "立敦的鋁箔材料可用於高耐壓、長壽命鋁電解電容器，支援電源供應器、車用電子、通訊設備、工業設備與能源設備中的濾波和穩壓。",
-        "whyItMatters": "AI 伺服器電源、工業與綠能設備都需要穩定電源轉換；電容材料可靠度會影響電源模組壽命與安全。",
-        "topicFit": "電容器上游材料直接屬被動元件供應鏈。",
-        "businessImpact": "高耐壓與長壽命電容應用若提升，有助改善材料產品組合；但上游材料價格仍受鋁價、能源成本與下游庫存循環影響。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：立敦科技股東會年報"
-        ],
-        "sourceUrls": [
-          "https://doc.twse.com.tw/"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
       }
     ],
     "swotSnapshot": {
@@ -148,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-18"
+      "lastVerified": "2026-06-22"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -178,7 +162,7 @@
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "立敦在被動元件題材中供應鋁電解電容器上游化成鋁箔與電蝕鋁箔材料，影響電容器容量、耐壓、壽命與可靠度。"
+        "roleSummary": "立敦是全球前三大鋁電解電容器上游化成鋁箔供應商，產品影響電容器容量、耐壓與壽命。MOPS主業為化成鋁箔與電蝕鋁箔生產銷售。"
       }
     ],
     "swot": [
@@ -246,8 +230,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
-    "recommendationState": "watchlist",
+    "totalScore": 72,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -261,20 +245,14 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 12.9%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：105.24",
-      "波段多空分水嶺看 MA20：99.34",
-      "追蹤法人是否延續 賣超：最近 -1.7千張",
-      "本益比 42.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：107.32",
+      "波段多空分水嶺看 MA20：100.38",
+      "追蹤法人是否延續 賣超：最近 -1.1千張",
+      "本益比 40.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 117.00 且量比 > 1.5：列為轉強訊號",

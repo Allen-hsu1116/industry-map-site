@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3311",
   "name": "閎暉",
-  "generatedAt": "2026-06-18T12:32:11.486Z",
+  "generatedAt": "2026-06-22T12:32:47.326Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-18",
-  "chipDataDate": "2026-06-18",
+  "marketDataDate": "2026-06-22",
+  "chipDataDate": "2026-06-22",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,31 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "閎暉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "閎暉 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 5.9%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 5.9%"
     ],
     "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 33,
-    "summary": "閎暉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +307張；近 20 日法人偏買，合計 +851張。",
+    "summary": "閎暉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.1千張；近 20 日法人偏買，合計 +1.3千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +307張",
-      "近 20 日法人偏買，合計 +851張",
-      "外資近 5 日買超 +303張",
-      "融資近 5 日下降 33.7%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +1.1千張",
+      "近 20 日法人偏買，合計 +1.3千張",
+      "外資近 5 日買超 +1.1千張",
+      "融資近 5 日下降 32.4%，籌碼壓力下降"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-18",
-      "融券近 5 日增加 35.7%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-22"
     ]
   },
   "industry": {
@@ -55,7 +52,7 @@
     "roleDetail": {
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "供應商角色",
-      "roleSummary": "閎暉供應外觀光學機構件、按鍵、2D/3D 玻璃與機構整合模組，服務車用內裝、穿戴、智慧鎖、遊戲機與消費電子等終端產品。",
+      "roleSummary": "閎暉為手機按鍵與機構件專業供應商，MOPS主業為按鍵及模組產品機構整合元件。5月營收21.3億年增13.7%，但累計年減4.6%，消費電子需求波動影響。",
       "supplyChainStage": "mechanical_module_components",
       "roleType": "consumer_automotive_mechanical_module_supplier",
       "directness": "supplier",
@@ -63,36 +60,19 @@
     },
     "productNarratives": [
       {
-        "name": "外觀光學機構件與機構整合模組",
-        "description": "閎暉把橡膠、塑膠、玻璃、薄膜、光學外觀件、按鍵、電路板、背光與 IC 等材料和零件整合成客戶產品用的機構件與模組，應用在車用內裝、穿戴裝置、智慧鎖、網通與遊戲機等。",
-        "whyItMatters": "許多終端產品不只需要電子功能，也需要耐用、好看、可量產的外觀與操作介面；閎暉的價值在材料、製程與模組整合能力。",
-        "topicFit": "遊戲機、穿戴與消費性電子機構件需求會影響公司訂單。",
-        "businessImpact": "年報揭露汽車零組件與機構整合元件為主要營收來源；業績受車用內裝、穿戴、智慧鎖、網通光學機構零組件與遊戲機產品導入節奏影響。",
-        "sourceLabels": [
-          "閎暉實業 Silitech：Product",
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：閎暉實業 113 年股東會年報"
-        ],
-        "sourceUrls": [
-          "https://www.silitech.com/CH/product.aspx",
-          "https://doc.twse.com.tw/"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
+        "name": "智慧機/平板按鍵模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
-        "name": "車用內裝與智慧裝置機構模組",
-        "description": "閎暉將玻璃、塑膠、薄膜、按鍵、背光與電子零件做成車用內裝、穿戴式產品、智慧鎖、網通光學機構件與遊戲機等應用的模組。",
-        "whyItMatters": "車用座艙、智慧穿戴與 IoT 裝置需要結合外觀、觸控、按鍵、耐用度與量產良率的機構模組，這決定終端產品的人機介面與可靠度。",
-        "topicFit": "穿戴式產品、遊戲機與消費電子機構模組屬消費硬體供應鏈。",
-        "businessImpact": "車用與穿戴模組導入可提高訂單穩定性，但營收仍受終端產品生命週期與大客戶新品節奏影響。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：閎暉實業 113 年股東會年報"
-        ],
-        "sourceUrls": [
-          "https://doc.twse.com.tw/"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
+        "name": "2.5D/3D玻璃蓋板",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "車用中控機構件",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -149,7 +129,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-18"
+      "lastVerified": "2026-06-22"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -179,7 +159,7 @@
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "閎暉供應外觀光學機構件、按鍵、2D/3D 玻璃與機構整合模組，服務車用內裝、穿戴、智慧鎖、遊戲機與消費電子等終端產品。"
+        "roleSummary": "閎暉為手機按鍵與機構件專業供應商，MOPS主業為按鍵及模組產品機構整合元件。5月營收21.3億年增13.7%，但累計年減4.6%，消費電子需求波動影響。"
       }
     ],
     "swot": [
@@ -247,8 +227,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 65,
-    "recommendationState": "watchlist",
+    "totalScore": 75,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -256,8 +236,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
@@ -266,14 +247,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：39.39",
-      "波段多空分水嶺看 MA20：37.69",
-      "追蹤法人是否延續 買超：最近 +81張",
-      "本益比 25.0 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：39.93",
+      "波段多空分水嶺看 MA20：38.01",
+      "追蹤法人是否延續 買超：最近 +738張",
+      "本益比 26.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 42.75 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 32.55：列為轉弱警訊",
+      "收盤跌破 20 日低點 33.60：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

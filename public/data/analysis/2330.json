@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-06-18T12:32:11.092Z",
+  "generatedAt": "2026-06-22T12:32:47.059Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-18",
-  "chipDataDate": "2026-06-18",
+  "marketDataDate": "2026-06-22",
+  "chipDataDate": "2026-06-22",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,31 +18,32 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 55,
-    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.3%。",
+    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 7.0%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 3.3%"
+      "收盤站上 MA20 7.0%"
     ],
     "risks": [],
     "watch": [
-      "接近 20 日高點 2440.00，觀察是否突破"
+      "接近 20 日高點 2510.00，觀察是否突破"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 0,
-    "summary": "台積電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.4萬張；外資近 5 日買超 +1.8萬張。",
+    "summary": "台積電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +7.4千張；外資近 5 日買超 +9.6千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.4萬張",
-      "外資近 5 日買超 +1.8萬張"
+      "三大法人近 5 日合計買超 +7.4千張",
+      "外資近 5 日買超 +9.6千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -4.4萬張",
-      "投信近 5 日賣超 -7.8千張"
+      "近 20 日法人偏賣，合計 -4.6萬張",
+      "投信近 5 日賣超 -4.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-18"
+      "最近法人資料日：2026-06-22",
+      "融券近 5 日增加 427.3%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -55,7 +56,7 @@
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台積電在 CoWoS 先進封裝領域是獨佔龍頭；AI GPU 與 HBM 整合離不開 CoWoS。4 月營收年增 17.5%，先進封裝是成長引擎。",
+      "roleSummary": "台積電在CoWoS先進封裝領域是獨佔龍頭，2025年產能持續擴充。5月營收4170億年增30.1%，累計年增30.0%，先進封裝為AI GPU出貨瓶頸與成長引擎。",
       "supplyChainStage": "advanced_packaging",
       "roleType": "cowos_advanced_packaging_provider",
       "directness": "core",
@@ -63,17 +64,17 @@
     },
     "productNarratives": [
       {
-        "name": "CoWoS",
+        "name": "CoWoS-S 2.5D封裝",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "SoIC",
+        "name": "SoIC 3D堆疊封裝",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "先進封裝平台",
+        "name": "InFO-POP封裝",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -134,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-06-18"
+      "lastVerified": "2026-06-22"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -164,7 +165,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電在 CoWoS 先進封裝領域是獨佔龍頭；AI GPU 與 HBM 整合離不開 CoWoS。4 月營收年增 17.5%，先進封裝是成長引擎。"
+        "roleSummary": "台積電在CoWoS先進封裝領域是獨佔龍頭，2025年產能持續擴充。5月營收4170億年增30.1%，累計年增30.0%，先進封裝為AI GPU出貨瓶頸與成長引擎。"
       },
       {
         "topicId": "wafer-foundry",
@@ -174,7 +175,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電是全球晶圓代工霸主；4 月營收 4,107 億年增 17.5%，累計年增近 30%。N5/N3 先進製程供不應求，N2 預計 2025 量產。"
+        "roleSummary": "台積電是全球晶圓代工霸主，先進製程市佔超過90%。5月營收4170億年增30.1%，累計年增30.0%，N3/N5製程供不應求，N2預計2025量產。"
       },
       {
         "topicId": "ai-server",
@@ -312,7 +313,7 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 10.6 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 11.1 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -327,14 +328,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2376.00",
-      "波段多空分水嶺看 MA20：2334.00",
-      "追蹤法人是否延續 買超：最近 +284張",
+      "短線支撐/壓力先看 MA5：2416.00",
+      "波段多空分水嶺看 MA20：2346.75",
+      "追蹤法人是否延續 買超：最近 +1.6萬張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 32.4 倍，需和同族群估值比較"
+      "本益比 33.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 2440.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 2510.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 2210.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
