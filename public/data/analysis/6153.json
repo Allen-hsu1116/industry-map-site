@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6153",
   "name": "嘉聯益",
-  "generatedAt": "2026-06-22T12:32:47.526Z",
+  "generatedAt": "2026-06-23T12:32:49.999Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-22",
-  "chipDataDate": "2026-06-22",
+  "marketDataDate": "2026-06-23",
+  "chipDataDate": "2026-06-23",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -19,13 +19,13 @@
     ]
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 15,
-    "summary": "嘉聯益 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 16.8%。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "嘉聯益 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 17.1%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 16.8%"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 17.1%"
     ],
     "risks": [],
     "watch": []
@@ -34,17 +34,17 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "嘉聯益 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1.4萬張；近 20 日法人偏賣，合計 -5.1千張。",
+    "summary": "嘉聯益 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -7.7千張；近 20 日法人偏賣，合計 -2.6千張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.4萬張",
-      "近 20 日法人偏賣，合計 -5.1千張",
+      "三大法人近 5 日合計賣超 -7.7千張",
+      "近 20 日法人偏賣，合計 -2.6千張",
       "投信近 5 日賣超 -100張",
-      "外資近 5 日賣超 -1.4萬張"
+      "外資近 5 日賣超 -8千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-22",
-      "融券近 5 日增加 129.5%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-23",
+      "融券近 5 日增加 14.3%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -111,7 +111,7 @@
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
       "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-06-22（fresh）"
+      "知識庫最後驗證：2026-06-23（fresh）"
     ]
   },
   "knowledge": {
@@ -125,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-22"
+      "lastVerified": "2026-06-23"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -207,7 +207,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 54,
+    "totalScore": 60,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -216,8 +216,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -225,15 +226,15 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 14.4%，部位需降速"
+        "message": "距離 MA20 約 14.6%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：24.07",
-      "波段多空分水嶺看 MA20：20.50",
-      "追蹤法人是否延續 賣超：最近 -7.7千張"
+      "短線支撐/壓力先看 MA5：24.04",
+      "波段多空分水嶺看 MA20：20.76",
+      "追蹤法人是否延續 買超：最近 +2.2千張"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 25.80 且量比 > 1.5：列為轉強訊號",
