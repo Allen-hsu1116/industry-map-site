@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2059",
   "name": "川湖",
-  "generatedAt": "2026-06-23T12:32:49.505Z",
+  "generatedAt": "2026-06-24T12:31:37.993Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-23",
-  "chipDataDate": "2026-06-23",
+  "marketDataDate": "2026-06-24",
+  "chipDataDate": "2026-06-24",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,31 +18,28 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "川湖 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 23.4%。",
+    "summary": "川湖 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 21.5%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 23.4%"
+      "收盤站上 MA20 21.5%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 20,
-    "summary": "川湖 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +131張；近 20 日法人偏買，合計 +314張。",
+    "score": 36,
+    "summary": "川湖 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +236張；近 20 日法人偏買，合計 +384張。",
     "signals": [
-      "三大法人近 5 日合計買超 +131張",
-      "近 20 日法人偏買，合計 +314張",
-      "外資近 5 日買超 +173張"
+      "三大法人近 5 日合計買超 +236張",
+      "近 20 日法人偏買，合計 +384張",
+      "投信近 5 日買超 +82張",
+      "外資近 5 日買超 +148張"
     ],
-    "risks": [
-      "投信近 5 日賣超 -31張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-23"
+      "最近法人資料日：2026-06-24"
     ]
   },
   "industry": {
@@ -149,7 +146,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-23"
+      "lastVerified": "2026-06-24"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -247,7 +244,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 58,
+    "totalScore": 61,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -257,8 +254,8 @@
         "月營收 MoM +3.8%，短期動能改善"
       ],
       "risks": [
-        "本益比 65.9 倍，需防估值壓縮",
-        "股價淨值比 22.6 倍偏高，需和 ROE/成長性比對"
+        "本益比 66.2 倍，需防估值壓縮",
+        "股價淨值比 22.7 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -274,17 +271,17 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 19.0%，停損距離過大"
+        "message": "距離 MA20 約 17.7%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：7032.00",
-      "波段多空分水嶺看 MA20：6055.25",
-      "追蹤法人是否延續 買超：最近 +18張",
+      "短線支撐/壓力先看 MA5：7203.00",
+      "波段多空分水嶺看 MA20：6178.75",
+      "追蹤法人是否延續 買超：最近 +126張",
       "月營收年增率 +53.5%，觀察基本面是否支撐估值",
-      "本益比 65.9 倍，需和同族群估值比較"
+      "本益比 66.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 7695.00 且量比 > 1.5：列為轉強訊號",

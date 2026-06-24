@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3035",
   "name": "智原",
-  "generatedAt": "2026-06-23T12:32:49.743Z",
+  "generatedAt": "2026-06-24T12:31:38.345Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-23",
-  "chipDataDate": "2026-06-23",
+  "marketDataDate": "2026-06-24",
+  "chipDataDate": "2026-06-24",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,12 +17,11 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 63,
-    "summary": "智原 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 16.3%。",
+    "score": 45,
+    "summary": "智原 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 14.4%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 16.3%",
-      "帶量上漲，量比 2.59x"
+      "收盤站上 MA20 14.4%"
     ],
     "risks": [],
     "watch": []
@@ -31,16 +30,16 @@
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 36,
-    "summary": "智原 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.1萬張；近 20 日法人偏買，合計 +1.7萬張。",
+    "summary": "智原 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1萬張；近 20 日法人偏買，合計 +1.7萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.1萬張",
+      "三大法人近 5 日合計買超 +1萬張",
       "近 20 日法人偏買，合計 +1.7萬張",
-      "投信近 5 日買超 +248張",
-      "外資近 5 日買超 +1萬張"
+      "投信近 5 日買超 +258張",
+      "外資近 5 日買超 +9.9千張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-06-23"
+      "最近法人資料日：2026-06-24"
     ]
   },
   "industry": {
@@ -132,7 +131,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-23"
+      "lastVerified": "2026-06-24"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -230,7 +229,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
+    "totalScore": 65,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": -40,
@@ -239,7 +238,7 @@
       "risks": [
         "月營收 YoY -43.1%，基本面承壓",
         "月營收 MoM -9.3%，短期動能轉弱",
-        "本益比 123.9 倍，需防估值壓縮"
+        "本益比 122.6 倍，需防估值壓縮"
       ]
     },
     "strategy": {
@@ -254,17 +253,17 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 14.0%，部位需降速"
+        "message": "距離 MA20 約 12.6%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：214.90",
-      "波段多空分水嶺看 MA20：200.40",
-      "追蹤法人是否延續 買超：最近 +1.6千張",
+      "短線支撐/壓力先看 MA5：220.80",
+      "波段多空分水嶺看 MA20：201.53",
+      "追蹤法人是否延續 賣超：最近 -984張",
       "月營收年增率 -43.1%，觀察基本面是否支撐估值",
-      "本益比 123.9 倍，需和同族群估值比較"
+      "本益比 122.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 245.00 且量比 > 1.5：列為轉強訊號",
