@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "4966",
   "name": "譜瑞-KY",
-  "generatedAt": "2026-06-24T12:31:38.627Z",
+  "generatedAt": "2026-06-25T12:31:55.087Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-24",
-  "chipDataDate": "2026-06-24",
+  "marketDataDate": "2026-06-25",
+  "chipDataDate": "2026-06-25",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,32 +18,30 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "譜瑞-KY 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 9.1%。",
+    "summary": "譜瑞-KY 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 8.6%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 9.1%"
+      "收盤跌破 MA20 8.6%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "譜瑞-KY 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +830張；外資近 5 日買超 +302張。",
-    "signals": [
-      "近 20 日法人偏買，合計 +830張",
-      "外資近 5 日買超 +302張"
-    ],
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -36,
+    "summary": "譜瑞-KY 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1千張；近 20 日法人偏賣，合計 -668張。",
+    "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -658張",
-      "投信近 5 日賣超 -980張"
+      "三大法人近 5 日合計賣超 -1千張",
+      "近 20 日法人偏賣，合計 -668張",
+      "投信近 5 日賣超 -953張",
+      "外資近 5 日賣超 -86張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-24",
-      "融券近 5 日增加 46.2%，留意軋空或空方壓力"
+      "最近法人資料日：2026-06-25"
     ]
   },
   "industry": {
@@ -135,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-24"
+      "lastVerified": "2026-06-25"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -233,14 +231,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 48,
+    "totalScore": 45,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 20,
       "label": "基本面中性",
       "signals": [
         "月營收 YoY +8.2%，溫和成長",
-        "本益比 20.5 倍，估值尚可對照成長"
+        "本益比 20.3 倍，估值尚可對照成長"
       ],
       "risks": []
     },
@@ -255,17 +253,17 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 10.0%，部位需降速"
+        "message": "距離 MA20 約 9.4%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：677.60",
-      "波段多空分水嶺看 MA20：730.15",
-      "追蹤法人是否延續 買超：最近 +120張",
+      "短線支撐/壓力先看 MA5：674.20",
+      "波段多空分水嶺看 MA20：719.55",
+      "追蹤法人是否延續 賣超：最近 -237張",
       "月營收年增率 +8.2%，觀察基本面是否支撐估值",
-      "本益比 20.5 倍，需和同族群估值比較"
+      "本益比 20.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 929.00 且量比 > 1.5：列為轉強訊號",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3714",
   "name": "富采",
-  "generatedAt": "2026-06-24T12:31:38.551Z",
+  "generatedAt": "2026-06-25T12:31:55.035Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -81,7 +81,7 @@
     ],
     "watch": [
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（fresh）",
+      "知識庫最後驗證：2026-05-26（normal）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -95,7 +95,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "fresh",
+      "freshness": "normal",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -158,12 +158,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 30 天未更新"
+        "message": "股價資料已 31 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 30 天未更新"
+        "message": "籌碼資料已 31 天未更新"
       },
       {
         "id": "risk.stop-distance",
