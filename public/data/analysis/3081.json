@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3081",
   "name": "聯亞",
-  "generatedAt": "2026-06-25T12:31:54.904Z",
+  "generatedAt": "2026-06-26T12:31:27.461Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-25",
-  "chipDataDate": "2026-06-25",
+  "marketDataDate": "2026-06-26",
+  "chipDataDate": "2026-06-26",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,29 +18,29 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "聯亞 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 12.4%。",
+    "summary": "聯亞 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 14.9%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 12.4%"
+      "收盤跌破 MA20 14.9%"
     ],
     "watch": []
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 0,
-    "summary": "聯亞 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +153張；外資近 5 日買超 +553張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -36,
+    "summary": "聯亞 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +859張；三大法人近 5 日合計賣超 -220張。",
     "signals": [
-      "三大法人近 5 日合計買超 +153張",
-      "外資近 5 日買超 +553張"
+      "外資近 5 日買超 +859張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -1.5千張",
-      "投信近 5 日賣超 -398張"
+      "三大法人近 5 日合計賣超 -220張",
+      "近 20 日法人偏賣，合計 -585張",
+      "投信近 5 日賣超 -1.1千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-25"
+      "最近法人資料日：2026-06-26"
     ]
   },
   "industry": {
@@ -132,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-25"
+      "lastVerified": "2026-06-26"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -230,15 +230,15 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 45,
-    "recommendationState": "watchlist",
+    "totalScore": 22,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": -12,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "本益比 278.6 倍，需防估值壓縮",
-        "股價淨值比 46.3 倍偏高，需和 ROE/成長性比對"
+        "本益比 267.4 倍，需防估值壓縮",
+        "股價淨值比 44.4 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -250,21 +250,21 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 14.2%，部位需降速"
+        "severity": "hard",
+        "message": "距離 MA20 約 17.4%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2275.00",
-      "波段多空分水嶺看 MA20：2420.75",
-      "追蹤法人是否延續 買超：最近 +255張",
-      "本益比 278.6 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：2194.00",
+      "波段多空分水嶺看 MA20：2390.00",
+      "追蹤法人是否延續 買超：最近 +169張",
+      "本益比 267.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 2890.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 2025.00：列為轉弱警訊",
+      "收盤突破 20 日高點 2865.00 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 1985.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
