@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-26T12:31:26.683Z",
+  "generatedAt": "2026-06-29T12:32:16.656Z",
   "status": "partial",
   "source": {
     "name": "TWSE OpenAPI t187ap04_L",
@@ -8,9 +8,59 @@
     "scope": "listed-company-major-news",
     "semantics": "official subject preserved; topic mapping is derived, not official"
   },
-  "latestDate": "2026-06-25",
+  "latestDate": "2026-06-28",
   "itemCount": 80,
   "items": [
+    {
+      "id": "twse-3711-2026-06-28-182714-第20款",
+      "date": "2026-06-28",
+      "announcedAt": "2026-06-28 18:27:14",
+      "companyCode": "3711",
+      "companyName": "日月光投控",
+      "officialSubject": "代子公司USI Enterprise Limited公告董事會決議處分大陸投資事業股權",
+      "clause": "第20款",
+      "derivedTopics": [
+        {
+          "topicId": "advanced-packaging",
+          "topicName": "先進封裝與 CoWoS",
+          "roleLabel": "osat_leader",
+          "confidence": "high",
+          "status": "verified"
+        },
+        {
+          "topicId": "ai-server",
+          "topicName": "AI 伺服器整機與 EMS",
+          "roleLabel": "server_packaging_test",
+          "confidence": "high",
+          "status": "verified"
+        },
+        {
+          "topicId": "silicon-photonics-optical-comm",
+          "topicName": "矽光子、CPO 與高速光通訊",
+          "roleLabel": "optical_packaging_provider",
+          "confidence": "high",
+          "status": "verified"
+        }
+      ],
+      "mappingMethod": "derived_from_company_topic_roles",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
+    {
+      "id": "twse-3708-2026-06-28-070003-第51款",
+      "date": "2026-06-28",
+      "announcedAt": "2026-06-28 07:00:03",
+      "companyCode": "3708",
+      "companyName": "上緯投控",
+      "officialSubject": "公告本公司名稱由「上緯國際投資控股股份有限公司」更名為 「上緯國際控股股份有限公司」，公告期間：115年6月11日至 115年9月10日。",
+      "clause": "第51款",
+      "derivedTopics": [],
+      "mappingMethod": "unmapped_official_event",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
     {
       "id": "twse-2883-2026-06-25-210934-第24款",
       "date": "2026-06-25",
@@ -1315,34 +1365,6 @@
       "companyName": "台亞",
       "officialSubject": "公告本公司115年股東常會決議事項",
       "clause": "第18款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-1517-2026-06-25-155849-第6款",
-      "date": "2026-06-25",
-      "announcedAt": "2026-06-25 15:58:49",
-      "companyCode": "1517",
-      "companyName": "利奇",
-      "officialSubject": "公告本公司董事會決議委任第二屆永續發展委員會委員",
-      "clause": "第6款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-3665-2026-06-25-155753-第11款",
-      "date": "2026-06-25",
-      "announcedAt": "2026-06-25 15:57:53",
-      "companyCode": "3665",
-      "companyName": "貿聯-KY",
-      "officialSubject": "代重要子公司BizLink Technology (Slovakia) s.r.o.公告 以債轉股方式進行增資",
-      "clause": "第11款",
       "derivedTopics": [],
       "mappingMethod": "unmapped_official_event",
       "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
