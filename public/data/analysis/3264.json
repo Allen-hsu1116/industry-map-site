@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-06-29T12:32:17.205Z",
+  "generatedAt": "2026-06-30T12:33:07.731Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-29",
-  "chipDataDate": "2026-06-29",
+  "marketDataDate": "2026-06-30",
+  "chipDataDate": "2026-06-30",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "C",
@@ -22,36 +22,34 @@
     ]
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -15,
-    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 3.7%。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
-    ],
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -30,
+    "summary": "欣銓 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
+    "signals": [],
     "risks": [
-      "收盤跌破 MA20 3.7%"
+      "收盤價、MA5、MA20 呈空頭排列"
     ],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": 5,
-    "summary": "欣銓 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.5千張；外資近 5 日買超 +3.5千張。",
+    "score": -11,
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.1萬張；外資近 5 日買超 +2.1千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.5千張",
-      "外資近 5 日買超 +3.5千張",
-      "融資近 5 日下降 19.2%，籌碼壓力下降"
+      "近 20 日法人偏買，合計 +1.1萬張",
+      "外資近 5 日買超 +2.1千張",
+      "融資近 5 日下降 5.5%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -3.3千張",
-      "投信近 5 日賣超 -1.7千張"
+      "三大法人近 5 日合計賣超 -1.2千張",
+      "投信近 5 日賣超 -3.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-29"
+      "最近法人資料日：2026-06-30"
     ]
   },
   "industry": {
@@ -81,7 +79,7 @@
     ],
     "watch": [
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-06-29（fresh）",
+      "知識庫最後驗證：2026-06-30（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -96,7 +94,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-29"
+      "lastVerified": "2026-06-30"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -134,7 +132,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 31,
+    "totalScore": 25,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -156,10 +154,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：225.20",
-      "波段多空分水嶺看 MA20：223.68",
-      "追蹤法人是否延續 買超：最近 +35張",
-      "本益比 33.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：222.90",
+      "波段多空分水嶺看 MA20：223.63",
+      "追蹤法人是否延續 買超：最近 +625張",
+      "本益比 34.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 251.50 且量比 > 1.5：列為轉強訊號",

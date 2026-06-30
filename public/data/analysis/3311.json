@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3311",
   "name": "閎暉",
-  "generatedAt": "2026-06-29T12:32:17.214Z",
+  "generatedAt": "2026-06-30T12:33:07.740Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-06-29",
-  "chipDataDate": "2026-06-29",
+  "marketDataDate": "2026-06-30",
+  "chipDataDate": "2026-06-30",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "閎暉 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 6.1%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 6.1%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "閎暉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
+      "股價貼近 MA20，留意方向選擇",
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": -3,
-    "summary": "閎暉 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +894張；融資近 5 日下降 9.4%，籌碼壓力下降。",
+    "score": -8,
+    "summary": "閎暉 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +890張；三大法人近 5 日合計賣超 -59張。",
     "signals": [
-      "近 20 日法人偏買，合計 +894張",
-      "融資近 5 日下降 9.4%，籌碼壓力下降"
+      "近 20 日法人偏買，合計 +890張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -227張",
-      "外資近 5 日賣超 -228張"
+      "三大法人近 5 日合計賣超 -59張",
+      "外資近 5 日賣超 -57張"
     ],
     "watch": [
-      "最近法人資料日：2026-06-29"
+      "最近法人資料日：2026-06-30"
     ]
   },
   "industry": {
@@ -132,7 +131,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-06-29"
+      "lastVerified": "2026-06-30"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -230,7 +229,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 49,
+    "totalScore": 58,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -248,10 +247,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：37.74",
-      "波段多空分水嶺看 MA20：38.62",
-      "追蹤法人是否延續 賣超：最近 -174張",
-      "本益比 23.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：37.45",
+      "波段多空分水嶺看 MA20：38.72",
+      "追蹤法人是否延續 買超：最近 +141張",
+      "本益比 24.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 42.75 且量比 > 1.5：列為轉強訊號",
