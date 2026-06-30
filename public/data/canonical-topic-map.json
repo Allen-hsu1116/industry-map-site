@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-28T00:00:00.000Z",
+  "generatedAt": "2026-06-08T00:00:00.000Z",
   "source": "canonical-topics+company-topic-roles",
   "stats": {
-    "total_topics": 23,
-    "unique_companies": 33,
-    "total_companies": 63
+    "total_topics": 28,
+    "unique_companies": 83,
+    "total_companies": 131
   },
   "topics": [
     {
       "slug": "ai-server",
       "name": "主題趨勢｜AI 伺服器整機與 EMS",
       "description": "以雲端與企業 AI 訓練/推論需求驅動的伺服器整機、ODM/OEM、EMS/SMT 與系統整合供應鏈。 AI 資本支出會直接推升整機出貨、組裝價值量、主板/系統整合與供應鏈議價能力，是 Daily Analysis 的核心高權重題材。",
-      "total": 11,
+      "total": 23,
       "groups": [
         {
           "name": "散熱與機構",
@@ -21,18 +21,20 @@
             {
               "code": "3017",
               "name": "奇鋐",
-              "role": "奇鋐在 AI 伺服器題材中的核心不是設計 GPU 或組裝整機，而是提供高功耗伺服器需要的散熱模組與熱管理能力；目前以官方整體散熱定位與年報營運範圍建立中等信心，液冷營收占比仍需後續法說或產品頁補證。",
+              "role": "奇鋐是全球前三大伺服器散熱模組供應商，AI伺服器高功耗推動VC均熱板需求爆發。5月營收158.7億年增60.6%，累計年增90.3%，客戶需求增加為主要成長動能。",
               "relevance": "高",
-              "analysis": "直接賦能角色；奇鋐在 AI 伺服器題材中的核心不是設計 GPU 或組裝整機，而是提供高功耗伺服器需要的散熱模組與熱管理能力；目前以官方整體散熱定位與年報營運範圍建立中等信心，液冷營收占比仍需後續法說或產品頁補證。",
+              "analysis": "直接賦能角色；奇鋐是全球前三大伺服器散熱模組供應商，AI伺服器高功耗推動VC均熱板需求爆發。5月營收158.7億年增60.6%，累計年增90.3%，客戶需求增加為主要成長動能。",
               "products": [
-                "整體散熱解決方案",
-                "散熱模組",
-                "液冷散熱方案",
-                "電子零件與電腦週邊設備製造"
+                "伺服器散熱模組(VC均熱板)",
+                "CPU/GPU散熱器",
+                "伺服器機殼與導風罩",
+                "液冷冷板(Cold Plate)"
               ],
               "customers": [
-                "客戶 A / C / B：年報揭露單一客戶收入占比較高，但未揭露名稱",
-                "AI 伺服器與高功耗電子設備供應鏈：需以法說或客戶公告補強"
+                "Dell(伺服器散熱)",
+                "HPE(伺服器散熱)",
+                "Supermicro(散熱模組)",
+                "廣達(2382)(AI伺服器散熱)"
               ],
               "tech_focus": [
                 "ai_server_thermal_solution_provider",
@@ -73,15 +75,18 @@
             {
               "code": "2368",
               "name": "金像電",
-              "role": "金像電不是 AI 伺服器整機 ODM，而是 AI 伺服器 PCB 供應鏈角色；Daily Analysis 應追蹤伺服器 PCB 訂單、材料成本與產能利用率。",
+              "role": "金像電在 AI 伺服器 PCB 題材中是高層數板核心供應商；4 月營收年增 58.4%，受惠 AI 伺服器高階 PCB 訂單爆量。",
               "relevance": "中",
-              "analysis": "供應商角色；金像電不是 AI 伺服器整機 ODM，而是 AI 伺服器 PCB 供應鏈角色；Daily Analysis 應追蹤伺服器 PCB 訂單、材料成本與產能利用率。",
+              "analysis": "供應商角色；金像電在 AI 伺服器 PCB 題材中是高層數板核心供應商；4 月營收年增 58.4%，受惠 AI 伺服器高階 PCB 訂單爆量。",
               "products": [
                 "AI 伺服器 PCB",
                 "高階伺服器主板"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "廣達",
+                "鴻海",
+                "緯創",
+                "技嘉"
               ],
               "tech_focus": [
                 "ai_server_pcb_supplier",
@@ -97,19 +102,300 @@
             {
               "code": "2383",
               "name": "台光電",
-              "role": "台光電不是 AI server 整機供應商，而是高速 PCB/CCL 上游材料供應鏈；AI 伺服器升級會透過板材規格與用量傳導。",
+              "role": "台光電是 AI 伺服器 CCL 最核心供應商；極低損耗基板是 AI PCB 關鍵材料。4 月營收年增 93.6%，備註「受惠於AI伺服器成長力道」。",
               "relevance": "中",
-              "analysis": "供應商角色；台光電不是 AI server 整機供應商，而是高速 PCB/CCL 上游材料供應鏈；AI 伺服器升級會透過板材規格與用量傳導。",
+              "analysis": "供應商角色；台光電是 AI 伺服器 CCL 最核心供應商；極低損耗基板是 AI PCB 關鍵材料。4 月營收年增 93.6%，備註「受惠於AI伺服器成長力道」。",
               "products": [
                 "AI 伺服器 CCL",
                 "高速低損耗基板材料"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "欣興(3037)",
+                "南電(8046)",
+                "景碩(3189)"
               ],
               "tech_focus": [
                 "ai_server_ccl_supplier",
                 "substrate_materials"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upstream_petrochemical_materials",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2301",
+              "name": "光寶科",
+              "role": "光寶科是全球前三大電源供應器廠，AI伺服器電源(800W+)為新成長引擎，配合Dell/HP/Microsoft等客戶。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；光寶科是全球前三大電源供應器廠，AI伺服器電源(800W+)為新成長引擎，配合Dell/HP/Microsoft等客戶。",
+              "products": [
+                "電源供應器(SPS/Server PSU)",
+                "LED照明模組",
+                "車用電子(ADAS/車用鏡頭)",
+                "多功能事務機(MFP)",
+                "光耦合器"
+              ],
+              "customers": [
+                "Dell",
+                "HP",
+                "Microsoft",
+                "Cisco",
+                "Toyota"
+              ],
+              "tech_focus": [
+                "server_psu_maker",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2345",
+              "name": "智邦",
+              "role": "智邦是AI資料中心網路交換器核心供應商，Microsoft/Google/MMeta為主要客戶。4月營收27.4億年增53.9%，累計年增61%，AI資料中心葉脊交換器為成長引擎。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；智邦是AI資料中心網路交換器核心供應商，Microsoft/Google/MMeta為主要客戶。4月營收27.4億年增53.9%，累計年增61%，AI資料中心葉脊交換器為成長引擎。",
+              "products": [
+                "100G/400G乙太網路交換器",
+                "Wi-Fi 6/7企業AP",
+                "5G小基站(Small Cell)",
+                "資料中心葉脊交換器",
+                "SD-WAN企業路由器"
+              ],
+              "customers": [
+                "Microsoft(Azure)",
+                "Google(GCP)",
+                "Meta",
+                "Amazon(AWS)",
+                "NVIDIA(Mellanox生態)"
+              ],
+              "tech_focus": [
+                "data_center_switch_maker",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2379",
+              "name": "瑞昱",
+              "role": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。4月營收127億年增11.3%，10G/5G PHY與WiFi 7是成長動能。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。4月營收127億年增11.3%，10G/5G PHY與WiFi 7是成長動能。",
+              "products": [
+                "乙太網路PHY晶片(1G/2.5G/5G/10G)",
+                "Wi-Fi 6/7晶片",
+                "USB PD控製器",
+                "音訊编解碼器(Codec)",
+                "車用乙太網路晶片"
+              ],
+              "customers": [
+                "智邦(2345)",
+                "Dell",
+                "HP",
+                "Lenovo",
+                "ASUS"
+              ],
+              "tech_focus": [
+                "ethernet_phy_chip_maker",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "1605",
+              "name": "華新",
+              "role": "華新提供AI資料中心配電所需的高壓電纜與銅匯流排。5月營收174.6億年增11.1%，但累計年減5.4%，鋼鐵與電纜受景氣循環影響。",
+              "relevance": "中",
+              "analysis": "供應商角色；華新提供AI資料中心配電所需的高壓電纜與銅匯流排。5月營收174.6億年增11.1%，但累計年減5.4%，鋼鐵與電纜受景氣循環影響。",
+              "products": [
+                "161kV超高壓電力電纜",
+                "銅匯流排(Copper Busbar)",
+                "不鏽鋼線材(316L)",
+                "鎳基合金線材(Inconel 625)"
+              ],
+              "customers": [
+                "台電(變電站配電)",
+                "台積電(廠房配電)",
+                "Google(資料中心配電)",
+                "Microsoft(資料中心配電)",
+                "風場開發商(沃旭/CIP)"
+              ],
+              "tech_focus": [
+                "power_cable_supplier",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2324",
+              "name": "仁寶",
+              "role": "仁寶為全球前四大NB ODM，跨入AI伺服器ODM。5月營收704.6億年增22.3%，累計年增7.7%，伺服器為新成長動能。",
+              "relevance": "中",
+              "analysis": "供應商角色；仁寶為全球前四大NB ODM，跨入AI伺服器ODM。5月營收704.6億年增22.3%，累計年增7.7%，伺服器為新成長動能。",
+              "products": [
+                "AI伺服器機架組裝(ODM)",
+                "GPU伺服器基板",
+                "邊緣運算伺服器",
+                "雲端伺服器機殼"
+              ],
+              "customers": [
+                "Dell(伺服器ODM)",
+                "HP(伺服器ODM)",
+                "Lenovo(伺服器ODM)",
+                "Google(雲端伺服器)",
+                "Meta(伺服器ODM)"
+              ],
+              "tech_focus": [
+                "server_odm",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2385",
+              "name": "群光",
+              "role": "群光提供伺服器電源(2kW+)，同時是全球NB鍵盤龍頭。AI伺服器電源為新成長動能。",
+              "relevance": "中",
+              "analysis": "供應商角色；群光提供伺服器電源(2kW+)，同時是全球NB鍵盤龍頭。AI伺服器電源為新成長動能。",
+              "products": [
+                "NB鍵盤(全球第一)",
+                "電源供應器(Adapter/充電器)",
+                "PC Camera/Webcam",
+                "伺服器電源(2kW+)",
+                "車用鏡頭模組"
+              ],
+              "customers": [
+                "Apple",
+                "Dell",
+                "HP",
+                "Lenovo",
+                "ASUS"
+              ],
+              "tech_focus": [
+                "server_psu_keyboard_supplier",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2352",
+              "name": "佳世達",
+              "role": "佳世達以商用顯示器與投影機為主，4月營收168億年減1.8%。AI伺服器相關性低，但其智慧零售方案有企業AI應用場景。",
+              "relevance": "低",
+              "analysis": "間接受惠；佳世達以商用顯示器與投影機為主，4月營收168億年減1.8%。AI伺服器相關性低，但其智慧零售方案有企業AI應用場景。",
+              "products": [
+                "LCD監視器",
+                "商務/教育投影機",
+                "醫療器材(超音波/內視鏡)",
+                "智慧零售解決方案",
+                "車載顯示器"
+              ],
+              "customers": [
+                "Dell",
+                "HP",
+                "醫療院所(長庚/三總)",
+                "連鎖零售商",
+                "車廠Tier 1"
+              ],
+              "tech_focus": [
+                "display_peripheral_supplier",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2353",
+              "name": "宏碁",
+              "role": "宏碁以AI PC/NB為主，4月營收313億年增68%受惠ASP提升與記憶體漲價提前拉貨。Altos伺服器品牌規模小但存在。",
+              "relevance": "低",
+              "analysis": "間接受惠；宏碁以AI PC/NB為主，4月營收313億年增68%受惠ASP提升與記憶體漲價提前拉貨。Altos伺服器品牌規模小但存在。",
+              "products": [
+                "筆記型電腦(NB/AI PC)",
+                "電競PC/螢幕(Predator)",
+                "Chromebook",
+                "顯示器(Monitor)",
+                "AI伺服器(Altos)"
+              ],
+              "customers": [
+                "消費者(DTC)",
+                "企業客戶",
+                "教育機構",
+                "電競玩家",
+                "中小企業"
+              ],
+              "tech_focus": [
+                "ai_pc_brand",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2357",
+              "name": "華碩",
+              "role": "華碩是GPU顯示卡與AI PC設計大廠，4月營收819億年增45.7%。AI PC與電競ROG筆電帶動成長，也佈局GPU伺服器。",
+              "relevance": "低",
+              "analysis": "間接受惠；華碩是GPU顯示卡與AI PC設計大廠，4月營收819億年增45.7%。AI PC與電競ROG筆電帶動成長，也佈局GPU伺服器。",
+              "products": [
+                "主機板(Motherboard)",
+                "電競筆電(ROG)",
+                "顯示卡(GPU)",
+                "AI PC筆電",
+                "迷你PC/NUC"
+              ],
+              "customers": [
+                "消費者(DTC電競)",
+                "系統整合商",
+                "DIY玩家",
+                "電競賽事合作夥伴",
+                "企業客戶"
+              ],
+              "tech_focus": [
+                "ai_pc_gpu_system_maker",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2388",
+              "name": "威盛",
+              "role": "威盛以AI邊緣運算晶片為主，非資料中心AI伺服器供應鏈成員。重點在車用/智慧城市邊緣AI推論。",
+              "relevance": "低",
+              "analysis": "間接受惠；威盛以AI邊緣運算晶片為主，非資料中心AI伺服器供應鏈成員。重點在車用/智慧城市邊緣AI推論。",
+              "products": [
+                "x86處理器(VMC/Centaur)",
+                "AI邊緣運算晶片",
+                "車用晶片(車載資訊系統)",
+                "智慧城市AI解決方案",
+                "嵌入式平台"
+              ],
+              "customers": [
+                "車廠(Tier 1)",
+                "智慧城市專案",
+                "工業電腦廠",
+                "嵌入式系統整合商",
+                "亞太政府專案"
+              ],
+              "tech_focus": [
+                "edge_ai_chipmaker",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2409",
+              "name": "友達",
+              "role": "友達以面板為主，4月營收221億年減4.5%。AI伺服器相關性低，但AI PC/監視器面板需求可能間接受惠。主力在車用顯示器與LTPS手機面板。",
+              "relevance": "低",
+              "analysis": "間接受惠；友達以面板為主，4月營收221億年減4.5%。AI伺服器相關性低，但AI PC/監視器面板需求可能間接受惠。主力在車用顯示器與LTPS手機面板。",
+              "products": [
+                "LTPS高解析手機面板",
+                "AMOLED手機面板(6代線)",
+                "車用顯示器(儀表/中控)",
+                "8K4K大尺寸電視面板",
+                "Micro LED顯示技術"
+              ],
+              "customers": [
+                "Apple",
+                "Samsung",
+                "Tesla",
+                "BMW",
+                "Sony"
+              ],
+              "tech_focus": [
+                "display_panel_supplier",
+                "upstream_petrochemical_materials"
               ]
             }
           ]
@@ -121,16 +407,20 @@
             {
               "code": "2317",
               "name": "鴻海",
-              "role": "鴻海在 AI 伺服器題材中屬於整機組裝、EMS 與系統整合核心角色；需追蹤 AI server 出貨、雲端客戶資本支出與產品組合。",
+              "role": "鴻海在 AI 伺服器 ODM 題材中是全球最大出貨商；4 月營收 8,321 億年增 29.7%，AI 伺服器占比持續拉升。NVIDIA GB200 機櫃為旗艦產品。",
               "relevance": "高",
-              "analysis": "核心產品/平台；鴻海在 AI 伺服器題材中屬於整機組裝、EMS 與系統整合核心角色；需追蹤 AI server 出貨、雲端客戶資本支出與產品組合。",
+              "analysis": "核心產品/平台；鴻海在 AI 伺服器 ODM 題材中是全球最大出貨商；4 月營收 8,321 億年增 29.7%，AI 伺服器占比持續拉升。NVIDIA GB200 機櫃為旗艦產品。",
               "products": [
                 "AI 伺服器整機組裝",
                 "EMS/SMT 電子代工",
                 "伺服器系統整合"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA",
+                "Google",
+                "AWS",
+                "Microsoft",
+                "Oracle"
               ],
               "tech_focus": [
                 "ai_server_ems_odm",
@@ -140,16 +430,19 @@
             {
               "code": "2356",
               "name": "英業達",
-              "role": "英業達在 AI 伺服器題材中是伺服器/筆電 ODM 供應鏈角色；需追蹤伺服器產品組合、客戶拉貨與毛利改善。",
+              "role": "英業達是 AI 伺服器 ODM 要角；4 月營收 85 億年增 36.5%，累計年增 30%。NVIDIA AI 伺服器為主要成長動能。",
               "relevance": "高",
-              "analysis": "核心產品/平台；英業達在 AI 伺服器題材中是伺服器/筆電 ODM 供應鏈角色；需追蹤伺服器產品組合、客戶拉貨與毛利改善。",
+              "analysis": "核心產品/平台；英業達是 AI 伺服器 ODM 要角；4 月營收 85 億年增 36.5%，累計年增 30%。NVIDIA AI 伺服器為主要成長動能。",
               "products": [
-                "AI 伺服器 ODM",
-                "伺服器製造",
-                "筆電 ODM"
+                "AI 訓練伺服器（OCP/IGX 架構）",
+                "GPU 伺服器整機",
+                "AI 推論伺服器"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA",
+                "Google",
+                "Meta",
+                "Microsoft"
               ],
               "tech_focus": [
                 "server_notebook_odm",
@@ -159,34 +452,20 @@
             {
               "code": "2382",
               "name": "廣達",
-              "role": "廣達的 AI 伺服器角色是整機/系統 ODM，不是 GPU 或關鍵半導體製造；Daily Analysis 應追蹤伺服器營收、雲端需求與客戶拉貨週期。",
+              "role": "廣達是全球最大 AI 伺服器 ODM；4 月營收 340 億年增 120.7%，累計年增 79.6%。備註「產品組合變更」反映 AI 伺服器占比急升。",
               "relevance": "高",
-              "analysis": "核心產品/平台；廣達的 AI 伺服器角色是整機/系統 ODM，不是 GPU 或關鍵半導體製造；Daily Analysis 應追蹤伺服器營收、雲端需求與客戶拉貨週期。",
+              "analysis": "核心產品/平台；廣達是全球最大 AI 伺服器 ODM；4 月營收 340 億年增 120.7%，累計年增 79.6%。備註「產品組合變更」反映 AI 伺服器占比急升。",
               "products": [
-                "雲端伺服器",
-                "AI server system integration"
+                "AI GPU 伺服器 ODM（GB200/NVL36）",
+                "大型機櫃式 AI 叢集",
+                "雲端資料中心伺服器"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
-              ],
-              "tech_focus": [
-                "cloud_server_odm",
-                "system_assembly"
-              ]
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "role": "廣達在 AI 伺服器題材中是雲端伺服器 ODM 核心角色；受惠邏輯主要來自 CSP AI 伺服器平台出貨、ASP 提升與產品組合變化。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；廣達在 AI 伺服器題材中是雲端伺服器 ODM 核心角色；受惠邏輯主要來自 CSP AI 伺服器平台出貨、ASP 提升與產品組合變化。",
-              "products": [
-                "AI 伺服器 ODM",
-                "雲端伺服器",
-                "資料中心系統"
-              ],
-              "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Google",
+                "AWS",
+                "Microsoft",
+                "Meta",
+                "NVIDIA"
               ],
               "tech_focus": [
                 "ai_server_odm",
@@ -194,18 +473,44 @@
               ]
             },
             {
-              "code": "3231",
-              "name": "緯創",
-              "role": "緯創在 AI 伺服器題材中屬 ODM/EMS 製造與系統整合角色；受惠需以 AI server 出貨、產品組合與客戶訂單能見度驗證。",
+              "code": "2382",
+              "name": "廣達",
+              "role": "廣達在 AI 伺服器題材中是 NVIDIA 最重要的 ODM 夥伴；4 月營收年增 120.7%，AI 伺服器已成營收主力。",
               "relevance": "高",
-              "analysis": "核心產品/平台；緯創在 AI 伺服器題材中屬 ODM/EMS 製造與系統整合角色；受惠需以 AI server 出貨、產品組合與客戶訂單能見度驗證。",
+              "analysis": "核心產品/平台；廣達在 AI 伺服器題材中是 NVIDIA 最重要的 ODM 夥伴；4 月營收年增 120.7%，AI 伺服器已成營收主力。",
               "products": [
-                "AI 伺服器 ODM",
-                "伺服器系統組裝",
-                "EMS 製造服務"
+                "NVIDIA GB200/NVL72 伺服器",
+                "自研 OAM/UBB AI 加速器模組",
+                "AI 推論伺服器"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Google",
+                "AWS",
+                "Meta",
+                "Microsoft"
+              ],
+              "tech_focus": [
+                "cloud_server_odm",
+                "system_assembly"
+              ]
+            },
+            {
+              "code": "3231",
+              "name": "緯創",
+              "role": "緯創是 AI 伺服器 ODM 三大之一；4 月營收 283 億年增 112%，累計年增 135.3%。AI 伺服器帶動營收暴增。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；緯創是 AI 伺服器 ODM 三大之一；4 月營收 283 億年增 112%，累計年增 135.3%。AI 伺服器帶動營收暴增。",
+              "products": [
+                "AI GPU 伺服器 ODM",
+                "CSP 客製化 AI 叢集",
+                "AI 推論伺服器"
+              ],
+              "customers": [
+                "NVIDIA",
+                "Google",
+                "AWS",
+                "Meta",
+                "Microsoft"
               ],
               "tech_focus": [
                 "ai_server_odm",
@@ -215,16 +520,20 @@
             {
               "code": "6669",
               "name": "緯穎",
-              "role": "緯穎在 AI 伺服器題材中是雲端資料中心與 CSP 伺服器 ODM 核心角色；重點追蹤 AI server 出貨、CSP capex 與客戶集中風險。",
+              "role": "緯穎是緯創子公司，專攻高階 AI 伺服器 ODM；4 月營收 83 億年增 29.7%，累計年增 53.2%。備註「主要係客戶需求強勁」。",
               "relevance": "高",
-              "analysis": "核心產品/平台；緯穎在 AI 伺服器題材中是雲端資料中心與 CSP 伺服器 ODM 核心角色；重點追蹤 AI server 出貨、CSP capex 與客戶集中風險。",
+              "analysis": "核心產品/平台；緯穎是緯創子公司，專攻高階 AI 伺服器 ODM；4 月營收 83 億年增 29.7%，累計年增 53.2%。備註「主要係客戶需求強勁」。",
               "products": [
                 "CSP AI 伺服器",
                 "雲端資料中心伺服器",
                 "系統整合與 ODM"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA",
+                "Google",
+                "AWS",
+                "Meta",
+                "Microsoft"
               ],
               "tech_focus": [
                 "csp_ai_server_odm",
@@ -240,16 +549,19 @@
             {
               "code": "2317",
               "name": "鴻海",
-              "role": "鴻海在 EMS/SMT 題材中是大型電子代工平台，AI 伺服器、手機與消費電子需求會透過組裝量與產品組合傳導。",
+              "role": "鴻海是全球最大 EMS 代工廠；連接器/線纜組件/機構件一條龍製造，4 月營收年增 29.7%。客戶涵蓋 Apple、NVIDIA 等一線品牌。",
               "relevance": "高",
-              "analysis": "核心產品/平台；鴻海在 EMS/SMT 題材中是大型電子代工平台，AI 伺服器、手機與消費電子需求會透過組裝量與產品組合傳導。",
+              "analysis": "核心產品/平台；鴻海是全球最大 EMS 代工廠；連接器/線纜組件/機構件一條龍製造，4 月營收年增 29.7%。客戶涵蓋 Apple、NVIDIA 等一線品牌。",
               "products": [
                 "EMS電子代工",
                 "SMT組裝",
                 "伺服器與終端產品製造"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Apple",
+                "NVIDIA",
+                "Cisco",
+                "Dell"
               ],
               "tech_focus": [
                 "global_ems_provider",
@@ -259,15 +571,18 @@
             {
               "code": "2356",
               "name": "英業達",
-              "role": "英業達在 EMS/ODM 製造中提供伺服器與筆電代工，題材傳導需要用產品組合與營收資料驗證。",
+              "role": "英業達是二線 EMS 大廠；NB 與伺服器並重，AI 伺服器帶動營收跳升。4 月營收年增 36.5%。",
               "relevance": "高",
-              "analysis": "核心產品/平台；英業達在 EMS/ODM 製造中提供伺服器與筆電代工，題材傳導需要用產品組合與營收資料驗證。",
+              "analysis": "核心產品/平台；英業達是二線 EMS 大廠；NB 與伺服器並重，AI 伺服器帶動營收跳升。4 月營收年增 36.5%。",
               "products": [
                 "伺服器 EMS",
                 "筆電 EMS/ODM"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Dell",
+                "HP",
+                "Lenovo",
+                "NVIDIA"
               ],
               "tech_focus": [
                 "server_notebook_ems",
@@ -277,19 +592,51 @@
             {
               "code": "3231",
               "name": "緯創",
-              "role": "緯創具大型 EMS/ODM 製造基礎，AI server 與終端產品需求會透過產能利用率、產品組合與客戶拉貨反映。",
+              "role": "緯創是全球 NB ODM 三大之一；EMS 代工營收穩定，AI 伺服器是最強成長引擎。4 月整體營收年增 112%。",
               "relevance": "高",
-              "analysis": "核心產品/平台；緯創具大型 EMS/ODM 製造基礎，AI server 與終端產品需求會透過產能利用率、產品組合與客戶拉貨反映。",
+              "analysis": "核心產品/平台；緯創是全球 NB ODM 三大之一；EMS 代工營收穩定，AI 伺服器是最強成長引擎。4 月整體營收年增 112%。",
               "products": [
                 "EMS電子代工",
                 "伺服器/筆電製造"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Dell",
+                "HP",
+                "Lenovo",
+                "Acer",
+                "NVIDIA"
               ],
               "tech_focus": [
                 "ems_manufacturing_provider",
                 "ems"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "server_odm",
+          "level": "downstream",
+          "companies": [
+            {
+              "code": "3711",
+              "name": "日月光投控",
+              "role": "日月光為 AI 伺服器晶片提供封裝測試服務；AI GPU/ASIC 封測需求帶動高階測試產能擴充。",
+              "relevance": "低",
+              "analysis": "間接受惠；日月光為 AI 伺服器晶片提供封裝測試服務；AI GPU/ASIC 封測需求帶動高階測試產能擴充。",
+              "products": [
+                "AI GPU 封裝測試",
+                "伺服器 ASIC 封裝",
+                "高速訊號測試"
+              ],
+              "customers": [
+                "NVIDIA",
+                "AMD",
+                "Broadcom",
+                "Marvell"
+              ],
+              "tech_focus": [
+                "server_packaging_test",
+                "server_odm"
               ]
             }
           ]
@@ -301,16 +648,19 @@
             {
               "code": "2376",
               "name": "技嘉",
-              "role": "技嘉在 AI 伺服器題材中具伺服器、主機板與系統品牌角色；受惠需追蹤伺服器平台出貨、液冷解決方案與通路需求。",
+              "role": "技嘉從主機板/顯卡跨入 AI 伺服器市場表現亮眼；4 月營收 52 億年增 73.7%，累計年增 64.2%。備註「AI訂單需求暢旺」。",
               "relevance": "高",
-              "analysis": "核心產品/平台；技嘉在 AI 伺服器題材中具伺服器、主機板與系統品牌角色；受惠需追蹤伺服器平台出貨、液冷解決方案與通路需求。",
+              "analysis": "核心產品/平台；技嘉從主機板/顯卡跨入 AI 伺服器市場表現亮眼；4 月營收 52 億年增 73.7%，累計年增 64.2%。備註「AI訂單需求暢旺」。",
               "products": [
-                "AI 伺服器",
-                "伺服器主機板",
-                "GPU server platforms"
+                "GPU 伺服器（4U/8U AI 推論）",
+                "AI 訓練伺服器",
+                "邊緣 AI 運算伺服器"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA",
+                "Google",
+                "AWS",
+                "Microsoft Azure"
               ],
               "tech_focus": [
                 "ai_server_platform_brand",
@@ -326,19 +676,403 @@
             {
               "code": "2330",
               "name": "台積電",
-              "role": "台積電透過 AI GPU/ASIC 晶圓代工與先進封裝賦能 AI 伺服器供應鏈，但不是伺服器整機 ODM；Daily Analysis 應把它歸為上游核心賦能。",
+              "role": "台積電是 AI 伺服器上游核心賦能者；NVIDIA/AMD AI GPU 皆由台積電代工+封裝。4 月營收年增 17.5%，累計年增近 30%。",
               "relevance": "高",
-              "analysis": "直接賦能角色；台積電透過 AI GPU/ASIC 晶圓代工與先進封裝賦能 AI 伺服器供應鏈，但不是伺服器整機 ODM；Daily Analysis 應把它歸為上游核心賦能。",
+              "analysis": "直接賦能角色；台積電是 AI 伺服器上游核心賦能者；NVIDIA/AMD AI GPU 皆由台積電代工+封裝。4 月營收年增 17.5%，累計年增近 30%。",
               "products": [
-                "AI/HPC 晶片晶圓代工",
-                "先進封裝"
+                "AI/HPC GPU 晶圓代工（N5/N3/N2）",
+                "CoWoS 先進封裝（AI 加速器整合）"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA",
+                "AMD",
+                "Broadcom",
+                "Marvell"
               ],
               "tech_focus": [
                 "ai_accelerator_foundry_enabler",
                 "semiconductor"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "defense-aerospace",
+      "name": "主題趨勢｜軍工、航太與無人機",
+      "description": "國防自主、航空航太、無人機、造船、軍用通訊、光電系統與特殊材料供應鏈。 地緣政治、國防預算與國機國造/國艦國造政策會帶動長約訂單與本土供應鏈機會，但需區分實際產品與概念跟漲。",
+      "total": 16,
+      "groups": [
+        {
+          "name": "aerospace_components",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2643",
+              "name": "捷迅",
+              "role": "捷迅是專精航空/國防物流的整合型物流服務商，資本額3.5億，軍規通關與保稅倉儲能量。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；捷迅是專精航空/國防物流的整合型物流服務商，資本額3.5億，軍規通關與保稅倉儲能量。",
+              "products": [
+                "航空零組件進出口報關與物流運輸",
+                "國防物資倉儲管理與配送",
+                "軍規設備整合型物流服務"
+              ],
+              "customers": [
+                "國防部（軍品物流運輸標案）",
+                "漢翔（航空零組件進出口報關）",
+                "中科院（國防物資倉儲）"
+              ],
+              "tech_focus": [
+                "defense_logistics_services",
+                "aerospace_components"
+              ]
+            },
+            {
+              "code": "3163",
+              "name": "波若威",
+              "role": "波若威是竹科光通訊專業廠，DWDM 核心技術自有，軍規光通訊與衛星光鏈路潛在應用。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；波若威是竹科光通訊專業廠，DWDM 核心技術自有，軍規光通訊與衛星光鏈路潛在應用。",
+              "products": [
+                "高密度波分多工器/解多工器（DWDM MUX/DEMUX）",
+                "全光纖式波長存取多工器（FWADM）",
+                "光機電主動/被動元件與模組",
+                "光纖通訊次系統"
+              ],
+              "customers": [
+                "光通訊設備商（Ciena、Cisco、Nokia）",
+                "國防通訊系統整合商",
+                "衛星光通訊模組客戶"
+              ],
+              "tech_focus": [
+                "optical_comm_components_defense",
+                "aerospace_components"
+              ]
+            },
+            {
+              "code": "3237",
+              "name": "汎銓",
+              "role": "汎銓是台灣少數 TEM/FIB 專業材料分析實驗室，半導體+國防+航太跨領域檢測服務。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；汎銓是台灣少數 TEM/FIB 專業材料分析實驗室，半導體+國防+航太跨領域檢測服務。",
+              "products": [
+                "TEM 穿透式電子顯微鏡試片製備與分析",
+                "FIB 聚焦離子束截面分析",
+                "半導體故障分析（FA）服務",
+                "軍規材料可靠性檢測分析"
+              ],
+              "customers": [
+                "台積電/聯電/世界先進（晶圓代工 FA 服務）",
+                "中科院（國防材料檢測分析）",
+                "漢翔（航太複材檢測）",
+                "國際 IDM/封測廠"
+              ],
+              "tech_focus": [
+                "defense_material_analysis",
+                "aerospace_components"
+              ]
+            },
+            {
+              "code": "3707",
+              "name": "漢磊",
+              "role": "漢磊是台灣少數 SiC/GaN 功率代工廠，技術稀缺性高，軍規 SiC 功率元件（雷達/電戰系統）需求。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；漢磊是台灣少數 SiC/GaN 功率代工廠，技術稀缺性高，軍規 SiC 功率元件（雷達/電戰系統）需求。",
+              "products": [
+                "SiC 功率半導體晶圓代工（6吋）",
+                "GaN 功率元件晶圓代工",
+                "類比 IC 晶圓代工（6吋/8吋）",
+                "軍規功率 MOSFET 代工"
+              ],
+              "customers": [
+                "國際功率 IC 設計公司（ON Semi、ST 等）",
+                "中科院（軍規功率元件代工）",
+                "台灣類比 IC 設計公司（致新/立錡）"
+              ],
+              "tech_focus": [
+                "sic_gan_power_foundry_defense",
+                "aerospace_components"
+              ]
+            },
+            {
+              "code": "5264",
+              "name": "鎧勝-KY",
+              "role": "鎧勝-KY 專注無人機構體利基市場，碳纖維複材機體一體成型，KY 公司具海外製造彈性。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；鎧勝-KY 專注無人機構體利基市場，碳纖維複材機體一體成型，KY 公司具海外製造彈性。",
+              "products": [
+                "無人機機體結構件（碳纖維/鋁合金）",
+                "無人機起落架與旋翼結構",
+                "精密金屬/複材機殼組件"
+              ],
+              "customers": [
+                "中科院（軍用無人機構體標案）",
+                "漢翔（無人機結構件協同開發）",
+                "國際無人機系統商"
+              ],
+              "tech_focus": [
+                "uav_airframe_structures",
+                "aerospace_components"
+              ]
+            },
+            {
+              "code": "5371",
+              "name": "中光電",
+              "role": "中光電是台灣投影機/背光模組龍頭，光機整合能力強，跨足軍用無人機光電酬載系統。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；中光電是台灣投影機/背光模組龍頭，光機整合能力強，跨足軍用無人機光電酬載系統。",
+              "products": [
+                "軍用無人機光電酬載系統（IR/EO pod）",
+                "高亮度投影機與背光模組",
+                "液晶顯示器與數位看板",
+                "軍規熱影像儀與夜視系統"
+              ],
+              "customers": [
+                "中科院（軍用光電系統標案）",
+                "國防部（無人機光電酬載）",
+                "Barco（專業投影機代工）",
+                "Sony/Sharp（背光模組）"
+              ],
+              "tech_focus": [
+                "military_electro_optical_payload",
+                "aerospace_components"
+              ]
+            },
+            {
+              "code": "7402",
+              "name": "邑錡",
+              "role": "邑錡自有 ASIC 晶片，低功耗影像技術獨特，Brinno 品牌全球縮時攝影市佔領先，軍規低照度攝影利基型。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；邑錡自有 ASIC 晶片，低功耗影像技術獨特，Brinno 品牌全球縮時攝影市佔領先，軍規低照度攝影利基型。",
+              "products": [
+                "軍規低照度攝影機與航拍影像設備",
+                "建築工程縮時攝影相機（Brinno 品牌）",
+                "雲端相機與 AI 影像分析平台",
+                "自有 ASIC 晶片與低功耗相機模組"
+              ],
+              "customers": [
+                "國防部（軍規低照度攝影設備）",
+                "中科院（無人機航拍影像系統）",
+                "全球建築/工程業者（縮時攝影品牌客戶）"
+              ],
+              "tech_focus": [
+                "military_low_light_camera",
+                "aerospace_components"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "aerospace_mro",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "2426",
+              "name": "鼎元",
+              "role": "鼎元是台灣紅外線 LED 領導廠商，5月營收2.33億MoM+11.4%，IR LED 軍規夜視/監控應用利基，GaAs 磊晶自有。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；鼎元是台灣紅外線 LED 領導廠商，5月營收2.33億MoM+11.4%，IR LED 軍規夜視/監控應用利基，GaAs 磊晶自有。",
+              "products": [
+                "軍規紅外線 LED（IR LED 850/940nm）",
+                "砷化鎵（GaAs）紅外線晶粒與磊晶",
+                "功率 LED 與光電晶體",
+                "軍用夜視/監控光電元件"
+              ],
+              "customers": [
+                "中科院（軍規紅外線元件標案）",
+                "國防部（夜視/監控光電模組）",
+                "國際安防監控設備商（Hikvision/Dahua）",
+                "LED 封裝廠（億光/東貝）"
+              ],
+              "tech_focus": [
+                "military_ir_led_components",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "2630",
+              "name": "亞航",
+              "role": "亞航是台南機場直鄰空軍基地的軍規航空器 MRO 維修商，具備軍機維修與無人機系統整合能量，5月營收3.61億MoM+16.4%但YoY-29.3%。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；亞航是台南機場直鄰空軍基地的軍規航空器 MRO 維修商，具備軍機維修與無人機系統整合能量，5月營收3.61億MoM+16.4%但YoY-29.3%。",
+              "products": [
+                "軍用航空器定期/階段性維修（F-16V、AT-3、IDF）",
+                "航空配件裝配與製造（機體結構件、管路系統）",
+                "無人機系統整合與飛控電腦組裝",
+                "精密工業設備維修與顧問"
+              ],
+              "customers": [
+                "國防部（空軍各型軍機維修標案）",
+                "漢翔（IDF 共同維修分工）",
+                "中科院（無人機飛控整合）",
+                "美國國防部（軍規件代工）"
+              ],
+              "tech_focus": [
+                "aerospace_mro_uav_integration",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "2645",
+              "name": "長榮航太",
+              "role": "長榮航太是長榮航空集團旗下 MRO 與航太零件製造商，5月營收16.88億創高YoY+10.6%，累計81.36億YoY+12.3%，客機/軍機維修雙引擎。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；長榮航太是長榮航空集團旗下 MRO 與航太零件製造商，5月營收16.88億創高YoY+10.6%，累計81.36億YoY+12.3%，客機/軍機維修雙引擎。",
+              "products": [
+                "航空器機體維修（C/D Check 大修）",
+                "發動機維修（GE/Safran 系列）",
+                "航空器零組件製造及組裝",
+                "軍用無人機結構件製造"
+              ],
+              "customers": [
+                "長榮航空（機體與發動機維修）",
+                "國防部（軍機維修標案）",
+                "GE Aerospace（發動機授權維修）",
+                "Safran（起落架與發動機件）"
+              ],
+              "tech_focus": [
+                "aerospace_mro_components",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "3004",
+              "name": "豐達科",
+              "role": "豐達科是台灣航太扣件龍頭，5月營收4.69億創高YoY+56.2%，累計20.93億YoY+32.1%，國際航太大廠認證齊全。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；豐達科是台灣航太扣件龍頭，5月營收4.69億創高YoY+56.2%，累計20.93億YoY+32.1%，國際航太大廠認證齊全。",
+              "products": [
+                "航太用高強度扣件（螺栓、鉚釘）",
+                "飛機結構件與引擎零件",
+                "船舶用扣件與結構件",
+                "車輛/工業用精密扣件"
+              ],
+              "customers": [
+                "GE Aerospace（發動機扣件）",
+                "Safran（起落架與引擎扣件）",
+                "漢翔（IDF/教練機扣件）",
+                "Boeing（航太結構扣件）"
+              ],
+              "tech_focus": [
+                "aerospace_fasteners_structural",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "4536",
+              "name": "拓凱",
+              "role": "拓凱是跨領域複合材料製造商，5月營收8.02億YoY+20.7%，航太/運動/醫療三引擎，碳纖維複材成型技術領先。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；拓凱是跨領域複合材料製造商，5月營收8.02億YoY+20.7%，航太/運動/醫療三引擎，碳纖維複材成型技術領先。",
+              "products": [
+                "航太用碳纖維複合材料零件",
+                "運動休閒用複合材料產品（網球拍、自行車架）",
+                "醫療用複合材料零件",
+                "軍用無人機複材機體結構"
+              ],
+              "customers": [
+                "漢翔（IDF/教練機複材件）",
+                "Airbus/Boeing（航太複材次承包）",
+                "中科院（飛彈複材彈體）",
+                "Yonex/Prince（運動器材品牌）"
+              ],
+              "tech_focus": [
+                "aerospace_composite_parts",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "4541",
+              "name": "晟田",
+              "role": "晟田是五軸 CNC 精密加工廠，跨足航太發動機零件/半導體設備/食品機械三引擎，航太+半導體設備國產化受惠。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；晟田是五軸 CNC 精密加工廠，跨足航太發動機零件/半導體設備/食品機械三引擎，航太+半導體設備國產化受惠。",
+              "products": [
+                "航太發動機殼體與葉片精密加工件",
+                "起落架結構件與精密加工件",
+                "半導體設備精密零組件",
+                "無菌食品充填設備自動化傳動件"
+              ],
+              "customers": [
+                "漢翔（發動機殼體加工）",
+                "GE Aerospace/Safran（航太引擎零件）",
+                "應用材料（半導體設備零件）",
+                "中科院（軍規精密加工件）"
+              ],
+              "tech_focus": [
+                "aerospace_precision_machining",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "6115",
+              "name": "鎰勝",
+              "role": "鎰勝是軍規/商用連接器製造商，5月營收7.28億YoY+24.7%累計33.29億YoY+11.0%，軍規+商用雙引擎成長動能強。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；鎰勝是軍規/商用連接器製造商，5月營收7.28億YoY+24.7%累計33.29億YoY+11.0%，軍規+商用雙引擎成長動能強。",
+              "products": [
+                "軍規電源線連接器（MIL-DTL-38999 系列）",
+                "資訊/通訊設備電源傳輸線",
+                "網路線與電子訊號線",
+                "軍用延長線與電源分配模組"
+              ],
+              "customers": [
+                "國防部（軍規連接器標案）",
+                "漢翔（軍機線束/連接器）",
+                "中科院（飛彈/無人機電源連接器）",
+                "Dell/HP（資訊設備電源線）"
+              ],
+              "tech_focus": [
+                "military_grade_connectors",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "8033",
+              "name": "雷虎",
+              "role": "雷虎是美國 Blue UAS 認證無人機製造商，5月營收1.17億MoM+7.0%累計6.02億YoY+6.3%，具備美國國防部採購資格。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；雷虎是美國 Blue UAS 認證無人機製造商，5月營收1.17億MoM+7.0%累計6.02億YoY+6.3%，具備美國國防部採購資格。",
+              "products": [
+                "軍用無人載具（SEAHAWK 無人直升機）",
+                "Blue UAS 認證無人機系統",
+                "無線電遙控模型與零配件",
+                "精密醫療器材與無菌包材"
+              ],
+              "customers": [
+                "國防部（軍用無人載具採購）",
+                "中科院（無人機系統合作）",
+                "美國國防部（Blue UAS 認證採購）",
+                "全球遙控模型經銷商"
+              ],
+              "tech_focus": [
+                "military_uav_manufacturer",
+                "aerospace_mro"
+              ]
+            },
+            {
+              "code": "8222",
+              "name": "寶一",
+              "role": "寶一專精發動機熱段零件（渦輪葉片/燃燒室件），5月營收0.79億YoY-19.1%累計YoY-4.0%，鈦合金/高溫合金鍛造技術門檻高。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；寶一專精發動機熱段零件（渦輪葉片/燃燒室件），5月營收0.79億YoY-19.1%累計YoY-4.0%，鈦合金/高溫合金鍛造技術門檻高。",
+              "products": [
+                "航空器結構零件與鈦合金鍛件",
+                "發動機熱段零件（渦輪葉片、燃燒室件）",
+                "航空合金材料買賣",
+                "發電/配電機械零配件"
+              ],
+              "customers": [
+                "漢翔（IDF/教練機結構件）",
+                "GE Aerospace/Safran（發動機熱段件）",
+                "中華航空（維修零件）",
+                "中科院（軍規鍛件）"
+              ],
+              "tech_focus": [
+                "aerospace_engine_hot_section",
+                "aerospace_mro"
               ]
             }
           ]
@@ -382,16 +1116,19 @@
             {
               "code": "2454",
               "name": "聯發科",
-              "role": "聯發科與 HPC/網通 IC 題材相關，但受惠程度需依產品線與客戶導入驗證；不應把手機晶片地位直接等同於資料中心 AI 加速器核心供應商。",
+              "role": "聯發科在 Wi-Fi 7 網通 SoC 題材是挑戰者；Filogic 系列搶攻家用/企業 Wi-Fi 7 市場。4 月營收年減 4.1%，網通晶片為成長動能。",
               "relevance": "高",
-              "analysis": "直接賦能角色；聯發科與 HPC/網通 IC 題材相關，但受惠程度需依產品線與客戶導入驗證；不應把手機晶片地位直接等同於資料中心 AI 加速器核心供應商。",
+              "analysis": "直接賦能角色；聯發科在 Wi-Fi 7 網通 SoC 題材是挑戰者；Filogic 系列搶攻家用/企業 Wi-Fi 7 市場。4 月營收年減 4.1%，網通晶片為成長動能。",
               "products": [
                 "HPC/網通 SoC",
                 "連接晶片",
                 "通訊晶片平台"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Cisco",
+                "Netgear",
+                "ASUS",
+                "中興通訊"
               ],
               "tech_focus": [
                 "hpc_networking_soc_provider",
@@ -401,16 +1138,20 @@
             {
               "code": "3034",
               "name": "聯詠",
-              "role": "聯詠在 DDIC 題材中是顯示驅動 IC 核心供應鏈角色；面板、手機、車載與消費顯示需求會透過 IC 出貨、ASP 與庫存循環傳導到營收。",
+              "role": "聯詠是全球 OLED DDI 出貨量龍頭；4 月營收 9.2 億年增 1.2%，累計年減 10.7%。OLED DDI 成長抵消部分面板衰退。",
               "relevance": "高",
-              "analysis": "核心產品/平台；聯詠在 DDIC 題材中是顯示驅動 IC 核心供應鏈角色；面板、手機、車載與消費顯示需求會透過 IC 出貨、ASP 與庫存循環傳導到營收。",
+              "analysis": "核心產品/平台；聯詠是全球 OLED DDI 出貨量龍頭；4 月營收 9.2 億年增 1.2%，累計年減 10.7%。OLED DDI 成長抵消部分面板衰退。",
               "products": [
                 "顯示驅動 IC",
                 "觸控與顯示整合 IC",
                 "顯示 SoC"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Samsung Display",
+                "LG Display",
+                "京東方",
+                "華星光電",
+                "群創"
               ],
               "tech_focus": [
                 "display_driver_ic_provider",
@@ -420,16 +1161,20 @@
             {
               "code": "3443",
               "name": "創意",
-              "role": "創意在 ASIC/IP 題材中是設計服務與矽智財供應鏈核心角色；AI、HPC 與客製晶片需求會透過設計服務、NRE 與量產權利金傳導。",
+              "role": "創意是台積電轉投資 ASIC 設計服務龍頭；4 月營收 4.3 億年增 156.9%，累計年增 81%。AI/HPC ASIC 設計訂單爆發。",
               "relevance": "高",
-              "analysis": "核心產品/平台；創意在 ASIC/IP 題材中是設計服務與矽智財供應鏈核心角色；AI、HPC 與客製晶片需求會透過設計服務、NRE 與量產權利金傳導。",
+              "analysis": "核心產品/平台；創意是台積電轉投資 ASIC 設計服務龍頭；4 月營收 4.3 億年增 156.9%，累計年增 81%。AI/HPC ASIC 設計訂單爆發。",
               "products": [
                 "ASIC 設計服務",
                 "SoC 設計服務",
                 "矽智財整合"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "NVIDIA",
+                "Broadcom",
+                "Marvell",
+                "Microsoft",
+                "Google"
               ],
               "tech_focus": [
                 "asic_design_service_provider",
@@ -448,7 +1193,11 @@
                 "先進製程設計支援"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "NVIDIA",
+                "Broadcom",
+                "Marvell",
+                "Google",
+                "Microsoft"
               ],
               "tech_focus": [
                 "ip_asic_design_service",
@@ -458,16 +1207,19 @@
             {
               "code": "3661",
               "name": "世芯-KY",
-              "role": "世芯-KY 在客製 ASIC 題材中是核心設計服務供應鏈角色；AI ASIC 專案會透過 NRE、量產設計服務與先進製程需求傳導。",
+              "role": "世芯是 AI ASIC 設計服務第二大廠；4 月營收 2.1 億年減 32.3%，累計年減 53.7%。量產產品減少但新 AI 專案 NRE 穩步推進。",
               "relevance": "高",
-              "analysis": "核心產品/平台；世芯-KY 在客製 ASIC 題材中是核心設計服務供應鏈角色；AI ASIC 專案會透過 NRE、量產設計服務與先進製程需求傳導。",
+              "analysis": "核心產品/平台；世芯是 AI ASIC 設計服務第二大廠；4 月營收 2.1 億年減 32.3%，累計年減 53.7%。量產產品減少但新 AI 專案 NRE 穩步推進。",
               "products": [
                 "客製 ASIC 設計服務",
                 "SoC 設計服務",
                 "高速介面與先進製程設計服務"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Amazon(AWS Graviton/Trainium)",
+                "Google(TPU)",
+                "Fujitsu",
+                "SambaNova"
               ],
               "tech_focus": [
                 "custom_asic_design_service",
@@ -481,11 +1233,14 @@
               "relevance": "高",
               "analysis": "核心產品/平台；世芯-KY 的核心受惠邏輯是先進製程 ASIC 設計服務與客戶專案放量，而不是自有標準晶片銷售；需追蹤專案轉量產節奏與客戶集中度。",
               "products": [
-                "先進製程 ASIC",
-                "IP 整合與設計服務"
+                "7nm/5nm ASIC SoC 設計 Turnkey",
+                "AI 加速器 ASIC 設計",
+                "HBM 整合 SoC 設計"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Amazon(AWS Graviton/Trainium)",
+                "Google(TPU)",
+                "Fujitsu"
               ],
               "tech_focus": [
                 "advanced_node_asic_service_provider",
@@ -495,16 +1250,21 @@
             {
               "code": "5274",
               "name": "信驊",
-              "role": "信驊在伺服器管理晶片/BMC 題材中是核心 IC 設計供應鏈角色；AI 伺服器與資料中心出貨會推動 BMC/管理 IC 需求。",
+              "role": "信驊是全球伺服器 BMC 幾乎獨佔供應商；AST2600/AST2700 出貨隨 AI 伺服器放量。OTC 上櫃公司。",
               "relevance": "高",
-              "analysis": "核心產品/平台；信驊在伺服器管理晶片/BMC 題材中是核心 IC 設計供應鏈角色；AI 伺服器與資料中心出貨會推動 BMC/管理 IC 需求。",
+              "analysis": "核心產品/平台；信驊是全球伺服器 BMC 幾乎獨佔供應商；AST2600/AST2700 出貨隨 AI 伺服器放量。OTC 上櫃公司。",
               "products": [
                 "BMC 伺服器管理晶片",
                 "伺服器基礎設施 IC",
                 "遠端管理晶片"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "廣達",
+                "鴻海",
+                "緯創",
+                "超微(8299)",
+                "Dell",
+                "HPE"
               ],
               "tech_focus": [
                 "server_management_ic_provider",
@@ -514,16 +1274,20 @@
             {
               "code": "6415",
               "name": "矽力*-KY",
-              "role": "矽力*-KY 在類比與功率管理 IC 題材中是核心 IC 設計供應鏈角色；終端、工業、車用與電源管理需求會透過 PMIC 產品組合傳導。",
+              "role": "矽力-KY 是中國及新興市場電源管理 IC 龍頭；4 月營收 2.0 億年增 28.1%，累計年增 21.3%。HV AC/DC 與車用 DC/DC 為雙引擎。",
               "relevance": "高",
-              "analysis": "核心產品/平台；矽力*-KY 在類比與功率管理 IC 題材中是核心 IC 設計供應鏈角色；終端、工業、車用與電源管理需求會透過 PMIC 產品組合傳導。",
+              "analysis": "核心產品/平台；矽力-KY 是中國及新興市場電源管理 IC 龍頭；4 月營收 2.0 億年增 28.1%，累計年增 21.3%。HV AC/DC 與車用 DC/DC 為雙引擎。",
               "products": [
                 "電源管理 IC",
                 "類比 IC",
                 "功率轉換控制晶片"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "比亞迪",
+                "華為",
+                "小米",
+                "Samsung",
+                "台達電"
               ],
               "tech_focus": [
                 "power_management_ic_provider",
@@ -563,15 +1327,21 @@
             {
               "code": "2337",
               "name": "旺宏",
-              "role": "旺宏的公開營業項目涵蓋積體電路與半導體零組件之研發、設計、製造、測試與銷售，因此在 IC 設計/半導體產品鏈屬於記憶體 IC 產品供應角色。",
+              "role": "旺宏為全球最大Mask ROM與車用NOR Flash供應商。5月營收62.6億年增175.8%，累計年增110.9%，受惠AI/車用/消費電子需求爆發。",
               "relevance": "中",
-              "analysis": "供應商角色；旺宏的公開營業項目涵蓋積體電路與半導體零組件之研發、設計、製造、測試與銷售，因此在 IC 設計/半導體產品鏈屬於記憶體 IC 產品供應角色。",
+              "analysis": "供應商角色；旺宏為全球最大Mask ROM與車用NOR Flash供應商。5月營收62.6億年增175.8%，累計年增110.9%，受惠AI/車用/消費電子需求爆發。",
               "products": [
-                "非揮發性記憶體與積體電路",
-                "半導體系統應用與銷售顧問服務"
+                "NOR Flash(Serial NOR/Parallel NOR)",
+                "NAND Flash(SLC NAND)",
+                "Mask ROM(唯讀記憶體)",
+                "SLC NAND(XtraROM)"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶。"
+                "Tesla(車用NOR Flash)",
+                "Bosch(車用記憶體)",
+                "Infineon(車規MCU ROM)",
+                "Qualcomm(手機Mask ROM)",
+                "任天堂(遊戲機ROM)"
               ],
               "tech_focus": [
                 "non_volatile_memory_ic_product_company",
@@ -586,7 +1356,7 @@
       "slug": "consumer-computing-devices",
       "name": "終端市場｜PC、手機與 AR/VR/XR 終端",
       "description": "筆電/PC/NB、智慧型手機、AR/VR/XR 光學與終端供應鏈，涵蓋品牌、代工、晶片與零組件。 終端裝置景氣循環、AI PC、手機換機與 XR 新產品會影響代工、零組件與品牌公司營收。",
-      "total": 7,
+      "total": 8,
       "groups": [
         {
           "name": "IC 設計與 IP",
@@ -595,16 +1365,20 @@
             {
               "code": "2454",
               "name": "聯發科",
-              "role": "聯發科在智慧型手機供應鏈題材中是核心 SoC 與通訊晶片供應商；手機需求、產品組合與旗艦晶片滲透是基本面傳導重點。",
+              "role": "聯發科是全球手機 SoC 出貨量龍頭；4 月營收 47 億年減 4.1%，累計年減 3.1%。Dimensity 9400 搶攻旗艦市場但仍受景氣影響。",
               "relevance": "高",
-              "analysis": "核心產品/平台；聯發科在智慧型手機供應鏈題材中是核心 SoC 與通訊晶片供應商；手機需求、產品組合與旗艦晶片滲透是基本面傳導重點。",
+              "analysis": "核心產品/平台；聯發科是全球手機 SoC 出貨量龍頭；4 月營收 47 億年減 4.1%，累計年減 3.1%。Dimensity 9400 搶攻旗艦市場但仍受景氣影響。",
               "products": [
                 "手機 SoC",
                 "5G 通訊晶片",
                 "Wi-Fi/藍牙連接晶片"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Samsung",
+                "小米",
+                "OPPO",
+                "Vivo",
+                "傳音"
               ],
               "tech_focus": [
                 "smartphone_soc_provider",
@@ -620,15 +1394,21 @@
             {
               "code": "3311",
               "name": "閎暉",
-              "role": "閎暉供應外觀光學機構件、按鍵、2D/3D 玻璃與機構整合模組，服務車用內裝、穿戴、智慧鎖、遊戲機與消費電子等終端產品。",
+              "role": "閎暉為手機按鍵與機構件專業供應商，MOPS主業為按鍵及模組產品機構整合元件。5月營收21.3億年增13.7%，但累計年減4.6%，消費電子需求波動影響。",
               "relevance": "中",
-              "analysis": "供應商角色；閎暉供應外觀光學機構件、按鍵、2D/3D 玻璃與機構整合模組，服務車用內裝、穿戴、智慧鎖、遊戲機與消費電子等終端產品。",
+              "analysis": "供應商角色；閎暉為手機按鍵與機構件專業供應商，MOPS主業為按鍵及模組產品機構整合元件。5月營收21.3億年增13.7%，但累計年減4.6%，消費電子需求波動影響。",
               "products": [
-                "外觀光學機構件與機構整合模組",
-                "車用內裝與智慧裝置機構模組"
+                "智慧機/平板按鍵模組",
+                "2.5D/3D玻璃蓋板",
+                "車用中控機構件",
+                "穿戴裝置外殼件",
+                "光學指紋辨識模組"
               ],
               "customers": [
-                "車用、穿戴、智慧鎖、網通光學機構件與遊戲機客戶；具名客戶需證據補強。"
+                "Apple(iPhone按鍵)",
+                "Samsung(手機機構件)",
+                "Garmin(穿戴外殼)",
+                "Ford(車用內裝機構)"
               ],
               "tech_focus": [
                 "consumer_automotive_mechanical_module_supplier",
@@ -644,15 +1424,18 @@
             {
               "code": "2317",
               "name": "鴻海",
-              "role": "鴻海在智慧型手機供應鏈中是核心組裝與製造服務商；此題材與 AI server 題材需分開看，避免把消費電子循環與伺服器成長混在一起。",
+              "role": "鴻海是全球最大 iPhone 組裝代工廠；手機營收佔比仍高但 AI 伺服器正快速追趕。4 月整體營收年增 29.7%。",
               "relevance": "高",
-              "analysis": "核心產品/平台；鴻海在智慧型手機供應鏈中是核心組裝與製造服務商；此題材與 AI server 題材需分開看，避免把消費電子循環與伺服器成長混在一起。",
+              "analysis": "核心產品/平台；鴻海是全球最大 iPhone 組裝代工廠；手機營收佔比仍高但 AI 伺服器正快速追趕。4 月整體營收年增 29.7%。",
               "products": [
                 "智慧型手機組裝",
                 "消費電子製造服務"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Apple",
+                "Samsung",
+                "小米",
+                "Sony"
               ],
               "tech_focus": [
                 "smartphone_assembly_provider",
@@ -662,15 +1445,18 @@
             {
               "code": "2356",
               "name": "英業達",
-              "role": "英業達的 PC/NB ODM 角色仍影響基本面，Daily Analysis 應把 PC 循環和 AI server 成長分開。",
+              "role": "英業達是 NB ODM 四大之一；NB 營收穩定但成長有限，AI 伺服器為新亮點。4 月整體營收年增 36.5%。",
               "relevance": "高",
-              "analysis": "核心產品/平台；英業達的 PC/NB ODM 角色仍影響基本面，Daily Analysis 應把 PC 循環和 AI server 成長分開。",
+              "analysis": "核心產品/平台；英業達是 NB ODM 四大之一；NB 營收穩定但成長有限，AI 伺服器為新亮點。4 月整體營收年增 36.5%。",
               "products": [
                 "筆電 ODM",
                 "PC 終端製造"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Dell",
+                "HP",
+                "Lenovo",
+                "Acer"
               ],
               "tech_focus": [
                 "notebook_odm",
@@ -680,15 +1466,18 @@
             {
               "code": "2382",
               "name": "廣達",
-              "role": "廣達仍具筆電 ODM 角色，PC 循環對基本面有影響；需要和 AI server 成長題材拆開評估。",
+              "role": "廣達是全球最大 NB ODM；NB 營收穩定但 AI 伺服器成長遠超 PC。4 月整體營收年增 120.7%。",
               "relevance": "高",
-              "analysis": "核心產品/平台；廣達仍具筆電 ODM 角色，PC 循環對基本面有影響；需要和 AI server 成長題材拆開評估。",
+              "analysis": "核心產品/平台；廣達是全球最大 NB ODM；NB 營收穩定但 AI 伺服器成長遠超 PC。4 月整體營收年增 120.7%。",
               "products": [
                 "筆記型電腦 ODM",
                 "消費終端組裝"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Apple",
+                "HP",
+                "Dell",
+                "Lenovo"
               ],
               "tech_focus": [
                 "notebook_odm",
@@ -702,11 +1491,15 @@
               "relevance": "高",
               "analysis": "核心產品/平台；緯創同時是 PC/NB ODM 供應鏈成員；PC 循環與 AI server 題材需分開計分。",
               "products": [
-                "筆電 ODM",
-                "PC 終端製造"
+                "商業筆電 ODM",
+                "Chromebook",
+                "消費型 NB"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Dell",
+                "HP",
+                "Lenovo",
+                "Acer"
               ],
               "tech_focus": [
                 "notebook_odm",
@@ -722,20 +1515,250 @@
             {
               "code": "2376",
               "name": "技嘉",
-              "role": "技嘉在 PC 題材中是主機板、顯示卡與 PC 零組件品牌；該題材與 AI server 題材需分開監控需求循環。",
+              "role": "技嘉是全球前三大主機板品牌，顯示卡市場份額第四。5月營收49.1億年增5.0%，累計年增44.8%，AI PC升級潮帶動主機板與顯示卡換機需求。",
               "relevance": "高",
-              "analysis": "核心產品/平台；技嘉在 PC 題材中是主機板、顯示卡與 PC 零組件品牌；該題材與 AI server 題材需分開監控需求循環。",
+              "analysis": "核心產品/平台；技嘉是全球前三大主機板品牌，顯示卡市場份額第四。5月營收49.1億年增5.0%，累計年增44.8%，AI PC升級潮帶動主機板與顯示卡換機需求。",
               "products": [
-                "主機板",
-                "顯示卡",
-                "PC 周邊"
+                "Z890/B760主機板(Intel LGA1851)",
+                "RTX 40系列顯示卡(AORUS品牌)",
+                "Mini-PC(BRIX系列)",
+                "AI筆電(AORUS 16X)"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Intel(主機板晶片組)",
+                "NVIDIA(GPU板卡)",
+                "AMD(主機板晶片組)",
+                "消費端通路(Newegg/Amazon)"
               ],
               "tech_focus": [
                 "pc_component_brand",
                 "brand"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "pc_nb",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "6176",
+              "name": "瑞儀",
+              "role": "瑞儀供應 NB 用薄型背光模組；AI PC 與 Mini LED NB 是新成長方向。",
+              "relevance": "低",
+              "analysis": "間接受惠；瑞儀供應 NB 用薄型背光模組；AI PC 與 Mini LED NB 是新成長方向。",
+              "products": [
+                "NB 薄型背光模組",
+                "平板背光模組"
+              ],
+              "customers": [
+                "廣達",
+                "仁寶",
+                "緯創"
+              ],
+              "tech_focus": [
+                "nb_backlight_supplier",
+                "pc_nb"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "wafer-foundry",
+      "name": "供應鏈環節｜晶圓代工與第三代半導體",
+      "description": "涵蓋先進製程、特殊製程、利基型晶圓代工與 SiC/GaN 第三代半導體功率元件代工等製造服務。 晶圓代工是半導體供應鏈核心瓶頸，製程需求、稼動率與資本支出會傳導到營收、毛利與估值。",
+      "total": 7,
+      "groups": [
+        {
+          "name": "電源與供電系統",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2308",
+              "name": "台達電",
+              "role": "台達電與第三代半導體題材的關聯主要在高效率電源、快充、伺服器電源與 EV/能源設備等應用端；現有官方與年報證據能支撐電源產品需要高效率功率轉換，但不能把台達電解讀為 SiC/GaN 晶圓、元件或封測核心供應商。",
+              "relevance": "低",
+              "analysis": "間接受惠；台達電與第三代半導體題材的關聯主要在高效率電源、快充、伺服器電源與 EV/能源設備等應用端；現有官方與年報證據能支撐電源產品需要高效率功率轉換，但不能把台達電解讀為 SiC/GaN 晶圓、元件或封測核心供應商。",
+              "products": [
+                "電源供應系統與高效電源",
+                "電動車動力、電力管理與充電設備",
+                "能源基礎設施、儲能與能源管理"
+              ],
+              "customers": [
+                "AI、ICT、EV、能源基礎設施等高效率電源應用客戶"
+              ],
+              "tech_focus": [
+                "power_product_application_side_user",
+                "power"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upstream_petrochemical_materials",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2303",
+              "name": "聯電",
+              "role": "聯電是全球第二大晶圓代工廠，28/22nm HKMG與14nm FinFET為主力，8吋特殊製程(RF/CIS/BCD)為利基。4月營收227億年增10.8%，累計年增6.9%。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；聯電是全球第二大晶圓代工廠，28/22nm HKMG與14nm FinFET為主力，8吋特殊製程(RF/CIS/BCD)為利基。4月營收227億年增10.8%，累計年增6.9%。",
+              "products": [
+                "22nm/28nm HKMG Logic製程",
+                "40nm嵌入式記憶體(eFlash)",
+                "14nm FinFET製程",
+                "特殊製程(RF/BCD/CIS)",
+                "8吋晶圓代工"
+              ],
+              "customers": [
+                "Qualcomm",
+                "联发科(2454)",
+                "Realtek(2379)",
+                "Broadcom",
+                "聯詠(3034)"
+              ],
+              "tech_focus": [
+                "mature_node_foundry",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2379",
+              "name": "瑞昱",
+              "role": "瑞昱是Fabless IC設計公司，在聯電/台積電投片生產乙太網路PHY、WiFi、USB PD等晶片。",
+              "relevance": "中",
+              "analysis": "客戶/通路角色；瑞昱是Fabless IC設計公司，在聯電/台積電投片生產乙太網路PHY、WiFi、USB PD等晶片。",
+              "products": [
+                "乙太網路PHY晶片(1G/2.5G/5G/10G)",
+                "Wi-Fi 6/7晶片",
+                "USB PD控製器",
+                "音訊编解碼器(Codec)",
+                "車用乙太網路晶片"
+              ],
+              "customers": [
+                "智邦(2345)",
+                "Dell",
+                "HP",
+                "Lenovo",
+                "ASUS"
+              ],
+              "tech_focus": [
+                "ic_design_fabless",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "2401",
+              "name": "凌陽",
+              "role": "凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片生產。",
+              "relevance": "中",
+              "analysis": "客戶/通路角色；凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片生產。",
+              "products": [
+                "車用晶片(MCU/SoC)",
+                "OTT串流媒體晶片",
+                "物聯網(IoT)MCU",
+                "語音辨識IC",
+                "液晶顯示驅動IC"
+              ],
+              "customers": [
+                "車廠(Tier 1)",
+                "OTT機上盒品牌商",
+                "家電品牌",
+                "中國家車廠",
+                "LCD面板廠"
+              ],
+              "tech_focus": [
+                "fabless_ic_design_house",
+                "upstream_petrochemical_materials"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "晶圓製造與代工",
+          "level": "midstream",
+          "companies": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "role": "台積電是全球晶圓代工霸主，先進製程市佔超過90%。5月營收4170億年增30.1%，累計年增30.0%，N3/N5製程供不應求，N2預計2025量產。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；台積電是全球晶圓代工霸主，先進製程市佔超過90%。5月營收4170億年增30.1%，累計年增30.0%，N3/N5製程供不應求，N2預計2025量產。",
+              "products": [
+                "N3(3nm)FinFET量產",
+                "N2(2nm)GAA量產準備",
+                "N5(5nm)大量生產",
+                "成熟製程(28nm/40nm車用工業用)",
+                "A16(1.6nm)Backside Power"
+              ],
+              "customers": [
+                "NVIDIA(H100/B200)",
+                "Apple(A18/M4)",
+                "AMD(Zen5/RDNA4)",
+                "Qualcomm(Snapdragon X)",
+                "Broadcom(客製ASIC)"
+              ],
+              "tech_focus": [
+                "advanced_logic_foundry",
+                "wafer_fabrication"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "design_enablement",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "3443",
+              "name": "創意",
+              "role": "創意與晶圓代工題材的關聯是設計服務與 foundry ecosystem 賦能，不應被誤寫成晶圓製造商。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；創意與晶圓代工題材的關聯是設計服務與 foundry ecosystem 賦能，不應被誤寫成晶圓製造商。",
+              "products": [
+                "ASIC SoC 設計服務（台積電專用）",
+                "嵌入式記憶體 IP",
+                "設計自動化工具"
+              ],
+              "customers": [
+                "NVIDIA",
+                "Broadcom",
+                "Marvell"
+              ],
+              "tech_focus": [
+                "foundry_ecosystem_design_partner",
+                "design_enablement"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "wide_bandgap",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "3450",
+              "name": "聯鈞",
+              "role": "聯鈞在第三代半導體題材中供應 SiC/GaN 晶圓雷射切割設備；4 月營收 8.78 億年增 45.5%，單月動能強但累計年減 11.8%。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；聯鈞在第三代半導體題材中供應 SiC/GaN 晶圓雷射切割設備；4 月營收 8.78 億年增 45.5%，單月動能強但累計年減 11.8%。",
+              "products": [
+                "SiC 晶圓雷射切割設備",
+                "GaN 晶圓雷射微切割",
+                "UV 雷射鑽孔系統"
+              ],
+              "customers": [
+                "Wolfspeed",
+                "II-VI",
+                "意法半導體",
+                "漢磊"
+              ],
+              "tech_focus": [
+                "laser_dicing_equipment",
+                "wide_bandgap"
               ]
             }
           ]
@@ -746,7 +1769,7 @@
       "slug": "pcb-substrates",
       "name": "供應鏈環節｜PCB、IC 載板與高階基板材料",
       "description": "PCB 硬板、FPC 軟板、IC 載板、玻璃基板、玻纖布、CCL、導線架與封裝化學品等基板材料供應鏈。 AI server、先進封裝、車用與高速通訊會提高板材層數、材料規格與載板需求，影響上游材料與板廠獲利。",
-      "total": 5,
+      "total": 7,
       "groups": [
         {
           "name": "ic_substrate",
@@ -755,16 +1778,20 @@
             {
               "code": "8046",
               "name": "南電",
-              "role": "南電在 IC 載板/ABF 題材中是核心供應鏈角色；AI/HPC 晶片封裝需求會透過載板規格、產能與稼動率傳導。",
+              "role": "南電是台灣 PCB/IC 載板大廠；4 月營收 4.5 億年增 39.5%，累計年增 34.2%。AI 伺服器高階 PCB 與 IC 載板雙引擎成長。",
               "relevance": "高",
-              "analysis": "核心產品/平台；南電在 IC 載板/ABF 題材中是核心供應鏈角色；AI/HPC 晶片封裝需求會透過載板規格、產能與稼動率傳導。",
+              "analysis": "核心產品/平台；南電是台灣 PCB/IC 載板大廠；4 月營收 4.5 億年增 39.5%，累計年增 34.2%。AI 伺服器高階 PCB 與 IC 載板雙引擎成長。",
               "products": [
                 "ABF 載板",
                 "IC 載板",
                 "BGA/HDI 板"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Intel",
+                "AMD",
+                "NVIDIA",
+                "廣達",
+                "鴻海"
               ],
               "tech_focus": [
                 "abf_substrate_provider",
@@ -784,11 +1811,14 @@
               "relevance": "中",
               "analysis": "供應商角色；聯茂與封裝材料題材的關聯偏向 PCB/基板材料供應，不應被誤寫成導線架或封測廠核心角色。",
               "products": [
-                "銅箔基板",
-                "封裝/PCB 基板材料"
+                "高頻高速 CCL（IC 封裝基材）",
+                "高 Tg 耐熱基板",
+                "HDI 用黏合片"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "欣興(3037)",
+                "南電(8046)",
+                "景碩(3189)"
               ],
               "tech_focus": [
                 "packaging_pcb_material_supplier",
@@ -804,16 +1834,20 @@
             {
               "code": "2368",
               "name": "金像電",
-              "role": "金像電在 PCB 題材中是伺服器/高層數 PCB 供應鏈核心角色；AI 伺服器主板層數、材料與良率會影響價值量。",
+              "role": "金像電是高層數伺服器 PCB 龍頭；4 月營收 7.3 億年增 58.4%，累計年增 60.8%。AI 伺服器用高階 PCB 供不應求，接單量增加。",
               "relevance": "高",
-              "analysis": "核心產品/平台；金像電在 PCB 題材中是伺服器/高層數 PCB 供應鏈核心角色；AI 伺服器主板層數、材料與良率會影響價值量。",
+              "analysis": "核心產品/平台；金像電是高層數伺服器 PCB 龍頭；4 月營收 7.3 億年增 58.4%，累計年增 60.8%。AI 伺服器用高階 PCB 供不應求，接單量增加。",
               "products": [
                 "高層數伺服器 PCB",
                 "HDI/硬板 PCB",
                 "網通與伺服器板"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "廣達",
+                "鴻海",
+                "緯創",
+                "Intel",
+                "NVIDIA"
               ],
               "tech_focus": [
                 "server_pcb_manufacturer",
@@ -832,7 +1866,11 @@
                 "PCB 製造"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Intel",
+                "AMD",
+                "NVIDIA",
+                "廣達",
+                "鴻海"
               ],
               "tech_focus": [
                 "pcb_substrate_manufacturer",
@@ -866,44 +1904,78 @@
           ]
         },
         {
+          "name": "substrate",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "3189",
+              "name": "景碩",
+              "role": "景碩在 IC 載板題材中是核心供應商；AI GPU/HBM 封裝需求帶動 ABF 載板與 BT 載板訂單成長，直接反映在營收與產能利用率。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；景碩在 IC 載板題材中是核心供應商；AI GPU/HBM 封裝需求帶動 ABF 載板與 BT 載板訂單成長，直接反映在營收與產能利用率。",
+              "products": [
+                "ABF 載板（CPU/GPU 用）",
+                "BT 載板（手機/AP 用）",
+                "CSP 載板"
+              ],
+              "customers": [
+                "Intel",
+                "AMD",
+                "Qualcomm",
+                "聯發科",
+                "NVIDIA"
+              ],
+              "tech_focus": [
+                "ic_substrate_manufacturer",
+                "substrate"
+              ]
+            }
+          ]
+        },
+        {
           "name": "substrate_materials",
           "level": "upstream",
           "companies": [
             {
               "code": "2383",
               "name": "台光電",
-              "role": "台光電在 CCL/基板材料供應鏈中具核心定位；需追蹤高速材料規格升級、產品組合與產能擴充。",
+              "role": "台光電是全球極低損耗銅箔基板龍頭；4 月營收 13.9 億年增 93.6%，累計年增 62.7%。AI 伺服器高頻高速 CCL 需求爆發。",
               "relevance": "高",
-              "analysis": "核心產品/平台；台光電在 CCL/基板材料供應鏈中具核心定位；需追蹤高速材料規格升級、產品組合與產能擴充。",
-              "products": [
-                "銅箔基板 CCL",
-                "玻纖布相關基板材料",
-                "高頻高速材料"
-              ],
-              "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
-              ],
-              "tech_focus": [
-                "ccl_material_provider",
-                "substrate_materials"
-              ]
-            },
-            {
-              "code": "2383",
-              "name": "台光電",
-              "role": "台光電在高階 CCL/載板上游材料題材中是核心供應鏈角色；AI 伺服器、交換器與高速 PCB 升級會推升低損耗材料需求。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；台光電在高階 CCL/載板上游材料題材中是核心供應鏈角色；AI 伺服器、交換器與高速 PCB 升級會推升低損耗材料需求。",
+              "analysis": "核心產品/平台；台光電是全球極低損耗銅箔基板龍頭；4 月營收 13.9 億年增 93.6%，累計年增 62.7%。AI 伺服器高頻高速 CCL 需求爆發。",
               "products": [
                 "高階銅箔基板 CCL",
                 "低損耗高速材料",
                 "IC 載板上游材料"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "欣興(3037)",
+                "南電(8046)",
+                "景碩(3189)",
+                "IBIDEN"
               ],
               "tech_focus": [
                 "high_end_ccl_supplier",
+                "substrate_materials"
+              ]
+            },
+            {
+              "code": "2383",
+              "name": "台光電",
+              "role": "台光電在極低損耗玻纖布垂直整合；自製自用降低成本，AI 伺服器帶動極低損耗規格需求。4 月營收年增 93.6%。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；台光電在極低損耗玻纖布垂直整合；自製自用降低成本，AI 伺服器帶動極低損耗規格需求。4 月營收年增 93.6%。",
+              "products": [
+                "銅箔基板 CCL",
+                "玻纖布相關基板材料",
+                "高頻高速材料"
+              ],
+              "customers": [
+                "台光電自用",
+                "聯茂(6213)",
+                "建榮(5505)"
+              ],
+              "tech_focus": [
+                "ccl_material_provider",
                 "substrate_materials"
               ]
             },
@@ -919,7 +1991,10 @@
                 "玻纖布相關材料"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "欣興(3037)",
+                "南電(8046)",
+                "景碩(3189)",
+                "IBIDEN"
               ],
               "tech_focus": [
                 "ccl_material_provider",
@@ -929,16 +2004,19 @@
             {
               "code": "6213",
               "name": "聯茂",
-              "role": "聯茂在 IC 載板/高階基板材料題材中屬 CCL 上游材料供應鏈角色；高速材料規格升級與載板需求會影響產品組合。",
+              "role": "聯茂是中高階 CCL 供應商；4 月營收 3.5 億年增 13.8%，累計年增 18.6%。AI 伺服器高速 CCL 為成長動能但技術定位次於台光電。",
               "relevance": "中",
-              "analysis": "供應商角色；聯茂在 IC 載板/高階基板材料題材中屬 CCL 上游材料供應鏈角色；高速材料規格升級與載板需求會影響產品組合。",
+              "analysis": "供應商角色；聯茂是中高階 CCL 供應商；4 月營收 3.5 億年增 13.8%，累計年增 18.6%。AI 伺服器高速 CCL 為成長動能但技術定位次於台光電。",
               "products": [
                 "高階 CCL",
                 "載板上游材料",
                 "PCB 基板材料"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "欣興(3037)",
+                "南電(8046)",
+                "景碩(3189)",
+                "IBIDEN"
               ],
               "tech_focus": [
                 "ccl_upstream_material_supplier",
@@ -946,174 +2024,31 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "slug": "ai-server-liquid-cooling",
-      "name": "技術平台｜AI 伺服器液冷散熱",
-      "description": "因 AI 加速器功耗上升而導入的液冷、冷板、CDU、管路、快接頭、散熱模組、風扇與熱管理方案。 高功耗 AI 平台會提高散熱價值量，液冷滲透率與氣冷升級會改變散熱廠產品組合、ASP 與毛利結構。",
-      "total": 4,
-      "groups": [
-        {
-          "name": "散熱與機構",
-          "level": "upstream",
-          "companies": [
-            {
-              "code": "2308",
-              "name": "台達電",
-              "role": "台達電在液冷散熱題材中是資料中心與設備端冷卻解決方案供應者；官方資料中心與風扇散熱頁皆列出液冷/氣冷散熱能力，財報也把散熱系統列為主要營業項目。",
-              "relevance": "高",
-              "analysis": "直接賦能角色；台達電在液冷散熱題材中是資料中心與設備端冷卻解決方案供應者；官方資料中心與風扇散熱頁皆列出液冷/氣冷散熱能力，財報也把散熱系統列為主要營業項目。",
-              "products": [
-                "風扇、氣冷與液冷散熱管理",
-                "資料中心液冷及氣冷散熱解決方案",
-                "無刷直流風扇",
-                "散熱系統"
-              ],
-              "customers": [
-                "資料中心、消費電子、車輛、工業與商用建築應用客戶：官方頁揭露應用領域"
-              ],
-              "tech_focus": [
-                "data_center_liquid_air_cooling_provider",
-                "thermal"
-              ]
-            },
-            {
-              "code": "3017",
-              "name": "奇鋐",
-              "role": "奇鋐被 legacy 題材歸為液冷系統整合供應鏈，產品知識庫也已把液冷散熱方案標為題材候選；但目前公開證據以整體散熱定位與財報主業務為主，尚未把液冷營收或特定客戶專案寫成確定事實。",
-              "relevance": "高",
-              "analysis": "直接賦能角色；奇鋐被 legacy 題材歸為液冷系統整合供應鏈，產品知識庫也已把液冷散熱方案標為題材候選；但目前公開證據以整體散熱定位與財報主業務為主，尚未把液冷營收或特定客戶專案寫成確定事實。",
-              "products": [
-                "液冷散熱方案",
-                "整體散熱解決方案"
-              ],
-              "customers": [
-                "高功耗伺服器與資料中心設備供應鏈：待來源驗證"
-              ],
-              "tech_focus": [
-                "liquid_cooling_solution_candidate",
-                "thermal"
-              ]
-            },
-            {
-              "code": "3017",
-              "name": "奇鋐",
-              "role": "奇鋐在氣冷與核心散熱組件題材中的角色最直接：公司官方定位為整體散熱解決方案供應商，年報也支撐電子零件、通訊電子與電腦週邊設備製造營運背景。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；奇鋐在氣冷與核心散熱組件題材中的角色最直接：公司官方定位為整體散熱解決方案供應商，年報也支撐電子零件、通訊電子與電腦週邊設備製造營運背景。",
-              "products": [
-                "整體散熱解決方案",
-                "散熱模組",
-                "電子零件與電腦週邊設備製造"
-              ],
-              "customers": [
-                "電子設備、通訊設備與電腦週邊設備客戶：年報未揭露具名客戶"
-              ],
-              "tech_focus": [
-                "air_cooling_and_thermal_module_provider",
-                "thermal"
-              ]
-            },
-            {
-              "code": "3017",
-              "name": "奇鋐",
-              "role": "奇鋐在散熱解決方案題材中屬於核心供應鏈角色，重點是整體熱管理與散熱模組，而不是單純的題材沾邊。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；奇鋐在散熱解決方案題材中屬於核心供應鏈角色，重點是整體熱管理與散熱模組，而不是單純的題材沾邊。",
-              "products": [
-                "整體散熱解決方案",
-                "液冷散熱方案",
-                "散熱模組"
-              ],
-              "customers": [
-                "高功耗電子設備與電腦週邊設備客戶：需以公開資料補名稱"
-              ],
-              "tech_focus": [
-                "thermal_solution_provider",
-                "thermal"
-              ]
-            },
-            {
-              "code": "3324",
-              "name": "雙鴻",
-              "role": "雙鴻在液冷散熱題材中屬散熱模組與液冷方案核心候選供應商；需持續補官方產品、法說與客戶專案證據來提高信心。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；雙鴻在液冷散熱題材中屬散熱模組與液冷方案核心候選供應商；需持續補官方產品、法說與客戶專案證據來提高信心。",
-              "products": [
-                "液冷散熱模組",
-                "散熱解決方案",
-                "熱管/均熱板相關散熱產品"
-              ],
-              "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
-              ],
-              "tech_focus": [
-                "liquid_cooling_module_provider",
-                "thermal"
-              ]
-            },
-            {
-              "code": "3324",
-              "name": "雙鴻",
-              "role": "雙鴻在氣冷與核心散熱元件題材中具熱管、均熱板、模組等供應鏈定位；需要把氣冷升級與液冷滲透分開追蹤。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；雙鴻在氣冷與核心散熱元件題材中具熱管、均熱板、模組等供應鏈定位；需要把氣冷升級與液冷滲透分開追蹤。",
-              "products": [
-                "熱管",
-                "均熱板",
-                "氣冷散熱模組"
-              ],
-              "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
-              ],
-              "tech_focus": [
-                "air_cooling_component_provider",
-                "thermal"
-              ]
-            },
-            {
-              "code": "3324",
-              "name": "雙鴻",
-              "role": "雙鴻在散熱解決方案題材中是核心散熱供應鏈角色；AI 伺服器高功耗平台會提高散熱規格與價值量。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；雙鴻在散熱解決方案題材中是核心散熱供應鏈角色；AI 伺服器高功耗平台會提高散熱規格與價值量。",
-              "products": [
-                "散熱模組",
-                "熱管理解決方案",
-                "液冷散熱方案"
-              ],
-              "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
-              ],
-              "tech_focus": [
-                "thermal_solution_provider",
-                "thermal"
-              ]
-            }
-          ]
         },
         {
-          "name": "thermal_system",
-          "level": "upstream",
+          "name": "fpc",
+          "level": "peripheral",
           "companies": [
             {
-              "code": "2376",
-              "name": "技嘉",
-              "role": "技嘉與液冷題材的關聯來自 AI 伺服器/液冷機櫃方案；需用官方產品頁或法說補強具體規格、客戶與營收占比。",
+              "code": "6153",
+              "name": "嘉聯益",
+              "role": "嘉聯益在軟板題材中是主要供應商；智慧手機與可穿戴裝置 FPC 需求驅動營收，4 月營收 4.52 億但年減 14.4%。",
               "relevance": "高",
-              "analysis": "直接賦能角色；技嘉與液冷題材的關聯來自 AI 伺服器/液冷機櫃方案；需用官方產品頁或法說補強具體規格、客戶與營收占比。",
+              "analysis": "核心產品/平台；嘉聯益在軟板題材中是主要供應商；智慧手機與可穿戴裝置 FPC 需求驅動營收，4 月營收 4.52 億但年減 14.4%。",
               "products": [
-                "液冷伺服器方案",
-                "AI 伺服器散熱整合"
+                "手機 FPC（顯示/觸控/天線）",
+                "NB FPC",
+                "可穿戴裝置 FPC"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "Apple",
+                "Samsung",
+                "華為",
+                "小米"
               ],
               "tech_focus": [
-                "liquid_cooling_server_solution",
-                "thermal_system"
+                "fpc_manufacturer",
+                "fpc"
               ]
             }
           ]
@@ -1121,161 +2056,153 @@
       ]
     },
     {
-      "slug": "software-cloud-security",
-      "name": "主題趨勢｜資安、雲端服務與企業軟體",
-      "description": "資安產品、系統整合、雲端代管、MSP、企業 SaaS、ERP、AI 軟體與 IT 委外服務供應鏈。 企業數位轉型、資安法規、雲端遷移與 AI 軟體導入會推動 recurring revenue 與專案服務需求。",
-      "total": 3,
+      "slug": "hbm",
+      "name": "產品應用｜HBM 高頻寬記憶體",
+      "description": "用於 AI GPU/ASIC 的高頻寬堆疊式記憶體與其相關封裝、測試、載板和材料供應鏈。 HBM 是 AI accelerator 的關鍵瓶頸之一，供需吃緊會影響記憶體、封裝、材料與測試供應鏈的成長性。",
+      "total": 6,
       "groups": [
         {
-          "name": "system_assembly",
-          "level": "midstream",
+          "name": "upstream_petrochemical_materials",
+          "level": "upstream",
           "companies": [
             {
-              "code": "6669",
-              "name": "緯穎",
-              "role": "緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。",
-              "relevance": "高",
-              "analysis": "直接賦能角色；緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。",
-              "products": [
-                "雲端伺服器",
-                "資料中心硬體平台"
-              ],
-              "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
-              ],
-              "tech_focus": [
-                "cloud_infrastructure_hardware_provider",
-                "system_assembly"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "enterprise_software_system_integration",
-          "level": "downstream",
-          "companies": [
-            {
-              "code": "2453",
-              "name": "凌群",
-              "role": "凌群在軟體雲端資安題材中提供系統整合、雲端、資安、金融、醫療、政府、交通與企業應用方案，並具備 DBMaker、NETCenter、OMFLOW、Ayuda 等自有軟體產品。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；凌群在軟體雲端資安題材中提供系統整合、雲端、資安、金融、醫療、政府、交通與企業應用方案，並具備 DBMaker、NETCenter、OMFLOW、Ayuda 等自有軟體產品。",
-              "products": [
-                "系統整合、AI 應用與企業軟體服務",
-                "DBMaker、NETCenter、OMFLOW 與 Ayuda 企業軟體"
-              ],
-              "customers": [
-                "政府、金融、醫療、交通、電信與企業客戶；專案細節需以標案或公告補強。"
-              ],
-              "tech_focus": [
-                "system_integrator_enterprise_software_provider",
-                "enterprise_software_system_integration"
-              ]
-            }
-          ]
-        },
-        {
-          "name": "server_management",
-          "level": "downstream",
-          "companies": [
-            {
-              "code": "5274",
-              "name": "信驊",
-              "role": "信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。",
+              "code": "2344",
+              "name": "華邦電",
+              "role": "華邦電是台灣唯一自主DRAM廠，4月營收年增182%反映DRAM景氣回升。LPDDR5/NOR Flash為AI邊緣裝置關鍵零組件。車规記憶體是未來成長引擎。",
               "relevance": "中",
-              "analysis": "供應商角色；信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。",
+              "analysis": "供應商角色；華邦電是台灣唯一自主DRAM廠，4月營收年增182%反映DRAM景氣回升。LPDDR5/NOR Flash為AI邊緣裝置關鍵零組件。車规記憶體是未來成長引擎。",
               "products": [
-                "伺服器管理晶片",
-                "遠端管理韌體/硬體平台"
+                "DRAM(LPD4/LPD5)",
+                "NOR Flash",
+                "NAND Flash(SLC)",
+                "Code Storage Flash",
+                "車用DRAM"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Qualcomm",
+                "聯發科(2454)",
+                "Intel",
+                "Samsung(授權)",
+                "車用Tier 1客戶"
               ],
               "tech_focus": [
-                "hardware_management_enabler",
-                "server_management"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "wafer-foundry",
-      "name": "供應鏈環節｜晶圓代工與第三代半導體",
-      "description": "涵蓋先進製程、特殊製程、利基型晶圓代工與 SiC/GaN 第三代半導體功率元件代工等製造服務。 晶圓代工是半導體供應鏈核心瓶頸，製程需求、稼動率與資本支出會傳導到營收、毛利與估值。",
-      "total": 3,
-      "groups": [
-        {
-          "name": "電源與供電系統",
-          "level": "upstream",
-          "companies": [
-            {
-              "code": "2308",
-              "name": "台達電",
-              "role": "台達電與第三代半導體題材的關聯主要在高效率電源、快充、伺服器電源與 EV/能源設備等應用端；現有官方與年報證據能支撐電源產品需要高效率功率轉換，但不能把台達電解讀為 SiC/GaN 晶圓、元件或封測核心供應商。",
-              "relevance": "低",
-              "analysis": "間接受惠；台達電與第三代半導體題材的關聯主要在高效率電源、快充、伺服器電源與 EV/能源設備等應用端；現有官方與年報證據能支撐電源產品需要高效率功率轉換，但不能把台達電解讀為 SiC/GaN 晶圓、元件或封測核心供應商。",
-              "products": [
-                "電源供應系統與高效電源",
-                "電動車動力、電力管理與充電設備",
-                "能源基礎設施、儲能與能源管理"
-              ],
-              "customers": [
-                "AI、ICT、EV、能源基礎設施等高效率電源應用客戶"
-              ],
-              "tech_focus": [
-                "power_product_application_side_user",
-                "power"
+                "dram_nor_flash_maker",
+                "upstream_petrochemical_materials"
               ]
             }
           ]
         },
         {
-          "name": "晶圓製造與代工",
+          "name": "先進封裝與封測",
           "level": "midstream",
           "companies": [
             {
               "code": "2330",
               "name": "台積電",
-              "role": "台積電在晶圓代工題材中是核心供應商；AI/HPC、手機、車用與工業晶片需求會透過先進製程與成熟製程稼動率傳導到營收與毛利。",
+              "role": "台積電不製造 HBM 記憶體，但在 HBM 與 AI GPU 的 CoWoS 整合封裝中是唯一量產供應商；4 月營收年增 17.5%。",
               "relevance": "高",
-              "analysis": "核心產品/平台；台積電在晶圓代工題材中是核心供應商；AI/HPC、手機、車用與工業晶片需求會透過先進製程與成熟製程稼動率傳導到營收與毛利。",
+              "analysis": "直接賦能角色；台積電不製造 HBM 記憶體，但在 HBM 與 AI GPU 的 CoWoS 整合封裝中是唯一量產供應商；4 月營收年增 17.5%。",
               "products": [
-                "先進邏輯晶圓代工",
-                "N2/A16 等先進製程",
-                "特殊製程與成熟製程"
+                "CoWoS-L HBM+GPU 整合封裝",
+                "SoIC HBM 3D 堆疊"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA",
+                "AMD",
+                "Broadcom"
               ],
               "tech_focus": [
-                "advanced_logic_foundry",
-                "wafer_fabrication"
+                "hbm_integration_packaging",
+                "advanced_packaging"
               ]
             }
           ]
         },
         {
-          "name": "design_enablement",
+          "name": "hbm",
           "level": "peripheral",
           "companies": [
             {
-              "code": "3443",
-              "name": "創意",
-              "role": "創意與晶圓代工題材的關聯是設計服務與 foundry ecosystem 賦能，不應被誤寫成晶圓製造商。",
+              "code": "2408",
+              "name": "南亞科",
+              "role": "南亞科在 HBM 題材中是 DRAM 供應商；4 月營收 25.5 億月增 40%，年增 717%（含美光合資認列），受惠 DRAM 景氣反轉。",
               "relevance": "高",
-              "analysis": "直接賦能角色；創意與晶圓代工題材的關聯是設計服務與 foundry ecosystem 賦能，不應被誤寫成晶圓製造商。",
+              "analysis": "核心產品/平台；南亞科在 HBM 題材中是 DRAM 供應商；4 月營收 25.5 億月增 40%，年增 717%（含美光合資認列），受惠 DRAM 景氣反轉。",
               "products": [
-                "ASIC 設計服務",
-                "製程設計支援"
+                "DDR5 DRAM",
+                "HBM3E（與美光合作）",
+                "利基型 DRAM"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "美光（合資）",
+                "Intel",
+                "AMD",
+                "Qualcomm"
               ],
               "tech_focus": [
-                "foundry_ecosystem_design_partner",
-                "design_enablement"
+                "dram_hbm_developer",
+                "hbm"
+              ]
+            },
+            {
+              "code": "2449",
+              "name": "京元電子",
+              "role": "京元電在 HBM 題材中提供 HBM TSV 測試與 KGD 測試服務；HBM 測試是高門檻高毛利業務。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；京元電在 HBM 題材中提供 HBM TSV 測試與 KGD 測試服務；HBM 測試是高門檻高毛利業務。",
+              "products": [
+                "HBM TSV 測試",
+                "HBM KGD 測試"
+              ],
+              "customers": [
+                "SK Hynix",
+                "Samsung",
+                "美光"
+              ],
+              "tech_focus": [
+                "hbm_test_house",
+                "hbm"
+              ]
+            },
+            {
+              "code": "8150",
+              "name": "南茂",
+              "role": "南茂在 HBM 題材中是封測服務供應商；4 月營收 24.6 億年增 32.2%，HBM 封裝測試是成長主力。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；南茂在 HBM 題材中是封測服務供應商；4 月營收 24.6 億年增 32.2%，HBM 封裝測試是成長主力。",
+              "products": [
+                "HBM TSV 封裝測試",
+                "記憶體封裝（BGA/FC）",
+                "晶圓級封裝"
+              ],
+              "customers": [
+                "SK Hynix",
+                "Samsung",
+                "美光",
+                "華邦"
+              ],
+              "tech_focus": [
+                "hbm_osat",
+                "hbm"
+              ]
+            },
+            {
+              "code": "3189",
+              "name": "景碩",
+              "role": "景碩供應 HBM 封裝用 BT 載板；HBM 堆疊封裝帶動載板需求。",
+              "relevance": "低",
+              "analysis": "間接受惠；景碩供應 HBM 封裝用 BT 載板；HBM 堆疊封裝帶動載板需求。",
+              "products": [
+                "HBM 用 BT 載板"
+              ],
+              "customers": [
+                "SK Hynix",
+                "Samsung",
+                "Micron"
+              ],
+              "tech_focus": [
+                "hbm_substrate_supplier",
+                "hbm"
               ]
             }
           ]
@@ -1286,7 +2213,7 @@
       "slug": "advanced-packaging",
       "name": "製程與封測｜先進封裝與 CoWoS",
       "description": "涵蓋 CoWoS、2.5D/3D 封裝、封裝製程機台、自動化、量測、IC 測試、OSAT 與封裝材料。 AI accelerator 對 HBM 與先進封裝產能高度依賴，CoWoS 產能、封測設備與材料是 AI 半導體供應鏈的關鍵瓶頸。",
-      "total": 3,
+      "total": 6,
       "groups": [
         {
           "name": "ic_substrate",
@@ -1299,11 +2226,15 @@
               "relevance": "中",
               "analysis": "供應商角色；南電不是 CoWoS 製程供應商本身，但可作為先進封裝所需載板/基板供應鏈角色；需避免把載板供應商寫成封裝代工。",
               "products": [
-                "先進封裝用 IC 載板",
-                "ABF 載板"
+                "ABF 載板（AI GPU 用）",
+                "HDISTM 載板",
+                "車用 HDI 載板"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Intel",
+                "AMD",
+                "NVIDIA",
+                "Broadcom"
               ],
               "tech_focus": [
                 "advanced_packaging_substrate_supplier",
@@ -1343,20 +2274,99 @@
             {
               "code": "2330",
               "name": "台積電",
-              "role": "台積電在 CoWoS/先進封裝題材中是核心製程與產能供應者；AI GPU/ASIC 與 HBM 整合需求會推動先進封裝產能、瓶頸與資本支出成為每日追蹤重點。",
+              "role": "台積電在CoWoS先進封裝領域是獨佔龍頭，2025年產能持續擴充。5月營收4170億年增30.1%，累計年增30.0%，先進封裝為AI GPU出貨瓶頸與成長引擎。",
               "relevance": "高",
-              "analysis": "核心產品/平台；台積電在 CoWoS/先進封裝題材中是核心製程與產能供應者；AI GPU/ASIC 與 HBM 整合需求會推動先進封裝產能、瓶頸與資本支出成為每日追蹤重點。",
+              "analysis": "核心產品/平台；台積電在CoWoS先進封裝領域是獨佔龍頭，2025年產能持續擴充。5月營收4170億年增30.1%，累計年增30.0%，先進封裝為AI GPU出貨瓶頸與成長引擎。",
               "products": [
-                "CoWoS",
-                "SoIC",
-                "先進封裝平台"
+                "CoWoS-S 2.5D封裝",
+                "SoIC 3D堆疊封裝",
+                "InFO-POP封裝",
+                "CoWoS-L(Large Die)封裝"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA(H100/B200 CoWoS)",
+                "AMD(MI300 SoIC)",
+                "Broadcom(客製ASIC CoWoS)",
+                "Apple(A系列InFO封裝)",
+                "Marvell(客製ASIC CoWoS)"
               ],
               "tech_focus": [
                 "cowos_advanced_packaging_provider",
                 "advanced_packaging"
+              ]
+            },
+            {
+              "code": "3711",
+              "name": "日月光投控",
+              "role": "日月光是全球最大 OSAT，在 CoWoS/先進封裝題材中提供後段封測整合服務；AI 晶片封裝測試需求直接推動營收成長。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；日月光是全球最大 OSAT，在 CoWoS/先進封裝題材中提供後段封測整合服務；AI 晶片封裝測試需求直接推動營收成長。",
+              "products": [
+                "Bumping/Wafer Level 封裝",
+                "SiP 系統封裝",
+                "FC 倒裝封裝",
+                "先進封裝測試"
+              ],
+              "customers": [
+                "Apple",
+                "NVIDIA",
+                "AMD",
+                "Qualcomm",
+                "Broadcom"
+              ],
+              "tech_focus": [
+                "osat_leader",
+                "advanced_packaging"
+              ]
+            },
+            {
+              "code": "3189",
+              "name": "景碩",
+              "role": "景碩在 CoWoS 封裝供應鏈中提供載板基材；CoWoS 封裝需求增長帶動高階載板出貨。",
+              "relevance": "低",
+              "analysis": "間接受惠；景碩在 CoWoS 封裝供應鏈中提供載板基材；CoWoS 封裝需求增長帶動高階載板出貨。",
+              "products": [
+                "CoWoS 用高階 ABF 載板",
+                "2.5D 封裝用載板"
+              ],
+              "customers": [
+                "台積電（間接）",
+                "Intel",
+                "AMD"
+              ],
+              "tech_focus": [
+                "packaging_substrate_supplier",
+                "advanced_packaging"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "high_end_testing",
+          "level": "midstream",
+          "companies": [
+            {
+              "code": "2449",
+              "name": "京元電子",
+              "role": "京元電在高階測試題材中是獨立測試廠龍頭；4 月營收 37.4 億年增 34.6%，累計年增 38%，AI/GPU 測試需求爆發。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；京元電在高階測試題材中是獨立測試廠龍頭；4 月營收 37.4 億年增 34.6%，累計年增 38%，AI/GPU 測試需求爆發。",
+              "products": [
+                "AI GPU 測試（NVIDIA H100/B200）",
+                "SoC 晶圓測試",
+                "記憶體測試",
+                "5G RF 測試"
+              ],
+              "customers": [
+                "NVIDIA",
+                "AMD",
+                "Qualcomm",
+                "聯發科",
+                "Apple"
+              ],
+              "tech_focus": [
+                "test_house",
+                "high_end_testing"
               ]
             }
           ]
@@ -1364,50 +2374,437 @@
       ]
     },
     {
-      "slug": "edge-ai-aiot",
-      "name": "技術平台｜Edge AI / AIoT 邊緣智慧",
-      "description": "邊緣 AI SoC、AIoT 模組、工業電腦、感測、連接與低功耗推論設備供應鏈。 AI 從雲端延伸到終端與工控場景時，會推動邊緣運算晶片、模組與系統整合需求。",
-      "total": 2,
+      "slug": "ai-server-liquid-cooling",
+      "name": "技術平台｜AI 伺服器液冷散熱",
+      "description": "因 AI 加速器功耗上升而導入的液冷、冷板、CDU、管路、快接頭、散熱模組、風扇與熱管理方案。 高功耗 AI 平台會提高散熱價值量，液冷滲透率與氣冷升級會改變散熱廠產品組合、ASP 與毛利結構。",
+      "total": 5,
       "groups": [
         {
-          "name": "IC 設計與 IP",
+          "name": "散熱與機構",
           "level": "upstream",
           "companies": [
             {
-              "code": "2454",
-              "name": "聯發科",
-              "role": "聯發科在 Edge AI/AIoT 題材中可透過終端 SoC、AI 加速與連接晶片扮演核心 IC 設計供應商角色；需追蹤端側 AI 功能是否帶動 ASP。",
+              "code": "2308",
+              "name": "台達電",
+              "role": "台達電提供伺服器氣冷與液冷散熱全方案，從風扇、VC到CDU一條龍。5月營收589.6億年增43.7%，散熱系統為主要營業項目之一，AI伺服器帶動高階散熱需求。",
               "relevance": "高",
-              "analysis": "核心產品/平台；聯發科在 Edge AI/AIoT 題材中可透過終端 SoC、AI 加速與連接晶片扮演核心 IC 設計供應商角色；需追蹤端側 AI 功能是否帶動 ASP。",
+              "analysis": "直接賦能角色；台達電提供伺服器氣冷與液冷散熱全方案，從風扇、VC到CDU一條龍。5月營收589.6億年增43.7%，散熱系統為主要營業項目之一，AI伺服器帶動高階散熱需求。",
               "products": [
-                "Edge AI SoC",
-                "AIoT 晶片平台",
-                "終端 AI 加速晶片"
+                "液冷CDU(冷卻液分配單元)",
+                "無刷直流風扇(PF系列)",
+                "氣冷散熱模組(VC+熱管)",
+                "伺服器背板風扇牆"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "NVIDIA(GB200散熱)",
+                "Dell(伺服器散熱)",
+                "HPE(伺服器散熱)",
+                "Google(資料中心散熱)",
+                "Microsoft(資料中心散熱)"
               ],
               "tech_focus": [
-                "edge_ai_soc_provider",
-                "ic_design"
+                "data_center_liquid_air_cooling_provider",
+                "thermal"
               ]
             },
             {
-              "code": "3034",
-              "name": "聯詠",
-              "role": "聯詠可透過顯示 SoC 與邊緣影像/顯示晶片切入 Edge AI 題材，但目前應保守列為供應鏈候選，不應過度放大為 AI 核心晶片。",
-              "relevance": "中",
-              "analysis": "供應商角色；聯詠可透過顯示 SoC 與邊緣影像/顯示晶片切入 Edge AI 題材，但目前應保守列為供應鏈候選，不應過度放大為 AI 核心晶片。",
+              "code": "3017",
+              "name": "奇鋐",
+              "role": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
               "products": [
-                "顯示 SoC",
-                "邊緣顯示與影像 IC"
+                "液冷冷板(Copper Cold Plate)",
+                "液冷散熱模組(CDU搭配)",
+                "均熱板(VC)散熱方案",
+                "伺服器熱管模組"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Dell(液冷伺服器)",
+                "HPE(液冷伺服器)",
+                "廣達(2382)(AI伺服器液冷)",
+                "緯創(3231)(伺服器散熱)"
               ],
               "tech_focus": [
-                "edge_ai_soc_candidate",
-                "ic_design"
+                "liquid_cooling_solution_candidate",
+                "thermal"
+              ]
+            },
+            {
+              "code": "3017",
+              "name": "奇鋐",
+              "role": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+              "products": [
+                "液冷冷板(Copper Cold Plate)",
+                "液冷散熱模組(CDU搭配)",
+                "均熱板(VC)散熱方案",
+                "伺服器熱管模組"
+              ],
+              "customers": [
+                "Dell(液冷伺服器)",
+                "HPE(液冷伺服器)",
+                "廣達(2382)(AI伺服器液冷)",
+                "緯創(3231)(伺服器散熱)"
+              ],
+              "tech_focus": [
+                "air_cooling_and_thermal_module_provider",
+                "thermal"
+              ]
+            },
+            {
+              "code": "3017",
+              "name": "奇鋐",
+              "role": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+              "products": [
+                "液冷冷板(Copper Cold Plate)",
+                "液冷散熱模組(CDU搭配)",
+                "均熱板(VC)散熱方案",
+                "伺服器熱管模組"
+              ],
+              "customers": [
+                "Dell(液冷伺服器)",
+                "HPE(液冷伺服器)",
+                "廣達(2382)(AI伺服器液冷)",
+                "緯創(3231)(伺服器散熱)"
+              ],
+              "tech_focus": [
+                "thermal_solution_provider",
+                "thermal"
+              ]
+            },
+            {
+              "code": "3324",
+              "name": "雙鴻",
+              "role": "雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
+              "products": [
+                "均熱板(Vapor Chamber)",
+                "熱管(Heat Pipe)",
+                "氣冷散熱模組(Sink+Fan)",
+                "伺服器VC散熱板"
+              ],
+              "customers": [
+                "廣達(2382)(伺服器散熱)",
+                "鴻海(2317)(伺服器散熱)",
+                "緯創(3231)(伺服器散熱)",
+                "Dell(伺服器散熱)",
+                "HPE(伺服器散熱)"
+              ],
+              "tech_focus": [
+                "liquid_cooling_module_provider",
+                "thermal"
+              ]
+            },
+            {
+              "code": "3324",
+              "name": "雙鴻",
+              "role": "雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
+              "products": [
+                "均熱板(Vapor Chamber)",
+                "熱管(Heat Pipe)",
+                "氣冷散熱模組(Sink+Fan)",
+                "伺服器VC散熱板"
+              ],
+              "customers": [
+                "廣達(2382)(伺服器散熱)",
+                "鴻海(2317)(伺服器散熱)",
+                "緯創(3231)(伺服器散熱)",
+                "Dell(伺服器散熱)",
+                "HPE(伺服器散熱)"
+              ],
+              "tech_focus": [
+                "thermal_solution_provider",
+                "thermal"
+              ]
+            },
+            {
+              "code": "3324",
+              "name": "雙鴻",
+              "role": "雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
+              "products": [
+                "均熱板(Vapor Chamber)",
+                "熱管(Heat Pipe)",
+                "氣冷散熱模組(Sink+Fan)",
+                "伺服器VC散熱板"
+              ],
+              "customers": [
+                "廣達(2382)(伺服器散熱)",
+                "鴻海(2317)(伺服器散熱)",
+                "緯創(3231)(伺服器散熱)",
+                "Dell(伺服器散熱)",
+                "HPE(伺服器散熱)"
+              ],
+              "tech_focus": [
+                "air_cooling_component_provider",
+                "thermal"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "thermal_system",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2376",
+              "name": "技嘉",
+              "role": "技嘉在液冷散熱題材中是 AI 伺服器整機整合商；自研冷板與水冷方案搭配 GPU 伺服器出貨。4 月營收年增 73.7%。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；技嘉在液冷散熱題材中是 AI 伺服器整機整合商；自研冷板與水冷方案搭配 GPU 伺服器出貨。4 月營收年增 73.7%。",
+              "products": [
+                "液冷伺服器方案",
+                "AI 伺服器散熱整合"
+              ],
+              "customers": [
+                "NVIDIA",
+                "自營 AI 伺服器整合",
+                "Google",
+                "AWS"
+              ],
+              "tech_focus": [
+                "liquid_cooling_server_solution",
+                "thermal_system"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "air_cooling",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "6230",
+              "name": "尼得科超眾",
+              "role": "尼得科超眾在風冷散熱題材中是散熱風扇領導廠；4 月營收 8.28 億年增 12%，累計年增 9.1%，日系股東技術支援穩定。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；尼得科超眾在風冷散熱題材中是散熱風扇領導廠；4 月營收 8.28 億年增 12%，累計年增 9.1%，日系股東技術支援穩定。",
+              "products": [
+                "伺服器散熱風扇",
+                "NB 散熱風扇",
+                "車用散熱風扇",
+                "BLDC 風扇馬達"
+              ],
+              "customers": [
+                "Dell",
+                "HP",
+                "廣達",
+                "NEC"
+              ],
+              "tech_focus": [
+                "cooling_fan_manufacturer",
+                "air_cooling"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "energy-storage-battery",
+      "name": "主題趨勢｜儲能、電芯與電池材料",
+      "description": "儲能系統、電池模組、BMS、電芯製造與正負極/隔離膜/銅箔等關鍵材料供應鏈。 電網韌性、資料中心備援與電動車需求會推升儲能與電池供應鏈價值量，材料價格與系統訂單會影響獲利。",
+      "total": 4,
+      "groups": [
+        {
+          "name": "system_integration",
+          "level": "downstream",
+          "companies": [
+            {
+              "code": "2308",
+              "name": "台達電",
+              "role": "台達電在儲能領域提供PCS變流器、BMS與微電網系統整合，全球儲能專案超過2GWh。5月營收589.6億年增43.7%，能源基礎設施為成長動能之一。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；台達電在儲能領域提供PCS變流器、BMS與微電網系統整合，全球儲能專案超過2GWh。5月營收589.6億年增43.7%，能源基礎設施為成長動能之一。",
+              "products": [
+                "MW級儲能變流器(PCS)",
+                "電池管理系統(BMS)",
+                "微電網控制系統",
+                "V2G雙向充電樁"
+              ],
+              "customers": [
+                "台電(儲能標案)",
+                "Tesla(Powerwall逆變器)",
+                "Delta Electronics USA(美國微電網)",
+                "NextEra Energy(公用儲能)"
+              ],
+              "tech_focus": [
+                "energy_storage_and_management_solution_provider",
+                "system_integration"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ess",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "1519",
+              "name": "華城",
+              "role": "華城在儲能題材中提供電力系統整合與變壓器設備；台電 E-dReg 儲能標案受惠最大。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；華城在儲能題材中提供電力系統整合與變壓器設備；台電 E-dReg 儲能標案受惠最大。",
+              "products": [
+                "儲能變壓器",
+                "微電網系統整合",
+                "太陽能變流器"
+              ],
+              "customers": [
+                "台電",
+                "儲能案場開發商"
+              ],
+              "tech_focus": [
+                "storage_electrical_integration",
+                "ess"
+              ]
+            },
+            {
+              "code": "1504",
+              "name": "東元",
+              "role": "東元在儲能題材中提供EMS系統整合與 PCS 變流器；受惠台電儲能標案。",
+              "relevance": "低",
+              "analysis": "間接受惠；東元在儲能題材中提供EMS系統整合與 PCS 變流器；受惠台電儲能標案。",
+              "products": [
+                "儲能 PCS 變流器",
+                "EMS 能源管理系統"
+              ],
+              "customers": [
+                "台電",
+                "台泥",
+                "光電案場"
+              ],
+              "tech_focus": [
+                "storage_system_integrator",
+                "ess"
+              ]
+            },
+            {
+              "code": "3576",
+              "name": "聯合再生",
+              "role": "聯合再生跨入儲能系統整合；太陽能+儲能案場一條龍服務。",
+              "relevance": "低",
+              "analysis": "間接受惠；聯合再生跨入儲能系統整合；太陽能+儲能案場一條龍服務。",
+              "products": [
+                "光儲合一系統整合",
+                "儲能案場開發"
+              ],
+              "customers": [
+                "台電",
+                "企業客戶"
+              ],
+              "tech_focus": [
+                "storage_system_provider",
+                "ess"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "silicon-photonics-optical-comm",
+      "name": "技術平台｜矽光子、CPO 與高速光通訊",
+      "description": "矽光子、CPO、光收發模組、光通訊 IC、連接器與光纖材料等高速資料傳輸供應鏈。 AI cluster 對高速低功耗互連需求提升，會帶動光收發模組、矽光子、CPO 與光通訊零組件滲透。",
+      "total": 4,
+      "groups": [
+        {
+          "name": "optical_component_epiwafer",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "3081",
+              "name": "聯亞",
+              "role": "聯亞以InP/GaAs MOCVD磊晶技術供應LD/PD磊晶片，是光收發模組上游關鍵元件材料供應者。主要客戶為全球光通訊雷射與模組大廠。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；聯亞以InP/GaAs MOCVD磊晶技術供應LD/PD磊晶片，是光收發模組上游關鍵元件材料供應者。主要客戶為全球光通訊雷射與模組大廠。",
+              "products": [
+                "InP雷射磊晶片(DFB/EML)",
+                "GaAs檢光器磊晶片(PIN/APD)",
+                "25G/100G EML雷射晶粒",
+                "高速PD檢光器晶粒"
+              ],
+              "customers": [
+                "II-VI(Coherent)(雷射晶粒)",
+                "Lumentum(雷射晶粒)",
+                "住友電工(光通訊晶粒)",
+                "華星光電(光收發模組)"
+              ],
+              "tech_focus": [
+                "optical_communication_ld_pd_epiwafer_supplier",
+                "optical_component_epiwafer"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "silicon_photonics",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "3450",
+              "name": "聯鈞",
+              "role": "聯鈞在矽光子題材中供應光波導雷射加工設備。",
+              "relevance": "低",
+              "analysis": "間接受惠；聯鈞在矽光子題材中供應光波導雷射加工設備。",
+              "products": [
+                "矽光子波導雷射加工設備"
+              ],
+              "customers": [
+                "Intel",
+                "Broadcom"
+              ],
+              "tech_focus": [
+                "laser_processing_equipment",
+                "silicon_photonics"
+              ]
+            },
+            {
+              "code": "3533",
+              "name": "嘉澤",
+              "role": "嘉澤在矽光子題材中供應 CPO/矽光子模組用光連接器；CPO 封裝密度提升帶動新連接器規格需求。",
+              "relevance": "低",
+              "analysis": "間接受惠；嘉澤在矽光子題材中供應 CPO/矽光子模組用光連接器；CPO 封裝密度提升帶動新連接器規格需求。",
+              "products": [
+                "CPO 用光連接器",
+                "矽光子模組連接器"
+              ],
+              "customers": [
+                "Intel",
+                "Broadcom",
+                "台積電"
+              ],
+              "tech_focus": [
+                "optical_connector_supplier",
+                "silicon_photonics"
+              ]
+            },
+            {
+              "code": "3711",
+              "name": "日月光投控",
+              "role": "日月光在矽光子題材中提供光通訊模組封裝服務；CPO/矽光子整合封裝是新成長方向。",
+              "relevance": "低",
+              "analysis": "間接受惠；日月光在矽光子題材中提供光通訊模組封裝服務；CPO/矽光子整合封裝是新成長方向。",
+              "products": [
+                "矽光子模組封裝",
+                "光收發模組封裝"
+              ],
+              "customers": [
+                "Intel",
+                "Broadcom",
+                "Cisco"
+              ],
+              "tech_focus": [
+                "optical_packaging_provider",
+                "silicon_photonics"
               ]
             }
           ]
@@ -1418,7 +2815,7 @@
       "slug": "display-led-optics",
       "name": "供應鏈環節｜面板、LED、光學鏡頭與感測",
       "description": "面板、DDIC 周邊、LED/Mini LED/Micro LED、車用照明、光學鏡頭、相機模組與光感測元件供應鏈。 顯示與光學元件受面板報價、車用照明、手機鏡頭與感測應用影響，週期與規格升級會反映到出貨與毛利。",
-      "total": 2,
+      "total": 4,
       "groups": [
         {
           "name": "IC 設計與 IP",
@@ -1427,15 +2824,19 @@
             {
               "code": "3034",
               "name": "聯詠",
-              "role": "聯詠不是面板製造商，而是面板驅動與控制 IC 的直接賦能者；Daily Analysis 應把面板價格/需求與 IC 設計庫存循環連動觀察。",
+              "role": "聯詠在面板驅動 IC 題材中是全球出貨量最大供應商；4 月營收年增 1.2%，OLED DDI 是主要成長引擎。",
               "relevance": "高",
-              "analysis": "直接賦能角色；聯詠不是面板製造商，而是面板驅動與控制 IC 的直接賦能者；Daily Analysis 應把面板價格/需求與 IC 設計庫存循環連動觀察。",
+              "analysis": "直接賦能角色；聯詠在面板驅動 IC 題材中是全球出貨量最大供應商；4 月營收年增 1.2%，OLED DDI 是主要成長引擎。",
               "products": [
                 "面板驅動 IC",
                 "顯示控制晶片"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "Samsung Display",
+                "LG Display",
+                "京東方",
+                "友達",
+                "群創"
               ],
               "tech_focus": [
                 "display_panel_ic_enabler",
@@ -1467,6 +2868,322 @@
               ]
             }
           ]
+        },
+        {
+          "name": "display_panel",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "6176",
+              "name": "瑞儀",
+              "role": "瑞儀在面板題材中是背光模組領導廠；4 月營收 37.1 億年減 8.5%，累計年減 2%，電視與監視器背光模組需求疲弱。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；瑞儀在面板題材中是背光模組領導廠；4 月營收 37.1 億年減 8.5%，累計年減 2%，電視與監視器背光模組需求疲弱。",
+              "products": [
+                "LCD 背光模組（電視/監視器）",
+                "Mini LED 背光模組",
+                "車用背光模組"
+              ],
+              "customers": [
+                "群創",
+                "友達",
+                "LG Display",
+                "BOE"
+              ],
+              "tech_focus": [
+                "backlight_module_manufacturer",
+                "display_panel"
+              ]
+            },
+            {
+              "code": "8150",
+              "name": "南茂",
+              "role": "南茂在面板驅動 IC 封裝領域有穩定份額；DDI 封裝金凸塊技術是核心。",
+              "relevance": "低",
+              "analysis": "間接受惠；南茂在面板驅動 IC 封裝領域有穩定份額；DDI 封裝金凸塊技術是核心。",
+              "products": [
+                "DDI 金凸塊封裝",
+                "COF 封裝"
+              ],
+              "customers": [
+                "聯詠",
+                "奇景",
+                "LX Semicon"
+              ],
+              "tech_focus": [
+                "ddic_packaging",
+                "display_panel"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "software-cloud-security",
+      "name": "主題趨勢｜資安、雲端服務與企業軟體",
+      "description": "資安產品、系統整合、雲端代管、MSP、企業 SaaS、ERP、AI 軟體與 IT 委外服務供應鏈。 企業數位轉型、資安法規、雲端遷移與 AI 軟體導入會推動 recurring revenue 與專案服務需求。",
+      "total": 3,
+      "groups": [
+        {
+          "name": "system_assembly",
+          "level": "midstream",
+          "companies": [
+            {
+              "code": "6669",
+              "name": "緯穎",
+              "role": "緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。",
+              "products": [
+                "雲端託管伺服器",
+                "資料中心即服務（DCaaS）",
+                "AI 訓練叢集代營"
+              ],
+              "customers": [
+                "Google",
+                "AWS",
+                "Microsoft",
+                "Meta"
+              ],
+              "tech_focus": [
+                "cloud_infrastructure_hardware_provider",
+                "system_assembly"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "enterprise_software_system_integration",
+          "level": "downstream",
+          "companies": [
+            {
+              "code": "2453",
+              "name": "凌群",
+              "role": "凌群為台灣老牌系統整合商，提供政府/金融/交通領域的資安與軟體服務。5月營收5.4億年增6.8%，累計年增6.3%，自有軟體產品DBMaker/OMFLOW為差異化利基。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；凌群為台灣老牌系統整合商，提供政府/金融/交通領域的資安與軟體服務。5月營收5.4億年增6.8%，累計年增6.3%，自有軟體產品DBMaker/OMFLOW為差異化利基。",
+              "products": [
+                "DBMaker關聯式資料庫",
+                "NETCenter網管系統",
+                "OMFLOW工作流程引擎",
+                "Ayuda客服中心系統",
+                "AI智能監控安控系統"
+              ],
+              "customers": [
+                "行政院(政府標案)",
+                "中華電信(2412)(系統整合)",
+                "兆豐金(2886)(金融資安)",
+                "台北捷運(交通監控)"
+              ],
+              "tech_focus": [
+                "system_integrator_enterprise_software_provider",
+                "enterprise_software_system_integration"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "server_management",
+          "level": "downstream",
+          "companies": [
+            {
+              "code": "5274",
+              "name": "信驊",
+              "role": "信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。",
+              "relevance": "中",
+              "analysis": "供應商角色；信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。",
+              "products": [
+                "遠端伺服器管理平台",
+                "BMC 韌體解決方案",
+                "資料中心基礎管理軟體"
+              ],
+              "customers": [
+                "Dell",
+                "HPE",
+                "Lenovo",
+                "超微(8299)"
+              ],
+              "tech_focus": [
+                "hardware_management_enabler",
+                "server_management"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "edge-ai-aiot",
+      "name": "技術平台｜Edge AI / AIoT 邊緣智慧",
+      "description": "邊緣 AI SoC、AIoT 模組、工業電腦、感測、連接與低功耗推論設備供應鏈。 AI 從雲端延伸到終端與工控場景時，會推動邊緣運算晶片、模組與系統整合需求。",
+      "total": 3,
+      "groups": [
+        {
+          "name": "IC 設計與 IP",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "role": "聯發科在邊緣 AI SoC 題材中是手機端側 AI 推論核心供應商；Dimensity 9400 內建 NPU 支援端側大模型運算。4 月營收年減 4.1%。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；聯發科在邊緣 AI SoC 題材中是手機端側 AI 推論核心供應商；Dimensity 9400 內建 NPU 支援端側大模型運算。4 月營收年減 4.1%。",
+              "products": [
+                "Edge AI SoC",
+                "AIoT 晶片平台",
+                "終端 AI 加速晶片"
+              ],
+              "customers": [
+                "Samsung",
+                "小米",
+                "Lenovo",
+                "Sony"
+              ],
+              "tech_focus": [
+                "edge_ai_soc_provider",
+                "ic_design"
+              ]
+            },
+            {
+              "code": "3034",
+              "name": "聯詠",
+              "role": "聯詠在邊緣 AI SoC 題材中是安防/物聯網核心供應商；內嵌 NPU 的 SoC 搶攻邊緣推論。4 月營收年增 1.2%。",
+              "relevance": "中",
+              "analysis": "供應商角色；聯詠在邊緣 AI SoC 題材中是安防/物聯網核心供應商；內嵌 NPU 的 SoC 搶攻邊緣推論。4 月營收年增 1.2%。",
+              "products": [
+                "顯示 SoC",
+                "邊緣顯示與影像 IC"
+              ],
+              "customers": [
+                "Hikvision",
+                "Dahua",
+                "Samsung",
+                "Canon"
+              ],
+              "tech_focus": [
+                "edge_ai_soc_candidate",
+                "ic_design"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "edge_ai",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "2395",
+              "name": "研華",
+              "role": "研華在邊緣 AI 題材中是工業電腦平台龍頭；4 月營收 82.7 億年增 34.6%，累計年增 22%，Edge AI 推論平台是成長主軸。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；研華在邊緣 AI 題材中是工業電腦平台龍頭；4 月營收 82.7 億年增 34.6%，累計年增 22%，Edge AI 推論平台是成長主軸。",
+              "products": [
+                "Edge AI 推論平台（NVIDIA Jetson 整合）",
+                "工業 GPU 運算平台",
+                "邊緣 AI 軟體 Platform"
+              ],
+              "customers": [
+                "NVIDIA",
+                "SI 系統整合商",
+                "製造業客戶",
+                "智慧城市案"
+              ],
+              "tech_focus": [
+                "edge_ai_platform",
+                "edge_ai"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "petrochem-plastics",
+      "name": "供應鏈環節｜石化、塑橡膠與特用化學",
+      "description": "石化基本原料、塑橡膠、特用化學品、溶劑與下游材料供應鏈。 石化與塑橡膠受原油、供需循環、價差與中國產能影響，景氣反轉會反映在利差、庫存與稼動率。",
+      "total": 3,
+      "groups": [
+        {
+          "name": "upstream_petrochemical_materials",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "1301",
+              "name": "台塑",
+              "role": "台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒。5月營收149.5億年增0.7%，累計年減3.8%，石化景氣復甦緩慢。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒。5月營收149.5億年增0.7%，累計年減3.8%，石化景氣復甦緩慢。",
+              "products": [
+                "PVC聚氯乙烯(泛用級/醫療級)",
+                "聚丙烯(PP)(射出級/薄膜級)",
+                "高密度聚乙烯(HDPE)(吹塑級)",
+                "碳素纖維(PAN基)",
+                "液鹼(NaOH 32%/50%)"
+              ],
+              "customers": [
+                "南亞(1303)(塑膠二次加工)",
+                "台化(1326)(PTA/ABS原料)",
+                "台塑化(6505)(VCM原料供應)",
+                "大陸管材製造商",
+                "東南亞塑膠加工廠"
+              ],
+              "tech_focus": [
+                "pvc_pp_producer",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "1326",
+              "name": "台化",
+              "role": "台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。4月營收321億年增28.2%，累計年增9.5%。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。4月營收321億年增28.2%，累計年增9.5%。",
+              "products": [
+                "純對苯二甲酸(PTA)",
+                "聚苯乙烯(PS)",
+                "苯乙烯(SM)",
+                "ABS樹脂",
+                "耐隆66纖維"
+              ],
+              "customers": [
+                "遠東新(1402)",
+                "新光合成纖維",
+                "中國下游纖維廠",
+                "東南亞紡織廠",
+                "汽車零件商"
+              ],
+              "tech_focus": [
+                "pta_sm_abs_producer",
+                "upstream_petrochemical_materials"
+              ]
+            },
+            {
+              "code": "1402",
+              "name": "遠東新",
+              "role": "遠東新是全球最大PET聚酯粒暨聚酯纖維製造商之一，垂直整合從EG/PTA原料到假撚絲、機能布料，主力客戶為Nike/Adidas/Uniqlo等國際品牌。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；遠東新是全球最大PET聚酯粒暨聚酯纖維製造商之一，垂直整合從EG/PTA原料到假撚絲、機能布料，主力客戶為Nike/Adidas/Uniqlo等國際品牌。",
+              "products": [
+                "PET聚酯粒(寶特瓶原料)",
+                "聚酯纖維絲",
+                "假撚絲",
+                "功能性布料(吸濕排汗)",
+                "寶特瓶回收再生纖維"
+              ],
+              "customers": [
+                "Nike",
+                "Adidas",
+                "Uniqlo(迅銷)",
+                "Coca-Cola",
+                "P&G"
+              ],
+              "tech_focus": [
+                "pet polyester_fiber_supplier",
+                "upstream_petrochemical_materials"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1474,7 +3191,7 @@
       "slug": "ai-server-mechanical",
       "name": "供應鏈環節｜AI 伺服器機構件與滑軌",
       "description": "AI server 機殼、滑軌、金屬機構件、精密沖壓與結構件等承載高功耗伺服器平台的機構供應鏈。 伺服器平台規格改版與重量/散熱要求提升，會帶動機殼、滑軌與精密機構件的設計導入與出貨價值量。",
-      "total": 2,
+      "total": 3,
       "groups": [
         {
           "name": "server_mechanical_rails",
@@ -1483,15 +3200,19 @@
             {
               "code": "2059",
               "name": "川湖",
-              "role": "川湖在 AI 伺服器機構件題材中提供高承重伺服器滑軌、理線器與電子設備導軌，支援資料中心伺服器與網通/儲存設備上架維護。",
+              "role": "川湖是全球伺服器導軌龍頭；4 月營收 2.6 億年增 79.1%，累計年增 48.9%。AI 伺服器帶動 GPU 機架導軌需求大增。",
               "relevance": "高",
-              "analysis": "核心產品/平台；川湖在 AI 伺服器機構件題材中提供高承重伺服器滑軌、理線器與電子設備導軌，支援資料中心伺服器與網通/儲存設備上架維護。",
+              "analysis": "核心產品/平台；川湖是全球伺服器導軌龍頭；4 月營收 2.6 億年增 79.1%，累計年增 48.9%。AI 伺服器帶動 GPU 機架導軌需求大增。",
               "products": [
                 "伺服器滑軌與理線器",
                 "電子設備導軌與機架安裝套件"
               ],
               "customers": [
-                "伺服器、交換器、儲存、UPS、KVM 與資料中心設備供應鏈；具名客戶需以年報或公告補強。"
+                "Dell",
+                "HPE",
+                "廣達",
+                "鴻海",
+                "Supermicro"
               ],
               "tech_focus": [
                 "server_rail_cable_management_supplier",
@@ -1511,10 +3232,15 @@
               "relevance": "中",
               "analysis": "供應商角色；緯創可透過伺服器 ODM 垂直整合機構件需求，但不是純機殼/滑軌專門供應商；此角色保守列為 supplier。",
               "products": [
-                "伺服器系統與機構整合"
+                "AI 伺服器機箱/導軌",
+                "GPU 機架滑軌",
+                "散熱風扇模組"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
+                "NVIDIA",
+                "Google",
+                "Dell",
+                "HPE"
               ],
               "tech_focus": [
                 "server_mechanical_integration",
@@ -1522,38 +3248,183 @@
               ]
             }
           ]
+        },
+        {
+          "name": "metal_casing",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "2474",
+              "name": "可成",
+              "role": "可成在金屬外殼題材中是 Apple 金屬機殼核心供應商；4 月營收 9.59 億年減 36.2%，累計年減 19%，手機/Notebook 外殼需求疲弱。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；可成在金屬外殼題材中是 Apple 金屬機殼核心供應商；4 月營收 9.59 億年減 36.2%，累計年減 19%，手機/Notebook 外殼需求疲弱。",
+              "products": [
+                "iPhone 鋁合金/不鏽鋼中框",
+                "NB 金屬外殼",
+                "平板金屬機殼"
+              ],
+              "customers": [
+                "Apple",
+                "Dell",
+                "HP",
+                "Lenovo"
+              ],
+              "tech_focus": [
+                "metal_casing_leader",
+                "metal_casing"
+              ]
+            }
+          ]
         }
       ]
     },
     {
-      "slug": "energy-storage-battery",
-      "name": "主題趨勢｜儲能、電芯與電池材料",
-      "description": "儲能系統、電池模組、BMS、電芯製造與正負極/隔離膜/銅箔等關鍵材料供應鏈。 電網韌性、資料中心備援與電動車需求會推升儲能與電池供應鏈價值量，材料價格與系統訂單會影響獲利。",
-      "total": 1,
+      "slug": "leo-satellite-communications",
+      "name": "終端市場｜低軌衛星通訊",
+      "description": "低軌衛星網路相關的衛星通訊、地面設備、天線、RF、網通與系統整合供應鏈。 低軌衛星建置會帶動天線、RF、網通設備、電源與系統整合需求，是中長期通訊基礎建設題材。",
+      "total": 3,
       "groups": [
         {
-          "name": "system_integration",
-          "level": "downstream",
+          "name": "power_ic",
+          "level": "upstream",
           "companies": [
             {
-              "code": "2308",
-              "name": "台達電",
-              "role": "台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；台達電在儲能系統題材中可歸為能源基礎設施與能源管理供應商，官方能源基礎設施頁列出儲能系統、太陽能逆變器、能源管理、微電網與充電系統。",
+              "code": "6415",
+              "name": "矽力*-KY",
+              "role": "矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。",
+              "relevance": "中",
+              "analysis": "供應商角色；矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。",
               "products": [
-                "能源基礎設施、儲能與能源管理",
-                "儲能系統",
-                "能源管理解決方案",
-                "太陽能逆變器",
-                "微電網"
+                "衛星電源管理 IC",
+                "太空級 DC/DC 轉換器",
+                "太陽能充電管理 IC"
               ],
               "customers": [
-                "再生能源、微電網、充電場域、工廠與商辦能源管理客戶"
+                "SpaceX",
+                "OneWeb",
+                "Telesat",
+                "國家太空中心"
               ],
               "tech_focus": [
-                "energy_storage_and_management_solution_provider",
-                "system_integration"
+                "satellite_power_ic_candidate",
+                "power_ic"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "satellite_ground_equipment",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2313",
+              "name": "華通",
+              "role": "華通是台灣 PCB 前三大廠，SpaceX Starlink PCB 供應商，5月營收67.62億YoY+13.0%累計326.25億YoY+11.7%，HDI 技術領先。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；華通是台灣 PCB 前三大廠，SpaceX Starlink PCB 供應商，5月營收67.62億YoY+13.0%累計326.25億YoY+11.7%，HDI 技術領先。",
+              "products": [
+                "低軌衛星用高多層 PCB（HDI/BGA）",
+                "智慧手機/平板 HDI 軟硬結合板",
+                "伺服器/基地台高層數 PCB",
+                "衛星通訊射頻 PCB"
+              ],
+              "customers": [
+                "SpaceX（Starlink 衛星 PCB）",
+                "Apple（iPhone/ iPad HDI 板）",
+                "Amazon（Project Kuiper 衛星 PCB）",
+                "Ericsson/Nokia（基地台 PCB）"
+              ],
+              "tech_focus": [
+                "leo_satellite_pcb_supplier",
+                "satellite_ground_equipment"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "leo_satellite",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "6153",
+              "name": "嘉聯益",
+              "role": "嘉聯益供應低軌衛星通訊設備用高頻軟板；Starlink/OneWeb 等衛星計畫帶動新需求。",
+              "relevance": "低",
+              "analysis": "間接受惠；嘉聯益供應低軌衛星通訊設備用高頻軟板；Starlink/OneWeb 等衛星計畫帶動新需求。",
+              "products": [
+                "高頻軟板（衛星通訊用）",
+                "毫米波 FPC"
+              ],
+              "customers": [
+                "SpaceX",
+                "OneWeb",
+                "台灣衛星供應鏈"
+              ],
+              "tech_focus": [
+                "fpc_satellite_supplier",
+                "leo_satellite"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "renewable-energy",
+      "name": "主題趨勢｜太陽能與離岸風電",
+      "description": "太陽能材料/設備/系統與離岸風電鋼構、海纜、變壓器、風場開發和運維供應鏈。 再生能源建置、併網與政策補助會帶動設備、工程、電力傳輸與運維需求，是中長期能源轉型題材。",
+      "total": 2,
+      "groups": [
+        {
+          "name": "offshore_wind",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "1519",
+              "name": "華城",
+              "role": "華城在離岸風電題材中提供陸上變電站設備；風場併聯變壓器是新需求。",
+              "relevance": "低",
+              "analysis": "間接受惠；華城在離岸風電題材中提供陸上變電站設備；風場併聯變壓器是新需求。",
+              "products": [
+                "風場併聯變壓器",
+                "開關設備"
+              ],
+              "customers": [
+                "台電",
+                "沃旭",
+                "CIP"
+              ],
+              "tech_focus": [
+                "wind_electrical_equipment",
+                "offshore_wind"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "solar",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "3576",
+              "name": "聯合再生",
+              "role": "聯合再生在太陽能題材中是台灣最大太陽能電池/模組廠；4 月營收 2.25 億年增 2.2%，但累計年減 37.8%，產業仍處低谷。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；聯合再生在太陽能題材中是台灣最大太陽能電池/模組廠；4 月營收 2.25 億年增 2.2%，但累計年減 37.8%，產業仍處低谷。",
+              "products": [
+                "PERC 太陽能電池",
+                "太陽能模組",
+                "太陽能電廠 EPC"
+              ],
+              "customers": [
+                "台電",
+                "光電案場開發商",
+                "在地系統商"
+              ],
+              "tech_focus": [
+                "solar_cell_manufacturer",
+                "solar"
               ]
             }
           ]
@@ -1564,7 +3435,7 @@
       "slug": "industrial-automation",
       "name": "技術平台｜工業自動化與 CNC 工具機",
       "description": "馬達驅動、PLC、工業視覺、線性傳動、CNC 工具機與智慧製造系統供應鏈。 製造業自動化、半導體/電子擴產與人力替代需求會推動控制器、傳動、設備與系統整合需求。",
-      "total": 1,
+      "total": 2,
       "groups": [
         {
           "name": "system_integration",
@@ -1573,19 +3444,21 @@
             {
               "code": "2308",
               "name": "台達電",
-              "role": "台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。",
+              "role": "台達電是台灣最大工業自動化品牌，產品涵蓋伺服、PLC、變頻器、機器人與工業通訊。5月營收589.6億年增43.7%，工業自動化為核心成長引擎之一，DIASCS平台整合驅動/運動控制/機器視覺。",
               "relevance": "高",
-              "analysis": "核心產品/平台；台達電在工業自動化題材中是核心產品與系統供應者，產品包含驅動、運動控制、PLC、人機介面、工業網路、機器人、製程設備與系統軟體，年報也將自動化列為營運部門。",
+              "analysis": "核心產品/平台；台達電是台灣最大工業自動化品牌，產品涵蓋伺服、PLC、變頻器、機器人與工業通訊。5月營收589.6億年增43.7%，工業自動化為核心成長引擎之一，DIASCS平台整合驅動/運動控制/機器視覺。",
               "products": [
-                "工業自動化與智慧製造產品",
-                "交流馬達驅動器",
-                "伺服系統",
-                "PLC",
-                "工業機器人",
-                "系統軟體"
+                "交流伺服馬達(ASDA-A3系列)",
+                "PLC可程式控制器(DVP/AH500系列)",
+                "變頻器(C2000系列)",
+                "工業機器人(DRSA/DRAS六軸)",
+                "DIASCS工業通訊平台(EtherCAT/PROFINET)"
               ],
               "customers": [
-                "工廠自動化、智慧製造、製程設備與工業能源管理客戶"
+                "Foxconn(鴻海自動化產線)",
+                "台達電子(集團內部自動化)",
+                "Schunk(機器手臂夾爪整合)",
+                "西門子(工業通訊協議授權)"
               ],
               "tech_focus": [
                 "industrial_automation_solution_provider",
@@ -1593,35 +3466,30 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "slug": "silicon-photonics-optical-comm",
-      "name": "技術平台｜矽光子、CPO 與高速光通訊",
-      "description": "矽光子、CPO、光收發模組、光通訊 IC、連接器與光纖材料等高速資料傳輸供應鏈。 AI cluster 對高速低功耗互連需求提升，會帶動光收發模組、矽光子、CPO 與光通訊零組件滲透。",
-      "total": 1,
-      "groups": [
+        },
         {
-          "name": "optical_component_epiwafer",
-          "level": "upstream",
+          "name": "industrial_automation",
+          "level": "peripheral",
           "companies": [
             {
-              "code": "3081",
-              "name": "聯亞",
-              "role": "聯亞在高速光通訊題材中以 InP/GaAs MOCVD 磊晶技術供應 LD/PD 磊晶片與高速 EML 相關產品，是光收發模組上游關鍵元件材料供應者。",
+              "code": "2395",
+              "name": "研華",
+              "role": "研華在工業自動化題材中提供 IPC 平台與 IoT 閘道器；工業 4.0 與 ESG 監控驅動需求。",
               "relevance": "高",
-              "analysis": "核心產品/平台；聯亞在高速光通訊題材中以 InP/GaAs MOCVD 磊晶技術供應 LD/PD 磊晶片與高速 EML 相關產品，是光收發模組上游關鍵元件材料供應者。",
+              "analysis": "核心產品/平台；研華在工業自動化題材中提供 IPC 平台與 IoT 閘道器；工業 4.0 與 ESG 監控驅動需求。",
               "products": [
-                "光通訊雷射與檢光器磊晶片",
-                "高速 EML 與資料中心光通訊元件"
+                "工業 IoT 平台",
+                "遠端 I/O 模組",
+                "工業閘道器"
               ],
               "customers": [
-                "光通訊晶粒、光收發模組與資料中心/電信供應鏈客戶；具名客戶需後續證據補強。"
+                "西門子",
+                "Rockwell",
+                "本土 SI"
               ],
               "tech_focus": [
-                "optical_communication_ld_pd_epiwafer_supplier",
-                "optical_component_epiwafer"
+                "industrial_automation_platform",
+                "industrial_automation"
               ]
             }
           ]
@@ -1629,63 +3497,60 @@
       ]
     },
     {
-      "slug": "cxl-memory-pooling",
-      "name": "技術平台｜CXL 記憶體池化",
-      "description": "基於 Compute Express Link 的記憶體擴充、共享與池化技術，服務資料中心高效資源配置。 若資料中心導入 CXL memory pooling，可能帶動控制晶片、模組、伺服器平台與記憶體配置升級。",
-      "total": 1,
+      "slug": "electrical-equipment-epc",
+      "name": "供應鏈環節｜重電、電纜與 EPC 工程",
+      "description": "重電設備、變壓器、電器電纜、電力系統、廠務與 EPC 工程服務供應鏈。 電網升級、資料中心建置、半導體廠務與能源基礎設施投資會帶動重電設備與 EPC 工程訂單。",
+      "total": 2,
       "groups": [
         {
-          "name": "IC 設計與 IP",
-          "level": "upstream",
+          "name": "electrical",
+          "level": "peripheral",
           "companies": [
             {
-              "code": "5274",
-              "name": "信驊",
-              "role": "信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。",
+              "code": "1504",
+              "name": "東元",
+              "role": "東元是台灣最大馬達製造商，全球工業馬達市佔前五。5月營收56.9億年增10.6%，累計年增7.2%，IE4/IE5高效率馬達需求穩定成長。",
               "relevance": "高",
-              "analysis": "直接賦能角色；信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。",
+              "analysis": "核心產品/平台；東元是台灣最大馬達製造商，全球工業馬達市佔前五。5月營收56.9億年增10.6%，累計年增7.2%，IE4/IE5高效率馬達需求穩定成長。",
               "products": [
-                "伺服器管理 IC",
-                "CXL/PCIe 管理相關 IC 候選"
+                "高壓馬達(IE4/IE5效率)",
+                "低壓馬達(TEFC系列)",
+                "變頻器(JN700系列)",
+                "電力變壓器(161kV/345kV)",
+                "GIS氣體絕緣開關"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "台塑(1301)(馬達/變頻器)",
+                "中鋼(2002)(大型馬達)",
+                "台電(變壓器/GIS)",
+                "中油(馬達/變壓器)"
               ],
               "tech_focus": [
-                "cxl_management_ic_candidate",
-                "ic_design"
+                "motor_manufacturer",
+                "electrical"
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "networking-infrastructure",
-      "name": "供應鏈環節｜高速交換器與網通設備",
-      "description": "高速交換器、無線網路、路由器、網通設備、網通晶片與企業/資料中心網路基礎設施供應鏈。 AI 資料中心、企業網路升級與寬頻投資會帶動交換器、Wi-Fi、網通晶片與設備需求。",
-      "total": 1,
-      "groups": [
-        {
-          "name": "pcb",
-          "level": "upstream",
-          "companies": [
+            },
             {
-              "code": "2368",
-              "name": "金像電",
-              "role": "金像電可供應網通設備 PCB，與高速交換器/網通設備題材的關聯屬材料與板級供應鏈。",
-              "relevance": "中",
-              "analysis": "供應商角色；金像電可供應網通設備 PCB，與高速交換器/網通設備題材的關聯屬材料與板級供應鏈。",
+              "code": "1519",
+              "name": "華城",
+              "role": "華城在重電設備題材中以變壓器與配電設備為核心；4 月營收 22.5 億年增 6.4%，累計年增 7.2%，台電強韌電網計畫受惠。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；華城在重電設備題材中以變壓器與配電設備為核心；4 月營收 22.5 億年增 6.4%，累計年增 7.2%，台電強韌電網計畫受惠。",
               "products": [
-                "網通 PCB",
-                "交換器/通訊設備板"
+                "電力變壓器（161kV/345kV）",
+                "配電變壓器",
+                "GIS 開關設備",
+                "太陽能變流器"
               ],
               "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
+                "台電",
+                "台塑",
+                "中鋼",
+                "半導體廠"
               ],
               "tech_focus": [
-                "networking_pcb_supplier",
-                "pcb"
+                "transformer_manufacturer",
+                "electrical"
               ]
             }
           ]
@@ -1696,7 +3561,7 @@
       "slug": "high-speed-interconnect",
       "name": "供應鏈環節｜高速連接器與車工業連接",
       "description": "高速連接器、Cable、排線、車用連接器、工業連接器、電源連接器與線束供應鏈。 AI server、車用電子與工業自動化會提高高速/高可靠連接需求，帶動連接器規格升級與出貨價值量。",
-      "total": 1,
+      "total": 2,
       "groups": [
         {
           "name": "interface_ic_design",
@@ -1721,6 +3586,36 @@
               ]
             }
           ]
+        },
+        {
+          "name": "high_speed_connector",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "3533",
+              "name": "嘉澤",
+              "role": "嘉澤在高速連接器題材中是台灣最大連接器廠；4 月營收 33.9 億年增 15.2%，累計年增 19.4%，AI 伺服器高速傳輸需求是成長主力。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；嘉澤在高速連接器題材中是台灣最大連接器廠；4 月營收 33.9 億年增 15.2%，累計年增 19.4%，AI 伺服器高速傳輸需求是成長主力。",
+              "products": [
+                "AI 伺服器 MCIO 連接器",
+                "DDR5 DIMM 插槽",
+                "PCIe Gen5/6 連接器",
+                "OSFP/QSFP 光模組連接器"
+              ],
+              "customers": [
+                "NVIDIA",
+                "廣達",
+                "緯穎",
+                "FCI",
+                "Amphenol"
+              ],
+              "tech_focus": [
+                "high_speed_connector_leader",
+                "high_speed_connector"
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1728,7 +3623,7 @@
       "slug": "passive-components",
       "name": "供應鏈環節｜被動元件",
       "description": "電子電路中不主動放大訊號的基礎元件族群，包含 MLCC/電容、電阻、電感、保護元件與石英頻率元件。 被動元件具庫存與報價循環，車用、AI server、工控與消費電子需求復甦會透過規格升級或用量提升影響訂單與毛利。",
-      "total": 1,
+      "total": 2,
       "groups": [
         {
           "name": "capacitor_upstream_materials",
@@ -1737,19 +3632,221 @@
             {
               "code": "6175",
               "name": "立敦",
-              "role": "立敦在被動元件題材中供應鋁電解電容器上游化成鋁箔與電蝕鋁箔材料，影響電容器容量、耐壓、壽命與可靠度。",
+              "role": "立敦是全球前三大鋁電解電容器上游化成鋁箔供應商，產品影響電容器容量、耐壓與壽命。MOPS主業為化成鋁箔與電蝕鋁箔生產銷售。",
               "relevance": "中",
-              "analysis": "供應商角色；立敦在被動元件題材中供應鋁電解電容器上游化成鋁箔與電蝕鋁箔材料，影響電容器容量、耐壓、壽命與可靠度。",
+              "analysis": "供應商角色；立敦是全球前三大鋁電解電容器上游化成鋁箔供應商，產品影響電容器容量、耐壓與壽命。MOPS主業為化成鋁箔與電蝕鋁箔生產銷售。",
               "products": [
-                "鋁電解電容器用化成鋁箔與電蝕鋁箔",
-                "高壓與長壽命電容材料應用"
+                "高壓化成鋁箔(400V-700V)",
+                "電蝕鋁箔(低比電容/高強度)",
+                "長壽命化成鋁箔(105°C/5000hr)",
+                "固態電容用鋁箔"
               ],
               "customers": [
-                "鋁電解電容器廠與電源、車用、工業、通訊、綠能設備供應鏈；具名客戶需補強。"
+                "Nichicon(尼吉康)(鋁電解電容)",
+                "Rubycon(紅寶石)(鋁電解電容)",
+                "Nippon Chemi-con(日本貴彌功)",
+                "智寶(2375)(台灣電容廠)"
               ],
               "tech_focus": [
                 "aluminum_electrolytic_capacitor_foil_supplier",
                 "capacitor_upstream_materials"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "upstream_petrochemical_materials",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2327",
+              "name": "國巨",
+              "role": "國巨是全球MLCC與晶片電阻龍頭，合併KEMET後車規/工規產品線完整。AI伺服器與電動車帶動高容值MLCC需求倍增。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；國巨是全球MLCC與晶片電阻龍頭，合併KEMET後車規/工規產品線完整。AI伺服器與電動車帶動高容值MLCC需求倍增。",
+              "products": [
+                "MLCC多層陶瓷電容",
+                "晶片電阻(Chip R)",
+                "電感(Inductor)",
+                "天線模組",
+                "壓電陶瓷元件"
+              ],
+              "customers": [
+                "Apple",
+                "Tesla",
+                "Intel",
+                "Qualcomm",
+                "Samsung"
+              ],
+              "tech_focus": [
+                "mlcc_chip_resistor_leader",
+                "upstream_petrochemical_materials"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ai-server-power-backup",
+      "name": "產品應用｜AI 伺服器電源與 BBU",
+      "description": "服務資料中心與 AI server 的高瓦數電源供應器、電源管理、UPS/BBU 電池備援與相關被動元件/電池模組。 AI server 功耗提升會推升 PSU 瓦數、電源效率、備援電池與資料中心電力架構升級，直接影響電源供應鏈價值量。",
+      "total": 2,
+      "groups": [
+        {
+          "name": "電源與供電系統",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2308",
+              "name": "台達電",
+              "role": "台達電是全球最大伺服器電源供應商，CRPS市佔超過50%。5月營收589.6億年增43.7%，電源及零組件為最大營收部門，AI伺服器高功耗驅動3000W+電源需求。",
+              "relevance": "高",
+              "analysis": "核心產品/平台；台達電是全球最大伺服器電源供應商，CRPS市佔超過50%。5月營收589.6億年增43.7%，電源及零組件為最大營收部門，AI伺服器高功耗驅動3000W+電源需求。",
+              "products": [
+                "CRPS伺服器電源(800W-3000W)",
+                "BBU電池備援模組",
+                "PDU電力分配單元",
+                "UPS不斷電系統(Modular UPS)"
+              ],
+              "customers": [
+                "NVIDIA(GB200供電)",
+                "Dell(伺服器電源)",
+                "HPE(伺服器電源)",
+                "Google(資料中心供電)",
+                "Microsoft(資料中心UPS)"
+              ],
+              "tech_focus": [
+                "power_supply_system_provider",
+                "power"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "psu",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "6230",
+              "name": "尼得科超眾",
+              "role": "尼得科超眾供應電源供應器用散熱風扇。",
+              "relevance": "低",
+              "analysis": "間接受惠；尼得科超眾供應電源供應器用散熱風扇。",
+              "products": [
+                "電源供應器散熱風扇"
+              ],
+              "customers": [
+                "台達電",
+                "全漢"
+              ],
+              "tech_focus": [
+                "psu_cooling_component",
+                "psu"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "robotics-physical-ai",
+      "name": "主題趨勢｜人形機器人與實體 AI",
+      "description": "人形機器人與實體 AI 的馬達、減速機、線性傳動、感測、控制、結構件與系統整合供應鏈。 若機器人商用化加速，會帶動精密傳動、感測控制與結構件新需求，但目前仍需嚴格驗證客戶與量產時程。",
+      "total": 1,
+      "groups": [
+        {
+          "name": "robotics",
+          "level": "peripheral",
+          "companies": [
+            {
+              "code": "2395",
+              "name": "研華",
+              "role": "研華在 Physical AI/機器人題材中提供機器人控制平台與周邊模組。",
+              "relevance": "低",
+              "analysis": "間接受惠；研華在 Physical AI/機器人題材中提供機器人控制平台與周邊模組。",
+              "products": [
+                "機器人控制 IPC",
+                "ROS 整合平台"
+              ],
+              "customers": [
+                "機器人 SI 廠",
+                "學研機構"
+              ],
+              "tech_focus": [
+                "robotics_platform",
+                "robotics"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cxl-memory-pooling",
+      "name": "技術平台｜CXL 記憶體池化",
+      "description": "基於 Compute Express Link 的記憶體擴充、共享與池化技術，服務資料中心高效資源配置。 若資料中心導入 CXL memory pooling，可能帶動控制晶片、模組、伺服器平台與記憶體配置升級。",
+      "total": 1,
+      "groups": [
+        {
+          "name": "IC 設計與 IP",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "5274",
+              "name": "信驊",
+              "role": "信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。",
+              "relevance": "高",
+              "analysis": "直接賦能角色；信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。",
+              "products": [
+                "CXL 記憶體擴展控制器",
+                "PCIe/CXL Retimer",
+                "BMC（AST3200 系列）"
+              ],
+              "customers": [
+                "Intel",
+                "AMD",
+                "Samsung",
+                "SK hynix"
+              ],
+              "tech_focus": [
+                "cxl_management_ic_candidate",
+                "ic_design"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "networking-infrastructure",
+      "name": "供應鏈環節｜高速交換器與網通設備",
+      "description": "高速交換器、無線網路、路由器、網通設備、網通晶片與企業/資料中心網路基礎設施供應鏈。 AI 資料中心、企業網路升級與寬頻投資會帶動交換器、Wi-Fi、網通晶片與設備需求。",
+      "total": 1,
+      "groups": [
+        {
+          "name": "pcb",
+          "level": "upstream",
+          "companies": [
+            {
+              "code": "2368",
+              "name": "金像電",
+              "role": "金像電在高速網通 PCB 也是主要供應商；交換器/光模組 PCB 需要高層數低損耗材，4 月營收年增 58.4%。",
+              "relevance": "中",
+              "analysis": "供應商角色；金像電在高速網通 PCB 也是主要供應商；交換器/光模組 PCB 需要高層數低損耗材，4 月營收年增 58.4%。",
+              "products": [
+                "網通 PCB",
+                "交換器/通訊設備板"
+              ],
+              "customers": [
+                "Cisco",
+                "Arista",
+                "廣達",
+                "啟碁"
+              ],
+              "tech_focus": [
+                "networking_pcb_supplier",
+                "pcb"
               ]
             }
           ]
@@ -1789,72 +3886,6 @@
       ]
     },
     {
-      "slug": "ai-server-power-backup",
-      "name": "產品應用｜AI 伺服器電源與 BBU",
-      "description": "服務資料中心與 AI server 的高瓦數電源供應器、電源管理、UPS/BBU 電池備援與相關被動元件/電池模組。 AI server 功耗提升會推升 PSU 瓦數、電源效率、備援電池與資料中心電力架構升級，直接影響電源供應鏈價值量。",
-      "total": 1,
-      "groups": [
-        {
-          "name": "電源與供電系統",
-          "level": "upstream",
-          "companies": [
-            {
-              "code": "2308",
-              "name": "台達電",
-              "role": "台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。",
-              "relevance": "高",
-              "analysis": "核心產品/平台；台達電在電源供應器題材中是核心產品供應者，官方電源及系統頁列出 AI、資通訊、工業、醫療與商用電源產品，年報也揭露電源及零組件是最大營收部門。",
-              "products": [
-                "電源供應系統與高效電源",
-                "伺服器電源",
-                "嵌入式電源",
-                "工業與醫療電源"
-              ],
-              "customers": [
-                "AI、ICT、工業、醫療與商用設備客戶：官方產品頁描述應用領域但未逐一揭露客戶名稱"
-              ],
-              "tech_focus": [
-                "power_supply_system_provider",
-                "power"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "hbm",
-      "name": "產品應用｜HBM 高頻寬記憶體",
-      "description": "用於 AI GPU/ASIC 的高頻寬堆疊式記憶體與其相關封裝、測試、載板和材料供應鏈。 HBM 是 AI accelerator 的關鍵瓶頸之一，供需吃緊會影響記憶體、封裝、材料與測試供應鏈的成長性。",
-      "total": 1,
-      "groups": [
-        {
-          "name": "先進封裝與封測",
-          "level": "midstream",
-          "companies": [
-            {
-              "code": "2330",
-              "name": "台積電",
-              "role": "台積電不是 HBM 記憶體供應商，但在 AI 加速器與 HBM 的先進封裝整合中扮演直接賦能角色；需避免把封裝整合誤寫成記憶體製造。",
-              "relevance": "高",
-              "analysis": "直接賦能角色；台積電不是 HBM 記憶體供應商，但在 AI 加速器與 HBM 的先進封裝整合中扮演直接賦能角色；需避免把封裝整合誤寫成記憶體製造。",
-              "products": [
-                "CoWoS HBM/GPU 整合",
-                "先進封裝服務"
-              ],
-              "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前保守以公司營運範圍與 legacy 供應鏈定位建立題材角色。"
-              ],
-              "tech_focus": [
-                "hbm_integration_packaging",
-                "advanced_packaging"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "slug": "niche-memory",
       "name": "產品應用｜NOR Flash 與利基記憶體",
       "description": "NOR Flash、利基型 DRAM/NAND、特殊記憶體 IC 與相關晶圓代工或模組供應鏈。 利基記憶體具備供需與報價循環，工控、車用與消費電子需求修復會影響稼動率與毛利率。",
@@ -1867,9 +3898,9 @@
             {
               "code": "2337",
               "name": "旺宏",
-              "role": "旺宏以 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品切入利基記憶體題材；Daily Analysis 應把它視為記憶體 IC 產品供應商，而不是泛半導體概念股。",
+              "role": "旺宏是全球 NOR Flash 龍頭；4 月營收 5.9 億年增 153.7%，累計年增 93.5%。車用/5G NOR Flash 需求爆發。",
               "relevance": "高",
-              "analysis": "核心產品/平台；旺宏以 NOR Flash、NAND Flash、ROM 等非揮發性記憶體與積體電路產品切入利基記憶體題材；Daily Analysis 應把它視為記憶體 IC 產品供應商，而不是泛半導體概念股。",
+              "analysis": "核心產品/平台；旺宏是全球 NOR Flash 龍頭；4 月營收 5.9 億年增 153.7%，累計年增 93.5%。車用/5G NOR Flash 需求爆發。",
               "products": [
                 "NOR Flash",
                 "NAND Flash",
@@ -1877,43 +3908,15 @@
                 "非揮發性記憶體與積體電路"
               ],
               "customers": [
-                "需以年報、法說或客戶公告持續補強具名客戶；目前以公開資訊觀測站營業項目與產品知識建立題材角色。"
+                "Tesla",
+                "Bosch",
+                "Infineon",
+                "Qualcomm",
+                "聯發科"
               ],
               "tech_focus": [
                 "nor_flash_and_non_volatile_memory_supplier",
                 "memory_ic"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "slug": "leo-satellite-communications",
-      "name": "終端市場｜低軌衛星通訊",
-      "description": "低軌衛星網路相關的衛星通訊、地面設備、天線、RF、網通與系統整合供應鏈。 低軌衛星建置會帶動天線、RF、網通設備、電源與系統整合需求，是中長期通訊基礎建設題材。",
-      "total": 1,
-      "groups": [
-        {
-          "name": "power_ic",
-          "level": "upstream",
-          "companies": [
-            {
-              "code": "6415",
-              "name": "矽力*-KY",
-              "role": "矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。",
-              "relevance": "中",
-              "analysis": "供應商角色；矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。",
-              "products": [
-                "衛星/通訊設備電源 IC 候選",
-                "功率管理 IC"
-              ],
-              "customers": [
-                "需以年報、法說、產品頁或客戶公告持續補強具名客戶；目前以 legacy 供應鏈定位與公開揭露資料建立保守 V2 角色。"
-              ],
-              "tech_focus": [
-                "satellite_power_ic_candidate",
-                "power_ic"
               ]
             }
           ]
@@ -1947,6 +3950,16 @@
       ]
     },
     {
+      "code": "1519",
+      "name": "華城",
+      "topic_count": 3,
+      "topics": [
+        "electrical-equipment-epc",
+        "energy-storage-battery",
+        "renewable-energy"
+      ]
+    },
+    {
       "code": "2368",
       "name": "金像電",
       "topic_count": 3,
@@ -1964,6 +3977,16 @@
         "ai-server",
         "ai-server-liquid-cooling",
         "consumer-computing-devices"
+      ]
+    },
+    {
+      "code": "2395",
+      "name": "研華",
+      "topic_count": 3,
+      "topics": [
+        "edge-ai-aiot",
+        "industrial-automation",
+        "robotics-physical-ai"
       ]
     },
     {
@@ -1987,6 +4010,16 @@
       ]
     },
     {
+      "code": "3189",
+      "name": "景碩",
+      "topic_count": 3,
+      "topics": [
+        "advanced-packaging",
+        "hbm",
+        "pcb-substrates"
+      ]
+    },
+    {
       "code": "3231",
       "name": "緯創",
       "topic_count": 3,
@@ -1997,6 +4030,16 @@
       ]
     },
     {
+      "code": "3711",
+      "name": "日月光投控",
+      "topic_count": 3,
+      "topics": [
+        "advanced-packaging",
+        "ai-server",
+        "silicon-photonics-optical-comm"
+      ]
+    },
+    {
       "code": "5274",
       "name": "信驊",
       "topic_count": 3,
@@ -2004,6 +4047,15 @@
         "cxl-memory-pooling",
         "ic-design",
         "software-cloud-security"
+      ]
+    },
+    {
+      "code": "1504",
+      "name": "東元",
+      "topic_count": 2,
+      "topics": [
+        "electrical-equipment-epc",
+        "energy-storage-battery"
       ]
     },
     {
@@ -2034,6 +4086,15 @@
       ]
     },
     {
+      "code": "2379",
+      "name": "瑞昱",
+      "topic_count": 2,
+      "topics": [
+        "ai-server",
+        "wafer-foundry"
+      ]
+    },
+    {
       "code": "2382",
       "name": "廣達",
       "topic_count": 2,
@@ -2052,6 +4113,15 @@
       ]
     },
     {
+      "code": "2449",
+      "name": "京元電子",
+      "topic_count": 2,
+      "topics": [
+        "advanced-packaging",
+        "hbm"
+      ]
+    },
+    {
       "code": "3017",
       "name": "奇鋐",
       "topic_count": 2,
@@ -2067,6 +4137,60 @@
       "topics": [
         "ic-design",
         "wafer-foundry"
+      ]
+    },
+    {
+      "code": "3450",
+      "name": "聯鈞",
+      "topic_count": 2,
+      "topics": [
+        "silicon-photonics-optical-comm",
+        "wafer-foundry"
+      ]
+    },
+    {
+      "code": "3533",
+      "name": "嘉澤",
+      "topic_count": 2,
+      "topics": [
+        "high-speed-interconnect",
+        "silicon-photonics-optical-comm"
+      ]
+    },
+    {
+      "code": "3576",
+      "name": "聯合再生",
+      "topic_count": 2,
+      "topics": [
+        "energy-storage-battery",
+        "renewable-energy"
+      ]
+    },
+    {
+      "code": "6153",
+      "name": "嘉聯益",
+      "topic_count": 2,
+      "topics": [
+        "leo-satellite-communications",
+        "pcb-substrates"
+      ]
+    },
+    {
+      "code": "6176",
+      "name": "瑞儀",
+      "topic_count": 2,
+      "topics": [
+        "consumer-computing-devices",
+        "display-led-optics"
+      ]
+    },
+    {
+      "code": "6230",
+      "name": "尼得科超眾",
+      "topic_count": 2,
+      "topics": [
+        "ai-server-liquid-cooling",
+        "ai-server-power-backup"
       ]
     },
     {
@@ -2097,6 +4221,47 @@
       ]
     },
     {
+      "code": "8150",
+      "name": "南茂",
+      "topic_count": 2,
+      "topics": [
+        "display-led-optics",
+        "hbm"
+      ]
+    },
+    {
+      "code": "1301",
+      "name": "台塑",
+      "topic_count": 1,
+      "topics": [
+        "petrochem-plastics"
+      ]
+    },
+    {
+      "code": "1326",
+      "name": "台化",
+      "topic_count": 1,
+      "topics": [
+        "petrochem-plastics"
+      ]
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "topic_count": 1,
+      "topics": [
+        "petrochem-plastics"
+      ]
+    },
+    {
+      "code": "1605",
+      "name": "華新",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
       "code": "2059",
       "name": "川湖",
       "topic_count": 1,
@@ -2105,11 +4270,179 @@
       ]
     },
     {
+      "code": "2301",
+      "name": "光寶科",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "topic_count": 1,
+      "topics": [
+        "wafer-foundry"
+      ]
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "topic_count": 1,
+      "topics": [
+        "leo-satellite-communications"
+      ]
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2327",
+      "name": "國巨",
+      "topic_count": 1,
+      "topics": [
+        "passive-components"
+      ]
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "topic_count": 1,
+      "topics": [
+        "hbm"
+      ]
+    },
+    {
+      "code": "2345",
+      "name": "智邦",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2352",
+      "name": "佳世達",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2357",
+      "name": "華碩",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2385",
+      "name": "群光",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2388",
+      "name": "威盛",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2401",
+      "name": "凌陽",
+      "topic_count": 1,
+      "topics": [
+        "wafer-foundry"
+      ]
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "topic_count": 1,
+      "topics": [
+        "hbm"
+      ]
+    },
+    {
+      "code": "2409",
+      "name": "友達",
+      "topic_count": 1,
+      "topics": [
+        "ai-server"
+      ]
+    },
+    {
+      "code": "2426",
+      "name": "鼎元",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
       "code": "2453",
       "name": "凌群",
       "topic_count": 1,
       "topics": [
         "software-cloud-security"
+      ]
+    },
+    {
+      "code": "2474",
+      "name": "可成",
+      "topic_count": 1,
+      "topics": [
+        "ai-server-mechanical"
+      ]
+    },
+    {
+      "code": "2630",
+      "name": "亞航",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "2643",
+      "name": "捷迅",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "2645",
+      "name": "長榮航太",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "3004",
+      "name": "豐達科",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
       ]
     },
     {
@@ -2134,6 +4467,22 @@
       "topic_count": 1,
       "topics": [
         "silicon-photonics-optical-comm"
+      ]
+    },
+    {
+      "code": "3163",
+      "name": "波若威",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "3237",
+      "name": "汎銓",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
       ]
     },
     {
@@ -2169,11 +4518,59 @@
       ]
     },
     {
+      "code": "3707",
+      "name": "漢磊",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "4536",
+      "name": "拓凱",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "4541",
+      "name": "晟田",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
       "code": "4966",
       "name": "譜瑞-KY",
       "topic_count": 1,
       "topics": [
         "high-speed-interconnect"
+      ]
+    },
+    {
+      "code": "5264",
+      "name": "鎧勝-KY",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "5371",
+      "name": "中光電",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "6115",
+      "name": "鎰勝",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
       ]
     },
     {
@@ -2206,6 +4603,30 @@
       "topic_count": 1,
       "topics": [
         "advanced-packaging"
+      ]
+    },
+    {
+      "code": "7402",
+      "name": "邑錡",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "8033",
+      "name": "雷虎",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
+      ]
+    },
+    {
+      "code": "8222",
+      "name": "寶一",
+      "topic_count": 1,
+      "topics": [
+        "defense-aerospace"
       ]
     },
     {
