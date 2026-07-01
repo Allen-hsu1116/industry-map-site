@@ -2,24 +2,17 @@
   "schemaVersion": 1,
   "code": "2313",
   "name": "華通",
-  "generatedAt": "2026-07-01T12:32:01.098Z",
+  "generatedAt": "2026-07-01T12:35:36.468Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "verified_topic_role",
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -50,34 +43,83 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "低軌衛星通訊",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "華通是台灣 PCB 前三大廠，SpaceX Starlink PCB 供應商，5月營收67.62億YoY+13.0%累計326.25億YoY+11.7%，HDI 技術領先。",
+      "supplyChainStage": "satellite_ground_equipment",
+      "roleType": "leo_satellite_pcb_supplier",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "低軌衛星用高多層 PCB（HDI/BGA）",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "智慧手機/平板 HDI 軟硬結合板",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "伺服器/基地台高層數 PCB",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "上市公司資本額119億，HDI 技術領先",
+        "5月營收67.62億，YoY+13.0%，累計326.25億YoY+11.7%"
+      ],
+      "opportunities": [
+        "AI 伺服器高層數 PCB 新應用",
+        "Starlink/Kuiper 低軌衛星 PCB 需求爆發"
+      ],
+      "risks": [
+        "衛星 PCB 認證週期長，替換風險",
+        "中國 PCB 廠（深南/滬電）低價競爭"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 低軌衛星通訊（end_market/active） +14",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 5 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "華通 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "華通 在「低軌衛星通訊」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：低軌衛星通訊 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 低軌衛星通訊（end_market/active） +14）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：PCB 產業資本密集，設備折舊壓力大",
+      "V2 W：消費性電子 PCB 占比高，衛星 PCB 仍為初期",
+      "V2 T：衛星 PCB 認證週期長，替換風險",
+      "V2 T：中國 PCB 廠（深南/滬電）低價競爭"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "V2 SWOT 最後驗證：2026-06-01",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：AI 伺服器高層數 PCB 新應用",
+      "V2 O：Starlink/Kuiper 低軌衛星 PCB 需求爆發",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
+      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-07-01"
     ]
   },
   "knowledge": {
@@ -112,9 +154,114 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "leo-satellite-communications",
+        "topicName": "低軌衛星通訊",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "華通是台灣 PCB 前三大廠，SpaceX Starlink PCB 供應商，5月營收67.62億YoY+13.0%累計326.25億YoY+11.7%，HDI 技術領先。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opp-ai-server-pcb",
+        "category": "opportunity",
+        "statement": "AI 伺服器高層數 PCB 新應用",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "opp-starlink-kuiper",
+        "category": "opportunity",
+        "statement": "Starlink/Kuiper 低軌衛星 PCB 需求爆發",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-hdi",
+        "category": "strength",
+        "statement": "上市公司資本額119億，HDI 技術領先",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-rev-growth",
+        "category": "strength",
+        "statement": "5月營收67.62億，YoY+13.0%，累計326.25億YoY+11.7%",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-starlink",
+        "category": "strength",
+        "statement": "台灣 PCB 前三大廠，SpaceX Starlink PCB 供應商",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "threat-cert-risk",
+        "category": "threat",
+        "statement": "衛星 PCB 認證週期長，替換風險",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "threat-china-pcb",
+        "category": "threat",
+        "statement": "中國 PCB 廠（深南/滬電）低價競爭",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-capex",
+        "category": "weakness",
+        "statement": "PCB 產業資本密集，設備折舊壓力大",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-satellite-low",
+        "category": "weakness",
+        "statement": "消費性電子 PCB 占比高，衛星 PCB 仍為初期",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -129,7 +276,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 21,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -141,10 +288,11 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢股",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
@@ -163,11 +311,6 @@
         "id": "risk.stop-distance",
         "severity": "hard",
         "message": "距離 MA20 約 15.1%，停損距離過大"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

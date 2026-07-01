@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6147",
   "name": "頎邦",
-  "generatedAt": "2026-07-01T12:32:01.572Z",
+  "generatedAt": "2026-07-01T12:35:36.942Z",
   "sourceUpdatedAt": "2026-06-01",
   "marketDataDate": "2026-07-01",
   "chipDataDate": "2026-07-01",
@@ -81,14 +81,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "顯示驅動 IC 凸塊、COF/COG 封裝與測試能力直接對應面板驅動 IC 後段需求。"
+        "顯示驅動 IC 凸塊、COF/COG 封裝與測試能力直接對應面板驅動 IC 後段需求。",
+        "台灣驅動 IC 封測龍頭，金凸塊市佔領先"
       ],
       "opportunities": [
-        "車用螢幕、OLED、高解析顯示與高可靠度測試需求可提高高階封測價值量。"
+        "COF 封裝在可撓式 OLED 面板需求",
+        "低軌衛星顯示/通訊 IC 封裝新應用"
       ],
       "risks": [
-        "若面板供需轉弱、驅動 IC 庫存調整或同業擴產競爭，封測需求與議價能力會受壓。",
-        "業務高度連動面板驅動 IC 與顯示面板循環，稼動率與產品價格波動會影響毛利。"
+        "中國封測廠（長電/通富微電）競爭",
+        "若面板供需轉弱、驅動 IC 庫存調整或同業擴產競爭，封測需求與議價能力會受壓。"
       ]
     },
     "scoringFactors": [
@@ -97,8 +99,8 @@
       "題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 6 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "頎邦 在「面板、LED、光學鏡頭與感測」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -106,20 +108,23 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：面板、LED、光學鏡頭與感測 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
+      "相關題材：低軌衛星通訊 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
       "V2 W：業務高度連動面板驅動 IC 與顯示面板循環，稼動率與產品價格波動會影響毛利。",
+      "V2 W：面板驅動 IC 封測市場已相對成熟，新增成長需依賴高階顯示與車用/OLED 滲透。",
+      "V2 T：中國封測廠（長電/通富微電）競爭",
       "V2 T：若面板供需轉弱、驅動 IC 庫存調整或同業擴產競爭，封測需求與議價能力會受壓。"
     ],
     "watch": [
-      "V2 O：車用螢幕、OLED、高解析顯示與高可靠度測試需求可提高高階封測價值量。",
+      "V2 O：COF 封裝在可撓式 OLED 面板需求",
+      "V2 O：低軌衛星顯示/通訊 IC 封裝新應用",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
       "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-05-28",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "追蹤 低軌衛星通訊：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -164,9 +169,37 @@
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
         "roleSummary": "頎邦在顯示供應鏈中提供面板驅動 IC 凸塊、COF/COG 封裝與測試服務，是把驅動 IC 連接到面板與軟板的後段封測核心環節。"
+      },
+      {
+        "topicId": "leo-satellite-communications",
+        "topicName": "低軌衛星通訊",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "頎邦是台灣驅動 IC 封測龍頭，金凸塊市佔領先，低軌衛星顯示/通訊 IC 封裝為新應用機會。"
       }
     ],
     "swot": [
+      {
+        "id": "opp-cof-oled",
+        "category": "opportunity",
+        "statement": "COF 封裝在可撓式 OLED 面板需求",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "opp-leo-packaging",
+        "category": "opportunity",
+        "statement": "低軌衛星顯示/通訊 IC 封裝新應用",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
       {
         "id": "opportunity-topic-demand",
         "category": "opportunity",
@@ -186,12 +219,48 @@
         ]
       },
       {
+        "id": "strength-driver-ic-leader",
+        "category": "strength",
+        "statement": "台灣驅動 IC 封測龍頭，金凸塊市佔領先",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-scale",
+        "category": "strength",
+        "statement": "上櫃公司資本額74.5億，COG/COF 技術成熟",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "threat-china",
+        "category": "threat",
+        "statement": "中國封測廠（長電/通富微電）競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
         "id": "threat-competition-cycle",
         "category": "threat",
         "statement": "若面板供需轉弱、驅動 IC 庫存調整或同業擴產競爭，封測需求與議價能力會受壓。",
         "confidence": "medium",
         "relatedTopicIds": [
           "display-led-optics"
+        ]
+      },
+      {
+        "id": "threat-panel-cycle",
+        "category": "threat",
+        "statement": "面板產業景氣循環波動",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
         ]
       },
       {
@@ -202,6 +271,24 @@
         "relatedTopicIds": [
           "display-led-optics"
         ]
+      },
+      {
+        "id": "weakness-mature",
+        "category": "weakness",
+        "statement": "面板驅動 IC 封測市場已相對成熟，新增成長需依賴高階顯示與車用/OLED 滲透。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-satellite-low",
+        "category": "weakness",
+        "statement": "衛星通訊題材對營收貢獻仍低，現階段主要營運動能仍取決於面板驅動 IC 產業。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
       }
     ],
     "topics": [
@@ -209,6 +296,17 @@
         "id": "display-led-optics",
         "name": "面板、LED、光學鏡頭與感測",
         "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",

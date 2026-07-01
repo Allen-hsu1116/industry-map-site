@@ -2,25 +2,20 @@
   "schemaVersion": 1,
   "code": "8033",
   "name": "雷虎",
-  "generatedAt": "2026-07-01T12:32:01.712Z",
+  "generatedAt": "2026-07-01T12:35:37.080Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -53,34 +48,83 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "軍工、航太與無人機",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "雷虎是美國 Blue UAS 認證無人機製造商，5月營收1.17億MoM+7.0%累計6.02億YoY+6.3%，具備美國國防部採購資格。",
+      "supplyChainStage": "aerospace_mro",
+      "roleType": "military_uav_manufacturer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "軍用無人載具（SEAHAWK 無人直升機）",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "Blue UAS 認證無人機系統",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "無線電遙控模型與零配件",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "美國 Blue UAS 認證，具備美國國防部採購資格",
+        "上市公司資本額15.3億，無人載具品牌知名度高"
+      ],
+      "opportunities": [
+        "美國 Blue UAS 認證帶來國際軍用無人機訂單",
+        "台灣軍用無人機國家隊成員"
+      ],
+      "risks": [
+        "軍用無人機認證與採購週期長",
+        "國際無人機大廠（DJI/Skydio）競爭"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 軍工、航太與無人機（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 5 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "雷虎 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "雷虎 在「軍工、航太與無人機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 軍工、航太與無人機（theme/active） +18）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：模型玩具收入占比仍高，國防轉型中",
+      "V2 W：5月營收YoY-9.6%，軍用無人機放量仍有限",
+      "V2 T：軍用無人機認證與採購週期長",
+      "V2 T：國際無人機大廠（DJI/Skydio）競爭"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：美國 Blue UAS 認證帶來國際軍用無人機訂單",
+      "V2 O：台灣軍用無人機國家隊成員",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
+      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-07-01"
     ]
   },
   "knowledge": {
@@ -115,9 +159,114 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "defense-aerospace",
+        "topicName": "軍工、航太與無人機",
+        "canonicalTopicId": "defense-aerospace",
+        "canonicalTopicName": "軍工、航太與無人機",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "雷虎是美國 Blue UAS 認證無人機製造商，5月營收1.17億MoM+7.0%累計6.02億YoY+6.3%，具備美國國防部採購資格。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opp-blue-uas-order",
+        "category": "opportunity",
+        "statement": "美國 Blue UAS 認證帶來國際軍用無人機訂單",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "opp-national-team",
+        "category": "opportunity",
+        "statement": "台灣軍用無人機國家隊成員",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-blue-uas",
+        "category": "strength",
+        "statement": "美國 Blue UAS 認證，具備美國國防部採購資格",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-brand",
+        "category": "strength",
+        "statement": "上市公司資本額15.3億，無人載具品牌知名度高",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-rev-growth",
+        "category": "strength",
+        "statement": "5月營收1.17億，MoM+7.0%，累計6.02億YoY+6.3%",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "threat-cert-cycle",
+        "category": "threat",
+        "statement": "軍用無人機認證與採購週期長",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "threat-intl-drone",
+        "category": "threat",
+        "statement": "國際無人機大廠（DJI/Skydio）競爭",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-transition",
+        "category": "weakness",
+        "statement": "模型玩具收入占比仍高，國防轉型中",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-yoy-decline",
+        "category": "weakness",
+        "statement": "5月營收YoY-9.6%，軍用無人機放量仍有限",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "defense-aerospace",
+        "name": "軍工、航太與無人機",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,7 +281,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 13,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -141,17 +290,12 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "題材股",
       "rationale": [
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
-      },
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
@@ -161,11 +305,6 @@
         "id": "risk.chip-data-stale",
         "severity": "hard",
         "message": "籌碼資料已 37 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

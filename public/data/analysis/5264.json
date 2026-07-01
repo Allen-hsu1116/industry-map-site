@@ -2,23 +2,18 @@
   "schemaVersion": 1,
   "code": "5264",
   "name": "鎧勝-KY",
-  "generatedAt": "2026-07-01T12:32:01.522Z",
+  "generatedAt": "2026-07-01T12:35:36.892Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -44,33 +39,82 @@
     "watch": []
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "軍工、航太與無人機",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "鎧勝-KY 專注無人機構體利基市場，碳纖維複材機體一體成型，KY 公司具海外製造彈性。",
+      "supplyChainStage": "aerospace_components",
+      "roleType": "uav_airframe_structures",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "無人機機體結構件（碳纖維/鋁合金）",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "無人機起落架與旋翼結構",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "精密金屬/複材機殼組件",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "KY 公司具海外製造彈性",
+        "專注無人機構體利基市場"
+      ],
+      "opportunities": [
+        "商用無人機市場擴張",
+        "軍用無人機國家隊帶動構體需求"
+      ],
+      "risks": [
+        "無人機構體進入門檻不高，競爭加劇",
+        "軍方標案排程不確定性"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 軍工、航太與無人機（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "鎧勝-KY 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "鎧勝-KY 在「軍工、航太與無人機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 軍工、航太與無人機（theme/active） +18）",
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：營運規模小，訂單集中度高",
+      "V2 W：興櫃/上櫃公司，流動性偏低",
+      "V2 T：無人機構體進入門檻不高，競爭加劇",
+      "V2 T：軍方標案排程不確定性"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-25（normal）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockMonthRevenue / MOPS monthly revenue"
+      "V2 O：商用無人機市場擴張",
+      "V2 O：軍用無人機國家隊帶動構體需求",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
+      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-07-01"
     ]
   },
   "knowledge": {
@@ -95,9 +139,105 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "defense-aerospace",
+        "topicName": "軍工、航太與無人機",
+        "canonicalTopicId": "defense-aerospace",
+        "canonicalTopicName": "軍工、航太與無人機",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "鎧勝-KY 專注無人機構體利基市場，碳纖維複材機體一體成型，KY 公司具海外製造彈性。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opp-commercial-uav",
+        "category": "opportunity",
+        "statement": "商用無人機市場擴張",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "opp-national-team",
+        "category": "opportunity",
+        "statement": "軍用無人機國家隊帶動構體需求",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-ky",
+        "category": "strength",
+        "statement": "KY 公司具海外製造彈性",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-niche",
+        "category": "strength",
+        "statement": "專注無人機構體利基市場",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "threat-entry-barrier",
+        "category": "threat",
+        "statement": "無人機構體進入門檻不高，競爭加劇",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "threat-procurement",
+        "category": "threat",
+        "statement": "軍方標案排程不確定性",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-concentration",
+        "category": "weakness",
+        "statement": "營運規模小，訂單集中度高",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-liquidity",
+        "category": "weakness",
+        "statement": "興櫃/上櫃公司，流動性偏低",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "defense-aerospace",
+        "name": "軍工、航太與無人機",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -112,8 +252,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 14,
-    "recommendationState": "blocked",
+    "totalScore": 61,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -121,23 +261,12 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "題材股",
       "rationale": [
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [

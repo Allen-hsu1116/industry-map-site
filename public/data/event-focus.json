@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-01T12:32:00.806Z",
+  "generatedAt": "2026-07-01T12:35:36.210Z",
   "status": "partial",
   "source": {
     "name": "TWSE OpenAPI t187ap04_L",
@@ -1259,8 +1259,16 @@
       "companyName": "雷虎",
       "officialSubject": "係因本公司有價證券於集中交易市場達公布注意交易資訊標 準，故公布相關財務業務等重大訊息，以利投資人區別瞭解。",
       "clause": "第51款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
+      "derivedTopics": [
+        {
+          "topicId": "defense-aerospace",
+          "topicName": "軍工、航太與無人機",
+          "roleLabel": "military_uav_manufacturer",
+          "confidence": "high",
+          "status": "verified"
+        }
+      ],
+      "mappingMethod": "derived_from_company_topic_roles",
       "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
       "source": "TWSE OpenAPI t187ap04_L",
       "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"

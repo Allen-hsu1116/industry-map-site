@@ -2,24 +2,17 @@
   "schemaVersion": 1,
   "code": "4908",
   "name": "前鼎",
-  "generatedAt": "2026-07-01T12:32:01.495Z",
+  "generatedAt": "2026-07-01T12:35:36.865Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "verified_topic_role",
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -52,34 +45,83 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯明確",
+    "score": 64,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "medium",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "低軌衛星通訊",
+      "roleLabel": "間接受惠",
+      "roleSummary": "前鼎是竹科光通訊模組專業廠，LD/PD 封裝核心技術，低軌衛星光通訊模組與資料中心光模組雙應用。",
+      "supplyChainStage": "satellite_ground_equipment",
+      "roleType": "optical_transceiver_satellite",
+      "directness": "indirect",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "光纖通訊雷射二極體（LD）封裝",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "受光二極體（PD）封裝",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "光傳接模組（Transceiver）",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "竹科光通訊模組專業廠，LD/PD 封裝核心技術",
+        "上櫃公司資本額7.8億，利基型光電封裝"
+      ],
+      "opportunities": [
+        "資料中心 400G/800G 光模組升級",
+        "低軌衛星光通訊模組新應用"
+      ],
+      "risks": [
+        "中國光模組低價競爭",
+        "國際光模組大廠技術與規模優勢"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
+      "題材 低軌衛星通訊（end_market/active） +14",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "前鼎 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "前鼎 在「低軌衛星通訊」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 64/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：低軌衛星通訊 · 間接受惠 · medium",
+      "產業評分：64/100（直接度 間接受惠 +8；角色信心 medium +10；題材 低軌衛星通訊（end_market/active） +14）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：衛星光通訊占比低，主要靠電信/資料中心",
+      "V2 W：營運規模小，競爭力不如國際大廠（Lumentum/Coherent）",
+      "V2 T：中國光模組低價競爭",
+      "V2 T：國際光模組大廠技術與規模優勢"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "V2 SWOT 最後驗證：2026-06-01",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 O：資料中心 400G/800G 光模組升級",
+      "V2 O：低軌衛星光通訊模組新應用",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
+      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-07-01"
     ]
   },
   "knowledge": {
@@ -114,9 +156,105 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "leo-satellite-communications",
+        "topicName": "低軌衛星通訊",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "前鼎是竹科光通訊模組專業廠，LD/PD 封裝核心技術，低軌衛星光通訊模組與資料中心光模組雙應用。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opp-datacenter-400g",
+        "category": "opportunity",
+        "statement": "資料中心 400G/800G 光模組升級",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "opp-leo-optical",
+        "category": "opportunity",
+        "statement": "低軌衛星光通訊模組新應用",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-ld-pd",
+        "category": "strength",
+        "statement": "竹科光通訊模組專業廠，LD/PD 封裝核心技術",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-niche",
+        "category": "strength",
+        "statement": "上櫃公司資本額7.8億，利基型光電封裝",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "threat-china",
+        "category": "threat",
+        "statement": "中國光模組低價競爭",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "threat-intl",
+        "category": "threat",
+        "statement": "國際光模組大廠技術與規模優勢",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-satellite-low",
+        "category": "weakness",
+        "statement": "衛星光通訊占比低，主要靠電信/資料中心",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-scale",
+        "category": "weakness",
+        "statement": "營運規模小，競爭力不如國際大廠（Lumentum/Coherent）",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -131,7 +269,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 11,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -143,7 +281,8 @@
       "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐"
+        "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
@@ -161,11 +300,6 @@
         "id": "risk.stop-distance",
         "severity": "hard",
         "message": "距離 MA20 約 20.8%，停損距離過大"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },
