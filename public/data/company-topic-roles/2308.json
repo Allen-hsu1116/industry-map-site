@@ -11,22 +11,29 @@
       "directness": "indirect",
       "supplyChainStage": "power",
       "roleType": "power_product_application_side_user",
-      "roleSummary": "台達電與第三代半導體題材的關聯主要在高效率電源、快充、伺服器電源與 EV/能源設備等應用端；現有官方與年報證據能支撐電源產品需要高效率功率轉換，但不能把台達電解讀為 SiC/GaN 晶圓、元件或封測核心供應商。",
+      "roleSummary": "台達電5月營收58.96億YoY+43.7%，AI伺服器電源需求爆發帶動高速增長。在wafer-foundry題材中屬於電源管理周邊賦能角色，非直接晶圓代工但供應晶圓廠與封裝廠的精密電源與自動化設備。",
       "products": [
-        "電源供應系統與高效電源",
-        "電動車動力、電力管理與充電設備",
-        "能源基礎設施、儲能與能源管理"
+        "高效電源供應器（Server PSU 800W+）",
+        "電動車充電樁與車載充電器",
+        "工業自動化伺服驅動器",
+        "DC-DC轉換器"
       ],
       "customers": [
-        "AI、ICT、EV、能源基礎設施等高效率電源應用客戶"
+        "Dell",
+        "HP",
+        "NVIDIA（資料中心電源）",
+        "Tesla（充電設備）",
+        "Siemens"
       ],
       "competitors": [
-        "高效率電源產品供應商",
-        "快充與伺服器電源供應商"
+        "光寶科(2301)",
+        "康舒(6282)",
+        "艾默生Emerson"
       ],
       "risks": [
-        "這是應用端受惠/採用關聯，不應視為第三代半導體製造或封測核心角色",
-        "若功率元件價格或供應受限，可能影響電源產品成本與規格轉換"
+        "電源供應器同業價格競爭",
+        "AI伺服器需求增速放緩風險",
+        "EV充電市場政策依賴度高"
       ],
       "legacy": {
         "topicSlug": "sic-gan-power",
@@ -57,7 +64,7 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-28",
+      "lastVerified": "2026-07-02",
       "status": "verified"
     },
     {
@@ -121,23 +128,29 @@
       "directness": "direct_enabler",
       "supplyChainStage": "power",
       "roleType": "ai_server_power_and_thermal_infrastructure_provider",
-      "roleSummary": "台達電在 AI 伺服器題材中的角色是電源、散熱與資料中心基礎設施的直接賦能者，不是 GPU/ASIC 或整機 ODM；官方產品頁明確提到 AI 時代資料中心基礎設施，並列出電源、配電、液冷/氣冷散熱、機櫃與環境管理。",
+      "roleSummary": "台達電是AI伺服器電源核心供應商，5月營收58.96億YoY+43.7%，AI資料中心電源與液冷散熱需求爆發。NVIDIA GB200/GB300伺服器採用台達電CRPS電源與液冷方案，為AI伺服器供應鏈直接賦能者。",
       "products": [
-        "電源供應系統與高效電源",
-        "資料中心基礎設施解決方案",
-        "風扇、氣冷與液冷散熱管理"
+        "AI伺服器電源供應器（CRPS 800W/2000W+）",
+        "資料中心液冷散熱系統（Coolant Distribution Unit）",
+        "AI機櫃級電源管理櫃（Power Shelf）",
+        "HVDC高效直流供電方案"
       ],
       "customers": [
-        "AI 資料中心與高功率伺服器供應鏈：官方產品頁描述應用場景但未揭露具名客戶"
+        "NVIDIA",
+        "Dell",
+        "HP Enterprise",
+        "Microsoft",
+        "Google"
       ],
       "competitors": [
-        "伺服器電源供應商",
-        "資料中心電力/冷卻基礎設施供應商",
-        "散熱管理廠"
+        "光寶科(2301)",
+        "全漢(6209)",
+        "Lite-On"
       ],
       "risks": [
-        "AI 題材需拆分電源、散熱、資料中心基礎設施，避免把台達誤判為整機或晶片核心供應商",
-        "資料中心資本支出若放緩，基礎設施接單與營收成長可能受影響"
+        "AI伺服器需求若放緩將影響高速增長",
+        "液冷散熱技術競爭（鴻海/雲達入局）",
+        "電源規格標準變動風險"
       ],
       "legacy": {
         "topicSlug": "ai-server",
@@ -168,7 +181,7 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-28",
+      "lastVerified": "2026-07-02",
       "status": "verified"
     },
     {
