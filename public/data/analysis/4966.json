@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "4966",
   "name": "譜瑞-KY",
-  "generatedAt": "2026-07-01T12:35:36.881Z",
+  "generatedAt": "2026-07-02T12:31:54.434Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-01",
-  "chipDataDate": "2026-07-01",
+  "marketDataDate": "2026-07-02",
+  "chipDataDate": "2026-07-02",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "譜瑞-KY 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 7.8%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 7.8%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "譜瑞-KY 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
-    "watch": []
+    "risks": [],
+    "watch": [
+      "股價貼近 MA20，留意方向選擇"
+    ]
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -36,
-    "summary": "譜瑞-KY 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +824張；三大法人近 5 日合計賣超 -175張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "譜瑞-KY 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +279張；外資近 5 日買超 +1千張。",
     "signals": [
-      "外資近 5 日買超 +824張"
+      "三大法人近 5 日合計買超 +279張",
+      "外資近 5 日買超 +1千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -175張",
-      "近 20 日法人偏賣，合計 -935張",
-      "投信近 5 日賣超 -927張"
+      "近 20 日法人偏賣，合計 -131張",
+      "投信近 5 日賣超 -701張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-01",
-      "融券近 5 日增加 52.6%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-02",
+      "融券近 5 日增加 76.5%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -54,7 +55,7 @@
     "roleDetail": {
       "topicName": "高速連接器與車工業連接",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "譜瑞-KY 在高速互連題材中提供 DisplayPort、HDMI/DVI、USB repeater/retimer 與顯示控制相關 IC，支援 PC、螢幕與消費電子高速影像與資料傳輸。",
+      "roleSummary": "譜瑞-KY是高速訊號介面晶片領導廠商，主力產品為USB4/Thunderbolt與DisplayPort重定時器。KY公司無TWSE月營收，但受惠於AI PC與高速傳輸介面升級週期。",
       "supplyChainStage": "interface_ic_design",
       "roleType": "high_speed_display_usb_interface_ic_provider",
       "directness": "core",
@@ -133,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-01"
+      "lastVerified": "2026-07-02"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -163,7 +164,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "譜瑞-KY 在高速互連題材中提供 DisplayPort、HDMI/DVI、USB repeater/retimer 與顯示控制相關 IC，支援 PC、螢幕與消費電子高速影像與資料傳輸。"
+        "roleSummary": "譜瑞-KY是高速訊號介面晶片領導廠商，主力產品為USB4/Thunderbolt與DisplayPort重定時器。KY公司無TWSE月營收，但受惠於AI PC與高速傳輸介面升級週期。"
       }
     ],
     "swot": [
@@ -231,14 +232,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 49,
+    "totalScore": 65,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 20,
       "label": "基本面中性",
       "signals": [
         "月營收 YoY +8.2%，溫和成長",
-        "本益比 19.3 倍，估值尚可對照成長"
+        "本益比 20.3 倍，估值尚可對照成長"
       ],
       "risks": []
     },
@@ -253,14 +254,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：629.80",
-      "波段多空分水嶺看 MA20：675.85",
-      "追蹤法人是否延續 買超：最近 +9張",
+      "短線支撐/壓力先看 MA5：629.40",
+      "波段多空分水嶺看 MA20：668.40",
+      "追蹤法人是否延續 買超：最近 +216張",
       "月營收年增率 +8.2%，觀察基本面是否支撐估值",
-      "本益比 19.3 倍，需和同族群估值比較"
+      "本益比 20.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 883.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 795.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 602.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

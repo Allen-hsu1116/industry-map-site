@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-07-01T12:35:36.952Z",
+  "generatedAt": "2026-07-02T12:31:54.542Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-01",
-  "chipDataDate": "2026-07-01",
+  "marketDataDate": "2026-07-02",
+  "chipDataDate": "2026-07-02",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "C",
@@ -24,34 +24,33 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 55,
-    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 24.5%。",
+    "score": 27,
+    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 14.4%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 24.5%"
-    ],
-    "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低",
-      "接近 20 日高點 341.50，觀察是否突破"
-    ]
-  },
-  "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 21,
-    "summary": "信昌電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +360張；投信近 5 日買超 +45張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +360張",
-      "投信近 5 日買超 +45張",
-      "外資近 5 日買超 +858張",
-      "融資近 5 日下降 7.0%，籌碼壓力下降"
+      "收盤站上 MA20 14.4%"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -2千張"
+      "帶量下跌，量比 2.47x"
+    ],
+    "watch": []
+  },
+  "chips": {
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -31,
+    "summary": "信昌電 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +186張；融資近 5 日下降 11.2%，籌碼壓力下降。",
+    "signals": [
+      "外資近 5 日買超 +186張",
+      "融資近 5 日下降 11.2%，籌碼壓力下降"
+    ],
+    "risks": [
+      "三大法人近 5 日合計賣超 -1.4千張",
+      "近 20 日法人偏賣，合計 -4千張",
+      "投信近 5 日賣超 -186張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-01"
+      "最近法人資料日：2026-07-02"
     ]
   },
   "industry": {
@@ -81,7 +80,7 @@
     ],
     "watch": [
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-07-01（fresh）",
+      "知識庫最後驗證：2026-07-02（fresh）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -96,7 +95,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-01"
+      "lastVerified": "2026-07-02"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -135,28 +134,27 @@
       "updatedAt": "2026-05-29"
     },
     "totalScore": 27,
-    "recommendationState": "blocked",
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": -12,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "本益比 91.5 倍，需防估值壓縮",
-        "股價淨值比 6.6 倍偏高，需和 ROE/成長性比對"
+        "本益比 85.5 倍，需防估值壓縮",
+        "股價淨值比 6.1 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "趨勢股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐"
+        "技術面符合趨勢股條件"
       ]
     },
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "hard",
-        "message": "距離 MA20 約 19.7%，停損距離過大"
+        "severity": "soft",
+        "message": "距離 MA20 約 12.6%，部位需降速"
       },
       {
         "id": "risk.topic-evidence",
@@ -167,13 +165,13 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：303.40",
-      "波段多空分水嶺看 MA20：274.30",
-      "追蹤法人是否延續 買超：最近 +528張",
-      "本益比 91.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：305.90",
+      "波段多空分水嶺看 MA20：278.73",
+      "追蹤法人是否延續 賣超：最近 -1.8千張",
+      "本益比 85.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 341.50 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 348.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 200.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

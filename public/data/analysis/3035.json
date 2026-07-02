@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3035",
   "name": "智原",
-  "generatedAt": "2026-07-01T12:35:36.691Z",
+  "generatedAt": "2026-07-02T12:31:54.153Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-01",
-  "chipDataDate": "2026-07-01",
+  "marketDataDate": "2026-07-02",
+  "chipDataDate": "2026-07-02",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,13 +15,13 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 15,
-    "summary": "智原 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 4.4%。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "智原 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 9.8%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 4.4%"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 9.8%"
     ],
     "risks": [],
     "watch": []
@@ -30,16 +30,17 @@
     "stance": "neutral",
     "label": "籌碼中性",
     "score": -8,
-    "summary": "智原 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.6萬張；三大法人近 5 日合計賣超 -3.5千張。",
+    "summary": "智原 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.6萬張；三大法人近 5 日合計賣超 -1.6千張。",
     "signals": [
       "近 20 日法人偏買，合計 +1.6萬張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -3.5千張",
-      "外資近 5 日賣超 -2.1千張"
+      "三大法人近 5 日合計賣超 -1.6千張",
+      "外資近 5 日賣超 -908張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-01"
+      "最近法人資料日：2026-07-02",
+      "融券近 5 日增加 120.5%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -52,7 +53,7 @@
     "roleDetail": {
       "topicName": "IC 設計與矽智財",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "智原在 IC 設計題材中扮演 ASIC 設計服務與矽智財 IP 供應者，協助客戶從規格、IP、設計實作到量產導入客製晶片。",
+      "roleSummary": "智原是台灣最大ASIC設計服務公司，5月營收0.93億YoY-45.1%（因量產減少），但ASIC設計接單動能持續。與聯電緊密合作N5/N7製程，為AI/HPC客製晶片提供設計平台。",
       "supplyChainStage": "asic_design_ip",
       "roleType": "asic_design_service_ip_provider",
       "directness": "core",
@@ -60,18 +61,18 @@
     },
     "productNarratives": [
       {
-        "name": "ASIC 設計服務與矽智財 IP",
-        "description": "智原幫客戶把晶片想法做成可量產的客製化 ASIC，也提供自有矽智財 IP、FPGA 轉 ASIC、先進封裝整合等服務。",
-        "whyItMatters": "ASIC 是 AI、HPC、網通、工控、IoT 等系統降低成本、功耗並提高整合度的重要路徑；智原的價值在於設計服務、IP 庫與晶圓代工/封裝供應鏈整合能力。",
-        "topicFit": "官方定位為 ASIC Design Service 與 Silicon IP 供應者，屬 IC 設計服務與矽智財題材。",
-        "businessImpact": "NRE、IP 授權、量產 royalty/turnkey 收入受客戶新案量、先進製程設計需求、AI/HPC ASIC 專案進度與量產放量影響；大型 ASIC 專案成功量產可帶來長尾營收，但設計週期長、專案波動較大。",
+        "name": "FPGA-Go-ASIC 與先進封裝整合服務",
+        "description": "智原提供 FPGA 轉 ASIC 與先進封裝整合服務，協助客戶把原型或小量 FPGA 方案轉成成本、功耗與供應更適合量產的 ASIC，並整合多 die/chiplet 封裝。",
+        "whyItMatters": "當系統從原型走向量產，FPGA 可能面臨成本、功耗或停產風險；轉 ASIC 與先進封裝服務可降低長期 BOM、提升效能並服務 AI/HPC 客製晶片需求。",
+        "topicFit": "FPGA 轉 ASIC 是客製晶片設計服務的一種。",
+        "businessImpact": "若 AI/HPC、工控與網通客戶由 FPGA 原型轉量產 ASIC，智原可取得 NRE、IP 與量產服務收入；但專案時程長且成功量產具有不確定性。",
         "sourceLabels": [
-          "Faraday Technology：ASIC Design Service",
-          "Faraday Technology：Silicon IP"
+          "Faraday Technology：Advanced Packaging Service",
+          "Faraday Technology：FPGA-Go-ASIC Service"
         ],
         "sourceUrls": [
-          "https://www.faraday-tech.com/en/entry/ASICService",
-          "https://www.faraday-tech.com/en/entry/SiliconIP"
+          "https://www.faraday-tech.com/en/content/Product/ASIC_Service/AdvancedPackageSolution",
+          "https://www.faraday-tech.com/en/content/Product/ASIC_Service/FPGA-to-ASIC"
         ],
         "lastVerified": "2026-05-28",
         "confidence": "high"
@@ -131,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-01"
+      "lastVerified": "2026-07-02"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -161,7 +162,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "智原在 IC 設計題材中扮演 ASIC 設計服務與矽智財 IP 供應者，協助客戶從規格、IP、設計實作到量產導入客製晶片。"
+        "roleSummary": "智原是台灣最大ASIC設計服務公司，5月營收0.93億YoY-45.1%（因量產減少），但ASIC設計接單動能持續。與聯電緊密合作N5/N7製程，為AI/HPC客製晶片提供設計平台。"
       }
     ],
     "swot": [
@@ -229,7 +230,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 61,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": -40,
@@ -238,12 +239,13 @@
       "risks": [
         "月營收 YoY -43.1%，基本面承壓",
         "月營收 MoM -9.3%，短期動能轉弱",
-        "本益比 112.8 倍，需防估值壓縮"
+        "本益比 119.2 倍，需防估值壓縮"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -251,11 +253,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：213.80",
-      "波段多空分水嶺看 MA20：203.05",
-      "追蹤法人是否延續 買超：最近 +1.5千張",
+      "短線支撐/壓力先看 MA5：212.80",
+      "波段多空分水嶺看 MA20：204.10",
+      "追蹤法人是否延續 買超：最近 +1.2千張",
       "月營收年增率 -43.1%，觀察基本面是否支撐估值",
-      "本益比 112.8 倍，需和同族群估值比較"
+      "本益比 119.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 245.00 且量比 > 1.5：列為轉強訊號",
