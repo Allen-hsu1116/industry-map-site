@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "companyCode": "6274",
+  "companyName": "台燿",
+  "updatedAt": "2026-07-03",
+  "roles": [
+    {
+      "topicId": "pcb-substrates",
+      "topicName": "PCB、IC 載板與高階基板材料",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "substrate_materials",
+      "roleType": "ccl_manufacturer",
+      "roleSummary": "台燿是台灣前三大銅箔基板(CCL)製造商，提供多層壓合板與粘合片，是PCB上游核心材料供應商。",
+      "products": [
+        "銅箔基板(CCL/FR-4)",
+        "高頻基板(低損耗)",
+        "多層壓合板",
+        "粘合片(Prepreg)"
+      ],
+      "customers": [
+        "欣興(3037)(IC載板CCL)",
+        "楠梓電(8046)(PCB CCL)",
+        "金像電(2368)(PCB CCL)"
+      ],
+      "competitors": [],
+      "risks": [],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-03",
+      "status": "verified"
+    },
+    {
+      "topicId": "leo-satellite-communications",
+      "topicName": "低軌衛星通訊",
+      "topicType": "end_market",
+      "directness": "peripheral",
+      "supplyChainStage": "substrate_materials",
+      "roleType": "satellite_ccl_supplier",
+      "roleSummary": "台燿提供低軌衛星通訊設備用高頻CCL，低損耗基板適合衛星射頻PCB。",
+      "products": [
+        "低軌衛星用高頻CCL",
+        "射頻PCB基板材料"
+      ],
+      "customers": [
+        "SpaceX(Starlink PCB基板)",
+        "衛星PCB製造商"
+      ],
+      "competitors": [],
+      "risks": [],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-07-03",
+      "status": "verified"
+    }
+  ]
+}
