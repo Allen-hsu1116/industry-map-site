@@ -2,22 +2,19 @@
   "schemaVersion": 1,
   "code": "2393",
   "name": "億光",
-  "generatedAt": "2026-07-02T12:31:53.906Z",
+  "generatedAt": "2026-07-03T12:32:27.115Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
       "incomplete_swot"
     ]
   },
@@ -53,34 +50,69 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "面板、LED、光學鏡頭與感測",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "億光是台灣最大LED封裝廠，產品涵蓋可見光/不可見光LED、紅外線/紫外線LED、車用LED與Mini LED背光，LED封裝市佔全球前五。",
+      "supplyChainStage": "led_packaging",
+      "roleType": "led_package_manufacturer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "SMD LED封裝(0402-5050)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "紅外線LED(IR/VCSEL)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "車用LED(頭燈/尾燈)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "億光 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "億光 在「面板、LED、光學鏡頭與感測」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：面板、LED、光學鏡頭與感測 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
+      "相關題材：軍工、航太與無人機 · 間接受惠",
+      "相關題材：IC 設計與矽智財 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "V2 SWOT 最後驗證：2026-06-01",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
+      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
+      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-06-01"
     ]
   },
   "knowledge": {
@@ -115,9 +147,95 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "display-led-optics",
+        "topicName": "面板、LED、光學鏡頭與感測",
+        "canonicalTopicId": "display-led-optics",
+        "canonicalTopicName": "面板、LED、光學鏡頭與感測",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "億光是台灣最大LED封裝廠，產品涵蓋可見光/不可見光LED、紅外線/紫外線LED、車用LED與Mini LED背光，LED封裝市佔全球前五。"
+      },
+      {
+        "topicId": "defense-aerospace",
+        "topicName": "軍工、航太與無人機",
+        "canonicalTopicId": "defense-aerospace",
+        "canonicalTopicName": "軍工、航太與無人機",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "億光在軍工題材中提供軍規紅外線LED與光電感測元件，可用於夜視與目標標定系統。"
+      },
+      {
+        "topicId": "ic-design",
+        "topicName": "IC 設計與矽智財",
+        "canonicalTopicId": "ic-design",
+        "canonicalTopicName": "IC 設計與矽智財",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "億光在IC設計題材中關聯度低，主要為LED封裝應用。"
+      },
+      {
+        "topicId": "industrial-automation",
+        "topicName": "工業自動化與 CNC 工具機",
+        "canonicalTopicId": "industrial-automation",
+        "canonicalTopicName": "工業自動化與 CNC 工具機",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "億光提供工業用光電感測器與光耦合器，可用於自動化產線的物件感測。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "display-led-optics",
+        "name": "面板、LED、光學鏡頭與感測",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "defense-aerospace",
+        "name": "軍工、航太與無人機",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ic-design",
+        "name": "IC 設計與矽智財",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "industrial-automation",
+        "name": "工業自動化與 CNC 工具機",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,7 +250,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 17,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 12,
@@ -143,24 +261,21 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股",
-      "rationale": []
+      "classification": "題材股",
+      "rationale": [
+        "題材角色已 evidence-backed，可納入題材股策略"
+      ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 38 天未更新"
+        "message": "股價資料已 39 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 38 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 39 天未更新"
       }
     ]
   },

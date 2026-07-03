@@ -2,22 +2,19 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-07-02T12:31:54.223Z",
+  "generatedAt": "2026-07-03T12:32:27.323Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-02",
-  "chipDataDate": "2026-07-02",
+  "marketDataDate": "2026-07-03",
+  "chipDataDate": "2026-07-03",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -25,10 +22,10 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 55,
-    "summary": "欣銓 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 10.4%。",
+    "summary": "欣銓 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 9.3%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 10.4%"
+      "收盤站上 MA20 9.3%"
     ],
     "risks": [],
     "watch": [
@@ -39,48 +36,85 @@
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 20,
-    "summary": "欣銓 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +4.3千張；近 20 日法人偏買，合計 +1.3萬張。",
+    "summary": "欣銓 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +6.8千張；近 20 日法人偏買，合計 +1.2萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +4.3千張",
-      "近 20 日法人偏買，合計 +1.3萬張",
-      "外資近 5 日買超 +7.4千張"
+      "三大法人近 5 日合計買超 +6.8千張",
+      "近 20 日法人偏買，合計 +1.2萬張",
+      "外資近 5 日買超 +9.4千張"
     ],
     "risks": [
-      "投信近 5 日賣超 -3.5千張"
+      "投信近 5 日賣超 -2.9千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-02"
+      "最近法人資料日：2026-07-03"
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "先進封裝與 CoWoS",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "欣銓是記憶體IC晶圓測試專業廠商，提供DRAM/NAND/HBM晶圓級測試與Burn-in服務，先進封裝測試需求帶動高階測試產能擴充。",
+      "supplyChainStage": "advanced_packaging_test",
+      "roleType": "memory_ic_wafer_test",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "晶圓 Burn-in 測試",
+        "description": "晶圓 Burn-in 是在特定條件下加速篩選潛在失效晶片，提升量產品質與可靠度的測試流程。",
+        "whyItMatters": "高可靠度晶片越重視早期失效篩選，Burn-in 測試可提升出貨品質並降低客戶端失效風險。",
+        "topicFit": "後段可靠度測試",
+        "businessImpact": "屬專業測試服務，題材強度取決於高可靠度產品需求與測試產能稼動率。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：欣銓 公司基本資料與公開揭露",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 先進封裝與 CoWoS（process/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "欣銓 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "欣銓 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
+      "相關題材：Edge AI / AIoT 邊緣智慧 · 間接受惠",
+      "相關題材：HBM 高頻寬記憶體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-07-02（fresh）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
+      "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "知識庫最後驗證：2026-07-03（fresh）"
     ]
   },
   "knowledge": {
@@ -94,7 +128,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-02"
+      "lastVerified": "2026-07-03"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -115,9 +149,158 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging",
+        "topicName": "先進封裝與 CoWoS",
+        "canonicalTopicId": "advanced-packaging",
+        "canonicalTopicName": "先進封裝與 CoWoS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "欣銓是記憶體IC晶圓測試專業廠商，提供DRAM/NAND/HBM晶圓級測試與Burn-in服務，先進封裝測試需求帶動高階測試產能擴充。"
+      },
+      {
+        "topicId": "edge-ai-aiot",
+        "topicName": "Edge AI / AIoT 邊緣智慧",
+        "canonicalTopicId": "edge-ai-aiot",
+        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "欣銓提供邊緣AI晶片的測試服務，數位/混合訊號IC測試涵蓋AI推論晶片的品質驗證。"
+      },
+      {
+        "topicId": "hbm",
+        "topicName": "HBM 高頻寬記憶體",
+        "canonicalTopicId": "hbm",
+        "canonicalTopicName": "HBM 高頻寬記憶體",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "欣銓為HBM記憶體供應鏈提供晶圓測試服務，HBM堆疊封裝前的晶圓級測試是確保良率的關鍵環節。"
+      },
+      {
+        "topicId": "leo-satellite-communications",
+        "topicName": "低軌衛星通訊",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "欣銓在低軌衛星題材中關聯度低，可能間接提供衛星通訊IC的測試服務。"
+      },
+      {
+        "topicId": "passive-components-mlcc",
+        "topicName": "MLCC / 電容器",
+        "canonicalTopicId": "passive-components-mlcc",
+        "canonicalTopicName": "MLCC / 電容器",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "欣銓在MLCC題材中關聯度低，主要為IC測試服務商。"
+      },
+      {
+        "topicId": "pcb-substrates",
+        "topicName": "PCB、IC 載板與高階基板材料",
+        "canonicalTopicId": "pcb-substrates",
+        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "欣銓在PCB題材中關聯度低，測試服務不直接涉及PCB製造。"
+      },
+      {
+        "topicId": "semiconductor-equipment-materials",
+        "topicName": "半導體設備與前段材料",
+        "canonicalTopicId": "semiconductor-equipment-materials",
+        "canonicalTopicName": "半導體設備與前段材料",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "欣銓在半導體設備材料題材中提供測試製程服務，晶圓測試與Burn-in是晶圓代工後段的關鍵品質管控環節。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "advanced-packaging",
+        "name": "先進封裝與 CoWoS",
+        "type": "process",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "edge-ai-aiot",
+        "name": "Edge AI / AIoT 邊緣智慧",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "hbm",
+        "name": "HBM 高頻寬記憶體",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "passive-components-mlcc",
+        "name": "MLCC / 電容器",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "pcb-substrates",
+        "name": "PCB、IC 載板與高階基板材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "semiconductor-equipment-materials",
+        "name": "半導體設備與前段材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,8 +315,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 45,
-    "recommendationState": "watchlist",
+    "totalScore": 77,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -141,31 +324,21 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢股",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐"
+        "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 9.4%，部位需降速"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：226.60",
-      "波段多空分水嶺看 MA20：225.48",
-      "追蹤法人是否延續 買超：最近 +2.2千張",
-      "本益比 38.6 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：233.10",
+      "波段多空分水嶺看 MA20：226.00",
+      "追蹤法人是否延續 買超：最近 +1.6千張",
+      "本益比 38.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 251.50 且量比 > 1.5：列為轉強訊號",

@@ -2,22 +2,19 @@
   "schemaVersion": 1,
   "code": "3680",
   "name": "家登",
-  "generatedAt": "2026-07-02T12:31:54.344Z",
+  "generatedAt": "2026-07-03T12:32:27.406Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -50,34 +47,69 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "先進封裝與 CoWoS",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "家登是先進封裝光罩解決方案供應商，提供CoWoS/2.5D封裝所需的承載環(Carrier Ring)、光罩盒與晶圓傳送載具。",
+      "supplyChainStage": "packaging_consumables",
+      "roleType": "advanced_packaging_carrier_solution",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "先進封裝承載環(Carrier Ring)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "CoWoS暫時性承載載具",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "光罩盒(Reticle Pod)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 先進封裝與 CoWoS（process/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "家登 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "家登 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
+      "相關題材：半導體設備與前段材料 · 核心產品/平台",
+      "相關題材：電商零售與物流平台 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 半導體設備與前段材料：月營收或訂單能見度改善",
+      "追蹤 半導體設備與前段材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "知識庫最後驗證：2026-05-26（normal）"
     ]
   },
   "knowledge": {
@@ -112,9 +144,116 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "advanced-packaging",
+        "topicName": "先進封裝與 CoWoS",
+        "canonicalTopicId": "advanced-packaging",
+        "canonicalTopicName": "先進封裝與 CoWoS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "家登是先進封裝光罩解決方案供應商，提供CoWoS/2.5D封裝所需的承載環(Carrier Ring)、光罩盒與晶圓傳送載具。"
+      },
+      {
+        "topicId": "semiconductor-equipment-materials",
+        "topicName": "半導體設備與前段材料",
+        "canonicalTopicId": "semiconductor-equipment-materials",
+        "canonicalTopicName": "半導體設備與前段材料",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "家登提供半導體製程用光罩解決方案與晶圓載具，是晶圓廠與封測廠的關鍵耗材供應商。"
+      },
+      {
+        "topicId": "ecommerce-retail-logistics",
+        "topicName": "電商零售與物流平台",
+        "canonicalTopicId": "ecommerce-retail-logistics",
+        "canonicalTopicName": "電商零售與物流平台",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "家登在電商物流題材中關聯度低。"
+      },
+      {
+        "topicId": "environment-water-recycling",
+        "topicName": "水資源、環保與電子廢料回收",
+        "canonicalTopicId": "environment-water-recycling",
+        "canonicalTopicName": "水資源、環保與電子廢料回收",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "家登在水環境題材中關聯度低。"
+      },
+      {
+        "topicId": "high-speed-interconnect",
+        "topicName": "高速連接器與車工業連接",
+        "canonicalTopicId": "high-speed-interconnect",
+        "canonicalTopicName": "高速連接器與車工業連接",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "家登在高速連接器題材中關聯度低。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "advanced-packaging",
+        "name": "先進封裝與 CoWoS",
+        "type": "process",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "semiconductor-equipment-materials",
+        "name": "半導體設備與前段材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "ecommerce-retail-logistics",
+        "name": "電商零售與物流平台",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "environment-water-recycling",
+        "name": "水資源、環保與電子廢料回收",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "high-speed-interconnect",
+        "name": "高速連接器與車工業連接",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -129,7 +268,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 3,
+    "totalScore": 31,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -138,26 +277,22 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股",
+      "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐"
+        "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 38 天未更新"
+        "message": "股價資料已 39 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 38 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 39 天未更新"
       }
     ]
   },

@@ -2,23 +2,20 @@
   "schemaVersion": 1,
   "code": "3454",
   "name": "晶睿",
-  "generatedAt": "2026-07-02T12:31:54.276Z",
+  "generatedAt": "2026-07-03T12:32:27.359Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-03-18",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
       "missing_product_knowledge",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -49,34 +46,69 @@
     "watch": []
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "題材關聯明確",
+    "score": 68,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "medium",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "軍工、航太與無人機",
+      "roleLabel": "間接受惠",
+      "roleSummary": "晶睿是安全監控設備製造商，提供軍規網路攝影機與門禁系統，可用於軍事基地與國防設施安全監控。",
+      "supplyChainStage": "security_equipment",
+      "roleType": "military_surveillance_equipment",
+      "directness": "indirect",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "軍規網路攝影機",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "門禁安全系統",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "熱成像攝影機",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
+      "題材 軍工、航太與無人機（theme/active） +18",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "晶睿 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "晶睿 在「軍工、航太與無人機」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 68/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：軍工、航太與無人機 · 間接受惠 · medium",
+      "產業評分：68/100（直接度 間接受惠 +8；角色信心 medium +10；題材 軍工、航太與無人機（theme/active） +18）",
+      "相關題材：面板、LED、光學鏡頭與感測 · 間接受惠",
+      "相關題材：工業自動化與 CNC 工具機 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockMonthRevenue / MOPS monthly revenue"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
+      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
+      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "知識庫最後驗證：2026-05-26（normal）"
     ]
   },
   "knowledge": {
@@ -105,9 +137,95 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "defense-aerospace",
+        "topicName": "軍工、航太與無人機",
+        "canonicalTopicId": "defense-aerospace",
+        "canonicalTopicName": "軍工、航太與無人機",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "晶睿是安全監控設備製造商，提供軍規網路攝影機與門禁系統，可用於軍事基地與國防設施安全監控。"
+      },
+      {
+        "topicId": "display-led-optics",
+        "topicName": "面板、LED、光學鏡頭與感測",
+        "canonicalTopicId": "display-led-optics",
+        "canonicalTopicName": "面板、LED、光學鏡頭與感測",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "晶睿在光學題材中提供監控用光學鏡頭與影像感測模組。"
+      },
+      {
+        "topicId": "industrial-automation",
+        "topicName": "工業自動化與 CNC 工具機",
+        "canonicalTopicId": "industrial-automation",
+        "canonicalTopicName": "工業自動化與 CNC 工具機",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "晶睿在工業自動化題材中提供工廠安全監控與AI影像分析方案。"
+      },
+      {
+        "topicId": "leo-satellite-communications",
+        "topicName": "低軌衛星通訊",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "晶睿在低軌衛星題材中關聯度低。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "defense-aerospace",
+        "name": "軍工、航太與無人機",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "display-led-optics",
+        "name": "面板、LED、光學鏡頭與感測",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "industrial-automation",
+        "name": "工業自動化與 CNC 工具機",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -122,7 +240,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 41,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -131,27 +249,17 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
       {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
-      },
-      {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 106 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "股價資料已 107 天未更新"
       }
     ]
   },

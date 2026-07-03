@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3711",
   "name": "日月光投控",
-  "generatedAt": "2026-07-02T12:31:54.357Z",
+  "generatedAt": "2026-07-03T12:32:27.415Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-02",
-  "chipDataDate": "2026-07-02",
+  "marketDataDate": "2026-07-03",
+  "chipDataDate": "2026-07-03",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -19,34 +19,32 @@
     ]
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 55,
-    "summary": "日月光投控 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 17.8%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 15,
+    "summary": "日月光投控 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 9.7%。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 17.8%"
+      "均線結構偏震盪，尚未形成明確排列",
+      "收盤站上 MA20 9.7%"
     ],
     "risks": [],
-    "watch": [
-      "接近 20 日高點 729.00，觀察是否突破"
-    ]
+    "watch": []
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 20,
-    "summary": "日月光投控 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.4萬張；近 20 日法人偏買，合計 +8.4千張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -20,
+    "summary": "日月光投控 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +1.7千張；三大法人近 5 日合計賣超 -7.8千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.4萬張",
-      "近 20 日法人偏買，合計 +8.4千張",
-      "外資近 5 日買超 +1.4萬張"
+      "投信近 5 日買超 +1.7千張"
     ],
     "risks": [
-      "投信近 5 日賣超 -652張"
+      "三大法人近 5 日合計賣超 -7.8千張",
+      "近 20 日法人偏賣，合計 -6.9千張",
+      "外資近 5 日賣超 -1.1萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-02"
+      "最近法人資料日：2026-07-03"
     ]
   },
   "industry": {
@@ -112,7 +110,7 @@
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-02（fresh）"
+      "知識庫最後驗證：2026-07-03（fresh）"
     ]
   },
   "knowledge": {
@@ -126,7 +124,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-02"
+      "lastVerified": "2026-07-03"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -229,8 +227,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 59,
-    "recommendationState": "blocked",
+    "totalScore": 63,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 12,
       "label": "基本面中性",
@@ -238,33 +236,25 @@
         "月營收 YoY +19.2%，成長動能明確"
       ],
       "risks": [
-        "本益比 67.5 倍，需防估值壓縮",
-        "股價淨值比 9.1 倍偏高，需和 ROE/成長性比對"
+        "本益比 63.3 倍，需防估值壓縮",
+        "股價淨值比 8.5 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "hard",
-        "message": "距離 MA20 約 15.1%，停損距離過大"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：673.80",
-      "波段多空分水嶺看 MA20：617.05",
-      "追蹤法人是否延續 買超：最近 +1.9千張",
+      "短線支撐/壓力先看 MA5：683.80",
+      "波段多空分水嶺看 MA20：621.50",
+      "追蹤法人是否延續 賣超：最近 -1.8萬張",
       "月營收年增率 +19.2%，觀察基本面是否支撐估值",
-      "本益比 67.5 倍，需和同族群估值比較"
+      "本益比 63.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 729.00 且量比 > 1.5：列為轉強訊號",
