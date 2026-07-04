@@ -11,23 +11,30 @@
       "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "edge_ai_chipmaker",
-      "roleSummary": "威盛以AI邊緣運算晶片為主，非資料中心AI伺服器供應鏈成員。重點在車用/智慧城市邊緣AI推論。",
+      "roleSummary": "威盛以x86邊緣AI運算晶片為主，非資料中心AI伺服器供應鏈核心。5月營收11.1億年增88.1%，累計43.6億年增34.3%，邊緣AI推論晶片需求帶動成長但基期低。",
       "products": [
-        "x86處理器(VMC/Centaur)",
-        "AI邊緣運算晶片",
-        "車用晶片(車載資訊系統)",
-        "智慧城市AI解決方案",
-        "嵌入式平台"
+        "x86邊緣AI處理器(EDGE AI SoC)",
+        "車用晶片(車載資訊系統/IVI)",
+        "AI推論加速器(搭配Cortex-M)",
+        "嵌入式x86平台(工業電腦用)",
+        "智慧城市AI邊緣運算盒"
       ],
       "customers": [
-        "車廠(Tier 1)",
-        "智慧城市專案",
-        "工業電腦廠",
+        "大眾電腦(工業電腦)",
+        "車廠Tier 1(車載IVI系統)",
+        "亞太智慧城市專案",
         "嵌入式系統整合商",
-        "亞太政府專案"
+        "工業電腦廠(研華/新漢)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "Intel(x86邊緣)",
+        "AMD(嵌入式x86)",
+        "NVIDIA(Jetson)"
+      ],
+      "risks": [
+        "營收基期極低(月營收僅11億)，邊緣AI市場仍小",
+        "x86邊緣AI面臨NVIDIA Jetson ARM生態強勢競爭"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -45,9 +52,9 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-02",
-      "status": "candidate"
+      "confidence": "high",
+      "lastVerified": "2026-07-05",
+      "status": "verified"
     }
   ]
 }

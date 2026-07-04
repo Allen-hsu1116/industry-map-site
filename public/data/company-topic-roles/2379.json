@@ -11,23 +11,30 @@
       "directness": "direct_enabler",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ethernet_phy_chip_maker",
-      "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。4月營收127億年增11.3%，10G/5G PHY與WiFi 7是成長動能。",
+      "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。5月營收125.2億年增21.9%，累計617億年增8.7%。10G PHY與WiFi 7是成長動能。",
       "products": [
-        "乙太網路PHY晶片(1G/2.5G/5G/10G)",
-        "Wi-Fi 6/7晶片",
-        "USB PD控製器",
-        "音訊编解碼器(Codec)",
-        "車用乙太網路晶片"
+        "乙太網路PHY晶片(1G/2.5G/5G/10G/25G)",
+        "Wi-Fi 7 MLO晶片(RTW89)",
+        "USB PD控制器(RTD21xx)",
+        "車用乙太網路晶片(100BASE-T1)",
+        "音訊編解碼器(ALC系列Codec)"
       ],
       "customers": [
-        "智邦(2345)",
-        "Dell",
-        "HP",
-        "Lenovo",
-        "ASUS"
+        "智邦(2345)(資料中心交換器)",
+        "Dell(NB/桌機網路晶片)",
+        "HP(NB/桌機網路晶片)",
+        "Lenovo(NB/桌機網路晶片)",
+        "ASUS(主機板內建網路)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "博通(Broadcom)",
+        "Marvell",
+        "Intel(網路PHY)"
+      ],
+      "risks": [
+        "消費級PHY價格競爭激烈，毛利率承壓",
+        "25G/50G伺服器PHY面臨Broadcom/Marvell強勢競爭"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -45,9 +52,9 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-02",
-      "status": "candidate"
+      "confidence": "high",
+      "lastVerified": "2026-07-05",
+      "status": "verified"
     },
     {
       "topicId": "wafer-foundry",
@@ -56,23 +63,30 @@
       "directness": "customer_or_channel",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ic_design_fabless",
-      "roleSummary": "瑞昱是Fabless IC設計公司，在聯電/台積電投片生產乙太網路PHY、WiFi、USB PD等晶片。",
+      "roleSummary": "瑞昱是Fabless IC設計公司，主力產品為網通PHY/WiFi/USB PD晶片，在聯電/台積電投片。5月營收125.2億年增21.9%，10G PHY與Wi-Fi 7帶動先進製程投片需求。",
       "products": [
-        "乙太網路PHY晶片(1G/2.5G/5G/10G)",
-        "Wi-Fi 6/7晶片",
-        "USB PD控製器",
-        "音訊编解碼器(Codec)",
-        "車用乙太網路晶片"
+        "乙太網路PHY晶片(1G~25G)(聯電28nm/台積電12nm投片)",
+        "Wi-Fi 7晶片(台積電6nm投片)",
+        "USB PD控制器(聯電28nm投片)",
+        "車用乙太網路晶片(聯電22nm投片)",
+        "音訊Codec(聯電成熟製程投片)"
       ],
       "customers": [
-        "智邦(2345)",
-        "Dell",
-        "HP",
-        "Lenovo",
-        "ASUS"
+        "智邦(2345)(交換器內建PHY)",
+        "Dell(NB內建網路)",
+        "HP(NB內建網路)",
+        "ASUS(主機板內建網路)",
+        "Lenovo(NB內建網路)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "博通(Broadcom)",
+        "Marvell",
+        "聯發科(2454)(WiFi)"
+      ],
+      "risks": [
+        "Fabless模式受晶圓代工產能與價格波動影響",
+        "網通晶片標準化程度高，價格競爭激烈"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -90,9 +104,9 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-02",
-      "status": "candidate"
+      "confidence": "high",
+      "lastVerified": "2026-07-05",
+      "status": "verified"
     }
   ]
 }
