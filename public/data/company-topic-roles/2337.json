@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2337",
   "companyName": "旺宏",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-06",
   "roles": [
     {
       "topicId": "niche-memory",
@@ -74,19 +74,20 @@
       "directness": "supplier",
       "supplyChainStage": "semiconductor_design_and_products",
       "roleType": "non_volatile_memory_ic_product_company",
-      "roleSummary": "旺宏為全球最大Mask ROM與車用NOR Flash供應商。5月營收62.6億年增175.8%，累計年增110.9%，受惠AI/車用/消費電子需求爆發。",
+      "roleSummary": "旺宏5月營收62.6億年增175.8%（受市場需求增加影響），累計年增110.9%。車用NOR Flash需求強勁，SLC NAND在工控應用出貨放量。",
       "products": [
         "NOR Flash(Serial NOR/Parallel NOR)",
         "NAND Flash(SLC NAND)",
         "Mask ROM(唯讀記憶體)",
-        "SLC NAND(XtraROM)"
+        "車用NOR Flash(45nm)",
+        "XtrMBit高密度ROM"
       ],
       "customers": [
         "Tesla(車用NOR Flash)",
         "Bosch(車用記憶體)",
         "Infineon(車規MCU ROM)",
-        "Qualcomm(手機Mask ROM)",
-        "任天堂(遊戲機ROM)"
+        "STMicroelectronics(車用NOR)",
+        "Sony(遊戲機ROM)"
       ],
       "competitors": [
         "華邦(2344)",
@@ -117,9 +118,14 @@
           "claim": "產品知識庫將半導體系統應用與銷售顧問服務標示為 IC 產品導入、應用支援與客戶服務。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-06",
+      "status": "verified",
+      "techFocus": [
+        "NOR Flash SLC製程微縮",
+        "3D NAND SLC堆疊技術",
+        "Mask ROM光罩編程"
+      ]
     }
   ]
 }

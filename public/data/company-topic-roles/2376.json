@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2376",
   "companyName": "技嘉",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-06",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,17 +11,20 @@
       "directness": "core",
       "supplyChainStage": "system_brand",
       "roleType": "ai_server_platform_brand",
-      "roleSummary": "技嘉從主機板/顯卡跨入 AI 伺服器市場表現亮眼；4 月營收 52 億年增 73.7%，累計年增 64.2%。備註「AI訂單需求暢旺」。",
+      "roleSummary": "技嘉5月營收49.1億年增5.0%，累計年增44.8%。AI伺服器為主要成長動能，G593系列搭配NVIDIA方案出貨增長。",
       "products": [
-        "GPU 伺服器（4U/8U AI 推論）",
-        "AI 訓練伺服器",
-        "邊緣 AI 運算伺服器"
+        "GPU伺服器(4U/8U AI推論)",
+        "AI訓練伺服器",
+        "邊緣AI運算伺服器",
+        "G593 AI伺服器(Z14平台)",
+        "液冷相容AI伺服器"
       ],
       "customers": [
-        "NVIDIA",
-        "Google",
-        "AWS",
-        "Microsoft Azure"
+        "NVIDIA(GPU伺服器授權)",
+        "Google(CSP伺服器)",
+        "AWS(CSP伺服器)",
+        "超微(Supermicro)(伺服器ODM)",
+        "CoreWeave(AI雲端)"
       ],
       "competitors": [
         "超微(8299)",
@@ -55,9 +58,14 @@
           "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-06",
+      "status": "verified",
+      "techFocus": [
+        "GPU伺服器4U/8U散熱設計",
+        "AI推論伺服器邊緣運算架構",
+        "液冷相容伺服器機構"
+      ]
     },
     {
       "topicId": "ai-server-liquid-cooling",
@@ -123,18 +131,20 @@
       "directness": "core",
       "supplyChainStage": "brand",
       "roleType": "pc_component_brand",
-      "roleSummary": "技嘉是全球前三大主機板品牌，顯示卡市場份額第四。5月營收49.1億年增5.0%，累計年增44.8%，AI PC升級潮帶動主機板與顯示卡換機需求。",
+      "roleSummary": "技嘉消費性產品涵蓋主機板、顯卡與Mini-PC，5月營收49.1億年增5.0%。AI伺服器帶動整體成長，消費性PC產品穩定。",
       "products": [
         "Z890/B760主機板(Intel LGA1851)",
         "RTX 40系列顯示卡(AORUS品牌)",
         "Mini-PC(BRIX系列)",
-        "AI筆電(AORUS 16X)"
+        "AORUS電競筆電",
+        "伺服器用主機板"
       ],
       "customers": [
         "Intel(主機板晶片組)",
         "NVIDIA(GPU板卡)",
         "AMD(主機板晶片組)",
-        "消費端通路(Newegg/Amazon)"
+        "Newegg(通路)",
+        "Amazon(通路)"
       ],
       "competitors": [
         "華碩",
@@ -166,9 +176,14 @@
           "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-06",
+      "status": "verified",
+      "techFocus": [
+        "Intel LGA1851主機板設計",
+        "AORUS品牌顯示卡散熱方案",
+        "Mini-PC BRIX小型化設計"
+      ]
     }
   ]
 }

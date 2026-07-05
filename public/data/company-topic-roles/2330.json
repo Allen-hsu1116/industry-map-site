@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-06",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,7 +11,7 @@
       "directness": "core",
       "supplyChainStage": "wafer_fabrication",
       "roleType": "advanced_logic_foundry",
-      "roleSummary": "台積電是全球晶圓代工霸主，先進製程市佔超過90%。5月營收4170億年增30.1%，累計年增30.0%，N3/N5製程供不應求，N2預計2025量產。",
+      "roleSummary": "台積電5月營收4170億年增30.1%，累計年增30.0%。N3/N5製程供不應求，N2預計2025量產，先進製程持續領先Samsung與Intel。",
       "products": [
         "N3(3nm)FinFET量產",
         "N2(2nm)GAA量產準備",
@@ -22,7 +22,7 @@
       "customers": [
         "NVIDIA(H100/B200)",
         "Apple(A18/M4)",
-        "AMD(Zen5/RDNA4)",
+        "AMD(Zen5/RNA4)",
         "Qualcomm(Snapdragon X)",
         "Broadcom(客製ASIC)"
       ],
@@ -57,8 +57,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "lastVerified": "2026-07-06",
+      "status": "verified",
+      "techFocus": [
+        "N3 FinFET量產與N2 GAA開發",
+        "EUV極紫外光微影技術",
+        "A16 Backside Power背供電架構"
+      ]
     },
     {
       "topicId": "advanced-packaging",
@@ -67,19 +72,20 @@
       "directness": "core",
       "supplyChainStage": "advanced_packaging",
       "roleType": "cowos_advanced_packaging_provider",
-      "roleSummary": "台積電在CoWoS先進封裝領域是獨佔龍頭，2025年產能持續擴充。5月營收4170億年增30.1%，累計年增30.0%，先進封裝為AI GPU出貨瓶頸與成長引擎。",
+      "roleSummary": "台積電在CoWoS先進封裝領域獨占鰲頭，5月營收4170億年增30.1%。2025年產能持續擴充，先進封裝為AI GPU出貨瓶頸與成長引擎。",
       "products": [
         "CoWoS-S 2.5D封裝",
         "SoIC 3D堆疊封裝",
         "InFO-POP封裝",
-        "CoWoS-L(Large Die)封裝"
+        "CoWoS-L(Large Die)封裝",
+        "SoIC+CoWoS整合方案"
       ],
       "customers": [
         "NVIDIA(H100/B200 CoWoS)",
         "AMD(MI300 SoIC)",
         "Broadcom(客製ASIC CoWoS)",
-        "Apple(A系列InFO封裝)",
-        "Marvell(客製ASIC CoWoS)"
+        "Apple(A18 InFO)",
+        "Qualcomm(Snapdragon SoIC)"
       ],
       "competitors": [
         "Samsung I-Cube4",
@@ -111,8 +117,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "lastVerified": "2026-07-06",
+      "status": "verified",
+      "techFocus": [
+        "CoWoS-S/L 2.5D矽中介層封裝",
+        "SoIC 3D堆疊混合鍵合",
+        "InFO-POP扇出型封裝"
+      ]
     },
     {
       "topicId": "hbm",

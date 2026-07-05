@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2395",
   "companyName": "研華",
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-07-06",
   "roles": [
     {
       "topicId": "edge-ai-aiot",
@@ -11,17 +11,20 @@
       "directness": "core",
       "supplyChainStage": "edge_ai",
       "roleType": "edge_ai_platform",
-      "roleSummary": "研華在邊緣 AI 題材中是工業電腦平台龍頭；4 月營收 82.7 億年增 34.6%，累計年增 22%，Edge AI 推論平台是成長主軸。",
+      "roleSummary": "研華5月營收77.3億年增32.1%，累計年增24.0%。Edge AI為成長主軸，NVIDIA Jetson整合方案在製造業AOI/瑕疵檢測需求增長。",
       "products": [
-        "Edge AI 推論平台（NVIDIA Jetson 整合）",
-        "工業 GPU 運算平台",
-        "邊緣 AI 軟體 Platform"
+        "Edge AI推論平台(NVIDIA Jetson整合)",
+        "工業GPU運算平台",
+        "邊緣AI軟體Platform",
+        "工業物聯網閘道器",
+        "AI視覺檢測系統"
       ],
       "customers": [
-        "NVIDIA",
-        "SI 系統整合商",
-        "製造業客戶",
-        "智慧城市案"
+        "NVIDIA(Jetson生態系)",
+        "西門子(SI系統整合)",
+        "Rockwell(工業自動化)",
+        "Foxconn(產線AI檢測)",
+        "台達電(工廠AIoT)"
       ],
       "competitors": [
         "新漢",
@@ -49,8 +52,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-30",
-      "status": "verified"
+      "lastVerified": "2026-07-06",
+      "status": "verified",
+      "techFocus": [
+        "NVIDIA Jetson Edge AI平台整合",
+        "工業GPU運算平台設計",
+        "邊緣AI軟體Platform-OA架構"
+      ]
     },
     {
       "topicId": "industrial-automation",
@@ -59,16 +67,20 @@
       "directness": "core",
       "supplyChainStage": "industrial_automation",
       "roleType": "industrial_automation_platform",
-      "roleSummary": "研華在工業自動化題材中提供 IPC 平台與 IoT 閘道器；工業 4.0 與 ESG 監控驅動需求。",
+      "roleSummary": "研華工業自動化產品線穩定成長，5月營收77.3億年增32.1%。ADAM遠端I/O與WebAccess SCADA為工廠數位化核心元件。",
       "products": [
-        "工業 IoT 平台",
-        "遠端 I/O 模組",
-        "工業閘道器"
+        "工業IoT平台",
+        "遠端I/O模組",
+        "工業閘道器",
+        "ADAM-4000/6000系列遠端模組",
+        "WebAccess SCADA軟體"
       ],
       "customers": [
-        "西門子",
-        "Rockwell",
-        "本土 SI"
+        "西門子(工業通訊整合)",
+        "Rockwell(自動化整合)",
+        "本土SI(系統整合商)",
+        "台塑(工廠自動化)",
+        "中鋼(製程監控)"
       ],
       "competitors": [
         "泓格",
@@ -94,8 +106,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-30",
-      "status": "verified"
+      "lastVerified": "2026-07-06",
+      "status": "verified",
+      "techFocus": [
+        "工業IoT平台WISE-DAQ數據採集",
+        "遠端I/O模組Modbus/OPC-UA",
+        "工業閘道器EdgeLink協議轉換"
+      ]
     },
     {
       "topicId": "robotics-physical-ai",
