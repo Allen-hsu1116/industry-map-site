@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2317",
   "name": "鴻海",
-  "generatedAt": "2026-07-03T12:32:27.065Z",
+  "generatedAt": "2026-07-06T12:32:05.357Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,13 +49,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "鴻海在 AI 伺服器 ODM 題材中是全球最大出貨商；4 月營收 8,321 億年增 29.7%，AI 伺服器占比持續拉升。NVIDIA GB200 機櫃為旗艦產品。",
+      "roleSummary": "鴻海是全球最大AI伺服器ODM/EMS出貨商。5月營收8,594億年增39.6%，累計3.82兆年增31.8%。NVIDIA GB200 NVL72機櫃為旗艦產品，垂直整合從連接器到整機一條龍。",
       "supplyChainStage": "system_assembly",
       "roleType": "ai_server_ems_odm",
       "directness": "core",
@@ -89,7 +89,7 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
@@ -98,9 +98,9 @@
     ],
     "summary": "鴻海 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：AI 伺服器整機與 EMS · 核心產品/平台",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -156,8 +156,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "鴻海在 AI 伺服器 ODM 題材中是全球最大出貨商；4 月營收 8,321 億年增 29.7%，AI 伺服器占比持續拉升。NVIDIA GB200 機櫃為旗艦產品。"
+        "confidence": "high",
+        "roleSummary": "鴻海是全球最大AI伺服器ODM/EMS出貨商。5月營收8,594億年增39.6%，累計3.82兆年增31.8%。NVIDIA GB200 NVL72機櫃為旗艦產品，垂直整合從連接器到整機一條龍。"
       },
       {
         "topicId": "ai-server",
@@ -176,8 +176,8 @@
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "鴻海是全球最大 iPhone 組裝代工廠；手機營收佔比仍高但 AI 伺服器正快速追趕。4 月整體營收年增 29.7%。"
+        "confidence": "high",
+        "roleSummary": "鴻海是全球最大電子代工廠，iPhone組裝為核心，AI伺服器機櫃為新成長引擎。5月營收8594億年增39.6%，累計3.82兆年增31.8%，AI伺服器放量帶動強勁成長。"
       }
     ],
     "swot": [
@@ -253,12 +253,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 39 天未更新"
+        "message": "股價資料已 42 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 39 天未更新"
+        "message": "籌碼資料已 42 天未更新"
       }
     ]
   },

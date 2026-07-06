@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-07-03T12:32:27.102Z",
+  "generatedAt": "2026-07-06T12:32:05.395Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-03",
-  "chipDataDate": "2026-07-03",
+  "marketDataDate": "2026-07-06",
+  "chipDataDate": "2026-07-06",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,47 +15,47 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "技嘉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -30,
+    "summary": "技嘉 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
+    "signals": [],
+    "risks": [
+      "收盤價、MA5、MA20 呈空頭排列"
     ],
-    "risks": [],
     "watch": [
       "股價貼近 MA20，留意方向選擇",
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 16,
-    "summary": "技嘉 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1千張；投信近 5 日買超 +6.1千張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -20,
+    "summary": "技嘉 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +5.9千張；三大法人近 5 日合計賣超 -367張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1千張",
-      "投信近 5 日買超 +6.1千張"
+      "投信近 5 日買超 +5.9千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -5.6千張",
-      "外資近 5 日賣超 -5.4千張"
+      "三大法人近 5 日合計賣超 -367張",
+      "近 20 日法人偏賣，合計 -7.5千張",
+      "外資近 5 日賣超 -6.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-03"
+      "最近法人資料日：2026-07-06"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "技嘉從主機板/顯卡跨入 AI 伺服器市場表現亮眼；4 月營收 52 億年增 73.7%，累計年增 64.2%。備註「AI訂單需求暢旺」。",
+      "roleSummary": "技嘉5月營收49.1億年增5.0%，累計年增44.8%。AI伺服器為主要成長動能，G593系列搭配NVIDIA方案出貨增長。",
       "supplyChainStage": "system_brand",
       "roleType": "ai_server_platform_brand",
       "directness": "core",
@@ -63,19 +63,21 @@
     },
     "productNarratives": [
       {
-        "name": "GPU 伺服器（4U/8U AI 推論）",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "AI 訓練伺服器",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "邊緣 AI 運算伺服器",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "AI 伺服器與 GPU Server Platforms",
+        "description": "AI 伺服器平台是技嘉提供給資料中心或企業 AI 訓練/推論用的伺服器系統，通常整合 GPU、CPU、主機板、電源與散熱。",
+        "whyItMatters": "技嘉不是只做 PC 零組件，AI server platform 讓它能參與資料中心高功率硬體升級。",
+        "topicFit": "直接產品平台：AI/GPU 伺服器。",
+        "businessImpact": "AI 伺服器業務若放量，可提高技嘉非 PC 通路產品比重；但驗證與供應鏈節奏需追蹤。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：技嘉 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
       }
     ],
     "swotSnapshot": {
@@ -92,7 +94,7 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
@@ -102,9 +104,9 @@
     ],
     "summary": "技嘉 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
       "相關題材：AI 伺服器液冷散熱 · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -134,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-03"
+      "lastVerified": "2026-07-06"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -163,8 +165,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "技嘉從主機板/顯卡跨入 AI 伺服器市場表現亮眼；4 月營收 52 億年增 73.7%，累計年增 64.2%。備註「AI訂單需求暢旺」。"
+        "confidence": "high",
+        "roleSummary": "技嘉5月營收49.1億年增5.0%，累計年增44.8%。AI伺服器為主要成長動能，G593系列搭配NVIDIA方案出貨增長。"
       },
       {
         "topicId": "consumer-computing-devices",
@@ -173,8 +175,8 @@
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "技嘉是全球前三大主機板品牌，顯示卡市場份額第四。5月營收49.1億年增5.0%，累計年增44.8%，AI PC升級潮帶動主機板與顯示卡換機需求。"
+        "confidence": "high",
+        "roleSummary": "技嘉消費性產品涵蓋主機板、顯卡與Mini-PC，5月營收49.1億年增5.0%。AI伺服器帶動整體成長，消費性PC產品穩定。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -183,8 +185,8 @@
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "medium",
-        "roleSummary": "技嘉在液冷散熱題材中是 AI 伺服器整機整合商；自研冷板與水冷方案搭配 GPU 伺服器出貨。4 月營收年增 73.7%。"
+        "confidence": "high",
+        "roleSummary": "技嘉是AI伺服器品牌廠中液冷方案領先者，提供冷板式與浸沒式散熱整合。5月營收49.1億年增5.0%，累計206.4億年增44.8%，液冷滲透率提升帶動成長。"
       }
     ],
     "swot": [
@@ -279,15 +281,15 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 70,
-    "recommendationState": "top_candidate",
+    "totalScore": 57,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 32,
       "label": "基本面偏強",
       "signals": [
         "月營收 YoY +72.2%，成長動能明確",
-        "本益比 15.8 倍，估值尚可對照成長",
-        "殖利率 3.5%，提供部分下檔支撐"
+        "本益比 15.7 倍，估值尚可對照成長",
+        "殖利率 3.6%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -302,14 +304,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：336.70",
-      "波段多空分水嶺看 MA20：341.73",
-      "追蹤法人是否延續 買超：最近 +41張",
+      "短線支撐/壓力先看 MA5：339.00",
+      "波段多空分水嶺看 MA20：340.10",
+      "追蹤法人是否延續 賣超：最近 -735張",
       "月營收年增率 +72.2%，觀察基本面是否支撐估值",
-      "本益比 15.8 倍，需和同族群估值比較"
+      "本益比 15.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 375.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 360.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 318.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

@@ -2,21 +2,19 @@
   "schemaVersion": 1,
   "code": "1301",
   "name": "台塑",
-  "generatedAt": "2026-07-03T12:32:26.956Z",
+  "generatedAt": "2026-07-06T12:32:05.243Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "topic_role_not_verified",
       "incomplete_swot"
     ]
   },
@@ -51,16 +49,16 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 40,
-    "knowledgeBasis": "canonical_pending",
-    "confidence": "medium",
-    "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "石化、塑橡膠與特用化學",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒。5月營收149.5億年增0.7%，累計年減3.8%，石化景氣復甦緩慢。",
+      "roleSummary": "台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒。5月營收149.5億年增0.7%，累計753億年減3.8%，石化景氣復甦緩慢。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "pvc_pp_producer",
       "directness": "core",
@@ -135,24 +133,23 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "V2 角色待驗證上限 / 缺 evidence 降權（原 92，上限 40）"
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "台塑 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
+    "summary": "台塑 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 待驗證（medium）",
-      "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · medium",
-      "產業評分：40/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
       "主要產品：PVC聚氯乙烯",
       "主要產品：聚丙烯(PP)",
       "主要產品：高密度聚乙烯(HDPE)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
       "W：碳稅/碳費政策壓力",
       "W：中國產能過剩競爭",
       "T：中國石化產能傾銷",
@@ -236,8 +233,8 @@
         "canonicalTopicName": "石化、塑橡膠與特用化學",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒。5月營收149.5億年增0.7%，累計年減3.8%，石化景氣復甦緩慢。"
+        "confidence": "high",
+        "roleSummary": "台塑是台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒。5月營收149.5億年增0.7%，累計753億年減3.8%，石化景氣復甦緩慢。"
       }
     ],
     "swot": [],
@@ -268,7 +265,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 6,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -280,8 +277,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股",
+      "classification": "題材股",
       "rationale": [
+        "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
@@ -289,17 +287,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 39 天未更新"
+        "message": "股價資料已 42 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 39 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 42 天未更新"
       }
     ]
   },

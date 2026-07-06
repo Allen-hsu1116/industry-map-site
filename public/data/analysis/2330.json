@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-07-03T12:32:27.073Z",
+  "generatedAt": "2026-07-06T12:32:05.366Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-03",
-  "chipDataDate": "2026-07-03",
+  "marketDataDate": "2026-07-06",
+  "chipDataDate": "2026-07-06",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,32 +17,32 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 30,
-    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列。",
+    "score": 45,
+    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.0%。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 3.0%"
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "台積電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +7.4千張；三大法人近 5 日合計賣超 -1.1萬張。",
+    "summary": "台積電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +6.9千張；三大法人近 5 日合計賣超 -1.1萬張。",
     "signals": [
-      "投信近 5 日買超 +7.4千張"
+      "投信近 5 日買超 +6.9千張"
     ],
     "risks": [
       "三大法人近 5 日合計賣超 -1.1萬張",
-      "近 20 日法人偏賣，合計 -9.9萬張",
-      "外資近 5 日賣超 -2.1萬張"
+      "近 20 日法人偏賣，合計 -7.8萬張",
+      "外資近 5 日賣超 -1.9萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-03",
-      "融券近 5 日增加 37.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-06"
     ]
   },
   "industry": {
@@ -55,7 +55,7 @@
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台積電在CoWoS先進封裝領域是獨佔龍頭，2025年產能持續擴充。5月營收4170億年增30.1%，累計年增30.0%，先進封裝為AI GPU出貨瓶頸與成長引擎。",
+      "roleSummary": "台積電在CoWoS先進封裝領域獨占鰲頭，5月營收4170億年增30.1%。2025年產能持續擴充，先進封裝為AI GPU出貨瓶頸與成長引擎。",
       "supplyChainStage": "advanced_packaging",
       "roleType": "cowos_advanced_packaging_provider",
       "directness": "core",
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-07-03"
+      "lastVerified": "2026-07-06"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -164,7 +164,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電在CoWoS先進封裝領域是獨佔龍頭，2025年產能持續擴充。5月營收4170億年增30.1%，累計年增30.0%，先進封裝為AI GPU出貨瓶頸與成長引擎。"
+        "roleSummary": "台積電在CoWoS先進封裝領域獨占鰲頭，5月營收4170億年增30.1%。2025年產能持續擴充，先進封裝為AI GPU出貨瓶頸與成長引擎。"
       },
       {
         "topicId": "wafer-foundry",
@@ -174,7 +174,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電是全球晶圓代工霸主，先進製程市佔超過90%。5月營收4170億年增30.1%，累計年增30.0%，N3/N5製程供不應求，N2預計2025量產。"
+        "roleSummary": "台積電5月營收4170億年增30.1%，累計年增30.0%。N3/N5製程供不應求，N2預計2025量產，先進製程持續領先Samsung與Intel。"
       },
       {
         "topicId": "ai-server",
@@ -184,7 +184,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
-        "roleSummary": "台積電是 AI 伺服器上游核心賦能者；NVIDIA/AMD AI GPU 皆由台積電代工+封裝。4 月營收年增 17.5%，累計年增近 30%。"
+        "roleSummary": "台積電是AI伺服器供應鏈核心，從先進製程到CoWoS封裝一體掌握。5月營收4170億年增30.1%，累計1.96兆年增30.0%，AI/HPC需求為最大成長驅動力。"
       },
       {
         "topicId": "hbm",
@@ -303,8 +303,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
-    "recommendationState": "watchlist",
+    "totalScore": 72,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 24,
       "label": "基本面中性",
@@ -327,11 +327,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2439.00",
-      "波段多空分水嶺看 MA20：2383.25",
-      "追蹤法人是否延續 賣超：最近 -1.1萬張",
+      "短線支撐/壓力先看 MA5：2457.00",
+      "波段多空分水嶺看 MA20：2388.00",
+      "追蹤法人是否延續 買超：最近 +258張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 32.9 倍，需和同族群估值比較"
+      "本益比 33.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2535.00 且量比 > 1.5：列為轉強訊號",

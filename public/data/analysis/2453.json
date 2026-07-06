@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2453",
   "name": "凌群",
-  "generatedAt": "2026-07-03T12:32:27.142Z",
+  "generatedAt": "2026-07-06T12:32:05.437Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-03",
-  "chipDataDate": "2026-07-03",
+  "marketDataDate": "2026-07-06",
+  "chipDataDate": "2026-07-06",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,29 +17,31 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": 0,
+    "score": 10,
     "summary": "凌群 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "接近 20 日高點 58.60，觀察是否突破"
     ]
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 28,
-    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +82張；近 20 日法人偏買，合計 +242張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 8,
+    "summary": "凌群 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +201張；外資近 5 日買超 +201張。",
     "signals": [
-      "三大法人近 5 日合計買超 +82張",
-      "近 20 日法人偏買，合計 +242張",
-      "外資近 5 日買超 +83張"
+      "三大法人近 5 日合計買超 +201張",
+      "外資近 5 日買超 +201張"
     ],
-    "risks": [],
+    "risks": [
+      "近 20 日法人偏賣，合計 -30張"
+    ],
     "watch": [
-      "最近法人資料日：2026-07-03"
+      "最近法人資料日：2026-07-06"
     ]
   },
   "industry": {
@@ -131,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-03"
+      "lastVerified": "2026-07-06"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -229,7 +231,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 68,
+    "totalScore": 66,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
@@ -243,7 +245,6 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -251,13 +252,13 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：56.08",
-      "波段多空分水嶺看 MA20：56.78",
-      "追蹤法人是否延續 賣超：最近 -1張",
+      "短線支撐/壓力先看 MA5：56.58",
+      "波段多空分水嶺看 MA20：56.63",
+      "追蹤法人是否延續 買超：最近 +65張",
       "本益比 18.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 61.20 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 58.60 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 54.70：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

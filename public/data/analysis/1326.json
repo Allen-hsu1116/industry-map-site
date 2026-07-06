@@ -2,21 +2,19 @@
   "schemaVersion": 1,
   "code": "1326",
   "name": "台化",
-  "generatedAt": "2026-07-03T12:32:26.976Z",
+  "generatedAt": "2026-07-06T12:32:05.265Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "topic_role_not_verified",
       "incomplete_swot"
     ]
   },
@@ -49,16 +47,16 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 40,
-    "knowledgeBasis": "canonical_pending",
-    "confidence": "medium",
-    "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "石化、塑橡膠與特用化學",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。4月營收321億年增28.2%，累計年增9.5%。",
+      "roleSummary": "台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。5月營收273.9億年增15.5%，累計1,412億年增10.6%。PTA與ABS受惠於下游需求回溫。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "pta_sm_abs_producer",
       "directness": "core",
@@ -100,11 +98,11 @@
         "confidence": "medium"
       },
       {
-        "name": "苯乙烯(SM)",
-        "description": "苯乙烯(SM) 是 台化 的主要產品/服務之一，需搭配公開資料追蹤其在對應產業鏈中的量產、銷售與客戶應用。",
-        "whyItMatters": "苯乙烯(SM)是台化在塑膠工業領域的重要產品線",
+        "name": "ABS樹脂",
+        "description": "ABS樹脂 是 台化 的主要產品/服務之一，需搭配公開資料追蹤其在對應產業鏈中的量產、銷售與客戶應用。",
+        "whyItMatters": "ABS樹脂是台化在塑膠工業領域的重要產品線",
         "topicFit": "石化、塑橡膠與特用化學相關產品",
-        "businessImpact": "苯乙烯(SM) 的量價、需求與產品組合變化會影響公司營收品質與題材連動性。",
+        "businessImpact": "ABS樹脂 的量價、需求與產品組合變化會影響公司營收品質與題材連動性。",
         "sourceLabels": [
           "公開資訊觀測站 MOPS / TWSE 財報系統：公司公告、年報與財務資訊",
           "FinMind：Taiwan Stock Market Datasets"
@@ -133,24 +131,23 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "V2 角色待驗證上限 / 缺 evidence 降權（原 92，上限 40）"
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "台化 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
+    "summary": "台化 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 待驗證（medium）",
-      "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · medium",
-      "產業評分：40/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
       "主要產品：純對苯二甲酸(PTA)",
       "主要產品：聚苯乙烯(PS)",
       "主要產品：苯乙烯(SM)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
       "W：中国PS/ABS產能過剩壓抑報價",
       "W：傳統纖維業務毛利壓縮",
       "T：中国產能傾銷",
@@ -234,8 +231,8 @@
         "canonicalTopicName": "石化、塑橡膠與特用化學",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。4月營收321億年增28.2%，累計年增9.5%。"
+        "confidence": "high",
+        "roleSummary": "台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。5月營收273.9億年增15.5%，累計1,412億年增10.6%。PTA與ABS受惠於下游需求回溫。"
       }
     ],
     "swot": [],
@@ -266,7 +263,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 14,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 24,
@@ -277,8 +274,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股",
+      "classification": "題材股",
       "rationale": [
+        "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
@@ -286,17 +284,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 39 天未更新"
+        "message": "股價資料已 42 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 39 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 42 天未更新"
       }
     ]
   },

@@ -2,21 +2,19 @@
   "schemaVersion": 1,
   "code": "2401",
   "name": "凌陽",
-  "generatedAt": "2026-07-03T12:32:27.118Z",
+  "generatedAt": "2026-07-06T12:32:05.412Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "topic_role_not_verified",
       "incomplete_swot"
     ]
   },
@@ -53,16 +51,16 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 40,
-    "knowledgeBasis": "canonical_pending",
-    "confidence": "medium",
-    "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "label": "核心題材受惠",
+    "score": 82,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "晶圓代工與第三代半導體",
       "roleLabel": "客戶/通路角色",
-      "roleSummary": "凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片生產。",
+      "roleSummary": "凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片。5月營收7.2億年增28.7%，累計31.5億年增16.4%，車用MCU需求帶動穩定成長。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "fabless_ic_design_house",
       "directness": "customer_or_channel",
@@ -70,17 +68,17 @@
     },
     "productNarratives": [
       {
-        "name": "車用晶片(MCU/SoC)",
+        "name": "車用MCU(32-bit ARM Cortex-M)(聯電28nm投片)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "OTT串流媒體晶片",
+        "name": "OTT串流媒體晶片(4K/8K機上盒)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "物聯網(IoT)MCU",
+        "name": "物聯網IoT MCU(低功耗WiFi SoC)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -101,26 +99,25 @@
     },
     "scoringFactors": [
       "直接度 客戶/通路角色 +18",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 晶圓代工與第三代半導體（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 角色待驗證上限 / 缺 evidence 降權（原 68，上限 40）"
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "凌陽 在「晶圓代工與第三代半導體」的 V2 角色為「客戶/通路角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
+    "summary": "凌陽 在「晶圓代工與第三代半導體」的 V2 角色為「客戶/通路角色」，資料基礎為「V2 已驗證」，產業 score 82/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 待驗證（medium）",
-      "V2 題材角色：晶圓代工與第三代半導體 · 客戶/通路角色 · medium",
-      "產業評分：40/100（直接度 客戶/通路角色 +18；角色信心 medium +10；題材 晶圓代工與第三代半導體（supply_chain_segment/active） +16）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：晶圓代工與第三代半導體 · 客戶/通路角色 · high",
+      "產業評分：82/100（直接度 客戶/通路角色 +18；角色信心 high +16；題材 晶圓代工與第三代半導體（supply_chain_segment/active） +16）",
       "主要產品：車用晶片(MCU/SoC)",
       "主要產品：OTT串流媒體晶片",
       "主要產品：物聯網(IoT)MCU",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
       "V2 W：營收規模偏小",
       "V2 W：消費性IC价格競爭激烈",
       "V2 T：NXP/Infineon/Renesas車用MCU强势競爭",
@@ -205,8 +202,8 @@
         "canonicalTopicName": "晶圓代工與第三代半導體",
         "directness": "customer_or_channel",
         "directnessLabel": "客戶/通路角色",
-        "confidence": "medium",
-        "roleSummary": "凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片生產。"
+        "confidence": "high",
+        "roleSummary": "凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片。5月營收7.2億年增28.7%，累計31.5億年增16.4%，車用MCU需求帶動穩定成長。"
       }
     ],
     "swot": [
@@ -346,7 +343,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 9,
+    "totalScore": 24,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -358,9 +355,10 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢股",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
+        "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
@@ -368,22 +366,17 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 39 天未更新"
+        "message": "股價資料已 42 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 39 天未更新"
+        "message": "籌碼資料已 42 天未更新"
       },
       {
         "id": "risk.stop-distance",
         "severity": "soft",
         "message": "距離 MA20 約 13.0%，部位需降速"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

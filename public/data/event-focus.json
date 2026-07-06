@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-03T12:32:26.796Z",
+  "generatedAt": "2026-07-06T12:32:05.087Z",
   "status": "partial",
   "source": {
     "name": "TWSE OpenAPI t187ap04_L",
@@ -8,9 +8,37 @@
     "scope": "listed-company-major-news",
     "semantics": "official subject preserved; topic mapping is derived, not official"
   },
-  "latestDate": "2026-07-02",
+  "latestDate": "2026-07-05",
   "itemCount": 80,
   "items": [
+    {
+      "id": "twse-1721-2026-07-05-070003-第51款",
+      "date": "2026-07-05",
+      "announcedAt": "2026-07-05 07:00:03",
+      "companyCode": "1721",
+      "companyName": "三晃",
+      "officialSubject": "公告本公司名稱由「三晃股份有限公司」更名為 「國慶科技股份有限公司」 ，公告期間：115年07月01日至115年9月30日。",
+      "clause": "第51款",
+      "derivedTopics": [],
+      "mappingMethod": "unmapped_official_event",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
+    {
+      "id": "twse-3708-2026-07-05-070003-第51款",
+      "date": "2026-07-05",
+      "announcedAt": "2026-07-05 07:00:03",
+      "companyCode": "3708",
+      "companyName": "上緯投控",
+      "officialSubject": "公告本公司名稱由「上緯國際投資控股股份有限公司」更名為 「上緯國際控股股份有限公司」，公告期間：115年6月11日至 115年9月10日。",
+      "clause": "第51款",
+      "derivedTopics": [],
+      "mappingMethod": "unmapped_official_event",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
     {
       "id": "twse-2371-2026-07-02-233219-第2款",
       "date": "2026-07-02",
@@ -172,8 +200,8 @@
           "topicId": "ai-server",
           "topicName": "AI 伺服器",
           "roleLabel": "server_odm",
-          "confidence": "medium",
-          "status": "candidate"
+          "confidence": "high",
+          "status": "verified"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -336,8 +364,8 @@
           "topicId": "ai-server",
           "topicName": "AI 伺服器",
           "roleLabel": "server_psu_maker",
-          "confidence": "medium",
-          "status": "candidate"
+          "confidence": "high",
+          "status": "verified"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -654,21 +682,21 @@
           "topicId": "ai-server",
           "topicName": "AI 伺服器整機與 EMS",
           "roleLabel": "ai_server_odm",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         },
         {
           "topicId": "ai-server",
           "topicName": "AI伺服器與液冷技術",
           "roleLabel": "cloud_server_odm",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         },
         {
           "topicId": "consumer-computing-devices",
           "topicName": "PC、手機與 AR/VR/XR 終端",
           "roleLabel": "notebook_odm",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         }
       ],
@@ -1157,8 +1185,8 @@
           "topicId": "ai-server",
           "topicName": "AI 伺服器",
           "roleLabel": "display_panel_supplier",
-          "confidence": "medium",
-          "status": "candidate"
+          "confidence": "high",
+          "status": "verified"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -1221,21 +1249,21 @@
           "topicId": "ai-server",
           "topicName": "AI伺服器與液冷技術",
           "roleLabel": "ai_server_ccl_supplier",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         },
         {
           "topicId": "pcb-substrates",
           "topicName": "PCB、IC 載板與高階基板材料",
           "roleLabel": "high_end_ccl_supplier",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         },
         {
           "topicId": "pcb-substrates",
           "topicName": "PCB、IC 載板與高階基板材料",
           "roleLabel": "ccl_material_provider",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         }
       ],
@@ -1386,46 +1414,18 @@
           "topicId": "ai-server",
           "topicName": "AI 伺服器",
           "roleLabel": "ethernet_phy_chip_maker",
-          "confidence": "medium",
-          "status": "candidate"
+          "confidence": "high",
+          "status": "verified"
         },
         {
           "topicId": "wafer-foundry",
           "topicName": "半導體製造｜晶圓代工",
           "roleLabel": "ic_design_fabless",
-          "confidence": "medium",
-          "status": "candidate"
+          "confidence": "high",
+          "status": "verified"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-3702-2026-06-30-194806-第6款",
-      "date": "2026-06-30",
-      "announcedAt": "2026-06-30 19:48:06",
-      "companyCode": "3702",
-      "companyName": "大聯大",
-      "officialSubject": "公告本公司審計委員會、薪酬委員會及提名委員會 成員異動",
-      "clause": "第6款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-3702-2026-06-30-194619-第6款",
-      "date": "2026-06-30",
-      "announcedAt": "2026-06-30 19:46:19",
-      "companyCode": "3702",
-      "companyName": "大聯大",
-      "officialSubject": "公告本公司董事會選任董事長、副董事長",
-      "clause": "第6款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
       "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
       "source": "TWSE OpenAPI t187ap04_L",
       "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"

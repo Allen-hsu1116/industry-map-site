@@ -2,21 +2,19 @@
   "schemaVersion": 1,
   "code": "2379",
   "name": "瑞昱",
-  "generatedAt": "2026-07-03T12:32:27.105Z",
+  "generatedAt": "2026-07-06T12:32:05.398Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "topic_role_not_verified",
       "incomplete_swot"
     ]
   },
@@ -51,16 +49,16 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 40,
-    "knowledgeBasis": "canonical_pending",
-    "confidence": "medium",
-    "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "直接賦能角色",
-      "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。4月營收127億年增11.3%，10G/5G PHY與WiFi 7是成長動能。",
+      "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。5月營收125.2億年增21.9%，累計617億年增8.7%。10G PHY與WiFi 7是成長動能。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ethernet_phy_chip_maker",
       "directness": "direct_enabler",
@@ -68,17 +66,17 @@
     },
     "productNarratives": [
       {
-        "name": "乙太網路PHY晶片(1G/2.5G/5G/10G)",
+        "name": "乙太網路PHY晶片(1G/2.5G/5G/10G/25G)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "Wi-Fi 6/7晶片",
+        "name": "Wi-Fi 7 MLO晶片(RTW89)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "USB PD控製器",
+        "name": "USB PD控制器(RTD21xx)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -99,26 +97,25 @@
     },
     "scoringFactors": [
       "直接度 直接賦能角色 +36",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 角色待驗證上限 / 缺 evidence 降權（原 88，上限 40）"
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "瑞昱 在「AI 伺服器整機與 EMS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
+    "summary": "瑞昱 在「AI 伺服器整機與 EMS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 待驗證（medium）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · medium",
-      "產業評分：40/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · high",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：晶圓代工與第三代半導體 · 客戶/通路角色",
       "主要產品：乙太網路PHY晶片(1G/2.5G/5G/10G)",
       "主要產品：Wi-Fi 6/7晶片",
       "主要產品：USB PD控製器"
     ],
     "risks": [
-      "已有 V2 role，但 status=candidate、confidence=medium、evidence=2；只做保守參考。",
       "V2 W：毛利率約40-50%，低於同業IC設計公司",
       "V2 W：消費性WiFi晶片價格競爭激烈",
       "V2 T：Broadcom/Marvell在高速PHY競爭",
@@ -203,8 +200,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "medium",
-        "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。4月營收127億年增11.3%，10G/5G PHY與WiFi 7是成長動能。"
+        "confidence": "high",
+        "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。5月營收125.2億年增21.9%，累計617億年增8.7%。10G PHY與WiFi 7是成長動能。"
       },
       {
         "topicId": "wafer-foundry",
@@ -213,8 +210,8 @@
         "canonicalTopicName": "晶圓代工與第三代半導體",
         "directness": "customer_or_channel",
         "directnessLabel": "客戶/通路角色",
-        "confidence": "medium",
-        "roleSummary": "瑞昱是Fabless IC設計公司，在聯電/台積電投片生產乙太網路PHY、WiFi、USB PD等晶片。"
+        "confidence": "high",
+        "roleSummary": "瑞昱是Fabless IC設計公司，主力產品為網通PHY/WiFi/USB PD晶片，在聯電/台積電投片。5月營收125.2億年增21.9%，10G PHY與Wi-Fi 7帶動先進製程投片需求。"
       }
     ],
     "swot": [
@@ -377,7 +374,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 21,
+    "totalScore": 39,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 20,
@@ -392,10 +389,11 @@
       ]
     },
     "strategy": {
-      "classification": "趨勢股",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
@@ -403,17 +401,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 39 天未更新"
+        "message": "股價資料已 42 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 39 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 42 天未更新"
       }
     ]
   },

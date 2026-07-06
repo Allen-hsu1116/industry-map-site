@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-07-03T12:32:27.058Z",
+  "generatedAt": "2026-07-06T12:32:05.349Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-03",
-  "chipDataDate": "2026-07-03",
+  "marketDataDate": "2026-07-06",
+  "chipDataDate": "2026-07-06",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "台達電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "台達電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.8%。",
+    "signals": [],
+    "risks": [
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 4.8%"
     ],
-    "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -44,
-    "summary": "台達電 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1.4千張；近 20 日法人偏賣，合計 -3.5萬張。",
+    "summary": "台達電 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -4.2千張；近 20 日法人偏賣，合計 -3.6萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.4千張",
-      "近 20 日法人偏賣，合計 -3.5萬張",
-      "投信近 5 日賣超 -338張",
-      "外資近 5 日賣超 -1.9千張",
-      "融資近 5 日增加 8.2%，但技術面未同步轉強"
+      "三大法人近 5 日合計賣超 -4.2千張",
+      "近 20 日法人偏賣，合計 -3.6萬張",
+      "投信近 5 日賣超 -505張",
+      "外資近 5 日賣超 -4.1千張",
+      "融資近 5 日增加 9.3%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-07-03",
-      "融券近 5 日增加 218.8%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-06"
     ]
   },
   "industry": {
@@ -55,7 +55,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器電源與 BBU",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台達電是全球最大伺服器電源供應商，CRPS市佔超過50%。5月營收589.6億年增43.7%，電源及零組件為最大營收部門，AI伺服器高功耗驅動3000W+電源需求。",
+      "roleSummary": "台達電5月營收589.6億年增43.7%，AI伺服器電源為核心成長動能。CRPS電源從800W邁向3000W+，BBU備援方案搭配NVIDIA GB200出貨。",
       "supplyChainStage": "power",
       "roleType": "power_supply_system_provider",
       "directness": "core",
@@ -135,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-03"
+      "lastVerified": "2026-07-06"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -165,7 +165,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台達電是全球最大伺服器電源供應商，CRPS市佔超過50%。5月營收589.6億年增43.7%，電源及零組件為最大營收部門，AI伺服器高功耗驅動3000W+電源需求。"
+        "roleSummary": "台達電5月營收589.6億年增43.7%，AI伺服器電源為核心成長動能。CRPS電源從800W邁向3000W+，BBU備援方案搭配NVIDIA GB200出貨。"
       },
       {
         "topicId": "energy-storage-battery",
@@ -175,7 +175,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台達電在儲能領域提供PCS變流器、BMS與微電網系統整合，全球儲能專案超過2GWh。5月營收589.6億年增43.7%，能源基礎設施為成長動能之一。"
+        "roleSummary": "台達電儲能業務受惠於全球綠電趨勢，5月營收589.6億年增43.7%。MW級PCS與BMS整合方案打入台電儲能標案及海外微電網市場。"
       },
       {
         "topicId": "industrial-automation",
@@ -185,7 +185,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台達電是台灣最大工業自動化品牌，產品涵蓋伺服、PLC、變頻器、機器人與工業通訊。5月營收589.6億年增43.7%，工業自動化為核心成長引擎之一，DIASCS平台整合驅動/運動控制/機器視覺。"
+        "roleSummary": "台達電工業自動化產品線涵蓋伺服馬達、PLC、變頻器及機器人，5月營收589.6億年增43.7%，工業自動化為穩定成長板塊。"
       },
       {
         "topicId": "ai-server",
@@ -205,7 +205,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
-        "roleSummary": "台達電提供伺服器氣冷與液冷散熱全方案，從風扇、VC到CDU一條龍。5月營收589.6億年增43.7%，散熱系統為主要營業項目之一，AI伺服器帶動高階散熱需求。"
+        "roleSummary": "台達電在AI伺服器液冷領域布局完整，5月營收年增43.7%。CDU+冷板一體方案搭配NVIDIA GB200量產，浸沒式冷卻為下一代技術儲備。"
       },
       {
         "topicId": "wafer-foundry",
@@ -359,7 +359,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 57,
+    "totalScore": 47,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
@@ -369,8 +369,8 @@
         "月營收 MoM +6.2%，短期動能改善"
       ],
       "risks": [
-        "本益比 76.5 倍，需防估值壓縮",
-        "股價淨值比 18.0 倍偏高，需和 ROE/成長性比對"
+        "本益比 73.6 倍，需防估值壓縮",
+        "股價淨值比 17.3 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -384,11 +384,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：1978.00",
-      "波段多空分水嶺看 MA20：2110.00",
-      "追蹤法人是否延續 買超：最近 +39張",
+      "短線支撐/壓力先看 MA5：1996.00",
+      "波段多空分水嶺看 MA20：2094.75",
+      "追蹤法人是否延續 賣超：最近 -2.1千張",
       "月營收年增率 +38.6%，觀察基本面是否支撐估值",
-      "本益比 76.5 倍，需和同族群估值比較"
+      "本益比 73.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2435.00 且量比 > 1.5：列為轉強訊號",
