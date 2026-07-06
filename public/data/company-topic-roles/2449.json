@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2449",
   "companyName": "京元電子",
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-07-07",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -11,12 +11,12 @@
       "directness": "core",
       "supplyChainStage": "high_end_testing",
       "roleType": "test_house",
-      "roleSummary": "京元電在高階測試題材中是獨立測試廠龍頭；4 月營收 37.4 億年增 34.6%，累計年增 38%，AI/GPU 測試需求爆發。",
+      "roleSummary": "京元電子5月營收37.77億年增36.61%，累計177.12億年增37.71%。MOPS登記為積體電路之測試加工買賣業務。",
       "products": [
-        "AI GPU 測試（NVIDIA H100/B200）",
-        "SoC 晶圓測試",
-        "記憶體測試",
-        "5G RF 測試"
+        "AI GPU測試（NVIDIA H100/B200）",
+        "SoC晶圓測試（CP/FT）",
+        "記憶體測試（DRAM/NAND）",
+        "5G RF測試"
       ],
       "customers": [
         "NVIDIA",
@@ -31,8 +31,8 @@
         "矽格"
       ],
       "risks": [
-        "測試機台產能擴充需大資本支出",
-        "客戶自建測試產線風險"
+        "半導體測試市場競爭激烈",
+        "測試機台資本支出大"
       ],
       "evidence": [
         {
@@ -51,8 +51,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-30",
-      "status": "verified"
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "AI GPU系統級測試（SLT）技術",
+        "先進封裝後段測試（FT）能力",
+        "5G射頻測試與量測技術"
+      ]
     },
     {
       "topicId": "hbm",
@@ -61,7 +66,7 @@
       "directness": "core",
       "supplyChainStage": "hbm",
       "roleType": "hbm_test_house",
-      "roleSummary": "京元電子是HBM測試核心供應商，三大HBM原廠均為客戶。5月營收37.8億年增36.6%，累計177.1億年增37.7%，HBM需求帶動測試產能利用率維持高檔。",
+      "roleSummary": "京元電子5月營收37.77億年增36.61%，累計177.12億年增37.71%。HBM測試為AI浪潮下的高成長業務。",
       "products": [
         "HBM TSV測試(KGD)",
         "HBM KGD良率測試",
@@ -80,7 +85,8 @@
         "日月光投控"
       ],
       "risks": [
-        "HBM 測試機台投資大"
+        "HBM測試機台投資成本高",
+        "HBM測試需求受記憶體景氣週期影響"
       ],
       "evidence": [
         {
@@ -99,8 +105,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-04",
-      "status": "verified"
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "HBM TSV KGD測試技術",
+        "DRAM封測與預燒測試",
+        "系統級測試（SLT）能力"
+      ]
     }
   ]
 }

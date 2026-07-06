@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3034",
   "companyName": "聯詠",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-07",
   "roles": [
     {
       "topicId": "ic-design",
@@ -11,11 +11,12 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "display_driver_ic_provider",
-      "roleSummary": "聯詠是全球 OLED DDI 出貨量龍頭；4 月營收 9.2 億年增 1.2%，累計年減 10.7%。OLED DDI 成長抵消部分面板衰退。",
+      "roleSummary": "聯詠5月營收94.12億年增9.35%，累計417.83億年減6.83%。MOPS登記為液晶顯示器驅動IC、通訊IC、微控制器等。",
       "products": [
-        "顯示驅動 IC",
-        "觸控與顯示整合 IC",
-        "顯示 SoC"
+        "顯示驅動IC（DDI/TDDI）",
+        "觸控與顯示整合IC（TDDI）",
+        "電視/Monitor SoC",
+        "OLED面板驅動IC"
       ],
       "customers": [
         "Samsung Display",
@@ -31,8 +32,8 @@
         "奕力(3582)"
       ],
       "risks": [
-        "OLED DDI 競爭加劇（韓廠反撲）",
-        "面板景氣循環影響出貨量"
+        "面板驅動IC受面板景氣週期影響",
+        "中國驅動IC競爭加劇（集創北方/奕斯偉）"
       ],
       "legacy": {
         "topicSlug": "ddic",
@@ -55,9 +56,14 @@
           "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "OLED DDI驅動IC設計",
+        "TDDI觸控顯示整合晶片技術",
+        "電視SoC影像處理引擎"
+      ]
     },
     {
       "topicId": "display-led-optics",
@@ -66,10 +72,12 @@
       "directness": "direct_enabler",
       "supplyChainStage": "ic_design",
       "roleType": "display_panel_ic_enabler",
-      "roleSummary": "聯詠在面板驅動 IC 題材中是全球出貨量最大供應商；4 月營收年增 1.2%，OLED DDI 是主要成長引擎。",
+      "roleSummary": "聯詠5月營收94.12億年增9.35%，累計417.83億年減6.83%。顯示驅動IC為核心產品線。",
       "products": [
-        "面板驅動 IC",
-        "顯示控制晶片"
+        "大尺寸LCD驅動IC",
+        "OLED面板驅動IC",
+        "顯示控制晶片（TCON）",
+        "車用顯示驅動IC"
       ],
       "customers": [
         "Samsung Display",
@@ -85,8 +93,8 @@
         "MegaChips"
       ],
       "risks": [
-        "面板產能過剩壓縮 DDI ASP",
-        "中國面板廠自研 DDI 趨勢"
+        "面板需求復甦緩慢（累計年減6.83%）",
+        "OLED驅動IC技術門檻高但競爭者增加"
       ],
       "legacy": {
         "topicSlug": "display-panel",
@@ -109,9 +117,14 @@
           "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "OLED面板驅動IC設計",
+        "TCON時序控制晶片技術",
+        "車規顯示驅動IC認證"
+      ]
     },
     {
       "topicId": "edge-ai-aiot",
@@ -120,10 +133,12 @@
       "directness": "supplier",
       "supplyChainStage": "ic_design",
       "roleType": "edge_ai_soc_candidate",
-      "roleSummary": "聯詠在邊緣 AI SoC 題材中是安防/物聯網核心供應商；內嵌 NPU 的 SoC 搶攻邊緣推論。4 月營收年增 1.2%。",
+      "roleSummary": "聯詠5月營收94.12億年增9.35%。Edge AI為顯示IC之外的拓展方向。",
       "products": [
-        "顯示 SoC",
-        "邊緣顯示與影像 IC"
+        "邊緣AI顯示SoC",
+        "AI影像處理IC",
+        "車用顯示與影像IC",
+        "智慧安防SoC"
       ],
       "customers": [
         "Hikvision",
@@ -138,8 +153,8 @@
         "Horizon Robotics"
       ],
       "risks": [
-        "邊緣 AI 市場分散，各應用規格不一",
-        "安防市場受地緣政治影響"
+        "Edge AI市場競爭激烈",
+        "AI應用拓展仍需時間驗證"
       ],
       "legacy": {
         "topicSlug": "edge-ai",
@@ -162,9 +177,14 @@
           "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "邊緣AI影像處理SoC設計",
+        "車用顯示驅動與影像處理整合",
+        "AI推論加速器整合至顯示SoC"
+      ]
     }
   ]
 }

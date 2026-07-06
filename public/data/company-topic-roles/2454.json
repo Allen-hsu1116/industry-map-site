@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2454",
   "companyName": "聯發科",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-07",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -11,11 +11,12 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "smartphone_soc_provider",
-      "roleSummary": "聯發科是全球手機 SoC 出貨量龍頭；4 月營收 47 億年減 4.1%，累計年減 3.1%。Dimensity 9400 搶攻旗艦市場但仍受景氣影響。",
+      "roleSummary": "聯發科5月營收474.34億年增4.99%，累計2433.21億年減1.59%。MOPS登記為多媒體IC、電腦週邊IC、高階消費性IC。",
       "products": [
-        "手機 SoC",
-        "5G 通訊晶片",
-        "Wi-Fi/藍牙連接晶片"
+        "天璣（Dimensity）系列手機SoC",
+        "5G數據機晶片（Sub-6/mmWave）",
+        "Wi-Fi 7/藍牙連接晶片",
+        "平板/Chromebook SoC"
       ],
       "customers": [
         "Samsung",
@@ -30,8 +31,8 @@
         "Unisoc"
       ],
       "risks": [
-        "旗艦 SoC 市佔仍落後 Qualcomm",
-        "中國手機品牌市場競爭加劇壓縮 ASP"
+        "手機SoC面臨高通競爭壓力",
+        "累計營收年減1.59%，手機市場復甦緩慢"
       ],
       "legacy": {
         "topicSlug": "mobile",
@@ -54,9 +55,14 @@
           "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "天璣系列手機SoC整合AI加速器",
+        "5G NR Sub-6/mmWave數據機技術",
+        "Wi-Fi 7三頻連接晶片設計"
+      ]
     },
     {
       "topicId": "edge-ai-aiot",
@@ -65,11 +71,12 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "edge_ai_soc_provider",
-      "roleSummary": "聯發科在邊緣 AI SoC 題材中是手機端側 AI 推論核心供應商；Dimensity 9400 內建 NPU 支援端側大模型運算。4 月營收年減 4.1%。",
+      "roleSummary": "聯發科5月營收474.34億年增4.99%。Edge AI/AIoT為聯發科新成長動能，Kompanio/Genio平台切入邊緣AI市場。",
       "products": [
-        "Edge AI SoC",
-        "AIoT 晶片平台",
-        "終端 AI 加速晶片"
+        "Kompanio系列Edge AI SoC",
+        "AIoT晶片平台（Genio系列）",
+        "終端AI加速晶片（NPU整合）",
+        "智慧家居SoC"
       ],
       "customers": [
         "Samsung",
@@ -83,8 +90,8 @@
         "Amlogic"
       ],
       "risks": [
-        "邊緣 AI 生態系尚在建構期",
-        "終端裝置 AI 推論需求不確定"
+        "Edge AI市場競爭加劇（高通/瑞芯微）",
+        "AIoT應用多樣化但單一規模較小"
       ],
       "legacy": {
         "topicSlug": "edge-ai",
@@ -107,9 +114,14 @@
           "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "Edge AI SoC整合NPU加速器",
+        "AIoT平台Genio系列開發",
+        "終端裝置AI推論晶片設計"
+      ]
     },
     {
       "topicId": "ic-design",
@@ -118,11 +130,12 @@
       "directness": "direct_enabler",
       "supplyChainStage": "ic_design",
       "roleType": "hpc_networking_soc_provider",
-      "roleSummary": "聯發科在 Wi-Fi 7 網通 SoC 題材是挑戰者；Filogic 系列搶攻家用/企業 Wi-Fi 7 市場。4 月營收年減 4.1%，網通晶片為成長動能。",
+      "roleSummary": "聯發科5月營收474.34億年增4.99%。MOPS登記為多媒體IC、高階消費性IC、其他特殊應用IC。IC設計為核心業務。",
       "products": [
-        "HPC/網通 SoC",
-        "連接晶片",
-        "通訊晶片平台"
+        "HPC/網通SoC",
+        "5G/6G通訊晶片",
+        "Wi-Fi 7連接晶片",
+        "ASIC客製化晶片服務"
       ],
       "customers": [
         "Cisco",
@@ -136,8 +149,8 @@
         "Realtek"
       ],
       "risks": [
-        "Wi-Fi 7 滲透率不及預期",
-        "企業網通市場被 Broadcom 壟斷"
+        "先進製程設計成本高（N3/N4）",
+        "網通晶片市場競爭激烈"
       ],
       "legacy": {
         "topicSlug": "hpc-networking-ic",
@@ -160,9 +173,14 @@
           "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "先進製程SoC設計（3nm/4nm）",
+        "5G/6G通訊晶片與基頻處理器",
+        "Wi-Fi 7三頻晶片設計"
+      ]
     }
   ]
 }

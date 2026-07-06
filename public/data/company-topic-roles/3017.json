@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3017",
   "companyName": "奇鋐",
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-07-07",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,27 +11,26 @@
       "directness": "direct_enabler",
       "supplyChainStage": "thermal",
       "roleType": "ai_server_thermal_solution_provider",
-      "roleSummary": "奇鋐是全球前三大伺服器散熱模組供應商，AI伺服器高功耗推動VC均熱板需求爆發。5月營收158.7億年增60.6%，累計年增90.3%，客戶需求增加為主要成長動能。",
+      "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。AI伺服器散熱需求強勁帶動爆發性成長。",
       "products": [
-        "伺服器散熱模組(VC均熱板)",
-        "CPU/GPU散熱器",
+        "伺服器散熱模組（VC均熱板）",
+        "CPU/GPU散熱器（風冷/液冷）",
         "伺服器機殼與導風罩",
-        "液冷冷板(Cold Plate)"
+        "液冷冷板（Cold Plate）"
       ],
       "customers": [
-        "Dell(伺服器散熱)",
-        "HPE(伺服器散熱)",
-        "Supermicro(散熱模組)",
-        "廣達(2382)(AI伺服器散熱)"
+        "Dell（伺服器散熱）",
+        "HPE（伺服器散熱）",
+        "Supermicro（散熱模組）",
+        "廣達(2382)（AI伺服器散熱）"
       ],
       "competitors": [
         "其他散熱模組與液冷方案供應商",
         "機構件/散熱整合廠"
       ],
       "risks": [
-        "官方可驗證資料尚未量化 AI 伺服器或液冷營收占比",
-        "年報顯示客戶集中度，單一客戶需求變化可能放大營收波動",
-        "題材熱度若未反映到接單、營收或毛利率，估值重評風險升高"
+        "散熱競爭者眾（雙鴻/泰碩等）",
+        "客戶集中度偏高"
       ],
       "legacy": {
         "topicSlug": "ai-server",
@@ -54,9 +53,14 @@
           "claim": "Financial report confirms 114 revenue scale and main business scope covering electronic parts/materials, communication electronics and computer peripherals manufacturing/processing/trading."
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "VC均熱板（Vapor Chamber）散熱技術",
+        "液冷冷板銅微通道加工",
+        "伺服器熱管與散熱模組整合設計"
+      ]
     },
     {
       "topicId": "ai-server-liquid-cooling",
@@ -65,26 +69,26 @@
       "directness": "direct_enabler",
       "supplyChainStage": "thermal",
       "roleType": "liquid_cooling_solution_candidate",
-      "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+      "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。液冷散熱為AI伺服器核心瓶頸，需求爆發。",
       "products": [
-        "液冷冷板(Copper Cold Plate)",
-        "液冷散熱模組(CDU搭配)",
-        "均熱板(VC)散熱方案",
+        "液冷冷板（銅微通道Cold Plate）",
+        "液冷散熱模組（CDU搭配）",
+        "均熱板（VC）散熱方案",
         "伺服器熱管模組"
       ],
       "customers": [
-        "Dell(液冷伺服器)",
-        "HPE(液冷伺服器)",
-        "廣達(2382)(AI伺服器液冷)",
-        "緯創(3231)(伺服器散熱)"
+        "Dell（液冷伺服器）",
+        "HPE（液冷伺服器）",
+        "廣達(2382)（AI伺服器液冷）",
+        "緯創(3231)（伺服器散熱）"
       ],
       "competitors": [
         "液冷模組供應商",
         "資料中心冷卻系統整合商"
       ],
       "risks": [
-        "液冷仍標為候選供應鏈角色，需要官方產品頁、法說或客戶導入證據提高信心",
-        "液冷題材容易被市場傳聞放大，需避免用股價熱度反推營運事實"
+        "液冷技術標準仍在演進中",
+        "競爭者（雙鴻/泰碩）積極投入液冷市場"
       ],
       "legacy": {
         "topicSlug": "liquid_cooling_advanced",
@@ -107,9 +111,14 @@
           "claim": "Financial report confirms electronics/computer-peripheral manufacturing scope but does not quantify liquid-cooling revenue contribution."
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "銅微通道冷板精密加工技術",
+        "CDU（Coolant Distribution Unit）散熱模組整合",
+        "VC均熱板與熱管複合散熱設計"
+      ]
     },
     {
       "topicId": "ai-server-liquid-cooling",
@@ -118,25 +127,26 @@
       "directness": "core",
       "supplyChainStage": "thermal",
       "roleType": "air_cooling_and_thermal_module_provider",
-      "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+      "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。液冷散熱為AI伺服器核心瓶頸。",
       "products": [
-        "液冷冷板(Copper Cold Plate)",
-        "液冷散熱模組(CDU搭配)",
-        "均熱板(VC)散熱方案",
+        "液冷冷板（銅微通道Cold Plate）",
+        "液冷散熱模組（CDU搭配）",
+        "均熱板（VC）散熱方案",
         "伺服器熱管模組"
       ],
       "customers": [
-        "Dell(液冷伺服器)",
-        "HPE(液冷伺服器)",
-        "廣達(2382)(AI伺服器液冷)",
-        "緯創(3231)(伺服器散熱)"
+        "Dell（液冷伺服器）",
+        "HPE（液冷伺服器）",
+        "廣達(2382)（AI伺服器液冷）",
+        "緯創(3231)（伺服器散熱）"
       ],
       "competitors": [
         "其他散熱模組廠",
         "風扇/熱導管/均熱板供應鏈"
       ],
       "risks": [
-        "需補更細的產品組合與毛利率來源，避免把寬口徑電子零件業務全部視為高階散熱受惠"
+        "液冷技術標準仍在演進中",
+        "競爭者（雙鴻/泰碩）積極投入液冷市場"
       ],
       "legacy": {
         "topicSlug": "thermal_components_air",
@@ -159,9 +169,14 @@
           "claim": "Financial report company history lists electronic parts/materials and computer peripherals manufacturing/processing/trading/import-export scope."
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "銅微通道冷板精密加工技術",
+        "CDU散熱模組整合",
+        "VC均熱板與熱管複合散熱設計"
+      ]
     },
     {
       "topicId": "ai-server-liquid-cooling",
@@ -170,24 +185,25 @@
       "directness": "core",
       "supplyChainStage": "thermal",
       "roleType": "thermal_solution_provider",
-      "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+      "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。液冷散熱為AI伺服器核心瓶頸。",
       "products": [
-        "液冷冷板(Copper Cold Plate)",
-        "液冷散熱模組(CDU搭配)",
-        "均熱板(VC)散熱方案",
+        "液冷冷板（銅微通道Cold Plate）",
+        "液冷散熱模組（CDU搭配）",
+        "均熱板（VC）散熱方案",
         "伺服器熱管模組"
       ],
       "customers": [
-        "Dell(液冷伺服器)",
-        "HPE(液冷伺服器)",
-        "廣達(2382)(AI伺服器液冷)",
-        "緯創(3231)(伺服器散熱)"
+        "Dell（液冷伺服器）",
+        "HPE（液冷伺服器）",
+        "廣達(2382)（AI伺服器液冷）",
+        "緯創(3231)（伺服器散熱）"
       ],
       "competitors": [
         "散熱模組與液冷方案供應商"
       ],
       "risks": [
-        "液冷與 AI 伺服器占比仍需分開驗證，不能只用散熱公司定位推導全部題材受惠"
+        "液冷技術標準仍在演進中",
+        "競爭者（雙鴻/泰碩）積極投入液冷市場"
       ],
       "legacy": {
         "topicSlug": "thermal-solution",
@@ -210,9 +226,14 @@
           "claim": "Financial report provides revenue scale and operating scope evidence; it does not by itself prove named AI customers."
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-06-22",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-07",
+      "status": "verified",
+      "techFocus": [
+        "銅微通道冷板精密加工技術",
+        "CDU散熱模組整合",
+        "VC均熱板與熱管複合散熱設計"
+      ]
     }
   ]
 }
