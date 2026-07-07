@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-07-06T12:32:05.368Z",
+  "generatedAt": "2026-07-07T12:31:51.119Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-06",
-  "chipDataDate": "2026-07-06",
+  "marketDataDate": "2026-07-07",
+  "chipDataDate": "2026-07-07",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,11 +18,11 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 7.1%。",
+    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 10.5%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 7.1%"
+      "收盤跌破 MA20 10.5%"
     ],
     "watch": []
   },
@@ -30,16 +30,16 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "旺宏 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -10.2萬張；近 20 日法人偏賣，合計 -9.2萬張。",
+    "summary": "旺宏 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -6.3萬張；近 20 日法人偏賣，合計 -9.1萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -10.2萬張",
-      "近 20 日法人偏賣，合計 -9.2萬張",
-      "投信近 5 日賣超 -5.7千張",
-      "外資近 5 日賣超 -9.6萬張"
+      "三大法人近 5 日合計賣超 -6.3萬張",
+      "近 20 日法人偏賣，合計 -9.1萬張",
+      "投信近 5 日賣超 -5.9千張",
+      "外資近 5 日賣超 -5.6萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-06"
+      "最近法人資料日：2026-07-07"
     ]
   },
   "industry": {
@@ -165,7 +165,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-07-06"
+      "lastVerified": "2026-07-07"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -287,7 +287,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 51,
+    "totalScore": 47,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
@@ -305,13 +305,19 @@
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 11.7%，部位需降速"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：146.30",
-      "波段多空分水嶺看 MA20：155.50",
-      "追蹤法人是否延續 賣超：最近 -1.1萬張",
+      "短線支撐/壓力先看 MA5：143.00",
+      "波段多空分水嶺看 MA20：155.28",
+      "追蹤法人是否延續 賣超：最近 -1.9千張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值"
     ],
     "triggerRules": [

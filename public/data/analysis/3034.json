@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3034",
   "name": "聯詠",
-  "generatedAt": "2026-07-06T12:32:05.574Z",
+  "generatedAt": "2026-07-07T12:31:51.436Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-06",
-  "chipDataDate": "2026-07-06",
+  "marketDataDate": "2026-07-07",
+  "chipDataDate": "2026-07-07",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,35 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 45,
-    "summary": "聯詠 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.7%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "聯詠 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 3.7%"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 5,
-    "summary": "聯詠 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +4.8千張；投信近 5 日買超 +753張。",
+    "summary": "聯詠 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +5.3千張；投信近 5 日買超 +681張。",
     "signals": [
-      "近 20 日法人偏買，合計 +4.8千張",
-      "投信近 5 日買超 +753張",
-      "融資近 5 日下降 9.9%，籌碼壓力下降"
+      "近 20 日法人偏買，合計 +5.3千張",
+      "投信近 5 日買超 +681張",
+      "融資近 5 日下降 5.4%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -924張",
-      "外資近 5 日賣超 -2千張"
+      "三大法人近 5 日合計賣超 -1千張",
+      "外資近 5 日賣超 -2.1千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-06"
+      "最近法人資料日：2026-07-07"
     ]
   },
   "industry": {
@@ -123,7 +122,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-06"
+      "lastVerified": "2026-07-07"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -226,22 +225,22 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 75,
-    "recommendationState": "top_candidate",
+    "totalScore": 67,
+    "recommendationState": "watchlist",
     "fundamental": {
-      "score": 18,
-      "label": "基本面中性",
+      "score": 26,
+      "label": "基本面偏強",
       "signals": [
         "月營收 YoY +1.2%，溫和成長",
         "月營收 MoM +8.9%，短期動能改善",
+        "本益比 21.8 倍，估值尚可對照成長",
         "殖利率 4.3%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -250,15 +249,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：538.00",
-      "波段多空分水嶺看 MA20：518.58",
-      "追蹤法人是否延續 賣超：最近 -261張",
+      "短線支撐/壓力先看 MA5：537.20",
+      "波段多空分水嶺看 MA20：521.48",
+      "追蹤法人是否延續 買超：最近 +38張",
       "月營收年增率 +1.2%，觀察基本面是否支撐估值",
-      "本益比 22.1 倍，需和同族群估值比較"
+      "本益比 21.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 606.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 456.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 463.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
