@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "4908",
   "name": "前鼎",
-  "generatedAt": "2026-07-07T12:31:51.704Z",
+  "generatedAt": "2026-07-08T12:31:46.523Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -46,15 +46,15 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "score": 64,
+    "score": 70,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "低軌衛星通訊",
       "roleLabel": "間接受惠",
-      "roleSummary": "前鼎是竹科光通訊模組專業廠，LD/PD 封裝核心技術，低軌衛星光通訊模組與資料中心光模組雙應用。",
+      "roleSummary": "前鼎光電為雷射/受光二極體封裝與光傳接模組專業廠商，MOPS登記為光纖通訊產品之設計研發生產銷售。",
       "supplyChainStage": "satellite_ground_equipment",
       "roleType": "optical_transceiver_satellite",
       "directness": "indirect",
@@ -93,7 +93,7 @@
     },
     "scoringFactors": [
       "直接度 間接受惠 +8",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 低軌衛星通訊（end_market/active） +14",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
@@ -101,11 +101,11 @@
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "前鼎 在「低軌衛星通訊」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 64/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "前鼎 在「低軌衛星通訊」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 70/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：低軌衛星通訊 · 間接受惠 · medium",
-      "產業評分：64/100（直接度 間接受惠 +8；角色信心 medium +10；題材 低軌衛星通訊（end_market/active） +14）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：低軌衛星通訊 · 間接受惠 · high",
+      "產業評分：70/100（直接度 間接受惠 +8；角色信心 high +16；題材 低軌衛星通訊（end_market/active） +14）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -164,8 +164,8 @@
         "canonicalTopicName": "低軌衛星通訊",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "前鼎是竹科光通訊模組專業廠，LD/PD 封裝核心技術，低軌衛星光通訊模組與資料中心光模組雙應用。"
+        "confidence": "high",
+        "roleSummary": "前鼎光電為雷射/受光二極體封裝與光傳接模組專業廠商，MOPS登記為光纖通訊產品之設計研發生產銷售。"
       }
     ],
     "swot": [
@@ -269,7 +269,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 11,
+    "totalScore": 12,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -278,7 +278,7 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢股",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
@@ -289,12 +289,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 43 天未更新"
+        "message": "股價資料已 44 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 43 天未更新"
+        "message": "籌碼資料已 44 天未更新"
       },
       {
         "id": "risk.stop-distance",

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-07-07T12:31:51.497Z",
+  "generatedAt": "2026-07-08T12:31:46.323Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-07",
-  "chipDataDate": "2026-07-07",
+  "marketDataDate": "2026-07-08",
+  "chipDataDate": "2026-07-08",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,31 +17,32 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -30,
-    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
+    "score": -55,
+    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 7.0%。",
     "signals": [],
     "risks": [
-      "收盤價、MA5、MA20 呈空頭排列"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 7.0%"
     ],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "接近 20 日低點 145.00，留意支撐是否失守"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "緯創 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2.5萬張；三大法人近 5 日合計賣超 -2.4萬張。",
+    "summary": "緯創 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +1.5萬張；三大法人近 5 日合計賣超 -2.9萬張。",
     "signals": [
-      "投信近 5 日買超 +2.5萬張"
+      "投信近 5 日買超 +1.5萬張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.4萬張",
-      "近 20 日法人偏賣，合計 -16.2萬張",
-      "外資近 5 日賣超 -5萬張"
+      "三大法人近 5 日合計賣超 -2.9萬張",
+      "近 20 日法人偏賣，合計 -16萬張",
+      "外資近 5 日賣超 -3.7萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-07"
+      "最近法人資料日：2026-07-08"
     ]
   },
   "industry": {
@@ -124,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-07"
+      "lastVerified": "2026-07-08"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -174,7 +175,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "緯創同時是 PC/NB ODM 供應鏈成員；PC 循環與 AI server 題材需分開計分。"
+        "roleSummary": "緯創5月營收290億年增39%，累計年增106%。為全球前三大NB ODM，商用筆電與Chromebook出貨暢旺，AI PC帶動換機潮。"
       },
       {
         "topicId": "ai-server-mechanical",
@@ -184,7 +185,7 @@
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "medium",
-        "roleSummary": "緯創可透過伺服器 ODM 垂直整合機構件需求，但不是純機殼/滑軌專門供應商；此角色保守列為 supplier。"
+        "roleSummary": "緯創跨入AI伺服器機構件，5月營收290億年增39%。GPU機架滑軌與散熱模組供NVIDIA/Google/Dell/HPE，AI伺服器營收占比快速提升。"
       }
     ],
     "swot": [
@@ -248,14 +249,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 52,
+    "totalScore": 47,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 15.6 倍，估值尚可對照成長",
-        "殖利率 3.5%，提供部分下檔支撐"
+        "本益比 14.7 倍，估值尚可對照成長",
+        "殖利率 3.8%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -269,14 +270,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：158.10",
-      "波段多空分水嶺看 MA20：158.53",
-      "追蹤法人是否延續 賣超：最近 -4.8千張",
-      "本益比 15.6 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：155.50",
+      "波段多空分水嶺看 MA20：157.57",
+      "追蹤法人是否延續 賣超：最近 -7.8千張",
+      "本益比 14.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 168.50 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 150.50：列為轉弱警訊",
+      "收盤突破 20 日高點 166.00 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 145.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

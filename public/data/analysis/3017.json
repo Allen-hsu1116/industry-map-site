@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3017",
   "name": "奇鋐",
-  "generatedAt": "2026-07-07T12:31:51.419Z",
+  "generatedAt": "2026-07-08T12:31:46.250Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-07",
-  "chipDataDate": "2026-07-07",
+  "marketDataDate": "2026-07-08",
+  "chipDataDate": "2026-07-08",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,45 +17,46 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": 0,
-    "summary": "奇鋐 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "score": -15,
+    "summary": "奇鋐 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 5.4%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
-    "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇"
-    ]
+    "risks": [
+      "收盤跌破 MA20 5.4%"
+    ],
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 41,
-    "summary": "奇鋐 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +2.6千張；近 20 日法人偏買，合計 +760張。",
+    "summary": "奇鋐 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.4千張；近 20 日法人偏買，合計 +1.5千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2.6千張",
-      "近 20 日法人偏買，合計 +760張",
-      "投信近 5 日買超 +2.2千張",
-      "外資近 5 日買超 +440張",
-      "融資近 5 日下降 11.4%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +1.4千張",
+      "近 20 日法人偏買，合計 +1.5千張",
+      "投信近 5 日買超 +1.9千張",
+      "融資近 5 日下降 5.3%，籌碼壓力下降"
     ],
-    "risks": [],
+    "risks": [
+      "外資近 5 日賣超 -324張"
+    ],
     "watch": [
-      "最近法人資料日：2026-07-07",
-      "融券近 5 日增加 74.1%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-08",
+      "融券近 5 日增加 13.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。",
+      "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。液冷散熱為AI伺服器核心瓶頸。",
       "supplyChainStage": "thermal",
       "roleType": "air_cooling_and_thermal_module_provider",
       "directness": "core",
@@ -63,17 +64,17 @@
     },
     "productNarratives": [
       {
-        "name": "液冷冷板(Copper Cold Plate)",
+        "name": "液冷冷板（銅微通道Cold Plate）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "液冷散熱模組(CDU搭配)",
+        "name": "液冷散熱模組（CDU搭配）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "均熱板(VC)散熱方案",
+        "name": "均熱板（VC）散熱方案",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -92,7 +93,7 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
@@ -102,9 +103,9 @@
     ],
     "summary": "奇鋐 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "相關題材：AI 伺服器液冷散熱 · 核心產品/平台",
       "相關題材：AI 伺服器整機與 EMS · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -134,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-07"
+      "lastVerified": "2026-07-08"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -163,8 +164,8 @@
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。"
+        "confidence": "high",
+        "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。液冷散熱為AI伺服器核心瓶頸。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -173,8 +174,8 @@
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。"
+        "confidence": "high",
+        "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。液冷散熱為AI伺服器核心瓶頸。"
       },
       {
         "topicId": "ai-server",
@@ -183,8 +184,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "medium",
-        "roleSummary": "奇鋐是全球前三大伺服器散熱模組供應商，AI伺服器高功耗推動VC均熱板需求爆發。5月營收158.7億年增60.6%，累計年增90.3%，客戶需求增加為主要成長動能。"
+        "confidence": "high",
+        "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。AI伺服器散熱需求強勁帶動爆發性成長。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -193,8 +194,8 @@
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "medium",
-        "roleSummary": "奇鋐從氣冷散熱延伸至液冷，提供冷板、VC與散熱模組整合方案。5月營收158.7億年增60.6%，累計年增90.3%，AI伺服器液冷滲透率提升為主要成長動力。"
+        "confidence": "high",
+        "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。液冷散熱為AI伺服器核心瓶頸，需求爆發。"
       }
     ],
     "swot": [
@@ -280,14 +281,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 68,
+    "totalScore": 65,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "股價淨值比 21.3 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 20.2 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -301,10 +302,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2648.00",
-      "波段多空分水嶺看 MA20：2469.50",
-      "追蹤法人是否延續 賣超：最近 -536張",
-      "本益比 40.3 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：2589.00",
+      "波段多空分水嶺看 MA20：2458.50",
+      "追蹤法人是否延續 買超：最近 +71張",
+      "本益比 38.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2790.00 且量比 > 1.5：列為轉強訊號",
