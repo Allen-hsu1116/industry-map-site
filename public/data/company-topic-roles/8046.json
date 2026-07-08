@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8046",
   "companyName": "南電",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-09",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -13,16 +13,17 @@
       "roleType": "abf_substrate_provider",
       "roleSummary": "南電是台灣 PCB/IC 載板大廠；4 月營收 4.5 億年增 39.5%，累計年增 34.2%。AI 伺服器高階 PCB 與 IC 載板雙引擎成長。",
       "products": [
-        "ABF 載板",
-        "IC 載板",
-        "BGA/HDI 板"
+        "ABF 載板（AI GPU/HPC 用）",
+        "IC 載板（BGA/FC-BGA）",
+        "HDI 板（手機/網通）",
+        "高頻高速 PCB"
       ],
       "customers": [
         "Intel",
         "AMD",
         "NVIDIA",
-        "廣達",
-        "鴻海"
+        "Broadcom",
+        "聯發科(2454)"
       ],
       "competitors": [
         "欣興(3037)",
@@ -57,7 +58,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "ABF 載板細線路製程（line/space <5μm）",
+        "HDI 高密度增層壓合技術",
+        "高頻高速基板材料（Megtron 6/7）應用"
+      ]
     },
     {
       "topicId": "advanced-packaging",
@@ -68,9 +74,10 @@
       "roleType": "advanced_packaging_substrate_supplier",
       "roleSummary": "南電不是 CoWoS 製程供應商本身，但可作為先進封裝所需載板/基板供應鏈角色；需避免把載板供應商寫成封裝代工。",
       "products": [
-        "ABF 載板（AI GPU 用）",
+        "ABF 載板（AI GPU 用，FC-BGA）",
         "HDISTM 載板",
-        "車用 HDI 載板"
+        "車用 HDI 載板",
+        "AiO 封裝用基板"
       ],
       "customers": [
         "Intel",
@@ -111,7 +118,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "ABF 載板 AI GPU 大尺寸基板（>100mm²）製程",
+        "HDISTM 高密度細線路載板技術",
+        "車用 HDI 載板耐高溫材料（FR-4 High-Tg）"
+      ]
     },
     {
       "topicId": "pcb-substrates",
@@ -165,7 +177,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "ABF 載板細線路製程（line/space <5μm）",
+        "HDI 高密度增層壓合技術",
+        "高頻高速基板材料（Megtron 6/7）應用"
+      ]
     }
   ]
 }

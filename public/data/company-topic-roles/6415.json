@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6415",
   "companyName": "矽力*-KY",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-09",
   "roles": [
     {
       "topicId": "ic-design",
@@ -13,16 +13,17 @@
       "roleType": "power_management_ic_provider",
       "roleSummary": "矽力-KY 是中國及新興市場電源管理 IC 龍頭；4 月營收 2.0 億年增 28.1%，累計年增 21.3%。HV AC/DC 與車用 DC/DC 為雙引擎。",
       "products": [
-        "電源管理 IC",
-        "類比 IC",
-        "功率轉換控制晶片"
+        "電源管理 IC（DC-DC 轉換器）",
+        "高壓功率 MOSFET 驅動 IC",
+        "類比/混合訊號 IC",
+        "快充協議 IC（USB-PD）"
       ],
       "customers": [
         "比亞迪",
         "華為",
         "小米",
         "Samsung",
-        "台達電"
+        "台達電(2308)"
       ],
       "competitors": [
         "TI",
@@ -57,7 +58,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "高壓 BCD 製程（700V HV-CMOS）功率 IC 設計",
+        "同步降壓轉換器（Sync Buck）高效率架構",
+        "數位電源控制 IC（DSP-PWM）整合技術"
+      ]
     },
     {
       "topicId": "leo-satellite-communications",
@@ -68,15 +74,15 @@
       "roleType": "satellite_power_ic_candidate",
       "roleSummary": "矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。",
       "products": [
-        "衛星電源管理 IC",
-        "太空級 DC/DC 轉換器",
-        "太陽能充電管理 IC"
+        "衛星電源管理 IC（抗輻射級）",
+        "太空級 DC/DC 降壓轉換器",
+        "太陽能充電管理 IC（MPPT）"
       ],
       "customers": [
         "SpaceX",
         "OneWeb",
         "Telesat",
-        "國家太空中心"
+        "國家太空中心(TASA)"
       ],
       "competitors": [
         "TI",
@@ -110,7 +116,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "太空級抗輻射（Radiation-Hardened）BCD 製程",
+        "衛星電源管理 IC 抗 SEL/SEU 設計",
+        "高效率太陽能 MPPT 充電控制技術"
+      ]
     }
   ]
 }

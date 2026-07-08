@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6230",
   "companyName": "尼得科超眾",
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-07-09",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
@@ -13,16 +13,17 @@
       "roleType": "cooling_fan_manufacturer",
       "roleSummary": "尼得科超眾在風冷散熱題材中是散熱風扇領導廠；4 月營收 8.28 億年增 12%，累計年增 9.1%，日系股東技術支援穩定。",
       "products": [
-        "伺服器散熱風扇",
-        "NB 散熱風扇",
-        "車用散熱風扇",
-        "BLDC 風扇馬達"
+        "伺服器散熱模組（VC 均熱板/熱導管）",
+        "AI GPU 散熱模組",
+        "車用散熱模組",
+        "BLDC 散熱風扇"
       ],
       "customers": [
         "Dell",
         "HP",
-        "廣達",
-        "NEC"
+        "廣達(2382)",
+        "NEC",
+        "NVIDIA（間接）"
       ],
       "competitors": [
         "建準",
@@ -51,7 +52,12 @@
       ],
       "confidence": "high",
       "lastVerified": "2026-05-30",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "均熱板（Vapor Chamber）壓差相變散熱技術",
+        "熱導管（Heat Pipe）毛細結構設計",
+        "微均熱板（Micro Vapor Chamber）薄型化製程"
+      ]
     },
     {
       "topicId": "ai-server-power-backup",
@@ -71,8 +77,8 @@
         "台達電(2308)",
         "全漢(6209)",
         "光寶科(2301)",
-        "NVIDIA（間接）",
-        "Dell"
+        "Dell",
+        "NVIDIA（間接）"
       ],
       "competitors": [
         "奇鋐(3017)",
@@ -102,7 +108,12 @@
       ],
       "confidence": "high",
       "lastVerified": "2026-07-02",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "高功率電源散熱風扇 PWM 溫控技術",
+        "微均熱板（Micro VC）電源模組散熱整合",
+        "伺服器 PSU 散熱模組熱阻優化"
+      ]
     }
   ]
 }

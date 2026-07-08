@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6669",
   "companyName": "緯穎",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-09",
   "roles": [
     {
       "topicId": "ai-server",
@@ -13,9 +13,10 @@
       "roleType": "csp_ai_server_odm",
       "roleSummary": "緯穎是緯創子公司，專攻高階 AI 伺服器 ODM；4 月營收 83 億年增 29.7%，累計年增 53.2%。備註「主要係客戶需求強勁」。",
       "products": [
-        "CSP AI 伺服器",
+        "CSP AI 伺服器（GPU 基板 OAM/UBB）",
         "雲端資料中心伺服器",
-        "系統整合與 ODM"
+        "AI 推理伺服器（L40S/H100）",
+        "系統整合與 ODM 服務"
       ],
       "customers": [
         "NVIDIA",
@@ -57,7 +58,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "GPU 基板（OAM/UBB）高密度 SMT 製程",
+        "液冷（Liquid Cooling）伺服器系統整合",
+        "CSP 客製化 AI 伺服器機構設計"
+      ]
     },
     {
       "topicId": "software-cloud-security",
@@ -68,9 +74,10 @@
       "roleType": "cloud_infrastructure_hardware_provider",
       "roleSummary": "緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。",
       "products": [
-        "雲端託管伺服器",
+        "雲端託管伺服器（Bare Metal as a Service）",
         "資料中心即服務（DCaaS）",
-        "AI 訓練叢集代營"
+        "AI 訓練叢集代營",
+        "邊緣運算伺服器"
       ],
       "customers": [
         "Google",
@@ -110,7 +117,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "雲端裸金屬伺服器（Bare Metal）即服務架構",
+        "AI 訓練叢集（GPU Cluster）高速網路整合",
+        "資料中心即服務（DCaaS）營運管理平台"
+      ]
     }
   ]
 }

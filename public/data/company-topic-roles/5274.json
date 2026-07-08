@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-07-08",
+  "updatedAt": "2026-07-09",
   "roles": [
     {
       "topicId": "ic-design",
@@ -73,15 +73,16 @@
       "roleType": "cxl_management_ic_candidate",
       "roleSummary": "信驊與 CXL 題材的關聯在伺服器管理與基礎設施 IC，屬於資料中心平台升級的直接賦能候選；需補產品規格與客戶導入證據。",
       "products": [
-        "CXL 記憶體擴展控制器",
-        "PCIe/CXL Retimer",
-        "BMC（AST3200 系列）"
+        "CXL 記憶體擴展控制器（AST3200 系列）",
+        "PCIe Gen5 Retimer IC",
+        "BMC 管理晶片（AST2600/AST3200）"
       ],
       "customers": [
         "Intel",
         "AMD",
         "Samsung",
-        "SK hynix"
+        "SK hynix",
+        "緯穎(6669)"
       ],
       "competitors": [
         "Microchip",
@@ -115,7 +116,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "AST3200 BMC 晶片整合 CXL 2.0 控制器設計",
+        "PCIe Gen5/Gen6 Retimer 訊號完整性技術",
+        "CXL Switch 多埠記憶體擴展架構"
+      ]
     },
     {
       "topicId": "software-cloud-security",
@@ -126,15 +132,16 @@
       "roleType": "hardware_management_enabler",
       "roleSummary": "信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。",
       "products": [
+        "BMC 韌體解決方案（AST2600/AST3200）",
         "遠端伺服器管理平台",
-        "BMC 韌體解決方案",
-        "資料中心基礎管理軟體"
+        "資料中心硬體監控軟體"
       ],
       "customers": [
         "Dell",
         "HPE",
         "Lenovo",
-        "超微(8299)"
+        "超微(8299)",
+        "緯穎(6669)"
       ],
       "competitors": [
         "Nuvoton",
@@ -168,7 +175,12 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "BMC 韌體帶外管理（Out-of-Band Management）",
+        "Redfish API 伺服器遠端管理協定",
+        "AST2600/AST3200 SoC 系統監控架構"
+      ]
     }
   ]
 }

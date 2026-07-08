@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6153",
   "companyName": "嘉聯益",
-  "updatedAt": "2026-05-30",
+  "updatedAt": "2026-07-09",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -13,15 +13,17 @@
       "roleType": "fpc_manufacturer",
       "roleSummary": "嘉聯益在軟板題材中是主要供應商；智慧手機與可穿戴裝置 FPC 需求驅動營收，4 月營收 4.52 億但年減 14.4%。",
       "products": [
-        "手機 FPC（顯示/觸控/天線）",
-        "NB FPC",
-        "可穿戴裝置 FPC"
+        "手機 FPC（顯示/觸控/天線模組）",
+        "NB/平板 FPC",
+        "可穿戴裝置軟板",
+        "RF 天線軟板"
       ],
       "customers": [
         "Apple",
         "Samsung",
         "華為",
-        "小米"
+        "小米",
+        "OPPO"
       ],
       "competitors": [
         "台郡",
@@ -50,7 +52,12 @@
       ],
       "confidence": "high",
       "lastVerified": "2026-05-30",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "多層軟板（Multi-layer FPC）壓合技術",
+        "LCP 高頻軟板材料應用（毫米波）",
+        "軟板細線路製程（line/space <30μm）"
+      ]
     },
     {
       "topicId": "leo-satellite-communications",
@@ -61,13 +68,15 @@
       "roleType": "fpc_satellite_supplier",
       "roleSummary": "嘉聯益供應低軌衛星通訊設備用高頻軟板；Starlink/OneWeb 等衛星計畫帶動新需求。",
       "products": [
-        "高頻軟板（衛星通訊用）",
-        "毫米波 FPC"
+        "高頻軟板（LCP 材質，衛星通訊用）",
+        "毫米波 FPC（28/39/77GHz）",
+        "衛星相位陣列天線軟板"
       ],
       "customers": [
         "SpaceX",
         "OneWeb",
-        "台灣衛星供應鏈"
+        "台灣衛星供應鏈",
+        "聯發科(2454)"
       ],
       "competitors": [
         "台郡"
@@ -93,7 +102,12 @@
       ],
       "confidence": "high",
       "lastVerified": "2026-05-30",
-      "status": "verified"
+      "status": "verified",
+      "techFocus": [
+        "LCP 液晶聚合物高頻軟板製程",
+        "毫米波（mmWave）FPC 訊號損耗控制",
+        "衛星通訊天線陣列軟板整合"
+      ]
     }
   ]
 }
