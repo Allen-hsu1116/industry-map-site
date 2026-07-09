@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6230",
   "name": "尼得科超眾",
-  "generatedAt": "2026-07-08T12:31:46.700Z",
+  "generatedAt": "2026-07-09T12:33:25.346Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -64,19 +64,21 @@
     },
     "productNarratives": [
       {
-        "name": "伺服器散熱風扇",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "NB 散熱風扇",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "車用散熱風扇",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "散熱模組與散熱片",
+        "description": "散熱模組與散熱片把晶片、伺服器或電子設備產生的熱導出，維持系統穩定運作。",
+        "whyItMatters": "AI 伺服器、GPU、筆電與高功耗電子設備功耗提升，會提高散熱模組價值量與設計難度。",
+        "topicFit": "AI 伺服器散熱供應鏈",
+        "businessImpact": "營運受 AI/伺服器與筆電需求、客戶平台導入、材料成本與產品 ASP 影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：超眾 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6230",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
       }
     ],
     "swotSnapshot": {
@@ -222,12 +224,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 44 天未更新"
+        "message": "股價資料已 45 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 44 天未更新"
+        "message": "籌碼資料已 45 天未更新"
       }
     ]
   },
