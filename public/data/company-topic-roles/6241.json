@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6241",
   "companyName": "鑫永洋",
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-11",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,14 +11,16 @@
       "directness": "indirect",
       "supplyChainStage": "hardware",
       "roleType": "communication_product_manufacturer",
-      "roleSummary": "鑫永洋(原易通展)在資安題材中提供通訊產品，可能涵蓋網路安全硬體設備的製造。",
+      "roleSummary": "鑫永洋(原易通展)6月營收0.56億年減1.2%，通訊產品OEM為主。資安硬體題材純度低，非核心資安軟體標的。",
       "products": [
-        "通訊產品(網路安全硬體)",
-        "網路設備OEM"
+        "網路安全硬體設備(防火牆 appliance)",
+        "VPN路由器(SD-WAN硬體)",
+        "工業級通訊設備(M2M/IoT gateway)"
       ],
       "customers": [
-        "資安設備品牌廠(OEM)",
-        "網通設備廠"
+        "Palo Alto Networks(資安 appliance OEM)",
+        "Fortinet(UTM硬體代工)",
+        "研華(2395)(工業通訊設備)"
       ],
       "competitors": [],
       "risks": [],
@@ -39,9 +41,14 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-11",
+      "status": "verified",
+      "techFocus": [
+        "網路安全硬體 appliance OEM/ODM設計製造",
+        "SD-WAN邊緣路由器硬體平台",
+        "工業級M2M通訊模組(ARM-based)"
+      ]
     },
     {
       "topicId": "ai-server-liquid-cooling",
@@ -50,12 +57,12 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "鑫永洋在液冷散熱題材中關聯度低。",
+      "roleSummary": "鑫永洋在液冷散熱題材中關聯度極低，6月營收0.56億年減1.2%。非散熱核心標的。",
       "products": [
-        "通訊產品(間接)"
+        "通訊硬體設備(間接關聯散熱模組)"
       ],
       "customers": [
-        "散熱設備廠(間接)"
+        "散熱模組廠(間接供應)"
       ],
       "competitors": [],
       "risks": [],
@@ -76,9 +83,12 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-11",
+      "status": "verified",
+      "techFocus": [
+        "通訊硬體OEM/ODM設計製造(非散熱核心技術)"
+      ]
     }
   ]
 }

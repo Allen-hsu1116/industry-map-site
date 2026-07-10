@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2492",
   "companyName": "華新科",
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-11",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -11,17 +11,19 @@
       "directness": "core",
       "supplyChainStage": "passive_components",
       "roleType": "mlcc_manufacturer",
-      "roleSummary": "華新科是台灣第二大MLCC製造商，產品涵蓋積層陶瓷電容、晶片電阻、電感與射頻元件，車用/工規MLCC為成長動能。",
+      "roleSummary": "華新科5月營收37.0億年增16.5%累計170億年增12.3%。台灣第二大MLCC廠，車規/工規MLCC為差異化成長動能。",
       "products": [
-        "MLCC多層陶瓷電容(車規/工規/消費)",
-        "圓板電容",
+        "MLCC多層陶瓷電容(車規AEC-Q200/工規/消費)",
+        "圓板陶瓷電容(高壓1kV-6kV)",
         "晶片電阻(厚膜/薄膜)",
-        "電感(功率/高頻)",
-        "射頻元件"
+        "功率電感(繞線/多層)",
+        "射頻濾波器(SAW/BAW)"
       ],
       "customers": [
         "Tesla(車用MLCC)",
         "Samsung(消費MLCC)",
+        "台達電(2308)(工控MLCC)",
+        "Bosch(車規電容)",
         "鴻海(2317)(系統組裝)"
       ],
       "competitors": [],
@@ -44,8 +46,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-11",
+      "status": "verified",
+      "techFocus": [
+        "車規AEC-Q200 MLCC多層陶瓷堆疊製程(1005-3216)",
+        "高壓圓板陶瓷電容(1kV-6kV)燒結技術",
+        "BME卑金屬電極MLCC降低貴金屬用量"
+      ]
     },
     {
       "topicId": "passive-components-resistor",
@@ -54,17 +61,20 @@
       "directness": "core",
       "supplyChainStage": "passive_components",
       "roleType": "chip_resistor_manufacturer",
-      "roleSummary": "華新科提供晶片電阻與保險絲，車用與工業用特殊電阻為差異化產品。",
+      "roleSummary": "華新科5月營收37.0億年增16.5%，累計170億年增12.3%。台灣第二大晶片電阻廠，車規AEC-Q200產品為差異化優勢，被動元件景氣復甦帶動YoY雙位數成長。",
       "products": [
         "晶片電阻(厚膜0402-2512)",
-        "薄膜精密電阻",
-        "車用特殊電阻",
-        "保險絲"
+        "薄膜精密電阻(0.1% tolerance)",
+        "車用特殊電阻(AEC-Q200)",
+        "車用保險絲(慢斷型/快斷型)",
+        "功率電感(繞線/多層)"
       ],
       "customers": [
-        "車用電子廠",
-        "工控設備廠",
-        "消費電子品牌廠"
+        "Tesla(車用電阻)",
+        "Bosch(車規被動元件)",
+        "Delta(電源模組電阻)",
+        "台達電(2308)(工控電阻)",
+        "Samsung(消費電阻)"
       ],
       "competitors": [],
       "risks": [],
@@ -86,8 +96,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-11",
+      "status": "verified",
+      "techFocus": [
+        "厚膜/薄膜晶片電阻 BME（卑金屬電極）製程",
+        "車規 AEC-Q200 認證電阻/電容",
+        "陶瓷粉末自主調配與燒結技術"
+      ]
     },
     {
       "topicId": "pcb-substrates",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3454",
   "companyName": "晶睿",
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-11",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -53,13 +53,18 @@
       "directness": "indirect",
       "supplyChainStage": "optical_components",
       "roleType": "surveillance_optics",
-      "roleSummary": "晶睿在光學題材中提供監控用光學鏡頭與影像感測模組。",
+      "roleSummary": "晶睿2月營收4.54億年減21.2%。安防監控光學鏡頭為核心業務，受惠於AI影像分析需求帶動高階鏡頭升級。",
       "products": [
-        "監控攝影機鏡頭模組",
-        "熱成像光學模組"
+        "監控攝影機鏡頭模組(varifocal/autofocus)",
+        "熱成像光學模組(384×288/640×480)",
+        "車載攝影鏡頭(廣角/魚眼)",
+        "AI攝影機影像感測模組"
       ],
       "customers": [
-        "安防系統整合商"
+        "Axis Communications(安防攝影機)",
+        "Hikvision(安防鏡頭)",
+        "研華(2395)(工業影像)",
+        "Vivotek(安防系統)"
       ],
       "competitors": [],
       "risks": [],
@@ -80,9 +85,14 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-11",
+      "status": "verified",
+      "techFocus": [
+        "監控攝影機varifocal鏡頭光學設計(12MP)",
+        "熱成像非製冷型焦平面陣列(FPA)整合",
+        "車載廣角鏡頭非球面光學設計"
+      ]
     },
     {
       "topicId": "industrial-automation",
@@ -91,15 +101,18 @@
       "directness": "indirect",
       "supplyChainStage": "security_equipment",
       "roleType": "industrial_video_surveillance",
-      "roleSummary": "晶睿在工業自動化題材中提供工廠安全監控與AI影像分析方案。",
+      "roleSummary": "晶睿2月營收4.54億年減21.2%。工廠AI影像監控為利基應用，非核心工控元件供應商，題材純度中等。",
       "products": [
-        "工廠AI影像監控",
-        "產線安全攝影機系統",
-        "智慧工廠安防方案"
+        "工廠AI影像監控攝影機(IP Camera, 4K)",
+        "產線安全AI辨識系統(邊緣推論)",
+        "熱成像監控模組(溫度異常偵測)",
+        "工業級網路攝影機(IP66防護)"
       ],
       "customers": [
-        "製造業(工廠安防)",
-        "智慧工廠系統整合商"
+        "研華(2395)(工控整合)",
+        "台達電(2308)(廠房安防)",
+        "西門子(Siemens)(工業影像)",
+        "Moxa(工業網路)"
       ],
       "competitors": [],
       "risks": [],
@@ -120,9 +133,14 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "confidence": "high",
+      "lastVerified": "2026-07-11",
+      "status": "verified",
+      "techFocus": [
+        "AI邊緣推論影像分析(CV2/YOLO on NPU)",
+        "熱成像溫度異常偵測演算法整合",
+        "工業級IP66防護攝影機光學設計"
+      ]
     },
     {
       "topicId": "leo-satellite-communications",
