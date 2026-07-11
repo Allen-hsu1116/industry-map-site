@@ -133,18 +133,25 @@
       "directness": "indirect",
       "supplyChainStage": "back_end_test",
       "roleType": "wafer_test_service",
-      "roleSummary": "欣銓在半導體設備材料題材中提供測試製程服務，晶圓測試與Burn-in是晶圓代工後段的關鍵品質管控環節。",
+      "roleSummary": "欣銓為台灣專業IC測試代工大廠，主力為記憶體IC晶圓測試(CP)與成品測試(FT)，客戶涵蓋華邦電、旺宏等記憶體廠。MOPS主要業務為記憶體IC之晶圓測試、數位/混合訊號IC測試及Burn-in測試。",
       "products": [
-        "晶圓測試服務(CP測試)",
-        "成品測試(FT測試)",
-        "Burn-in測試"
+        "晶圓測試服務(CP測試)(記憶體/邏輯IC晶圓級測試)",
+        "成品測試(FT測試)(封裝後功能測試/老化測試)",
+        "Burn-in測試(晶圓型式/成品型式高溫老化壽命篩選)",
+        "混合訊號IC測試(ADC/DAC/射頻IC量測)"
       ],
       "customers": [
-        "晶圓代工廠(測試代工)",
-        "IC設計公司(測試委外)"
+        "華邦電(2344)(記憶體IC晶圓測試代工)",
+        "旺宏(2337)(NOR Flash測試代工)",
+        "力積電(3552)(記憶體/邏輯IC測試)",
+        "聯詠(3034)(驅動IC渓試代工)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "IC測試為資本密集產業，測試機台投資金額大",
+        "記憶體IC測試需求受記憶體景氣循環影響大",
+        "面臨京元電(2449)等同業價格競爭壓力"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -162,8 +169,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "high",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     },
     {
@@ -173,15 +180,22 @@
       "directness": "indirect",
       "supplyChainStage": "test",
       "roleType": "test_service",
-      "roleSummary": "欣銓在PCB題材中關聯度低，測試服務不直接涉及PCB製造。",
+      "roleSummary": "欣銓在PCB載板題材中為間接受惠者，透過IC封裝後測試服務確保載板封裝IC品質。主要客戶為IC載板封裝廠，但與PCB載板供應鏈為間接關係。",
       "products": [
-        "IC測試(間接支援PCB上的IC品質)"
+        "IC測試服務(封裝後IC品質驗證，間接支援PCB良率)",
+        "Burn-in測試(載板封裝IC高溫老化篩選)"
       ],
       "customers": [
-        "IC封裝廠"
+        "欣興(3037)(ABF載板封裝IC測試)",
+        "南電(8046)(IC載板封裝測試委外)",
+        "景碩(3189)(BT載板IC測試代工)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "與PCB載板為間接關係，題材傳導非常微弱",
+        "載板封裝IC測試佔欣銓營收比重低",
+        "ABF載板需求波動不直接影響測試訂單"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -199,8 +213,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "low",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     },
     {
@@ -210,15 +224,20 @@
       "directness": "indirect",
       "supplyChainStage": "test",
       "roleType": "test_service",
-      "roleSummary": "欣銓在MLCC題材中關聯度低，主要為IC測試服務商。",
+      "roleSummary": "欣銓在被動元件MLCC題材中為極間接受惠者，僅在MLCC驅動/控制IC測試環節有少量關聯。與MLCC供應鏈關聯度極低。",
       "products": [
-        "IC測試(間接)"
+        "IC測試(被動元件驅動IC測試，間接)"
       ],
       "customers": [
-        "半導體廠"
+        "國巨(2327)(被動元件驅動IC測試委外)",
+        "華新科(2492)(MLCC相關IC測試)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "與MLCC供應鏈關聯度極低，題材傳導幾乎不存在",
+        "MLCC本身不需IC測試服務，僅驅動IC有間接關聯",
+        "此題材分類可能有誤，建議重新評估是否保留"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -236,8 +255,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "low",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     },
     {
@@ -247,15 +266,22 @@
       "directness": "indirect",
       "supplyChainStage": "test",
       "roleType": "satellite_ic_test",
-      "roleSummary": "欣銓在低軌衛星題材中關聯度低，可能間接提供衛星通訊IC的測試服務。",
+      "roleSummary": "欣銓在低軌衛星通訊題材中為衛星通訊IC測試代工供應商，提供射頻/混合訊號IC晶圓測試與成品測試。MOPS主要業務涵蓋數位訊號IC及混合訊號IC之晶圓及成品測試，可應用於衛星通訊晶片。",
       "products": [
-        "衛星通訊IC測試(數位/混合訊號)"
+        "衛星通訊IC測試(數位/混合訊號射頻IC測試)",
+        "Burn-in測試(衛星通訊IC高溫老化壽命篩選)"
       ],
       "customers": [
-        "衛星IC設計公司"
+        "衛星通訊IC設計公司(射頻/基頻IC測試委外)",
+        "高通(Qualcomm)(衛星通訊晶片測試)",
+        "聯發科(2454)(衛星通訊模組IC測試)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "衛星通訊IC測試佔欣銓營收比重低，題材傳導有限",
+        "衛星IC測試需特殊射頻測試機台，設備投資需求高",
+        "低軌衛星IC設計公司可能自有測試能力，委外意願不確定"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -274,7 +300,7 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     }
   ]

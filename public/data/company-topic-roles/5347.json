@@ -53,17 +53,23 @@
       "directness": "indirect",
       "supplyChainStage": "wafer_fabrication",
       "roleType": "military_ic_foundry",
-      "roleSummary": "世界先進在軍工題材中提供軍規IC晶圓代工，車用/工規產線可支援軍規半導體製造。",
+      "roleSummary": "世界先進在國防航太題材中以8吋晶圓代工廠角色供應軍規IC代工服務，主力製程為BCD/CMOS，可應用於軍規電源管理IC與航太電子IC。MOPS主要業務為依客戶訂單從事積體電路製造銷售。",
       "products": [
-        "軍規IC晶圓代工(8吋)",
-        "車用IC代工(可轉軍規)"
+        "軍規IC晶圓代工(8吋BCD/CMOS製程)",
+        "車用IC代工(可轉軍規BCD 0.35-0.6μm)",
+        "電源管理IC代工(軍規等級高可靠度BCD製程)"
       ],
       "customers": [
-        "中科院(軍規IC代工)",
-        "軍用IC設計公司"
+        "中科院(軍規IDM/IC代工)",
+        "漢翔(2634)(航太電子IC代工)",
+        "軍用IC設計公司(軍規電源/控制IC)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "軍規IC代工佔世界先進營收比重極低，主要為商用IC",
+        "8吋晶圓廠面臨設備老舊與產能受限問題",
+        "軍規IC認證週期長且量小，投入產出比不佳"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -82,7 +88,7 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     },
     {
@@ -92,19 +98,23 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "間接代工太陽能電源管理與逆變器控制IC",
+      "roleSummary": "世界先進在太陽能再生能源題材中以8吋晶圓代工角色供應太陽能電源管理IC與逆變器控制IC代工，主力製程為BCD高壓製程。MOPS主要業務為依客戶訂單從事積體電路製造銷售及封裝測試服務。",
       "products": [
-        "太陽能電源管理IC代工(BCD製程)",
-        "太陽能逆變器控制IC代工",
-        "功率半導體代工(太陽能MPPT IC)"
+        "太陽能電源管理IC代工(BCD 0.35-0.6μm製程)",
+        "太陽能逆變器控制IC代工(高壓BCD製程)",
+        "功率半導體代工(太陽能MPPT IC/逆變器驅動IC)"
       ],
       "customers": [
-        "太陽能IC設計公司(BCD製程代工)",
         "茂達(6138)(電源管理IC代工)",
-        "矽力杰(太陽能逆變器IC代工)"
+        "矽力杰 Silergy(太陽能逆變器IC代工)",
+        "太陽能IC設計公司(BCD製程委外)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "太陽能IC代工佔世界先進營收比重低，非主力產品線",
+        "8吋晶圓代工面臨12吋競爭壓力，太陽能IC可能轉12吋製程",
+        "太陽能逆變器IC市場競爭激烈，客戶可能分散代工來源"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -123,7 +133,7 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     }
   ]

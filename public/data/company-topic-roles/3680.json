@@ -95,19 +95,25 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "間接供應高速傳輸封裝製程所需承載載具",
+      "roleSummary": "家登在高速互連題材中為先進封裝載具供應商，提供CoWoS/SoIC封裝用承載環與暫時性載具，以及EUV光罩盒。MOPS主要業務為光罩解決方案、晶圓解決方案及機台設備產品。",
       "products": [
-        "先進封裝承載環(Carrier Ring)",
-        "CoWoS暫時性承載載具",
-        "光罩盒(Reticle Pod)"
+        "先進封裝承載環(Carrier Ring)(CoWoS/SoIC用晶圓承載)",
+        "CoWoS暫時性承載載具(Temporary Bonding Carrier)",
+        "光罩盒(Reticle Pod)(EUV光罩傳送/儲存保護)",
+        "晶圓傳送盒(Front Opening Unified Pod 12吋/8吋)"
       ],
       "customers": [
-        "台積電(2330)(CoWoS封裝載具)",
+        "台積電(2330)(CoWoS封裝承載載具)",
         "日月光(3711)(先進封裝耗材)",
-        "英特爾(封裝載具)"
+        "英特爾(Intel)(封裝載具)",
+        "三星(Samsung)(半導體光罩盒)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "先進封裝載具為利基型耗材，單價高但總量有限",
+        "客戶集中度高，台積電佔比大，客戶議價能力強",
+        "先進封裝技術演進快，載具規格需持續跟隨客戶升級"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -125,8 +131,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "high",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     },
     {
@@ -136,11 +142,11 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "間接供應半導體廠所需晶圓傳送耗材(與電商物流關聯性低)",
+      "roleSummary": "家登在電商零售物流題材中為半導體耗材供應商，透過精密物流體系供應晶圓傳送盒、光罩盒等半導體製程耗材。MOPS主要業務為光罩與晶圓解決方案產品。",
       "products": [
-        "半導體耗材(晶圓傳送盒)",
-        "光罩盒(Reticle Pod)",
-        "晶圓載具(Wafer Carrier)"
+        "半導體耗材(晶圓傳送盒FOUP 12吋)",
+        "光罩盒(Reticle Pod EUV/DUV)",
+        "晶圓載具(Wafer Carrier 8吋/12吋)"
       ],
       "customers": [
         "台積電(2330)(晶圓傳送耗材)",
@@ -148,7 +154,11 @@
         "世界先進(5347)(晶圓載具)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "與電商零售物流題材關聯度低，此分類可能有誤",
+        "半導體耗材為B2B直銷模式，非電商零售模式",
+        "建議重新評估此題材分類是否保留"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -166,8 +176,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "low",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     },
     {
@@ -177,19 +187,23 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "間接提供可回收循環使用之半導體耗材(與環保水回收關聯性低)",
+      "roleSummary": "家登在環境水資源回收題材中提供半導體耗材回收與重複使用服務，包括晶圓載具清潔、光罩盒翻新等循環經濟方案。MOPS主要業務為光罩與晶圓解決方案產品。",
       "products": [
-        "半導體耗材(晶圓載具回收)",
-        "光罩盒(重複使用)",
-        "晶圓傳送盒(耐化學清洗)"
+        "半導體耗材回收服務(晶圓載具清潔/維修/再使用)",
+        "光罩盒重複使用方案(Reticle Pod翻新/校驗)",
+        "晶圓傳送盒耐化學清洗(FOUP清潔認證服務)"
       ],
       "customers": [
-        "台積電(2330)(耗材回收使用)",
-        "聯電(2303)(光罩盒重複使用)",
+        "台積電(2330)(耗材回收與重複使用)",
+        "聯電(2303)(光罩盒翻新)",
         "世界先進(5347)(載具循環使用)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "與環境水資源回收題材關聯度為間接，半導體耗材回收非核心環保業務",
+        "耗材回收服務佔營收比重低",
+        "此題材分類較勉強，家登核心為半導體精密耗材製造"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -207,8 +221,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "low",
+      "lastVerified": "2026-07-12",
       "status": "verified"
     }
   ]
