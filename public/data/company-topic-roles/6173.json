@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-13",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -23,7 +23,11 @@
         "華新科(2492)(MLCC瓷粉)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "MLCC瓷粉客戶集中(國巨集團)",
+        "上櫃公司規模小,研發預算有限",
+        "被動元件景氣循環影響瓷粉需求"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -42,8 +46,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "BaTiO3鈦酸鋇瓷粉自行合成技術(奈米級粉體)",
+        "高溫共燒陶瓷製程(HTCC/LTCC)",
+        "Class 1/2/3瓷粉配方梯度設計"
+      ]
     },
     {
       "topicId": "advanced-packaging",
@@ -65,9 +74,8 @@
       ],
       "competitors": [],
       "risks": [
-        "封裝用介電材料佔信昌電營收比重低，主要產品為晶片電容/電阻",
-        "先進封裝陶瓷材料市場競爭，國際大廠Murata/京瓷技術領先",
-        "介電瓷粉為上游原料，與先進封裝終端需求傳導鏈長"
+        "先進封裝陶瓷基板市場日商(京瓷/村田)主導",
+        "客戶台積電/日月光認證週期長"
       ],
       "legacy": {},
       "evidence": [
@@ -87,8 +95,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-12",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "LTCC低溫共燒陶瓷基板技術(<900°C燒結)",
+        "DPC直接鍍銅陶瓷基板技術",
+        "AMB活性金屬釬焊基板技術"
+      ]
     },
     {
       "topicId": "display-led-optics",
@@ -109,7 +122,10 @@
         "宏齊(6168)(LED封裝材料)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "LED散熱基板市場競爭激烈(中國低價競爭)",
+        "LED產業景氣波動影響需求"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -128,8 +144,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "LED散熱陶瓷基板(Al2O3/AlN DPC製程)",
+        "高導熱係數基板材料(>170 W/m·K)",
+        "晶片電容微型化技術(0201/0402)"
+      ]
     },
     {
       "topicId": "renewable-energy",
@@ -150,7 +171,10 @@
         "康舒(6282)(太陽能逆變器)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "太陽能被動元件市場規模有限",
+        "逆變器技術升級快速,被動元件需持續跟進"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -169,8 +193,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "高壓陶瓷電容耐壓設計(>1kV DC)",
+        "太陽能逆變器用突波吸收器(Va>470V)",
+        "車規級被動元件認證(AEC-Q200)"
+      ]
     },
     {
       "topicId": "pcb-substrates",
@@ -191,7 +220,10 @@
         "台燿(6279)(高頻基板材料)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "PCB基板填料市場利基型,成長空間有限",
+        "與國際化工大廠(Dupont/松下)技術差距"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -210,8 +242,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "高頻陶瓷填充材料(Df優化配方)",
+        "基板介電層用陶瓷粉體粒徑控制(D50<1μm)",
+        "低CTE熱膨脹係數陶瓷填料"
+      ]
     },
     {
       "topicId": "ai-server-power-backup",
@@ -232,7 +269,10 @@
         "康舒(6282)(AI伺服器PSU)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "AI伺服器電源被動元件用量小於MLCC主流規格",
+        "台達電/光寶科等客戶議價能力強"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -251,8 +291,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "高頻PWM控制電路用MLCC(>100kHz)",
+        "電源濾波用高容值陶瓷電容(10μF+)",
+        "車規/AI伺服器雙認證被動元件"
+      ]
     },
     {
       "topicId": "energy-storage-battery",
@@ -273,7 +318,10 @@
         "康舒(6282)(儲能PCS被動元件)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "儲能被動元件佔營收比重低",
+        "中國被動元件廠低價競爭"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -292,8 +340,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "儲能BMS用精密電阻(0.1%精度)",
+        "高壓變流器濾波電容(>1500V DC)",
+        "突波保護元件(Va>600V)"
+      ]
     }
   ]
 }

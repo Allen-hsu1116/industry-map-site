@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6213",
   "companyName": "聯茂",
-  "updatedAt": "2026-05-31",
+  "updatedAt": "2026-07-13",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -13,17 +13,16 @@
       "roleType": "ccl_upstream_material_supplier",
       "roleSummary": "聯茂5月營收38.03億YoY+29.3%，受惠於AI伺服器高階CCL需求。為全球前五大銅箔基板製造商，AI伺服器PCB用高階CCL為核心增長引擎。",
       "products": [
-        "高階銅箔基板（High-Tg CCL for AI伺服器）",
-        "超低損耗CCL（高速網通/5G）",
-        "HDI用基板材料",
-        "玻纖布與環氧樹脂"
+        "高速CCL銅箔基板(IT-180A/IT-968/IT-972)",
+        "高頻低損耗基板材料(M4/M6/M8系列)",
+        "高Tg多層板基材(IT-588/IT-600)",
+        "IC載板用BT基板材料"
       ],
       "customers": [
-        "欣興(3037)",
-        "南電(8046)",
-        "景碩(3189)",
-        "IBIDEN",
-        "臻鼎(4958)"
+        "欣興(3037)(IC載板CCL)",
+        "南電(8046)(ABF載板基材)",
+        "燿華(2367)(高速PCB基板)",
+        "深南電路(中國)(高頻CCL)"
       ],
       "competitors": [
         "台燿(6274)",
@@ -32,9 +31,9 @@
         "Rogers(USA)"
       ],
       "risks": [
-        "CCL原物料（玻纖布/樹脂）價格波動",
-        "中國CCL低價競爭",
-        "AI伺服器需求放緩"
+        "台燿/台光電在高頻CCL競爭激烈",
+        "6月營收YoY+48%但基期較低",
+        "ABF載板基材被味之素壟斷"
       ],
       "legacy": {
         "topicSlug": "ic-substrate",
@@ -58,8 +57,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-02",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "高速低損耗CCL配方技術(Df<0.002 @10GHz)",
+        "高Tg基板材料開發(Tg>200°C)",
+        "極低粗糙度銅箔基板製程(Rz<3μm)"
+      ]
     },
     {
       "topicId": "pcb-substrates",
@@ -70,15 +74,16 @@
       "roleType": "ccl_material_provider",
       "roleSummary": "聯茂在 CCL/玻纖布相關基板材料題材中具直接供應鏈角色；需追蹤高速材料需求、報價與產能利用率。",
       "products": [
-        "CCL",
-        "高階基板材料",
-        "玻纖布相關材料"
+        "高速CCL銅箔基板(IT-180A/IT-968/IT-972)",
+        "高頻低損耗基板材料(M4/M6/M8系列)",
+        "高Tg多層板基材(IT-588/IT-600)",
+        "IC載板用BT基板材料"
       ],
       "customers": [
-        "欣興(3037)",
-        "南電(8046)",
-        "景碩(3189)",
-        "IBIDEN"
+        "欣興(3037)(IC載板CCL)",
+        "南電(8046)(ABF載板基材)",
+        "燿華(2367)(高速PCB基板)",
+        "深南電路(中國)(高頻CCL)"
       ],
       "competitors": [
         "台光電(2383)",
@@ -87,8 +92,9 @@
         "Isola"
       ],
       "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "台燿/台光電在高頻CCL競爭激烈",
+        "6月營收YoY+48%但基期較低",
+        "ABF載板基材被味之素壟斷"
       ],
       "legacy": {
         "topicSlug": "fiberglass-cloth",
@@ -112,8 +118,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "高速低損耗CCL配方技術(Df<0.002 @10GHz)",
+        "高Tg基板材料開發(Tg>200°C)",
+        "極低粗糙度銅箔基板製程(Rz<3μm)"
+      ]
     },
     {
       "topicId": "pcb-substrates",
@@ -124,14 +135,16 @@
       "roleType": "packaging_pcb_material_supplier",
       "roleSummary": "聯茂與封裝材料題材的關聯偏向 PCB/基板材料供應，不應被誤寫成導線架或封測廠核心角色。",
       "products": [
-        "高頻高速 CCL（IC 封裝基材）",
-        "高 Tg 耐熱基板",
-        "HDI 用黏合片"
+        "高速CCL銅箔基板(IT-180A/IT-968/IT-972)",
+        "高頻低損耗基板材料(M4/M6/M8系列)",
+        "高Tg多層板基材(IT-588/IT-600)",
+        "IC載板用BT基板材料"
       ],
       "customers": [
-        "欣興(3037)",
-        "南電(8046)",
-        "景碩(3189)"
+        "欣興(3037)(IC載板CCL)",
+        "南電(8046)(ABF載板基材)",
+        "燿華(2367)(高速PCB基板)",
+        "深南電路(中國)(高頻CCL)"
       ],
       "competitors": [
         "台光電(2383)",
@@ -139,8 +152,9 @@
         "Isola"
       ],
       "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "台燿/台光電在高頻CCL競爭激烈",
+        "6月營收YoY+48%但基期較低",
+        "ABF載板基材被味之素壟斷"
       ],
       "legacy": {
         "topicSlug": "packaging-materials",
@@ -164,8 +178,13 @@
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "高速低損耗CCL配方技術(Df<0.002 @10GHz)",
+        "高Tg基板材料開發(Tg>200°C)",
+        "極低粗糙度銅箔基板製程(Rz<3μm)"
+      ]
     }
   ]
 }

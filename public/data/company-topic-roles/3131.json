@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3131",
   "companyName": "弘塑",
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-13",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -13,17 +13,20 @@
       "roleType": "packaging_equipment_chemicals",
       "roleSummary": "弘塑提供先進封裝製程設備與化學品，含電子級蝕刻液與封裝製程機台，是CoWoS/2.5D封裝的設備與耗材供應商。",
       "products": [
-        "先進封裝製程機台",
-        "電子級蝕刻液(混酸)",
-        "封裝用化學品",
-        "晶圓清洗設備"
+        "先進封裝製程機台(電鍍/清洗/蝕刻)",
+        "電子級蝕刻液(封裝級混酸)",
+        "封裝用化學品(銅電鍍液/清洗液)",
+        "晶圓清洗設備(封裝前清洗)"
       ],
       "customers": [
         "台積電(2330)(封裝製程設備)",
         "日月光(3711)(封裝耗材)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "先進封裝設備市場被國際大廠(如LAM/TEL)主導",
+        "化學品業務毛利率受原物料波動影響"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -42,8 +45,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "先進封裝濕製程設備(電鍍/清洗)",
+        "封裝級蝕刻液配方(銅蝕刻/鈍化層蝕刻)",
+        "CoWoS/InFO製程耗材供應能力"
+      ]
     },
     {
       "topicId": "semiconductor-equipment-materials",
@@ -54,10 +62,10 @@
       "roleType": "semi_process_equipment_chemicals",
       "roleSummary": "弘塑提供半導體製程設備工程承包與電子級化學品，涵蓋晶圓製造前段與封裝後段的製程耗材。",
       "products": [
-        "半導體製程機台(客製)",
-        "電子級混酸(蝕刻液)",
-        "電鑄藥液",
-        "製程設備維修"
+        "半導體濕製程機台(客製化蝕刻/清洗設備)",
+        "電子級混酸蝕刻液(BOE/SPM/HF系列)",
+        "電鑄藥液(銅電鑄用)",
+        "製程設備維修與升級服務"
       ],
       "customers": [
         "台積電(2330)(製程設備)",
@@ -65,7 +73,10 @@
         "世界先進(5347)(設備工程)"
       ],
       "competitors": [],
-      "risks": [],
+      "risks": [
+        "客戶集中度高(台積電佔比大)",
+        "設備廠規模相對小,研發資源有限"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -84,8 +95,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "濕製程設備客製化設計(蝕刻/清洗/電鑄)",
+        "電子級混酸配方技術(BOE/SPM/HF+HNO3)",
+        "半導體製程設備在地化維修能力"
+      ]
     }
   ]
 }
