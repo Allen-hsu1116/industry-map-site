@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6241",
   "name": "鑫永洋",
-  "generatedAt": "2026-07-10T12:34:55.133Z",
+  "generatedAt": "2026-07-13T12:32:58.220Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,15 +50,15 @@
   },
   "industry": {
     "label": "題材關聯明確",
-    "score": 67,
+    "score": 73,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "間接受惠",
-      "roleSummary": "鑫永洋在液冷散熱題材中關聯度低。",
+      "roleSummary": "鑫永洋在液冷散熱題材中關聯度極低，6月營收0.56億年減1.2%。非散熱核心標的。",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
       "directness": "indirect",
@@ -66,7 +66,7 @@
     },
     "productNarratives": [
       {
-        "name": "通訊產品(間接)",
+        "name": "通訊硬體設備(間接關聯散熱模組)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -78,17 +78,17 @@
     },
     "scoringFactors": [
       "直接度 間接受惠 +8",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "鑫永洋 在「AI 伺服器液冷散熱」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 67/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "鑫永洋 在「AI 伺服器液冷散熱」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 73/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：AI 伺服器液冷散熱 · 間接受惠 · medium",
-      "產業評分：67/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 間接受惠 · high",
+      "產業評分：73/100（直接度 間接受惠 +8；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "相關題材：資安、雲端服務與企業軟體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -143,8 +143,8 @@
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "鑫永洋在液冷散熱題材中關聯度低。"
+        "confidence": "high",
+        "roleSummary": "鑫永洋在液冷散熱題材中關聯度極低，6月營收0.56億年減1.2%。非散熱核心標的。"
       },
       {
         "topicId": "software-cloud-security",
@@ -153,8 +153,8 @@
         "canonicalTopicName": "資安、雲端服務與企業軟體",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "鑫永洋(原易通展)在資安題材中提供通訊產品，可能涵蓋網路安全硬體設備的製造。"
+        "confidence": "high",
+        "roleSummary": "鑫永洋(原易通展)6月營收0.56億年減1.2%，通訊產品OEM為主。資安硬體題材純度低，非核心資安軟體標的。"
       }
     ],
     "swot": [],
@@ -196,7 +196,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 19,
+    "totalScore": 20,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -205,7 +205,7 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股",
+      "classification": "題材股",
       "rationale": [
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
@@ -214,12 +214,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 46 天未更新"
+        "message": "股價資料已 49 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 46 天未更新"
+        "message": "籌碼資料已 49 天未更新"
       }
     ]
   },

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-07-10T12:34:54.873Z",
+  "generatedAt": "2026-07-13T12:32:57.963Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-09",
-  "chipDataDate": "2026-07-09",
+  "marketDataDate": "2026-07-13",
+  "chipDataDate": "2026-07-13",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -36,18 +36,18 @@
     "stance": "neutral",
     "label": "籌碼中性",
     "score": -11,
-    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.3萬張；外資近 5 日買超 +953張。",
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.3萬張；融資近 5 日下降 11.5%，籌碼壓力下降。",
     "signals": [
       "近 20 日法人偏買，合計 +1.3萬張",
-      "外資近 5 日買超 +953張",
       "融資近 5 日下降 11.5%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -570張",
-      "投信近 5 日賣超 -1.2千張"
+      "三大法人近 5 日合計賣超 -2.1千張",
+      "投信近 5 日賣超 -969張",
+      "外資近 5 日賣超 -801張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-09"
+      "最近法人資料日：2026-07-13"
     ]
   },
   "industry": {
@@ -115,7 +115,7 @@
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
       "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-09（fresh）"
+      "知識庫最後驗證：2026-07-13（fresh）"
     ]
   },
   "knowledge": {
@@ -129,7 +129,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-09"
+      "lastVerified": "2026-07-13"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -189,7 +189,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "欣銓在低軌衛星題材中關聯度低，可能間接提供衛星通訊IC的測試服務。"
+        "roleSummary": "欣銓在低軌衛星通訊題材中為衛星通訊IC測試代工供應商，提供射頻/混合訊號IC晶圓測試與成品測試。MOPS主要業務涵蓋數位訊號IC及混合訊號IC之晶圓及成品測試，可應用於衛星通訊晶片。"
       },
       {
         "topicId": "passive-components-mlcc",
@@ -198,8 +198,8 @@
         "canonicalTopicName": "MLCC / 電容器",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "欣銓在MLCC題材中關聯度低，主要為IC測試服務商。"
+        "confidence": "low",
+        "roleSummary": "欣銓在被動元件MLCC題材中為極間接受惠者，僅在MLCC驅動/控制IC測試環節有少量關聯。與MLCC供應鏈關聯度極低。"
       },
       {
         "topicId": "pcb-substrates",
@@ -208,8 +208,8 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "欣銓在PCB題材中關聯度低，測試服務不直接涉及PCB製造。"
+        "confidence": "low",
+        "roleSummary": "欣銓在PCB載板題材中為間接受惠者，透過IC封裝後測試服務確保載板封裝IC品質。主要客戶為IC載板封裝廠，但與PCB載板供應鏈為間接關係。"
       },
       {
         "topicId": "semiconductor-equipment-materials",
@@ -218,8 +218,8 @@
         "canonicalTopicName": "半導體設備與前段材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "欣銓在半導體設備材料題材中提供測試製程服務，晶圓測試與Burn-in是晶圓代工後段的關鍵品質管控環節。"
+        "confidence": "high",
+        "roleSummary": "欣銓為台灣專業IC測試代工大廠，主力為記憶體IC晶圓測試(CP)與成品測試(FT)，客戶涵蓋華邦電、旺宏等記憶體廠。MOPS主要業務為記憶體IC之晶圓測試、數位/混合訊號IC測試及Burn-in測試。"
       }
     ],
     "swot": [],
@@ -334,14 +334,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：240.50",
-      "波段多空分水嶺看 MA20：230.40",
-      "追蹤法人是否延續 買超：最近 +393張",
-      "本益比 36.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：236.10",
+      "波段多空分水嶺看 MA20：230.90",
+      "追蹤法人是否延續 賣超：最近 -10張",
+      "本益比 34.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 271.50 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 204.50：列為轉弱警訊",
+      "收盤跌破 20 日低點 208.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
