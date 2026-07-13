@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,19 +11,20 @@
       "directness": "indirect",
       "supplyChainStage": "power",
       "roleType": "power_product_application_side_user",
-      "roleSummary": "台達電5月營收58.96億YoY+43.7%，AI伺服器電源需求爆發帶動高速增長。在wafer-foundry題材中屬於電源管理周邊賦能角色，非直接晶圓代工但供應晶圓廠與封裝廠的精密電源與自動化設備。",
+      "roleSummary": "台達電6月營收656億年增55.4%，累計年增41%，MOPS備註：AI相關產品需求旺盛。為全球電源管理龍頭，AI伺服器電源為核心成長引擎。",
       "products": [
-        "高效電源供應器（Server PSU 800W+）",
-        "電動車充電樁與車載充電器",
+        "Server PSU 800W+鈦金級電源供應器",
+        "GPU供電模組(VRM/VRD 48V)",
+        "電動車充電樁(30kW/60kW DC快充)",
         "工業自動化伺服驅動器",
-        "DC-DC轉換器"
+        "DC-DC轉換器(48V/12V)"
       ],
       "customers": [
-        "Dell",
-        "HP",
-        "NVIDIA（資料中心電源）",
-        "Tesla（充電設備）",
-        "Siemens"
+        "NVIDIA(資料中心電源)",
+        "Dell(伺服器PSU)",
+        "HP(伺服器電源)",
+        "Tesla(充電設備)",
+        "Siemens(工業自動化)"
       ],
       "competitors": [
         "光寶科(2301)",
@@ -64,8 +65,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-02",
-      "status": "verified"
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "800W+鈦金級Server PSU數位控制電源設計",
+        "48V直接供電架構VRM/VRD設計",
+        "SiC/GaN寬能隙功率元件應用於電源轉換"
+      ]
     },
     {
       "topicId": "ai-server-power-backup",

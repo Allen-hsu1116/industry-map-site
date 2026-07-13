@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4966",
   "companyName": "譜瑞-KY",
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-07-14",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -11,19 +11,20 @@
       "directness": "core",
       "supplyChainStage": "interface_ic_design",
       "roleType": "high_speed_display_usb_interface_ic_provider",
-      "roleSummary": "譜瑞-KY是高速訊號介面晶片領導廠商，主力產品為USB4/Thunderbolt與DisplayPort重定時器。KY公司無TWSE月營收，但受惠於AI PC與高速傳輸介面升級週期。",
+      "roleSummary": "譜瑞-KY MOPS主要經營：高速訊號傳輸介面及顯示與觸控晶片之研發設計及銷售。全球USB4/Thunderbolt重定時器IC領導廠商，AI伺服器PCIe Retimer為新成長動能。",
       "products": [
-        "USB4/Thunderbolt重定時器晶片",
-        "DisplayPort 2.1訊號介面晶片",
+        "USB4/Thunderbolt 4重定時器IC(DF8201)",
+        "DisplayPort 2.1訊號介面IC",
         "HDMI 2.1訊號處理晶片",
-        "PCIe Gen5/6重定時器"
+        "PCIe Gen5/6 Retimer IC",
+        "Type-C Alt Mode訊號切換IC"
       ],
       "customers": [
-        "Apple",
-        "Intel",
-        "AMD",
-        "Lenovo",
-        "Dell"
+        "Apple(MacBook USB4/DP)",
+        "Intel(Thunderbolt 4重定時器)",
+        "AMD(PCIe Retimer)",
+        "Lenovo(NB Type-C)",
+        "Dell(筆電DP/HDMI)"
       ],
       "competitors": [
         "譜瑞(Parade)",
@@ -52,8 +53,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-02",
-      "status": "verified"
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "USB4/Thunderbolt 4重定時器(CTLE/DFE等化)IC設計",
+        "PCIe Gen5/6 Retimer訊號完整性補償技術",
+        "DisplayPort 2.1 UHBR(80Gbps)訊號處理晶片設計"
+      ]
     }
   ]
 }

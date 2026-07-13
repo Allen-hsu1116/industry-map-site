@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-14",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -132,15 +132,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "advanced_packaging",
       "roleType": "hbm_integration_packaging",
-      "roleSummary": "台積電不製造 HBM 記憶體，但在 HBM 與 AI GPU 的 CoWoS 整合封裝中是唯一量產供應商；4 月營收年增 17.5%。",
+      "roleSummary": "台積電MOPS主要經營：積體電路製造銷售/封裝測試/光罩設計。在HBM題材中為AI GPU+HBM整合封裝核心提供者，CoWoS-L/SoIC為HBM 3D堆疊關鍵技術。",
       "products": [
-        "CoWoS-L HBM+GPU 整合封裝",
-        "SoIC HBM 3D 堆疊"
+        "CoWoS-L HBM+GPU整合封裝(NVIDIA B200)",
+        "SoIC 3D堆疊(HBM on Logic)",
+        "CoWoS-S HBM 3e多晶片封裝",
+        "InFO-AI HBM頻寬互連",
+        "A16(1.6nm) Backside Power HBM支援"
       ],
       "customers": [
-        "NVIDIA",
-        "AMD",
-        "Broadcom"
+        "NVIDIA(H100/B200 HBM封裝)",
+        "AMD(MI300X HBM整合)",
+        "Broadcom(客製ASIC+HBM封裝)",
+        "Marvell(客製ASIC HBM封裝)",
+        "Google(TPU HBM封裝)"
       ],
       "competitors": [
         "Samsung I-Cube",
@@ -172,8 +177,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "CoWoS-L 2.5D封裝(Si interposer+HBM堆疊)",
+        "SoIC 3D堆疊(Chip-on-Wafer HBM on Logic)",
+        "TSV矽穿孔技術用於HBM 3D堆疊"
+      ]
     },
     {
       "topicId": "ai-server",

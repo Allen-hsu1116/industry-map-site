@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-07-03",
+  "updatedAt": "2026-07-14",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -11,17 +11,20 @@
       "directness": "core",
       "supplyChainStage": "packaging_consumables",
       "roleType": "advanced_packaging_carrier_solution",
-      "roleSummary": "家登是先進封裝光罩解決方案供應商，提供CoWoS/2.5D封裝所需的承載環(Carrier Ring)、光罩盒與晶圓傳送載具。",
+      "roleSummary": "家登MOPS主要經營：光罩解決方案/晶圓解決方案/機台設備。為台積電CoWoS先進封裝關鍵耗材供應商，EUV光罩盒與承載載具為核心利基產品。",
       "products": [
-        "先進封裝承載環(Carrier Ring)",
-        "CoWoS暫時性承載載具",
-        "光罩盒(Reticle Pod)",
-        "晶圓傳送載具"
+        "CoWoS暫時性承載載具(Carrier Ring)",
+        "EUV光罩盒(Reticle Pod EUV/DUV)",
+        "12吋晶圓傳送盒(FOUP)",
+        "先進封裝承載環(Carrier Ring for CoWoS)",
+        "晶圓傳送載具(Wafer Carrier 12吋)"
       ],
       "customers": [
         "台積電(2330)(CoWoS封裝載具)",
         "日月光(3711)(先進封裝耗材)",
-        "晶圓代工廠(光罩傳送)"
+        "Intel(光罩盒EUV)",
+        "Samsung(晶圓傳送載具)",
+        "聯電(2303)(光罩盒)"
       ],
       "competitors": [],
       "risks": [],
@@ -43,8 +46,13 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "EUV光罩盒(Reticle Pod)奈米級潔淨度設計",
+        "CoWoS暫時性承載載具(Carrier Ring)化學機械研磨精度",
+        "FOUP晶圓傳送盒微環境控制(<Class 1潔淨度)"
+      ]
     },
     {
       "topicId": "semiconductor-equipment-materials",
@@ -142,16 +150,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "家登在電商零售物流題材中為半導體耗材供應商，透過精密物流體系供應晶圓傳送盒、光罩盒等半導體製程耗材。MOPS主要業務為光罩與晶圓解決方案產品。",
+      "roleSummary": "家登MOPS主要經營：光罩/晶圓/機台設備解決方案。在電商零售題材的角色為半導體耗材B2B電子採購平台，非一般消費電商。",
       "products": [
-        "半導體耗材(晶圓傳送盒FOUP 12吋)",
-        "光罩盒(Reticle Pod EUV/DUV)",
-        "晶圓載具(Wafer Carrier 8吋/12吋)"
+        "半導體耗材電商平台(晶圓傳送盒FOUP 12吋線上採購)",
+        "光罩盒線上訂購系統(Reticle Pod EUV/DUV)",
+        "晶圓載具數位化供應鏈管理平台",
+        "半導備品耗材B2B電子採購系統"
       ],
       "customers": [
-        "台積電(2330)(晶圓傳送耗材)",
-        "聯電(2303)(光罩盒)",
-        "世界先進(5347)(晶圓載具)"
+        "台積電(2330)(晶圓傳送耗材B2B採購)",
+        "聯電(2303)(光罩盒線上採購)",
+        "世界先進(5347)(晶圓載具電子訂購)",
+        "日月光(3711)(封裝耗材採購)"
       ],
       "competitors": [],
       "risks": [
@@ -177,8 +187,13 @@
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-07-12",
-      "status": "verified"
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "半導體耗材B2B電子商務平台架構",
+        "供應鏈數位化管理系統(SCM)整合",
+        "FOUP/Reticle Pod線上規格選配與報價系統"
+      ]
     },
     {
       "topicId": "environment-water-recycling",
@@ -187,16 +202,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "家登在環境水資源回收題材中提供半導體耗材回收與重複使用服務，包括晶圓載具清潔、光罩盒翻新等循環經濟方案。MOPS主要業務為光罩與晶圓解決方案產品。",
+      "roleSummary": "家登在環保回收題材的角色為半導體耗材循環經濟，FOUP/光罩盒的清潔、翻新、重複使用服務。MOPS主要經營：光罩/晶圓/機台設備解決方案。",
       "products": [
-        "半導體耗材回收服務(晶圓載具清潔/維修/再使用)",
+        "半導體耗材回收服務(FOUP晶圓傳送盒清潔/維修/再使用)",
         "光罩盒重複使用方案(Reticle Pod翻新/校驗)",
-        "晶圓傳送盒耐化學清洗(FOUP清潔認證服務)"
+        "晶圓傳送盒耐化學清洗(FOUP清潔認證)",
+        "半導體載具循環經濟方案"
       ],
       "customers": [
         "台積電(2330)(耗材回收與重複使用)",
         "聯電(2303)(光罩盒翻新)",
-        "世界先進(5347)(載具循環使用)"
+        "世界先進(5347)(載具循環使用)",
+        "Intel(光罩盒校驗)"
       ],
       "competitors": [],
       "risks": [
@@ -221,9 +238,14 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-07-12",
-      "status": "verified"
+      "confidence": "medium",
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "FOUP晶圓傳送盒耐化學清洗製程(超純水+化學溶劑)",
+        "光罩盒(Reticle Pod)奈米級潔淨度校驗技術",
+        "半導體耗材循環經濟認證體系"
+      ]
     }
   ]
 }
