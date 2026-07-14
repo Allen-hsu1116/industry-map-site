@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-07-13T12:32:57.954Z",
+  "generatedAt": "2026-07-14T12:32:44.491Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-13",
-  "chipDataDate": "2026-07-13",
+  "marketDataDate": "2026-07-14",
+  "chipDataDate": "2026-07-14",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,33 +17,30 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -55,
-    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 8.3%。",
+    "score": -45,
+    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 8.5%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 8.3%"
+      "收盤跌破 MA20 8.5%"
     ],
-    "watch": [
-      "接近 20 日低點 142.50，留意支撐是否失守"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "緯創 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +6.5千張；三大法人近 5 日合計賣超 -3.2萬張。",
+    "summary": "緯創 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +3.4千張；三大法人近 5 日合計賣超 -1.7萬張。",
     "signals": [
-      "投信近 5 日買超 +6.5千張"
+      "投信近 5 日買超 +3.4千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -3.2萬張",
-      "近 20 日法人偏賣，合計 -14.9萬張",
-      "外資近 5 日賣超 -3萬張"
+      "三大法人近 5 日合計賣超 -1.7萬張",
+      "近 20 日法人偏賣，合計 -13.7萬張",
+      "外資近 5 日賣超 -1.4萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-13",
-      "融券近 5 日增加 107.7%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-14"
     ]
   },
   "industry": {
@@ -56,7 +53,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "緯創是AI伺服器ODM三大之一。5月營收2,902億年增39.2%，累計1,420億年增106.2%。AI伺服器帶動營收暴增，CSP客製化AI叢集為主力產品。",
+      "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。",
       "supplyChainStage": "system_assembly",
       "roleType": "ai_server_odm",
       "directness": "core",
@@ -64,17 +61,17 @@
     },
     "productNarratives": [
       {
-        "name": "AI GPU伺服器ODM(NVIDIA HGX H100/B200)",
+        "name": "AI伺服器整機組裝(NVIDIA HGX平台)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "CSP客製化AI訓練叢集機架",
+        "name": "GPU伺服器主板(NVLink互連)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "AI推論伺服器(邊緣/雲端)",
+        "name": "伺服器機殼與散熱模組組裝",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -126,7 +123,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-13"
+      "lastVerified": "2026-07-14"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -156,7 +153,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "緯創是AI伺服器ODM三大之一。5月營收2,902億年增39.2%，累計1,420億年增106.2%。AI伺服器帶動營收暴增，CSP客製化AI叢集為主力產品。"
+        "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。"
       },
       {
         "topicId": "ai-server",
@@ -165,8 +162,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "緯創是全球 NB ODM 三大之一；EMS 代工營收穩定，AI 伺服器是最強成長引擎。4 月整體營收年增 112%。"
+        "confidence": "high",
+        "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。"
       },
       {
         "topicId": "consumer-computing-devices",
@@ -250,14 +247,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 43,
+    "totalScore": 45,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 14.4 倍，估值尚可對照成長",
-        "殖利率 3.8%，提供部分下檔支撐"
+        "本益比 14.3 倍，估值尚可對照成長",
+        "殖利率 3.9%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -271,20 +268,20 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 9.0%，部位需降速"
+        "message": "距離 MA20 約 9.3%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：149.60",
-      "波段多空分水嶺看 MA20：156.45",
-      "追蹤法人是否延續 賣超：最近 -2.3千張",
-      "本益比 14.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：146.50",
+      "波段多空分水嶺看 MA20：155.78",
+      "追蹤法人是否延續 買超：最近 +4.2千張",
+      "本益比 14.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 166.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 142.50：列為轉弱警訊",
+      "收盤跌破 20 日低點 139.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

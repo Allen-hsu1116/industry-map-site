@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6153",
   "name": "嘉聯益",
-  "generatedAt": "2026-07-13T12:32:58.172Z",
+  "generatedAt": "2026-07-14T12:32:44.710Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-13",
-  "chipDataDate": "2026-07-13",
+  "marketDataDate": "2026-07-14",
+  "chipDataDate": "2026-07-14",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -21,31 +21,30 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -55,
-    "summary": "嘉聯益 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 12.9%。",
+    "score": -45,
+    "summary": "嘉聯益 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 14.9%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 12.9%"
+      "收盤跌破 MA20 14.9%"
     ],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低",
-      "接近 20 日低點 18.95，留意支撐是否失守"
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -28,
-    "summary": "嘉聯益 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -3.7千張；近 20 日法人偏賣，合計 -2.3萬張。",
+    "summary": "嘉聯益 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -3.6千張；近 20 日法人偏賣，合計 -2.3萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -3.7千張",
+      "三大法人近 5 日合計賣超 -3.6千張",
       "近 20 日法人偏賣，合計 -2.3萬張",
-      "外資近 5 日賣超 -3.5千張"
+      "外資近 5 日賣超 -3.4千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-13"
+      "最近法人資料日：2026-07-14"
     ]
   },
   "industry": {
@@ -58,7 +57,7 @@
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "嘉聯益在軟板題材中是主要供應商；智慧手機與可穿戴裝置 FPC 需求驅動營收，4 月營收 4.52 億但年減 14.4%。",
+      "roleSummary": "嘉聯益6月營收5.6億年增25%，累計年增0.75%。MOPS主要經營：軟性電路板(FPC)設計/製造/加工。為Apple手機FPC主要供應商之一，LCP軟板為5G高頻利基。",
       "supplyChainStage": "fpc",
       "roleType": "fpc_manufacturer",
       "directness": "core",
@@ -112,7 +111,7 @@
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
       "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-13（fresh）"
+      "知識庫最後驗證：2026-07-14（fresh）"
     ]
   },
   "knowledge": {
@@ -126,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-13"
+      "lastVerified": "2026-07-14"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -156,7 +155,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "嘉聯益在軟板題材中是主要供應商；智慧手機與可穿戴裝置 FPC 需求驅動營收，4 月營收 4.52 億但年減 14.4%。"
+        "roleSummary": "嘉聯益6月營收5.6億年增25%，累計年增0.75%。MOPS主要經營：軟性電路板(FPC)設計/製造/加工。為Apple手機FPC主要供應商之一，LCP軟板為5G高頻利基。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -208,8 +207,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 40,
-    "recommendationState": "watchlist",
+    "totalScore": 26,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -225,20 +224,20 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 14.8%，部位需降速"
+        "severity": "hard",
+        "message": "距離 MA20 約 17.5%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：19.84",
-      "波段多空分水嶺看 MA20：21.87",
-      "追蹤法人是否延續 賣超：最近 -25張"
+      "短線支撐/壓力先看 MA5：19.42",
+      "波段多空分水嶺看 MA20：21.68",
+      "追蹤法人是否延續 賣超：最近 -322張"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 25.80 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 18.95：列為轉弱警訊",
+      "收盤跌破 20 日低點 17.70：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
