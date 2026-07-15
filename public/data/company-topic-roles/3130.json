@@ -1,154 +1,160 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "3130",
-  "companyName": "一零四",
-  "updatedAt": "2026-07-14",
-  "roles": [
-    {
-      "topicId": "defense-aerospace",
-      "topicName": "軍工、航太與無人機",
-      "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "一零四(104)在國防航太題材中為人才招募服務提供者，透過104人力銀行平台與獵才顧問服務，協助漢翔、中科院等國防航太機構招募專業人才。5月營收2.57億年增10.5%，累計11.5億年增6.7%，受惠就業市場活絡。",
-      "products": [
-        "104人力銀行平台(國防航太人才招募媒合)",
-        "104獵才顧問(航太工程師/軍規研發人才獵才)",
-        "104教育訓練(國防航太技能培訓課程)"
-      ],
-      "customers": [
-        "漢翔(2634)(航太工程師招募)",
-        "中科院(國防研發人才徵才)",
-        "長榮航太(2645)(航空維修人才招募)",
-        "空軍(軍職轉民間航太人才媒合)"
-      ],
-      "competitors": [],
-      "risks": [
-        "國防航太人才招募佔營收比重極低",
-        "6月營收YoY+7.9%但與國防關聯性薄弱",
-        "被歸類為國防概念股但實質貢獻有限"
-      ],
-      "legacy": {},
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "3130",
+    "companyName": "一零四",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
+            "topicId": "defense-aerospace",
+            "topicName": "軍工、航太與無人機",
+            "topicType": "theme",
+            "directness": "indirect",
+            "supplyChainStage": "peripheral",
+            "roleType": "indirect",
+            "roleSummary": "一零四(104)在國防航太題材中為人才招募服務提供者，透過104人力銀行平台與獵才顧問服務，協助漢翔、中科院等國防航太機構招募專業人才。5月營收2.57億年增10.5%，累計11.5億年增6.7%，受惠就業市場活絡。",
+            "products": [
+                "104人力銀行平台(國防航太人才招募媒合)",
+                "104獵才顧問(航太工程師/軍規研發人才獵才)",
+                "104教育訓練(國防航太技能培訓課程)"
+            ],
+            "customers": [
+                "漢翔(2634)(航太工程師招募)",
+                "中科院(國防研發人才徵才)",
+                "長榮航太(2645)(航空維修人才招募)",
+                "空軍(軍職轉民間航太人才媒合)"
+            ],
+            "competitors": [],
+            "risks": [
+                "國防航太人才招募佔營收比重極低",
+                "6月營收YoY+7.9%但與國防關聯性薄弱",
+                "被歸類為國防概念股但實質貢獻有限"
+            ],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "medium",
+            "lastVerified": "2026-07-13",
+            "status": "verified",
+            "techFocus": [
+                "AI人才推薦引擎(NLP/CV履歷分析)",
+                "HR SaaS雲端平台架構(微服務/容器化)",
+                "就業媒合大數據分析平台"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-13",
-      "status": "verified",
-      "techFocus": [
-        "AI人才推薦引擎(NLP/CV履歷分析)",
-        "HR SaaS雲端平台架構(微服務/容器化)",
-        "就業媒合大數據分析平台"
-      ]
-    },
-    {
-      "topicId": "software-cloud-security",
-      "topicName": "資安、雲端服務與企業軟體",
-      "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "software_service",
-      "roleType": "hr_saas_platform",
-      "roleSummary": "一零四是台灣最大人力銀行平台，提供線上求職招募與HR SaaS服務，數位雲端業務涵蓋AI推薦與數據分析。",
-      "products": [
-        "104人力銀行平台",
-        "HR SaaS(招募/績效)",
-        "AI人才推薦引擎",
-        "企業教育訓練平台"
-      ],
-      "customers": [
-        "台灣企業(HR服務)",
-        "求職者(免費)",
-        "外商在台分公司(招募)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
+            "topicId": "software-cloud-security",
+            "topicName": "資安、雲端服務與企業軟體",
+            "topicType": "theme",
+            "directness": "core",
+            "supplyChainStage": "software_service",
+            "roleType": "hr_saas_platform",
+            "roleSummary": "一零四6月營收2.63億年增7.9%。台灣最大人力資源SaaS平台，以AI人才推薦引擎與HR SaaS服務企業招募需求。",
+            "products": [
+                "104人力銀行平台(求職招募SaaS)",
+                "HR SaaS(招募/績效/薪酬管理)",
+                "AI人才推薦引擎(技能-職缺匹配)",
+                "企業教育訓練平台(線上課程)"
+            ],
+            "customers": [
+                "台積電(2330)(HR服務招募)",
+                "聯發科(2454)(人才招募平台)",
+                "鴻海(2317)(大規模徵才服務)",
+                "台灣中小企業(HR SaaS訂閱)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-03",
+            "status": "verified",
+            "techFocus": [
+                "AI人才推薦演算法(NLP技能圖譜匹配)",
+                "SaaS多租戶架構(高並發求職流量處理)",
+                "大數據勞動市場分析引擎"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+            "topicId": "memory-modules",
+            "topicName": "記憶體模組",
+            "topicType": "product",
+            "directness": "indirect",
+            "supplyChainStage": "peripheral",
+            "roleType": "indirect",
+            "roleSummary": "一零四6月營收2.63億年增7.9%，累計年增6.9%。作為台灣最大人力銀行平台，間接服務記憶體模組廠人才招募需求，提供DRAM/NAND封測工程師媒合與培訓服務。",
+            "products": [
+                "104人力銀行平台(記憶體模組廠人才招募專區)",
+                "記憶體IC設計/封測工程師獵才服務",
+                "104教育訓練(DRAM/NAND封測製程技能培訓)",
+                "104獵才顧問(記憶體模組廠高階徵才)"
+            ],
+            "customers": [
+                "威剛科技(3260)(記憶體模組人才招募)",
+                "創見(2451)(DRAM人才徵才)",
+                "宇瞻(8271)(記憶體模組工程師招募)",
+                "群創/友達(面板驅動IC記憶體人才)",
+                "力晶(6770)(DRAM人才招募)"
+            ],
+            "competitors": [],
+            "risks": [
+                "記憶體產業人才需求為間接受益，佔整體營收比重極小",
+                "記憶體產業景氣循環影響徵才需求，下行期招募縮減",
+                "人才招募平台同業競爭激烈"
+            ],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "medium",
+            "lastVerified": "2026-07-14",
+            "status": "verified",
+            "techFocus": [
+                "記憶體產業人才大數據媒合演算法(技能-職缺匹配)",
+                "AI驅動人才推薦引擎(DRAM/NAND技能圖譜)",
+                "人力資源SaaS平台架構(高並發求職流量處理)"
+            ]
         }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
-    },
-    {
-      "topicId": "memory-modules",
-      "topicName": "記憶體模組",
-      "topicType": "product",
-      "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "一零四6月營收2.6億年增7.9%，累計年增6.9%。MOPS主要經營：廣告服務/就業服務。為人力銀行平台，與記憶體產業關聯為人才招募媒合服務，非直接製造商。角色為記憶體產業人才供應鏈支援。",
-      "products": [
-        "104人力銀行平台(半導體/記憶體人才招募)",
-        "半導體人才獵才服務(記憶體模組廠高階徵才)",
-        "104教育訓練(半導體封測/記憶體製程技能培訓)",
-        "104獵才顧問(記憶體IC設計人才)"
-      ],
-      "customers": [
-        "威剛科技(3260)(記憶體模組人才招募)",
-        "創見(2451)(半導體人才徵才)",
-        "宇瞻(8271)(記憶體模組工程師招募)",
-        "群創/友達(面板驅動IC記憶體人才)",
-        "力晶(6770)(DRAM人才招募)"
-      ],
-      "competitors": [],
-      "risks": [
-        "記憶體產業人才需求為間接受益，佔整體營收比重極小",
-        "記憶體產業景氣循環影響徵才需求，下行期招募縮減",
-        "人才招募平台同業競爭激烈"
-      ],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-14",
-      "status": "verified",
-      "techFocus": [
-        "半導體/記憶體人才大數據媒合演算法",
-        "AI驅動人才推薦引擎(技能-職缺匹配)",
-        "人力資源SaaS平台架構"
-      ]
-    }
-  ]
+    ]
 }

@@ -1,359 +1,389 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "6261",
-  "companyName": "久元",
-  "updatedAt": "2026-07-11",
-  "roles": [
-    {
-      "topicId": "wafer-foundry",
-      "topicName": "晶圓代工與第三代半導體",
-      "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "back_end_process",
-      "roleType": "wafer_dicing_grinding",
-      "roleSummary": "久元提供晶圓切割、研磨、測試與挑檢服務，是晶圓代工後段加工的專業供應商。",
-      "products": [
-        "晶圓切割(Dicing)",
-        "晶圓研磨(Grinding)",
-        "晶圓測試與挑檢",
-        "IC/CIS/CCM測試設備"
-      ],
-      "customers": [
-        "台積電(2330)(晶圓切割)",
-        "聯電(2303)(晶圓加工)",
-        "世界先進(5347)(晶圓加工)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "6261",
+    "companyName": "久元",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+            "topicId": "wafer-foundry",
+            "topicName": "晶圓代工與第三代半導體",
+            "topicType": "supply_chain_segment",
+            "directness": "indirect",
+            "supplyChainStage": "back_end_process",
+            "roleType": "wafer_dicing_grinding",
+            "roleSummary": "久元提供晶圓切割、研磨、測試與挑檢服務，是晶圓代工後段加工的專業供應商。",
+            "products": [
+                "晶圓切割(Dicing)",
+                "晶圓研磨(Grinding)",
+                "晶圓測試與挑檢",
+                "IC/CIS/CCM測試設備"
+            ],
+            "customers": [
+                "台積電(2330)(晶圓切割)",
+                "聯電(2303)(晶圓加工)",
+                "世界先進(5347)(晶圓加工)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "晶圓級測試(Wafer Probing)高精度對位技術",
+                "IC測試分選機(Handler)精密機構設計",
+                "CIS封裝級測試探針卡技術"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "晶圓級測試(Wafer Probing)高精度對位技術",
-        "IC測試分選機(Handler)精密機構設計",
-        "CIS封裝級測試探針卡技術"
-      ]
-    },
-    {
-      "topicId": "display-led-optics",
-      "topicName": "面板、LED、光學鏡頭與感測",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "test_equipment",
-      "roleType": "cis_ccm_test_equipment",
-      "roleSummary": "久元提供CIS(影像感測器)與CCM(攝像模組)測試設備，光電產品加工含切割研磨挑檢。",
-      "products": [
-        "CIS影像感測器測試設備",
-        "CCM攝像模組測試設備",
-        "光電產品切割研磨"
-      ],
-      "customers": [
-        "舜宇光學(CIS/CCM測試)",
-        "豪威科技(OmniVision)(CIS測試)",
-        "光學鏡頭模組廠"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+            "topicId": "display-led-optics",
+            "topicName": "面板、LED、光學鏡頭與感測",
+            "topicType": "supply_chain_segment",
+            "directness": "core",
+            "supplyChainStage": "test_equipment",
+            "roleType": "cis_ccm_test_equipment",
+            "roleSummary": "久元提供CIS(影像感測器)與CCM(攝像模組)測試設備，光電產品加工含切割研磨挑檢。",
+            "products": [
+                "CIS影像感測器測試設備",
+                "CCM攝像模組測試設備",
+                "光電產品切割研磨"
+            ],
+            "customers": [
+                "舜宇光學(CIS/CCM測試)",
+                "豪威科技(OmniVision)(CIS測試)",
+                "光學鏡頭模組廠"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "LED封裝測試設備(光通量/色溫/演色性)",
+                "LED晶圓級測試探針卡設計",
+                "CIS感測器封裝級光學測試系統"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "LED封裝測試設備(光通量/色溫/演色性)",
-        "LED晶圓級測試探針卡設計",
-        "CIS感測器封裝級光學測試系統"
-      ]
-    },
-    {
-      "topicId": "consumer-computing-devices",
-      "topicName": "PC、手機與 AR/VR/XR 終端",
-      "topicType": "end_market",
-      "directness": "indirect",
-      "supplyChainStage": "test_equipment",
-      "roleType": "mobile_camera_test",
-      "roleSummary": "久元6月營收3.90億年增33.7%。手機CIS/CCM測試設備為核心業務，受惠於手機多鏡頭與車用CIS需求擴增。",
-      "products": [
-        "手機攝像模組(CCM)測試設備",
-        "CIS感測器測試設備(晶圓級/封裝級)",
-        "IC測試分選機(Handler)",
-        "LED封裝測試設備"
-      ],
-      "customers": [
-        "Sony(Sony CIS測試)",
-        "舜宇(2342)(手機鏡頭模組測試)",
-        "舜宇光學(2382)(CCM測試)",
-        "日月光(3711)(IC測試代工)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+            "topicId": "consumer-computing-devices",
+            "topicName": "PC、手機與 AR/VR/XR 終端",
+            "topicType": "end_market",
+            "directness": "indirect",
+            "supplyChainStage": "test_equipment",
+            "roleType": "mobile_camera_test",
+            "roleSummary": "久元6月營收3.90億年增33.7%。手機CIS/CCM測試設備為核心業務，受惠於手機多鏡頭與車用CIS需求擴增。",
+            "products": [
+                "手機攝像模組(CCM)測試設備",
+                "CIS感測器測試設備(晶圓級/封裝級)",
+                "IC測試分選機(Handler)",
+                "LED封裝測試設備"
+            ],
+            "customers": [
+                "Sony(Sony CIS測試)",
+                "舜宇(2342)(手機鏡頭模組測試)",
+                "舜宇光學(2382)(CCM測試)",
+                "日月光(3711)(IC測試代工)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "CIS/CIS封裝級測試探針卡與分選機技術",
+                "CCM攝像模組MTF/畸變/色彩測試系統",
+                "晶圓級測試(Wafer Probing)高精度對位技術"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "CIS/CIS封裝級測試探針卡與分選機技術",
-        "CCM攝像模組MTF/畸變/色彩測試系統",
-        "晶圓級測試(Wafer Probing)高精度對位技術"
-      ]
-    },
-    {
-      "topicId": "energy-storage-battery",
-      "topicName": "儲能、電芯與電池材料",
-      "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元在儲能題材中關聯度低，主要業務為半導體與光電加工測試。",
-      "products": [
-        "半導體加工(間接)"
-      ],
-      "customers": [
-        "電池相關IC供應鏈(間接)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+            "topicId": "energy-storage-battery",
+            "topicName": "儲能、電芯與電池材料",
+            "topicType": "theme",
+            "directness": "indirect",
+            "supplyChainStage": "peripheral",
+            "roleType": "indirect",
+            "roleSummary": "久元6月營收3.90億連續三月成長。提供BMS電池管理IC測試設備與探針卡，間接受惠於儲能電池產業擴張。",
+            "products": [
+                "BMS電池管理IC測試設備(充放電曲線量測)",
+                "電池保護IC晶圓級測試探針卡",
+                "CIS/CCM測試設備(電池模組光學檢測)",
+                "IC切割研磨代工(電池管理晶片)"
+            ],
+            "customers": [
+                "德鈜(電池BMS IC測試)",
+                "致新(3682)(電池管理IC測試)",
+                "立錡(6286)(電池充放電IC測試)",
+                "達興(電池保護IC封測)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "BMS晶圓級測試探針卡技術(高溫充放電量測)",
+                "電池管理IC充放電曲線測試設備",
+                "IC晶圓切割研磨精密加工(±1μm)"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "電池管理IC測試設備(充放電曲線量測)",
-        "BMS晶圓級測試探針卡技術",
-        "儲能用功率半導體測試分選機"
-      ]
-    },
-    {
-      "topicId": "renewable-energy",
-      "topicName": "太陽能與離岸風電",
-      "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元在太陽能題材中關聯度低。",
-      "products": [
-        "半導體加工(間接)"
-      ],
-      "customers": [
-        "太陽能IC供應鏈(間接)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+            "topicId": "renewable-energy",
+            "topicName": "太陽能與離岸風電",
+            "topicType": "theme",
+            "directness": "indirect",
+            "supplyChainStage": "peripheral",
+            "roleType": "indirect",
+            "roleSummary": "久元6月營收3.90億連續三月成長。提供太陽能電池IV曲線測試與光伏模組EL檢測設備，間接受惠太陽能產業。",
+            "products": [
+                "太陽能電池IV曲線測試設備",
+                "光伏模組EL檢測系統(電致發光瑕疵檢測)",
+                "太陽能IC切割研磨代工(逆變器驅動晶片)",
+                "CIS/CCM測試設備(太陽能追蹤感測)"
+            ],
+            "customers": [
+                "茂迪(6244)(太陽能電池測試設備)",
+                "聯合再生(3576)(太陽能模組檢測)",
+                "茂達(6138)(太陽能逆變器IC代工)",
+                "矽力杰Silergy(太陽能IC加工)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "太陽能電池IV曲線量測技術(高精度光譜響應)",
+                "光伏模組EL電致發光瑕疵檢測系統",
+                "IC晶圓切割研磨精密加工(太陽能逆變器晶片)"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "太陽能電池IV曲線測試設備",
-        "光伏模組EL檢測系統",
-        "逆變器用功率半導體測試設備"
-      ]
-    },
-    {
-      "topicId": "passive-components-mlcc",
-      "topicName": "MLCC / 電容器",
-      "topicType": "product",
-      "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元在MLCC題材中關聯度低。",
-      "products": [
-        "半導體加工(間接)"
-      ],
-      "customers": [
-        "被動元件廠(間接)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+            "topicId": "passive-components-mlcc",
+            "topicName": "MLCC / 電容器",
+            "topicType": "product",
+            "directness": "indirect",
+            "supplyChainStage": "peripheral",
+            "roleType": "indirect",
+            "roleSummary": "久元6月營收3.90億連續三月成長。提供MLCC測試探針卡與陶瓷電容分選機，間接受惠被動元件產業。",
+            "products": [
+                "MLCC晶圓級測試探針卡(高頻量測)",
+                "陶瓷電容測試分選機(Handler)",
+                "被動元件驅動IC切割研磨代工",
+                "CIS測試設備(MLCC光學檢測應用)"
+            ],
+            "customers": [
+                "國巨(2327)(MLCC測試設備)",
+                "華新科(2492)(被動元件測試探針卡)",
+                "禾伸堂(3028)(被動元件加工)",
+                "達方(8163)(MLCC分選機)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "MLCC晶圓級測試探針卡設計(高頻阻抗匹配)",
+                "陶瓷電容測試分選機精密機構(高速分選)",
+                "IC晶圓切割研磨精密加工(被動元件驅動IC)"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "MLCC晶圓級測試探針卡設計",
-        "陶瓷電容測試分選機(Handler)",
-        "高頻射頻元件測試系統"
-      ]
-    },
-    {
-      "topicId": "passive-components-resistor",
-      "topicName": "電阻與被動保護元件",
-      "topicType": "product",
-      "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元在電阻題材中關聯度低。",
-      "products": [
-        "半導體加工(間接)"
-      ],
-      "customers": [
-        "被動元件廠(間接)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+            "topicId": "passive-components-resistor",
+            "topicName": "電阻與被動保護元件",
+            "topicType": "product",
+            "directness": "indirect",
+            "supplyChainStage": "peripheral",
+            "roleType": "indirect",
+            "roleSummary": "久元6月營收3.90億連續三月成長。提供晶片電阻測試分選機與精密電阻量測系統，間接受惠被動元件產業。",
+            "products": [
+                "晶片電阻測試分選機(精密電阻值量測)",
+                "高精密電阻值量測系統(微歐姆級)",
+                "被動保護元件IC切割研磨代工",
+                "CIS測試設備(電阻光學檢測應用)"
+            ],
+            "customers": [
+                "國巨(2327)(晶片電阻測試分選機)",
+                "華新科(2492)(電阻量測系統)",
+                "旺詮(2437)(晶片電阻加工)",
+                "大毅(2471)(電阻測試設備)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "晶片電阻測試分選機精密機構(高速分選)",
+                "高精密電阻值量測系統(微歐姆級精度)",
+                "IC晶圓切割研磨精密加工(被動保護IC)"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+            "topicId": "leo-satellite-communications",
+            "topicName": "低軌衛星通訊",
+            "topicType": "end_market",
+            "directness": "indirect",
+            "supplyChainStage": "peripheral",
+            "roleType": "indirect",
+            "roleSummary": "久元6月營收3.90億連續三月成長。提供衛星通訊射頻IC測試與光學通訊模組測試設備，間接受惠低軌衛星產業。",
+            "products": [
+                "衛星通訊射頻IC測試設備(高頻量測)",
+                "低軌衛星光學通訊模組測試(Laser/CIS)",
+                "衛通基頻IC切割研磨代工",
+                "CIS/CCM測試設備(衛星光學感測)"
+            ],
+            "customers": [
+                "聯發科(2454)(衛星通訊模組IC測試)",
+                "高通Qualcomm(衛星通訊晶片測試)",
+                "群電(6412)(衛星電源IC加工)",
+                "台揚(2314)(衛星射頻模組測試)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-11",
+            "status": "verified",
+            "techFocus": [
+                "衛通射頻元件測試設備(Ka/Ku頻段高頻量測)",
+                "低軌衛星光學通訊模組測試(Laser Diode)",
+                "IC晶圓切割研磨精密加工(衛通基頻晶片)"
+            ]
         }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "晶片電阻測試分選機精密機構",
-        "高精密電阻值量測系統",
-        "車規電阻AEC-Q200測試設備"
-      ]
-    },
-    {
-      "topicId": "leo-satellite-communications",
-      "topicName": "低軌衛星通訊",
-      "topicType": "end_market",
-      "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元在低軌衛星題材中關聯度低。",
-      "products": [
-        "半導體加工(間接)"
-      ],
-      "customers": [
-        "衛星IC供應鏈(間接)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
-      "techFocus": [
-        "衛通射頻元件測試設備",
-        "低軌衛星光學通訊模組測試",
-        "衛星用CIS感測器測試系統"
-      ]
-    }
-  ]
+    ]
 }
