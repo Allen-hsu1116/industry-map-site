@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3017",
   "name": "奇鋐",
-  "generatedAt": "2026-07-14T12:32:44.438Z",
+  "generatedAt": "2026-07-15T12:31:28.843Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-14",
-  "chipDataDate": "2026-07-14",
+  "marketDataDate": "2026-07-15",
+  "chipDataDate": "2026-07-15",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,29 +18,31 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "奇鋐 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 13.1%。",
+    "summary": "奇鋐 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 10.8%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 13.1%"
+      "收盤跌破 MA20 10.8%"
     ],
-    "watch": []
+    "watch": [
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": -16,
-    "summary": "奇鋐 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.5千張；三大法人近 5 日合計賣超 -1.3千張。",
+    "summary": "奇鋐 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.4千張；三大法人近 5 日合計賣超 -929張。",
     "signals": [
-      "近 20 日法人偏買，合計 +1.5千張"
+      "近 20 日法人偏買，合計 +1.4千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.3千張",
-      "投信近 5 日賣超 -425張",
-      "外資近 5 日賣超 -630張"
+      "三大法人近 5 日合計賣超 -929張",
+      "投信近 5 日賣超 -664張",
+      "外資近 5 日賣超 -64張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-14"
+      "最近法人資料日：2026-07-15"
     ]
   },
   "industry": {
@@ -132,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-14"
+      "lastVerified": "2026-07-15"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -278,14 +280,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 28,
-    "recommendationState": "blocked",
+    "totalScore": 44,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "股價淨值比 18.4 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 18.8 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -297,17 +299,17 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "hard",
-        "message": "距離 MA20 約 15.0%，停損距離過大"
+        "severity": "soft",
+        "message": "距離 MA20 約 12.1%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2294.00",
-      "波段多空分水嶺看 MA20：2438.25",
-      "追蹤法人是否延續 賣超：最近 -53張",
-      "本益比 34.8 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：2237.00",
+      "波段多空分水嶺看 MA20：2426.00",
+      "追蹤法人是否延續 賣超：最近 -168張",
+      "本益比 35.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2790.00 且量比 > 1.5：列為轉強訊號",
