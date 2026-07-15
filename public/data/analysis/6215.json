@@ -2,25 +2,20 @@
   "schemaVersion": 1,
   "code": "6215",
   "name": "建準",
-  "generatedAt": "2026-07-15T12:31:29.286Z",
+  "generatedAt": "2026-07-15T12:38:00.921Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -53,33 +48,78 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "AI 伺服器液冷散熱",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "優勢：6月營收 2.8 億元、年增 30%，自動化需求帶動成長。劣勢：散熱非主力產品，題材連結弱。",
+      "supplyChainStage": "peripheral",
+      "roleType": "indirect",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "自動化設備零組件",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "散熱風扇馬達",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "軸承",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "6月營收 2.8 億元、年增 30%，自動化需求帶動成長。"
+      ],
+      "opportunities": [
+        "伺服器散熱與自動化設備需求增加，可望帶動風扇馬達、軸承及線性滑軌應用。"
+      ],
+      "risks": [
+        "散熱並非核心業務且題材連結較弱，若同業擴產或需求轉弱，受惠幅度可能有限。",
+        "散熱非主力產品，題材連結弱。"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 AI 伺服器液冷散熱（technology/active） +17",
+      "角色證據 1 則 +6",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "建準 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "建準 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：散熱非主力產品，題材連結弱。",
+      "V2 T：散熱並非核心業務且題材連結較弱，若同業擴產或需求轉弱，受惠幅度可能有限。"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
+      "V2 O：伺服器散熱與自動化設備需求增加，可望帶動風扇馬達、軸承及線性滑軌應用。",
+      "催化訊號：AI GPU/ASIC TDP 升高、客戶導入液冷機櫃或 CDU、散熱廠液冷相關營收揭露增加",
+      "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
+      "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
+      "V2 SWOT 最後驗證：2026-07-15",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -115,9 +155,69 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "優勢：6月營收 2.8 億元、年增 30%，自動化需求帶動成長。劣勢：散熱非主力產品，題材連結弱。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-liquid-cooling-6215",
+        "category": "opportunity",
+        "statement": "伺服器散熱與自動化設備需求增加，可望帶動風扇馬達、軸承及線性滑軌應用。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
+        "id": "strength-ai-server-liquid-cooling-6215",
+        "category": "strength",
+        "statement": "6月營收 2.8 億元、年增 30%，自動化需求帶動成長。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
+        "id": "threat-ai-server-liquid-cooling-6215",
+        "category": "threat",
+        "statement": "散熱並非核心業務且題材連結較弱，若同業擴產或需求轉弱，受惠幅度可能有限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
+        "id": "weakness-ai-server-liquid-cooling-6215",
+        "category": "weakness",
+        "statement": "散熱非主力產品，題材連結弱。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server-liquid-cooling",
+        "name": "AI 伺服器液冷散熱",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "AI GPU/ASIC TDP 升高",
+          "客戶導入液冷機櫃或 CDU",
+          "散熱廠液冷相關營收揭露增加"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 33,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -141,19 +241,14 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
-      },
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
@@ -168,11 +263,6 @@
         "id": "risk.stop-distance",
         "severity": "soft",
         "message": "距離 MA20 約 12.0%，部位需降速"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

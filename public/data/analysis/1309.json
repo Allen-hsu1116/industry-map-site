@@ -2,25 +2,20 @@
   "schemaVersion": 1,
   "code": "1309",
   "name": "台達化",
-  "generatedAt": "2026-07-15T12:31:28.381Z",
+  "generatedAt": "2026-07-15T12:38:00.309Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -53,33 +48,78 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "石化、塑橡膠與特用化學",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "優勢：台灣 PS 市占龍頭，ABS/SAN 產品線完整。劣勢：PS 屬成熟產品，成長動能有限，受中國低價 PS 傾銷衝擊。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "ps_abs_san_resin_producer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "聚苯乙烯(PS/GPPS/HIPS)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "ABS 樹脂",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "SAN 樹脂",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "台灣 PS 市占龍頭，ABS/SAN 產品線完整。"
+      ],
+      "opportunities": [
+        "ABS 與 SAN 樹脂若擴大高規格應用，有助降低成熟 PS 產品的成長限制。"
+      ],
+      "risks": [
+        "成熟 PS 市場的低價競爭與供給過剩，可能持續壓抑產品報價及獲利空間。",
+        "PS 屬成熟產品，成長動能有限，受中國低價 PS 傾銷衝擊。"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
+      "角色證據 1 則 +6",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "台達化 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "台達化 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：PS 屬成熟產品，成長動能有限，受中國低價 PS 傾銷衝擊。",
+      "V2 T：成熟 PS 市場的低價競爭與供給過剩，可能持續壓抑產品報價及獲利空間。"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
+      "V2 O：ABS 與 SAN 樹脂若擴大高規格應用，有助降低成熟 PS 產品的成長限制。",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
+      "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-07-15",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -115,9 +155,69 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "petrochem-plastics",
+        "topicName": "石化、塑橡膠與特用化學",
+        "canonicalTopicId": "petrochem-plastics",
+        "canonicalTopicName": "石化、塑橡膠與特用化學",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "優勢：台灣 PS 市占龍頭，ABS/SAN 產品線完整。劣勢：PS 屬成熟產品，成長動能有限，受中國低價 PS 傾銷衝擊。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-petrochem-plastics-1309",
+        "category": "opportunity",
+        "statement": "ABS 與 SAN 樹脂若擴大高規格應用，有助降低成熟 PS 產品的成長限制。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "strength-petrochem-plastics-1309",
+        "category": "strength",
+        "statement": "台灣 PS 市占龍頭，ABS/SAN 產品線完整。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-petrochem-plastics-1309",
+        "category": "threat",
+        "statement": "成熟 PS 市場的低價競爭與供給過剩，可能持續壓抑產品報價及獲利空間。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-petrochem-plastics-1309",
+        "category": "weakness",
+        "statement": "PS 屬成熟產品，成長動能有限，受中國低價 PS 傾銷衝擊。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "petrochem-plastics",
+        "name": "石化、塑橡膠與特用化學",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 12,
     "recommendationState": "blocked",
     "fundamental": {
       "score": -14,
@@ -145,17 +245,12 @@
       ]
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "題材股",
       "rationale": [
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
-      },
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
@@ -170,11 +265,6 @@
         "id": "risk.stop-distance",
         "severity": "soft",
         "message": "距離 MA20 約 10.4%，部位需降速"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

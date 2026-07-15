@@ -2,24 +2,17 @@
   "schemaVersion": 1,
   "code": "8210",
   "name": "勤誠",
-  "generatedAt": "2026-07-15T12:31:29.480Z",
+  "generatedAt": "2026-07-15T12:38:01.049Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "verified_topic_role",
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -53,33 +46,78 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "AI 伺服器液冷散熱",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "優勢：6月營收 3.2 億元、年增 98%，終端客戶大量出貨，AI 伺服器機殼需求爆發。劣勢：機殼屬低毛利產品，競爭者多。",
+      "supplyChainStage": "mechanical",
+      "roleType": "liquid_cooling_server_chassis_supplier",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "伺服器機殼(1U/2U/4U)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "液冷機櫃",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "GPU伺服器機殼",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "6月營收 3.2 億元、年增 98%，終端客戶大量出貨，AI 伺服器機殼需求爆發。"
+      ],
+      "opportunities": [
+        "GPU 伺服器與液冷機櫃導入增加，可望帶動高密度伺服器機殼與機櫃需求。"
+      ],
+      "risks": [
+        "機殼產品毛利較低且競爭者眾多，客戶議價與產品整合趨勢可能壓縮獲利空間。",
+        "機殼屬低毛利產品，競爭者多。"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 AI 伺服器液冷散熱（technology/active） +17",
+      "角色證據 1 則 +6",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "勤誠 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "勤誠 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：機殼屬低毛利產品，競爭者多。",
+      "V2 T：機殼產品毛利較低且競爭者眾多，客戶議價與產品整合趨勢可能壓縮獲利空間。"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
+      "V2 O：GPU 伺服器與液冷機櫃導入增加，可望帶動高密度伺服器機殼與機櫃需求。",
+      "催化訊號：AI GPU/ASIC TDP 升高、客戶導入液冷機櫃或 CDU、散熱廠液冷相關營收揭露增加",
+      "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
+      "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
+      "V2 SWOT 最後驗證：2026-07-15",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -115,9 +153,69 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "優勢：6月營收 3.2 億元、年增 98%，終端客戶大量出貨，AI 伺服器機殼需求爆發。劣勢：機殼屬低毛利產品，競爭者多。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-liquid-cooling-8210",
+        "category": "opportunity",
+        "statement": "GPU 伺服器與液冷機櫃導入增加，可望帶動高密度伺服器機殼與機櫃需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
+        "id": "strength-ai-server-liquid-cooling-8210",
+        "category": "strength",
+        "statement": "6月營收 3.2 億元、年增 98%，終端客戶大量出貨，AI 伺服器機殼需求爆發。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
+        "id": "threat-ai-server-liquid-cooling-8210",
+        "category": "threat",
+        "statement": "機殼產品毛利較低且競爭者眾多，客戶議價與產品整合趨勢可能壓縮獲利空間。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
+        "id": "weakness-ai-server-liquid-cooling-8210",
+        "category": "weakness",
+        "statement": "機殼屬低毛利產品，競爭者多。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "ai-server-liquid-cooling",
+        "name": "AI 伺服器液冷散熱",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "AI GPU/ASIC TDP 升高",
+          "客戶導入液冷機櫃或 CDU",
+          "散熱廠液冷相關營收揭露增加"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -132,7 +230,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 3,
+    "totalScore": 31,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -141,9 +239,10 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢股",
+      "classification": "趨勢題材股",
       "rationale": [
-        "技術面符合趨勢股條件"
+        "技術面符合趨勢股條件",
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
@@ -156,11 +255,6 @@
         "id": "risk.chip-data-stale",
         "severity": "hard",
         "message": "籌碼資料已 51 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

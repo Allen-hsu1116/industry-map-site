@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1605",
   "name": "華新",
-  "generatedAt": "2026-07-15T12:31:28.439Z",
+  "generatedAt": "2026-07-15T12:38:00.346Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,33 +51,33 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 92,
+    "score": 94,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "AI 伺服器整機與 EMS",
-      "roleLabel": "供應商角色",
-      "roleSummary": "華新麗華提供AI資料中心配電所需的高壓電纜與特殊鋼材。5月營收174.6億年增11.1%，但累計740億年減5.4%。AI資料中心帶動高壓電纜與銅匯流排需求成長，不鏽鋼事業受景氣循環影響。",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "power_cable_supplier",
-      "directness": "supplier",
+      "topicName": "太陽能與離岸風電",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "優勢：台灣唯一具備 66kV 海纜量產能力之廠商，離岸風電國產化政策受惠。劣勢：海纜占營收比重仍低，傳統電纜業務成長有限。6月營收 16.7 億元，年增 29%，受惠綠能題材帶動。",
+      "supplyChainStage": "offshore_wind",
+      "roleType": "submarine_power_cable_supplier",
+      "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "161kV超高壓電力電纜(AI資料中心配電)",
+        "name": "66kV 級海纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "銅匯流排(Copper Busbar)(GPU機架配電)",
+        "name": "33kV 陣列海纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "低煙無鹵電纜(資料中心機房)",
+        "name": "陸上輸電電纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -97,24 +97,24 @@
       ]
     },
     "scoringFactors": [
-      "直接度 供應商角色 +26",
+      "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "題材 太陽能與離岸風電（theme/active） +18",
+      "角色證據 1 則 +6",
       "催化訊號 3 項 +12",
-      "正向 SWOT 6 項 +10",
+      "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "華新 在「AI 伺服器整機與 EMS」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 92/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "華新 在「太陽能與離岸風電」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 供應商角色 · high",
-      "產業評分：92/100（直接度 供應商角色 +26；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "V2 題材角色：太陽能與離岸風電 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 太陽能與離岸風電（theme/active） +18）",
+      "相關題材：AI 伺服器整機與 EMS · 供應商角色",
       "主要產品：電力電纜(161kV超高壓)",
       "主要產品：銅線及銅纜",
-      "主要產品：不鏽鋼線材",
-      "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
+      "主要產品：不鏽鋼線材"
     ],
     "risks": [
       "V2 W：營收年減12%(2026/4月)反映銅價與需求弱勢",
@@ -126,9 +126,9 @@
       "V2 O：離岸風電電纜需求",
       "V2 O：AI資料中心電力基礎建設",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-06-02"
+      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
+      "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -193,6 +193,16 @@
   },
   "canonicalKnowledge": {
     "topicRoles": [
+      {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "優勢：台灣唯一具備 66kV 海纜量產能力之廠商，離岸風電國產化政策受惠。劣勢：海纜占營收比重仍低，傳統電纜業務成長有限。6月營收 16.7 億元，年增 29%，受惠綠能題材帶動。"
+      },
       {
         "topicId": "ai-server",
         "topicName": "AI 伺服器",
@@ -260,6 +270,15 @@
         ]
       },
       {
+        "id": "strength-renewable-energy-1605",
+        "category": "strength",
+        "statement": "台灣唯一具備 66kV 海纜量產能力之廠商，離岸風電國產化政策受惠。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
         "id": "threat-1605-0",
         "category": "threat",
         "statement": "銅價劇烈波動侵蝕毛利",
@@ -303,9 +322,29 @@
         "relatedTopicIds": [
           "ai-server"
         ]
+      },
+      {
+        "id": "weakness-renewable-energy-1605",
+        "category": "weakness",
+        "statement": "海纜占營收比重仍低，傳統電纜業務成長有限。6月營收 16.7 億元，年增 29%，受惠綠能題材帶動。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
       }
     ],
     "topics": [
+      {
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
       {
         "id": "ai-server",
         "name": "AI 伺服器整機與 EMS",

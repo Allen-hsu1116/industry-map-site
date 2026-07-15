@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2059",
   "name": "川湖",
-  "generatedAt": "2026-07-15T12:31:28.508Z",
+  "generatedAt": "2026-07-15T12:38:00.392Z",
   "sourceUpdatedAt": "2026-06-01",
   "marketDataDate": "2026-07-15",
   "chipDataDate": "2026-07-15",
@@ -51,37 +51,36 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "AI 伺服器機構件與滑軌",
+      "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "川湖5月營收37.9億年增172.1%累計118.4億年增74.2%。全球伺服器滑軌龍頭，新產品出貨帶動爆發性成長，AI伺服器高載重需求為新動能。",
-      "supplyChainStage": "server_mechanical_rails",
-      "roleType": "server_rail_cable_management_supplier",
+      "roleSummary": "優勢：6月營收 4.4 億元、年增 221%，新產品出貨帶動爆發性成長，伺服器導軌全球市占第一。劣勢：產品單價低，毛利率受材料成本影響。",
+      "supplyChainStage": "mechanical",
+      "roleType": "liquid_cooling_mechanical_rail_supplier",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "伺服器滑軌與理線器",
-        "description": "川湖主要做伺服器、電子設備與家具用的滑軌、鉸鏈與理線器；其中伺服器導軌可讓機櫃中的伺服器被安全拉出維修，理線器則協助整理機櫃線材。",
-        "whyItMatters": "AI 伺服器與雲端資料中心需要大量高承重、薄型、可快速安裝維修的導軌與理線設計；這類機構件雖不是晶片，但直接影響伺服器上架、散熱、維護效率與可靠度。",
-        "topicFit": "伺服器導軌與理線器直接對應雲端資料中心與 AI 伺服器機櫃需求。",
-        "businessImpact": "資料中心伺服器升級與 AI 伺服器高重量、高維修頻率需求，有利於高承重、免工具、客製化滑軌與理線器價值提升；但需求仍受雲端資本支出與主要伺服器客戶拉貨節奏影響。",
-        "sourceLabels": [
-          "川湖科技 King Slide：超薄伺服器導軌與理線器",
-          "公開資訊觀測站 MOPS：川湖科技股份有限公司基本資料"
-        ],
-        "sourceUrls": [
-          "https://www.kingslide.com/products_cloud",
-          "https://mops.twse.com.tw/mops/web/t05st03"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
+        "name": "伺服器導軌(滑軌)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "液冷快速接頭(QD)支架",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "伺服器機殼導軌總成",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
       "strengths": [
+        "6月營收 4.4 億元、年增 221%，新產品出貨帶動爆發性成長，伺服器導軌全球市占第一。",
         "高承重伺服器滑軌、理線器與導軌產品直接支援資料中心伺服器上架、維護與高密度機櫃部署。"
       ],
       "opportunities": [
@@ -89,38 +88,40 @@
       ],
       "risks": [
         "若雲端客戶資本支出降溫、伺服器平台設計變更或競爭者切入，訂單與毛利會受壓。",
-        "產品雖為關鍵機構件，但營運受雲端資本支出、伺服器平台換代與大客戶拉貨節奏影響。"
+        "伺服器導軌與支架產品單價相對有限，毛利率仍可能受到金屬材料成本與客戶議價影響。"
       ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 AI 伺服器機構件與滑軌（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "題材 AI 伺服器液冷散熱（technology/active） +17",
+      "角色證據 1 則 +6",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 3 項 +10",
+      "風險 SWOT 扣分 -9",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "川湖 在「AI 伺服器機構件與滑軌」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "川湖 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器機構件與滑軌 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器機構件與滑軌（supply_chain_segment/active） +16）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "相關題材：AI 伺服器機構件與滑軌 · 核心產品/平台",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "V2 W：伺服器導軌與支架產品單價相對有限，毛利率仍可能受到金屬材料成本與客戶議價影響。",
       "V2 W：產品雖為關鍵機構件，但營運受雲端資本支出、伺服器平台換代與大客戶拉貨節奏影響。",
       "V2 T：若雲端客戶資本支出降溫、伺服器平台設計變更或競爭者切入，訂單與毛利會受壓。"
     ],
     "watch": [
       "V2 O：AI 伺服器重量、功耗與維護需求提升，有利高承重、高可靠度滑軌與理線產品價值量。",
-      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "催化訊號：AI GPU/ASIC TDP 升高、客戶導入液冷機櫃或 CDU、散熱廠液冷相關營收揭露增加",
+      "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
+      "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
       "追蹤 AI 伺服器機構件與滑軌：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器機構件與滑軌：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-05-28",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "追蹤 AI 伺服器機構件與滑軌：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -157,6 +158,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "優勢：6月營收 4.4 億元、年增 221%，新產品出貨帶動爆發性成長，伺服器導軌全球市占第一。劣勢：產品單價低，毛利率受材料成本影響。"
+      },
+      {
         "topicId": "ai-server-mechanical",
         "topicName": "AI 伺服器機構件與滑軌",
         "canonicalTopicId": "ai-server-mechanical",
@@ -178,6 +189,15 @@
         ]
       },
       {
+        "id": "strength-ai-server-liquid-cooling-2059",
+        "category": "strength",
+        "statement": "6月營收 4.4 億元、年增 221%，新產品出貨帶動爆發性成長，伺服器導軌全球市占第一。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
         "id": "strength-core-position",
         "category": "strength",
         "statement": "高承重伺服器滑軌、理線器與導軌產品直接支援資料中心伺服器上架、維護與高密度機櫃部署。",
@@ -196,6 +216,15 @@
         ]
       },
       {
+        "id": "weakness-ai-server-liquid-cooling-2059",
+        "category": "weakness",
+        "statement": "伺服器導軌與支架產品單價相對有限，毛利率仍可能受到金屬材料成本與客戶議價影響。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling"
+        ]
+      },
+      {
         "id": "weakness-cycle-exposure",
         "category": "weakness",
         "statement": "產品雖為關鍵機構件，但營運受雲端資本支出、伺服器平台換代與大客戶拉貨節奏影響。",
@@ -206,6 +235,17 @@
       }
     ],
     "topics": [
+      {
+        "id": "ai-server-liquid-cooling",
+        "name": "AI 伺服器液冷散熱",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "AI GPU/ASIC TDP 升高",
+          "客戶導入液冷機櫃或 CDU",
+          "散熱廠液冷相關營收揭露增加"
+        ]
+      },
       {
         "id": "ai-server-mechanical",
         "name": "AI 伺服器機構件與滑軌",

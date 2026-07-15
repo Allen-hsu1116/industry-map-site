@@ -2,25 +2,20 @@
   "schemaVersion": 1,
   "code": "1609",
   "name": "大亞",
-  "generatedAt": "2026-07-15T12:31:28.445Z",
+  "generatedAt": "2026-07-15T12:38:00.350Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "F",
-    "label": "資料不足",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "verified_topic_role",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_product_knowledge",
-      "missing_topic_role",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -55,33 +50,78 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "太陽能與離岸風電",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "優勢：6月營收 3.4 億元、年增 23%，累計年增 19%，綠能轉型有成。劣勢：海纜起步較晚，產能規模小於華新。",
+      "supplyChainStage": "electrical_equipment",
+      "roleType": "high_voltage_power_cable_supplier",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "161kV 超高壓電力電纜",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "69kV 海纜",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "銅導體電纜",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "6月營收 3.4 億元、年增 23%，累計年增 19%，綠能轉型有成。"
+      ],
+      "opportunities": [
+        "再生能源併網與輸配電建設需求增加，可望帶動高壓電纜及海纜產品機會。"
+      ],
+      "risks": [
+        "銅價波動、專案遞延及海纜產能規模較小，可能限制接單彈性與毛利表現。",
+        "海纜起步較晚，產能規模小於華新。"
+      ]
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 太陽能與離岸風電（theme/active） +18",
+      "角色證據 1 則 +6",
+      "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "大亞 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "大亞 在「太陽能與離岸風電」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：太陽能與離岸風電 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 太陽能與離岸風電（theme/active） +18）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
+      "V2 W：海纜起步較晚，產能規模小於華新。",
+      "V2 T：銅價波動、專案遞延及海纜產能規模較小，可能限制接單彈性與毛利表現。"
     ],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
+      "V2 O：再生能源併網與輸配電建設需求增加，可望帶動高壓電纜及海纜產品機會。",
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
+      "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "V2 SWOT 最後驗證：2026-07-15",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -117,9 +157,69 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
-    "swot": [],
-    "topics": []
+    "topicRoles": [
+      {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "優勢：6月營收 3.4 億元、年增 23%，累計年增 19%，綠能轉型有成。劣勢：海纜起步較晚，產能規模小於華新。"
+      }
+    ],
+    "swot": [
+      {
+        "id": "opportunity-renewable-energy-1609",
+        "category": "opportunity",
+        "statement": "再生能源併網與輸配電建設需求增加，可望帶動高壓電纜及海纜產品機會。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-renewable-energy-1609",
+        "category": "strength",
+        "statement": "6月營收 3.4 億元、年增 23%，累計年增 19%，綠能轉型有成。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-renewable-energy-1609",
+        "category": "threat",
+        "statement": "銅價波動、專案遞延及海纜產能規模較小，可能限制接單彈性與毛利表現。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-renewable-energy-1609",
+        "category": "weakness",
+        "statement": "海纜起步較晚，產能規模小於華新。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      }
+    ],
+    "topics": [
+      {
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -134,7 +234,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 38,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 12,
@@ -145,19 +245,14 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股 / 題材待驗證",
+      "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "分析品質不足，策略只能列為觀察"
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
-      {
-        "id": "risk.analysis-quality",
-        "severity": "hard",
-        "message": "AnalysisQuality F 不可列入 Top recommendation"
-      },
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
@@ -167,11 +262,6 @@
         "id": "risk.chip-data-stale",
         "severity": "hard",
         "message": "籌碼資料已 51 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },
