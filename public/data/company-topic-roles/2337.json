@@ -1,131 +1,136 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "2337",
-  "companyName": "旺宏",
-  "updatedAt": "2026-07-06",
-  "roles": [
-    {
-      "topicId": "niche-memory",
-      "topicName": "NOR Flash 與利基記憶體",
-      "topicType": "product",
-      "directness": "core",
-      "supplyChainStage": "memory_ic",
-      "roleType": "nor_flash_and_non_volatile_memory_supplier",
-      "roleSummary": "旺宏5月營收6.26億YoY+175.8%，受惠於車用NOR Flash與遊戲ROM需求爆發。為全球NOR Flash市佔第二大，車規記憶體與Mask ROM利基型市場領導者。",
-      "products": [
-        "NOR Flash（SPI NOR 1Gb-4Gb）",
-        "NAND Flash（SLC/MLC）",
-        "Mask ROM（遊戲卡帶/車用）",
-        "XtraROM（車規級唯讀記憶體）"
-      ],
-      "customers": [
-        "Tesla",
-        "Bosch",
-        "Infineon",
-        "Qualcomm",
-        "聯發科(2454)"
-      ],
-      "competitors": [
-        "華邦電(2344)",
-        "美光Micron",
-        "GigaDevice"
-      ],
-      "risks": [
-        "NOR Flash價格波動",
-        "中國GigaDevice低價競爭",
-        "車用需求若放緩影響高增長基期"
-      ],
-      "legacy": {
-        "topicSlug": "semiconductor-memory",
-        "groupName": "NOR Flash 與利基記憶體",
-        "legacyRole": "全球 NOR Flash 前三大"
-      },
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "2337",
+    "companyName": "旺宏",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "旺宏 公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
-          "claim": "MOPS 公司基本資料揭露 旺宏 主要業務為積體電路、各種半導體零組件，及其系統應用產品之研究發展、設計、製造、測試、銷售及顧問諮詢。"
+            "topicId": "niche-memory",
+            "topicName": "NOR Flash 與利基記憶體",
+            "topicType": "product",
+            "directness": "core",
+            "supplyChainStage": "memory_ic",
+            "roleType": "nor_flash_and_non_volatile_memory_supplier",
+            "roleSummary": "旺宏5月營收6.26億YoY+175.8%，受惠於車用NOR Flash與遊戲ROM需求爆發。為全球NOR Flash市佔第二大，車規記憶體與Mask ROM利基型市場領導者。",
+            "products": [
+                "NOR Flash（SPI NOR 1Gb-4Gb）",
+                "NAND Flash（SLC/MLC）",
+                "Mask ROM（遊戲卡帶/車用）",
+                "XtraROM（車規級唯讀記憶體）"
+            ],
+            "customers": [
+                "Tesla",
+                "Bosch",
+                "Infineon",
+                "Qualcomm",
+                "聯發科(2454)"
+            ],
+            "competitors": [
+                "華邦電(2344)",
+                "美光Micron",
+                "GigaDevice"
+            ],
+            "risks": [
+                "NOR Flash價格波動",
+                "中國GigaDevice低價競爭",
+                "車用需求若放緩影響高增長基期"
+            ],
+            "legacy": {
+                "topicSlug": "semiconductor-memory",
+                "groupName": "NOR Flash 與利基記憶體",
+                "legacyRole": "全球 NOR Flash 前三大"
+            },
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS",
+                    "title": "旺宏 公司基本資料",
+                    "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
+                    "claim": "MOPS 公司基本資料揭露 旺宏 主要業務為積體電路、各種半導體零組件，及其系統應用產品之研究發展、設計、製造、測試、銷售及顧問諮詢。"
+                },
+                {
+                    "sourceId": "product-knowledge-2337",
+                    "publisher": "internal evidence-backed product knowledge",
+                    "title": "旺宏 product knowledge",
+                    "url": "public/data/product-knowledge/2337.json",
+                    "claim": "產品知識庫將旺宏的非揮發性記憶體與積體電路產品映射到 memory-modules / ic-design，並列出 NOR Flash、NAND Flash、ROM 等別名。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤 2337 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-02",
+            "status": "verified",
+            "techFocus": [
+                "SPI NOR Flash 1Gb-4Gb量產技術",
+                "車規XtraROM唯讀記憶體(AEC-Q100)",
+                "SLC NAND Flash 3D堆疊技術"
+            ]
         },
         {
-          "sourceId": "product-knowledge-2337",
-          "publisher": "internal evidence-backed product knowledge",
-          "title": "旺宏 product knowledge",
-          "url": "public/data/product-knowledge/2337.json",
-          "claim": "產品知識庫將旺宏的非揮發性記憶體與積體電路產品映射到 memory-modules / ic-design，並列出 NOR Flash、NAND Flash、ROM 等別名。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2337 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+            "topicId": "ic-design",
+            "topicName": "IC 設計與半導體產品",
+            "topicType": "supply_chain_segment",
+            "directness": "supplier",
+            "supplyChainStage": "semiconductor_design_and_products",
+            "roleType": "non_volatile_memory_ic_product_company",
+            "roleSummary": "旺宏5月營收62.6億年增175.8%（受市場需求增加影響），累計年增110.9%。車用NOR Flash需求強勁，SLC NAND在工控應用出貨放量。",
+            "products": [
+                "NOR Flash(Serial NOR/Parallel NOR)",
+                "NAND Flash(SLC NAND)",
+                "Mask ROM(唯讀記憶體)",
+                "車用NOR Flash(45nm)",
+                "XtrMBit高密度ROM"
+            ],
+            "customers": [
+                "Tesla(車用NOR Flash)",
+                "Bosch(車用記憶體)",
+                "Infineon(車規MCU ROM)",
+                "STMicroelectronics(車用NOR)",
+                "Sony(遊戲機ROM)"
+            ],
+            "competitors": [
+                "華邦(2344)",
+                "Cypress(Infineon)",
+                "GigaDevice(兆易創新)"
+            ],
+            "risks": [
+                "需分清楚 IC 產品/應用支援與晶圓代工角色，避免供應鏈階段誤分類。"
+            ],
+            "legacy": {
+                "topicSlug": "semiconductor-memory",
+                "groupName": "記憶體 IC 產品",
+                "legacyRole": "NOR Flash / ROM 產品供應商"
+            },
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS",
+                    "title": "旺宏 公司基本資料",
+                    "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
+                    "claim": "MOPS 公司基本資料揭露 旺宏 主要業務為積體電路、各種半導體零組件，及其系統應用產品之研究發展、設計、製造、測試、銷售及顧問諮詢。"
+                },
+                {
+                    "sourceId": "product-knowledge-2337",
+                    "publisher": "internal evidence-backed product knowledge",
+                    "title": "旺宏 product knowledge",
+                    "url": "public/data/product-knowledge/2337.json",
+                    "claim": "產品知識庫將半導體系統應用與銷售顧問服務標示為 IC 產品導入、應用支援與客戶服務。"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-06",
+            "status": "verified",
+            "techFocus": [
+                "NOR Flash SLC製程微縮",
+                "3D NAND SLC堆疊技術",
+                "Mask ROM光罩編程"
+            ]
         }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-02",
-      "status": "verified"
-    },
-    {
-      "topicId": "ic-design",
-      "topicName": "IC 設計與半導體產品",
-      "topicType": "supply_chain_segment",
-      "directness": "supplier",
-      "supplyChainStage": "semiconductor_design_and_products",
-      "roleType": "non_volatile_memory_ic_product_company",
-      "roleSummary": "旺宏5月營收62.6億年增175.8%（受市場需求增加影響），累計年增110.9%。車用NOR Flash需求強勁，SLC NAND在工控應用出貨放量。",
-      "products": [
-        "NOR Flash(Serial NOR/Parallel NOR)",
-        "NAND Flash(SLC NAND)",
-        "Mask ROM(唯讀記憶體)",
-        "車用NOR Flash(45nm)",
-        "XtrMBit高密度ROM"
-      ],
-      "customers": [
-        "Tesla(車用NOR Flash)",
-        "Bosch(車用記憶體)",
-        "Infineon(車規MCU ROM)",
-        "STMicroelectronics(車用NOR)",
-        "Sony(遊戲機ROM)"
-      ],
-      "competitors": [
-        "華邦(2344)",
-        "Cypress(Infineon)",
-        "GigaDevice(兆易創新)"
-      ],
-      "risks": [
-        "需分清楚 IC 產品/應用支援與晶圓代工角色，避免供應鏈階段誤分類。"
-      ],
-      "legacy": {
-        "topicSlug": "semiconductor-memory",
-        "groupName": "記憶體 IC 產品",
-        "legacyRole": "NOR Flash / ROM 產品供應商"
-      },
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "旺宏 公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
-          "claim": "MOPS 公司基本資料揭露 旺宏 主要業務為積體電路、各種半導體零組件，及其系統應用產品之研究發展、設計、製造、測試、銷售及顧問諮詢。"
-        },
-        {
-          "sourceId": "product-knowledge-2337",
-          "publisher": "internal evidence-backed product knowledge",
-          "title": "旺宏 product knowledge",
-          "url": "public/data/product-knowledge/2337.json",
-          "claim": "產品知識庫將半導體系統應用與銷售顧問服務標示為 IC 產品導入、應用支援與客戶服務。"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-06",
-      "status": "verified",
-      "techFocus": [
-        "NOR Flash SLC製程微縮",
-        "3D NAND SLC堆疊技術",
-        "Mask ROM光罩編程"
-      ]
-    }
-  ]
+    ]
 }

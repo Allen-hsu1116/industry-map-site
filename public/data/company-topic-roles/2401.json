@@ -1,60 +1,65 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "2401",
-  "companyName": "凌陽",
-  "updatedAt": "2026-06-02",
-  "roles": [
-    {
-      "topicId": "wafer-foundry",
-      "topicName": "半導體製造｜晶圓代工",
-      "topicType": "supply_chain_segment",
-      "directness": "customer_or_channel",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "fabless_ic_design_house",
-      "roleSummary": "凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片。5月營收7.2億年增28.7%，累計31.5億年增16.4%，車用MCU需求帶動穩定成長。",
-      "products": [
-        "車用MCU(32-bit ARM Cortex-M)(聯電28nm投片)",
-        "OTT串流媒體晶片(4K/8K機上盒)",
-        "物聯網IoT MCU(低功耗WiFi SoC)",
-        "語音辨識IC(DSP+ADC)",
-        "液晶顯示驅動IC(TDDI)"
-      ],
-      "customers": [
-        "中國車廠(比亞迪/吉利)(車用MCU)",
-        "OTT機上盒品牌商(小米/華數)",
-        "中國家電品牌(美的/海爾)",
-        "LCD面板廠(群創/友達)(驅動IC)",
-        "IoT模組廠(移遠/廣和通)"
-      ],
-      "competitors": [
-        "盛群(6202)(MCU)",
-        "中穎(6202)(MCU)",
-        "新唐(4919)(MCU)"
-      ],
-      "risks": [
-        "營收規模小(月營收僅7.2億)，在車用MCU市佔低於NXP/瑞薩",
-        "中國OTT機上盒市場成長放緩"
-      ],
-      "legacy": {},
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "2401",
+    "companyName": "凌陽",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+            "topicId": "wafer-foundry",
+            "topicName": "半導體製造｜晶圓代工",
+            "topicType": "supply_chain_segment",
+            "directness": "customer_or_channel",
+            "supplyChainStage": "upstream_petrochemical_materials",
+            "roleType": "fabless_ic_design_house",
+            "roleSummary": "凌陽是Fabless IC設計公司，主力為車用MCU與OTT串流晶片，在聯電/台積電投片。5月營收7.2億年增28.7%，累計31.5億年增16.4%，車用MCU需求帶動穩定成長。",
+            "products": [
+                "車用MCU(32-bit ARM Cortex-M)(聯電28nm投片)",
+                "OTT串流媒體晶片(4K/8K機上盒)",
+                "物聯網IoT MCU(低功耗WiFi SoC)",
+                "語音辨識IC(DSP+ADC)",
+                "液晶顯示驅動IC(TDDI)"
+            ],
+            "customers": [
+                "中國車廠(比亞迪/吉利)(車用MCU)",
+                "OTT機上盒品牌商(小米/華數)",
+                "中國家電品牌(美的/海爾)",
+                "LCD面板廠(群創/友達)(驅動IC)",
+                "IoT模組廠(移遠/廣和通)"
+            ],
+            "competitors": [
+                "盛群(6202)(MCU)",
+                "中穎(6202)(MCU)",
+                "新唐(4919)(MCU)"
+            ],
+            "risks": [
+                "營收規模小(月營收僅7.2億)，在車用MCU市佔低於NXP/瑞薩",
+                "中國OTT機上盒市場成長放緩"
+            ],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-05",
+            "status": "verified",
+            "techFocus": [
+                "車用MCU 32-bit ARM Cortex-M設計(聯電28nm投片)",
+                "OTT 4K/8K串流媒體晶片SoC設計",
+                "TDDI液晶顯示驅動IC設計"
+            ]
         }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
-      "status": "verified"
-    }
-  ]
+    ]
 }

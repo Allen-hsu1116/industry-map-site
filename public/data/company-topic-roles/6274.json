@@ -1,97 +1,107 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "6274",
-  "companyName": "台燿",
-  "updatedAt": "2026-07-03",
-  "roles": [
-    {
-      "topicId": "pcb-substrates",
-      "topicName": "PCB、IC 載板與高階基板材料",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "substrate_materials",
-      "roleType": "ccl_manufacturer",
-      "roleSummary": "台燿是台灣前三大銅箔基板(CCL)製造商，提供多層壓合板與粘合片，是PCB上游核心材料供應商。",
-      "products": [
-        "銅箔基板(CCL/FR-4)",
-        "高頻基板(低損耗)",
-        "多層壓合板",
-        "粘合片(Prepreg)"
-      ],
-      "customers": [
-        "欣興(3037)(IC載板CCL)",
-        "楠梓電(8046)(PCB CCL)",
-        "金像電(2368)(PCB CCL)"
-      ],
-      "competitors": [],
-      "risks": [],
-      "legacy": {},
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "6274",
+    "companyName": "台燿",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
+            "topicId": "pcb-substrates",
+            "topicName": "PCB、IC 載板與高階基板材料",
+            "topicType": "supply_chain_segment",
+            "directness": "core",
+            "supplyChainStage": "substrate_materials",
+            "roleType": "ccl_manufacturer",
+            "roleSummary": "台燿是台灣前三大銅箔基板(CCL)製造商，提供多層壓合板與粘合片，是PCB上游核心材料供應商。",
+            "products": [
+                "銅箔基板(CCL/FR-4)",
+                "高頻基板(低損耗)",
+                "多層壓合板",
+                "粘合片(Prepreg)"
+            ],
+            "customers": [
+                "欣興(3037)(IC載板CCL)",
+                "楠梓電(8046)(PCB CCL)",
+                "金像電(2368)(PCB CCL)"
+            ],
+            "competitors": [],
+            "risks": [],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-03",
+            "status": "verified",
+            "techFocus": [
+                "高頻銅箔基板壓合技術(High-Tg/低介電損耗)",
+                "多層壓合板製程(高Tg FR-4/Halogen-free)",
+                "粘合片(Prepreg)樹脂配方技術"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+            "topicId": "leo-satellite-communications",
+            "topicName": "低軌衛星通訊",
+            "topicType": "end_market",
+            "directness": "indirect",
+            "supplyChainStage": "substrate_materials",
+            "roleType": "satellite_ccl_supplier",
+            "roleSummary": "台燿為台灣主要銅箔基板製造商，在低軌衛星題材中供應高頻低損耗CCL材料予衛星通訊PCB製造商。主要產品為高頻PTFE系CCL與超低Dk多層壓合板，應用於Starlink等低軌衛星通訊射頻電路板。",
+            "products": [
+                "低軌衛星用高頻CCL(Dk<3.0超低損耗材料)",
+                "射頻PCB基板材料(高頻PTFE/碳氫樹脂系)",
+                "多層壓合板(衛星通訊板用M4/M7級)",
+                "高Tg銅箔基板(Tg≥200°C耐熱級)"
+            ],
+            "customers": [
+                "SpaceX(Starlink衛星PCB基板材料)",
+                "衛星PCB製造商(台灣欣興/燿華高頻板)",
+                "OneWeb(低軌衛星通訊板材料)",
+                "亞洲衛星(SATCOM)PCB廠"
+            ],
+            "competitors": [],
+            "risks": [
+                "低軌衛星CCL佔整體營收比重仍小，題材傳導至營收需時間",
+                "高頻CCL市場競爭激烈，國際大廠Panasonic/Rogers市佔率高",
+                "衛星客戶認證週期長，新客戶導入進度不確定"
+            ],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS主要經營業務: 銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+                }
+            ],
+            "confidence": "medium",
+            "lastVerified": "2026-07-12",
+            "status": "verified",
+            "techFocus": [
+                "高頻低損耗銅箔基板(衛星通訊PCB基材)",
+                "多層壓合板高頻特性控制(Dk/Df穩定性)",
+                "Halogen-free無鹵銅箔基板環保製程"
+            ]
         }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-03",
-      "status": "verified"
-    },
-    {
-      "topicId": "leo-satellite-communications",
-      "topicName": "低軌衛星通訊",
-      "topicType": "end_market",
-      "directness": "indirect",
-      "supplyChainStage": "substrate_materials",
-      "roleType": "satellite_ccl_supplier",
-      "roleSummary": "台燿為台灣主要銅箔基板製造商，在低軌衛星題材中供應高頻低損耗CCL材料予衛星通訊PCB製造商。主要產品為高頻PTFE系CCL與超低Dk多層壓合板，應用於Starlink等低軌衛星通訊射頻電路板。",
-      "products": [
-        "低軌衛星用高頻CCL(Dk<3.0超低損耗材料)",
-        "射頻PCB基板材料(高頻PTFE/碳氫樹脂系)",
-        "多層壓合板(衛星通訊板用M4/M7級)",
-        "高Tg銅箔基板(Tg≥200°C耐熱級)"
-      ],
-      "customers": [
-        "SpaceX(Starlink衛星PCB基板材料)",
-        "衛星PCB製造商(台灣欣興/燿華高頻板)",
-        "OneWeb(低軌衛星通訊板材料)",
-        "亞洲衛星(SATCOM)PCB廠"
-      ],
-      "competitors": [],
-      "risks": [
-        "低軌衛星CCL佔整體營收比重仍小，題材傳導至營收需時間",
-        "高頻CCL市場競爭激烈，國際大廠Panasonic/Rogers市佔率高",
-        "衛星客戶認證週期長，新客戶導入進度不確定"
-      ],
-      "legacy": {},
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-12",
-      "status": "verified"
-    }
-  ]
+    ]
 }

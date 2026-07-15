@@ -1,158 +1,160 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "3189",
-  "companyName": "景碩",
-  "updatedAt": "2026-07-08",
-  "roles": [
-    {
-      "topicId": "pcb-substrates",
-      "topicName": "PCB、IC 載板與高階基板材料",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "substrate",
-      "roleType": "ic_substrate_manufacturer",
-      "roleSummary": "景碩5月營收42億年增33%，累計年增29%。ABF/BT載板受AI伺服器與HBM需求帶動，為台灣前三大IC載板廠。",
-      "products": [
-        "ABF 載板（CPU/GPU 用）",
-        "BT 載板（手機/AP 用）",
-        "CSP 載板"
-      ],
-      "customers": [
-        "Intel",
-        "AMD",
-        "Qualcomm",
-        "聯發科",
-        "NVIDIA"
-      ],
-      "competitors": [
-        "欣興",
-        "南電",
-        "Unimicron"
-      ],
-      "risks": [
-        "ABF 載板景氣循環波動大",
-        "先進封裝技術如 CoWoS 可能減少載板用量"
-      ],
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "3189",
+    "companyName": "景碩",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "景碩 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3189",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 景碩 的營業項目、產品組合與財務資料。"
+            "topicId": "pcb-substrates",
+            "topicName": "PCB、IC 載板與高階基板材料",
+            "topicType": "supply_chain_segment",
+            "directness": "core",
+            "supplyChainStage": "substrate",
+            "roleType": "ic_substrate_manufacturer",
+            "roleSummary": "景碩5月營收42億年增33%，累計年增29%。ABF/BT載板受AI伺服器與HBM需求帶動，為台灣前三大IC載板廠。",
+            "products": [
+                "ABF 載板（CPU/GPU 用）",
+                "BT 載板（手機/AP 用）",
+                "CSP 載板"
+            ],
+            "customers": [
+                "Intel",
+                "AMD",
+                "Qualcomm",
+                "聯發科",
+                "NVIDIA"
+            ],
+            "competitors": [
+                "欣興",
+                "南電",
+                "Unimicron"
+            ],
+            "risks": [
+                "ABF 載板景氣循環波動大",
+                "先進封裝技術如 CoWoS 可能減少載板用量"
+            ],
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+                    "title": "景碩 公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3189",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 景碩 的營業項目、產品組合與財務資料。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-08",
+            "status": "verified",
+            "techFocus": [
+                "ABF高階載板細線製程(2/2mil L/S)",
+                "BT載板雷射鑽孔與填孔技術",
+                "Any-Layer HDI載板製程"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-08",
-      "status": "verified",
-      "techFocus": [
-        "ABF高階載板細線製程(2/2mil L/S)",
-        "BT載板雷射鑽孔與填孔技術",
-        "Any-Layer HDI載板製程"
-      ]
-    },
-    {
-      "topicId": "advanced-packaging",
-      "topicName": "先進封裝與 CoWoS",
-      "topicType": "process",
-      "directness": "indirect",
-      "supplyChainStage": "advanced_packaging",
-      "roleType": "packaging_substrate_supplier",
-      "roleSummary": "景碩在先進封裝領域供應CoWoS/2.5D封裝用ABF載板，5月營收42億年增33%。隨台積電CoWoS擴產，載板需求同步增長。",
-      "products": [
-        "CoWoS 用高階 ABF 載板",
-        "2.5D 封裝用載板"
-      ],
-      "customers": [
-        "台積電（間接）",
-        "Intel",
-        "AMD"
-      ],
-      "competitors": [
-        "欣興",
-        "南電"
-      ],
-      "risks": [
-        "CoWoS 對載板規格要求高，技術門檻提升"
-      ],
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "景碩 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3189",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 景碩 的營業項目、產品組合與財務資料。"
+            "topicId": "advanced-packaging",
+            "topicName": "先進封裝與 CoWoS",
+            "topicType": "process",
+            "directness": "indirect",
+            "supplyChainStage": "advanced_packaging",
+            "roleType": "packaging_substrate_supplier",
+            "roleSummary": "景碩在先進封裝領域供應CoWoS/2.5D封裝用ABF載板，5月營收42億年增33%。隨台積電CoWoS擴產，載板需求同步增長。",
+            "products": [
+                "CoWoS 用高階 ABF 載板",
+                "2.5D 封裝用載板"
+            ],
+            "customers": [
+                "台積電（間接）",
+                "Intel",
+                "AMD"
+            ],
+            "competitors": [
+                "欣興",
+                "南電"
+            ],
+            "risks": [
+                "CoWoS 對載板規格要求高，技術門檻提升"
+            ],
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+                    "title": "景碩 公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3189",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 景碩 的營業項目、產品組合與財務資料。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-08",
+            "status": "verified",
+            "techFocus": [
+                "CoWoS用高階ABF載板設計",
+                "2.5D封裝用細線載板製程(2/2mil)",
+                "高頻高速載板材料開發"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
+            "topicId": "hbm",
+            "topicName": "HBM 高頻寬記憶體",
+            "topicType": "supply_chain_segment",
+            "directness": "indirect",
+            "supplyChainStage": "hbm",
+            "roleType": "hbm_substrate_supplier",
+            "roleSummary": "景碩供應HBM用BT載板，受SK Hynix/Samsung/Micron HBM擴產帶動。5月營收42億年增33%，HBM載板為高毛利成長動能。",
+            "products": [
+                "HBM用BT載板(高精度鑽孔)",
+                "記憶體堆疊用BT基板(warpage控制)",
+                "HBM封裝用多層BT載板"
+            ],
+            "customers": [
+                "SK Hynix",
+                "Samsung",
+                "Micron"
+            ],
+            "competitors": [
+                "欣興"
+            ],
+            "risks": [
+                "HBM 載板規格嚴苛，良率挑戰大"
+            ],
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+                    "title": "景碩 公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3189",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 景碩 的營業項目、產品組合與財務資料。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-08",
+            "status": "verified",
+            "techFocus": [
+                "HBM用BT載板高精度鑽孔",
+                "記憶體堆疊用載板 warpage 控制",
+                "多層BT載板壓合技術"
+            ]
         }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-08",
-      "status": "verified",
-      "techFocus": [
-        "CoWoS用高階ABF載板設計",
-        "2.5D封裝用細線載板製程(2/2mil)",
-        "高頻高速載板材料開發"
-      ]
-    },
-    {
-      "topicId": "hbm",
-      "topicName": "HBM 高頻寬記憶體",
-      "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "hbm",
-      "roleType": "hbm_substrate_supplier",
-      "roleSummary": "景碩供應HBM用BT載板，受SK Hynix/Samsung/Micron HBM擴產帶動。5月營收42億年增33%，HBM載板為高毛利成長動能。",
-      "products": [
-        "HBM 用 BT 載板"
-      ],
-      "customers": [
-        "SK Hynix",
-        "Samsung",
-        "Micron"
-      ],
-      "competitors": [
-        "欣興"
-      ],
-      "risks": [
-        "HBM 載板規格嚴苛，良率挑戰大"
-      ],
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "景碩 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3189",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 景碩 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-08",
-      "status": "verified",
-      "techFocus": [
-        "HBM用BT載板高精度鑽孔",
-        "記憶體堆疊用載板 warpage 控制",
-        "多層BT載板壓合技術"
-      ]
-    }
-  ]
+    ]
 }

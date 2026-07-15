@@ -1,61 +1,66 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "2303",
-  "companyName": "聯電",
-  "updatedAt": "2026-06-02",
-  "roles": [
-    {
-      "topicId": "wafer-foundry",
-      "topicName": "半導體製造｜晶圓代工",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "mature_node_foundry",
-      "roleSummary": "聯電是全球第二大晶圓代工廠，28/22nm HKMG為主力成熟製程，14nm FinFET為利基。5月營收229.4億年增17.8%，累計1,066億年增9.1%，AI需求帶動22nm放量。特殊製程(RF/CIS/BCD)在8吋晶圓具差異化優勢。",
-      "products": [
-        "22nm/28nm HKMG Logic製程(AI/IoT SoC)",
-        "14nm FinFET製程(射頻/網通)",
-        "40nm嵌入式記憶體(eFlash MCU)",
-        "RF/BCD/CIS特殊製程(8吋/12吋)",
-        "高壓BCD製程(電源管理IC)"
-      ],
-      "customers": [
-        "Qualcomm(RF前端模組)",
-        "聯發科(2454)(智慧型手機晶片)",
-        "Realtek(2379)(網通PHY/WiFi)",
-        "Broadcom(有線通訊ASIC)",
-        "聯詠(3034)(驅動IC)"
-      ],
-      "competitors": [
-        "台積電(2330)",
-        "GlobalFoundries",
-        "Samsung Foundry",
-        "中芯國際"
-      ],
-      "risks": [
-        "先進製程停滯：14nm後未再推進，與台積電差距擴大",
-        "中國成熟製程產能過剩競爭（中芯國際28nm擴產）"
-      ],
-      "legacy": {},
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "2303",
+    "companyName": "聯電",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+            "topicId": "wafer-foundry",
+            "topicName": "半導體製造｜晶圓代工",
+            "topicType": "supply_chain_segment",
+            "directness": "core",
+            "supplyChainStage": "upstream_petrochemical_materials",
+            "roleType": "mature_node_foundry",
+            "roleSummary": "聯電是全球第二大晶圓代工廠，28/22nm HKMG為主力成熟製程，14nm FinFET為利基。5月營收229.4億年增17.8%，累計1,066億年增9.1%，AI需求帶動22nm放量。特殊製程(RF/CIS/BCD)在8吋晶圓具差異化優勢。",
+            "products": [
+                "22nm/28nm HKMG Logic製程(AI/IoT SoC)",
+                "14nm FinFET製程(射頻/網通)",
+                "40nm嵌入式記憶體(eFlash MCU)",
+                "RF/BCD/CIS特殊製程(8吋/12吋)",
+                "高壓BCD製程(電源管理IC)"
+            ],
+            "customers": [
+                "Qualcomm(RF前端模組)",
+                "聯發科(2454)(智慧型手機晶片)",
+                "Realtek(2379)(網通PHY/WiFi)",
+                "Broadcom(有線通訊ASIC)",
+                "聯詠(3034)(驅動IC)"
+            ],
+            "competitors": [
+                "台積電(2330)",
+                "GlobalFoundries",
+                "Samsung Foundry",
+                "中芯國際"
+            ],
+            "risks": [
+                "先進製程停滯：14nm後未再推進，與台積電差距擴大",
+                "中國成熟製程產能過剩競爭（中芯國際28nm擴產）"
+            ],
+            "legacy": {},
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+                    "title": "公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+                }
+            ],
+            "confidence": "high",
+            "lastVerified": "2026-07-05",
+            "status": "verified",
+            "techFocus": [
+                "22nm/28nm HKMG Logic製程(AI/IoT SoC)",
+                "14nm FinFET製程(射頻/網通)",
+                "特殊製程平台(RF/BCD/CIS/嵌入式記憶體)"
+            ]
         }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
-      "status": "verified"
-    }
-  ]
+    ]
 }

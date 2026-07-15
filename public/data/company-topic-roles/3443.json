@@ -1,178 +1,183 @@
 {
-  "schemaVersion": 1,
-  "companyCode": "3443",
-  "companyName": "創意",
-  "updatedAt": "2026-07-08",
-  "roles": [
-    {
-      "topicId": "ic-design",
-      "topicName": "IC 設計與矽智財",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "ic_design",
-      "roleType": "asic_design_service_provider",
-      "roleSummary": "創意電子(GUC)5月營收46.7億年增132%，累計年增91%。為台積電集團ASIC設計服務公司，AI客製化ASIC需求爆發帶動營收跳升。",
-      "products": [
-        "ASIC 設計服務",
-        "SoC 設計服務",
-        "矽智財整合"
-      ],
-      "customers": [
-        "NVIDIA",
-        "Broadcom",
-        "Marvell",
-        "Microsoft",
-        "Google"
-      ],
-      "competitors": [
-        "世芯(3661)",
-        "Altera(Intel)",
-        "eSilicon(GlobalFoundries)"
-      ],
-      "risks": [
-        "大客戶集中度高（單一客戶佔比可能過高）",
-        "ASIC 設計 NRE 費用回收期長"
-      ],
-      "legacy": {
-        "topicSlug": "asic-ip-design",
-        "groupName": "ASIC設計服務",
-        "legacyRole": "ASIC 設計服務與 IP 供應商"
-      },
-      "evidence": [
+    "schemaVersion": 1,
+    "companyCode": "3443",
+    "companyName": "創意",
+    "updatedAt": "2026-07-16",
+    "roles": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "創意 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+            "topicId": "ic-design",
+            "topicName": "IC 設計與矽智財",
+            "topicType": "supply_chain_segment",
+            "directness": "core",
+            "supplyChainStage": "ic_design",
+            "roleType": "asic_design_service_provider",
+            "roleSummary": "創意電子(GUC)5月營收46.7億年增132%，累計年增91%。為台積電集團ASIC設計服務公司，AI客製化ASIC需求爆發帶動營收跳升。",
+            "products": [
+                "ASIC 設計服務",
+                "SoC 設計服務",
+                "矽智財整合"
+            ],
+            "customers": [
+                "NVIDIA",
+                "Broadcom",
+                "Marvell",
+                "Microsoft",
+                "Google"
+            ],
+            "competitors": [
+                "世芯(3661)",
+                "Altera(Intel)",
+                "eSilicon(GlobalFoundries)"
+            ],
+            "risks": [
+                "大客戶集中度高（單一客戶佔比可能過高）",
+                "ASIC 設計 NRE 費用回收期長"
+            ],
+            "legacy": {
+                "topicSlug": "asic-ip-design",
+                "groupName": "ASIC設計服務",
+                "legacyRole": "ASIC 設計服務與 IP 供應商"
+            },
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+                    "title": "創意 公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+                }
+            ],
+            "confidence": "medium",
+            "lastVerified": "2026-07-08",
+            "status": "verified",
+            "techFocus": [
+                "先進製程ASIC Turnkey設計(7nm/5nm/3nm)",
+                "AI加速器HBM整合SoC設計(CoWoS封裝)",
+                "高速SerDes/PCIe Gen5介面IP設計"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-08",
-      "status": "verified",
-      "techFocus": [
-        "N3/N2 ASIC設計流程與台積電CoWoS整合",
-        "高速SerDes/DDR/HBM IP整合設計",
-        "AI GPU/HBM CoWoS封裝設計服務"
-      ]
-    },
-    {
-      "topicId": "ic-design",
-      "topicName": "IC 設計與矽智財",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "ic_design",
-      "roleType": "ip_asic_design_service",
-      "roleSummary": "創意的角色偏向 IP 授權與客製 ASIC 設計服務，不是晶圓代工或封裝廠；Daily Analysis 應追蹤設計案能見度與先進製程需求。",
-      "products": [
-        "IP 授權",
-        "ASIC 設計服務",
-        "先進製程設計支援"
-      ],
-      "customers": [
-        "NVIDIA",
-        "Broadcom",
-        "Marvell",
-        "Google",
-        "Microsoft"
-      ],
-      "competitors": [
-        "世芯(3661)",
-        "Altera(Intel)",
-        "Cadence"
-      ],
-      "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
-      ],
-      "legacy": {
-        "topicSlug": "ip-asic",
-        "groupName": "先進製程ASIC設計服務",
-        "legacyRole": "先進製程ASIC龍頭"
-      },
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "創意 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+            "topicId": "ic-design",
+            "topicName": "IC 設計與矽智財",
+            "topicType": "supply_chain_segment",
+            "directness": "core",
+            "supplyChainStage": "ic_design",
+            "roleType": "ip_asic_design_service",
+            "roleSummary": "創意的角色偏向 IP 授權與客製 ASIC 設計服務，不是晶圓代工或封裝廠；Daily Analysis 應追蹤設計案能見度與先進製程需求。",
+            "products": [
+                "IP 授權",
+                "ASIC 設計服務",
+                "先進製程設計支援"
+            ],
+            "customers": [
+                "NVIDIA",
+                "Broadcom",
+                "Marvell",
+                "Google",
+                "Microsoft"
+            ],
+            "competitors": [
+                "世芯(3661)",
+                "Altera(Intel)",
+                "Cadence"
+            ],
+            "risks": [
+                "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+                "不得用短線股價或題材熱度反推營運事實。"
+            ],
+            "legacy": {
+                "topicSlug": "ip-asic",
+                "groupName": "先進製程ASIC設計服務",
+                "legacyRole": "先進製程ASIC龍頭"
+            },
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+                    "title": "創意 公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+                }
+            ],
+            "confidence": "medium",
+            "lastVerified": "2026-05-28",
+            "status": "verified",
+            "techFocus": [
+                "先進製程ASIC Turnkey設計(7nm/5nm/3nm)",
+                "AI加速器HBM整合SoC設計(CoWoS封裝)",
+                "高速SerDes/PCIe Gen5介面IP設計"
+            ]
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+            "topicId": "wafer-foundry",
+            "topicName": "半導體製造｜晶圓代工",
+            "topicType": "supply_chain_segment",
+            "directness": "direct_enabler",
+            "supplyChainStage": "design_enablement",
+            "roleType": "foundry_ecosystem_design_partner",
+            "roleSummary": "創意電子為台積電專屬ASIC設計服務夥伴，5月營收46.7億年增132%。深度整合台積電先進製程IP，AI ASIC量產帶動爆發性成長。",
+            "products": [
+                "ASIC SoC 設計服務（台積電專用）",
+                "嵌入式記憶體 IP",
+                "設計自動化工具"
+            ],
+            "customers": [
+                "NVIDIA",
+                "Broadcom",
+                "Marvell"
+            ],
+            "competitors": [
+                "世芯(3661)",
+                "Altera(Intel)",
+                "eSilicon"
+            ],
+            "risks": [
+                "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
+                "不得用短線股價或題材熱度反推營運事實。"
+            ],
+            "legacy": {
+                "topicSlug": "wafer-foundry",
+                "groupName": "特殊製程與利基型代工",
+                "legacyRole": "ASIC設計服務(台積電子公司)"
+            },
+            "evidence": [
+                {
+                    "sourceId": "mops-company-disclosures",
+                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+                    "title": "創意 公司公告、年報與財務資訊",
+                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
+                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+                },
+                {
+                    "sourceId": "finmind-taiwan-stock-datasets",
+                    "publisher": "FinMind",
+                    "title": "Taiwan Stock Market Datasets",
+                    "url": "https://finmindtrade.com/analysis/#/data/api",
+                    "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+                }
+            ],
+            "confidence": "medium",
+            "lastVerified": "2026-07-08",
+            "status": "verified",
+            "techFocus": [
+                "台積電N3/N2先進製程設計支援",
+                "嵌入式記憶體IP(eFlash/MRAM)整合",
+                "設計自動化工具與IP資料庫"
+            ]
         }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified"
-    },
-    {
-      "topicId": "wafer-foundry",
-      "topicName": "半導體製造｜晶圓代工",
-      "topicType": "supply_chain_segment",
-      "directness": "direct_enabler",
-      "supplyChainStage": "design_enablement",
-      "roleType": "foundry_ecosystem_design_partner",
-      "roleSummary": "創意電子為台積電專屬ASIC設計服務夥伴，5月營收46.7億年增132%。深度整合台積電先進製程IP，AI ASIC量產帶動爆發性成長。",
-      "products": [
-        "ASIC SoC 設計服務（台積電專用）",
-        "嵌入式記憶體 IP",
-        "設計自動化工具"
-      ],
-      "customers": [
-        "NVIDIA",
-        "Broadcom",
-        "Marvell"
-      ],
-      "competitors": [
-        "世芯(3661)",
-        "Altera(Intel)",
-        "eSilicon"
-      ],
-      "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
-      ],
-      "legacy": {
-        "topicSlug": "wafer-foundry",
-        "groupName": "特殊製程與利基型代工",
-        "legacyRole": "ASIC設計服務(台積電子公司)"
-      },
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "創意 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-08",
-      "status": "verified",
-      "techFocus": [
-        "台積電N3/N2先進製程設計支援",
-        "嵌入式記憶體IP(eFlash/MRAM)整合",
-        "設計自動化工具與IP資料庫"
-      ]
-    }
-  ]
+    ]
 }
