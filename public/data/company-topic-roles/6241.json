@@ -1,96 +1,108 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "6241",
-    "companyName": "鑫永洋",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "6241",
+  "companyName": "鑫永洋",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "software-cloud-security",
+      "topicName": "資安、雲端服務與企業軟體",
+      "topicType": "theme",
+      "directness": "indirect",
+      "supplyChainStage": "hardware",
+      "roleType": "communication_product_manufacturer",
+      "roleSummary": "鑫永洋(原易通展)6月營收0.56億年減1.2%，通訊產品OEM為主。資安硬體題材純度低，非核心資安軟體標的。",
+      "products": [
+        "網路安全硬體設備(防火牆 appliance)",
+        "VPN路由器(SD-WAN硬體)",
+        "工業級通訊設備(M2M/IoT gateway)"
+      ],
+      "customers": [
+        "Palo Alto Networks",
+        "Fortinet",
+        "研華(2395)"
+      ],
+      "competitors": [],
+      "risks": [],
+      "legacy": {},
+      "evidence": [
         {
-            "topicId": "software-cloud-security",
-            "topicName": "資安、雲端服務與企業軟體",
-            "topicType": "theme",
-            "directness": "indirect",
-            "supplyChainStage": "hardware",
-            "roleType": "communication_product_manufacturer",
-            "roleSummary": "鑫永洋(原易通展)6月營收0.56億年減1.2%，通訊產品OEM為主。資安硬體題材純度低，非核心資安軟體標的。",
-            "products": [
-                "網路安全硬體設備(防火牆 appliance)",
-                "VPN路由器(SD-WAN硬體)",
-                "工業級通訊設備(M2M/IoT gateway)"
-            ],
-            "customers": [
-                "Palo Alto Networks",
-                "Fortinet",
-                "研華(2395)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 通訊產品製造及買賣"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-11",
-            "status": "verified",
-            "techFocus": [
-                "網路安全硬體 appliance OEM/ODM設計製造",
-                "SD-WAN邊緣路由器硬體平台",
-                "工業級M2M通訊模組(ARM-based)"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 通訊產品製造及買賣"
         },
         {
-            "topicId": "ai-server-liquid-cooling",
-            "topicName": "AI 伺服器液冷散熱",
-            "topicType": "technology",
-            "directness": "indirect",
-            "supplyChainStage": "peripheral",
-            "roleType": "indirect",
-            "roleSummary": "鑫永洋在液冷散熱題材中關聯度極低，6月營收0.56億年減1.2%。非散熱核心標的。",
-            "products": [
-                "通訊散熱模組(伺服器散熱風扇)",
-                "通訊硬體設備(機房散熱配套)",
-                "網路交換器散熱外殼(金屬散熱設計)"
-            ],
-            "customers": [
-                "散熱模組廠(間接供應)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 通訊產品製造及買賣"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-11",
-            "status": "verified",
-            "techFocus": [
-                "通訊硬體OEM/ODM設計製造(非散熱核心技術)"
-            ]
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-11",
+      "status": "verified",
+      "techFocus": [
+        "網路安全硬體 appliance OEM/ODM設計製造",
+        "SD-WAN邊緣路由器硬體平台",
+        "工業級M2M通訊模組(ARM-based)"
+      ]
+    },
+    {
+      "topicId": "ai-server-liquid-cooling",
+      "topicName": "AI 伺服器液冷散熱",
+      "topicType": "technology",
+      "directness": "indirect",
+      "supplyChainStage": "peripheral",
+      "roleType": "indirect",
+      "roleSummary": "鑫永洋(AMIGO)為通訊散熱週邊供應商,以散熱風扇與機構外殼切入AI伺服器機房散熱配套,非核心散熱技術業者但具ODM整合能力。",
+      "products": [
+        "伺服器散熱風扇(軸流扇/離心扇)(AMIGO品牌)",
+        "機房散熱用通訊硬體設備(ODM代工)",
+        "網路交換器散熱外殼(鋁壓鑄散熱設計)",
+        "散熱模組配套五金件(沖壓/CNC加工)",
+        "通訊機櫃散熱風扇總成(熱管理整合)"
+      ],
+      "customers": [
+        "中磊(5388)(網通散熱配套)",
+        "智邦(2390)(交換器散熱模組)",
+        "啟碁(6285)(通訊散熱風扇)",
+        "建漢(3061)(機房散熱硬體)",
+        "明泰(3380)(網通設備散熱件)"
+      ],
+      "competitors": [],
+      "risks": [
+        "月營收資料未揭露(上櫃小公司資訊透明度低)",
+        "散熱非核心技術,以機構件搭配為主(毛利率受限)",
+        "資本額僅4.87億,規模小抗風險能力弱"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 通訊產品製造及買賣"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-17",
+      "status": "verified",
+      "techFocus": [
+        "軸流/離心散熱風扇葉片氣流設計(CFD模擬)",
+        "伺服器機房熱管理散熱外殼一體化設計",
+        "通訊硬體OEM/ODM散熱整合製造(沖壓+壓鑄+組裝)"
+      ]
+    }
+  ]
 }

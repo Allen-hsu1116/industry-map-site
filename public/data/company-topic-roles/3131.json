@@ -1,107 +1,111 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "3131",
-    "companyName": "弘塑",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "3131",
+  "companyName": "弘塑",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "advanced-packaging",
+      "topicName": "先進封裝與 CoWoS",
+      "topicType": "process",
+      "directness": "core",
+      "supplyChainStage": "process_equipment",
+      "roleType": "packaging_equipment_chemicals",
+      "roleSummary": "弘塑提供先進封裝製程設備與化學品，含電子級蝕刻液與封裝製程機台，是CoWoS/2.5D封裝的設備與耗材供應商。",
+      "products": [
+        "先進封裝製程機台(電鍍/清洗/蝕刻)",
+        "電子級蝕刻液(封裝級混酸)",
+        "封裝用化學品(銅電鍍液/清洗液)",
+        "晶圓清洗設備(封裝前清洗)"
+      ],
+      "customers": [
+        "台積電(2330)(CoWoS封裝製程設備+蝕刻液)",
+        "日月光(3711)(封裝耗材與化學品)",
+        "力積電(6770)(封裝濕製程設備)",
+        "京元電(2449)(測試製程化學品)",
+        "南茂(8150)(封裝電鍍液)"
+      ],
+      "competitors": [],
+      "risks": [
+        "月營收資料未揭露(資訊透明度較低)",
+        "資本額僅2.93億,規模小但技術利基型",
+        "高度依賴台積電CoWoS擴產節奏"
+      ],
+      "legacy": {},
+      "evidence": [
         {
-            "topicId": "advanced-packaging",
-            "topicName": "先進封裝與 CoWoS",
-            "topicType": "process",
-            "directness": "core",
-            "supplyChainStage": "process_equipment",
-            "roleType": "packaging_equipment_chemicals",
-            "roleSummary": "弘塑提供先進封裝製程設備與化學品，含電子級蝕刻液與封裝製程機台，是CoWoS/2.5D封裝的設備與耗材供應商。",
-            "products": [
-                "先進封裝製程機台(電鍍/清洗/蝕刻)",
-                "電子級蝕刻液(封裝級混酸)",
-                "封裝用化學品(銅電鍍液/清洗液)",
-                "晶圓清洗設備(封裝前清洗)"
-            ],
-            "customers": [
-                "台積電(2330)(封裝製程設備)",
-                "日月光(3711)(封裝耗材)"
-            ],
-            "competitors": [],
-            "risks": [
-                "先進封裝設備市場被國際大廠(如LAM/TEL)主導",
-                "化學品業務毛利率受原物料波動影響"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 半導體及積體電路製造設備之工程承包、製造、買賣及維修工程。化學品：工業級、試藥級、電子級混酸（蝕刻液）、電鑄藥液。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-13",
-            "status": "verified",
-            "techFocus": [
-                "先進封裝濕製程設備(電鍍/清洗)",
-                "封裝級蝕刻液配方(銅蝕刻/鈍化層蝕刻)",
-                "CoWoS/InFO製程耗材供應能力"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 半導體及積體電路製造設備之工程承包、製造、買賣及維修工程。化學品：工業級、試藥級、電子級混酸（蝕刻液）、電鑄藥液。"
         },
         {
-            "topicId": "semiconductor-equipment-materials",
-            "topicName": "半導體設備與前段材料",
-            "topicType": "supply_chain_segment",
-            "directness": "core",
-            "supplyChainStage": "process_equipment_materials",
-            "roleType": "semi_process_equipment_chemicals",
-            "roleSummary": "弘塑6月營收6.31億大幅成長(4月5.36億→6月6.31億)。濕製程設備與電子級化學品雙業務，服務台積電等一線晶圓廠。",
-            "products": [
-                "濕製程機台(客製化蝕刻/清洗設備)",
-                "電子級混酸蝕刻液(BOE/SPM/HF系列)",
-                "電鑄藥液(銅電鑄用)",
-                "製程設備維修與升級服務"
-            ],
-            "customers": [
-                "台積電(2330)(製程設備)",
-                "聯電(2303)(化學品)",
-                "世界先進(5347)(設備工程)"
-            ],
-            "competitors": [],
-            "risks": [
-                "客戶集中度高(台積電佔比大)",
-                "設備廠規模相對小,研發資源有限"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 半導體及積體電路製造設備之工程承包、製造、買賣及維修工程。化學品：工業級、試藥級、電子級混酸（蝕刻液）、電鑄藥液。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-13",
-            "status": "verified",
-            "techFocus": [
-                "濕製程設備客製化設計(蝕刻/清洗/電鑄)",
-                "電子級混酸配方技術(BOE/SPM/HF+HNO3)",
-                "製程設備在地化維修能力(快速響應)"
-            ]
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-17",
+      "status": "verified",
+      "techFocus": [
+        "先進封裝濕製程設備(電鍍/清洗)",
+        "封裝級蝕刻液配方(銅蝕刻/鈍化層蝕刻)",
+        "CoWoS/InFO製程耗材供應能力"
+      ]
+    },
+    {
+      "topicId": "semiconductor-equipment-materials",
+      "topicName": "半導體設備與前段材料",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "process_equipment_materials",
+      "roleType": "semi_process_equipment_chemicals",
+      "roleSummary": "弘塑6月營收6.31億大幅成長(4月5.36億→6月6.31億)。濕製程設備與電子級化學品雙業務，服務台積電等一線晶圓廠。",
+      "products": [
+        "濕製程機台(客製化蝕刻/清洗設備)",
+        "電子級混酸蝕刻液(BOE/SPM/HF系列)",
+        "電鑄藥液(銅電鑄用)",
+        "製程設備維修與升級服務"
+      ],
+      "customers": [
+        "台積電(2330)(製程設備)",
+        "聯電(2303)(化學品)",
+        "世界先進(5347)(設備工程)"
+      ],
+      "competitors": [],
+      "risks": [
+        "客戶集中度高(台積電佔比大)",
+        "設備廠規模相對小,研發資源有限"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 半導體及積體電路製造設備之工程承包、製造、買賣及維修工程。化學品：工業級、試藥級、電子級混酸（蝕刻液）、電鑄藥液。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "濕製程設備客製化設計(蝕刻/清洗/電鑄)",
+        "電子級混酸配方技術(BOE/SPM/HF+HNO3)",
+        "製程設備在地化維修能力(快速響應)"
+      ]
+    }
+  ]
 }

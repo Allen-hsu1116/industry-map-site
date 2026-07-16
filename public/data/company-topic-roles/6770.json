@@ -1,101 +1,108 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "6770",
-    "companyName": "力積電",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "6770",
+  "companyName": "力積電",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "wafer-foundry",
+      "topicName": "晶圓代工與第三代半導體",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "wafer_fabrication",
+      "roleType": "specialty_foundry",
+      "roleSummary": "力積電6月營收64.74億年增68.8%、月增12.2%，累計年增37.8%——客戶需求上升、量價齊揚。12吋利基DRAM代工與8吋利基製程雙引擎，SiC/GaN第三代功率代工為新成長動能。",
+      "products": [
+        "12吋利基DRAM代工(PSRAM/LPDDR4/DDR3)",
+        "8吋邏輯IC代工(0.18-0.35μm)",
+        "CIS影像感測器代工(BSI製程)",
+        "SiC/GaN第三代功率晶圓代工",
+        "特殊應用IC技術整合服務(ASIC NRE→MP)"
+      ],
+      "customers": [
+        "ISSI(利基DRAM代工)",
+        "OmniVision(CIS代工)",
+        "聯詠(3034)(驅動IC代工)"
+      ],
+      "competitors": [],
+      "risks": [],
+      "legacy": {},
+      "evidence": [
         {
-            "topicId": "wafer-foundry",
-            "topicName": "晶圓代工與第三代半導體",
-            "topicType": "supply_chain_segment",
-            "directness": "core",
-            "supplyChainStage": "wafer_fabrication",
-            "roleType": "specialty_foundry",
-            "roleSummary": "力積電6月營收64.74億年增68.8%、月增12.2%，累計年增37.8%——客戶需求上升、量價齊揚。12吋利基DRAM代工與8吋利基製程雙引擎，SiC/GaN第三代功率代工為新成長動能。",
-            "products": [
-                "12吋利基DRAM代工(PSRAM/LPDDR4/DDR3)",
-                "8吋邏輯IC代工(0.18-0.35μm)",
-                "CIS影像感測器代工(BSI製程)",
-                "SiC/GaN第三代功率晶圓代工",
-                "特殊應用IC技術整合服務(ASIC NRE→MP)"
-            ],
-            "customers": [
-                "ISSI(利基DRAM代工)",
-                "OmniVision(CIS代工)",
-                "聯詠(3034)(驅動IC代工)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 各式積體電路其系統產品之生產、製造、測試、封裝；半導體設備零組件維修、開發、製造與銷售"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-14",
-            "status": "verified",
-            "techFocus": [
-                "12吋利基DRAM代工(40nm DDR3/DDR4 PSRAM)",
-                "8吋BCD/CMOS利基製程平台(0.18-0.35μm)",
-                "SiC/GaN第三代寬能隙功率晶圓代工"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 各式積體電路其系統產品之生產、製造、測試、封裝；半導體設備零組件維修、開發、製造與銷售"
         },
         {
-            "topicId": "niche-memory",
-            "topicName": "NOR Flash 與利基記憶體",
-            "topicType": "product",
-            "directness": "core",
-            "supplyChainStage": "wafer_fabrication",
-            "roleType": "niche_dram_foundry",
-            "roleSummary": "力積電是利基型DRAM代工領導廠商，12吋廠提供PSRAM、利基DRAM與特殊記憶體代工服務。",
-            "products": [
-                "12吋利基DRAM代工(PSRAM/LPDDR)",
-                "特殊記憶體代工",
-                "CIS記憶體整合代工"
-            ],
-            "customers": [
-                "ISSI(利基DRAM)",
-                "兆易創新(GigaDevice)(利基DRAM)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 各式積體電路其系統產品之生產、製造、測試、封裝；半導體設備零組件維修、開發、製造與銷售"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-03",
-            "status": "verified",
-            "techFocus": [
-                "12吋利基DRAM代工(40nm DDR3/DDR4 PSRAM)",
-                "特殊應用IC技術整合服務(ASIC NRE→MP)",
-                "矽智財(IP)設計與服務"
-            ]
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "12吋利基DRAM代工(40nm DDR3/DDR4 PSRAM)",
+        "8吋BCD/CMOS利基製程平台(0.18-0.35μm)",
+        "SiC/GaN第三代寬能隙功率晶圓代工"
+      ]
+    },
+    {
+      "topicId": "niche-memory",
+      "topicName": "NOR Flash 與利基記憶體",
+      "topicType": "product",
+      "directness": "core",
+      "supplyChainStage": "wafer_fabrication",
+      "roleType": "niche_dram_foundry",
+      "roleSummary": "力積電是利基型DRAM代工領導廠商，12吋廠提供PSRAM、利基DRAM與特殊記憶體代工服務。",
+      "products": [
+        "12吋利基DRAM代工(PSRAM/LPDDR)",
+        "特殊記憶體代工",
+        "CIS記憶體整合代工"
+      ],
+      "customers": [
+        "ISSI(利基DRAM設計)",
+        "兆易創新(GigaDevice)(利基DRAM代工)",
+        "旺宏(2337)(CIS記憶體整合代工)",
+        "華邦電(2344)(特殊記憶體代工)",
+        "各利基型IC設計公司(ASIC NRE→MP)"
+      ],
+      "competitors": [],
+      "risks": [
+        "6月營收6.47億YoY+68.8%!客戶需求上升+銷售價格調漲",
+        "累計營收YoY+37.8%,利基DRAM代工復甦強勁",
+        "12吋廠設備折舊壓力大,先進製程投資受限"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 各式積體電路其系統產品之生產、製造、測試、封裝；半導體設備零組件維修、開發、製造與銷售"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-17",
+      "status": "verified",
+      "techFocus": [
+        "12吋利基DRAM代工(40nm DDR3/DDR4 PSRAM)",
+        "特殊應用IC技術整合服務(ASIC NRE→MP)",
+        "矽智財(IP)設計與服務"
+      ]
+    }
+  ]
 }
