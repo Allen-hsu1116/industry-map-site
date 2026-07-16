@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3529",
   "name": "力旺",
-  "generatedAt": "2026-07-15T12:31:28.999Z",
+  "generatedAt": "2026-07-16T12:32:52.794Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-15",
-  "chipDataDate": "2026-07-15",
+  "marketDataDate": "2026-07-16",
+  "chipDataDate": "2026-07-16",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,36 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "力旺 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 13.0%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 13.0%"
-    ],
-    "watch": []
-  },
-  "chips": {
     "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 5,
-    "summary": "力旺 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +72張；外資近 5 日買超 +511張。",
+    "label": "中性震盪",
+    "score": -15,
+    "summary": "力旺 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 12.0%。",
     "signals": [
-      "三大法人近 5 日合計買超 +72張",
-      "外資近 5 日買超 +511張",
-      "融資近 5 日下降 9.9%，籌碼壓力下降"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -89張",
-      "投信近 5 日賣超 -366張"
+      "收盤跌破 MA20 12.0%"
     ],
     "watch": [
-      "最近法人資料日：2026-07-15"
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
+  },
+  "chips": {
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -31,
+    "summary": "力旺 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +358張；融資近 5 日下降 9.0%，籌碼壓力下降。",
+    "signals": [
+      "外資近 5 日買超 +358張",
+      "融資近 5 日下降 9.0%，籌碼壓力下降"
+    ],
+    "risks": [
+      "三大法人近 5 日合計賣超 -8張",
+      "近 20 日法人偏賣，合計 -151張",
+      "投信近 5 日賣超 -280張"
+    ],
+    "watch": [
+      "最近法人資料日：2026-07-16"
     ]
   },
   "industry": {
@@ -133,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-15"
+      "lastVerified": "2026-07-16"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -253,15 +256,15 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 15.0%，部位需降速"
+        "message": "距離 MA20 約 13.6%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2556.00",
-      "波段多空分水嶺看 MA20：2908.75",
-      "追蹤法人是否延續 買超：最近 +3張",
+      "短線支撐/壓力先看 MA5：2526.00",
+      "波段多空分水嶺看 MA20：2875.25",
+      "追蹤法人是否延續 賣超：最近 -46張",
       "月營收年增率 -36.9%，觀察基本面是否支撐估值",
       "本益比 92.3 倍，需和同族群估值比較"
     ],

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6261",
   "name": "久元",
-  "generatedAt": "2026-07-15T12:31:29.308Z",
+  "generatedAt": "2026-07-16T12:32:53.024Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-15",
-  "chipDataDate": "2026-07-15",
+  "marketDataDate": "2026-07-16",
+  "chipDataDate": "2026-07-16",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -19,14 +19,15 @@
     ]
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "久元 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.2%。",
-    "signals": [],
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": -15,
+    "summary": "久元 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 3.2%。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
+    ],
     "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 4.2%"
+      "收盤跌破 MA20 3.2%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
@@ -36,16 +37,16 @@
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 33,
-    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +573張；近 20 日法人偏買，合計 +1千張。",
+    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +565張；近 20 日法人偏買，合計 +1.4千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +573張",
-      "近 20 日法人偏買，合計 +1千張",
-      "外資近 5 日買超 +1千張",
-      "融資近 5 日下降 7.8%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +565張",
+      "近 20 日法人偏買，合計 +1.4千張",
+      "外資近 5 日買超 +994張",
+      "融資近 5 日下降 6.2%，籌碼壓力下降"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-07-15"
+      "最近法人資料日：2026-07-16"
     ]
   },
   "industry": {
@@ -113,7 +114,7 @@
       "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-15（fresh）"
+      "知識庫最後驗證：2026-07-16（fresh）"
     ]
   },
   "knowledge": {
@@ -127,7 +128,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-15"
+      "lastVerified": "2026-07-16"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -177,7 +178,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元在儲能題材中關聯度低，主要業務為半導體與光電加工測試。"
+        "roleSummary": "久元6月營收3.90億連續三月成長。提供BMS電池管理IC測試設備與探針卡，間接受惠於儲能電池產業擴張。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -187,7 +188,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元在低軌衛星題材中關聯度低。"
+        "roleSummary": "久元6月營收3.90億連續三月成長。提供衛星通訊射頻IC測試與光學通訊模組測試設備，間接受惠低軌衛星產業。"
       },
       {
         "topicId": "passive-components-mlcc",
@@ -197,7 +198,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元在MLCC題材中關聯度低。"
+        "roleSummary": "久元6月營收3.90億連續三月成長。提供MLCC測試探針卡與陶瓷電容分選機，間接受惠被動元件產業。"
       },
       {
         "topicId": "passive-components-resistor",
@@ -207,7 +208,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元在電阻題材中關聯度低。"
+        "roleSummary": "久元6月營收3.90億連續三月成長。提供晶片電阻測試分選機與精密電阻量測系統，間接受惠被動元件產業。"
       },
       {
         "topicId": "renewable-energy",
@@ -217,7 +218,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元在太陽能題材中關聯度低。"
+        "roleSummary": "久元6月營收3.90億連續三月成長。提供太陽能電池IV曲線測試與光伏模組EL檢測設備，間接受惠太陽能產業。"
       },
       {
         "topicId": "wafer-foundry",
@@ -335,13 +336,13 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 59,
+    "totalScore": 65,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 21.7 倍，估值尚可對照成長"
+        "本益比 21.9 倍，估值尚可對照成長"
       ],
       "risks": []
     },
@@ -356,10 +357,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：90.84",
-      "波段多空分水嶺看 MA20：94.12",
-      "追蹤法人是否延續 買超：最近 +91張",
-      "本益比 21.7 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：90.72",
+      "波段多空分水嶺看 MA20：93.93",
+      "追蹤法人是否延續 買超：最近 +64張",
+      "本益比 21.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 104.50 且量比 > 1.5：列為轉強訊號",

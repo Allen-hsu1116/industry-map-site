@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-07-15T12:31:28.929Z",
+  "generatedAt": "2026-07-16T12:32:52.744Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-15",
-  "chipDataDate": "2026-07-15",
+  "marketDataDate": "2026-07-16",
+  "chipDataDate": "2026-07-16",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -19,35 +19,32 @@
     ]
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -30,
-    "summary": "欣銓 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 5,
-    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +8.3千張；投信近 5 日買超 +786張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 36,
+    "summary": "欣銓 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.4千張；近 20 日法人偏買，合計 +1.2萬張。",
     "signals": [
-      "近 20 日法人偏買，合計 +8.3千張",
-      "投信近 5 日買超 +786張",
-      "融資近 5 日下降 20.5%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +1.4千張",
+      "近 20 日法人偏買，合計 +1.2萬張",
+      "投信近 5 日買超 +1.4千張",
+      "外資近 5 日買超 +374張"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -1.7千張",
-      "外資近 5 日賣超 -1.9千張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-07-15"
+      "最近法人資料日：2026-07-16"
     ]
   },
   "industry": {
@@ -60,7 +57,7 @@
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "欣銓是記憶體IC晶圓測試專業廠商，提供DRAM/NAND/HBM晶圓級測試與Burn-in服務，先進封裝測試需求帶動高階測試產能擴充。",
+      "roleSummary": "欣銓6月營收15.52億穩定成長。專業記憶體IC晶圓測試代工，服務DRAM/NAND/HBM供應鏈測試需求。",
       "supplyChainStage": "advanced_packaging_test",
       "roleType": "memory_ic_wafer_test",
       "directness": "core",
@@ -115,7 +112,7 @@
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
       "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-15（fresh）"
+      "知識庫最後驗證：2026-07-16（fresh）"
     ]
   },
   "knowledge": {
@@ -129,7 +126,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-15"
+      "lastVerified": "2026-07-16"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -159,7 +156,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "欣銓是記憶體IC晶圓測試專業廠商，提供DRAM/NAND/HBM晶圓級測試與Burn-in服務，先進封裝測試需求帶動高階測試產能擴充。"
+        "roleSummary": "欣銓6月營收15.52億穩定成長。專業記憶體IC晶圓測試代工，服務DRAM/NAND/HBM供應鏈測試需求。"
       },
       {
         "topicId": "edge-ai-aiot",
@@ -169,7 +166,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "欣銓提供邊緣AI晶片的測試服務，數位/混合訊號IC測試涵蓋AI推論晶片的品質驗證。"
+        "roleSummary": "欣銓6月營收15.52億穩定成長。提供邊緣AI SoC晶圓與成品測試服務，受惠AIoT邊緣運算晶片需求增長。"
       },
       {
         "topicId": "hbm",
@@ -179,7 +176,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "欣銓為HBM記憶體供應鏈提供晶圓測試服務，HBM堆疊封裝前的晶圓級測試是確保良率的關鍵環節。"
+        "roleSummary": "欣銓6月營收15.52億穩定成長。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -189,7 +186,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "欣銓在低軌衛星通訊題材中為衛星通訊IC測試代工供應商，提供射頻/混合訊號IC晶圓測試與成品測試。MOPS主要業務涵蓋數位訊號IC及混合訊號IC之晶圓及成品測試，可應用於衛星通訊晶片。"
+        "roleSummary": "欣銓6月營收15.52億穩定成長。提供衛星通訊IC晶圓與成品測試服務，受惠低軌衛星射頻晶片需求增長。"
       },
       {
         "topicId": "passive-components-mlcc",
@@ -199,7 +196,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "欣銓在被動元件MLCC題材中為極間接受惠者，僅在MLCC驅動/控制IC測試環節有少量關聯。與MLCC供應鏈關聯度極低。"
+        "roleSummary": "欣銓6月營收15.52億穩定成長。提供被動元件驅動IC晶圓與成品測試服務，間接受惠MLCC產業需求。"
       },
       {
         "topicId": "pcb-substrates",
@@ -209,7 +206,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "欣銓在PCB載板題材中為間接受惠者，透過IC封裝後測試服務確保載板封裝IC品質。主要客戶為IC載板封裝廠，但與PCB載板供應鏈為間接關係。"
+        "roleSummary": "欣銓6月營收15.52億穩定成長。提供IC載板封裝後測試與Burn-in服務，間接支援PCB載板良率驗證。"
       },
       {
         "topicId": "semiconductor-equipment-materials",
@@ -219,7 +216,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "欣銓為台灣專業IC測試代工大廠，主力為記憶體IC晶圓測試(CP)與成品測試(FT)，客戶涵蓋華邦電、旺宏等記憶體廠。MOPS主要業務為記憶體IC之晶圓測試、數位/混合訊號IC測試及Burn-in測試。"
+        "roleSummary": "欣銓6月營收15.52億穩定成長。專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。"
       }
     ],
     "swot": [],
@@ -316,7 +313,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 67,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -327,6 +324,7 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -334,10 +332,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：226.80",
-      "波段多空分水嶺看 MA20：230.23",
-      "追蹤法人是否延續 賣超：最近 -583張",
-      "本益比 34.8 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：227.90",
+      "波段多空分水嶺看 MA20：231.10",
+      "追蹤法人是否延續 買超：最近 +2.1千張",
+      "本益比 36.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 271.50 且量比 > 1.5：列為轉強訊號",

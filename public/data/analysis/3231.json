@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-07-15T12:31:28.916Z",
+  "generatedAt": "2026-07-16T12:32:52.735Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-15",
-  "chipDataDate": "2026-07-15",
+  "marketDataDate": "2026-07-16",
+  "chipDataDate": "2026-07-16",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,29 +18,31 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": -15,
-    "summary": "緯創 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 6.1%。",
+    "summary": "緯創 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 5.1%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [
-      "收盤跌破 MA20 6.1%"
+      "收盤跌破 MA20 5.1%"
     ],
     "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -36,
-    "summary": "緯創 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1.1萬張；近 20 日法人偏賣，合計 -11.7萬張。",
-    "signals": [],
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": -8,
+    "summary": "緯創 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +703張；外資近 5 日買超 +7千張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +703張",
+      "外資近 5 日買超 +7千張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.1萬張",
-      "近 20 日法人偏賣，合計 -11.7萬張",
-      "投信近 5 日賣超 -952張",
-      "外資近 5 日賣超 -3.1千張"
+      "近 20 日法人偏賣，合計 -10.5萬張",
+      "投信近 5 日賣超 -7.6千張",
+      "融資近 5 日增加 9.6%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-07-15"
+      "最近法人資料日：2026-07-16"
     ]
   },
   "industry": {
@@ -123,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-15"
+      "lastVerified": "2026-07-16"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -247,13 +249,13 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 53,
+    "totalScore": 58,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 14.6 倍，估值尚可對照成長",
+        "本益比 14.7 倍，估值尚可對照成長",
         "殖利率 3.8%，提供部分下檔支撐"
       ],
       "risks": []
@@ -269,9 +271,9 @@
   "nextSession": {
     "focus": [
       "短線支撐/壓力先看 MA5：144.50",
-      "波段多空分水嶺看 MA20：154.98",
-      "追蹤法人是否延續 買超：最近 +1.7千張",
-      "本益比 14.6 倍，需和同族群估值比較"
+      "波段多空分水嶺看 MA20：154.40",
+      "追蹤法人是否延續 買超：最近 +3.8千張",
+      "本益比 14.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 166.00 且量比 > 1.5：列為轉強訊號",
