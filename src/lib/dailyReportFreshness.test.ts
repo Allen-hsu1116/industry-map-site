@@ -71,10 +71,20 @@ test("checked-in daily report regenerates picks from strong-stock ranking instea
     rankings: Array<{ timeframe: string; items: Array<{ code: string; name: string }> }>;
   };
   const topDailyRankingCodes = strongStocks.rankings.find((ranking) => ranking.timeframe === "1d")?.items.map((item) => item.code) ?? [];
+  const expectedPickCodes = topDailyRankingCodes
+    .filter((code) => {
+      const analysis = JSON.parse(fs.readFileSync(`public/data/analysis/${code}.json`, "utf8")) as {
+        analysisQuality?: { grade?: string };
+        scoring?: { recommendationState?: string; riskGates?: Array<{ severity?: string }> };
+      };
+      return ["A", "B", "C"].includes(analysis.analysisQuality?.grade ?? "")
+        && analysis.scoring?.recommendationState !== "blocked"
+        && !analysis.scoring?.riskGates?.some((gate) => gate.severity === "hard");
+    })
+    .slice(0, 6);
 
   assert.notDeepEqual(report.picks.map((pick) => pick.code), ["2330", "2337", "2344"], "daily picks must not preserve the original hard-coded template");
-  assert.ok(report.picks.length >= 3, "daily report should publish multiple current candidates");
-  assert.ok(report.picks.every((pick) => topDailyRankingCodes.includes(pick.code)), "daily picks should be drawn from strong-stock ranking candidates");
+  assert.deepEqual(report.picks.map((pick) => pick.code), expectedPickCodes, "daily picks should match the current quality-gated ranking, including narrow or empty markets");
   assert.ok(report.picks.every((pick) => /strong-stock ranking|Daily Analysis|quality gate/i.test(pick.recommendation.reasoning)), "pick reasoning should disclose strong-stock + Daily Analysis inputs");
   assert.ok(report.hot_sectors.every((sector) => sector.leaders.some((leader) => report.picks.some((pick) => pick.code === leader))), "hot sectors should be derived from current picks, not stale leaders");
 });
