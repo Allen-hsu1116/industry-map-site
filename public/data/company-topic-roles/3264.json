@@ -1,355 +1,360 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "3264",
-    "companyName": "欣銓",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "3264",
+  "companyName": "欣銓",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "advanced-packaging",
+      "topicName": "先進封裝與 CoWoS",
+      "topicType": "process",
+      "directness": "core",
+      "supplyChainStage": "advanced_packaging_test",
+      "roleType": "memory_ic_wafer_test",
+      "roleSummary": "欣銓6月營收15.52億穩定成長。專業記憶體IC晶圓測試代工，服務DRAM/NAND/HBM供應鏈測試需求。",
+      "products": [
+        "記憶體IC晶圓測試(DRAM/NAND/HBM CP測試)",
+        "數位訊號IC晶圓及成品測試",
+        "混合訊號IC測試(ADC/DAC/射頻)",
+        "晶圓級Burn-in測試(高溫老化壽命篩選)"
+      ],
+      "customers": [
+        "力積電(6770)(利基DRAM測試)",
+        "南亞科(2408)(DRAM測試)",
+        "旺宏(2337)(NOR Flash測試)",
+        "華邦電(2344)(NAND測試)"
+      ],
+      "competitors": [],
+      "risks": [],
+      "legacy": {},
+      "evidence": [
         {
-            "topicId": "advanced-packaging",
-            "topicName": "先進封裝與 CoWoS",
-            "topicType": "process",
-            "directness": "core",
-            "supplyChainStage": "advanced_packaging_test",
-            "roleType": "memory_ic_wafer_test",
-            "roleSummary": "欣銓6月營收15.52億穩定成長。專業記憶體IC晶圓測試代工，服務DRAM/NAND/HBM供應鏈測試需求。",
-            "products": [
-                "記憶體IC晶圓測試(DRAM/NAND/HBM CP測試)",
-                "數位訊號IC晶圓及成品測試",
-                "混合訊號IC測試(ADC/DAC/射頻)",
-                "晶圓級Burn-in測試(高溫老化壽命篩選)"
-            ],
-            "customers": [
-                "力積電(6770)(利基DRAM測試)",
-                "南亞科(2408)(DRAM測試)",
-                "旺宏(2337)(NOR Flash測試)",
-                "華邦電(2344)(NAND測試)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-03",
-            "status": "verified",
-            "techFocus": [
-                "記憶體IC晶圓級測試(CP)良率篩選技術",
-                "晶圓級Burn-in測試(高溫加速老化)",
-                "混合訊號IC測試(ADC/DAC高精度量測)"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
         },
         {
-            "topicId": "hbm",
-            "topicName": "HBM 高頻寬記憶體",
-            "topicType": "product",
-            "directness": "indirect",
-            "supplyChainStage": "hbm_test",
-            "roleType": "hbm_wafer_test_provider",
-            "roleSummary": "欣銓6月營收15.52億穩定成長。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務。",
-            "products": [
-                "HBM晶圓測試(TSV前CP測試)",
-                "DRAM die測試與分類(KGD)",
-                "HBM成品測試(封裝後FT)",
-                "Burn-in測試(HBM高溫老化篩選)"
-            ],
-            "customers": [
-                "SK hynix(HBM供應鏈測試)",
-                "Micron(HBM供應鏈測試)",
-                "力積電(6770)(利基記憶體測試)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-07-03",
-            "status": "verified",
-            "techFocus": [
-                "HBM TSV前晶圓測試(KGD Known Good Die)",
-                "高頻寬記憶體高溫Burn-in測試技術",
-                "DRAM die分類與良率篩選"
-            ]
-        },
-        {
-            "topicId": "edge-ai-aiot",
-            "topicName": "Edge AI / AIoT 邊緣智慧",
-            "topicType": "technology",
-            "directness": "indirect",
-            "supplyChainStage": "test",
-            "roleType": "edge_ai_ic_test",
-            "roleSummary": "欣銓6月營收15.52億穩定成長。提供邊緣AI SoC晶圓與成品測試服務，受惠AIoT邊緣運算晶片需求增長。",
-            "products": [
-                "邊緣AI SoC晶圓測試(CP)",
-                "邊緣AI SoC成品測試(FT)",
-                "混合訊號IC測試(ADC/DAC)",
-                "Burn-in測試(AI IC高溫老化)"
-            ],
-            "customers": [
-                "聯發科(2454)(AI SoC測試)",
-                "瑞昱(2379)(邊緣AI IC測試)",
-                "利基型AI IC設計公司(測試代工)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-07-03",
-            "status": "verified",
-            "techFocus": [
-                "AI SoC數位訊號晶圓測試(CP)",
-                "混合訊號IC測試(ADC/DAC高精度量測)",
-                "晶圓級Burn-in測試(高溫加速老化)"
-            ]
-        },
-        {
-            "topicId": "semiconductor-equipment-materials",
-            "topicName": "半導體設備與前段材料",
-            "topicType": "supply_chain_segment",
-            "directness": "indirect",
-            "supplyChainStage": "back_end_test",
-            "roleType": "wafer_test_service",
-            "roleSummary": "欣銓6月營收15.52億穩定成長。專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。",
-            "products": [
-                "晶圓測試服務(CP測試)(記憶體/邏輯IC晶圓級測試)",
-                "成品測試(FT測試)(封裝後功能測試/老化測試)",
-                "Burn-in測試(晶圓型式/成品型式高溫老化壽命篩選)",
-                "混合訊號IC測試(ADC/DAC/射頻IC量測)"
-            ],
-            "customers": [
-                "華邦電(2344)(記憶體IC晶圓測試代工)",
-                "旺宏(2337)(NOR Flash測試代工)",
-                "力積電(3552)(記憶體/邏輯IC測試)",
-                "聯詠(3034)(驅動IC測試代工)"
-            ],
-            "competitors": [],
-            "risks": [
-                "IC測試為資本密集產業，測試機台投資金額大",
-                "記憶體IC測試需求受記憶體景氣循環影響大",
-                "面臨京元電(2449)等同業價格競爭壓力"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-12",
-            "status": "verified",
-            "techFocus": [
-                "記憶體IC晶圓級測試(CP)良率篩選技術",
-                "晶圓級/成品級Burn-in測試(高溫加速老化)",
-                "混合訊號IC測試(ADC/DAC/射頻高精度量測)"
-            ]
-        },
-        {
-            "topicId": "pcb-substrates",
-            "topicName": "PCB、IC 載板與高階基板材料",
-            "topicType": "supply_chain_segment",
-            "directness": "indirect",
-            "supplyChainStage": "test",
-            "roleType": "test_service",
-            "roleSummary": "欣銓6月營收15.52億穩定成長。提供IC載板封裝後測試與Burn-in服務，間接支援PCB載板良率驗證。",
-            "products": [
-                "IC載板封裝後測試(FT)",
-                "Burn-in測試(載板封裝IC高溫老化篩選)",
-                "混合訊號IC測試(載板封裝射頻IC)",
-                "晶圓測試(CP)(載板封裝前晶圓級測試)"
-            ],
-            "customers": [
-                "欣興(3037)(ABF載板封裝IC測試)",
-                "南電(8046)(IC載板封裝測試委外)",
-                "景碩(3189)(BT載板IC測試代工)"
-            ],
-            "competitors": [],
-            "risks": [
-                "與PCB載板為間接關係，題材傳導非常微弱",
-                "載板封裝IC測試佔欣銓營收比重低",
-                "ABF載板需求波動不直接影響測試訂單"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "low",
-            "lastVerified": "2026-07-12",
-            "status": "verified",
-            "techFocus": [
-                "IC載板封裝後功能測試(FT)技術",
-                "晶圓級Burn-in測試(高溫加速老化)",
-                "混合訊號IC測試(載板封裝射頻量測)"
-            ]
-        },
-        {
-            "topicId": "passive-components-mlcc",
-            "topicName": "MLCC / 電容器",
-            "topicType": "product",
-            "directness": "indirect",
-            "supplyChainStage": "test",
-            "roleType": "test_service",
-            "roleSummary": "欣銓6月營收15.52億穩定成長。提供被動元件驅動IC晶圓與成品測試服務，間接受惠MLCC產業需求。",
-            "products": [
-                "被動元件驅動IC晶圓測試(CP)",
-                "MLCC驅動IC成品測試(FT)",
-                "混合訊號IC測試(被動元件搭配IC)",
-                "Burn-in測試(被動元件驅動IC高溫老化)"
-            ],
-            "customers": [
-                "國巨(2327)(被動元件驅動IC測試委外)",
-                "華新科(2492)(MLCC相關IC測試)",
-                "禾伸堂(3028)(被動元件IC測試)"
-            ],
-            "competitors": [],
-            "risks": [
-                "與MLCC供應鏈關聯度極低，題材傳導幾乎不存在",
-                "MLCC本身不需IC測試服務，僅驅動IC有間接關聯",
-                "此題材分類可能有誤，建議重新評估是否保留"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "low",
-            "lastVerified": "2026-07-12",
-            "status": "verified",
-            "techFocus": [
-                "混合訊號IC測試技術(ADC/DAC量測)",
-                "晶圓級Burn-in測試(高溫老化壽命篩選)",
-                "測試程式開發與量測良率優化"
-            ]
-        },
-        {
-            "topicId": "leo-satellite-communications",
-            "topicName": "低軌衛星通訊",
-            "topicType": "end_market",
-            "directness": "indirect",
-            "supplyChainStage": "test",
-            "roleType": "satellite_ic_test",
-            "roleSummary": "欣銓6月營收15.52億穩定成長。提供衛星通訊IC晶圓與成品測試服務，受惠低軌衛星射頻晶片需求增長。",
-            "products": [
-                "衛星通訊IC晶圓測試(CP)(數位/混合訊號射頻IC)",
-                "衛星通訊IC成品測試(FT)(封裝後功能驗證)",
-                "Burn-in測試(衛星通訊IC高溫老化壽命篩選)",
-                "射頻IC測試(Ka/Ku頻段高頻量測)"
-            ],
-            "customers": [
-                "高通Qualcomm(衛星通訊晶片測試)",
-                "聯發科(2454)(衛星通訊模組IC測試)",
-                "利基型衛通IC設計公司(測試委外)"
-            ],
-            "competitors": [],
-            "risks": [
-                "衛星通訊IC測試佔欣銓營收比重低，題材傳導有限",
-                "衛星IC測試需特殊射頻測試機台，設備投資需求高",
-                "低軌衛星IC設計公司可能自有測試能力，委外意願不確定"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-07-12",
-            "status": "verified",
-            "techFocus": [
-                "射頻IC測試技術(Ka/Ku頻段高頻量測)",
-                "晶圓級Burn-in測試(高溫加速老化)",
-                "混合訊號IC測試(射頻/基頻高精度量測)"
-            ]
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-03",
+      "status": "verified",
+      "techFocus": [
+        "記憶體IC晶圓級測試(CP)良率篩選技術",
+        "晶圓級Burn-in測試(高溫加速老化)",
+        "混合訊號IC測試(ADC/DAC高精度量測)"
+      ]
+    },
+    {
+      "topicId": "hbm",
+      "topicName": "HBM 高頻寬記憶體",
+      "topicType": "product",
+      "directness": "indirect",
+      "supplyChainStage": "hbm_test",
+      "roleType": "hbm_wafer_test_provider",
+      "roleSummary": "欣銓6月營收15.52億穩定成長。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務。",
+      "products": [
+        "HBM晶圓測試(TSV前CP測試)",
+        "DRAM die測試與分類(KGD)",
+        "HBM成品測試(封裝後FT)",
+        "Burn-in測試(HBM高溫老化篩選)"
+      ],
+      "customers": [
+        "SK hynix(HBM供應鏈測試)",
+        "Micron(HBM供應鏈測試)",
+        "力積電(6770)(利基記憶體測試)"
+      ],
+      "competitors": [],
+      "risks": [],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-07-03",
+      "status": "verified",
+      "techFocus": [
+        "HBM TSV前晶圓測試(KGD Known Good Die)",
+        "高頻寬記憶體高溫Burn-in測試技術",
+        "DRAM die分類與良率篩選"
+      ]
+    },
+    {
+      "topicId": "edge-ai-aiot",
+      "topicName": "Edge AI / AIoT 邊緣智慧",
+      "topicType": "technology",
+      "directness": "indirect",
+      "supplyChainStage": "test",
+      "roleType": "edge_ai_ic_test",
+      "roleSummary": "欣銓6月營收15.52億穩定成長。提供邊緣AI SoC晶圓與成品測試服務，受惠AIoT邊緣運算晶片需求增長。",
+      "products": [
+        "邊緣AI SoC晶圓測試(CP)",
+        "邊緣AI SoC成品測試(FT)",
+        "混合訊號IC測試(ADC/DAC)",
+        "Burn-in測試(AI IC高溫老化)"
+      ],
+      "customers": [
+        "聯發科(2454)(AI SoC測試)",
+        "瑞昱(2379)(邊緣AI IC測試)",
+        "利基型AI IC設計公司(測試代工)"
+      ],
+      "competitors": [],
+      "risks": [],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-07-03",
+      "status": "verified",
+      "techFocus": [
+        "AI SoC數位訊號晶圓測試(CP)",
+        "混合訊號IC測試(ADC/DAC高精度量測)",
+        "晶圓級Burn-in測試(高溫加速老化)"
+      ]
+    },
+    {
+      "topicId": "semiconductor-equipment-materials",
+      "topicName": "半導體設備與前段材料",
+      "topicType": "supply_chain_segment",
+      "directness": "indirect",
+      "supplyChainStage": "back_end_test",
+      "roleType": "wafer_test_service",
+      "roleSummary": "欣銓為專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。在半導體設備材料題材中屬後段測試環節，受記憶體與車用IC需求帶動。",
+      "products": [
+        "晶圓測試CP(記憶體IC晶圓級 probing)",
+        "成品測試FT(封裝後功能測試/老化測試)",
+        "Burn-in測試(晶圓型/成品型高溫老化壽命篩選)",
+        "混合訊號IC測試(ADC/DAC/射頻IC量測)",
+        "車規IC測試(AEC-Q100車用晶片篩選)"
+      ],
+      "customers": [
+        "華邦電(2344)(記憶體IC晶圓測試)",
+        "旺宏(2337)(NOR Flash測試代工)",
+        "力積電(6770)(記憶體/邏輯IC測試)",
+        "聯詠(3034)(顯示驅動IC測試代工)"
+      ],
+      "competitors": [
+        "京元電子(2449)(IC測試代工)",
+        "力成(6239)(記憶體封測)",
+        "日月投控(3711)(封測龍頭)"
+      ],
+      "risks": [
+        "IC測試為資本密集產業，測試機台投資金額大",
+        "記憶體IC測試需求受記憶體景氣循環影響大",
+        "面臨京元電(2449)等同業價格競爭壓力"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-18",
+      "status": "verified",
+      "techFocus": [
+        "記憶體IC晶圓級測試(CP)良率篩選技術",
+        "晶圓級/成品級Burn-in測試(高溫加速老化)",
+        "混合訊號IC測試(ADC/DAC/射頻高精度量測)"
+      ]
+    },
+    {
+      "topicId": "pcb-substrates",
+      "topicName": "PCB、IC 載板與高階基板材料",
+      "topicType": "supply_chain_segment",
+      "directness": "indirect",
+      "supplyChainStage": "test",
+      "roleType": "test_service",
+      "roleSummary": "欣銓6月營收15.52億穩定成長。提供IC載板封裝後測試與Burn-in服務，間接支援PCB載板良率驗證。",
+      "products": [
+        "IC載板封裝後測試(FT)",
+        "Burn-in測試(載板封裝IC高溫老化篩選)",
+        "混合訊號IC測試(載板封裝射頻IC)",
+        "晶圓測試(CP)(載板封裝前晶圓級測試)"
+      ],
+      "customers": [
+        "欣興(3037)(ABF載板封裝IC測試)",
+        "南電(8046)(IC載板封裝測試委外)",
+        "景碩(3189)(BT載板IC測試代工)"
+      ],
+      "competitors": [],
+      "risks": [
+        "與PCB載板為間接關係，題材傳導非常微弱",
+        "載板封裝IC測試佔欣銓營收比重低",
+        "ABF載板需求波動不直接影響測試訂單"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "low",
+      "lastVerified": "2026-07-12",
+      "status": "verified",
+      "techFocus": [
+        "IC載板封裝後功能測試(FT)技術",
+        "晶圓級Burn-in測試(高溫加速老化)",
+        "混合訊號IC測試(載板封裝射頻量測)"
+      ]
+    },
+    {
+      "topicId": "passive-components-mlcc",
+      "topicName": "MLCC / 電容器",
+      "topicType": "product",
+      "directness": "indirect",
+      "supplyChainStage": "test",
+      "roleType": "test_service",
+      "roleSummary": "欣銓6月營收15.52億穩定成長。提供被動元件驅動IC晶圓與成品測試服務，間接受惠MLCC產業需求。",
+      "products": [
+        "被動元件驅動IC晶圓測試(CP)",
+        "MLCC驅動IC成品測試(FT)",
+        "混合訊號IC測試(被動元件搭配IC)",
+        "Burn-in測試(被動元件驅動IC高溫老化)"
+      ],
+      "customers": [
+        "國巨(2327)(被動元件驅動IC測試委外)",
+        "華新科(2492)(MLCC相關IC測試)",
+        "禾伸堂(3028)(被動元件IC測試)"
+      ],
+      "competitors": [],
+      "risks": [
+        "與MLCC供應鏈關聯度極低，題材傳導幾乎不存在",
+        "MLCC本身不需IC測試服務，僅驅動IC有間接關聯",
+        "此題材分類可能有誤，建議重新評估是否保留"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "low",
+      "lastVerified": "2026-07-12",
+      "status": "verified",
+      "techFocus": [
+        "混合訊號IC測試技術(ADC/DAC量測)",
+        "晶圓級Burn-in測試(高溫老化壽命篩選)",
+        "測試程式開發與量測良率優化"
+      ]
+    },
+    {
+      "topicId": "leo-satellite-communications",
+      "topicName": "低軌衛星通訊",
+      "topicType": "end_market",
+      "directness": "indirect",
+      "supplyChainStage": "test",
+      "roleType": "satellite_ic_test",
+      "roleSummary": "欣銓6月營收15.52億穩定成長。提供衛星通訊IC晶圓與成品測試服務，受惠低軌衛星射頻晶片需求增長。",
+      "products": [
+        "衛星通訊IC晶圓測試(CP)(數位/混合訊號射頻IC)",
+        "衛星通訊IC成品測試(FT)(封裝後功能驗證)",
+        "Burn-in測試(衛星通訊IC高溫老化壽命篩選)",
+        "射頻IC測試(Ka/Ku頻段高頻量測)"
+      ],
+      "customers": [
+        "高通Qualcomm(衛星通訊晶片測試)",
+        "聯發科(2454)(衛星通訊模組IC測試)",
+        "利基型衛通IC設計公司(測試委外)"
+      ],
+      "competitors": [],
+      "risks": [
+        "衛星通訊IC測試佔欣銓營收比重低，題材傳導有限",
+        "衛星IC測試需特殊射頻測試機台，設備投資需求高",
+        "低軌衛星IC設計公司可能自有測試能力，委外意願不確定"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-07-12",
+      "status": "verified",
+      "techFocus": [
+        "射頻IC測試技術(Ka/Ku頻段高頻量測)",
+        "晶圓級Burn-in測試(高溫加速老化)",
+        "混合訊號IC測試(射頻/基頻高精度量測)"
+      ]
+    }
+  ]
 }

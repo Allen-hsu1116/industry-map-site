@@ -1,114 +1,118 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "3576",
-    "companyName": "聯合再生",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "3576",
+  "companyName": "聯合再生",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "renewable-energy",
+      "topicName": "太陽能與離岸風電",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "supplyChainStage": "solar",
+      "roleType": "solar_cell_manufacturer",
+      "roleSummary": "聯合再生6月營收2.08億年減9.5%，累計12.78億年減24.1%。太陽能電池/模組/EPC三大業務，受中國低價模組傾銷與海外競爭影響，營運持續承壓。",
+      "products": [
+        "PERC太陽能電池(單晶/多晶)",
+        "TOPCon太陽能電池(量產轉換中)",
+        "太陽能模組(60Cell/72Cell)",
+        "太陽能電廠EPC工程總承包",
+        "太陽能電廠運維(O&M)服務"
+      ],
+      "customers": [
+        "台電(太陽光電躉購FIT)",
+        "辰亞能源(馬來西亞太陽能案場)",
+        "鑫盈能源(台灣太陽能案場開發)",
+        "永梁能源(太陽能EPC案場)"
+      ],
+      "competitors": [
+        "元晶",
+        "茂迪",
+        "聯景"
+      ],
+      "risks": [
+        "累計營收年減24.1%，太陽能供過於求",
+        "中國太陽能模組低價傾銷壓力",
+        "TOPCon製程轉換需持續資本投入"
+      ],
+      "evidence": [
         {
-            "topicId": "renewable-energy",
-            "topicName": "太陽能與離岸風電",
-            "topicType": "supply_chain_segment",
-            "directness": "core",
-            "supplyChainStage": "solar",
-            "roleType": "solar_cell_manufacturer",
-            "roleSummary": "聯合再生5月營收3.2億年增28%，但累計年減26%。太陽能電池/模組/EPC三大業務，受台灣光電政策與海外競爭影響，營運仍承壓。",
-            "products": [
-                "PERC 太陽能電池",
-                "太陽能模組",
-                "太陽能電廠 EPC"
-            ],
-            "customers": [
-                "台電",
-                "光電案場開發商",
-                "在地系統商"
-            ],
-            "competitors": [
-                "元晶",
-                "茂迪",
-                "聯景"
-            ],
-            "risks": [
-                "累計營收年減 37.8%，太陽能供過於求",
-                "中國太陽能模組低價傾銷壓力"
-            ],
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "聯合再生 公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3576",
-                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯合再生 的營業項目、產品組合與財務資料。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤 3576 的月營收、股價、估值與法人資料。"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-08",
-            "status": "verified",
-            "techFocus": [
-                "PERC/TOPCon太陽能電池量產",
-                "太陽能模組封裝與可靠性測試",
-                "太陽能電廠EPC工程與運維"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯合再生 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3576",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯合再生 的營業項目、產品組合與財務資料。"
         },
         {
-            "topicId": "energy-storage-battery",
-            "topicName": "儲能、電芯與電池材料",
-            "topicType": "supply_chain_segment",
-            "directness": "indirect",
-            "supplyChainStage": "ess",
-            "roleType": "storage_system_provider",
-            "roleSummary": "聯合再生6月營收2.08億年減9.5%、月減35.8%，累計年減24.1%。太陽能電池與儲能系統雙引擎布局，但營收下滑反映太陽能市場價格競爭壓力。",
-            "products": [
-                "太陽能電池模組(PERC/TOPCon)",
-                "儲能案場EPC統包工程",
-                "光儲合一微電網系統",
-                "太陽能電廠運維(OM)服務",
-                "儲能貨櫃系統整合(BESS)"
-            ],
-            "customers": [
-                "台電(儲能調頻備轉標案)",
-                "中租控股(太陽能電廠開發)",
-                "台泥(儲能案場合作)",
-                "經濟部能源署(示範案場)",
-                "森崴能源(6806)(光儲案場)"
-            ],
-            "competitors": [
-                "華城",
-                "中興電"
-            ],
-            "risks": [
-                "儲能業務尚在初期，獲利不穩"
-            ],
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "聯合再生 公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3576",
-                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯合再生 的營業項目、產品組合與財務資料。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤 3576 的月營收、股價、估值與法人資料。"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-04",
-            "status": "verified",
-            "techFocus": [
-                "TOPCon太陽能電池量產技術(轉換效率>25%)",
-                "光儲合一微電網系統整合(PCS+EMS)",
-                "儲能貨櫃BESS系統整合(LiFePO4電池)"
-            ]
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3576 的月營收、股價、估值與法人資料。"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-18",
+      "status": "verified",
+      "techFocus": [
+        "PERC/TOPCon太陽能電池量產轉換",
+        "太陽能模組封裝與可靠性測試",
+        "太陽能電廠EPC工程與運維"
+      ]
+    },
+    {
+      "topicId": "energy-storage-battery",
+      "topicName": "儲能、電芯與電池材料",
+      "topicType": "supply_chain_segment",
+      "directness": "indirect",
+      "supplyChainStage": "ess",
+      "roleType": "storage_system_provider",
+      "roleSummary": "聯合再生6月營收2.08億年減9.5%、月減35.8%，累計年減24.1%。太陽能電池與儲能系統雙引擎布局，但營收下滑反映太陽能市場價格競爭壓力。",
+      "products": [
+        "太陽能電池模組(PERC/TOPCon)",
+        "儲能案場EPC統包工程",
+        "光儲合一微電網系統",
+        "太陽能電廠運維(OM)服務",
+        "儲能貨櫃系統整合(BESS)"
+      ],
+      "customers": [
+        "台電(儲能調頻備轉標案)",
+        "中租控股(太陽能電廠開發)",
+        "台泥(儲能案場合作)",
+        "經濟部能源署(示範案場)",
+        "森崴能源(6806)(光儲案場)"
+      ],
+      "competitors": [
+        "華城",
+        "中興電"
+      ],
+      "risks": [
+        "儲能業務尚在初期，獲利不穩"
+      ],
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "聯合再生 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3576",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯合再生 的營業項目、產品組合與財務資料。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3576 的月營收、股價、估值與法人資料。"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-04",
+      "status": "verified",
+      "techFocus": [
+        "TOPCon太陽能電池量產技術(轉換效率>25%)",
+        "光儲合一微電網系統整合(PCS+EMS)",
+        "儲能貨櫃BESS系統整合(LiFePO4電池)"
+      ]
+    }
+  ]
 }

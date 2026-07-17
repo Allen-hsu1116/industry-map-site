@@ -1,48 +1,58 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "1309",
-    "companyName": "1309",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "1309",
+  "companyName": "1309",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "petrochem-plastics",
+      "topicName": "石化、塑橡膠與特用化學",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "roleSummary": "台達化為台灣PS市占龍頭，6月營收6.0億年減51.7%，累計61.7億年減23.6%。PS屬成熟產品，受中國低價PS傾銷衝擊，部分客戶流失，營運承壓。",
+      "products": [
+        "聚苯乙烯PS(GPPS通用級/HIPS耐衝擊級)",
+        "ABS樹脂(丙烯腈-丁二烯-苯乙烯共聚體)",
+        "SAN樹脂(苯乙烯-丙烯腈共聚體)",
+        "玻璃棉(玻璃纖維保溫材料)",
+        "塑膠原料加工品(射出/押出級粒料)"
+      ],
+      "customers": [
+        "奇美實業(ABS/SAN塑膠原料買賣)",
+        "台達電(1308)(塑膠外殼材料)",
+        "鴻海(2317)(NB外殼ABS原料)",
+        "仁寶(2324)(NB外殼ABS/SAN)",
+        "緯創(3231)(NB外殼ABS原料)"
+      ],
+      "competitors": [
+        "奇美實業(ABS/PS塑膠原料)",
+        "國喬(1312)(PS/ABS)",
+        "台化(1326)(PS/ABS)"
+      ],
+      "risks": [
+        "PS屬成熟產品，成長動能有限",
+        "中國低價PS傾銷導致客戶流失",
+        "原料價格波動大影響毛利"
+      ],
+      "evidence": [
         {
-            "topicId": "petrochem-plastics",
-            "topicName": "石化、塑橡膠與特用化學",
-            "topicType": "supply_chain_segment",
-            "directness": "core",
-            "roleSummary": "優勢：台灣 PS 市占龍頭，ABS/SAN 產品線完整。劣勢：PS 屬成熟產品，成長動能有限，受中國低價 PS 傾銷衝擊。",
-            "products": [
-                "聚苯乙烯(PS/GPPS/HIPS)",
-                "ABS 樹脂",
-                "SAN 樹脂",
-                "玻璃棉"
-            ],
-            "customers": [
-                "奇美實業",
-                "台達電(1308)",
-                "鴻海(2317)",
-                "仁寶(2324)(NB外殼)",
-                "緯創(3231)(NB外殼)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS",
-                    "title": "1309公司基本資料",
-                    "url": "https://mops.twse.com.tw/mops/web/t05st03",
-                    "claim": "MOPS 公司基本資料 supports 1309 role in 石化、塑橡膠與特用化學 through disclosed product/service scope."
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-15",
-            "status": "verified",
-            "techFocus": [
-                "PS 連續本體聚合技術",
-                "ABS 乳液接枝聚合技術"
-            ],
-            "supplyChainStage": "upstream_petrochemical_materials",
-            "roleType": "ps_abs_san_resin_producer"
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "1309公司基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS 公司基本資料 supports 1309 role in 石化、塑橡膠與特用化學 through disclosed product/service scope."
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-18",
+      "status": "verified",
+      "techFocus": [
+        "PS連續本體聚合技術(批量/連續製程)",
+        "ABS乳液接枝聚合技術(橡膠接枝苯乙烯)",
+        "SAN連續本體聚合技術(高透明/高剛性)"
+      ],
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "ps_abs_san_resin_producer"
+    }
+  ]
 }

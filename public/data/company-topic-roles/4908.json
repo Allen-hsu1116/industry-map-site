@@ -63,21 +63,30 @@
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "優勢：光收發模組垂直整合(從 LD/PD 封裝到模組)，矽光子題材直接受惠。劣勢：上櫃公司規模小，與眾達、光迅等競爭壓力大，營收規模有限。",
+      "roleSummary": "前鼎光電為光纖通訊模組垂直整合廠，從LD/PD封裝到光收發模組一條龍。矽光子題材直接受惠，但上櫃規模較小，與眾達科、光迅等競爭壓力大。",
       "products": [
-        "100G/400G 光收發模組",
-        "雷射二極體(TOSA/ROSA)",
-        "光纖跳線",
-        "DWDM 光模組"
+        "100G/400G光收發模組(QSFP28/QSFP-DD)",
+        "雷射二極體封裝(TOSA/ROSA)",
+        "DWDM密集波分光模組(100GHz spacing)",
+        "光纖跳線(Single-mode/Multi-mode patch cord)",
+        "800G光收發模組(QSFP-DD800)"
       ],
       "customers": [
-        "NVIDIA",
-        "Cisco",
-        "Amazon",
-        "中國電信設備商"
+        "NVIDIA(Spectrum-X光交換器用光模組)",
+        "Cisco(光通訊設備用光收發模組)",
+        "Amazon(AWS資料中心光模組)",
+        "華為(光傳輸設備用TOSA/ROSA)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "眾達科(4977)",
+        "光環科技(2340)",
+        "中際旭創(中國)"
+      ],
+      "risks": [
+        "上櫃公司規模小，營收有限",
+        "中國光模組廠低價競爭壓力",
+        "矽光子CPO技術顛覆傳統可插拔光模組"
+      ],
       "evidence": [
         {
           "sourceId": "mops-company-disclosures",
@@ -88,11 +97,12 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-15",
+      "lastVerified": "2026-07-18",
       "status": "verified",
       "techFocus": [
-        "雷射二極體封裝技術",
-        "光收發模組COB封裝技術"
+        "雷射二極體TO-CAN封裝技術(DFB/EML)",
+        "光收發模組COB(Chip-on-Board)封裝技術",
+        "DWDM波分複用光模組設計"
       ],
       "supplyChainStage": "optical_components",
       "roleType": "optical_transceiver_module_supplier"
