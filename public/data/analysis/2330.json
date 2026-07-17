@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-07-16T12:32:52.484Z",
+  "generatedAt": "2026-07-17T12:35:29.108Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-16",
-  "chipDataDate": "2026-07-16",
+  "marketDataDate": "2026-07-17",
+  "chipDataDate": "2026-07-17",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,35 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 30,
-    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列。",
-    "signals": [
-      "收盤價、MA5、MA20 呈多頭排列"
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -73,
+    "summary": "台積電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 5.7%。",
+    "signals": [],
+    "risks": [
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 5.7%",
+      "帶量下跌，量比 2.31x"
     ],
-    "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "接近 20 日低點 2290.00，留意支撐是否失守"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "台積電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2.3千張；三大法人近 5 日合計賣超 -2.8萬張。",
+    "summary": "台積電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +3.8千張；三大法人近 5 日合計賣超 -5.5萬張。",
     "signals": [
-      "投信近 5 日買超 +2.3千張"
+      "投信近 5 日買超 +3.8千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.8萬張",
-      "近 20 日法人偏賣，合計 -8.8萬張",
-      "外資近 5 日賣超 -3.5萬張"
+      "三大法人近 5 日合計賣超 -5.5萬張",
+      "近 20 日法人偏賣，合計 -12.8萬張",
+      "外資近 5 日賣超 -6.6萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-16"
+      "最近法人資料日：2026-07-17"
     ]
   },
   "industry": {
@@ -133,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-07-16"
+      "lastVerified": "2026-07-17"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -302,7 +304,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
+    "totalScore": 46,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 24,
@@ -311,13 +313,12 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 10.9 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 10.1 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -326,15 +327,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2437.00",
-      "波段多空分水嶺看 MA20：2433.00",
-      "追蹤法人是否延續 賣超：最近 -2.6千張",
+      "短線支撐/壓力先看 MA5：2412.00",
+      "波段多空分水嶺看 MA20：2428.25",
+      "追蹤法人是否延續 賣超：最近 -4萬張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 33.2 倍，需和同族群估值比較"
+      "本益比 30.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2535.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 2325.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 2290.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
