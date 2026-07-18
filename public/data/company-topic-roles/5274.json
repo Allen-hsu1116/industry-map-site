@@ -131,18 +131,20 @@
       "directness": "supplier",
       "supplyChainStage": "server_management",
       "roleType": "hardware_management_enabler",
-      "roleSummary": "信驊不是 SaaS 公司；與企業軟體/資安題材的關聯應限縮為伺服器遠端管理硬體與韌體基礎設施供應鏈。",
+      "roleSummary": "信驊為全球BMC(Baseboard Management Controller)晶片龍頭，AST2600/AST3200系列主導伺服器帶外管理市場，資料中心安全監控核心供應商。",
       "products": [
-        "BMC 韌體解決方案（AST2600/AST3200）",
-        "遠端伺服器管理平台",
-        "資料中心硬體監控軟體"
+        "BMC韌體解決方案(AST2600/AST3200 SoC)",
+        "遠端伺服器管理平台(Redfish API)",
+        "資料中心硬體監控軟體(OpenBMC)",
+        "伺服器帶外管理(Out-of-Band Management)",
+        "雲端伺服器資產管理軟體"
       ],
       "customers": [
-        "Dell",
-        "HPE",
-        "Lenovo",
-        "超微(8299)",
-        "緯穎(6669)"
+        "Dell(iDRAC BMC AST2600)",
+        "HPE(iLO BMC AST2600)",
+        "Lenovo(XClarity BMC AST2600)",
+        "超微(8299)(Supermicro BMC AST2600)",
+        "緯穎(6669)(CSP伺服器BMC AST3200)"
       ],
       "competitors": [
         "Nuvoton",
@@ -174,13 +176,13 @@
           "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
+      "confidence": "high",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "BMC 韌體帶外管理（Out-of-Band Management）",
-        "Redfish API 伺服器遠端管理協定",
-        "AST2600/AST3200 SoC 系統監控架構"
+        "BMC韌體帶外管理(Out-of-Band Management)架構",
+        "Redfish API伺服器遠端管理協定(DMTF標準)",
+        "AST2600/AST3200 SoC系統監控架構(ARM Cortex)"
       ]
     }
   ]

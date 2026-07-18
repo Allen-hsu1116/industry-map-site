@@ -67,85 +67,25 @@
       ]
     },
     {
-      "topicId": "ai-server",
-      "topicName": "AI 伺服器整機與 EMS",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "ems",
-      "roleType": "ems_manufacturing_provider",
-      "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。",
-      "products": [
-        "AI伺服器整機組裝(NVIDIA HGX平台)",
-        "GPU伺服器主板(NVLink互連)",
-        "伺服器機殼與散熱模組組裝",
-        "AI邊緣運算伺服器(液冷版)",
-        "雲端資料中心伺服器EMS"
-      ],
-      "customers": [
-        "NVIDIA(AI伺服器ODM)",
-        "Dell(伺服器ODM)",
-        "HP Enterprise(伺服器)",
-        "Meta(資料中心伺服器)",
-        "Microsoft(Azure伺服器)"
-      ],
-      "competitors": [
-        "鴻海",
-        "廣達",
-        "仁寶",
-        "和碩"
-      ],
-      "risks": [
-        "EMS 毛利結構偏低",
-        "PC 需求衰退壓力"
-      ],
-      "legacy": {
-        "topicSlug": "ems-smt",
-        "groupName": "EMS電子代工",
-        "legacyRole": "大型 EMS 代工廠"
-      },
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "緯創 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3231",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯創 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
-      "status": "verified",
-      "techFocus": [
-        "NVIDIA HGX H100/B200 GPU伺服器ODM設計與量產",
-        "伺服器液冷散熱系統整合(冷板式Direct-to-Chip)",
-        "NVLink/NVSwitch互連拓撲主板佈線設計"
-      ]
-    },
-    {
       "topicId": "consumer-computing-devices",
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "topicType": "end_market",
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "notebook_odm",
-      "roleSummary": "緯創5月營收290億年增39%，累計年增106%。為全球前三大NB ODM，商用筆電與Chromebook出貨暢旺，AI PC帶動換機潮。",
+      "roleSummary": "緯創6月營收321.82億年增53.8%。商用筆電/Chromebook ODM為傳統核心業務，受AI伺服器爆發帶動整體營收大增，消費裝置ODM穩定貢獻。",
       "products": [
-        "商業筆電 ODM",
-        "Chromebook",
-        "消費型 NB"
+        "商用筆電ODM(Intel Core Ultra/AMD Ryzen AI平台)",
+        "Chromebook ODM(Google ChromeOS認證機型)",
+        "消費型筆電ODM(15.6/14吋主流機型)",
+        "一體機(All-in-One)ODM(Intel/AMD桌面平台)",
+        "平板電腦ODM(Android/Windows)"
       ],
       "customers": [
-        "Dell",
-        "HP",
-        "Lenovo",
-        "Acer"
+        "Dell(Latitude商用筆電ODM)",
+        "HP(EliteBook/ProBook商用筆電ODM)",
+        "Lenovo(ThinkPad商用筆電ODM)",
+        "Acer(消費型NB ODM)"
       ],
       "competitors": [
         "廣達",
@@ -178,13 +118,13 @@
           "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-08",
+      "confidence": "high",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "商用NB/Chromebook ODM設計與量產",
-        "消費型NB DfM降本工程",
-        "多元CPU平台(Intel/AMD/Qualcomm)設計支援"
+        "商用筆電DfM降本設計(Intel/AMD/Qualcomm多平台支援)",
+        "Chromebook輕量化機構設計(機殼CNC+鋁擠型)",
+        "AI PC筆電NPU整合設計(Intel Core Ultra Meteor Lake)"
       ]
     },
     {
@@ -194,17 +134,19 @@
       "directness": "supplier",
       "supplyChainStage": "mechanical",
       "roleType": "server_mechanical_integration",
-      "roleSummary": "緯創跨入AI伺服器機構件，5月營收290億年增39%。GPU機架滑軌與散熱模組供NVIDIA/Google/Dell/HPE，AI伺服器營收占比快速提升。",
+      "roleSummary": "緯創6月營收321.82億年增53.8%，累計年增94.0%受AI伺服器需求帶動。AI伺服器機構件為ODM附帶業務，提供機箱/導軌/散熱風扇模組組裝。",
       "products": [
-        "AI 伺服器機箱/導軌",
-        "GPU 機架滑軌",
-        "散熱風扇模組"
+        "AI伺服器機箱(1U/2U/4U GPU機架式)",
+        "GPU導軌與滑軌組件(NVIDIA HGX/H100/B200適配)",
+        "伺服器散熱風扇模組(軸流扇+散熱鰭片)",
+        "AI伺服器前面板與I/O擋板機構件",
+        "伺服器機架滑軌(19吋標準機架25-27吋深)"
       ],
       "customers": [
-        "NVIDIA",
-        "Google",
-        "Dell",
-        "HPE"
+        "NVIDIA(HGX AI伺服器機構ODM)",
+        "Google(CSP客製AI伺服器機箱)",
+        "Dell(Enterprise伺服器機構代工)",
+        "HPE(ProLiant伺服器機箱代工)"
       ],
       "competitors": [
         "川湖(2059)",
@@ -236,13 +178,13 @@
           "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-08",
+      "confidence": "high",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "AI伺服器機箱散熱風道設計",
-        "GPU機架滑軌精密加工",
-        "高功率散熱風扇模組整合"
+        "AI伺服器機箱高功率散熱風道設計(TDP>1kW機箱熱管理)",
+        "GPU機架滑軌精密沖壓加工(承重>50kg滑軌)",
+        "伺服器前面板與I/O擋板鈑金沖壓製程"
       ]
     }
   ]

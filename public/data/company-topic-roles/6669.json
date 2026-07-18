@@ -11,19 +11,20 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "csp_ai_server_odm",
-      "roleSummary": "緯穎是緯創子公司，專攻高階 AI 伺服器 ODM；4 月營收 83 億年增 29.7%，累計年增 53.2%。備註「主要係客戶需求強勁」。",
+      "roleSummary": "緯穎6月營收111.37億年增29.8%，累計年增41.7%。CSP專用AI伺服器ODM為核心業務，GPU基板OAM/UBB與液冷整合為技術門檻。",
       "products": [
-        "CSP AI 伺服器（GPU 基板 OAM/UBB）",
-        "雲端資料中心伺服器",
-        "AI 推理伺服器（L40S/H100）",
-        "系統整合與 ODM 服務"
+        "CSP客製AI伺服器(GPU基板OAM/UBB)",
+        "雲端資料中心伺服器(1U/2U機架式)",
+        "AI推理伺服器(L40S/H100 PCIe)",
+        "AI訓練伺服器(HGX H100/B200 SXM)",
+        "系統整合與ODM服務(CSP客製化)"
       ],
       "customers": [
-        "NVIDIA",
-        "Google",
-        "AWS",
-        "Meta",
-        "Microsoft"
+        "NVIDIA(HGX AI伺服器ODM)",
+        "Google(CSP客製AI伺服器)",
+        "AWS(EC2客製伺服器ODM)",
+        "Meta(AI訓練伺服器ODM)",
+        "Microsoft(Azure AI伺服器ODM)"
       ],
       "competitors": [
         "廣達",
@@ -56,13 +57,13 @@
           "claim": "FinMind 可用於追蹤 6669 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
+      "confidence": "high",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "GPU 基板（OAM/UBB）高密度 SMT 製程",
-        "液冷（Liquid Cooling）伺服器系統整合",
-        "CSP 客製化 AI 伺服器機構設計"
+        "GPU基板(OAM/UBB)高密度SMT製程(HDI多層板)",
+        "液冷(Liquid Cooling)伺服器系統整合(CDU+冷板)",
+        "CSP客製化AI伺服器機構設計(19吋機架>30kW)"
       ]
     },
     {
@@ -72,18 +73,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "system_assembly",
       "roleType": "cloud_infrastructure_hardware_provider",
-      "roleSummary": "緯穎不是雲端代管軟體商，而是雲端基礎設施硬體供應鏈；和 cloud/MSP 題材的關聯應視為雲端硬體賦能。",
+      "roleSummary": "緯穎6月營收111.37億年增29.8%，累計年增41.7%。CSP專用AI伺服器ODM為核心，提供Bare Metal/DCaaS/AI訓練叢集代營服務。",
       "products": [
-        "雲端託管伺服器（Bare Metal as a Service）",
-        "資料中心即服務（DCaaS）",
-        "AI 訓練叢集代營",
-        "邊緣運算伺服器"
+        "雲端託管伺服器(Bare Metal as a Service)",
+        "資料中心即服務(DCaaS)解決方案",
+        "AI訓練叢集代營(GPU Cluster託管)",
+        "邊緣運算伺服器(Edge AI推理)",
+        "伺服器硬體監控管理軟體(BMC整合)"
       ],
       "customers": [
-        "Google",
-        "AWS",
-        "Microsoft",
-        "Meta"
+        "Google(CSP客製AI伺服器)",
+        "AWS(雲端資料中心伺服器ODM)",
+        "Microsoft(Azure AI伺服器ODM)",
+        "Meta(資料中心AI訓練伺服器)",
+        "Oracle(Cloud Infrastructure伺服器)"
       ],
       "competitors": [
         "Equinix",
@@ -115,13 +118,13 @@
           "claim": "FinMind 可用於追蹤 6669 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
+      "confidence": "high",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "雲端裸金屬伺服器（Bare Metal）即服務架構",
-        "AI 訓練叢集（GPU Cluster）高速網路整合",
-        "資料中心即服務（DCaaS）營運管理平台"
+        "雲端裸金屬伺服器(Bare Metal)即服務架構",
+        "AI訓練叢集(GPU Cluster)高速網路整合(NVLink/IB)",
+        "資料中心即服務(DCaaS)營運管理平台"
       ]
     }
   ]

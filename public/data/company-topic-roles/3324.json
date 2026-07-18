@@ -1,190 +1,69 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "3324",
-    "companyName": "雙鴻",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "3324",
+  "companyName": "雙鴻",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "ai-server-liquid-cooling",
+      "topicName": "AI 伺服器液冷散熱",
+      "topicType": "technology",
+      "directness": "core",
+      "supplyChainStage": "thermal",
+      "roleType": "liquid_cooling_module_provider",
+      "roleSummary": "雙鴻為散熱模組專業製造商，VC均熱板與熱管供AI伺服器散熱需求。受惠AI伺服器液冷滲透率提升，出貨持續成長。",
+      "products": [
+        "均熱板(Vapor Chamber)",
+        "熱管(Heat Pipe)",
+        "氣冷散熱模組(Sink+Fan)",
+        "伺服器VC散熱板"
+      ],
+      "customers": [
+        "廣達(2382)(伺服器散熱)",
+        "鴻海(2317)(伺服器散熱)",
+        "緯創(3231)(伺服器散熱)",
+        "Dell(伺服器散熱)",
+        "HPE(伺服器散熱)"
+      ],
+      "competitors": [
+        "奇鋐(3017)",
+        "CoolIT",
+        "Asetek",
+        "Boyd"
+      ],
+      "risks": [
+        "液冷技術路線（冷板vs浸沒式）未定",
+        "CSP 客戶自研散熱方案可能性"
+      ],
+      "legacy": {
+        "topicSlug": "liquid_cooling_advanced",
+        "groupName": "液冷系統整合",
+        "legacyRole": "液冷散熱模組龍頭"
+      },
+      "evidence": [
         {
-            "topicId": "ai-server-liquid-cooling",
-            "topicName": "AI 伺服器液冷散熱",
-            "topicType": "technology",
-            "directness": "core",
-            "supplyChainStage": "thermal",
-            "roleType": "liquid_cooling_module_provider",
-            "roleSummary": "雙鴻為散熱模組專業製造商，VC均熱板與熱管供AI伺服器散熱需求。受惠AI伺服器液冷滲透率提升，出貨持續成長。",
-            "products": [
-                "均熱板(Vapor Chamber)",
-                "熱管(Heat Pipe)",
-                "氣冷散熱模組(Sink+Fan)",
-                "伺服器VC散熱板"
-            ],
-            "customers": [
-                "廣達(2382)(伺服器散熱)",
-                "鴻海(2317)(伺服器散熱)",
-                "緯創(3231)(伺服器散熱)",
-                "Dell(伺服器散熱)",
-                "HPE(伺服器散熱)"
-            ],
-            "competitors": [
-                "奇鋐(3017)",
-                "CoolIT",
-                "Asetek",
-                "Boyd"
-            ],
-            "risks": [
-                "液冷技術路線（冷板vs浸沒式）未定",
-                "CSP 客戶自研散熱方案可能性"
-            ],
-            "legacy": {
-                "topicSlug": "liquid_cooling_advanced",
-                "groupName": "液冷系統整合",
-                "legacyRole": "液冷散熱模組龍頭"
-            },
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "雙鴻 公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3324",
-                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 雙鴻 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤 3324 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-07-08",
-            "status": "verified",
-            "techFocus": [
-                "均熱板(Vapor Chamber)毛細結構設計",
-                "伺服器散熱熱管(U型/L型)製程",
-                "VC散熱板高功率密度散熱技術(>500W)"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "雙鴻 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3324",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 雙鴻 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
         },
         {
-            "topicId": "ai-server-liquid-cooling",
-            "topicName": "AI 伺服器液冷散熱",
-            "topicType": "supply_chain_segment",
-            "directness": "core",
-            "supplyChainStage": "thermal",
-            "roleType": "thermal_solution_provider",
-            "roleSummary": "雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
-            "products": [
-                "均熱板(Vapor Chamber)",
-                "熱管(Heat Pipe)",
-                "氣冷散熱模組(Sink+Fan)",
-                "伺服器VC散熱板"
-            ],
-            "customers": [
-                "廣達(2382)(伺服器散熱)",
-                "鴻海(2317)(伺服器散熱)",
-                "緯創(3231)(伺服器散熱)",
-                "Dell(伺服器散熱)",
-                "HPE(伺服器散熱)"
-            ],
-            "competitors": [
-                "奇鋐(3017)",
-                "超眾(6230)",
-                "CoolIT",
-                "Boyd"
-            ],
-            "risks": [
-                "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
-                "不得用短線股價或題材熱度反推營運事實。"
-            ],
-            "legacy": {
-                "topicSlug": "thermal-solution",
-                "groupName": "散熱模組與液冷方案",
-                "legacyRole": "散熱方案供應商"
-            },
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "雙鴻 公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3324",
-                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 雙鴻 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤 3324 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-06-22",
-            "status": "verified",
-            "techFocus": [
-                "均熱板(Vapor Chamber)毛細結構設計",
-                "伺服器散熱熱管(U型/L型)製程",
-                "VC散熱板高功率密度散熱技術(>500W)"
-            ]
-        },
-        {
-            "topicId": "ai-server-liquid-cooling",
-            "topicName": "AI 伺服器液冷散熱",
-            "topicType": "supply_chain_segment",
-            "directness": "core",
-            "supplyChainStage": "thermal",
-            "roleType": "air_cooling_component_provider",
-            "roleSummary": "雙鴻是全球散熱模組領導廠商之一，VC均熱板與熱管為核心產品。AI伺服器高功耗帶動VC需求，從氣冷散熱模組向液冷滲透。",
-            "products": [
-                "均熱板(Vapor Chamber)",
-                "熱管(Heat Pipe)",
-                "氣冷散熱模組(Sink+Fan)",
-                "伺服器VC散熱板"
-            ],
-            "customers": [
-                "廣達(2382)(伺服器散熱)",
-                "鴻海(2317)(伺服器散熱)",
-                "緯創(3231)(伺服器散熱)",
-                "Dell(伺服器散熱)",
-                "HPE(伺服器散熱)"
-            ],
-            "competitors": [
-                "奇鋐(3017)",
-                "超眾(6230)",
-                "建準(3008)"
-            ],
-            "risks": [
-                "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
-                "不得用短線股價或題材熱度反推營運事實。"
-            ],
-            "legacy": {
-                "topicSlug": "thermal_components_air",
-                "groupName": "熱導管與散熱方案",
-                "legacyRole": "散熱模組龍頭，AI散熱受惠"
-            },
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "雙鴻 公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3324",
-                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 雙鴻 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤 3324 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-06-22",
-            "status": "verified",
-            "techFocus": [
-                "均熱板(Vapor Chamber)毛細結構設計",
-                "伺服器散熱熱管(U型/L型)製程",
-                "VC散熱板高功率密度散熱技術(>500W)"
-            ]
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3324 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
-    ]
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-07-08",
+      "status": "verified",
+      "techFocus": [
+        "均熱板(Vapor Chamber)毛細結構設計",
+        "伺服器散熱熱管(U型/L型)製程",
+        "VC散熱板高功率密度散熱技術(>500W)"
+      ]
+    }
+  ]
 }

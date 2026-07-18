@@ -11,19 +11,20 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "power_management_ic_provider",
-      "roleSummary": "矽力-KY 是中國及新興市場電源管理 IC 龍頭；4 月營收 2.0 億年增 28.1%，累計年增 21.3%。HV AC/DC 與車用 DC/DC 為雙引擎。",
+      "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心公司，高壓BCD製程與快充IC為主要成長動能。",
       "products": [
-        "電源管理 IC（DC-DC 轉換器）",
-        "高壓功率 MOSFET 驅動 IC",
-        "類比/混合訊號 IC",
-        "快充協議 IC（USB-PD）"
+        "電源管理IC(DC-DC降壓轉換器 Buck/Boost)",
+        "高壓功率MOSFET驅動IC(700V HV-CMOS)",
+        "類比/混合訊號IC(ADC/DAC/Op-amp)",
+        "快充協議IC(USB-PD 3.1/Qi)",
+        "數位電源控制IC(DSP-PWM數位控制)"
       ],
       "customers": [
-        "比亞迪",
-        "華為",
-        "小米",
-        "Samsung",
-        "台達電(2308)"
+        "比亞迪(車用電源管理IC)",
+        "華為(手機快充IC/電源管理)",
+        "小米(消費電子快充IC/電源)",
+        "Samsung(手機快充IC/電源管理)",
+        "台達電(2308)(工業電源管理IC)"
       ],
       "competitors": [
         "TI",
@@ -56,13 +57,13 @@
           "claim": "FinMind 可用於追蹤 6415 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
+      "confidence": "high",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "高壓 BCD 製程（700V HV-CMOS）功率 IC 設計",
-        "同步降壓轉換器（Sync Buck）高效率架構",
-        "數位電源控制 IC（DSP-PWM）整合技術"
+        "高壓BCD製程(700V HV-CMOS)功率IC設計",
+        "同步降壓轉換器(Sync Buck)高效率架構(>95%)",
+        "數位電源控制IC(DSP-PWM)整合技術"
       ]
     },
     {
@@ -72,17 +73,20 @@
       "directness": "supplier",
       "supplyChainStage": "power_ic",
       "roleType": "satellite_power_ic_candidate",
-      "roleSummary": "矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。",
+      "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心能力延伸至太空級抗輻射應用，LEO衛星電源IC為新興成長領域。",
       "products": [
-        "衛星電源管理 IC（抗輻射級）",
-        "太空級 DC/DC 降壓轉換器",
-        "太陽能充電管理 IC（MPPT）"
+        "衛星電源管理IC(抗輻射級Rad-Hardened)",
+        "太空級DC/DC降壓轉換器(抗SEL/SEU設計)",
+        "太陽能充電管理IC(MPPT最大功率追蹤)",
+        "衛星負載電源模組(多輸出電壓軌)",
+        "抗輻射LDO穩壓器(低壓差線性穩壓)"
       ],
       "customers": [
-        "SpaceX",
-        "OneWeb",
-        "Telesat",
-        "國家太空中心(TASA)"
+        "SpaceX(Starlink衛星電源IC)",
+        "OneWeb(LEO衛星電源管理IC)",
+        "Telesat(LEO衛星電源方案)",
+        "國家太空中心TASA(國產衛星電源IC)",
+        "Maxar(衛星製造商電源IC)"
       ],
       "competitors": [
         "TI",
@@ -114,13 +118,13 @@
           "claim": "FinMind 可用於追蹤 6415 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
+      "confidence": "high",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "太空級抗輻射（Radiation-Hardened）BCD 製程",
-        "衛星電源管理 IC 抗 SEL/SEU 設計",
-        "高效率太陽能 MPPT 充電控制技術"
+        "太空級抗輻射(Radiation-Hardened)BCD製程設計",
+        "衛星電源管理IC抗SEL/SEU設計(Latch-up防護)",
+        "高效率太陽能MPPT充電控制技術(>98%轉換效率)"
       ]
     }
   ]

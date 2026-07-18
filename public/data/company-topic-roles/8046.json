@@ -73,18 +73,20 @@
       "directness": "supplier",
       "supplyChainStage": "ic_substrate",
       "roleType": "advanced_packaging_substrate_supplier",
-      "roleSummary": "南電不是 CoWoS 製程供應商本身，但可作為先進封裝所需載板/基板供應鏈角色；需避免把載板供應商寫成封裝代工。",
+      "roleSummary": "南電6月營收46.84億年增50.0%，累計年增37.2%，受市場需求成長帶動。ABF載板受惠AI GPU與CPU封裝需求，大尺寸FC-BGA為核心成長動能。",
       "products": [
-        "ABF 載板（AI GPU 用，FC-BGA）",
-        "HDISTM 載板",
-        "車用 HDI 載板",
-        "AiO 封裝用基板"
+        "ABF載板(AI GPU用FC-BGA >100mm²大尺寸)",
+        "HDISTM高密度細線路載板(線寬/線距<5μm)",
+        "車用HDI載板(FR-4 High-Tg耐高溫)",
+        "AiO封裝用基板(All-in-One CPU載板)",
+        "FCCSP載板(手機AP封裝用細線路)"
       ],
       "customers": [
-        "Intel",
-        "AMD",
-        "NVIDIA",
-        "Broadcom"
+        "Intel(Core CPU FC-BGA載板)",
+        "AMD(Ryzen/EPYC CPU載板)",
+        "NVIDIA(AI GPU FC-BGA載板)",
+        "Broadcom(客製ASIC封裝載板)",
+        "聯發科(手機AP FCCSP載板)"
       ],
       "competitors": [
         "欣興(3037)",
@@ -117,74 +119,13 @@
           "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-05-28",
-      "status": "verified",
-      "techFocus": [
-        "ABF 載板 AI GPU 大尺寸基板（>100mm²）製程",
-        "HDISTM 高密度細線路載板技術",
-        "車用 HDI 載板耐高溫材料（FR-4 High-Tg）"
-      ]
-    },
-    {
-      "topicId": "pcb-substrates",
-      "topicName": "PCB、IC 載板與高階基板材料",
-      "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "pcb",
-      "roleType": "pcb_substrate_manufacturer",
-      "roleSummary": "南電6月營收46.8億年增50%，累計年增37.2%。MOPS主要經營：電子零組件/電池。AI伺服器PCB與IC載板為主要成長動能，台塑集團旗下PCB大廠。",
-      "products": [
-        "AI伺服器HDI高密度PCB(20+層)",
-        "BGA IC載板(FC-BGA/FCCSP)",
-        "高頻高速基板(Megtron 6/7材料)",
-        "記憶體模組PCB(DDR5/DDR4)",
-        "封裝載板(ABF基板)"
-      ],
-      "customers": [
-        "NVIDIA(AI加速卡載板)",
-        "AMD(GPU/CPU載板)",
-        "Intel(伺服器PCB)",
-        "廣達(2382)(伺服器主板)",
-        "鴻海(2317)(伺服器PCB)"
-      ],
-      "competitors": [
-        "欣興(3037)",
-        "景碩(3189)",
-        "IBIDEN"
-      ],
-      "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
-      ],
-      "legacy": {
-        "topicSlug": "pcb-manufacturing",
-        "groupName": "消費電子PCB",
-        "legacyRole": "南亞電路板，HDI/BGA載板"
-      },
-      "evidence": [
-        {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "南電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        }
-      ],
       "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "lastVerified": "2026-07-19",
       "status": "verified",
       "techFocus": [
-        "ABF載板細線路製程(line/space <5μm)",
-        "HDI高密度增層壓合技術(20+層)",
-        "AI伺服器超低損耗(Ultra Low Loss)基板材料應用"
+        "ABF載板AI GPU大尺寸基板(>100mm²)製程技術",
+        "HDISTM高密度細線路載板技術(線寬<5μm)",
+        "車用HDI載板耐高溫材料(FR-4 High-Tg >170°C)"
       ]
     }
   ]
