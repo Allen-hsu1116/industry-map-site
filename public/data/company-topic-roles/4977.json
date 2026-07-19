@@ -2,28 +2,37 @@
   "schemaVersion": 1,
   "companyCode": "4977",
   "companyName": "4977",
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-07-20",
   "roles": [
     {
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "優勢：6月營收 0.82 億元、年增 8%，矽光子收發模組直接受惠 AI 數據中心光互連需求。劣勢：累計營收年減 21%，轉型期陣痛，競爭者眾達、旭軟等競爭激烈。",
+      "roleSummary": "眾達-KY(PCL Technologies)6月營收0.82億YoY+8.1%，累計4.3億YoY-20.8%。設計研發生產光收發模組(100G-800G)，矽光子CPO為前瞻技術布局。AI數據中心光互連為長期成長動能，但短期面臨轉型期營收下滑壓力。",
       "products": [
-        "100G/400G/800G 光收發模組",
-        "矽光子收發器",
-        "光次組裝模組",
-        "DWDM 光模組"
+        "100G/400G/800G光收發模組(QSFP/OSFP)",
+        "矽光子收發器(Co-Packaged Optics整合)",
+        "光次組裝模組(Fiber Array/FAU耦合)",
+        "400G LR4/SR4光收發模組"
       ],
       "customers": [
-        "NVIDIA",
-        "Google",
-        "Microsoft",
-        "Meta"
+        "NVIDIA(AI GPU光互連收發模組)",
+        "Google(GCP資料中心光收發器)",
+        "Microsoft(Azure光收發模組)",
+        "Meta(資料中心光互連)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "中際旭創(中國光收發模組龍頭)",
+        "新易盛(Eoptol)(中國光模組)",
+        "Coherent(II-VI)(美國光通訊)",
+        "Lumentum(美國光通訊)"
+      ],
+      "risks": [
+        "6月營收0.82億YoY+8.1%但累計YoY-20.8%(轉型期陣痛)",
+        "光收發模組市場被中際旭創/新易盛低價競爭",
+        "矽光子CPO技術仍在早期階段,量產時程不確定"
+      ],
       "evidence": [
         {
           "sourceId": "mops-company-disclosures",
@@ -37,8 +46,9 @@
       "lastVerified": "2026-07-15",
       "status": "verified",
       "techFocus": [
-        "矽光子整合封裝技術",
-        "800G 光收發模組設計"
+        "矽光子整合封裝技術(Co-Packaged Optics CPO)",
+        "800G光收發模組設計(PAM4調變/DSP整合)",
+        "光次組裝FAU Fiber Array耦合對位技術(μm級精度)"
       ],
       "supplyChainStage": "optical_components",
       "roleType": "silicon_photonics_transceiver_supplier"

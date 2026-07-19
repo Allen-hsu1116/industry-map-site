@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6182",
   "companyName": "合晶",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-20",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -11,20 +11,29 @@
       "directness": "core",
       "supplyChainStage": "upstream_materials",
       "roleType": "silicon_wafer_manufacturer",
-      "roleSummary": "合晶是台灣矽晶圓專業製造商，提供6吋/8吋矽晶圓，是晶圓代工與利基IC的上游材料供應商。",
+      "roleSummary": "合晶科技為台灣矽晶圓專業製造商(WAFER WORKS)，提供6吋/8吋矽晶圓與EPI外延晶圓，是晶圓代工與利基功率IC的上游材料供應商。為環球晶集團旗下公司。",
       "products": [
-        "8吋矽晶圓(N型/P型)",
-        "6吋矽晶圓",
-        "外延晶圓(Epi Wafer)",
-        "長晶與切片服務"
+        "8吋矽晶圓(N型/P型CZ長晶)",
+        "6吋矽晶圓(離散元件用)",
+        "外延晶圓(EPI Wafer)(功率MOSFET/IGBT)",
+        "區熔矽晶圓(FZ)(高壓功率元件用高阻值)"
       ],
       "customers": [
-        "世界先進(5347)(8吋晶圓代工)",
+        "世界先進(5347)(8吋晶圓代工基板)",
         "力積電(6770)(利基記憶體晶圓)",
-        "漢磊(3707)(SiC/GaN代工)"
+        "漢磊(3707)(SiC/GaN功率代工基板)",
+        "Vishay(功率MOSFET晶圓)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "環球晶(6488)(矽晶圓龍頭)",
+        "SUMCO(日本矽晶圓)",
+        "SK Siltron(韓國矽晶圓)"
+      ],
+      "risks": [
+        "合晶為上櫃公司,月營收資料透明度較低",
+        "矽晶圓市場被環球晶/SUMCO主導,合晶為利基供應商",
+        "12吋矽晶圓需求成長但合晶主力在6/8吋(成熟製程)"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -46,9 +55,9 @@
       "lastVerified": "2026-07-11",
       "status": "verified",
       "techFocus": [
-        "6/8吋矽晶圓CZ長晶與切磨拋製程",
-        "功率半導體EPI外延晶圓生長技術",
-        "離散元件用研磨晶圓表面平坦化"
+        "6/8吋矽晶圓CZ長晶與切磨拋製程(直徑精度±0.1mm)",
+        "功率半導體EPI外延晶圓生長技術(厚度均勻性±3%)",
+        "區熔(FZ)高阻值矽晶圓(>1000Ω·cm用於高壓功率元件)"
       ]
     },
     {

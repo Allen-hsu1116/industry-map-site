@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3454",
   "companyName": "晶睿",
-  "updatedAt": "2026-07-11",
+  "updatedAt": "2026-07-20",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -11,20 +11,29 @@
       "directness": "indirect",
       "supplyChainStage": "security_equipment",
       "roleType": "military_surveillance_equipment",
-      "roleSummary": "晶睿是安全監控設備製造商，提供軍規網路攝影機與門禁系統，可用於軍事基地與國防設施安全監控。",
+      "roleSummary": "晶睿為安全監控設備製造商，提供軍規網路攝影機、熱成像攝影機與門禁安全系統，可用於軍事基地與國防設施安全監控。國防安防為利基應用，營收佔比有限。",
       "products": [
-        "軍規網路攝影機",
-        "門禁安全系統",
-        "熱成像攝影機",
-        "Video Management System(VMS)"
+        "軍規網路攝影機(IP66防護/加密傳輸)",
+        "熱成像攝影機(384×288/640×480非製冷FPA)",
+        "門禁安全系統(生物辨識/RFID)",
+        "軍規影像管理平台VMS(加密/權限管理)"
       ],
       "customers": [
-        "中科院(國防監控)",
-        "軍事設施安全單位",
-        "政府機關(安防標案)"
+        "中科院(國防監控標案)",
+        "國防部(軍事設施安防)",
+        "政府機關(安防標案)",
+        "漢翔(2634)(航空設施安防)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "Axis Communications(軍規安防)",
+        "Hikvision(軍規攝影機)",
+        "FLIR(熱成像攝影機龍頭)"
+      ],
+      "risks": [
+        "晶睿為安防監控廠,國防應用為利基市場(營收佔比低)",
+        "軍規安防設備認證週期長且量小",
+        "國際安防大廠(Axis/FLIR)在軍規市場更具優勢"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -46,9 +55,9 @@
       "lastVerified": "2026-07-11",
       "status": "verified",
       "techFocus": [
-        "軍規攝影鏡頭光學設計(寬溫/抗震)",
-        "熱成像溫度異常偵測演算法",
-        "軍規IP67防護攝影機光學封裝"
+        "軍規攝影鏡頭光學設計(寬溫-40~65°C/抗震MIL-STD-810)",
+        "熱成像溫度異常偵測演算法(非製冷型FPA)",
+        "軍規IP66防護攝影機光學封裝與加密傳輸"
       ]
     },
     {
@@ -58,21 +67,29 @@
       "directness": "indirect",
       "supplyChainStage": "optical_components",
       "roleType": "surveillance_optics",
-      "roleSummary": "晶睿2月營收4.54億年減21.2%。安防監控光學鏡頭為核心業務，受惠於AI影像分析需求帶動高階鏡頭升級。",
+      "roleSummary": "晶睿為安防監控設備製造商，光學鏡頭模組為產品核心零組件之一。6月營收資料未揭露，安防監控需求受AI影像分析帶動高階鏡頭升級。",
       "products": [
-        "監控攝影機鏡頭模組(varifocal/autofocus)",
-        "熱成像光學模組(384×288/640×480)",
-        "車載攝影鏡頭(廣角/魚眼)",
-        "AI攝影機影像感測模組"
+        "監控攝影機鏡頭模組(varifocal 12MP/autofocus)",
+        "熱成像光學模組(384×288/640×480非製冷)",
+        "車載攝影鏡頭(廣角/魚眼/紅外濾片)",
+        "360度全景監控光學模組"
       ],
       "customers": [
-        "Axis Communications(安防攝影機)",
-        "Hikvision(安防鏡頭)",
-        "研華(2395)(工業影像)",
-        "Vivotek(安防系統)"
+        "Axis Communications(安防攝影機OEM)",
+        "Hikvision(安防鏡頭模組)",
+        "研華(2395)(工業影像鏡頭)",
+        "Bosch Security(安防光學模組)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "大立光(3008)(光學鏡頭龍頭)",
+        "玉晶光(3406)(光學鏡頭)",
+        "舜宇光學(中國安防鏡頭)"
+      ],
+      "risks": [
+        "晶睿為安防系統廠,光學鏡頭為外購/組裝非自製核心",
+        "安防光學鏡頭市場競爭激烈(舜宇/大立光)",
+        "熱成像光學模組市場被FLIR/高德紅外主導"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -94,9 +111,9 @@
       "lastVerified": "2026-07-11",
       "status": "verified",
       "techFocus": [
-        "監控攝影機varifocal鏡頭光學設計(12MP)",
-        "熱成像非製冷型焦平面陣列(FPA)整合",
-        "車載廣角鏡頭非球面光學設計"
+        "監控攝影機varifocal鏡頭光學設計(12MP高解析)",
+        "熱成像非製冷型焦平面陣列(FPA)光學整合",
+        "車載廣角鏡頭非球面光學設計(畸變<3%)"
       ]
     },
     {
@@ -106,21 +123,29 @@
       "directness": "indirect",
       "supplyChainStage": "security_equipment",
       "roleType": "industrial_video_surveillance",
-      "roleSummary": "晶睿2月營收4.54億年減21.2%。工廠AI影像監控為利基應用，非核心工控元件供應商，題材純度中等。",
+      "roleSummary": "晶睿為安防監控設備製造商，在工業自動化題材中以AI影像監控攝影機切入工廠安全與產線檢測應用。題材純度中等，工控為延伸應用非核心產品線。",
       "products": [
-        "工廠AI影像監控攝影機(IP Camera, 4K)",
-        "產線安全AI辨識系統(邊緣推論)",
-        "熱成像監控模組(溫度異常偵測)",
-        "工業級網路攝影機(IP66防護)"
+        "工廠AI影像監控攝影機(IP Camera 4K/Edge AI)",
+        "產線安全AI辨識系統(邊緣推論YOLO/NPU)",
+        "熱成像監控模組(溫度異常偵測/預警)",
+        "工廠AOI視覺檢測攝影機(缺陷檢測)"
       ],
       "customers": [
-        "研華(2395)(工控整合)",
-        "台達電(2308)(廠房安防)",
-        "西門子(Siemens)(工業影像)",
-        "Moxa(工業網路)"
+        "研華(2395)(工控系統整合)",
+        "台達電(2308)(廠房安防監控)",
+        "西門子Siemens(工業影像系統)",
+        "鴻海(2317)(工廠自動化監控)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "研華(2395)(工業電腦/影像系統)",
+        "Cognex(機器視覺龍頭)",
+        "Keyence(工業視覺檢測)"
+      ],
+      "risks": [
+        "晶睿為安防監控廠,工控應用為延伸市場非核心",
+        "工業AOI視覺檢測市場被Cognex/Keyence主導",
+        "AI邊緣推論攝影機競爭者眾(Intel/Google Nest)"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -142,9 +167,9 @@
       "lastVerified": "2026-07-11",
       "status": "verified",
       "techFocus": [
-        "AI邊緣推論影像分析(CV2/YOLO on NPU)",
-        "熱成像溫度異常偵測演算法整合",
-        "工業級IP66防護攝影機光學設計"
+        "AI邊緣推論影像分析(CV2/YOLO on NPU/Hailo)",
+        "熱成像溫度異常偵測演算法整合(±2°C精度)",
+        "工業級IP66防護攝影機光學設計(寬溫/抗震)"
       ]
     },
     {
@@ -154,19 +179,29 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "間接提供衛星通訊地面站與設施之安防監控方案",
+      "roleSummary": "晶睿為安全監控設備製造商，在低軌衛星題材中間接供應地面站與通訊設施之安防監控方案。題材連結性為間接應用，非核心衛星通訊元件供應商。",
       "products": [
-        "安防監控攝影機(衛星通訊站點監控)",
-        "網路攝影機(衛星地面站安防)",
-        "影像管理平台VMS(衛星通訊設施監控)"
+        "低軌衛星地面站安防攝影機(IP66/IP67防護)",
+        "衛星通訊設施監控影像管理平台VMS",
+        "極端環境網路攝影機(-40~65°C寬溫)",
+        "太陽能供電獨立監控系統(衛星站點用)"
       ],
       "customers": [
         "中華電信(2412)(衛星地面站安防)",
         "遠傳(4904)(衛星通訊站點監控)",
-        "台灣大哥大(3045)(衛星設施安防)"
+        "台灣大哥大(3045)(衛星設施安防)",
+        "SpaceX(間接Starlink地面站安防)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "Axis Communications(瑞典安防龍頭)",
+        "Hikvision(海康威視)(安防攝影機)",
+        "Bosch Security(安防系統)"
+      ],
+      "risks": [
+        "晶睿為安防監控廠,低軌衛星題材為間接應用(地面站安防)",
+        "低軌衛星地面站安防攝影機採購量有限",
+        "安防監控市場競爭激烈(Hikvision低價策略)"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -188,9 +223,9 @@
       "lastVerified": "2026-07-11",
       "status": "verified",
       "techFocus": [
-        "低軌衛星通訊用RF射頻鏡頭",
-        "衛星地面站光學追蹤模組",
-        "極端環境光學鏡頭設計(-40~85°C)"
+        "極端環境光學鏡頭設計(-40~65°C/IP67防護)",
+        "衛星地面站安防VMS影像管理平台整合",
+        "低功耗太陽能獨立監控系統設計(離網站點)"
       ]
     }
   ]

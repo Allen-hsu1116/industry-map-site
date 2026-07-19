@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3406",
   "companyName": "玉晶光",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-20",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -11,22 +11,29 @@
       "directness": "core",
       "supplyChainStage": "optical_components",
       "roleType": "smartphone_lens_manufacturer",
-      "roleSummary": "玉晶光6月營收17.4億年增4.5%，累計年增17.2%。MOPS主要經營：光學鏡頭/鏡片研發製造、高功率LED照明。為Apple iPhone前鏡頭核心供應商，3D感測與AR/VR鏡頭為成長佈局。",
+      "roleSummary": "玉晶光6月營收17.4億YoY+4.5%，累計118億YoY+17.2%。Apple iPhone前鏡頭核心供應商，3D感測與AR/VR Pancake鏡頭為新成長動能，車用ADAS鏡頭放量中。",
       "products": [
         "iPhone前鏡頭(7P/8P塑膠非球面)",
-        "3D感測鏡頭(Face ID結構光/dTOF)",
-        "車用光學鏡頭(環視/ADAS)",
-        "高功率LED室內外照明",
-        "AR/VR Pancake光學鏡頭"
+        "3D感測鏡頭(Face ID結構光/dTOF接收)",
+        "車用光學鏡頭(環視/ADAS/DMS)",
+        "AR/VR光學鏡頭(Pancake折疊光路)"
       ],
       "customers": [
         "Apple(iPhone前鏡頭/Face ID 3D感測)",
-        "Meta(Quest AR/VR鏡頭)",
-        "車廠(ADAS車用鏡頭)",
-        "照明品牌(LED照明產品)"
+        "Meta(Quest AR/VR Pancake鏡頭)",
+        "車廠Tier1(Mobileye/Continental ADAS鏡頭)",
+        "Microsoft(HoloLens AR鏡頭)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "大立光(3008)(手機鏡頭龍頭)",
+        "舜宇光學(中國光學鏡頭)",
+        "康達智(日本手機鏡頭)"
+      ],
+      "risks": [
+        "6月營收17.4億YoY+4.5%成長溫和,累計YoY+17.2%",
+        "Apple iPhone前鏡頭订单受手機出貨循環影響",
+        "中國舜宇光學低價競爭壓力增大(車用/消費鏡頭)"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -49,8 +56,8 @@
       "status": "verified",
       "techFocus": [
         "7P/8P塑膠非球面鏡頭WLG研磨與Molding技術",
-        "dTOF/結構光3D感測鏡頭光學設計",
-        "Pancake折疊光路AR/VR鏡頭設計"
+        "dTOF/結構光3D感測鏡頭光學設計(VCSEL接收)",
+        "Pancake折疊光路AR/VR鏡頭設計(超短焦)"
       ]
     },
     {
@@ -60,21 +67,29 @@
       "directness": "core",
       "supplyChainStage": "optical_components",
       "roleType": "mobile_ar_lens",
-      "roleSummary": "玉晶光6月營收17.4億年增4.5%，累計年增17.2%。MOPS主要經營：光學鏡頭/LED照明。在消費終端題材為Apple iPhone前鏡頭與Meta VR光學鏡頭核心供應商。",
+      "roleSummary": "玉晶光6月營收17.4億YoY+4.5%，累計118億YoY+17.2%。消費終端題材為Apple iPhone前鏡頭與Meta VR Pancake鏡頭，AR/VR市場為長期成長機會但短期需求波動大。",
       "products": [
-        "iPhone前鏡頭模組(7P/8P非球面)",
-        "AR/VR光學鏡頭(Pancake/Fresnel)",
-        "平板/筆電Webcam鏡頭",
-        "3D感測鏡頭(dTOF Face ID)"
+        "iPhone前鏡頭模組(7P/8P非球面光學)",
+        "AR/VR光學鏡頭(Pancake/Fresnel折疊光路)",
+        "平板/筆電Webcam鏡頭(全高清/自動對焦)",
+        "車載HUD鏡頭(抬頭顯示器光學)"
       ],
       "customers": [
         "Apple(iPhone/iPad前鏡頭)",
         "Meta(Quest VR Pancake鏡頭)",
         "Microsoft(HoloLens AR鏡頭)",
-        "Chromebook品牌(Webcam)"
+        "車廠(HUD抬頭顯示器光學鏡頭)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "大立光(3008)(手機鏡頭龍頭)",
+        "舜宇光學(中國消費光學)",
+        "亞洲光學(301)(光學鏡頭)"
+      ],
+      "risks": [
+        "6月營收17.4億YoY+4.5%消費端需求溫和復甦",
+        "Apple iPhone出貨量年減影響前鏡頭订单",
+        "AR/VR鏡頭市場需求未如預期爆發(Meta Quest出貨低於預期)"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -96,9 +111,9 @@
       "lastVerified": "2026-07-14",
       "status": "verified",
       "techFocus": [
-        "Pancake折疊光路VR鏡頭光學設計",
+        "Pancake折疊光路VR鏡頭光學設計(超短焦/輕量化)",
         "7P/8P塑膠非球面手機鏡頭WLG/Molding技術",
-        "dTOF 3D感測接收鏡頭光學設計"
+        "dTOF 3D感測接收鏡頭光學設計(Face ID)"
       ]
     }
   ]

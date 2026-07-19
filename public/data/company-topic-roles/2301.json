@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2301",
   "companyName": "光寶科",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-07-20",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,23 +11,29 @@
       "directness": "direct_enabler",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "server_psu_maker",
-      "roleSummary": "光寶科是伺服器電源供應器大廠，AI伺服器高瓦數PSU帶動產品組合升級。5月營收173.5億年增29.6%，累計774.6億年增22.5%，雲端與AI伺服器需求推動穩健成長。",
+      "roleSummary": "光寶科6月營收186.6億YoY+37.0%，累計961億YoY+25.1%。AI伺服器高瓦數CRPS鈦金級PSU為核心成長動能，GPU電源模組(VRM)需求隨AI加速器放量而增長。",
       "products": [
-        "伺服器電源供應器(800W-3000W)",
-        "AI伺服器GPU電源模組",
-        "LED照明模組(車用/商用)",
-        "車用電子(ADAS/車用鏡頭)",
-        "光耦合器(Photo Coupler)"
+        "AI伺服器CRPS電源供應器(800W-3000W鈦金級)",
+        "AI伺服器GPU電源模組(VRM/VRD多相降壓)",
+        "雲端光電模組(光耦合器/感測器)",
+        "伺服器LED指示/照明模組"
       ],
       "customers": [
-        "Dell(伺服器PSU)",
-        "HP(電源供應器)",
-        "Microsoft(雲端PSU)",
-        "Amazon(AWS電源)",
-        "Tesla(車用電子)"
+        "Dell(伺服器PSU CRPS)",
+        "HPE(伺服器電源供應器)",
+        "Microsoft(Azure雲端PSU)",
+        "NVIDIA(間接AI伺服器PSU)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "台達電(2308)(伺服器PSU龍頭)",
+        "群光(2385)(伺服器PSU)",
+        "康舒(6282)(伺服器電源)"
+      ],
+      "risks": [
+        "6月營收186.6億YoY+37.0%創高,AI伺服器PSU需求強勁",
+        "伺服器PSU市場競爭激烈(台達電市佔領先)",
+        "AI伺服器PSU規格升級快(3000W+)需持續研發投入"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -49,9 +55,9 @@
       "lastVerified": "2026-07-04",
       "status": "verified",
       "techFocus": [
-        "AI 伺服器 GPU 電源模組（VRM）多相降壓轉換",
-        "CRPS 鈦金級電源供應器（80PLUS Titanium）",
-        "伺服器 PSU 數位 PWM 控制技術"
+        "AI伺服器GPU電源模組(VRM)多相降壓轉換技術",
+        "CRPS鈦金級電源供應器(80PLUS Titanium效率>96%)",
+        "伺服器PSU數位PWM控制與熱插拔設計"
       ]
     }
   ]

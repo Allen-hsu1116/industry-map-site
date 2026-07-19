@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2393",
   "companyName": "億光",
-  "updatedAt": "2026-07-11",
+  "updatedAt": "2026-07-20",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -11,21 +11,30 @@
       "directness": "core",
       "supplyChainStage": "led_packaging",
       "roleType": "led_package_manufacturer",
-      "roleSummary": "億光是台灣最大LED封裝廠，產品涵蓋可見光/不可見光LED、紅外線/紫外線LED、車用LED與Mini LED背光，LED封裝市佔全球前五。",
+      "roleSummary": "億光6月營收18.3億YoY+10.6%，累計104億YoY+3.2%。台灣最大LED封裝廠，產品涵蓋可見光/不可見光LED、Mini LED背光、車用LED，LED封裝全球市佔前五。",
       "products": [
-        "SMD LED封裝(0402-5050)",
-        "紅外線LED(IR/VCSEL)",
-        "車用LED(頭燈/尾燈)",
-        "Mini LED背光模組",
-        "UV LED"
+        "SMD LED封裝(0402-5050白光/RGB)",
+        "Mini LED背光封裝(chip<200μm)",
+        "紅外線LED(850nm/940nm IR/VCSEL)",
+        "車用LED(頭燈/尾燈/車內照明AEC-Q102)"
       ],
       "customers": [
-        "Samsung(Mini LED背光)",
-        "Sony(顯示器背光)",
-        "汽車車燈廠(車用LED)"
+        "Samsung(Mini LED背光封裝)",
+        "Sony(顯示器LED背光)",
+        "汽車車燈廠(Stanley/小糸車用LED)",
+        "小米(消費電子LED)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "日亞化Nichia(全球LED龍頭)",
+        "光寶科(2301)(LED封裝)",
+        "東貝(2499)(LED封裝)",
+        " Seoul Semiconductor(韓國LED)"
+      ],
+      "risks": [
+        "6月營收18.3億YoY+10.6%成長溫和,LED市場成熟期",
+        "中國LED封裝低價競爭(三安光電/木林森)壓縮消費級毛利",
+        "Mini LED背光需求受面板景氣循環影響"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -47,9 +56,9 @@
       "lastVerified": "2026-07-11",
       "status": "verified",
       "techFocus": [
-        "高功率LED封裝(陶瓷基板/散熱設計)",
-        "車規AEC-Q102 LED可靠性驗證",
-        "紅外線LED(850nm/940nm)陣列光學設計"
+        "高功率LED封裝(陶瓷基板散熱/晶粒級封裝)",
+        "Mini LED區域調光封裝技術(chip size<200μm)",
+        "車規AEC-Q102 LED可靠性驗證(-40~125°C)"
       ]
     },
     {
@@ -112,23 +121,29 @@
       "directness": "indirect",
       "supplyChainStage": "sensors",
       "roleType": "optical_sensor_supplier",
-      "roleSummary": "億光5月營收17.7億年增10.2%累計85.7億年增1.7%。工控用光電感測器與光耦合器為穩定利基，車用LED為新成長點。",
+      "roleSummary": "億光6月營收18.3億YoY+10.6%，累計104億YoY+3.2%。工控用光電感測器與光耦合器為穩定利基產品線，車用LED與UV LED為新成長動能。",
       "products": [
-        "工業用光電感測器(對射型/反射型)",
-        "光耦合器(Photocoupler, 10kV隔離)",
-        "紅外線感測LED(940nm/850nm)",
-        "工業用RGB LED指示燈",
-        "車用LED封裝(車規AEC-Q102)"
+        "工業用光電感測器(對射型/反射型IP67)",
+        "光耦合器(Photocoupler 10kV隔離)",
+        "紅外線感測LED(940nm/850nm工業級)",
+        "UV LED(365nm/395nm工業固化)"
       ],
       "customers": [
-        "西門子(Siemens)(工控感測)",
-        "Omron(自動化設備LED)",
+        "西門子Siemens(工控光電感測)",
+        "Omron(自動化設備LED感測)",
         "台達電(2308)(電源隔離光耦)",
-        "研華(2395)(工控指示燈)",
-        "Tesla(車用LED)"
+        "Keyence(工業感測器LED)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "光寶科(2301)(光耦合器)",
+        "夏普Sharp(工業光電感測)",
+        "Hamamatsu(工業光電元件)"
+      ],
+      "risks": [
+        "6月營收18.3億YoY+10.6%工控LED為穩定利基但佔比不高",
+        "工控光電感測器市場被歐日大廠(西門子/Omron)主導",
+        "中國LED感測器低價競爭壓力增大"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -152,7 +167,7 @@
       "techFocus": [
         "高隔離電壓光耦合器(10kV)封裝技術",
         "工業級LED封裝(IP67防塵防水/寬溫-40~85°C)",
-        "車規AEC-Q102 LED可靠性驗證"
+        "UV LED 365nm/395nm工業固化封裝"
       ]
     },
     {
@@ -162,20 +177,29 @@
       "directness": "indirect",
       "supplyChainStage": "optoelectronic_components",
       "roleType": "military_ir_led",
-      "roleSummary": "億光5月營收17.7億年增10.2%。軍規紅外線LED為利基應用，用於夜視與目標標定系統，題材純度中等。",
+      "roleSummary": "億光6月營收18.3億YoY+10.6%。軍規紅外線LED(850nm/940nm)為利基應用，用於夜視照明與目標標定系統，題材純度中等，營收貢獻有限但毛利率較高。",
       "products": [
-        "軍規紅外線LED(850nm/940nm)",
-        "夜視用IR照明LED陣列",
-        "光電感測元件(光敏二極體)",
-        "軍規指示燈(LED)"
+        "軍規紅外線LED(850nm/940nm高功率)",
+        "夜視用IR照明LED陣列(可調焦)",
+        "光電感測元件(光敏二極體PIN)",
+        "軍規UV LED(偽鈔/生化偵檢用)"
       ],
       "customers": [
-        "中科院(軍規光電)",
-        "漢翔(2634)(航空LED)",
-        "國防部(夜視裝備)"
+        "中科院(軍規光電標案)",
+        "漢翔(2634)(航空LED照明)",
+        "國防部(夜視裝備IR LED)",
+        "軍規光電模組廠(系統整合)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "日亞化Nichia(軍規IR LED)",
+        "OSRAM(軍規紅外線LED)",
+        "Excelitas(軍規光電元件)"
+      ],
+      "risks": [
+        "6月營收18.3億YoY+10.6%軍規LED佔比極低(利基應用)",
+        "軍規LED認證週期長且量小(投產比有限)",
+        "軍規光電市場被國際大廠(OSRAM/Excelitas)主導"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -197,9 +221,9 @@
       "lastVerified": "2026-07-11",
       "status": "verified",
       "techFocus": [
-        "850nm/940nm紅外線LED高功率封裝技術",
-        "軍規環境可靠性(-55~125°C/抗震)LED設計",
-        "夜視照明IR LED陣列光學設計"
+        "850nm/940nm紅外線LED高功率封裝(>500mW)",
+        "軍規環境可靠性(-55~125°C/抗震/MIL-STD-810)LED設計",
+        "夜視照明IR LED陣列光學設計(可調焦距)"
       ]
     }
   ]
