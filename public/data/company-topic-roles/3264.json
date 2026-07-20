@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-07-21",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -11,7 +11,7 @@
       "directness": "core",
       "supplyChainStage": "advanced_packaging_test",
       "roleType": "memory_ic_wafer_test",
-      "roleSummary": "欣銓6月營收15.52億穩定成長。專業記憶體IC晶圓測試代工，服務DRAM/NAND/HBM供應鏈測試需求。",
+      "roleSummary": "欣銓6月營收15.52億MoM+2.25%。專業記憶體IC晶圓測試代工，服務DRAM/NAND/HBM供應鏈測試需求，先進封裝Burn-in測試為附加業務。",
       "products": [
         "記憶體IC晶圓測試(DRAM/NAND/HBM CP測試)",
         "數位訊號IC晶圓及成品測試",
@@ -24,8 +24,17 @@
         "旺宏(2337)(NOR Flash測試)",
         "華邦電(2344)(NAND測試)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "力成(6239)(記憶體封測)",
+        "京元電子(2449)(IC測試代工)",
+        "矽格(6257)(混合訊號封測)",
+        "日月光(3711)(封測龍頭)"
+      ],
+      "risks": [
+        "先進封裝測試為附屬業務，欣銓核心仍為記憶體IC晶圓測試(CP)",
+        "6月營收15.52億穩定，但先進封裝測試訂單量受CoWoS產能擴充速度制約",
+        "測試代工為重資本行業，機台折舊壓力持續"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -44,7 +53,7 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
+      "lastVerified": "2026-07-21",
       "status": "verified",
       "techFocus": [
         "記憶體IC晶圓級測試(CP)良率篩選技術",
@@ -59,7 +68,7 @@
       "directness": "indirect",
       "supplyChainStage": "hbm_test",
       "roleType": "hbm_wafer_test_provider",
-      "roleSummary": "欣銓6月營收15.52億穩定成長。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務。",
+      "roleSummary": "欣銓6月營收15.52億MoM+2.25%。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務，受惠AI GPU HBM需求爆發，但測試環節受惠程度低於封測廠。",
       "products": [
         "HBM晶圓測試(TSV前CP測試)",
         "DRAM die測試與分類(KGD)",
@@ -71,8 +80,17 @@
         "Micron(HBM供應鏈測試)",
         "力積電(6770)(利基記憶體測試)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "力成(6239)(HBM封測)",
+        "京元電子(2449)(記憶體測試)",
+        "矽格(6257)(混合訊號封測)",
+        "愛發(9103)(測試設備代理)"
+      ],
+      "risks": [
+        "HBM測試佔欣銓營收比重仍小，HBM需求爆發主要受惠封測廠(力成/日月光)而非測試廠",
+        "6月營收15.52億穩定成長，但HBM測試需高頻Burn-in機台，設備投資門檻高",
+        "HBM測試訂單集中在SK hynix/Micron兩大客戶，客戶集中度風險"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -90,8 +108,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "high",
+      "lastVerified": "2026-07-21",
       "status": "verified",
       "techFocus": [
         "HBM TSV前晶圓測試(KGD Known Good Die)",
@@ -106,7 +124,7 @@
       "directness": "indirect",
       "supplyChainStage": "test",
       "roleType": "edge_ai_ic_test",
-      "roleSummary": "欣銓6月營收15.52億穩定成長。提供邊緣AI SoC晶圓與成品測試服務，受惠AIoT邊緣運算晶片需求增長。",
+      "roleSummary": "欣銓6月營收15.52億MoM+2.25%。提供邊緣AI SoC晶圓與成品測試服務，受惠AIoT邊緣運算晶片需求增長，主力仍為記憶體IC測試代工。",
       "products": [
         "邊緣AI SoC晶圓測試(CP)",
         "邊緣AI SoC成品測試(FT)",
@@ -118,8 +136,17 @@
         "瑞昱(2379)(邊緣AI IC測試)",
         "利基型AI IC設計公司(測試代工)"
       ],
-      "competitors": [],
-      "risks": [],
+      "competitors": [
+        "力成(6239)(記憶體封測)",
+        "京元電子(2449)(IC測試代工)",
+        "矽格(6257)(混合訊號封測)",
+        "安靠(Amkor)(封測代工)"
+      ],
+      "risks": [
+        "邊緣AI SoC測試佔欣銓營收比重有限，主力仍為記憶體IC測試",
+        "6月營收15.52億MoM+2.25%穩定，但邊緣AI測試需新機台投資，資本支出壓力增加",
+        "測試代工毛利率受客戶議價壓力，訂單量波動影響大"
+      ],
       "legacy": {},
       "evidence": [
         {
@@ -137,8 +164,8 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-03",
+      "confidence": "high",
+      "lastVerified": "2026-07-21",
       "status": "verified",
       "techFocus": [
         "AI SoC數位訊號晶圓測試(CP)",

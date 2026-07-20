@@ -1,47 +1,56 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "6215",
-    "companyName": "6215",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "6215",
+  "companyName": "6215",
+  "updatedAt": "2026-07-21",
+  "roles": [
+    {
+      "topicId": "ai-server-liquid-cooling",
+      "topicName": "AI 伺服器液冷散熱",
+      "topicType": "supply_chain_segment",
+      "directness": "core",
+      "roleSummary": "和椿6月營收2.79億年增30.5%、累計年增53.7%，自動化零組件需求增加。散熱風扇馬達與精密軸承為間接供應，題材連結弱，非核心散熱標的。",
+      "products": [
+        "自動化傳動設備(散熱風扇馬達)",
+        "精密軸承(散熱風扇用)",
+        "線性滑軌(散熱模組產線自動化)",
+        "伺服馬達(散熱模組組裝設備)"
+      ],
+      "customers": [
+        "台達電",
+        "上銀",
+        "發那科(FANUC)",
+        "西門子(Siemens)"
+      ],
+      "competitors": [
+        "建準(8154)(散熱風扇馬達)",
+        "全毅(3362)(精密軸承)",
+        "三聯(5493)(自動化傳動)",
+        "上銀(2049)(直線導軌)"
+      ],
+      "risks": [
+        "散熱風扇馬達/精密軸承非和椿主力產品，題材連結弱，營收貢獻比重極低",
+        "6月營收YoY+30.5%主要來自自動化設備需求，非散熱相關訂單",
+        "散熱風扇馬達市場建準(8154)市佔高，和椿缺乏規模優勢"
+      ],
+      "evidence": [
         {
-            "topicId": "ai-server-liquid-cooling",
-            "topicName": "AI 伺服器液冷散熱",
-            "topicType": "supply_chain_segment",
-            "directness": "core",
-            "roleSummary": "優勢：6月營收 2.8 億元、年增 30%，自動化需求帶動成長。劣勢：散熱非主力產品，題材連結弱。",
-            "products": [
-                "自動化傳動設備(散熱風扇馬達)",
-                "精密軸承(散熱風扇用)",
-                "線性滑軌(散熱模組產線自動化)",
-                "伺服馬達(散熱模組組裝設備)"
-            ],
-            "customers": [
-                "台達電",
-                "上銀",
-                "發那科(FANUC)",
-                "西門子(Siemens)"
-            ],
-            "competitors": [],
-            "risks": [],
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS",
-                    "title": "6215公司基本資料",
-                    "url": "https://mops.twse.com.tw/mops/web/t05st03",
-                    "claim": "MOPS 公司基本資料 supports 6215 role in AI 伺服器液冷散熱 through disclosed product/service scope."
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-15",
-            "status": "verified",
-            "techFocus": [
-                "精密軸承製造技術",
-                "自動化傳動零組件設計"
-            ],
-            "supplyChainStage": "peripheral",
-            "roleType": "indirect"
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "6215公司基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS 公司基本資料 supports 6215 role in AI 伺服器液冷散熱 through disclosed product/service scope."
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-21",
+      "status": "verified",
+      "techFocus": [
+        "精密軸承製造技術",
+        "自動化傳動零組件設計"
+      ],
+      "supplyChainStage": "peripheral",
+      "roleType": "indirect"
+    }
+  ]
 }
