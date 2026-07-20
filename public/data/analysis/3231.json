@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-07-17T12:35:29.361Z",
+  "generatedAt": "2026-07-20T12:33:26.673Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-17",
-  "chipDataDate": "2026-07-17",
+  "marketDataDate": "2026-07-20",
+  "chipDataDate": "2026-07-20",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,35 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -55,
-    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 9.3%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 9.3%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": -15,
+    "summary": "緯創 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 5.8%。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
-    "watch": [
-      "接近 20 日低點 139.00，留意支撐是否失守"
-    ]
+    "risks": [
+      "收盤跌破 MA20 5.8%"
+    ],
+    "watch": []
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 0,
-    "summary": "緯創 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +2.3千張；外資近 5 日買超 +1.2萬張。",
+    "summary": "緯創 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.6萬張；外資近 5 日買超 +2.6萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2.3千張",
-      "外資近 5 日買超 +1.2萬張"
+      "三大法人近 5 日合計買超 +1.6萬張",
+      "外資近 5 日買超 +2.6萬張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -8.9萬張",
-      "投信近 5 日賣超 -1.2萬張"
+      "近 20 日法人偏賣，合計 -7.7萬張",
+      "投信近 5 日賣超 -1.3萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-17",
-      "融券近 5 日增加 89.3%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-20",
+      "融券近 5 日增加 55.6%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -100,8 +99,8 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
-      "相關題材：AI 伺服器整機與 EMS · 核心產品/平台",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
+      "相關題材：AI 伺服器機構件與滑軌 · 供應商角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -126,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-17"
+      "lastVerified": "2026-07-20"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -159,24 +158,14 @@
         "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。"
       },
       {
-        "topicId": "ai-server",
-        "topicName": "AI 伺服器整機與 EMS",
-        "canonicalTopicId": "ai-server",
-        "canonicalTopicName": "AI 伺服器整機與 EMS",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。"
-      },
-      {
         "topicId": "consumer-computing-devices",
         "topicName": "PC、手機與 AR/VR/XR 終端",
         "canonicalTopicId": "consumer-computing-devices",
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "緯創5月營收290億年增39%，累計年增106%。為全球前三大NB ODM，商用筆電與Chromebook出貨暢旺，AI PC帶動換機潮。"
+        "confidence": "high",
+        "roleSummary": "緯創6月營收321.82億年增53.8%。商用筆電/Chromebook ODM為傳統核心業務，受AI伺服器爆發帶動整體營收大增，消費裝置ODM穩定貢獻。"
       },
       {
         "topicId": "ai-server-mechanical",
@@ -185,8 +174,8 @@
         "canonicalTopicName": "AI 伺服器機構件與滑軌",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
-        "confidence": "medium",
-        "roleSummary": "緯創跨入AI伺服器機構件，5月營收290億年增39%。GPU機架滑軌與散熱模組供NVIDIA/Google/Dell/HPE，AI伺服器營收占比快速提升。"
+        "confidence": "high",
+        "roleSummary": "緯創6月營收321.82億年增53.8%，累計年增94.0%受AI伺服器需求帶動。AI伺服器機構件為ODM附帶業務，提供機箱/導軌/散熱風扇模組組裝。"
       }
     ],
     "swot": [
@@ -250,14 +239,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 47,
+    "totalScore": 59,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 13.9 倍，估值尚可對照成長",
-        "殖利率 4.0%，提供部分下檔支撐"
+        "本益比 14.4 倍，估值尚可對照成長",
+        "殖利率 3.8%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -267,20 +256,14 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 10.2%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
       "短線支撐/壓力先看 MA5：143.40",
-      "波段多空分水嶺看 MA20：153.23",
-      "追蹤法人是否延續 賣超：最近 -5.1千張",
-      "本益比 13.9 倍，需和同族群估值比較"
+      "波段多空分水嶺看 MA20：152.32",
+      "追蹤法人是否延續 買超：最近 +1.2萬張",
+      "本益比 14.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 166.00 且量比 > 1.5：列為轉強訊號",

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2383",
   "name": "台光電",
-  "generatedAt": "2026-07-17T12:35:29.144Z",
+  "generatedAt": "2026-07-20T12:33:26.463Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-17",
-  "chipDataDate": "2026-07-17",
+  "marketDataDate": "2026-07-20",
+  "chipDataDate": "2026-07-20",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,33 +17,30 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -55,
-    "summary": "台光電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 16.5%。",
+    "score": -45,
+    "summary": "台光電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 17.4%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 16.5%"
+      "收盤跌破 MA20 17.4%"
     ],
-    "watch": [
-      "接近 20 日低點 4495.00，留意支撐是否失守"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 21,
-    "summary": "台光電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +537張；投信近 5 日買超 +205張。",
+    "score": 41,
+    "summary": "台光電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +598張；近 20 日法人偏買，合計 +480張。",
     "signals": [
-      "三大法人近 5 日合計買超 +537張",
-      "投信近 5 日買超 +205張",
-      "外資近 5 日買超 +207張",
-      "融資近 5 日下降 8.4%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +598張",
+      "近 20 日法人偏買，合計 +480張",
+      "投信近 5 日買超 +146張",
+      "外資近 5 日買超 +282張",
+      "融資近 5 日下降 14.6%，籌碼壓力下降"
     ],
-    "risks": [
-      "近 20 日法人偏賣，合計 -556張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-07-17"
+      "最近法人資料日：2026-07-20"
     ]
   },
   "industry": {
@@ -105,7 +102,6 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
-      "相關題材：PCB、IC 載板與高階基板材料 · 核心產品/平台",
       "相關題材：AI 伺服器整機與 EMS · 供應商角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -133,7 +129,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-17"
+      "lastVerified": "2026-07-20"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -155,16 +151,6 @@
   },
   "canonicalKnowledge": {
     "topicRoles": [
-      {
-        "topicId": "pcb-substrates",
-        "topicName": "PCB、IC 載板與高階基板材料",
-        "canonicalTopicId": "pcb-substrates",
-        "canonicalTopicName": "PCB、IC 載板與高階基板材料",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "台光電5月營收156.2億年增114.6%（受惠於AI伺服器成長力道），累計年增73.2%。高速CCL為AI伺服器PCB上游關鍵材料，需求爆發。"
-      },
       {
         "topicId": "pcb-substrates",
         "topicName": "PCB、IC 載板與高階基板材料",
@@ -258,7 +244,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 36,
+    "totalScore": 42,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -268,8 +254,8 @@
         "月營收 MoM +15.9%，短期動能改善"
       ],
       "risks": [
-        "本益比 97.5 倍，需防估值壓縮",
-        "股價淨值比 33.6 倍偏高，需和 ROE/成長性比對"
+        "本益比 95.3 倍，需防估值壓縮",
+        "股價淨值比 32.9 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -284,21 +270,21 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 19.7%，停損距離過大"
+        "message": "距離 MA20 約 21.1%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：4932.00",
-      "波段多空分水嶺看 MA20：5382.75",
-      "追蹤法人是否延續 買超：最近 +364張",
+      "短線支撐/壓力先看 MA5：4786.00",
+      "波段多空分水嶺看 MA20：5322.50",
+      "追蹤法人是否延續 買超：最近 +72張",
       "月營收年增率 +93.6%，觀察基本面是否支撐估值",
-      "本益比 97.5 倍，需和同族群估值比較"
+      "本益比 95.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 6250.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 4495.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 4180.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-07-17T12:35:29.370Z",
+  "generatedAt": "2026-07-20T12:33:26.681Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-17",
-  "chipDataDate": "2026-07-17",
+  "marketDataDate": "2026-07-20",
+  "chipDataDate": "2026-07-20",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -21,31 +21,33 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -45,
-    "summary": "欣銓 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 7.5%。",
+    "score": -55,
+    "summary": "欣銓 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 13.9%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 7.5%"
+      "收盤跌破 MA20 13.9%"
     ],
-    "watch": []
+    "watch": [
+      "接近 20 日低點 194.50，留意支撐是否失守"
+    ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 0,
-    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.3萬張；投信近 5 日買超 +1.9千張。",
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +7千張；投信近 5 日買超 +2千張。",
     "signals": [
-      "近 20 日法人偏買，合計 +1.3萬張",
-      "投信近 5 日買超 +1.9千張"
+      "近 20 日法人偏買，合計 +7千張",
+      "投信近 5 日買超 +2千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.3千張",
-      "外資近 5 日賣超 -3.6千張"
+      "三大法人近 5 日合計賣超 -2.9千張",
+      "外資近 5 日賣超 -4.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-17",
-      "融券近 5 日增加 440.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-20",
+      "融券近 5 日增加 400.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -113,7 +115,7 @@
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
       "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-17（fresh）"
+      "知識庫最後驗證：2026-07-20（fresh）"
     ]
   },
   "knowledge": {
@@ -127,7 +129,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-17"
+      "lastVerified": "2026-07-20"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -196,8 +198,8 @@
         "canonicalTopicName": "MLCC / 電容器",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "欣銓6月營收15.52億穩定成長。提供被動元件驅動IC晶圓與成品測試服務，間接受惠MLCC產業需求。"
+        "confidence": "high",
+        "roleSummary": "欣銓為專業IC測試服務商，提供MLCC驅動IC晶圓與成品測試服務，間接受惠MLCC產業需求成長帶動測試量增加。"
       },
       {
         "topicId": "pcb-substrates",
@@ -206,8 +208,8 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "欣銓6月營收15.52億穩定成長。提供IC載板封裝後測試與Burn-in服務，間接支援PCB載板良率驗證。"
+        "confidence": "high",
+        "roleSummary": "欣銓為專業IC測試服務商，提供IC載板封裝前後測試與Burn-in服務。受惠ABF載板需求成長，間接支援PCB載板良率驗證。"
       },
       {
         "topicId": "semiconductor-equipment-materials",
@@ -217,7 +219,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "欣銓6月營收15.52億穩定成長。專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。"
+        "roleSummary": "欣銓為專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。在半導體設備材料題材中屬後段測試環節，受記憶體與車用IC需求帶動。"
       }
     ],
     "swot": [],
@@ -314,8 +316,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 51,
-    "recommendationState": "watchlist",
+    "totalScore": 29,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -328,18 +330,24 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "hard",
+        "message": "距離 MA20 約 16.2%，停損距離過大"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：223.70",
-      "波段多空分水嶺看 MA20：231.23",
-      "追蹤法人是否延續 賣超：最近 -3.3千張",
-      "本益比 33.2 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：218.20",
+      "波段多空分水嶺看 MA20：229.48",
+      "追蹤法人是否延續 賣超：最近 -565張",
+      "本益比 30.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 271.50 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 206.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 194.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

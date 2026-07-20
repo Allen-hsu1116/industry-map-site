@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6239",
   "name": "力成",
-  "generatedAt": "2026-07-17T12:35:29.626Z",
+  "generatedAt": "2026-07-20T12:33:26.930Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-17",
-  "chipDataDate": "2026-07-17",
+  "marketDataDate": "2026-07-20",
+  "chipDataDate": "2026-07-20",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,33 +18,33 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -55,
-    "summary": "力成 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 12.0%。",
+    "summary": "力成 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 17.4%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 12.0%"
+      "收盤跌破 MA20 17.4%"
     ],
     "watch": [
-      "接近 20 日低點 286.50，留意支撐是否失守"
+      "接近 20 日低點 265.50，留意支撐是否失守"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -31,
-    "summary": "力成 籌碼面目前為「籌碼偏空」：融資近 5 日下降 10.3%，籌碼壓力下降；三大法人近 5 日合計賣超 -5.4千張。",
+    "summary": "力成 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +773張；融資近 5 日下降 11.1%，籌碼壓力下降。",
     "signals": [
-      "融資近 5 日下降 10.3%，籌碼壓力下降"
+      "外資近 5 日買超 +773張",
+      "融資近 5 日下降 11.1%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -5.4千張",
-      "近 20 日法人偏賣，合計 -1.3萬張",
-      "投信近 5 日賣超 -1.7千張",
-      "外資近 5 日賣超 -2.3千張"
+      "三大法人近 5 日合計賣超 -2.1千張",
+      "近 20 日法人偏賣，合計 -1.1萬張",
+      "投信近 5 日賣超 -1.9千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-17",
-      "融券近 5 日增加 52.1%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-20",
+      "融券近 5 日增加 26.6%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -57,7 +57,7 @@
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "力成5月營收79.18億YoY+30.2%，受惠於DRAM/NAND封測需求回升與HBM測試動能。為台灣最大記憶體封測廠，HBM測試為先進封裝賦能角色。",
+      "roleSummary": "力成為台灣最大記憶體封測廠，6月營收76.2億年增21.7%，累計444億年增32.4%。受惠DRAM/NAND封測需求回升與HBM測試動能，先進封裝賦能角色明確。",
       "supplyChainStage": "memory_logic_osat",
       "roleType": "memory_logic_packaging_testing_provider",
       "directness": "core",
@@ -77,6 +77,23 @@
         "sourceUrls": [
           "https://www.pti.com.tw/en/service/service/chip-probing",
           "https://www.pti.com.tw/en/service/service/final-test"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
+      },
+      {
+        "name": "WLCSP、Flip Chip 與 SiP 封裝服務",
+        "description": "力成提供晶圓級封裝、Flip Chip、SiP 等封裝服務，將晶片以更小尺寸、更高 I/O 或更好電熱性能的形式封裝，服務記憶體與邏輯晶片客戶。",
+        "whyItMatters": "AI、行動裝置、記憶體和高效能邏輯晶片都需要更高密度與更高可靠度的封裝；先進封裝服務提高單位封測價值量。",
+        "topicFit": "WLCSP、Flip Chip、SiP、Fan Out 與 TSV 直接屬先進封裝服務。",
+        "businessImpact": "先進封裝占比提升有助提高服務價值，但需要產能、良率與客戶產品放量支撐。",
+        "sourceLabels": [
+          "Powertech Technology Inc.：Wafer Level Packaging",
+          "Powertech Technology Inc.：Flip Chips"
+        ],
+        "sourceUrls": [
+          "https://www.pti.com.tw/en/service/packaging/wafer-level-packaging",
+          "https://www.pti.com.tw/en/service/packaging/flip-chips"
         ],
         "lastVerified": "2026-05-28",
         "confidence": "high"
@@ -136,7 +153,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-17"
+      "lastVerified": "2026-07-20"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -166,7 +183,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "力成5月營收79.18億YoY+30.2%，受惠於DRAM/NAND封測需求回升與HBM測試動能。為台灣最大記憶體封測廠，HBM測試為先進封裝賦能角色。"
+        "roleSummary": "力成為台灣最大記憶體封測廠，6月營收76.2億年增21.7%，累計444億年增32.4%。受惠DRAM/NAND封測需求回升與HBM測試動能，先進封裝賦能角色明確。"
       }
     ],
     "swot": [
@@ -234,8 +251,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 39,
-    "recommendationState": "watchlist",
+    "totalScore": 23,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -251,21 +268,21 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 13.7%，部位需降速"
+        "severity": "hard",
+        "message": "距離 MA20 約 21.0%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：307.00",
-      "波段多空分水嶺看 MA20：327.40",
-      "追蹤法人是否延續 賣超：最近 -4.7千張",
-      "本益比 34.3 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：297.80",
+      "波段多空分水嶺看 MA20：322.55",
+      "追蹤法人是否延續 買超：最近 +1.4千張",
+      "本益比 31.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 377.50 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 286.50：列為轉弱警訊",
+      "收盤跌破 20 日低點 265.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

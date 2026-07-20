@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-17T12:35:31.382Z",
+  "generatedAt": "2026-07-20T12:33:28.651Z",
   "source": {
     "name": "FinMind TaiwanStockPrice checked-in financial snapshots",
     "scope": "all public/data/financials/*.json companies with fresh latest K-line date; stale companies excluded",
@@ -10,70 +10,70 @@
     {
       "timeframe": "1d",
       "status": "partial",
-      "generatedAt": "2026-07-17T12:35:30.826Z",
+      "generatedAt": "2026-07-20T12:33:28.106Z",
       "items": [
         {
-          "code": "2059",
-          "name": "川湖",
-          "score": -30.1,
-          "latestDate": "2026-07-17",
-          "close": 7890,
-          "returnPct": -8.84,
-          "changePct1d": -8.84,
-          "volumeRatio20": 1.49,
-          "ma20": 7760.75,
-          "aboveMa20": true,
+          "code": "3231",
+          "name": "緯創",
+          "score": 29,
+          "latestDate": "2026-07-20",
+          "close": 143.5,
+          "returnPct": 3.24,
+          "changePct1d": 3.24,
+          "volumeRatio20": 1.53,
+          "ma20": 152.32,
+          "aboveMa20": false,
           "high20Breakout": false,
-          "reason": "1d return -8.84% · volume ratio 1.49x · above MA20",
+          "reason": "1d return +3.24% · volume ratio 1.53x · below MA20",
           "rank": 1
+        },
+        {
+          "code": "2376",
+          "name": "技嘉",
+          "score": 18.88,
+          "latestDate": "2026-07-20",
+          "close": 331,
+          "returnPct": 1.85,
+          "changePct1d": 1.85,
+          "volumeRatio20": 1.15,
+          "ma20": 334.38,
+          "aboveMa20": false,
+          "high20Breakout": false,
+          "reason": "1d return +1.85% · volume ratio 1.15x · below MA20",
+          "rank": 2
+        },
+        {
+          "code": "2330",
+          "name": "台積電",
+          "score": 17.22,
+          "latestDate": "2026-07-20",
+          "close": 2320,
+          "returnPct": 1.31,
+          "changePct1d": 1.31,
+          "volumeRatio20": 1.34,
+          "ma20": 2423.75,
+          "aboveMa20": false,
+          "high20Breakout": false,
+          "reason": "1d return +1.31% · volume ratio 1.34x · below MA20",
+          "rank": 3
         }
       ],
       "source": {
         "name": "FinMind TaiwanStockPrice checked-in financial snapshots",
-        "latestDate": "2026-07-17",
+        "latestDate": "2026-07-20",
         "scope": "fresh K-line coverage 30 / 499; stale companies excluded from ranking",
         "warning": "price/technical only; excludes chips, fundamentals, news, ETF constituents, and AI judgement"
       }
     },
     {
       "timeframe": "5d",
-      "status": "partial",
-      "generatedAt": "2026-07-17T12:35:31.105Z",
-      "items": [
-        {
-          "code": "3017",
-          "name": "奇鋐",
-          "score": 23.45,
-          "latestDate": "2026-07-17",
-          "close": 2200,
-          "returnPct": 3.77,
-          "changePct1d": -1.12,
-          "volumeRatio20": 1.34,
-          "ma20": 2410.5,
-          "aboveMa20": false,
-          "high20Breakout": false,
-          "reason": "5d return +3.77% · volume ratio 1.34x · below MA20",
-          "rank": 1
-        },
-        {
-          "code": "2059",
-          "name": "川湖",
-          "score": 0,
-          "latestDate": "2026-07-17",
-          "close": 7890,
-          "returnPct": -1.31,
-          "changePct1d": -8.84,
-          "volumeRatio20": 1.49,
-          "ma20": 7760.75,
-          "aboveMa20": true,
-          "high20Breakout": false,
-          "reason": "5d return -1.31% · volume ratio 1.49x · above MA20",
-          "rank": 2
-        }
-      ],
+      "status": "empty",
+      "generatedAt": "2026-07-20T12:33:28.378Z",
+      "items": [],
+      "emptyReason": "5d timeframe has no fresh checked-in K-line candidates with enough lookback.",
       "source": {
         "name": "FinMind TaiwanStockPrice checked-in financial snapshots",
-        "latestDate": "2026-07-17",
+        "latestDate": "2026-07-20",
         "scope": "fresh K-line coverage 30 / 499; stale companies excluded from ranking",
         "warning": "price/technical only; excludes chips, fundamentals, news, ETF constituents, and AI judgement"
       }
@@ -81,42 +81,27 @@
     {
       "timeframe": "20d",
       "status": "partial",
-      "generatedAt": "2026-07-17T12:35:31.382Z",
+      "generatedAt": "2026-07-20T12:33:28.651Z",
       "items": [
         {
           "code": "2059",
           "name": "川湖",
-          "score": 64.98,
-          "latestDate": "2026-07-17",
-          "close": 7890,
-          "returnPct": 14.93,
-          "changePct1d": -8.84,
-          "volumeRatio20": 1.49,
-          "ma20": 7760.75,
-          "aboveMa20": true,
-          "high20Breakout": false,
-          "reason": "20d return +14.93% · volume ratio 1.49x · above MA20",
-          "rank": 1
-        },
-        {
-          "code": "3711",
-          "name": "日月光投控",
-          "score": -6.71,
-          "latestDate": "2026-07-17",
-          "close": 614,
-          "returnPct": 0.16,
-          "changePct1d": -9.97,
-          "volumeRatio20": 0.93,
-          "ma20": 660.8,
+          "score": 17.51,
+          "latestDate": "2026-07-20",
+          "close": 7750,
+          "returnPct": 2.65,
+          "changePct1d": -1.77,
+          "volumeRatio20": 1.33,
+          "ma20": 7805,
           "aboveMa20": false,
           "high20Breakout": false,
-          "reason": "20d return +0.16% · volume ratio 0.93x · below MA20",
-          "rank": 2
+          "reason": "20d return +2.65% · volume ratio 1.33x · below MA20",
+          "rank": 1
         }
       ],
       "source": {
         "name": "FinMind TaiwanStockPrice checked-in financial snapshots",
-        "latestDate": "2026-07-17",
+        "latestDate": "2026-07-20",
         "scope": "fresh K-line coverage 30 / 499; stale companies excluded from ranking",
         "warning": "price/technical only; excludes chips, fundamentals, news, ETF constituents, and AI judgement"
       }

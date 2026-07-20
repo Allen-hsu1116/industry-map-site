@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6415",
   "name": "矽力*-KY",
-  "generatedAt": "2026-07-17T12:35:29.653Z",
+  "generatedAt": "2026-07-20T12:33:26.957Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,13 +54,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "IC 設計與矽智財",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "矽力-KY 是中國及新興市場電源管理 IC 龍頭；4 月營收 2.0 億年增 28.1%，累計年增 21.3%。HV AC/DC 與車用 DC/DC 為雙引擎。",
+      "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心公司，高壓BCD製程與快充IC為主要成長動能。",
       "supplyChainStage": "ic_design",
       "roleType": "power_management_ic_provider",
       "directness": "core",
@@ -68,17 +68,17 @@
     },
     "productNarratives": [
       {
-        "name": "電源管理 IC（DC-DC 轉換器）",
+        "name": "電源管理IC(DC-DC降壓轉換器 Buck/Boost)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高壓功率 MOSFET 驅動 IC",
+        "name": "高壓功率MOSFET驅動IC(700V HV-CMOS)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "類比/混合訊號 IC",
+        "name": "類比/混合訊號IC(ADC/DAC/Op-amp)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -90,7 +90,7 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
@@ -98,9 +98,9 @@
     ],
     "summary": "矽力*-KY 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 IC 設計與矽智財（supply_chain_segment/active） +16）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 IC 設計與矽智財（supply_chain_segment/active） +16）",
       "相關題材：低軌衛星通訊 · 供應商角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -155,8 +155,8 @@
         "canonicalTopicName": "IC 設計與矽智財",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "矽力-KY 是中國及新興市場電源管理 IC 龍頭；4 月營收 2.0 億年增 28.1%，累計年增 21.3%。HV AC/DC 與車用 DC/DC 為雙引擎。"
+        "confidence": "high",
+        "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心公司，高壓BCD製程與快充IC為主要成長動能。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -165,8 +165,8 @@
         "canonicalTopicName": "低軌衛星通訊",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
-        "confidence": "medium",
-        "roleSummary": "矽力*-KY 與低軌衛星題材的關聯應保守視為電源 IC 供應鏈候選；需用產品規格、客戶或應用公告補證。"
+        "confidence": "high",
+        "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心能力延伸至太空級抗輻射應用，LEO衛星電源IC為新興成長領域。"
       }
     ],
     "swot": [],
@@ -228,12 +228,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 53 天未更新"
+        "message": "股價資料已 56 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 53 天未更新"
+        "message": "籌碼資料已 56 天未更新"
       },
       {
         "id": "risk.stop-distance",
