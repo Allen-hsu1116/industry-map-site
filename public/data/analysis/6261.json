@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6261",
   "name": "久元",
-  "generatedAt": "2026-07-20T12:33:26.937Z",
+  "generatedAt": "2026-07-21T12:33:38.851Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-20",
-  "chipDataDate": "2026-07-20",
+  "marketDataDate": "2026-07-21",
+  "chipDataDate": "2026-07-21",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -22,28 +22,30 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "久元 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 9.9%。",
+    "summary": "久元 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 6.4%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 9.9%"
+      "收盤跌破 MA20 6.4%"
     ],
-    "watch": []
+    "watch": [
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 33,
-    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +506張；近 20 日法人偏買，合計 +1.4千張。",
+    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +391張；近 20 日法人偏買，合計 +1.3千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +506張",
-      "近 20 日法人偏買，合計 +1.4千張",
-      "外資近 5 日買超 +1.1千張",
-      "融資近 5 日下降 10.2%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +391張",
+      "近 20 日法人偏買，合計 +1.3千張",
+      "外資近 5 日買超 +500張",
+      "融資近 5 日下降 12.2%，籌碼壓力下降"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-07-20"
+      "最近法人資料日：2026-07-21"
     ]
   },
   "industry": {
@@ -56,7 +58,7 @@
     "roleDetail": {
       "topicName": "面板、LED、光學鏡頭與感測",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "久元提供CIS(影像感測器)與CCM(攝像模組)測試設備，光電產品加工含切割研磨挑檢。",
+      "roleSummary": "久元6月營收3.90億MoM+11.8%。CIS影像感測器與CCM攝像模組測試設備為核心業務，受惠手機多鏡頭與車用CIS需求擴增，LED封裝測試設備亦為穩定業務。",
       "supplyChainStage": "test_equipment",
       "roleType": "cis_ccm_test_equipment",
       "directness": "core",
@@ -111,7 +113,7 @@
       "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-20（fresh）"
+      "知識庫最後驗證：2026-07-21（fresh）"
     ]
   },
   "knowledge": {
@@ -125,7 +127,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-20"
+      "lastVerified": "2026-07-21"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -155,7 +157,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "久元提供CIS(影像感測器)與CCM(攝像模組)測試設備，光電產品加工含切割研磨挑檢。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。CIS影像感測器與CCM攝像模組測試設備為核心業務，受惠手機多鏡頭與車用CIS需求擴增，LED封裝測試設備亦為穩定業務。"
       },
       {
         "topicId": "consumer-computing-devices",
@@ -165,7 +167,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元6月營收3.90億年增33.7%。手機CIS/CCM測試設備為核心業務，受惠於手機多鏡頭與車用CIS需求擴增。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。手機CIS/CCM測試設備為核心業務，受惠手機多鏡頭與車用CIS需求擴增，亦提供攝像模組MTF/畸變/色彩測試系統。"
       },
       {
         "topicId": "energy-storage-battery",
@@ -175,7 +177,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元6月營收3.90億連續三月成長。提供BMS電池管理IC測試設備與探針卡，間接受惠於儲能電池產業擴張。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供BMS電池管理IC測試設備與探針卡，間接受惠儲能電池產業擴張，但佔營收比重極低。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -185,7 +187,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元6月營收3.90億連續三月成長。提供衛星通訊射頻IC測試與光學通訊模組測試設備，間接受惠低軌衛星產業。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供衛星通訊射頻IC測試與光學通訊模組測試設備，間接受惠低軌衛星產業，但佔營收比重極低。"
       },
       {
         "topicId": "passive-components-mlcc",
@@ -195,7 +197,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元6月營收3.90億連續三月成長。提供MLCC測試探針卡與陶瓷電容分選機，間接受惠被動元件產業。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供MLCC晶圓級測試探針卡與陶瓷電容分選機，間接受惠被動元件產業，但佔營收比重極低。"
       },
       {
         "topicId": "passive-components-resistor",
@@ -205,7 +207,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元6月營收3.90億連續三月成長。提供晶片電阻測試分選機與精密電阻量測系統，間接受惠被動元件產業。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供晶片電阻測試分選機與精密電阻量測系統，間接受惠被動元件產業，但佔營收比重極低。"
       },
       {
         "topicId": "renewable-energy",
@@ -215,7 +217,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元6月營收3.90億連續三月成長。提供太陽能電池IV曲線測試與光伏模組EL檢測設備，間接受惠太陽能產業。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供太陽能電池IV曲線測試與光伏模組EL檢測設備，間接受惠太陽能產業，但佔營收比重極低。"
       },
       {
         "topicId": "wafer-foundry",
@@ -225,7 +227,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "久元提供晶圓切割、研磨、測試與挑檢服務，是晶圓代工後段加工的專業供應商。"
+        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供晶圓切割、研磨、測試與挑檢服務，是晶圓代工後段加工的專業供應商，受惠先進製程晶圓薄化與測試需求。"
       }
     ],
     "swot": [],
@@ -333,13 +335,13 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 59,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 20.1 倍，估值尚可對照成長"
+        "本益比 20.7 倍，估值尚可對照成長"
       ],
       "risks": []
     },
@@ -350,23 +352,17 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 10.9%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：87.44",
-      "波段多空分水嶺看 MA20：92.64",
-      "追蹤法人是否延續 買超：最近 +200張",
-      "本益比 20.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：86.90",
+      "波段多空分水嶺看 MA20：91.89",
+      "追蹤法人是否延續 賣超：最近 -39張",
+      "本益比 20.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 104.50 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 103.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 78.90：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
