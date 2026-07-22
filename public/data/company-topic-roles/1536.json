@@ -1,212 +1,220 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "1536",
-    "companyName": "和大",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "1536",
+  "companyName": "和大",
+  "updatedAt": "2026-07-23",
+  "roles": [
+    {
+      "topicId": "industrial-automation",
+      "topicName": "工業自動化與 CNC 工具機",
+      "topicType": "technology",
+      "directness": "core",
+      "supplyChainStage": "transmission_components",
+      "roleType": "precision_gear_manufacturer",
+      "roleSummary": "和大是台灣最大精密齒輪製造商，提供減速機齒輪、行星齒輪與精密軸類，工業自動化與CNC工具機的關鍵傳動元件供應商。",
+      "products": [
+        "精密行星齒輪組(減速比1:3-1:100)",
+        "諧波減速機齒輪組件(柔輪/剛輪/波發生器)",
+        "伺服馬達用精密齒輪箱",
+        "CNC工具機主軸齒輪"
+      ],
+      "customers": [
+        "上銀(2049)(線性傳動用齒輪箱)",
+        "伺服馬達廠(台達電/東元精度齒輪)",
+        "工具機廠(台中精機/永進機械)"
+      ],
+      "competitors": [
+        "NEUGART(德國精密行星齒輪)",
+        "Sumitomo(住友重機械)",
+        "SEW-EURODRIVE"
+      ],
+      "risks": [
+        "齒輪加工毛利受鋼材價格波動影響",
+        "工業自動化齒輪需求受資本支出週期影響"
+      ],
+      "legacy": {},
+      "evidence": [
         {
-            "topicId": "industrial-automation",
-            "topicName": "工業自動化與 CNC 工具機",
-            "topicType": "technology",
-            "directness": "core",
-            "supplyChainStage": "transmission_components",
-            "roleType": "precision_gear_manufacturer",
-            "roleSummary": "和大是台灣最大精密齒輪製造商，提供減速機齒輪、行星齒輪與精密軸類，工業自動化與CNC工具機的關鍵傳動元件供應商。",
-            "products": [
-                "精密行星齒輪組(減速比1:3-1:100)",
-                "諧波減速機齒輪組件(柔輪/剛輪/波發生器)",
-                "伺服馬達用精密齒輪箱",
-                "CNC工具機主軸齒輪"
-            ],
-            "customers": [
-                "上銀(2049)(線性傳動用齒輪箱)",
-                "伺服馬達廠(台達電/東元精度齒輪)",
-                "工具機廠(台中精機/永進機械)"
-            ],
-            "competitors": [],
-            "risks": [
-                "齒輪加工毛利受鋼材價格波動影響",
-                "工業自動化齒輪需求受資本支出週期影響"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-13",
-            "status": "verified",
-            "techFocus": [
-                "行星齒輪精密研磨(ISO 6級精度)",
-                "諧波減速機柔輪熱處理技術",
-                "RV減速機偏心軸承加工精度控制"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
         },
         {
-            "topicId": "robotics-physical-ai",
-            "topicName": "人形機器人與實體 AI",
-            "topicType": "theme",
-            "directness": "core",
-            "supplyChainStage": "transmission_components",
-            "roleType": "robot_reducer_gear",
-            "roleSummary": "和大是台灣精密齒輪製造龍頭，在機器人題材中供應諧波減速機與RV減速機的精密齒輪組件。5月營收3.95億年增12.2%，受惠機器人及電動車齒輪需求成長。諧波齒輪為六軸機器人與協作型機器人關節核心零組件。",
-            "products": [
-                "諧波減速機齒輪組(Harmonic Drive柔輪/剛輪)",
-                "RV減速機齒輪組件(RV-E/C系列精密行星齒輪)",
-                "機器人關節用精密齒輪(J1-J6軸用伺服減速齒輪)",
-                "人形機器人關節諧波齒輪(輕量化/高扭矩密度)"
-            ],
-            "customers": [
-                "Harmonic Drive(諧波減速機OEM齒輪供應)",
-                "Nabtesco(RV減速機齒輪代工)",
-                "上銀(2049)(線性傳動齒輪箱)",
-                "達明機器人(4585)(協作型機器人關節齒輪)"
-            ],
-            "competitors": [],
-            "risks": [
-                "累計營收年減0.9%，顯示上半年汽車齒輪需求偏弱拖累整體",
-                "機器人齒輪佔營收比重仍低，主要受惠仍需看人形機器人量產進度",
-                "諧波減速機齒輪技術門檻高，與日本HD品牌差距仍大"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-12",
-            "status": "verified",
-            "techFocus": [
-                "諧波減速機柔輪/剛輪精密齒加工(DIN 6級)",
-                "RV減速機行星齒輪組件精密製造(背隙<1 arcmin)",
-                "人形機器人關節輕量化高扭矩密度齒輪設計"
-            ]
-        },
-        {
-            "topicId": "energy-storage-battery",
-            "topicName": "儲能、電芯與電池材料",
-            "topicType": "theme",
-            "directness": "indirect",
-            "supplyChainStage": "peripheral",
-            "roleType": "indirect",
-            "roleSummary": "和大6月營收3.7億年增3.8%，累計年減0.2%。MOPS主要經營：汽機車齒輪/軸類製造。在儲能題材角色為精密齒輪供應商，提供儲能系統傳動與冷卻齒輪。",
-            "products": [
-                "精密齒輪箱(儲能系統減速機JIS 0級)",
-                "行星齒輪組(儲能變流器冷卻風扇傳動)",
-                "客製化齒輪(儲能設備追日/轉動機構)",
-                "精密軸類(儲能追日支架驅動軸)"
-            ],
-            "customers": [
-                "台達電(2308)(儲能變流器散熱齒輪)",
-                "東元(1504)(儲能馬達減速齒輪箱)",
-                "士林電機(1503)(儲能系統傳動齒輪)",
-                "永鑫能源(儲能追日系統齒輪)"
-            ],
-            "competitors": [],
-            "risks": [
-                "儲能齒輪為間接供應，佔營收比重極低，題材傳導有限",
-                "累計營收年減0.9%，整體動能偏弱",
-                "儲能系統齒輪需求量小，非標準化大量生產品"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-07-14",
-            "status": "verified",
-            "techFocus": [
-                "JIS 0級精密齒輪加工(精度≤3μm)",
-                "行星齒輪減速機設計(減速比1:100-1:1000)",
-                "齒輪表面硬化處理(滲碳淬火HRC58-62)"
-            ]
-        },
-        {
-            "topicId": "renewable-energy",
-            "topicName": "太陽能與離岸風電",
-            "topicType": "theme",
-            "directness": "indirect",
-            "supplyChainStage": "peripheral",
-            "roleType": "indirect",
-            "roleSummary": "和大在太陽能再生能源題材中供應追日系統用精密驅動齒輪組件，為太陽能追日追蹤器馬達減速機提供核心齒輪。5月營收3.95億年增12.2%，但太陽能齒輪佔比小。",
-            "products": [
-                "追日系統精密齒輪(太陽能追日支架驅動行星齒輪)",
-                "行星減速機齒輪組(太陽能追日馬達用減速比1:100-1:1000)",
-                "客製化齒輪(太陽能追日追蹤器迴轉支承)"
-            ],
-            "customers": [
-                "昱成(太陽能追日追蹤器製造)",
-                "東元(1504)(太陽能追日馬達減速機)",
-                "程達光電(太陽能追日系統整合)"
-            ],
-            "competitors": [],
-            "risks": [
-                "太陽能追日齒輪為利基型產品，營收貢獻有限",
-                "累計營收年減0.9%，太陽能題材傳導不明顯",
-                "太陽能追日系統需求受政策補貼影響大"
-            ],
-            "legacy": {},
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-                    "title": "公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-                    "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-                }
-            ],
-            "confidence": "medium",
-            "lastVerified": "2026-07-12",
-            "status": "verified",
-            "techFocus": [
-                "太陽能追日支架驅動行星齒輪(減速比1:100-1:1000)",
-                "追日迴轉支承精密齒加工技術",
-                "耐候性齒輪材料技術(抗腐蝕/抗UV)"
-            ]
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-13",
+      "status": "verified",
+      "techFocus": [
+        "行星齒輪精密研磨(ISO 6級精度)",
+        "諧波減速機柔輪熱處理技術",
+        "RV減速機偏心軸承加工精度控制"
+      ]
+    },
+    {
+      "topicId": "robotics-physical-ai",
+      "topicName": "人形機器人與實體 AI",
+      "topicType": "theme",
+      "directness": "core",
+      "supplyChainStage": "transmission_components",
+      "roleType": "robot_reducer_gear",
+      "roleSummary": "和大是台灣精密齒輪製造龍頭，在機器人題材中供應諧波減速機與RV減速機的精密齒輪組件。5月營收3.95億年增12.2%，受惠機器人及電動車齒輪需求成長。諧波齒輪為六軸機器人與協作型機器人關節核心零組件。",
+      "products": [
+        "諧波減速機齒輪組(Harmonic Drive柔輪/剛輪)",
+        "RV減速機齒輪組件(RV-E/C系列精密行星齒輪)",
+        "機器人關節用精密齒輪(J1-J6軸用伺服減速齒輪)",
+        "人形機器人關節諧波齒輪(輕量化/高扭矩密度)"
+      ],
+      "customers": [
+        "Harmonic Drive(諧波減速機OEM齒輪供應)",
+        "Nabtesco(RV減速機齒輪代工)",
+        "上銀(2049)(線性傳動齒輪箱)",
+        "達明機器人(4585)(協作型機器人關節齒輪)"
+      ],
+      "competitors": [],
+      "risks": [
+        "累計營收年減0.9%，顯示上半年汽車齒輪需求偏弱拖累整體",
+        "機器人齒輪佔營收比重仍低，主要受惠仍需看人形機器人量產進度",
+        "諧波減速機齒輪技術門檻高，與日本HD品牌差距仍大"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-12",
+      "status": "verified",
+      "techFocus": [
+        "諧波減速機柔輪/剛輪精密齒加工(DIN 6級)",
+        "RV減速機行星齒輪組件精密製造(背隙<1 arcmin)",
+        "人形機器人關節輕量化高扭矩密度齒輪設計"
+      ]
+    },
+    {
+      "topicId": "energy-storage-battery",
+      "topicName": "儲能、電芯與電池材料",
+      "topicType": "theme",
+      "directness": "indirect",
+      "supplyChainStage": "peripheral",
+      "roleType": "indirect",
+      "roleSummary": "和大6月營收3.7億年增3.8%，累計年減0.2%。MOPS主要經營：汽機車齒輪/軸類製造。在儲能題材角色為精密齒輪供應商，提供儲能系統傳動與冷卻齒輪。",
+      "products": [
+        "精密齒輪箱(儲能系統減速機JIS 0級)",
+        "行星齒輪組(儲能變流器冷卻風扇傳動)",
+        "客製化齒輪(儲能設備追日/轉動機構)",
+        "精密軸類(儲能追日支架驅動軸)"
+      ],
+      "customers": [
+        "台達電(2308)(儲能變流器散熱齒輪)",
+        "東元(1504)(儲能馬達減速齒輪箱)",
+        "士林電機(1503)(儲能系統傳動齒輪)",
+        "永鑫能源(儲能追日系統齒輪)"
+      ],
+      "competitors": [
+        "和大同業(SPIROTEX)",
+        "夏米納(Shimano)",
+        "NEUGART(德國減速機廠)"
+      ],
+      "risks": [
+        "儲能齒輪為間接供應，佔營收比重極低，題材傳導有限",
+        "累計營收年減0.9%，整體動能偏弱",
+        "儲能系統齒輪需求量小，非標準化大量生產品"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-07-14",
+      "status": "verified",
+      "techFocus": [
+        "JIS 0級精密齒輪加工(精度≤3μm)",
+        "行星齒輪減速機設計(減速比1:100-1:1000)",
+        "齒輪表面硬化處理(滲碳淬火HRC58-62)"
+      ]
+    },
+    {
+      "topicId": "renewable-energy",
+      "topicName": "太陽能與離岸風電",
+      "topicType": "theme",
+      "directness": "indirect",
+      "supplyChainStage": "peripheral",
+      "roleType": "indirect",
+      "roleSummary": "和大在太陽能再生能源題材中供應追日系統用精密驅動齒輪組件，為太陽能追日追蹤器馬達減速機提供核心齒輪。5月營收3.95億年增12.2%，但太陽能齒輪佔比小。",
+      "products": [
+        "追日系統精密齒輪(太陽能追日支架驅動行星齒輪)",
+        "行星減速機齒輪組(太陽能追日馬達用減速比1:100-1:1000)",
+        "客製化齒輪(太陽能追日追蹤器迴轉支承)"
+      ],
+      "customers": [
+        "昱成(太陽能追日追蹤器製造)",
+        "東元(1504)(太陽能追日馬達減速機)",
+        "程達光電(太陽能追日系統整合)"
+      ],
+      "competitors": [],
+      "risks": [
+        "太陽能追日齒輪為利基型產品，營收貢獻有限",
+        "累計營收年減0.9%，太陽能題材傳導不明顯",
+        "太陽能追日系統需求受政策補貼影響大"
+      ],
+      "legacy": {},
+      "evidence": [
+        {
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
+          "title": "公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        }
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-07-12",
+      "status": "verified",
+      "techFocus": [
+        "太陽能追日支架驅動行星齒輪(減速比1:100-1:1000)",
+        "追日迴轉支承精密齒加工技術",
+        "耐候性齒輪材料技術(抗腐蝕/抗UV)"
+      ]
+    }
+  ]
 }
