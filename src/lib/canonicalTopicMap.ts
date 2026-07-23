@@ -159,7 +159,7 @@ function buildCanonicalTopicMapFromNormalized(canonical: CanonicalTopicsFile, ro
         analysis: `${directnessLabel(role.directness)}；${role.roleSummary}`,
         products: role.products,
         customers: role.customers,
-        tech_focus: [role.roleType, role.supplyChainStage].filter(Boolean),
+        tech_focus: role.techFocus?.length ? role.techFocus : [role.roleType, role.supplyChainStage].filter(Boolean),
       });
       seenCompanyTopics.add(topic.id);
     }

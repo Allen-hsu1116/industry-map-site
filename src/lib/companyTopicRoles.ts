@@ -29,6 +29,7 @@ export interface CompanyTopicRoleItem {
     groupName?: string;
     legacyRole?: string;
   };
+  techFocus?: string[];
   evidence: CompanyTopicRoleEvidence[];
   confidence: RoleConfidence;
   lastVerified: string | null;
@@ -133,6 +134,7 @@ export function normalizeCompanyTopicRoles(raw: unknown): CompanyTopicRolesKnowl
       customers: asStringArray(item.customers),
       competitors: asStringArray(item.competitors),
       risks: asStringArray(item.risks),
+      techFocus: asStringArray(item.techFocus) || asStringArray(item.tech_focus),
       legacy: legacy ? {
         topicSlug: asString(legacy.topicSlug),
         groupName: asString(legacy.groupName),

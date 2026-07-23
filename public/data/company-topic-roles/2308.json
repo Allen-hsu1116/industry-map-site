@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-07-24",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -211,10 +211,10 @@
       "roleSummary": "台達電在AI伺服器液冷領域布局完整，5月營收年增43.7%。CDU+冷板一體方案搭配NVIDIA GB200量產，浸沒式冷卻為下一代技術儲備。",
       "products": [
         "液冷CDU(冷卻液分配單元)",
-        "無刷直流風扇(PF系列)",
-        "氣冷散熱模組(VC+熱管)",
-        "D2C冷板模組",
-        "浸沒式冷卻方案"
+        "無刷直流風扇(PF系列/PWM溫控)",
+        "氣冷散熱模組(VC均熱板+熱導管)",
+        "Direct-to-Chip(D2C)冷板模組",
+        "兩相浸沒式冷卻系統(Immersion Cooling)"
       ],
       "customers": [
         "NVIDIA(GB200散熱)",
@@ -263,9 +263,9 @@
       "lastVerified": "2026-07-06",
       "status": "verified",
       "techFocus": [
-        "液冷CDU(冷卻液分配單元)設計",
-        "Direct-to-Chip冷板技術",
-        "浸沒式冷卻系統"
+        "液冷CDU(冷卻液分配單元)設計與冷板式液冷系統整合",
+        "Direct-to-Chip冷板技術與GPU熱點管理",
+        "兩相浸沒式冷卻系統(Immersion Cooling)流體力學設計"
       ]
     },
     {
@@ -339,9 +339,9 @@
       "products": [
         "MW級儲能變流器(PCS)",
         "電池管理系統(BMS)",
-        "微電網控制系統",
-        "再生能源功率調節器",
-        "儲能貨櫃系統"
+        "微電網EMS能源管理控制系統",
+        "再生能源功率調節器(PV Inverter)",
+        "儲能貨櫃系統整合(40呎MW級)"
       ],
       "customers": [
         "台電(儲能標案)",
@@ -383,9 +383,9 @@
       "lastVerified": "2026-07-06",
       "status": "verified",
       "techFocus": [
-        "MW級儲能變流器(PCS)雙向轉換",
-        "電池管理系統(BMS)演算法",
-        "微電網群控技術"
+        "MW級儲能變流器(PCS)雙向逆變/整流控制",
+        "電池管理系統(BMS)SOC/SOH演算法",
+        "微電網EMS多機組群控與調度演算法"
       ]
     }
   ]
