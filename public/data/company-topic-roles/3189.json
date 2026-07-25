@@ -11,18 +11,20 @@
       "directness": "core",
       "supplyChainStage": "substrate",
       "roleType": "ic_substrate_manufacturer",
-      "roleSummary": "景碩5月營收42億年增33%，累計年增29%。ABF/BT載板受AI伺服器與HBM需求帶動，為台灣前三大IC載板廠。",
+      "roleSummary": "景碩為台灣前三大IC載板廠，6月營收4224.1億YoY32.3%，累計23601.2億YoY29.8%。6月營收42.2億年增32.3%，受惠AI/HPC用ABF載板需求成長。MOPS主要經營：電子零組件製造/電子材料批發。",
       "products": [
-        "ABF 載板（CPU/GPU 用）",
-        "BT 載板（手機/AP 用）",
-        "CSP 載板"
+        "ABF載板(FC-BGA CPU/GPU用2/2mil L/S)",
+        "BT載板(手機AP用0.8mm薄型)",
+        "CSP載板(記憶體/射頻IC用)",
+        "Any-Layer HDI載板(手機AP用)",
+        "SiP系統級封裝載板(無線模組)"
       ],
       "customers": [
-        "Intel",
-        "AMD",
-        "Qualcomm",
-        "聯發科",
-        "NVIDIA"
+        "Intel(FC-BGA CPU載板)",
+        "AMD(FC-BGA GPU/CPU載板)",
+        "Qualcomm(手機AP BT載板)",
+        "聯發科(2454)(手機AP BT載板)",
+        "NVIDIA(AI加速器ABF載板)"
       ],
       "competitors": [
         "欣興",
@@ -50,12 +52,12 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-08",
+      "lastVerified": "2026-07-26",
       "status": "verified",
       "techFocus": [
         "ABF高階載板細線製程(2/2mil L/S)",
-        "BT載板雷射鑽孔與填孔技術",
-        "Any-Layer HDI載板製程"
+        "BT載板雷射鑽孔與填孔技術(φ50μm)",
+        "Any-Layer HDI載板製程(任意層互連)"
       ]
     },
     {
@@ -65,18 +67,18 @@
       "directness": "indirect",
       "supplyChainStage": "advanced_packaging",
       "roleType": "packaging_substrate_supplier",
-      "roleSummary": "景碩在先進封裝領域供應CoWoS/2.5D封裝用ABF載板，5月營收42億年增33%。隨台積電CoWoS擴產，載板需求同步增長。",
+      "roleSummary": "景碩為台灣前三大IC載板廠，6月營收4224.1億YoY32.3%，累計23601.2億YoY29.8%。6月營收42.2億年增32.3%，受惠AI/HPC用ABF載板需求成長。CoWoS用高階ABF載板為先進封裝供應鏈關鍵環節。",
       "products": [
-        "CoWoS用高階ABF載板(2.5D封裝)",
+        "CoWoS用高階ABF載板(2.5D封裝2/2mil L/S)",
         "FC-BGA載板(HPC/AI晶片用)",
         "FC-CSP載板(手機AP用)",
-        "SiP系統級封裝載板",
+        "SiP系統級封裝載板(無線模組)",
         "BT載板(記憶體/利基型IC)"
       ],
       "customers": [
-        "台積電（間接）",
-        "Intel",
-        "AMD"
+        "台積電(2330)(CoWoS封裝載板間接)",
+        "Intel(FC-BGA CPU載板)",
+        "AMD(FC-BGA GPU/CPU載板)"
       ],
       "competitors": [
         "欣興",
@@ -104,12 +106,12 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-17",
+      "lastVerified": "2026-07-26",
       "status": "verified",
       "techFocus": [
-        "CoWoS用高階ABF載板設計",
-        "2.5D封裝用細線載板製程(2/2mil)",
-        "高頻高速載板材料開發"
+        "CoWoS用高階ABF載板設計(2/2mil L/S細線路)",
+        "2.5D封裝用細線載板製程(ABF介電層<5μm)",
+        "高頻高速載板材料開發(Megtron 7/EMC)"
       ]
     },
     {
