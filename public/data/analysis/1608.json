@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "code": "1608",
   "name": "華榮",
-  "generatedAt": "2026-07-24T12:34:09.767Z",
+  "generatedAt": "2026-07-27T12:37:50.792Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "missing_product_knowledge",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -83,9 +81,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "華榮6月營收11.0億元年增13.4%，累計營收67.2億年增15.8%，受惠於台電強化電網投資及離岸風電併聯需求，電力電纜訂單穩定成長。"
+      ],
+      "opportunities": [
+        "離岸風電、太陽能及儲能電廠建設帶動高壓電力電纜及特規電纜需求，華榮在風場併聯變壓器及海底電纜領域有供應實績。"
+      ],
+      "risks": [
+        "銅為主要原料，國際銅價波動直接影響成本與毛利率，若銅價大漲而合約調價滯後，將壓縮利潤空間。",
+        "電線電纜屬原物料加工型產業，毛利率受銅價波動影響大，且產品差異化程度低，主要靠規模與產能競爭。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,6 +98,8 @@
       "題材 重電、電纜與 EPC 工程（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "華榮 在「重電、電纜與 EPC 工程」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +112,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：電線電纜屬原物料加工型產業，毛利率受銅價波動影響大，且產品差異化程度低，主要靠規模與產能競爭。",
+      "V2 T：銅為主要原料，國際銅價波動直接影響成本與毛利率，若銅價大漲而合約調價滯後，將壓縮利潤空間。"
+    ],
     "watch": [
+      "V2 O：離岸風電、太陽能及儲能電廠建設帶動高壓電力電纜及特規電纜需求，華榮在風場併聯變壓器及海底電纜領域有供應實績。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
       "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -179,7 +189,52 @@
         "roleSummary": "華榮為台灣老牌電線電纜廠,離岸風電領域供應風場陣列海纜與陸上輸電電纜,6月營收11.0億YoY+13.4%,受惠電網升級與離岸風電建置。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-renewable-energy-cables",
+        "category": "opportunity",
+        "statement": "離岸風電、太陽能及儲能電廠建設帶動高壓電力電纜及特規電纜需求，華榮在風場併聯變壓器及海底電纜領域有供應實績。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc",
+          "energy-storage-battery",
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-cable-infrastructure",
+        "category": "strength",
+        "statement": "華榮6月營收11.0億元年增13.4%，累計營收67.2億年增15.8%，受惠於台電強化電網投資及離岸風電併聯需求，電力電纜訂單穩定成長。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc",
+          "energy-storage-battery",
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-raw-material-price",
+        "category": "threat",
+        "statement": "銅為主要原料，國際銅價波動直接影響成本與毛利率，若銅價大漲而合約調價滯後，將壓縮利潤空間。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc",
+          "energy-storage-battery",
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-cable-commodity",
+        "category": "weakness",
+        "statement": "電線電纜屬原物料加工型產業，毛利率受銅價波動影響大，且產品差異化程度低，主要靠規模與產能競爭。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc",
+          "energy-storage-battery",
+          "renewable-energy"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "electrical-equipment-epc",
@@ -248,12 +303,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       }
     ]
   },

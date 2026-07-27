@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "2449",
   "name": "京元電子",
-  "generatedAt": "2026-07-24T12:34:09.903Z",
+  "generatedAt": "2026-07-27T12:37:50.927Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -57,7 +53,7 @@
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "京元電子5月營收37.77億年增36.61%，累計177.12億年增37.71%。MOPS登記為積體電路之測試加工買賣業務。",
+      "roleSummary": "京元電子為全球最大獨立IC測試廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。6月營收36.2億年增28.6%，累計213.3億年增36.1%。MOPS主要經營：積體電路設計製造測試。AI GPU SLT系統級測試為先進封裝品質把關關鍵環節。",
       "supplyChainStage": "high_end_testing",
       "roleType": "test_house",
       "directness": "core",
@@ -81,9 +77,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "京元電子6月營收36.2億元年增28.6%，累計營收213.3億年增36.1%，受惠於AI/HPC晶片測試需求爆發及HBM量產帶動測試產能滿載。"
+      ],
+      "opportunities": [
+        "AI伺服器GPU（NVIDIA H100/B200）及HBM3E/HBM4量產帶動測試需求大幅成長，HBM需經過嚴格的晶圓級Burn-in測試，京元電子在HBM測試領域具領先地位。"
+      ],
+      "risks": [
+        "測試廠營收高度依賴少數大型IC設計客戶（如聯發科、瑞昱），若客戶調整測試委外策略或轉向內部測試，將影響訂單穩定性。",
+        "測試產業屬重資本投入，需持續採購高階測試機台（如Advantest 9300 KLA TeraMaster），設備折舊負擔重，利用率波動直接影響獲利。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -91,6 +94,8 @@
       "題材 先進封裝與 CoWoS（process/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "京元電子 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -102,14 +107,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：測試產業屬重資本投入，需持續採購高階測試機台（如Advantest 9300 KLA TeraMaster），設備折舊負擔重，利用率波動直接影響獲利。",
+      "V2 T：測試廠營收高度依賴少數大型IC設計客戶（如聯發科、瑞昱），若客戶調整測試委外策略或轉向內部測試，將影響訂單穩定性。"
+    ],
     "watch": [
+      "V2 O：AI伺服器GPU（NVIDIA H100/B200）及HBM3E/HBM4量產帶動測試需求大幅成長，HBM需經過嚴格的晶圓級Burn-in測試，京元電子在HBM測試領域具領先地位。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 HBM 高頻寬記憶體：月營收或訂單能見度改善",
-      "追蹤 HBM 高頻寬記憶體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 HBM 高頻寬記憶體：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -153,7 +161,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "京元電子5月營收37.77億年增36.61%，累計177.12億年增37.71%。MOPS登記為積體電路之測試加工買賣業務。"
+        "roleSummary": "京元電子為全球最大獨立IC測試廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。6月營收36.2億年增28.6%，累計213.3億年增36.1%。MOPS主要經營：積體電路設計製造測試。AI GPU SLT系統級測試為先進封裝品質把關關鍵環節。"
       },
       {
         "topicId": "hbm",
@@ -166,7 +174,48 @@
         "roleSummary": "京元電子5月營收37.77億年增36.61%，累計177.12億年增37.71%。HBM測試為AI浪潮下的高成長業務。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-hbm-test",
+        "category": "opportunity",
+        "statement": "AI伺服器GPU（NVIDIA H100/B200）及HBM3E/HBM4量產帶動測試需求大幅成長，HBM需經過嚴格的晶圓級Burn-in測試，京元電子在HBM測試領域具領先地位。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm"
+        ]
+      },
+      {
+        "id": "strength-test-house-leader",
+        "category": "strength",
+        "statement": "京元電子6月營收36.2億元年增28.6%，累計營收213.3億年增36.1%，受惠於AI/HPC晶片測試需求爆發及HBM量產帶動測試產能滿載。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm"
+        ]
+      },
+      {
+        "id": "threat-customer-concentration",
+        "category": "threat",
+        "statement": "測試廠營收高度依賴少數大型IC設計客戶（如聯發科、瑞昱），若客戶調整測試委外策略或轉向內部測試，將影響訂單穩定性。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm"
+        ]
+      },
+      {
+        "id": "weakness-capex-intensive",
+        "category": "weakness",
+        "statement": "測試產業屬重資本投入，需持續採購高階測試機台（如Advantest 9300 KLA TeraMaster），設備折舊負擔重，利用率波動直接影響獲利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "advanced-packaging",
@@ -223,12 +272,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       }
     ]
   },

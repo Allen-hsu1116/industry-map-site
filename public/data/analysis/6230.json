@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "6230",
   "name": "尼得科超眾",
-  "generatedAt": "2026-07-24T12:34:10.339Z",
+  "generatedAt": "2026-07-27T12:37:51.362Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -56,7 +52,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "尼得科超眾在風冷散熱題材中是散熱風扇領導廠；4 月營收 8.28 億年增 12%，累計年增 9.1%，日系股東技術支援穩定。",
+      "roleSummary": "尼得科超眾為散熱模組大廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。MOPS主要經營：散熱模組/散熱片/熱導管/微均熱板。在AI伺服器液冷題材中為VC均熱板與熱導管核心供應商，受惠GPU散熱需求升溫。",
       "supplyChainStage": "air_cooling",
       "roleType": "cooling_fan_manufacturer",
       "directness": "core",
@@ -79,12 +75,36 @@
         ],
         "lastVerified": "2026-05-28",
         "confidence": "medium"
+      },
+      {
+        "name": "熱導管與微均熱板",
+        "description": "熱導管與微均熱板是高效率導熱元件，利用相變化或均熱結構把熱快速分散。",
+        "whyItMatters": "高功耗晶片需要更高效率熱管理，熱導管/VC 規格升級會推升散熱廠產品價值量。",
+        "topicFit": "散熱元件與熱管理方案",
+        "businessImpact": "觀察重點是高階散熱產品占比、客戶新品設計導入與產能利用率。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：超眾 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6230",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "尼得科超眾6月營收7.58億元，累計營收46.8億年增9.0%，為台灣散熱模組領導廠商，受惠於AI伺服器高功耗散熱需求。"
+      ],
+      "opportunities": [
+        "AI伺服器GPU（NVIDIA GB200）功耗達1000W+，需要VC均熱板+熱導管+液冷整合方案，超眾在高功率散熱模組有量產實績。"
+      ],
+      "risks": [
+        "面臨台達電（2308）、雙鴻（3324）、建準（3004）等散熱大廠競爭，且Nidec集團內部資源分配可能影響超眾獨立性。",
+        "6月營收年減3.2%，月減13.0%，顯示短期需求波動，且散熱模組毛利率受金屬原料價格影響。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -92,6 +112,8 @@
       "題材 AI 伺服器液冷散熱（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "尼得科超眾 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -103,14 +125,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：6月營收年減3.2%，月減13.0%，顯示短期需求波動，且散熱模組毛利率受金屬原料價格影響。",
+      "V2 T：面臨台達電（2308）、雙鴻（3324）、建準（3004）等散熱大廠競爭，且Nidec集團內部資源分配可能影響超眾獨立性。"
+    ],
     "watch": [
+      "V2 O：AI伺服器GPU（NVIDIA GB200）功耗達1000W+，需要VC均熱板+熱導管+液冷整合方案，超眾在高功率散熱模組有量產實績。",
       "催化訊號：AI GPU/ASIC TDP 升高、客戶導入液冷機櫃或 CDU、散熱廠液冷相關營收揭露增加",
       "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
       "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
       "追蹤 AI 伺服器電源與 BBU：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器電源與 BBU：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 AI 伺服器電源與 BBU：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -154,7 +179,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "尼得科超眾在風冷散熱題材中是散熱風扇領導廠；4 月營收 8.28 億年增 12%，累計年增 9.1%，日系股東技術支援穩定。"
+        "roleSummary": "尼得科超眾為散熱模組大廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。MOPS主要經營：散熱模組/散熱片/熱導管/微均熱板。在AI伺服器液冷題材中為VC均熱板與熱導管核心供應商，受惠GPU散熱需求升溫。"
       },
       {
         "topicId": "ai-server-power-backup",
@@ -167,7 +192,48 @@
         "roleSummary": "尼得科超眾5月營收8.71億YoY+21.9%，AI伺服器散熱需求帶動增長。主產品為散熱模組與均熱板，供應台達電等電源大廠，間接受惠AI伺服器散熱升級趨勢。Nidec集團子公司。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-cooling",
+        "category": "opportunity",
+        "statement": "AI伺服器GPU（NVIDIA GB200）功耗達1000W+，需要VC均熱板+熱導管+液冷整合方案，超眾在高功率散熱模組有量產實績。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling",
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "strength-cooling-module",
+        "category": "strength",
+        "statement": "尼得科超眾6月營收7.58億元，累計營收46.8億年增9.0%，為台灣散熱模組領導廠商，受惠於AI伺服器高功耗散熱需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling",
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "threat-delta-avc-competition",
+        "category": "threat",
+        "statement": "面臨台達電（2308）、雙鴻（3324）、建準（3004）等散熱大廠競爭，且Nidec集團內部資源分配可能影響超眾獨立性。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling",
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "weakness-revenue-decline",
+        "category": "weakness",
+        "statement": "6月營收年減3.2%，月減13.0%，顯示短期需求波動，且散熱模組毛利率受金屬原料價格影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-liquid-cooling",
+          "ai-server-power-backup"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ai-server-liquid-cooling",
@@ -224,12 +290,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       }
     ]
   },

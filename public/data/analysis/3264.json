@@ -2,50 +2,46 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-07-24T12:34:10.091Z",
+  "generatedAt": "2026-07-27T12:37:51.113Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-24",
-  "chipDataDate": "2026-07-24",
+  "marketDataDate": "2026-07-27",
+  "chipDataDate": "2026-07-27",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "欣銓 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 7.0%。",
+    "summary": "欣銓 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 8.4%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 7.0%"
+      "收盤跌破 MA20 8.4%"
     ],
     "watch": []
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 20,
-    "summary": "欣銓 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +125張；近 20 日法人偏買，合計 +1.6千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": -16,
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +753張；三大法人近 5 日合計賣超 -1.1千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +125張",
-      "近 20 日法人偏買，合計 +1.6千張",
-      "外資近 5 日買超 +652張"
+      "近 20 日法人偏買，合計 +753張"
     ],
     "risks": [
-      "投信近 5 日賣超 -509張"
+      "三大法人近 5 日合計賣超 -1.1千張",
+      "投信近 5 日賣超 -833張",
+      "外資近 5 日賣超 -175張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-24",
-      "融券近 5 日增加 203.7%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-27",
+      "融券近 5 日增加 266.7%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -84,9 +80,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "欣銓為台灣第二大獨立IC測試廠，專精於記憶體IC晶圓測試（CP）與成品測試（FT），在HBM及車用記憶體測試領域具技術領先優勢。"
+      ],
+      "opportunities": [
+        "HBM3E/HBM4量產帶動記憶體測試需求大幅成長，Edge AI晶片也需要混合訊號測試，欣銓在這些領域已布局多年。"
+      ],
+      "risks": [
+        "若記憶體景氣循環下行，測試產能利用率下降將壓縮毛利率，且需與京元電子競爭客戶訂單。",
+        "公司為上櫃企業，市場關注度與流動性低於上市公司，且月營收需透過OTC公告取得，資訊透明度略低。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -94,6 +97,8 @@
       "題材 先進封裝與 CoWoS（process/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "欣銓 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -106,14 +111,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：公司為上櫃企業，市場關注度與流動性低於上市公司，且月營收需透過OTC公告取得，資訊透明度略低。",
+      "V2 T：若記憶體景氣循環下行，測試產能利用率下降將壓縮毛利率，且需與京元電子競爭客戶訂單。"
+    ],
     "watch": [
+      "V2 O：HBM3E/HBM4量產帶動記憶體測試需求大幅成長，Edge AI晶片也需要混合訊號測試，欣銓在這些領域已布局多年。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
-      "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-24（fresh）"
+      "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -127,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-24"
+      "lastVerified": "2026-07-27"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -220,7 +228,56 @@
         "roleSummary": "欣銓為專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。在半導體設備材料題材中屬後段測試環節，受記憶體與車用IC需求帶動。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-hbm-edge-ai-test",
+        "category": "opportunity",
+        "statement": "HBM3E/HBM4量產帶動記憶體測試需求大幅成長，Edge AI晶片也需要混合訊號測試，欣銓在這些領域已布局多年。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm",
+          "edge-ai-aiot",
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "strength-memory-test-expertise",
+        "category": "strength",
+        "statement": "欣銓為台灣第二大獨立IC測試廠，專精於記憶體IC晶圓測試（CP）與成品測試（FT），在HBM及車用記憶體測試領域具技術領先優勢。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm",
+          "edge-ai-aiot",
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "threat-test-capacity-oversupply",
+        "category": "threat",
+        "statement": "若記憶體景氣循環下行，測試產能利用率下降將壓縮毛利率，且需與京元電子競爭客戶訂單。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm",
+          "edge-ai-aiot",
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "weakness-otc-visibility",
+        "category": "weakness",
+        "statement": "公司為上櫃企業，市場關注度與流動性低於上市公司，且月營收需透過OTC公告取得，資訊透明度略低。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "hbm",
+          "edge-ai-aiot",
+          "semiconductor-equipment-materials"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "advanced-packaging",
@@ -314,7 +371,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 44,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -325,18 +382,23 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 9.2%，部位需降速"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：210.40",
-      "波段多空分水嶺看 MA20：225.30",
-      "追蹤法人是否延續 賣超：最近 -1.3千張",
-      "本益比 27.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：212.10",
+      "波段多空分水嶺看 MA20：224.88",
+      "追蹤法人是否延續 賣超：最近 -1.8千張",
+      "本益比 26.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 271.50 且量比 > 1.5：列為轉強訊號",

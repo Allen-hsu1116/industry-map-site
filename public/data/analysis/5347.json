@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "code": "5347",
   "name": "世界",
-  "generatedAt": "2026-07-24T12:34:10.254Z",
+  "generatedAt": "2026-07-27T12:37:51.277Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "missing_product_knowledge",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -84,9 +82,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "世界先進為全球第五大晶圓代工廠，專注於0.13μm~90nm特殊製程（BCD/Power MOS/Embedded Flash），在車用與工控晶片代工具穩固地位。"
+      ],
+      "opportunities": [
+        "車用功率IC（IGBT/MOSFET驅動IC）、電源管理IC及國防軍規IC需求穩定成長，世界先進在BCD/Power製程有領先量產能力。"
+      ],
+      "risks": [
+        "面臨聯電（2303）、力積電（6770）在成熟製程代工的價格競爭，且中國中芯國際擴產成熟製程搶單。",
+        "公司為上櫃企業，無法透過TWSE OpenAPI取得月營收資料，且成熟製程代工毛利率低於先進製程。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -94,6 +99,8 @@
       "題材 晶圓代工與第三代半導體（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "世界 在「晶圓代工與第三代半導體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -106,14 +113,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：公司為上櫃企業，無法透過TWSE OpenAPI取得月營收資料，且成熟製程代工毛利率低於先進製程。",
+      "V2 T：面臨聯電（2303）、力積電（6770）在成熟製程代工的價格競爭，且中國中芯國際擴產成熟製程搶單。"
+    ],
     "watch": [
+      "V2 O：車用功率IC（IGBT/MOSFET驅動IC）、電源管理IC及國防軍規IC需求穩定成長，世界先進在BCD/Power製程有領先量產能力。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
       "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
-      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -180,7 +190,52 @@
         "roleSummary": "世界先進6月營收59.77億大幅跳增(5月42.42億→6月59.77億)。8吋/12吋利基製程代工，太陽能電源管理IC與逆變器驅動IC受惠綠能需求。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-power-ic-defense",
+        "category": "opportunity",
+        "statement": "車用功率IC（IGBT/MOSFET驅動IC）、電源管理IC及國防軍規IC需求穩定成長，世界先進在BCD/Power製程有領先量產能力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "defense-aerospace",
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-specialty-foundry",
+        "category": "strength",
+        "statement": "世界先進為全球第五大晶圓代工廠，專注於0.13μm~90nm特殊製程（BCD/Power MOS/Embedded Flash），在車用與工控晶片代工具穩固地位。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "defense-aerospace",
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-foundry-competition",
+        "category": "threat",
+        "statement": "面臨聯電（2303）、力積電（6770）在成熟製程代工的價格競爭，且中國中芯國際擴產成熟製程搶單。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "defense-aerospace",
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-otc-no-revenue-data",
+        "category": "weakness",
+        "statement": "公司為上櫃企業，無法透過TWSE OpenAPI取得月營收資料，且成熟製程代工毛利率低於先進製程。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "defense-aerospace",
+          "renewable-energy"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "wafer-foundry",
@@ -249,12 +304,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       }
     ]
   },

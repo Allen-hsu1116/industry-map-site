@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2454",
   "name": "聯發科",
-  "generatedAt": "2026-07-24T12:34:09.908Z",
+  "generatedAt": "2026-07-27T12:37:50.932Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-24",
-  "chipDataDate": "2026-07-24",
+  "marketDataDate": "2026-07-27",
+  "chipDataDate": "2026-07-27",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,32 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -15,
-    "summary": "聯發科 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 3.6%。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
-    ],
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "聯發科 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 5.1%。",
+    "signals": [],
     "risks": [
-      "收盤跌破 MA20 3.6%"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 5.1%"
     ],
     "watch": []
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 16,
-    "summary": "聯發科 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.4千張；投信近 5 日買超 +208張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +1.4千張",
-      "投信近 5 日買超 +208張",
-      "外資近 5 日買超 +505張"
-    ],
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -36,
+    "summary": "聯發科 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -536張；近 20 日法人偏賣，合計 -6.6千張。",
+    "signals": [],
     "risks": [
-      "近 20 日法人偏賣，合計 -1.3萬張"
+      "三大法人近 5 日合計賣超 -536張",
+      "近 20 日法人偏賣，合計 -6.6千張",
+      "投信近 5 日賣超 -172張",
+      "外資近 5 日賣超 -601張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-24",
-      "融券近 5 日增加 24.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-27",
+      "融券近 5 日增加 25.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -55,7 +53,7 @@
     "roleDetail": {
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "聯發科5月營收474.34億年增4.99%，累計2433.21億年減1.59%。MOPS登記為多媒體IC、電腦週邊IC、高階消費性IC。",
+      "roleSummary": "聯發科為全球智慧手機SoC第二大供應商，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。6月營收580.1億年增2.8%。天璣9400採台積電3nm量產，打入Samsung/小米/OPPO供應鏈。",
       "supplyChainStage": "ic_design",
       "roleType": "smartphone_soc_provider",
       "directness": "core",
@@ -63,17 +61,17 @@
     },
     "productNarratives": [
       {
-        "name": "天璣（Dimensity）系列手機SoC",
+        "name": "天璣Dimensity 9400旗艦SoC(3nm)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "5G數據機晶片（Sub-6/mmWave）",
+        "name": "5G數據機晶片(Sub-6/mmWave M80)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "Wi-Fi 7/藍牙連接晶片",
+        "name": "Wi-Fi 7/藍牙5.4連接晶片",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -122,7 +120,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-24"
+      "lastVerified": "2026-07-27"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -152,7 +150,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "聯發科5月營收474.34億年增4.99%，累計2433.21億年減1.59%。MOPS登記為多媒體IC、電腦週邊IC、高階消費性IC。"
+        "roleSummary": "聯發科為全球智慧手機SoC第二大供應商，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。6月營收580.1億年增2.8%。天璣9400採台積電3nm量產，打入Samsung/小米/OPPO供應鏈。"
       },
       {
         "topicId": "edge-ai-aiot",
@@ -162,7 +160,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "聯發科5月營收474.34億年增4.99%。Edge AI/AIoT為聯發科新成長動能，Kompanio/Genio平台切入邊緣AI市場。"
+        "roleSummary": "聯發科為Edge AI SoC領導廠商，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。6月營收580.1億年增2.8%。Kompanio系列Chromebook SoC與Genio AIoT平台為端側AI推論核心產品，打入Samsung/Lenovo供應鏈。"
       },
       {
         "topicId": "ic-design",
@@ -172,7 +170,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
-        "roleSummary": "聯發科5月營收474.34億年增4.99%。MOPS登記為多媒體IC、高階消費性IC、其他特殊應用IC。IC設計為核心業務。"
+        "roleSummary": "聯發科為全球第四大IC設計公司，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。MOPS主要經營：多媒體IC/電腦週邊IC/高階消費性IC。天璣9400採台積電3nm量產，Wi-Fi 7晶片打入Cisco/Netgear供應鏈。"
       }
     ],
     "swot": [],
@@ -225,7 +223,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 57,
+    "totalScore": 41,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": -20,
@@ -233,8 +231,8 @@
       "signals": [],
       "risks": [
         "月營收 MoM -26.1%，短期動能轉弱",
-        "本益比 59.8 倍，需防估值壓縮",
-        "股價淨值比 15.3 倍偏高，需和 ROE/成長性比對"
+        "本益比 58.6 倍，需防估值壓縮",
+        "股價淨值比 15.1 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -247,11 +245,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：3697.00",
-      "波段多空分水嶺看 MA20：3888.25",
-      "追蹤法人是否延續 賣超：最近 -705張",
+      "短線支撐/壓力先看 MA5：3765.00",
+      "波段多空分水嶺看 MA20：3878.25",
+      "追蹤法人是否延續 賣超：最近 -920張",
       "月營收年增率 -4.1%，觀察基本面是否支撐估值",
-      "本益比 59.8 倍，需和同族群估值比較"
+      "本益比 58.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 4380.00 且量比 > 1.5：列為轉強訊號",

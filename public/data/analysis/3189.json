@@ -2,31 +2,27 @@
   "schemaVersion": 1,
   "code": "3189",
   "name": "景碩",
-  "generatedAt": "2026-07-24T12:34:10.071Z",
+  "generatedAt": "2026-07-27T12:37:51.093Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-24",
-  "chipDataDate": "2026-07-24",
+  "marketDataDate": "2026-07-27",
+  "chipDataDate": "2026-07-27",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "景碩 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 9.4%。",
+    "summary": "景碩 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 9.0%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 9.4%"
+      "收盤跌破 MA20 9.0%"
     ],
     "watch": []
   },
@@ -34,19 +30,19 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -28,
-    "summary": "景碩 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2.8千張；三大法人近 5 日合計賣超 -3.6千張。",
+    "summary": "景碩 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +469張；三大法人近 5 日合計賣超 -5.2千張。",
     "signals": [
-      "投信近 5 日買超 +2.8千張"
+      "投信近 5 日買超 +469張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -3.6千張",
-      "近 20 日法人偏賣，合計 -5.2千張",
-      "外資近 5 日賣超 -5.5千張",
-      "融資近 5 日增加 8.2%，但技術面未同步轉強"
+      "三大法人近 5 日合計賣超 -5.2千張",
+      "近 20 日法人偏賣，合計 -1.1萬張",
+      "外資近 5 日賣超 -5千張",
+      "融資近 5 日增加 14.7%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-07-24",
-      "融券近 5 日增加 503.3%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-27",
+      "融券近 5 日增加 164.2%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -59,7 +55,7 @@
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "景碩5月營收42億年增33%，累計年增29%。ABF/BT載板受AI伺服器與HBM需求帶動，為台灣前三大IC載板廠。",
+      "roleSummary": "景碩為台灣前三大IC載板廠，6月營收4224.1億YoY32.3%，累計23601.2億YoY29.8%。6月營收42.2億年增32.3%，受惠AI/HPC用ABF載板需求成長。MOPS主要經營：電子零組件製造/電子材料批發。",
       "supplyChainStage": "substrate",
       "roleType": "ic_substrate_manufacturer",
       "directness": "core",
@@ -85,9 +81,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "景碩6月營收42.2億元年增32.3%，累計營收236.0億年增29.8%，受惠於AI伺服器ABF載板需求強勁及HBM基板出貨成長。"
+      ],
+      "opportunities": [
+        "AI伺服器GPU封裝需要高階ABF載板，HBM3E/HBM4也需要高密度interposer基板，景碩在這些領域已有量產實績。"
+      ],
+      "risks": [
+        "面臨日本Ibiden、新光電氣及韓國Simmtech等國際載板大廠競爭，高階ABF載板技術門檻高但對手也在積極擴產。",
+        "IC載板屬重資本投入產業，高階ABF載板產能擴建需要2-3年週期，設備折舊負擔重，若需求降溫將面臨利用率不足壓力。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -95,6 +98,8 @@
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "景碩 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -107,14 +112,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：IC載板屬重資本投入產業，高階ABF載板產能擴建需要2-3年週期，設備折舊負擔重，若需求降溫將面臨利用率不足壓力。",
+      "V2 T：面臨日本Ibiden、新光電氣及韓國Simmtech等國際載板大廠競爭，高階ABF載板技術門檻高但對手也在積極擴產。"
+    ],
     "watch": [
+      "V2 O：AI伺服器GPU封裝需要高階ABF載板，HBM3E/HBM4也需要高密度interposer基板，景碩在這些領域已有量產實績。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
-      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-07-24（fresh）"
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -128,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-24"
+      "lastVerified": "2026-07-27"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -158,7 +166,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "景碩5月營收42億年增33%，累計年增29%。ABF/BT載板受AI伺服器與HBM需求帶動，為台灣前三大IC載板廠。"
+        "roleSummary": "景碩為台灣前三大IC載板廠，6月營收4224.1億YoY32.3%，累計23601.2億YoY29.8%。6月營收42.2億年增32.3%，受惠AI/HPC用ABF載板需求成長。MOPS主要經營：電子零組件製造/電子材料批發。"
       },
       {
         "topicId": "advanced-packaging",
@@ -168,7 +176,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "high",
-        "roleSummary": "景碩在先進封裝領域供應CoWoS/2.5D封裝用ABF載板，5月營收42億年增33%。隨台積電CoWoS擴產，載板需求同步增長。"
+        "roleSummary": "景碩為台灣前三大IC載板廠，6月營收4224.1億YoY32.3%，累計23601.2億YoY29.8%。6月營收42.2億年增32.3%，受惠AI/HPC用ABF載板需求成長。CoWoS用高階ABF載板為先進封裝供應鏈關鍵環節。"
       },
       {
         "topicId": "hbm",
@@ -181,7 +189,52 @@
         "roleSummary": "景碩供應HBM用BT載板，受SK Hynix/Samsung/Micron HBM擴產帶動。5月營收42億年增33%，HBM載板為高毛利成長動能。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-hbm-substrate",
+        "category": "opportunity",
+        "statement": "AI伺服器GPU封裝需要高階ABF載板，HBM3E/HBM4也需要高密度interposer基板，景碩在這些領域已有量產實績。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "advanced-packaging",
+          "hbm"
+        ]
+      },
+      {
+        "id": "strength-substrate-growth",
+        "category": "strength",
+        "statement": "景碩6月營收42.2億元年增32.3%，累計營收236.0億年增29.8%，受惠於AI伺服器ABF載板需求強勁及HBM基板出貨成長。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "advanced-packaging",
+          "hbm"
+        ]
+      },
+      {
+        "id": "threat-competition-ibiden",
+        "category": "threat",
+        "statement": "面臨日本Ibiden、新光電氣及韓國Simmtech等國際載板大廠競爭，高階ABF載板技術門檻高但對手也在積極擴產。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "advanced-packaging",
+          "hbm"
+        ]
+      },
+      {
+        "id": "weakness-capex-cycle",
+        "category": "weakness",
+        "statement": "IC載板屬重資本投入產業，高階ABF載板產能擴建需要2-3年週期，設備折舊負擔重，若需求降溫將面臨利用率不足壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "advanced-packaging",
+          "hbm"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "pcb-substrates",
@@ -241,7 +294,7 @@
         "月營收 MoM +3.4%，短期動能改善"
       ],
       "risks": [
-        "本益比 200.3 倍，需防估值壓縮",
+        "本益比 200.0 倍，需防估值壓縮",
         "股價淨值比 8.7 倍偏高，需和 ROE/成長性比對"
       ]
     },
@@ -256,17 +309,17 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 10.4%，部位需降速"
+        "message": "距離 MA20 約 9.9%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：743.40",
-      "波段多空分水嶺看 MA20：784.90",
-      "追蹤法人是否延續 賣超：最近 -2.8千張",
+      "短線支撐/壓力先看 MA5：749.60",
+      "波段多空分水嶺看 MA20：780.55",
+      "追蹤法人是否延續 賣超：最近 -706張",
       "月營收年增率 +26.8%，觀察基本面是否支撐估值",
-      "本益比 200.3 倍，需和同族群估值比較"
+      "本益比 200.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 939.00 且量比 > 1.5：列為轉強訊號",

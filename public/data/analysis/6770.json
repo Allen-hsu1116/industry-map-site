@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "code": "6770",
   "name": "力積電",
-  "generatedAt": "2026-07-24T12:34:10.415Z",
+  "generatedAt": "2026-07-27T12:37:51.438Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "missing_product_knowledge",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -85,9 +83,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "力積電6月營收64.7億元年增68.8%，累計營收308.6億年增37.8%，因客戶需求上升銷售量增加且銷售價格調漲，營收強勁成長。"
+      ],
+      "opportunities": [
+        "OLED面板驅動IC（DDI）需求隨OLED面板滲透率提升而成長，力積電為全球最大DDI代工廠，直接受惠於OLED趨勢。"
+      ],
+      "risks": [
+        "成熟製程代工面臨中芯國際、世界先進（5347）的價格競爭，且中國半導體自主化政策推動中芯大量擴產成熟製程。",
+        "公司主力製程為55nm~90nm成熟製程，缺乏先進製程（<28nm）佈局，毛利率與技術壁壠低於台積電/聯電。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -95,6 +100,8 @@
       "題材 NOR Flash 與利基記憶體（product/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "力積電 在「NOR Flash 與利基記憶體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -106,14 +113,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：公司主力製程為55nm~90nm成熟製程，缺乏先進製程（<28nm）佈局，毛利率與技術壁壠低於台積電/聯電。",
+      "V2 T：成熟製程代工面臨中芯國際、世界先進（5347）的價格競爭，且中國半導體自主化政策推動中芯大量擴產成熟製程。"
+    ],
     "watch": [
+      "V2 O：OLED面板驅動IC（DDI）需求隨OLED面板滲透率提升而成長，力積電為全球最大DDI代工廠，直接受惠於OLED趨勢。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 NOR Flash 與利基記憶體：月營收或訂單能見度改善",
       "追蹤 NOR Flash 與利基記憶體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
-      "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -170,7 +180,48 @@
         "roleSummary": "力積電6月營收64.74億年增68.8%、月增12.2%，累計年增37.8%——客戶需求上升、量價齊揚。12吋利基DRAM代工與8吋利基製程雙引擎，SiC/GaN第三代功率代工為新成長動能。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-display-driver-foundry",
+        "category": "opportunity",
+        "statement": "OLED面板驅動IC（DDI）需求隨OLED面板滲透率提升而成長，力積電為全球最大DDI代工廠，直接受惠於OLED趨勢。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "niche-memory"
+        ]
+      },
+      {
+        "id": "strength-revenue-surge",
+        "category": "strength",
+        "statement": "力積電6月營收64.7億元年增68.8%，累計營收308.6億年增37.8%，因客戶需求上升銷售量增加且銷售價格調漲，營收強勁成長。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "niche-memory"
+        ]
+      },
+      {
+        "id": "threat-foundry-price-war",
+        "category": "threat",
+        "statement": "成熟製程代工面臨中芯國際、世界先進（5347）的價格競爭，且中國半導體自主化政策推動中芯大量擴產成熟製程。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "niche-memory"
+        ]
+      },
+      {
+        "id": "weakness-legacy-process",
+        "category": "weakness",
+        "statement": "公司主力製程為55nm~90nm成熟製程，缺乏先進製程（<28nm）佈局，毛利率與技術壁壠低於台積電/聯電。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "niche-memory"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "niche-memory",
@@ -229,12 +280,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       },
       {
         "id": "risk.stop-distance",

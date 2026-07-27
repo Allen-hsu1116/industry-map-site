@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "code": "3583",
   "name": "辛耘",
-  "generatedAt": "2026-07-24T12:34:10.151Z",
+  "generatedAt": "2026-07-27T12:37:51.174Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "missing_product_knowledge",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -83,9 +81,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "辛耘6月營收10.3億元，累計營收61.2億年增6.8%，為半導體/LED/Solar製程機台設備代理與製造商，受惠於先進封裝設備需求。"
+      ],
+      "opportunities": [
+        "先進封裝（CoWoS/SoIC）設備需求大幅成長，辛耘代理相關製程設備並自研封裝解決方案，直接受惠於AI晶片封裝擴產。"
+      ],
+      "risks": [
+        "設備代理業務受原廠授權變動影響，若原廠調整代理策略或直接介入台灣市場，將影響公司營運。",
+        "6月營收年減2.7%，累計營收增幅僅6.8%，成長動能有限，且設備代理業務受原廠供貨節奏與客戶資本支出循環影響大。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,6 +98,8 @@
       "題材 先進封裝與 CoWoS（process/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "辛耘 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +112,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：6月營收年減2.7%，累計營收增幅僅6.8%，成長動能有限，且設備代理業務受原廠供貨節奏與客戶資本支出循環影響大。",
+      "V2 T：設備代理業務受原廠授權變動影響，若原廠調整代理策略或直接介入台灣市場，將影響公司營運。"
+    ],
     "watch": [
+      "V2 O：先進封裝（CoWoS/SoIC）設備需求大幅成長，辛耘代理相關製程設備並自研封裝解決方案，直接受惠於AI晶片封裝擴產。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 半導體設備與前段材料：月營收或訂單能見度改善",
-      "追蹤 半導體設備與前段材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 半導體設備與前段材料：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -166,7 +176,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "辛耘6月營收10.35億年增6.8%。前段製程設備代理與晶圓再生雙引擎，服務台積電/聯電等一線客戶。"
+        "roleSummary": "辛耘6月營收10.35億YoY-2.7%，累計61.15億YoY+6.8%。MOPS登記為半導體LED Solar LCD製程機台設備代理研發製造/晶圓再生技術/化學分析儀器。前段製程設備代理與晶圓再生雙引擎，服務台積電/聯電等一線客戶。"
       },
       {
         "topicId": "display-led-optics",
@@ -179,7 +189,52 @@
         "roleSummary": "辛耘6月營收10.35億年增6.8%。LED/Solar製程設備代理與化學分析儀器，服務光電產業客戶。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-advanced-packaging-equipment",
+        "category": "opportunity",
+        "statement": "先進封裝（CoWoS/SoIC）設備需求大幅成長，辛耘代理相關製程設備並自研封裝解決方案，直接受惠於AI晶片封裝擴產。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "semiconductor-equipment-materials",
+          "display-led-optics"
+        ]
+      },
+      {
+        "id": "strength-semi-equipment-distributor",
+        "category": "strength",
+        "statement": "辛耘6月營收10.3億元，累計營收61.2億年增6.8%，為半導體/LED/Solar製程機台設備代理與製造商，受惠於先進封裝設備需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "semiconductor-equipment-materials",
+          "display-led-optics"
+        ]
+      },
+      {
+        "id": "threat-principal-risk",
+        "category": "threat",
+        "statement": "設備代理業務受原廠授權變動影響，若原廠調整代理策略或直接介入台灣市場，將影響公司營運。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "semiconductor-equipment-materials",
+          "display-led-optics"
+        ]
+      },
+      {
+        "id": "weakness-revenue-flat",
+        "category": "weakness",
+        "statement": "6月營收年減2.7%，累計營收增幅僅6.8%，成長動能有限，且設備代理業務受原廠供貨節奏與客戶資本支出循環影響大。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "advanced-packaging",
+          "semiconductor-equipment-materials",
+          "display-led-optics"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "advanced-packaging",
@@ -248,12 +303,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       }
     ]
   },

@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "code": "3130",
   "name": "一零四",
-  "generatedAt": "2026-07-24T12:34:10.057Z",
+  "generatedAt": "2026-07-27T12:37:51.079Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "missing_product_knowledge",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -83,9 +81,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "一零四6月營收2.63億元年增7.9%，累計營收14.1億年增6.9%，為台灣最大人力銀行平台，品牌認知度與用戶基數具壟斷優勢。"
+      ],
+      "opportunities": [
+        "公司積極發展HR SaaS服務（104人資學院、人才評測、HR系統工具），以及AI驅動的智慧招募推薦，提升ARPU與客戶黏著度。"
+      ],
+      "risks": [
+        "台灣少子化與人口高齡化導致勞動力供給縮減，長期影響求職者端流量與企業招募需求。",
+        "營收規模小（年營收約30億台幣），且業務高度集中於台灣單一市場，成長空間受人口結構與市場規模限制。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,6 +98,8 @@
       "題材 資安、雲端服務與企業軟體（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "一零四 在「資安、雲端服務與企業軟體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +112,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：營收規模小（年營收約30億台幣），且業務高度集中於台灣單一市場，成長空間受人口結構與市場規模限制。",
+      "V2 T：台灣少子化與人口高齡化導致勞動力供給縮減，長期影響求職者端流量與企業招募需求。"
+    ],
     "watch": [
+      "V2 O：公司積極發展HR SaaS服務（104人資學院、人才評測、HR系統工具），以及AI驅動的智慧招募推薦，提升ARPU與客戶黏著度。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 資安、雲端服務與企業軟體：月營收或訂單能見度改善",
       "追蹤 資安、雲端服務與企業軟體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
-      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -179,7 +189,52 @@
         "roleSummary": "一零四6月營收2.63億年增7.9%，累計年增6.9%。作為台灣最大人力銀行平台，間接服務記憶體模組廠人才招募需求，提供DRAM/NAND封測工程師媒合與培訓服務。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-saas-data-services",
+        "category": "opportunity",
+        "statement": "公司積極發展HR SaaS服務（104人資學院、人才評測、HR系統工具），以及AI驅動的智慧招募推薦，提升ARPU與客戶黏著度。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace",
+          "software-cloud-security",
+          "memory-modules"
+        ]
+      },
+      {
+        "id": "strength-hr-platform-dominance",
+        "category": "strength",
+        "statement": "一零四6月營收2.63億元年增7.9%，累計營收14.1億年增6.9%，為台灣最大人力銀行平台，品牌認知度與用戶基數具壟斷優勢。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace",
+          "software-cloud-security",
+          "memory-modules"
+        ]
+      },
+      {
+        "id": "threat-demographic-decline",
+        "category": "threat",
+        "statement": "台灣少子化與人口高齡化導致勞動力供給縮減，長期影響求職者端流量與企業招募需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace",
+          "software-cloud-security",
+          "memory-modules"
+        ]
+      },
+      {
+        "id": "weakness-taiwan-market-limit",
+        "category": "weakness",
+        "statement": "營收規模小（年營收約30億台幣），且業務高度集中於台灣單一市場，成長空間受人口結構與市場規模限制。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace",
+          "software-cloud-security",
+          "memory-modules"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "software-cloud-security",
@@ -247,12 +302,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       }
     ]
   },

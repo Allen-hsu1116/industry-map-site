@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "code": "6274",
   "name": "台燿",
-  "generatedAt": "2026-07-24T12:34:10.352Z",
+  "generatedAt": "2026-07-27T12:37:51.375Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "missing_product_knowledge",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -86,9 +84,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "台燿為台灣銅箔基板（CCL）製造商，在高頻高速CCL及HDI用基板有量產能力，供應PCB廠下游加工。"
+      ],
+      "opportunities": [
+        "AI伺服器PCB需要High-Tg/Low-Df高頻高速CCL，台燿在Mid-Loss/Low-Loss級CCL有量產能力，受惠於AI伺服器主板需求。"
+      ],
+      "risks": [
+        "面臨台光電（2383）、南亞塑膠（1303）、聯茂（6213）等CCL大廠競爭，高頻高速CCL技術門檻高但對手也在積極追趕。",
+        "公司為上櫃企業，無法透過TWSE取得月營收，且CCL產業毛利率受銅箔與樹脂原料價格波動影響大。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -96,6 +101,8 @@
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "台燿 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -107,14 +114,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：公司為上櫃企業，無法透過TWSE取得月營收，且CCL產業毛利率受銅箔與樹脂原料價格波動影響大。",
+      "V2 T：面臨台光電（2383）、南亞塑膠（1303）、聯茂（6213）等CCL大廠競爭，高頻高速CCL技術門檻高但對手也在積極追趕。"
+    ],
     "watch": [
+      "V2 O：AI伺服器PCB需要High-Tg/Low-Df高頻高速CCL，台燿在Mid-Loss/Low-Loss級CCL有量產能力，受惠於AI伺服器主板需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
-      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -171,7 +181,48 @@
         "roleSummary": "台燿為台灣主要銅箔基板製造商，在低軌衛星題材中供應高頻低損耗CCL材料予衛星通訊PCB製造商。主要產品為高頻PTFE系CCL與超低Dk多層壓合板，應用於Starlink等低軌衛星通訊射頻電路板。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-high-speed-ccl",
+        "category": "opportunity",
+        "statement": "AI伺服器PCB需要High-Tg/Low-Df高頻高速CCL，台燿在Mid-Loss/Low-Loss級CCL有量產能力，受惠於AI伺服器主板需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-ccl-manufacturer",
+        "category": "strength",
+        "statement": "台燿為台灣銅箔基板（CCL）製造商，在高頻高速CCL及HDI用基板有量產能力，供應PCB廠下游加工。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "threat-ccl-competition",
+        "category": "threat",
+        "statement": "面臨台光電（2383）、南亞塑膠（1303）、聯茂（6213）等CCL大廠競爭，高頻高速CCL技術門檻高但對手也在積極追趕。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-otc-no-revenue",
+        "category": "weakness",
+        "statement": "公司為上櫃企業，無法透過TWSE取得月營收，且CCL產業毛利率受銅箔與樹脂原料價格波動影響大。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "leo-satellite-communications"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "pcb-substrates",
@@ -230,12 +281,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       },
       {
         "id": "risk.stop-distance",

@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "3450",
   "name": "聯鈞",
-  "generatedAt": "2026-07-24T12:34:10.125Z",
+  "generatedAt": "2026-07-27T12:37:51.147Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "missing_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -84,9 +80,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "聯鈞6月營收11.4億元年增88.2%，因客戶需求增加致使營收大幅成長，受惠於SiC/GaN第三代半導體雷射切割需求爆發。"
+      ],
+      "opportunities": [
+        "SiC/GaN功率半導體晶圓需要UV雷射切割（傳統刀片無法切SiC），矽光子CPO封裝也需要雷射加工，聯鈞在這兩個領域都有布局。"
+      ],
+      "risks": [
+        "半導體設備採購具有明顯的資本支出循環，若客戶端擴產放緩，設備訂單可能急速降溫。",
+        "公司市值較小，營收基期低，單月營收波動大，且產品線集中於雷射加工設備，客戶端需求循環風險較高。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -94,6 +97,8 @@
       "題材 晶圓代工與第三代半導體（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "聯鈞 在「晶圓代工與第三代半導體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +110,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：公司市值較小，營收基期低，單月營收波動大，且產品線集中於雷射加工設備，客戶端需求循環風險較高。",
+      "V2 T：半導體設備採購具有明顯的資本支出循環，若客戶端擴產放緩，設備訂單可能急速降溫。"
+    ],
     "watch": [
+      "V2 O：SiC/GaN功率半導體晶圓需要UV雷射切割（傳統刀片無法切SiC），矽光子CPO封裝也需要雷射加工，聯鈞在這兩個領域都有布局。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
       "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
-      "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -169,7 +177,48 @@
         "roleSummary": "聯鈞是全球少數能提供矽光子波導雷射加工的廠商，掌握矽光子核心製程。5月營收9.6億年增49.9%，受惠AI光互連需求升溫，但累計營收39.2億年減1.9%，仍在恢復期。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-sic-silicon-photonics",
+        "category": "opportunity",
+        "statement": "SiC/GaN功率半導體晶圓需要UV雷射切割（傳統刀片無法切SiC），矽光子CPO封裝也需要雷射加工，聯鈞在這兩個領域都有布局。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "strength-laser-revenue-surge",
+        "category": "strength",
+        "statement": "聯鈞6月營收11.4億元年增88.2%，因客戶需求增加致使營收大幅成長，受惠於SiC/GaN第三代半導體雷射切割需求爆發。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "threat-equipment-cycle",
+        "category": "threat",
+        "statement": "半導體設備採購具有明顯的資本支出循環，若客戶端擴產放緩，設備訂單可能急速降溫。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "weakness-small-cap-volatility",
+        "category": "weakness",
+        "statement": "公司市值較小，營收基期低，單月營收波動大，且產品線集中於雷射加工設備，客戶端需求循環風險較高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry",
+          "silicon-photonics-optical-comm"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "wafer-foundry",
@@ -227,12 +276,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       },
       {
         "id": "risk.stop-distance",

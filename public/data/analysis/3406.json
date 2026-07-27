@@ -2,22 +2,20 @@
   "schemaVersion": 1,
   "code": "3406",
   "name": "玉晶光",
-  "generatedAt": "2026-07-24T12:34:10.117Z",
+  "generatedAt": "2026-07-27T12:37:51.140Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
+    "grade": "B",
+    "label": "可用但仍有缺口",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge",
-      "complete_swot"
+      "product_knowledge"
     ],
     "blockingReasons": [
-      "missing_product_knowledge",
-      "missing_swot"
+      "missing_product_knowledge"
     ]
   },
   "technical": {
@@ -86,9 +84,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "玉晶光6月營收17.4億元年增4.5%，累計營收118.2億年增17.2%，為Apple iPhone主力光學鏡頭供應商之一，受惠於iPhone新機拉貨。"
+      ],
+      "opportunities": [
+        "AR/VR/MR裝置（Apple Vision Pro）需要高精度光學鏡頭，玉晶光在Pancake鏡頭及MR光學模組有量產能力，為長期成長動能。"
+      ],
+      "risks": [
+        "面臨大立光在高端鏡頭技術（潛望式長焦、可變光圈）的競爭壓力，且中國舜宇光學在中低階鏡頭低價搶市。",
+        "營收高度依賴Apple單一客戶，iPhone出貨量與規格變化直接影響營收，客戶集中度風險高。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -96,6 +101,8 @@
       "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "玉晶光 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -107,14 +114,17 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：營收高度依賴Apple單一客戶，iPhone出貨量與規格變化直接影響營收，客戶集中度風險高。",
+      "V2 T：面臨大立光在高端鏡頭技術（潛望式長焦、可變光圈）的競爭壓力，且中國舜宇光學在中低階鏡頭低價搶市。"
+    ],
     "watch": [
+      "V2 O：AR/VR/MR裝置（Apple Vision Pro）需要高精度光學鏡頭，玉晶光在Pancake鏡頭及MR光學模組有量產能力，為長期成長動能。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
-      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -171,7 +181,48 @@
         "roleSummary": "玉晶光6月營收17.4億YoY+4.5%，累計118億YoY+17.2%。Apple iPhone前鏡頭核心供應商，3D感測與AR/VR Pancake鏡頭為新成長動能，車用ADAS鏡頭放量中。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ar-vr-lens",
+        "category": "opportunity",
+        "statement": "AR/VR/MR裝置（Apple Vision Pro）需要高精度光學鏡頭，玉晶光在Pancake鏡頭及MR光學模組有量產能力，為長期成長動能。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "display-led-optics",
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "strength-apple-lens-supplier",
+        "category": "strength",
+        "statement": "玉晶光6月營收17.4億元年增4.5%，累計營收118.2億年增17.2%，為Apple iPhone主力光學鏡頭供應商之一，受惠於iPhone新機拉貨。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "display-led-optics",
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "threat-largan-competition",
+        "category": "threat",
+        "statement": "面臨大立光在高端鏡頭技術（潛望式長焦、可變光圈）的競爭壓力，且中國舜宇光學在中低階鏡頭低價搶市。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "display-led-optics",
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "weakness-customer-concentration",
+        "category": "weakness",
+        "statement": "營收高度依賴Apple單一客戶，iPhone出貨量與規格變化直接影響營收，客戶集中度風險高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "display-led-optics",
+          "consumer-computing-devices"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "consumer-computing-devices",
@@ -230,12 +281,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 60 天未更新"
+        "message": "股價資料已 63 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 60 天未更新"
+        "message": "籌碼資料已 63 天未更新"
       },
       {
         "id": "risk.stop-distance",
