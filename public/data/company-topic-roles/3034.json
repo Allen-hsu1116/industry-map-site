@@ -135,18 +135,20 @@
       "directness": "supplier",
       "supplyChainStage": "ic_design",
       "roleType": "edge_ai_soc_candidate",
-      "roleSummary": "聯詠5月營收94.12億年增9.35%。Edge AI為顯示IC之外的拓展方向。",
+      "roleSummary": "聯詠6月營收100.23億YoY+19.0%，累計518.05億YoY-2.8%。MOPS登記為語音/通訊/液晶顯示器驅動IC設計製造。台灣最大顯示驅動IC廠，跨足邊緣AI SoC，整合NPU推論引擎於顯示/影像IC，AI安防與車用ASIL-B認證IC為新成長動能。",
       "products": [
-        "邊緣AI顯示SoC(整合NPU推論引擎)",
-        "AI影像處理IC(ISP+NPU 4K/8K)",
-        "車用顯示與影像IC(ASIL-B認證)",
-        "智慧安防SoC(AI人臉辨識/物體偵測)"
+        "邊緣AI顯示SoC(整合NPU推論引擎TOPS>1)(28nm)",
+        "AI影像處理IC(ISP+NPU 4K/8K)(智慧安防用)",
+        "車用顯示與影像IC(ASIL-B認證)(儀表板/後視鏡)",
+        "智慧安防SoC(AI人臉辨識/物體偵測)(H.265)",
+        "電視用大型DDI(TDDI/Gate Driver IC)(4K120Hz)"
       ],
       "customers": [
-        "Hikvision",
-        "Dahua",
-        "Samsung",
-        "Canon"
+        "Hikvision(海康威視)(AI安防監控SoC)",
+        "Dahua(大華股份)(AI安防監控SoC)",
+        "Samsung(三星)(OLED DDI驅動IC)",
+        "Canon(佳能)(影像處理ISP IC)",
+        "BOE(京東方)(電視/手機DDI驅動IC)"
       ],
       "competitors": [
         "Rockchip",
@@ -180,12 +182,12 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-07",
+      "lastVerified": "2026-07-28",
       "status": "verified",
       "techFocus": [
-        "邊緣AI影像處理SoC設計(NPU+ISP整合)",
-        "車用顯示驅動與影像處理整合(ASIL-B)",
-        "AI推論加速器(NPU)整合至顯示SoC(TOPS>1)"
+        "邊緣AI影像處理SoC設計(NPU+ISP整合)(28nm TOPS>1)",
+        "車用顯示驅動與影像處理整合(ASIL-B ISO26262)",
+        "AI推論加速器NPU整合至顯示SoC(INT8/INT4量化)"
       ]
     }
   ]
