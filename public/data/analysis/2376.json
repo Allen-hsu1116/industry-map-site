@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-07-27T12:37:50.889Z",
+  "generatedAt": "2026-07-28T12:37:27.574Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-27",
-  "chipDataDate": "2026-07-27",
+  "marketDataDate": "2026-07-28",
+  "chipDataDate": "2026-07-28",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 45,
-    "summary": "技嘉 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.2%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": -15,
+    "summary": "技嘉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 3.5%。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 3.2%"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
-    "risks": [],
+    "risks": [
+      "收盤跌破 MA20 3.5%"
+    ],
     "watch": []
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": -15,
-    "summary": "技嘉 籌碼面目前為「籌碼中性」：投信近 5 日買超 +3.2千張；融資近 5 日下降 13.3%，籌碼壓力下降。",
+    "summary": "技嘉 籌碼面目前為「籌碼中性」：投信近 5 日買超 +789張；融資近 5 日下降 13.9%，籌碼壓力下降。",
     "signals": [
-      "投信近 5 日買超 +3.2千張",
-      "融資近 5 日下降 13.3%，籌碼壓力下降"
+      "投信近 5 日買超 +789張",
+      "融資近 5 日下降 13.9%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.4千張",
-      "近 20 日法人偏賣，合計 -1.4千張",
-      "外資近 5 日賣超 -5.5千張"
+      "三大法人近 5 日合計賣超 -2.3千張",
+      "近 20 日法人偏賣，合計 -3千張",
+      "外資近 5 日賣超 -3.4千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-27",
-      "融券近 5 日增加 10.8%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-28"
     ]
   },
   "industry": {
@@ -136,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-27"
+      "lastVerified": "2026-07-28"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -176,7 +176,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "技嘉消費性產品涵蓋主機板、顯卡與Mini-PC，5月營收49.1億年增5.0%。AI伺服器帶動整體成長，消費性PC產品穩定。"
+        "roleSummary": "技嘉6月營收428.92億YoY+68.6%，累計2492.69億YoY+48.4%，MOPS備註「AI訂單需求暢旺」。MOPS登記為電腦硬體/週邊設備製造加工買賣。主機板、顯卡與Mini-PC為消費核心產品，AI伺服器帶動整體爆發成長，消費性PC產品穩定但非主力。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -281,22 +281,21 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 75,
-    "recommendationState": "top_candidate",
+    "totalScore": 61,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 32,
       "label": "基本面偏強",
       "signals": [
         "月營收 YoY +72.2%，成長動能明確",
-        "本益比 16.3 倍，估值尚可對照成長",
-        "殖利率 3.4%，提供部分下檔支撐"
+        "本益比 15.3 倍，估值尚可對照成長",
+        "殖利率 3.7%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -305,11 +304,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：349.50",
-      "波段多空分水嶺看 MA20：338.63",
-      "追蹤法人是否延續 賣超：最近 -871張",
+      "短線支撐/壓力先看 MA5：346.70",
+      "波段多空分水嶺看 MA20：338.73",
+      "追蹤法人是否延續 賣超：最近 -1千張",
       "月營收年增率 +72.2%，觀察基本面是否支撐估值",
-      "本益比 16.3 倍，需和同族群估值比較"
+      "本益比 15.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 358.00 且量比 > 1.5：列為轉強訊號",

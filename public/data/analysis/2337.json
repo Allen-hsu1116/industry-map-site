@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-07-27T12:37:50.862Z",
+  "generatedAt": "2026-07-28T12:37:27.545Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-27",
-  "chipDataDate": "2026-07-27",
+  "marketDataDate": "2026-07-28",
+  "chipDataDate": "2026-07-28",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,34 +17,32 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -45,
-    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 8.8%。",
+    "score": -55,
+    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 16.5%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 8.8%"
+      "收盤跌破 MA20 16.5%"
     ],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "量能低於 20 日均量，突破訊號可信度較低",
+      "接近 20 日低點 113.00，留意支撐是否失守"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
-    "score": -31,
-    "summary": "旺宏 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +5.2千張；融資近 5 日下降 5.1%，籌碼壓力下降。",
-    "signals": [
-      "外資近 5 日買超 +5.2千張",
-      "融資近 5 日下降 5.1%，籌碼壓力下降"
-    ],
+    "score": -36,
+    "summary": "旺宏 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -8千張；近 20 日法人偏賣，合計 -13.8萬張。",
+    "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.3千張",
-      "近 20 日法人偏賣，合計 -15萬張",
-      "投信近 5 日賣超 -7千張"
+      "三大法人近 5 日合計賣超 -8千張",
+      "近 20 日法人偏賣，合計 -13.8萬張",
+      "投信近 5 日賣超 -6.7千張",
+      "外資近 5 日賣超 -1.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-27",
-      "融券近 5 日增加 29.8%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-28"
     ]
   },
   "industry": {
@@ -57,7 +55,7 @@
     "roleDetail": {
       "topicName": "NOR Flash 與利基記憶體",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "旺宏5月營收6.26億YoY+175.8%，受惠於車用NOR Flash與遊戲ROM需求爆發。為全球NOR Flash市佔第二大，車規記憶體與Mask ROM利基型市場領導者。",
+      "roleSummary": "旺宏6月營收69.56億YoY+216.1%，累計295.93億YoY+128.8%，MOPS備註「受市場需求增加影響」。MOPS登記為積體電路/半導體零組件及系統應用產品研發設計製造測試銷售。全球NOR Flash市佔第二大，車規記憶體與Mask ROM利基應用爆發，營收暴增反映車用/遊戲ROM需求強勁復甦。",
       "supplyChainStage": "memory_ic",
       "roleType": "nor_flash_and_non_volatile_memory_supplier",
       "directness": "core",
@@ -170,7 +168,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-07-27"
+      "lastVerified": "2026-07-28"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -200,7 +198,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "旺宏5月營收6.26億YoY+175.8%，受惠於車用NOR Flash與遊戲ROM需求爆發。為全球NOR Flash市佔第二大，車規記憶體與Mask ROM利基型市場領導者。"
+        "roleSummary": "旺宏6月營收69.56億YoY+216.1%，累計295.93億YoY+128.8%，MOPS備註「受市場需求增加影響」。MOPS登記為積體電路/半導體零組件及系統應用產品研發設計製造測試銷售。全球NOR Flash市佔第二大，車規記憶體與Mask ROM利基應用爆發，營收暴增反映車用/遊戲ROM需求強勁復甦。"
       },
       {
         "topicId": "ic-design",
@@ -292,8 +290,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 48,
-    "recommendationState": "watchlist",
+    "totalScore": 28,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": 30,
       "label": "基本面偏強",
@@ -313,21 +311,21 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 9.7%，部位需降速"
+        "severity": "hard",
+        "message": "距離 MA20 約 19.8%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：127.40",
-      "波段多空分水嶺看 MA20：137.65",
-      "追蹤法人是否延續 賣超：最近 -3.1千張",
+      "短線支撐/壓力先看 MA5：125.40",
+      "波段多空分水嶺看 MA20：135.38",
+      "追蹤法人是否延續 賣超：最近 -9.5千張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 167.50 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 115.50：列為轉弱警訊",
+      "收盤突破 20 日高點 162.50 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 113.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

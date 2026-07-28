@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2383",
   "name": "台光電",
-  "generatedAt": "2026-07-27T12:37:50.896Z",
+  "generatedAt": "2026-07-28T12:37:27.580Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-27",
-  "chipDataDate": "2026-07-27",
+  "marketDataDate": "2026-07-28",
+  "chipDataDate": "2026-07-28",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,31 +18,30 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "台光電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 6.6%。",
+    "summary": "台光電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 13.6%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 6.6%"
+      "收盤跌破 MA20 13.6%"
     ],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "台光電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +556張；三大法人近 5 日合計賣超 -806張。",
+    "summary": "台光電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +215張；三大法人近 5 日合計賣超 -378張。",
     "signals": [
-      "投信近 5 日買超 +556張"
+      "投信近 5 日買超 +215張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -806張",
+      "三大法人近 5 日合計賣超 -378張",
       "近 20 日法人偏賣，合計 -1.3千張",
-      "外資近 5 日賣超 -1.3千張"
+      "外資近 5 日賣超 -652張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-27"
+      "最近法人資料日：2026-07-28",
+      "融券近 5 日增加 30.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -131,7 +130,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-27"
+      "lastVerified": "2026-07-28"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -246,8 +245,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 51,
-    "recommendationState": "watchlist",
+    "totalScore": 31,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -256,8 +255,8 @@
         "月營收 MoM +15.9%，短期動能改善"
       ],
       "risks": [
-        "本益比 104.5 倍，需防估值壓縮",
-        "股價淨值比 36.0 倍偏高，需和 ROE/成長性比對"
+        "本益比 95.7 倍，需防估值壓縮",
+        "股價淨值比 33.0 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -267,15 +266,21 @@
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "hard",
+        "message": "距離 MA20 約 15.7%，停損距離過大"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：4924.00",
-      "波段多空分水嶺看 MA20：5154.50",
-      "追蹤法人是否延續 賣超：最近 -50張",
+      "短線支撐/壓力先看 MA5：4840.00",
+      "波段多空分水嶺看 MA20：5102.50",
+      "追蹤法人是否延續 買超：最近 +1張",
       "月營收年增率 +93.6%，觀察基本面是否支撐估值",
-      "本益比 104.5 倍，需和同族群估值比較"
+      "本益比 95.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 6250.00 且量比 > 1.5：列為轉強訊號",

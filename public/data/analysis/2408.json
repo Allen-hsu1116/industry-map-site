@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2408",
   "name": "南亞科",
-  "generatedAt": "2026-07-27T12:37:50.911Z",
+  "generatedAt": "2026-07-28T12:37:27.596Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-27",
-  "chipDataDate": "2026-07-27",
+  "marketDataDate": "2026-07-28",
+  "chipDataDate": "2026-07-28",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -19,35 +19,32 @@
     ]
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "南亞科 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "南亞科 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 6.8%。",
+    "signals": [],
+    "risks": [
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 6.8%"
     ],
-    "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
-    "score": -28,
-    "summary": "南亞科 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +1.6千張；三大法人近 5 日合計賣超 -6.8千張。",
-    "signals": [
-      "投信近 5 日買超 +1.6千張"
-    ],
+    "score": -36,
+    "summary": "南亞科 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1.3萬張；近 20 日法人偏賣，合計 -8.3萬張。",
+    "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -6.8千張",
-      "近 20 日法人偏賣，合計 -7.9萬張",
-      "外資近 5 日賣超 -7.9千張",
-      "融資近 5 日增加 9.0%，但技術面未同步轉強"
+      "三大法人近 5 日合計賣超 -1.3萬張",
+      "近 20 日法人偏賣，合計 -8.3萬張",
+      "投信近 5 日賣超 -2.1千張",
+      "外資近 5 日賣超 -1萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-27",
-      "融券近 5 日增加 37.3%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-28",
+      "融券近 5 日增加 176.6%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -60,7 +57,7 @@
     "roleDetail": {
       "topicName": "HBM 高頻寬記憶體",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "南亞科5月營收276.7億年增730%（受市場需求成長影響，基期極低），累計年增650%。DDR5量產中，HBM3E與美光合作開發。",
+      "roleSummary": "南亞科6月營收293.88億YoY+621.3%，累計1316.36億YoY+643.1%，MOPS備註「受市場需求成長影響」。MOPS登記為電子零組件製造/國際貿易。DRAM價格上漲帶動營收暴增(基期極低)，DDR5量產中(1a nm)，HBM3E與美光合作開發，為HBM題材間接受益者。",
       "supplyChainStage": "hbm",
       "roleType": "dram_hbm_developer",
       "directness": "core",
@@ -68,17 +65,17 @@
     },
     "productNarratives": [
       {
-        "name": "DDR5 DRAM(1a nm)",
+        "name": "HBM3E(與美光Micron合作開發)(8H/12H堆疊)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "HBM3E(與美光合作)",
+        "name": "利基型DRAM(消費/工規)(DDR3/DDR4)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "利基型DRAM(消費/工規)",
+        "name": "DDR4 DRAM(成熟製程20A/1X nm)(伺服器/PC)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -137,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-27"
+      "lastVerified": "2026-07-28"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -167,7 +164,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "南亞科5月營收276.7億年增730%（受市場需求成長影響，基期極低），累計年增650%。DDR5量產中，HBM3E與美光合作開發。"
+        "roleSummary": "南亞科6月營收293.88億YoY+621.3%，累計1316.36億YoY+643.1%，MOPS備註「受市場需求成長影響」。MOPS登記為電子零組件製造/國際貿易。DRAM價格上漲帶動營收暴增(基期極低)，DDR5量產中(1a nm)，HBM3E與美光合作開發，為HBM題材間接受益者。"
       }
     ],
     "swot": [
@@ -235,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 62,
+    "totalScore": 51,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
@@ -245,7 +242,7 @@
         "月營收 MoM +18.2%，短期動能改善"
       ],
       "risks": [
-        "股價淨值比 7.0 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 6.3 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -259,11 +256,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：422.70",
-      "波段多空分水嶺看 MA20：423.95",
-      "追蹤法人是否延續 買超：最近 +556張",
+      "短線支撐/壓力先看 MA5：420.20",
+      "波段多空分水嶺看 MA20：420.93",
+      "追蹤法人是否延續 賣超：最近 -6.6千張",
       "月營收年增率 +444.9%，觀察基本面是否支撐估值",
-      "本益比 39.0 倍，需和同族群估值比較"
+      "本益比 35.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 489.50 且量比 > 1.5：列為轉強訊號",
