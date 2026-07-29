@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6153",
   "name": "嘉聯益",
-  "generatedAt": "2026-07-28T12:37:28.003Z",
+  "generatedAt": "2026-07-29T12:34:28.358Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-28",
-  "chipDataDate": "2026-07-28",
+  "marketDataDate": "2026-07-29",
+  "chipDataDate": "2026-07-29",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,31 +17,29 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -55,
-    "summary": "嘉聯益 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 18.5%。",
+    "score": -45,
+    "summary": "嘉聯益 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 21.6%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 18.5%"
+      "收盤跌破 MA20 21.6%"
     ],
-    "watch": [
-      "接近 20 日低點 15.00，留意支撐是否失守"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -28,
-    "summary": "嘉聯益 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -4.7千張；近 20 日法人偏賣，合計 -1.8萬張。",
+    "summary": "嘉聯益 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -6.1千張；近 20 日法人偏賣，合計 -2萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -4.7千張",
-      "近 20 日法人偏賣，合計 -1.8萬張",
-      "外資近 5 日賣超 -4.8千張"
+      "三大法人近 5 日合計賣超 -6.1千張",
+      "近 20 日法人偏賣，合計 -2萬張",
+      "外資近 5 日賣超 -6.2千張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-28",
-      "融券近 5 日增加 37.9%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-29",
+      "融券近 5 日增加 27.6%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -134,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-28"
+      "lastVerified": "2026-07-29"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -257,7 +255,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 24,
+    "totalScore": 26,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -275,19 +273,19 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 22.7%，停損距離過大"
+        "message": "距離 MA20 約 27.5%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：16.32",
-      "波段多空分水嶺看 MA20：18.47",
-      "追蹤法人是否延續 賣超：最近 -1.6千張"
+      "短線支撐/壓力先看 MA5：15.76",
+      "波段多空分水嶺看 MA20：18.11",
+      "追蹤法人是否延續 賣超：最近 -2.1千張"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 22.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 15.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 13.70：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
