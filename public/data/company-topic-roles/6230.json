@@ -66,19 +66,20 @@
       "directness": "indirect",
       "supplyChainStage": "psu",
       "roleType": "psu_cooling_component",
-      "roleSummary": "尼得科超眾5月營收8.71億YoY+21.9%，AI伺服器散熱需求帶動增長。主產品為散熱模組與均熱板，供應台達電等電源大廠，間接受惠AI伺服器散熱升級趨勢。Nidec集團子公司。",
+      "roleSummary": "尼得科超眾為Nidec集團旗下散熱模組供應商。提供AI伺服器高功率散熱風扇、VC均熱板散熱模組及車用IGBT散熱方案。MOPS主要經營：散熱模組、散熱片、熱導管及微均熱板。",
       "products": [
-        "AI伺服器散熱模組（VC均熱板/熱導管）",
-        "高功率電源散熱風扇",
-        "微均熱板（Micro Vapor Chamber）",
-        "車用散熱模組"
+        "AI伺服器高功率散熱風扇(12038/12052mm 12V/48V 200W+)",
+        "伺服器VC均熱板散熱模組(銅微通道/厚度<2.5mm)",
+        "BBU散熱模組(電池組被動散熱/鋁擠型鰭片)",
+        "車用散熱模組(IGBT/碳化矽SiC散熱基板)",
+        "熱導管(φ6mm/φ8mm U型/最大熱傳>100W)"
       ],
       "customers": [
-        "台達電(2308)",
-        "全漢(6209)",
-        "光寶科(2301)",
-        "Dell",
-        "NVIDIA（間接）"
+        "Dell(PowerEdge伺服器散熱風扇)",
+        "NVIDIA(間接/透過伺服器ODM散熱模組)",
+        "Supermicro(GPU伺服器散熱方案)",
+        "鴻海2317(AI伺服器散熱模組)",
+        "日產Nissan(電動車IGBT散熱模組)"
       ],
       "competitors": [
         "奇鋐(3017)",
@@ -107,13 +108,31 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-02",
+      "lastVerified": "2026-07-31",
       "status": "verified",
       "techFocus": [
-        "高功率電源散熱風扇 PWM 溫控技術",
-        "微均熱板（Micro VC）電源模組散熱整合",
-        "伺服器 PSU 散熱模組熱阻優化"
-      ]
+        "高功率散熱風扇12V/48V 200W+風量>200CFM",
+        "VC均熱板銅微通道毛細結構厚度<2.5mm",
+        "車用IGBT散熱基板AM2/AlN陶瓷基板焊接"
+      ],
+      "swot": {
+        "strengths": [
+          "散熱模組+風扇垂直整合，日商Nidec集團資源",
+          "伺服器散熱風扇市佔領先"
+        ],
+        "weaknesses": [
+          "OTC上櫃規模較小，AI伺服器散熱競爭激烈",
+          "營收數據未透過TWSE OpenAPI揭露"
+        ],
+        "opportunities": [
+          "AI GPU功耗1000W+帶動高功率散熱風扇需求",
+          "電動車IGBT/SiC散熱模組市場成長"
+        ],
+        "threats": [
+          "奇鋐3017/雙鴻3324競爭VC/散熱模組份額",
+          "Nidec集團內部資源分配不確定性"
+        ]
+      }
     }
   ]
 }

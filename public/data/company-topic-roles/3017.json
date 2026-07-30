@@ -11,18 +11,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "thermal",
       "roleType": "ai_server_thermal_solution_provider",
-      "roleSummary": "奇鋐5月營收158.71億年增60.64%，累計805.41億年增90.31%。AI伺服器散熱需求強勁帶動爆發性成長。",
+      "roleSummary": "奇鋐為AI伺服器散熱與機殼核心供應商，6月營收176.2億元年增66.1%，累計年增85.5%。提供NVIDIA HGX伺服器液冷冷板、VC均熱板、熱管模組及機殼導風罩。MOPS主要經營：3C電子產品。",
       "products": [
-        "伺服器散熱模組（VC均熱板）",
-        "CPU/GPU散熱器（風冷/液冷）",
-        "伺服器機殼與導風罩",
-        "液冷冷板（Cold Plate）"
+        "AI伺服器機殼與導風罩(1U/2U/4U NVIDIA HGX)",
+        "液冷冷板(銅微通道0.3mm寬/流量>30L/min)",
+        "伺服器熱管模組(U型熱管φ6mm/φ8mm)",
+        "VC均熱板(銅箔蝕刻毛細結構/厚度<2mm)",
+        "AI GPU散熱模組(NVIDIA B200 1000W TDP)"
       ],
       "customers": [
-        "Dell（伺服器散熱）",
-        "HPE（伺服器散熱）",
-        "Supermicro（散熱模組）",
-        "廣達(2382)（AI伺服器散熱）"
+        "Dell(PowerEdge AI伺服器散熱)",
+        "HPE(Cray XD670 AI伺服器散熱)",
+        "Supermicro(GPU SuperServer散熱模組)",
+        "NVIDIA(HGX參考設計散熱)",
+        "緯穎(6669)(AI伺服器機殼/散熱)"
       ],
       "competitors": [
         "其他散熱模組與液冷方案供應商",
@@ -54,13 +56,31 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-07",
+      "lastVerified": "2026-07-31",
       "status": "verified",
       "techFocus": [
-        "VC均熱板（Vapor Chamber）散熱技術",
-        "液冷冷板銅微通道加工",
-        "伺服器熱管與散熱模組整合設計"
-      ]
+        "銅微通道冷板通道寬度0.3mm/流量>30L/min",
+        "VC均熱板銅箔蝕刻毛細結構厚度<2mm",
+        "U型熱管φ6mm/φ8mm彎折半徑<3R"
+      ],
+      "swot": {
+        "strengths": [
+          "散熱模組+機殼垂直整合，AI伺服器散熱方案領先",
+          "6月營收176.2億元年增66.1%，累計年增85.5%"
+        ],
+        "weaknesses": [
+          "散熱方案ASP受限於客戶成本壓力",
+          "機殼同質化競爭"
+        ],
+        "opportunities": [
+          "AI GPU功耗1000W+帶動液冷方案需求爆發",
+          "NVIDIA B200散熱規格升級帶動ASP提升"
+        ],
+        "threats": [
+          "雙鴻(3324)競爭VC/熱管市場份額",
+          "伺服器機殼同質化競爭壓力"
+        ]
+      }
     },
     {
       "topicId": "ai-server-liquid-cooling",

@@ -1,62 +1,81 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "8299",
-    "companyName": "群聯",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "8299",
+  "companyName": "群聯",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "memory-modules",
+      "topicName": "記憶體模組",
+      "topicType": "product",
+      "directness": "core",
+      "supplyChainStage": "nand_controller_storage_module",
+      "roleType": "nand_controller_ssd_solution_provider",
+      "roleSummary": "群聯為全球NAND Flash控制晶片龍頭。提供PCIe 5.0 NVMe SSD控制晶片、UFS 4.0/eMMC控制晶片及SSD模組，為Apple/Samsung/Kioxia/Western Digital核心供應商。MOPS主要經營：IC設計業半導體業電腦及週邊設備業。",
+      "products": [
+        "PCIe NVMe SSD控制晶片(PS5026-E26 PCIe 5.0)",
+        "UFS 4.0快閃儲存控制晶片(手機/汽車)",
+        "eMMC 5.1控制晶片(物聯網/工控)",
+        "USB 3.2隨身碟控制晶片(PS2251-18)",
+        "固態硬碟模組(消費/企業級/工規)"
+      ],
+      "customers": [
+        "Apple(iPhone NAND快閃控制晶片)",
+        "Samsung(Galaxy手機UFS控制晶片)",
+        "Toshiba/Kioxia(NAND Flash控制晶片)",
+        "Western Digital(USB控制晶片)",
+        "Micron(Crucial SSD控制晶片)"
+      ],
+      "competitors": [
+        "慧榮(5274)",
+        "Marvell",
+        "Realtek"
+      ],
+      "risks": [
+        "NAND價格週期波動，中國控制晶片替代競爭，SSD市場需求放緩"
+      ],
+      "evidence": [
         {
-            "topicId": "memory-modules",
-            "topicName": "記憶體模組",
-            "topicType": "product",
-            "directness": "core",
-            "supplyChainStage": "nand_controller_storage_module",
-            "roleType": "nand_controller_ssd_solution_provider",
-            "roleSummary": "群聯是全球NAND控制晶片龍頭，主力為eMMC/UFS/PCIe SSD控制晶片。上櫃公司無TWSE月營收，但aiDAPTIV+邊緣AI儲存方案為新成長動能，與Toshiba/Kioxia深度合作。",
-            "products": [
-                "NAND Flash控制晶片（eMMC/UFS/SSD）",
-                "PCIe Gen5 NVMe SSD",
-                "企業級SSD與aiDAPTIV+邊緣AI儲存方案",
-                "車用與工控級快閃記憶體模組"
-            ],
-            "customers": [
-                "Apple",
-                "Samsung",
-                "Toshiba/Kioxia",
-                "Western Digital",
-                "Micron"
-            ],
-            "competitors": [
-                "慧榮(5274)",
-                "Marvell",
-                "Realtek"
-            ],
-            "risks": [
-                "NAND價格週期波動，中國控制晶片替代競爭，SSD市場需求放緩"
-            ],
-            "evidence": [
-                {
-                    "sourceId": "phison-solutions",
-                    "publisher": "群聯電子 Phison",
-                    "title": "解決方案總覽",
-                    "url": "https://www.phison.com/zh-tw/solutions",
-                    "claim": "解決方案總覽 supports 群聯 role as nand_controller_ssd_solution_provider in 記憶體模組 through disclosed product/service scope."
-                },
-                {
-                    "sourceId": "mops-8299-2024-annual-report",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "群聯電子 113 年股東會年報",
-                    "url": "https://doc.twse.com.tw/",
-                    "claim": "群聯電子 113 年股東會年報 supports 群聯 role as nand_controller_ssd_solution_provider in 記憶體模組 through disclosed product/service scope."
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-02",
-            "status": "verified",
-            "techFocus": [
-                "NAND Flash控制晶片設計(SSD/eMMC/UFS)",
-                "PCIe NVMe SSD控制器韌體開發",
-                "記憶體模組封裝測試與良率優化"
-            ]
+          "sourceId": "phison-solutions",
+          "publisher": "群聯電子 Phison",
+          "title": "解決方案總覽",
+          "url": "https://www.phison.com/zh-tw/solutions",
+          "claim": "解決方案總覽 supports 群聯 role as nand_controller_ssd_solution_provider in 記憶體模組 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-8299-2024-annual-report",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "群聯電子 113 年股東會年報",
+          "url": "https://doc.twse.com.tw/",
+          "claim": "群聯電子 113 年股東會年報 supports 群聯 role as nand_controller_ssd_solution_provider in 記憶體模組 through disclosed product/service scope."
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-31",
+      "status": "verified",
+      "techFocus": [
+        "PCIe 5.0 NVMe SSD控制晶片(PS5026-E26 14GB/s)",
+        "UFS 4.0快閃控制晶片(4.2GB/s讀寫速度)",
+        "NAND Flash管理演算法(LDPC糾錯/Wear Leveling)"
+      ],
+      "swot": {
+        "strengths": [
+          "全球NAND Flash控制晶片龍頭，PCIe 5.0/UFS 4.0技術領先",
+          "Apple/Samsung/Kioxia等一線客戶認證"
+        ],
+        "weaknesses": [
+          "OTC上櫃，營收數據未透過TWSE OpenAPI揭露",
+          "控制晶片ASP受限於NAND原廠議價"
+        ],
+        "opportunities": [
+          "AI PC帶動PCIe 5.0 SSD需求",
+          "汽車UFS/eMMC車規儲存市場成長"
+        ],
+        "threats": [
+          "慧榮3104/點序6485競爭控制晶片份額",
+          "NAND原廠自研控制晶片風險"
+        ]
+      }
+    }
+  ]
 }

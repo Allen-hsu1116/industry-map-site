@@ -1,61 +1,81 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "7402",
-    "companyName": "邑錡",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "7402",
+  "companyName": "邑錡",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "defense-aerospace",
+      "topicName": "軍工、航太與無人機",
+      "topicType": "theme",
+      "directness": "core",
+      "supplyChainStage": "aerospace_components",
+      "roleType": "military_low_light_camera",
+      "roleSummary": "邑錡為自有ASIC影像晶片+低功耗相機模組廠商。提供軍規低照度航拍系統、無人機航拍影像、建築縮時攝影及雲端AI分析平台。MOPS主要經營：自有ASIC晶片與低功耗相機模組，AI影像機器人視覺產品。",
+      "products": [
+        "軍規低照度航拍攝影系統(0.001Lux/starlight CMOS)",
+        "無人機航拍影像系統(4K/60fps/H.265)",
+        "建築工程縮時攝影機(太陽能供電/4G傳輸)",
+        "雲端相機與AI影像分析平台(AWS IoT)",
+        "自有ASIC低功耗影像晶片(<100mW)"
+      ],
+      "customers": [
+        "國防部(軍規低照度航拍攝影設備標案)",
+        "中科院(無人機航拍影像系統整合)",
+        "Brinno自有品牌(建築工程縮時攝影機經銷商)",
+        "建築工程商(營造業縮時監控)",
+        "無人機系統商(航拍模組OEM)"
+      ],
+      "competitors": [
+        "光隆(8927)",
+        "智翔科技",
+        "FLIR(USA)"
+      ],
+      "risks": [
+        "軍規標案規模有限，消費端縮時攝影市場小眾"
+      ],
+      "evidence": [
         {
-            "topicId": "defense-aerospace",
-            "topicName": "軍工、航太與無人機",
-            "topicType": "theme",
-            "directness": "core",
-            "supplyChainStage": "aerospace_components",
-            "roleType": "military_low_light_camera",
-            "roleSummary": "邑錡具備自有ASIC晶片設計與低功耗相機模組開發能力，軍工題材為軍規低照度攝影與無人機航拍影像系統。上櫃公司無TWSE月營收，但自有ASIC+軍規影像為利基優勢。",
-            "products": [
-                "軍規低照度攝影機（夜視/監控）",
-                "無人機航拍影像系統",
-                "自有ASIC低功耗晶片",
-                "建築工程縮時攝影相機（Brinno品牌）"
-            ],
-            "customers": [
-                "國防部（軍規攝影設備）",
-                "中科院（無人機航拍系統）",
-                "Brinno品牌經銷商",
-                "建築工程商"
-            ],
-            "competitors": [
-                "光隆(8927)",
-                "智翔科技",
-                "FLIR(USA)"
-            ],
-            "risks": [
-                "軍規標案規模有限，消費端縮時攝影市場小眾"
-            ],
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "邑錡 公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=7402",
-                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 邑錡 的營業項目、產品組合與財務資料。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤 7402 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-02",
-            "status": "verified",
-            "techFocus": [
-                "自有ASIC晶片設計(低功耗影像處理)",
-                "低照度航拍軍工影像設備(星光級感光)",
-                "AI影像機器視覺分析平台(雲端)"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "邑錡 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=7402",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 邑錡 的營業項目、產品組合與財務資料。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 7402 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-31",
+      "status": "verified",
+      "techFocus": [
+        "低照度CMOS starlight感測0.001Lux影像處理",
+        "自有ASIC影像壓縮晶片功耗<100mW",
+        "4G/LTE IoT影像傳輸與AWS雲端AI分析"
+      ],
+      "swot": {
+        "strengths": [
+          "自有ASIC晶片+低功耗相機模組垂直整合",
+          "Brinno品牌在建築縮時攝影市場領先"
+        ],
+        "weaknesses": [
+          "OTC小廠(資本額3.5億)，營收規模極小",
+          "國防標案佔比不確定，民用為主"
+        ],
+        "opportunities": [
+          "軍用無人機航拍需求成長",
+          "建築工程數位化帶動縮時攝影需求"
+        ],
+        "threats": [
+          "消費級相機市場競爭激烈",
+          "國防標案週期不確定"
+        ]
+      }
+    }
+  ]
 }

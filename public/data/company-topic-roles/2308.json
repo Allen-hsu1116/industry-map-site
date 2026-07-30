@@ -80,20 +80,20 @@
       "directness": "core",
       "supplyChainStage": "power",
       "roleType": "power_supply_system_provider",
-      "roleSummary": "台達電5月營收589.6億年增43.7%，AI伺服器電源為核心成長動能。CRPS電源從800W邁向3000W+，BBU備援方案搭配NVIDIA GB200出貨。",
+      "roleSummary": "台達電是全球電源管理龍頭，6月營收656億元年增55.4%，累計年增41.0%。AI伺服器電源供應器、BBU電池備援系統、48V高壓直流供電方案的核心供應商，NVIDIA/Microsoft/Google等AI資料中心電源方案主要合作夥伴。MOPS主要經營：電源供應系統、散熱系統、工業自動化。",
       "products": [
-        "CRPS伺服器電源(800W-3000W)",
-        "BBU電池備援模組",
-        "PDU電力分配單元",
-        "ORV3電源機櫃方案",
-        "48V直流供電系統"
+        "BBU電池備援單元(18650電池組/48V輸出/2kW)",
+        "PDU智慧電力分配單元(三相480V/單相240V/分支迴路監控)",
+        "48V高壓直流供電系統(效率>97%/功率因數>0.99)",
+        "AI伺服器電源供應器(3kW-5kW鈦金級效率)",
+        "ORv3電源機櫃(Open Rack V3 48V架構)"
       ],
       "customers": [
-        "NVIDIA(GB200供電)",
-        "Dell(伺服器電源)",
-        "HPE(伺服器電源)",
-        "超微(Supermicro)(伺服器PSU)",
-        "緯穎(6669)(CSP伺服器電源)"
+        "NVIDIA(B100/B200 GPU供電方案)",
+        "Microsoft(Azure資料中心48V供電)",
+        "Google(Cloud TPU機架級供電)",
+        "Meta(AI訓練叢集電源管理)",
+        "AWS(Graviton伺服器電源)"
       ],
       "competitors": [
         "伺服器電源供應器廠",
@@ -125,13 +125,31 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "lastVerified": "2026-07-31",
       "status": "verified",
       "techFocus": [
-        "800W-3000W CRPS伺服器電源轉換",
-        "BBU電池備援系統架構",
-        "48V高壓直流供電"
-      ]
+        "48V高壓直流(HVDC)供電架構效率>97%",
+        "BBU鋰電池備援切換<4ms無中斷",
+        "PDU分支迴路級電流監控精度±0.5%"
+      ],
+      "swot": {
+        "strengths": [
+          "全球電源管理龍頭，AI伺服器電源市佔>50%",
+          "6月營收656億元年增55.4%，AI需求爆發帶動電源業務爆發成長"
+        ],
+        "weaknesses": [
+          "電源產品ASP受限於客戶議價壓力",
+          "BBU鋰電池供應鏈依賴日韓電池芯"
+        ],
+        "opportunities": [
+          "48V HVDC成為AI資料中心主流供電標準",
+          "ORv3開放機架標準帶來新增量"
+        ],
+        "threats": [
+          "光寶(2301)競爭伺服器電源份額",
+          "中國廠商低價電源方案壓力"
+        ]
+      }
     },
     {
       "topicId": "ai-server",
@@ -294,20 +312,20 @@
       "directness": "core",
       "supplyChainStage": "system_integration",
       "roleType": "industrial_automation_solution_provider",
-      "roleSummary": "台達電工業自動化產品線涵蓋伺服馬達、PLC、變頻器及機器人，5月營收589.6億年增43.7%，工業自動化為穩定成長板塊。",
+      "roleSummary": "台達電為全球工業自動化領導供應商，6月營收656億元年增55.4%，累計年增41.0%。提供變頻器、伺服馬達、PLC/SCADA、樓宇自動化及工業機器手臂。MOPS主要經營：電源供應系統、工業自動化、智慧樓宇管理。",
       "products": [
-        "交流伺服馬達(ASDA-A3系列)",
-        "PLC可程式控制器(DVP/AH500系列)",
-        "變頻器(C2000系列)",
-        "工業機器人(DR系列)",
-        "智慧樓宇控制系統"
+        "C2000系列變頻器(7.5kW-75kW/向量控制/通訊Modbus)",
+        "ASDA-A3伺服馬達驅動器(750W-7.5kW/解析度24bit)",
+        "DIAView SCADA圖控系統(支援OPC UA/MQTT)",
+        "樓宇自動化控制器(Delta-IFM/Modbus TCP/BACnet)",
+        "工業機器手臂(DR系列6軸/負載3-20kg)"
       ],
       "customers": [
-        "Foxconn(鴻海自動化產線)",
-        "台達電子(集團內部自動化)",
-        "Schunk(機器手臂夾爪整合)",
-        "台塑(工廠自動化)",
-        "友達(面板產線自動化)"
+        "Foxconn富士康(產線自動化方案)",
+        "TSMC台積電(廠務自動化)",
+        "SIEMENS(樓宇自動化OEM合作)",
+        "BYD比亞迪(電動車產線自動化)",
+        "Foxsemicon福semi(半導體設備自動化)"
       ],
       "competitors": [
         "工業自動化控制與驅動系統供應商",
@@ -339,13 +357,31 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "lastVerified": "2026-07-31",
       "status": "verified",
       "techFocus": [
-        "交流伺服馬達驅控整合",
-        "PLC可程式控制器DVP/AH500",
-        "機器手臂夾爪整合方案"
-      ]
+        "交流伺服馬達24bit編碼器解析度+17bit磁編碼器",
+        "DIAView SCADA支援OPC UA/MQTT雙協議",
+        "機器手臂6軸協作型DR系列重複精度±0.02mm"
+      ],
+      "swot": {
+        "strengths": [
+          "全球工業自動化前五大供應商，變頻器+伺服+PLC全線方案",
+          "6月營收656億元年增55.4%，工業自動化+AI電源雙引擎"
+        ],
+        "weaknesses": [
+          "工業自動化毛利率20-25%低於電源業務30%+",
+          "中國市場佔比高，地緣風險"
+        ],
+        "opportunities": [
+          "智慧製造升級帶動PLC/SCADA需求",
+          "機器人/協作手臂市場年增15%+"
+        ],
+        "threats": [
+          "SIEMENS/Rockwell在高端PLC競爭",
+          "中國本土品牌匯川/禾川低價競爭"
+        ]
+      }
     },
     {
       "topicId": "energy-storage-battery",
