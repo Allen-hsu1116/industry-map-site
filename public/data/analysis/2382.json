@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2382",
   "name": "廣達",
-  "generatedAt": "2026-07-30T12:33:59.393Z",
+  "generatedAt": "2026-07-31T12:33:26.466Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,7 +54,7 @@
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "廣達為全球AI伺服器ODM龍頭，6月營收385190.8億YoY102.9%，累計1845814.2億YoY86.5%。6月營收385.2億年增102.9%，累計1845.8億年增86.5%。NVIDIA GB200/NVL72整機櫃組裝為核心成長引擎，Google/AWS/Meta為三大CSP客戶。",
+      "roleSummary": "廣達為全球AI伺服器ODM龍頭，6月營收3852億元年增102.9%，累計年增86.5%。為Google TPU/AWS Graviton/Meta AI訓練/Microsoft Azure AI伺服器核心ODM。MOPS主要經營：電子筆記型電腦及相關產品。",
       "supplyChainStage": "system_assembly",
       "roleType": "ai_server_odm",
       "directness": "core",
@@ -62,19 +62,21 @@
     },
     "productNarratives": [
       {
-        "name": "NVIDIA GB200/NVL72伺服器機櫃整機",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "自研OAM/UBB AI加速器模組",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "AI推論伺服器(Graviton/TPU)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "AI 伺服器 ODM 與雲端伺服器",
+        "description": "AI 伺服器 ODM 是依雲端服務商或品牌客戶需求設計、整合並量產伺服器平台，包含主機板、GPU 模組、電源、散熱與機構整合。",
+        "whyItMatters": "CSP 擴建 AI 資料中心時，需要能快速導入新平台並大量交付的 ODM；廣達的產品知識重點是雲端伺服器系統能力。",
+        "topicFit": "資料中心 AI 設備需求的系統端受益者。",
+        "businessImpact": "AI 伺服器產品組合提升可改善營收結構，但平台轉換、客戶驗證與 GPU 供給仍會影響出貨節奏。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS / TWSE 財報書系統：廣達 公司公告、年報與財務資訊",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
       }
     ],
     "swotSnapshot": {
@@ -160,7 +162,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "廣達為全球AI伺服器ODM龍頭，6月營收385190.8億YoY102.9%，累計1845814.2億YoY86.5%。6月營收385.2億年增102.9%，累計1845.8億年增86.5%。NVIDIA GB200/NVL72整機櫃組裝為核心成長引擎，Google/AWS/Meta為三大CSP客戶。"
+        "roleSummary": "廣達為全球AI伺服器ODM龍頭，6月營收3852億元年增102.9%，累計年增86.5%。為Google TPU/AWS Graviton/Meta AI訓練/Microsoft Azure AI伺服器核心ODM。MOPS主要經營：電子筆記型電腦及相關產品。"
       },
       {
         "topicId": "consumer-computing-devices",
@@ -170,7 +172,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "廣達為全球最大NB ODM廠，6月營收385190.8億YoY102.9%，累計1845814.2億YoY86.5%。6月營收385.2億年增102.9%，AI伺服器與消費終端雙引擎驅動。MOPS主要經營：電子筆記型電腦及相關產品。"
+        "roleSummary": "廣達是全球最大NB ODM，6月營收3852億元年增102.9%，累計年增86.5%。消費運算裝置領域為Apple MacBook獨家代工，同時Dell/HP/Lenovo商用筆電核心供應商。MOPS主要經營：電子筆記型電腦及相關產品。"
       }
     ],
     "swot": [
@@ -265,12 +267,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 66 天未更新"
+        "message": "股價資料已 67 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 66 天未更新"
+        "message": "籌碼資料已 67 天未更新"
       }
     ]
   },

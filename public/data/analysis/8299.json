@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "8299",
   "name": "群聯電子",
-  "generatedAt": "2026-07-30T12:33:59.993Z",
+  "generatedAt": "2026-07-31T12:33:27.073Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-07-30",
-  "chipDataDate": "2026-07-30",
+  "marketDataDate": "2026-07-31",
+  "chipDataDate": "2026-07-31",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,36 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "群聯電子 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 23.6%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 23.6%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": -15,
+    "summary": "群聯電子 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 14.9%。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
-    "watch": []
+    "risks": [
+      "收盤跌破 MA20 14.9%"
+    ],
+    "watch": [
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -31,
-    "summary": "群聯電子 籌碼面目前為「籌碼偏空」：融資近 5 日下降 7.9%，籌碼壓力下降；三大法人近 5 日合計賣超 -2.1千張。",
+    "summary": "群聯電子 籌碼面目前為「籌碼偏空」：融資近 5 日下降 8.6%，籌碼壓力下降；三大法人近 5 日合計賣超 -1.4千張。",
     "signals": [
-      "融資近 5 日下降 7.9%，籌碼壓力下降"
+      "融資近 5 日下降 8.6%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.1千張",
-      "近 20 日法人偏賣，合計 -4.7千張",
-      "投信近 5 日賣超 -264張",
-      "外資近 5 日賣超 -1.3千張"
+      "三大法人近 5 日合計賣超 -1.4千張",
+      "近 20 日法人偏賣，合計 -4.4千張",
+      "投信近 5 日賣超 -271張",
+      "外資近 5 日賣超 -684張"
     ],
     "watch": [
-      "最近法人資料日：2026-07-30",
-      "融券近 5 日增加 630.8%，留意軋空或空方壓力"
+      "最近法人資料日：2026-07-31"
     ]
   },
   "industry": {
@@ -55,7 +57,7 @@
     "roleDetail": {
       "topicName": "記憶體模組",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "群聯是全球NAND控制晶片龍頭，主力為eMMC/UFS/PCIe SSD控制晶片。上櫃公司無TWSE月營收，但aiDAPTIV+邊緣AI儲存方案為新成長動能，與Toshiba/Kioxia深度合作。",
+      "roleSummary": "群聯為全球NAND Flash控制晶片龍頭。提供PCIe 5.0 NVMe SSD控制晶片、UFS 4.0/eMMC控制晶片及SSD模組，為Apple/Samsung/Kioxia/Western Digital核心供應商。MOPS主要經營：IC設計業半導體業電腦及週邊設備業。",
       "supplyChainStage": "nand_controller_storage_module",
       "roleType": "nand_controller_ssd_solution_provider",
       "directness": "core",
@@ -134,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-07-30"
+      "lastVerified": "2026-07-31"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -164,7 +166,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "群聯是全球NAND控制晶片龍頭，主力為eMMC/UFS/PCIe SSD控制晶片。上櫃公司無TWSE月營收，但aiDAPTIV+邊緣AI儲存方案為新成長動能，與Toshiba/Kioxia深度合作。"
+        "roleSummary": "群聯為全球NAND Flash控制晶片龍頭。提供PCIe 5.0 NVMe SSD控制晶片、UFS 4.0/eMMC控制晶片及SSD模組，為Apple/Samsung/Kioxia/Western Digital核心供應商。MOPS主要經營：IC設計業半導體業電腦及週邊設備業。"
       }
     ],
     "swot": [
@@ -232,14 +234,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 32,
+    "totalScore": 39,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 32,
       "label": "基本面偏強",
       "signals": [
         "月營收 YoY +92.7%，成長動能明確",
-        "本益比 14.3 倍，估值尚可對照成長"
+        "本益比 15.7 倍，估值尚可對照成長"
       ],
       "risks": []
     },
@@ -254,17 +256,17 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 30.9%，停損距離過大"
+        "message": "距離 MA20 約 17.5%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：1661.00",
-      "波段多空分水嶺看 MA20：1957.50",
-      "追蹤法人是否延續 買超：最近 +83張",
+      "短線支撐/壓力先看 MA5：1624.00",
+      "波段多空分水嶺看 MA20：1927.50",
+      "追蹤法人是否延續 賣超：最近 -128張",
       "月營收年增率 +92.7%，觀察基本面是否支撐估值",
-      "本益比 14.3 倍，需和同族群估值比較"
+      "本益比 15.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2420.00 且量比 > 1.5：列為轉強訊號",
