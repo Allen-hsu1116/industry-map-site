@@ -91,7 +91,7 @@
                 "AI伺服器高層數PCB(24+ layer)(GPU基板)",
                 "高階伺服器主板(18-24層)(Intel/AMD平台)",
                 "800G交換器PCB(High-speed/Low-loss)",
-                "伺服器背板(Backplane)(高速連接)",
+                "伺服器背板Backplane(高速連接)",
                 "記憶體模組PCB DDR5 RDIMM"
               ],
               "customers": [
@@ -104,7 +104,14 @@
                 "AI伺服器高層數PCB(24+ layer)壓合技術",
                 "GPU基板超低損耗(Ultra Low Loss)基板材料應用",
                 "高速伺服器主板阻抗控制(Impedance Control)製程"
-              ]
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收82.55億YoY+78.2%，累計436.6億YoY+68.7%(接單量增加)，AI伺服器高階PCB訂單爆量，MOPS確認多層PCB製造為主營",
+                "weaknesses": "PCB為資本密集產業(擴產需大量資本支出)，毛利受銅箔/玻纖布等原材料價格影響，PCB同業競爭激烈(欣興/燿華)",
+                "opportunities": "AI伺服器PCB層數升級(24→30+層)帶動ASP提升，800G/1.6T交換器PCB需求，DDR5記憶體模組PCB升級週期",
+                "threats": "PCB同業競爭(欣興/燿華/博智)，AI伺服器PCB規格變化風險(如GPU基板整合至載板)，原材料價格波動"
+              }
             }
           ]
         },
@@ -119,11 +126,11 @@
               "relevance": "中",
               "analysis": "供應商角色；台光電是AI伺服器CCL(銅箔基板)龍頭，極低損耗材料為核心競爭力。5月營收15.6億年增114.6%，累計62.6億年增73.2%，受惠於AI伺服器成長力道，動能爆發。",
               "products": [
-                "AI伺服器CCL(極低損耗/超低DF)",
-                "高速低損耗基板材料(Very Low Loss)",
-                "ABF載板用粘合片(Prepreg)",
+                "AI伺服器CCL(極低損耗/超低DF<0.001)",
+                "高速低損耗基板材料(Very Low Loss/Megtron6)",
+                "ABF載板用粘合片Prepreg",
                 "毫米波射頻CCL(5G/6G)",
-                "高頻基板(HaloBase/Megtron6)"
+                "高頻基板HaloBase/Megtron6"
               ],
               "customers": [
                 "欣興(3037)(ABF載板用CCL)",
@@ -133,10 +140,17 @@
                 "廣達(2382)(伺服器PCB用CCL)"
               ],
               "tech_focus": [
-                "極低損耗（Ultra Low Loss）CCL 材料配方開發",
-                "ABF 載板用高頻高速銅箔基板壓合技術",
-                "AI 伺服器 PCB 用 Very Low Loss 介電常數控制"
-              ]
+                "極低損耗(Ultra Low Loss)CCL材料配方開發(Df<0.001@10GHz)",
+                "ABF載板用高頻高速銅箔基板壓合技術",
+                "AI伺服器PCB用Very Low Loss介電常數控制(Dk<3.5)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收177.33億YoY+120.7%，累計803.42億YoY+81.8%(受惠於AI伺服器成長力道)，極低損耗CCL材料為核心競爭力，AI伺服器CCL龍頭",
+                "weaknesses": "營收月波動大(5月15.6億→6月17.7億)，CCL為PCB上游材料毛利受樹脂/玻纖布成本影響，客戶集中於少數載板廠",
+                "opportunities": "AI伺服器PCB材料升級(Mid Loss→Very Low Loss→Ultra Low Loss)，800G交換器CCL需求，5G/6G毫米波CCL新應用",
+                "threats": "CCL競爭(台燿/聯茂/松屛)，ABF載板用CCL面臨日系材料廠(味之素/住友電工)競爭，AI伺服器CCL規格標準化可能降低差異化"
+              }
             }
           ]
         },
@@ -227,24 +241,31 @@
               "relevance": "中",
               "analysis": "供應商角色；華新麗華提供AI資料中心配電所需的高壓電纜與特殊鋼材。5月營收174.6億年增11.1%，但累計740億年減5.4%。AI資料中心帶動高壓電纜與銅匯流排需求成長，不鏽鋼事業受景氣循環影響。",
               "products": [
-                "161kV超高壓電力電纜(AI資料中心配電)",
-                "銅匯流排(Copper Busbar)(GPU機架配電)",
-                "低煙無鹵電纜(資料中心機房)",
-                "不鏽鋼無縫鋼管(耐腐蝕)",
-                "鎳基合金線材(Inconel 625)(高溫環境)"
+                "161kV超高壓電力電纜(AI資料中心配電/XLPE絕緣)",
+                "銅匯流排Copper Busbar(GPU機架配電/高導流壓延)",
+                "低煙無鹵電纜(資料中心機房/阻燃LSZH)",
+                "不鏽鋼無縫鋼管(耐腐蝕/特殊鋼)",
+                "鎳基合金線材Inconel 625(高溫環境)"
               ],
               "customers": [
-                "台電(變電站配電工程)",
+                "台電(變電站配電工程/161kV)",
                 "台積電(2330)(廠房高壓配電)",
-                "Google(資料中心配電)",
-                "Microsoft(資料中心配電)",
+                "Google(資料中心配電電纜)",
+                "Microsoft(資料中心配電電纜)",
                 "沃旭能源(離岸風場電纜)"
               ],
               "tech_focus": [
-                "161kV 超高壓電力電纜交聯聚乙烯（XLPE）絕緣技術",
-                "銅匯流排（Copper Busbar）高導流壓延製程",
-                "AI 資料中心 GPU 機架配電匯流排設計"
-              ]
+                "161kV超高壓電力電纜交聯聚乙烯(XLPE)絕緣技術",
+                "銅匯流排(Copper Busbar)高導流壓延製程(導電率>98% IACS)",
+                "AI資料中心GPU機架配電匯流排設計(48V HVDC)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收167.2億YoY+29.3%，累計907.68億YoY-0.4%，電線電纜與特殊鋼雙主營，MOPS確認電纜/鋼線/特殊鋼為主營",
+                "weaknesses": "AI伺服器關聯度為間接(配電電纜→資料中心)，不鏽鋼事業受景氣循環影響大，累計營收微減0.4%",
+                "opportunities": "AI資料中心建潮帶動高壓電纜與銅匯流排需求，48V HVDC供電架構趨勢，離岸風電海底電纜需求",
+                "threats": "電纜同業競爭(華榮/大亞/億泰)，不鏽鋼價格受國際鎳價波動影響，AI資料中心配電標準化可能降低差異化"
+              }
             },
             {
               "code": "2324",
@@ -270,7 +291,14 @@
                 "NVIDIA HGX H100/B200 8-GPU系統級散熱與PCB設計",
                 "伺服器液冷相容機構(冷板/快速接頭整合)",
                 "邊緣AI裝置Jetson AGX Orin系統整合"
-              ]
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收958.54億YoY+58.4%，累計4395.98億YoY+15.8%(客戶需求較去年同期成長)，全球前五大伺服器ODM，MOPS確認5C電子產品為主營",
+                "weaknesses": "AI伺服器ODM毛利低於消費電子ODM，筆電ODM業務受PC出貨衰退影響，伺服器ODM競爭激烈(鴻海/廣達/緯創)",
+                "opportunities": "AI伺服器ODM需求爆發(NVIDIA H100/B200系統)，邊緣AI裝置(Jetson)新應用，液冷伺服器ODM設計能力",
+                "threats": "伺服器ODM競爭(鴻海/廣達/緯創)，品牌客戶(Dell/HPE)可能自建伺服器，AI伺服器規格快速變化需持續投入研發"
+              }
             },
             {
               "code": "2385",
@@ -279,11 +307,11 @@
               "relevance": "中",
               "analysis": "供應商角色；群光提供AI伺服器高功率電源(2kW~3.3kW)，同時是全球NB鍵盤龍頭。5月營收72.3億年減11.0%，累計374億年減5.2%。AI伺服器電源為新成長動能但占比仍低。",
               "products": [
-                "AI伺服器電源(2kW~3.3kW CRPS)",
-                "NB鍵盤模組(全球市佔第一)",
-                "PC Camera/Webcam模組",
-                "電源轉接器(Adapter 65W~330W)",
-                "車用鏡頭模組(ADAS)"
+                "AI伺服器電源(2kW~3.3kW CRPS/鈦金級)",
+                "NB鍵盤模組(剪刀腳結構/全球市佔第一)",
+                "PC Camera/Webcam模組(720p/1080p)",
+                "電源轉接器Adapter(65W~330W)",
+                "車用鏡頭模組(ADAS/環視)"
               ],
               "customers": [
                 "Apple(NB鍵盤/Adapter)",
@@ -293,10 +321,17 @@
                 "NVIDIA(伺服器電源試樣)"
               ],
               "tech_focus": [
-                "AI 伺服器 2kW~3.3kW CRPS 鈦金級 PSU 設計",
-                "NB 鍵盤薄型化剪刀腳結構（全球市佔第一）",
-                "AI 伺服器 GPU VRM 多相電源模組"
-              ]
+                "AI伺服器2kW~3.3kW CRPS鈦金級PSU設計(效率>96%)",
+                "NB鍵盤薄型化剪刀腳結構(全球市佔第一)",
+                "AI伺服器GPU VRM多相電源模組(48V→0.8V)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收78.89億MoM+9.2%(但YoY-5.5%累計-5.3%)，NB鍵盤全球市佔第一，AI伺服器電源為新成長動能，MOPS確認鍵盤/影像/電源為主營",
+                "weaknesses": "6月營收年減5.5%(消費電子疲軟)，AI伺服器電源占比仍低(新業務)，累計營收年減5.3%",
+                "opportunities": "AI伺服器電源升級(2kW→3.3kW+)需求增長，GPU VRM多相電源模組新應用，車用鏡頭ADAS需求",
+                "threats": "電源供應器競爭(台達電/光寶/康舒)，NB鍵盤需求受PC出貨衰退影響，AI伺服器電源客戶認證週期長"
+              }
             },
             {
               "code": "2352",
@@ -308,8 +343,8 @@
                 "醫療級高解析LCD監視器(21.3\" 3MP/27\" 6MP DICOM校正)",
                 "商務/教育投影機(4K雷射光源6000流明)",
                 "超音波系統(彩色都卜勒/便攜式床邊用)",
-                "智慧零售ESL電子標籤解決方案(2.4GHz/13.56MHz)",
-                "車載顯示器模組(12.3\" 中控一體化曲面)"
+                "智慧零售ESL電子標籤(2.4GHz/13.56MHz)",
+                "車載顯示器模組(12.3\"中控一體化曲面)"
               ],
               "customers": [
                 "Dell(商用監視器ODM代工)",
@@ -322,7 +357,14 @@
                 "醫療級DICOM GSDF灰階校正LCD技術",
                 "4K雷射光源投影機光機設計(phosphor wheel)",
                 "ESL電子標籤2.4GHz無線協議與零售管理系統整合"
-              ]
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收186.71億YoY-0.6%，累計1042.71億YoY+1.0%，MOPS確認液晶顯示器/投影機/醫療服務為主營，商用顯示器與醫療器材雙引擎",
+                "weaknesses": "AI伺服器相關性低(轉投資群(友威科/佳醫)為主貢獻)，6月營收年減0.6%(成長停滯)，顯示器ODM毛利低",
+                "opportunities": "醫療器材需求增長(超音波/可攜式)，ESL智慧零售滲透率提升，車載顯示器(中控曲面OLED)新應用",
+                "threats": "顯示器ODM競爭(群創/友達自有品牌)，醫療器材認證週期長/門檻高，投影機受商用需求疲軟影響"
+              }
             },
             {
               "code": "2353",
@@ -331,24 +373,31 @@
               "relevance": "低",
               "analysis": "間接受惠；宏碁以AI PC/NB為核心成長引擎，5月營收261.7億年增36.5%，累計1,299億年增31.0%。AI PC帶動ASP提升，Altos伺服器品牌規模小但在拉丁美洲有利基。",
               "products": [
-                "AI PC筆電(Swift Go AI / Copilot+)",
-                "電競筆電/桌機(Predator Helios)",
-                "Chromebook(教育市場)",
-                "商用顯示器(Monitor)",
-                "AI伺服器(Altos品牌)(拉丁美洲)"
+                "AI PC筆電(Swift Go AI/Copilot+/Snapdragon X Elite)",
+                "電競筆電/桌機(Predator Helios/RTX 5090)",
+                "Chromebook(教育市場/AMD/AE-Security)",
+                "商用顯示器Monitor(27\" 4K USB-C)",
+                "AI伺服器(Altos品牌)(拉丁美洲/企業)"
               ],
               "customers": [
-                "消費者(DTC AI PC)",
+                "消費者(DTC AI PC/電競)",
                 "Amazon(AI PC線上通路)",
-                "Best Buy(北美零售)",
+                "Best Buy(北美零售通路)",
                 "拉丁美洲企業(Altos伺服器)",
-                "教育機構(Chromebook)"
+                "教育機構(Chromebook採購)"
               ],
               "tech_focus": [
-                "AI PC 筆電 Copilot+ NPU 整合（Snapdragon X Elite/Intel Lunar Lake）",
-                "電競筆電 GPU 散熱 Vapor Chamber 設計",
-                "AI PC 軟體生態系（AcerSense/AI Nexus）"
-              ]
+                "AI PC筆電Copilot+ NPU整合(Snapdragon X Elite/Intel Lunar Lake)",
+                "電競筆電GPU散熱Vapor Chamber設計",
+                "AI PC軟體生態系(AcerSense/AI Nexus)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收278.18億MoM+6.3%，累計1577.27億YoY+23.3%，AI PC/NB為核心成長引擎，Altos伺服器在拉丁美洲有利基，MOPS確認資訊產品通路銷售為主營",
+                "weaknesses": "6月營收年減3.0%(PC市場成長放緩)，AI伺服器品牌Altos規模小(非核心)，自有品牌毛利受通路折扣影響",
+                "opportunities": "AI PC升級週期(Copilot+/NPU)帶動ASP提升，電競NB需求穩定，Chromebook教育市場需求",
+                "threats": "PC品牌競爭(華碩/聯想/惠普/戴爾)，AI伺服器品牌競爭激烈(Altos規模太小)，PC出貨量衰退風險"
+              }
             },
             {
               "code": "2357",
@@ -357,24 +406,31 @@
               "relevance": "低",
               "analysis": "間接受惠；華碩是GPU顯示卡與AI PC設計大廠，5月營收690.9億年增9.3%，累計3,594億年增34.5%。AI PC與電競ROG筆電帶動成長，也佈局GPU伺服器與AI工作站。",
               "products": [
-                "AI PC筆電(Zenbook Duo/Pro Art)",
-                "電競筆電/桌機(ROG Strix/TUF)",
+                "AI PC筆電(Zenbook Duo/ProArt/Copilot+)",
+                "電競筆電/桌機(ROG Strix/TUF/RTX 5090)",
                 "GPU顯示卡(RTX 5090/5080 AIB)",
                 "AI工作站(ProArt Station/ESC8000)",
                 "主機板(Z890/B860 DIY市場)"
               ],
               "customers": [
                 "消費者(DTC AI PC/電競)",
-                "NVIDIA(GPU AIB合作夥伴)",
-                "Amazon(AI PC/電競)",
+                "NVIDIA(GPU AIB合作夥伴/RTX 5090)",
+                "Amazon(AI PC/電競通路)",
                 "Newegg(DIY主機板通路)",
-                "微星(2377)(AI工作站經銷)"
+                "企業用戶(ESC8000 AI工作站)"
               ],
               "tech_focus": [
-                "AI PC Zenbook Duo 雙螢幕鉸鏈機構設計",
-                "電競筆電 ROG Strix GPU AIB 散熱模組",
-                "ProArt AI 創作工作站 NPU/GPU 效能調校"
-              ]
+                "AI PC Zenbook Duo雙螢幕鉸鏈機構設計",
+                "電競筆電ROG Strix GPU AIB散熱模組(Vapor Chamber)",
+                "ProArt AI創作工作站NPU/GPU效能調校"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收1067.23億YoY+55.6%，累計4661.02億YoY+38.8%(主要來自AI伺服器之銷售成長)，GPU顯示卡與AI PC設計大廠，自有品牌+主機板全球第一",
+                "weaknesses": "AI伺服器(ESC系列)占比仍低(品牌主力為PC/NB)，GPU AIB毛利受NVIDIA定價控制，電競市場景氣敏感",
+                "opportunities": "AI PC升級週期帶動ASP提升，AI工作站(ESC8000)企業需求，GPU AIB受惠NVIDIA新架構(Blackwell)",
+                "threats": "PC品牌競爭(宏碁/聯想/惠普)，GPU AIB競爭(微星/技嘉/藍天)，AI伺服器品牌競爭(Supermicro/Dell/技嘉)"
+              }
             },
             {
               "code": "2388",
@@ -393,14 +449,21 @@
                 "大眾電腦(工業電腦)(嵌入式x86平台)",
                 "研華(2395)(工業電腦用VIA SoC)",
                 "新漢(8234)(邊緣AI運算盒)",
-                "亞太智慧城市政府專案(交通/安防邊緣AI)",
+                "亞太智慧城市政府(交通/安防邊緣AI)",
                 "車廠Tier 1(車載IVI系統開發)"
               ],
               "tech_focus": [
-                "x86邊緣AI SoC(EDGE AI Processor)NPU整合",
+                "x86邊緣AI SoC(EDGE AI Processor)NPU整合(INT8)",
                 "車載資訊系統(IVI)車規級SoC設計(AEC-Q100)",
-                "邊緣AI推理處理器CV/DLA加速器架構(INT8)"
-              ]
+                "邊緣AI推理處理器CV/DLA加速器架構"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收12.48億YoY+34.0%，累計56.07億YoY+34.2%，x86邊緣AI運算晶片受惠邊緣AI需求，MOPS確認IC設計/半導體為主營",
+                "weaknesses": "非資料中心AI伺服器供應鏈核心(邊緣AI規模遠小於資料中心AI)，營收規模小(月營收12.48億)，x86市佔遠低於Intel/AMD",
+                "opportunities": "邊緣AI推論需求增長(智慧城市/工業/交通)，車用IVI系統升級(數位儀表板)，AIoT邊緣運算盒需求",
+                "threats": "x86處理器市場Intel/AMD壟斷(威盛市佔極低)，邊緣AI面臨ARM(高通/聯發科)競爭，車用晶片競爭(高通/恩智浦/瑞薩)"
+              }
             },
             {
               "code": "2409",
@@ -426,7 +489,14 @@
                 "LTPS低溫多晶矽高解析面板製程(460ppi+)",
                 "車用顯示器寬溫抗震設計(-40~85°C/抗震MIL-810)",
                 "MicroLED/Mini LED顯示器前瞻技術(巨量轉移mass transfer)"
-              ]
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收249.52億YoY+13.8%，累計1399.23億YoY-1.0%，MOPS確認TFT-LCD及系統/垂直場域/智慧移動為主營，車用顯示器轉型有成",
+                "weaknesses": "AI伺服器關聯度低(面板與AI伺服器無直接關係)，累計營收年減1.0%(面板市場供過於求)，面板產業週期波動大",
+                "opportunities": "AI PC/監視器面板需求間接受惠，車用顯示器(中控/儀表)增長，MicroLED/Mini LED前瞻技術佈局",
+                "threats": "面板競爭(群創/京東方/華星光電)，面板產業供過於求週期，MicroLED量產時程不確定(成本過高)"
+              }
             }
           ]
         },
@@ -576,10 +646,10 @@
               "relevance": "低",
               "analysis": "間接受惠；日月光投控6月營收657.83億YoY+32.9%，累計3647.26億YoY+22.0%。MOPS登記為一般投資業(控股公司)，旗下日月光半導體為全球最大封測廠。AI GPU/ASIC封裝測試為核心成長動能，NVIDIA/AMD/Broadcom AI晶片封測需求持續擴大，CoWoS後段封測受益於先進封裝產能擴張。",
               "products": [
-                "AI GPU FC-BGA封裝測試(NVIDIA H100/B200)",
+                "AI GPU FC-BGA封裝測試(NVIDIA H100/B200/substrate 80x80mm)",
                 "伺服器ASIC封裝(Broadcom/Marvell客製AI晶片)",
-                "高速SerDes訊號測試(112G/224G PAM4)",
-                "CoWoS後段封裝測試(2.5D/3D整合測試)",
+                "高速SerDes訊號測試(112G/224G PAM4 BER<1e-12)",
+                "CoWoS後段封裝測試(2.5D/3D整合測試/TSV)",
                 "HBM記憶體封裝測試(TSV堆疊測試)"
               ],
               "customers": [
@@ -590,10 +660,17 @@
                 "Google(TPU AI晶片封測)"
               ],
               "tech_focus": [
-                "AI GPU FC-BGA封裝測試量產( substrate 80x80mm)",
+                "AI GPU FC-BGA封裝測試量產(substrate 80x80mm)",
                 "高速SerDes訊號測試(112G/224G PAM4 BER<1e-12)",
                 "CoWoS後段封裝測試整合(2.5D/3D TSV)"
-              ]
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收657.83億YoY+32.9%，累計3647.26億YoY+22.0%，全球最大封測廠，AI GPU/ASIC封裝測試為核心成長動能，MOPS確認為控股公司(旗下日月光半導體)",
+                "weaknesses": "封測毛利率受限(vs. IC設計/晶圓代工)，AI封測產能擴張需大量資本支出，CoWoS後段封測產能受台積電CoWoS前段產能限制",
+                "opportunities": "NVIDIA/AMD/Broadcom AI晶片封測需求持續擴大，CoWoS先進封裝產能擴張，HBM記憶體封裝測試需求(TSV堆疊)",
+                "threats": "封測競爭(安靠Amkor/力成)，AI晶片封裝規格變化風險(如Chiplet/3D IC)，地緣政治風險(中國廠區)"
+              }
             }
           ]
         },
@@ -608,24 +685,31 @@
               "relevance": "高",
               "analysis": "核心產品/平台；技嘉5月營收49.1億年增5.0%累計206.4億年增44.8%。AI伺服器為主要成長動能，G593系列搭配NVIDIA方案出貨增長。",
               "products": [
-                "GPU伺服器(4U/8U AI推論/訓練)",
-                "G593 AI伺服器(Z14平台)",
-                "液冷相容AI伺服器(冷板式)",
-                "邊緣AI運算伺服器(NVIDIA IGX)",
-                "AI訓練伺服器(HGX H100/B200)"
+                "G593 AI伺服器(Z14平台/雙路GPU/4U/8U)",
+                "AI訓練伺服器(NVIDIA HGX H100/B200 8-GPU系統)",
+                "液冷相容AI伺服器(冷板式/CDU整合)",
+                "邊緣AI運算伺服器(NVIDIA IGX Orin)",
+                "GPU伺服器(4U/8U AI推論/訓練/3kW+/機箱)"
               ],
               "customers": [
-                "NVIDIA",
-                "Google",
-                "AWS",
-                "CoreWeave",
-                "Supermicro"
+                "NVIDIA(HGX H100/B200 AI伺服器合作)",
+                "Google(GCP AI訓練伺服器採購)",
+                "AWS(AI推論伺服器EC2實例)",
+                "CoreWeave(雲端GPU租賃伺服器)",
+                "Supermicro(伺服器競合/部分ODM合作)"
               ],
               "tech_focus": [
-                "GPU伺服器4U/8U高功率散熱設計(3kW+/機箱)",
-                "G593 Z14平台雙路GPU伺服器架構",
-                "冷板式液冷伺服器機構設計與CDU整合"
-              ]
+                "G593 Z14平台雙路GPU伺服器架構(3kW+/機箱散熱)",
+                "冷板式液冷伺服器機構設計與CDU整合",
+                "NVIDIA HGX H100/B200 8-GPU系統級散熱與PCB設計"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收42.89億YoY+68.6%，累計249.27億YoY+48.4%(AI訂單需求暢旺)，G593系列搭配NVIDIA方案出貨增長，自有品牌+ODM雙引擎",
+                "weaknesses": "營收月減12.6%(季節性波動)，AI伺服器品牌競爭激烈(vs Supermicro/Dell/HPE)，GPU伺服器毛利率低於主機板",
+                "opportunities": "NVIDIA GB200/GB300下一代AI伺服器平台設計機會，液冷AI伺服器滲透率提升，邊緣AI運算需求增長",
+                "threats": "Supermicro在AI伺服器市場份額領先且價格競爭激烈，Dell/HPE品牌壟斷企業市場，Cloud OEM自建伺服器趨勢"
+              }
             }
           ]
         },
@@ -2160,21 +2244,31 @@
               "relevance": "低",
               "analysis": "間接受惠；久元6月營收3.90億MoM+11.8%。提供晶圓切割、研磨、測試與挑檢服務，是晶圓代工後段加工的專業供應商，受惠先進製程晶圓薄化與測試需求。",
               "products": [
-                "晶圓切割(Dicing)",
-                "晶圓研磨(Grinding)",
-                "晶圓測試與挑檢",
-                "IC/CIS/CCM測試設備"
+                "晶圓切割Dicing(8/12吋/UV雷射/blade dicing)",
+                "晶圓研磨Grinding(8/12吋薄化至<50μm)",
+                "晶圓測試CP與挑檢(Wafer Probing/全晶圓mapping)",
+                "IC/CIS/CCM測試分選機Handler(高速分選>10k UPH)",
+                "CIS封裝級測試探針卡(Wafer-level/Package-level)"
               ],
               "customers": [
-                "台積電(2330)(晶圓切割)",
-                "聯電(2303)(晶圓加工)",
-                "世界先進(5347)(晶圓加工)"
+                "台積電(2330)(晶圓切割/研磨/測試服務)",
+                "聯電(2303)(晶圓加工/測試)",
+                "世界先進(5347)(8吋晶圓加工)",
+                "Sony(Sony CIS測試設備)",
+                "舜宇光學(2382)(手機CCM測試設備)"
               ],
               "tech_focus": [
-                "晶圓級測試(Wafer Probing)高精度對位技術",
-                "IC測試分選機(Handler)精密機構設計",
-                "CIS封裝級測試探針卡技術"
-              ]
+                "晶圓級測試(Wafer Probing)高精度對位技術(±1μm)",
+                "IC測試分選機(Handler)精密機構設計(>10k UPH)",
+                "晶圓薄化研磨技術(8/12吋薄化至<50μm)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收3.90億MoM+11.8%，晶圓代工後段加工專業供應商，MOPS確認核心為切割/研磨/測試/設備雙引擎，CIS測試設備受惠手機多鏡頭趨勢",
+                "weaknesses": "營收規模小(月營收<4億)，晶圓代工後段加工毛利受限，上櫃公司資訊揭露頻率較低",
+                "opportunities": "先進製程晶圓薄化需求增加(3D IC/CoWoS)，CIS封裝測試受惠車用/手機多鏡頭，AI晶片測試需求增長",
+                "threats": "晶圓代工廠(台積電/聯電)自有後段加工能力可能垂直整合，測試設備競爭(愛德萬/泰瑞達)，晶圓代工景氣週期影響"
+              }
             }
           ]
         },
@@ -2988,21 +3082,29 @@
               "relevance": "高",
               "analysis": "核心產品/平台；和椿6月營收2.79億年增30.5%、累計年增53.7%，自動化零組件需求增加。散熱風扇馬達與精密軸承為間接供應，題材連結弱，非核心散熱標的。",
               "products": [
-                "自動化傳動設備(散熱風扇馬達驅動)",
-                "精密軸承(散熱風扇用ABEC-5級)",
-                "線性滑軌(散熱模組產線自動化)",
-                "伺服馬達(散熱模組組裝設備AC/DC)"
+                "散熱風扇精密軸承(ABEC-5級/低噪音<25dB/用於AI伺服器冷板循環泵)",
+                "直線導軌與滾珠螺桿(散熱模組產線自動化設備/行程1000mm)",
+                "伺服馬達(散熱模組組裝設備AC/DC 400W)",
+                "自動化傳動模組(VC均熱板壓合設備用/精度±0.01mm)"
               ],
               "customers": [
-                "台達電",
-                "上銀",
-                "發那科(FANUC)",
-                "西門子(Siemens)"
+                "台達電(2308)(散熱風扇馬達用精密軸承)",
+                "上銀(2049)(自動化傳動零組件協同)",
+                "發那科FANUC(數控系統用精密軸承)",
+                "西門子Siemens(自動化設備傳動零組件)"
               ],
               "tech_focus": [
-                "精密軸承製造技術(ABEC-5級精度/低噪音)",
-                "自動化傳動零組件設計(直線導軌/滾珠螺桿)"
-              ]
+                "ABEC-5級精密軸承製造(低噪音<25dB/精度P5級)",
+                "直線導軌與滾珠螺桿設計(行程1000mm/重複定位精度±0.01mm)",
+                "散熱模組產線自動化傳動系統整合"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "精密軸承ABEC-5級製造能力，自動化傳動零組件產品線完整，受惠散熱風扇馬達需求增長",
+                "weaknesses": "散熱題材連結為間接供應(軸承→風扇馬達→散熱模組)，非直接AI散熱標的，營收規模小(6月2.79億)",
+                "opportunities": "AI伺服器液冷散熱風扇馬達需求增長帶動精密軸承訂單，自動化設備需求受AI產線擴張推升",
+                "threats": "散熱風扇馬達軸承替代性高，面臨日系NMB/美蓓亞競爭，AI散熱題材純度低可能導致資金輪動時被忽略"
+              }
             },
             {
               "code": "6241",
@@ -3131,23 +3233,30 @@
               "relevance": "高",
               "analysis": "核心產品/平台；勤誠6月營收32.38億年增98%、累計年增55.6%，AI伺服器機殼需求爆發。從傳統伺服器機殼擴展至液冷機櫃，受惠NVL72/GB200整機櫃出貨趨勢，但機殼屬低毛利產品。",
               "products": [
+                "AI伺服器液冷機櫃(NVL72/GB200相容/整機櫃散熱通道)",
+                "GPU伺服器高功率機殼(4U/8U/3kW+/19吋標準機架)",
                 "伺服器機殼(1U/2U/4U rack mount)",
-                "AI伺服器液冷機櫃(NVL72/GB200相容)",
-                "GPU伺服器高功率機殼(4U/8U)",
-                "邊緣運算 Compact Edge 機殼",
-                "資料中心機架空調整合機殼"
+                "邊緣運算Compact Edge機殼(短深度/壁掛式)",
+                "資料中心機架空調整合機殼(冷熱通道隔離)"
               ],
               "customers": [
-                "Supermicro",
-                "Dell",
-                "Gigabyte",
-                "緯穎"
+                "Supermicro(GPU SuperServer機殼)",
+                "Dell(PowerEdge AI伺服器機殼)",
+                "技嘉(2376)(G593 AI伺服器機殼)",
+                "緯穎(6669)(AI伺服器機殼/液冷機櫃)"
               ],
               "tech_focus": [
-                "NVL72整機櫃液冷散熱通道設計",
+                "NVL72整機櫃液冷散熱通道設計(19吋標準/冷熱通道隔離)",
                 "GPU伺服器4U/8U高功率(3kW+)機殼結構與熱流分析",
                 "19吋標準機架快速拆裝免工具機構設計"
-              ]
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收32.38億YoY+98%(AI伺服器機殼需求爆發)，NVL72/GB200整機櫃出貨趨勢直接受惠，機殼設計能力完整涵蓋1U到整櫃",
+                "weaknesses": "機殼屬低毛利產品(毛利率<15%)，營收波動大(月增/月減幅度大)，客戶集中度高(前三大客戶佔比>70%)",
+                "opportunities": "NVL72整機櫃出貨趨勢帶動液冷機櫃需求，GB200/GB300下一代AI伺服器機殼升級，邊緣AI機殼新應用",
+                "threats": "AI伺服器機殼競爭者眾多(鴻準/可成等金屬機殼廠)，機殼技術門檻低容易被替代，AI伺服器出貨增速放緩風險"
+              }
             }
           ]
         }
@@ -3377,23 +3486,31 @@
               "relevance": "高",
               "analysis": "核心產品/平台；頎邦是顯示驅動IC封測領導廠商，MOPS主要業務為金凸塊、錫鉛凸塊、晶圓測試、COF/COG封裝。上櫃公司無TWSE月營收，但受惠於OLED驅動IC需求與車用顯示面板增長。",
               "products": [
-                "顯示驅動IC金凸塊服務（Gold Bumping）",
-                "COF捲帶式薄膜覆晶封裝",
-                "COG玻璃覆晶封裝",
-                "晶圓測試（CP Probe Card）"
+                "顯示驅動IC金凸塊服務(Gold Bumping/pitch<15μm)",
+                "COF捲帶式薄膜覆晶封裝(TCP/COF/捲對捲製程)",
+                "COG玻璃覆晶封裝(Chip-on-Glass)",
+                "晶圓測試CP(Probe Card/高頻測試)",
+                "錫鉛凸塊(Solder Bumping/用於Driver IC)"
               ],
               "customers": [
-                "聯詠(3034)",
-                "瑞鼎(3593)",
-                "奕力",
-                "友達(2409)",
-                "群創(3481)"
+                "聯詠(3034)(OLED/LCD驅動IC金凸塊與COF封裝)",
+                "瑞鼎(3593)(手機面板驅動IC金凸塊)",
+                "奕力(驅動IC金凸塊客戶)",
+                "友達(2409)(面板COG封裝服務)",
+                "群創(3481)(電視面板驅動IC COF封裝)"
               ],
               "tech_focus": [
-                "金凸塊（Gold Bumping）微凸塊 pitch <15μm 製程",
-                "COF 捲帶式薄膜覆晶封裝技術",
-                "晶圓級測試（CP）高頻測試整合"
-              ]
+                "金凸塊(Gold Bumping)微凸塊pitch<15μm製程",
+                "COF捲帶式薄膜覆晶封裝技術(捲對捲製程)",
+                "晶圓級測試(CP)高頻測試整合探針卡"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "顯示驅動IC封測領導廠商，金凸塊pitch<15μm技術領先，OLED驅動IC需求增長帶動訂單，MOPS確認核心業務為金凸塊/COF/COG",
+                "weaknesses": "上櫃公司無TWSE月營收揭露(資訊透明度較低)，產品線集中在顯示驅動IC封測(單一應用風險)，車用/AR顯示新應用尚在起步",
+                "opportunities": "OLED面板滲透率提升帶動驅動IC封測需求，車用顯示面板增長(中控/儀表OLED)，AR/VR微顯示驅動IC新應用",
+                "threats": "驅動IC封測競爭者(南茂/福懋科)，OLED驅動IC整合至面板COE趨勢可能減少封測需求，面板產業週期波動"
+              }
             }
           ]
         },
@@ -3861,22 +3978,29 @@
               "relevance": "低",
               "analysis": "間接受惠；久元6月營收3.90億MoM+11.8%。手機CIS/CCM測試設備為核心業務，受惠手機多鏡頭與車用CIS需求擴增，亦提供攝像模組MTF/畸變/色彩測試系統。",
               "products": [
-                "手機攝像模組(CCM)測試設備",
-                "CIS感測器測試設備(晶圓級/封裝級)",
-                "IC測試分選機(Handler)",
-                "LED封裝測試設備"
+                "手機攝像模組CCM測試設備(MTF/畸變/色彩測試)",
+                "CIS感測器測試設備(晶圓級/封裝級/Wafer Probing)",
+                "IC測試分選機Handler(高速分選>10k UPH)",
+                "LED封裝測試設備(光學/電性測試)"
               ],
               "customers": [
-                "Sony(Sony CIS測試)",
-                "舜宇(2342)(手機鏡頭模組測試)",
-                "舜宇光學(2382)(CCM測試)",
-                "日月光(3711)(IC測試代工)"
+                "Sony(Sony CIS感測器測試設備)",
+                "舜宇光學(2382)(手機鏡頭模組CCM測試)",
+                "日月光(3711)(IC測試代工/Handler採購)",
+                "力成(6239)(記憶體IC測試設備)"
               ],
               "tech_focus": [
-                "CIS/CIS封裝級測試探針卡與分選機技術",
-                "CCM攝像模組MTF/畸變/色彩測試系統",
-                "晶圓級測試(Wafer Probing)高精度對位技術"
-              ]
+                "CIS封裝級測試探針卡與分選機技術(晶圓級/封裝級)",
+                "CCM攝像模組MTF/畸變/色彩測試系統(亞畫素精度)",
+                "晶圓級測試(Wafer Probing)高精度對位(±1μm)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "6月營收3.90億MoM+11.8%，CIS/CCM測試設備為核心業務受惠手機多鏡頭與車用CIS擴增，MOPS確認IC/CIS/CCM測試設備為主營業務",
+                "weaknesses": "營收規模小(月營收<4億)，消費性電子測試設備受手機出貨週期影響大，上櫃公司資訊揭露頻率較低",
+                "opportunities": "手機多鏡頭趨勢(4鏡頭/5鏡頭)推升CCM測試需求，車用CIS(ADAS/環視)測試設備新應用，AR/VR眼球追蹤感測器測試",
+                "threats": "手機出貨量衰退風險(影響CCM測試設備需求)，Sony/三星可能自建CIS測試線，測試設備競爭(東京精密/愛德萬)"
+              }
             }
           ]
         },
@@ -4660,22 +4784,31 @@
               "relevance": "低",
               "analysis": "間接受惠；嘉澤跨入CPO光連接器與矽光子模組連接器，5月營收30.4億年增9%。CPO技術為矽光子下一世代互連關鍵，嘉澤為連接器端先佈局者。",
               "products": [
-                "CPO用光連接器(Co-Packaged Optics)(<1μm對位)",
-                "矽光子模組Fiber Array耦合連接器",
-                "OSFP/QSFP-DD光模組連接器(400G/800G)",
-                "CPU socket(LGA/PGA)(伺服器用)",
-                "高速背板連接器(112G PAM4)"
+                "CPO用光連接器(Co-Packaged Optics/對位精度<1μm)",
+                "矽光子模組Fiber Array耦合連接器(128ch單模光纖)",
+                "OSFP/QSFP-DD光模組連接器(400G/800G/1.6T)",
+                "CPU socket(LGA/PGA)(伺服器用/Intel/AMD)",
+                "高速背板連接器(112G PAM4/224G)"
               ],
               "customers": [
-                "Intel",
-                "Broadcom",
-                "台積電"
+                "Intel(CPU socket與CPO光連接器供應)",
+                "Broadcom(矽光子模組連接器/AI ASIC)",
+                "台積電(2330)(CoWoS封裝用連接器)",
+                "NVIDIA(GPU伺服器高速背板連接器)",
+                "Marvell(資料中心ASIC連接器)"
               ],
               "tech_focus": [
-                "CPO用光連接器對位精度(<1μm)",
-                "矽光子模組fiber array耦合連接器",
-                "OSFP/QSFP光模組連接器量產"
-              ]
+                "CPO用光連接器對位精度<1μm(矽光子晶片與光纖耦合)",
+                "矽光子模組Fiber Array耦合連接器(128ch單模光纖陣列)",
+                "OSFP/QSFP-DD 800G/1.6T光模組連接器量產"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "連接器端CPO技術先佈局者，5月營收30.4億年增9%，CPU socket全球市佔高，CPO光連接器<1μm對位精度技術領先",
+                "weaknesses": "矽光子題材純度中等(連接器為周邊而非核心光子元件)，CPO量產時程不確定(仍處研發/小量階段)，營收成長率低於純AI伺服器概念股",
+                "opportunities": "CPO技術為下一代資料中心互連關鍵(取代可插拔光模組)，矽光子滲透率提升帶動連接器需求，800G/1.6T光模組升級週期",
+                "threats": "CPO技術路線不確定性(光I/O vs. CPO vs. 可插拔演進)，連接器競爭者(安費耐/立訊/中航光電)，矽光子封裝良率挑戰可能延後量產"
+              }
             },
             {
               "code": "3711",
@@ -4987,20 +5120,27 @@
               "relevance": "低",
               "analysis": "間接受惠；鑫永洋(原易通展)6月營收0.56億MoM-26%，通訊產品OEM為主。資安硬體appliance OEM題材純度低，非核心資安軟體標的，營收規模小且波動大。",
               "products": [
-                "網路安全硬體設備(防火牆 appliance)",
-                "VPN路由器(SD-WAN硬體)",
-                "工業級通訊設備(M2M/IoT gateway)"
+                "網路安全硬體設備(防火牆appliance/1U/2U)",
+                "VPN路由器(SD-WAN硬體/ARM-based)",
+                "工業級通訊設備(M2M/IoT gateway/IP30防護)"
               ],
               "customers": [
-                "Palo Alto Networks",
-                "Fortinet",
-                "研華(2395)"
+                "Palo Alto Networks(次世代防火牆appliance OEM)",
+                "Fortinet(FortiGate防火牆硬體OEM)",
+                "研華(2395)(工業級M2M通訊模組)"
               ],
               "tech_focus": [
-                "網路安全硬體 appliance OEM/ODM設計製造",
-                "SD-WAN邊緣路由器硬體平台",
-                "工業級M2M通訊模組(ARM-based)"
-              ]
+                "網路安全硬體appliance OEM/ODM設計製造(ARM/x86)",
+                "SD-WAN邊緣路由器硬體平台(支援IPsec/MACsec)",
+                "工業級M2M通訊模組(ARM-based/IP30防護/-40~70°C寬溫)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "資安硬體appliance OEM專業廠，Palo Alto/Fortinet等一線資安品牌客戶，MOPS確認通訊產品製造為主營業務",
+                "weaknesses": "6月營收0.56億MoM-26%(營收規模極小且波動大)，上櫃公司資訊揭露頻率低，資安軟體題材純度低(僅硬體OEM非軟體)",
+                "opportunities": "全球資安硬體支出增長(SASE/Zero Trust)，IoT gateway需求受工業4.0推升，SD-WAN邊緣設備升級週期",
+                "threats": "資安硬體appliance競爭激烈(眾多台灣OEM廠)，客戶可能轉單至其他ODM，營收規模小難以投入大量研發"
+              }
             }
           ]
         },
@@ -6183,24 +6323,30 @@
               "relevance": "低",
               "analysis": "間接受惠；合晶為矽晶圓製造與製程用水回收方案供應商。提供8吋/6吋矽晶圓、UF/RO用水回收系統及氫氟酸廢液回收。MOPS主要經營：半導體及其材料之研發、設計、製造。",
               "products": [
-                "8吋矽晶圓(太陽能/半導體用/N-type)",
-                "6吋矽晶圓(半導體用/P-type)",
-                "矽晶圓製程用水回收系統(UF/RO回收率>80%)",
-                "矽晶圓酸洗廢液回收(氫氟酸回收再利用)",
-                "太陽能級多晶矽原料"
+                "8吋矽晶圓(N-type/半導體用/CCZ連續直拉法)",
+                "6吋矽晶圓(P-type/半導體用/CZ法)",
+                "矽晶圓製程用水回收系統(UF/RO/回收率>80%)",
+                "矽晶圓酸洗廢液回收(氫氟酸回收再利用/離子交換)"
               ],
               "customers": [
-                "TSMC台積電2330(矽晶圓製程用水回收/廢液處理)",
-                "聯電2303(矽晶圓製程廢水回收)",
-                "Motech茂迪6244(太陽能矽晶圓)",
-                "Sino-American Silicon中美矽晶5483(半導體矽晶圓)",
-                "GlobalWafers環球晶6488(矽晶圓原料)"
+                "台積電(2330)(矽晶圓製程用水回收/廢液處理)",
+                "聯電(2303)(矽晶圓製程廢水回收)",
+                "茂迪(6244)(太陽能級多晶矽原料)",
+                "中美矽晶(5483)(半導體矽晶圓)",
+                "環球晶(6488)(矽晶圓原料供應)"
               ],
               "tech_focus": [
-                "矽晶圓製程UF/RO水回收系統回收率>80%",
-                "氫氟酸廢液回收再利用(沉澱/離子交換)",
-                "8吋N-type矽晶圓CCZ連續直拉法生產"
-              ]
+                "矽晶圓製程UF/RO水回收系統(回收率>80%/膜過濾精度0.01μm)",
+                "氫氟酸廢液回收再利用(沉澱/離子交換/回收率>90%)",
+                "8吋N-type矽晶圓CCZ連續直拉法生產(氧含量控制)"
+              ],
+              "confidence": "高",
+              "swot": {
+                "strengths": "矽晶圓製造與製程用水回收方案雙業務，MOPS確認半導體材料研發製造為主營，8吋N-type CCZ技術領先",
+                "weaknesses": "上櫃公司無TWSE月營收揭露(資訊透明度較低)，環境水回收題材為附帶業務非主營(矽晶圓為主)，營收規模受限",
+                "opportunities": "半導體廠水回收法規趨嚴帶動需求，8吋N-type矽晶圓受惠車用/電源管理IC，矽晶圓短缺帶動價格上漲",
+                "threats": "矽晶圓競爭(環球晶/嘉晶)，水回收業務面臨專業環保工程公司競爭，矽晶圓價格週期波動"
+              }
             }
           ]
         }
