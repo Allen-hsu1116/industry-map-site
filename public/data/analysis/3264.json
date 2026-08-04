@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-08-03T12:33:14.025Z",
+  "generatedAt": "2026-08-04T12:31:19.021Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-03",
-  "chipDataDate": "2026-08-03",
+  "marketDataDate": "2026-08-04",
+  "chipDataDate": "2026-08-04",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,32 +18,34 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": -15,
-    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 10.9%。",
+    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 6.7%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [
-      "收盤跌破 MA20 10.9%"
+      "收盤跌破 MA20 6.7%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -20,
-    "summary": "欣銓 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +563張；三大法人近 5 日合計賣超 -2.1千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": -15,
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：投信近 5 日買超 +421張；融資近 5 日下降 6.1%，籌碼壓力下降。",
     "signals": [
-      "投信近 5 日買超 +563張"
+      "投信近 5 日買超 +421張",
+      "融資近 5 日下降 6.1%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.1千張",
-      "近 20 日法人偏賣，合計 -8.2千張",
-      "外資近 5 日賣超 -2.5千張"
+      "三大法人近 5 日合計賣超 -813張",
+      "近 20 日法人偏賣，合計 -8.8千張",
+      "外資近 5 日賣超 -1.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-03"
+      "最近法人資料日：2026-08-04",
+      "融券近 5 日增加 13.1%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -137,7 +139,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-03"
+      "lastVerified": "2026-08-04"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -373,7 +375,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 50,
+    "totalScore": 55,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -387,23 +389,17 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 12.3%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：175.60",
-      "波段多空分水嶺看 MA20：210.50",
-      "追蹤法人是否延續 買超：最近 +260張",
-      "本益比 24.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：177.20",
+      "波段多空分水嶺看 MA20：207.33",
+      "追蹤法人是否延續 買超：最近 +236張",
+      "本益比 25.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 271.50 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 262.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 159.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
