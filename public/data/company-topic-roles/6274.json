@@ -89,17 +89,19 @@
       "directness": "indirect",
       "supplyChainStage": "substrate_materials",
       "roleType": "satellite_ccl_supplier",
-      "roleSummary": "台燿為台灣主要銅箔基板製造商，在低軌衛星題材中供應高頻低損耗CCL材料予衛星通訊PCB製造商。主要產品為高頻PTFE系CCL與超低Dk多層壓合板，應用於Starlink等低軌衛星通訊射頻電路板。",
+      "roleSummary": "台燿為台灣主要銅箔基板製造商，MOPS登記為銅箔基板/粘合片/多層壓合板製造加工買賣。在低軌衛星題材中供應高頻低損耗CCL(Dk<3.0)予衛星通訊PCB製造商，應用於Starlink等低軌衛星通訊射頻電路板。",
       "products": [
-        "低軌衛星用高頻CCL(Dk<3.0超低損耗材料)",
-        "射頻PCB基板材料(高頻PTFE/碳氫樹脂系)",
-        "多層壓合板(衛星通訊板用M4/M7級)",
-        "高Tg銅箔基板(Tg≥200°C耐熱級)"
+        "低軌衛星用高頻CCL(Dk<3.0超低損耗PTFE/碳氫樹脂系)",
+        "射頻PCB基板材料(高頻PTFE/M4/M7級)(Ka/Ku頻段用)",
+        "多層壓合板(衛星通訊板用M4/M7級高頻低損耗)",
+        "高Tg銅箔基板(Tg大於等於200C耐熱級)(HDI用)",
+        "無鹵環保銅箔基板(Halogen-free)(RoHS/REACH合規)"
       ],
       "customers": [
         "SpaceX(Starlink衛星PCB基板材料)",
-        "衛星PCB製造商(台灣欣興/燿華高頻板)",
         "OneWeb(低軌衛星通訊板材料)",
+        "欣興(3037)(高頻PCB基板採購)",
+        "燿華(6145)(高頻PCB製造)",
         "亞洲衛星(SATCOM)PCB廠"
       ],
       "competitors": [
@@ -129,14 +131,36 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-12",
+      "confidence": "high",
+      "lastVerified": "2026-08-05",
       "status": "verified",
       "techFocus": [
-        "高頻低損耗銅箔基板(衛星通訊PCB基材)",
-        "多層壓合板高頻特性控制(Dk/Df穩定性)",
-        "Halogen-free無鹵銅箔基板環保製程"
-      ]
+        "高頻低損耗銅箔基板配方(PTFE/碳氫樹脂Dk<3.0/Df<0.002)",
+        "多層壓合板高頻特性控制(Dk/Df溫度穩定性)",
+        "Halogen-free無鹵銅箔基板環保製程(高頻相容)"
+      ],
+      "swot": {
+        "strengths": [
+          "MOPS登記為銅箔基板/粘合片/多層壓合板製造，高頻CCL具配方能力",
+          "SpaceX/OneWeb等低軌衛星營運商為終端客戶",
+          "台燿為台灣主要CCL製造商，與台光電(2383)/聯茂(6213)同業"
+        ],
+        "weaknesses": [
+          "低軌衛星高頻CCL佔比低，主力仍為商用CCL",
+          "高頻CCL市場競爭激烈(台光電/聯茂/松下)",
+          "月營收資料暫無法取得"
+        ],
+        "opportunities": [
+          "低軌衛星通訊PCB需求增長帶動高頻CCL需求",
+          "Starlink/OneWeb衛星發射數量持續增加",
+          "高頻CCL ASP高於商用CCL，可提升毛利率"
+        ],
+        "threats": [
+          "台光電(2383)在高頻CCL市場具領先優勢",
+          "低軌衛星題材為間接受惠，需求不確定性高",
+          "日系CCL廠(松下/日東電工)在高頻材料具技術領先"
+        ]
+      }
     }
   ]
 }

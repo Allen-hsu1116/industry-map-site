@@ -11,19 +11,20 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "server_notebook_odm",
-      "roleSummary": "英業達為AI伺服器ODM要角，6月營收1,023億年增61.6%，累計4,702億年增36.8%。NVIDIA AI伺服器為主要成長動能，客戶需求大幅增加。",
+      "roleSummary": "英業達為AI伺服器ODM要角，6月營收102.26億YoY+61.62%，累計470.17億YoY+36.83%。MOPS登記為筆記型電腦伺服器，NVIDIA HGX AI伺服器為主要成長動能。與廣達/緯創同為AI伺服器三大ODM，客戶涵蓋NVIDIA/Google/Meta/Microsoft/Amazon。",
       "products": [
-        "AI伺服器HGX H100/B200系統組裝",
-        "通用型伺服器(1U/2U機架式)(Xeon/EPYC)",
-        "NVIDIA IGX邊緣AI運算伺服器",
-        "伺服器主板SMT組裝與系統測試",
-        "GPU伺服器液冷散熱模組整合"
+        "NVIDIA HGX H100/B200 AI伺服器系統組裝(4U/8U機架式)",
+        "通用型伺服器(1U/2U機架式)(Intel Xeon/AMD EPYC)",
+        "NVIDIA IGX邊緣AI運算伺服器(Orin平台)",
+        "伺服器主板SMT貼片組裝與系統測試(量測/Burn-in)",
+        "GPU伺服器液冷散熱模組整合(冷板式/浸沒式)"
       ],
       "customers": [
-        "NVIDIA(HGX AI伺服器ODM)",
-        "Google(雲端AI伺服器)",
-        "Meta(資料中心AI伺服器)",
-        "Microsoft(Azure AI伺服器)"
+        "NVIDIA(HGX AI伺服器ODM代工)",
+        "Google(雲端AI訓練伺服器)",
+        "Meta(資料中心AI推論伺服器)",
+        "Microsoft(Azure AI伺服器ODM)",
+        "Amazon AWS(雲端通用伺服器)"
       ],
       "competitors": [
         "鴻海(2317)(AI伺服器EMS)",
@@ -57,30 +58,34 @@
           "claim": "FinMind 可用於追蹤 2356 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-07-18",
+      "confidence": "high",
+      "lastVerified": "2026-08-05",
       "status": "verified",
       "techFocus": [
         "OCP(Open Compute Project)AI訓練伺服器架構設計",
-        "NVIDIA IGX邊緣AI平台系統整合",
-        "GPU伺服器高功率PSU(3.3kW+)與散熱管理"
+        "NVIDIA HGX H100/B200系統整合與散熱管理(1000W+/機箱)",
+        "GPU伺服器高功率PSU(3.3kW+)與液冷方案整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收102.26億YoY+61.6%，AI伺服器客戶需求強勁帶動爆發成長",
-          "伺服器ODM具備HGX H100/B200基板SMT量產能力，累計營收YoY+36.8%"
+          "6月營收102.26億YoY+61.62%，MOPS備註客戶需求增加，AI伺服器需求爆發",
+          "累計470.17億YoY+36.83%，AI伺服器ODM訂單持續放量",
+          "NVIDIA HGX ODM合作夥伴，與廣達/緯創同為AI伺服器三大ODM"
         ],
         "weaknesses": [
-          "伺服器業務營收規模小於廣達/緯創，議價能力受限",
-          "筆電業務仍佔相當比重，AI伺服器佔比提升中但尚未成為主力"
+          "ODM代工毛利偏低(3-5%)，營收高但獲利貢獻不成比例",
+          "伺服器產品線集中於少數雲端客戶(NVIDIA/Google/Meta)，客戶集中度高",
+          "MOPS登記為筆記型電腦伺服器，筆電業務成長有限"
         ],
         "opportunities": [
-          "客戶需求持續增加，AI伺服器訂單能見度高",
-          "擴大雲端客戶AI伺服器ODM份額，提升高毛利伺服器營收佔比"
+          "NVIDIA GB200/GB300下一代AI伺服器ODM訂單持續",
+          "邊緣AI伺服器(IGX)市場起步，先行卡位",
+          "液冷伺服器滲透率提升帶動ASP上升"
         ],
         "threats": [
-          "廣達(2382)6月營收YoY+102.9%、緯創(3231)YoY+94.0%，同業增速超越英業達",
-          "雲端客戶自研伺服器晶片(如Google TPU)可能壓縮ODM代工空間"
+          "ODM同業(廣達/緯創)競爭激烈，價格壓力大",
+          "AI伺服器需求若放緩，營收YoY高基期面臨衰退風險",
+          "供應鏈零組件(GPU/HBM)供貨不穩可能影響出貨"
         ]
       }
     },
