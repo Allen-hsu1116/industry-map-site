@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-08-04T12:31:19.021Z",
+  "generatedAt": "2026-08-05T12:33:31.803Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-04",
-  "chipDataDate": "2026-08-04",
+  "marketDataDate": "2026-08-05",
+  "chipDataDate": "2026-08-05",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,35 +17,31 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": -15,
-    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 6.7%。",
+    "score": 0,
+    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
-    "risks": [
-      "收盤跌破 MA20 6.7%"
-    ],
+    "risks": [],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": -15,
-    "summary": "欣銓 籌碼面目前為「籌碼中性」：投信近 5 日買超 +421張；融資近 5 日下降 6.1%，籌碼壓力下降。",
+    "score": 16,
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +971張；投信近 5 日買超 +412張。",
     "signals": [
-      "投信近 5 日買超 +421張",
-      "融資近 5 日下降 6.1%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +971張",
+      "投信近 5 日買超 +412張",
+      "外資近 5 日買超 +210張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -813張",
-      "近 20 日法人偏賣，合計 -8.8千張",
-      "外資近 5 日賣超 -1.3千張"
+      "近 20 日法人偏賣，合計 -5.6千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-04",
-      "融券近 5 日增加 13.1%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-05"
     ]
   },
   "industry": {
@@ -139,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-04"
+      "lastVerified": "2026-08-05"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -198,8 +194,8 @@
         "canonicalTopicName": "低軌衛星通訊",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "欣銓6月營收15.52億穩定成長。提供衛星通訊IC晶圓與成品測試服務，受惠低軌衛星射頻晶片需求增長。"
+        "confidence": "high",
+        "roleSummary": "欣銓為記憶體IC及混合訊號IC測試專業廠，MOPS登記為記憶體IC晶圓測試、數位/混合訊號IC晶圓及成品測試、晶圓型Burn-in測試。在低軌衛星題材中以Ka/Ku頻段射頻IC測試切入，受惠低軌衛星射頻晶片需求增長。母公司力積電(6770)為穩定來源。"
       },
       {
         "topicId": "passive-components-mlcc",
@@ -375,7 +371,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 64,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -393,13 +389,13 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：177.20",
-      "波段多空分水嶺看 MA20：207.33",
-      "追蹤法人是否延續 買超：最近 +236張",
-      "本益比 25.3 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：184.20",
+      "波段多空分水嶺看 MA20：205.85",
+      "追蹤法人是否延續 買超：最近 +825張",
+      "本益比 26.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 262.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 243.50 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 159.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

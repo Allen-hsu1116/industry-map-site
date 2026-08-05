@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3324",
   "name": "雙鴻",
-  "generatedAt": "2026-08-04T12:31:19.042Z",
+  "generatedAt": "2026-08-05T12:33:31.818Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,13 +49,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "雙鴻為散熱模組專業製造商，VC均熱板與熱管供AI伺服器散熱需求。受惠AI伺服器液冷滲透率提升，出貨持續成長。",
+      "roleSummary": "雙鴻為散熱模組專業製造商，MOPS登記為散熱模組。VC均熱板與熱管供AI伺服器散熱需求，受惠AI伺服器液冷滲透率提升。產品線涵蓋均熱板/熱管/氣冷模組/冷板式液冷模組，客戶涵蓋廣達/鴻海/緯創三大ODM及Dell/HPE。",
       "supplyChainStage": "thermal",
       "roleType": "liquid_cooling_module_provider",
       "directness": "core",
@@ -63,17 +63,17 @@
     },
     "productNarratives": [
       {
-        "name": "均熱板(Vapor Chamber)",
+        "name": "均熱板(Vapor Chamber)(單相/兩相VC)(>500W TDP散熱)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "熱管(Heat Pipe)",
+        "name": "熱管(Heat Pipe)(U型/L型/扁平熱管)(直徑4-8mm)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "氣冷散熱模組(Sink+Fan)",
+        "name": "氣冷散熱模組(Sink+Fan)(伺服器用鋁擠型鰭片+PWM風扇)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -85,7 +85,7 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
@@ -93,9 +93,9 @@
     ],
     "summary": "雙鴻 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -148,8 +148,8 @@
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "雙鴻為散熱模組專業製造商，VC均熱板與熱管供AI伺服器散熱需求。受惠AI伺服器液冷滲透率提升，出貨持續成長。"
+        "confidence": "high",
+        "roleSummary": "雙鴻為散熱模組專業製造商，MOPS登記為散熱模組。VC均熱板與熱管供AI伺服器散熱需求，受惠AI伺服器液冷滲透率提升。產品線涵蓋均熱板/熱管/氣冷模組/冷板式液冷模組，客戶涵蓋廣達/鴻海/緯創三大ODM及Dell/HPE。"
       }
     ],
     "swot": [],
@@ -198,12 +198,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 71 天未更新"
+        "message": "股價資料已 72 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 71 天未更新"
+        "message": "籌碼資料已 72 天未更新"
       }
     ]
   },
