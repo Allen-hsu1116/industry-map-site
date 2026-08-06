@@ -63,7 +63,29 @@
         "N3 FinFET量產與N2 GAA開發",
         "EUV極紫外光微影技術",
         "A16 Backside Power背供電架構"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "6月營收4426.8億YoY+67.9%，累計24044.8億YoY+35.6%，先進製程需求驅動(公司公告)",
+          "N3(3nm)FinFET量產領先Samsung/Intel，N2(2nm)GAA準備量產",
+          "全球邏輯晶圓代工市佔>60%，先進製程(7nm以下)市佔>90%"
+        ],
+        "weaknesses": [
+          "先進製程資本支出龐大(年CapEx >500億美元)，折舊壓力重",
+          "海外建廠(亞利桑那/熊本/德國)成本高於台灣，毛利率承壓",
+          "2nm GAA量產良率驗證中，技術風險存在"
+        ],
+        "opportunities": [
+          "AI GPU(NVIDIA B200/B300)、手機AP(Apple A18/M4)需求帶動N3/N2稼動率滿載",
+          "A16(1.6nm)Backside Power背供電架構為下世代競爭壁壘",
+          "成熟製程(28/40nm)擴產切入車用/IoT/電源管理市場"
+        ],
+        "threats": [
+          "Samsung 3nm GAA量產推進，技術追趕風險",
+          "Intel 18A製程回歸代工，爭取AI客戶",
+          "地緣政治風險(台海局勢)影響客戶分散策略與長期投資意願"
+        ]
+      }
     },
     {
       "topicId": "advanced-packaging",
@@ -123,7 +145,29 @@
         "CoWoS-S/L 2.5D矽中介層封裝(>2x reticle stitching for AI GPU)",
         "SoIC 3D堆疊混合鍵合(Cu-Cu direct bonding pitch<10μm/N3 node)",
         "InFO-POP扇出型封裝(高密度RDL線寬2μm/手機AP整合)"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "6月營收4426.8億YoY+67.9%，先進封裝(CoWoS/SoIC)為AI GPU出貨瓶頸關鍵",
+          "CoWoS-S/L 2.5D封裝獨占AI GPU(NVIDIA B200)市場，reticle stitching >4x",
+          "SoIC 3D堆疊(Cu-Cu hybrid bonding pitch<10μm)領先Samsung/Intel"
+        ],
+        "weaknesses": [
+          "CoWoS產能長期供不應求，瓶頸可能限制客戶出貨與營收貢獻",
+          "先進封裝良率挑戰(大尺寸reticle/多晶片堆疊)影響毛利",
+          "先進封裝資本支出高(設備/無塵室/測試)，ROI回收週期長"
+        ],
+        "opportunities": [
+          "CoWoS產能2025年持續擴充(月產能>35k wafer)，AI GPU出貨放量",
+          "SoIC+CoWoS整合方案(3D SoIC on CoWoS-R)為NVIDIA B200/下世代AI ASIC主流",
+          "InFO-AI扇出封裝延伸至AI推理邊緣裝置"
+        ],
+        "threats": [
+          "Samsung I-Cube4/Samsung ASEAL先進封裝競爭",
+          "Intel Foveros 3D封裝爭取AI ASIC客戶",
+          "矽中介層成本高，有機載板方案(如Intel EMIB)為替代路線"
+        ]
+      }
     },
     {
       "topicId": "hbm",
@@ -183,7 +227,29 @@
         "CoWoS-L 2.5D封裝(Si interposer+HBM堆疊)",
         "SoIC 3D堆疊(Chip-on-Wafer HBM on Logic)",
         "TSV矽穿孔技術用於HBM 3D堆疊"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "6月營收4426.8億YoY+67.9%，HBM封裝(CoWoS-L/SoIC)為AI GPU核心技術",
+          "CoWoS-L HBM+GPU整合封裝(NVIDIA B200/4x reticle/8-HBM stacks)獨占供應",
+          "SoIC 3D HBM on Logic堆疊(TSV<5μm/Cu-Cu hybrid bonding)技術領先"
+        ],
+        "weaknesses": [
+          "HBM供應鏈(SK hynix/三星/Micron)產能瓶頸影響台積電出片節奏",
+          "CoWoS產能不足可能限制HBM封裝營收貢獻時程",
+          "HBM封裝測試良率受TSV/微凸塊製程影響，除錯成本高"
+        ],
+        "opportunities": [
+          "HBM3e 12-high/24GB量產，AI GPU記憶體容量倍增帶動封裝ASP",
+          "A16(1.6nm)Backside Power降低IR drop 15%，支援HBM高頻寬操作",
+          "下世代AI ASIC(Marvell/Google TPU/Broadcom)均採CoWoS-L+HBM方案"
+        ],
+        "threats": [
+          "Samsung HBM3e封裝能力追趕，可能獲得NVIDIA部分訂單",
+          "Intel EMIB+HBM方案為替代路線(有機中介層vs矽中介層)",
+          "HBM供應商集中(SK hynix>三星>Micron)，議價能力受限"
+        ]
+      }
     },
     {
       "topicId": "ai-server",
