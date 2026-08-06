@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6175",
   "name": "立敦",
-  "generatedAt": "2026-08-05T12:33:32.019Z",
+  "generatedAt": "2026-08-06T12:35:21.303Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-05",
-  "chipDataDate": "2026-08-05",
+  "marketDataDate": "2026-08-06",
+  "chipDataDate": "2026-08-06",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,33 +18,31 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": -15,
-    "summary": "立敦 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 12.1%。",
+    "summary": "立敦 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 10.6%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [
-      "收盤跌破 MA20 12.1%"
+      "收盤跌破 MA20 10.6%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -3,
-    "summary": "立敦 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.4千張；融資近 5 日下降 6.0%，籌碼壓力下降。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 28,
+    "summary": "立敦 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +409張；近 20 日法人偏買，合計 +2.3千張。",
     "signals": [
-      "近 20 日法人偏買，合計 +1.4千張",
-      "融資近 5 日下降 6.0%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +409張",
+      "近 20 日法人偏買，合計 +2.3千張",
+      "外資近 5 日買超 +383張"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -86張",
-      "外資近 5 日賣超 -106張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-05",
-      "融券近 5 日增加 57.9%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-06",
+      "融券近 5 日增加 25.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -136,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-06"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -234,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 53,
+    "totalScore": 59,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -247,6 +245,7 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -254,15 +253,15 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 13.7%，部位需降速"
+        "message": "距離 MA20 約 11.8%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：72.48",
-      "波段多空分水嶺看 MA20：87.47",
-      "追蹤法人是否延續 賣超：最近 -1張",
+      "短線支撐/壓力先看 MA5：74.56",
+      "波段多空分水嶺看 MA20：85.97",
+      "追蹤法人是否延續 買超：最近 +157張",
       "本益比 28.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [

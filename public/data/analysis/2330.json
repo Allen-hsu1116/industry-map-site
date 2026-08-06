@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-08-05T12:33:31.553Z",
+  "generatedAt": "2026-08-06T12:35:20.834Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-05",
-  "chipDataDate": "2026-08-05",
+  "marketDataDate": "2026-08-06",
+  "chipDataDate": "2026-08-06",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -24,24 +24,26 @@
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 16,
-    "summary": "台積電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +6.9千張；投信近 5 日買超 +7.6千張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 21,
+    "summary": "台積電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +3.6千張；投信近 5 日買超 +6.6千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +6.9千張",
-      "投信近 5 日買超 +7.6千張"
+      "三大法人近 5 日合計買超 +3.6千張",
+      "投信近 5 日買超 +6.6千張",
+      "融資近 5 日下降 5.2%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -8.5萬張",
-      "外資近 5 日賣超 -73張"
+      "近 20 日法人偏賣，合計 -8.7萬張",
+      "外資近 5 日賣超 -127張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-05"
+      "最近法人資料日：2026-08-06"
     ]
   },
   "industry": {
@@ -60,23 +62,7 @@
       "directness": "core",
       "source": "canonical"
     },
-    "productNarratives": [
-      {
-        "name": "CoWoS-S 2.5D封裝",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "SoIC 3D堆疊封裝",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "InFO-POP封裝",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      }
-    ],
+    "productNarratives": [],
     "swotSnapshot": {
       "strengths": [
         "台積電同時具備先進邏輯晶圓代工、先進封裝與 AI/HPC 晶片製造相關能力，是 AI 半導體供應鏈的核心平台型公司。"
@@ -133,7 +119,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-08-05"
+      "lastVerified": "2026-08-06"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -302,8 +288,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
-    "recommendationState": "watchlist",
+    "totalScore": 70,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 24,
       "label": "基本面中性",
@@ -311,12 +297,13 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 10.6 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 10.4 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -325,11 +312,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2345.00",
-      "波段多空分水嶺看 MA20：2369.00",
-      "追蹤法人是否延續 買超：最近 +9.9千張",
+      "短線支撐/壓力先看 MA5：2377.00",
+      "波段多空分水嶺看 MA20：2364.00",
+      "追蹤法人是否延續 賣超：最近 -4.7千張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 32.3 倍，需和同族群估值比較"
+      "本益比 31.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2480.00 且量比 > 1.5：列為轉強訊號",
