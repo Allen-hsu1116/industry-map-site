@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6147",
   "name": "頎邦",
-  "generatedAt": "2026-08-06T12:35:21.290Z",
+  "generatedAt": "2026-08-07T12:33:56.140Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-06",
-  "chipDataDate": "2026-08-06",
+  "marketDataDate": "2026-08-07",
+  "chipDataDate": "2026-08-07",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,36 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -15,
-    "summary": "頎邦 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 8.5%。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
-    ],
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "頎邦 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 9.3%。",
+    "signals": [],
     "risks": [
-      "收盤跌破 MA20 8.5%"
-    ],
-    "watch": []
-  },
-  "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "頎邦 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +3.1萬張；三大法人近 5 日合計賣超 -1.3萬張。",
-    "signals": [
-      "近 20 日法人偏買，合計 +3.1萬張"
-    ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -1.3萬張",
-      "投信近 5 日賣超 -4.5千張",
-      "外資近 5 日賣超 -6千張"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 9.3%"
     ],
     "watch": [
-      "最近法人資料日：2026-08-06",
-      "融券近 5 日增加 332.8%，留意軋空或空方壓力"
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
+  },
+  "chips": {
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -24,
+    "summary": "頎邦 籌碼面目前為「籌碼偏空」：近 20 日法人偏買，合計 +3.2萬張；三大法人近 5 日合計賣超 -1萬張。",
+    "signals": [
+      "近 20 日法人偏買，合計 +3.2萬張"
+    ],
+    "risks": [
+      "三大法人近 5 日合計賣超 -1萬張",
+      "投信近 5 日賣超 -5.9千張",
+      "外資近 5 日賣超 -2千張",
+      "融資近 5 日增加 14.3%，但技術面未同步轉強"
+    ],
+    "watch": [
+      "最近法人資料日：2026-08-07",
+      "融券近 5 日增加 172.2%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -139,7 +141,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-06"
+      "lastVerified": "2026-08-07"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -330,7 +332,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 51,
+    "totalScore": 43,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -348,19 +350,19 @@
       {
         "id": "risk.stop-distance",
         "severity": "soft",
-        "message": "距離 MA20 約 9.3%，部位需降速"
+        "message": "距離 MA20 約 10.3%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：143.90",
-      "波段多空分水嶺看 MA20：165.05",
-      "追蹤法人是否延續 賣超：最近 -6.9千張",
-      "本益比 36.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：147.20",
+      "波段多空分水嶺看 MA20：161.53",
+      "追蹤法人是否延續 賣超：最近 -193張",
+      "本益比 35.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 219.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 214.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 113.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

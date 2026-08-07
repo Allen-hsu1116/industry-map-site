@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3529",
   "name": "力旺",
-  "generatedAt": "2026-08-06T12:35:21.136Z",
+  "generatedAt": "2026-08-07T12:33:55.986Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-06",
-  "chipDataDate": "2026-08-06",
+  "marketDataDate": "2026-08-07",
+  "chipDataDate": "2026-08-07",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,31 +17,32 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 45,
-    "summary": "力旺 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 8.7%。",
+    "score": 55,
+    "summary": "力旺 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 11.1%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 8.7%"
+      "收盤站上 MA20 11.1%"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "接近 20 日高點 2780.00，觀察是否突破"
+    ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "力旺 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +380張；三大法人近 5 日合計賣超 -533張。",
+    "summary": "力旺 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +192張；三大法人近 5 日合計賣超 -113張。",
     "signals": [
-      "投信近 5 日買超 +380張"
+      "投信近 5 日買超 +192張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -533張",
-      "近 20 日法人偏賣，合計 -289張",
-      "外資近 5 日賣超 -960張"
+      "三大法人近 5 日合計賣超 -113張",
+      "近 20 日法人偏賣，合計 -321張",
+      "外資近 5 日賣超 -331張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-06",
-      "融券近 5 日增加 150.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-07"
     ]
   },
   "industry": {
@@ -133,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-06"
+      "lastVerified": "2026-08-07"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -231,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 61,
+    "totalScore": 59,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": -32,
@@ -239,8 +240,8 @@
       "signals": [],
       "risks": [
         "月營收 YoY -36.9%，基本面承壓",
-        "本益比 89.2 倍，需防估值壓縮",
-        "股價淨值比 57.0 倍偏高，需和 ROE/成長性比對"
+        "本益比 91.4 倍，需防估值壓縮",
+        "股價淨值比 58.4 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -250,15 +251,21 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 10.0%，部位需降速"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2546.00",
-      "波段多空分水嶺看 MA20：2447.75",
-      "追蹤法人是否延續 買超：最近 +103張",
+      "短線支撐/壓力先看 MA5：2596.00",
+      "波段多空分水嶺看 MA20：2453.75",
+      "追蹤法人是否延續 賣超：最近 -76張",
       "月營收年增率 -36.9%，觀察基本面是否支撐估值",
-      "本益比 89.2 倍，需和同族群估值比較"
+      "本益比 91.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2780.00 且量比 > 1.5：列為轉強訊號",
