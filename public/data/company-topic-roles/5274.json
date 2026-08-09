@@ -63,7 +63,29 @@
         "BMC伺服器管理晶片AST2600/AST2750 SoC架構設計",
         "PCIe Gen5/6 Retimer訊號完整性補償技術",
         "CXL 2.0/3.0記憶體池化Retimer IC設計"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "全球BMC伺服器管理晶片(AST2600/AST2750)市佔率>90%，近乎壟斷",
+          "PCIe Gen5/6 Retimer訊號完整性補償技術(CTLE/DFE)領先",
+          "Dell/HPE/Lenovo/Supermicro等全球伺服器大廠核心供應商"
+        ],
+        "weaknesses": [
+          "資本額僅3.78億，公司規模小，研發資源有限",
+          "BMC晶片產品線高度集中，多元化不足",
+          "上櫃公司流動性較低"
+        ],
+        "opportunities": [
+          "AI伺服器出貨量增長帶動BMC晶片需求",
+          "PCIe Gen5/Gen6 Retimer在AI GPU互連需求爆發",
+          "CXL 2.0/3.0記憶體池化AST3200新應用"
+        ],
+        "threats": [
+          "Intel/AMD可能自研BMC晶片降低外購",
+          "中國BMC晶片廠(超微/長城)在國產替代壓力下追趕",
+          "伺服器景氣循環影響BMC出貨量"
+        ]
+      }
     },
     {
       "topicId": "cxl-memory-pooling",
@@ -122,7 +144,29 @@
         "AST3200 BMC晶片整合CXL 2.0控制器設計",
         "PCIe Gen5/Gen6 Retimer訊號完整性技術(CTLE/DFE)",
         "CXL Switch多埠記憶體擴展架構"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "AST3200 CXL記憶體擴展控制器整合CXL 2.0控制器設計先發優勢",
+          "PCIe Gen5/Gen6 Retimer訊號完整性技術(CTLE/DFE)領先同業",
+          "CXL Switch多埠記憶體擴展架構與Intel/AMD/Samsung/SK hynix合作"
+        ],
+        "weaknesses": [
+          "CXL記憶體池化市場尚在早期階段，營收貢獻有限",
+          "CXL標準持續演進(2.0→3.0)需持續研發投入",
+          "公司規模小，CXL Switch晶片研發資源受限"
+        ],
+        "opportunities": [
+          "CXL記憶體池化在AI資料中心加速落地",
+          "CXL 3.0多埠Switch晶片新應用",
+          "PCIe Gen6 Retimer在AI伺服器GPU互連需求"
+        ],
+        "threats": [
+          "Intel/AMD可能整合CXL控制器至CPU減少外購",
+          "Microchip/Marvell等大廠也在布局CXL Switch",
+          "CXL生態系成熟速度不確定"
+        ]
+      }
     },
     {
       "topicId": "software-cloud-security",
@@ -183,7 +227,29 @@
         "BMC韌體帶外管理(Out-of-Band Management)架構",
         "Redfish API伺服器遠端管理協定(DMTF標準)",
         "AST2600/AST3200 SoC系統監控架構(ARM Cortex)"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "BMC韌體帶外管理(Out-of-Band Management)架構為伺服器管理事實標準",
+          "Redfish API伺服器遠端管理協定(DMTF標準)支援完整",
+          "Dell(iDRAC)/HPE(iLO)/Lenovo(XClarity)等Tier-1伺服器大廠深度嵌入"
+        ],
+        "weaknesses": [
+          "BMC韌體為硬體附屬軟體，獨立軟體授權收入有限",
+          "OpenBMC開源方案可能侵蝕私有韌體市場",
+          "雲端伺服器資產管理軟體面臨微軟/Google等大廠競爭"
+        ],
+        "opportunities": [
+          "AI伺服器帶外管理需求增長(功耗/溫度監控)",
+          "資料中心ESG碳排監控軟體新應用",
+          "雲端伺服器資產管理平台SaaS化"
+        ],
+        "threats": [
+          "OpenBMC開源社群降低私有BMC韌體需求",
+          "大型CSP(Google/AWS/Meta)自研伺服器管理軟體",
+          "資安市場競爭激烈"
+        ]
+      }
     }
   ]
 }
