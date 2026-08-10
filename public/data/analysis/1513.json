@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1513",
   "name": "中興電",
-  "generatedAt": "2026-08-07T12:33:55.596Z",
+  "generatedAt": "2026-08-10T12:37:07.576Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -83,9 +79,18 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "具備風場輸配電工程EPC統包經驗（設計-採購-施工一體化），為台灣少數能承接大型風場變電站的本土廠商。",
+        "中興電為台灣GIS氣體絕緣開關設備領導廠商，345kV GIS設計製造能力為國內少数具備超高壓GIS量產資格的廠商。"
+      ],
+      "opportunities": [
+        "台電dReg調頻備轉容量持續擴標，中興電為既有標案得標商，具備優先續約優勢。",
+        "氫能+儲能混合電廠為未來趨勢，中興電同時具備PEM燃料電池與儲能PCS能力，可切入混合式電廠標案。"
+      ],
+      "risks": [
+        "台達電6月營收YoY+55.4%受惠AI需求，其PCS技術與全球佈局遠超中興電，海外儲能市場競爭力不足。",
+        "丹麥沃旭/德國EnBW等開發商可能指定歐洲EPC合作夥伴，中興電在風場變電站統包面臨外商競爭。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,6 +98,8 @@
       "題材 重電、電纜與 EPC 工程（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 13 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "中興電 在「重電、電纜與 EPC 工程」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +112,19 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：EPC統包工程營收認列不規律，單一大型標案完工後可能面臨營收空窗，波動性高。",
+      "V2 W：中興電在儲能供應鏈定位為間接角色（PCS/配電盤/EPC統包），非電池芯供應商，儲能附加值有限。",
+      "V2 T：台達電6月營收YoY+55.4%受惠AI需求，其PCS技術與全球佈局遠超中興電，海外儲能市場競爭力不足。",
+      "V2 T：丹麥沃旭/德國EnBW等開發商可能指定歐洲EPC合作夥伴，中興電在風場變電站統包面臨外商競爭。"
+    ],
     "watch": [
+      "V2 O：台電dReg調頻備轉容量持續擴標，中興電為既有標案得標商，具備優先續約優勢。",
+      "V2 O：氫能+儲能混合電廠為未來趨勢，中興電同時具備PEM燃料電池與儲能PCS能力，可切入混合式電廠標案。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
       "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-06-01"
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -179,7 +191,233 @@
         "roleSummary": "中興電在離岸風電題材中提供風場陸上變電站GIS設備與輸配電工程統包服務，並跨足氫能產氫系統。5月營收23.9億年增3.6%，累計111.9億年增2.3%，綠能工程動能穩定。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-dreg-expansion",
+        "category": "opportunity",
+        "statement": "台電dReg調頻備轉容量持續擴標，中興電為既有標案得標商，具備優先續約優勢。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-hydrogen-ess",
+        "category": "opportunity",
+        "statement": "氫能+儲能混合電廠為未來趨勢，中興電同時具備PEM燃料電池與儲能PCS能力，可切入混合式電廠標案。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-hydrogen-policy",
+        "category": "opportunity",
+        "statement": "台灣氫能政策逐步成形（2025氫能示範運行），中興電PEM燃料電池+產氫系統為先發者。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "opportunity-hydrogen-renewable",
+        "category": "opportunity",
+        "statement": "綠氫（再生能源電解水製氫）為未來趨勢，中興電PEM水電解產氫系統可與風電/光電結合。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "opportunity-offshore-wind-phase3",
+        "category": "opportunity",
+        "statement": "台灣離岸風電區塊開發（Phase 3）2026-2030年每年1.5GW標案，中興電為風場變電站GIS核心供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "opportunity-resilient-grid",
+        "category": "opportunity",
+        "statement": "台電強韌電網計畫5600億元持續推動，345kV GIS/變壓器標案為中興電核心受惠項目。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "strength-epc-track-record",
+        "category": "strength",
+        "statement": "具備風場輸配電工程EPC統包經驗（設計-採購-施工一體化），為台灣少數能承接大型風場變電站的本土廠商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-gis-leader",
+        "category": "strength",
+        "statement": "中興電為台灣GIS氣體絕緣開關設備領導廠商，345kV GIS設計製造能力為國內少数具備超高壓GIS量產資格的廠商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "strength-hydrogen-pioneer",
+        "category": "strength",
+        "statement": "中興電為台灣氫能PEM燃料電池固定式發電系統先驅，中油示範場已運轉，具備產氫+發電一體化技術。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "strength-mom-growth",
+        "category": "strength",
+        "statement": "6月營收MoM+18.4%，顯示儲能/輸配電標案出貨加速，且氫能燃料電池示範場持續推進。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-offshore-wind-gis",
+        "category": "strength",
+        "statement": "中興電為離岸風電陸上變電站GIS設備核心供應商，161kV/345kV GIS+海底電纜終端接頭為風場併聯必要設備。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-pcs-epc",
+        "category": "strength",
+        "statement": "中興電為台電儲能調頻備轉EPC統包標案常勝軍，具備100kW-5MW級PCS雙向變流器+配電盤+EMS一站式統包能力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-revenue-growth",
+        "category": "strength",
+        "statement": "6月營收28.3億元，MoM+18.4%、YoY+8.3%，受惠輸配電標案持續出貨與氫能系統訂單。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "threat-delta-pcs",
+        "category": "threat",
+        "statement": "台達電6月營收YoY+55.4%受惠AI需求，其PCS技術與全球佈局遠超中興電，海外儲能市場競爭力不足。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-foreign-epc",
+        "category": "threat",
+        "statement": "丹麥沃旭/德國EnBW等開發商可能指定歐洲EPC合作夥伴，中興電在風場變電站統包面臨外商競爭。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-foreign-gis",
+        "category": "threat",
+        "statement": "ABB/Siemens/Hitachi Energy等國際大廠在345kV GIS領域技術領先，台電部分超高壓標案仍偏好外商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "threat-hydrogen-slow-adoption",
+        "category": "threat",
+        "statement": "台灣氫能基礎設施（加氫站/氫氣管線）建設進度緩慢，PEM燃料電池固定式發電市場短期難以放量。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "threat-safety-regulation",
+        "category": "threat",
+        "statement": "儲能案場火災事故頻傳，台電可能提高安全標準與保險要求，增加EPC統包成本與責任風險。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-wind-delay",
+        "category": "threat",
+        "statement": "離岸風電區塊開發標案時程持續延遲（環評/漁業補償/在地化爭議），影響風場變電站設備訂單排程。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-epc-lumpy",
+        "category": "weakness",
+        "statement": "EPC統包工程營收認列不規律，單一大型標案完工後可能面臨營收空窗，波動性高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "weakness-indirect-ess",
+        "category": "weakness",
+        "statement": "中興電在儲能供應鏈定位為間接角色（PCS/配電盤/EPC統包），非電池芯供應商，儲能附加值有限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-indirect-wind",
+        "category": "weakness",
+        "statement": "中興電在再生能源領域為間接角色，不參與風機製造/風場開發，附加值受限於電力設備供應。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-lumpy-revenue",
+        "category": "weakness",
+        "statement": "風場EPC統包營收認列集中於標案完工期，季度波動大，且風場開發時程延遲影響設備交貨。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-pcs-commodity",
+        "category": "weakness",
+        "statement": "PCS變流器技術門檻逐步降低，台達電/華城/士林電機均具備MW級PCS能力，利潤率面臨壓縮。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-small-scale",
+        "category": "weakness",
+        "statement": "實收資本額50.3億元，營收規模遠小於士林電機/東元，在大型EPC統包標案中資金调度能力受限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "electrical-equipment-epc",
@@ -250,12 +488,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

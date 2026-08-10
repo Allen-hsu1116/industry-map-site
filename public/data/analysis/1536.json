@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1536",
   "name": "和大",
-  "generatedAt": "2026-08-07T12:33:55.605Z",
+  "generatedAt": "2026-08-10T12:37:07.587Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -113,14 +109,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "精密齒輪加工技術領先，RV 減速機通過 FANUC/Yaskawa 認證"
+        "精密齒輪加工技術領先，RV 減速機通過 FANUC/Yaskawa 認證",
+        "與Harmonic Drive Systems（日本）及Nabtesco（日本）建立OEM齒輪供應關係，為全球機器人減速機大廠的關鍵齒輪供應商。"
       ],
       "opportunities": [
-        "工業機器人需求帶動減速機成長，人形機器人帶動新規格需求"
+        "工業機器人需求帶動減速機成長，人形機器人帶動新規格需求",
+        "儲能電池櫃散熱風扇傳動齒輪需求隨儲能裝機量成長，和大可切入台達電/東元供應鏈。"
       ],
       "risks": [
         "Nabtesco/Harmonic Drive 在減速機市場的寡佔地位",
-        "減速機市佔遠低於 Nabtesco/Harmonic Drive"
+        "中國來福諧波/中大力德等本土減速機廠技術快速追趕，低價搶佔國產機器人市場，壓縮和大成長空間。"
       ]
     },
     "scoringFactors": [
@@ -129,8 +127,8 @@
       "題材 工業自動化與 CNC 工具機（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 13 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "和大 在「工業自動化與 CNC 工具機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -145,15 +143,17 @@
     ],
     "risks": [
       "V2 W：減速機市佔遠低於 Nabtesco/Harmonic Drive",
-      "V2 T：Nabtesco/Harmonic Drive 在減速機市場的寡佔地位"
+      "V2 W：6月營收3.67億元，累計YoY-0.2%持平，再生能源相關齒輪佔營收比重低，對整體業績影響有限。",
+      "V2 T：Nabtesco/Harmonic Drive 在減速機市場的寡佔地位",
+      "V2 T：中國來福諧波/中大力德等本土減速機廠技術快速追趕，低價搶佔國產機器人市場，壓縮和大成長空間。"
     ],
     "watch": [
       "V2 O：工業機器人需求帶動減速機成長，人形機器人帶動新規格需求",
+      "V2 O：儲能電池櫃散熱風扇傳動齒輪需求隨儲能裝機量成長，和大可切入台達電/東元供應鏈。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善",
       "追蹤 工業自動化與 CNC 工具機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 人形機器人與實體 AI：月營收或訂單能見度改善",
-      "追蹤 人形機器人與實體 AI：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 人形機器人與實體 AI：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -241,12 +241,111 @@
         ]
       },
       {
+        "id": "opportunity-ess-cooling",
+        "category": "opportunity",
+        "statement": "儲能電池櫃散熱風扇傳動齒輪需求隨儲能裝機量成長，和大可切入台達電/東元供應鏈。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-ev-gear",
+        "category": "opportunity",
+        "statement": "電動車減速機齒輪組需求隨EV滲透率提升高速成長，和大高精度斜齒輪/行星齒輪可切入EV供應鏈。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "opportunity-humanoid-robot",
+        "category": "opportunity",
+        "statement": "人形機器人（Tesla Optimus/Figure/Unitree）量產帶動關節減速機需求爆發，和大諧波/RV齒輪技術可直接受惠。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
+        ]
+      },
+      {
+        "id": "opportunity-lightweight-gear",
+        "category": "opportunity",
+        "statement": "和大已開發人形機器人關節用輕量化高扭矩密度齒輪設計，切入新興應用領域。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
+        ]
+      },
+      {
+        "id": "opportunity-solar-growth",
+        "category": "opportunity",
+        "statement": "台灣太陽能裝機目標2025年20GW+，追日系統滲透率提升帶動精密齒輪需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "opportunity-tracking-gear",
+        "category": "opportunity",
+        "statement": "太陽能+儲能案場追日系統需求成長，和大精密行星齒輪（減速比1:100-1:1000）可用於追日支架驅動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
         "id": "strength-1536-industrial-automation",
         "category": "strength",
         "statement": "精密齒輪加工技術領先，RV 減速機通過 FANUC/Yaskawa 認證",
         "confidence": "medium",
         "relatedTopicIds": [
           "industrial-automation"
+        ]
+      },
+      {
+        "id": "strength-oem-partnership",
+        "category": "strength",
+        "statement": "與Harmonic Drive Systems（日本）及Nabtesco（日本）建立OEM齒輪供應關係，為全球機器人減速機大廠的關鍵齒輪供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
+        ]
+      },
+      {
+        "id": "strength-precision-gear",
+        "category": "strength",
+        "statement": "和大JIS 0級精密齒輪加工技術（精度≤3μm）可應用於儲能變流器冷卻風扇傳動與追日系統機構。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-reducer-gear",
+        "category": "strength",
+        "statement": "和大為台灣唯一同時供應諧波減速機（Harmonic Drive）與RV減速機齒輪組件的精密齒輪製造商，DIN 6級精度/背隙<1 arcmin。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
+        ]
+      },
+      {
+        "id": "strength-solar-tracking",
+        "category": "strength",
+        "statement": "和大精密行星齒輪（減速比1:100-1:1000/JIS N1級精度）為太陽能追日系統核心驅動組件，已供應昱成/程達等追日支架製造商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-wind-blade-gear",
+        "category": "strength",
+        "statement": "和大具備風電變槳系統高扭矩行星齒輪箱組件製造能力，抗腐蝕/抗UV材料技術為差異化。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
         ]
       },
       {
@@ -259,12 +358,120 @@
         ]
       },
       {
+        "id": "threat-china-gear",
+        "category": "threat",
+        "statement": "中國來福諧波/中大力德等本土減速機廠技術快速追趕，低價搶佔國產機器人市場，壓縮和大成長空間。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
+        ]
+      },
+      {
+        "id": "threat-china-solar-gear",
+        "category": "threat",
+        "statement": "中國太陽能追日系統齒輪供應鏈已本土化（中信重工/南高齒等），和大在大型追日支架市場競爭力不足。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-ess-market-limited",
+        "category": "threat",
+        "statement": "儲能用齒輪市場規模太小，不值得和大投入大量研發資源，可能分散核心業務焦點。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-japan-dominance",
+        "category": "threat",
+        "statement": "全球機器人減速機市場由Nabtesco（RV）/Harmonic Drive Systems（諧波）雙寡佔，和大為其代工供應商，自主品牌發展受限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
+        ]
+      },
+      {
+        "id": "threat-niche-competition",
+        "category": "threat",
+        "statement": "儲能用齒輪技術門檻低，中國/台灣中小型齒輪廠均可競爭，和大在利基市場無顯著差異化。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-wind-blade-niche",
+        "category": "threat",
+        "statement": "風電變槳齒輪箱市場由Nabtesco/Winergy等國際大廠主導，和大僅為零組件供應商，難以切入整齒輪箱組裝。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
         "id": "weakness-1536-industrial-automation",
         "category": "weakness",
         "statement": "減速機市佔遠低於 Nabtesco/Harmonic Drive",
         "confidence": "medium",
         "relatedTopicIds": [
           "industrial-automation"
+        ]
+      },
+      {
+        "id": "weakness-flat-revenue",
+        "category": "weakness",
+        "statement": "6月營收3.67億元，累計YoY-0.2%持平，再生能源相關齒輪佔營收比重低，對整體業績影響有限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-indirect-ess",
+        "category": "weakness",
+        "statement": "和大在儲能領域為間接角色（indirect），僅供應散熱齒輪/追日機構等周邊零組件，非儲能核心供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-indirect-renewable",
+        "category": "weakness",
+        "statement": "和大在再生能源為間接角色，僅供應追日/變槳齒輪等周邊零組件，非太陽能板/風機核心供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-niche-market",
+        "category": "weakness",
+        "statement": "儲能用齒輪為利基應用，市場規模有限，對和大營收貢獻微乎其微。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-oem-dependency",
+        "category": "weakness",
+        "statement": "和大在機器人減速機供應鏈為OEM齒輪代工角色，非品牌商/系統整合商，附加值與議價能力受限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
+        ]
+      },
+      {
+        "id": "weakness-small-scale",
+        "category": "weakness",
+        "statement": "6月營收3.67億元（YoY+3.8%/MoM-7.0%），實收資本額27.9億元，規模遠小於日本減速機大廠，研發投入受限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "robotics-physical-ai"
         ]
       }
     ],
@@ -351,12 +558,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

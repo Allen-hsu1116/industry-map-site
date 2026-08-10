@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1519",
   "name": "華城",
-  "generatedAt": "2026-08-07T12:33:55.600Z",
+  "generatedAt": "2026-08-10T12:37:07.581Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -83,9 +79,18 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "華城具備超高壓變電站統包工程能力（設計/施工/試車一體化），可承接台電大型變電站EPC標案。",
+        "華城具備離岸風電海上變電站統包工程整合能力，為台灣少數能承接風場變電站EPC的本土廠商。"
+      ],
+      "opportunities": [
+        "台電微電網標案+工業區儲能需求成長，華城可爭取儲能變電站EPC統包（變壓器+配電盤+EMS整合）。",
+        "台灣離岸風電區塊開發2026-2030年每年1.5GW，每個風場需1座變電站+345kV併聯變壓器，華城為核心供應商。"
+      ],
+      "risks": [
+        "台達電/中興電在儲能PCS+EMS整合能力更完整，華城在儲能系統統包競爭力受限於變壓器/配電盤範圍。",
+        "歐洲風場開發商可能指定母國變電站EPC合作夥伴（丹麥Semco/德國Pfisterer），華城在風場統包面臨外商競爭。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,6 +98,8 @@
       "題材 重電、電纜與 EPC 工程（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 12 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "華城 在「重電、電纜與 EPC 工程」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +112,19 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：華城在儲能供應鏈為電力設備EPC角色，不生產電池芯/PCS/BMS，附加值受限於變壓器與統包。",
+      "V2 W：華城在再生能源為間接角色（wind_electrical_equipment），不參與風機製造/風場開發/海纜製造。",
+      "V2 T：台達電/中興電在儲能PCS+EMS整合能力更完整，華城在儲能系統統包競爭力受限於變壓器/配電盤範圍。",
+      "V2 T：歐洲風場開發商可能指定母國變電站EPC合作夥伴（丹麥Semco/德國Pfisterer），華城在風場統包面臨外商競爭。"
+    ],
     "watch": [
+      "V2 O：台電微電網標案+工業區儲能需求成長，華城可爭取儲能變電站EPC統包（變壓器+配電盤+EMS整合）。",
+      "V2 O：台灣離岸風電區塊開發2026-2030年每年1.5GW，每個風場需1座變電站+345kV併聯變壓器，華城為核心供應商。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
       "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-06-01"
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -179,7 +191,224 @@
         "roleSummary": "華城5月營收14.8億年減9.3%累計84.8億年增3.9%。離岸風電變電站設備為新需求，但短期營收波動大。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-microgrid-epc",
+        "category": "opportunity",
+        "statement": "台電微電網標案+工業區儲能需求成長，華城可爭取儲能變電站EPC統包（變壓器+配電盤+EMS整合）。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-offshore-phase3",
+        "category": "opportunity",
+        "statement": "台灣離岸風電區塊開發2026-2030年每年1.5GW，每個風場需1座變電站+345kV併聯變壓器，華城為核心供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "opportunity-resilient-grid",
+        "category": "opportunity",
+        "statement": "台電強韌電網計畫5600億元持續推動，345kV超高壓變壓器/GIS為華城核心受惠產品。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "opportunity-us-export",
+        "category": "opportunity",
+        "statement": "美國老舊電網更新需求龐大（IRA法案電網現代化預算），華城變壓器可出口美國市場。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "opportunity-us-grid-storage",
+        "category": "opportunity",
+        "statement": "美國IRA法案帶動儲能電廠建設潮，華城變壓器可出口美國儲能案場。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-us-wind-farm",
+        "category": "opportunity",
+        "statement": "美國離岸風電（Vineyard Wind/South Fork等）變壓器需求成長，華城可切入美國風場併聯設備市場。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-epc-integration",
+        "category": "strength",
+        "statement": "華城具備超高壓變電站統包工程能力（設計/施工/試車一體化），可承接台電大型變電站EPC標案。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "strength-offshore-substation",
+        "category": "strength",
+        "statement": "華城具備離岸風電海上變電站統包工程整合能力，為台灣少數能承接風場變電站EPC的本土廠商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "strength-storage-transformer",
+        "category": "strength",
+        "statement": "華城為儲能電廠用變壓器（500kVA-10MVA）與微電網系統整合商，具備EMS+PCS+儲能一站式MW級統包能力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-tepc-ess",
+        "category": "strength",
+        "statement": "已得標台電微電網/光儲融合標案，具備儲能變電站EPC統包實績。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-transformer-expert",
+        "category": "strength",
+        "statement": "華城為台灣超高壓電力變壓器專業製造商，345kV油浸式變壓器+GIS（72.5kV-145kV）為核心產品，台電長期供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "strength-wind-transformer",
+        "category": "strength",
+        "statement": "華城為風場併聯變壓器（161kV/345kV）+GIS（72.5kV/145kV）核心供應商，具備離岸風電海上變電站統包工程能力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-delta-chungsin",
+        "category": "threat",
+        "statement": "台達電/中興電在儲能PCS+EMS整合能力更完整，華城在儲能系統統包競爭力受限於變壓器/配電盤範圍。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-foreign-substation",
+        "category": "threat",
+        "statement": "歐洲風場開發商可能指定母國變電站EPC合作夥伴（丹麥Semco/德國Pfisterer），華城在風場統包面臨外商競爭。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-imported-transformers",
+        "category": "threat",
+        "statement": "ABB/Hitachi Energy/Siemens等國際大廠在500kV以上超高壓變壓器具技術優勢，台電部分標案可能偏好外商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "threat-tepc-budget",
+        "category": "threat",
+        "statement": "台電強韌電網計畫預算可能因政治因素調整或延遲，影響變壓器/GIS標案排程。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "threat-tepc-delay",
+        "category": "threat",
+        "statement": "台電儲能標案時程可能因安全法規/預算調整而延遲，影響華城儲能變壓器交貨排程。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-wind-delay",
+        "category": "threat",
+        "statement": "離岸風電區塊開發標案延遲（環評/漁權/在地化爭議），影響風場變電站設備訂單排程與營收認列。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-core-ess",
+        "category": "weakness",
+        "statement": "華城在儲能供應鏈為電力設備EPC角色，不生產電池芯/PCS/BMS，附加值受限於變壓器與統包。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-indirect-wind",
+        "category": "weakness",
+        "statement": "華城在再生能源為間接角色（wind_electrical_equipment），不參與風機製造/風場開發/海纜製造。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-revenue-decline",
+        "category": "weakness",
+        "statement": "6月營收17.3億元，YoY-25.8%、累計YoY-2.7%，顯示台電標案出貨節奏放緩或基期較高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "weakness-small-cap",
+        "category": "weakness",
+        "statement": "實收資本額31.6億元，營收規模約150-200億元，在大型變電站EPC統包標案中資金與產能受限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "weakness-yoy-decline",
+        "category": "weakness",
+        "statement": "6月營收YoY-25.8%，雖然MoM+17.1%顯示出貨回溫，但年減幅度仍大，儲能標案可能受台電排程影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-yoy-decline-wind",
+        "category": "weakness",
+        "statement": "6月營收YoY-25.8%，風場標案可能因開發時程延遲而影響設備交貨，營收波動性高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "electrical-equipment-epc",
@@ -251,12 +480,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

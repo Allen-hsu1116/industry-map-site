@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-08-07T12:33:55.938Z",
+  "generatedAt": "2026-08-10T12:37:07.922Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-07",
-  "chipDataDate": "2026-08-07",
+  "marketDataDate": "2026-08-10",
+  "chipDataDate": "2026-08-10",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,35 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 63,
+    "summary": "欣銓 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 9.4%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 9.4%",
+      "帶量上漲，量比 2.23x"
     ],
     "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": 8,
-    "summary": "欣銓 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.4千張；投信近 5 日買超 +3.1千張。",
+    "score": 16,
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +3.6千張；投信近 5 日買超 +6.4千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.4千張",
-      "投信近 5 日買超 +3.1千張"
+      "三大法人近 5 日合計買超 +3.6千張",
+      "投信近 5 日買超 +6.4千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -4.9千張",
-      "外資近 5 日賣超 -2.1千張",
-      "融資近 5 日增加 26.0%，但技術面未同步轉強"
+      "近 20 日法人偏賣，合計 -2.5千張",
+      "外資近 5 日賣超 -3.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-07",
-      "融券近 5 日增加 41.9%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-10",
+      "融券近 5 日增加 33.3%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -137,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-07"
+      "lastVerified": "2026-08-10"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -176,7 +175,7 @@
         "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "medium",
         "roleSummary": "欣銓6月營收15.52億MoM+2.25%。提供邊緣AI SoC晶圓與成品測試服務，受惠AIoT邊緣運算晶片需求增長，主力仍為記憶體IC測試代工。"
       },
       {
@@ -186,7 +185,7 @@
         "canonicalTopicName": "HBM 高頻寬記憶體",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "medium",
         "roleSummary": "欣銓6月營收15.52億MoM+2.25%。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務，受惠AI GPU HBM需求爆發，但測試環節受惠程度低於封測廠。"
       },
       {
@@ -196,7 +195,7 @@
         "canonicalTopicName": "低軌衛星通訊",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "medium",
         "roleSummary": "欣銓為記憶體IC及混合訊號IC測試專業廠，MOPS登記為記憶體IC晶圓測試、數位/混合訊號IC晶圓及成品測試、晶圓型Burn-in測試。在低軌衛星題材中以Ka/Ku頻段射頻IC測試切入，受惠低軌衛星射頻晶片需求增長。母公司力積電(6770)為穩定來源。"
       },
       {
@@ -206,7 +205,7 @@
         "canonicalTopicName": "MLCC / 電容器",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "low",
         "roleSummary": "欣銓為專業IC測試服務商，提供MLCC驅動IC晶圓與成品測試服務，間接受惠MLCC產業需求成長帶動測試量增加。"
       },
       {
@@ -216,7 +215,7 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "low",
         "roleSummary": "欣銓為專業IC測試服務商，提供IC載板封裝前後測試與Burn-in服務。受惠ABF載板需求成長，間接支援PCB載板良率驗證。"
       },
       {
@@ -373,8 +372,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 62,
-    "recommendationState": "watchlist",
+    "totalScore": 78,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -382,8 +381,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -391,10 +391,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：200.40",
-      "波段多空分水嶺看 MA20：203.45",
-      "追蹤法人是否延續 買超：最近 +406張",
-      "本益比 27.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：207.40",
+      "波段多空分水嶺看 MA20：203.33",
+      "追蹤法人是否延續 買超：最近 +2.4千張",
+      "本益比 29.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 243.50 且量比 > 1.5：列為轉強訊號",

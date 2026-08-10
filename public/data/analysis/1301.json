@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1301",
   "name": "台塑",
-  "generatedAt": "2026-08-07T12:33:55.565Z",
+  "generatedAt": "2026-08-10T12:37:07.545Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bearish",
@@ -119,16 +115,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "六輕一貫化生產成本優勢",
-        "PVC全球市佔領先"
+        "產品線涵蓋PVC、PP、HDPE、LDPE、LLDPE、EVA、碳素纖維、丙烯睛、MMA等，跨泛用塑膠與特化材料分散風險。",
+        "台塑為六輕一貫化塑化工廠核心，PVC年產能130萬噸，VCM→PVC上游垂直整合，成本結構為全球前三低成本。"
       ],
       "opportunities": [
-        "碳素纖維新應用(航太/車用)",
-        "美中貿易轉單效益"
+        "碳素纖維應用於風電葉片、壓力容器、航太結構件需求成長，台塑具備PAN基precursor自主技術。",
+        "醫療級PVC（USP Class VI/REACH合規）與碳素纖維（T700/T800 precursor）為高毛利特化產品，受AI/航太/醫療需求帶動。"
       ],
       "risks": [
-        "碳稅/碳費政策壓力",
-        "中國產能過剩競爭"
+        "歐盟CBAM碳邊境調整機制與台灣碳費制度將增加六輕高碳排製程成本，PVC/PP等高耗能產品首當其衝。",
+        "石化景氣進入下行週期，油價波動+中國產能過剩+全球需求放緩三重壓力，泛用塑膠利差持續壓縮。"
       ]
     },
     "scoringFactors": [
@@ -137,6 +133,8 @@
       "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "台塑 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -150,18 +148,18 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：碳稅/碳費政策壓力",
-      "W：中國產能過剩競爭",
-      "T：中國石化產能傾銷",
-      "T：ESG法規趨嚴增加成本"
+      "V2 W：中國PVC/PP產能過剩導致低價傾銷，壓縮台塑利潤空間，且中國為台塑最大出口市場之一。",
+      "V2 W：6月營收139.8億元，YoY-2.7%、累計YoY-3.6%，反映中國塑膠原料自給率提升與全球需求放緩壓力。",
+      "V2 T：歐盟CBAM碳邊境調整機制與台灣碳費制度將增加六輕高碳排製程成本，PVC/PP等高耗能產品首當其衝。",
+      "V2 T：石化景氣進入下行週期，油價波動+中國產能過剩+全球需求放緩三重壓力，泛用塑膠利差持續壓縮。"
     ],
     "watch": [
+      "V2 O：碳素纖維應用於風電葉片、壓力容器、航太結構件需求成長，台塑具備PAN基precursor自主技術。",
+      "V2 O：醫療級PVC（USP Class VI/REACH合規）與碳素纖維（T700/T800 precursor）為高毛利特化產品，受AI/航太/醫療需求帶動。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
       "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：碳素纖維新應用(航太/車用)",
-      "O：美中貿易轉單效益",
-      "V2 SWOT 最後驗證：2026-06-02"
+      "V2 SWOT 最後驗證：2026-08-08"
     ]
   },
   "knowledge": {
@@ -237,7 +235,80 @@
         "roleSummary": "台塑6月營收139.76億YoY-2.7%，累計892.39億YoY-3.6%。MOPS登記為PVC/PP/HDPE/碳素纖維/液鹼等石化產品。台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒，石化景氣復甦緩慢影響營收。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-carbon-fiber",
+        "category": "opportunity",
+        "statement": "碳素纖維應用於風電葉片、壓力容器、航太結構件需求成長，台塑具備PAN基precursor自主技術。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "opportunity-medical-grade-pvc",
+        "category": "opportunity",
+        "statement": "醫療級PVC（USP Class VI/REACH合規）與碳素纖維（T700/T800 precursor）為高毛利特化產品，受AI/航太/醫療需求帶動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "strength-product-diversity",
+        "category": "strength",
+        "statement": "產品線涵蓋PVC、PP、HDPE、LDPE、LLDPE、EVA、碳素纖維、丙烯睛、MMA等，跨泛用塑膠與特化材料分散風險。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "strength-sixth-naphtha",
+        "category": "strength",
+        "statement": "台塑為六輕一貫化塑化工廠核心，PVC年產能130萬噸，VCM→PVC上游垂直整合，成本結構為全球前三低成本。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-esg-carbon-tax",
+        "category": "threat",
+        "statement": "歐盟CBAM碳邊境調整機制與台灣碳費制度將增加六輕高碳排製程成本，PVC/PP等高耗能產品首當其衝。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-petrochem-cycle",
+        "category": "threat",
+        "statement": "石化景氣進入下行週期，油價波動+中國產能過剩+全球需求放緩三重壓力，泛用塑膠利差持續壓縮。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-china-overcapacity",
+        "category": "weakness",
+        "statement": "中國PVC/PP產能過剩導致低價傾銷，壓縮台塑利潤空間，且中國為台塑最大出口市場之一。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-revenue-decline",
+        "category": "weakness",
+        "statement": "6月營收139.8億元，YoY-2.7%、累計YoY-3.6%，反映中國塑膠原料自給率提升與全球需求放緩壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "petrochem-plastics",
@@ -287,12 +358,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

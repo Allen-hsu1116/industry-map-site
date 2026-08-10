@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2317",
   "name": "鴻海",
-  "generatedAt": "2026-08-07T12:33:55.676Z",
+  "generatedAt": "2026-08-10T12:37:07.658Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -81,11 +81,18 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
+      "strengths": [
+        "6月營收8218億元，YoY+52.1%（伺服器出貨增加+消費智能新產品），AI伺服器GB200 NVL72整機組裝為新成長引擎。",
+        "鴻海為全球最大電子代工服務（EMS）廠商，iPhone組裝市佔率70%+，且垂直整合精密機構件+連接器+模具。"
+      ],
       "opportunities": [
+        "Apple Intelligence（AI iPhone）帶動換機潮，iPhone 16/17系列AI功能升級可能推動2025-2026年超級週期。",
         "AI 伺服器整機與雲端資料中心硬體需求成長，可帶動鴻海伺服器 ODM/EMS 接單與產能利用率。"
       ],
-      "risks": []
+      "risks": [
+        "中國立訊精密（Luxshare）快速搶佔Apple EMS訂單（AirPods/Apple Watch/iPhone部分組裝），鴻海市佔率面臨侵蝕。",
+        "中美科技戰與中國人工成本上升迫使鴻海將產線移往印度/越南，轉移過程面臨良率/成本/管理挑戰。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,7 +100,8 @@
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 1 項 +5",
+      "正向 SWOT 5 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "鴻海 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +113,19 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：Apple佔鴻海營收比重超過40%，iPhone銷售週期與Apple定價策略直接影響鴻海營收與利潤。",
+      "V2 W：EMS代工毛利率長期低於8%，鴻海雖營收龐大但利潤率受限，iPhone組裝為勞力密集低毛利業務。",
+      "V2 T：中國立訊精密（Luxshare）快速搶佔Apple EMS訂單（AirPods/Apple Watch/iPhone部分組裝），鴻海市佔率面臨侵蝕。",
+      "V2 T：中美科技戰與中國人工成本上升迫使鴻海將產線移往印度/越南，轉移過程面臨良率/成本/管理挑戰。"
+    ],
     "watch": [
+      "V2 O：Apple Intelligence（AI iPhone）帶動換機潮，iPhone 16/17系列AI功能升級可能推動2025-2026年超級週期。",
       "V2 O：AI 伺服器整機與雲端資料中心硬體需求成長，可帶動鴻海伺服器 ODM/EMS 接單與產能利用率。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
       "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
-      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -171,6 +184,15 @@
     ],
     "swot": [
       {
+        "id": "opportunity-ai-pc-iphone",
+        "category": "opportunity",
+        "statement": "Apple Intelligence（AI iPhone）帶動換機潮，iPhone 16/17系列AI功能升級可能推動2025-2026年超級週期。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
         "id": "opportunity-ai-server-odm-ramp",
         "category": "opportunity",
         "statement": "AI 伺服器整機與雲端資料中心硬體需求成長，可帶動鴻海伺服器 ODM/EMS 接單與產能利用率。",
@@ -178,6 +200,69 @@
         "relatedTopicIds": [
           "ai-server-odm",
           "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-vertical-integration",
+        "category": "opportunity",
+        "statement": "鴻海垂直整合能力（連接器/機殼/模具/PCB/SMT）可在iPhone/AI伺服器/消費電子間共享，降低成本提升毛利。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "strength-ai-server-growth",
+        "category": "strength",
+        "statement": "6月營收8218億元，YoY+52.1%（伺服器出貨增加+消費智能新產品），AI伺服器GB200 NVL72整機組裝為新成長引擎。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "strength-iphone-ems",
+        "category": "strength",
+        "statement": "鴻海為全球最大電子代工服務（EMS）廠商，iPhone組裝市佔率70%+，且垂直整合精密機構件+連接器+模具。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "threat-china-ems",
+        "category": "threat",
+        "statement": "中國立訊精密（Luxshare）快速搶佔Apple EMS訂單（AirPods/Apple Watch/iPhone部分組裝），鴻海市佔率面臨侵蝕。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "threat-geopolitical-risk",
+        "category": "threat",
+        "statement": "中美科技戰與中國人工成本上升迫使鴻海將產線移往印度/越南，轉移過程面臨良率/成本/管理挑戰。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "weakness-apple-dependency",
+        "category": "weakness",
+        "statement": "Apple佔鴻海營收比重超過40%，iPhone銷售週期與Apple定價策略直接影響鴻海營收與利潤。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
+        ]
+      },
+      {
+        "id": "weakness-low-margin-ems",
+        "category": "weakness",
+        "statement": "EMS代工毛利率長期低於8%，鴻海雖營收龐大但利潤率受限，iPhone組裝為勞力密集低毛利業務。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "consumer-computing-devices"
         ]
       }
     ],
@@ -242,12 +327,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

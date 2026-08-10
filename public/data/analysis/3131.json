@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "3131",
   "name": "弘塑",
-  "generatedAt": "2026-08-07T12:33:55.905Z",
+  "generatedAt": "2026-08-10T12:37:07.890Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -83,9 +79,18 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "設備+化學品垂直整合模式，提供客戶一站式濕製程解決方案，且具備在地化24h快速維修能力。",
+        "弘塑為台灣半導體濕製程設備（蝕刻/清洗/電鑄）與電子級混酸蝕刻液雙引擎供應商，直接供應台積電、聯電等晶圓代工廠。"
+      ],
+      "opportunities": [
+        "先進製程（N3/N2）蝕刻步驟增加，電子級混酸用量與純度要求提升，弘塑為少數能同時供應設備+化學品的本土廠商。",
+        "半導體設備在地化趨勢下，弘塑的客製化濕製程機台與24h在地維修服務具備進口替代優勢。"
+      ],
+      "risks": [
+        "半導體資本支出進入下行週期時，設備採購與化學品需求將同步萎縮，弘塑雙引擎業務均受影響。",
+        "全球濕製程設備市場由日商DNS（大阪機工）、SCREEN Holdings主導，技術與市佔差距短期難以縮小。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,6 +98,8 @@
       "題材 先進封裝與 CoWoS（process/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "弘塑 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -104,14 +111,19 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：產品線集中於半導體濕製程設備與化學品，受半導體資本支出週期影響顯著，且面臨國際大廠（DNS/SCREEN/Lam Research）競爭壓力。",
+      "V2 W：上櫃公司規模較小（實收資本額2.93億元），月營收資料未揭露於TWSE OpenAPI，資訊透明度受限。",
+      "V2 T：半導體資本支出進入下行週期時，設備採購與化學品需求將同步萎縮，弘塑雙引擎業務均受影響。",
+      "V2 T：全球濕製程設備市場由日商DNS（大阪機工）、SCREEN Holdings主導，技術與市佔差距短期難以縮小。"
+    ],
     "watch": [
+      "V2 O：先進製程（N3/N2）蝕刻步驟增加，電子級混酸用量與純度要求提升，弘塑為少數能同時供應設備+化學品的本土廠商。",
+      "V2 O：半導體設備在地化趨勢下，弘塑的客製化濕製程機台與24h在地維修服務具備進口替代優勢。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
       "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 半導體設備與前段材料：月營收或訂單能見度改善",
-      "追蹤 半導體設備與前段材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-06-01"
+      "追蹤 半導體設備與前段材料：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -168,7 +180,80 @@
         "roleSummary": "弘塑6月營收6.31億(4月5.36億→6月6.31億成長)。MOPS登記為半導體IC製造設備工程承包/電子級混酸蝕刻液電鑄電鑄藥液。濕製程設備與電子級化學品雙業務，服務台積電等一線晶圓廠，前段設備+化學品一體化供應。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-advanced-node-wet",
+        "category": "opportunity",
+        "statement": "先進製程（N3/N2）蝕刻步驟增加，電子級混酸用量與純度要求提升，弘塑為少數能同時供應設備+化學品的本土廠商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "opportunity-equipment-localization",
+        "category": "opportunity",
+        "statement": "半導體設備在地化趨勢下，弘塑的客製化濕製程機台與24h在地維修服務具備進口替代優勢。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "strength-chemical-vertical",
+        "category": "strength",
+        "statement": "設備+化學品垂直整合模式，提供客戶一站式濕製程解決方案，且具備在地化24h快速維修能力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "strength-wet-process-equipment",
+        "category": "strength",
+        "statement": "弘塑為台灣半導體濕製程設備（蝕刻/清洗/電鑄）與電子級混酸蝕刻液雙引擎供應商，直接供應台積電、聯電等晶圓代工廠。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "threat-cyclic-capex",
+        "category": "threat",
+        "statement": "半導體資本支出進入下行週期時，設備採購與化學品需求將同步萎縮，弘塑雙引擎業務均受影響。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "threat-japanese-dominance",
+        "category": "threat",
+        "statement": "全球濕製程設備市場由日商DNS（大阪機工）、SCREEN Holdings主導，技術與市佔差距短期難以縮小。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "weakness-product-concentration",
+        "category": "weakness",
+        "statement": "產品線集中於半導體濕製程設備與化學品，受半導體資本支出週期影響顯著，且面臨國際大廠（DNS/SCREEN/Lam Research）競爭壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      },
+      {
+        "id": "weakness-small-cap",
+        "category": "weakness",
+        "statement": "上櫃公司規模較小（實收資本額2.93億元），月營收資料未揭露於TWSE OpenAPI，資訊透明度受限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "semiconductor-equipment-materials"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "advanced-packaging",
@@ -225,12 +310,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

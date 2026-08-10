@@ -10132,6 +10132,14 @@
         "low": 144.5,
         "close": 146.5,
         "volume": 14319059
+      },
+      {
+        "date": "2026-08-10",
+        "open": 151,
+        "high": 158,
+        "low": 147,
+        "close": 154,
+        "volume": 24436732
       }
     ],
     "monthly_revenue": [
@@ -19903,6 +19911,24 @@
       "total_buy": 6262763,
       "total_sell": 6456026,
       "total_net": -193263
+    },
+    {
+      "date": "2026-08-10",
+      "foreign_buy": 8862660,
+      "foreign_sell": 9198719,
+      "foreign_net": -336059,
+      "investment_trust_buy": 50404,
+      "investment_trust_sell": 0,
+      "investment_trust_net": 50404,
+      "dealer_buy": 410647,
+      "dealer_sell": 204876,
+      "dealer_net": 205771,
+      "dealer_hedge_buy": 187647,
+      "dealer_hedge_sell": 42876,
+      "dealer_hedge_net": 144771,
+      "total_buy": 9323711,
+      "total_sell": 9403595,
+      "total_net": -79884
     }
   ],
   "margin_history": [
@@ -21014,8 +21040,8 @@
       "margin_balance": 31852,
       "margin_yesterday_balance": 29023,
       "margin_limit": 186148,
-      "short_sell": 50,
-      "short_buy": 61,
+      "short_sell": 61,
+      "short_buy": 50,
       "short_cash_repayment": 0,
       "short_balance": 126,
       "short_yesterday_balance": 115,
@@ -21030,8 +21056,8 @@
       "margin_balance": 32070,
       "margin_yesterday_balance": 31852,
       "margin_limit": 186148,
-      "short_sell": 68,
-      "short_buy": 133,
+      "short_sell": 133,
+      "short_buy": 68,
       "short_cash_repayment": 0,
       "short_balance": 191,
       "short_yesterday_balance": 126,
@@ -21046,8 +21072,8 @@
       "margin_balance": 31848,
       "margin_yesterday_balance": 32070,
       "margin_limit": 186148,
-      "short_sell": 22,
-      "short_buy": 164,
+      "short_sell": 164,
+      "short_buy": 22,
       "short_cash_repayment": 0,
       "short_balance": 333,
       "short_yesterday_balance": 191,
@@ -21062,8 +21088,8 @@
       "margin_balance": 32732,
       "margin_yesterday_balance": 31848,
       "margin_limit": 186148,
-      "short_sell": 28,
-      "short_buy": 263,
+      "short_sell": 263,
+      "short_buy": 28,
       "short_cash_repayment": 1,
       "short_balance": 567,
       "short_yesterday_balance": 333,
@@ -21085,6 +21111,22 @@
       "short_yesterday_balance": 567,
       "short_limit": 186148,
       "offset": 22
+    },
+    {
+      "date": "2026-08-07",
+      "margin_buy": 752,
+      "margin_sell": 1404,
+      "margin_cash_repayment": 11,
+      "margin_balance": 32523,
+      "margin_yesterday_balance": 33186,
+      "margin_limit": 186148,
+      "short_sell": 44,
+      "short_buy": 35,
+      "short_cash_repayment": 0,
+      "short_balance": 322,
+      "short_yesterday_balance": 313,
+      "short_limit": 186148,
+      "offset": 16
     }
   ],
   "per_history": [
@@ -21579,6 +21621,12 @@
       "pe": 35.39,
       "pb": 1.86,
       "dividend_yield": 1.91
+    },
+    {
+      "date": "2026-08-10",
+      "pe": 37.2,
+      "pb": 1.96,
+      "dividend_yield": 1.82
     }
   ],
   "shareholding_history": [
@@ -21738,19 +21786,19 @@
     "market_type": "上櫃"
   },
   "price": {
-    "date": "2026-08-07",
+    "date": "2026-08-10",
     "open": 151,
-    "high": 151,
-    "low": 144.5,
-    "close": 146.5,
-    "volume": 14319059
+    "high": 158,
+    "low": 147,
+    "close": 154,
+    "volume": 24436732
   },
-  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-08-07; raw daily OHLCV only, no AI-filled K-line rows",
-  "marketFeedSource": "FinMind TaiwanStockInstitutionalInvestorsBuySell + FinMind TaiwanStockMarginPurchaseShortSale + FinMind TaiwanStockPER via api.finmindtrade.com; updated batch 2026-08-07; raw daily institutional/margin/valuation rows only, no AI-filled chip rows",
+  "priceSource": "FinMind TaiwanStockPrice via api.finmindtrade.com; updated batch 2026-08-10; raw daily OHLCV only, no AI-filled K-line rows",
+  "marketFeedSource": "FinMind TaiwanStockInstitutionalInvestorsBuySell + FinMind TaiwanStockMarginPurchaseShortSale + FinMind TaiwanStockPER via api.finmindtrade.com; updated batch 2026-08-10; raw daily institutional/margin/valuation rows only, no AI-filled chip rows",
   "valuation": {
-    "date": "20260807",
-    "pe": "35.39",
-    "pb": "1.86",
-    "dividendYield": "1.91"
+    "date": "20260810",
+    "pe": "37.2",
+    "pb": "1.96",
+    "dividendYield": "1.82"
   }
 }

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-08-07T12:33:55.667Z",
+  "generatedAt": "2026-08-10T12:37:07.651Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-07",
-  "chipDataDate": "2026-08-07",
+  "marketDataDate": "2026-08-10",
+  "chipDataDate": "2026-08-10",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,31 +17,30 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": -15,
-    "summary": "台達電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 4.5%。",
+    "score": 15,
+    "summary": "台達電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 5.3%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "均線結構偏震盪，尚未形成明確排列",
+      "收盤站上 MA20 5.3%"
     ],
-    "risks": [
-      "收盤跌破 MA20 4.5%"
-    ],
+    "risks": [],
     "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -44,
-    "summary": "台達電 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -2.6千張；近 20 日法人偏賣，合計 -1.8萬張。",
-    "signals": [],
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "台達電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +3.3千張；外資近 5 日買超 +3.5千張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +3.3千張",
+      "外資近 5 日買超 +3.5千張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.6千張",
-      "近 20 日法人偏賣，合計 -1.8萬張",
-      "投信近 5 日賣超 -1.3千張",
-      "外資近 5 日賣超 -1.3千張",
-      "融資近 5 日增加 10.1%，但技術面未同步轉強"
+      "近 20 日法人偏賣，合計 -1.6萬張",
+      "投信近 5 日賣超 -491張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-07"
+      "最近法人資料日：2026-08-10"
     ]
   },
   "industry": {
@@ -79,15 +78,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "台達電主要業務不侷限單一題材，財報揭露的事業範圍可支持其跨電源、基礎設施、自動化與能源應用的多元定位。",
-        "台達電同時具備電源、資料中心基礎設施、風扇散熱與工業自動化產品組合，能跨多個高成長題材提供系統級解決方案。"
+        "6月營收656億元，YoY+55.4%（備註：AI相關產品需求旺盛），AI伺服器電源/散熱為核心成長動能。",
+        "6月營收656億元，YoY+55.4%（AI相關產品需求旺盛），累計YoY+41.0%，AI伺服器電源/散熱為最強成長動能。"
       ],
       "opportunities": [
+        "48V HVDC供電架構在先進晶圓廠/AI資料中心滲透率提升，台達電為全球48V供電方案領導廠商。",
         "AI 資料中心功率密度提高，使高效率電源、配電、熱管理與液冷相關產品具備中期成長機會。"
       ],
       "risks": [
-        "電源、散熱、工業自動化與能源基礎設施市場競爭激烈，若高階產品放量、成本控制或客戶驗證進度不如預期，題材受惠可能無法完整轉化為獲利。",
-        "台達電跨題材產品線很廣，若只看單一熱門題材，容易高估該題材對整體營收與獲利的直接貢獻。"
+        "Bel Power/Artesyn/Murata等國際電源大廠也在搶佔AI伺服器PSU/BBU/PDU市場，台達電雖領先但利潤率可能壓縮。",
+        "Bel Power Solutions/Artesyn等國際電源大廠在Server PSU/VRM領域競爭，台達電雖為龍頭但利潤率面臨壓力。"
       ]
     },
     "scoringFactors": [
@@ -96,8 +96,8 @@
       "題材 AI 伺服器電源與 BBU（product/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 3 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 19 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "台達電 在「AI 伺服器電源與 BBU」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -111,16 +111,18 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "V2 W：台達電跨題材產品線很廣，若只看單一熱門題材，容易高估該題材對整體營收與獲利的直接貢獻。",
-      "V2 T：電源、散熱、工業自動化與能源基礎設施市場競爭激烈，若高階產品放量、成本控制或客戶驗證進度不如預期，題材受惠可能無法完整轉化為獲利。"
+      "V2 W：台達電不生產電池芯，BMS/PCS均為電池週邊設備，儲能系統核心附加值（電池芯）由CATL/LG ES/Samsung SDI掌握。",
+      "V2 W：BBU鋰電池芯依賴外部供應商（18650電池組），台達電不生產電池芯，BBU附加值受限於電池管理電路。",
+      "V2 T：Bel Power/Artesyn/Murata等國際電源大廠也在搶佔AI伺服器PSU/BBU/PDU市場，台達電雖領先但利潤率可能壓縮。",
+      "V2 T：Bel Power Solutions/Artesyn等國際電源大廠在Server PSU/VRM領域競爭，台達電雖為龍頭但利潤率面臨壓力。"
     ],
     "watch": [
+      "V2 O：48V HVDC供電架構在先進晶圓廠/AI資料中心滲透率提升，台達電為全球48V供電方案領導廠商。",
       "V2 O：AI 資料中心功率密度提高，使高效率電源、配電、熱管理與液冷相關產品具備中期成長機會。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 AI 伺服器電源與 BBU：月營收或訂單能見度改善",
       "追蹤 AI 伺服器電源與 BBU：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -134,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-07"
+      "lastVerified": "2026-08-10"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -219,6 +221,15 @@
     ],
     "swot": [
       {
+        "id": "opportunity-48v-hvdc",
+        "category": "opportunity",
+        "statement": "48V HVDC供電架構在先進晶圓廠/AI資料中心滲透率提升，台達電為全球48V供電方案領導廠商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
         "id": "opportunity-ai-data-center-power-cooling",
         "category": "opportunity",
         "statement": "AI 資料中心功率密度提高，使高效率電源、配電、熱管理與液冷相關產品具備中期成長機會。",
@@ -230,6 +241,96 @@
         ]
       },
       {
+        "id": "opportunity-ai-foundry-expansion",
+        "category": "opportunity",
+        "statement": "台積電AI用先進製程（N3/N2/A16）持續擴產，CoWoS/先進封裝廠房新建帶動廠務電源/散熱設備需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "opportunity-gb200-gb300",
+        "category": "opportunity",
+        "statement": "NVIDIA GB200/GB300機櫃級AI伺服器需更高功率BBU+PDU+48V HVDC供電，台達電為NVIDIA指定供電方案合作夥伴。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "opportunity-gb200-rack",
+        "category": "opportunity",
+        "statement": "NVIDIA GB200 NVL72機櫃級AI伺服器每台需100kW+供電+液冷，台達電為NVIDIA指定電源+CDU方案供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-global-ess-growth",
+        "category": "opportunity",
+        "statement": "全球儲能裝機量2025-2030年CAGR 25%+，台達電PCS/BMS/EMS全產品線可直接受惠。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-immersion-cooling",
+        "category": "opportunity",
+        "statement": "兩相浸沒式液冷為AI伺服器散熱終極方案，台達電已開發Immersion Cooling方案，可在超過100kW TDP場景應用。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "opportunity-microgrid",
+        "category": "opportunity",
+        "statement": "離島/工業區/偏遠地區微電網需求成長，台達電EMS微電網調度系統（多機組群控/需量反應/孤島偵測）為核心差異化。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-msft-google",
+        "category": "opportunity",
+        "statement": "Microsoft Azure/Google Cloud自研AI晶片（Maia/TPU）亦需48V供電方案，台達電可擴大供應至非NVIDIA客戶。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "strength-ai-revenue-surge",
+        "category": "strength",
+        "statement": "6月營收656億元，YoY+55.4%（備註：AI相關產品需求旺盛），AI伺服器電源/散熱為核心成長動能。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "strength-ai-yoy-55",
+        "category": "strength",
+        "statement": "6月營收656億元，YoY+55.4%（AI相關產品需求旺盛），累計YoY+41.0%，AI伺服器電源/散熱為最強成長動能。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "strength-bbu-pdu",
+        "category": "strength",
+        "statement": "台達電為AI伺服器BBU電池備援單元+PDU智慧電力分配單元+48V HVDC供電系統核心供應商，直接供應NVIDIA B100/B200 GPU供電方案。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
+        ]
+      },
+      {
         "id": "strength-official-segment-evidence",
         "category": "strength",
         "statement": "台達電主要業務不侷限單一題材，財報揭露的事業範圍可支持其跨電源、基礎設施、自動化與能源應用的多元定位。",
@@ -238,6 +339,33 @@
           "psu",
           "industrial-automation",
           "energy-storage"
+        ]
+      },
+      {
+        "id": "strength-pcs-bms-ems",
+        "category": "strength",
+        "statement": "台達電為全球儲能系統核心供應商，具備MW級PCS雙向變流器+BMS電池管理系統+EMS微電網調度全產品線。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-power-leader",
+        "category": "strength",
+        "statement": "台達電為全球電源管理龍頭，800W+鈦金級Server PSU/48V VRM為晶圓代工廠廠務電力系統核心供應商，AI需求帶動6月營收YoY+55.4%。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "strength-power-thermal-full",
+        "category": "strength",
+        "statement": "台達電為AI伺服器電源+散熱一站式方案供應商，CRPS 800W/2000W+鈦金級PSU+CDU液冷散熱+機櫃級電源管理，直接供應NVIDIA GB200/GB300。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
         ]
       },
       {
@@ -253,6 +381,51 @@
         ]
       },
       {
+        "id": "strength-sic-gan",
+        "category": "strength",
+        "statement": "台達電具備SiC/GaN寬能隙功率元件應用技術，48V直接供電架構VRM/VRD為先進製程晶圓廠電力基礎設施。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "strength-tesla-partnership",
+        "category": "strength",
+        "statement": "台達電為Tesla Powerwall逆變器供應商，且供應台電儲能標案PCS，在全球儲能市場具備品牌客戶基礎。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-bel-artesyn",
+        "category": "threat",
+        "statement": "Bel Power/Artesyn/Murata等國際電源大廠也在搶佔AI伺服器PSU/BBU/PDU市場，台達電雖領先但利潤率可能壓縮。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "threat-bel-power-competition",
+        "category": "threat",
+        "statement": "Bel Power Solutions/Artesyn等國際電源大廠在Server PSU/VRM領域競爭，台達電雖為龍頭但利潤率面臨壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "threat-china-inverter",
+        "category": "threat",
+        "statement": "中國陽光電源/華為數字能源/上能電氣在儲能PCS市場以低價策略快速擴張，台達電海外市佔面臨壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
         "id": "threat-execution-and-competitive-pressure",
         "category": "threat",
         "statement": "電源、散熱、工業自動化與能源基礎設施市場競爭激烈，若高階產品放量、成本控制或客戶驗證進度不如預期，題材受惠可能無法完整轉化為獲利。",
@@ -262,6 +435,123 @@
           "ai-server-liquid-cooling",
           "industrial-automation",
           "energy-storage"
+        ]
+      },
+      {
+        "id": "threat-foundry-downcycle",
+        "category": "threat",
+        "statement": "若半導體景氣進入下行週期，晶圓廠擴產放緩將直接影響台達電廠務電源/散熱設備訂單。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "threat-hyperscaler-insource",
+        "category": "threat",
+        "statement": "Microsoft/Google/Meta等Hyperscale客戶可能自研電源/散熱方案（OCP標準化），降低對台達電依賴。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-nvidia-cycle",
+        "category": "threat",
+        "statement": "AI伺服器需求受NVIDIA產品週期驅動，B100/B200→GB200→GB300世代交替期間可能出現需求波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "threat-safety-regulation",
+        "category": "threat",
+        "statement": "儲能案場火災事故頻傳，全球安全法規趨嚴（UL 9540A/NFPA 855）可能增加PCS/BMS/EMS設計與認證成本。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-solid-state-battery",
+        "category": "threat",
+        "statement": "固態電池技術若成熟可能改變BBU設計，台達電需持續投入電池管理技術研發以維持競爭力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "weakness-battery-cell-dependency",
+        "category": "weakness",
+        "statement": "台達電不生產電池芯，BMS/PCS均為電池週邊設備，儲能系統核心附加值（電池芯）由CATL/LG ES/Samsung SDI掌握。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-bbu-battery-dependency",
+        "category": "weakness",
+        "statement": "BBU鋰電池芯依賴外部供應商（18650電池組），台達電不生產電池芯，BBU附加值受限於電池管理電路。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
+        ]
+      },
+      {
+        "id": "weakness-capacity-constraint",
+        "category": "weakness",
+        "statement": "AI伺服器電源/散熱產能擴建需要時間，CDU/冷板等液冷組件可能面臨交期壓力。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-foundry-capex",
+        "category": "weakness",
+        "statement": "晶圓代工廠務電力設備採購受資本支出週期影響，擴產潮後可能面臨設備採購放緩。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "weakness-indirect-foundry",
+        "category": "weakness",
+        "statement": "台達電在晶圓代工題材為間接角色（power_product_application_side_user），非晶圓製造商，題材傳導為廠務電力設備供應。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "wafer-foundry"
+        ]
+      },
+      {
+        "id": "weakness-margin-dilution",
+        "category": "weakness",
+        "statement": "AI伺服器PSU/CDU業務雖高速成長，但CRPS PSU毛利率15-20%低於公司平均，可能稀釋整體利潤率。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server"
+        ]
+      },
+      {
+        "id": "weakness-margin-pressure",
+        "category": "weakness",
+        "statement": "儲能PCS技術標準化程度提高，中國陽光電源/華為數字能源低價競爭壓縮台達電PCS利潤率。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-nvidia-dependency",
+        "category": "weakness",
+        "statement": "AI伺服器電源/供電業務高度依賴NVIDIA GPU出貨量，若NVIDIA產品週期延遲或競爭加劇將影響台達電訂單。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ai-server-power-backup"
         ]
       },
       {
@@ -358,7 +648,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 53,
+    "totalScore": 68,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
@@ -368,8 +658,8 @@
         "月營收 MoM +6.2%，短期動能改善"
       ],
       "risks": [
-        "本益比 52.5 倍，需防估值壓縮",
-        "股價淨值比 14.6 倍偏高，需和 ROE/成長性比對"
+        "本益比 57.8 倍，需防估值壓縮",
+        "股價淨值比 16.1 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -383,14 +673,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：1636.00",
-      "波段多空分水嶺看 MA20：1727.25",
-      "追蹤法人是否延續 賣超：最近 -1.8千張",
+      "短線支撐/壓力先看 MA5：1683.00",
+      "波段多空分水嶺看 MA20：1723.50",
+      "追蹤法人是否延續 買超：最近 +2.4千張",
       "月營收年增率 +38.6%，觀察基本面是否支撐估值",
-      "本益比 52.5 倍，需和同族群估值比較"
+      "本益比 57.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 1980.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 1950.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 1425.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

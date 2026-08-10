@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6241",
   "name": "鑫永洋",
-  "generatedAt": "2026-08-07T12:33:56.188Z",
+  "generatedAt": "2026-08-10T12:37:08.177Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -47,12 +47,12 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "score": 77,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=2；只做保守參考。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "間接受惠",
@@ -64,17 +64,12 @@
     },
     "productNarratives": [
       {
-        "name": "機房散熱通訊硬體設備(ODM代工)(19\"機櫃用)",
+        "name": "通訊硬體設備(散熱模組周邊搭配用)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "網路交換器散熱外殼(鋁壓鑄散熱設計)(10G/40G/100G)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "散熱模組配套五金件(沖壓/CNC加工)(銅/鋁材質)",
+        "name": "網路通訊模組(資料中心散熱系統監控用)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -93,24 +88,25 @@
     },
     "scoringFactors": [
       "直接度 間接受惠 +8",
-      "角色信心 high +16",
+      "角色信心 low +3",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 56，上限 40）"
     ],
-    "summary": "鑫永洋 在「AI 伺服器液冷散熱」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 77/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "鑫永洋 在「AI 伺服器液冷散熱」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器液冷散熱 · 間接受惠 · high",
-      "產業評分：77/100（直接度 間接受惠 +8；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "相關題材：資安、雲端服務與企業軟體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "已有 V2 role，但 status=verified、confidence=low、evidence=2；只做保守參考。",
       "V2 W：公司為上櫃極小型股，實收資本額僅4.55億元，營收規模與市場影響力有限，且含私募股票。",
       "V2 T：公司規模極小且營收有限，若新產品布局未能成功商轉，長期營運持續性存在風險。"
     ],
@@ -163,7 +159,7 @@
         "canonicalTopicName": "AI 伺服器液冷散熱",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "low",
         "roleSummary": "鑫永洋(AMIGO)為通訊散熱週邊供應商，MOPS登記為通訊產品製造及買賣。以散熱風扇與機構外殼切入AI伺服器機房散熱配套，非核心散熱技術業者但具ODM整合能力。"
       },
       {
@@ -173,7 +169,7 @@
         "canonicalTopicName": "資安、雲端服務與企業軟體",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "medium",
         "roleSummary": "鑫永洋(原易通展)6月營收0.56億MoM-26%，通訊產品OEM為主。資安硬體appliance OEM題材純度低，非核心資安軟體標的，營收規模小且波動大。"
       }
     ],
@@ -257,7 +253,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 21,
+    "totalScore": 8,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -266,21 +262,24 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
-      "rationale": [
-        "題材角色已 evidence-backed，可納入題材股策略"
-      ]
+      "classification": "觀察股",
+      "rationale": []
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

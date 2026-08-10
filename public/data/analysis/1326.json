@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1326",
   "name": "台化",
-  "generatedAt": "2026-08-07T12:33:55.587Z",
+  "generatedAt": "2026-08-10T12:37:07.566Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bearish",
@@ -117,16 +113,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "六輕上游原料整合優勢",
-        "PTA/SM成本全球領先"
+        "台化為全球前三大PTA生產商與台灣最大ABS樹脂廠，六輕一貫化從PX→PTA→聚酯纖維全鏈整合。",
+        "6月營收276.7億元，YoY+11.6%、累計YoY+10.8%，為台塑集團中營收成長最強的公司。"
       ],
       "opportunities": [
-        "越南/印度紡織需求增長",
-        "高值化耐隆應用擴展"
+        "ABS/PP應用於電動車內裝件與電池模組外殼需求成長，車用塑膠為高值化方向。",
+        "台化具備CPL/尼龍上游原料（AN/DMF）供應能力，受惠機能性紡織品與工程塑膠需求。"
       ],
       "risks": [
-        "中国PS/ABS產能過剩壓抑報價",
-        "傳統纖維業務毛利壓縮"
+        "中國2025-2026年新增PTA產能超過800萬噸/年，全球PTA產能利用率可能降至70%以下。",
+        "六輕芳香烴/PTA製程為高碳排產業，CBAM與台灣碳費將增加外銷成本。"
       ]
     },
     "scoringFactors": [
@@ -135,6 +131,8 @@
       "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "台化 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -148,18 +146,18 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：中国PS/ABS產能過剩壓抑報價",
-      "W：傳統纖維業務毛利壓縮",
-      "T：中国產能傾銷",
-      "T：碳費/ESG合規成本上升"
+      "V2 W：ABS樹脂受3C消費電子景氣循環影響大，NB/手機需求放緩時ABS利差快速收窄。",
+      "V2 W：PTA-聚酯產業鏈長期供過於求，中國新產能持續投產壓縮利差，台化PTA業務利潤率低於5%。",
+      "V2 T：中國2025-2026年新增PTA產能超過800萬噸/年，全球PTA產能利用率可能降至70%以下。",
+      "V2 T：六輕芳香烴/PTA製程為高碳排產業，CBAM與台灣碳費將增加外銷成本。"
     ],
     "watch": [
+      "V2 O：ABS/PP應用於電動車內裝件與電池模組外殼需求成長，車用塑膠為高值化方向。",
+      "V2 O：台化具備CPL/尼龍上游原料（AN/DMF）供應能力，受惠機能性紡織品與工程塑膠需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
       "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：越南/印度紡織需求增長",
-      "O：高值化耐隆應用擴展",
-      "V2 SWOT 最後驗證：2026-06-02"
+      "V2 SWOT 最後驗證：2026-08-08"
     ]
   },
   "knowledge": {
@@ -235,7 +233,80 @@
         "roleSummary": "台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。5月營收273.9億年增15.5%，累計1,412億年增10.6%。PTA與ABS受惠於下游需求回溫。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-abs-ev-battery",
+        "category": "opportunity",
+        "statement": "ABS/PP應用於電動車內裝件與電池模組外殼需求成長，車用塑膠為高值化方向。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "opportunity-nylon-upstream",
+        "category": "opportunity",
+        "statement": "台化具備CPL/尼龍上游原料（AN/DMF）供應能力，受惠機能性紡織品與工程塑膠需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "strength-pta-sm-scale",
+        "category": "strength",
+        "statement": "台化為全球前三大PTA生產商與台灣最大ABS樹脂廠，六輕一貫化從PX→PTA→聚酯纖維全鏈整合。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "strength-revenue-growth",
+        "category": "strength",
+        "statement": "6月營收276.7億元，YoY+11.6%、累計YoY+10.8%，為台塑集團中營收成長最強的公司。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-china-pta-glut",
+        "category": "threat",
+        "statement": "中國2025-2026年新增PTA產能超過800萬噸/年，全球PTA產能利用率可能降至70%以下。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-esg-carbon",
+        "category": "threat",
+        "statement": "六輕芳香烴/PTA製程為高碳排產業，CBAM與台灣碳費將增加外銷成本。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-abs-cyclicality",
+        "category": "weakness",
+        "statement": "ABS樹脂受3C消費電子景氣循環影響大，NB/手機需求放緩時ABS利差快速收窄。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-margin-pressure",
+        "category": "weakness",
+        "statement": "PTA-聚酯產業鏈長期供過於求，中國新產能持續投產壓縮利差，台化PTA業務利潤率低於5%。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "petrochem-plastics",
@@ -284,12 +355,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

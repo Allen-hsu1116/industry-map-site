@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1402",
   "name": "遠東新",
-  "generatedAt": "2026-08-07T12:33:55.588Z",
+  "generatedAt": "2026-08-10T12:37:07.568Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -122,16 +118,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "全球PET聚酯粒龍頭",
-        "垂直整合(上游EG/PTA→下游纖維)"
+        "遠東新為全球前五大PET聚酯製造商，具備rPET回收再生技術（TopGreen® GRS認證），為Nike/Adidas/Uniqlo再生纖維供應商。",
+        "6月營收229.2億元，YoY+12.1%、累計YoY+5.3%，受惠瓶用PET與機能性布料需求回暖。"
       ],
       "opportunities": [
-        "rPET回收再製成長趨勢",
-        "東南亞/印度紡織需求"
+        "瓶用PET受飲料/食品包裝需求穩定成長，且rPET食品級應用法規逐步開放（美國FDA/EU 2022/1616）。",
+        "Nike/Adidas/Uniqlo等品牌客戶承諾2030年使用50%+再生材料，遠東新rPT/rPET為少數GRS認證供應商。"
       ],
       "risks": [
-        "傳統紡織毛利偏低",
-        "中国PET產能過剩"
+        "化學法PET回收（depolymerization）技術進步可能顛覆物理法rPET市場，Eastman/Carbios等新創具技術優勢。",
+        "全球快時尚消費放緩（Shein/Temu低價競爭），聚酯纖維需求增速可能低於預期。"
       ]
     },
     "scoringFactors": [
@@ -140,6 +136,8 @@
       "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "遠東新 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -153,18 +151,18 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "W：傳統紡織毛利偏低",
-      "W：中国PET產能過剩",
-      "T：中國PET傾銷壓價",
-      "T：快時尚品牌去化庫存"
+      "V2 W：全球PET產能過剩，中國/印度新產能持續投產，瓶用PET利差長期受壓。",
+      "V2 W：紡織下游染整/假撚加工為勞力密集產業，台灣/中國人工成本上升壓縮利潤，需持續東南亞移轉。",
+      "V2 T：化學法PET回收（depolymerization）技術進步可能顛覆物理法rPET市場，Eastman/Carbios等新創具技術優勢。",
+      "V2 T：全球快時尚消費放緩（Shein/Temu低價競爭），聚酯纖維需求增速可能低於預期。"
     ],
     "watch": [
+      "V2 O：瓶用PET受飲料/食品包裝需求穩定成長，且rPET食品級應用法規逐步開放（美國FDA/EU 2022/1616）。",
+      "V2 O：Nike/Adidas/Uniqlo等品牌客戶承諾2030年使用50%+再生材料，遠東新rPT/rPET為少數GRS認證供應商。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
       "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "O：rPET回收再製成長趨勢",
-      "O：東南亞/印度紡織需求",
-      "V2 SWOT 最後驗證：2026-06-02"
+      "V2 SWOT 最後驗證：2026-08-08"
     ]
   },
   "knowledge": {
@@ -240,7 +238,80 @@
         "roleSummary": "遠東新6月營收229.22億YoY+12.1%，累計1305.14億YoY+5.3%。MOPS登記為石化纖維原料半成品製成品/紡織成衣針織成衣。全球前五大聚酯纖維供應商，垂直整合從PET聚合→紡絲→假撚→織布→成衣，受惠運動服飾與環保再生需求。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-food-grade-pet",
+        "category": "opportunity",
+        "statement": "瓶用PET受飲料/食品包裝需求穩定成長，且rPET食品級應用法規逐步開放（美國FDA/EU 2022/1616）。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "opportunity-rpet-brand-demand",
+        "category": "opportunity",
+        "statement": "Nike/Adidas/Uniqlo等品牌客戶承諾2030年使用50%+再生材料，遠東新rPT/rPET為少數GRS認證供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "strength-recycled-pet",
+        "category": "strength",
+        "statement": "遠東新為全球前五大PET聚酯製造商，具備rPET回收再生技術（TopGreen® GRS認證），為Nike/Adidas/Uniqlo再生纖維供應商。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "strength-revenue-growth",
+        "category": "strength",
+        "statement": "6月營收229.2億元，YoY+12.1%、累計YoY+5.3%，受惠瓶用PET與機能性布料需求回暖。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-chemical-recycling-disruption",
+        "category": "threat",
+        "statement": "化學法PET回收（depolymerization）技術進步可能顛覆物理法rPET市場，Eastman/Carbios等新創具技術優勢。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-fast-fashion-downcycle",
+        "category": "threat",
+        "statement": "全球快時尚消費放緩（Shein/Temu低價競爭），聚酯纖維需求增速可能低於預期。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-pet-overcapacity",
+        "category": "weakness",
+        "statement": "全球PET產能過剩，中國/印度新產能持續投產，瓶用PET利差長期受壓。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-textile-labor",
+        "category": "weakness",
+        "statement": "紡織下游染整/假撚加工為勞力密集產業，台灣/中國人工成本上升壓縮利潤，需持續東南亞移轉。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "petrochem-plastics",
@@ -291,12 +362,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1504",
   "name": "東元",
-  "generatedAt": "2026-08-07T12:33:55.592Z",
+  "generatedAt": "2026-08-10T12:37:07.572Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
-    "missingKnowledge": [
-      "complete_swot"
-    ],
-    "blockingReasons": [
-      "incomplete_swot"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -85,9 +81,18 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "東元為台灣最大工業馬達製造商，產品線涵蓋IE3/IE4/IE5高壓低壓馬達（0.75kW-10000kW），變頻器JN700系列，客戶涵蓋台塑/中鋼/台電。",
+        "東元具備MW級儲能PCS變流器與EMS能源管理系統整合能力，可提供微電網一站式解決方案。"
+      ],
+      "opportunities": [
+        "電動車驅動馬達市場年增25%+，東元具備車用馬達開發能力且已供應國內EV廠。",
+        "全球IE4/IE5馬達法規陸續生效（EU 2023/2024、中國GB 18613-2020），東元IE4/IE5產品線完整可直接受惠。"
+      ],
+      "risks": [
+        "中國臥龍電氣/江特電機等低價馬達廠積極搶佔東南亞/印度市場，壓縮東元海外成長空間。",
+        "台達電在儲能PCS領域技術領先且全球佈局完整，東元在海外儲能市場難以競爭。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -95,6 +100,8 @@
       "題材 重電、電纜與 EPC 工程（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 8 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "東元 在「重電、電纜與 EPC 工程」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -106,14 +113,19 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：東元在儲能領域為間接角色（indirect），非電池芯/電池模組製造商，附加值有限。",
+      "V2 W：馬達/變壓器為成熟低毛利產業，東元毛利率長期維持在15-20%，缺乏高成長動能。",
+      "V2 T：中國臥龍電氣/江特電機等低價馬達廠積極搶佔東南亞/印度市場，壓縮東元海外成長空間。",
+      "V2 T：台達電在儲能PCS領域技術領先且全球佈局完整，東元在海外儲能市場難以競爭。"
+    ],
     "watch": [
+      "V2 O：電動車驅動馬達市場年增25%+，東元具備車用馬達開發能力且已供應國內EV廠。",
+      "V2 O：全球IE4/IE5馬達法規陸續生效（EU 2023/2024、中國GB 18613-2020），東元IE4/IE5產品線完整可直接受惠。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
       "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-06-01"
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -170,7 +182,152 @@
         "roleSummary": "東元6月營收52.8億年增0.15%，累計年增5.9%。MOPS主要經營：電氣/運輸/冷凍空調/電子。儲能PCS與高壓馬達為綠能轉型重點，台電儲能標案為主要驅動。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ev-motor",
+        "category": "opportunity",
+        "statement": "電動車驅動馬達市場年增25%+，東元具備車用馬達開發能力且已供應國內EV廠。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "opportunity-ie4-ie5-regulation",
+        "category": "opportunity",
+        "statement": "全球IE4/IE5馬達法規陸續生效（EU 2023/2024、中國GB 18613-2020），東元IE4/IE5產品線完整可直接受惠。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "opportunity-microgrid",
+        "category": "opportunity",
+        "statement": "離島/工業區微電網需求成長，東元EMS+PCS+馬達一站式方案具整合優勢。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "opportunity-taipower-ess",
+        "category": "opportunity",
+        "statement": "台電調頻備轉容量持續擴標（2025年目標1500MW+），東元可爭取PCS+EMS統包標案。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-motor-leader",
+        "category": "strength",
+        "statement": "東元為台灣最大工業馬達製造商，產品線涵蓋IE3/IE4/IE5高壓低壓馬達（0.75kW-10000kW），變頻器JN700系列，客戶涵蓋台塑/中鋼/台電。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "strength-pcs-ems",
+        "category": "strength",
+        "statement": "東元具備MW級儲能PCS變流器與EMS能源管理系統整合能力，可提供微電網一站式解決方案。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "strength-revenue-stable",
+        "category": "strength",
+        "statement": "6月營收52.8億元，YoY+0.1%持平，累計YoY+5.9%，受惠IE4/IE5高效率馬達與變頻器需求穩定成長。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "strength-tepc-partnership",
+        "category": "strength",
+        "statement": "與台電長期合作關係為儲能標案核心優勢，且具備IE4/IE5高壓馬達用於儲能冷卻系統。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-china-motor-competition",
+        "category": "threat",
+        "statement": "中國臥龍電氣/江特電機等低價馬達廠積極搶佔東南亞/印度市場，壓縮東元海外成長空間。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "threat-delta-dominance",
+        "category": "threat",
+        "statement": "台達電在儲能PCS領域技術領先且全球佈局完整，東元在海外儲能市場難以競爭。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-ess-safety",
+        "category": "threat",
+        "statement": "儲能案場火災事故頻傳，安全法規趨嚴可能增加PCS/EMS系統整合成本。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "threat-smart-grid-disruption",
+        "category": "threat",
+        "statement": "固態變壓器（SST）與數位電網技術可能顛覆傳統變壓器/GIS市場，東元在電力電子轉型速度需加快。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "weakness-indirect-role",
+        "category": "weakness",
+        "statement": "東元在儲能領域為間接角色（indirect），非電池芯/電池模組製造商，附加值有限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-low-margin",
+        "category": "weakness",
+        "statement": "馬達/變壓器為成熟低毛利產業，東元毛利率長期維持在15-20%，缺乏高成長動能。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      },
+      {
+        "id": "weakness-pcs-competition",
+        "category": "weakness",
+        "statement": "儲能PCS市場競爭激烈，台達電/中興電/華城均具備MW級PCS能力，東元市佔率不高。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "energy-storage-battery"
+        ]
+      },
+      {
+        "id": "weakness-transformer-cyclicality",
+        "category": "weakness",
+        "statement": "超高壓變壓器/GIS業務受台電標案週期影響，強韌電網計畫完工後可能面臨訂單空窗。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "electrical-equipment-epc"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "electrical-equipment-epc",
@@ -233,12 +390,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },

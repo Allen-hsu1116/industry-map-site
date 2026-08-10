@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3130",
   "name": "一零四",
-  "generatedAt": "2026-08-07T12:33:55.904Z",
+  "generatedAt": "2026-08-10T12:37:07.888Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,7 +51,7 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
@@ -65,17 +65,17 @@
     },
     "productNarratives": [
       {
-        "name": "104人力銀行平台(求職招募SaaS)",
+        "name": "104人力銀行平台(線上求職招募)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "HR SaaS(招募/績效/薪酬管理)",
+        "name": "HR SaaS(招募管理/績效考核/人力資源分析)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "AI人才推薦引擎(技能-職缺匹配)",
+        "name": "AI人才推薦引擎(NLP履歷分析)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -94,7 +94,7 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 資安、雲端服務與企業軟體（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
@@ -104,9 +104,9 @@
     ],
     "summary": "一零四 在「資安、雲端服務與企業軟體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：資安、雲端服務與企業軟體 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 資安、雲端服務與企業軟體（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：資安、雲端服務與企業軟體 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 資安、雲端服務與企業軟體（theme/active） +18）",
       "相關題材：軍工、航太與無人機 · 間接受惠",
       "相關題材：記憶體模組 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -165,7 +165,7 @@
         "canonicalTopicName": "資安、雲端服務與企業軟體",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
+        "confidence": "medium",
         "roleSummary": "一零四6月營收2.63億年增7.9%、累計年增6.9%。台灣最大人力資源SaaS平台，以AI人才推薦引擎與HR SaaS服務企業招募需求，與資安題材關聯薄弱。"
       },
       {
@@ -175,7 +175,7 @@
         "canonicalTopicName": "軍工、航太與無人機",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "low",
         "roleSummary": "一零四(104)在國防航太題材中為人才招募服務提供者，透過104人力銀行平台與獵才顧問服務協助漢翔/中科院等國防航太機構招募專業人才。6月營收2.63億YoY+7.87%，累計14.09億YoY+6.93%。MOPS登記為一般廣告服務業電子資訊就業服務。"
       },
       {
@@ -185,7 +185,7 @@
         "canonicalTopicName": "記憶體模組",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
+        "confidence": "low",
         "roleSummary": "一零四6月營收2.63億YoY+7.87%，累計14.09億YoY+6.93%。作為台灣最大人力銀行平台，間接服務記憶體模組廠人才招募需求，提供DRAM/NAND封測工程師媒合與培訓服務。MOPS登記為一般廣告服務業電子資訊就業服務。"
       }
     ],
@@ -302,12 +302,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 74 天未更新"
+        "message": "股價資料已 77 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 74 天未更新"
+        "message": "籌碼資料已 77 天未更新"
       }
     ]
   },
