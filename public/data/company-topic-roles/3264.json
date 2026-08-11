@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-08-09",
+  "updatedAt": "2026-08-12",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -58,7 +58,29 @@
         "記憶體IC晶圓級測試(Wafer Probing)高溫Burn-in篩選技術",
         "HBM TSV前DRAM die測試與良率分類技術",
         "混合訊號IC ADC/DAC射頻量測測試平台"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "MOPS登記記憶體IC晶圓測試/數位訊號IC/混合訊號IC晶圓及成品測試/Burn-in測試，先進封裝前後段測試全覆蓋",
+          "HBM TSV堆疊前DRAM die晶圓測試與分類(KGD)技術，SK hynix/Micron HBM供應鏈測試合作夥伴",
+          "記憶體IC晶圓級測試(Wafer Probing)高溫Burn-in篩選技術，CoWoS封裝前後測試需求受惠"
+        ],
+        "weaknesses": [
+          "月營收資料無法取得(上櫃)，營運動能與HBM測試收入貢獻難以量化",
+          "先進封裝測試為附屬服務角色，測試收入受封裝產能利用率波動影響大",
+          "HBM測試雖具技術壁壘但規模有限，欣銓主力仍為標準DRAM/NAND測試"
+        ],
+        "opportunities": [
+          "AI伺服器HBM需求爆發帶動TSV前DRAM die測試需求大幅增長，KGD篩選為HBM量產關鍵瓶頸",
+          "CoWoS封裝良率提升需更嚴格的晶圓測試與Burn-in篩選，欣銓測試服務需求持續增加",
+          "先進封裝(SoIC/Chiplet)帶動混合訊號IC測試需求，欣銓混合訊號測試平台具先發優勢"
+        ],
+        "threats": [
+          "京元電子(2449)同為記憶體測試代工競爭者，HBM測試訂單爭奪激烈",
+          "記憶體廠(SK hynix/Micron)可能自建HBM測試產能減少委外需求",
+          "先進封裝測試標準未統一，測試方案可能隨封裝技術演進快速變化"
+        ]
+      }
     },
     {
       "topicId": "hbm",
@@ -113,7 +135,29 @@
         "HBM TSV堆疊前DRAM die晶圓測試與分類(KGD)",
         "高溫Burn-in篩選HBM記憶體可靠性驗證",
         "記憶體IC晶圓級測試探針卡高密度對位技術"
-      ]
+      ],
+      "swot": {
+        "strengths": [
+          "HBM晶圓測試(TSV前CP測試)與DRAM die測試分類(KGD)為HBM供應鏈核心環節，SK hynix/Micron為測試合作夥伴",
+          "MOPS登記記憶體IC晶圓測試為主營業務，高溫Burn-in篩選HBM記憶體可靠性驗證具技術壁壘",
+          "HBM TSV堆疊前DRAM die晶圓測試與分類(KGD)為HBM量產良率保證關鍵步驟"
+        ],
+        "weaknesses": [
+          "月營收資料無法取得(上櫃)，HBM測試收入占比與成長動能難以量化",
+          "HBM測試需高溫Burn-in設備投資金額大，設備取得週期影響產能擴張速度",
+          "HBM測試標準與規格隨SK hynix/Micron技術演進快速變化，測試方案需持續更新"
+        ],
+        "opportunities": [
+          "AI GPU(H100/B200)搭載HBM3/HBM3e需求爆發，帶動DRAM die KGD測試需求倍增",
+          "HBM4世代堆疊層數增至12-16層，KGD篩選重要性提升有利測試單價增長",
+          "Micron HBM量產導入帶動台灣供應鏈測試需求，欣銓為Micron HBM測試合作夥伴可受惠"
+        ],
+        "threats": [
+          "SK hynix/Micron可能擴大內部測試產能減少委外，影響欣銓HBM測試訂單",
+          "京元電子(2449)積極搶攻HBM測試市場，價格競爭可能壓縮測試毛利",
+          "HBM技術路線變化(如混合鍵合替代微凸塊)可能改變測試流程與需求"
+        ]
+      }
     },
     {
       "topicId": "edge-ai-aiot",
