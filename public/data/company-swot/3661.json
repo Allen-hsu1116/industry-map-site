@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3661",
   "companyName": "世芯-KY",
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-08-13",
   "items": [
     {
       "id": "strength-advanced-custom-asic-service",
@@ -122,6 +122,58 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "strength-ai-asic-turnkey",
+      "category": "strength",
+      "statement": "世芯-KY是AI ASIC Turnkey設計服務領導廠商，7月營收74.33億MoM+108%YoY+182%爆發性成長，量產產品增加。",
+      "rationale": "MOPS登記為ASIC SoC設計及製造生產；7nm/5nm/3nm先進製程Turnkey服務，客戶涵蓋NVIDIA/Broadcom/Google/Amazon/Meta。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-revenue-volatility",
+      "category": "weakness",
+      "statement": "累計營收YoY-13.8%，上半年量產產品減少導致營收下滑，單月爆發性成長但全年仍可能負成長。",
+      "rationale": "7月YoY+182%但累計YoY-13.8%，反映上半年NRE收入減少、量產時程遞延的波動風險。",
+      "timeHorizon": "cyclical",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ai-custom-chip",
+      "category": "opportunity",
+      "statement": "AI訓練/推論客製化晶片需求爆發，Google TPU/AWS Trainium/Meta AI晶片均為客戶，NRE+量產收入雙引擎。",
+      "rationale": "7月營收爆發性成長備註為「量產產品增加所致」，AI ASIC從NRE轉入量產階段。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "threat-customer-concentration",
+      "category": "threat",
+      "statement": "少數超大客戶(NVIDIA/Google/Amazon)占比高，單一客戶專案延遲或取消將嚴重影響營收。",
+      "rationale": "ASIC Turnkey服務客戶集中度天然偏高，每個AI ASIC專案金額巨大但數量有限。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
       "status": "verified"
     }
   ]

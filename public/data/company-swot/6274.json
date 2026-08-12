@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6274",
   "companyName": "台燿",
-  "updatedAt": "2026-07-25",
+  "updatedAt": "2026-08-13",
   "items": [
     {
       "id": "strength-ccl-manufacturer",
@@ -122,6 +122,73 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-07-25",
+      "status": "verified"
+    },
+    {
+      "id": "strength-high-freq-ccl",
+      "category": "strength",
+      "statement": "台燿為高頻低損耗CCL專業製造商，Megtron 6/7等級基板供應AI伺服器與低軌衛星PCB。",
+      "rationale": "MOPS登記為銅箔基板/粘合片/多層壓合板製造；高頻CCL(Dk<3.0, Df<0.002)用於400G/800G網通與衛星射頻電路。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "pcb-substrates",
+        "leo-satellite-communications"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-upstream-material-cost",
+      "category": "weakness",
+      "statement": "銅箔與樹脂等上游原料成本佔比高，原物料價格波動直接影響毛利率。",
+      "rationale": "CCL為原物料密集型產品，銅價與環氧樹脂價格波動為主要成本風險。",
+      "timeHorizon": "cyclical",
+      "relatedTopicIds": [
+        "pcb-substrates"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ai-server-ccl",
+      "category": "opportunity",
+      "statement": "AI伺服器400G/800G交換器使用高頻低損耗CCL，需求隨AI資本支出成長。",
+      "rationale": "NVIDIA供應鏈對高頻CCL需求增加，台燿為台灣主要供應商之一。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "pcb-substrates"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "threat-competition-tuc-taiwan",
+      "category": "threat",
+      "statement": "台光電(2383)、南亞塑膠(1303)等同業競爭高頻CCL市場，技術門檻逐步降低。",
+      "rationale": "多家CCL廠商投入高頻低損耗材料研發，競爭加劇。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "pcb-substrates"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-revenue-data-gap",
+      "category": "weakness",
+      "statement": "上櫃公司月營收未透過TWSE OpenAPI揭露，營運追蹤難度較高。",
+      "rationale": "6274為上櫃公司，月營收API無資料。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "pcb-substrates",
+        "leo-satellite-communications"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
       "status": "verified"
     }
   ]

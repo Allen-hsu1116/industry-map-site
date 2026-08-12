@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6415",
   "companyName": "矽力*-KY",
-  "updatedAt": "2026-05-28",
+  "updatedAt": "2026-08-13",
   "items": [
     {
       "id": "strength-power-management-ic-focus",
@@ -119,6 +119,84 @@
       ],
       "confidence": "medium",
       "lastVerified": "2026-05-28",
+      "status": "verified"
+    },
+    {
+      "id": "strength-pmic-leader",
+      "category": "strength",
+      "statement": "矽力-KY是全球電源管理IC設計領導廠商，7月營收23.57億創歷史新高，YoY+58.5%，終端需求強勁。",
+      "rationale": "MOPS登記為電源管理IC研發設計及銷售；高壓BCD製程與USB PD快充IC為核心競爭力，產品布局完整驅動營收爆發性成長。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-fabless-cyclical",
+      "category": "weakness",
+      "statement": "Fabless模式受晶圓代工產能與價格制約，且消費電子景氣循環影響快充IC需求波動。",
+      "rationale": "矽力依賴台積電/世界先進等代工廠產能，景氣下行時利用率與價格談判能力受限。",
+      "timeHorizon": "cyclical",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ai-server-pmic",
+      "category": "opportunity",
+      "statement": "AI伺服器電源管理IC需求隨GPU功耗上升而增加，車用PMIC受電動車滲透率提升帶動。",
+      "rationale": "7月營收YoY+58.5%，備註提及「終端產品需求增加且產品布局更完整」，AI/車用為成長引擎。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "threat-china-competition",
+      "category": "threat",
+      "statement": "中國電源管理IC設計公司(如芯朋微、晶豐明源)在中低壓PMIC領域加速替代。",
+      "rationale": "中國國產替代政策推動本土PMIC設計，矽力在中國消費電子市場面臨價格競爭。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "ic-design"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "strength-leo-radiation-pmic",
+      "category": "strength",
+      "statement": "電源管理IC設計核心能力可延伸至太空級抗輻射應用，LEO衛星電源IC為新興成長領域。",
+      "rationale": "高壓BCD製程與車規AEC-Q100認證基礎可轉化至太空級電源IC設計。",
+      "timeHorizon": "emerging",
+      "relatedTopicIds": [
+        "leo-satellite-communications"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-leo-no-space-heritage",
+      "category": "weakness",
+      "statement": "缺乏太空級認證與飛行履歷(heritage)，LEO衛星市場進入門檻高且認證週期長。",
+      "rationale": "太空級IC需通過輻射測試與長期可靠性驗證，矽力目前無太空履歷。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "leo-satellite-communications"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
       "status": "verified"
     }
   ]

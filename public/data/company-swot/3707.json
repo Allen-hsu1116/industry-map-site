@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3707",
   "companyName": "漢磊",
-  "updatedAt": "2026-07-01",
+  "updatedAt": "2026-08-13",
   "items": [
     {
       "id": "strength-sic-gan",
@@ -234,6 +234,58 @@
       ],
       "confidence": "high",
       "lastVerified": "2026-07-01",
+      "status": "verified"
+    },
+    {
+      "id": "strength-sic-gan-foundry",
+      "category": "strength",
+      "statement": "漢磊為第三代半導體SiC/GaN功率晶圓代工廠，具軍規JAN認證，進入壁壘高。",
+      "rationale": "MOPS登記為功率半導體及類比積體電路晶圓代工；SiC 4/6吋MOSFET與GaN HEMT 0.15μm為核心製程。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "defense-aerospace"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "weakness-revenue-data-gap",
+      "category": "weakness",
+      "statement": "上櫃公司月營收未透過TWSE OpenAPI揭露，營運追蹤難度較高。",
+      "rationale": "3707為上櫃公司，月營收API無資料。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "defense-aerospace"
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "opportunity-ev-sic",
+      "category": "opportunity",
+      "statement": "電動車SiC功率元件需求爆發，800V高壓平台加速SiC MOSFET導入。",
+      "rationale": "SiC用於電動車主逆變器/OBC/DC-DC，800V平台趨勢帶動SiC需求。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "defense-aerospace"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
+      "status": "verified"
+    },
+    {
+      "id": "threat-sic-substrate-cost",
+      "category": "threat",
+      "statement": "SiC基板成本高且供應商集中(Wolfspeed/II-VI)，代工毛利受基板成本制約。",
+      "rationale": "SiC基板佔元件成本50%+，基板價格與供應穩定性為風險。",
+      "timeHorizon": "structural",
+      "relatedTopicIds": [
+        "defense-aerospace"
+      ],
+      "confidence": "medium",
+      "lastVerified": "2026-08-13",
       "status": "verified"
     }
   ]
