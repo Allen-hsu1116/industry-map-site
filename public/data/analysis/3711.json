@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3711",
   "name": "日月光投控",
-  "generatedAt": "2026-08-11T12:34:44.389Z",
+  "generatedAt": "2026-08-12T12:30:48.973Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-11",
-  "chipDataDate": "2026-08-11",
+  "marketDataDate": "2026-08-12",
+  "chipDataDate": "2026-08-12",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,29 +18,30 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "日月光投控 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 4.2%。",
+    "summary": "日月光投控 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.4%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 4.2%"
+      "收盤站上 MA20 3.4%"
     ],
     "risks": [],
     "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -20,
-    "summary": "日月光投控 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +7千張；三大法人近 5 日合計賣超 -2.3千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": -15,
+    "summary": "日月光投控 籌碼面目前為「籌碼中性」：投信近 5 日買超 +3.7千張；融資近 5 日下降 8.6%，籌碼壓力下降。",
     "signals": [
-      "投信近 5 日買超 +7千張"
+      "投信近 5 日買超 +3.7千張",
+      "融資近 5 日下降 8.6%，籌碼壓力下降"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.3千張",
-      "近 20 日法人偏賣，合計 -2.6萬張",
-      "外資近 5 日賣超 -9.8千張"
+      "三大法人近 5 日合計賣超 -5.2千張",
+      "近 20 日法人偏賣，合計 -3.5萬張",
+      "外資近 5 日賣超 -8.9千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-11"
+      "最近法人資料日：2026-08-12"
     ]
   },
   "industry": {
@@ -132,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-11"
+      "lastVerified": "2026-08-12"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -293,38 +294,38 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 70,
+    "totalScore": 73,
     "recommendationState": "top_candidate",
     "fundamental": {
-      "score": 12,
+      "score": 24,
       "label": "基本面中性",
       "signals": [
         "月營收 YoY +19.2%，成長動能明確"
       ],
       "risks": [
-        "本益比 45.5 倍，需防估值壓縮",
-        "股價淨值比 7.1 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 7.0 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "題材角色已 evidence-backed，可納入題材股策略"
+        "題材角色已 evidence-backed，可納入題材股策略",
+        "基本面成長可支撐估值與題材敘事"
       ]
     },
     "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：606.40",
-      "波段多空分水嶺看 MA20：603.75",
-      "追蹤法人是否延續 賣超：最近 -562張",
+      "短線支撐/壓力先看 MA5：612.00",
+      "波段多空分水嶺看 MA20：600.65",
+      "追蹤法人是否延續 賣超：最近 -2.9千張",
       "月營收年增率 +19.2%，觀察基本面是否支撐估值",
-      "本益比 45.5 倍，需和同族群估值比較"
+      "本益比 44.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 696.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 694.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 465.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2308",
   "name": "台達電",
-  "generatedAt": "2026-08-11T12:34:44.031Z",
+  "generatedAt": "2026-08-12T12:30:48.439Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-11",
-  "chipDataDate": "2026-08-11",
+  "marketDataDate": "2026-08-12",
+  "chipDataDate": "2026-08-12",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,35 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 15,
-    "summary": "台達電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 4.9%。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "台達電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 4.3%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 4.9%"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 4.3%"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "台達電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2.1千張；三大法人近 5 日合計賣超 -2.5千張。",
+    "summary": "台達電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2.3千張；三大法人近 5 日合計賣超 -3.6千張。",
     "signals": [
-      "投信近 5 日買超 +2.1千張"
+      "投信近 5 日買超 +2.3千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.5千張",
-      "近 20 日法人偏賣，合計 -1.8萬張",
-      "外資近 5 日賣超 -4.8千張"
+      "三大法人近 5 日合計賣超 -3.6千張",
+      "近 20 日法人偏賣，合計 -2萬張",
+      "外資近 5 日賣超 -6千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-11",
-      "融券近 5 日增加 64.5%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-12",
+      "融券近 5 日增加 38.2%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -137,7 +139,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-11"
+      "lastVerified": "2026-08-12"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -649,8 +651,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 64,
-    "recommendationState": "watchlist",
+    "totalScore": 71,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -659,13 +661,14 @@
         "月營收 MoM +6.2%，短期動能改善"
       ],
       "risks": [
-        "本益比 57.5 倍，需防估值壓縮",
-        "股價淨值比 16.0 倍偏高，需和 ROE/成長性比對"
+        "本益比 57.0 倍，需防估值壓縮",
+        "股價淨值比 15.8 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -674,11 +677,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：1720.00",
-      "波段多空分水嶺看 MA20：1721.00",
-      "追蹤法人是否延續 賣超：最近 -4千張",
+      "短線支撐/壓力先看 MA5：1748.00",
+      "波段多空分水嶺看 MA20：1716.00",
+      "追蹤法人是否延續 賣超：最近 -830張",
       "月營收年增率 +38.6%，觀察基本面是否支撐估值",
-      "本益比 57.5 倍，需和同族群估值比較"
+      "本益比 57.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 1950.00 且量比 > 1.5：列為轉強訊號",
