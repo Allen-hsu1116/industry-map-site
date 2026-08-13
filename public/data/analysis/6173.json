@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-08-12T12:30:49.154Z",
+  "generatedAt": "2026-08-13T12:35:37.437Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-12",
-  "chipDataDate": "2026-08-12",
+  "marketDataDate": "2026-08-13",
+  "chipDataDate": "2026-08-13",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,29 +17,34 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 63,
-    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 18.7%。",
+    "score": 73,
+    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 30.0%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 18.7%",
-      "帶量上漲，量比 5.09x"
+      "收盤站上 MA20 30.0%",
+      "帶量上漲，量比 5.60x"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "接近 20 日高點 223.50，觀察是否突破"
+    ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
-    "score": -28,
-    "summary": "信昌電 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -4.7千張；近 20 日法人偏賣，合計 -5.1千張。",
-    "signals": [],
+    "score": -20,
+    "summary": "信昌電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +1.9千張；三大法人近 5 日合計賣超 -7.6千張。",
+    "signals": [
+      "投信近 5 日買超 +1.9千張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -4.7千張",
-      "近 20 日法人偏賣，合計 -5.1千張",
-      "外資近 5 日賣超 -4.3千張"
+      "三大法人近 5 日合計賣超 -7.6千張",
+      "近 20 日法人偏賣，合計 -1.1萬張",
+      "外資近 5 日賣超 -8.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-12"
+      "最近法人資料日：2026-08-13",
+      "融券近 5 日增加 409.5%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -133,7 +138,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-12"
+      "lastVerified": "2026-08-13"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -369,7 +374,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 50,
+    "totalScore": 53,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -388,19 +393,19 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 15.7%，停損距離過大"
+        "message": "距離 MA20 約 23.1%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：177.20",
-      "波段多空分水嶺看 MA20：171.50",
-      "追蹤法人是否延續 賣超：最近 -555張",
-      "本益比 38.3 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：187.70",
+      "波段多空分水嶺看 MA20：171.90",
+      "追蹤法人是否延續 賣超：最近 -3.2千張",
+      "本益比 42.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 233.50 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 223.50 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 132.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

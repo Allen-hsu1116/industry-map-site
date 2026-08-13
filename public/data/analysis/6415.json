@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "6415",
   "name": "矽力*-KY",
-  "generatedAt": "2026-08-12T12:30:49.248Z",
+  "generatedAt": "2026-08-13T12:35:37.500Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -84,9 +80,17 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "電源管理IC設計核心能力可延伸至太空級抗輻射應用，LEO衛星電源IC為新興成長領域。",
+        "矽力-KY是全球電源管理IC設計領導廠商，7月營收23.57億創歷史新高，YoY+58.5%，終端需求強勁。"
+      ],
+      "opportunities": [
+        "AI伺服器電源管理IC需求隨GPU功耗上升而增加，車用PMIC受電動車滲透率提升帶動。"
+      ],
+      "risks": [
+        "中國電源管理IC設計公司(如芯朋微、晶豐明源)在中低壓PMIC領域加速替代。",
+        "Fabless模式受晶圓代工產能與價格制約，且消費電子景氣循環影響快充IC需求波動。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -94,6 +98,8 @@
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 3 項 +10",
+      "風險 SWOT 扣分 -9",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "矽力*-KY 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -105,14 +111,18 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：Fabless模式受晶圓代工產能與價格制約，且消費電子景氣循環影響快充IC需求波動。",
+      "V2 W：缺乏太空級認證與飛行履歷(heritage)，LEO衛星市場進入門檻高且認證週期長。",
+      "V2 T：中國電源管理IC設計公司(如芯朋微、晶豐明源)在中低壓PMIC領域加速替代。"
+    ],
     "watch": [
+      "V2 O：AI伺服器電源管理IC需求隨GPU功耗上升而增加，車用PMIC受電動車滲透率提升帶動。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
-      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-05-28"
+      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -169,7 +179,62 @@
         "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心能力延伸至太空級抗輻射應用，LEO衛星電源IC為新興成長領域。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-server-pmic",
+        "category": "opportunity",
+        "statement": "AI伺服器電源管理IC需求隨GPU功耗上升而增加，車用PMIC受電動車滲透率提升帶動。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      },
+      {
+        "id": "strength-leo-radiation-pmic",
+        "category": "strength",
+        "statement": "電源管理IC設計核心能力可延伸至太空級抗輻射應用，LEO衛星電源IC為新興成長領域。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "strength-pmic-leader",
+        "category": "strength",
+        "statement": "矽力-KY是全球電源管理IC設計領導廠商，7月營收23.57億創歷史新高，YoY+58.5%，終端需求強勁。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      },
+      {
+        "id": "threat-china-competition",
+        "category": "threat",
+        "statement": "中國電源管理IC設計公司(如芯朋微、晶豐明源)在中低壓PMIC領域加速替代。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      },
+      {
+        "id": "weakness-fabless-cyclical",
+        "category": "weakness",
+        "statement": "Fabless模式受晶圓代工產能與價格制約，且消費電子景氣循環影響快充IC需求波動。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      },
+      {
+        "id": "weakness-leo-no-space-heritage",
+        "category": "weakness",
+        "statement": "缺乏太空級認證與飛行履歷(heritage)，LEO衛星市場進入門檻高且認證週期長。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "leo-satellite-communications"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ic-design",
@@ -228,12 +293,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       },
       {
         "id": "risk.stop-distance",

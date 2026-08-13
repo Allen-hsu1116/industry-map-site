@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1314",
   "name": "中石化",
-  "generatedAt": "2026-08-12T12:30:48.313Z",
+  "generatedAt": "2026-08-13T12:35:36.862Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -65,31 +61,48 @@
     },
     "productNarratives": [
       {
-        "name": "己內醯胺CPL(尼龍6上游原料)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "己內醯胺(CPL)",
+        "description": "己內醯胺為尼龍6纖維/工程塑膠原料，台灣唯一自主生產商。",
+        "whyItMatters": "CPL為尼龍上游原料，與紡織/工程塑膠景氣連動。",
+        "topicFit": "CPL原料",
+        "businessImpact": "營運觀察重點為中石化在己內醯胺(CPL)的訂單動能、客戶導入進度與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：中國石油化學工業開發(股)公司 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1314"
+        ],
+        "lastVerified": "2026-08-13",
+        "confidence": "high"
       },
       {
-        "name": "丙烯腈AN(ABS/壓克力上游原料)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "尼龍66原料(耐隆工程塑膠上游)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "丙烯腈(AN)",
+        "description": "丙烯腈為ABS樹脂、碳纖維、壓克力原料。",
+        "whyItMatters": "AN用於ABS與碳纖維，與塑膠/複材供應鏈連動。",
+        "topicFit": "AN原料",
+        "businessImpact": "營運觀察重點為中石化在丙烯腈(AN)的訂單動能、客戶導入進度與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：中國石油化學工業開發(股)公司 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1314"
+        ],
+        "lastVerified": "2026-08-13",
+        "confidence": "high"
       }
     ],
     "swotSnapshot": {
       "strengths": [
+        "中石化為台灣唯一CPL(己內醯胺)自主生產商，CPL/AN一貫化生產具規模優勢。",
         "台灣唯一 CPL 自主生產商，掌握尼龍上游原料。"
       ],
       "opportunities": [
+        "AN(丙烯腈)為碳纖維原料，碳纖維在航太/風電/電動車需求成長帶動AN長期需求。",
         "尼龍上游原料若朝高值化與特殊應用發展，可望改善大宗 CPL 產品組合。"
       ],
       "risks": [
-        "原油價格波動與區域 CPL、AN 產能過剩，可能同步擠壓原料利差與稼動率。",
-        "CPL/AN 屬大宗石化產品，受油價與中國產能過剩壓力影響大。"
+        "中國CPL/AN產能大量擴建，台灣中石化面臨進口競爭與利差壓縮壓力。",
+        "原油價格波動與區域 CPL、AN 產能過剩，可能同步擠壓原料利差與稼動率。"
       ]
     },
     "scoringFactors": [
@@ -98,8 +111,8 @@
       "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
       "角色證據 1 則 +6",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 3 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "中石化 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -112,15 +125,17 @@
     ],
     "risks": [
       "V2 W：CPL/AN 屬大宗石化產品，受油價與中國產能過剩壓力影響大。",
+      "V2 W：7月營收10.60億YoY-35.6%，累計YoY-30.7%，油價下跌與中國產能過剩雙重打擊。",
+      "V2 T：中國CPL/AN產能大量擴建，台灣中石化面臨進口競爭與利差壓縮壓力。",
       "V2 T：原油價格波動與區域 CPL、AN 產能過剩，可能同步擠壓原料利差與稼動率。"
     ],
     "watch": [
+      "V2 O：AN(丙烯腈)為碳纖維原料，碳纖維在航太/風電/電動車需求成長帶動AN長期需求。",
       "V2 O：尼龍上游原料若朝高值化與特殊應用發展，可望改善大宗 CPL 產品組合。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
       "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-15",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -169,6 +184,15 @@
     ],
     "swot": [
       {
+        "id": "opportunity-carbon-fiber-an",
+        "category": "opportunity",
+        "statement": "AN(丙烯腈)為碳纖維原料，碳纖維在航太/風電/電動車需求成長帶動AN長期需求。",
+        "confidence": "low",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
         "id": "opportunity-petrochem-plastics-1314",
         "category": "opportunity",
         "statement": "尼龍上游原料若朝高值化與特殊應用發展，可望改善大宗 CPL 產品組合。",
@@ -178,9 +202,27 @@
         ]
       },
       {
+        "id": "strength-cpl-monopoly",
+        "category": "strength",
+        "statement": "中石化為台灣唯一CPL(己內醯胺)自主生產商，CPL/AN一貫化生產具規模優勢。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
         "id": "strength-petrochem-plastics-1314",
         "category": "strength",
         "statement": "台灣唯一 CPL 自主生產商，掌握尼龍上游原料。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "threat-china-overcapacity",
+        "category": "threat",
+        "statement": "中國CPL/AN產能大量擴建，台灣中石化面臨進口競爭與利差壓縮壓力。",
         "confidence": "high",
         "relatedTopicIds": [
           "petrochem-plastics"
@@ -199,6 +241,15 @@
         "id": "weakness-petrochem-plastics-1314",
         "category": "weakness",
         "statement": "CPL/AN 屬大宗石化產品，受油價與中國產能過剩壓力影響大。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "petrochem-plastics"
+        ]
+      },
+      {
+        "id": "weakness-revenue-sharp-decline",
+        "category": "weakness",
+        "statement": "7月營收10.60億YoY-35.6%，累計YoY-30.7%，油價下跌與中國產能過剩雙重打擊。",
         "confidence": "high",
         "relatedTopicIds": [
           "petrochem-plastics"
@@ -253,12 +304,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

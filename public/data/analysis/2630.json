@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "2630",
   "name": "亞航",
-  "generatedAt": "2026-08-12T12:30:48.674Z",
+  "generatedAt": "2026-08-13T12:35:37.103Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bearish",
@@ -91,7 +87,7 @@
       ],
       "risks": [
         "漢翔與長榮航太競爭維修標案",
-        "軍方採購排程不確定性高"
+        "營收高度依賴國防部預算與軍機維修標案，政策與預算變化為主要風險。"
       ]
     },
     "scoringFactors": [
@@ -100,7 +96,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 4 項 +10",
+      "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -114,9 +110,9 @@
     ],
     "risks": [
       "V2 W：5月營收YoY-29.3%，累計YoY-18.6%，軍方標案排程延遲",
-      "V2 W：資本額僅20.9億，規模小於漢翔與長榮航太",
+      "V2 W：7月營收3.47億YoY-27.4%，累計YoY-21.8%，軍機維修收入持續下滑。",
       "V2 T：漢翔與長榮航太競爭維修標案",
-      "V2 T：軍方採購排程不確定性高"
+      "V2 T：營收高度依賴國防部預算與軍機維修標案，政策與預算變化為主要風險。"
     ],
     "watch": [
       "V2 O：F-16V 升級後續維修需求擴大",
@@ -124,7 +120,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -191,6 +187,15 @@
         ]
       },
       {
+        "id": "opportunity-uav-integration",
+        "category": "opportunity",
+        "statement": "無人機飛控整合為新興業務，國防無人機發展帶動維修/整合需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-mro-location",
         "category": "strength",
         "statement": "台南機場直鄰空軍基地，軍機維修地緣優勢獨佔",
@@ -209,9 +214,27 @@
         ]
       },
       {
+        "id": "strength-sole-private-military-mro",
+        "category": "strength",
+        "statement": "亞航為國內唯一民營軍機維修廠，F-16V/IDF/AT-3/黑鷹維修具獨佔性壁壘。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "threat-competition",
         "category": "threat",
         "statement": "漢翔與長榮航太競爭維修標案",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "threat-defense-budget-dependency",
+        "category": "threat",
+        "statement": "營收高度依賴國防部預算與軍機維修標案，政策與預算變化為主要風險。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -230,6 +253,15 @@
         "id": "weakness-rev-yoy",
         "category": "weakness",
         "statement": "5月營收YoY-29.3%，累計YoY-18.6%，軍方標案排程延遲",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-revenue-declining",
+        "category": "weakness",
+        "statement": "7月營收3.47億YoY-27.4%，累計YoY-21.8%，軍機維修收入持續下滑。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -290,12 +322,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

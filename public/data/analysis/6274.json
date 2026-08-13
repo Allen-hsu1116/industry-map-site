@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "6274",
   "name": "台燿",
-  "generatedAt": "2026-08-12T12:30:49.223Z",
+  "generatedAt": "2026-08-13T12:35:37.485Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -85,14 +81,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "台燿為台灣銅箔基板（CCL）製造商，在高頻高速CCL及HDI用基板有量產能力，供應PCB廠下游加工。"
+        "台燿為台灣銅箔基板（CCL）製造商，在高頻高速CCL及HDI用基板有量產能力，供應PCB廠下游加工。",
+        "台燿為高頻低損耗CCL專業製造商，Megtron 6/7等級基板供應AI伺服器與低軌衛星PCB。"
       ],
       "opportunities": [
+        "AI伺服器400G/800G交換器使用高頻低損耗CCL，需求隨AI資本支出成長。",
         "AI伺服器PCB需要High-Tg/Low-Df高頻高速CCL，台燿在Mid-Loss/Low-Loss級CCL有量產能力，受惠於AI伺服器主板需求。"
       ],
       "risks": [
         "面臨台光電（2383）、南亞塑膠（1303）、聯茂（6213）等CCL大廠競爭，高頻高速CCL技術門檻高但對手也在積極追趕。",
-        "公司為上櫃企業，無法透過TWSE取得月營收，且CCL產業毛利率受銅箔與樹脂原料價格波動影響大。"
+        "台光電(2383)、南亞塑膠(1303)等同業競爭高頻CCL市場，技術門檻逐步降低。"
       ]
     },
     "scoringFactors": [
@@ -101,8 +99,8 @@
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "台燿 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -116,15 +114,17 @@
     ],
     "risks": [
       "V2 W：公司為上櫃企業，無法透過TWSE取得月營收，且CCL產業毛利率受銅箔與樹脂原料價格波動影響大。",
-      "V2 T：面臨台光電（2383）、南亞塑膠（1303）、聯茂（6213）等CCL大廠競爭，高頻高速CCL技術門檻高但對手也在積極追趕。"
+      "V2 W：上櫃公司月營收未透過TWSE OpenAPI揭露，營運追蹤難度較高。",
+      "V2 T：面臨台光電（2383）、南亞塑膠（1303）、聯茂（6213）等CCL大廠競爭，高頻高速CCL技術門檻高但對手也在積極追趕。",
+      "V2 T：台光電(2383)、南亞塑膠(1303)等同業競爭高頻CCL市場，技術門檻逐步降低。"
     ],
     "watch": [
+      "V2 O：AI伺服器400G/800G交換器使用高頻低損耗CCL，需求隨AI資本支出成長。",
       "V2 O：AI伺服器PCB需要High-Tg/Low-Df高頻高速CCL，台燿在Mid-Loss/Low-Loss級CCL有量產能力，受惠於AI伺服器主板需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
-      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 低軌衛星通訊：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -183,6 +183,15 @@
     ],
     "swot": [
       {
+        "id": "opportunity-ai-server-ccl",
+        "category": "opportunity",
+        "statement": "AI伺服器400G/800G交換器使用高頻低損耗CCL，需求隨AI資本支出成長。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates"
+        ]
+      },
+      {
         "id": "opportunity-high-speed-ccl",
         "category": "opportunity",
         "statement": "AI伺服器PCB需要High-Tg/Low-Df高頻高速CCL，台燿在Mid-Loss/Low-Loss級CCL有量產能力，受惠於AI伺服器主板需求。",
@@ -203,6 +212,16 @@
         ]
       },
       {
+        "id": "strength-high-freq-ccl",
+        "category": "strength",
+        "statement": "台燿為高頻低損耗CCL專業製造商，Megtron 6/7等級基板供應AI伺服器與低軌衛星PCB。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "leo-satellite-communications"
+        ]
+      },
+      {
         "id": "threat-ccl-competition",
         "category": "threat",
         "statement": "面臨台光電（2383）、南亞塑膠（1303）、聯茂（6213）等CCL大廠競爭，高頻高速CCL技術門檻高但對手也在積極追趕。",
@@ -213,6 +232,15 @@
         ]
       },
       {
+        "id": "threat-competition-tuc-taiwan",
+        "category": "threat",
+        "statement": "台光電(2383)、南亞塑膠(1303)等同業競爭高頻CCL市場，技術門檻逐步降低。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates"
+        ]
+      },
+      {
         "id": "weakness-otc-no-revenue",
         "category": "weakness",
         "statement": "公司為上櫃企業，無法透過TWSE取得月營收，且CCL產業毛利率受銅箔與樹脂原料價格波動影響大。",
@@ -220,6 +248,25 @@
         "relatedTopicIds": [
           "pcb-substrates",
           "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-revenue-data-gap",
+        "category": "weakness",
+        "statement": "上櫃公司月營收未透過TWSE OpenAPI揭露，營運追蹤難度較高。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "pcb-substrates",
+          "leo-satellite-communications"
+        ]
+      },
+      {
+        "id": "weakness-upstream-material-cost",
+        "category": "weakness",
+        "statement": "銅箔與樹脂等上游原料成本佔比高，原物料價格波動直接影響毛利率。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "pcb-substrates"
         ]
       }
     ],
@@ -281,12 +328,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       },
       {
         "id": "risk.stop-distance",

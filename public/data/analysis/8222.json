@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "8222",
   "name": "寶一",
-  "generatedAt": "2026-08-12T12:30:49.391Z",
+  "generatedAt": "2026-08-13T12:35:37.594Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bearish",
@@ -81,8 +77,8 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "專精發動機熱段零件，技術門檻高",
-        "上市公司資本額6.9億，航太鍛件利基型"
+        "寶一為航空發動機熱段件鍛造與航空合金供應商，7月營收0.91億YoY+46.8%強勁成長。",
+        "專精發動機熱段零件，技術門檻高"
       ],
       "opportunities": [
         "國防自主帶動軍規鍛件本土化",
@@ -99,7 +95,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 4 項 +10",
+      "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -113,7 +109,7 @@
     ],
     "risks": [
       "V2 W：5月營收0.79億，YoY-19.1%，累計YoY-4.0%，營收衰退",
-      "V2 W：營運規模小，訂單波動影響大",
+      "V2 W：月營收僅0.91億，規模極小，單一訂單對營收影響極大。",
       "V2 T：單一客戶依賴風險",
       "V2 T：國際航太鍛件大廠競爭"
     ],
@@ -123,7 +119,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -190,6 +186,24 @@
         ]
       },
       {
+        "id": "opportunity-idf-extension",
+        "category": "opportunity",
+        "statement": "IDF經國號戰機延壽與構改需求帶動結構件訂單，國機國造為長期政策方向。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-engine-hot-section",
+        "category": "strength",
+        "statement": "寶一為航空發動機熱段件鍛造與航空合金供應商，7月營收0.91億YoY+46.8%強勁成長。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-hot-section",
         "category": "strength",
         "statement": "專精發動機熱段零件，技術門檻高",
@@ -226,9 +240,27 @@
         ]
       },
       {
+        "id": "threat-single-customer",
+        "category": "threat",
+        "statement": "漢翔為最大客戶，客戶集中度極高，漢翔訂單變化直接決定寶一營收。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "weakness-rev-decline",
         "category": "weakness",
         "statement": "5月營收0.79億，YoY-19.1%，累計YoY-4.0%，營收衰退",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-small-revenue",
+        "category": "weakness",
+        "statement": "月營收僅0.91億，規模極小，單一訂單對營收影響極大。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -290,12 +322,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

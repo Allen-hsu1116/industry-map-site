@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "4977",
   "name": "眾達-KY",
-  "generatedAt": "2026-08-12T12:30:49.061Z",
+  "generatedAt": "2026-08-13T12:35:37.373Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -67,31 +63,33 @@
     },
     "productNarratives": [
       {
-        "name": "100G/400G/800G光收發模組(QSFP/OSFP)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "矽光子收發器(Co-Packaged Optics整合)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "光次組裝模組(Fiber Array/FAU耦合)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "100G/400G/800G光收發模組",
+        "description": "用於數據中心光互連的100G-800G光收發模組。",
+        "whyItMatters": "AI數據中心光互連為核心成長動能。，是公司接單動能與產品組合的重要觀察指標。",
+        "topicFit": "光收發模組",
+        "businessImpact": "營運觀察重點為眾達-KY在100G/400G/800G光收發模組的訂單動能、客戶導入進度與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：眾達科技股份有限公司 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=4977"
+        ],
+        "lastVerified": "2026-08-13",
+        "confidence": "high"
       }
     ],
     "swotSnapshot": {
       "strengths": [
+        "眾達-KY為光收發模組設計製造商，7月營收1.81億YoY+137%(含品固集團)，AI數據中心光互連為長期動能。",
         "6月營收 0.82 億元、年增 8%，矽光子收發模組直接受惠 AI 數據中心光互連需求。"
       ],
       "opportunities": [
+        "800G光收發模組與CPO共封裝光學為AI數據中心下一代技術，長期成長潛力大。",
         "AI 資料中心朝 400G、800G 光互連升級，可望提高高速光收發模組需求。"
       ],
       "risks": [
-        "營運規模較小且高速光模組競爭激烈，價格壓力可能抵銷產品升級帶來的效益。",
-        "累計營收年減 21%，轉型期陣痛，競爭者眾達、旭軟等競爭激烈。"
+        "光模組市場競爭激烈，中際旭創/新易盛等中國廠商在800G領域加速追趕。",
+        "營運規模較小且高速光模組競爭激烈，價格壓力可能抵銷產品升級帶來的效益。"
       ]
     },
     "scoringFactors": [
@@ -100,8 +98,8 @@
       "題材 矽光子、CPO 與高速光通訊（technology/active） +17",
       "角色證據 1 則 +6",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "眾達-KY 在「矽光子、CPO 與高速光通訊」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -114,15 +112,17 @@
     ],
     "risks": [
       "V2 W：累計營收年減 21%，轉型期陣痛，競爭者眾達、旭軟等競爭激烈。",
+      "V2 W：累計營收6.12億YoY-1.4%，規模較小且7月YoY+137%主要因納入品固集團營收，有機成長有限。",
+      "V2 T：光模組市場競爭激烈，中際旭創/新易盛等中國廠商在800G領域加速追趕。",
       "V2 T：營運規模較小且高速光模組競爭激烈，價格壓力可能抵銷產品升級帶來的效益。"
     ],
     "watch": [
+      "V2 O：800G光收發模組與CPO共封裝光學為AI數據中心下一代技術，長期成長潛力大。",
       "V2 O：AI 資料中心朝 400G、800G 光互連升級，可望提高高速光收發模組需求。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
       "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-15",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -171,6 +171,15 @@
     ],
     "swot": [
       {
+        "id": "opportunity-800g-cpo",
+        "category": "opportunity",
+        "statement": "800G光收發模組與CPO共封裝光學為AI數據中心下一代技術，長期成長潛力大。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
         "id": "opportunity-silicon-photonics-optical-comm-4977",
         "category": "opportunity",
         "statement": "AI 資料中心朝 400G、800G 光互連升級，可望提高高速光收發模組需求。",
@@ -180,10 +189,28 @@
         ]
       },
       {
+        "id": "strength-optical-transceiver",
+        "category": "strength",
+        "statement": "眾達-KY為光收發模組設計製造商，7月營收1.81億YoY+137%(含品固集團)，AI數據中心光互連為長期動能。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
         "id": "strength-silicon-photonics-optical-comm-4977",
         "category": "strength",
         "statement": "6月營收 0.82 億元、年增 8%，矽光子收發模組直接受惠 AI 數據中心光互連需求。",
         "confidence": "high",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "threat-competition-factory",
+        "category": "threat",
+        "statement": "光模組市場競爭激烈，中際旭創/新易盛等中國廠商在800G領域加速追趕。",
+        "confidence": "medium",
         "relatedTopicIds": [
           "silicon-photonics-optical-comm"
         ]
@@ -201,6 +228,15 @@
         "id": "weakness-silicon-photonics-optical-comm-4977",
         "category": "weakness",
         "statement": "累計營收年減 21%，轉型期陣痛，競爭者眾達、旭軟等競爭激烈。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "silicon-photonics-optical-comm"
+        ]
+      },
+      {
+        "id": "weakness-small-revenue-base",
+        "category": "weakness",
+        "statement": "累計營收6.12億YoY-1.4%，規模較小且7月YoY+137%主要因納入品固集團營收，有機成長有限。",
         "confidence": "high",
         "relatedTopicIds": [
           "silicon-photonics-optical-comm"
@@ -252,12 +288,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

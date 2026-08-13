@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "8033",
   "name": "雷虎",
-  "generatedAt": "2026-08-12T12:30:49.349Z",
+  "generatedAt": "2026-08-13T12:35:37.566Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -65,25 +61,40 @@
     },
     "productNarratives": [
       {
-        "name": "軍用無人直升機(SEAHAWK T-80)(最大起飛重量80kg)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "無線電遙控模型",
+        "description": "遙控直升機/車/船模型及零配件。，並用於公司對應終端產品與客戶應用。",
+        "whyItMatters": "遙控模型為傳統核心業務與技術基礎。，是公司接單動能與產品組合的重要觀察指標。",
+        "topicFit": "遙控模型",
+        "businessImpact": "營運觀察重點為雷虎在無線電遙控模型的訂單動能、客戶導入進度與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：雷虎科技股份有限公司 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8033"
+        ],
+        "lastVerified": "2026-08-13",
+        "confidence": "high"
       },
       {
-        "name": "Blue UAS認證無人機系統(美國國防部採購資格)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "無線電遙控模型(直升機/固定翼/船)(全球經銷)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "精密醫療器材",
+        "description": "精密醫療器材與無菌包材。，並用於公司對應終端產品與客戶應用。",
+        "whyItMatters": "醫療器材為多元化布局。，是公司接單動能與產品組合的重要觀察指標。",
+        "topicFit": "醫療器材",
+        "businessImpact": "營運觀察重點為雷虎在精密醫療器材的訂單動能、客戶導入進度與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：雷虎科技股份有限公司 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8033"
+        ],
+        "lastVerified": "2026-08-13",
+        "confidence": "high"
       }
     ],
     "swotSnapshot": {
       "strengths": [
         "美國 Blue UAS 認證，具備美國國防部採購資格",
-        "上市公司資本額15.3億，無人載具品牌知名度高"
+        "雷虎為美國Blue UAS認證無人機製造商，具備美國國防部採購資格，軍用無人載具雙軌發展。"
       ],
       "opportunities": [
         "美國 Blue UAS 認證帶來國際軍用無人機訂單",
@@ -100,7 +111,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 5 項 +10",
+      "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -113,8 +124,8 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "V2 W：7月營收1.18億YoY-9.5%，MoM-47.6%大幅下滑，營收波動性極大。",
       "V2 W：模型玩具收入占比仍高，國防轉型中",
-      "V2 W：5月營收YoY-9.6%，軍用無人機放量仍有限",
       "V2 T：軍用無人機認證與採購週期長",
       "V2 T：國際無人機大廠（DJI/Skydio）競爭"
     ],
@@ -124,7 +135,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -191,9 +202,27 @@
         ]
       },
       {
+        "id": "opportunity-us-defense",
+        "category": "opportunity",
+        "statement": "美國國防部Blue UAS採購為重大成長機會，軍用無人機需求持續增加。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-blue-uas",
         "category": "strength",
         "statement": "美國 Blue UAS 認證，具備美國國防部採購資格",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-blue-uas-certified",
+        "category": "strength",
+        "statement": "雷虎為美國Blue UAS認證無人機製造商，具備美國國防部採購資格，軍用無人載具雙軌發展。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -230,6 +259,24 @@
         "id": "threat-intl-drone",
         "category": "threat",
         "statement": "國際無人機大廠（DJI/Skydio）競爭",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "threat-rc-model-decline",
+        "category": "threat",
+        "statement": "傳統遙控模型市場萎縮，無人機業務雖有成長機會但尚未穩定貢獻。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-revenue-decline",
+        "category": "weakness",
+        "statement": "7月營收1.18億YoY-9.5%，MoM-47.6%大幅下滑，營收波動性極大。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -299,12 +346,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

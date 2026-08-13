@@ -2,19 +2,15 @@
   "schemaVersion": 1,
   "code": "5264",
   "name": "鎧勝-KY",
-  "generatedAt": "2026-08-12T12:30:49.067Z",
+  "generatedAt": "2026-08-13T12:35:37.377Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "insufficient",
@@ -82,7 +78,7 @@
       ],
       "risks": [
         "無人機構體進入門檻不高，競爭加劇",
-        "軍方標案排程不確定性"
+        "資訊不透明為最大風險，投資人難以評估實際營運狀況與訂單動能。"
       ]
     },
     "scoringFactors": [
@@ -91,7 +87,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 4 項 +10",
+      "正向 SWOT 5 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -104,9 +100,9 @@
     ],
     "risks": [
       "V2 W：營運規模小，訂單集中度高",
-      "V2 W：興櫃/上櫃公司，流動性偏低",
+      "V2 W：MOPS與月營收API均無資料，資訊透明度極低，營運追蹤困難。",
       "V2 T：無人機構體進入門檻不高，競爭加劇",
-      "V2 T：軍方標案排程不確定性"
+      "V2 T：資訊不透明為最大風險，投資人難以評估實際營運狀況與訂單動能。"
     ],
     "watch": [
       "V2 O：商用無人機市場擴張",
@@ -114,7 +110,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -171,6 +167,15 @@
         ]
       },
       {
+        "id": "opportunity-military-uav",
+        "category": "opportunity",
+        "statement": "中科院軍用無人機量產帶動金屬結構件需求，國防自主為政策方向。",
+        "confidence": "low",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-ky",
         "category": "strength",
         "statement": "KY 公司具海外製造彈性",
@@ -189,9 +194,27 @@
         ]
       },
       {
+        "id": "strength-uav-metal-structure",
+        "category": "strength",
+        "statement": "鎧勝-KY為無人機金屬結構件供應商，中科院軍用無人機構體標案帶動需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "threat-entry-barrier",
         "category": "threat",
         "statement": "無人機構體進入門檻不高，競爭加劇",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "threat-info-asymmetry",
+        "category": "threat",
+        "statement": "資訊不透明為最大風險，投資人難以評估實際營運狀況與訂單動能。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -210,6 +233,15 @@
         "id": "weakness-concentration",
         "category": "weakness",
         "statement": "營運規模小，訂單集中度高",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-data-gap",
+        "category": "weakness",
+        "statement": "MOPS與月營收API均無資料，資訊透明度極低，營運追蹤困難。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"

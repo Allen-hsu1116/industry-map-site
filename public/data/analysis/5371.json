@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "5371",
   "name": "中光電",
-  "generatedAt": "2026-08-12T12:30:49.084Z",
+  "generatedAt": "2026-08-13T12:35:37.389Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -101,7 +97,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 5 項 +10",
+      "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -125,7 +121,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -192,6 +188,15 @@
         ]
       },
       {
+        "id": "opportunity-uav-payload",
+        "category": "opportunity",
+        "statement": "軍用無人機光電酬載(IR/EO Pod)為高壁壘利基市場，國防無人機發展帶動需求。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-group",
         "category": "strength",
         "statement": "集團資源（中光電集團）支援",
@@ -207,6 +212,16 @@
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-projector-leader",
+        "category": "strength",
+        "statement": "中光電為上櫃投影機/背光模組龍頭，光機整合能力延伸至軍用無人機光電酬載(IR/EO Pod)。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace",
+          "display-led-optics"
         ]
       },
       {
@@ -252,6 +267,16 @@
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-revenue-data-gap",
+        "category": "weakness",
+        "statement": "上櫃公司月營收未透過TWSE OpenAPI揭露，營運追蹤難度較高。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace",
+          "display-led-optics"
         ]
       }
     ],
@@ -302,12 +327,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

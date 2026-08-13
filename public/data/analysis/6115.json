@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "6115",
   "name": "鎰勝",
-  "generatedAt": "2026-08-12T12:30:49.123Z",
+  "generatedAt": "2026-08-13T12:35:37.415Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bearish",
@@ -67,25 +63,25 @@
     },
     "productNarratives": [
       {
-        "name": "軍規MIL-DTL-38999連接器(不銹鋼殼體/耐震)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "軍機線束(Wire Harness)總成(EMI屏蔽/耐高溫200C)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "飛彈電源連接器(高G值抗震/防水IP68)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "軍規MIL-DTL-38999連接器",
+        "description": "軍規圓形快速連接器，用於軍機/飛彈電源訊號連接。",
+        "whyItMatters": "軍規連接器具高壁壘，國防自主帶動需求。，是公司接單動能與產品組合的重要觀察指標。",
+        "topicFit": "軍規連接器",
+        "businessImpact": "營運觀察重點為鎰勝在軍規MIL-DTL-38999連接器的訂單動能、客戶導入進度與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：鎰勝工業股份有限公司 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6115"
+        ],
+        "lastVerified": "2026-08-13",
+        "confidence": "high"
       }
     ],
     "swotSnapshot": {
       "strengths": [
         "軍規+商用雙引擎，營收成長動能強",
-        "5月營收7.28億，YoY+24.7%，累計33.29億YoY+11.0%"
+        "鎰勝為軍規連接器與線束供應商，7月營收7.46億YoY+11.9%，MIL-DTL-38999軍規連接器為核心壁壘。"
       ],
       "opportunities": [
         "國防自主帶動軍規連接器本土化需求",
@@ -93,7 +89,7 @@
       ],
       "risks": [
         "中國連接器低價競爭",
-        "消費性電子需求波動"
+        "消費電子電源線連接器為成熟大宗商品，價格競爭激烈、毛利有限。"
       ]
     },
     "scoringFactors": [
@@ -102,7 +98,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 5 項 +10",
+      "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -115,10 +111,10 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "V2 W：消費性電子電源線連接器仍為營收主力，軍規占比相對有限。",
       "V2 W：國防軍規連接器占比低，主要靠消費性電子",
-      "V2 W：毛利率受銅/塑膠原料價格影響",
       "V2 T：中國連接器低價競爭",
-      "V2 T：消費性電子需求波動"
+      "V2 T：消費電子電源線連接器為成熟大宗商品，價格競爭激烈、毛利有限。"
     ],
     "watch": [
       "V2 O：國防自主帶動軍規連接器本土化需求",
@@ -126,7 +122,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -193,9 +189,27 @@
         ]
       },
       {
+        "id": "opportunity-defense-connector",
+        "category": "opportunity",
+        "statement": "國防自主帶動軍規連接器/線束需求，中科院飛彈與軍機標案為成長來源。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-dual-engine",
         "category": "strength",
         "statement": "軍規+商用雙引擎，營收成長動能強",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-military-connector",
+        "category": "strength",
+        "statement": "鎰勝為軍規連接器與線束供應商，7月營收7.46億YoY+11.9%，MIL-DTL-38999軍規連接器為核心壁壘。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -229,10 +243,28 @@
         ]
       },
       {
+        "id": "threat-connector-commodity",
+        "category": "threat",
+        "statement": "消費電子電源線連接器為成熟大宗商品，價格競爭激烈、毛利有限。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "threat-consumer",
         "category": "threat",
         "statement": "消費性電子需求波動",
         "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-consumer-dependency",
+        "category": "weakness",
+        "statement": "消費性電子電源線連接器仍為營收主力，軍規占比相對有限。",
+        "confidence": "medium",
         "relatedTopicIds": [
           "defense-aerospace"
         ]
@@ -301,12 +333,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "3661",
   "name": "世芯-KY",
-  "generatedAt": "2026-08-12T12:30:48.952Z",
+  "generatedAt": "2026-08-13T12:35:37.299Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -83,9 +79,16 @@
       }
     ],
     "swotSnapshot": {
-      "strengths": [],
-      "opportunities": [],
-      "risks": []
+      "strengths": [
+        "世芯-KY是AI ASIC Turnkey設計服務領導廠商，7月營收74.33億MoM+108%YoY+182%爆發性成長，量產產品增加。"
+      ],
+      "opportunities": [
+        "AI訓練/推論客製化晶片需求爆發，Google TPU/AWS Trainium/Meta AI晶片均為客戶，NRE+量產收入雙引擎。"
+      ],
+      "risks": [
+        "少數超大客戶(NVIDIA/Google/Amazon)占比高，單一客戶專案延遲或取消將嚴重影響營收。",
+        "累計營收YoY-13.8%，上半年量產產品減少導致營收下滑，單月爆發性成長但全年仍可能負成長。"
+      ]
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
@@ -93,6 +96,8 @@
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
+      "正向 SWOT 2 項 +10",
+      "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "世芯-KY 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -103,12 +108,16 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "V2 W：累計營收YoY-13.8%，上半年量產產品減少導致營收下滑，單月爆發性成長但全年仍可能負成長。",
+      "V2 T：少數超大客戶(NVIDIA/Google/Amazon)占比高，單一客戶專案延遲或取消將嚴重影響營收。"
+    ],
     "watch": [
+      "V2 O：AI訓練/推論客製化晶片需求爆發，Google TPU/AWS Trainium/Meta AI晶片均為客戶，NRE+量產收入雙引擎。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-05-28",
+      "V2 SWOT 最後驗證：2026-08-13",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
     ]
   },
@@ -156,7 +165,44 @@
         "roleSummary": "世芯-KY是AI ASIC設計服務領導廠商，提供7nm/5nm/3nm先進製程SoC Turnkey服務。5月營收19.4億年減33.5%，累計82.5億年減50.1%，量產產品減少但新AI專案NRE持續推進。"
       }
     ],
-    "swot": [],
+    "swot": [
+      {
+        "id": "opportunity-ai-custom-chip",
+        "category": "opportunity",
+        "statement": "AI訓練/推論客製化晶片需求爆發，Google TPU/AWS Trainium/Meta AI晶片均為客戶，NRE+量產收入雙引擎。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      },
+      {
+        "id": "strength-ai-asic-turnkey",
+        "category": "strength",
+        "statement": "世芯-KY是AI ASIC Turnkey設計服務領導廠商，7月營收74.33億MoM+108%YoY+182%爆發性成長，量產產品增加。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      },
+      {
+        "id": "threat-customer-concentration",
+        "category": "threat",
+        "statement": "少數超大客戶(NVIDIA/Google/Amazon)占比高，單一客戶專案延遲或取消將嚴重影響營收。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      },
+      {
+        "id": "weakness-revenue-volatility",
+        "category": "weakness",
+        "statement": "累計營收YoY-13.8%，上半年量產產品減少導致營收下滑，單月爆發性成長但全年仍可能負成長。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "ic-design"
+        ]
+      }
+    ],
     "topics": [
       {
         "id": "ic-design",
@@ -203,12 +249,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

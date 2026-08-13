@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "4536",
   "name": "拓凱",
-  "generatedAt": "2026-08-12T12:30:48.998Z",
+  "generatedAt": "2026-08-13T12:35:37.331Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -81,16 +77,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
-        "複合材料跨領域應用（航太/運動/醫療），分散風險",
-        "5月營收8.02億，YoY+20.7%，運動+航太雙引擎成長"
+        "拓凱為國內碳纖維複材加工領先廠商，7月營收10.23億YoY+20.4%，航太/運動雙軌成長。",
+        "複合材料跨領域應用（航太/運動/醫療），分散風險"
       ],
       "opportunities": [
         "航太複材次承包訂單隨 Boeing/Airbus 產能提升",
         "軍用無人機複材機體需求爆發"
       ],
       "risks": [
-        "碳纖維原料價格波動",
-        "中國複材運動器材低價競爭"
+        "民航航太次結構件需求受航空業景氣循環影響，Boeing/Airbus產能波動為風險。",
+        "碳纖維原料價格波動"
       ]
     },
     "scoringFactors": [
@@ -99,7 +95,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 5 項 +10",
+      "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -113,9 +109,9 @@
     ],
     "risks": [
       "V2 W：航太複材占比相對運動器材低",
-      "V2 W：累計營收YoY-3.1%，上半年運動器材需求偏弱",
-      "V2 T：碳纖維原料價格波動",
-      "V2 T：中國複材運動器材低價競爭"
+      "V2 W：資本額僅9.08億，規模較小，大型航太標案競爭力受限。",
+      "V2 T：民航航太次結構件需求受航空業景氣循環影響，Boeing/Airbus產能波動為風險。",
+      "V2 T：碳纖維原料價格波動"
     ],
     "watch": [
       "V2 O：航太複材次承包訂單隨 Boeing/Airbus 產能提升",
@@ -123,7 +119,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -190,6 +186,24 @@
         ]
       },
       {
+        "id": "opportunity-missile-composite",
+        "category": "opportunity",
+        "statement": "國防飛彈量產帶動彈體複材需求，中科院飛彈標案為穩定成長來源。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-composite-leader",
+        "category": "strength",
+        "statement": "拓凱為國內碳纖維複材加工領先廠商，7月營收10.23億YoY+20.4%，航太/運動雙軌成長。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-diversify",
         "category": "strength",
         "statement": "複合材料跨領域應用（航太/運動/醫療），分散風險",
@@ -217,6 +231,15 @@
         ]
       },
       {
+        "id": "threat-aero-cycle",
+        "category": "threat",
+        "statement": "民航航太次結構件需求受航空業景氣循環影響，Boeing/Airbus產能波動為風險。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "threat-carbon-price",
         "category": "threat",
         "statement": "碳纖維原料價格波動",
@@ -239,6 +262,15 @@
         "category": "weakness",
         "statement": "航太複材占比相對運動器材低",
         "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-small-cap",
+        "category": "weakness",
+        "statement": "資本額僅9.08億，規模較小，大型航太標案競爭力受限。",
+        "confidence": "medium",
         "relatedTopicIds": [
           "defense-aerospace"
         ]
@@ -298,12 +330,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },

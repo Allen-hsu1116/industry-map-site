@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "7402",
   "name": "邑錡",
-  "generatedAt": "2026-08-12T12:30:49.341Z",
+  "generatedAt": "2026-08-13T12:35:37.561Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -84,7 +80,7 @@
     "swotSnapshot": {
       "strengths": [
         "自有 ASIC 晶片，低功耗影像技術獨特",
-        "Brinno 品牌全球縮時攝影市佔領先"
+        "邑錡為自有ASIC影像晶片+低功耗相機模組廠商，美國Blue UAS認證供應鏈，軍規航拍具進入壁壘。"
       ],
       "opportunities": [
         "AI 影像分析平台跨入軍安/國土安全",
@@ -101,7 +97,7 @@
       "題材 軍工、航太與無人機（theme/active） +18",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
-      "正向 SWOT 5 項 +10",
+      "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -115,7 +111,7 @@
     ],
     "risks": [
       "V2 W：國防軍工收入占比低，主要靠民用市場",
-      "V2 W：資本額僅3.5億，營運規模極小",
+      "V2 W：上櫃公司月營收未透過TWSE OpenAPI揭露，營運追蹤難度較高。",
       "V2 T：國際軍規攝影設備大廠競爭",
       "V2 T：縮時攝影消費市場天花板低"
     ],
@@ -125,7 +121,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 軍工、航太與無人機：月營收或訂單能見度改善",
       "追蹤 軍工、航太與無人機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-01"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -192,9 +188,27 @@
         ]
       },
       {
+        "id": "opportunity-blue-uas",
+        "category": "opportunity",
+        "statement": "美國Blue UAS認證為美國國防部採購資格，軍用無人機航拍系統為高壁壘成長領域。",
+        "confidence": "medium",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "strength-asic",
         "category": "strength",
         "statement": "自有 ASIC 晶片，低功耗影像技術獨特",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "strength-asic-image",
+        "category": "strength",
+        "statement": "邑錡為自有ASIC影像晶片+低功耗相機模組廠商，美國Blue UAS認證供應鏈，軍規航拍具進入壁壘。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -237,9 +251,27 @@
         ]
       },
       {
+        "id": "threat-small-cap-niche",
+        "category": "threat",
+        "statement": "資本額僅3.53億，極小資本公司，營收規模有限，單一標案影響營收波動大。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
         "id": "weakness-defense-low",
         "category": "weakness",
         "statement": "國防軍工收入占比低，主要靠民用市場",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "defense-aerospace"
+        ]
+      },
+      {
+        "id": "weakness-revenue-data-gap",
+        "category": "weakness",
+        "statement": "上櫃公司月營收未透過TWSE OpenAPI揭露，營運追蹤難度較高。",
         "confidence": "high",
         "relatedTopicIds": [
           "defense-aerospace"
@@ -300,12 +332,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       },
       {
         "id": "risk.stop-distance",

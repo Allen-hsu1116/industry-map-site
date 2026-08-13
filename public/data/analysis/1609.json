@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1609",
   "name": "大亞",
-  "generatedAt": "2026-08-12T12:30:48.367Z",
+  "generatedAt": "2026-08-13T12:35:36.896Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "product_knowledge"
-    ],
-    "blockingReasons": [
-      "missing_product_knowledge"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "bullish",
@@ -84,14 +80,16 @@
     ],
     "swotSnapshot": {
       "strengths": [
+        "大亞為台灣電線電纜大廠，綠能轉型有成，7月營收29.06億YoY+11.5%，累計YoY+17.9%。",
         "6月營收 3.4 億元、年增 23%，累計年增 19%，綠能轉型有成。"
       ],
       "opportunities": [
+        "台灣離岸風電裝置量持續增加，66kV/161kV海底電纜為關鍵基礎設施，需求長期成長。",
         "再生能源併網與輸配電建設需求增加，可望帶動高壓電纜及海纜產品機會。"
       ],
       "risks": [
-        "銅價波動、專案遞延及海纜產能規模較小，可能限制接單彈性與毛利表現。",
-        "海纜起步較晚，產能規模小於華新。"
+        "銅價波動直接影響電線電纜成本與毛利率，原物料避險管理為關鍵。",
+        "銅價波動、專案遞延及海纜產能規模較小，可能限制接單彈性與毛利表現。"
       ]
     },
     "scoringFactors": [
@@ -100,8 +98,8 @@
       "題材 太陽能與離岸風電（theme/active） +18",
       "角色證據 1 則 +6",
       "催化訊號 3 項 +12",
-      "正向 SWOT 2 項 +10",
-      "風險 SWOT 扣分 -6",
+      "正向 SWOT 4 項 +10",
+      "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "大亞 在「太陽能與離岸風電」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
@@ -114,15 +112,17 @@
     ],
     "risks": [
       "V2 W：海纜起步較晚，產能規模小於華新。",
+      "V2 W：離岸風電海纜起步較晚，產能小於華新(1605)，海纜市場份額有限。",
+      "V2 T：銅價波動直接影響電線電纜成本與毛利率，原物料避險管理為關鍵。",
       "V2 T：銅價波動、專案遞延及海纜產能規模較小，可能限制接單彈性與毛利表現。"
     ],
     "watch": [
+      "V2 O：台灣離岸風電裝置量持續增加，66kV/161kV海底電纜為關鍵基礎設施，需求長期成長。",
       "V2 O：再生能源併網與輸配電建設需求增加，可望帶動高壓電纜及海纜產品機會。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
       "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "V2 SWOT 最後驗證：2026-07-15",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "V2 SWOT 最後驗證：2026-08-13"
     ]
   },
   "knowledge": {
@@ -171,6 +171,15 @@
     ],
     "swot": [
       {
+        "id": "opportunity-offshore-wind-cable",
+        "category": "opportunity",
+        "statement": "台灣離岸風電裝置量持續增加，66kV/161kV海底電纜為關鍵基礎設施，需求長期成長。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
         "id": "opportunity-renewable-energy-1609",
         "category": "opportunity",
         "statement": "再生能源併網與輸配電建設需求增加，可望帶動高壓電纜及海纜產品機會。",
@@ -180,10 +189,28 @@
         ]
       },
       {
+        "id": "strength-green-transition",
+        "category": "strength",
+        "statement": "大亞為台灣電線電纜大廠，綠能轉型有成，7月營收29.06億YoY+11.5%，累計YoY+17.9%。",
+        "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
         "id": "strength-renewable-energy-1609",
         "category": "strength",
         "statement": "6月營收 3.4 億元、年增 23%，累計年增 19%，綠能轉型有成。",
         "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "threat-raw-material-copper",
+        "category": "threat",
+        "statement": "銅價波動直接影響電線電纜成本與毛利率，原物料避險管理為關鍵。",
+        "confidence": "medium",
         "relatedTopicIds": [
           "renewable-energy"
         ]
@@ -202,6 +229,15 @@
         "category": "weakness",
         "statement": "海纜起步較晚，產能規模小於華新。",
         "confidence": "high",
+        "relatedTopicIds": [
+          "renewable-energy"
+        ]
+      },
+      {
+        "id": "weakness-submarine-cable-late",
+        "category": "weakness",
+        "statement": "離岸風電海纜起步較晚，產能小於華新(1605)，海纜市場份額有限。",
+        "confidence": "medium",
         "relatedTopicIds": [
           "renewable-energy"
         ]
@@ -256,12 +292,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 79 天未更新"
+        "message": "股價資料已 80 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 79 天未更新"
+        "message": "籌碼資料已 80 天未更新"
       }
     ]
   },
