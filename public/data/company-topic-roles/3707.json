@@ -1,64 +1,86 @@
 {
-    "schemaVersion": 1,
-    "companyCode": "3707",
-    "companyName": "漢磊",
-    "updatedAt": "2026-07-16",
-    "roles": [
+  "schemaVersion": 1,
+  "companyCode": "3707",
+  "companyName": "漢磊",
+  "updatedAt": "2026-07-16",
+  "roles": [
+    {
+      "topicId": "defense-aerospace",
+      "topicName": "軍工、航太與無人機",
+      "topicType": "theme",
+      "directness": "core",
+      "supplyChainStage": "aerospace_components",
+      "roleType": "sic_gan_power_foundry_defense",
+      "roleSummary": "漢磊6月營收6.20億連續三月成長。SiC/GaN第三代功率晶圓代工能力具軍規JAN認證，軍工航太功率元件代工具有進入壁壘。",
+      "products": [
+        "6吋SiC MOSFET晶圓代工(1200V/1700V)",
+        "GaN HEMT晶圓代工(650V功率/射頻)",
+        "6/8吋類比IC晶圓代工(BJT/BCD)",
+        "軍規功率MOSFET代工(JAN認證)",
+        "高壓BJT晶圓代工(工業用)"
+      ],
+      "customers": [
+        "ON Semiconductor(SiC MOSFET代工)",
+        "STMicroelectronics(GaN合作)",
+        "中科院(軍規SiC功率元件代工)",
+        "致新(3682)(電源管理IC代工)",
+        "立錡(6286)(電源管理IC代工)"
+      ],
+      "competitors": [
+        "穩懋(2455)(GaN HEMT)",
+        "環宇通訊(3282)(GaN)",
+        "VisIC(SiC)"
+      ],
+      "risks": [
+        "上櫃公司營收規模小，SiC/GaN代工產能有限",
+        "6吋SiC與國際8吋SiC代工廠(Wolfspeed/II-VI)有世代差距"
+      ],
+      "evidence": [
         {
-            "topicId": "defense-aerospace",
-            "topicName": "軍工、航太與無人機",
-            "topicType": "theme",
-            "directness": "core",
-            "supplyChainStage": "aerospace_components",
-            "roleType": "sic_gan_power_foundry_defense",
-            "roleSummary": "漢磊6月營收6.20億連續三月成長。SiC/GaN第三代功率晶圓代工能力具軍規JAN認證，軍工航太功率元件代工具有進入壁壘。",
-            "products": [
-                "6吋SiC MOSFET晶圓代工(1200V/1700V)",
-                "GaN HEMT晶圓代工(650V功率/射頻)",
-                "6/8吋類比IC晶圓代工(BJT/BCD)",
-                "軍規功率MOSFET代工(JAN認證)",
-                "高壓BJT晶圓代工(工業用)"
-            ],
-            "customers": [
-                "ON Semiconductor(SiC MOSFET代工)",
-                "STMicroelectronics(GaN合作)",
-                "中科院(軍規SiC功率元件代工)",
-                "致新(3682)(電源管理IC代工)",
-                "立錡(6286)(電源管理IC代工)"
-            ],
-            "competitors": [
-                "穩懋(2455)(GaN HEMT)",
-                "環宇通訊(3282)(GaN)",
-                "VisIC(SiC)"
-            ],
-            "risks": [
-                "上櫃公司營收規模小，SiC/GaN代工產能有限",
-                "6吋SiC與國際8吋SiC代工廠(Wolfspeed/II-VI)有世代差距"
-            ],
-            "evidence": [
-                {
-                    "sourceId": "mops-company-disclosures",
-                    "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-                    "title": "漢磊 公司公告、年報與財務資訊",
-                    "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3707",
-                    "claim": "MOPS/TWSE 公司公告與財報可用來驗證 漢磊 的營業項目、產品組合與財務資料。"
-                },
-                {
-                    "sourceId": "finmind-taiwan-stock-datasets",
-                    "publisher": "FinMind",
-                    "title": "Taiwan Stock Market Datasets",
-                    "url": "https://finmindtrade.com/analysis/#/data/api",
-                    "claim": "FinMind 可用於追蹤 3707 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-                }
-            ],
-            "confidence": "high",
-            "lastVerified": "2026-07-05",
-            "status": "verified",
-            "techFocus": [
-                "6吋SiC MOSFET晶圓代工(1200V/1700V車規/軍規)",
-                "GaN HEMT氮化鎵功率/射頻代工(650V)",
-                "JAN軍規認證功率MOSFET代工流程"
-            ]
+          "sourceId": "mops-company-disclosures",
+          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
+          "title": "漢磊 公司公告、年報與財務資訊",
+          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3707",
+          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 漢磊 的營業項目、產品組合與財務資料。"
+        },
+        {
+          "sourceId": "finmind-taiwan-stock-datasets",
+          "publisher": "FinMind",
+          "title": "Taiwan Stock Market Datasets",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind 可用於追蹤 3707 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
         }
-    ]
+      ],
+      "confidence": "high",
+      "lastVerified": "2026-07-05",
+      "status": "verified",
+      "techFocus": [
+        "6吋SiC MOSFET晶圓代工(1200V/1700V車規/軍規)",
+        "GaN HEMT氮化鎵功率/射頻代工(650V)",
+        "JAN軍規認證功率MOSFET代工流程"
+      ],
+      "swot": {
+        "strengths": [
+          "6吋SiC MOSFET(1200V/1700V)+GaN HEMT(650V)晶圓代工，車用/軍用功率半導體技術",
+          "MOPS登記為功率半導體及類比積體電路晶圓代工，SiC/GaN為下一代功率技術",
+          "7月營收6.48億MoM+4.4%，功率半導體需求穩定增長"
+        ],
+        "weaknesses": [
+          "6吋晶圓廠規模小，成本競爭力不如8吋/12吋",
+          "SiC/GaN良率仍低於Si，量產能力待提升",
+          "資本額40億但含私募5億，擴產資金有限"
+        ],
+        "opportunities": [
+          "電動車800V高壓平台帶動SiC MOSFET需求爆發",
+          "軍用雷達/電戰系統GaN射頻元件需求",
+          "ON Semiconductor/STMicroelectronics合作訂單增長"
+        ],
+        "threats": [
+          "WolfSpeed/II-VI等SiC大廠8吋量產能力領先",
+          "中國SiC/GaN晶圓代工(三安光電)低价競爭",
+          "SiC長晶技術門檻高，良率提升緩慢"
+        ]
+      }
+    }
+  ]
 }
