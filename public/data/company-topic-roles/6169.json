@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-17T03:10:00.000Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -148,10 +148,12 @@
       "roleType": "vr_streaming_content",
       "roleSummary": "昱泉VR串流內容需求高速光通訊傳輸(間接)。FinMind 7月0.023億。",
       "products": [
-        "高頻寬VR串流內容(需低延遲光纖傳輸)"
+        "VR串流遊戲內容(需低延遲光纖傳輸)",
+        "雲端遊戲平台軟體(需高速光纖網路)"
       ],
       "customers": [
-        "VR頭顯用戶(間接)"
+        "VR頭顯用戶(間接)",
+        "雲端遊戲平台商(間接)"
       ],
       "competitors": [
         "其他遊戲開發商"
@@ -180,21 +182,25 @@
       "lastVerified": "2026-08-16",
       "status": "verified",
       "techFocus": [
-        "VR串流壓縮技術(H.265/AV1)"
+        "VR串流壓縮技術(H.265/AV1)",
+        "雲端遊戲低延遲串流引擎"
       ],
       "swot": {
         "strengths": [
-          "VR串流內容需求高速光通訊(間接)"
+          "遊戲軟體開發能力可延伸至VR/雲端遊戲",
+          "VR串流內容需求高速光通訊(間接推動光纖基礎建設)"
         ],
         "weaknesses": [
           "與矽光子/CPO供應鏈完全無關",
-          "營收規模極小"
+          "FinMind 7月營收僅2.3萬元，營收規模極小"
         ],
         "opportunities": [
-          "VR串流普及推動光纖到戶需求"
+          "VR串流普及推動光纖到戶/資料中心光通訊需求",
+          "雲端遊戲市場成長帶動高速光纖網路建設"
         ],
         "threats": [
-          "題材關聯性極弱"
+          "題材關聯性極弱，市場不會將昱泉納入光通訊供應鏈",
+          "VR/雲端遊戲市場發展速度不確定"
         ]
       }
     },
@@ -207,7 +213,8 @@
       "roleType": "game_hardware_pcb",
       "roleSummary": "昱泉為遊戲軟體公司，與PCB供應鏈無直接關聯。FinMind 7月0.023億。",
       "products": [
-        "遊戲主機軟體(運行於含PCB的硬體平台)"
+        "遊戲主機軟體(PS5/Switch)",
+        "跨平台遊戲引擎"
       ],
       "customers": [
         "Sony(PlayStation)",
@@ -240,21 +247,25 @@
       "lastVerified": "2026-08-16",
       "status": "verified",
       "techFocus": [
-        "遊戲引擎跨平台優化"
+        "遊戲引擎跨平台優化",
+        "遊戲主機SoC軟體整合"
       ],
       "swot": {
         "strengths": [
-          "遊戲主機出貨帶動PCB需求(極間接)"
+          "遊戲主機軟體出貨帶動硬體PCB需求(極間接)",
+          "跨平台遊戲引擎開發能力"
         ],
         "weaknesses": [
           "與PCB產業無供應鏈關係",
-          "營收極小"
+          "FinMind 7月營收僅2.3萬元，營收極小"
         ],
         "opportunities": [
-          "次世代主機升級週期"
+          "次世代遊戲主機(PS6/Next Switch)升級週期帶動PCB需求",
+          "雲端遊戲伺服器硬體需求"
         ],
         "threats": [
-          "題材關聯性極弱"
+          "題材關聯性極弱",
+          "遊戲主機硬體需求波動"
         ]
       }
     },
@@ -267,10 +278,13 @@
       "roleType": "game_semi_end_user",
       "roleSummary": "昱泉遊戲軟體運行於含半導體晶片的硬體平台(間接)。FinMind 7月0.023億。",
       "products": [
-        "遊戲軟體(運行於半導體晶片平台)"
+        "遊戲軟體(PS5/Switch/PC)",
+        "教育軟體(數位學習平台)"
       ],
       "customers": [
-        "Sony/Nintendo/Meta(硬體平台)"
+        "Sony(PlayStation)",
+        "Nintendo(Switch)",
+        "Meta(Quest)"
       ],
       "competitors": [
         "其他遊戲開發商"
@@ -299,21 +313,25 @@
       "lastVerified": "2026-08-16",
       "status": "verified",
       "techFocus": [
-        "遊戲引擎GPU優化"
+        "遊戲引擎GPU優化",
+        "Unity/Unreal引擎整合"
       ],
       "swot": {
         "strengths": [
-          "遊戲需求驅動GPU/SoC半導體需求(極間接)"
+          "遊戲需求驅動GPU/SoC半導體需求(極間接)",
+          "遊戲引擎優化需深入GPU架構"
         ],
         "weaknesses": [
           "與半導體供應鏈完全無關",
-          "營收極小"
+          "FinMind 7月營收僅2.3萬元，營收極小"
         ],
         "opportunities": [
-          "AI遊戲驅動高階GPU需求"
+          "AI遊戲驅動高階GPU需求(間接)",
+          "遊戲引擎AI化帶動算力需求"
         ],
         "threats": [
-          "題材關聯性極弱"
+          "題材關聯性極弱",
+          "遊戲市場競爭激烈"
         ]
       }
     },
@@ -327,11 +345,13 @@
       "roleSummary": "昱泉開發教育軟體可能含環保教育數位內容。FinMind 7月0.023億。",
       "products": [
         "環保教育數位化平台",
-        "永續發展互動教材"
+        "永續發展互動教材",
+        "ESG教育遊戲"
       ],
       "customers": [
         "國內教育機構",
-        "政府環保單位"
+        "政府環保單位",
+        "企業ESG培訓部門"
       ],
       "competitors": [
         "其他教育軟體公司"
@@ -365,17 +385,20 @@
       ],
       "swot": {
         "strengths": [
-          "教育軟體開發經驗可延伸至環保教育"
+          "教育軟體開發經驗可延伸至環保教育",
+          "MOPS登記遊戲及教育軟體研究開發，具數位教育平台技術"
         ],
         "weaknesses": [
           "與水資源/環保供應鏈完全無關",
-          "營收極小"
+          "FinMind 7月營收僅2.3萬元，營收極小"
         ],
         "opportunities": [
-          "ESG教育需求增長"
+          "ESG教育需求增長帶動數位化環保教材市場",
+          "政府環保教育預算增加"
         ],
         "threats": [
-          "題材關聯性極弱"
+          "題材關聯性極弱",
+          "數位教育市場競爭激烈"
         ]
       }
     }
