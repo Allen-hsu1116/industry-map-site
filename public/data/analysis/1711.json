@@ -2,22 +2,19 @@
   "schemaVersion": 1,
   "code": "1711",
   "name": "永光",
-  "generatedAt": "2026-08-14T12:32:56.438Z",
+  "generatedAt": "2026-08-17T12:31:55.247Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
+    "grade": "B",
+    "label": "可用但仍有缺口",
+    "upgradePriority": "medium",
     "missingKnowledge": [
-      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
-      "insufficient_daily_analysis",
-      "missing_topic_role",
       "missing_swot"
     ]
   },
@@ -52,34 +49,71 @@
     ]
   },
   "industry": {
-    "label": "產業資料待補",
-    "score": 0,
-    "knowledgeBasis": "insufficient",
-    "provenanceLabel": "產業資料待補",
-    "verificationNote": "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。",
-    "productNarratives": [],
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "roleDetail": {
+      "topicName": "石化、塑橡膠與特用化學",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "永光7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%，累計YoY+9.0%。為台灣特用化學品與色料大廠。",
+      "supplyChainStage": "specialty_chemicals",
+      "roleType": "dye_and_specialty_chemical_producer",
+      "directness": "core",
+      "source": "canonical"
+    },
+    "productNarratives": [
+      {
+        "name": "色料化學品與反應性染料",
+        "description": "色料化學品與反應性染料用於紡織、印刷、碳粉與各類材料著色，屬化工材料產品線。",
+        "whyItMatters": "色料需求受紡織、印刷與材料景氣影響，價格與原料成本會影響化工廠毛利。",
+        "topicFit": "特用化學與色料材料供應鏈",
+        "businessImpact": "營運觀察重點是終端需求、原料成本、產品組合與海外競爭。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：永光 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [],
       "opportunities": [],
       "risks": []
     },
     "scoringFactors": [
-      "尚未建立 V2 題材角色"
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16",
+      "角色證據 2 則 +12",
+      "催化訊號 3 項 +12",
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "永光 尚未建立完整題材角色，產業 score 0/100；Daily analysis 先以 FinMind 市場資料與既有財務資料為主。",
+    "summary": "永光 在「石化、塑橡膠與特用化學」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：產業資料待補（n/a）",
-      "產業評分：0/100（尚未建立 V2 題材角色）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
+      "相關題材：重電、電纜與 EPC 工程 · 間接受惠",
+      "相關題材：儲能、電芯與電池材料 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "尚未建立 V2 題材角色；Daily analysis 不會將產業題材列為主要加分來源。"
-    ],
+    "risks": [],
     "watch": [
-      "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-26（normal）",
-      "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind TaiwanStockInstitutionalInvestorsBuySell"
+      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
+      "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
+      "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "知識庫最後驗證：2026-05-26（normal）"
     ]
   },
   "knowledge": {
@@ -114,9 +148,95 @@
     ]
   },
   "canonicalKnowledge": {
-    "topicRoles": [],
+    "topicRoles": [
+      {
+        "topicId": "petrochem-plastics",
+        "topicName": "石化、塑橡膠與特用化學",
+        "canonicalTopicId": "petrochem-plastics",
+        "canonicalTopicName": "石化、塑橡膠與特用化學",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "永光7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%，累計YoY+9.0%。為台灣特用化學品與色料大廠。"
+      },
+      {
+        "topicId": "electrical-equipment-epc",
+        "topicName": "重電、電纜與 EPC 工程",
+        "canonicalTopicId": "electrical-equipment-epc",
+        "canonicalTopicName": "重電、電纜與 EPC 工程",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "永光7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%，累計YoY+9.0%。提供電氣絕緣用化學材料。"
+      },
+      {
+        "topicId": "energy-storage-battery",
+        "topicName": "儲能、電芯與電池材料",
+        "canonicalTopicId": "energy-storage-battery",
+        "canonicalTopicName": "儲能、電芯與電池材料",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "永光提供電池材料用化學品。7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%，累計YoY+9.0%。"
+      },
+      {
+        "topicId": "semiconductor-equipment-materials",
+        "topicName": "半導體設備與前段材料",
+        "canonicalTopicId": "semiconductor-equipment-materials",
+        "canonicalTopicName": "半導體設備與前段材料",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "永光電子化學品可用於半導體製程。7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%。"
+      }
+    ],
     "swot": [],
-    "topics": []
+    "topics": [
+      {
+        "id": "petrochem-plastics",
+        "name": "石化、塑橡膠與特用化學",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "electrical-equipment-epc",
+        "name": "重電、電纜與 EPC 工程",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "energy-storage-battery",
+        "name": "儲能、電芯與電池材料",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "semiconductor-equipment-materials",
+        "name": "半導體設備與前段材料",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      }
+    ]
   },
   "scoring": {
     "version": 3,
@@ -131,7 +251,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 0,
+    "totalScore": 20,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -140,24 +260,21 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股",
-      "rationale": []
+      "classification": "題材股",
+      "rationale": [
+        "題材角色已 evidence-backed，可納入題材股策略"
+      ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 81 天未更新"
+        "message": "股價資料已 84 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 81 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 84 天未更新"
       }
     ]
   },
