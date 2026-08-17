@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6168",
   "companyName": "宏齊",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-18T03:30:00.000Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -88,14 +88,17 @@
       "directness": "indirect",
       "supplyChainStage": "optical_led",
       "roleType": "optical_comm_led",
-      "roleSummary": "宏齊VCSEL/IR LED可用於光通訊收發模組。7月營收2.06億，MoM+0.8%。",
+      "roleSummary": "宏齊核心為SMD LED；本題材僅屬IR LED封裝的鄰近能力，不能視為矽光子或CPO供應商。 2026年7月營收2.06億元、YoY+12.8%；MOPS未揭露矽光子、CPO或光收發模組產品。",
       "products": [
-        "VCSEL封裝(850nm光纖通訊用)",
-        "IR LED(940nm/1310nm光通訊用)"
+        "850nm近紅外線SMD發光元件封裝",
+        "940nm近紅外線SMD發光元件封裝",
+        "光耦合器用紅外線發射端LED封裝"
       ],
       "customers": [
-        "II-VI/Coherent(VCSEL模組供應)",
-        "華星光(4969)(光收發模組)"
+        "光寶科(2301；光電模組應用對象)",
+        "億光(2393；IR LED供應鏈對象)",
+        "聯亞(3081；高速光源供應鏈對照)",
+        "華星光(4979；光收發模組供應鏈對照)"
       ],
       "competitors": [
         "億光(2393)",
@@ -122,30 +125,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "VCSEL面射出雷射封裝技術",
-        "高速調製LED封裝"
+        "IR LED固晶、鍵合與低熱阻SMD封裝",
+        "850/940nm光譜、光功率與可靠度篩選",
+        "發射/感測端光軸對準與氣密控制"
       ],
       "swot": {
         "strengths": [
-          "FinMind 7月營收2.06億，SMD LED出貨穩定",
-          "VCSEL封裝技術(850nm)可用於光纖通訊短距傳輸",
-          "MOPS登記SMD LED生產銷售，具VCSEL/IR LED封裝能力"
+          "2026年7月營收2.06億元、YoY+12.8%；MOPS未揭露矽光子、CPO或光收發模組產品",
+          "具IR LED封裝與量產測試能力",
+          "既有設備可支援小型低熱阻封裝"
         ],
         "weaknesses": [
-          "光通訊LED營收佔比極低，主力為消費性電子LED",
-          "與矽光子/CPO無直接關聯(非矽光子晶片設計)"
+          "未揭露VCSEL或矽光子晶片產品",
+          "與800G/1.6T CPO技術差距大"
         ],
         "opportunities": [
-          "CPO技術帶動VCSEL需求(短距光互連)",
-          "800G/1.6T光模組用VCSEL封裝需求"
+          "IR光感測與光耦仍需可靠發射元件",
+          "導入VCSEL可延伸3D感測"
         ],
         "threats": [
-          "矽光子技術替代傳統LED/VCSEL光源",
-          "光通訊模組廠垂直整合減少外購VCSEL"
+          "專業雷射與磊晶廠主導高速光源",
+          "市場易誤把IR LED視為CPO題材"
         ]
       }
     },
@@ -156,13 +160,17 @@
       "directness": "indirect",
       "supplyChainStage": "led_driver_ic",
       "roleType": "led_driver_ic_customer",
-      "roleSummary": "宏齊LED封裝使用LED驅動IC。7月營收2.06億，MoM+0.8%。",
+      "roleSummary": "宏齊MOPS僅揭露SMD LED生產銷售，並非IC設計公司；本題材定位為LED驅動IC的整合與採購端。 2026年7月營收2.06億元、YoY+12.8%、累計YoY+7.8%，LED封裝出貨回升。",
       "products": [
-        "LED驅動IC採購(定電流驅動/PWM調光)",
-        "Mini LED背光驅動IC(區域調光)"
+        "Mini LED背光SMD LED與驅動板整合模組",
+        "RGB SMD LED與定電流驅動參考設計",
+        "車用照明SMD LED與PWM調光模組"
       ],
       "customers": [
-        "聚積(3545)(LED驅動IC)"
+        "聚積(3527；LED驅動IC供應鏈對象)",
+        "聯詠(3034；顯示驅動IC對象)",
+        "友達(2409；Mini LED背光應用對象)",
+        "群創(3481；顯示背光應用對象)"
       ],
       "competitors": [
         "億光(2393)",
@@ -188,29 +196,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "LED驅動IC選型與封裝整合",
-        "PWM調光控制整合"
+        "PWM/類比混合調光與定電流通道匹配",
+        "Mini LED分區背光之封裝與PCB熱設計",
+        "車用LED負載突降與EMI元件選型"
       ],
       "swot": {
         "strengths": [
-          "FinMind 7月營收2.06億，LED封裝與驅動IC整合能力",
-          "Mini LED背光驅動IC選型與封裝整合技術"
+          "2026年7月營收2.06億元、YoY+12.8%、累計YoY+7.8%，LED封裝出貨回升",
+          "封裝與驅動整合可提供模組方案",
+          "Mini LED需封裝與驅動共同驗證"
         ],
         "weaknesses": [
-          "無IC設計能力，驅動IC為外購",
-          "IC設計題材關聯弱(為IC採購方非設計方)"
+          "無IC設計能力，驅動IC須外購",
+          "MOPS未揭露驅動板收入"
         ],
         "opportunities": [
-          "Mini LED驅動IC需求隨車用/顯示器背光增長",
-          "Micro LED驅動IC新應用"
+          "Mini LED與矩陣車燈提高驅動需求",
+          "Micro LED增加巨量通道控制需求"
         ],
         "threats": [
-          "驅動IC供應商(聚積/聯詠)漲價壓縮封裝毛利",
-          "LED封裝廠可能自製驅動IC方案"
+          "IC原廠可直接與面板廠合作",
+          "中國LED封裝低價競爭"
         ]
       }
     }

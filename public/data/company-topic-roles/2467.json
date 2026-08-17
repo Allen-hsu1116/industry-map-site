@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2467",
   "companyName": "志聖",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-18T03:30:00.000Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -154,15 +154,19 @@
       "directness": "indirect",
       "supplyChainStage": "industrial_software",
       "roleType": "equipment_software_integration",
-      "roleSummary": "志聖製程設備搭配AI視覺與數據分析軟體。7月營收11.68億，YoY+132.7%，累計62.12億，累計YoY+87.0%。",
+      "roleSummary": "2026年7月營收11.68億元、YoY+132.7%、累計YoY+87.0%，AI供應鏈設備需求強勁。",
       "products": [
-        "製程設備AI視覺檢測軟體(缺陷識別/自動對位)",
-        "設備稼動率監控系統(物聯網數據採集)",
-        "製程參數優化軟體(機器學習調優)"
+        "貼膜/撕膜設備AOI對位與缺陷辨識軟體",
+        "熱製程設備溫度配方與多區PID軟體",
+        "壓合設備壓力/真空曲線追溯系統",
+        "SECS/GEM與OPC UA設備聯網模組"
       ],
       "customers": [
-        "PCB製造商(設備軟體授權)",
-        "封裝廠(製程優化軟體)"
+        "台積電(2330；先進封裝設備應用對象)",
+        "日月光投控(3711；封裝設備應用對象)",
+        "欣興(3037；PCB設備應用對象)",
+        "臻鼎-KY(4958；高階PCB設備應用對象)",
+        "南電(8046；IC載板設備應用對象)"
       ],
       "competitors": [
         "群翊(6624)",
@@ -189,29 +193,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "AI視覺檢測深度學習模型(CNN/YOLO)",
-        "設備IoT數據平台(MQTT/OPC UA)"
+        "SECS/GEM、EDA與OPC UA/MES整合",
+        "機器視覺自動對位與缺陷分類",
+        "多區PID、壓力真空曲線與配方追溯"
       ],
       "swot": {
         "strengths": [
-          "AI視覺檢測軟體提升設備附加價值",
-          "製程數據分析能力"
+          "2026年7月營收11.68億元、YoY+132.7%、累計YoY+87.0%，AI供應鏈設備需求強勁",
+          "軟體與製程設備深度整合，切換成本高",
+          "MOPS明列PCB與先進封裝設備場景"
         ],
         "weaknesses": [
-          "軟體為設備附屬非獨立產品",
-          "缺乏雲端平台能力"
+          "軟體隨設備銷售，缺乏獨立SaaS",
+          "依賴PCB與封裝資本支出"
         ],
         "opportunities": [
-          "AI驅動製程優化需求",
-          "設備數位化轉型趨勢"
+          "先進封裝擴產增加設備聯網需求",
+          "預防維護可形成持續服務收入"
         ],
         "threats": [
-          "專業AI軟體公司競爭",
-          "客戶自建軟體"
+          "客戶自建MES或AI模型",
+          "群翊、均豪整套方案競爭"
         ]
       }
     },

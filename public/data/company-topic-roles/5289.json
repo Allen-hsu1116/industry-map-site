@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5289",
   "companyName": "宜鼎",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-18T03:30:00.000Z",
   "roles": [
     {
       "topicId": "cxl-memory-pooling",
@@ -161,14 +161,19 @@
       "directness": "indirect",
       "supplyChainStage": "niche_storage",
       "roleType": "industrial_niche_storage",
-      "roleSummary": "宜鼎提供工規嵌入式儲存含NOR Flash相關產品。7月營收84.95億，MoM+3.5%。",
+      "roleSummary": "FinMind顯示2026年7月營收8.49億元、MoM+3.5%，工控記憶體需求維持成長。",
       "products": [
-        "工規SPI NOR Flash模組(128Mb-2Gb)",
-        "工規SLC NAND SSD(高可靠度/長壽命)"
+        "工規SLC/iSLC NAND SSD(SATA/PCIe)",
+        "工規eMMC 5.1與SD記憶卡",
+        "寬溫DDR4/DDR5 ECC模組",
+        "斷電保護2.5吋SATA與M.2 NVMe SSD"
       ],
       "customers": [
-        "工業控制設備廠(嵌入式儲存)",
-        "車用電子廠(車規NOR Flash)"
+        "研華(2395；工業電腦儲存應用)",
+        "新漢(8234；邊緣平台工規儲存)",
+        "友通(2397；工業主機板嵌入式儲存)",
+        "艾訊(3088；工業電腦寬溫SSD)",
+        "凌華(6166；自動化平台記憶體)"
       ],
       "competitors": [
         "創見(2451)",
@@ -196,30 +201,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "SLC NAND高可靠度設計(30000 P/E cycles)",
-        "NOR Flash快速啟動技術(<10ms)"
+        "iSLC寫入放大控制與P/E壽命延長",
+        "iCell硬體斷電保護與資料完整性",
+        "-40至85°C寬溫篩選與固定BOM"
       ],
       "swot": {
         "strengths": [
-          "工規嵌入式儲存可整合NOR Flash",
-          "SLC NAND高可靠度技術(30000 P/E cycles)",
-          "FinMind 7月營收8.49億，工規記憶體需求穩定"
+          "FinMind顯示2026年7月營收8.49億元、MoM+3.5%，工控記憶體需求維持成長",
+          "MOPS直接揭露工業儲存與DRAM模組",
+          "iSLC、斷電保護與寬溫形成差異化"
         ],
         "weaknesses": [
-          "NOR Flash佔比極低",
-          "NOR Flash為外購非自製"
+          "NAND/DRAM顆粒依賴上游原廠",
+          "工規驗證期長且訂單分散"
         ],
         "opportunities": [
-          "車規NOR Flash需求增長",
-          "工業物聯網嵌入式儲存"
+          "Edge AI增加高耐久儲存需求",
+          "車載醫療推升長供貨產品"
         ],
         "threats": [
-          "旺宏/華邦等NOR Flash原廠直接競爭",
-          "NOR Flash價格波動影響模組成本"
+          "創見、宇瞻及國際模組廠競爭",
+          "記憶體循環造成庫存跌價"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-18T03:30:00.000Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -11,15 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "battery_component_distribution",
       "roleType": "battery_component_distributor",
-      "roleSummary": "至上營收資料待補。MOPS登記為電子零組件經銷業務。為電子元件通路商。",
+      "roleSummary": "至上MOPS僅揭露電子零組件經銷；儲能角色屬BMS、功率元件與記憶體的間接應用。 2026年7月營收768.74億元、YoY+333.5%，但公司說明主因是記憶體漲價及伺服器、手機拉貨。",
       "products": [
-        "電池管理IC(BMS)經銷",
-        "電池保護板元件經銷(MOSFET/保險絲)",
-        "儲能逆變器功率元件經銷(IGBT/SiC)"
+        "BMS電池監控IC與電流感測器通路方案",
+        "儲能PCS用1200V IGBT與SiC MOSFET",
+        "電池保護板用MOSFET、保險絲與TVS",
+        "EMS控制器用DDR4與eMMC元件"
       ],
       "customers": [
-        "儲能系統整合商",
-        "電池模組廠"
+        "台達電(2308；儲能PCS元件應用對象)",
+        "台泥(1101；儲能系統元件應用對象)",
+        "AES-KY(6781；儲能電池模組應用對象)",
+        "新盛力(4931；BMS元件應用對象)"
       ],
       "competitors": [
         "文曄(3034)",
@@ -46,27 +49,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "電子元件通路管理(庫存/物流/技術支援)"
+        "BMS多串電芯量測、均衡與隔離通訊選型",
+        "1200V IGBT/SiC閘極驅動與熱設計",
+        "保護MOSFET SOA與浪湧保護搭配"
       ],
       "swot": {
         "strengths": [
-          "電子元件通路規模大",
-          "可經銷電池管理相關IC/元件"
+          "2026年7月營收768.74億元、YoY+333.5%，但公司說明主因是記憶體漲價及伺服器、手機拉貨",
+          "大型通路具庫存物流與FAE能力",
+          "可整合BMS、功率元件與記憶體BOM"
         ],
         "weaknesses": [
-          "通路商毛利率極低(3-5%)",
-          "電池元件經銷佔比低"
+          "MOPS未拆分儲能產品線或營收",
+          "通路毛利低且具名關係待驗證"
         ],
         "opportunities": [
-          "儲能市場帶動BMS IC經銷量"
+          "表後儲能增加BMS/PCS元件需求",
+          "SiC提高PCS單機元件價值"
         ],
         "threats": [
-          "原廠直銷趨勢",
-          "線上通路競爭"
+          "原廠直供大型系統商",
+          "價格反轉造成庫存評價風險"
         ]
       }
     },
@@ -77,14 +84,17 @@
       "directness": "indirect",
       "supplyChainStage": "ewaste_component_recovery",
       "roleType": "ewaste_component_distributor",
-      "roleSummary": "至上為電子元件通路商。營收資料待補。",
+      "roleSummary": "至上並非廢棄物處理商；環保角色限於退貨、呆滯庫存與報廢電子元件的分級及委外資源化。 2026年7月營收768.74億元、YoY+333.5%，龐大交易量同時放大逆向物流與呆滯料管理需求。",
       "products": [
-        "電子廢料中有價元件回收轉售",
-        "回收電子元件測試分級轉售"
+        "退貨記憶體與IC功能測試分級批次",
+        "呆滯電子元件可追溯轉售服務",
+        "報廢PCB與IC含金屬廢料委外資源化"
       ],
       "customers": [
-        "電子廢料回收商",
-        "二手電子設備市場"
+        "光洋科(1785；貴金屬電子廢料處理對象)",
+        "中台資源科技(6923；電子廢棄物資源化對象)",
+        "可寧衛(8422；事業廢棄物處理對象)",
+        "台灣鋼聯(6581；含金屬廢棄物資源化對象)"
       ],
       "competitors": [
         "文曄(3034)",
@@ -110,28 +120,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "電子元件測試分級技術"
+        "IC功能測試、批號追溯與良品分級",
+        "RMA逆向物流及RoHS/REACH管理",
+        "報廢料序號銷毀與處理流向稽核"
       ],
       "swot": {
         "strengths": [
-          "FinMind 7月營收76.87億，電子元件通路商規模大可服務回收市場",
-          "電子元件測試分級能力可用於回收元件品質把關"
+          "2026年7月營收768.74億元、YoY+333.5%，龐大交易量同時放大逆向物流與呆滯料管理需求",
+          "通路網路可跨客戶重新配置停產料號",
+          "倉儲與批號追溯可提高再利用率"
         ],
         "weaknesses": [
-          "回收市場極小，主力為電子元件經銷",
-          "與環保供應鏈關聯弱"
+          "非回收處理商，最終資源化須委外",
+          "MOPS未揭露循環經濟收入"
         ],
         "opportunities": [
-          "電子廢料回收法規推動二手元件市場",
-          "循環經濟趨勢帶動回收元件認證需求"
+          "碳盤查提高可追溯再利用需求",
+          "原廠RMA帶動逆向物流服務"
         ],
         "threats": [
-          "回收元件品質爭議影響通路商譽",
-          "原廠限制回收元件流通"
+          "再利用元件失效造成保固風險",
+          "廢棄物轉移法規提高成本"
         ]
       }
     },
@@ -213,15 +226,18 @@
       "directness": "indirect",
       "supplyChainStage": "server_component_distribution",
       "roleType": "server_component_distributor",
-      "roleSummary": "至上經銷AI伺服器用電子元件。營收資料待補。",
+      "roleSummary": "至上並非滑軌或機殼製造商；此題材僅透過AI伺服器主板、電源與儲存元件間接參與。 2026年7月營收768.74億元、YoY+333.5%，公司明指伺服器客戶拉貨強勁。",
       "products": [
-        "AI伺服器用高速連接器經銷",
-        "伺服器用MLCC/電容經銷",
-        "伺服器電源用MOSFET/二極體經銷"
+        "AI伺服器主板用DDR5 RDIMM元件",
+        "BMC/BIOS用SPI NOR Flash與eMMC",
+        "伺服器電源板用MOSFET與電源管理IC",
+        "PCIe 5.0連接器與Retimer周邊元件"
       ],
       "customers": [
-        "AI伺服器ODM廠(緯穎/廣達/英業達)",
-        "伺服器主板製造商"
+        "廣達(2382；AI伺服器ODM應用對象)",
+        "緯穎(6669；雲端伺服器應用對象)",
+        "緯創(3231；AI主板元件應用對象)",
+        "英業達(2356；伺服器ODM應用對象)"
       ],
       "competitors": [
         "文曄(3034)",
@@ -247,28 +263,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "AI伺服器BOM元件選型技術支援"
+        "DDR5/PCIe 5.0主板BOM與信號完整性支援",
+        "高功率伺服器電源MOSFET效率與SOA選型",
+        "BMC開機儲存可靠度與壽命驗證"
       ],
       "swot": {
         "strengths": [
-          "FinMind 7月營收76.87億，電子元件通路規模大可服務AI伺服器ODM廠",
-          "MOPS登記電子零組件經銷，可供應AI伺服器用連接器/MLCC/MOSFET"
+          "2026年7月營收768.74億元、YoY+333.5%，公司明指伺服器客戶拉貨強勁",
+          "可一次供應記憶體、儲存及電源元件",
+          "通路庫存與FAE支援平台快速改版"
         ],
         "weaknesses": [
-          "AI伺服器專用元件佔比低，主力為消費性電子元件",
-          "毛利率低(通路商本質)"
+          "不生產機殼或滑軌，僅間接相關",
+          "AI伺服器元件占比未揭露"
         ],
         "opportunities": [
-          "AI伺服器出貨增長帶動連接器/電容/二極體經銷量",
-          "ODM廠(緯穎/廣達/英業達)擴產帶動BOM元件採購"
+          "平台升級推升DDR5與PCIe元件用量",
+          "ODM擴產增加備貨需求"
         ],
         "threats": [
-          "ODM廠直接向原廠採購跳過通路商",
-          "電子元件通路商(大聯大/文曄)競爭"
+          "ODM直接向原廠採購",
+          "記憶體價格反轉造成庫存風險"
         ]
       }
     },
@@ -279,15 +298,18 @@
       "directness": "indirect",
       "supplyChainStage": "thermal_component_distribution",
       "roleType": "thermal_component_distributor",
-      "roleSummary": "至上經銷散熱相關電子元件。營收資料待補。",
+      "roleSummary": "至上不製造冷板、CDU或快接頭；液冷角色來自泵浦驅動、感測與功率元件通路。 2026年7月營收768.74億元、YoY+333.5%，但MOPS未拆分液冷相關收入。",
       "products": [
-        "散熱風扇馬達驅動IC經銷",
-        "溫度感測器經銷(NTC/PT1000)",
-        "液冷泵驅動元件經銷"
+        "CDU泵浦用三相馬達驅動IC與MOSFET",
+        "冷板迴路用數位溫度感測器與NTC",
+        "CDU壓力/流量感測器訊號調理IC",
+        "風扇牆用BLDC驅動IC與電流感測器"
       ],
       "customers": [
-        "散熱模組廠(奇鋐/雙鴻)",
-        "伺服器ODM廠"
+        "奇鋐(3017；CDU與冷板元件應用對象)",
+        "雙鴻(3324；液冷模組應用對象)",
+        "台達電(2308；液冷電源元件應用對象)",
+        "建準(2421；風扇驅動元件應用對象)"
       ],
       "competitors": [
         "文曄(3034)",
@@ -313,28 +335,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "散熱元件選型與系統整合支援"
+        "BLDC泵浦/風扇FOC控制與閘極驅動",
+        "溫度壓力流量感測器AFE與I2C/SPI整合",
+        "CDU寬溫耐壓與失效保護驗證"
       ],
       "swot": {
         "strengths": [
-          "FinMind 7月營收76.87億，通路規模大可經銷散熱相關電子元件",
-          "可整合散熱風扇驅動IC/溫度感測器/液冷泵驅動元件供應鏈"
+          "2026年7月營收768.74億元、YoY+333.5%，但MOPS未拆分液冷相關收入",
+          "可打包驅動IC、MOSFET與感測器BOM",
+          "FAE可支援泵浦控制與熱感測選型"
         ],
         "weaknesses": [
-          "散熱元件經銷佔比極低",
-          "與液冷技術關聯弱(僅為元件經銷)"
+          "不具冷板/CDU流體與機構設計能力",
+          "液冷收入占比未揭露"
         ],
         "opportunities": [
-          "AI伺服器液冷趨勢帶動感測器/驅動IC需求",
-          "散熱模組廠(奇鋐/雙鴻)擴產帶動元件採購"
+          "高功率AI平台提高CDU感測元件用量",
+          "預防維護增加感測器數量"
         ],
         "threats": [
-          "散熱模組廠直接向原廠採購",
-          "液冷方案零組件規格變化快"
+          "CDU廠自製控制板或原廠直供",
+          "規格迭代造成料號庫存淘汰"
         ]
       }
     }

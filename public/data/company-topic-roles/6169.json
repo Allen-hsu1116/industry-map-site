@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-18T03:30:00.000Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -146,14 +146,19 @@
       "directness": "indirect",
       "supplyChainStage": "optical_content",
       "roleType": "vr_streaming_content",
-      "roleSummary": "昱泉VR串流內容需求高速光通訊傳輸(間接)。FinMind 7月0.023億。",
+      "roleSummary": "昱泉MOPS僅揭露遊戲與教育軟體，與矽光子/CPO沒有供應關係；此角色只是雲端遊戲對高速網路的終端需求映射。 FinMind顯示2026年7月營收僅2.3萬元，商業規模極小。",
       "products": [
-        "VR串流遊戲內容(需低延遲光纖傳輸)",
-        "雲端遊戲平台軟體(需高速光纖網路)"
+        "PC/主機跨平台3D遊戲軟體",
+        "VR互動遊戲與沉浸式內容",
+        "雲端遊戲低延遲串流軟體",
+        "教育訓練模擬軟體"
       ],
       "customers": [
-        "VR頭顯用戶(間接)",
-        "雲端遊戲平台商(間接)"
+        "Sony Interactive Entertainment(PlayStation平台)",
+        "Nintendo(Switch平台)",
+        "Meta(Quest VR平台)",
+        "Microsoft(Xbox/雲端遊戲平台)",
+        "Valve(Steam平台)"
       ],
       "competitors": [
         "其他遊戲開發商"
@@ -178,29 +183,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "VR串流壓縮技術(H.265/AV1)",
-        "雲端遊戲低延遲串流引擎"
+        "H.265/AV1壓縮與自適應位元率串流",
+        "遊戲狀態同步、輸入預測與延遲補償",
+        "Unity/Unreal跨平台與VR效能最佳化"
       ],
       "swot": {
         "strengths": [
-          "遊戲軟體開發能力可延伸至VR/雲端遊戲",
-          "VR串流內容需求高速光通訊(間接推動光纖基礎建設)"
+          "具遊戲教育軟體研發能力",
+          "低延遲串流是高速網路終端應用"
         ],
         "weaknesses": [
-          "與矽光子/CPO供應鏈完全無關",
-          "FinMind 7月營收僅2.3萬元，營收規模極小"
+          "FinMind顯示2026年7月營收僅2.3萬元，商業規模極小",
+          "與矽光子/CPO無直接供應關係",
+          "MOPS未揭露VR或雲端遊戲收入"
         ],
         "opportunities": [
-          "VR串流普及推動光纖到戶/資料中心光通訊需求",
-          "雲端遊戲市場成長帶動高速光纖網路建設"
+          "VR與雲端遊戲增加資料中心流量",
+          "5G/FTTH降低互動串流延遲"
         ],
         "threats": [
-          "題材關聯性極弱，市場不會將昱泉納入光通訊供應鏈",
-          "VR/雲端遊戲市場發展速度不確定"
+          "題材傳導極弱，不屬光通訊受惠股",
+          "平台抽成與流量成本侵蝕獲利"
         ]
       }
     },
@@ -211,14 +218,18 @@
       "directness": "indirect",
       "supplyChainStage": "pcb_end_user",
       "roleType": "game_hardware_pcb",
-      "roleSummary": "昱泉為遊戲軟體公司，與PCB供應鏈無直接關聯。FinMind 7月0.023億。",
+      "roleSummary": "昱泉不生產PCB、載板或基板材料；本題材只描述遊戲在主機與PC硬體上的終端需求，不能列為PCB供應商。 FinMind顯示2026年7月營收僅2.3萬元，且公司不生產PCB或基板材料。",
       "products": [
-        "遊戲主機軟體(PS5/Switch)",
-        "跨平台遊戲引擎"
+        "PlayStation平台遊戲軟體",
+        "Nintendo Switch平台遊戲軟體",
+        "Windows PC遊戲軟體",
+        "Unity/Unreal跨平台引擎客製模組"
       ],
       "customers": [
-        "Sony(PlayStation)",
-        "Nintendo(Switch)"
+        "Sony Interactive Entertainment(PlayStation平台)",
+        "Nintendo(Switch平台)",
+        "Microsoft(Xbox/Windows平台)",
+        "Valve(Steam平台)"
       ],
       "competitors": [
         "其他遊戲開發商"
@@ -243,29 +254,31 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "遊戲引擎跨平台優化",
-        "遊戲主機SoC軟體整合"
+        "x86/ARM與主機SoC跨平台編譯最佳化",
+        "DirectX/Vulkan與Shader管線調校",
+        "主機儲存I/O與資產串流最佳化"
       ],
       "swot": {
         "strengths": [
-          "遊戲主機軟體出貨帶動硬體PCB需求(極間接)",
-          "跨平台遊戲引擎開發能力"
+          "跨平台遊戲能力覆蓋PC與主機生態",
+          "內容可間接刺激主機硬體換機"
         ],
         "weaknesses": [
-          "與PCB產業無供應鏈關係",
-          "FinMind 7月營收僅2.3萬元，營收極小"
+          "FinMind顯示2026年7月營收僅2.3萬元，且公司不生產PCB或基板材料",
+          "與PCB產業無直接供應鏈關係",
+          "硬體平台不是PCB客戶"
         ],
         "opportunities": [
-          "次世代遊戲主機(PS6/Next Switch)升級週期帶動PCB需求",
-          "雲端遊戲伺服器硬體需求"
+          "次世代主機週期帶動新內容需求",
+          "PC光追與NPU創造新遊戲功能"
         ],
         "threats": [
-          "題材關聯性極弱",
-          "遊戲主機硬體需求波動"
+          "PCB景氣與公司營運幾乎無連動",
+          "平台認證與抽成限制小型開發商"
         ]
       }
     },
