@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -229,16 +229,18 @@
       "directness": "indirect",
       "supplyChainStage": "ess_communication",
       "roleType": "ess_energy_management_gateway",
-      "roleSummary": "中磊提供儲能系統通訊管理閘道器與遠端監控模組。7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%。",
+      "roleSummary": "中磊MOPS揭露有線與無線網路產品；儲能題材角色是EMS、逆變器與智慧電表的通訊閘道器，而非電芯或電池模組供應商。2026年7月營收79.80億元、YoY+51.3%，北美市場訂單增溫。",
       "products": [
-        "儲能系統EMS通訊閘道器(Modbus TCP/IEC 61850)",
-        "智慧電表AMI通訊模組(Zigbee/Cellular)",
-        "太陽能逆變器監控模組(Wi-Fi/4G)"
+        "儲能EMS Modbus TCP通訊閘道器",
+        "太陽能逆變器Wi-Fi/4G遠端監控模組",
+        "AMI智慧電表Cat-M1/NB-IoT通訊模組",
+        "VPP虛擬電廠邊緣控制閘道器"
       ],
       "customers": [
-        "Tesla(Powerwall通訊模組)",
-        "Enphase(微型逆變器監控)",
-        "北美儲能系統整合商"
+        "Tesla(Powerwall通訊應用對象)",
+        "Enphase Energy(逆變器監控應用對象)",
+        "Fluence(儲能EMS整合對象)",
+        "台達電(2308；儲能與逆變器整合對象)"
       ],
       "competitors": [
         "智邦(2391)",
@@ -255,7 +257,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：有線及無線網路產品"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -263,31 +265,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收79.80億元，YoY+51.3%，北美市場訂單增溫"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "IEC 61850電力系統通訊協議",
-        "低功耗廣域物聯網(NB-IoT/Cat-M1)電表通訊"
+        "Modbus TCP/RTU、DNP3與IEC 61850電力通訊轉換",
+        "LTE Cat-M1/NB-IoT低功耗廣域連線與遠端OTA",
+        "IEEE 2030.5/OpenADR需求響應與VPP排程介面"
       ],
       "swot": {
         "strengths": [
-          "網通技術平台可延伸至儲能EMS通訊",
-          "北美客戶基礎有利切入美國儲能市場"
+          "MOPS確認有線與無線網路產品能力，可移植至儲能通訊閘道器",
+          "2026年7月營收79.80億元、YoY+51.3%，北美訂單增溫有利切入當地能源連網應用"
         ],
         "weaknesses": [
-          "儲能營收佔比極低",
-          "缺乏電力系統專業認證"
+          "不生產電芯、PCS或BMS，儲能題材僅占通訊層",
+          "MOPS未揭露儲能產品營收與具名客戶，實際貢獻仍待驗證"
         ],
         "opportunities": [
-          "美國IRA法案推動儲能市場爆發",
-          "虛擬電廠(VPP)需大量通訊閘道器"
+          "VPP與需求響應需要大量家庭儲能閘道器及雲端連線",
+          "北美太陽能加儲能安裝量成長可帶動逆變器監控模組"
         ],
         "threats": [
-          "儲能設備商自建通訊模組",
-          "中國儲能廠低價競爭"
+          "Tesla、Enphase及PCS廠可能自研通訊模組，ODM議價空間有限",
+          "電力通訊資安與認證要求提高，驗證失敗會延後專案認列"
         ]
       }
     },

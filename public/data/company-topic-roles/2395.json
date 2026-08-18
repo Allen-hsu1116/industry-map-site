@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2395",
   "companyName": "研華",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "edge-ai-aiot",
@@ -89,20 +89,20 @@
       "directness": "core",
       "supplyChainStage": "industrial_automation",
       "roleType": "industrial_automation_platform",
-      "roleSummary": "研華工業自動化產品線穩定成長，5月營收77.3億年增32.1%。ADAM遠端I/O與WebAccess SCADA為工廠數位化核心元件。",
+      "roleSummary": "研華MOPS明確揭露工業測控、工業電腦、嵌入式電腦卡與液晶電腦，是工業自動化直接供應者。2026年7月營收112.72億元、YoY+87.6%、MoM+11.4%，公告說明專案需求與出貨暢旺。",
       "products": [
-        "工業IoT平台WISE-DAQ/WISE-PaaS數據採集",
-        "ADAM-4000/6000系列遠端I/O模組(Modbus/OPC-UA)",
-        "EdgeLink工業閘道器(協議轉換MQTT/Modbus)",
-        "WebAccess/SCADA HMI人機介面軟體",
-        "UNO系列工業無風扇嵌入式電腦"
+        "ADAM-4000/6000系列Modbus遠端I/O模組",
+        "UNO無風扇DIN-rail工業電腦",
+        "WISE-EdgeLink協議轉換閘道器",
+        "WebAccess/SCADA監控軟體",
+        "TPC系列觸控人機介面"
       ],
       "customers": [
-        "西門子(工業通訊整合)",
-        "Rockwell(自動化整合)",
-        "本土SI(系統整合商)",
-        "台塑(工廠自動化)",
-        "中鋼(製程監控)"
+        "西門子(Siemens；工業協議整合對象)",
+        "Rockwell Automation(控制系統整合對象)",
+        "台塑(1301；製程監控應用對象)",
+        "中鋼(2002；產線自動化應用對象)",
+        "台積電(2330；廠務監控應用對象)"
       ],
       "competitors": [
         "泓格",
@@ -117,7 +117,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
           "title": "研華 公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2395",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 研華 的營業項目、產品組合與財務資料。"
+          "claim": "MOPS主要經營業務：工業測控、工業電腦、嵌入式電腦卡及液晶電腦"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -125,36 +125,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2395 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收112.72億元，YoY+87.6%，公告稱專案需求與出貨暢旺"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "工業IoT平台WISE-DAQ數據採集與WISE-PaaS邊緣運算",
-        "遠端I/O模組Modbus RTU/OPC-UA通訊協議",
-        "EdgeLink工業閘道器多協議轉換(MQTT/Modbus/OPC-UA)"
+        "Modbus RTU/TCP、OPC UA與MQTT多協議邊緣轉換",
+        "無風扇寬溫工業電腦、DIN-rail安裝與24VDC隔離I/O",
+        "SCADA時序資料採集、設備告警與邊緣規則引擎"
       ],
       "swot": {
         "strengths": [
-          "工業IoT平台WISE-DAQ/WISE-PaaS數據採集與邊緣運算平台自主開發，軟體加值能力強",
-          "ADAM-4000/6000系列遠端I/O模組（Modbus/OPC-UA）全球工控市佔領先",
-          "6月營收YoY+73.4%，工控需求出貨暢旺，與西門子/Rockwell等工控大廠有合作"
+          "MOPS確認工業測控與工業電腦本業，從I/O、IPC到SCADA產品鏈完整",
+          "2026年7月營收112.72億元、YoY+87.6%，專案需求與出貨暢旺"
         ],
         "weaknesses": [
-          "工業自動化硬體（I/O模組）毛利率受限於標準化競爭",
-          "WISE-PaaS軟體平台訂閱收入佔比仍低，轉型需要時間",
-          "工控產品線廣泛，資源分散於多個垂直應用"
+          "標準I/O與IPC硬體面臨同質化，軟體訂閱占比仍需提高",
+          "跨眾多垂直產業客製整合，專案交付與技術支援成本高"
         ],
         "opportunities": [
-          "工業4.0/ESG推動工廠數位轉型，I/O模組與數據採集需求長期成長",
-          "WISE-PaaS平台從硬體銷售轉向軟體訂閱模式，提升經常性收入",
-          "Modbus/OPC-UA通訊協議在IIoT標準化趨勢中受惠"
+          "工廠數位化、能源管理與預測維護增加邊緣資料採集需求",
+          "OPC UA與MQTT標準化有利WISE-EdgeLink及WebAccess跨設備整合"
         ],
         "threats": [
-          "西門子Siemens/Rockwell在工控平台主導市場，研華為配合角色",
-          "中國工控廠（匯川等）在I/O模組低價競爭",
-          "工廠自動化資本支出受總體經濟影響波動"
+          "西門子、Rockwell、Beckhoff與中國工控商同時競爭平台與價格",
+          "製造業資本支出轉弱會延後IPC、I/O與SCADA專案驗收"
         ]
       }
     },

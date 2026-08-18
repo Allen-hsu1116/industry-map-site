@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3454",
   "companyName": "晶睿",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -11,18 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "security_equipment",
       "roleType": "military_surveillance_equipment",
-      "roleSummary": "晶睿為安全監控設備製造商，提供軍規網路攝影機、熱成像攝影機與門禁安全系統，可用於軍事基地與國防設施安全監控。國防安防為利基應用，營收佔比有限。",
+      "roleSummary": "晶睿為網路攝影機與影像管理方案商，但本輪MOPS公司資料及月營收查詢均失敗；國防角色應限於基地安防與影像監控的潛在應用，不能宣稱軍規客戶或軍用量產。",
       "products": [
-        "軍規網路攝影機(IP66防護/加密傳輸)",
-        "熱成像攝影機(384×288/640×480非製冷FPA)",
-        "門禁安全系統(生物辨識/RFID)",
-        "軍規影像管理平台VMS(加密/權限管理)"
+        "IP66/IK10戶外型網路攝影機",
+        "H.265多感測器全景網路攝影機",
+        "熱成像異常偵測網路攝影機",
+        "VAST影像管理系統(VMS)"
       ],
       "customers": [
-        "中科院(國防監控標案)",
-        "國防部(軍事設施安防)",
-        "政府機關(安防標案)",
-        "漢翔(2634)(航空設施安防)"
+        "中科院(基地安防應用對象)",
+        "漢翔(2634；廠區監控應用對象)",
+        "台船(2208；船廠周界監控應用對象)",
+        "雷虎(8033；無人載具影像整合對象)"
       ],
       "competitors": [
         "陞泰(6265)(安防監控)",
@@ -49,36 +49,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "本輪MOPS公司資料、TWSE月營收及FinMind月營收均查無資料"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "軍規攝影鏡頭光學設計(寬溫-40~65°C/抗震MIL-STD-810)",
-        "熱成像溫度異常偵測演算法(非製冷型FPA)",
-        "軍規IP66防護攝影機光學封裝與加密傳輸"
+        "ONVIF Profile S/T、H.265壓縮與多串流影像傳輸",
+        "Secure Boot、簽章韌體、TLS加密與802.1X網路存取",
+        "IP66/IK10防護、低照度成像與AI周界事件偵測"
       ],
       "swot": {
         "strengths": [
-          "軍規IP66防護攝影機+熱成像(384×288/640×480非製冷FPA)具軍用安防技術",
-          "客戶含中科院、國防部，軍規標案進入門檻高",
-          "MIL-STD-810抗震+寬溫-40~65°C設計符合軍規要求"
+          "網路攝影機、VMS與AI事件偵測可組成基地周界安防方案",
+          "ONVIF、H.265及網路資安能力適合既有監控系統整合"
         ],
         "weaknesses": [
-          "MOPS與FinMind均無法取得基本資料，公開資訊透明度低(上櫃)",
-          "國防標案週期長且不確定性高，營收波動大",
-          "軍規攝影機市場規模有限，成長天花板低"
+          "本輪MOPS與月營收工具均無資料，無法以官方資料驗證國防收入或客戶",
+          "產品屬一般安防設備，未見MIL-STD軍規、航太光電酬載或武器系統認證證據"
         ],
         "opportunities": [
-          "台灣國防自主政策帶動軍用監控設備需求",
-          "熱成像攝影機應用擴展至邊境巡邏/海巡監控",
-          "無人機光電酬載系統整合商機"
+          "國防設施汰換可增加高解析、低照度與資安強化攝影機需求",
+          "邊境、港區及機場周界監控可導入熱成像與AI事件分析"
         ],
         "threats": [
-          "國外大廠(FLIR/Axis)技術領先且品牌優勢強",
-          "國防預算波動影響標案釋出時程",
-          "軍規認證週期長且成本高"
+          "Axis、Bosch與Teledyne FLIR在高階安防及熱影像領域競爭強",
+          "標案資安規範與產地限制若不符，產品可能無法進入採購清單"
         ]
       }
     },

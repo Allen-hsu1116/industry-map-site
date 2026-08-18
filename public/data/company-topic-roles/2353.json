@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2353",
   "companyName": "宏碁",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,20 @@
       "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ai_pc_brand",
-      "roleSummary": "宏碁以AI PC/NB為核心成長引擎，5月營收261.7億年增36.5%，累計1,299億年增31.0%。AI PC帶動ASP提升，Altos伺服器品牌規模小但在拉丁美洲有利基。",
+      "roleSummary": "宏碁MOPS揭露資訊產品、軟體與維修服務的通路銷售；AI伺服器由Altos品牌切入，規模仍遠小於PC本業。2026年7月營收269.04億元、YoY+21.9%、累計YoY+23.1%，成長不能全數歸因AI伺服器。",
       "products": [
-        "AI PC筆電(Swift Go AI / Copilot+)",
-        "電競筆電/桌機(Predator Helios)",
-        "Chromebook(教育市場)",
-        "商用顯示器(Monitor)",
-        "AI伺服器(Altos品牌)(拉丁美洲)"
+        "Altos NVIDIA GPU加速伺服器",
+        "Altos AMD EPYC雙路機架伺服器",
+        "Altos BrainSphere AI/HPC管理軟體",
+        "Veriton AI工作站",
+        "Swift Copilot+ AI PC"
       ],
       "customers": [
-        "消費者(DTC AI PC)",
-        "Amazon(AI PC線上通路)",
-        "Best Buy(北美零售)",
-        "拉丁美洲企業(Altos伺服器)",
-        "教育機構(Chromebook)"
+        "NVIDIA(GPU平台供應鏈對象)",
+        "AMD(EPYC伺服器平台對象)",
+        "Intel(Xeon伺服器平台對象)",
+        "Microsoft(Azure與Copilot生態整合對象)",
+        "Amazon(資訊產品銷售通路對象)"
       ],
       "competitors": [
         "華碩(2357)",
@@ -43,7 +43,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：資訊產品、軟體及維修服務之通路銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -51,32 +51,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收269.04億元，YoY+21.9%，累計YoY+23.1%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "AI PC 筆電 Copilot+ NPU 整合（Snapdragon X Elite/Intel Lunar Lake）",
-        "電競筆電 GPU 散熱 Vapor Chamber 設計",
-        "AI PC 軟體生態系（AcerSense/AI Nexus）"
+        "PCIe GPU多卡拓撲、NVLink互連與高功率散熱配置",
+        "AMD EPYC/Intel Xeon雙路平台的DDR5與PCIe 5.0整合",
+        "BrainSphere叢集佈署、工作負載排程與遠端管理"
       ],
       "swot": {
         "strengths": [
-          "資訊產品通路銷售品牌，累計營收YoY+23.3%顯示PC需求回溫",
-          "AI PC為新產品線，邊緣AI運算可能帶動品牌PC升級週期"
+          "2026年7月營收269.04億元、YoY+21.9%，品牌與全球通路需求回升",
+          "Altos伺服器、AI工作站與AI PC可形成企業端到端運算產品組合"
         ],
         "weaknesses": [
-          "6月營收27.82億YoY-3.0%，AI伺服器非核心業務，直接受益有限",
-          "PC品牌商在AI伺服器供應鏈中角色邊緣化"
+          "MOPS核心仍是資訊產品通路銷售，AI伺服器並非主要營收來源",
+          "伺服器規模、客戶認證與供應鏈議價力落後Dell、HPE、Supermicro及台灣ODM"
         ],
         "opportunities": [
-          "AI PC(Intel Core Ultra/NPU)帶動品牌NB/DT換機潮",
-          "資訊產品通路可結合AI伺服器解決方案，擴大企業客戶"
+          "企業私有AI與中小型推論工作負載可帶動Altos GPU伺服器與工作站",
+          "AI PC通路客戶可向上交叉銷售邊緣伺服器與叢集管理軟體"
         ],
         "threats": [
-          "AI伺服器題材關聯度低，6月營收YoY-3.0%顯示AI趨勢未明顯受益",
-          "PC品牌競爭激烈(Dell/HP/Lenovo)，AI PC換機週期不確定性高"
+          "GPU供貨、出口管制與高功率散熱能力限制Altos專案交付",
+          "AI伺服器價格戰及大型雲端客戶直接採購ODM，壓縮品牌商空間"
         ]
       }
     }

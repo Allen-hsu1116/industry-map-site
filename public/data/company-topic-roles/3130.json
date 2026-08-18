@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3130",
   "companyName": "一零四",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -90,18 +90,19 @@
       "directness": "core",
       "supplyChainStage": "software_service",
       "roleType": "hr_saas_platform",
-      "roleSummary": "一零四6月營收2.63億年增7.9%、累計年增6.9%。台灣最大人力資源SaaS平台，以AI人才推薦引擎與HR SaaS服務企業招募需求，與資安題材關聯薄弱。",
+      "roleSummary": "一零四MOPS揭露一般廣告與電子資訊就業服務，核心是104人力銀行及企業HR數位服務；資安屬HR SaaS必要能力而非獨立資安產品。2026年7月營收2.75億元、YoY+12.4%、累計YoY+7.8%。",
       "products": [
-        "104人力銀行平台(線上求職招募)",
-        "HR SaaS(招募管理/績效考核/人力資源分析)",
-        "AI人才推薦引擎(NLP履歷分析)",
-        "企業教育訓練平台(線上課程)"
+        "104人力銀行線上招募平台",
+        "企業招募管理ATS雲端服務",
+        "人資管理與績效考核SaaS",
+        "履歷語意搜尋與職缺推薦引擎",
+        "線上職能測評與教育訓練平台"
       ],
       "customers": [
-        "台灣企業(HR服務訂閱)",
-        "外商在台分公司(招募服務)",
-        "政府機關(就業媒合)",
-        "求職者(免費使用)"
+        "Microsoft(Azure/Entra整合對象)",
+        "Google(Workspace單一登入整合對象)",
+        "SAP(SuccessFactors資料整合對象)",
+        "Oracle(HCM資料整合對象)"
       ],
       "competitors": [
         "1111人力銀行(線上招募)",
@@ -120,7 +121,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
+          "claim": "MOPS主要經營業務：一般廣告服務及電子資訊就業服務"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -128,36 +129,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收2.75億元，YoY+12.4%，累計YoY+7.8%"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "AI人才推薦引擎(NLP/CV履歷分析與職缺匹配)",
-        "HR SaaS雲端平台架構(微服務/容器化/K8s)",
-        "就業媒合大數據分析平台(使用者行為分析)"
+        "履歷與職缺的NLP向量檢索、語意匹配及排序模型",
+        "多租戶HR SaaS微服務、RBAC權限與稽核軌跡",
+        "OIDC/SAML單一登入、個資加密與資料留存治理"
       ],
       "swot": {
         "strengths": [
-          "6月營收2.63億YoY+7.9%、累計14.09億YoY+6.9%，穩定成長反映平台型商業模式韌性",
-          "MOPS登記一般廣告服務業+電子資訊就業服務，104人力銀行為台灣最大求職招募平台",
-          "HR SaaS(招募管理/績效考核/人力資源分析)與AI人才推薦引擎(NLP/CV履歷分析)具AI轉型優勢"
+          "2026年7月營收2.75億元、YoY+12.4%，平台訂閱與招募需求維持成長",
+          "MOPS確認電子資訊就業服務本業，具台灣求職履歷與職缺資料規模"
         ],
         "weaknesses": [
-          "資本額3.32億規模有限，SaaS研發投資受限於營收規模",
-          "台灣求職市場天花板有限，104平台成長率受人口結構與市場飽和制約",
-          "軟體雲端資安屬間接角色(HR SaaS含資安功能)，非專業資安產品公司"
+          "資安只是HR SaaS的必要功能，沒有獨立防火牆、SOC或資安訂閱收入",
+          "台灣人口與就業市場規模限制長期成長，跨境資料法規也提高擴張成本"
         ],
         "opportunities": [
-          "AI人才推薦引擎與HR SaaS雲端平台可延伸至東南亞市場，數位化招募需求增長",
-          "企業數位轉型帶動HR SaaS訂閱收入持續增長，經常性收入占比提升",
-          "零工經濟/自由工作者平台需求增長，104可延伸至彈性用工媒合服務"
+          "生成式AI可提升履歷摘要、職缺撰寫與人才推薦效率",
+          "企業人資流程雲端化可增加ATS、績效與測評模組的交叉銷售"
         ],
         "threats": [
-          "LinkedIn/Indeed等國際招募平台競爭，台灣市場可能被國際平台滲透",
-          "AI招募工具普及化，競爭門檻降低可能壓縮104技術優勢",
-          "台灣少子化趨勢長期影響求職市場規模，平台成長天花板明確"
+          "LinkedIn、Indeed及AI原生招募工具可能分流企業預算",
+          "個資外洩或推薦演算法偏誤將造成法遵、品牌與客戶流失風險"
         ]
       }
     },

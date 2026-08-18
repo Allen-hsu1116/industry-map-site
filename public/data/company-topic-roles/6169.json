@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -11,16 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "display_content",
       "roleType": "game_graphics_content",
-      "roleSummary": "昱泉為遊戲開發商，3D圖形渲染技術與顯示面板應用內容有間接關聯。FinMind 7月營收0.023億，規模極小。",
+      "roleSummary": "昱泉MOPS僅揭露遊戲與教育軟體，與面板、LED或光學製造沒有供應關係；此角色只是高解析3D內容的終端應用映射。FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%。",
       "products": [
-        "3D遊戲引擎(Unity/Unreal客製化)",
-        "AR/VR互動內容開發",
-        "教育培訓數位化平台"
+        "Windows PC即時3D遊戲軟體",
+        "PlayStation平台遊戲移植版本",
+        "Nintendo Switch平台遊戲移植版本",
+        "VR沉浸式教育訓練內容"
       ],
       "customers": [
-        "Sony(PlayStation遊戲開發)",
-        "Meta(Quest VR遊戲)",
-        "國內教育機構"
+        "Sony Interactive Entertainment(平台驗證對象)",
+        "Nintendo(平台驗證對象)",
+        "Valve(Steam發行平台對象)",
+        "Meta(Quest VR平台對象)"
       ],
       "competitors": [
         "智冠(5470)",
@@ -37,38 +39,40 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
           "publisher": "FinMind",
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "3D即時渲染技術(光線追蹤/VR)",
-        "AR/VR互動敘事引擎"
+        "Unity/Unreal即時渲染、LOD與GPU批次最佳化",
+        "VR雙眼渲染、90Hz畫面更新與動態解析度",
+        "HDR色彩映射與多解析度UI縮放"
       ],
       "swot": {
         "strengths": [
-          "3D圖形引擎技術可支援高解析面板內容製作",
-          "VR遊戲開發經驗"
+          "MOPS確認具遊戲及教育軟體研發能力，可製作高解析互動內容",
+          "跨PC、主機與VR的內容可作為高更新率顯示裝置終端應用"
         ],
         "weaknesses": [
-          "FinMind 7月營收僅0.023億規模極小",
-          "與面板/LED供應鏈關聯極為薄弱"
+          "FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%，商業規模極小",
+          "不製造面板、LED、鏡頭或感測器，題材關聯極弱"
         ],
         "opportunities": [
-          "VR/AR頭顯普及帶動3D內容需求"
+          "OLED與VR頭顯更新率提升，增加沉浸式內容最佳化需求",
+          "教育訓練導入3D模擬可擴充軟體授權與專案收入"
         ],
         "threats": [
-          "遊戲市場競爭激烈",
-          "面板產業與遊戲內容無直接供應鏈關係"
+          "顯示硬體成長不代表昱泉能取得內容訂單，題材傳導可能為零",
+          "大型遊戲工作室與平台自有內容競爭，昱泉研發資源有限"
         ]
       }
     },
@@ -79,15 +83,18 @@
       "directness": "indirect",
       "supplyChainStage": "edge_ai_content",
       "roleType": "edge_ai_game_content",
-      "roleSummary": "昱泉遊戲開發涉及AI NPC與Edge AI互動內容。FinMind 7月0.023億。",
+      "roleSummary": "昱泉MOPS只確認遊戲及教育軟體，未揭露AIoT硬體或AI產品收入；Edge AI角色應視為遊戲NPC與離線互動功能的潛在軟體應用。FinMind顯示2026年7月營收2.3萬元、MoM-42.5%。",
       "products": [
-        "AI驅動NPC對話系統(LLM整合)",
-        "邊緣AI遊戲引擎(離線運算)",
-        "AI教育輔助平台"
+        "離線NPC行為樹與小型語言模型互動模組",
+        "Windows遊戲端側AI推論外掛",
+        "教育訓練情境自適應推薦模組",
+        "Unity/Unreal邊緣裝置效能監控工具"
       ],
       "customers": [
-        "國內教育機構",
-        "遊戲發行商"
+        "Microsoft(Windows/DirectML平台驗證對象)",
+        "NVIDIA(RTX/TensorRT平台驗證對象)",
+        "Unity Technologies(遊戲引擎生態對象)",
+        "Epic Games(Unreal Engine生態對象)"
       ],
       "competitors": [
         "智冠(5470)",
@@ -104,38 +111,40 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
           "publisher": "FinMind",
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "LLM驅動NPC動態對話生成",
-        "Edge AI推論優化(低延遲遊戲體驗)"
+        "4-bit/8-bit量化模型與ONNX Runtime端側推論",
+        "NPC行為樹結合檢索式對話及內容安全規則",
+        "GPU/NPU異質運算與遊戲幀率延遲預算控制"
       ],
       "swot": {
         "strengths": [
-          "遊戲AI NPC技術可延伸至Edge AI應用",
-          "教育軟體開發經驗"
+          "MOPS確認具遊戲與教育軟體研發能力，能把AI功能嵌入互動情境",
+          "既有遊戲引擎流程可作為NPC與端側推論功能的整合入口"
         ],
         "weaknesses": [
-          "營收規模極小(月0.023億)",
-          "與Edge AI硬體供應鏈無直接關聯"
+          "FinMind顯示2026年7月營收僅2.3萬元，無足夠規模證明AI產品商業化",
+          "未揭露AIoT硬體、模型IP或具名AI客戶，題材屬潛在應用"
         ],
         "opportunities": [
-          "AI NPC成為遊戲標配功能"
+          "PC與遊戲主機NPU普及可讓NPC推論在裝置端執行，降低雲端成本",
+          "企業訓練模擬導入生成式AI可提高客製專案單價"
         ],
         "threats": [
-          "大廠遊戲AI能力領先",
-          "公司資源有限"
+          "Unity、Epic及大型工作室可直接提供AI工具，壓縮小型開發商差異化",
+          "模型授權、內容安全與推論成本可能阻礙商用導入"
         ]
       }
     },
@@ -289,15 +298,18 @@
       "directness": "indirect",
       "supplyChainStage": "semi_end_application",
       "roleType": "game_semi_end_user",
-      "roleSummary": "昱泉遊戲軟體運行於含半導體晶片的硬體平台(間接)。FinMind 7月0.023億。",
+      "roleSummary": "昱泉不生產半導體設備或材料；MOPS僅揭露遊戲與教育軟體。此角色只代表遊戲軟體消耗GPU/SoC算力的終端需求，不能列為半導體設備受惠者。FinMind顯示2026年7月營收2.3萬元。",
       "products": [
-        "遊戲軟體(PS5/Switch/PC)",
-        "教育軟體(數位學習平台)"
+        "Windows PC 3D遊戲軟體",
+        "PlayStation平台遊戲軟體",
+        "Nintendo Switch平台遊戲軟體",
+        "GPU效能基準與畫質設定工具"
       ],
       "customers": [
-        "Sony(PlayStation)",
-        "Nintendo(Switch)",
-        "Meta(Quest)"
+        "NVIDIA(GPU平台相容對象)",
+        "AMD(Radeon GPU平台相容對象)",
+        "Sony Interactive Entertainment(PlayStation平台對象)",
+        "Nintendo(Switch平台對象)"
       ],
       "competitors": [
         "其他遊戲開發商"
@@ -312,39 +324,40 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
           "publisher": "FinMind",
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "遊戲引擎GPU優化",
-        "Unity/Unreal引擎整合"
+        "DirectX 12/Vulkan圖形API與shader編譯最佳化",
+        "GPU記憶體管理、材質壓縮與draw-call合併",
+        "跨x86/ARM平台效能分析與畫質分級"
       ],
       "swot": {
         "strengths": [
-          "遊戲需求驅動GPU/SoC半導體需求(極間接)",
-          "遊戲引擎優化需深入GPU架構"
+          "遊戲軟體能形成GPU、記憶體與先進SoC的終端算力需求",
+          "MOPS確認具遊戲軟體研發能力，可進行跨平台GPU最佳化"
         ],
         "weaknesses": [
-          "與半導體供應鏈完全無關",
-          "FinMind 7月營收僅2.3萬元，營收極小"
+          "不供應蝕刻、沉積、量測設備或化學材料，與本題材無直接營收連結",
+          "FinMind顯示2026年7月營收僅2.3萬元，需求影響量可忽略"
         ],
         "opportunities": [
-          "AI遊戲驅動高階GPU需求(間接)",
-          "遊戲引擎AI化帶動算力需求"
+          "光線追蹤與生成式遊戲內容增加高階GPU需求，但僅屬終端拉動",
+          "新一代主機換機可增加遊戲移植與效能最佳化專案"
         ],
         "threats": [
-          "題材關聯性極弱",
-          "遊戲市場競爭激烈"
+          "半導體資本支出循環與昱泉訂單並無直接關係，題材容易誤判",
+          "大型遊戲引擎提供現成跨平台工具，削弱客製最佳化價值"
         ]
       }
     },
@@ -355,16 +368,18 @@
       "directness": "indirect",
       "supplyChainStage": "digital_content",
       "roleType": "environmental_education_content",
-      "roleSummary": "昱泉開發教育軟體可能含環保教育數位內容。FinMind 7月0.023億。",
+      "roleSummary": "昱泉MOPS只確認遊戲與教育軟體，沒有水處理、回收設備或環境工程業務；本題材最多是環境教育與ESG訓練內容的潛在應用。FinMind顯示2026年7月營收2.3萬元、MoM-42.5%。",
       "products": [
-        "環保教育數位化平台",
-        "永續發展互動教材",
-        "ESG教育遊戲"
+        "水資源循環互動教育教材",
+        "工廠節水情境模擬訓練軟體",
+        "碳排與資源回收遊戲化課程",
+        "ESG稽核流程VR訓練內容"
       ],
       "customers": [
-        "國內教育機構",
-        "政府環保單位",
-        "企業ESG培訓部門"
+        "台達電(2308；ESG訓練應用對象)",
+        "台積電(2330；節水教育應用對象)",
+        "Microsoft(教育平台整合對象)",
+        "Google(教育平台整合對象)"
       ],
       "competitors": [
         "其他教育軟體公司"
@@ -379,39 +394,40 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
           "publisher": "FinMind",
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "數位教育平台開發",
-        "互動式環保教材設計"
+        "Unity/Unreal情境模擬與遊戲化學習流程",
+        "WebGL跨平台教材部署及LMS的SCORM/xAPI串接",
+        "VR互動操作紀錄與學習成效分析"
       ],
       "swot": {
         "strengths": [
-          "教育軟體開發經驗可延伸至環保教育",
-          "MOPS登記遊戲及教育軟體研究開發，具數位教育平台技術"
+          "MOPS確認具教育軟體研發能力，可製作互動式環境教育內容",
+          "遊戲化與VR可提升節水、回收及ESG流程訓練的參與度"
         ],
         "weaknesses": [
-          "與水資源/環保供應鏈完全無關",
-          "FinMind 7月營收僅2.3萬元，營收極小"
+          "不具膜材、藥劑、設備或工程能力，與水循環產業鏈無直接關係",
+          "FinMind顯示2026年7月營收僅2.3萬元，缺乏專案規模與續約證據"
         ],
         "opportunities": [
-          "ESG教育需求增長帶動數位化環保教材市場",
-          "政府環保教育預算增加"
+          "企業ESG揭露與員工訓練需求可帶動客製化數位教材",
+          "公共環境教育可從一次性活動轉向可重複使用的線上模擬課程"
         ],
         "threats": [
-          "題材關聯性極弱",
-          "數位教育市場競爭激烈"
+          "通用LMS與內容工作室可快速複製環境教育教材，替代性高",
+          "若沒有環工專業夥伴，內容正確性與標案資格可能不足"
         ]
       }
     }

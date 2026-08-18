@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4764",
   "companyName": "雙鍵",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -155,15 +155,18 @@
       "directness": "indirect",
       "supplyChainStage": "packaging_additives",
       "roleType": "packaging_material_additive",
-      "roleSummary": "雙鍵UV光固化產品可用於封裝材料(UV膠/封裝樹脂添加劑)。7月營收2.94億，MoM+3.4%。",
+      "roleSummary": "雙鍵MOPS揭露塑膠添加劑與UV光固化產品；在先進封裝題材僅能定位為UV固化樹脂添加劑的潛在材料供應者，未揭露量產封裝客戶。2026年7月營收2.94億元、YoY+44.1%、MoM+3.4%。",
       "products": [
-        "UV固化封裝膠(晶圓級封裝用)",
-        "封裝用抗UV添加劑(環氧樹脂用)",
-        "底部填膠添加劑(流動性改質劑)"
+        "365/395nm UV-LED固化封裝膠用光引發劑",
+        "環氧底部填膠用UV吸收劑與光安定劑",
+        "晶圓暫時貼合膠用UV解黏添加劑",
+        "封裝保護塗層用丙烯酸酯寡聚物"
       ],
       "customers": [
-        "日月光投控(3711)(封裝材料)",
-        "長興(1717)(封裝樹脂)"
+        "長興(1717；封裝樹脂配方應用對象)",
+        "達興材料(5234；電子材料驗證對象)",
+        "日月光投控(3711；封裝材料終端驗證對象)",
+        "矽品精密(封裝材料終端驗證對象)"
       ],
       "competitors": [
         "長興(1717)",
@@ -180,7 +183,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品之研發、製造與銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -188,32 +191,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收2.94億元，YoY+44.1%，MoM+3.4%，累計YoY+28.6%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "UV光固化秒級固化技術",
-        "奈米級添加劑分散技術"
+        "365/395nm UV-LED自由基聚合與秒級固化",
+        "HALS/UV absorber分子設計及耐黃變控制",
+        "奈米添加劑分散與低離子雜質配方"
       ],
       "swot": {
         "strengths": [
-          "7月營收2.94億YoY+44.1%，UV光固化產品技術適合封裝膠應用",
-          "UV光固化秒級固化技術可用於晶圓級封裝",
-          "添加劑分子設計能力可客製化封裝材料配方"
+          "MOPS揭露UV光固化產品研發製造，具光引發與樹脂添加劑配方基礎",
+          "2026年7月營收2.94億元、YoY+44.1%，本業需求與出貨動能強"
         ],
         "weaknesses": [
-          "封裝添加劑營收佔比極低，主力為塑膠添加劑",
-          "與先進封裝供應鏈關聯弱(僅為添加劑供應)"
+          "未公開半導體封裝材料量產客戶或營收占比，題材純度低",
+          "缺乏先進封裝所需低離子污染、低翹曲與長期可靠度的公開驗證資料"
         ],
         "opportunities": [
-          "先進封裝用UV固化材料需求隨AI晶片增長",
-          "CoWoS封裝底部填膠添加劑新應用"
+          "CoWoS與晶圓級封裝擴產增加UV解黏、暫時貼合與保護塗層材料驗證需求",
+          "UV-LED低溫快速固化可縮短敏感元件封裝節拍"
         ],
         "threats": [
-          "封裝材料大廠(日東電工/信越)自製添加劑",
-          "UV固化技術替代品出現"
+          "信越化學、日東電工等材料商已有完整封裝認證與客戶黏著度",
+          "封裝客戶驗證期長，若配方未通過可靠度測試便無法轉成營收"
         ]
       }
     },
@@ -293,15 +303,18 @@
       "directness": "indirect",
       "supplyChainStage": "environmental_additives",
       "roleType": "recyclable_additive",
-      "roleSummary": "雙鍵UV光固化產品為環保型材料(無溶劑/VOC排放低)。7月營收2.94億，MoM+3.4%。",
+      "roleSummary": "雙鍵MOPS核心為塑膠添加劑與UV光固化產品，環境題材的合理角色是低VOC塗層與延長塑膠壽命，並非水處理設備或藥劑供應商。2026年7月營收2.94億元、YoY+44.1%、MoM+3.4%。",
       "products": [
-        "UV光固化環保塗料(無溶劑/VOC零排放)",
-        "可回收塑膠添加劑(降解促進劑)",
-        "水處理用高分子絮凝劑"
+        "100%固含UV-LED固化低VOC塗層樹脂",
+        "再生塑料用受阻胺光安定劑(HALS)",
+        "再生PP/PE用抗氧化添加劑組合",
+        "UV固化油墨用低遷移光引發劑"
       ],
       "customers": [
-        "塑膠加工廠(環保塗料)",
-        "電子廢料回收商(降解添加劑)"
+        "長興(1717；UV樹脂應用對象)",
+        "永光(1711；特用化學品配方對象)",
+        "台塑(1301；再生塑料添加劑應用對象)",
+        "遠東新(1402；再生聚酯材料應用對象)"
       ],
       "competitors": [
         "巴斯夫(BASF)",
@@ -317,7 +330,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品之研發、製造與銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -325,31 +338,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收2.94億元，YoY+44.1%，MoM+3.4%，累計YoY+28.6%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "UV光固化無溶劑技術(環保)",
-        "生物降解添加劑分子設計"
+        "100%固含UV-LED固化以降低溶劑與VOC排放",
+        "HALS與UV absorber協同耐候、延長再生塑料壽命",
+        "抗氧化劑在PP/PE再生料中的遷移與黃變控制"
       ],
       "swot": {
         "strengths": [
-          "7月營收2.94億YoY+44.1%，UV光固化為環保型技術(無溶劑/VOC零排放)",
-          "可降解添加劑研發能力符合循環經濟趨勢"
+          "MOPS揭露塑膠添加劑與UV光固化產品，與低VOC及材料延壽有直接技術連結",
+          "2026年7月營收YoY+44.1%、累計YoY+28.6%，有資源投入環保配方升級"
         ],
         "weaknesses": [
-          "環保應用營收佔比低",
-          "環保法規各地不同影響產品推廣"
+          "MOPS未揭露水處理藥劑、膜材或回收設備，與水循環主題關聯間接",
+          "環保材料收入占比與碳減量效益缺乏公開量化資料"
         ],
         "opportunities": [
-          "全球減碳趨勢推動環保材料需求",
-          "電子廢料回收化學品需求增長"
+          "再生料摻配比例提高，帶動抗氧化與耐候添加劑需求",
+          "低VOC塗裝法規推升UV-LED固化塗層替代溶劑型材料"
         ],
         "threats": [
-          "環保材料市場競爭加劇(國際大廠加入)",
-          "環保法規變化可能影響產品認證"
+          "BASF、Songwon等大型添加劑商具規模與全球認證優勢",
+          "再生塑料價格與政策補貼波動，可能延後客戶導入高價添加劑"
         ]
       }
     }

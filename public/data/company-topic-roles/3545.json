@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3545",
   "companyName": "敦泰",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -229,15 +229,18 @@
       "directness": "indirect",
       "supplyChainStage": "ic_substrate",
       "roleType": "ic_substrate_user",
-      "roleSummary": "敦泰IC使用IC載板封裝。7月營收9.11億，YoY-14.3%，累計61.39億，累計YoY-13.6%。",
+      "roleSummary": "敦泰MOPS核心是手持式行動裝置應用晶片，不製造PCB或載板；本題材是觸控、顯示與指紋IC封裝板的下游需求。2026年7月營收9.11億元、YoY-14.3%，累計YoY-13.6%。",
       "products": [
-        "觸控IC封裝用IC載板(BGA/WLCSP)",
-        "指紋IC封裝基板(CSP)"
+        "觸控控制IC用WLCSP重布線封裝",
+        "TDDI顯示觸控整合IC用COF載帶",
+        "指紋感測IC用CSP封裝基板",
+        "AMOLED驅動IC用細間距COF載帶"
       ],
       "customers": [
-        "欣興(3037)(IC載板)",
-        "景碩(3189)(IC載板)",
-        "南電(8046)(IC載板)"
+        "欣興(3037；IC載板供應鏈對象)",
+        "景碩(3189；CSP載板供應鏈對象)",
+        "頎邦(6147；COF凸塊與載帶封裝對象)",
+        "南茂(8150；顯示驅動IC封測對象)"
       ],
       "competitors": [
         "聯詠(3034)",
@@ -254,7 +257,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：手持式行動裝置應用晶片之研發、設計、製造及銷售"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -262,31 +265,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收9.11億元，YoY-14.3%，累計YoY-13.6%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "WLCSP晶圓級封裝載板設計",
-        "BGA封裝散熱設計"
+        "WLCSP重布線層、細間距凸塊與翹曲控制",
+        "COF細線路載帶及顯示驅動高速訊號完整性",
+        "行動IC薄型封裝的散熱、ESD與跌落可靠度"
       ],
       "swot": {
         "strengths": [
-          "IC設計公司為IC載板需求來源，敦泰觸控/指紋IC封裝用載板需求穩定",
-          "WLCSP/BGA封裝設計影響載板規格，具有上游規格定義能力"
+          "MOPS確認手持式行動裝置IC設計本業，可定義WLCSP、CSP與COF封裝規格",
+          "觸控、指紋及顯示整合產品可形成多種細間距封裝需求"
         ],
         "weaknesses": [
-          "載板為外購品，敦泰無自製能力",
-          "與載板供應鏈關聯間接，僅為使用者"
+          "不製造載板或COF載帶，僅為規格制定與採購端",
+          "2026年7月營收YoY-14.3%、累計YoY-13.6%，終端需求與產品組合承壓"
         ],
         "opportunities": [
-          "先進封裝(FOWLP/2.5D)載板需求隨AI晶片增長",
-          "觸控IC封裝從QFN轉WLCSP帶動高階載板需求"
+          "AMOLED滲透與窄邊框設計推升細間距COF及薄型封裝需求",
+          "觸控與顯示整合可減少晶片數並提高單顆封裝複雜度"
         ],
         "threats": [
-          "載板產能短缺可能影響IC出貨時程",
-          "IC載板價格上漲侵蝕IC設計公司毛利率"
+          "智慧手機需求疲弱會同時壓抑IC出貨與載板採購量",
+          "載板、COF或封測良率異常可能造成交期延誤及成本上升"
         ]
       }
     }

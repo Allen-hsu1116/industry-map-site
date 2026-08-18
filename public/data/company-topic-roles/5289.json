@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5289",
   "companyName": "宜鼎",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "cxl-memory-pooling",
@@ -11,17 +11,18 @@
       "directness": "core",
       "supplyChainStage": "cxl_memory",
       "roleType": "cxl_memory_device",
-      "roleSummary": "宜鼎7月營收84.95億，MoM+3.5%。MOPS登記為工業用嵌入式儲存裝置/DRAM模組。為工規記憶體與儲存專業製造商。",
+      "roleSummary": "宜鼎MOPS揭露工業用嵌入式儲存裝置與DRAM模組；CXL角色屬工規記憶體能力向伺服器記憶體池化延伸，實際CXL量產客戶未由MOPS證實。FinMind顯示2026年7月營收84.95億元、MoM+3.5%。",
       "products": [
-        "CXL記憶體擴充模組(CXL 2.0/3.0 Type 3)",
-        "工規DDR5 DRAM模組(ECC/1R/2R/5600MT/s)",
-        "工規NVMe SSD(M.2/U.2/EDSFF)",
-        "嵌入式儲存(eMMC/UFS/SD)"
+        "CXL 2.0 Type-3記憶體擴充模組",
+        "DDR5 ECC RDIMM工業級記憶體模組",
+        "EDSFF E1.S PCIe 5.0 NVMe SSD",
+        "M.2 2280工規PCIe 4.0 NVMe SSD"
       ],
       "customers": [
-        "伺服器ODM廠(緯穎/廣達/英業達)",
-        "工業電腦廠(研華/新漢)",
-        "車用電子廠(車規eMMC/UFS)"
+        "Intel(支援CXL平台驗證對象)",
+        "AMD(EPYC CXL相容驗證對象)",
+        "Supermicro(伺服器整合驗證對象)",
+        "研華(2395；工業伺服器應用對象)"
       ],
       "competitors": [
         "創見(2451)",
@@ -39,43 +40,40 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用DRAM模組"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
           "publisher": "FinMind",
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind fallback：2026年7月營收84.95億元，MoM+3.5%"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "CXL 2.0/3.0記憶體池化協議",
-        "工規DRAM寬溫設計(-40~85°C)",
-        "NVMe SSD端對端資料保護(TCG Opal)"
+        "CXL 2.0 Type-3記憶體裝置枚舉與容量擴充",
+        "DDR5 ECC/RAS與-40°C至85°C寬溫篩選",
+        "PCIe 5.0信號完整性及NVMe端到端資料保護"
       ],
       "swot": {
         "strengths": [
-          "7月營收84.95億，MoM+3.5%，工規記憶體領導廠商",
-          "CXL記憶體擴充模組技術佈局",
-          "工規DRAM寬溫設計(-40~85°C)"
+          "MOPS確認工業用DRAM模組與嵌入式儲存本業，具長供貨與寬溫驗證能力",
+          "FinMind顯示2026年7月營收84.95億元、MoM+3.5%，規模足以支撐新介面研發"
         ],
         "weaknesses": [
-          "CXL市場仍在早期",
-          "工規記憶體毛利率高但市場小"
+          "MOPS未揭露CXL產品營收或量產客戶，現階段題材多於財務貢獻",
+          "CXL控制器與伺服器韌體相容性門檻高，宜鼎仍依賴CPU平台生態"
         ],
         "opportunities": [
-          "CXL記憶體池化隨AI伺服器需求爆發",
-          "工規NVMe SSD需求增長",
-          "車規eMMC/UFS需求"
+          "AI推論伺服器需要以CXL擴充低成本容量與共享記憶體池",
+          "工業伺服器可結合CXL、DDR5與EDSFF SSD形成完整資料層方案"
         ],
         "threats": [
-          "創見/宇瞻等競爭對手",
-          "CXL標準化競爭",
-          "消費級記憶體降價壓力"
+          "三星、SK hynix與Micron可直接供應CXL記憶體裝置，壓縮模組商空間",
+          "CXL 3.x導入時程與主機板支援若延後，產品認列可能不如預期"
         ]
       }
     },
@@ -86,18 +84,19 @@
       "directness": "core",
       "supplyChainStage": "memory_module",
       "roleType": "industrial_memory_module",
-      "roleSummary": "宜鼎7月營收84.95億，MoM+3.5%。為工規記憶體模組專業製造商。",
+      "roleSummary": "宜鼎MOPS明確揭露工業用嵌入式儲存裝置與DRAM模組，是工規記憶體直接供應者。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，但客戶名未由MOPS揭露。",
       "products": [
-        "工規DDR5 DRAM模組(ECC RDIMM/1R/2R/5600MT/s)",
-        "工規DDR4 DRAM模組(ECC/3200MT/s)",
-        "工規NVMe SSD(M.2 2280/U.2/EDSFF)",
-        "嵌入式儲存(eMMC 5.1/UFS 3.1)"
+        "DDR5 ECC UDIMM/SODIMM工業級模組",
+        "DDR5 ECC RDIMM伺服器記憶體模組",
+        "M.2 2280 PCIe 4.0工規NVMe SSD",
+        "2.5吋SATA III寬溫工業SSD",
+        "eMMC 5.1嵌入式快閃儲存模組"
       ],
       "customers": [
-        "研華(2395)(工規DRAM/SSD)",
-        "新漢(8234)(工規儲存)",
-        "車用電子廠(車規eMMC/UFS)",
-        "醫療設備設備廠(醫療級SSD)"
+        "研華(2395；工業電腦應用對象)",
+        "新漢(8234；邊緣伺服器應用對象)",
+        "友通(2397；嵌入式主機板應用對象)",
+        "凌華(6166；工業電腦驗證對象)"
       ],
       "competitors": [
         "創見(2451)",
@@ -114,43 +113,40 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用DRAM模組"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
           "publisher": "FinMind",
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind fallback：2026年7月營收84.95億元，MoM+3.5%"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "工規DRAM寬溫測試(-40~85°C/1000hr)",
-        "NVMe SSD端對端資料保護(TCG Opal 2.0)",
-        "車規eMMC AEC-Q100認證"
+        "-40°C至85°C寬溫DRAM篩選、抗震與長供貨管理",
+        "DDR5 ECC與On-die ECC錯誤修正及信號完整性",
+        "NVMe斷電保護、TCG Opal 2.0與端到端資料保護"
       ],
       "swot": {
         "strengths": [
-          "7月營收84.95億，MoM+3.5%，工規記憶體模組領導廠商",
-          "完整工規認證體系(寬溫/抗震/長壽命)",
-          "車規eMMC/UFS AEC-Q100認證"
+          "MOPS確認工業用DRAM模組與嵌入式儲存為核心業務，題材直接",
+          "FinMind顯示2026年7月營收84.95億元、MoM+3.5%，產品組合與出貨維持成長"
         ],
         "weaknesses": [
-          "工規市場規模較小",
-          "DRAM價格受原廠(三星/海力士)制約"
+          "DRAM與NAND晶粒成本受三星、SK hynix、Micron供給週期制約",
+          "工規產品需長期備料，庫存跌價與終端專案延後風險較高"
         ],
         "opportunities": [
-          "AI邊緣運算帶動工規DRAM/SSD需求",
-          "車規eMMC/UFS需求隨智慧座艙增長",
-          "CXL記憶體擴充模組新藍海"
+          "Edge AI、機器視覺與醫療設備升級帶動DDR5及NVMe寬溫需求",
+          "車載與軌道交通需要長供貨、抗震及斷電保護儲存方案"
         ],
         "threats": [
-          "創見/宇瞻競爭",
-          "DRAM原廠降價波及工規市場",
-          "中國工規記憶體廠追趕"
+          "創見、宇瞻及威剛在工規模組市場競爭價格與通路",
+          "原廠擴大自有工規產品線可能壓縮第三方模組商毛利"
         ]
       }
     },
@@ -236,15 +232,18 @@
       "directness": "indirect",
       "supplyChainStage": "memory_pcb",
       "roleType": "memory_module_pcb_user",
-      "roleSummary": "宜鼎記憶體模組使用PCB基板。7月營收84.95億，MoM+3.5%。",
+      "roleSummary": "宜鼎不製造PCB或IC載板，而是DDR5模組與NVMe SSD板的需求端。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，出貨成長可帶動高層數低損耗PCB採購，但關聯屬間接。",
       "products": [
-        "DDR5 DRAM模組PCB(8層/10層/低損耗)",
-        "NVMe SSD PCB(M.2/U.2高頻基板)"
+        "DDR5 RDIMM 10層低損耗記憶體模組板",
+        "M.2 2280 PCIe 4.0 NVMe SSD載板",
+        "EDSFF E1.S PCIe 5.0企業級SSD板",
+        "eMMC/UFS嵌入式儲存測試載板"
       ],
       "customers": [
-        "欣興(3037)(記憶體模組PCB)",
-        "景碩(3189)(DRAM模組基板)",
-        "耀華(6153)(SSD PCB)"
+        "欣興(3037；模組PCB供應鏈對象)",
+        "健鼎(3044；多層PCB供應鏈對象)",
+        "瀚宇博(5469；伺服器PCB供應鏈對象)",
+        "金像電(2368；高速PCB技術比較對象)"
       ],
       "competitors": [
         "創見(2451)",
@@ -261,39 +260,40 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用DRAM模組"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
           "publisher": "FinMind",
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind fallback：2026年7月營收84.95億元，MoM+3.5%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "DDR5低損耗PCB設計(阻抗控制±5%)",
-        "高頻SSD PCB信號完整性設計"
+        "DDR5 5600MT/s阻抗控制、串擾抑制與10層疊構",
+        "PCIe 5.0 32GT/s低損耗材料與差分走線設計",
+        "工規板級三防塗覆、寬溫與振動可靠度"
       ],
       "swot": {
         "strengths": [
-          "FinMind 7月營收8.49億，記憶體模組出貨帶動PCB採購",
-          "DDR5 DRAM模組需要8層/10層低損耗PCB，為高階PCB需求來源"
+          "宜鼎工規記憶體與SSD產品可定義高層數、低損耗及寬溫PCB規格",
+          "FinMind顯示2026年7月營收84.95億元、MoM+3.5%，模組出貨可形成穩定PCB採購量"
         ],
         "weaknesses": [
-          "PCB為外購品，宜鼎無自製能力",
-          "與PCB供應鏈關聯間接(僅為使用者)"
+          "PCB全數外購，宜鼎不具板材、鑽孔、電鍍或壓合製造能力",
+          "此題材僅為下游需求映射，無法直接享受PCB擴產毛利"
         ],
         "opportunities": [
-          "DDR5/PCIe 5.0高階PCB需求增長",
-          "NVMe SSD M.2/U.2高頻基板需求隨AI伺服器成長"
+          "DDR5與PCIe 5.0提升板層數、材料等級與單板價值",
+          "EDSFF企業級SSD成長增加高速小型板與可靠度測試需求"
         ],
         "threats": [
-          "PCB產能波動影響模組出貨時程",
-          "PCB價格上漲侵蝕模組毛利率"
+          "高階PCB交期或良率異常會直接延誤記憶體模組出貨",
+          "銅箔基板與金屬價格上升將侵蝕模組產品毛利"
         ]
       }
     }

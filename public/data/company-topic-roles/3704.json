@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3704",
   "companyName": "合勤控",
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-18T19:02:52Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,17 +11,19 @@
       "directness": "core",
       "supplyChainStage": "network_security",
       "roleType": "network_security_appliance",
-      "roleSummary": "合勤控7月營收19.17億，MoM-44.7%。為合勤集團控股公司，子公司合勤科技為網通安全設備品牌商。",
+      "roleSummary": "合勤控MOPS本體為一般投資業，資安與雲端產品來自集團網通子公司；角色應以Zyxel防火牆、VPN與Nebula雲端管理為主。2026年7月營收19.17億元、YoY-11.8%、MoM-44.7%，但累計YoY+10.3%。",
       "products": [
-        "防火牆設備(ZyWALL系列/次世代防火牆NGFW)",
-        "VPN路由器(Site-to-Site/SSL VPN)",
-        "SD-WAN設備(企業分支網路)",
-        "資安威脅管理(UTM統一威脅管理)"
+        "Zyxel USG FLEX次世代防火牆",
+        "Zyxel ATP沙箱防火牆",
+        "Nebula雲端網路管理平台",
+        "Site-to-Site/SSL VPN企業閘道器",
+        "SD-WAN分支網路安全設備"
       ],
       "customers": [
-        "中小企業(SMB網通安全設備)",
-        "電信運營商(企業級VPN設備)",
-        "學校/政府機關(網路安全設備)"
+        "中華電信(2412；企業網路應用對象)",
+        "Deutsche Telekom(電信通路應用對象)",
+        "Orange(電信通路應用對象)",
+        "Telefónica(企業網路通路對象)"
       ],
       "competitors": [
         "明泰(3380)",
@@ -39,7 +41,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：一般投資業；產品角色來自集團網通子公司"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -47,36 +49,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收19.17億元，YoY-11.8%，MoM-44.7%，累計YoY+10.3%"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "次世代防火牆NGFW技術(深度封包檢測/IDS/IPS)",
-        "SD-WAN軟體定義廣域網路技術",
-        "Zero Trust零信任網路架構"
+        "DPI、IDS/IPS、應用識別與雲端沙箱威脅分析",
+        "IPsec/SSL VPN、SD-WAN路徑選擇與零信任存取政策",
+        "Nebula多租戶雲端佈署、韌體管理與設備遙測"
       ],
       "swot": {
         "strengths": [
-          "合勤品牌在中小企業網通安全市場有知名度",
-          "SD-WAN/NGFW/UTM產品線完整",
-          "全球通路佈局(100+國家)"
+          "集團具Zyxel防火牆、VPN、SD-WAN與Nebula雲管產品組合",
+          "2026年前7月累計營收YoY+10.3%，中期需求仍較去年成長"
         ],
         "weaknesses": [
-          "7月營收19.17億，MoM-44.7%",
-          "與Fortinet/Palo Alto等國際品牌技術差距",
-          "中小企業市場毛利率壓力"
+          "MOPS本體只揭露一般投資業，產品與技術需透過子公司才能落地",
+          "2026年7月營收YoY-11.8%、MoM-44.7%，單月出貨波動顯著"
         ],
         "opportunities": [
-          "SD-WAN市場快速增長",
-          "Zero Trust安全架構趨勢",
-          "5G企業專網安全需求"
+          "中小企業從單機防火牆升級雲端集中管理與訂閱式安全服務",
+          "Wi-Fi、交換器與防火牆整合可提高Nebula每客戶訂閱價值"
         ],
         "threats": [
-          "Fortinet/Palo Alto等國際品牌領先",
-          "中國網通安全廠低價競爭",
-          "雲端安全服務替代硬體設備"
+          "Fortinet、Palo Alto Networks及Cisco在企業資安品牌與研發規模領先",
+          "SASE與純雲端安全服務可能取代部分實體防火牆需求"
         ]
       }
     },
@@ -159,15 +164,18 @@
       "directness": "indirect",
       "supplyChainStage": "consumer_networking",
       "roleType": "consumer_wifi_router",
-      "roleSummary": "合勤控提供消費級Wi-Fi路由器/ Mesh系統。7月營收19.17億，MoM-44.7%。",
+      "roleSummary": "合勤控本體MOPS為一般投資業，消費裝置角色來自集團的家庭閘道器、Wi-Fi路由器與Mesh產品。2026年7月營收19.17億元、YoY-11.8%、MoM-44.7%，換機需求尚未穩定反映。",
       "products": [
-        "Wi-Fi 6E/7 Mesh路由器(Tri-band/6GHz)",
-        "家庭閘道器(DOCSIS/GPON+Wi-Fi)",
-        "智慧家庭中樞(Zigbee/Thread/Matter)"
+        "Wi-Fi 7 BE級三頻Mesh路由器",
+        "Wi-Fi 6E 6GHz家庭閘道器",
+        "GPON/XGS-PON光纖家庭閘道器",
+        "Matter/Thread智慧家庭中樞"
       ],
       "customers": [
-        "電信運營商(家庭閘道器ODM)",
-        "消費電子零售通路(Wi-Fi路由器)"
+        "中華電信(2412；家庭閘道器應用對象)",
+        "Deutsche Telekom(寬頻設備應用對象)",
+        "Orange(家庭寬頻設備應用對象)",
+        "Telefónica(光纖閘道器應用對象)"
       ],
       "competitors": [
         "中磊(5388)",
@@ -185,7 +193,7 @@
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
           "title": "公司公告、年報與財務資訊",
           "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "claim": "MOPS主要經營業務：一般投資業；產品角色來自集團網通子公司"
         },
         {
           "sourceId": "finmind-taiwan-stock-datasets",
@@ -193,31 +201,39 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "月營收資料",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收19.17億元，YoY-11.8%，MoM-44.7%，累計YoY+10.3%"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-18",
       "status": "verified",
       "techFocus": [
-        "Wi-Fi 7 Mesh組網技術(EasyMesh)",
-        "Matter協議智慧家庭整合"
+        "Wi-Fi 7 Multi-Link Operation、320MHz頻寬與4K-QAM",
+        "EasyMesh自組網、頻段轉向與無縫漫遊",
+        "XGS-PON 10Gbps光纖接取及Matter/Thread邊界路由"
       ],
       "swot": {
         "strengths": [
-          "合勤品牌在消費級Wi-Fi路由器有市場基礎",
-          "Wi-Fi 7/Matter技術佈局"
+          "集團長期投入家庭閘道器與無線網路，能整合PON、Wi-Fi與雲端管理",
+          "Wi-Fi 7、XGS-PON與Matter技術可支撐下一波家庭網路升級"
         ],
         "weaknesses": [
-          "消費級市場毛利率低",
-          "與TP-Link/ASUS等品牌競爭"
+          "2026年7月營收YoY-11.8%、MoM-44.7%，消費與電信專案出貨波動大",
+          "消費路由器標準化程度高，品牌及零售行銷資源弱於ASUS與TP-Link"
         ],
         "opportunities": [
-          "Wi-Fi 7換機週期",
-          "Matter協議推動智慧家庭需求"
+          "Wi-Fi 7終端普及與多Gigabit光纖升級帶動家庭閘道器換機",
+          "Matter裝置成長可使路由器升級為智慧家庭邊界中樞"
         ],
         "threats": [
-          "TP-Link等中國品牌低價競爭",
-          "電信運營商租賃模式降低設備採購"
+          "TP-Link、小米與電信商白牌設備持續壓低售價",
+          "電信商延長設備租賃週期會減少一次性閘道器採購"
         ]
       }
     },
