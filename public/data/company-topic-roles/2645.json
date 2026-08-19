@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2645",
   "companyName": "長榮航太",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -11,19 +11,20 @@
       "directness": "core",
       "supplyChainStage": "aerospace_mro",
       "roleType": "aerospace_mro_components",
-      "roleSummary": "長榮航太6月營收18.25億YoY+13.0%，累計99.61億YoY+12.4%。MOPS登記為航空器機體零組件及發動機維修/航空器零組件製造及組裝。受惠航空運量回升帶動維修需求，軍用無人機結構件為新成長動能。",
+      "roleSummary": "長榮航太MOPS揭露航空器機體、發動機維修及航空器部件製造組裝，是航太MRO核心角色；軍用題材須與民航維修分開看。2026年7月營收17.23億元、YoY+18.5%、累計YoY+13.3%，但MoM-5.6%。",
       "products": [
-        "航空器機體C/D Check大修(波音777/A350/787結構檢查)",
-        "發動機維修(GE CF6-80/LEAP-1A/LEAP-1B授權)(熱段/冷段拆修)",
-        "航空器結構件製造(鈦合金/碳纖維複材CNC加工)",
-        "軍用無人機結構件(碳纖維複材機體RTM一體成型)",
-        "航空發動機零組件組裝(FADEC系統件)"
+        "波音777/787與空巴A330/A350機體C/D Check重維修",
+        "CF6與LEAP系列發動機拆解、檢測、修復及組裝服務",
+        "鈦合金/鎳基超合金航空結構件五軸加工",
+        "複材機身蒙皮與艙門結構件製造組裝",
+        "發動機機匣、支架與導流結構件製造"
       ],
       "customers": [
-        "長榮航空(機體C/D Check+發動機維修)",
-        "國防部(軍機維修標案/F-16V升級)",
-        "GE Aerospace(LEAP/CF6發動機授權維修)",
-        "Safran(起落架與發動機件授權)"
+        "長榮航空(民航MRO關係企業)",
+        "Boeing(機型與維修認證生態對象)",
+        "Airbus(機型與維修認證生態對象)",
+        "GE Aerospace(發動機MRO技術生態對象)",
+        "Pratt & Whitney(發動機MRO技術生態對象)"
       ],
       "competitors": [
         "漢翔",
@@ -47,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2645 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：航空器機體、航空器部件及發動機維修；航空器部件製造與組裝。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收17.23億元，MoM-5.6%、YoY+18.5%，累計YoY+13.3%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "航空器C/D Check大修能力(波音777/A350結構檢查)",
-        "GE LEAP/CF6發動機授權維修(熱段/冷段拆修)",
-        "航空結構件鈦合金/碳纖維複材CNC加工"
+        "無損檢測NDT、結構損傷評估與適航放行紀錄追溯",
+        "鎳基超合金/鈦合金五軸加工及特殊製程品質控管",
+        "發動機熱段件尺寸量測、表面修復與動平衡組裝"
       ],
       "swot": {
         "strengths": [
-          "6月營收18.25億YoY+13.0%、累計99.61億YoY+12.4%，航空器維修業務穩定增長",
-          "MOPS登記航空器機體/零組件/發動機維修+製造組裝，波音777/A350/787 C/D Check大修能力齊全",
-          "GE LEAP/CF6發動機授權維修(熱段/冷段拆修)，國防部F-16V升級軍機維修標案供應商"
+          "2026年7月營收YoY+18.5%、累計YoY+13.3%，航空維修需求維持成長",
+          "機體重維修、發動機MRO與航空結構製造三項能力可交叉承接長約"
         ],
         "weaknesses": [
-          "長榮航空為最大機體維修客戶，客戶集中度高影響議價能力",
-          "航空器維修屬勞力密集產業，毛利率受限於人力成本上升",
-          "發動機維修授權受限於GE/Safran等原廠，授權範圍與技術轉移有限"
+          "7月營收MoM-5.6%，維修入塢時程與大型案件認列造成波動",
+          "收入仍高度受民航景氣與關係企業機隊需求影響，軍工占比未由MOPS揭露"
         ],
         "opportunities": [
-          "後疫情航空旅運復甦帶動飛機維修需求大幅增長，C/D Check排程滿載",
-          "國防部F-16V升級與新式戰機維修標案商機持續，軍機維修收入占比可提升",
-          "發動機MRO市場需求隨LEAP-1A/1B換裝潮增長，長榮航太GE授權維修具先發優勢"
+          "全球機隊老化與維修缺口擴大，可提高機庫及發動機產能利用率",
+          "國機國造與無人機供應鏈可帶動航太級加工、組裝及維修需求"
         ],
         "threats": [
-          "新加坡ST Engineering/MRO等亞洲競爭者積極擴產，搶食台灣航空公司維修訂單",
-          "原廠(GE/Safran)收回授權或提高權利金風險，影響發動機維修利潤",
-          "航空業景氣循環風險：油價上漲/經濟衰退可能壓縮航空公司維修預算"
+          "ST Engineering、HAECO等亞洲MRO擴產，爭奪航空公司長約",
+          "OEM授權、適航規範或關鍵航材供應中斷會延誤交付"
         ]
       }
     }

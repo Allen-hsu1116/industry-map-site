@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6214",
   "companyName": "精誠",
-  "updatedAt": "2026-08-16",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,19 +11,20 @@
       "directness": "core",
       "supplyChainStage": "it_services",
       "roleType": "enterprise_it_services",
-      "roleSummary": "精誠7月營收47.45億，YoY+31.8%，累計321.12億，累計YoY+36.2%，累計YoY+36.2%。MOPS登記為資訊軟體服務/電子資訊供應/資料處理。為台灣最大IT服務與系統整合商。",
+      "roleSummary": "精誠MOPS揭露資訊軟體、電子資訊供應與資料處理服務，屬企業軟體、雲端與資安核心角色。2026年7月營收47.45億元、YoY+31.8%、累計YoY+36.2%，但MoM-29.6%反映專案驗收認列波動。",
       "products": [
-        "企業IT系統整合(SI/ERP/CRM導入)",
-        "雲端遷移服務(AWS/Azure/GCP)",
-        "資安服務(SOC/MDR/滲透測試)",
-        "大數據分析平台(Hadoop/Spark/數據中台)",
-        "AI解決方案(LLM導入/RPA流程自動化)"
+        "24x7 SOC資安監控與MDR代管偵測回應服務",
+        "AWS/Azure/Google Cloud雲端遷移與FinOps治理服務",
+        "SAP S/4HANA與Oracle ERP企業系統導入",
+        "Kubernetes微服務平台與DevSecOps導入",
+        "企業RAG知識庫與LLM Agent工作流整合"
       ],
       "customers": [
-        "金融機構(銀行/保險/證券IT系統)",
-        "政府機關(數位化標案)",
-        "電信運營商(CRM/BSS系統)",
-        "製造業(ERP/MES系統整合)"
+        "Microsoft(雲端與企業軟體合作對象)",
+        "Amazon Web Services(AWS雲端合作對象)",
+        "Google Cloud(雲端與資料平台合作對象)",
+        "SAP(ERP解決方案合作對象)",
+        "Oracle(資料庫與企業應用合作對象)"
       ],
       "competitors": [
         "零壹(3029)",
@@ -49,38 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：資訊軟體服務、電子資訊供應、資料處理、電腦設備與資訊軟體零售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收47.45億元，MoM-29.6%、YoY+31.8%，累計YoY+36.2%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "企業級系統整合(SAP/Oracle/Microsoft)",
-        "雲原生架構設計(Kubernetes/微服務)",
-        "AI/LLM企業導入(RAG/知識庫/Agent)"
+        "SIEM/SOAR整合、EDR遙測與MITRE ATT&CK事件映射",
+        "Kubernetes、Service Mesh、GitOps與DevSecOps供應鏈控管",
+        "向量資料庫、RAG權限過濾與LLM Agent可觀測性"
       ],
       "swot": {
         "strengths": [
-          "7月營收47.45億，YoY+31.8%，累計321.12億，累計YoY+36.2%，累計YoY+36.2%高速成長",
-          "台灣最大IT服務與系統整合商",
-          "產品線完整(SI/雲端/資安/AI/大數據)",
-          "金融/政府/電信客戶基礎深厚"
+          "2026年7月營收YoY+31.8%、累計YoY+36.2%，企業數位轉型需求強",
+          "從ERP、雲端到SOC/MDR與AI導入具跨平台整合能力"
         ],
         "weaknesses": [
-          "IT服務毛利率偏低(15-25%)",
-          "人才流動率高",
-          "加值經銷與系統整合業務毛利差異大"
+          "7月營收MoM-29.6%，專案驗收與授權轉售使月營收波動大",
+          "系統整合與軟硬體轉售占比提高時，整體毛利率容易被稀釋"
         ],
         "opportunities": [
-          "企業AI轉型需求(LLM/RAG/Agent)",
-          "雲端遷移持續增長",
-          "資安市場(SOC/MDR)快速擴張",
-          "政府數位化標案"
+          "生成式AI治理、RAG落地與Agent導入可帶動顧問及維運收入",
+          "零信任、雲端資安與法遵需求可擴大MDR長約占比"
         ],
         "threats": [
-          "零壹/敦陽等競爭對手",
-          "國際IT服務大廠(IBM/Accenture)進入",
-          "AI自動化壓縮低階IT服務需求"
+          "IBM、Accenture及大型雲端原廠直接服務企業，壓縮整合商空間",
+          "資安人才短缺與大型專案交付失誤可能侵蝕毛利"
         ]
       }
     }

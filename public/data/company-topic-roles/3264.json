@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -166,18 +166,18 @@
       "directness": "indirect",
       "supplyChainStage": "test",
       "roleType": "edge_ai_ic_test",
-      "roleSummary": "欣銓6月營收15.52億MoM+2.25%。提供邊緣AI SoC晶圓與成品測試服務，受惠AIoT邊緣運算晶片需求增長，主力仍為記憶體IC測試代工。",
+      "roleSummary": "欣銓MOPS揭露記憶體、數位與混合訊號IC晶圓/成品測試及晶圓級Burn-in；Edge AI角色在於NPU/SoC的CP、FT與可靠度篩選，而非AI晶片設計。FinMind顯示2026年7月營收17.67億元、MoM+13.8%。",
       "products": [
-        "邊緣AI SoC晶圓測試(CP測試)",
-        "邊緣AI SoC成品測試(FT測試)",
-        "混合訊號IC測試(ADC/DAC/射頻)",
-        "Burn-in測試(AI晶片高溫老化篩選)"
+        "邊緣AI SoC晶圓針測CP服務",
+        "NPU/MCU成品功能測試FT服務",
+        "AIoT混合訊號ADC/DAC與射頻前端測試",
+        "晶圓級Burn-in與高溫壽命篩選服務"
       ],
       "customers": [
-        "AI IC設計公司(測試代工委外)",
-        "利基型SoC設計公司(晶圓測試)",
-        "聯發科(2454)(邊緣AI晶片測試)",
-        "Novatek(3034)(驅動AI晶片測試)"
+        "MediaTek(邊緣SoC應用對象，非MOPS揭露客戶)",
+        "Realtek(2379；AIoT SoC應用對象，非MOPS揭露客戶)",
+        "Novatek(3034；影像/邊緣IC應用對象，非MOPS揭露客戶)",
+        "Nuvoton(4919；MCU/NPU應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "京元電(2449)(AI GPU測試代工)",
@@ -204,36 +204,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位與混合訊號IC晶圓/成品測試、晶圓級Burn-in測試。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收17.67億元，較6月增加13.8%；TWSE月營收查無資料，改採FinMind。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "數位訊號IC高速測試(AI SoC推論晶片驗證)",
-        "混合訊號IC ADC/DAC射頻量測平台",
-        "晶圓級Burn-in高溫老化壽命篩選技術"
+        "多Site數位SoC CP/FT與高速介面功能測試",
+        "ADC/DAC、PLL、RF前端之混合訊號量測",
+        "晶圓級Burn-in之溫控、供電應力與失效追溯"
       ],
       "swot": {
         "strengths": [
-          "7月營收17.67億MoM+13.8%，AI SoC測試需求帶動成長動能強",
-          "記憶體IC+混合訊號IC測試雙引擎，覆蓋AI推論晶片驗證全流程(CP→FT→Burn-in)",
-          "MOPS登記為記憶體/數位/混合訊號IC晶圓及成品測試，技術平台涵蓋ADC/DAC射頻量測"
+          "2026年7月營收17.67億元、MoM+13.8%，測試產能利用率動能改善",
+          "CP、FT、混合訊號及晶圓級Burn-in可涵蓋Edge AI SoC量產流程"
         ],
         "weaknesses": [
-          "邊緣AI SoC測試為間接角色，非核心業務驅動主力",
-          "AI IC設計公司客戶名單不夠具體，多為「AI IC設計公司」泛稱",
-          "邊緣AI測試競爭加劇，京元電(2449)也積極搶進AI GPU SLT測試"
+          "MOPS未揭露Edge AI收入與客戶，題材仍屬應用推論",
+          "NPU高速介面與高功耗測試需持續投入ATE及治具，折舊壓力高"
         ],
         "opportunities": [
-          "Edge AI推論晶片出貨放量帶動CP/FT測試需求增長",
-          "NPU/Hailo等邊緣AI加速器量產測試委外商機",
-          "聯發科(2454)邊緣AI晶片Dimensity系列測試訂單持續"
+          "AI PC周邊、機器視覺與工業AIoT增加中低功耗NPU測試需求",
+          "車用Edge AI可提高高溫測試與Burn-in單價"
         ],
         "threats": [
-          "邊緣AI SoC測試規格快速演進，測試平台資本支出壓力大",
-          "客戶可能自建測試線降低委外比例",
-          "陸系測試廠低价競爭壓縮毛利率"
+          "京元電、矽格等測試廠擴充AI SoC平台，價格與產能競爭加劇",
+          "客戶自建測試程式或轉移封測供應商，設備利用率可能下滑"
         ]
       }
     },
@@ -475,20 +485,18 @@
       "directness": "indirect",
       "supplyChainStage": "test",
       "roleType": "satellite_ic_test",
-      "roleSummary": "欣銓為記憶體IC及混合訊號IC測試專業廠，MOPS登記為記憶體IC晶圓測試、數位/混合訊號IC晶圓及成品測試、晶圓型Burn-in測試。在低軌衛星題材中以Ka/Ku頻段射頻IC測試切入，受惠低軌衛星射頻晶片需求增長。母公司力積電(6770)為穩定來源。",
+      "roleSummary": "欣銓在低軌衛星題材僅能以數位/混合訊號IC CP、FT及Burn-in平台承接衛星終端基頻、波束控制與射頻前端IC；MOPS未揭露衛星客戶或mmWave專線。FinMind顯示2026年7月營收17.67億元、MoM+13.8%。",
       "products": [
-        "衛星通訊IC晶圓測試(CP)(Ka/Ku頻段射頻IC晶圓級測試)",
-        "衛星通訊IC成品測試(FT)(封裝後射頻功能驗證)",
-        "Burn-in測試(衛星通訊IC高溫老化壽命篩選)(125C/168hr)",
-        "記憶體IC測試(DRAM/NOR Flash CP/FT)(主力業務)",
-        "混合訊號IC測試(ADC/DAC/射頻前端IC)"
+        "衛星終端基頻SoC晶圓針測CP服務",
+        "波束成形控制IC混合訊號FT服務",
+        "Ku/Ka頻段射頻前端控制IC成品測試",
+        "衛星用記憶體與控制IC晶圓級Burn-in服務"
       ],
       "customers": [
-        "高通Qualcomm(衛星通訊晶片測試)",
-        "聯發科(2454)(衛星通訊模組IC測試)",
-        "利基型衛通IC設計公司(測試委外)",
-        "華邦(2344)(記憶體IC測試)",
-        "旺宏(2337)(NOR Flash測試)"
+        "Qualcomm(衛星終端晶片應用對象，非MOPS揭露客戶)",
+        "MediaTek(衛星通訊SoC應用對象，非MOPS揭露客戶)",
+        "Qorvo(射頻前端應用對象，非MOPS揭露客戶)",
+        "Skyworks Solutions(射頻前端應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "京元電(2449)(射頻IC測試代工)",
@@ -515,36 +523,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位與混合訊號IC晶圓/成品測試、晶圓級Burn-in測試。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收17.67億元，較6月增加13.8%；TWSE月營收查無資料，改採FinMind。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-09",
+      "confidence": "low",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "數位/混合訊號IC晶圓及成品測試(衛星射頻/基頻IC)",
-        "Burn-in測試(衛星通訊IC高溫老化壽命篩選)",
-        "射頻IC量測測試平台(高頻/mmWave)"
+        "基頻SoC之高速數位介面、PLL與多Site CP/FT",
+        "射頻前端控制IC之增益、線性度與功耗量測",
+        "125°C高溫應力、晶圓級Burn-in與失效位址追蹤"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記為記憶體IC及混合訊號IC測試，具射頻測試能力可切入衛星通訊IC",
-          "母公司為力積電(6770)，記憶體測試業務穩定",
-          "Burn-in測試具高門檻，利基型IC測試毛利較高"
+          "2026年7月營收MoM+13.8%，本業測試需求與產能利用率回升",
+          "數位、混合訊號及晶圓級Burn-in能力可支援衛星終端IC可靠度篩選"
         ],
         "weaknesses": [
-          "衛星通訊IC測試佔比極低，主力仍為記憶體IC測試",
-          "封測業競爭激烈，京元電(2449)、力成(6239)同樣跨足射頻測試",
-          "測試設備投資金額大，折舊壓力高"
+          "MOPS未揭露衛星營收或客戶，不能把Qualcomm/MediaTek視為已確認訂單",
+          "真正Ka/Ku高頻RF量測需專用ATE、探針與校正，現有能力未獲MOPS佐證"
         ],
         "opportunities": [
-          "低軌衛星射頻IC需求增長帶動測試委外需求",
-          "Ka/Ku頻段射頻測試具技術門檻，可提高ASP",
-          "記憶體IC測試受惠AI帶動HBM需求"
+          "手機直連衛星與相控陣終端增加基頻、波束控制及電源IC測試需求",
+          "高可靠度通訊IC可提高Burn-in與長時間測試服務單價"
         ],
         "threats": [
-          "衛星通訊IC測試為間接受惠，題材連結度低",
-          "IC測試價格競爭激烈，客戶議價能力強",
-          "測試設備投資金額大，折舊壓力高"
+          "衛星晶片量產時程易延後，專用測試投資回收期長",
+          "京元電、日月光及國際OSAT具更完整RF與可靠度平台"
         ]
       }
     }

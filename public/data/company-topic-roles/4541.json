@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4541",
   "companyName": "晟田",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -11,18 +11,19 @@
       "directness": "core",
       "supplyChainStage": "aerospace_mro",
       "roleType": "aerospace_precision_machining",
-      "roleSummary": "晟田6月營收1.99億連續三月成長(4月1.67億→6月1.99億)。航太發動機/起落架精密加工件核心供應商，兼具晶圓廠設備零件加工能力。",
+      "roleSummary": "晟田MOPS明確揭露航太發動機、起落架及次系統精密件，另有半導體設備與食品充填業務。FinMind顯示2026年7月營收1.95億元、較6月減少2.5%；規模小且軍工收入未單獨揭露。",
       "products": [
-        "航太發動機殼體與葉片精密加工件(Inconel 718/Ti-6Al-4V/五軸CNC ±10μm)",
-        "起落架結構件(300M超高強度鋼/抗拉強度>1900MPa/精密加工)",
-        "晶圓廠設備精密機加工件(蝕刻/CVD設備零件/Al 6061/SUS 316L)",
-        "無菌食品充填設備(工業自動化/304/316L不鏽鋼/Servo-driven)",
-        "航太次系統零組件(FADEC系統件/液壓致動器殼體)"
+        "鎳基超合金航空發動機機匣五軸加工件",
+        "鈦合金航空發動機支架與承力結構件",
+        "300M超高強度鋼起落架致動器殼體",
+        "航空液壓歧管與閥體精密加工件",
+        "航空傳動齒輪箱殼體與安裝座"
       ],
       "customers": [
-        "漢翔(發動機殼體加工)",
-        "GE Aerospace/Safran(航太引擎零件)",
-        "應用材料(Applied Materials)(設備零件)"
+        "漢翔(2634；航太供應鏈對象)",
+        "GE Aerospace(發動機平台應用對象，非MOPS揭露客戶)",
+        "Safran(發動機/起落架平台應用對象，非MOPS揭露客戶)",
+        "Pratt & Whitney(發動機平台應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "寶一（8222）",
@@ -46,36 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 4541 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：航太發動機、起落架及次系統精密件；半導體設備精密件；無菌食品充填與自動化精密傳動件。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收1.95億元，較6月減少2.5%；TWSE月營收查無資料，改採FinMind。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-07",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "航太發動機殼體五軸精密加工(±10μm)",
-        "起落架結構件高強度加工技術(Inconel/Ti合金)",
-        "晶圓廠設備零件高精度機加工(耐腐蝕材料)"
+        "Inconel 718與Ti-6Al-4V五軸切削、刀具磨耗補償及熱變形控制",
+        "300M鋼熱處理後精加工、殘留應力與尺寸穩定控制",
+        "AS9100製程追溯、首件檢驗FAI與三次元量測"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記為航太發動機/起落架零組件+半導體設備+自動化精密傳動，多元布局",
-          "Inconel 718/Ti-6Al-4V五軸CNC精密加工(±10μm)技術符合航太要求",
-          "起落架300M超高強度鋼(抗拉>1900MPa)加工能力罕見"
+          "MOPS直接揭露發動機、起落架與次系統精密件，航太題材連結明確",
+          "具難切削鎳基/鈦合金及高強度鋼五軸加工門檻"
         ],
         "weaknesses": [
-          "7月營收僅1.95億MoM-2.5%，規模小且成長動能弱",
-          "航太零件加工客製化程度高，難以規模化",
-          "資本額僅6.76億，產能擴充受限"
+          "2026年7月營收僅1.95億元且MoM-2.5%，規模與單月波動風險高",
+          "客製化精密件認證期長，設備、治具與品質人力固定成本高"
         ],
         "opportunities": [
-          "漢翔發動機殼體加工訂單隨國機國造增長",
-          "GE Aerospace/Safran全球航太供應鏈拓展",
-          "半導體設備零組件(AMAT/Lam)在地化採購"
+          "全球發動機維修缺口與新機交付增加，可帶動機匣及支架需求",
+          "國機國造與無人機國產化可增加航太級加工件在地採購"
         ],
         "threats": [
-          "晟田為上櫃公司，公開資訊有限",
-          "航太零件認證(AS9100/NADCAP)週期長成本高",
-          "中國/韓國航太加工廠低价競爭"
+          "OEM砍價或單一專案延後，對小型供應商營收影響大",
+          "原料、航材認證與特殊製程外包瓶頸可能拖延交付"
         ]
       }
     }

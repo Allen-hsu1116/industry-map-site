@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -249,16 +249,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。提供BMS電池管理IC測試設備與探針卡，間接受惠儲能電池產業擴張，但佔營收比重極低。",
+      "roleSummary": "久元MOPS揭露半導體/光電切磨測與IC/CIS/CCM測試設備，未揭露BMS或功率元件專用設備；儲能題材僅是既有IC測試平台可能承接BMS、隔離器與閘極驅動IC的應用延伸。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。",
       "products": [
-        "BMS電池管理IC測試設備(充放電曲線量測)",
-        "IGBT/MOSFET功率元件測試分選機(Handler)(1200V/1700V)",
-        "儲能IC晶圓級測試探針卡"
+        "BMS類比前端IC晶圓切割與成品測試服務",
+        "電流/電壓感測IC自動測試與挑檢服務",
+        "隔離閘極驅動IC高低溫成品測試服務",
+        "功率模組控制板用CIS/光學感測器測試設備"
       ],
       "customers": [
-        "電池管理IC設計公司(BMS IC測試委外)",
-        "功率半導體廠(測試設備採購)",
-        "德州儀器TI(BMS IC測試設備)"
+        "Texas Instruments(BMS IC應用對象，非MOPS揭露客戶)",
+        "Analog Devices(BMS AFE應用對象，非MOPS揭露客戶)",
+        "Infineon(閘極驅動IC應用對象，非MOPS揭露客戶)",
+        "onsemi(電池感測與驅動IC應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "京元電(2449)(IC測試代工)",
@@ -285,36 +287,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體與光電產品之切割、研磨、測試、挑檢與基板切割；IC/CIS/CCM測試設備研製銷售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收3.74億元，較6月減少4.1%；TWSE月營收查無資料，改採FinMind。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "電池管理IC測試設備(充放電曲線量測/高低溫測試)",
-        "BMS晶圓級測試探針卡技術",
-        "儲能用功率半導體測試分選機(Handler)精密機構"
+        "多通道微伏/微安量測與BMS AFE通道一致性校正",
+        "-40°C至125°C高低溫成品測試及資料追溯",
+        "晶圓切割、挑檢、Handler上下料與測試機台整合"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，BMS電池管理IC測試設備利基供應商",
-          "功率半導體測試分選機(IGBT/MOSFET Handler)自有技術",
-          "儲能IC晶圓級測試探針卡設計能力"
+          "MOPS揭露切割、研磨、測試、挑檢與自研IC測試設備，具後段整合基礎",
+          "可把類比/混合訊號測試平台延伸至BMS AFE與隔離驅動IC"
         ],
         "weaknesses": [
-          "儲能/電池為間接題材，BMS IC測試佔營收比重低",
-          "功率半導體測試設備市場競爭(愛德萬/泰瑞達壟斷)",
-          "電池管理IC測試規格尚未標準化，客製化成本高"
+          "2026年7月營收3.74億元、MoM-4.1%，短期動能轉弱",
+          "MOPS未揭露BMS、IGBT或SiC專用測試設備，儲能收入占比無法驗證"
         ],
         "opportunities": [
-          "儲能系統(BESS)建置帶動BMS IC測試需求",
-          "SiC/GaN功率半導體測試設備需求(電動車/儲能)",
-          "車規BMS IC(AEC-Q100)測試認證服務"
+          "儲能櫃與電動車增加多通道BMS AFE及隔離驅動IC測試需求",
+          "客製Handler與測試整合可切入中小型IC設計公司的委外量產"
         ],
         "threats": [
-          "大型測試設備廠(Advantest/Teradyne)切入功率IC測試",
-          "中國BMS IC設計公司自建測試線",
-          "電池技術路線變化(固態電池)影響BMS IC需求"
+          "Advantest、Teradyne與專業封測廠具完整功率/類比測試平台",
+          "客戶自建測試程式或需求規格變動，可能提高客製成本"
         ]
       }
     },
@@ -325,16 +337,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。提供太陽能電池IV曲線測試與光伏模組EL檢測設備，間接受惠太陽能產業，但佔營收比重極低。",
+      "roleSummary": "久元MOPS只揭露半導體/光電加工及IC/CIS/CCM測試設備，未揭露太陽能電池IV、模組EL或逆變器功率元件專用設備；再生能源角色應限縮為光學檢測與IC測試能力的潛在延伸。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。",
       "products": [
-        "太陽能逆變器IGBT/SiC測試分選機(Handler)(1200V+)",
-        "光伏模組EL檢測系統(電致發光缺陷檢測)",
-        "太陽能電池IV曲線測試設備"
+        "光伏模組缺陷影像用CIS相機測試設備",
+        "逆變器控制IC晶圓切割與成品測試服務",
+        "隔離式閘極驅動IC高低溫測試服務",
+        "太陽能監控用CMOS影像模組CCM測試設備"
       ],
       "customers": [
-        "太陽能逆變器廠(功率半導體測試設備)",
-        "茂迪(6244)(太陽能電池測試)",
-        "元晶(6443)(太陽能模組檢測)"
+        "元晶(6443；光伏檢測應用對象，非MOPS揭露客戶)",
+        "茂迪(6244；光伏檢測應用對象，非MOPS揭露客戶)",
+        "台達電(2308；逆變器IC應用對象，非MOPS揭露客戶)",
+        "SMA Solar Technology(逆變器生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "精測(6510)(晶圓測試探針卡)",
@@ -361,36 +375,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體與光電產品之切割、研磨、測試、挑檢與基板切割；IC/CIS/CCM測試設備研製銷售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收3.74億元，較6月減少4.1%；TWSE月營收查無資料，改採FinMind。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "太陽能電池IV曲線測試設備設計",
-        "光伏模組EL(電致發光)檢測系統",
-        "逆變器用功率半導體(IGBT/SiC)測試分選機"
+        "CIS/CCM影像均勻度、壞點與色彩校正自動測試",
+        "逆變器控制IC之PWM、ADC與保護腳位量測",
+        "高低溫Handler、晶圓切割與成品挑檢流程整合"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，太陽能逆變器功率半導體測試設備利基供應商",
-          "光伏模組EL檢測系統(電致發光缺陷檢測)自有技術",
-          "太陽能電池IV曲線測試設備設計能力"
+          "CIS/CCM測試設備可支援EL/可見光缺陷檢測相機供應鏈",
+          "半導體切磨測與自研設備能力可承接逆變器控制IC後段流程"
         ],
         "weaknesses": [
-          "太陽能為間接題材，逆變器測試佔營收比重極低",
-          "太陽能產業景氣循環劇烈，設備採購不穩定",
-          "逆變器大廠(華為/SMA)自建測試線"
+          "2026年7月營收MoM-4.1%，且再生能源收入未單獨揭露",
+          "原資料宣稱IV曲線與EL整機設備，但MOPS無相應佐證"
         ],
         "opportunities": [
-          "太陽能裝置量持續成長帶動逆變器IGBT/SiC測試需求",
-          "TOPCon/HJT電池技術升級帶動IV曲線測試設備更新",
-          "太陽能+儲能微電網逆變器測試新應用"
+          "TOPCon/HJT擴產提高模組缺陷影像檢測與相機校正需求",
+          "SiC逆變器普及帶動控制、隔離及感測IC量產測試"
         ],
         "threats": [
-          "太陽能逆變器價格競爭激烈壓縮測試設備預算",
-          "中國太陽能設備廠低價競爭",
-          "逆變器SiC功率元件測試標準由大廠主導"
+          "光伏設備商通常提供完整EL/IV檢測線，久元跨入門檻高",
+          "中國光伏設備價格戰可能壓低外購測試模組預算"
         ]
       }
     },
@@ -553,16 +577,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。提供衛星通訊射頻IC測試與光學通訊模組測試設備，間接受惠低軌衛星產業，但佔營收比重極低。",
+      "roleSummary": "久元MOPS揭露IC/CIS/CCM測試設備與半導體光電切磨測，未揭露mmWave、光通訊或衛星專用測試系統；低軌衛星角色只限於射頻/影像IC後段測試的潛在應用。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。",
       "products": [
-        "衛星通訊射頻元件測試設備(mmWave/高頻)",
-        "低軌衛星光學通訊模組測試系統",
-        "衛星用CIS感測器測試設備(地球觀測/姿態控制)"
+        "衛星終端基頻IC晶圓切割與成品測試服務",
+        "波束成形控制IC混合訊號成品測試服務",
+        "星載地球觀測CIS感測器測試設備",
+        "衛星終端相機模組CCM自動對焦測試設備"
       ],
       "customers": [
-        "衛星通訊IC設計公司(射頻IC測試設備)",
-        "SpaceX(星鏈用光學/射頻模組測試)",
-        "聯發科(2454)(衛星通訊模組測試)"
+        "MediaTek(衛星基頻IC應用對象，非MOPS揭露客戶)",
+        "Qualcomm(衛星終端晶片應用對象，非MOPS揭露客戶)",
+        "Qorvo(射頻前端應用對象，非MOPS揭露客戶)",
+        "Sony Semiconductor Solutions(CIS應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "精測(6510)(晶圓測試探針卡)",
@@ -589,36 +615,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體與光電產品之切割、研磨、測試、挑檢與基板切割；IC/CIS/CCM測試設備研製銷售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收3.74億元，較6月減少4.1%；TWSE月營收查無資料，改採FinMind。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "衛通射頻元件(mmWave/高頻)測試設備設計",
-        "低軌衛星光學通訊模組對準與耦合量測",
-        "衛星用CIS感測器測試系統(輻射環境模擬)"
+        "混合訊號基頻IC之ADC/DAC、時脈與介面功能量測",
+        "CIS暗電流、壞點、PRNU與高動態範圍測試",
+        "CCM主動對焦、光軸偏移與影像均勻度校正"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，衛星通訊射頻元件測試設備利基供應商",
-          "低軌衛星光學通訊模組對準與耦合量測技術",
-          "衛星用CIS感測器測試系統(地球觀測/姿態控制)"
+          "MOPS揭露IC/CIS/CCM測試設備，可對應衛星終端與地球觀測影像元件後段需求",
+          "切割、研磨、測試與挑檢一體化可縮短中小量專案交付"
         ],
         "weaknesses": [
-          "衛星通訊為間接題材，射頻測試佔營收比重極低",
-          "SpaceX/OneWeb等衛星廠商測試設備自建化",
-          "衛星通訊IC測試規格客製化程度高，量產困難"
+          "2026年7月營收MoM-4.1%，且衛星收入未揭露",
+          "MOPS未證實mmWave或光通訊測試能力，不能把SpaceX列為實際客戶"
         ],
         "opportunities": [
-          "低軌衛星建置潮(Starlink/OneWeb/台灣衛星)帶動射頻IC測試",
-          "衛星光通訊(雷射通訊)模組測試新興應用",
-          "Ku/Ka頻段射頻IC量測需求成長"
+          "手機直連衛星增加基頻、波束控制及射頻前端IC測試需求",
+          "地球觀測衛星提高高動態範圍CIS與相機模組測試需求"
         ],
         "threats": [
-          "衛星通訊IC設計公司可能自建測試線",
-          "衛星產業建置進度不確定性高",
-          "高頻(mmWave)測試設備競爭大廠(Advantest)優勢"
+          "衛星元件量小且客製規格多，設備攤提與程式開發成本高",
+          "大型ATE與封測廠在高頻及航太可靠度測試更具優勢"
         ]
       }
     }

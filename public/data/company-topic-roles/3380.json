@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -11,19 +11,19 @@
       "directness": "core",
       "supplyChainStage": "networking_equipment",
       "roleType": "networking_equipment_brand",
-      "roleSummary": "明泰7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%，累計122.23億YoY+1.9%。MOPS登記為電信管制射頻器材/無線通信機械器材。為企業與電信級網通設備品牌商。",
+      "roleSummary": "明泰MOPS揭露射頻與無線通信設備製造，屬網通設備核心角色。2026年7月營收17.43億元、MoM-23.3%、YoY-2.1%，累計YoY僅+1.9%，短期出貨轉弱。",
       "products": [
-        "企業級乙太網路交換器(L2/L3/100G/400G)",
-        "5G行動網路設備(小基地台/路由器)",
-        "Wi-Fi 6E/7企業AP(集中管理)",
-        "網路安全設備(防火牆/VPN gateway)",
-        "光纖網路設備(PON/OTN/DWDM)"
+        "10G/25G/100G L2/L3資料中心乙太網路交換器",
+        "Wi-Fi 7三頻企業無線基地台（802.11be/MLO）",
+        "XGS-PON 10Gbps光纖網路終端ONT",
+        "5G NR企業小型基地台與室內CPE",
+        "工業乙太網路交換器（寬溫/冗餘環網）"
       ],
       "customers": [
-        "Nokia(5G/光纖設備ODM)",
-        "Ericsson(無線接入設備)",
-        "企業用戶(自有品牌Alpha Networks)",
-        "電信運營商(亞太區)"
+        "Nokia(網通ODM/平台合作對象)",
+        "Ericsson(無線接取平台合作對象)",
+        "HPE Aruba(企業網通生態對象，非MOPS揭露客戶)",
+        "Cisco(網通ODM生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "中磊(5388)",
@@ -49,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電信管制射頻器材與無線通信機械器材製造。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "400G乙太網路交換器晶片設計",
-        "Wi-Fi 7企業級Mesh網路技術",
-        "5G SA核心網路軟體定義"
+        "Broadcom/Marvell交換晶片之高速SerDes、ACL與L3路由整合",
+        "IEEE 802.11be MLO、320MHz頻寬與企業漫遊",
+        "XGS-PON 10Gbps對稱傳輸、OMCI與電信級QoS"
       ],
       "swot": {
         "strengths": [
-          "企業級網通設備產品線完整(L2/L3交換器/Wi-Fi/5G)",
-          "Nokia/Ericsson等國際大廠ODM合作夥伴",
-          "400G高速交換器技術能力"
+          "具交換器、Wi-Fi、PON與5G接取設備完整ODM平台",
+          "Nokia/Ericsson等電信設備生態合作經驗有助國際認證"
         ],
         "weaknesses": [
-          "7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%，MoM-23.3%月減明顯",
-          "ODM毛利率受限",
-          "自有品牌知名度低於國際大廠"
+          "2026年7月營收MoM-23.3%、YoY-2.1%，出貨與拉貨節奏偏弱",
+          "累計YoY僅+1.9%，且ODM模式受客戶集中與議價壓力影響"
         ],
         "opportunities": [
-          "5G企業專網需求增長",
-          "400G/800G資料中心交換器升級週期",
-          "Wi-Fi 7企業市場啟動"
+          "Wi-Fi 7企業換機與XGS-PON升級可提高單機價值",
+          "企業專網與工業乙太網可分散消費網通週期"
         ],
         "threats": [
-          "中磊/智邦等ODM競爭對手規模優勢",
-          "Cisco/Arista等品牌廠技術領先",
-          "中國網通廠低價競爭"
+          "智邦、中磊與中國ODM在規模、成本和400G/800G產品上競爭",
+          "電信商資本支出延後會直接壓縮PON與5G設備拉貨"
         ]
       }
     },

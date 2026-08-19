@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3704",
   "companyName": "合勤控",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -244,17 +244,19 @@
       "directness": "core",
       "supplyChainStage": "networking_equipment",
       "roleType": "networking_brand",
-      "roleSummary": "合勤控為合勤集團控股公司，提供企業級網通設備。7月營收19.17億，MoM-44.7%。",
+      "roleSummary": "合勤控MOPS本體僅登記一般投資業；網通角色來自集團旗下Zyxel與MitraStar，分析不可把控股公司本體誤寫成設備製造商。2026年7月合併營收19.17億元、MoM-44.7%、YoY-11.8%，但累計YoY仍+10.3%。",
       "products": [
-        "企業級乙太網路交換器(L2/L3管理型)",
-        "PoE交換器(30W/60W/90W PoE++)",
-        "工業級網路交換器(IP30/寬溫-40~75°C)",
-        "5G小基地台(企業專網用)"
+        "Zyxel XGS1930系列10G上行L2+管理型交換器",
+        "Zyxel GS1920系列802.3bt PoE++交換器",
+        "Zyxel Nebula雲端管理交換器與無線網路平台",
+        "Zyxel USG FLEX系列次世代防火牆",
+        "MitraStar 5G NR室內/戶外CPE"
       ],
       "customers": [
-        "企業用戶(自有品牌Zyxel)",
-        "電信運營商(ODM/OEM)",
-        "工業自動化客戶(工業級交換器)"
+        "Deutsche Telekom(電信CPE應用對象，非MOPS揭露客戶)",
+        "Vodafone(電信CPE應用對象，非MOPS揭露客戶)",
+        "Orange(電信CPE應用對象，非MOPS揭露客戶)",
+        "中華電信(2412；寬頻CPE應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "明泰(3380)",
@@ -280,35 +282,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：一般投資業；網通題材係透過合勤集團旗下Zyxel與MitraStar營運。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收19.17億元，MoM-44.7%、YoY-11.8%，累計YoY+10.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "L3路由交換器OSPF/BGP協議",
-        "PoE++ 90W供電管理技術",
-        "5G企業專網小基地台整合"
+        "Nebula多租戶雲端管理、零接觸佈署與設備遙測",
+        "IEEE 802.3bt PoE++ 60W/90W供電與分路功率管理",
+        "5G NR Sub-6GHz CPE、Wi-Fi 7回程與TR-069/TR-369管理"
       ],
       "swot": {
         "strengths": [
-          "合勤品牌在企業級網通市場有全球佈局",
-          "產品線完整(交換器/PoE/工業級/5G小基地台)",
-          "100+國家銷售渠道"
+          "Zyxel品牌、MitraStar ODM與Nebula雲管平台涵蓋企業及電信網路",
+          "2026年前7月累計營收YoY+10.3%，中期營運仍較去年成長"
         ],
         "weaknesses": [
-          "與Cisco/HPE/Arista等國際品牌差距",
-          "企業級市場毛利率壓力"
+          "2026年7月營收MoM-44.7%、YoY-11.8%，單月拉貨明顯轉弱",
+          "控股公司MOPS只揭露投資業，設備產品與客戶需從子公司層級驗證"
         ],
         "opportunities": [
-          "5G企業專網需求增長",
-          "工業4.0帶動工業級網通需求",
-          "PoE++供電需求隨物聯網增長"
+          "Wi-Fi 7、2.5G/10G交換器與5G FWA升級可帶動換機",
+          "Nebula訂閱與資安服務可提高軟體經常性收入占比"
         ],
         "threats": [
-          "Cisco/HPE品牌優勢",
-          "中國網通廠低價競爭",
-          "SDN/NaaS雲端網路替代硬體"
+          "Cisco、HPE Aruba、Ubiquiti及中國網通廠在品牌或價格上競爭",
+          "歐洲電信商資本支出延後可能加劇CPE營收波動"
         ]
       }
     }

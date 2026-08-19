@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1301",
   "companyName": "台塑",
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "pvc_pp_producer",
-      "roleSummary": "台塑6月營收139.76億YoY-2.7%，累計892.39億YoY-3.6%。MOPS登記為PVC/PP/HDPE/碳素纖維/液鹼等石化產品。台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游塑膠粒，石化景氣復甦緩慢影響營收。",
+      "roleSummary": "台塑MOPS揭露PVC、PP、HDPE、EVA、LDPE/LLDPE、吸水樹脂與碳纖維等，屬石化塑膠核心上游。2026年7月營收152.94億元、MoM+9.4%、YoY+4.8%，但累計YoY-2.5%，顯示單月回升尚未扭轉全年壓力。",
       "products": [
-        "PVC聚氯乙烯(泛用級SG-5/醫療級USP Class VI)(六輕VCM→PVC一貫化年產130萬噸)",
-        "聚丙烯PP(射出級/薄膜級/纖維級)(六輕年產70萬噸)",
-        "高密度聚乙烯HDPE(吹塑級/射出級)(中空容器/管材用)",
-        "碳素纖維PAN基(航太級T700/T800)(年產3000噸)",
-        "液鹼NaOH(32%/50%)(氯鹼法副產物)"
+        "懸浮法PVC樹脂（管材/薄膜/醫療軟質配方用）",
+        "聚丙烯PP粒（射出級/薄膜級/纖維級）",
+        "HDPE高密度聚乙烯（吹塑級/管材級）",
+        "EVA乙烯醋酸乙烯酯共聚物（發泡/太陽能封裝膜用）",
+        "PAN基碳纖維（複材補強用）"
       ],
       "customers": [
-        "南亞(1303)(塑膠二次加工/管材/薄膜)",
-        "台化(1326)(ABS/PTA原料供應)",
-        "台塑化(6505)(VCM原料互供)",
-        "中國管材製造商(建築用PVC管)",
-        "東南亞塑膠加工廠(越南/印尼PVC/PE加工)"
+        "南亞(1303；集團下游加工對象)",
+        "台化(1326；集團原料互供對象)",
+        "台塑化(6505；烯烴原料供應鏈對象)",
+        "華夏(1305；PVC產業鏈對象)",
+        "聯成(1313；塑化增塑劑產業鏈對象)"
       ],
       "competitors": [
         "信越化學(Shin-Etsu)(PVC)",
@@ -51,36 +51,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：PVC、VCM、液鹼、PP、HDPE、EVA、LDPE、LLDPE、吸水樹脂、碳纖維、AN、MMA與環氧氯丙烷。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收152.94億元，MoM+9.4%、YoY+4.8%，累計YoY-2.5%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "六輕一貫化生產(VCM→PVC上游整合)(年產能130萬噸)",
-        "碳素纖維PAN基製程(航太級T700/T800 precursor)",
-        "醫療級PVC純化技術(USP Class VI/REACH合規)"
+        "VCM至懸浮法PVC聚合、殘單脫除與粒徑分布控制",
+        "PP/PE聚合觸媒、熔融指數與分子量分布控制",
+        "PAN原絲氧化、碳化與表面處理之碳纖維製程"
       ],
       "swot": {
         "strengths": [
-          "台灣最大PVC與PP生產商，六輕一貫化生產從上游VCM到下游PVC年產130萬噸，成本優勢顯著",
-          "6月營收13976億，雖YoY-2.69%但資本額636.6億、財務結構穩健",
-          "碳素纖維PAN基（T700/T800）佈局航太級應用，具高附加價值產品線"
+          "2026年7月營收MoM+9.4%、YoY+4.8%，大宗產品出貨短期回升",
+          "PVC、PP、PE、EVA與碳纖維多產品及六輕上游整合具規模優勢"
         ],
         "weaknesses": [
-          "累計營收89239億YoY-3.62%，連續衰退反映石化景氣低迷",
-          "PVC/PP屬大宗石化品，毛利率受油價與中國產能過剩壓縮",
-          "六輕工安風險與環保法規壓力長期存在"
+          "累計營收YoY-2.5%，石化景氣尚未全面復甦",
+          "大宗塑料價格受中國新增產能、原油與乙烯/丙烯價差牽制"
         ],
         "opportunities": [
-          "醫療級PVC（USP Class VI）打入高階應用，可提升ASP",
-          "碳素纖維受惠航太與風電需求長期成長",
-          "東南亞塑膠加工廠需求隨區域製造業轉移持續增長"
+          "EVA太陽能封裝膜與高階醫療PVC可提高產品組合附加價值",
+          "碳纖維在風電、壓力容器與交通輕量化的需求可降低大宗品依賴"
         ],
         "threats": [
-          "中國PVC/PE低價傾銷壓迫台灣與東南亞市場價格",
-          "全球減碳趨勢下石化產品長期需求成長放緩",
-          "原料（乙烯/丙烯）價格波動大，影響利潤穩定性"
+          "中國低價PVC/PP/PE出口持續壓縮亞洲利差",
+          "碳費、塑膠減量與六輕環保成本提高長期資本支出"
         ]
       }
     }

@@ -2,26 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3296",
   "companyName": "勝德",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "battery_pack",
       "roleType": "battery_pack_assembler",
-      "roleSummary": "勝德7月營收1.72億，MoM+4.3%。MOPS登記為有線無線通信/電子零組件製造。為電池模組與電源管理設備製造商。",
+      "roleSummary": "勝德MOPS只揭露通信、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS或PCS；因此在儲能題材應定位為智慧配電與保護元件的潛在周邊角色，而非電池模組廠。2026年7月營收1.72億元、YoY+42.9%，但不能歸因儲能。",
       "products": [
-        "鋰電池模組組裝(18650/21700/軟包)",
-        "UPS不斷電系統(線性互動/在線雙轉換)",
-        "太陽能變流器(微型/串列型)",
-        "儲能逆變器( hybrid逆變器/離網型)"
+        "機架式智慧PDU（分路電流量測與遠端開關）",
+        "MOV突波保護電源排插（過壓/雷擊保護）",
+        "過流保護斷路與熱熔斷電源模組",
+        "RS-485/Modbus用電監測通訊模組"
       ],
       "customers": [
-        "台達電(2308)(儲能系統OEM)",
-        "山特電子(UPS OEM)",
-        "北美太陽能系統商(逆變器ODM)"
+        "台達電(2308；儲能配電應用對象，非MOPS揭露客戶)",
+        "Schneider Electric(智慧配電應用對象，非MOPS揭露客戶)",
+        "Eaton(UPS/PDU應用對象，非MOPS揭露客戶)",
+        "Vertiv(資料中心PDU應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "華城電能(1513)",
@@ -47,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：有線與無線通信機械器材、電子元件、電機與電子機械器材之製造買賣。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收1.72億元，MoM+4.3%、YoY+42.9%，累計YoY+5.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "low",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "BMS電池管理系統設計(16串/24串)",
-        "太陽能逆變器MPPT追日技術(>99%效率)",
-        "儲能系統PCS功率轉換技術"
+        "MOV/GDT多級突波抑制與熱失控斷路設計",
+        "分路電流/電壓/功率量測及繼電器遠端控制",
+        "Modbus RTU/TCP、SNMP與MQTT能源資料上傳"
       ],
       "swot": {
         "strengths": [
-          "電池模組與UPS/逆變器產品線完整",
-          "BMS電池管理技術",
-          "太陽能MPPT追日技術效率>99%"
+          "2026年7月營收YoY+42.9%，本業通信與電機電子器材需求明顯回升",
+          "智慧PDU、突波保護與用電監測可對接儲能櫃輔助配電需求"
         ],
         "weaknesses": [
-          "7月營收1.72億，MoM+4.3%，營收規模小",
-          "電池模組毛利率低",
-          "與台達電等大廠規模差距"
+          "MOPS未揭露電池、BMS、PCS或儲能系統產品，題材連結間接",
+          "7月營收僅1.72億元，研發與認證資源落後大型電源廠"
         ],
         "opportunities": [
-          "儲能系統需求爆發",
-          "住宅太陽能+儲能一體機",
-          "UPS資料中心需求增長"
+          "工商儲能櫃增加分路量測、遠端斷電及消防聯動需求",
+          "既有通信能力可延伸至儲能EMS邊緣資料採集模組"
         ],
         "threats": [
-          "台達電/華城電能等大廠競爭",
-          "中國電池/逆變器廠低價",
-          "電芯供應受制於上游"
+          "台達電、Schneider與Eaton已有完整儲能配電方案，通路與認證優勢大",
+          "若無實際儲能認證或訂單，題材溢價容易快速消退"
         ]
       }
     },
@@ -157,19 +168,21 @@
       "topicId": "renewable-energy",
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "solar_inverter",
       "roleType": "solar_inverter_manufacturer",
-      "roleSummary": "勝德提供太陽能逆變器。7月營收1.72億，MoM+4.3%。",
+      "roleSummary": "勝德MOPS未揭露太陽能逆變器或光伏產品；再生能源題材僅能視為智慧配電、突波保護及監控通訊器材的潛在周邊應用。2026年7月營收1.72億元、YoY+42.9%，成長來源未證實來自太陽能。",
       "products": [
-        "微型逆變器(300W/單模組MPPT)",
-        "串列型逆變器(3-10kW/住宅用)",
-        "混合型逆變器(太陽能+儲能一體機)"
+        "光伏交流側MOV突波保護電源模組",
+        "太陽能監控用RS-485/Modbus通訊閘道器",
+        "屋頂光伏配電箱用分路電流監測模組",
+        "混合式逆變器周邊遠端斷電控制模組"
       ],
       "customers": [
-        "北美太陽能系統安裝商",
-        "歐洲太陽能分銷商",
-        "台灣太陽能系統商"
+        "台達電(2308；光伏電力電子應用對象，非MOPS揭露客戶)",
+        "SMA Solar Technology(逆變器生態對象，非MOPS揭露客戶)",
+        "SolarEdge(逆變器生態對象，非MOPS揭露客戶)",
+        "Enphase Energy(微型逆變器生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "華城電能(1513)",
@@ -195,31 +208,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：有線與無線通信機械器材、電子元件、電機與電子機械器材之製造買賣。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收1.72億元，MoM+4.3%、YoY+42.9%，累計YoY+5.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "low",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "MPPT追日技術(>99%效率)",
-        "混合型逆變器離網/並網切換"
+        "IEC 61643概念之MOV/GDT交流突波保護與熱斷路",
+        "Modbus RTU/TCP太陽能逆變器遙測資料轉換",
+        "分路電流感測、遠端繼電器與故障告警"
       ],
       "swot": {
         "strengths": [
-          "太陽能逆變器產品線完整(微型/串列/混合型)",
-          "MPPT追日技術效率>99%"
+          "2026年7月營收YoY+42.9%，本業短期復甦提供產品開發現金流",
+          "通信與電機器材能力可延伸至光伏監控及交流側保護"
         ],
         "weaknesses": [
-          "營收規模小",
-          "與國際逆變器大廠差距"
+          "MOPS未揭露微型、串列或混合式逆變器，原資料把公司誤列為逆變器製造商",
+          "營收規模小，缺乏可驗證的光伏安規認證與客戶名單"
         ],
         "opportunities": [
-          "住宅太陽能+儲能一體機需求",
-          "美國IRA法案推動太陽能市場"
+          "屋頂光伏與儲能整合增加遠端關斷、監控與突波保護需求",
+          "可與既有逆變器廠合作開發通訊閘道器，而非直接競爭主機"
         ],
         "threats": [
-          "中國逆變器廠低價競爭",
-          "Enphase等國際大廠技術領先"
+          "逆變器廠通常自行整合監控與保護功能，外購空間有限",
+          "中國通訊閘道器與保護元件價格競爭激烈"
         ]
       }
     }

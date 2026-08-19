@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "7402",
   "companyName": "邑錡",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "aerospace_components",
       "roleType": "military_low_light_camera",
-      "roleSummary": "邑錡為自有ASIC影像晶片+低功耗相機模組廠商。提供軍規低照度航拍系統、無人機航拍影像、建築縮時攝影及雲端AI分析平台。MOPS主要經營：自有ASIC晶片與低功耗相機模組，AI影像機器人視覺產品。",
+      "roleSummary": "邑錡MOPS明確揭露自有ASIC、低功耗相機模組、低照度與航拍軍工影像設備；其軍工角色是小型影像感測與航拍模組，不是整機無人機廠。FinMind顯示2026年7月營收0.50億元、MoM+4.2%，規模仍小。",
       "products": [
-        "軍規低照度航拍攝影系統(0.001Lux/starlight CMOS)",
-        "無人機航拍影像系統(4K/60fps/H.265)",
-        "建築工程縮時攝影機(太陽能供電/4G傳輸)",
-        "雲端相機與AI影像分析平台(AWS IoT)",
-        "自有ASIC低功耗影像晶片(<100mW)"
+        "0.001Lux星光級低照度航拍相機模組",
+        "4K/60fps H.265無人機雲台相機模組",
+        "低於100mW自有影像壓縮ASIC",
+        "4G/LTE太陽能供電遠端縮時攝影機",
+        "雲端影像上傳與AI事件分析平台"
       ],
       "customers": [
-        "國防部(軍規低照度航拍攝影設備標案)",
-        "中科院(無人機航拍影像系統整合)",
-        "Brinno自有品牌(建築工程縮時攝影機經銷商)",
-        "建築工程商(營造業縮時監控)",
-        "無人機系統商(航拍模組OEM)"
+        "漢翔(2634；無人機影像應用對象，非MOPS揭露客戶)",
+        "雷虎(8033；無人機整合應用對象，非MOPS揭露客戶)",
+        "DJI(航拍相機平台對象，非MOPS揭露客戶)",
+        "Autel Robotics(航拍平台對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "光隆(8927)",
@@ -48,32 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 7402 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：自有ASIC與低功耗相機模組；建築縮時、雲端相機、AI分析、低照度及航拍軍工影像設備。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收0.50億元，較6月增加4.2%；TWSE月營收查無資料，改採FinMind。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "低照度CMOS starlight感測0.001Lux影像處理",
-        "自有ASIC影像壓縮晶片功耗<100mW",
-        "4G/LTE IoT影像傳輸與AWS雲端AI分析"
+        "低照度CMOS多幀降噪、寬動態與電子防手震",
+        "低功耗H.265影像ASIC及邊緣錄影電源管理",
+        "4G/LTE遠端傳輸、斷線續傳與雲端AI事件標註"
       ],
       "swot": {
         "strengths": [
-          "自有ASIC晶片+低功耗相機模組垂直整合",
-          "Brinno品牌在建築縮時攝影市場領先"
+          "MOPS直接揭露低照度及航拍軍工影像設備，題材連結有官方業務描述支撐",
+          "自有低功耗ASIC與相機軟硬體整合可降低無人機酬載功耗"
         ],
         "weaknesses": [
-          "OTC小廠(資本額3.5億)，營收規模極小",
-          "國防標案佔比不確定，民用為主"
+          "2026年7月營收僅0.50億元，單一專案延遲即可能造成大幅波動",
+          "MOPS未揭露國防客戶或標案金額，不能把應用對象視為已確認客戶"
         ],
         "opportunities": [
-          "軍用無人機航拍需求成長",
-          "建築工程數位化帶動縮時攝影需求"
+          "台灣無人機國產化增加低照度偵察、航拍與長時間監控模組需求",
+          "邊緣AI可把影像壓縮模組升級為目標偵測與事件告警酬載"
         ],
         "threats": [
-          "消費級相機市場競爭激烈",
-          "國防標案週期不確定"
+          "FLIR、DJI及中國影像模組廠在感測器、雲台與量產成本具優勢",
+          "軍規測試、資安與出口管制認證可能拉長導入時間"
         ]
       }
     }

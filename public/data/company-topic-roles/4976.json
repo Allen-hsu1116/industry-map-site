@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4976",
   "companyName": "佳凌",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-19T19:04:33Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -86,17 +86,20 @@
       "directness": "core",
       "supplyChainStage": "medical_optics",
       "roleType": "medical_optical_lens",
-      "roleSummary": "佳凌提供醫療用光學鏡頭。7月營收0.97億，MoM+1.3%。",
+      "roleSummary": "佳凌MOPS明確列出醫療鏡頭開發製作，但未揭露醫療營收占比或客戶；角色是醫療影像光學鏡組供應，而非終端醫材品牌。2026年7月營收0.97億元、YoY+9.5%，累計YoY僅+1.3%。",
       "products": [
-        "內視鏡鏡頭(胃鏡/大腸鏡/腹腔鏡用)",
-        "手術顯微鏡鏡頭(高解析/變焦)",
-        "眼科檢查鏡頭(眼底/裂隙燈)",
-        "牙科口內口內鏡頭(廣角/高解析)"
+        "直徑3mm以下拋棄式內視鏡鏡頭組",
+        "腹腔鏡4K廣角低畸變光學鏡組",
+        "眼底攝影機高NA成像鏡組",
+        "牙科口內相機廣角微型鏡頭",
+        "手術顯微鏡連續變焦鏡組"
       ],
       "customers": [
-        "醫療設備製造商(內視鏡OEM)",
-        "醫院(手術顯微鏡鏡頭)",
-        "眼科設備備廠(檢查鏡頭)"
+        "Olympus(內視鏡應用對象，非MOPS揭露客戶)",
+        "Fujifilm Healthcare(內視鏡應用對象，非MOPS揭露客戶)",
+        "HOYA/PENTAX Medical(內視鏡應用對象，非MOPS揭露客戶)",
+        "Carl Zeiss Meditec(手術顯微鏡應用對象，非MOPS揭露客戶)",
+        "Alcon(眼科影像應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "先進光(3362)",
@@ -122,32 +125,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v28",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：車載、相機、安控、視訊、穿戴、工業、辨識與醫療鏡頭；塑膠成型機構件及精密模具。"
+        },
+        {
+          "sourceId": "monthly-revenue-v28",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收0.97億元，MoM+1.3%、YoY+9.5%，累計YoY+1.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-19",
       "status": "verified",
       "techFocus": [
-        "醫療級光學鍍膜(抗反射/抗菌)",
-        "高NA數值孔徑鏡頭設計(NA>0.5)",
-        "微型化內視鏡鏡頭(直徑<3mm)"
+        "微型非球面塑膠/玻璃混合鏡片之公差與偏心控制",
+        "可見光抗反射鍍膜、低鬼影與色差校正",
+        "高NA、低畸變與短工作距離之醫療成像光學設計"
       ],
       "swot": {
         "strengths": [
-          "車載/辨識鏡頭技術可延伸至醫療應用",
-          "光學鍍膜與高NA設計能力"
+          "2026年7月營收YoY+9.5%，車載與精密鏡頭本業提供醫療光學製造基礎",
+          "MOPS直接列出醫療鏡頭，微型成像、模具與組裝能力可共用"
         ],
         "weaknesses": [
-          "醫療鏡頭營收佔比低",
-          "與先進光/大立光在醫療光學領域差距"
+          "7月營收僅0.97億元且累計YoY僅+1.3%，整體規模與成長有限",
+          "醫療收入、認證與實際客戶未揭露，導入週期可能長於消費/車載鏡頭"
         ],
         "opportunities": [
-          "微創手術內視鏡需求增長",
-          "AI輔助診斷需高解析鏡頭"
+          "拋棄式內視鏡、AI輔助診斷與微創手術提高小型高解析鏡頭需求",
+          "車載鏡頭量產經驗可轉化為醫療鏡組的自動化組裝與良率管理"
         ],
         "threats": [
-          "大立光/先進光等大廠進入醫療光學",
-          "中國光學廠低價競爭"
+          "大立光、先進光及中國光學廠具規模和成本優勢",
+          "醫材法規、滅菌相容與客戶驗證失敗會延後量產"
         ]
       }
     },
