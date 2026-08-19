@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6261",
   "name": "久元",
-  "generatedAt": "2026-08-18T12:33:28.200Z",
+  "generatedAt": "2026-08-19T12:33:25.610Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-18",
-  "chipDataDate": "2026-08-18",
+  "marketDataDate": "2026-08-19",
+  "chipDataDate": "2026-08-19",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,14 +15,14 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "久元 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -30,
+    "summary": "久元 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
+    "signals": [],
+    "risks": [
+      "收盤價、MA5、MA20 呈空頭排列"
     ],
-    "risks": [],
     "watch": [
       "股價貼近 MA20，留意方向選擇"
     ]
@@ -30,17 +30,17 @@
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 33,
-    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +322張；近 20 日法人偏買，合計 +1.6千張。",
+    "score": 28,
+    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +276張；近 20 日法人偏買，合計 +1.7千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +322張",
-      "近 20 日法人偏買，合計 +1.6千張",
-      "外資近 5 日買超 +365張",
-      "融資近 5 日下降 6.3%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +276張",
+      "近 20 日法人偏買，合計 +1.7千張",
+      "外資近 5 日買超 +329張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-18"
+      "最近法人資料日：2026-08-19",
+      "融券近 5 日增加 150.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-18"
+      "lastVerified": "2026-08-19"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -391,13 +391,13 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
+    "totalScore": 61,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 14.9 倍，估值尚可對照成長",
+        "本益比 14.8 倍，估值尚可對照成長",
         "殖利率 3.3%，提供部分下檔支撐"
       ],
       "risks": []
@@ -413,13 +413,13 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：78.30",
-      "波段多空分水嶺看 MA20：78.29",
-      "追蹤法人是否延續 買超：最近 +27張",
-      "本益比 14.9 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：77.70",
+      "波段多空分水嶺看 MA20：77.79",
+      "追蹤法人是否延續 買超：最近 +118張",
+      "本益比 14.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 88.30 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 86.70 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 70.10：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5289",
   "name": "宜鼎",
-  "generatedAt": "2026-08-18T12:33:28.096Z",
+  "generatedAt": "2026-08-19T12:33:25.510Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -60,7 +60,7 @@
     "roleDetail": {
       "topicName": "記憶體模組",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "宜鼎7月營收84.95億，MoM+3.5%。為工規記憶體模組專業製造商。",
+      "roleSummary": "宜鼎MOPS明確揭露工業用嵌入式儲存裝置與DRAM模組，是工規記憶體直接供應者。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，但客戶名未由MOPS揭露。",
       "supplyChainStage": "memory_module",
       "roleType": "industrial_memory_module",
       "directness": "core",
@@ -68,17 +68,17 @@
     },
     "productNarratives": [
       {
-        "name": "工規DDR5 DRAM模組(ECC RDIMM/1R/2R/5600MT/s)",
+        "name": "DDR5 ECC UDIMM/SODIMM工業級模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "工規DDR4 DRAM模組(ECC/3200MT/s)",
+        "name": "DDR5 ECC RDIMM伺服器記憶體模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "工規NVMe SSD(M.2 2280/U.2/EDSFF)",
+        "name": "M.2 2280 PCIe 4.0工規NVMe SSD",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -157,7 +157,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "宜鼎7月營收84.95億，MoM+3.5%。為工規記憶體模組專業製造商。"
+        "roleSummary": "宜鼎MOPS明確揭露工業用嵌入式儲存裝置與DRAM模組，是工規記憶體直接供應者。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，但客戶名未由MOPS揭露。"
       },
       {
         "topicId": "niche-memory",
@@ -176,8 +176,8 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "宜鼎記憶體模組使用PCB基板。7月營收84.95億，MoM+3.5%。"
+        "confidence": "medium",
+        "roleSummary": "宜鼎不製造PCB或IC載板，而是DDR5模組與NVMe SSD板的需求端。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，出貨成長可帶動高層數低損耗PCB採購，但關聯屬間接。"
       },
       {
         "topicId": "cxl-memory-pooling",
@@ -187,7 +187,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "宜鼎7月營收84.95億，MoM+3.5%。MOPS登記為工業用嵌入式儲存裝置/DRAM模組。為工規記憶體與儲存專業製造商。"
+        "roleSummary": "宜鼎MOPS揭露工業用嵌入式儲存裝置與DRAM模組；CXL角色屬工規記憶體能力向伺服器記憶體池化延伸，實際CXL量產客戶未由MOPS證實。FinMind顯示2026年7月營收84.95億元、MoM+3.5%。"
       }
     ],
     "swot": [],
@@ -269,12 +269,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 85 天未更新"
+        "message": "股價資料已 86 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 85 天未更新"
+        "message": "籌碼資料已 86 天未更新"
       }
     ]
   },

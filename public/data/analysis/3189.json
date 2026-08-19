@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3189",
   "name": "景碩",
-  "generatedAt": "2026-08-18T12:33:27.909Z",
+  "generatedAt": "2026-08-19T12:33:25.330Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-18",
-  "chipDataDate": "2026-08-18",
+  "marketDataDate": "2026-08-19",
+  "chipDataDate": "2026-08-19",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,28 +18,29 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": 15,
-    "summary": "景碩 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 12.2%。",
+    "summary": "景碩 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 9.8%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 12.2%"
+      "收盤站上 MA20 9.8%"
     ],
     "risks": [],
     "watch": []
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 36,
-    "summary": "景碩 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +429張；近 20 日法人偏買，合計 +297張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "景碩 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1千張；投信近 5 日買超 +649張。",
     "signals": [
-      "三大法人近 5 日合計買超 +429張",
-      "近 20 日法人偏買，合計 +297張",
-      "投信近 5 日買超 +250張",
-      "外資近 5 日買超 +96張"
+      "近 20 日法人偏買，合計 +1千張",
+      "投信近 5 日買超 +649張"
     ],
-    "risks": [],
+    "risks": [
+      "三大法人近 5 日合計賣超 -257張",
+      "外資近 5 日賣超 -15張"
+    ],
     "watch": [
-      "最近法人資料日：2026-08-18"
+      "最近法人資料日：2026-08-19"
     ]
   },
   "industry": {
@@ -133,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-18"
+      "lastVerified": "2026-08-19"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -281,8 +282,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 70,
-    "recommendationState": "top_candidate",
+    "totalScore": 68,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
       "label": "基本面中性",
@@ -291,33 +292,26 @@
         "月營收 MoM +3.4%，短期動能改善"
       ],
       "risks": [
-        "本益比 160.5 倍，需防估值壓縮",
-        "股價淨值比 10.3 倍偏高，需和 ROE/成長性比對"
+        "本益比 157.5 倍，需防估值壓縮",
+        "股價淨值比 10.1 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 10.9%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：868.20",
-      "波段多空分水嶺看 MA20：770.90",
-      "追蹤法人是否延續 賣超：最近 -503張",
+      "短線支撐/壓力先看 MA5：866.40",
+      "波段多空分水嶺看 MA20：773.55",
+      "追蹤法人是否延續 買超：最近 +312張",
       "月營收年增率 +26.8%，觀察基本面是否支撐估值",
-      "本益比 160.5 倍，需和同族群估值比較"
+      "本益比 157.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 937.00 且量比 > 1.5：列為轉強訊號",
