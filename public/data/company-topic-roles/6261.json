@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -89,20 +89,19 @@
       "directness": "core",
       "supplyChainStage": "test_equipment",
       "roleType": "cis_ccm_test_equipment",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。MOPS登記為半導體及光電產品加工(切割/研磨/測試/挑檢)與IC/CIS/CCM測試設備研發製造。CIS影像感測器與CCM攝像模組測試設備為核心業務，受惠手機多鏡頭與車用CIS需求擴增。",
+      "roleSummary": "久元MOPS直接揭露半導體與光電產品切割、研磨、測試、挑檢，以及IC／CIS／CCM測試設備研製，光學感測測試角色成立；但未揭露既有資料中的Sony、OmniVision或舜宇為客戶。FinMind顯示2026年7月營收3.74億元，較6月減少4.1%，營運仍受設備驗收與加工量波動。",
       "products": [
-        "CIS影像感測器晶圓級測試設備(探針卡+積分球光學檢測)",
-        "CCM攝像模組AA主動對位測試設備(6DOF精度<1μm)",
-        "LED晶粒分選/測試設備(光通量/色溫/演色性量測)",
-        "LED晶圓切割研磨設備(dicing saw 5×5mil級)",
-        "LED晶圓背面研磨(BSP)設備(薄化至50μm以下)"
+        "CIS晶圓／成品電性與光學測試設備",
+        "CCM相機模組功能與影像品質測試設備",
+        "LED晶粒光電參數測試分選設備",
+        "光電晶圓切割、研磨與挑檢加工服務"
       ],
       "customers": [
-        "舜宇光學(2384)(CCM模組測試設備)",
-        "豪威科技OmniVision(CIS封裝級光學測試)",
-        "台積電(2330)(LED測試探針卡)",
-        "晶電(2448)(LED晶粒分選設備)",
-        "國際光電模組廠(手機多鏡頭CIS測試)"
+        "Sony Semiconductor Solutions（CIS驗證對象，非MOPS揭露客戶）",
+        "OmniVision豪威科技（CIS驗證對象，非MOPS揭露客戶）",
+        "舜宇光學（CCM設備應用對象，非MOPS揭露客戶）",
+        "丘鈦科技Q Technology（CCM設備應用對象，非MOPS揭露客戶）",
+        "晶電／富采(3714；LED測試應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "致茂科技(6130)(光電測試設備)",
@@ -111,9 +110,8 @@
         "旺捷科技(測試分選機)"
       ],
       "risks": [
-        "CIS/CCM測試設備佔久元營收比重中等，光電產品加工(切割/研磨)為另一主線",
-        "6月營收3.90億MoM+11.8%穩定成長，但CIS測試設備市場規模受限於手機/車用CIS出貨量",
-        "中國測試設備廠低價競爭壓力漸增"
+        "Sony、Samsung等IDM內製測試及中國設備商低價競爭壓縮外購空間",
+        "手機鏡頭規格升級放緩會延後CCM設備換機週期"
       ],
       "legacy": {},
       "evidence": [
@@ -130,36 +128,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體及光電產品切割、研磨、測試、挑檢、基板切割；IC／CIS／CCM測試設備研製銷售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE查無；FinMind：2026年7月營收3.74億元，較6月減少4.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "confidence": "medium",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "CIS封裝級光學測試系統(探針卡+積分球設計)",
-        "CCM AA主動對位校準技術(6DOF對位精度<1μm)",
-        "LED晶粒光通量/色溫/演色性量測(IS 5×5mil級)"
+        "CIS暗電流、PRNU／DSNU、色彩與解析度自動化量測",
+        "CCM MTF、畸變、對焦與影像品質校正",
+        "LED光通量、色座標、順向電壓與漏電高速分選"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，CIS/CCM測試設備國內利基供應商，舜宇光學/OmniVision客戶",
-          "CCM AA主動對位測試設備6DOF精度<1μm，技術門檻高",
-          "LED晶粒分選測試設備(IS 5×5mil級)完整產品線"
+          "MOPS直接支持CIS／CCM測試設備與光電加工雙主線",
+          "設備研發搭配切割、研磨、測試與挑檢，可提供較完整後段流程"
         ],
         "weaknesses": [
-          "光電測試設備市場規模有限，CIS測試以委外為主",
-          "手機多鏡頭趨勢飽和，CCM測試設備需求成長放緩",
-          "光學測試設備競爭激烈(日本/韓國/中國廠商)"
+          "FinMind顯示2026年7月營收3.74億元、MoM-4.1%，設備驗收波動仍明顯",
+          "MOPS未揭露客戶名與各產品營收占比，不能把生態系公司寫成已確認客戶"
         ],
         "opportunities": [
-          "車用CIS(環景/ADAS)需求成長帶動測試設備新應用",
-          "AR/VR/XR眼動追蹤+深度感測CIS測試需求興起",
-          "高畫素(200MP+)CIS測試難度提升，設備升級需求"
+          "ADAS、安控與機器視覺增加CIS及CCM測試量與品質規格",
+          "高畫素、多攝與3D感測提高MTF、色彩及深度校正設備需求"
         ],
         "threats": [
-          "Sony/Samsung垂直整合CIS測試，外部設備採購減少",
-          "中國CCM模組廠自建測試線，影響外部設備需求",
-          "LED市場轉向Mini/Micro LED，測試設備規格變化"
+          "Sony、Samsung等IDM內製測試及中國設備商低價競爭壓縮外購空間",
+          "手機鏡頭規格升級放緩會延後CCM設備換機週期"
         ]
       }
     },

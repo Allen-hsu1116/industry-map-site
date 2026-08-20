@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6176",
   "companyName": "瑞儀",
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -160,20 +160,20 @@
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "瑞儀為全球背光模組龍頭，6月營收36.9億年減15.0%，累計231億年減6.0%。Mini LED技術領先，散熱膜片為AI伺服器題材延伸，但非核心業務。",
+      "directness": "indirect",
+      "roleSummary": "瑞儀MOPS揭露電子零組件、模具與照明設備製造，未揭露冷板、CDU、快接頭、冷卻液或AI伺服器散熱產品。既有石墨片與液冷描述缺乏MOPS支持，應降級為光學模組熱管理的鄰近觀察角色。2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%。",
       "products": [
-        "背光模組(側入光/直下光)",
-        "Mini LED背光模組(區域調光)",
-        "車用顯示器光學膜(增亮膜/擴散膜)",
-        "伺服器散熱用光學微結構膜片(石墨烯散熱膜)",
-        "AI伺服器導熱石墨片(人工石墨)"
+        "筆電／平板側入式LED背光模組",
+        "Mini LED直下式分區背光模組",
+        "車用顯示器背光模組",
+        "導光板、增亮膜與擴散膜光學組件"
       ],
       "customers": [
-        "Apple(iPad/MacBook背光模組)",
-        "群創光電(3481)(面板背光模組)",
-        "友達光電(2409)(面板背光模組)",
-        "車用顯示器廠(車規背光)"
+        "Apple（平板／筆電背光應用對象，非MOPS揭露客戶）",
+        "LG Display（面板背光應用對象，非MOPS揭露客戶）",
+        "友達(2409；車用顯示背光對象，非MOPS揭露客戶)",
+        "群創(3481；顯示背光對象，非MOPS揭露客戶)",
+        "京東方BOE（顯示背光對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中強光電(2442)(背光模組)",
@@ -181,9 +181,8 @@
         "達方(8163)(散熱元件)"
       ],
       "risks": [
-        "散熱非核心業務，題材連結較弱",
-        "背光模組受OLED衝擊需求下滑",
-        "累計營收年減6.0%，消費電子需求疲軟"
+        "OLED滲透降低傳統背光需求，會削弱可移轉至其他熱管理領域的規模",
+        "奇鋐、雙鴻與Cooler Master已有冷板／CDU經驗，瑞儀跨入液冷缺乏證據與認證"
       ],
       "evidence": [
         {
@@ -192,38 +191,48 @@
           "title": "6176公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 6176 role in AI 伺服器液冷散熱 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件、模具及照明設備製造。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-18",
+      "confidence": "low",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "Mini LED區域調光技術(Local Dimming)",
-        "光學微結構膜片技術(增亮膜/擴散膜)",
-        "人工石墨散熱片製程(厚度<25μm)"
+        "導光板微結構、光學膜堆疊與亮度均勻性控制",
+        "Mini LED分區調光、熱點抑制與薄型化設計",
+        "精密模具、射出成形與光學組件自動貼合"
       ],
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
       "swot": {
         "strengths": [
-          "人工石墨散熱片製程(厚度<25μm)切入AI伺服器散熱應用",
-          "光學微結構膜片技術(增亮膜/擴散膜)可延伸至散熱膜片",
-          "Mini LED區域調光技術(Local Dimming)有散熱管理經驗"
+          "背光模組需要光、熱與機構共設計，具薄型化和量產整合經驗",
+          "車用與Mini LED產品可提高顯示模組規格與平均單價"
         ],
         "weaknesses": [
-          "AI伺服器液冷散熱為新應用領域，技術與量產經驗有限",
-          "散熱產品線佔營收比重極低，規模效應不足",
-          "液冷散熱市場競爭者(奇鋐/雙鴻)技術領先"
+          "MOPS未揭露任何液冷零件，不能把瑞儀當冷板或CDU供應商",
+          "2026年7月營收YoY-9.5%、累計YoY-6.5%，顯示本業仍承壓"
         ],
         "opportunities": [
-          "AI伺服器液冷散熱(冷板式/浸沒式)需求快速增長",
-          "導熱石墨片在AI伺服器GPU散熱應用",
-          "散熱膜片在伺服器機箱熱管理新應用"
+          "顯示模組的熱管理與精密模具能力可尋找資料中心監控顯示或薄型熱介面合作",
+          "車用與高亮度顯示升級可降低對傳統筆電背光的依賴"
         ],
         "threats": [
-          "奇鋐(3017)/雙鴻(3324)在伺服器散熱市場地位穩固",
-          "散熱模組廠垂直整合可能減少外購散熱膜片",
-          "AI伺服器散熱方案標準尚未統一"
+          "OLED滲透降低傳統背光需求，會削弱可移轉至其他熱管理領域的規模",
+          "奇鋐、雙鴻與Cooler Master已有冷板／CDU經驗，瑞儀跨入液冷缺乏證據與認證"
         ]
       }
     }

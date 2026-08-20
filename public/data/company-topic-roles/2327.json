@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2327",
   "companyName": "國巨",
-  "updatedAt": "2026-07-23",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "passive-components",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "mlcc_chip_resistor_leader",
-      "roleSummary": "國巨是全球被動元件龍頭，MLCC/晶片電阻/電感三合一。5月營收150.6億年增47.5%，累計672.6億年增27.3%，AI伺服器與車用需求帶動強勁復甦。",
+      "roleSummary": "國巨MOPS直接揭露被動元件、電阻原料半成品、天線及相關零件製造銷售，被動元件核心角色無疑。2026年7月營收161.31億元，MoM+5.0%、YoY+51.5%，累計YoY+32.5%，公司說明為客戶需求強勁；但MOPS未揭露Apple、Tesla、Intel或NVIDIA為客戶。",
       "products": [
-        "MLCC多層陶瓷電容(0402-2220)",
-        "晶片電阻(0201-2512)",
-        "電感(功率型/高頻型)",
-        "天線模組(5G mmWave)",
-        "鉭質電容(Tantalum)"
+        "0201～2220多層陶瓷電容MLCC",
+        "0201～2512厚膜／薄膜晶片電阻",
+        "功率電感與高頻RF電感",
+        "鉭質／聚合物電容",
+        "5G／Wi-Fi天線與射頻元件"
       ],
       "customers": [
-        "Apple(MLCC/晶片電阻)",
-        "Tesla(車用電容/電阻)",
-        "Intel(伺服器MLCC)",
-        "NVIDIA(AI GPU用MLCC)",
-        "Samsung(消費電子被動元件)"
+        "Apple（消費電子被動元件應用對象，非MOPS揭露客戶）",
+        "Tesla（車用被動元件應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI加速卡被動元件應用對象，非MOPS揭露客戶）",
+        "Intel（伺服器被動元件應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（消費電子應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "三星電機(Samsung Electro-Mechanics)",
@@ -32,9 +32,8 @@
         "國巨(2327)併購KEMET/普思"
       ],
       "risks": [
-        "MLCC價格競爭激烈(三星電機/太陽誘電)",
-        "6月營收YoY+39%但基期效應",
-        "高階MLCC仍依賴日商(村田)技術"
+        "Murata、Samsung Electro-Mechanics與Taiyo Yuden在高階MLCC競爭",
+        "需求反轉時通路去庫存與價格下跌會快速影響營收及產能利用率"
       ],
       "legacy": {},
       "evidence": [
@@ -51,37 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：被動元件、電阻原料半成品、天線、主動元件與機器設備零件。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收161.31億元，MoM+5.0%、YoY+51.5%，累計YoY+32.5%；備註為客戶需求強勁。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-13",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "MLCC積層製程(BME賤金屬電極Ni/Cu)",
-        "高容值MLCC堆疊技術(>100μF 0805)",
-        "車規級被動元件(AEC-Q200全認證)",
-        "天線模組(5G mmWave AiP封裝)"
+        "BME鎳內電極MLCC積層、燒結與介電層薄化",
+        "AEC-Q200高溫、高濕、耐壓與脈衝可靠度",
+        "低ESR／ESL、高容值與小型化被動元件設計"
       ],
       "swot": {
         "strengths": [
-          "6月營收153.6億YoY+38.9%，累計826.2億YoY+29.4%，被動元件景氣復甦",
-          "全球MLCC/晶片電阻龍頭(Yageo集團)，併購KEMET後產品線完整(鉭電/電感)",
-          "車規級被動元件(AEC-Q200)全認證，打入Tesla/車用供應鏈"
+          "MOPS直接支持被動元件與天線製造，產品涵蓋MLCC、電阻、電感與鉭電容",
+          "2026年7月營收161.31億元、YoY+51.5%，累計YoY+32.5%，且公司明確說明客戶需求強勁"
         ],
         "weaknesses": [
-          "高階MLCC仍依賴日商(村田Murata)技術，高容值/小尺寸落後",
-          "MLCC價格競爭激烈(三星電機/太陽誘電)，ASP壓力持續",
-          "6月營收YoY+39%部分受惠低基期效應(去年去化庫存)"
+          "MOPS未揭露Apple、Tesla、NVIDIA等客戶，具名應用關係不能當成確認訂單",
+          "中低階被動元件標準化高，報價與庫存循環仍會壓縮毛利"
         ],
         "opportunities": [
-          "AI伺服器GPU用MLCC數量倍增(NVIDIA B200每顆用>10000顆MLCC)",
-          "車用電子(ADAS/EV)被動元件用量持續增長，ASP高於消費電子",
-          "5G mmWave天線模組(AiP封裝)為新增長領域"
+          "AI伺服器高功率電源與GPU板增加MLCC、電阻及電感用量",
+          "電動車與ADAS提高AEC-Q200元件數量及高可靠度產品占比"
         ],
         "threats": [
-          "村田(Murata)在車用/高階MLCC技術壁壘高，短期難以突破",
-          "三星電機(SEMCO)低價搶佔中階MLCC市場",
-          "被動元件價格循環劇烈，景氣反轉時庫存跌價風險"
+          "Murata、Samsung Electro-Mechanics與Taiyo Yuden在高階MLCC競爭",
+          "需求反轉時通路去庫存與價格下跌會快速影響營收及產能利用率"
         ]
       }
     }

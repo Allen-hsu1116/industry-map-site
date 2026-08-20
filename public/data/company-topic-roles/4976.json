@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4976",
   "companyName": "佳凌",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -175,18 +175,20 @@
       "directness": "core",
       "supplyChainStage": "optical_lens",
       "roleType": "camera_lens_manufacturer",
-      "roleSummary": "佳凌7月營收0.97億，MoM+1.3%。MOPS登記為車載/相機/安控/視訊/行動穿戴/工業/辨識/醫療等鏡頭開發。為光學鏡頭專業製造商。",
+      "roleSummary": "佳凌MOPS直接揭露車載、相機、安控、視訊、穿戴、工業辨識與醫療鏡頭，光學鏡頭角色成立；但未揭露Mobileye、Bosch、海康威視等客戶。2026年7月營收0.97億元，MoM+1.3%、YoY+9.5%，累計YoY+1.3%，規模小且成長溫和。",
       "products": [
-        "車載鏡頭(ADAS/環視/電子後照鏡)",
-        "安控鏡頭(監視器/球型/槍型)",
-        "工業檢測鏡頭(機器視覺/遠心)",
-        "行動穿戴鏡頭(AR/VR/智慧眼鏡)"
+        "ADAS前視／環視車載鏡頭",
+        "安控監視器定焦／變焦鏡頭",
+        "工業機器視覺遠心鏡頭",
+        "AR／VR與穿戴裝置鏡頭",
+        "內視鏡／醫療影像鏡頭"
       ],
       "customers": [
-        "Mobileye(ADAS車載鏡頭)",
-        "博世Bosch(車載感測鏡頭)",
-        "海康威視(安控鏡頭)",
-        "工業視覺設備廠(機器視覺鏡頭)"
+        "Mobileye（ADAS鏡頭應用對象，非MOPS揭露客戶）",
+        "Bosch（車載感測應用對象，非MOPS揭露客戶）",
+        "海康威視Hikvision（安控鏡頭應用對象，非MOPS揭露客戶）",
+        "Keyence（機器視覺應用對象，非MOPS揭露客戶）",
+        "Cognex（工業視覺應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "大立光(3008)",
@@ -194,8 +196,8 @@
         "亞洲光學(3019)"
       ],
       "risks": [
-        "光學鏡頭市場競爭激烈",
-        "車規認證週期長"
+        "大立光、舜宇、亞洲光學與中國鏡頭廠在規模及報價上競爭",
+        "車規驗證週期長，單一平台延後可能明顯影響小型公司的營收"
       ],
       "legacy": {},
       "evidence": [
@@ -212,36 +214,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：車載、相機、安控、視訊、穿戴、工業辨識、醫療鏡頭及塑膠機構部品。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收0.97億元，MoM+1.3%、YoY+9.5%，累計YoY+1.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "非球面鏡片精密成型(PV<0.1um)",
-        "變焦鏡頭光學設計(連續變焦10x)",
-        "光學穩像技術(OIS/VCM)"
+        "非球面鏡片成形、鏡組偏心與MTF公差控制",
+        "車載鏡頭寬溫、防水防霧與耀光抑制設計",
+        "遠心光路、低畸變與機器視覺工作距離設計"
       ],
       "swot": {
         "strengths": [
-          "光學鏡頭產品線廣泛(車載/安控/工業/穿戴/醫療)",
-          "車載ADAS鏡頭打入Mobileye/Bosch",
-          "非球面鏡片成型技術"
+          "MOPS直接支持車載、安控、工業辨識與醫療等多場景鏡頭產品",
+          "2026年7月營收YoY+9.5%，車載與工業光學需求提供溫和成長"
         ],
         "weaknesses": [
-          "7月營收0.97億，MoM+1.3%，營收規模小",
-          "與大立光等大廠規模差距",
-          "光學鏡頭毛利率壓力"
+          "月營收僅0.97億元，規模與大立光、舜宇光學差距大",
+          "MOPS未揭露具名客戶或各應用收入占比，現有名單僅能標示為應用對象"
         ],
         "opportunities": [
-          "ADAS/自動駕駛鏡頭需求增長",
-          "機器視覺工業檢測需求",
-          "AR/VR頭顯鏡頭新市場"
+          "ADAS鏡頭數量增加、環視與駕駛監控提升車載光學需求",
+          "機器視覺與醫療影像需要低畸變、遠心與高解析鏡頭"
         ],
         "threats": [
-          "大立光/先進光等大廠規模優勢",
-          "中國光學鏡頭廠低價競爭",
-          "車規認證週期長"
+          "大立光、舜宇、亞洲光學與中國鏡頭廠在規模及報價上競爭",
+          "車規驗證週期長，單一平台延後可能明顯影響小型公司的營收"
         ]
       }
     },

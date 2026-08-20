@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2408",
   "companyName": "南亞科",
-  "updatedAt": "2026-07-06",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "hbm",
       "topicName": "HBM 高頻寬記憶體",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "hbm",
       "roleType": "dram_hbm_developer",
-      "roleSummary": "南亞科6月營收293.88億YoY+621.3%，累計1316.36億YoY+643.1%，MOPS備註「受市場需求成長影響」。MOPS登記為電子零組件製造/國際貿易。DRAM價格上漲帶動營收暴增(基期極低)，DDR5量產中(1a nm)，HBM3E與美光合作開發，為HBM題材間接受益者。",
+      "roleSummary": "南亞科是DRAM製造商，但MOPS主要業務僅揭露電子零組件製造，未揭露HBM產品或與美光共同開發HBM3E。此角色應定位為DDR5與DRAM景氣的間接受惠觀察，不是已量產HBM供應商。2026年7月營收438.68億元，MoM+49.3%、YoY+719.6%，公司說明為市場需求成長，但不能全歸因HBM。",
       "products": [
-        "DDR5 DRAM(1a nm)(RDIMM/LRDIMM 4800-6400MT/s)",
-        "HBM3E(與美光Micron合作開發)(8H/12H堆疊)",
-        "利基型DRAM(消費/工規)(DDR3/DDR4)",
-        "DDR4 DRAM(成熟製程20A/1X nm)(伺服器/PC)",
-        "Mobile DRAM(LPDDR4X/LPDDR5)(手機/平板)"
+        "8Gb／16Gb DDR5 DRAM顆粒",
+        "DDR4伺服器與PC用DRAM顆粒",
+        "LPDDR4X／LPDDR5行動記憶體顆粒",
+        "消費／工控用利基型DRAM顆粒"
       ],
       "customers": [
-        "美光Micron(HBM3E合資開發/技術授權)",
-        "Intel(DIMM模組認證採購)(Xeon伺服器)",
-        "AMD(伺服器DRAM)(EPYC平台)",
-        "Kingston(模組代工)(全球最大記憶體模組廠)",
-        "威剛ADR4(3260)(模組採購)(消費/企業級)"
+        "金士頓Kingston（記憶體模組應用對象，非MOPS揭露客戶）",
+        "威剛(3260；DRAM模組應用對象，非MOPS揭露客戶)",
+        "創見(2451；工控記憶體應用對象，非MOPS揭露客戶)",
+        "宇瞻(8271；工控記憶體應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "SK Hynix",
@@ -32,8 +30,8 @@
         "美光"
       ],
       "risks": [
-        "HBM 技術與量產時程落後韓系競爭者",
-        "DRAM 景氣循環價格波動大"
+        "SK hynix、Samsung與Micron已主導HBM，南亞科若無明確產品揭露將持續缺席高毛利市場",
+        "DRAM價格循環與中國長鑫擴產可能使高成長快速反轉"
       ],
       "evidence": [
         {
@@ -49,36 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2408 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件製造、國際貿易及其他顧問服務。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收438.68億元，MoM+49.3%、YoY+719.6%，累計YoY+660.9%；備註為市場需求成長。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "medium",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "DDR5 DRAM 1a nm製程(6400MT/s RDIMM)",
-        "HBM3E TSV Through-Silicon Via(8H/12H堆疊)",
-        "利基型DRAM低功耗設計(1.1V DDR5/LPDDR5)"
+        "10奈米級DRAM cell微縮、良率與漏電控制",
+        "DDR5 On-die ECC及高速I/O訊號完整性驗證",
+        "DRAM晶圓測試、顆粒分級與模組平台相容性驗證"
       ],
       "swot": {
         "strengths": [
-          "6月營收29.39億YoY+621.3%、累計YoY+643.1%，DRAM景氣超級循環帶動爆發式成長",
-          "DDR5 DRAM（1a nm）6400MT/s RDIMM量產，HBM3E與美光Micron合作開發（8H/12H堆疊）",
-          "資本額345億，台塑集團資源支持，DRAM技術自主能力強"
+          "2026年7月營收438.68億元、YoY+719.6%，DRAM需求與價格回升帶來強勁營運槓桿",
+          "具DDR5、行動與利基DRAM產品組合，可承接AI伺服器周邊主記憶體需求"
         ],
         "weaknesses": [
-          "HBM3E為與美光合作開發，自主IP比重有限",
-          "DRAM產業景氣循環波動大，YoY+621%基期效應明顯",
-          "1a nm製程技術落後三星/海力士一代"
+          "MOPS未揭露HBM產品、TSV堆疊或HBM3E量產，不能列為直接HBM供應商",
+          "YoY+719.6%含低基期與價格循環，單月增幅不能直接代表HBM市占"
         ],
         "opportunities": [
-          "AI伺服器HBM需求爆發，HBM3E 8H/12H堆疊供不應求",
-          "DDR5滲透率持續提升，RDIMM/LRDIMM 4800-6400MT/s需求增長",
-          "與美光合作HBM技術授權可加速追趕三星/海力士"
+          "AI伺服器除HBM外也需要大量DDR5 RDIMM，主記憶體升級可形成實質需求",
+          "DDR5滲透提升與DRAM供需改善有利產品組合與報價"
         ],
         "threats": [
-          "SK Hynix/Samsung在HBM技術領先2代以上，市佔差距大",
-          "DRAM價格循環波動，高基期下未來YoY增幅可能收窄",
-          "中國長鑫存儲在DRAM逐步擴產，低階市場價格競爭"
+          "SK hynix、Samsung與Micron已主導HBM，南亞科若無明確產品揭露將持續缺席高毛利市場",
+          "DRAM價格循環與中國長鑫擴產可能使高成長快速反轉"
         ]
       }
     }

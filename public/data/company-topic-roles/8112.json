@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -152,19 +152,22 @@
       "topicId": "passive-components-mlcc",
       "topicName": "MLCC / 電容器",
       "topicType": "product",
-      "directness": "core",
+      "directness": "supplier",
       "supplyChainStage": "mlcc_distribution",
       "roleType": "mlcc_distributor",
-      "roleSummary": "至上為MLCC/電容器電子通路商。營收資料待補。",
+      "roleSummary": "至上MOPS只揭露電子零組件經銷，未列明MLCC代理品牌；因此此角色是電子通路商對MLCC／電容器的供應鏈角色，不是製造商。2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，公司說明主要來自記憶體價格上漲與伺服器、手機客戶拉貨，不能把爆發成長歸因MLCC。",
       "products": [
-        "MLCC積層陶瓷電容經銷(村田/三星電機/國巨)",
-        "鉭質電容經銷(KEMET/Vishay)",
-        "鋁質電解電容經銷(NCC/尼吉康)"
+        "車規／工規MLCC選型與經銷服務",
+        "聚合物鉭質電容選型與經銷服務",
+        "鋁電解電容選型與經銷服務",
+        "電源板用電容BOM替代料與VMI服務"
       ],
       "customers": [
-        "村田製作所(Murata)(MLCC代理)",
-        "三星電機(MLCC代理)",
-        "國巨(2327)(MLCC代理)"
+        "村田製作所Murata（MLCC供應鏈對象，非MOPS揭露代理品牌）",
+        "Samsung Electro-Mechanics（MLCC供應鏈對象，非MOPS揭露代理品牌）",
+        "國巨(2327；被動元件供應鏈對象，非MOPS揭露代理品牌)",
+        "KEMET／Yageo Group（鉭電容供應鏈對象，非MOPS揭露代理品牌）",
+        "Vishay（電容供應鏈對象，非MOPS揭露代理品牌）"
       ],
       "competitors": [
         "文曄(3034)",
@@ -172,8 +175,8 @@
         "品佳(8261)"
       ],
       "risks": [
-        "通路商毛利率極低(3-5%)",
-        "原廠直銷趨勢"
+        "原廠直銷、通路整併與價格透明化壓縮經銷毛利",
+        "記憶體價格反轉或手機拉貨降溫，會使目前極高營收增幅快速收斂"
       ],
       "legacy": {},
       "evidence": [
@@ -190,32 +193,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件經銷業務。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，累計YoY+180.4%；備註為記憶體價格上漲及伺服器、手機客戶拉貨。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "MLCC選型技術支援(替代料交叉比對)",
-        "庫存管理系統(JIT/VMI)"
+        "MLCC容值、耐壓、溫度係數與封裝交叉選型",
+        "車規AEC-Q200與工規壽命／降額設計審查",
+        "JIT／VMI庫存、批號追溯與替代料風險管理"
       ],
       "swot": {
         "strengths": [
-          "MLCC/電容器產品線齊全(代理國際一線大廠)",
-          "供應鏈管理能力(JIT/VMI)"
+          "2026年7月營收768.74億元、YoY+333.5%，通路規模與伺服器／手機拉貨動能強",
+          "具多品牌料件整合、替代料比對與VMI能力，可降低客戶缺料風險"
         ],
         "weaknesses": [
-          "通路商毛利率極低",
-          "原廠直銷趨勢",
-          "營收資料待補"
+          "MOPS未揭露MLCC代理品牌，不能把村田、三星電機或國巨寫成已確認代理關係",
+          "本月高成長主因記憶體價格及伺服器／手機拉貨，並非MLCC單一題材貢獻"
         ],
         "opportunities": [
-          "車用/AI伺服器MLCC需求增長",
-          "國產MLCC替代需求"
+          "AI伺服器與車用電子增加高容值、高耐壓及車規MLCC需求",
+          "供應吃緊時替代料認證與VMI服務可提高通路黏著度"
         ],
         "threats": [
-          "原廠縮減代理體系",
-          "線上元件採購平台競爭"
+          "原廠直銷、通路整併與價格透明化壓縮經銷毛利",
+          "記憶體價格反轉或手機拉貨降溫，會使目前極高營收增幅快速收斂"
         ]
       }
     },

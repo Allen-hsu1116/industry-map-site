@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3406",
   "companyName": "玉晶光",
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -89,18 +89,19 @@
       "directness": "core",
       "supplyChainStage": "optical_components",
       "roleType": "mobile_ar_lens",
-      "roleSummary": "玉晶光6月營收17.4億YoY+4.5%，累計118億YoY+17.2%。消費終端題材為Apple iPhone前鏡頭與Meta VR Pancake鏡頭，AR/VR市場為長期成長機會但短期需求波動大。",
+      "roleSummary": "玉晶光MOPS直接揭露各類光學鏡頭與鏡片研發製造，消費裝置光學角色成立；但MOPS未揭露Apple、Meta、Microsoft或車廠客戶。2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%，旺季拉貨明顯但年增仍溫和。",
       "products": [
-        "iPhone前鏡頭模組(7P/8P非球面光學)",
-        "AR/VR光學鏡頭(Pancake/Fresnel折疊光路)",
-        "平板/筆電Webcam鏡頭(全高清/自動對焦)",
-        "車載HUD鏡頭(抬頭顯示器光學)"
+        "7P／8P塑膠非球面智慧手機鏡頭",
+        "dToF／3D感測接收鏡頭",
+        "Pancake折疊光路XR鏡頭",
+        "筆電／平板自動對焦Webcam鏡頭",
+        "車載HUD與駕駛監控鏡頭"
       ],
       "customers": [
-        "Apple(iPhone/iPad前鏡頭)",
-        "Meta(Quest VR Pancake鏡頭)",
-        "Microsoft(HoloLens AR鏡頭)",
-        "車廠(HUD抬頭顯示器光學鏡頭)"
+        "Apple（手機／平板鏡頭應用對象，非MOPS揭露客戶）",
+        "Meta Platforms（Quest XR鏡頭應用對象，非MOPS揭露客戶）",
+        "Microsoft（AR裝置鏡頭應用對象，非MOPS揭露客戶）",
+        "Continental（車載HUD／感測應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "大立光(3008)(手機鏡頭龍頭)",
@@ -108,9 +109,8 @@
         "亞洲光學(301)(光學鏡頭)"
       ],
       "risks": [
-        "6月營收17.4億YoY+4.5%消費端需求溫和復甦",
-        "Apple iPhone出貨量年減影響前鏡頭订单",
-        "AR/VR鏡頭市場需求未如預期爆發(Meta Quest出貨低於預期)"
+        "大立光、舜宇光學與亞洲光學在手機及XR鏡頭競爭激烈",
+        "智慧手機與XR出貨不及預期會放大高階鏡頭產能利用率波動"
       ],
       "legacy": {},
       "evidence": [
@@ -127,36 +127,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各類光學鏡頭與鏡片研發製造；高功率LED照明。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "confidence": "medium",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "Pancake折疊光路VR鏡頭光學設計(超短焦/輕量化)",
-        "7P/8P塑膠非球面手機鏡頭WLG/Molding技術",
-        "dTOF 3D感測接收鏡頭光學設計(Face ID)"
+        "多片塑膠非球面成形、鏡組偏心與MTF公差控制",
+        "Pancake偏振折疊光路、鬼影抑制與輕量化",
+        "dToF窄頻濾光、接收視場與主動對焦模組整合"
       ],
       "swot": {
         "strengths": [
-          "Pancake折疊光路VR鏡頭光學設計(超短焦/輕量化)技術領先",
-          "7P/8P塑膠非球面手機鏡頭WLG/Molding技術能力",
-          "iPhone/iPad前鏡頭核心供應商地位"
+          "MOPS直接支持光學鏡頭與鏡片研發製造，消費光學角色明確",
+          "2026年7月營收MoM+39.3%、累計YoY+14.2%，旺季出貨動能回升"
         ],
         "weaknesses": [
-          "6月營收YoY僅+4.5%，手機/消費電子鏡頭成長放緩",
-          "Apple營收集中度極高",
-          "AR/VR鏡頭市場規模尚小，營收貢獻有限"
+          "7月YoY僅+1.6%，單月高MoM可能主要反映季節性而非結構性爆發",
+          "MOPS未揭露Apple、Meta或Microsoft客戶，客戶集中與訂單敘述仍須外部證據"
         ],
         "opportunities": [
-          "Meta Quest 3/Apple Vision Pro帶動Pancake VR鏡頭需求",
-          "平板/筆電Webcam鏡頭(全高清/自動對焦)升級",
-          "車載HUD鏡頭(抬頭顯示器光學)新應用"
+          "XR裝置薄型化推升Pancake鏡頭與精密組裝需求",
+          "手機3D感測、筆電視訊升級與車載鏡頭可分散單一終端風險"
         ],
         "threats": [
-          "大立光(3008)在手機鏡頭技術與規模領先",
-          "中國舜宇光學在AR/VR鏡頭低價競爭",
-          "手機/平板出貨量下滑影響鏡頭需求"
+          "大立光、舜宇光學與亞洲光學在手機及XR鏡頭競爭激烈",
+          "智慧手機與XR出貨不及預期會放大高階鏡頭產能利用率波動"
         ]
       }
     }

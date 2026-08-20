@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2474",
   "companyName": "可成",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "ai-server-mechanical",
       "topicName": "AI 伺服器機構件與滑軌",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "metal_casing",
       "roleType": "metal_casing_leader",
-      "roleSummary": "可成為金屬機殼大廠，6月營收804.7億YoY-55.1%，累計6455.1億YoY-31.6%。6月營收8.0億年減55.1%，因電子料件短缺影響筆電出貨。正轉型切入AI伺服器金屬機殼與散熱結構件。MOPS主要經營：機殼及內構件生產銷售開發。",
+      "roleSummary": "可成MOPS僅明確揭露機殼及內構件生產、銷售與開發，未揭露AI伺服器冷板、滑軌或Dell／HPE訂單。其金屬加工能力可延伸至伺服器機構件，但目前應列為潛在應用角色。2026年7月營收10.56億元，雖MoM+31.3%，仍YoY-34.3%、累計YoY-32.0%。",
       "products": [
-        "AI伺服器金屬機殼(鋁合金壓鑄一體成型)",
-        "伺服器散熱結構件(VC均熱板外殼/冷板框架)",
-        "液冷散熱金屬冷板(銅微通道CNC加工)",
-        "伺服器滑軌與機構件(精密沖壓)"
+        "鋁／鎂合金CNC精密機殼",
+        "鋁合金壓鑄內構件與支撐框架",
+        "NMT金屬塑膠一體成形外觀件",
+        "陽極處理／噴砂／雷雕金屬外觀件"
       ],
       "customers": [
-        "Dell(伺服器機殼壓鑄)",
-        "HPE(伺服器機構件)",
-        "Supermicro(散熱結構件)",
-        "廣達(2382)(AI伺服器機殼)"
+        "廣達(2382；伺服器機構件應用對象，非MOPS揭露客戶)",
+        "緯創(3231；伺服器機構件應用對象，非MOPS揭露客戶)",
+        "緯穎(6669；機櫃內構件應用對象，非MOPS揭露客戶)",
+        "Supermicro超微（伺服器機殼應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "鴻海/富士康",
@@ -30,8 +30,8 @@
         "Casetek"
       ],
       "risks": [
-        "手機機殼業務萎縮（年減48.30%）",
-        "AI伺服器機構件轉型尚在起步"
+        "勤誠、晟銘電與ODM自製機殼具有既有認證和客戶優勢",
+        "若轉型驗證進度不如預期，消費機殼衰退仍會主導營運"
       ],
       "evidence": [
         {
@@ -47,36 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2474 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：機殼及內構件相關產品生產、銷售與開發。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收10.56億元，MoM+31.3%、YoY-34.3%，累計YoY-32.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "medium",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "鋁合金壓鑄與CNC精密加工(一體成型機殼)",
-        "伺服器散熱結構件設計(VC均熱板外殼/冷板框架)",
-        "金屬機殼一體成形技術(Nano Molding Technology)"
+        "鋁／鎂合金壓鑄、CNC精加工與尺寸公差控制",
+        "NMT金屬塑膠接合、天線隔離與結構一體化",
+        "陽極氧化、噴砂與耐蝕表面處理"
       ],
       "swot": {
         "strengths": [
-          "鋁合金壓鑄一體成型技術領先，AI伺服器機殼具高功率散熱設計能力(TDP>1kW)",
-          "MOPS登記機殼及內構件生產銷售開發，從消費機殼切入AI伺服器結構件具遷移優勢",
-          "資本額53.88億、財務結構穩健，具備承接大型CSP客製機殼訂單的產能規模"
+          "MOPS直接支持機殼與內構件製造，金屬加工能力可遷移至伺服器機構件",
+          "2026年7月營收MoM+31.3%，短期出貨較6月回升"
         ],
         "weaknesses": [
-          "6月營收8.05億YoY-55.1%，累計64.55億YoY-31.6%，主因電子料件短缺影響筆電出貨，消費業務大幅萎縮",
-          "AI伺服器機殼占整體營收比重仍低，轉型速度不及可成過去蘋果機殼全盛期規模",
-          "Dell/HPE伺服器機殼訂單需與眾多金屬加工廠競爭，缺乏獨家代工綁定關係"
+          "7月營收YoY-34.3%、累計YoY-32.0%，本業規模仍明顯收縮",
+          "MOPS未揭露AI伺服器、液冷冷板或具名伺服器客戶，直接供應關係缺乏證據"
         ],
         "opportunities": [
-          "AI伺服器GPU功耗飆升帶動高階金屬散熱機殼需求，VC均熱板外殼/冷板框架具高ASP",
-          "CSP自訂AI伺服器規格趨勢下，客製化機殼開案量增加有利可成設計代工模式",
-          "液冷滲透率提升帶動冷板框架與密封機殼需求，可成壓鑄+CNC一體成型具加工優勢"
+          "高功率伺服器增加金屬框架、承重與EMI／散熱結構需求",
+          "既有壓鑄、CNC與表面處理產線可承接少量多樣機構件"
         ],
         "threats": [
-          "消費電子機殼業務受電子料件短缺與需求低迷雙重打擊，營收持續衰退風險高",
-          "中國金屬加工廠低價競爭AI伺服器機殼訂單，壓縮可成毛利空間",
-          "AI伺服器機殼客戶集中度高(Dell/HPE)，議價能力有限"
+          "勤誠、晟銘電與ODM自製機殼具有既有認證和客戶優勢",
+          "若轉型驗證進度不如預期，消費機殼衰退仍會主導營運"
         ]
       }
     }

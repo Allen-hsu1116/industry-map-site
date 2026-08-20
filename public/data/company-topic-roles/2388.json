@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2388",
   "companyName": "威盛",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "edge_ai_chipmaker",
-      "roleSummary": "威盛6月營收12.48億YoY+34.0%，累計56.07億YoY+34.2%。MOPS登記為積體電路/半導體記憶零件組設計製造測試銷售。以x86邊緣AI運算晶片為主，非資料中心AI伺服器供應鏈核心。邊緣AI推論晶片需求帶動成長，但規模與資料中心AI晶片差距大。",
+      "roleSummary": "威盛MOPS揭露積體電路、記憶體零件組及軟體設計銷售，並未揭露資料中心AI伺服器產品。此角色僅能視為邊緣運算晶片與嵌入式平台對AI運算生態的間接曝險。2026年7月營收11.36億元，MoM-9.0%、YoY+43.3%，成長是公司整體數據，不能直接歸因AI伺服器。",
       "products": [
-        "x86邊緣AI處理器(EDGE AI SoC)(整合NPU/CV加速器)",
-        "車用晶片(車載資訊系統IVI/數位儀表板)",
-        "AI推論加速器(搭配Cortex-M即時推論)",
-        "嵌入式x86平台(工業電腦用)(VIA Eden/QuadCore)",
-        "智慧城市AI邊緣運算盒(VIA Smart Edge)"
+        "x86嵌入式處理器與主機板平台",
+        "ARM Android／Linux系統模組",
+        "邊緣AI影像辨識閘道器",
+        "車載資訊娛樂與數位座艙參考平台"
       ],
       "customers": [
-        "大眾電腦(工業電腦)(嵌入式x86平台)",
-        "研華(2395)(工業電腦用VIA SoC)",
-        "新漢(8234)(邊緣AI運算盒)",
-        "亞太智慧城市政府專案(交通/安防邊緣AI)",
-        "車廠Tier 1(車載IVI系統開發)"
+        "研華(2395；嵌入式平台應用對象，非MOPS揭露客戶)",
+        "新漢(8234；邊緣運算應用對象，非MOPS揭露客戶)",
+        "友通(2397；工業主機板應用對象，非MOPS揭露客戶)",
+        "凌華(6166；邊緣AI平台對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "Intel(x86邊緣)",
@@ -32,8 +30,8 @@
         "NVIDIA(Jetson)"
       ],
       "risks": [
-        "營收基期極低(月營收僅11億)，邊緣AI市場仍小",
-        "x86邊緣AI面臨NVIDIA Jetson ARM生態強勢競爭"
+        "NVIDIA Jetson、Intel Edge與Qualcomm平台在工具鏈及生態上更完整",
+        "若市場只追逐GPU伺服器，威盛的邊緣AI曝險容易被題材過度解讀"
       ],
       "legacy": {},
       "evidence": [
@@ -50,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路與記憶體零件組設計製造測試銷售；軟體設計及資料處理。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收11.36億元，MoM-9.0%、YoY+43.3%，累計YoY+35.7%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "low",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "x86邊緣AI SoC(EDGE AI Processor)NPU整合",
-        "車載資訊系統(IVI)車規級SoC設計(AEC-Q100)",
-        "邊緣AI推理處理器CV/DLA加速器架構(INT8)"
+        "x86／ARM異質運算、Linux驅動與長週期BSP維護",
+        "INT8邊緣視覺推論、影像前處理與低功耗熱設計",
+        "車載乙太網、CAN／LIN與多媒體顯示介面整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收1.25億YoY+34.0%，累計YoY+34.2%，連續高成長反映Edge AI需求增溫",
-          "x86邊緣AI SoC整合NPU/CV加速器，在嵌入式x86平台具差異化",
-          "車載資訊系統IVI車規級SoC（AEC-Q100）打入車廠供應鏈"
+          "2026年7月營收YoY+43.3%、累計YoY+35.7%，整體營運動能改善",
+          "具處理器、嵌入式主機板與軟體整合能力，可服務邊緣AI場景"
         ],
         "weaknesses": [
-          "營收規模僅1.25億/月，與聯發科、瑞昱等IC設計公司差距大",
-          "x86 SoC市場受Intel/AMD主導，威盛利基市場規模有限",
-          "資本額55.6億但研發投入規模不及大型IC設計公司"
+          "MOPS未揭露AI伺服器、GPU加速卡或資料中心整機，題材直接性低",
+          "7月營收MoM-9.0%，且公司規模與主流AI晶片／伺服器供應商差距大"
         ],
         "opportunities": [
-          "Edge AI推論需求在工業4.0/智慧城市應用快速成長",
-          "車用IVI/數位儀表板SoC受惠車聯網趨勢",
-          "NPU整合SoC在端側AI推論市場具利基優勢"
+          "工業視覺與智慧城市需要在現場完成低延遲推論，帶動邊緣平台升級",
+          "既有x86／ARM軟硬整合可切入AI閘道器而非硬擠資料中心伺服器"
         ],
         "threats": [
-          "Intel/AMD在x86 SoC市場具絕對主導地位",
-          "聯發科/瑞昱在Edge AI晶片同樣佈局，競爭壓力大",
-          "ARM架構在Edge AI市場逐步取代x86"
+          "NVIDIA Jetson、Intel Edge與Qualcomm平台在工具鏈及生態上更完整",
+          "若市場只追逐GPU伺服器，威盛的邊緣AI曝險容易被題材過度解讀"
         ]
       }
     }

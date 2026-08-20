@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3035",
   "companyName": "智原",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -11,19 +11,19 @@
       "directness": "core",
       "supplyChainStage": "asic_design_ip",
       "roleType": "asic_design_service_ip_provider",
-      "roleSummary": "智原是台灣最大ASIC設計服務公司，5月營收0.93億YoY-45.1%（因量產減少），但ASIC設計接單動能持續。與聯電緊密合作N5/N7製程，為AI/HPC客製晶片提供設計平台。",
+      "roleSummary": "智原MOPS直接揭露ASIC設計、矽智財與ASIC EDA工具，IC設計服務角色明確；但未揭露Google、Amazon、Intel或STMicro為客戶，也不能由MOPS證明特定N5／N7案。2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，但累計YoY-46.1%，專案與量產收入波動仍大。",
       "products": [
-        "ASIC設計服務（N5/N7/N12製程）",
-        "矽智財IP（CPU/DSP/USB/PCIe/DDR PHY）",
-        "FPGA-to-ASIC轉換服務",
-        "先進封裝整合設計（2.5D/CoWoS）"
+        "ASIC NRE前端／後端設計服務",
+        "USB／PCIe／DDR／SerDes矽智財IP",
+        "SoC整合與量產Turnkey服務",
+        "ASIC設計自動化與驗證工具"
       ],
       "customers": [
-        "聯電(2303)(ASIC量產代工合作夥伴)",
-        "Intel(先進製程ASIC設計服務)",
-        "Google(客製TPU ASIC設計服務)",
-        "Amazon(AWS Graviton ASIC設計服務)",
-        "意法半導體STMicroelectronics(SiC MOSFET封裝測試)"
+        "聯電(2303；晶圓代工平台對象，非MOPS揭露客戶)",
+        "Arm（CPU IP生態對象，非MOPS揭露客戶）",
+        "Synopsys（EDA／IP平台對象，非MOPS揭露客戶）",
+        "Cadence（EDA／IP平台對象，非MOPS揭露客戶）",
+        "台積電(2330；先進製程平台對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "創意(3443)",
@@ -31,9 +31,8 @@
         "Alchip"
       ],
       "risks": [
-        "6月累計營收YoY-51%(因量產減少)",
-        "ASIC設計服務受半導體景氣循環影響大",
-        "IP授權面臨ARM/Synopsys競爭"
+        "世芯、創意與國際ASIC服務商競逐先進製程大案",
+        "Synopsys、Cadence與Arm掌握關鍵EDA／IP，授權成本與平台依賴度高"
       ],
       "evidence": [
         {
@@ -49,37 +48,46 @@
           "title": "Silicon IP",
           "url": "https://www.faraday-tech.com/en/entry/SiliconIP",
           "claim": "Silicon IP supports 智原 role as asic_design_service_ip_provider in IC 設計與矽智財 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：ASIC設計、矽智財與系統平台、ASIC EDA工具。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，累計YoY-46.1%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "ASIC設計服務(N5/N7/N12/N16製程流程)",
-        "矽智財IP組合(CPU/DSP/USB/PCIe/DDR PHY/AMBA)",
-        "FPGA-to-ASIC NCR轉換技術",
-        "2.5D/CoWoS先進封裝整合設計"
+        "RTL-to-GDSII實作、時序收斂與低功耗SoC整合",
+        "PCIe／USB／DDR PHY介面IP及矽驗證",
+        "DFT、scan／BIST、量產測試與ASIC Turnkey管理"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記ASIC設計/矽智財IP/EDA Tools三合一平台，N5/N7/N12製程ASIC Turnkey服務能力",
-          "CPU/DSP/USB/PCIe/DDR PHY IP組合完整，6月營收14.17億YoY+26.6%顯示ASIC接單動能回升",
-          "聯電(2303)為ASIC量產代工合作夥伴，從設計到量產一條龍服務具差異化優勢"
+          "MOPS直接支持ASIC、矽智財與EDA工具三項核心能力",
+          "2026年7月營收YoY+10.0%，單月仍有設計或量產收入支撐"
         ],
         "weaknesses": [
-          "累計營收59.02億YoY-50.6%，主因量產減少，ASIC Turnkey服務收入波動性大",
-          "ASIC設計規模與IP庫深度落後ARM/Imagination等IP大廠，高階IP授權收入有限",
-          "依賴聯電製程平台，先進製程(N3/N2)需透過台積電合作，製程選擇彈性受限"
+          "7月營收MoM-25.0%、累計YoY-46.1%，專案里程碑與量產案波動明顯",
+          "MOPS未揭露Google、Amazon、Intel等客戶，原具名客戶敘述過度延伸"
         ],
         "opportunities": [
-          "AI ASIC需求爆發帶動N5/N7 ASIC設計服務接單量增長，智原Turnkey模式可切入AI新創供應鏈",
-          "RISC-V生態系擴展帶動客製化SoC需求，智原CPU/DSP IP組合可支持RISC-V ASIC設計",
-          "6月營收MoM+52.4%顯示ASIC接單回升，量產收入有望逐季恢復"
+          "AI、網通與邊緣運算客製SoC增加ASIC NRE與介面IP需求",
+          "chiplet與先進封裝使Die-to-Die、SerDes及系統整合服務更重要"
         ],
         "threats": [
-          "世芯-KY(3661)在AI ASIC Turnkey服務競爭激烈，7nm/5nm/3nm設計能力領先",
-          "ASIC設計服務收入受專案時程影響大，單月MoM+52%但累計YoY-50.6%反映波動風險",
-          "EDA工具受Synopsys/Cadence壟斷，智原自研EDA工具市場接受度有限"
+          "世芯、創意與國際ASIC服務商競逐先進製程大案",
+          "Synopsys、Cadence與Arm掌握關鍵EDA／IP，授權成本與平台依賴度高"
         ]
       }
     }

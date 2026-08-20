@@ -2,37 +2,35 @@
   "schemaVersion": 1,
   "companyCode": "5371",
   "companyName": "中光電",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "aerospace_components",
       "roleType": "military_electro_optical_payload",
-      "roleSummary": "中光電為上櫃投影機/背光模組龍頭，MOPS登記為液晶顯示器/電視、投射系統及模組與背光裝置、多媒體簡報系統設備研發製造銷售。光機整合能力強，跨足軍用無人機光電酬載系統(IR/EO Pod)，為國防無人機光電載荷關鍵供應商。",
+      "roleSummary": "中光電MOPS揭露液晶顯示器、投射系統、背光裝置與多媒體簡報設備，未揭露IR／EO軍用酬載、熱像儀或國防客戶。此角色只能定位為光機與投影技術可能延伸至訓練／指揮顯示的間接角色。FinMind顯示2026年7月營收35.35億元，較6月減少2.4%，不能歸因軍工。",
       "products": [
-        "軍用無人機光電酬載系統(IR/EO Pod)(日夜間偵察)",
-        "高亮度投影機(5000-10000流明)(DLP/LCoS)",
-        "軍規熱影像儀與夜視系統(非冷卻FPA 640x512)",
-        "液晶顯示器與數位看板(商用/工控用)",
-        "背光模組(電視/監視器/車用)(Mini LED分區調光)"
+        "DLP雷射投影機與光機模組",
+        "LCD顯示器與商用數位看板",
+        "電視／監視器背光模組",
+        "多媒體簡報與互動投影系統"
       ],
       "customers": [
-        "中科院(軍用光電系統標案)(無人機酬載開發)",
-        "國防部(無人機光電酬載)(紅雀/騰雲無人機)",
-        "Barco(專業投影機代工)(DJ/醫療用)",
-        "Sony(背光模組)(電視面板供應)",
-        "Sharp(背光模組)(龜山面板廠)"
+        "Barco（專業投影平台對象，非MOPS揭露客戶）",
+        "BenQ明基（投影與顯示生態對象，非MOPS揭露客戶）",
+        "ViewSonic優派（商用顯示應用對象，非MOPS揭露客戶）",
+        "Epson（投影系統生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "群創（3481）",
         "友達（2409）"
       ],
       "risks": [
-        "光電系統國際大廠（FLIR/Raytheon）競爭",
-        "消費性投影機需求下滑"
+        "軍規夜視與熱像需要不同感測器、可靠度與資安認證，不能靠投影技術直接跨越",
+        "Barco、Christie與軍規顯示整合商在專業市場具既有認證與通路"
       ],
       "evidence": [
         {
@@ -48,36 +46,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 5371 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：液晶顯示器／電視、投射系統、背光裝置及多媒體簡報設備。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE查無；FinMind：2026年7月營收35.35億元，較6月減少2.4%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "low",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "紅外線/光電感測器整合(IR/EO Pod)( gimbal穩定<5μrad)",
-        "DLP/LCoS高亮度投影光機設計(10000流明)",
-        "軍規熱影像儀非冷卻焦平面陣列(Uncooled FPA 640x512)"
+        "DLP光機、雷射螢光輪與色彩校正",
+        "背光導光、分區調光與亮度均勻性控制",
+        "投影幾何校正、影像拼接與互動感測整合"
       ],
       "swot": {
         "strengths": [
-          "7月營收35.35億規模大，軍用無人機光電酬載(IR/EO Pod)為高附加價值產品",
-          "MOPS登記為液晶顯示器/投射系統/背光裝置研發製造，光電技術基礎深厚",
-          "高亮度投影機(5000-10000流明 DLP/LCoS)可轉用軍用場景投影"
+          "MOPS直接支持投影、顯示、背光與軟體整合，具成熟光機量產基礎",
+          "2026年7月營收35.35億元，規模足以支撐專業顯示與投影研發"
         ],
         "weaknesses": [
-          "7月營收MoM-2.4%，顯示器本業需求疲軟拖累",
-          "軍用光電酬載為間接角色，中光電核心為顯示/投影",
-          "軍規認證與國防標案週期長"
+          "MOPS完全未揭露IR／EO Pod、熱影像或軍方客戶，原核心軍工定位證據不足",
+          "FinMind顯示7月營收MoM-2.4%，且公司整體營收無法分辨軍工貢獻"
         ],
         "opportunities": [
-          "中科院無人機(紅雀/騰雲)光電酬載系統標案",
-          "軍用夜視/熱成像系統國機國造需求",
-          "背光模組轉型至Mini-LED/Micro-LED顯示"
+          "模擬訓練、指揮中心與沉浸式簡報需要高亮度投影及多畫面拼接",
+          "既有光機與軟體能力可透過具軍規認證的系統商進入國防顯示"
         ],
         "threats": [
-          "國外軍用光電大廠(Raytheon/Lockheed)技術領先",
-          "顯示器本業受到中國面板廠(京東方)低价競爭",
-          "無人機光電酬載市場競爭者多"
+          "軍規夜視與熱像需要不同感測器、可靠度與資安認證，不能靠投影技術直接跨越",
+          "Barco、Christie與軍規顯示整合商在專業市場具既有認證與通路"
         ]
       }
     }

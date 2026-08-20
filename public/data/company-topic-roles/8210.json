@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
   "companyCode": "8210",
-  "companyName": "8210",
-  "updatedAt": "2026-08-14",
+  "companyName": "勤誠",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "勤誠6月營收32.38億年增98%、累計年增55.6%，AI伺服器機殼需求爆發。從傳統伺服器機殼擴展至液冷機櫃，受惠NVL72/GB200整機櫃出貨趨勢，但機殼屬低毛利產品。",
+      "directness": "indirect",
+      "roleSummary": "勤誠MOPS揭露電腦周邊設備與系統研製、製造及買賣，但未明確揭露冷板、CDU或NVL72液冷機櫃。其可驗證核心是伺服器機殼與機構整合，液冷只是機箱配套的潛在延伸。2026年7月營收24.62億元，MoM-23.9%、YoY+41.5%，累計YoY+53.4%，公司說明為終端產品大量出貨。",
       "products": [
-        "伺服器機殼(1U/2U/4U rack mount)",
-        "AI伺服器液冷機櫃(NVL72/GB200相容)",
-        "GPU伺服器高功率機殼(4U/8U)",
-        "邊緣運算 Compact Edge 機殼",
-        "資料中心機架空調整合機殼"
+        "1U／2U／4U機架式伺服器機殼",
+        "4U／8U GPU伺服器機殼",
+        "OCP相容伺服器托盤與機架機構",
+        "高密度儲存伺服器機殼",
+        "免工具抽換滑軌、風扇牆與線纜管理組件"
       ],
       "customers": [
-        "Supermicro(NVL72整機櫃機殼供應)",
-        "Dell(AI伺服器機殼供應)",
-        "Gigabyte(技嘉)(AI伺服器機殼供應)",
-        "緯穎(6669)(AI伺服器機殼供應)",
-        "鴻海(2317)(伺服器機殼代工)"
+        "Supermicro超微（伺服器機殼應用對象，非MOPS揭露客戶）",
+        "Dell Technologies（企業伺服器應用對象，非MOPS揭露客戶）",
+        "技嘉(2376；GPU伺服器應用對象，非MOPS揭露客戶)",
+        "緯穎(6669；雲端伺服器應用對象，非MOPS揭露客戶)",
+        "緯創(3231；伺服器ODM應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "富奇想(6776)(伺服器機殼)",
@@ -31,9 +31,8 @@
         "緯穎(6669)(AI伺服器ODM)"
       ],
       "risks": [
-        "6月營收YoY+98%但基期低，機殼毛利低(10-15%)，高成長未必反映獲利同步增長",
-        "AI伺服器機殼競爭者多，富奇想/迎廣等亦積極搶單，價格壓力大",
-        "液冷機櫃為新產品線，量產良率與散熱效能驗證需時間"
+        "晟銘電、迎廣、富士康與ODM自製機殼形成價格及認證競爭",
+        "若NVIDIA／CSP機櫃規格改版，既有模具與機構設計可能需快速重投資"
       ],
       "evidence": [
         {
@@ -42,38 +41,48 @@
           "title": "8210公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 8210 role in AI 伺服器液冷散熱 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電腦應用軟體及電腦周邊設備／系統研製、製造、加工與買賣。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收24.62億元，MoM-23.9%、YoY+41.5%，累計YoY+53.4%；備註為終端產品大量出貨。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "NVL72整機櫃液冷散熱通道設計",
-        "GPU伺服器4U/8U高功率(3kW+)機殼結構與熱流分析",
-        "19吋標準機架快速拆裝免工具機構設計"
+        "19吋機架鈑金、承重、振動與免工具維修設計",
+        "高功率GPU風道、風扇牆、壓降與熱點分析",
+        "OCP托盤、線纜管理及冷板管路預留空間整合"
       ],
       "supplyChainStage": "mechanical",
       "roleType": "liquid_cooling_server_chassis_supplier",
       "swot": {
         "strengths": [
-          "FinMind 6月16.35億，NVL72整機櫃液冷散熱通道設計能力",
-          "GPU伺服器4U/8U高功率(3kW+)機殼結構與熱流分析",
-          "Supermicro/Dell/技嘉/緯穎/鴻海一線客戶"
+          "2026年7月營收24.62億元、YoY+41.5%，累計YoY+53.4%，伺服器機構出貨動能強",
+          "機殼、托盤、風扇牆與線纜管理可隨GPU伺服器密度升級提高設計價值"
         ],
         "weaknesses": [
-          "伺服器機殼為傳統金屬加工，技術壁壘有限",
-          "AI伺服器機殼佔營收比重仍低",
-          "機殼代工毛利率受客戶議價壓力"
+          "7月營收MoM-23.9%，平台切換或拉貨節奏仍造成大幅波動",
+          "MOPS未揭露冷板、CDU、快接頭或液冷營收，不能列為液冷核心供應商"
         ],
         "opportunities": [
-          "NVL72/GB200整機櫃AI伺服器機殼需求爆發",
-          "液冷伺服器機櫃散熱通道設計新應用",
-          "邊緣AI伺服器(Compact Edge)機殼新市場"
+          "液冷伺服器仍需要管路預留、承重、維修動線與防漏隔離的專用機殼",
+          "OCP與整櫃式AI系統增加高密度托盤、風扇牆及線纜管理需求"
         ],
         "threats": [
-          "鴻海(2317)伺服器機殼垂直整合競爭",
-          "中國機殼廠低價競爭",
-          "AI伺服器ODM自建機殼產線"
+          "晟銘電、迎廣、富士康與ODM自製機殼形成價格及認證競爭",
+          "若NVIDIA／CSP機櫃規格改版，既有模具與機構設計可能需快速重投資"
         ]
       }
     }

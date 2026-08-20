@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6415",
   "companyName": "矽力*-KY",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-20T19:05:30Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -92,23 +92,21 @@
       "topicId": "leo-satellite-communications",
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
-      "directness": "supplier",
+      "directness": "indirect",
       "supplyChainStage": "power_ic",
       "roleType": "satellite_power_ic_candidate",
-      "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心能力延伸至太空級抗輻射應用，LEO衛星電源IC為新興成長領域。",
+      "roleSummary": "矽力*-KY的MOPS主要業務只有電源管理IC研發設計與銷售，未揭露抗輻射IC、衛星認證或SpaceX／OneWeb客戶。低軌衛星角色只能視為一般PMIC技術的潛在延伸，不能當成既成太空供應鏈。2026年7月營收23.57億元，MoM+13.1%、YoY+58.5%，公司說明來自終端需求與產品布局，但未歸因衛星。",
       "products": [
-        "衛星電源管理IC(抗輻射級Rad-Hardened)",
-        "太空級DC/DC降壓轉換器(抗SEL/SEU設計)",
-        "太陽能充電管理IC(MPPT最大功率追蹤)",
-        "衛星負載電源模組(多輸出電壓軌)",
-        "抗輻射LDO穩壓器(低壓差線性穩壓)"
+        "同步降壓／升降壓DC-DC電源管理IC",
+        "低壓差LDO穩壓器",
+        "電池充電與保護管理IC",
+        "LED背光與照明驅動IC"
       ],
       "customers": [
-        "SpaceX(Starlink衛星電源IC)",
-        "OneWeb(LEO衛星電源管理IC)",
-        "Telesat(LEO衛星電源方案)",
-        "國家太空中心TASA(國產衛星電源IC)",
-        "Maxar(衛星製造商電源IC)"
+        "SpaceX（衛星電源應用對象，非MOPS揭露客戶）",
+        "Eutelsat OneWeb（衛星電源應用對象，非MOPS揭露客戶）",
+        "Thales Alenia Space（太空電源驗證對象，非MOPS揭露客戶）",
+        "Airbus Defence and Space（衛星平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "TI",
@@ -116,8 +114,8 @@
         "Infineon"
       ],
       "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "TI、ADI與Infineon已有太空級產品與認證資料庫，導入門檻高",
+        "太空產品驗證週期長、量小且失效成本高，未必符合消費／工業PMIC規模經濟"
       ],
       "legacy": {
         "topicSlug": "leo-satellite",
@@ -138,36 +136,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6415 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v29",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電源管理IC研發設計及銷售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v29",
+          "publisher": "TWSE OpenAPI / FinMind",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收23.57億元，MoM+13.1%、YoY+58.5%，累計YoY+30.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "confidence": "low",
+      "lastVerified": "2026-08-20",
       "status": "verified",
       "techFocus": [
-        "太空級抗輻射(Radiation-Hardened)BCD製程設計",
-        "衛星電源管理IC抗SEL/SEU設計(Latch-up防護)",
-        "高效率太陽能MPPT充電控制技術(>98%轉換效率)"
+        "高壓BCD製程、同步整流與高效率電源轉換",
+        "UVLO／OVP／OCP與過溫保護整合",
+        "多相降壓、負載瞬態響應與低靜態電流設計"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月15.12億，電源管理IC設計能力可延伸至衛星電源IC",
-          "太空級抗輻射(Radiation-Hardened)BCD製程設計技術",
-          "太陽能MPPT充電控制技術(>98%轉換效率)"
+          "2026年7月營收23.57億元、YoY+58.5%，PMIC本業需求與產品組合擴張明顯",
+          "MOPS直接支持電源管理IC研發銷售，具高壓BCD與電源保護設計基礎"
         ],
         "weaknesses": [
-          "衛星電源IC為新興應用，營收貢獻尚小",
-          "太空級抗輻射IC認證週期長且成本高",
-          "缺乏衛星產業客戶基礎(SpaceX/OneWeb)"
+          "MOPS未揭露抗輻射、SEL／SEU設計、太空認證或任何衛星客戶",
+          "公司整體營收成長不能歸因低軌衛星，題材目前缺乏可量化收入"
         ],
         "opportunities": [
-          "低軌衛星(Starlink/OneWeb)電源管理IC需求",
-          "太空級DC/DC降壓轉換器(抗SEL/SEU)新市場",
-          "衛星太陽能MPPT充電管理IC需求"
+          "若完成輻射耐受與長壽命驗證，一般PMIC能力可延伸衛星次系統",
+          "低軌衛星數量增加，電源軌、充電與負載點穩壓器需求同步擴大"
         ],
         "threats": [
-          "TI/ADI太空級IC已有成熟產品線",
-          "衛星產業建置進度不確定性",
-          "抗輻射IC設計門檻高且市場小"
+          "TI、ADI與Infineon已有太空級產品與認證資料庫，導入門檻高",
+          "太空產品驗證週期長、量小且失效成本高，未必符合消費／工業PMIC規模經濟"
         ]
       }
     }
