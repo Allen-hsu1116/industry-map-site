@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6261",
   "name": "久元",
-  "generatedAt": "2026-08-19T12:33:25.610Z",
+  "generatedAt": "2026-08-20T12:34:41.682Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-19",
-  "chipDataDate": "2026-08-19",
+  "marketDataDate": "2026-08-20",
+  "chipDataDate": "2026-08-20",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,32 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -30,
-    "summary": "久元 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "久元 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 28,
-    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +276張；近 20 日法人偏買，合計 +1.7千張。",
+    "score": 33,
+    "summary": "久元 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +214張；近 20 日法人偏買，合計 +1.7千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +276張",
+      "三大法人近 5 日合計買超 +214張",
       "近 20 日法人偏買，合計 +1.7千張",
-      "外資近 5 日買超 +329張"
+      "外資近 5 日買超 +267張",
+      "融資近 5 日下降 5.2%，籌碼壓力下降"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-19",
-      "融券近 5 日增加 150.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-20",
+      "融券近 5 日增加 100.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -134,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-19"
+      "lastVerified": "2026-08-20"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -184,7 +186,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供BMS電池管理IC測試設備與探針卡，間接受惠儲能電池產業擴張，但佔營收比重極低。"
+        "roleSummary": "久元MOPS揭露半導體/光電切磨測與IC/CIS/CCM測試設備，未揭露BMS或功率元件專用設備；儲能題材僅是既有IC測試平台可能承接BMS、隔離器與閘極驅動IC的應用延伸。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -194,7 +196,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供衛星通訊射頻IC測試與光學通訊模組測試設備，間接受惠低軌衛星產業，但佔營收比重極低。"
+        "roleSummary": "久元MOPS揭露IC/CIS/CCM測試設備與半導體光電切磨測，未揭露mmWave、光通訊或衛星專用測試系統；低軌衛星角色只限於射頻/影像IC後段測試的潛在應用。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。"
       },
       {
         "topicId": "passive-components-mlcc",
@@ -224,7 +226,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "久元6月營收3.90億MoM+11.8%。提供太陽能電池IV曲線測試與光伏模組EL檢測設備，間接受惠太陽能產業，但佔營收比重極低。"
+        "roleSummary": "久元MOPS只揭露半導體/光電加工及IC/CIS/CCM測試設備，未揭露太陽能電池IV、模組EL或逆變器功率元件專用設備；再生能源角色應限縮為光學檢測與IC測試能力的潛在延伸。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。"
       },
       {
         "topicId": "wafer-foundry",
@@ -391,14 +393,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 61,
+    "totalScore": 69,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 14.8 倍，估值尚可對照成長",
-        "殖利率 3.3%，提供部分下檔支撐"
+        "本益比 15.2 倍，估值尚可對照成長",
+        "殖利率 3.2%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -413,13 +415,13 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：77.70",
-      "波段多空分水嶺看 MA20：77.79",
-      "追蹤法人是否延續 買超：最近 +118張",
-      "本益比 14.8 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：77.30",
+      "波段多空分水嶺看 MA20：77.43",
+      "追蹤法人是否延續 買超：最近 +56張",
+      "本益比 15.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 86.70 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 85.80 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 70.10：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3296",
   "name": "勝德",
-  "generatedAt": "2026-08-19T12:33:25.355Z",
+  "generatedAt": "2026-08-20T12:34:41.409Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,34 +49,34 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
     "roleDetail": {
       "topicName": "儲能、電芯與電池材料",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "勝德7月營收1.72億，MoM+4.3%。MOPS登記為有線無線通信/電子零組件製造。為電池模組與電源管理設備製造商。",
+      "roleLabel": "間接受惠",
+      "roleSummary": "勝德MOPS只揭露通信、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS或PCS；因此在儲能題材應定位為智慧配電與保護元件的潛在周邊角色，而非電池模組廠。2026年7月營收1.72億元、YoY+42.9%，但不能歸因儲能。",
       "supplyChainStage": "battery_pack",
       "roleType": "battery_pack_assembler",
-      "directness": "core",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "鋰電池模組組裝(18650/21700/軟包)",
+        "name": "機架式智慧PDU（分路電流量測與遠端開關）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "UPS不斷電系統(線性互動/在線雙轉換)",
+        "name": "MOV突波保護電源排插（過壓/雷擊保護）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "太陽能變流器(微型/串列型)",
+        "name": "過流保護斷路與熱熔斷電源模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -87,30 +87,32 @@
       "risks": []
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 low +3",
       "題材 儲能、電芯與電池材料（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 53，上限 40）"
     ],
-    "summary": "勝德 在「儲能、電芯與電池材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "勝德 在「儲能、電芯與電池材料」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：儲能、電芯與電池材料 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 儲能、電芯與電池材料（theme/active） +18）",
-      "相關題材：太陽能與離岸風電 · 核心產品/平台",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：儲能、電芯與電池材料 · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 儲能、電芯與電池材料（theme/active） +18）",
       "相關題材：醫療器材與體外診斷 · 間接受惠",
+      "相關題材：太陽能與離岸風電 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [],
+    "risks": [
+      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。"
+    ],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
       "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
-      "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 醫療器材與體外診斷：月營收或訂單能見度改善",
+      "追蹤 醫療器材與體外診斷：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "知識庫最後驗證：2026-05-26（normal）"
     ]
   },
@@ -152,20 +154,10 @@
         "topicName": "儲能、電芯與電池材料",
         "canonicalTopicId": "energy-storage-battery",
         "canonicalTopicName": "儲能、電芯與電池材料",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "勝德7月營收1.72億，MoM+4.3%。MOPS登記為有線無線通信/電子零組件製造。為電池模組與電源管理設備製造商。"
-      },
-      {
-        "topicId": "renewable-energy",
-        "topicName": "太陽能與離岸風電",
-        "canonicalTopicId": "renewable-energy",
-        "canonicalTopicName": "太陽能與離岸風電",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "勝德提供太陽能逆變器。7月營收1.72億，MoM+4.3%。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "勝德MOPS只揭露通信、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS或PCS；因此在儲能題材應定位為智慧配電與保護元件的潛在周邊角色，而非電池模組廠。2026年7月營收1.72億元、YoY+42.9%，但不能歸因儲能。"
       },
       {
         "topicId": "medical-devices",
@@ -176,6 +168,16 @@
         "directnessLabel": "間接受惠",
         "confidence": "medium",
         "roleSummary": "勝德MOPS未明列醫療產品；醫療角色僅能定位於電源分配、突波保護與備援電力的潛在延伸。 2026年7月營收1.72億元、YoY+42.9%、累計YoY+5.8%，但MOPS未明列醫療產品。"
+      },
+      {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "勝德MOPS未揭露太陽能逆變器或光伏產品；再生能源題材僅能視為智慧配電、突波保護及監控通訊器材的潛在周邊應用。2026年7月營收1.72億元、YoY+42.9%，成長來源未證實來自太陽能。"
       }
     ],
     "swot": [],
@@ -192,9 +194,9 @@
         ]
       },
       {
-        "id": "renewable-energy",
-        "name": "太陽能與離岸風電",
-        "type": "theme",
+        "id": "medical-devices",
+        "name": "醫療器材與體外診斷",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -203,9 +205,9 @@
         ]
       },
       {
-        "id": "medical-devices",
-        "name": "醫療器材與體外診斷",
-        "type": "end_market",
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
+        "type": "theme",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -228,7 +230,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 16,
+    "totalScore": 0,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -237,21 +239,24 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
-      "rationale": [
-        "題材角色已 evidence-backed，可納入題材股策略"
-      ]
+      "classification": "觀察股",
+      "rationale": []
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 86 天未更新"
+        "message": "股價資料已 87 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 86 天未更新"
+        "message": "籌碼資料已 87 天未更新"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

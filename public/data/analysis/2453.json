@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2453",
   "name": "凌群",
-  "generatedAt": "2026-08-19T12:33:25.165Z",
+  "generatedAt": "2026-08-20T12:34:41.209Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-19",
-  "chipDataDate": "2026-08-19",
+  "marketDataDate": "2026-08-20",
+  "chipDataDate": "2026-08-20",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -29,19 +29,18 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -8,
-    "summary": "凌群 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +32張；三大法人近 5 日合計賣超 -289張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 28,
+    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +10張；近 20 日法人偏買，合計 +113張。",
     "signals": [
-      "近 20 日法人偏買，合計 +32張"
+      "三大法人近 5 日合計買超 +10張",
+      "近 20 日法人偏買，合計 +113張",
+      "外資近 5 日買超 +13張"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -289張",
-      "外資近 5 日賣超 -287張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-19"
+      "最近法人資料日：2026-08-20"
     ]
   },
   "industry": {
@@ -133,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-19"
+      "lastVerified": "2026-08-20"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -231,20 +230,21 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 61,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
         "本益比 16.3 倍，估值尚可對照成長",
-        "殖利率 5.5%，提供部分下檔支撐"
+        "殖利率 5.4%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -252,9 +252,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：51.64",
-      "波段多空分水嶺看 MA20：52.05",
-      "追蹤法人是否延續 賣超：最近 -56張",
+      "短線支撐/壓力先看 MA5：51.62",
+      "波段多空分水嶺看 MA20：52.02",
+      "追蹤法人是否延續 買超：最近 +54張",
       "本益比 16.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [

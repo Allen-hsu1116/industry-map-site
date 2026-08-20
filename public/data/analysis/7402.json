@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "7402",
   "name": "邑錡",
-  "generatedAt": "2026-08-19T12:33:25.690Z",
+  "generatedAt": "2026-08-20T12:34:41.768Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,13 +48,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "邑錡為自有ASIC影像晶片+低功耗相機模組廠商。提供軍規低照度航拍系統、無人機航拍影像、建築縮時攝影及雲端AI分析平台。MOPS主要經營：自有ASIC晶片與低功耗相機模組，AI影像機器人視覺產品。",
+      "roleSummary": "邑錡MOPS明確揭露自有ASIC、低功耗相機模組、低照度與航拍軍工影像設備；其軍工角色是小型影像感測與航拍模組，不是整機無人機廠。FinMind顯示2026年7月營收0.50億元、MoM+4.2%，規模仍小。",
       "supplyChainStage": "aerospace_components",
       "roleType": "military_low_light_camera",
       "directness": "core",
@@ -62,17 +62,17 @@
     },
     "productNarratives": [
       {
-        "name": "軍規低照度航拍攝影系統(0.001Lux/starlight CMOS)",
+        "name": "0.001Lux星光級低照度航拍相機模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "無人機航拍影像系統(4K/60fps/H.265)",
+        "name": "4K/60fps H.265無人機雲台相機模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "建築工程縮時攝影機(太陽能供電/4G傳輸)",
+        "name": "低於100mW自有影像壓縮ASIC",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -93,9 +93,9 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 軍工、航太與無人機（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
@@ -103,9 +103,9 @@
     ],
     "summary": "邑錡 在「軍工、航太與無人機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 軍工、航太與無人機（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 軍工、航太與無人機（theme/active） +18）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -164,8 +164,8 @@
         "canonicalTopicName": "軍工、航太與無人機",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "邑錡為自有ASIC影像晶片+低功耗相機模組廠商。提供軍規低照度航拍系統、無人機航拍影像、建築縮時攝影及雲端AI分析平台。MOPS主要經營：自有ASIC晶片與低功耗相機模組，AI影像機器人視覺產品。"
+        "confidence": "medium",
+        "roleSummary": "邑錡MOPS明確揭露自有ASIC、低功耗相機模組、低照度與航拍軍工影像設備；其軍工角色是小型影像感測與航拍模組，不是整機無人機廠。FinMind顯示2026年7月營收0.50億元、MoM+4.2%，規模仍小。"
       }
     ],
     "swot": [
@@ -332,12 +332,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 86 天未更新"
+        "message": "股價資料已 87 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 86 天未更新"
+        "message": "籌碼資料已 87 天未更新"
       },
       {
         "id": "risk.stop-distance",
