@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6175",
   "name": "立敦",
-  "generatedAt": "2026-08-20T12:34:41.640Z",
+  "generatedAt": "2026-08-21T12:31:23.347Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-20",
-  "chipDataDate": "2026-08-20",
+  "marketDataDate": "2026-08-21",
+  "chipDataDate": "2026-08-21",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -29,20 +29,19 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -8,
-    "summary": "立敦 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +1.6千張；三大法人近 5 日合計賣超 -204張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 28,
+    "summary": "立敦 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +262張；近 20 日法人偏買，合計 +1.5千張。",
     "signals": [
-      "近 20 日法人偏買，合計 +1.6千張"
+      "三大法人近 5 日合計買超 +262張",
+      "近 20 日法人偏買，合計 +1.5千張",
+      "外資近 5 日買超 +283張"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -204張",
-      "外資近 5 日賣超 -151張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-20",
-      "融券近 5 日增加 32.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-21",
+      "融券近 5 日增加 12.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -134,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-20"
+      "lastVerified": "2026-08-21"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -232,7 +231,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 60,
+    "totalScore": 66,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -245,6 +244,7 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -252,13 +252,13 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：75.98",
-      "波段多空分水嶺看 MA20：75.55",
-      "追蹤法人是否延續 賣超：最近 -33張",
-      "本益比 23.9 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：75.32",
+      "波段多空分水嶺看 MA20：75.15",
+      "追蹤法人是否延續 買超：最近 +8張",
+      "本益比 23.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 86.60 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 84.80 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 65.70：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
