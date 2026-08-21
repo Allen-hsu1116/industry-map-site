@@ -2,27 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "3004",
   "companyName": "豐達科",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "core",
-      "supplyChainStage": "aerospace_mro",
-      "roleType": "aerospace_fasteners_structural",
-      "roleSummary": "豐達科為航太扣件專業製造商，6月營收497.5億YoY46.6%，累計2590.1億YoY34.7%。6月營收4.98億年增46.6%，累計25.9億年增34.7%。MOPS主要經營：飛機船舶用扣件結構件/車輛工業用扣件。供貨GE Aerospace/Safran/漢翔。",
+      "supplyChainStage": "aerospace_fasteners",
+      "roleType": "aerospace_fastener_manufacturer",
+      "roleSummary": "豐達科MOPS直接揭露飛機與船舶用扣件、結構件製造加工，航太供應鏈角色明確；但MOPS未揭露特定材料牌號、GE／Safran客戶或軍用機型。2026年7月營收4.94億元，YoY+53.0%、累計YoY+37.3%，公司說明為客戶需求增加。",
       "products": [
-        "航太用高強度扣件(鈦合金/合金鋼螺栓Inconel 718)",
-        "飛機結構件與引擎零件(渦輪葉片/燃燒室件)",
-        "船舶用扣件與結構件(不鏽鋼316/雙相鋼)",
-        "車輛/工業用精密扣件(10.9/12.9級)"
+        "航空結構用高強度螺栓",
+        "航空發動機用螺帽與扣件",
+        "船舶耐蝕螺栓與固定件",
+        "車輛底盤用高強度扣件",
+        "客製化金屬結構件"
       ],
       "customers": [
-        "GE Aerospace(發動機扣件Inconel 718)",
-        "Safran(起落架與引擎扣件Ti-6Al-4V)",
-        "漢翔(2634)(IDF/教緦機扣件)",
-        "Boeing(航太結構扣件)"
+        "GE Aerospace（航太扣件應用對象，非MOPS揭露客戶）",
+        "Safran（發動機扣件應用對象，非MOPS揭露客戶）",
+        "Boeing（機體扣件應用對象，非MOPS揭露客戶）",
+        "Airbus（機體扣件應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中航（5607）",
@@ -46,36 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3004 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：飛機、船舶、車輛及工業用扣件與結構件之製造加工、代理買賣及產品設計。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收4.94億元，MoM-0.7%、YoY+53.0%，累計YoY+37.3%；公司說明客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "medium",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "鈦合金/超合金(Inconel 718)航太扣件冷鍛加工",
-        "飛機引擎高溫扣件熱處理技術(固溶時效HRC 40-45)",
-        "航太扣件AS9100品質認證製造(NADCAP)"
+        "多工位冷鍛與螺紋滾壓成形",
+        "真空熱處理、硬度與疲勞壽命控制",
+        "磁粉／滲透非破壞檢測與批次追溯"
       ],
       "swot": {
         "strengths": [
-          "6月營收4.98億YoY+46.6%、累計25.90億YoY+34.7%，航太扣件需求強勁動能",
-          "鈦合金/超合金(Inconel 718)航太扣件冷鍛加工能力，GE Aerospace/Safran為發動機扣件客戶",
-          "飛機引擎高溫扣件熱處理技術(固溶時效HRC 40-45)，Ti-6Al-4V起落架扣件具量產實績"
+          "MOPS直接支持飛機與船舶用扣件、結構件製造加工",
+          "2026年7月營收YoY+53.0%、累計YoY+37.3%，且公司說明客戶需求增加"
         ],
         "weaknesses": [
-          "資本額6.43億規模有限，產能擴張受限於設備投資",
-          "航太扣件客戶認證週期長(Accreditation 1-2年)，新客戶/新產品導入速度慢",
-          "原材料(鈦合金/Inconel)成本高且供應商有限，材料漲價直接壓縮毛利"
+          "MOPS未揭露具名客戶、材料牌號與軍用營收比重",
+          "航太認證及客戶批准週期長，產能擴張回收較慢"
         ],
         "opportunities": [
-          "LEAP發動機換裝潮帶動Inconel 718高溫扣件需求持續增長，累計YoY+34.7%已反映此趨勢",
-          "國防自主政策帶動漢翔IDF/國機國造扣件需求，國內航太扣件供應鏈商機",
-          "太空產業(SpaceX/低軌衛星)帶動高強度航太扣件新應用場景"
+          "商用飛機交付回升可帶動高強度扣件補庫",
+          "供應鏈在地化有利具批次追溯與品質體系的供應商"
         ],
         "threats": [
-          "航太扣件認證供應商數量有限但競爭加劇，美國Precision Castparts(PCC)具規模優勢",
-          "鈦合金/Inconel原材料價格波動大，影響接單報價競爭力",
-          "航太產業受飛機交付節奏影響，扣件需求可能因Boeing/Airbus延遲交付而波動"
+          "波音與空巴交付延遲會向上游傳導拉貨波動",
+          "特殊鋼與鎳基材料價格上漲可能侵蝕毛利"
         ]
       }
     }

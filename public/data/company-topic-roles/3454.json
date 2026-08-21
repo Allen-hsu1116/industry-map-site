@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3454",
   "companyName": "晶睿",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -246,20 +246,20 @@
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "晶睿為安全監控設備製造商，在低軌衛星題材中間接供應地面站與通訊設施之安防監控方案。題材連結性為間接應用，非核心衛星通訊元件供應商。",
+      "supplyChainStage": "site_security_adjacent",
+      "roleType": "security_camera_adjacent_to_ground_sites",
+      "roleSummary": "本輪MOPS公司資料、TWSE月營收與FinMind月營收均查無3454資料，無法驗證低軌衛星產品或營收。既有網路攝影機與影像管理平台僅能列為地面站安防的歷史應用範圍，不得視為衛星通訊設備。",
       "products": [
-        "低軌衛星地面站安防攝影機(IP66/IP67防護)",
-        "衛星通訊設施監控影像管理平台VMS",
-        "極端環境網路攝影機(-40~65°C寬溫)",
-        "太陽能供電獨立監控系統(衛星站點用)"
+        "H.265戶外型網路攝影機（歷史產品範圍）",
+        "IP66／IK10防護網路攝影機（歷史產品範圍）",
+        "多感測器全景網路攝影機（歷史產品範圍）",
+        "VAST 2影像管理平台（歷史產品範圍）"
       ],
       "customers": [
-        "中華電信(2412)(衛星地面站安防)",
-        "遠傳(4904)(衛星通訊站點監控)",
-        "台灣大哥大(3045)(衛星設施安防)",
-        "SpaceX(間接Starlink地面站安防)"
+        "中華電信（地面站安防應用對象，非MOPS揭露客戶）",
+        "SES（衛星站點安防驗證對象，非MOPS揭露客戶）",
+        "Eutelsat OneWeb（地面設施安防驗證對象，非MOPS揭露客戶）",
+        "SpaceX（地面設施安防驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "陞泰(6265)(衛星站安防)",
@@ -286,36 +286,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "本輪MOPS完整基本資料查無3454，既有產品描述僅保留為歷史範圍。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "MCP unavailable",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "TWSE與FinMind均查無2026年近期月營收，無法量化題材營運貢獻。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-08-21",
+      "status": "needs_fresh_disclosure",
       "techFocus": [
-        "極端環境光學鏡頭設計(-40~65°C/IP67防護)",
-        "衛星地面站安防VMS影像管理平台整合",
-        "低功耗太陽能獨立監控系統設計(離網站點)"
+        "H.265影像編碼、低頻寬傳輸與邊緣錄影",
+        "ONVIF互通、VMS集中管理與事件告警",
+        "IP66／IK10戶外防護與寬動態成像"
       ],
       "swot": {
         "strengths": [
-          "極端環境光學鏡頭(-40~65°C/IP67防護)適合衛星地面站安防",
-          "衛星地面站安防VMS影像管理平台整合能力",
-          "低功耗太陽能獨立監控系統適合離網站點"
+          "歷史產品範圍具網路攝影機與VMS，可對應地面設施安防",
+          "IP66／IK10與H.265適合偏遠站點的戶外影像監控"
         ],
         "weaknesses": [
-          "MOPS與FinMind均無法取得資料(上櫃公司)",
-          "低軌衛星為間接角色，晶睿核心為安防監控非通訊",
-          "衛星地面站安防市場規模仍小"
+          "MOPS與兩條月營收資料路徑皆失敗，無法做最新營運驗證",
+          "沒有低軌衛星終端、天線、閘道器或具名營運商訂單證據"
         ],
         "opportunities": [
-          "Starlink/OneWeb地面站建設帶動安防監控需求",
-          "中華電信(2412)衛星地面站標案商機",
-          "偏遠地區離網監控系統需求增長"
+          "偏遠衛星地面站可帶動戶外攝影機與集中式VMS需求",
+          "邊緣AI告警可降低離網站點的人力巡檢成本"
         ],
         "threats": [
-          "衛星地面站安防需求量小且分散，難以規模化",
-          "極端環境設備認證成本高",
-          "大型電信商可能選用國際品牌安防設備"
+          "海康威視、大華與Axis在安防市場競爭激烈",
+          "把站點安防誤寫成衛星通訊供應鏈會高估題材直接性"
         ]
       }
     }

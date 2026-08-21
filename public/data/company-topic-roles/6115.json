@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "6115",
   "companyName": "鎰勝",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "aerospace_mro",
-      "roleType": "military_grade_connectors",
-      "roleSummary": "鎰勝為軍規連接器與線束供應商，6月營收6.82億元年增16.0%，累計年增11.8%。提供軍規MIL-DTL-38999連接器、軍機線束、飛彈電源連接器及資訊設備電源線。MOPS主要經營：資訊通訊消費性電子產品之電源線連接器、電源傳輸線、網路線。",
+      "directness": "indirect",
+      "supplyChainStage": "power_cable_adjacent",
+      "roleType": "commercial_cable_adjacent_to_defense",
+      "roleSummary": "鎰勝MOPS支持資訊、通訊與消費電子用電源線、連接器、網路線與訊號線，未揭露MIL-DTL-38999、軍機線束、飛彈連接器或國防客戶。此角色僅能視為通用電源與訊號線材對高可靠設備的鄰近供應。2026年7月營收7.46億元，YoY+11.9%、累計YoY+11.8%。",
       "products": [
-        "軍規MIL-DTL-38999連接器(不銹鋼殼體/耐震)",
-        "軍機線束(Wire Harness)總成(EMI屏蔽/耐高溫200C)",
-        "飛彈電源連接器(高G值抗震/防水IP68)",
-        "無人機訊號傳輸線(輕量化/抗干擾)",
-        "資訊設備電源線(IEC 60320 C13/C19)"
+        "IEC 60320 AC電源線組",
+        "插頭式電源延長線",
+        "RJ45 Cat6／Cat6A網路線",
+        "USB資料與充電訊號線",
+        "消費電子電源連接器與傳輸線"
       ],
       "customers": [
-        "國防部(軍規連接器/線束標案)",
-        "漢翔2634(軍機線束/連接器)",
-        "中科院(飛彈/無人機電源連接器)",
-        "Dell/HP(資訊設備電源線)",
-        "Foxconn富士康(伺服器電源線)"
+        "Delta Electronics（電源線應用對象，非MOPS揭露客戶）",
+        "Lite-On Technology（電源線應用對象，非MOPS揭露客戶）",
+        "Amphenol（連接器生態對象，非MOPS揭露客戶）",
+        "TE Connectivity（線纜連接生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "宏致（3605）",
@@ -48,32 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6115 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：資訊、通訊及消費電子用電源線連接器、電源傳輸線、網路線、訊號線與延長線。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收7.46億元，MoM+9.3%、YoY+11.9%，累計YoY+11.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "軍規連接器MIL-DTL-38999抗震/防水設計",
-        "EMI屏蔽線束編織覆蓋率>95%",
-        "高溫耐燃線材(200C PTFE絕緣)"
+        "電源線壓接、拉力、耐壓與絕緣測試",
+        "插頭射出包覆、端子保持力與阻燃材料控制",
+        "Cat6／Cat6A差分阻抗、串音與傳輸損耗測試"
       ],
       "swot": {
         "strengths": [
-          "軍規連接器/線束國內少數供應商，具MIL認證",
-          "6月營收6.82億元年增16.0%，累計年增11.8%"
+          "MOPS直接支持電源線、連接器、網路線與訊號線製造",
+          "2026年7月營收YoY+11.9%、累計YoY+11.8%，公司整體穩健成長"
         ],
         "weaknesses": [
-          "軍規業務佔比低，主要靠民用電源線",
-          "營收規模中等(月營收<7億)"
+          "MOPS未揭露軍規連接器、軍機線束或國防客戶",
+          "通用線材附加價值及軍工題材直接性均低"
         ],
         "opportunities": [
-          "國防自主帶動軍規連接器/線束需求",
-          "無人機產業帶動輕量化線束需求"
+          "高可靠設備可帶動耐壓、阻燃與可追溯線材驗證",
+          "資料與電源整合需求可增加高規格線組產品價值"
         ],
         "threats": [
-          "民用電源線市場成熟成長有限",
-          "中國線材廠低價競爭"
+          "中國與東南亞線材廠價格競爭壓縮毛利",
+          "未取得軍規連接器與環境測試資格前難以進入國防平台"
         ]
       }
     }

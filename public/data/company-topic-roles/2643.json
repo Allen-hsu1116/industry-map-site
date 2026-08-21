@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "2643",
   "companyName": "捷迅",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "defense_logistics_services",
-      "roleSummary": "捷迅為上櫃整合型物流服務商(AEO認證)，MOPS登記為整合型物流服務。國防軍品與航太物流保稅報關為國防航太供應鏈的重要後勤環節，具國防部、漢翔與中科院長期合作關係，軍品物流的合規門檻高。",
+      "directness": "indirect",
+      "supplyChainStage": "integrated_logistics_adjacent",
+      "roleType": "integrated_logistics_for_aerospace",
+      "roleSummary": "捷迅MOPS僅揭露整合型物流服務，未揭露國防部、中科院、漢翔合約或軍品安全等級。此角色限於航太零件與高價設備可能採用的報關、保稅倉儲及運輸服務。FinMind顯示2026年7月營收7.04億元，MoM+1.1%。",
       "products": [
-        "航空器進出口報關與保稅物流(AEO認證)(含維修零件)",
-        "國防軍品倉儲管理與配送(溫控/防潮/安全等級)",
-        "軍規設備整合型物流服務(ITLS)(全程追溯)",
-        "航太精密零件保稅報關(AEO/ISO9001)(進出口合規)"
+        "航空貨運承攬與門到門配送",
+        "海運貨櫃承攬與多式聯運",
+        "保稅倉儲與庫存管理",
+        "進出口報關與文件代理",
+        "溫濕度監控高價設備物流"
       ],
       "customers": [
-        "國防部(軍品物流運輸標案)(國防儲備/戰備運輸)",
-        "漢翔(2634)(航空器進出口報關)(IDF/民用航空零件)",
-        "中科院(國防物資倉儲)(飛彈/雷達零件物流)",
-        "空軍後勤指揮部(航空料件保稅倉儲)",
-        "長榮航太(2645)(航空引擎零件報關)"
+        "漢翔(2634)（航太物流應用對象，非MOPS揭露客戶）",
+        "長榮航太(2645)（航材物流應用對象，非MOPS揭露客戶）",
+        "Boeing（航材物流應用對象，非MOPS揭露客戶）",
+        "Airbus（航材物流應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中菲行（5601）",
@@ -47,36 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2643 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：整合型物流服務。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收7.04億元，MoM+1.1%；為公司整體數據。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "保稅倉儲與通關管理系統(航太AEO認證)(電子化通關)",
-        "軍品供應鏈溫控運輸與追溯系統(冷鏈/防潮)",
-        "航空器進出口貿易合規(Export Control ITAR/ECCN)"
+        "AEO供應鏈安全、報關文件與貨況追蹤",
+        "保稅倉儲批號、序號與先進先出管理",
+        "高價精密設備防震、防潮與溫濕度紀錄"
       ],
       "swot": {
         "strengths": [
-          "AEO認證保稅倉儲與通關管理系統具航太物流專業資格，可承接航空器進出口報關與維修零件物流",
-          "MOPS登記整合型物流服務，軍品倉儲管理具溫控/防潮/安全等級，國防部軍品物流標案供應商",
-          "漢翔(2634)為航空器進出口報關客戶，IDF/民用航空零件物流具實績"
+          "MOPS直接支持整合型物流服務，可承接高價航材跨境運輸",
+          "FinMind顯示7月營收7.04億元、MoM+1.1%，短期維持成長"
         ],
         "weaknesses": [
-          "資本額僅3.5億，規模有限難以承接大規模國防物流標案",
-          "月營收資料無法取得(上櫃)，營運能見度較低",
-          "航太物流為利基市場，業務規模擴張受限於國防預算與航空產業景氣"
+          "MOPS未揭露軍品、國防客戶或安全分級服務",
+          "物流毛利受運價、匯率與客戶議價影響，題材直接性低"
         ],
         "opportunities": [
-          "國防自主政策帶動軍品物流與戰備運輸需求增長，國防部標案商機穩定",
-          "漢翔IDF升級與民用航空零件出口增長，帶動航空器報關與維修零件物流需求",
-          "保稅倉儲電子化通關系統可延伸至半導體設備進出口報關等高值物流"
+          "航太維修在地化增加航材報關、保稅與緊急配送需求",
+          "供應鏈去風險可提升可追溯精密設備物流價值"
         ],
         "threats": [
-          "國防物流標案競爭者眾多，大型物流商(如中華航空貨運)具規模優勢",
-          "軍品物流安全要求高，任何疏失可能導致合約終止",
-          "航空產業受景氣與油價影響大，維修零件物流需求波動明顯"
+          "全球貨運價格回落可能壓縮營收與毛利",
+          "出口管制或軍民兩用規範提高合規成本與延誤風險"
         ]
       }
     }

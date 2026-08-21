@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -234,19 +234,22 @@
       "topicId": "leo-satellite-communications",
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
-      "directness": "core",
-      "supplyChainStage": "satellite_ground_equipment",
-      "roleType": "satellite_ground_station_equipment",
-      "roleSummary": "明泰提供低軌衛星地面段設備(用戶終端/閘道器)。7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%。",
+      "directness": "indirect",
+      "supplyChainStage": "terrestrial_networking_adjacent",
+      "roleType": "terrestrial_networking_adjacent_to_satellite",
+      "roleSummary": "明泰MOPS只揭露射頻器材與無線通信機械製造，未揭露低軌衛星終端、Ka／Ku相控陣、地面閘道器或星鏈營運商訂單。此角色改列為衛星地面網路可能採用的既有網通平台。2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%，且不能歸因衛星。",
       "products": [
-        "低軌衛星用戶終端(Starlink/Kuiper相容)",
-        "衛星地面閘道器(Ka/Ku頻段)",
-        "衛星回傳網路路由器"
+        "Wi-Fi 7三頻企業無線基地台",
+        "5G NR室內小型基地台",
+        "5G固定無線接取CPE",
+        "L2／L3乙太網路交換器",
+        "XGS-PON 10Gbps光纖網路終端"
       ],
       "customers": [
-        "SpaceX(Starlink地面設備ODM)",
-        "Amazon(Kuiper Project終端設備)",
-        "OneWeb(地面段設備)"
+        "SpaceX（衛星地面網路驗證對象，非MOPS揭露客戶）",
+        "Amazon（Project Kuiper驗證對象，非MOPS揭露客戶）",
+        "Eutelsat OneWeb（地面網路驗證對象，非MOPS揭露客戶）",
+        "Hughes Network Systems（衛星閘道應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中磊(5388)",
@@ -272,31 +275,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電信管制射頻器材製造、無線通信機械器材製造。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "Ku/Ka頻段射頻前端設計",
-        "衛星網路協議(L2/L3路由優化)"
+        "IEEE 802.11be MLO與320MHz企業無線接取",
+        "5G NR Sub-6GHz CPE射頻與網路切片整合",
+        "L2／L3路由、VLAN、QoS與遠端網管"
       ],
       "swot": {
         "strengths": [
-          "射頻器材製造經驗適合衛星地面設備",
-          "與國際衛星運營商合作潛力"
+          "MOPS直接支持射頻器材與無線通信設備製造能力",
+          "既有Wi-Fi、5G、交換器與PON平台可用於地面回傳網路整合"
         ],
         "weaknesses": [
-          "低軌衛星營收佔比仍低",
-          "衛星通訊認證門檻高"
+          "MOPS未揭露衛星終端、Ka／Ku相控陣或具名衛星客戶",
+          "7月MoM-23.3%、YoY-2.1%，短期出貨轉弱且衛星營收無法拆分"
         ],
         "opportunities": [
-          "Starlink/Kuiper用戶終端出貨量增長",
-          "低軌衛星物聯網應用興起"
+          "低軌衛星地面站仍需要乙太網路、Wi-Fi與5G回傳設備",
+          "衛星與地面網路融合可帶動企業閘道器及網管功能升級"
         ],
         "threats": [
-          "SpaceX可能自建終端設備",
-          "中國低軌衛星計畫競爭"
+          "SpaceX與終端大廠自製比例提高可能排除一般網通ODM",
+          "衛星認證週期長，題材若無實際訂單容易只剩概念"
         ]
       }
     },

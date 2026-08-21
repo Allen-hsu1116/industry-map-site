@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3704",
   "companyName": "合勤控",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -89,19 +89,21 @@
       "topicId": "leo-satellite-communications",
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
-      "directness": "core",
-      "supplyChainStage": "satellite_user_terminal",
-      "roleType": "satellite_user_terminal_manufacturer",
-      "roleSummary": "合勤控子公司合勤科技提供低軌衛星用戶終端設備。7月營收19.17億，MoM-44.7%。",
+      "directness": "indirect",
+      "supplyChainStage": "holding_company_networking_adjacent",
+      "roleType": "holding_company_with_networking_subsidiaries",
+      "roleSummary": "合勤控MOPS對母公司只揭露一般投資業，沒有低軌衛星終端、相控陣天線或衛星營運商客戶證據。此角色僅能透過集團寬頻閘道器、企業AP與交換器視為地面網路鄰近題材。2026年7月營收19.17億元，MoM-44.7%、YoY-11.8%，累計YoY+10.3%。",
       "products": [
-        "低軌衛星用戶終端(Ku/Ka頻段平板天線)",
-        "衛星路由器(L2/L3路由/負載均衡)",
-        "衛星回傳設備(SATCOM回傳閘道器)"
+        "集團寬頻網路閘道器",
+        "集團Wi-Fi 6／7企業無線基地台",
+        "集團L2／L3乙太網路交換器",
+        "集團5G固定無線接取CPE"
       ],
       "customers": [
-        "OneWeb(地面段終端設備ODM)",
-        "SES(衛星網路設備)",
-        "Telesat(用戶終端設備)"
+        "SpaceX（衛星地面網路驗證對象，非MOPS揭露客戶）",
+        "Eutelsat OneWeb（地面網路驗證對象，非MOPS揭露客戶）",
+        "SES（衛星回傳應用對象，非MOPS揭露客戶）",
+        "Telesat（地面終端驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "明泰(3380)",
@@ -127,33 +129,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：一般投資業。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收19.17億元，MoM-44.7%、YoY-11.8%，累計YoY+10.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "Ku/Ka頻段平板相控陣天線設計",
-        "衛星-地面網路無縫切換技術"
+        "Wi-Fi 6／7企業漫遊、MLO與集中網管",
+        "5G FWA CPE之Sub-6GHz射頻與QoS整合",
+        "L2／L3路由、VLAN與衛星回傳備援策略"
       ],
       "swot": {
         "strengths": [
-          "網通設備品牌與ODM能力可延伸至衛星終端",
-          "與OneWeb/SES等衛星運營商合作"
+          "集團具有寬頻閘道、企業AP、交換器與5G CPE平台",
+          "累計營收YoY+10.3%，公司整體仍維持成長"
         ],
         "weaknesses": [
-          "低軌衛星營收佔比仍低",
-          "衛星通訊認證門檻高"
+          "MOPS母公司僅為一般投資業，衛星產品與子公司收入都未在本資料揭露",
+          "7月MoM-44.7%、YoY-11.8%，出貨波動顯著"
         ],
         "opportunities": [
-          "OneWeb/Starlink用戶終端出貨量增長",
-          "低軌衛星物聯網應用",
-          "偏遠地區寬頻覆蓋需求"
+          "衛星與地面寬頻融合可增加企業閘道器及備援路由需求",
+          "低軌衛星地面站可採用既有交換器與Wi-Fi網管平台"
         ],
         "threats": [
-          "SpaceX可能自建終端設備",
-          "中國低軌衛星計畫競爭",
-          "衛星終端價格下降壓力"
+          "相控陣天線與衛星認證並非現有MOPS可證實能力",
+          "集團多層架構容易把子公司鄰近技術誤當母公司直接收入"
         ]
       }
     },

@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "2344",
   "companyName": "華邦電",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "hbm",
       "topicName": "記憶體｜HBM",
       "topicType": "product",
-      "directness": "supplier",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "dram_nor_flash_maker",
-      "roleSummary": "華邦電是台灣唯一自主DRAM廠，5月營收200.0億年增182.0%，累計775億年增128.6%。LPDDR5/NOR Flash為AI邊緣裝置關鍵零組件，車用記憶體是未來成長引擎。",
+      "directness": "indirect",
+      "supplyChainStage": "specialty_memory_adjacent",
+      "roleType": "specialty_memory_not_hbm",
+      "roleSummary": "華邦電MOPS支持記憶體與半導體系統產品，但未揭露HBM、TSV堆疊或HBM量產。此角色應定位為利基型DRAM、NOR Flash與SLC NAND對記憶體景氣的間接曝險，不是HBM供應商。2026年7月營收267.73億元，YoY+291.5%、累計YoY+161.0%，公司說明受市場供需影響，不能歸因HBM。",
       "products": [
-        "LPDDR4/LPDDR5 DRAM(1A/1B製程)",
-        "NOR Flash(45nm/38nm)(AI Edge Storage)",
-        "SLC NAND Flash(車用/工控)",
-        "Code Storage Flash(物聯網裝置)",
-        "車用DRAM(AEC-Q100 Grade 3)"
+        "DDR3／DDR4利基型DRAM顆粒",
+        "LPDDR4行動與嵌入式DRAM",
+        "SpiFlash Serial NOR Flash",
+        "QspiNAND SLC NAND Flash",
+        "KGD裸晶與記憶體MCP產品"
       ],
       "customers": [
-        "Qualcomm(手機LPDDR)",
-        "聯發科(2454)(手機/OTT晶片配搭)",
-        "Intel(NOR Flash BIOS)",
-        "Tesla(車用DRAM/Flash)",
-        "Samsung(技術授權/代工合作)"
+        "SK hynix（HBM技術比較對象，非MOPS揭露客戶）",
+        "Micron Technology（HBM技術比較對象，非MOPS揭露客戶）",
+        "Samsung Electronics（HBM技術比較對象，非MOPS揭露客戶）",
+        "Nanya Technology（台灣DRAM生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "美光(Micron)",
@@ -51,36 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路、半導體記憶零組件及系統產品、電腦與數位通訊用半導體零組件。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收267.73億元，MoM+30.0%、YoY+291.5%，累計YoY+161.0%；受市場供需影響。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "LPDDR4/LPDDR5 DRAM 1A/1B製程量產",
-        "45nm/38nm NOR Flash車規級量產",
-        "車用DRAM AEC-Q100 Grade 3認證"
+        "DDR3／DDR4與LPDDR4介面、低功耗刷新及寬溫驗證",
+        "Serial NOR之SPI／xSPI介面與高速讀取",
+        "SLC NAND之ECC、壞塊管理與資料保持可靠度"
       ],
       "swot": {
         "strengths": [
-          "6月營收206.0億YoY+189.9%，累計981.0億YoY+139.2%，DRAM價格復甦帶動爆發增長",
-          "LPDDR4/LPDDR5 DRAM(1A/1B製程)量產，供貨Qualcomm/聯發科手機晶片配搭",
-          "車用DRAM(AEC-Q100 Grade 3)認證，打入Tesla車用供應鏈"
+          "MOPS直接支持記憶體與半導體系統產品，利基型記憶體產品線完整",
+          "2026年7月營收YoY+291.5%、累計YoY+161.0%，記憶體景氣彈性強"
         ],
         "weaknesses": [
-          "不生產HBM(高頻寬記憶體)，非AI伺服器HBM直接供應鏈，題材關聯為間接受惠",
-          "DRAM價格循環劇烈，YoY+190%高基期效應可能不可持續",
-          "DRAM製程(1A/1B)落後三星/美光(1b/1c)，技術代差存在"
+          "MOPS未揭露HBM、TSV或堆疊封裝量產，不能列為HBM供應商",
+          "公司說明成長受市場供需影響，營收高度循環且題材歸因有限"
         ],
         "opportunities": [
-          "AI Edge裝置(NPU/AI PC)需要LPDDR5/DDR5高頻寬記憶體，帶動需求",
-          "NOR Flash(45nm/38nm)切入AI Edge Storage，儲存AI模型權重",
-          "車用DRAM/Flash受惠ADAS Level 3+放量，ASP高於消費級"
+          "AI邊緣裝置與工控系統可帶動利基DRAM與NOR Flash需求",
+          "記憶體報價回升可改善產能利用率與產品組合"
         ],
         "threats": [
-          "不生產HBM，AI伺服器HBM商機與華邦電無直接關係，題材過熱風險",
-          "DRAM價格循環反轉時庫存跌價損失風險",
-          "Samsung/SK hynix/Micron在LPDDR5/DDR5技術與成本領先"
+          "HBM資本與技術門檻高，與三大原廠差距難以短期跨越",
+          "記憶體報價反轉或中國新增產能會放大營收波動"
         ]
       }
     }

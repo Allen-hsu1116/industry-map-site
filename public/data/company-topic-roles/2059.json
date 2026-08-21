@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2059",
   "companyName": "川湖",
-  "updatedAt": "2026-07-15",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "ai-server-mechanical",
@@ -85,20 +85,20 @@
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "川湖為全球伺服器滑軌市占第一，6月營收44.4億年增220.5%，累計162.8億年增98.9%。新產品出貨帶動爆發性成長，AI伺服器液冷散熱結構件為新動能。",
+      "directness": "indirect",
+      "roleSummary": "川湖MOPS直接支持伺服器導軌、滑軌及周邊零組件，未揭露液冷快接頭、冷板或CDU。其液冷角色應限於高重量GPU／液冷伺服器機箱的抽換與承載機構。2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%，公司說明新產品開始出貨，但未指明液冷。",
       "products": [
-        "伺服器滑軌(1U/2U/4U/8U精密滾珠導軌)",
-        "液冷快速接頭(QD)支架與固定座",
-        "伺服器機殼導軌總成(機架安裝套件)",
-        "AI伺服器GPU支架與導風散熱結構件",
-        "NB鉸鏈(筆記型電腦轉軸/360度鉸鏈)"
+        "1U／2U機架式伺服器滾珠滑軌",
+        "4U／8U高載重GPU伺服器滑軌",
+        "免工具快拆機架導軌",
+        "伺服器線纜管理臂與滑軌周邊件",
+        "筆記型電腦轉軸鉸鏈"
       ],
       "customers": [
-        "Dell(伺服器滑軌)",
-        "Supermicro(伺服器導軌)",
-        "鴻海(2317)(AI伺服器結構件)",
-        "緯穎(6669)(AI伺服器導軌)"
+        "Dell Technologies（伺服器滑軌應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（機架滑軌應用對象，非MOPS揭露客戶）",
+        "Super Micro Computer（GPU伺服器應用對象，非MOPS揭露客戶）",
+        "Wiwynn（雲端機架應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Unical(美國伺服器滑軌)",
@@ -117,38 +117,48 @@
           "title": "2059公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 2059 role in AI 伺服器液冷散熱 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：伺服器等用導軌及周邊零組件、鉸鏈與滑軌之研發設計製造銷售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%；新產品開始出貨。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-18",
+      "confidence": "medium",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "高精度滑軌沖壓技術(靜音/高載重100kg+)",
-        "液冷快速接頭(QD)支架結構設計與密封",
-        "GPU支架散熱導風結構分析(CFD模擬)"
+        "高載重滾珠滑軌之撓度、摩擦與壽命控制",
+        "免工具快拆、盲裝與機架公差補償設計",
+        "運輸振動、循環抽拉與鎖定機構可靠度測試"
       ],
-      "supplyChainStage": "mechanical",
-      "roleType": "liquid_cooling_mechanical_rail_supplier",
+      "supplyChainStage": "server_mechanical_adjacent",
+      "roleType": "server_rails_adjacent_to_liquid_cooled_racks",
       "swot": {
         "strengths": [
-          "6月營收4.44億YoY+220.5%，新產品(含液冷相關支架)開始出貨",
-          "液冷快速接頭(QD)支架與固定座打入AI伺服器供應鏈",
-          "與鴻海/緯穎等AI伺服器ODM建立結構件合作關係"
+          "MOPS直接支持伺服器導軌、滑軌與周邊件，機架機構角色清楚",
+          "2026年7月營收YoY+355.5%、累計YoY+136.6%，且公司說明新產品開始出貨"
         ],
         "weaknesses": [
-          "液冷相關產品仍為輔助結構件，非核心冷卻元件(CDU/冷板)",
-          "QD支架單價低，對營收貢獻有限",
-          "液冷技術路線(冷板式vs浸沒式)未定，產品設計需持續調整"
+          "MOPS未揭露冷板、CDU或液冷快接頭，不能列為流體散熱核心供應商",
+          "營收暴增未拆分產品，無法確認液冷機架貢獻比例"
         ],
         "opportunities": [
-          "AI伺服器液冷滲透率快速提升，QD支架與固定座需求放量",
-          "GB200 NVL72液冷機櫃帶動結構件與安裝套件需求",
-          "從滑軌延伸至液冷結構件，產品組合升級"
+          "GPU與液冷機箱重量上升可提高高載重滑軌單機價值",
+          "機架維修性與線纜／管路空間需求有利客製機構件升級"
         ],
         "threats": [
-          "液冷CDU/冷板廠商(台達電/雙鴻)可能垂直整合結構件",
-          "液冷技術標準未統一，產品規格變化風險",
-          "伺服器ODM自行設計結構件，減少外購"
+          "伺服器平台規格改版可能要求重新認證及模具投資",
+          "單月高成長基期墊高後，後續增速可能快速回落"
         ]
       }
     }

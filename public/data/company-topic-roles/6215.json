@@ -2,26 +2,26 @@
   "schemaVersion": 1,
   "companyCode": "6215",
   "companyName": "6215",
-  "updatedAt": "2026-08-17T03:10:00.000Z",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "和椿6月營收2.79億年增30.5%、累計年增53.7%，自動化零組件需求增加。散熱風扇馬達與精密軸承為間接供應，題材連結弱，非核心散熱標的。",
+      "directness": "indirect",
+      "roleSummary": "和椿MOPS只揭露自動化設備與系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇。此角色改列為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，YoY+37.2%、累計YoY+50.4%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。",
       "products": [
-        "自動化傳動設備(散熱風扇馬達驅動)",
-        "精密軸承(散熱風扇用ABEC-5級)",
-        "線性滑軌(散熱模組產線自動化)",
-        "伺服馬達(散熱模組組裝設備AC/DC)"
+        "線性滑軌定位模組",
+        "滾珠螺桿傳動模組",
+        "真空吸附搬運模組",
+        "伺服馬達驅動定位工作站",
+        "機器人取放與鎖附自動化設備"
       ],
       "customers": [
-        "台達電(2308)(散熱風扇馬達驅動/精密軸承供應)",
-        "上銀(2049)(線性滑軌/直線導軌配套)",
-        "發那科FANUC(伺服馬達/自動化設備配套)",
-        "西門子Siemens(工業自動化傳動配套)",
-        "ABB(機器人關節用精密軸承)"
+        "Auras Technology（液冷產線應用對象，非MOPS揭露客戶）",
+        "AVC（液冷產線應用對象，非MOPS揭露客戶）",
+        "Delta Electronics（設備整合應用對象，非MOPS揭露客戶）",
+        "Vertiv（冷卻設備產線驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "建準(8154)(散熱風扇馬達)",
@@ -41,37 +41,48 @@
           "title": "6215公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 6215 role in AI 伺服器液冷散熱 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：自動化設備及系統零組件之製造加工及買賣。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收3.78億元，MoM+35.5%、YoY+37.2%，累計YoY+50.4%；自動化零組件及設備需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-21",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "精密軸承製造技術(ABEC-5級精度/低噪音)",
-        "自動化傳動系統設計(直線導軌/滾珠螺桿)"
+        "滾珠螺桿預壓、背隙與重複定位精度控制",
+        "EtherCAT伺服同步、位置迴路與多軸插補",
+        "真空壓力監測、治具防呆與設備互鎖"
       ],
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
+      "supplyChainStage": "automation_equipment_adjacent",
+      "roleType": "automation_for_cooling_production",
       "swot": {
         "strengths": [
-          "FinMind 7月營收3.78億MoM+35.5%，AI伺服器散熱周邊需求帶動強勁成長",
-          "MOPS登記自動化設備及系統零組件，散熱風扇馬達驅動+精密軸承(ABEC-5)技術",
-          "客戶含台達電(2308)、上銀(2049)，台灣自動化/散熱龍頭供應鏈"
+          "MOPS直接支持自動化設備與系統零組件製造買賣",
+          "2026年7月營收YoY+37.2%、累計YoY+50.4%，自動化需求強"
         ],
         "weaknesses": [
-          "AI伺服器液冷為間接角色，和椿核心為自動化傳動非散熱本業",
-          "散熱風扇馬達/軸承為周邊，ASP低於系統級散熱方案",
-          "資本額僅8.28億，規模小"
+          "MOPS未揭露冷板、CDU、快接頭或任何液冷散熱產品",
+          "公司整體成長來自自動化設備，液冷題材只能算產線應用"
         ],
         "opportunities": [
-          "AI伺服器液冷散熱風扇需求隨GPU功耗增加而增長",
-          "台達電(2308)伺服器散熱方案擴產帶動軸承/馬達採購",
-          "精密軸承(ABEC-5)打入更高階散熱模組"
+          "液冷模組擴產可增加鎖附、點膠、搬運與測試自動化需求",
+          "高良率與可追溯製程提升精密傳動及設備控制價值"
         ],
         "threats": [
-          "散熱風扇大廠(建準/奇鋐)垂直整合減少軸承委外",
-          "中國軸承/馬達廠低价競爭",
-          "AI伺服器散熱技術從氣冷轉液冷可能減少風扇需求"
+          "散熱廠可自行整合產線或採用日系自動化品牌",
+          "把產線設備誤列為液冷核心零件會高估直接受惠程度"
         ]
       }
     }

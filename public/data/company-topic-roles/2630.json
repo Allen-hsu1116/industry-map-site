@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2630",
   "companyName": "亞航",
-  "updatedAt": "2026-07-07",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "core",
-      "supplyChainStage": "aerospace_mro",
-      "roleType": "aerospace_mro_uav_integration",
-      "roleSummary": "亞航為國內唯一民營軍機維修廠，6月營收3.28億元年減30.5%。提供F-16V/IDF/AT-3戰機維修、黑鷹直升機維修及無人機飛控整合。MOPS主要經營：航空器與有關裝備之維修、租賃與買賣。",
+      "supplyChainStage": "aircraft_mro",
+      "roleType": "aircraft_mro_and_parts",
+      "roleSummary": "亞航MOPS直接支持航空器與裝備維修、租賃買賣及航空配件製造裝配，航太MRO角色成立；但MOPS未列特定F-16、IDF或軍方合約。2026年7月營收3.47億元，MoM+5.8%、YoY-27.4%，累計YoY-21.8%，專案與維修排程造成壓力。",
       "products": [
-        "F-16V戰機大修/翻修(Engine/Avionics)",
-        "IDF經國號戰機結構件維修(漢翔協同)",
-        "AT-3教練機定期維修/結構件更換",
-        "黑鷹直升機UH-60M動態維修",
-        "無人機飛控系統整合(中科院合作)"
+        "航空器機體定期檢查與重維修服務",
+        "航空器航電與機電裝備檢修",
+        "航空配件製造與裝配服務",
+        "航空器租賃與技術顧問服務"
       ],
       "customers": [
-        "國防部空軍司令部(F-16V/IDF/AT-3維修標案)",
-        "漢翔2634(IDF共同維修分工)",
-        "中科院(無人機飛控系統整合標案)",
-        "美國國防部(軍規件代工/LOA案件)",
-        "中華航空2610(航空器零件維修)"
+        "漢翔(2634)（航太MRO合作對象，非MOPS揭露客戶）",
+        "長榮航空(2618)（民航維修應用對象，非MOPS揭露客戶）",
+        "中華航空(2610)（民航維修應用對象，非MOPS揭露客戶）",
+        "GE Aerospace（發動機維修生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "漢翔",
@@ -48,32 +46,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2630 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：航空器與裝備維修、租賃買賣；航空配件製造裝配；精密工業設備修理。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收3.47億元，MoM+5.8%、YoY-27.4%，累計YoY-21.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "F-16V結構疲勞分析與壽命評估(ASIP)",
-        "航空器引擎熱段件修理(渦輪葉片/燃燒室)",
-        "無人機飛控系統整合(STM32/RTOS)"
+        "渦流、超音波與染色滲透非破壞檢測",
+        "航電線路、液壓與機電裝備故障隔離",
+        "維修工卡、零件序號與適航文件全程追溯"
       ],
       "swot": {
         "strengths": [
-          "國內唯一民營軍機維修廠(MRO)，具備F-16/IDF大修資格",
-          "軍用航空器維修壟斷地位"
+          "MOPS直接支持航空器與裝備維修及航空配件製造裝配",
+          "機體、航電與配件整合能力具較高法規和技術門檻"
         ],
         "weaknesses": [
-          "6月營收3.28億元年減30.5%，累計年減20.7%，軍機維修量能下降",
-          "營收規模小且依賴國防部標案"
+          "2026年7月營收YoY-27.4%、累計YoY-21.8%，營運明顯衰退",
+          "MOPS未揭露特定軍機型號或軍方客戶，國防收入不可臆測"
         ],
         "opportunities": [
-          "國機國造政策帶動IDF升級/無人機需求",
-          "F-16V延壽計畫增加維修訂單"
+          "國內機隊延壽與維修在地化可提高MRO需求",
+          "民航復甦及航材供應鏈重整有利維修與零件服務"
         ],
         "threats": [
-          "軍機維修標案競爭(漢翔可能內部化)",
-          "美國原廠零件供應延遲風險"
+          "維修專案驗收與機隊排程造成月營收大幅波動",
+          "原廠授權、適航規範與航材短缺可能延誤交付"
         ]
       }
     }

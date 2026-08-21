@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "4536",
   "companyName": "拓凱",
-  "updatedAt": "2026-07-08",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "core",
-      "supplyChainStage": "aerospace_mro",
-      "roleType": "aerospace_composite_parts",
-      "roleSummary": "拓凱為國內碳纖維複材加工領先廠商，6月營收8.91億元年增10.0%。提供IDF/教練機複材件、飛彈彈體、Airbus/Boeing航太次結構件及運動器材。MOPS主要經營：運動休閒產品航太醫療產品。",
+      "supplyChainStage": "aerospace_composites",
+      "roleType": "aerospace_composite_products",
+      "roleSummary": "拓凱MOPS直接揭露航太產品，航太複材角色成立；但未揭露IDF、飛彈、波音或空巴客戶與機型。2026年7月營收10.23億元，MoM+14.8%、YoY+20.4%，累計YoY僅+2.2%，單月回升尚未全面轉化為全年高成長。",
       "products": [
-        "IDF/教練機碳纖維複材機體件(蒙皮/翼肋)",
-        "飛彈複材彈體殼段(雄風/萬劍)",
-        "Airbus A320neo/Boeing 787複材次結構件(次承包)",
-        "醫療用碳纖維複材零件(骨科植入物/手術台)",
-        "運動器材碳纖維管(Yonex羽球拍/Prince網球拍)"
+        "碳纖維航空結構件",
+        "航太複合材料內裝件",
+        "複材整流罩與外覆件",
+        "碳纖維醫療影像床板",
+        "碳纖維自行車架與運動器材"
       ],
       "customers": [
-        "漢翔2634(IDF/教練機複材件)",
-        "Airbus(A320neo複材次承包)",
-        "Boeing(787複材次結構件)",
-        "中科院(飛彈複材彈體/無人機機體)",
-        "Yonex/Prince(運動器材碳纖維管)"
+        "Boeing（航空複材應用對象，非MOPS揭露客戶）",
+        "Airbus（航空複材應用對象，非MOPS揭露客戶）",
+        "Safran（航太次系統應用對象，非MOPS揭露客戶）",
+        "漢翔(2634)（航太複材應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "拓凱國際",
@@ -48,32 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 4536 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：運動休閒產品、航太醫療產品、原物料及其他。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收10.23億元，MoM+14.8%、YoY+20.4%，累計YoY+2.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "碳纖維預浸料熱壓罐成型(Autoclave 180C/7bar)",
-        "RTM樹脂轉注成型(大型複材件一體成型)",
-        "複材-金屬接合技術(膠合/機械接合混用)"
+        "碳纖維預浸布鋪層、纖維方向與孔隙率控制",
+        "熱壓罐固化之溫壓曲線與樹脂流動管理",
+        "超音波C-scan非破壞檢測與層間剝離判讀"
       ],
       "swot": {
         "strengths": [
-          "國內碳纖維複材加工領先廠商，航太+運動雙主業",
-          "6月營收8.91億元年增10.0%，運動休閒+航太穩定成長"
+          "MOPS直接支持航太產品，碳纖維複材製造具跨產業經驗",
+          "2026年7月營收MoM+14.8%、YoY+20.4%，單月需求回升"
         ],
         "weaknesses": [
-          "運動器材毛利率低於航太，獲利結構不均",
-          "小廠規模(資本額9億)難以承接大型航太標案"
+          "累計YoY僅+2.2%，單月回升仍未形成強勁全年趨勢",
+          "MOPS未揭露具名航太客戶、軍用機型或國防收入"
         ],
         "opportunities": [
-          "國防自主化帶動飛彈/無人機複材需求",
-          "Airbus/Boeing複材占比提升帶動次承包量"
+          "商用飛機增產與機身輕量化擴大複材結構件需求",
+          "本地航太供應鏈自主化可增加送樣、認證與次承包機會"
         ],
         "threats": [
-          "中國/東南亞運動器材複材低價競爭",
-          "航太認證週期長投入大"
+          "航空認證週期長，客戶延遲交付會影響產能利用率",
+          "碳纖維與樹脂原料價格及出口管制增加成本風險"
         ]
       }
     }

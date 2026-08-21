@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3707",
   "companyName": "漢磊",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "sic_gan_power_foundry_defense",
-      "roleSummary": "漢磊6月營收6.20億連續三月成長。SiC/GaN第三代功率晶圓代工能力具軍規JAN認證，軍工航太功率元件代工具有進入壁壘。",
+      "directness": "indirect",
+      "supplyChainStage": "power_foundry_adjacent",
+      "roleType": "power_semiconductor_foundry_adjacent_to_aerospace",
+      "roleSummary": "漢磊MOPS支持功率半導體與類比IC晶圓代工，但未揭露JAN軍規認證、中科院客戶或軍工收入。此角色應定位為航太電源系統可能採用的功率元件製程平台。FinMind顯示2026年7月營收6.48億元，MoM+4.4%，不能歸因軍工。",
       "products": [
-        "6吋SiC MOSFET晶圓代工(1200V/1700V)",
-        "GaN HEMT晶圓代工(650V功率/射頻)",
-        "6/8吋類比IC晶圓代工(BJT/BCD)",
-        "軍規功率MOSFET代工(JAN認證)",
-        "高壓BJT晶圓代工(工業用)"
+        "高壓功率MOSFET晶圓代工",
+        "類比積體電路晶圓代工",
+        "高壓二極體晶圓代工",
+        "馬達驅動與電源管理IC代工"
       ],
       "customers": [
-        "ON Semiconductor(SiC MOSFET代工)",
-        "STMicroelectronics(GaN合作)",
-        "中科院(軍規SiC功率元件代工)",
-        "致新(3682)(電源管理IC代工)",
-        "立錡(6286)(電源管理IC代工)"
+        "Infineon Technologies（功率元件驗證對象，非MOPS揭露客戶）",
+        "onsemi（功率元件驗證對象，非MOPS揭露客戶）",
+        "STMicroelectronics（功率IC驗證對象，非MOPS揭露客戶）",
+        "漢翔(2634)（航太電源應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "穩懋(2455)(GaN HEMT)",
@@ -49,36 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3707 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：功率半導體及類比積體電路的晶圓代工。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收6.48億元，MoM+4.4%；為公司整體數據。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "6吋SiC MOSFET晶圓代工(1200V/1700V車規/軍規)",
-        "GaN HEMT氮化鎵功率/射頻代工(650V)",
-        "JAN軍規認證功率MOSFET代工流程"
+        "高壓Trench MOSFET閘極與導通電阻控制",
+        "BCD類比／功率整合製程與高壓隔離結構",
+        "外延層厚度、崩潰電壓與晶圓級可靠度量測"
       ],
       "swot": {
         "strengths": [
-          "6吋SiC MOSFET(1200V/1700V)+GaN HEMT(650V)晶圓代工，車用/軍用功率半導體技術",
-          "MOPS登記為功率半導體及類比積體電路晶圓代工，SiC/GaN為下一代功率技術",
-          "7月營收6.48億MoM+4.4%，功率半導體需求穩定增長"
+          "MOPS直接支持功率半導體與類比IC晶圓代工",
+          "FinMind顯示7月營收6.48億元、MoM+4.4%，短期連續回升"
         ],
         "weaknesses": [
-          "6吋晶圓廠規模小，成本競爭力不如8吋/12吋",
-          "SiC/GaN良率仍低於Si，量產能力待提升",
-          "資本額40億但含私募5億，擴產資金有限"
+          "MOPS未揭露JAN、MIL-STD或具名國防客戶",
+          "軍工收入無法拆分，航太角色僅屬功率元件應用鄰近"
         ],
         "opportunities": [
-          "電動車800V高壓平台帶動SiC MOSFET需求爆發",
-          "軍用雷達/電戰系統GaN射頻元件需求",
-          "ON Semiconductor/STMicroelectronics合作訂單增長"
+          "航太電源轉換與致動系統可增加高壓功率元件驗證需求",
+          "供應鏈在地化有利本土功率半導體製程平台送樣"
         ],
         "threats": [
-          "WolfSpeed/II-VI等SiC大廠8吋量產能力領先",
-          "中國SiC/GaN晶圓代工(三安光電)低价競爭",
-          "SiC長晶技術門檻高，良率提升緩慢"
+          "軍用認證週期長且批量小，未必能帶來顯著營收",
+          "國際IDM與成熟製程代工廠在成本及可靠度資料庫上競爭"
         ]
       }
     }

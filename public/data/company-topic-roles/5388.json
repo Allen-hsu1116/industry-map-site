@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -158,18 +158,21 @@
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "defense_communication",
-      "roleType": "defense_networking_equipment",
-      "roleSummary": "中磊為網通ODM大廠，國防通訊設備(加密路由器/戰術網路)為間接應用。7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%。",
+      "supplyChainStage": "networking_adjacent",
+      "roleType": "networking_equipment_adjacent_to_defense",
+      "roleSummary": "中磊MOPS僅揭露有線、無線網路產品，未揭露MIL-STD加密路由器、戰術Mesh、SATCOM或國防客戶。此角色應限於安全通訊可能採用的寬頻閘道器與無線接取平台。2026年7月營收79.80億元，YoY+51.3%、累計YoY+56.9%，公司說明為北美訂單增溫，不能歸因軍工。",
       "products": [
-        "軍規加密網路路由器(MIL-STD-810H)",
-        "戰術邊緣網路閘道器(5G Mesh/Wi-Fi Mesh)",
-        "無人機通訊中繼模組(4G/5G/SATCOM)"
+        "DOCSIS寬頻纜線閘道器",
+        "XGS-PON光纖網路終端",
+        "Wi-Fi 6／7家庭與企業路由器",
+        "4G／5G固定無線接取CPE",
+        "IoT蜂巢式通訊閘道器"
       ],
       "customers": [
-        "美國國防部(戰術網路設備ODM)",
-        "Lockheed Martin(無人機通訊模組)",
-        "Northrop Grumman(軍規網通設備)"
+        "L3Harris Technologies（安全通訊驗證對象，非MOPS揭露客戶）",
+        "RTX（戰術網路驗證對象，非MOPS揭露客戶）",
+        "Nokia（電信網路平台對象，非MOPS揭露客戶）",
+        "Ericsson（5G接取平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "啟碁(6285)",
@@ -194,31 +197,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：有線網路產品、無線網路產品及其他。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收79.80億元，MoM+9.7%、YoY+51.3%，累計YoY+56.9%；北美市場訂單增溫。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "軍規加密通訊協議(TLS 1.3/IPsec/AES-256)",
-        "5G Mesh戰術網路自癒技術"
+        "DOCSIS 3.1／XGS-PON寬頻接取與遠端管理",
+        "Wi-Fi 6／7 MLO、Mesh漫遊與QoS",
+        "5G NR Sub-6GHz CPE射頻、天線與網路切片整合"
       ],
       "swot": {
         "strengths": [
-          "網通ODM技術可延伸至軍規通訊",
-          "北美客戶基礎有利國防供應鏈切入"
+          "MOPS直接支持有線與無線網路產品，接取設備平台完整",
+          "2026年7月營收YoY+51.3%、累計YoY+56.9%，北美訂單增溫"
         ],
         "weaknesses": [
-          "國防營收佔比極微",
-          "缺乏軍規認證經驗"
+          "MOPS未揭露軍規加密、MIL-STD、SATCOM或國防客戶",
+          "公司整體高成長來自北美市場，不能直接歸因國防題材"
         ],
         "opportunities": [
-          "美國國防預算持續增長",
-          "5G軍用通訊標準化"
+          "安全通訊與基地網路升級可增加寬頻閘道與5G CPE驗證需求",
+          "網路備援與零信任邊緣架構可提高企業閘道器功能價值"
         ],
         "threats": [
-          "國防供應鏈准入門檻高",
-          "軍工大廠垂直整合"
+          "戰術通訊需專用加密與環境驗證，民用網通平台未必能切入",
+          "北美電信商拉貨波動與關稅政策可能反轉高成長"
         ]
       }
     },

@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "4908",
   "companyName": "前鼎",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "leo-satellite-communications",
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "satellite_ground_equipment",
-      "roleType": "optical_transceiver_satellite",
-      "roleSummary": "前鼎光電為雷射/受光二極體封裝與光傳接模組專業廠商，MOPS登記為光纖通訊產品設計研發生產銷售。受惠LEO衛星通訊與AI光互連需求帶動成長。",
+      "supplyChainStage": "terrestrial_optical_backhaul_adjacent",
+      "roleType": "optical_transceiver_adjacent_to_ground_backhaul",
+      "roleSummary": "前鼎MOPS直接支持雷射二極體、受光二極體封裝及光傳接模組，但未揭露星間光鏈路、抗輻射封裝或衛星營運商客戶。此角色應限於衛星地面站光纖回傳的鄰近光通訊元件。FinMind顯示2026年7月營收0.99億元，MoM+8.2%。",
       "products": [
-        "光纖通訊雷射二極體(LD)封裝(1310nm/1550nm TO-CAN)",
-        "受光二極體(PD)封裝(PIN/APD InGaAs晶粒)",
-        "光傳接模組(Transceiver)(SFP+/SFP28 100G)",
-        "衛星光通訊LD/PD模組(LEO星鏈用hermetic封裝)",
-        "光次模組(OSA)(TOSA/ROSA 100G/400G)"
+        "1310nm／1550nm雷射二極體封裝",
+        "InGaAs受光二極體封裝",
+        "SFP／SFP+光傳接模組",
+        "TOSA／ROSA光次模組",
+        "PON用雙向光收發模組"
       ],
       "customers": [
-        "Cisco(光傳接模組/光次模組)",
-        "Ciena(100G/400G光傳接模組)",
-        "Nokia(光纖網路設備LD/PD)",
-        "中科院(國防光通訊LD/PD模組)"
+        "Ciena（地面光傳輸應用對象，非MOPS揭露客戶）",
+        "Nokia（地面光回傳應用對象，非MOPS揭露客戶）",
+        "SES（衛星地面站驗證對象，非MOPS揭露客戶）",
+        "Eutelsat OneWeb（地面回傳驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Lumentum",
@@ -48,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 4908 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：雷射二極體、受光二極體封裝及光傳接模組相關光纖通訊產品。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收0.99億元，MoM+8.2%；為公司整體數據。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "1310nm/1550nm LD雷射二極體TO-CAN封裝技術",
-        "光傳接模組(SFP+/SFP28 100G)設計製造",
-        "衛星光通訊LD/PD元件密封封裝(hermetic seal helium leak test)"
+        "1310nm／1550nm LD與InGaAs PD封裝耦光",
+        "TOSA／ROSA主動對準與光功率校準",
+        "SFP／SFP+模組之數位診斷監控與鏈路預算"
       ],
       "swot": {
         "strengths": [
-          "1310nm/1550nm LD雷射二極體TO-CAN封裝技術切入衛星光通訊供應鏈",
-          "光傳接模組(SFP+/SFP28 100G)設計製造能力",
-          "衛星光通訊LD/PD元件密封封裝(hermetic seal)適用太空環境"
+          "MOPS直接支持LD、PD封裝與光傳接模組，地面光回傳角色可驗證",
+          "FinMind顯示7月營收0.99億元、MoM+8.2%，短期回升"
         ],
         "weaknesses": [
-          "資本額7.8億，公司規模小，產能擴張受限",
-          "衛星光通訊市場規模尚小，營收貢獻有限",
-          "LD/PD封裝面臨Lumentum/Coherent/II-VI等大廠競爭"
+          "MOPS未揭露衛星光通訊、抗輻射規格或具名衛星客戶",
+          "月營收不足1億元，規模小且題材貢獻未拆分"
         ],
         "opportunities": [
-          "SpaceX Starlink/OneWeb衛星網路部署帶動光通訊元件需求",
-          "低軌衛星光互連(衛星間雷射通訊)新應用",
-          "國防光通訊(中科院)需求穩定"
+          "衛星地面站擴建可增加城域與骨幹光纖回傳模組需求",
+          "PON與乙太網光模組升級可提高地面網路傳輸容量"
         ],
         "threats": [
-          "Lumentum/Coherent/II-VI在光通訊元件市場主導",
-          "中國光通訊元件廠低價競爭",
-          "衛星通訊市場發展速度不確定"
+          "中國光模組廠價格競爭壓縮標準產品毛利",
+          "若低軌衛星採用專用星間光鏈路，既有電信模組未必能直接切入"
         ]
       }
     },

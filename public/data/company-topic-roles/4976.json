@@ -2,25 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "4976",
   "companyName": "佳凌",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "defense_optics",
-      "roleType": "military_optical_lens",
-      "roleSummary": "佳凌7月營收0.97億，MoM+1.3%。MOPS登記為車載/相機/安控/醫療/辨識等鏡頭開發製作。提供軍規光學鏡頭。",
+      "directness": "indirect",
+      "supplyChainStage": "optical_lens_adjacent",
+      "roleType": "camera_lens_adjacent_to_defense",
+      "roleSummary": "佳凌MOPS支持車載、相機、安控、視訊、穿戴、工業辨識與醫療鏡頭，但未揭露軍規鏡頭、無人機光電酬載或國防客戶。此角色改列為安控與機器視覺鏡頭對航太影像系統的鄰近能力。2026年7月營收0.97億元，YoY+9.5%、累計YoY+1.3%，規模仍小。",
       "products": [
-        "軍規監視鏡頭(日夜兩用/IR/SWIR波段)",
-        "無人機光電酬載載鏡頭(穩像/變焦)",
-        "軍用瞄準鏡頭(紅外線/夜視)"
+        "ADAS／環視車載攝影鏡頭",
+        "IP安控攝影鏡頭",
+        "機器視覺辨識鏡頭",
+        "醫療影像光學鏡頭",
+        "塑膠射出成型鏡筒與機構件"
       ],
       "customers": [
-        "中山科學研究院(軍規鏡頭)",
-        "漢翔(2634)(無人機光電系統)",
-        "國防部(監視/瞄準鏡頭)"
+        "Mobileye（ADAS鏡頭應用對象，非MOPS揭露客戶）",
+        "Continental（車載視覺應用對象，非MOPS揭露客戶）",
+        "Bosch（機器視覺應用對象，非MOPS揭露客戶）",
+        "Hanwha Vision（安控鏡頭應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "大立光(3008)",
@@ -46,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：車載、相機、安控、視訊、穿戴、工業辨識與醫療鏡頭；塑膠成型機構部品及精密模具。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收0.97億元，MoM+1.3%、YoY+9.5%，累計YoY+1.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "SWIR短波紅外鏡頭設計(900-1700nm)",
-        "光學穩像技術(陀螺儀補償)",
-        "軍規環境測試(MIL-STD-810H)"
+        "塑膠非球面鏡片射出、模具補償與面形控制",
+        "鏡組偏心、MTF與畸變校正",
+        "車載寬溫、振動與日夜共焦光學設計"
       ],
       "swot": {
         "strengths": [
-          "車載/安控/辨識鏡頭技術可延伸至軍規應用",
-          "光學穩像與SWIR技術佈局",
-          "可服務國內國防供應鏈"
+          "MOPS直接支持多場域鏡頭與塑膠成型機構件開發製造",
+          "車載、安控與工業辨識經驗可延伸高可靠影像應用"
         ],
         "weaknesses": [
-          "7月營收0.97億，MoM+1.3%，營收規模小",
-          "軍規認證經驗有限",
-          "國防訂單佔比低"
+          "2026年7月營收僅0.97億元，累計YoY僅+1.3%，規模與成長有限",
+          "MOPS未揭露軍規、無人機酬載或國防客戶"
         ],
         "opportunities": [
-          "台灣國防自主政策推動軍規鏡頭需求",
-          "無人機光電酬載需求增長",
-          "美國國防供應鏈商機"
+          "無人載具與邊緣辨識可增加寬溫、低畸變鏡頭驗證需求",
+          "車載鏡頭量產經驗可支援高振動環境的可靠度改善"
         ],
         "threats": [
-          "大立光/先進光等大廠技術廠技術領先",
-          "軍規認證門檻高",
-          "國防預算波動"
+          "大立光、舜宇光學及中國安控鏡頭廠競爭激烈",
+          "未通過軍規環境測試前，光學能力不能直接等同軍工訂單"
         ]
       }
     },

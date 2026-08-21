@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3406",
   "companyName": "玉晶光",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -10,19 +10,20 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "optical_components",
-      "roleType": "smartphone_lens_manufacturer",
-      "roleSummary": "玉晶光6月營收17.4億YoY+4.5%，累計118億YoY+17.2%。Apple iPhone前鏡頭核心供應商，3D感測與AR/VR Pancake鏡頭為新成長動能，車用ADAS鏡頭放量中。",
+      "roleType": "optical_lens_manufacturer",
+      "roleSummary": "玉晶光MOPS直接揭露各類光學鏡頭、鏡片及高功率LED照明，光學元件角色成立；但MOPS未揭露Apple、Meta、Microsoft或車用客戶。2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%，旺季拉貨強但單月年增溫和。",
       "products": [
-        "iPhone前鏡頭(7P/8P塑膠非球面)",
-        "3D感測鏡頭(Face ID結構光/dTOF接收)",
-        "車用光學鏡頭(環視/ADAS/DMS)",
-        "AR/VR光學鏡頭(Pancake折疊光路)"
+        "7P／8P塑膠非球面手機鏡頭",
+        "dToF／結構光3D感測接收鏡頭",
+        "Pancake折疊光路XR鏡頭",
+        "ADAS／DMS車載攝影鏡頭",
+        "高功率LED室內外照明模組"
       ],
       "customers": [
-        "Apple(iPhone前鏡頭/Face ID 3D感測)",
-        "Meta(Quest AR/VR Pancake鏡頭)",
-        "車廠Tier1(Mobileye/Continental ADAS鏡頭)",
-        "Microsoft(HoloLens AR鏡頭)"
+        "Apple（手機鏡頭應用對象，非MOPS揭露客戶）",
+        "Meta Platforms（XR鏡頭應用對象，非MOPS揭露客戶）",
+        "Microsoft（AR裝置應用對象，非MOPS揭露客戶）",
+        "Continental（車載鏡頭應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "大立光(3008)(手機鏡頭龍頭)",
@@ -49,36 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各類光學鏡頭、鏡片研發及生產製造；高功率LED室內外照明產品。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "confidence": "medium",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "7P/8P塑膠非球面鏡頭WLG研磨與Molding技術",
-        "dTOF/結構光3D感測鏡頭光學設計(VCSEL接收)",
-        "Pancake折疊光路AR/VR鏡頭設計(超短焦)"
+        "多片塑膠非球面成形、鏡組偏心與MTF公差控制",
+        "dToF窄頻濾光、接收視場與主動對焦模組整合",
+        "Pancake偏振折疊光路、鬼影抑制與輕量化"
       ],
       "swot": {
         "strengths": [
-          "iPhone前鏡頭(7P/8P塑膠非球面)核心供應商，與Apple深度合作",
-          "dTOF/結構光3D感測鏡頭(Face ID接收)光學設計能力",
-          "6月累計營收11.8億YoY+17.2%，光學鏡頭出貨穩定增長"
+          "MOPS直接支持光學鏡頭、鏡片及高功率LED產品，題材角色可驗證",
+          "2026年7月營收MoM+39.3%、累計YoY+14.2%，旺季出貨動能回升"
         ],
         "weaknesses": [
-          "6月營收17.3億YoY僅+4.5%，成長動能放緩",
-          "Apple單一客戶營收集中度極高，客戶分散不足",
-          "手機鏡頭ASP受Apple議價壓力持續"
+          "7月YoY僅+1.6%，高月增主要可能是季節性而非結構性爆發",
+          "MOPS未揭露具名終端客戶，既有客戶關係只能列為應用對象"
         ],
         "opportunities": [
-          "AR/VR光學鏡頭(Pancake折疊光路)切入Meta Quest/Microsoft HoloLens供應鏈",
-          "車用光學鏡頭(環視/ADAS/DMS)隨自動駕駛滲透增長",
-          "iPhone 3D感測(Face ID)升級帶動鏡頭ASP提升"
+          "XR薄型化推升Pancake鏡頭與精密組裝需求",
+          "手機3D感測與ADAS／DMS鏡頭可擴大高階光學應用"
         ],
         "threats": [
-          "大立光(3008)在手機鏡頭市場份額與技術領先",
-          "中國鏡頭廠(舜宇光學/歐菲光)低價競爭",
-          "手機出貨量成熟化影響鏡頭需求"
+          "大立光與舜宇光學在手機及XR鏡頭持續競爭",
+          "智慧手機與XR出貨不及預期會壓低高階鏡頭產能利用率"
         ]
       }
     },

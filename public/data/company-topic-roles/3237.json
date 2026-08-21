@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3237",
   "companyName": "汎銓",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "defense_material_analysis",
-      "roleSummary": "汎銓為材料分析與IC故障分析服務商，MOPS登記為材料檢測分析服務。受惠先進製程節點縮小帶動FA需求，國防/航太材料檢測為利基應用。",
+      "directness": "indirect",
+      "supplyChainStage": "materials_analysis_adjacent",
+      "roleType": "failure_analysis_adjacent_to_aerospace",
+      "roleSummary": "本輪MOPS公司資料、TWSE月營收與FinMind月營收均查無3237資料，無法驗證軍規材料、MIL-STD-883或國防客戶。既有FIB／TEM／SEM失效分析服務僅保留為歷史服務範圍，國防角色限於材料與電子元件驗證的間接應用。",
       "products": [
-        "TEM穿透式電子顯微鏡試片製備(FIB lift-out sub-10nm)",
-        "FIB聚焦離子束截面分析(Ga+離子束30kV)",
-        "IC故障分析(FA)服務(OBIRCH/開路短路漏電定位)",
-        "軍規材料可靠性檢測(MIL-STD-883 method 5005)",
-        "SEM掃描式電子顯微鏡分析(EDS成分分析)"
+        "FIB聚焦離子束截面分析（歷史服務範圍）",
+        "TEM穿透式電子顯微鏡試片製備（歷史服務範圍）",
+        "SEM／EDS表面形貌與成分分析（歷史服務範圍）",
+        "OBIRCH電性失效定位（歷史服務範圍）"
       ],
       "customers": [
-        "台積電(2330)(先進製程FA服務)",
-        "聯電(2303)(晶圓FA失效分析)",
-        "中科院(國防材料檢測分析)",
-        "漢翔(2634)(航太複材TEM分析)",
-        "日月光(3711)(封裝FA失效分析)"
+        "漢翔(2634)（航太材料驗證對象，非MOPS揭露客戶）",
+        "RTX（軍用電子驗證對象，非MOPS揭露客戶）",
+        "台積電(2330)（半導體分析應用對象，非MOPS揭露客戶）",
+        "日月光投控(3711)（封裝分析應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "閎康（6457）",
@@ -48,36 +46,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3237 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "本輪MOPS完整基本資料查無3237，產品僅保留為歷史服務範圍。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "MCP unavailable",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "TWSE與FinMind均查無2026年近期月營收，無法量化題材營運貢獻。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
+      "status": "needs_fresh_disclosure",
       "techFocus": [
-        "FIB-TEM奈米級截面製備與分析(sub-10nm精度)",
-        "IC故障分析(FA)定位技術(OBIRCH/FIB circuit edit)",
-        "軍規材料可靠性檢測(MIL-STD-883 method 5005)"
+        "FIB lift-out奈米截面製備與電路切割",
+        "TEM晶格／界面分析與EDS元素鑑定",
+        "OBIRCH漏電熱點定位與SEM缺陷關聯"
       ],
       "swot": {
         "strengths": [
-          "FIB-TEM奈米級截面製備與分析技術(sub-10nm精度)，台積電(2330)/聯電(2303)先進製程FA服務供應商",
-          "IC故障分析(FA)定位技術(OBIRCH/FIB circuit edit)，半導體失效分析具獨家技術壁壘",
-          "TEM穿透式電子顯微鏡試片製備(FIB lift-out)為高階材料分析必備工具，航太材料分析可延伸應用"
+          "歷史服務範圍涵蓋FIB、TEM、SEM／EDS與電性失效定位",
+          "材料分析可支援航太電子與高可靠度元件驗證"
         ],
         "weaknesses": [
-          "MOPS基本資料與月營收均無法取得，營運規模與財務狀況能見度極低",
-          "FA服務屬利基市場，客戶集中於台積電/聯電等晶圓廠，業務規模擴張受限",
-          "國防航太屬間接角色(材料分析服務可延伸至航太材料)，非直接軍品供應商"
+          "MOPS與兩條月營收資料路徑皆失敗，最新公司與營運資料無法驗證",
+          "沒有軍規認證、國防客戶或軍工收入證據"
         ],
         "opportunities": [
-          "半導體先進製程(2nm/1.4nm)FA需求持續增長，奈米級截面分析為必備服務",
-          "航太材料(鈦合金/複合材料)微觀結構分析需求可延伸，FIB-TEM技術具跨領域應用潛力",
-          "先進封裝(CoWoS/SoIC)FA需求增加，3D IC失效分析為新興應用場景"
+          "航太電子國產化可增加材料與失效分析需求",
+          "先進封裝與第三代半導體導入可擴大高可靠度分析案件"
         ],
         "threats": [
-          "晶圓廠可能自建FA實驗室減少外部委外需求，台積電/聯電內部化風險",
-          "FA服務競爭者(閎康/宜特)同具FIB-TEM分析能力，技術差異化可能縮小",
-          "半導體景氣循環影響FA委外需求，先進製程投資放緩將直接影響接單"
+          "大型晶圓廠與封測廠內建分析實驗室可能壓縮外包需求",
+          "資料不可得容易使題材精確度與投資判斷失真"
         ]
       }
     }

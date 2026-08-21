@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "3163",
   "companyName": "波若威",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "optical_comm_components_defense",
-      "roleSummary": "波若威為竹科DWDM光通訊專業廠，MOPS登記為高密度波分多工器/解多工器、全光纖式波長存取多工器、光機電主動被動元件模組及次系統設計生產銷售。產品應用於國防通訊與光纖網路基礎設施。",
+      "directness": "indirect",
+      "supplyChainStage": "fiber_optics_adjacent",
+      "roleType": "fiber_optic_components_adjacent_to_defense",
+      "roleSummary": "波若威MOPS支持DWDM／WADM及光機電元件模組，未揭露軍規加密、抗輻射或國防客戶。國防角色僅能定位為基地與指揮網路可能採用的光纖傳輸元件。FinMind顯示2026年7月營收2.10億元，MoM+15.9%，不能歸因軍工。",
       "products": [
-        "高密度波分多工器/解多工器(DWDM MUX/DEMUX)(CH40/CH96通道)",
-        "全光纖式波長存取多工器(FWADM)(CWDM/DWDM)",
-        "光機電主動/被動元件與模組(EDFA/光開關/衰減器)",
-        "光纖通訊次系統(ROADM節點/光層交換模組)(C-band)"
+        "DWDM波分多工器／解多工器",
+        "CWDM合波器與分波器",
+        "全光纖式WADM波長存取多工器",
+        "光開關與光衰減模組",
+        "光纖次系統整合模組"
       ],
       "customers": [
-        "Ciena(DWDM光傳輸設備WaveServer)",
-        "Cisco(光通訊模組NCS/ONS系列)",
-        "Nokia(光纖網路設備1830 PSS)",
-        "中科院(國防光纖通訊系統)",
-        "Infinera(光傳輸平台DTN-X)"
+        "L3Harris Technologies（戰術光網驗證對象，非MOPS揭露客戶）",
+        "RTX（安全通訊應用對象，非MOPS揭露客戶）",
+        "Ciena（光傳輸平台應用對象，非MOPS揭露客戶）",
+        "Nokia（光網路平台應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "光環（3227）",
@@ -47,36 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3163 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：DWDM／WADM及光機電主被動元件、模組與次系統設計生產銷售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收2.10億元，MoM+15.9%；為公司整體數據。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "DWDM高密度波分多工技術(C-band 96ch 50GHz spacing)",
-        "全光纖式波長存取多工器設計(低損耗<0.5dB)",
-        "光機電模組次系統整合(EDFA/光開關/VOA)"
+        "50GHz／100GHz DWDM通道間隔與低插入損耗控制",
+        "WADM波長選擇、隔離度與偏振相依損耗控制",
+        "光纖耦合、封裝溫漂與回波損耗量測"
       ],
       "swot": {
         "strengths": [
-          "DWDM高密度波分多工技術(C-band 96ch 50GHz spacing)與全光纖式波長存取多工器設計(低損耗<0.5dB)",
-          "MOPS登記高密度波分多工器/解多工器與合波器設計生產銷售，Ciena/Cisco為DWDM光傳輸設備客戶",
-          "光機電主動被動元件/模組及次系統設計能力，可切入軍規光通訊與衛星地面站應用"
+          "MOPS直接支持DWDM、WADM及光機電元件模組",
+          "FinMind顯示7月營收2.10億元、MoM+15.9%，短期回升"
         ],
         "weaknesses": [
-          "月營收資料無法取得(上櫃)，營運規模與成長動能難以評估",
-          "資本額9.46億規模有限，DWDM模組量產規模落後國際大廠",
-          "國防航太屬間接角色(光通訊元件用於軍事通訊)，非直接軍品供應商"
+          "MOPS未揭露軍規認證、加密功能或國防客戶",
+          "光通訊元件可軍民兩用，但軍工營收無法從公司整體數據拆分"
         ],
         "opportunities": [
-          "軍用衛星通訊與戰場光纖網路帶動DWDM模組需求，波若威高密度波分多工技術具利基優勢",
-          "低軌衛星地面站光通訊需求增長，全光纖式波長存取多工器可切入衛星通訊供應鏈",
-          "國防寬頻通訊網路升級帶動軍規DWDM設備需求，波若威與Ciena/Cisco合作關係可延伸至國防標案"
+          "基地與指揮網路升級可增加高可靠光纖傳輸元件需求",
+          "高頻寬感測與無人系統回傳可提高DWDM鏈路容量需求"
         ],
         "threats": [
-          "DWDM模組市場由Ciena/Cisco等系統廠主導，波若威為元件供應商議價力有限",
-          "矽光子整合趨勢可能取代分立DWDM元件，長期需求可能減少",
-          "國防通訊設備認證週期長且客戶集中，合約終止風險高"
+          "中國光被動元件供應商價格競爭激烈",
+          "未完成軍用環境與資安驗證前，不能直接進入國防系統"
         ]
       }
     }

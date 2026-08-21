@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3189",
   "companyName": "景碩",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -163,22 +163,20 @@
       "topicName": "HBM 高頻寬記憶體",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "hbm",
-      "roleType": "hbm_substrate_supplier",
-      "roleSummary": "景碩6月營收42.24億YoY+32.3%，累計236.01億YoY+29.8%。MOPS登記為電子零組件/電子材料製造批發零售。供應HBM用BT載板，受SK Hynix/Samsung/Micron HBM擴產帶動，HBM載板為高毛利成長動能，受惠AI加速器對HBM需求暴增。",
+      "supplyChainStage": "ic_substrate_adjacent",
+      "roleType": "ic_substrate_adjacent_to_hbm_packages",
+      "roleSummary": "景碩MOPS只概括揭露電子零組件與電子材料，未證實HBM專用BT載板、TSV對位或SK hynix／Samsung／Micron客戶。此角色應定位為高階IC載板對AI封裝的間接曝險。2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%，但不能全歸因HBM。",
       "products": [
-        "HBM用BT載板(高精度鑽孔)(pitch<80μm)(8H/12H堆疊)",
-        "記憶體堆疊用BT基板(warpage控制<50μm)",
-        "HBM封裝用多層BT載板(8-12層)(TSV對位)",
-        "AI ASIC封裝用ABF載板(高I/O密度)",
-        "手機AP封裝用SiP載板(超薄<0.2mm)"
+        "FC-BGA高階IC載板",
+        "BT樹脂BGA／CSP載板",
+        "細線路多層IC封裝基板",
+        "SiP系統級封裝載板"
       ],
       "customers": [
-        "SK Hynix(HBM3/HBM3E用BT載板)(8H/12H堆疊)",
-        "Samsung(HBM3用BT載板)(AI加速器供應鏈)",
-        "Micron(美光)(HBM3E用BT載板)(與南亞科合作)",
-        "聯發科(2454)(手機AP封裝載板)",
-        "高通Qualcomm(手機AP/數據機封裝載板)"
+        "SK hynix（HBM封裝驗證對象，非MOPS揭露客戶）",
+        "Micron Technology（HBM封裝驗證對象，非MOPS揭露客戶）",
+        "Samsung Electronics（記憶體封裝驗證對象，非MOPS揭露客戶）",
+        "ASE Technology（封裝整合生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "欣興"
@@ -200,36 +198,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件製造、電子材料批發與零售。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "medium",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "HBM用BT載板高精度鑽孔(pitch<80μm)(CO2雷射)",
-        "記憶體堆疊用載板warpage控制(<50μm)",
-        "多層BT載板壓合技術(8-12層)(介電厚度<40μm)"
+        "FC-BGA細線路／微盲孔與多層增層製程",
+        "大尺寸載板翹曲、熱膨脹係數與層間對位控制",
+        "BT與ABF基材之阻抗、可靠度與回焊壽命管理"
       ],
       "swot": {
         "strengths": [
-          "HBM用BT載板高精度鑽孔(pitch<80μm CO2雷射)技術打入SK Hynix/Samsung供應鏈",
-          "記憶體堆疊用載板warpage控制(<50μm)能力",
-          "多層BT載板壓合技術(8-12層)(介電厚度<40μm)適用8H/12H堆疊"
+          "高階FC-BGA與多層IC載板能力可參與AI封裝生態",
+          "2026年7月營收YoY+35.9%、累計YoY+30.7%，公司整體成長強"
         ],
         "weaknesses": [
-          "HBM BT載板為新應用，量產規模與良率仍在提升",
-          "HBM載板市場競爭者包含欣興/南電等大廠",
-          "BT載板材料依賴日商(Mitsui Gas Chemical)供應"
+          "MOPS未揭露HBM專用載板、TSV或具名記憶體客戶",
+          "公司營收成長不能直接等同HBM收入，題材歸因仍有限"
         ],
         "opportunities": [
-          "HBM3/HBM3E 8H/12H堆疊需求隨AI加速器出貨量爆發增長",
-          "AI ASIC封裝用ABF載板(高I/O密度)新訂單",
-          "手機AP SiP封裝用超薄載板(<0.2mm)需求"
+          "AI加速器與高頻寬記憶體擴大先進封裝載板需求",
+          "大尺寸FC-BGA與低翹曲製程可提高產品組合價值"
         ],
         "threats": [
-          "欣興(3037)/南電(8046)也在積極切入HBM BT載板市場",
-          "日本Ibiden/Shinko在高階HBM載板技術領先",
-          "HBM產能擴張速度可能不及預期"
+          "欣興、南電與韓系載板廠競爭高階產能",
+          "HBM封裝架構若轉向矽中介層或其他基板方案，受惠幅度可能低於預期"
         ]
       }
     }

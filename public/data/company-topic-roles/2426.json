@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "2426",
   "companyName": "鼎元",
-  "updatedAt": "2026-07-07",
+  "updatedAt": "2026-08-21T19:04:04Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "aerospace_mro",
-      "roleType": "military_ir_led_components",
-      "roleSummary": "鼎元為國內軍規光電元件供應商，6月營收2.49億元年增19.4%。提供軍規紅外線偵測元件、軍規LED、砷化鎵光電晶體及雷射二極體。MOPS主要經營：砷化鎵、紅外線、LED、雷射二極體、光電晶體研發製造。",
+      "directness": "indirect",
+      "supplyChainStage": "optoelectronic_components_adjacent",
+      "roleType": "infrared_optoelectronics_adjacent_to_defense",
+      "roleSummary": "鼎元MOPS支持砷化鎵、紅外線LED、雷射二極體、光電晶體與光二極體，但未揭露InSb中波紅外線、MIL-STD認證、國防部或中科院客戶。國防角色改列為夜視、感測與測距系統可評估的光電元件鄰近供應。2026年7月營收2.55億元，YoY+36.3%、累計YoY+2.3%。",
       "products": [
-        "軍規紅外線偵測元件(InSb 1-5um/MWIR)",
-        "軍規LED發光二極體(850nm/940nm夜視相容)",
-        "砷化鎵GaAs光電晶體(高頻開關/940nm)",
-        "雷射二極體(808nm/980nm泵浦用)",
-        "光二極體PIN(400-1100nm/響應時間<5ns)"
+        "850nm／940nm紅外線LED晶粒",
+        "砷化鎵發光二極體晶粒",
+        "808nm／980nm雷射二極體晶粒",
+        "矽PIN光二極體",
+        "光電晶體感測元件"
       ],
       "customers": [
-        "中科院(軍規紅外線/MWIR偵測元件標案)",
-        "國防部(夜視裝置IR LED/軍規光電模組)",
-        "Hikvision海康威視(安防監控紅外LED)",
-        "Dahua大華(安防監控紅外LED)",
-        "億光2393/東貝2440(LED封裝磊晶供應)"
+        "L3Harris Technologies（夜視應用驗證對象，非MOPS揭露客戶）",
+        "RTX（光電感測應用驗證對象，非MOPS揭露客戶）",
+        "Hanwha Systems（紅外線模組應用對象，非MOPS揭露客戶）",
+        "漢翔(2634)（航電感測應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "光磊（2340）",
@@ -48,32 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2426 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile-v30",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：砷化鎵、紅外線、LED、雷射二極體、光電晶體、光二極體、單晶、磊晶與晶粒。"
+        },
+        {
+          "sourceId": "monthly-revenue-v30",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收2.55億元，MoM+2.5%、YoY+36.3%，累計YoY+2.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "low",
+      "lastVerified": "2026-08-21",
       "status": "verified",
       "techFocus": [
-        "InSb中波紅外線(MWIR 1-5um)偵測元件製程",
-        "GaAs磊晶成長(MOCVD 4-6吋)",
-        "軍規LED可靠性測試(MIL-STD-883振動/溫衝)"
+        "GaAs磊晶與850nm／940nm紅外線發光效率控制",
+        "PIN光二極體暗電流、響應度與封裝雜訊控制",
+        "雷射二極體波長穩定、熱阻與壽命篩選"
       ],
       "swot": {
         "strengths": [
-          "軍規紅外線/光電元件國內少數供應商",
-          "6月營收2.49億元年增19.4%，軍用需求穩定"
+          "MOPS直接支持紅外線、LED、雷射二極體與光感測元件",
+          "2026年7月營收YoY+36.3%，單月需求明顯回升"
         ],
         "weaknesses": [
-          "營收規模小(月營收<3億元)，量體有限",
-          "民用安防LED市場競爭激烈價格下滑"
+          "累計YoY僅+2.3%，單月高成長尚未形成全年趨勢",
+          "MOPS未揭露軍規認證、國防收入或具名軍工客戶"
         ],
         "opportunities": [
-          "國防自主化政策帶動軍規光電標案",
-          "無人機紅外線夜視需求成長"
+          "夜視、無人機感測與雷射測距可增加紅外線元件驗證機會",
+          "國防自主化可能帶動本地光電元件送樣與可靠度測試"
         ],
         "threats": [
-          "中國LED晶粒低價競爭壓力",
-          "軍用標案週期不確定"
+          "中國LED與感測晶粒價格競爭激烈",
+          "未通過軍用可靠度認證前，題材只能停留在應用鄰近"
         ]
       }
     }
