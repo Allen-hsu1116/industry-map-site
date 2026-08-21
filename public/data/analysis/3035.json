@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3035",
   "name": "智原",
-  "generatedAt": "2026-08-21T12:31:22.948Z",
+  "generatedAt": "2026-08-21T12:34:39.162Z",
   "sourceUpdatedAt": "2026-06-01",
   "marketDataDate": "2026-08-21",
   "chipDataDate": "2026-08-21",
@@ -52,11 +52,11 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "IC 設計與矽智財",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "智原是台灣最大ASIC設計服務公司，5月營收0.93億YoY-45.1%（因量產減少），但ASIC設計接單動能持續。與聯電緊密合作N5/N7製程，為AI/HPC客製晶片提供設計平台。",
+      "roleSummary": "智原MOPS直接揭露ASIC設計、矽智財與ASIC EDA工具，IC設計服務角色明確；但未揭露Google、Amazon、Intel或STMicro為客戶，也不能由MOPS證明特定N5／N7案。2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，但累計YoY-46.1%，專案與量產收入波動仍大。",
       "supplyChainStage": "asic_design_ip",
       "roleType": "asic_design_service_ip_provider",
       "directness": "core",
@@ -64,21 +64,19 @@
     },
     "productNarratives": [
       {
-        "name": "FPGA-Go-ASIC 與先進封裝整合服務",
-        "description": "智原提供 FPGA 轉 ASIC 與先進封裝整合服務，協助客戶把原型或小量 FPGA 方案轉成成本、功耗與供應更適合量產的 ASIC，並整合多 die/chiplet 封裝。",
-        "whyItMatters": "當系統從原型走向量產，FPGA 可能面臨成本、功耗或停產風險；轉 ASIC 與先進封裝服務可降低長期 BOM、提升效能並服務 AI/HPC 客製晶片需求。",
-        "topicFit": "FPGA 轉 ASIC 是客製晶片設計服務的一種。",
-        "businessImpact": "若 AI/HPC、工控與網通客戶由 FPGA 原型轉量產 ASIC，智原可取得 NRE、IP 與量產服務收入；但專案時程長且成功量產具有不確定性。",
-        "sourceLabels": [
-          "Faraday Technology：Advanced Packaging Service",
-          "Faraday Technology：FPGA-Go-ASIC Service"
-        ],
-        "sourceUrls": [
-          "https://www.faraday-tech.com/en/content/Product/ASIC_Service/AdvancedPackageSolution",
-          "https://www.faraday-tech.com/en/content/Product/ASIC_Service/FPGA-to-ASIC"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
+        "name": "ASIC NRE前端／後端設計服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "USB／PCIe／DDR／SerDes矽智財IP",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "SoC整合與量產Turnkey服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -97,7 +95,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -165,7 +163,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "智原是台灣最大ASIC設計服務公司，5月營收0.93億YoY-45.1%（因量產減少），但ASIC設計接單動能持續。與聯電緊密合作N5/N7製程，為AI/HPC客製晶片提供設計平台。"
+        "roleSummary": "智原MOPS直接揭露ASIC設計、矽智財與ASIC EDA工具，IC設計服務角色明確；但未揭露Google、Amazon、Intel或STMicro為客戶，也不能由MOPS證明特定N5／N7案。2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，但累計YoY-46.1%，專案與量產收入波動仍大。"
       }
     ],
     "swot": [

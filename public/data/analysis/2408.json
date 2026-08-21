@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2408",
   "name": "南亞科",
-  "generatedAt": "2026-08-21T12:31:22.710Z",
+  "generatedAt": "2026-08-21T12:34:39.005Z",
   "sourceUpdatedAt": "2026-06-01",
   "marketDataDate": "2026-08-21",
   "chipDataDate": "2026-08-21",
@@ -48,36 +48,36 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
+    "label": "題材關聯明確",
+    "score": 70,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "HBM 高頻寬記憶體",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "南亞科6月營收293.88億YoY+621.3%，累計1316.36億YoY+643.1%，MOPS備註「受市場需求成長影響」。MOPS登記為電子零組件製造/國際貿易。DRAM價格上漲帶動營收暴增(基期極低)，DDR5量產中(1a nm)，HBM3E與美光合作開發，為HBM題材間接受益者。",
+      "roleLabel": "間接受惠",
+      "roleSummary": "南亞科是DRAM製造商，但MOPS主要業務僅揭露電子零組件製造，未揭露HBM產品或與美光共同開發HBM3E。此角色應定位為DDR5與DRAM景氣的間接受惠觀察，不是已量產HBM供應商。2026年7月營收438.68億元，MoM+49.3%、YoY+719.6%，公司說明為市場需求成長，但不能全歸因HBM。",
       "supplyChainStage": "hbm",
       "roleType": "dram_hbm_developer",
-      "directness": "core",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "HBM3E(與美光Micron合作開發)(8H/12H堆疊)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "利基型DRAM(消費/工規)(DDR3/DDR4)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "DDR4 DRAM(成熟製程20A/1X nm)(伺服器/PC)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "LPDDR5 行動記憶體",
+        "description": "LPDDR5 行動記憶體：南亞科的核心產品。",
+        "whyItMatters": "台灣唯一 DRAM 製造商，提供 DRAM Die 供應 HBM 堆疊，是 HBM 供應鏈中 DRAM 顆粒的來源之一。2026年營收 YoY+717% 反映 DRAM 景氣強勁反轉。",
+        "topicFit": "在 HBM 高頻寬記憶體 題材中：台灣唯一 DRAM 製造商，提供 DRAM Die 供應 HBM 堆疊，是 HBM 供應鏈中 DRAM 顆粒的來源之一。2026年營收 YoY+717% 反映 ",
+        "businessImpact": "該產品貢獻南亞科在相關題材的營收。2026年4月營收25.49億元，YoY+717%，累計YoY+624%，DRAM價格回升與出貨成長帶動",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：南亞科 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2408"
+        ],
+        "lastVerified": "2026-06-01",
+        "confidence": "medium"
       }
     ],
     "swotSnapshot": {
@@ -93,20 +93,20 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
       "題材 HBM 高頻寬記憶體（product/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "南亞科 在「HBM 高頻寬記憶體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "南亞科 在「HBM 高頻寬記憶體」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 70/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：HBM 高頻寬記憶體 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 HBM 高頻寬記憶體（product/active） +16）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：HBM 高頻寬記憶體 · 間接受惠 · medium",
+      "產業評分：70/100（直接度 間接受惠 +8；角色信心 medium +10；題材 HBM 高頻寬記憶體（product/active） +16）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -161,10 +161,10 @@
         "topicName": "HBM 高頻寬記憶體",
         "canonicalTopicId": "hbm",
         "canonicalTopicName": "HBM 高頻寬記憶體",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "南亞科6月營收293.88億YoY+621.3%，累計1316.36億YoY+643.1%，MOPS備註「受市場需求成長影響」。MOPS登記為電子零組件製造/國際貿易。DRAM價格上漲帶動營收暴增(基期極低)，DDR5量產中(1a nm)，HBM3E與美光合作開發，為HBM題材間接受益者。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "南亞科是DRAM製造商，但MOPS主要業務僅揭露電子零組件製造，未揭露HBM產品或與美光共同開發HBM3E。此角色應定位為DDR5與DRAM景氣的間接受惠觀察，不是已量產HBM供應商。2026年7月營收438.68億元，MoM+49.3%、YoY+719.6%，公司說明為市場需求成長，但不能全歸因HBM。"
       }
     ],
     "swot": [
@@ -232,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 82,
+    "totalScore": 76,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 38,

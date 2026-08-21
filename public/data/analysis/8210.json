@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8210",
   "name": "勤誠",
-  "generatedAt": "2026-08-21T12:31:23.573Z",
+  "generatedAt": "2026-08-21T12:34:39.587Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -46,34 +46,34 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
+    "label": "題材關聯明確",
+    "score": 71,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "勤誠6月營收32.38億年增98%、累計年增55.6%，AI伺服器機殼需求爆發。從傳統伺服器機殼擴展至液冷機櫃，受惠NVL72/GB200整機櫃出貨趨勢，但機殼屬低毛利產品。",
+      "roleLabel": "間接受惠",
+      "roleSummary": "勤誠MOPS揭露電腦周邊設備與系統研製、製造及買賣，但未明確揭露冷板、CDU或NVL72液冷機櫃。其可驗證核心是伺服器機殼與機構整合，液冷只是機箱配套的潛在延伸。2026年7月營收24.62億元，MoM-23.9%、YoY+41.5%，累計YoY+53.4%，公司說明為終端產品大量出貨。",
       "supplyChainStage": "mechanical",
       "roleType": "liquid_cooling_server_chassis_supplier",
-      "directness": "core",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "伺服器機殼(1U/2U/4U rack mount)",
+        "name": "1U／2U／4U機架式伺服器機殼",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "AI伺服器液冷機櫃(NVL72/GB200相容)",
+        "name": "4U／8U GPU伺服器機殼",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "GPU伺服器高功率機殼(4U/8U)",
+        "name": "OCP相容伺服器托盤與機架機構",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -91,20 +91,20 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
-      "角色證據 1 則 +6",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "勤誠 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "勤誠 在「AI 伺服器液冷散熱」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 71/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 間接受惠 · medium",
+      "產業評分：71/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -159,10 +159,10 @@
         "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "勤誠6月營收32.38億年增98%、累計年增55.6%，AI伺服器機殼需求爆發。從傳統伺服器機殼擴展至液冷機櫃，受惠NVL72/GB200整機櫃出貨趨勢，但機殼屬低毛利產品。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "勤誠MOPS揭露電腦周邊設備與系統研製、製造及買賣，但未明確揭露冷板、CDU或NVL72液冷機櫃。其可驗證核心是伺服器機殼與機構整合，液冷只是機箱配套的潛在延伸。2026年7月營收24.62億元，MoM-23.9%、YoY+41.5%，累計YoY+53.4%，公司說明為終端產品大量出貨。"
       }
     ],
     "swot": [
@@ -230,7 +230,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 31,
+    "totalScore": 25,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,

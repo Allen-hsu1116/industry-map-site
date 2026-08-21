@@ -2,15 +2,19 @@
   "schemaVersion": 1,
   "code": "5264",
   "name": "鎧勝-KY",
-  "generatedAt": "2026-08-21T12:31:23.250Z",
+  "generatedAt": "2026-08-21T12:34:39.370Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "A",
-    "label": "完整 evidence-backed",
-    "upgradePriority": "low",
-    "missingKnowledge": [],
-    "blockingReasons": []
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
+    "missingKnowledge": [
+      "verified_topic_role"
+    ],
+    "blockingReasons": [
+      "topic_role_not_verified"
+    ]
   },
   "technical": {
     "stance": "insufficient",
@@ -35,34 +39,34 @@
     "watch": []
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "鎧勝-KY為無人機結構件供應商，中科院軍用無人機構體標案帶動需求。MOPS資料不足，營收以公告為準。",
+      "roleLabel": "間接受惠",
+      "roleSummary": "本次MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證既有中科院標案、無人機起落架、旋翼或軍規材料規格。為避免把舊題材吹成軍火庫，此角色降級為歷史金屬機殼加工能力對航太結構件的觀察名單。",
       "supplyChainStage": "aerospace_components",
       "roleType": "uav_airframe_structures",
-      "directness": "core",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "無人機機體結構件（碳纖維T700/T800/鋁合金7075-T6一體成型）",
+        "name": "CNC鋁／鎂合金金屬機殼（歷史產品範圍，待新揭露驗證）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "無人機起落架（鈦合金Ti-6Al-4V精密加工/承載>50kg）",
+        "name": "壓鑄內構件與金屬支撐框架（歷史產品範圍，待新揭露驗證）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "旋翼結構件（碳纖維複材一體成型/直徑1-3m級）",
+        "name": "陽極處理與噴砂金屬外觀件（歷史產品範圍，待新揭露驗證）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -82,23 +86,24 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 low +3",
       "題材 軍工、航太與無人機（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 5 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 53，上限 40）"
     ],
-    "summary": "鎧勝-KY 在「軍工、航太與無人機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "鎧勝-KY 在「軍工、航太與無人機」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 軍工、航太與無人機（theme/active） +18）",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：軍工、航太與無人機 · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 軍工、航太與無人機（theme/active） +18）",
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
     ],
     "risks": [
+      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
       "V2 W：營運規模小，訂單集中度高",
       "V2 W：MOPS與月營收API均無資料，資訊透明度極低，營運追蹤困難。",
       "V2 T：無人機構體進入門檻不高，競爭加劇",
@@ -141,10 +146,10 @@
         "topicName": "軍工、航太與無人機",
         "canonicalTopicId": "defense-aerospace",
         "canonicalTopicName": "軍工、航太與無人機",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "鎧勝-KY為無人機結構件供應商，中科院軍用無人機構體標案帶動需求。MOPS資料不足，營收以公告為準。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "本次MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證既有中科院標案、無人機起落架、旋翼或軍規材料規格。為避免把舊題材吹成軍火庫，此角色降級為歷史金屬機殼加工能力對航太結構件的觀察名單。"
       }
     ],
     "swot": [
@@ -284,7 +289,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 61,
+    "totalScore": 44,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -293,12 +298,16 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
-      "rationale": [
-        "題材角色已 evidence-backed，可納入題材股策略"
-      ]
+      "classification": "觀察股",
+      "rationale": []
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [

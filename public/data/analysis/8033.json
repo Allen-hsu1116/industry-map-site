@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8033",
   "name": "雷虎",
-  "generatedAt": "2026-08-21T12:31:23.535Z",
+  "generatedAt": "2026-08-21T12:34:39.562Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -47,13 +47,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "雷虎6月營收2.26億YoY+19.6%，累計8.28億YoY+9.7%。MOPS登記為精密醫療器材/中大型無人載具及無線電遙控模型/無菌包材。美國Blue UAS認證無人機製造商，具備美國國防部採購資格，軍用無人載具與精密醫療器材雙軌發展。",
+      "roleSummary": "雷虎的MOPS主要業務直接包含中大型無人載具及無線電遙控模型，軍工題材連結成立，但MOPS未揭露特定軍方客戶、Blue UAS資格或單一機型規格。2026年7月營收1.18億元，MoM-47.6%、YoY-9.5%，累計仍YoY+7.4%，顯示專案型出貨波動很大。",
       "supplyChainStage": "aerospace_mro",
       "roleType": "military_uav_manufacturer",
       "directness": "core",
@@ -61,34 +61,19 @@
     },
     "productNarratives": [
       {
-        "name": "無線電遙控模型",
-        "description": "遙控直升機/車/船模型及零配件。，並用於公司對應終端產品與客戶應用。",
-        "whyItMatters": "遙控模型為傳統核心業務與技術基礎。，是公司接單動能與產品組合的重要觀察指標。",
-        "topicFit": "遙控模型",
-        "businessImpact": "營運觀察重點為雷虎在無線電遙控模型的訂單動能、客戶導入進度與產品組合變化。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：雷虎科技股份有限公司 公司基本資料"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8033"
-        ],
-        "lastVerified": "2026-08-13",
-        "confidence": "high"
+        "name": "中大型無人直升機載具",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
-        "name": "精密醫療器材",
-        "description": "精密醫療器材與無菌包材。，並用於公司對應終端產品與客戶應用。",
-        "whyItMatters": "醫療器材為多元化布局。，是公司接單動能與產品組合的重要觀察指標。",
-        "topicFit": "醫療器材",
-        "businessImpact": "營運觀察重點為雷虎在精密醫療器材的訂單動能、客戶導入進度與產品組合變化。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：雷虎科技股份有限公司 公司基本資料"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8033"
-        ],
-        "lastVerified": "2026-08-13",
-        "confidence": "high"
+        "name": "固定翼無人機載具",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "無線電遙控直升機／固定翼／船模",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -107,9 +92,9 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 軍工、航太與無人機（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
@@ -117,9 +102,9 @@
     ],
     "summary": "雷虎 在「軍工、航太與無人機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 軍工、航太與無人機（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 軍工、航太與無人機（theme/active） +18）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -178,8 +163,8 @@
         "canonicalTopicName": "軍工、航太與無人機",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "雷虎6月營收2.26億YoY+19.6%，累計8.28億YoY+9.7%。MOPS登記為精密醫療器材/中大型無人載具及無線電遙控模型/無菌包材。美國Blue UAS認證無人機製造商，具備美國國防部採購資格，軍用無人載具與精密醫療器材雙軌發展。"
+        "confidence": "medium",
+        "roleSummary": "雷虎的MOPS主要業務直接包含中大型無人載具及無線電遙控模型，軍工題材連結成立，但MOPS未揭露特定軍方客戶、Blue UAS資格或單一機型規格。2026年7月營收1.18億元，MoM-47.6%、YoY-9.5%，累計仍YoY+7.4%，顯示專案型出貨波動很大。"
       }
     ],
     "swot": [
