@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "2382",
   "companyName": "廣達",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器整機與 EMS",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "system_assembly",
       "roleType": "ai_server_odm",
-      "roleSummary": "廣達為全球AI伺服器ODM龍頭，6月營收3852億元年增102.9%，累計年增86.5%。為Google TPU/AWS Graviton/Meta AI訓練/Microsoft Azure AI伺服器核心ODM。MOPS主要經營：電子筆記型電腦及相關產品。",
+      "roleSummary": "廣達MOPS主業欄只揭露電子筆記型電腦及相關產品，未支持既有Google TPU、AWS、Meta、Microsoft或特定GPU伺服器型號；基於本次MCP證據，本題材降為資料中心業務待其他公告驗證的相鄰觀察。2026年7月營收3,662.74億元，MoM-4.9%、YoY+131.3%，累計YoY+92.7%，備註為產品組合變更。",
       "products": [
-        "NVIDIA HGX H100/B200 8-GPU AI伺服器ODM",
-        "Google TPU v5/v6 AI伺服器ODM",
-        "AWS Graviton4/AI推理伺服器ODM",
-        "Meta AI訓練叢集伺服器ODM(液冷)",
-        "Microsoft Azure AI伺服器ODM(H100/B100)"
+        "電子筆記型電腦整機",
+        "筆記型電腦主機板組件",
+        "筆記型電腦電源與散熱模組",
+        "筆記型電腦周邊產品"
       ],
       "customers": [
-        "Google(TPU v5e/v6 AI加速器伺服器)",
-        "AWS(Graviton4/Inferentia2 AI推理伺服器)",
-        "Meta(Grand Teton AI訓練伺服器)",
-        "Microsoft(Azure Maia 100 AI伺服器)",
-        "Oracle(Cloud Infrastructure AI伺服器)"
+        "NVIDIA（AI運算平台觀察對象，非MOPS揭露客戶）",
+        "Google（雲端資料中心應用對象，非MOPS揭露客戶）",
+        "Amazon Web Services（雲端應用對象，非MOPS揭露客戶）",
+        "Meta（AI資料中心應用對象，非MOPS揭露客戶）",
+        "Microsoft（雲端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "鴻海",
@@ -56,32 +55,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2382 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子筆記型電腦及相關產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收3,662.74億元，MoM-4.9%、YoY+131.3%，累計YoY+92.7%；備註為產品組合變更。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "NVIDIA HGX H100/B200 8-GPU系統級散熱+供電整合",
-        "Google TPU v5/v6 PCB+光互連系統設計",
-        "AI伺服器液冷(冷板)/浸沒式冷卻整合"
+        "筆記型電腦主機板高速訊號與電源完整性設計",
+        "薄型機構散熱、風道與電池安全整合",
+        "整機自動化組裝、燒機與可靠度測試"
       ],
       "swot": {
         "strengths": [
-          "全球AI伺服器ODM龍頭，雲端巨頭核心供應商",
-          "6月營收3852億元年增102.9%，AI伺服器需求爆發"
+          "7月營收3,662.74億元、YoY+131.3%，累計YoY+92.7%",
+          "大規模電子整機設計製造能力可作為資料中心硬體延伸基礎"
         ],
         "weaknesses": [
-          "伺服器ODM毛利率<5%，獲利靠規模經濟",
-          "雲端客戶集中度極高(Google/AWS/Meta)"
+          "MOPS主業欄僅揭露筆記型電腦，無法驗證AI伺服器型號與客戶",
+          "7月營收MoM-4.9%，且產品組合變更未拆出AI伺服器貢獻"
         ],
         "opportunities": [
-          "AI推理需求帶動伺服器出貨量持續成長",
-          "邊緣AI伺服器新應用場景"
+          "若後續公告確認資料中心產品，可受惠AI基建資本支出",
+          "大規模供應鏈與量產管理能力可轉用機架系統"
         ],
         "threats": [
-          "緯穎6669/仁寶2324競爭AI伺服器份額",
-          "雲端客戶自研晶片降低ODM價值"
+          "缺乏MCP直接證據時，題材估值容易高於可驗證營收曝險",
+          "雲端客戶自研規格與供應商分散會加劇議價壓力"
         ]
       }
     },

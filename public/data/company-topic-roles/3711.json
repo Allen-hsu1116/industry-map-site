@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "3711",
   "companyName": "日月光投控",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "advanced_packaging",
       "roleType": "osat_leader",
-      "roleSummary": "日月光投控為全球封測龍頭，6月營收657.8億元年增32.9%，累計年增22.0%。提供FC-BGA/SiP/WLP/FC-CSP封裝及AI晶片SLT系統級測試，為Apple/NVIDIA/AMD/Qualcomm封裝核心供應商。MOPS主要經營：一般投資業(日月光投控)。",
+      "roleSummary": "日月光投控本體MOPS僅揭露一般投資業，既有FC-BGA、SiP與WLP敘述屬集團子公司能力，不能當成投控本體產品或特定客戶關係。2026年7月合併營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%，但未拆分先進封裝貢獻。",
       "products": [
-        "FC-BGA封裝(AI GPU/HBM基板)",
-        "SiP系統級封裝(射頻/物聯網/穿戴)",
-        "WLP/PLP扇出型封裝(5G/AI Edge)",
-        "FC-CSP封裝(手機SoC/AP)",
-        "先進測試(AI晶片SLT系統級測試)"
+        "集團子公司之積體電路封裝服務",
+        "集團子公司之晶圓與成品測試服務",
+        "集團子公司之系統級封裝整合服務",
+        "集團子公司之電子製造服務"
       ],
       "customers": [
-        "Apple(A18/M4 SoC封裝)",
-        "NVIDIA(H100/B200 GPU封裝)",
-        "AMD(Zen5/MI300封裝)",
-        "Qualcomm(Snapdragon X Elite封裝)",
-        "Broadcom(Jericho AI ASIC封裝)"
+        "TSMC（先進封裝生態對象，非MOPS揭露客戶）",
+        "NVIDIA（AI晶片應用對象，非MOPS揭露客戶）",
+        "AMD（高效運算晶片應用對象，非MOPS揭露客戶）",
+        "Qualcomm（行動晶片應用對象，非MOPS揭露客戶）",
+        "Apple（終端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "安靠",
@@ -49,32 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3711 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：一般投資業。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "FC-BGA大尺寸基板封裝(AI GPU 55x55mm+)",
-        "SiP系統級封裝整合被動元件/IPD",
-        "SLT系統級測試(AI晶片全功能驗證)"
+        "集團層級封裝、測試與電子製造資源配置",
+        "封裝後電性測試與系統級驗證整合",
+        "多晶片封裝量產之良率、翹曲與熱管理控制"
       ],
       "swot": {
         "strengths": [
-          "全球封測龍頭(市佔>30%)，AI晶片封裝核心供應商",
-          "6月營收657.8億元年增32.9%，累計年增22.0%，AI需求帶動成長"
+          "投控集團涵蓋封裝、測試與電子製造，可整合後段資源",
+          "7月合併營收YoY+43.2%、累計YoY+25.1%"
         ],
         "weaknesses": [
-          "封測毛利率20-25%低於晶圓代工",
-          "先進封裝資本支出龐大"
+          "MOPS本體只揭露一般投資業，產品與客戶必須明確標示為集團層級",
+          "合併營收未拆分先進封裝，不能直接驗證題材貢獻"
         ],
         "opportunities": [
-          "AI GPU封裝需求爆發帶動ASP提升",
-          "Chiplet封裝趨勢帶來新增量"
+          "AI與異質整合提高封裝及測試內容價值",
+          "集團跨封測與EMS可承接模組到系統級驗證"
         ],
         "threats": [
-          "安靠Amkor競爭先進封裝份額",
-          "台積電2330 CoWoS自封裝競爭"
+          "先進封裝資本支出高，產能利用率下滑會壓縮回報",
+          "晶圓代工廠擴大自有先進封裝可能加劇競爭"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2449",
   "companyName": "京元電子",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -85,23 +85,21 @@
       "topicId": "hbm",
       "topicName": "HBM 高頻寬記憶體",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "hbm",
       "roleType": "hbm_test_house",
-      "roleSummary": "京元電子5月營收37.77億年增36.61%，累計177.12億年增37.71%。HBM測試為AI浪潮下的高成長業務。",
+      "roleSummary": "京元電子MOPS只支持各類IC設計、製造、測試、加工與包裝，未揭露HBM、TSV、KGD或多層堆疊測試；本題材定位為可承接高階記憶體與邏輯IC測試的相鄰角色。2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%，但不能全歸因HBM。",
       "products": [
-        "HBM TSV測試(KGD/已知良晶測試/8層/12層堆疊)",
-        "HBM KGD良率測試(Thermal Pre-burn/85°C/多溫度段測試)",
-        "DRAM封測(DDR5-6400/LPDDR5X-8533/BGA封裝)",
-        "邏輯晶片預燒測(Logic Pre-burn/125°C/動態燒機)",
-        "系統級測試(SLT/Speed Sort/多電壓域測試)"
+        "積體電路晶圓測試服務",
+        "積體電路成品測試服務",
+        "積體電路加工與包裝服務",
+        "測試配件與測試程式整合"
       ],
       "customers": [
-        "SK Hynix(HBM3/3E測試)",
-        "Samsung(HBM3測試)",
-        "Micron(美光)(HBM3E測試)",
-        "聯電(UMC)(邏輯晶片測試)",
-        "力積電(PSMC)(DRAM測試)"
+        "SK hynix（HBM測試應用對象，非MOPS揭露客戶）",
+        "Micron（記憶體測試應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（記憶體測試生態對象，非MOPS揭露客戶）",
+        "NVIDIA（HBM終端平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "日月光投控"
@@ -124,36 +122,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2449 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各種積體電路設計、製造、測試、配件、加工與包裝。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "HBM TSV KGD測試技術(微凸塊接觸/探針卡<40μm pitch)",
-        "DRAM封測與預燒測試(高溫動態燒機/多頻率域測試)",
-        "系統級測試(SLT)能力(HBM+GPU整合測試/NVLink頻寬驗證)"
+        "晶圓探針與成品自動化測試整合",
+        "多溫度電性測試、分選與壽命篩選",
+        "高腳數IC測試介面與量產資料分析"
       ],
       "swot": {
         "strengths": [
-          "HBM TSV KGD測試技術（微凸塊接觸/探針卡<40μm pitch）領先，SK Hynix/Samsung測試合作",
-          "累計營收YoY+36.1%，AI帶動HBM測試需求高速成長",
-          "HBM KGD良率測試（Thermal Pre-burn/85°C/多溫度段測試）技術門檻高"
+          "MOPS直接支持IC測試、加工與包裝能力",
+          "7月營收YoY+36.7%、累計YoY+36.2%"
         ],
         "weaknesses": [
-          "HBM測試佔整體營收比重仍小，產能擴充需時間",
-          "探針卡<40μm pitch測試方案良率爬坡中",
-          "測試機台投資金額大，資本支出壓力"
+          "MOPS未揭露HBM、TSV、KGD或堆疊測試",
+          "公司整體營收無法拆出HBM測試貢獻"
         ],
         "opportunities": [
-          "HBM3E 8H/12H堆疊測試需求隨AI伺服器放量爆發性增長",
-          "KGD測試在先進封裝良率要求提高下重要性提升",
-          "SK Hynix/Samsung HBM產能擴充帶動測試外包需求"
+          "HBM供應擴張可增加高腳數、多溫與長測時需求",
+          "AI邏輯晶片與記憶體同步放量可提高測試產能利用率"
         ],
         "threats": [
-          "SK Hynix/Samsung可能自行建立HBM測試能力減少外包",
-          "日月光/安靠同樣佈局HBM測試，競爭加劇",
-          "HBM測試規格隨堆疊層數增加快速變化，技術追趕壓力"
+          "記憶體原廠自建測試產能會限制外包份額",
+          "HBM測試介面昂貴且世代更新快，折舊風險高"
         ]
       }
     }

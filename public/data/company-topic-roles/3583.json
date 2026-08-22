@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3583",
   "companyName": "辛耘",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "equipment_distribution",
       "roleType": "packaging_equipment_distributor",
-      "roleSummary": "辛耘6月營收10.35億年增6.8%。先進封裝製程設備代理與晶圓再生服務，受惠先進封裝產能擴充需求。",
+      "roleSummary": "辛耘MOPS揭露半導體等製程設備代理／研發製造、晶圓再生及化學分析儀器，未列出任何先進封裝專用機台。故本題材定位為設備整合與晶圓服務的相鄰角色。2026年7月營收9.73億元，MoM-6.0%、YoY+6.6%，累計YoY+6.8%。",
       "products": [
-        "先進封裝製程機台(代理/在地化整合)",
-        "晶圓再生服務(Wafer Reclaim)",
-        "製程設備維修與升級服務"
+        "半導體製程設備代理與整合服務",
+        "自研半導體製程機台",
+        "再生晶圓處理服務",
+        "化學分析儀器與量測方案"
       ],
       "customers": [
-        "台積電(2330)(製程設備代理+晶圓再生)",
-        "日月光(3711)(封裝設備維修)",
-        "力積電(6770)(晶圓再生服務)",
-        "環球晶(6488)(晶圓再生代工)",
-        "世界先進(5347)(晶圓再生服務)"
+        "TSMC（半導體設備應用對象，非MOPS揭露客戶）",
+        "UMC（晶圓製程應用對象，非MOPS揭露客戶）",
+        "ASE Technology（封裝設備應用對象，非MOPS揭露客戶）",
+        "Powertech Technology（測試與封裝應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "弘塑(3131)",
@@ -49,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體等製程機台設備代理研發製造、晶圓再生、化學分析儀器。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收9.73億元，MoM-6.0%、YoY+6.6%，累計YoY+6.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-17",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "先進封裝製程設備代理與在地化整合",
-        "晶圓再生技術(Reclaim 化學機械研磨)",
-        "封裝製程分析儀器(XRF/ICP-MS)"
+        "製程機台導入、廠務介面與自動化整合",
+        "再生晶圓表面去膜、清洗與缺陷檢測",
+        "製程化學品濃度、金屬離子與污染分析"
       ],
       "swot": {
         "strengths": [
-          "先進封裝製程機台代理/在地化整合與台積電/日月光合作",
-          "晶圓再生服務(Wafer Reclaim CMP化學機械研磨)切入台積電/力積電供應鏈",
-          "封裝製程分析儀器(XRF/ICP-MS)提供材料分析服務"
+          "MOPS直接支持設備代理、自研製造、晶圓再生與化學分析",
+          "7月營收YoY+6.6%、累計YoY+6.8%"
         ],
         "weaknesses": [
-          "6月營收10.3億YoY-2.7%，先進封裝設備需求短期放緩",
-          "設備代理業務毛利受限於原廠(Lam Research/TEL)定價",
-          "晶圓再生服務面臨環球晶(6488)等矽晶圓廠自營回收競爭"
+          "MOPS未揭露先進封裝專用機台或製程步驟",
+          "7月營收MoM-6.0%，設備認列具季度波動"
         ],
         "opportunities": [
-          "CoWoS/SoIC先進封裝擴產帶動製程設備代理需求",
-          "先進封裝晶圓再生(8/12吋測試晶圓回收)需求增長",
-          "封裝製程分析儀器(XRF/ICP-MS)在先進封裝材料檢測新應用"
+          "先進封裝擴產可拉動設備整合、量測與再生晶圓需求",
+          "在地設備服務可受惠供應鏈本土化"
         ],
         "threats": [
-          "Lam Research/TEL可能直銷減少代理空間",
-          "環球晶(6488)等矽晶圓廠自有晶圓再生服務",
-          "半導體資本支出週期波動影響設備採購"
+          "客戶資本支出遞延與驗收延後會造成營收波動",
+          "國際設備原廠競爭與代理權變動可能壓縮業務"
         ]
       }
     },

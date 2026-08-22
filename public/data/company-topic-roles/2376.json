@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2376",
   "companyName": "技嘉",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI伺服器與液冷技術",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "system_brand",
       "roleType": "ai_server_platform_brand",
-      "roleSummary": "技嘉5月營收49.1億年增5.0%累計206.4億年增44.8%。AI伺服器為主要成長動能，G593系列搭配NVIDIA方案出貨增長。",
+      "roleSummary": "技嘉MOPS支持電腦硬體、電腦系統與周邊設備，但未揭露G593、HGX、H100/B200或液冷規格；可保留運算系統整合角色，特定AI平台關係則標示未驗證。2026年7月營收442.13億元，MoM+3.1%、YoY+59.7%，累計YoY+50.0%，公司明示AI訂單需求暢旺。",
       "products": [
-        "GPU伺服器(4U/8U AI推論/訓練)",
-        "G593 AI伺服器(Z14平台)",
-        "液冷相容AI伺服器(冷板式)",
-        "邊緣AI運算伺服器(NVIDIA IGX)",
-        "AI訓練伺服器(HGX H100/B200)"
+        "機架式運算系統",
+        "伺服器主機板",
+        "GPU加速運算卡",
+        "電腦系統管理軟體與周邊"
       ],
       "customers": [
-        "NVIDIA(HGX AI伺服器GPU合作)",
-        "Google(雲端AI伺服器採購)",
-        "AWS(雲端GPU伺服器採購)",
-        "CoreWeave(AI運算服務用GPU伺服器)",
-        "Supermicro(伺服器主機板ODM合作)"
+        "NVIDIA（GPU平台對象，非MOPS揭露客戶）",
+        "AMD（CPU／GPU平台對象，非MOPS揭露客戶）",
+        "Intel（伺服器CPU平台對象，非MOPS揭露客戶）",
+        "Microsoft（AI運算應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "超微(8299)",
@@ -56,32 +54,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電腦硬體、電腦系統與周邊設備製造加工買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收442.13億元，MoM+3.1%、YoY+59.7%，累計YoY+50.0%；備註為AI訂單需求暢旺。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "GPU伺服器4U/8U高功率散熱設計(3kW+/機箱)",
-        "G593 Z14平台雙路GPU伺服器架構",
-        "冷板式液冷伺服器機構設計與CDU整合"
+        "伺服器主機板PCIe高速訊號與電源完整性",
+        "GPU運算系統BIOS／BMC韌體與相容性驗證",
+        "機架系統散熱、風道與整機燒機測試"
       ],
       "swot": {
         "strengths": [
-          "6月營收42.89億YoY+68.6%，AI訂單需求暢旺帶動品牌AI伺服器出貨爆發",
-          "G593 AI伺服器(Z14平台)為自有品牌高階GPU伺服器，累計營收YoY+48.4%"
+          "MOPS支持電腦硬體與系統整合，且公司備註AI訂單需求暢旺",
+          "7月營收YoY+59.7%、累計YoY+50.0%"
         ],
         "weaknesses": [
-          "營收規模遠小於鴻海/廣達/緯創，AI伺服器出貨量受限",
-          "品牌伺服器 vs ODM代工模式定位模糊，雲端大廠更傾向直接ODM採購"
+          "MOPS未揭露特定AI伺服器型號、GPU平台或液冷規格",
+          "AI訂單成長未拆分伺服器、主機板與消費產品貢獻"
         ],
         "opportunities": [
-          "AI訂單需求暢旺，企業端AI推論伺服器需求崛起有利品牌出貨",
-          "GPU伺服器4U/8U高功率散熱設計(3kW+/機箱)具差異化優勢"
+          "企業AI與邊緣運算可帶動品牌伺服器系統需求",
+          "CPU／GPU平台換代增加主機板與整機驗證價值"
         ],
         "threats": [
-          "超微/戴爾等國際品牌伺服器大廠同樣布局AI伺服器，品牌競爭激烈",
-          "雲端大廠自研AI伺服器規格，品牌伺服器市場空間可能被壓縮"
+          "GPU供應與客戶專案遞延會影響出貨",
+          "ODM與品牌伺服器競爭激烈，庫存與價格壓力高"
         ]
       }
     },

@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3023",
   "companyName": "信邦",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器整機與 EMS",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "connectors",
       "roleType": "server_connector_supplier",
-      "roleSummary": "信邦6月營收30.9億YoY+17.6%，累計174億YoY+8.7%。提供AI伺服器用高速連接器(112G PAM4)與客製化線材組裝，涵蓋GPU伺服器內部高速訊號傳輸。",
+      "roleSummary": "信邦MOPS只揭露電子零件加工、電腦周邊、通信器材與網路組件，沒有112G PAM4、MCIO或AI伺服器專案；因此定位為連接與線束整合的相鄰角色。2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%。",
       "products": [
-        "AI伺服器高速連接器(112Gbps PAM4)",
-        "GPU板對板連接器(Board-to-Board高密度)",
-        "伺服器背板線材組裝(MCIO/PCIe Gen5)",
-        "AI伺服器客製化線束(Custom Cable Assembly)"
+        "電腦周邊內部線束組件",
+        "通訊設備訊號連接線組",
+        "網路設備電源線組",
+        "客製連接器與線纜加工服務"
       ],
       "customers": [
-        "廣達(2382)(AI伺服器連接器/線材)",
-        "緯創(3231)(伺服器連接器)",
-        "Supermicro(伺服器客製化連接方案)",
-        "NVIDIA(間接AI伺服器連接器供應鏈)"
+        "Quanta（伺服器整機應用對象，非MOPS揭露客戶）",
+        "Wistron（伺服器整機應用對象，非MOPS揭露客戶）",
+        "Inventec（伺服器整機應用對象，非MOPS揭露客戶）",
+        "Cisco（網路設備應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "安費諾Amphenol(連接器龍頭)",
@@ -49,32 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零件加工製造、電腦周邊、通訊器材及網路零組件製造加工買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-03",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "AI伺服器高速連接器(112Gbps PAM4)Signal Integrity設計",
-        "GPU板對板(Board-to-Board)高密度連接器量產",
-        "伺服器背板高速訊號完整性(Signal Integrity)與阻抗控制"
+        "高速差分線束阻抗與串音控制",
+        "連接器壓接、焊接與拉拔力可靠度",
+        "線纜組件耐彎折、溫升與訊號完整性測試"
       ],
       "swot": {
         "strengths": [
-          "AI伺服器高速連接器(112Gbps PAM4) Signal Integrity設計能力領先",
-          "6月營收30.93億YoY+17.6%，穩定成長，累計YoY+8.7%"
+          "MOPS支持電腦周邊、通訊與網路連接組件製造",
+          "7月營收YoY+29.0%、累計YoY+11.4%"
         ],
         "weaknesses": [
-          "營收規模較小(月營收約31億)，AI伺服器連接器佔總營收比例有限",
-          "連接器為標準化零組件，毛利率受限於客戶議價"
+          "MOPS未揭露AI伺服器、112G PAM4或特定連接介面",
+          "整體營收無法拆出AI伺服器線束占比"
         ],
         "opportunities": [
-          "224G PAM4下一代高速連接器需求隨AI伺服器升級而來",
-          "GPU板對板(Board-to-Board)高密度連接器量產能力可擴大AI伺服器份額"
+          "AI伺服器提高高速與高電流線束用量",
+          "機櫃模組化可增加客製連接組件的單機價值"
         ],
         "threats": [
-          "連接器競爭對手(如安費諾/TE Connectivity)同樣布局AI伺服器高速連接器",
-          "AI伺服器需求若集中於少數雲端客戶，客戶集中度風險高"
+          "介面規格快速更迭造成模具與庫存淘汰",
+          "ODM客戶議價與銅價波動可能壓縮毛利"
         ]
       }
     },

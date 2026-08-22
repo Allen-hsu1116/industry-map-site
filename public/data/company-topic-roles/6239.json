@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "6239",
   "companyName": "力成",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "memory_logic_osat",
       "roleType": "memory_logic_packaging_testing_provider",
-      "roleSummary": "力成為台灣最大記憶體封測廠，6月營收76.2億年增21.7%，累計444億年增32.4%。受惠DRAM/NAND封測需求回升與HBM測試動能，先進封裝賦能角色明確。",
+      "roleSummary": "力成MOPS明確揭露IC與半導體元件測試、自動測試軟體及電子製造，未揭露WLCSP、Flip Chip、SiP或HBM堆疊封裝；本題材應定位為先進封裝後段測試與量產驗證的相鄰角色。2026年7月營收82.70億元，MoM+8.5%、YoY+29.4%，累計YoY+31.9%。",
       "products": [
-        "DRAM/NAND IC封裝測試(BGA/QFN)",
-        "WLCSP晶圓級封裝(Wafer Level Chip Scale Package)",
-        "Flip Chip封裝(FC-BGA/FC-CSP)",
-        "SiP系統級封裝(System-in-Package)",
-        "HBM堆疊封裝測試(TSV Through Silicon Via)"
+        "積體電路晶圓電性測試服務",
+        "積體電路成品自動測試服務",
+        "半導體元件可靠度與分選服務",
+        "自動測試程式與測試介面開發"
       ],
       "customers": [
-        "美光Micron(DRAM/NAND封測)",
-        "三星Samsung(HBM封測)",
-        "SK海力士(HBM封測)",
-        "華邦電(2344)(記憶體封測)",
-        "旺宏(2337)(NOR Flash封測)"
+        "Micron（記憶體測試應用對象，非MOPS揭露客戶）",
+        "SK hynix（記憶體測試應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（半導體測試生態對象，非MOPS揭露客戶）",
+        "TSMC（先進封裝生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "京元電(2449)(IC測試)",
@@ -62,36 +60,46 @@
           "title": "Flip Chips",
           "url": "https://www.pti.com.tw/en/service/packaging/flip-chips",
           "claim": "Flip Chips supports 力成 role as memory_logic_packaging_testing_provider in 先進封裝與 CoWoS through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路與半導體元件測試、自動測試軟體研發設計銷售、電子零組件製造。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收82.70億元，MoM+8.5%、YoY+29.4%，累計YoY+31.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-18",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "記憶體IC堆疊封裝測試(TSV矽穿孔)",
-        "先進封裝測試(Burn-in/Pre-Burn-in Screening)",
-        "HBM封裝後測試與良率篩選技術"
+        "晶圓測試與成品測試程式開發",
+        "多溫度電性測試、分選與可靠度篩選",
+        "自動測試設備介面及量產資料分析"
       ],
       "swot": {
         "strengths": [
-          "7月營收82.70億MoM+8.5%，封測龍頭規模最大",
-          "MOPS登記為積體電路與半導體元件測試服務+自動測試軟體研發，DRAM/NAND封測+WLCSP技術",
-          "客戶含美光Micron、三星Samsung，全球前兩大記憶體廠"
+          "MOPS直接支持IC測試與自動測試軟體能力，可承接封裝後驗證",
+          "7月營收YoY+29.4%、累計YoY+31.9%，測試需求成長"
         ],
         "weaknesses": [
-          "HBM封測市佔不如日月光(3711)，先進封裝競爭劣勢",
-          "記憶體封測受記憶體景氣循環影響大",
-          "資本額75.9億但先進封裝資本支出壓力大"
+          "MOPS未支持WLCSP、Flip Chip、SiP或HBM封裝製程",
+          "公司整體營收未拆出先進封裝後段測試貢獻"
         ],
         "opportunities": [
-          "HBM3E封測需求隨AI GPU出貨爆發",
-          "WLCSP晶圓級封裝打入AI邊緣晶片",
-          "車用記憶體封測新應用(DDR5/LPDDR5)"
+          "先進封裝複雜度提高，系統級與多溫測試時數上升",
+          "記憶體與AI晶片擴產可帶動獨立測試產能利用率"
         ],
         "threats": [
-          "日月光(3711)先進封裝規模與技術領先",
-          "中國封測廠(長電/通富)低价競爭成熟封裝",
-          "記憶體大廠可能自建封測減少委外"
+          "晶片業者內建測試產能可能壓縮外包份額",
+          "測試設備投資高且平台迭代快，產能錯配會拖累報酬"
         ]
       }
     }

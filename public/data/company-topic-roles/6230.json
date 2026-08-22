@@ -2,28 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "6230",
   "companyName": "尼得科超眾",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "air_cooling",
       "roleType": "cooling_fan_manufacturer",
-      "roleSummary": "尼得科超眾為散熱模組大廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。MOPS主要經營：散熱模組/散熱片/熱導管/微均熱板。在AI伺服器液冷題材中為VC均熱板與熱導管核心供應商，受惠GPU散熱需求升溫。",
+      "roleSummary": "尼得科超眾MOPS只揭露散熱模組、散熱片、熱導管與微均熱板，沒有冷板、CDU或快接頭；因此在液冷題材僅屬氣冷／相變散熱的鄰近供應商。2026年7月營收7.89億元，MoM+4.1%、YoY-0.3%，累計YoY+7.6%。",
       "products": [
-        "伺服器散熱模組(VC均熱板/熱導管)",
-        "AI GPU散熱模組(NVIDIA H100/B200用)",
-        "微均熱板(Micro Vapor Chamber薄型化)",
-        "車用散熱模組(電池/馬達散熱)"
+        "伺服器用散熱模組",
+        "鋁／銅散熱片",
+        "熱導管散熱組件",
+        "微型均熱板"
       ],
       "customers": [
-        "Dell(伺服器散熱模組)",
-        "HP(伺服器散熱模組)",
-        "廣達(2382)(AI伺服器散熱)",
-        "NEC(伺服器散熱模組)",
-        "NVIDIA(間接via ODM)"
+        "NVIDIA（AI加速器熱設計應用對象，非MOPS揭露客戶）",
+        "Intel（伺服器CPU熱設計應用對象，非MOPS揭露客戶）",
+        "AMD（伺服器CPU／GPU應用對象，非MOPS揭露客戶）",
+        "Dell Technologies（伺服器整機應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "建準",
@@ -48,37 +47,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6230 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：散熱模組、散熱片、熱導管及微均熱板。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收7.89億元，MoM+4.1%、YoY-0.3%，累計YoY+7.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "均熱板(Vapor Chamber)壓差相變散熱技術(φ0.3mm毛細結構)",
-        "熱導管(Heat Pipe)毛細結構設計(溝槽+粉末燒結)",
-        "微均熱板(Micro VC)薄型化製程(<1mm厚度)"
+        "熱導管毛細結構與工作流體封裝",
+        "微型均熱板兩相傳熱與平面溫差控制",
+        "散熱片鰭片密度、風阻與熱阻協同設計"
       ],
       "swot": {
         "strengths": [
-          "7月營收7.89億MoM+4.1%，散熱模組需求穩定",
-          "MOPS登記為散熱模組/散熱片/熱導管/微均熱板，VC均熱板技術領先",
-          "NVIDIA H100/B200 AI GPU散熱模組打入Dell/HP伺服器供應鏈",
-          "母公司Nidec(日本電産)集團資源與技術支援"
+          "MOPS直接支持熱導管、微均熱板與散熱模組量產能力",
+          "7月營收MoM+4.1%，累計YoY+7.6%維持成長"
         ],
         "weaknesses": [
-          "VC均熱板競爭激烈(雙鴻3019/奇鴻3017)",
-          "散熱模組毛利率受原料(銅/鋁)價格波動影響",
-          "Dell/HP伺服器出貨量受AI伺服器市場競爭影響"
+          "MOPS未揭露冷板、CDU或快接頭，液冷直接曝險不足",
+          "7月營收YoY-0.3%，單月動能弱於AI散熱門同業"
         ],
         "opportunities": [
-          "AI GPU功耗(TDP 700W→1200W)提升帶動VC均熱板需求",
-          "Nidec集團馬達技術整合散熱風扇+均熱板系統方案",
-          "資料中心液冷方案過渡期氣冷+VC需求"
+          "液冷導入前後仍需熱導管與均熱板處理局部熱點",
+          "AI伺服器功耗上升可提高高效相變散熱模組價值"
         ],
         "threats": [
-          "液冷方案(冷板/浸沒式)長期可能取代VC均熱板",
-          "雙鴻(3019)VC均熱板產能擴建競爭",
-          "中國散熱模組廠(超頻三)低价競爭"
+          "冷板直觸式液冷滲透可能替代部分傳統熱管與散熱片",
+          "散熱模組價格競爭與原料金屬成本壓縮毛利"
         ]
       }
     },

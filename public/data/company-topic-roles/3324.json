@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3324",
   "companyName": "雙鴻",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "technology",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "thermal",
       "roleType": "liquid_cooling_module_provider",
-      "roleSummary": "雙鴻為散熱模組專業製造商，MOPS登記為散熱模組。VC均熱板與熱管供AI伺服器散熱需求，受惠AI伺服器液冷滲透率提升。產品線涵蓋均熱板/熱管/氣冷模組/冷板式液冷模組，客戶涵蓋廣達/鴻海/緯創三大ODM及Dell/HPE。",
+      "roleSummary": "雙鴻MOPS只揭露「散熱模組」，未點名冷板、CDU、浸沒式冷卻或任何AI伺服器客戶；保留散熱供應鏈角色，但將液冷產品與客戶關係降為未驗證。FinMind顯示2026年7月營收37.65億元，較6月增加38.5%。",
       "products": [
-        "均熱板(Vapor Chamber)(單相/兩相VC)(>500W TDP散熱)",
-        "熱管(Heat Pipe)(U型/L型/扁平熱管)(直徑4-8mm)",
-        "氣冷散熱模組(Sink+Fan)(伺服器用鋁擠型鰭片+PWM風扇)",
-        "伺服器VC散熱板(NVIDIA HGX H100/B200用)",
-        "冷板式液冷模組(Cold Plate)(GPU/CPU直接接觸液冷)"
+        "伺服器用散熱模組",
+        "銅製均熱板模組",
+        "熱導管與散熱鰭片組件",
+        "風扇與導風罩整合模組"
       ],
       "customers": [
-        "廣達(2382)(AI伺服器散熱模組)",
-        "鴻海(2317)(AI伺服器散熱模組)",
-        "緯創(3231)(AI伺服器散熱模組)",
-        "Dell(伺服器散熱模組)",
-        "HPE(伺服器散熱模組)"
+        "NVIDIA（AI加速器熱設計應用對象，非MOPS揭露客戶）",
+        "AMD（伺服器CPU／GPU應用對象，非MOPS揭露客戶）",
+        "Quanta（伺服器整機生態對象，非MOPS揭露客戶）",
+        "Wistron（伺服器整機生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "奇鋐(3017)",
@@ -55,36 +53,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3324 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：散熱模組。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收37.65億元，較6月增加38.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "均熱板(Vapor Chamber)毛細結構設計(銅粉燒結/溝槽複合式)",
-        "伺服器散熱熱管(U型/L型)製程(水-銅熱管/直徑4-8mm)",
-        "VC散熱板高功率密度散熱技術(>500W TDP/均溫性<5C)"
+        "均熱板兩相傳熱、毛細結構與氣密封裝",
+        "熱導管、鰭片與風扇之系統熱阻最佳化",
+        "伺服器高熱通量熱點模擬與可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記為散熱模組，專注散熱領域產品線完整",
-          "AI伺服器液冷滲透率提升帶動VC/冷板需求爆發",
-          "與廣達/鴻海/緯創三大ODM建立散熱模組供應關係"
+          "MOPS直接支持散熱模組主業，與AI伺服器熱管理相鄰",
+          "FinMind顯示7月營收37.65億元、月增38.5%"
         ],
         "weaknesses": [
-          "散熱模組毛利偏低(15-20%)，代工屬性強",
-          "資本額9.3億，規模相對較小",
-          "散熱模組技術門檻有限，新進者多"
+          "MOPS未揭露冷板、CDU或浸沒式液冷產品",
+          "月營收未拆分AI伺服器與液冷貢獻，不能以成長直接驗證"
         ],
         "opportunities": [
-          "NVIDIA GB200/GB300液冷需求帶動VC/冷板ASP上升",
-          "兩相浸沒式液冷方案佈局可切入高階市場",
-          "AI伺服器出貨量持續增長帶動散熱模組需求"
+          "AI加速器功耗上升推高均熱板與散熱模組內容價值",
+          "若冷板產品取得客戶驗證，可由氣冷跨入直接液冷"
         ],
         "threats": [
-          "奇鋐(3017)、泰碩(3387)競爭激烈，價格壓力大",
-          "散熱模組技術門檻有限，新進者多",
-          "AI伺服器需求若放緩，散熱模組面臨庫存調整"
+          "冷板與CDU供應商競爭加劇，傳統氣冷產品可能被替代",
+          "伺服器平台改版快，認證延遲會影響出貨節奏"
         ]
       }
     }

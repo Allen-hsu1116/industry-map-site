@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2467",
   "companyName": "志聖",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -84,17 +84,19 @@
       "directness": "core",
       "supplyChainStage": "packaging_equipment",
       "roleType": "advanced_packaging_equipment",
-      "roleSummary": "志聖提供先進封裝設備(貼膜/壓合/撕膜/熱製程/清潔)。7月營收11.68億，YoY+132.7%，累計62.12億，累計YoY+87.0%。",
+      "roleSummary": "志聖MOPS已明確揭露AI供應鏈先進封裝設備，包括貼膜、壓合、撕膜、熱製程與清潔，題材連結直接；但未揭露特定客戶、TAIW或電漿／超音波規格。2026年7月營收11.68億元，MoM+34.3%、YoY+132.7%，累計YoY+87.0%，公司說明為客戶需求提升。",
       "products": [
-        "先進封裝貼膜機(晶圓級貼膜/TAIW貼膜)",
-        "封裝壓合機(熱壓合/真空壓合)",
-        "封裝撕膜機(UV解膠/自動剝膜)",
-        "封裝清潔設備(電漿清潔/超音波清洗)"
+        "先進封裝貼膜設備",
+        "先進封裝壓合設備",
+        "先進封裝撕膜設備",
+        "先進封裝熱製程設備",
+        "先進封裝清潔設備"
       ],
       "customers": [
-        "日月光投控(3711)(封裝製程設備)",
-        "矽品(2325)(封裝製程設備)",
-        "力成(6239)(封裝製程設備)"
+        "TSMC（先進封裝設備應用對象，非MOPS揭露客戶）",
+        "ASE Technology（封裝設備應用對象，非MOPS揭露客戶）",
+        "Amkor Technology（封裝設備應用對象，非MOPS揭露客戶）",
+        "Powertech Technology（封裝設備應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "群翊(6624)",
@@ -119,31 +121,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：AI供應鏈先進封裝設備：貼膜、壓合、撕膜、熱製程、清潔。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收11.68億元，MoM+34.3%、YoY+132.7%，累計YoY+87.0%；公司說明客戶需求提升。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "晶圓級貼膜技術(Wafer Level/精度<3μm)",
-        "真空壓合溫度控制(±0.5°C)"
+        "晶圓／載板貼膜張力、氣泡與對位控制",
+        "真空壓合溫度、壓力與翹曲控制",
+        "撕膜、熱處理與清潔站點之自動化搬送整合"
       ],
       "swot": {
         "strengths": [
-          "7月營收11.68億，YoY+132.7%，累計62.12億，累計YoY+87.0%，AI封裝需求帶動設備訂單爆發",
-          "封裝裝貼膜/壓合設備技術成熟"
+          "MOPS直接列出五類先進封裝設備，產品證據完整",
+          "7月營收YoY+132.7%、累計YoY+87.0%，且公司說明客戶需求提升"
         ],
         "weaknesses": [
-          "與國際大廠(應材/ASM)技術差距",
-          "封裝設備佔比仍低"
+          "MOPS未揭露特定客戶、平台或設備規格",
+          "設備認列集中，基期與驗收時點會放大月增率"
         ],
         "opportunities": [
-          "CoWoS/2.5D封裝產能擴充帶動設備需求",
-          "HBM封裝需要新壓合/貼膜設備"
+          "AI先進封裝擴產帶動貼膜、壓合、撕膜與清潔需求",
+          "設備站點整合可提高單線訂單價值與服務收入"
         ],
         "threats": [
-          "國際設備大廠技術領先",
-          "封裝廠自製設備風險"
+          "主要客戶資本支出放緩會造成訂單與驗收遞延",
+          "國際設備商競爭及技術路線變動可能壓縮市占"
         ]
       }
     },

@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3363",
   "companyName": "上詮",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "technology",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "optical_passive_components",
       "roleType": "optical_passive_component_manufacturer",
-      "roleSummary": "上詮7月營收1.72億，MoM+4.3%。MOPS登記為光纖被動元件/光纖模組/光纖測試儀器。為光纖被動元件專業製造商。",
+      "roleSummary": "上詮MOPS揭露光纖被動元件、光纖模組／整合系統及光纖測試設備，沒有CPO或矽光子晶片；本題材可確認的是光纖耦合與測試的周邊角色。FinMind顯示2026年7月營收1.71億元，較6月增加8.5%。",
       "products": [
-        "光纖分光器(PLC Splitter/1xN/NxN)",
-        "光纖波長多工器(WDM/CWDM/DWDM)",
-        "光纖連接器(LC/SC/MPO/CS)",
-        "光纖跳線/光纜組件(OS2/OM4/OM5)"
+        "PLC光纖分光器",
+        "WDM波分多工被動元件",
+        "MPO／LC光纖連接模組",
+        "光纖生產測試儀器"
       ],
       "customers": [
-        "Google(資料中心光纖佈線)",
-        "Meta(光纖網路基礎設施)",
-        "AWS(光纖連接器)",
-        "Cisco(光纖模組元件)"
+        "Broadcom（矽光子平台對象，非MOPS揭露客戶）",
+        "NVIDIA（CPO應用生態對象，非MOPS揭露客戶）",
+        "Arista Networks（資料中心交換器應用對象，非MOPS揭露客戶）",
+        "Cisco（光網路設備應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華星光(4969)",
@@ -48,35 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：光纖被動元件、光纖模組與整合系統、光纖生產測試儀器設備。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收1.71億元，較6月增加8.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "PLC平面光波導元件製程(石英基板/光刻)",
-        "DWDM薄膜濾光片鍍膜技術(100GHz間隔)",
-        "MPO多芯光纖連接器對接精度(±0.5um)"
+        "PLC平面光波導分光與插入損耗控制",
+        "MPO多芯光纖端面研磨、對位與回損測試",
+        "WDM波長選擇、封裝與溫度穩定性驗證"
       ],
       "swot": {
         "strengths": [
-          "光纖被動元件產品線完整(PLC/WDM/連接器/跳線)",
-          "MPO多芯連接器精度技術(±0.5um)",
-          "打入Google/Meta/AWS等雲端巨頭"
+          "MOPS直接支持光纖被動元件、模組整合與測試設備",
+          "FinMind顯示7月營收1.71億元、月增8.5%"
         ],
         "weaknesses": [
-          "光纖被動元件毛利率中等(15-20%)",
-          "矽光子長期可能替代部分元件"
+          "MOPS未揭露CPO、矽光子晶片或特定高速規格",
+          "公司規模小，月營收未拆分資料中心光互連占比"
         ],
         "opportunities": [
-          "AI資料中心光纖佈線需求爆發",
-          "CPO封裝帶動光纖連接器新規格",
-          "800G/1.6T光模組帶動MPO連接器需求"
+          "CPO與矽光子模組仍需要高密度光纖耦合與測試",
+          "800G／1.6T網路升級可提升MPO與WDM需求"
         ],
         "threats": [
-          "中國光纖元件廠低價競爭",
-          "矽光子技術顛覆傳統光纖元件",
-          "光纖元件價格持續下跌"
+          "矽光子封裝方案尚未定型，客戶規格變動快",
+          "被動光元件價格競爭與良率爬坡可能壓縮毛利"
         ]
       }
     },

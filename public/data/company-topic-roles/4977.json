@@ -2,25 +2,26 @@
   "schemaVersion": 1,
   "companyCode": "4977",
   "companyName": "4977",
-  "updatedAt": "2026-07-20",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "眾達-KY(PCL Technologies)6月營收0.82億YoY+8.1%，累計4.3億YoY-20.8%。設計研發生產光收發模組(100G-800G)，矽光子CPO為前瞻技術布局。AI數據中心光互連為長期成長動能，但短期面臨轉型期營收下滑壓力。",
+      "directness": "adjacent",
+      "roleSummary": "眾達-KY MOPS只揭露光收發模組設計、研發、生產與銷售，沒有CPO、矽光子晶片或800G規格；可確認的是光模組整合，矽光子僅為可能採用的上游平台。2026年7月營收1.81億元，MoM+120.2%、YoY+136.6%，但因7月起納入品固集團，累計YoY仍-1.4%，不可把跳升全歸因AI光通訊。",
       "products": [
-        "100G/400G/800G光收發模組(QSFP/OSFP)",
-        "矽光子收發器(Co-Packaged Optics整合)",
-        "光次組裝模組(Fiber Array/FAU耦合)",
-        "400G LR4/SR4光收發模組"
+        "可插拔式光收發模組",
+        "單模長距離光收發模組",
+        "多模短距離光收發模組",
+        "光電收發次模組整合服務"
       ],
       "customers": [
-        "NVIDIA(AI GPU光互連收發模組)",
-        "Google(GCP資料中心光收發器)",
-        "Microsoft(Azure光收發模組)",
-        "Meta(資料中心光互連)"
+        "Broadcom（光通訊平台對象，非MOPS揭露客戶）",
+        "Marvell（光DSP平台對象，非MOPS揭露客戶）",
+        "Arista Networks（資料中心交換器應用對象，非MOPS揭露客戶）",
+        "Cisco（網路設備應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI網路應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中際旭創(中國光收發模組龍頭)",
@@ -40,38 +41,48 @@
           "title": "4977公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 4977 role in 矽光子、CPO 與高速光通訊 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：設計、研發、生產及銷售光收發模組。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收1.81億元，MoM+120.2%、YoY+136.6%，累計YoY-1.4%；7月起納入品固集團。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-15",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "矽光子整合封裝技術(Co-Packaged Optics CPO)",
-        "800G光收發模組設計(PAM4調變/DSP整合)",
-        "光次組裝FAU Fiber Array耦合對位技術(μm級精度)"
+        "光發射／接收次模組耦合與封裝整合",
+        "單模與多模光鏈路功率預算及眼圖測試",
+        "光模組韌體監控、溫度補償與量產校準"
       ],
       "supplyChainStage": "optical_components",
       "roleType": "silicon_photonics_transceiver_supplier",
       "swot": {
         "strengths": [
-          "7月營收1.81億MoM+120.2%爆發性成長，AI光收發模組需求帶動",
-          "MOPS登記為光收發模組設計研發生產銷售，100G/400G/800G QSFP/OSFP完整產品線",
-          "客戶含NVIDIA(AI GPU光互連)、Google(GCP資料中心)，頂級AI生態客戶"
+          "MOPS直接支持光收發模組研發製造，位於高速光互連下游",
+          "7月營收MoM+120.2%、YoY+136.6%，單月規模明顯放大"
         ],
         "weaknesses": [
-          "營收基期低(7月1.81億)，規模仍小抗風險能力弱",
-          "光收發模組競爭激烈(聯亞3081/前鼎4908/華星光電4972)",
-          "矽光子Co-Packaged Optics技術仍在早期，量產風險高"
+          "MOPS未揭露矽光子、CPO或特定傳輸速率",
+          "成長包含7月起納入品固集團，累計營收仍YoY-1.4%"
         ],
         "opportunities": [
-          "800G/1.6T光收發模組隨AI資料中心升級需求爆發",
-          "NVIDIA Quantum InfiniBand光互連收發模組訂單",
-          "矽光子CPO整合技術量產化"
+          "AI資料中心升速可增加光收發模組需求",
+          "矽光子引擎成熟後可降低高速模組功耗與成本"
         ],
         "threats": [
-          "II-VI(原Finisar)/Broadcom等大廠技術與規模領先",
-          "中國光模組廠(中際旭創/新易盛)低价競爭",
-          "矽光子技術標準化可能壓縮傳統光模組ASP"
+          "光模組價格下降快，產品世代切換帶來庫存風險",
+          "上游雷射、DSP與矽光子平台受少數供應商制約"
         ]
       }
     }

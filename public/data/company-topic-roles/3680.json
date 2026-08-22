@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "packaging_consumables",
       "roleType": "advanced_packaging_carrier_solution",
-      "roleSummary": "家登6月營收7.52億MoM+11%。MOPS主要經營：光罩解決方案/晶圓解決方案/機台設備。為台積電CoWoS先進封裝關鍵耗材供應商，EUV光罩盒與承載載具為核心利基產品。",
+      "roleSummary": "家登MOPS揭露光罩、晶圓與機台設備解決方案，足以支持半導體載具與設備角色，但未點名CoWoS承載環、台積電客戶或特定封裝規格。FinMind顯示2026年7月營收8.71億元，較6月增加15.8%；該成長未拆分先進封裝貢獻。",
       "products": [
-        "CoWoS暫時性承載載具(Carrier Ring)",
-        "EUV光罩盒(Reticle Pod EUV/DUV)",
-        "12吋晶圓傳送盒(FOUP)",
-        "先進封裝承載環(Carrier Ring for CoWoS)",
-        "晶圓傳送載具(Wafer Carrier 12吋)"
+        "EUV／DUV光罩傳送與儲存載具",
+        "300mm晶圓傳送與儲存載具",
+        "晶圓廠自動化機台設備",
+        "半導體載具清洗與維護方案"
       ],
       "customers": [
-        "台積電(2330)(CoWoS封裝載具)",
-        "日月光(3711)(先進封裝耗材)",
-        "Intel(光罩盒EUV)",
-        "Samsung(晶圓傳送載具)",
-        "聯電(2303)(光罩盒)"
+        "TSMC（晶圓與光罩應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（EUV應用對象，非MOPS揭露客戶）",
+        "Intel（先進製程應用對象，非MOPS揭露客戶）",
+        "ASML（EUV設備生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Entegris(先進封裝載具)",
@@ -51,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：光罩解決方案、晶圓解決方案、機台設備產品。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收8.71億元，較6月增加15.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "EUV光罩盒(Reticle Pod)奈米級潔淨度設計",
-        "CoWoS暫時性承載載具(Carrier Ring)化學機械研磨精度",
-        "FOUP晶圓傳送盒微環境控制(<Class 1潔淨度)"
+        "EUV光罩防微粒、密封與傳送介面控制",
+        "300mm晶圓載具潔淨度與自動搬運相容性",
+        "載具材料低逸氣、耐化學與尺寸穩定設計"
       ],
       "swot": {
         "strengths": [
-          "7月營收8.71億MoM+15.8%，CoWoS封裝載具需求隨AI爆發",
-          "MOPS登記為光罩/晶圓解決方案+機台設備，CoWoS暫時性承載載具為獨特利基",
-          "台積電(2330)為核心客戶，CoWoS產能擴建直接帶動載具需求"
+          "MOPS直接支持光罩、晶圓與機台設備三類解決方案",
+          "FinMind顯示7月營收8.71億元、月增15.8%"
         ],
         "weaknesses": [
-          "高度依賴台積電單一客戶，訂單議價能力弱",
-          "CoWoS載具為客製化耗材，難以標準化規模生產",
-          "資本額僅9.6億，產能擴充受限"
+          "MOPS未揭露CoWoS承載環或特定封裝客戶",
+          "月營收未拆分光罩、晶圓載具與先進封裝設備貢獻"
         ],
         "opportunities": [
-          "台積電CoWoS產能2026年翻倍擴建帶動載具需求",
-          "SoIC/3D封裝新載具規格開發",
-          "日月光(3711)先進封裝耗材新客戶拓展"
+          "EUV與先進封裝擴產提高高潔淨載具及自動化設備需求",
+          "在地化維護服務可提高耗材與設備黏著度"
         ],
         "threats": [
-          "台積電可能自研載具減少委外",
-          "中國半導體耗材廠低价競爭",
-          "CoWoS良率提升可能減少載具消耗量"
+          "晶圓廠資本支出遞延會直接影響設備訂單",
+          "客戶認證期長，單一載具污染事件可能造成高額損失"
         ]
       }
     },

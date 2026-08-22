@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2356",
   "companyName": "英業達",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "server_notebook_odm",
-      "roleSummary": "英業達為AI伺服器ODM要角，6月營收102.26億YoY+61.62%，累計470.17億YoY+36.83%。MOPS登記為筆記型電腦伺服器，NVIDIA HGX AI伺服器為主要成長動能。與廣達/緯創同為AI伺服器三大ODM，客戶涵蓋NVIDIA/Google/Meta/Microsoft/Amazon。",
+      "roleSummary": "英業達MOPS直接揭露筆記型電腦與伺服器，AI伺服器供應鏈角色成立；但未支持HGX H100/B200、IGX、液冷或特定雲端客戶。2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%，累計YoY+40.8%，公司說明為客戶需求增加。",
       "products": [
-        "NVIDIA HGX H100/B200 AI伺服器系統組裝(4U/8U機架式)",
-        "通用型伺服器(1U/2U機架式)(Intel Xeon/AMD EPYC)",
-        "NVIDIA IGX邊緣AI運算伺服器(Orin平台)",
-        "伺服器主板SMT貼片組裝與系統測試(量測/Burn-in)",
-        "GPU伺服器液冷散熱模組整合(冷板式/浸沒式)"
+        "機架式伺服器整機",
+        "多節點伺服器系統",
+        "伺服器主機板與電源模組",
+        "伺服器系統整合與燒機測試",
+        "筆記型電腦整機"
       ],
       "customers": [
-        "NVIDIA(HGX AI伺服器ODM代工)",
-        "Google(雲端AI訓練伺服器)",
-        "Meta(資料中心AI推論伺服器)",
-        "Microsoft(Azure AI伺服器ODM)",
-        "Amazon AWS(雲端通用伺服器)"
+        "NVIDIA（AI運算平台對象，非MOPS揭露客戶）",
+        "Intel（伺服器CPU平台對象，非MOPS揭露客戶）",
+        "AMD（伺服器CPU／GPU平台對象，非MOPS揭露客戶）",
+        "Microsoft（雲端應用對象，非MOPS揭露客戶）",
+        "Amazon Web Services（雲端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "鴻海(2317)(AI伺服器EMS)",
@@ -56,36 +56,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2356 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：筆記型電腦、伺服器。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%，累計YoY+40.8%；公司說明客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "OCP(Open Compute Project)AI訓練伺服器架構設計",
-        "NVIDIA HGX H100/B200系統整合與散熱管理(1000W+/機箱)",
-        "GPU伺服器高功率PSU(3.3kW+)與液冷方案整合"
+        "伺服器主機板高速訊號與多相電源設計",
+        "多節點機構、風道與熱管理整合",
+        "BIOS／BMC韌體、整機燒機與可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "6月營收102.26億YoY+61.62%，MOPS備註客戶需求增加，AI伺服器需求爆發",
-          "累計470.17億YoY+36.83%，AI伺服器ODM訂單持續放量",
-          "NVIDIA HGX ODM合作夥伴，與廣達/緯創同為AI伺服器三大ODM"
+          "MOPS直接揭露伺服器主業，題材角色有基本證據",
+          "7月營收YoY+65.7%、累計YoY+40.8%，公司說明客戶需求增加"
         ],
         "weaknesses": [
-          "ODM代工毛利偏低(3-5%)，營收高但獲利貢獻不成比例",
-          "伺服器產品線集中於少數雲端客戶(NVIDIA/Google/Meta)，客戶集中度高",
-          "MOPS登記為筆記型電腦伺服器，筆電業務成長有限"
+          "7月營收MoM-11.8%，月度出貨節奏波動",
+          "MOPS未揭露特定AI平台、液冷產品或雲端客戶"
         ],
         "opportunities": [
-          "NVIDIA GB200/GB300下一代AI伺服器ODM訂單持續",
-          "邊緣AI伺服器(IGX)市場起步，先行卡位",
-          "液冷伺服器滲透率提升帶動ASP上升"
+          "AI伺服器與企業推論需求可提高伺服器業務比重",
+          "平台換代帶動主機板、電源與整機驗證需求"
         ],
         "threats": [
-          "ODM同業(廣達/緯創)競爭激烈，價格壓力大",
-          "AI伺服器需求若放緩，營收YoY高基期面臨衰退風險",
-          "供應鏈零組件(GPU/HBM)供貨不穩可能影響出貨"
+          "GPU供應、電力與散熱基建不足可能延後專案",
+          "伺服器ODM競爭與客戶集中使議價壓力偏高"
         ]
       }
     },

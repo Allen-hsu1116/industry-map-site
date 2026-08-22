@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "3131",
   "companyName": "弘塑",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "core",
+      "directness": "adjacent",
       "supplyChainStage": "process_equipment",
       "roleType": "packaging_equipment_chemicals",
-      "roleSummary": "弘塑6月營收6.31億(4月5.36億→6月6.31億成長)。MOPS登記為半導體IC製造設備工程承包製造買賣維修/電子級混酸蝕刻液電鑄藥液。提供先進封裝製程設備與電子級化學品，是CoWoS/2.5D封裝的設備與耗材供應商。",
+      "roleSummary": "弘塑MOPS支持半導體設備工程、製造與維修，以及電子級混酸蝕刻液、電鑄藥液和機械安裝；但未揭露TSV、CoWoS、RCA清洗或特定化學配方。FinMind顯示2026年7月營收7.93億元，較6月增加25.6%。",
       "products": [
-        "先進封裝濕製程機台(銅電鍍/清洗/蝕刻一體化)",
-        "電子級蝕刻液(封裝級BOE/SPM/HF+HNO3混酸)",
-        "銅電鍍液(先進封裝TSV/InFO電鍍用CuSO4配方)",
-        "晶圓清洗設備(封裝前RCA clean SC1/SC2)",
-        "封裝製程耗材(銅蝕刻液/鈍化層蝕刻液)"
+        "半導體製造設備工程承包與維修",
+        "電子級混酸蝕刻液",
+        "電鑄製程藥液",
+        "半導體機械安裝工程",
+        "半導體用電子控制組件製造"
       ],
       "customers": [
-        "台積電(2330)(CoWoS封裝製程設備+蝕刻液)",
-        "日月光(3711)(封裝耗材與化學品)",
-        "力積電(6770)(封裝濕製程設備)",
-        "京元電(2449)(測試製程化學品)",
-        "南茂(8150)(封裝電鍍液)"
+        "TSMC（半導體設備應用對象，非MOPS揭露客戶）",
+        "ASE Technology（封裝設備應用對象，非MOPS揭露客戶）",
+        "Amkor Technology（封裝設備應用對象，非MOPS揭露客戶）",
+        "Powertech Technology（封裝測試應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "辛耘(3583)",
@@ -51,36 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體設備工程製造維修、電子級混酸蝕刻液、電鑄藥液、機械安裝與電子零組件製造。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收7.93億元，較6月增加25.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "先進封裝濕製程設備(電鍍/清洗/蝕刻客製化)",
-        "封裝級蝕刻液配方(BOE/SPM/HF+HNO3電子級混酸)",
-        "CoWoS/InFO製程耗材供應(銅電供應(銅電鍍液/鈍化層蝕刻液)"
+        "電子級混酸濃度、金屬離子與微粒控制",
+        "電鑄藥液之沉積均勻性與槽液管理",
+        "半導體設備管路、機電介面與潔淨室安裝"
       ],
       "swot": {
         "strengths": [
-          "先進封裝濕製程設備(銅電鍍/清洗/蝕刻一體化)直接供應台積電CoWoS封裝製程",
-          "封裝級蝕刻液配方(BOE/SPM/HF+HNO3電子級混酸)客製化能力",
-          "CoWoS/InFO製程耗材(銅電鍍液/鈍化層蝕刻液)與台積電深度合作"
+          "MOPS直接支持設備工程、電子級蝕刻液與電鑄藥液",
+          "FinMind顯示7月營收7.93億元、月增25.6%"
         ],
         "weaknesses": [
-          "資本額僅2.92億，公司規模小，產能擴張受限",
-          "半導體設備/化學品業務高度依賴台積電單一客戶",
-          "電子級混酸原料(氫氟酸/硫酸)依賴進口"
+          "MOPS未支持既有TSV、CoWoS或特定濕製程機台說法",
+          "設備與工程驗收造成月營收波動"
         ],
         "opportunities": [
-          "CoWoS/SoIC先進封裝擴產帶動濕製程設備與化學品需求",
-          "先進封裝TSV/InFO電鍍用CuSO4配方新應用",
-          "封裝製程耗材(銅蝕刻液/鈍化層蝕刻液)隨先進封裝放量"
+          "先進封裝擴產可增加濕製程設備、藥液與安裝需求",
+          "在地維修與化學品供應可縮短晶圓廠停機時間"
         ],
         "threats": [
-          "國際半導體設備大廠(Lam Research/TEL)在濕製程設備競爭",
-          "台積電可能自行開發或多元採購化學品降低依賴",
-          "電子級化學品安全/環保法規趨嚴"
+          "客戶資本支出遞延會壓後設備驗收與工程收入",
+          "化學品純度或設備穩定性異常將帶來高額客訴風險"
         ]
       }
     },

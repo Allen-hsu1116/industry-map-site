@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8222",
   "companyName": "寶一",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -11,20 +11,18 @@
       "directness": "core",
       "supplyChainStage": "aerospace_mro",
       "roleType": "aerospace_engine_hot_section",
-      "roleSummary": "寶一為航空發動機熱段件鍛造與航空合金供應商。提供渦輪葉片(Inconel/單晶)、鈦合金鍛件、IDF結構件及航空合金材料。MOPS主要經營：各型航空器及其零件之製造、修理及買賣航空合金材料及五金之買賣。",
+      "roleSummary": "寶一MOPS明確揭露航空器及其零件製造、修理、航空合金材料買賣；但未揭露特定軍機計畫、軍方客戶或合金牌號。2026年7月營收0.91億元，MoM+33.6%、YoY+46.8%，累計YoY僅+0.7%，單月跳升仍須觀察延續性。",
       "products": [
-        "航空發動機熱段渦輪葉片(Inconel 718/單晶CMSX-4)",
-        "航空合金鍛件(Ti-6Al-4V/Inconel 718)",
-        "IDF/教練機結構件(鋁合金7075-T6鍛件)",
-        "航空合金材料買賣(Ti/Inconel/Waspaloy)",
-        "發電機配電零件(精密鑄造/鍛造件)"
+        "航空器發動機結構件製造與修理",
+        "航空器機體金屬件製造與修理",
+        "航空合金材料與航空五金銷售",
+        "發電／輸電／配電機械配件製造"
       ],
       "customers": [
-        "漢翔2634(IDF/教練機結構鍛件)",
-        "GE Aerospace(LEAP引擎熱段件次承包)",
-        "Safran(發動機熱段件鍛造)",
-        "中華航空2610(航空器維修零件)",
-        "中科院(軍規鍛件/飛彈結構)"
+        "漢翔(2634；航太供應鏈對象，非MOPS揭露客戶)",
+        "長榮航太(2645；航空維修生態對象，非MOPS揭露客戶)",
+        "GE Aerospace（航空發動機應用對象，非MOPS揭露客戶）",
+        "Safran（航空發動機應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "豐達科（3004）",
@@ -48,32 +46,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 8222 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各型航空器及其零件之製造、修理及買賣；航空合金材料及五金買賣；發電、輸電、配電機械及其配件製造買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收0.91億元，MoM+33.6%、YoY+46.8%，累計YoY+0.7%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "單晶渦輪葉片CMSX-4精密鑄造(定向凝固)",
-        "Inconel 718鍛造(等溫鍛造/超塑性成型)",
-        "Ti-6Al-4V鈦合金精密鍛造(Gleeble熱模擬)"
+        "航空金屬件精密加工與尺寸檢驗",
+        "航空器零件修理、追溯與適航品質管理",
+        "航空合金材料批次與熱處理履歷管控"
       ],
       "swot": {
         "strengths": [
-          "國內少數航空發動機熱段件鍛造廠，GE/Safran認證供應商",
-          "鈦合金/Inconel鍛造技術壁壘高"
+          "MOPS直接支持航空器零件製造、修理及航空合金材料業務",
+          "2026年7月營收YoY+46.8%、MoM+33.6%，短期出貨明顯回升"
         ],
         "weaknesses": [
-          "OTC小廠(資本額6.8億)，營收規模小",
-          "航空合金材料買賣毛利低"
+          "單月營收僅0.91億元，規模小且專案出貨波動高",
+          "MOPS未拆分軍用與民航收入，也未支持既有IDF或特定合金牌號說法"
         ],
         "opportunities": [
-          "GE LEAP引擎產量提升帶動熱段件需求",
-          "國機國造帶動IDF結構件/軍規鍛件訂單"
+          "國機國造與全球航空維修回補可增加精密件及材料需求",
+          "累計營收轉為YoY+0.7%，若後續月份延續可確認復甦"
         ],
         "threats": [
-          "航太認證週期長(2-3年)，新產品投入大",
-          "國際鍛造廠競爭(美/日/韓)"
+          "航空認證週期長，單一專案遞延會放大月營收波動",
+          "匯率、航空合金價格與國際供應鏈管制可能侵蝕毛利"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6669",
   "companyName": "緯穎",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-22T19:05:32Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "csp_ai_server_odm",
-      "roleSummary": "緯穎6月營收111.37億年增29.8%，累計年增41.7%。CSP專用AI伺服器ODM為核心業務，GPU基板OAM/UBB與液冷整合為技術門檻。",
+      "roleSummary": "緯穎MOPS僅以「資料中心產品」概括主業，足以支持資料中心硬體核心角色，但不支持既有H100/B200、特定CSP或液冷規格。2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%，強勁成長仍屬公司整體資料中心產品表現。",
       "products": [
-        "CSP客製AI伺服器(GPU基板OAM/UBB)",
-        "雲端資料中心伺服器(1U/2U機架式)",
-        "AI推理伺服器(L40S/H100 PCIe)",
-        "AI訓練伺服器(HGX H100/B200 SXM)",
-        "系統整合與ODM服務(CSP客製化)"
+        "資料中心機架式運算系統",
+        "資料中心儲存節點系統",
+        "機櫃級電源與管理模組",
+        "資料中心系統整合與量產服務"
       ],
       "customers": [
-        "NVIDIA(HGX AI伺服器ODM)",
-        "Google(CSP客製AI伺服器)",
-        "AWS(EC2客製伺服器ODM)",
-        "Meta(AI訓練伺服器ODM)",
-        "Microsoft(Azure AI伺服器ODM)"
+        "NVIDIA（AI運算平台對象，非MOPS揭露客戶）",
+        "AMD（伺服器處理器平台對象，非MOPS揭露客戶）",
+        "Intel（伺服器處理器平台對象，非MOPS揭露客戶）",
+        "Meta（資料中心應用對象，非MOPS揭露客戶）",
+        "Microsoft（雲端資料中心應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "廣達",
@@ -55,32 +54,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6669 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：資料中心產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "confidence": "medium",
+      "lastVerified": "2026-08-22",
       "status": "verified",
       "techFocus": [
-        "GPU基板(OAM/UBB)高密度SMT製程(HDI多層板)",
-        "液冷(Liquid Cooling)伺服器系統整合(CDU+冷板)",
-        "CSP客製化AI伺服器機構設計(19吋機架>30kW)"
+        "OCP機架級機構、供電與管理介面整合",
+        "CPU／GPU運算節點高速訊號與電源完整性驗證",
+        "資料中心整機燒機、韌體相容性與量產測試"
       ],
       "swot": {
         "strengths": [
-          "專注資料中心產品，AI伺服器ODM為核心業務",
-          "6月營收111.37億YoY+29.8%，累計YoY+41.7%，穩定受惠AI伺服器需求"
+          "MOPS直接揭露資料中心產品，AI伺服器供應鏈定位成立",
+          "7月營收1,176.86億元、YoY+39.2%，累計YoY+41.3%"
         ],
         "weaknesses": [
-          "產品線集中於資料中心伺服器，無消費電子分散風險",
-          "營收增速(YoY+29.8%)低於母公司緯創(YoY+53.8%)和廣達(YoY+102.9%)"
+          "MOPS未揭露特定GPU平台、CSP客戶或液冷產品規格",
+          "高度集中資料中心產品，客戶資本支出變動會快速傳導"
         ],
         "opportunities": [
-          "雲端資料中心AI伺服器持續擴產，緯穎為純AI伺服器ODM標的",
-          "NVIDIA GB200/GB300機櫃級AI伺服器需求帶動出貨量成長"
+          "AI訓練與推論基礎設施擴張可推升機架級系統需求",
+          "OCP與機櫃級整合提高單櫃內容價值"
         ],
         "threats": [
-          "廣達/鴻海積極搶佔AI伺服器ODM份額，競爭加劇",
-          "客戶集中度高(主要為少數雲端巨頭)，議價能力受限"
+          "GPU供應、電力與散熱基建瓶頸可能拖延出貨",
+          "雲端客戶自研規格與議價能力提高ODM驗證及成本壓力"
         ]
       }
     },
