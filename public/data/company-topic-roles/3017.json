@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3017",
   "companyName": "奇鋐",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -86,23 +86,23 @@
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "technology",
-      "directness": "direct_enabler",
+      "directness": "supplier",
       "supplyChainStage": "thermal",
       "roleType": "liquid_cooling_solution_candidate",
-      "roleSummary": "奇鋐6月營收176.18億YoY+66.1%，累計981.59億YoY+85.5%，MOPS備註「因客戶需求增加使營收成長」。MOPS登記為3C電子產品。液冷散熱為AI伺服器核心瓶頸，需求爆發帶動營收高速成長，銅微通道冷板與CDU散熱模組為AI伺服器液冷關鍵零組件。",
+      "roleSummary": "奇鋐MOPS僅以「3C電子產品」概括，無法單憑本次MCP證實銅微通道尺寸、CDU流量、熱阻、客戶或液冷產品組合；因此保留散熱產業脈絡，但降低信心並移除過度規格化斷言。2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%，公司說明為客戶需求增加；仍不能全數歸因液冷。",
       "products": [
-        "液冷冷板(銅微通道Cold Plate)(通道寬度0.3mm)",
-        "液冷散熱模組(CDU搭配)(Coolant Distribution Unit)",
-        "均熱板(VC)散熱方案(超大板徑>300mm)",
-        "伺服器熱管模組(燒結式熱管Qmax>150W)",
-        "AI伺服器3D VC均熱板(一體成型U型/多熱源)"
+        "伺服器散熱風扇模組（題材應用產品）",
+        "熱管散熱模組（題材應用產品）",
+        "均熱板散熱模組（題材應用產品）",
+        "直接液冷冷板（MOPS未逐項列名）",
+        "液冷歧管與迴路組件（MOPS未逐項列名）"
       ],
       "customers": [
-        "Dell(液冷伺服器散熱模組)(PowerEdge XE9680)",
-        "HPE(液冷伺服器散熱模組)(Cray XD670)",
-        "廣達(2382)(AI伺服器液冷模組)(NVIDIA HGX)",
-        "緯創(3231)(伺服器散熱方案)(GB200機架)",
-        "Supermicro(液冷AI伺服器散熱)"
+        "NVIDIA（AI平台驗證對象，非MOPS揭露客戶）",
+        "Dell Technologies（伺服器應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
+        "廣達（系統整合對象，非MOPS揭露客戶）",
+        "緯創（系統整合對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "液冷模組供應商",
@@ -131,36 +131,46 @@
           "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
           "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
           "claim": "Financial report confirms electronics/computer-peripheral manufacturing scope but does not quantify liquid-cooling revenue contribution."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務僅概括為3C電子產品，未逐項揭露液冷產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%；公司說明客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "low",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "銅微通道冷板精密加工技術(通道寬度0.3mm)",
-        "CDU(Coolant Distribution Unit)散熱模組整合(流量>30L/min)",
-        "VC均熱板與熱管複合散熱設計(熱阻<0.1K/W)"
+        "熱管與均熱板的兩相傳熱、毛細結構與熱擴散設計",
+        "冷板微流道、歧管流量平衡與壓降控制",
+        "液冷迴路氣密、耐壓與漏液可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "6月營收176.18億YoY+66.1%、累計981.59億YoY+85.5%，因客戶需求增加營收爆發性成長",
-          "銅微通道冷板精密加工(通道寬度0.3mm)與CDU散熱模組整合技術，Dell/HPE液冷伺服器散熱供應商",
-          "MOPS登記3C電子產品，從消費散熱模組切入AI伺服器液冷具技術遷移優勢"
+          "7月營收YoY+57.4%、累計YoY+80.3%，公司整體客戶需求強",
+          "散熱模組產業脈絡可延伸至高功率伺服器熱管理"
         ],
         "weaknesses": [
-          "AI伺服器液冷產品占整體營收比重仍需提升，消費電子散熱仍是主力但成長放緩",
-          "液冷冷板量產規模有限，良率與成本控制仍需改善才能與專業液冷廠競爭",
-          "Dell/HPE為主要液冷客戶，CSP自訂規格趨勢下需快速適應新客戶設計需求"
+          "MOPS僅寫3C電子產品，未直接支持冷板、CDU或液冷規格",
+          "具名客戶與所有液冷產品均非本次MOPS揭露，角色信心需維持偏低"
         ],
         "opportunities": [
-          "AI GPU功耗飆升(H100/B200 TDP>1kW)帶動液冷滲透率快速提升，奇鋐CDU+冷板整合方案具先發優勢",
-          "CSP自建AI伺服器帶動客製化液冷模組需求，奇鋐設計代工能力可切入Google/Meta供應鏈",
-          "累計營收YoY+85.5%顯示客戶拉貨動能強勁，液冷產能擴張有利持續增長"
+          "GPU功耗上升可推動氣冷轉向冷板式直接液冷",
+          "散熱模組、風扇與液路共同設計可提高單機價值"
         ],
         "threats": [
-          "專業液冷廠(如CoolIT/Vertiv)技術領先，奇鋐液冷產品線深度可能不足",
-          "台達電(2308)等電源散熱大廠跨入液冷市場，規模與客戶關係具優勢",
-          "液冷標準尚未統一(CDU/冷板/快接頭介面)，技術路線變化風險高"
+          "液冷產品需長期氣密與材料相容驗證，失效責任高",
+          "雙鴻、健策、台達電及國際散熱商競爭可能壓縮價格"
         ]
       }
     }

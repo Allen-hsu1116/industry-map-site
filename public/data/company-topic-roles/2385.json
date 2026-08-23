@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "2385",
   "companyName": "群光",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
-      "directness": "supplier",
+      "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "server_psu_keyboard_supplier",
-      "roleSummary": "群光提供AI伺服器高功率電源(2kW~3.3kW)，同時是全球NB鍵盤龍頭。5月營收72.3億年減11.0%，累計374億年減5.2%。AI伺服器電源為新成長動能但占比仍低。",
+      "roleSummary": "群光MOPS支持電源供應器、鍵盤與數位影像產品，但未揭露2kW以上CRPS、GPU VRM或NVIDIA伺服器試樣，因此AI伺服器角色收斂為電源供應器的間接應用機會。2026年7月營收70.57億元，MoM-10.5%、YoY-12.2%、累計YoY-6.3%，目前全公司營運未呈現AI伺服器帶動的成長證據。",
       "products": [
-        "AI伺服器電源(2kW~3.3kW CRPS)",
-        "NB鍵盤模組(全球市佔第一)",
-        "PC Camera/Webcam模組",
-        "電源轉接器(Adapter 65W~330W)",
-        "車用鏡頭模組(ADAS)"
+        "伺服器用電源供應器（題材應用產品）",
+        "桌上型電腦電源供應器",
+        "筆記型電腦電源轉接器",
+        "鍵盤模組",
+        "數位影像攝影模組"
       ],
       "customers": [
-        "Apple(NB鍵盤/Adapter)",
-        "Dell(NB鍵盤/電源)",
-        "HP(NB鍵盤/電源)",
-        "Lenovo(NB鍵盤/電源)",
-        "NVIDIA(伺服器電源試樣)"
+        "Dell Technologies（電源／鍵盤應用對象，非MOPS揭露客戶）",
+        "HP Inc.（電源／鍵盤應用對象，非MOPS揭露客戶）",
+        "Lenovo（電源／鍵盤應用對象，非MOPS揭露客戶）",
+        "Apple（鍵盤／電源應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI平台驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "群電(6412)(電源)",
@@ -50,32 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：鍵盤、數位影像產品及電源供應器之製造銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收70.57億元，MoM-10.5%、YoY-12.2%、累計YoY-6.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "AI 伺服器 2kW~3.3kW CRPS 鈦金級 PSU 設計",
-        "NB 鍵盤薄型化剪刀腳結構（全球市佔第一）",
-        "AI 伺服器 GPU VRM 多相電源模組"
+        "高功率開關式電源的功率因數校正與同步整流",
+        "電源供應器數位控制、遙測與過壓／過流保護",
+        "鍵盤薄型機構與數位影像模組的光機電整合"
       ],
       "swot": {
         "strengths": [
-          "AI伺服器電源供應器(鈦金級CRPS)與鍵盤雙產品線，伺服器PSU為穩定出貨",
-          "電源供應器製造及銷售為MOPS登記核心業務"
+          "MOPS直接支持電源供應器製造與銷售，具備切入伺服器電源的產品基礎",
+          "電源、鍵盤與影像模組量產能力可分散單一產品風險"
         ],
         "weaknesses": [
-          "6月營收78.89億YoY-5.5%，累計YoY-5.3%，AI伺服器題材受益不如預期",
-          "電源供應器競爭激烈(台達電/光寶科)，群光規模較小"
+          "MOPS未揭露AI伺服器高功率規格、CRPS產品或具名伺服器客戶",
+          "7月營收MoM-10.5%、YoY-12.2%、累計YoY-6.3%，公司整體動能偏弱"
         ],
         "opportunities": [
-          "AI伺服器電源從800W邁向3000W+，高瓦數PSU為群光升級方向",
-          "數位影像產品(HDMI/USB-C模組)可結合AI伺服器管理介面需求"
+          "AI伺服器功耗提高可帶動高瓦數、高效率電源供應器驗證需求",
+          "既有PC電源量產能力可延伸至邊緣伺服器與工作站"
         ],
         "threats": [
-          "6月YoY-5.5%為20家AI伺服器公司中唯一負成長，競爭力堪憂",
-          "台達電(2308)YoY+55.4%/光寶科(2301)YoY+37.0%在AI電源領域大幅領先群光"
+          "台達電、光寶科與康舒在伺服器電源領域競爭激烈",
+          "AI伺服器專案若未通過平台認證，題材難轉化為實際營收"
         ]
       }
     }

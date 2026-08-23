@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6147",
   "companyName": "頎邦",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -88,20 +88,20 @@
       "directness": "indirect",
       "supplyChainStage": "satellite_ground_equipment",
       "roleType": "display_driver_ic_packaging_satellite",
-      "roleSummary": "頎邦為台灣驅動IC封測龍頭，MOPS登記為金凸塊/錫鉛凸塊/晶圓測試(CP)/COF/COG/TCP封裝。金凸塊市佔領先，低軌衛星通訊顯示面板驅動IC封裝為新應用機會，配合衛星終端設備小型化趨勢。",
+      "roleSummary": "頎邦MOPS只支持金凸塊、錫鉛凸塊、晶圓測試、TCP、COF與COG封裝，完全未揭露衛星、射頻、抗輻射或低軌終端產品；舊資料把顯示封裝硬扯成衛星通訊，這種題材黏法跟口香糖一樣煩，現改為極弱的終端顯示封裝觀察角色。TWSE月營收查無資料，FinMind顯示2026年7月營收25.23億元、MoM+10.2%；查詢區間不足以計算YoY。",
       "products": [
-        "驅動IC封裝(COG/COF/TCP)(FHD/WQHD面板用)",
-        "金凸塊(Gold Bumping)與錫鉛凸塊(pitch<15μm)",
-        "晶圓測試(CP Probe Card)服務(高頻/混合訊號)",
-        "衛星通訊顯示面板驅動IC封測(COF薄型化<0.1mm)",
-        "觸控IC封裝(TDDI COF整合觸控與驅動)"
+        "金凸塊（Gold Bumping）服務",
+        "錫鉛凸塊（Solder Bumping）服務",
+        "晶圓測試（CP）服務",
+        "捲帶式薄膜覆晶（COF）封裝",
+        "玻璃覆晶（COG）封裝"
       ],
       "customers": [
-        "聯詠(3034)(電視/手機DDI驅動IC封測)",
-        "瑞鼎(3593)(手機/OLED DDI封測)",
-        "奕力(6112)(觸控驅動IC金凸塊)",
-        "友達(2409)(面板驅動IC COG封裝)",
-        "群創(3481)(電視/監視器DDI封測)"
+        "聯詠（顯示驅動IC生態系對象，非MOPS揭露客戶）",
+        "瑞鼎（顯示驅動IC生態系對象，非MOPS揭露客戶）",
+        "友達（終端顯示應用對象，非MOPS揭露客戶）",
+        "SpaceX Starlink（衛星終端應用對象，非MOPS揭露客戶）",
+        "Amazon Kuiper（衛星終端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "南茂（8150）",
@@ -125,36 +125,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6147 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：金凸塊、錫鉛凸塊、晶圓測試、TCP、COF及COG封裝。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收25.23億元、MoM+10.2%；查詢區間不足以計算YoY。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "low",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "COF捲帶式薄膜覆晶封裝(Chip-on-Flex)(pitch<15μm)",
-        "金凸塊(Gold Bumping)微凸塊製程(pitch<15μm)",
-        "晶圓級測試(CP)高頻測試技術(>6GHz)"
+        "金／錫鉛凸塊電鍍、凸塊高度均勻性與接合可靠度",
+        "COF細線路對位、熱壓接合與捲帶封裝製程",
+        "晶圓測試探針接觸、混合訊號量測與良率分選"
       ],
       "swot": {
         "strengths": [
-          "COF捲帶式薄膜覆晶封裝(Chip-on-Flex)(pitch<15μm)可用於衛星通訊面板",
-          "金凸塊(Gold Bumping)微凸塊製程(pitch<15μm)適用高密度封裝",
-          "晶圓級測試(CP)高頻測試技術(>6GHz)可測試衛星通訊射頻IC"
+          "MOPS直接支持凸塊、晶圓測試與COF／COG等顯示IC封測能力",
+          "FinMind顯示7月營收25.23億元、MoM+10.2%，公司整體短期動能改善"
         ],
         "weaknesses": [
-          "衛星通訊用顯示/觸控封裝為間接應用，營收貢獻極低",
-          "衛星通訊市場規模尚小",
-          "封裝業務與衛星通訊關聯性為間接受惠"
+          "MOPS完全未揭露衛星通訊、射頻前端、抗輻射或低軌終端產品",
+          "現有封測主業與衛星題材距離遠，營收無法歸因低軌衛星"
         ],
         "opportunities": [
-          "低軌衛星地面站/終端設備顯示面板用DDI封裝需求",
-          "衛星通訊模組用高頻IC晶圓測試(CP)新應用",
-          "觸控IC COF封裝在衛星終端設備應用"
+          "若衛星終端增加小型顯示與人機介面，COF／COG可能有極間接需求",
+          "高密度凸塊與測試能力可服務更多顯示及混合訊號IC，不必押單一衛星題材"
         ],
         "threats": [
-          "日月光投控(3711)在高頻IC封測規模優勢",
-          "衛星通訊封裝需求規模不確定",
-          "顯示驅動IC封裝與衛星通訊關聯性薄弱"
+          "投資人把顯示封測誤判成衛星通訊供應鏈，容易形成題材估值落差",
+          "顯示驅動IC景氣與面板需求仍是主要營運變數，衛星需求難以抵銷循環"
         ]
       }
     }

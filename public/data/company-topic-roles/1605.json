@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "1605",
   "companyName": "華新",
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
-      "directness": "supplier",
+      "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "power_cable_supplier",
-      "roleSummary": "華新麗華提供AI資料中心配電所需的高壓電纜與特殊鋼材。5月營收174.6億年增11.1%，但累計740億年減5.4%。AI資料中心帶動高壓電纜與銅匯流排需求成長，不鏽鋼事業受景氣循環影響。",
+      "roleSummary": "華新麗華MOPS僅揭露電線電纜、鋼線鋼纜與特殊鋼，能合理對應資料中心外部供配電與機房建設材料，但未揭露GPU機架匯流排或Google、Microsoft等客戶，故本題材降為間接受惠。2026年7月公司營收157.14億元，MoM-6.0%、YoY+10.1%、累計YoY+1.0%；營收為全公司口徑，不能全數歸因AI伺服器。",
       "products": [
-        "161kV超高壓電力電纜(AI資料中心配電)",
-        "銅匯流排(Copper Busbar)(GPU機架配電)",
-        "低煙無鹵電纜(資料中心機房)",
-        "不鏽鋼無縫鋼管(耐腐蝕)",
-        "鎳基合金線材(Inconel 625)(高溫環境)"
+        "高壓交連聚乙烯（XLPE）電力電纜",
+        "低煙無鹵機房配線電纜",
+        "鋼線與鋼纜",
+        "不鏽鋼盤元與線材",
+        "特殊鋼管材"
       ],
       "customers": [
-        "台電(變電站配電工程)",
-        "台積電(2330)(廠房高壓配電)",
-        "Google(資料中心配電)",
-        "Microsoft(資料中心配電)",
-        "沃旭能源(離岸風場電纜)"
+        "台灣電力公司（供配電應用對象，非MOPS揭露客戶）",
+        "台積電（廠務用電應用對象，非MOPS揭露客戶）",
+        "Google（資料中心應用對象，非MOPS揭露客戶）",
+        "Microsoft（資料中心應用對象，非MOPS揭露客戶）",
+        "Amazon Web Services（資料中心應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華電電纜(1603)",
@@ -50,32 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電線電纜、鋼線鋼纜及特殊鋼之生產與銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收157.14億元，MoM-6.0%、YoY+10.1%、累計YoY+1.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "161kV 超高壓電力電纜交聯聚乙烯（XLPE）絕緣技術",
-        "銅匯流排（Copper Busbar）高導流壓延製程",
-        "AI 資料中心 GPU 機架配電匯流排設計"
+        "XLPE絕緣與高壓電纜押出／交連製程",
+        "低煙無鹵護套與耐燃機房配線設計",
+        "特殊鋼冶煉、熱軋與耐蝕成分控制"
       ],
       "swot": {
         "strengths": [
-          "AI資料中心高壓電纜與銅匯流排需求成長，6月營收16.72億YoY+29.3%",
-          "66kV離岸風電海纜與AI資料中心配電電纜雙引擎驅動"
+          "MOPS直接支持電線電纜與特殊鋼主業，可對應資料中心外部電力與基建材料",
+          "7月營收YoY+10.1%、累計YoY+1.0%，公司整體營運維持成長"
         ],
         "weaknesses": [
-          "AI資料中心電纜為間接供應角色，佔總營收比例小",
-          "累計營收YoY-0.4%，本業電線電纜/特殊鋼需求偏弱拖累整體表現"
+          "MOPS未揭露GPU機架匯流排、伺服器內部線纜或特定雲端客戶",
+          "7月營收MoM-6.0%，且不鏽鋼景氣會稀釋AI資料中心題材純度"
         ],
         "opportunities": [
-          "AI資料中心建置潮帶動高壓電纜與銅匯流排需求持續成長",
-          "特殊鋼業務受惠電動車需求，可分散AI伺服器以外成長動能"
+          "資料中心擴建可增加高壓電纜、耐燃配線與廠務鋼材需求",
+          "電網強韌與園區變電工程可放大AI機房上游供電材料需求"
         ],
         "threats": [
-          "電線電纜為大宗商品，價格競爭激烈毛利低",
-          "銅價波動影響毛利穩定性，AI資料中心電纜訂單佔比仍小"
+          "銅、鎳與不鏽鋼原料價格波動可能壓縮加工利差",
+          "雲端業者資本支出延後時，間接基建需求可能晚於伺服器出貨反映"
         ]
       }
     },

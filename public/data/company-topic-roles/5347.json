@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5347",
   "companyName": "世界",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -179,20 +179,20 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "世界先進在再生能源題材中以8吋BCD高壓製程代工太陽能電源管理IC與逆變器控制IC。MOPS登記為依客戶訂單從事積體電路製造銷售。主力客戶為茂達/矽力杰/致新等電源管理IC設計公司。",
+      "roleSummary": "世界先進MOPS支持依客戶設計從事積體電路製造、封裝測試、光罩與CAD服務，但未揭露BCD節點、太陽能MPPT／逆變器IC、功率MOSFET或任何具名客戶；因此本題材僅保留再生能源電力電子晶片的晶圓代工間接角色。TWSE月營收查無資料，FinMind顯示2026年7月營收47.06億元、MoM-21.3%；查詢區間不足以計算YoY。",
       "products": [
-        "太陽能電源管理IC代工(BCD 0.35-0.6um製程)(MPPT控制IC)",
-        "太陽能逆變器控制IC代工(高壓BCD製程)(PWM/SPWM驅動IC)",
-        "功率MOSFET代工(太陽能MPPT IC/逆變器驅動IC)",
-        "8吋/12吋利基製程平台(0.18um BCD/CMOS)",
-        "綠能储能IC代工(BMS電池管理IC/充放電控制IC)"
+        "類比與電源管理IC晶圓製造服務",
+        "高電壓控制IC晶圓製造服務",
+        "功率元件晶圓製造服務",
+        "積體電路封裝與測試服務",
+        "光罩製造與電腦輔助設計服務"
       ],
       "customers": [
-        "茂達(6138)(電源管理IC代工)",
-        "矽力杰Silergy(太陽能逆變器IC代工)",
-        "致新(8081)(電源管理IC代工)",
-        "立錡(6229)(電源管理IC代工)",
-        "沛波(6670)(功率MOSFET代工)"
+        "茂達（電源管理IC生態系對象，非MOPS揭露客戶）",
+        "矽力杰（電源管理IC生態系對象，非MOPS揭露客戶）",
+        "致新（電源管理IC生態系對象，非MOPS揭露客戶）",
+        "立錡（電源管理IC生態系對象，非MOPS揭露客戶）",
+        "Infineon（功率元件生態系對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "力積電(6770)",
@@ -219,36 +219,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：依客戶設計製造積體電路，並提供封裝、測試、光罩及CAD服務。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收47.06億元、MoM-21.3%；查詢區間不足以計算YoY。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "low",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "BCD高壓製程(0.35-0.6um)用於電源管理IC代工",
-        "8吋/12吋利基製程平台(0.18um BCD/CMOS)",
-        "功率MOSFET代工製程(太陽能MPPT/逆變器驅動)"
+        "高電壓類比／電源製程的隔離結構與耐壓元件整合",
+        "功率元件導通電阻、崩潰電壓與熱可靠度控制",
+        "光罩、晶圓製造、封裝測試與良率回饋整合"
       ],
       "swot": {
         "strengths": [
-          "BCD高壓製程可應用於太陽能電源管理IC，具技術平台彈性",
-          "8吋利基製程在電源管理IC代工市場具穩定需求",
-          "世界先進資本額187.96億，財務結構穩健"
+          "MOPS直接支持晶圓製造、封裝測試、光罩與CAD的完整代工服務",
+          "類比、高電壓與功率元件可對應逆變器、充電與電源管理應用"
         ],
         "weaknesses": [
-          "太陽能IC代工佔比低，主力為商用電源管理IC",
-          "8吋廠長期面臨12吋競爭壓力",
-          "太陽能IC代工為間接受惠，題材連結度低"
+          "MOPS未揭露太陽能、風電、MPPT、BCD節點或具名客戶",
+          "FinMind顯示7月營收MoM-21.3%，短期認列動能轉弱"
         ],
         "opportunities": [
-          "太陽能逆變器IC需求隨綠能裝置量增長",
-          "储能BMS IC代工市場擴大",
-          "BCD製程可跨足車用/工業用電源管理"
+          "再生能源逆變器與儲能系統增加高電壓控制及功率元件需求",
+          "客戶尋求成熟製程第二來源，可提升特色製程產能利用率"
         ],
         "threats": [
-          "電源管理IC代工競爭激烈(力積電/合晶)",
-          "太陽能補貼政策變動影響下游需求",
-          "8吋晶圓代工長期面臨12吋競爭"
+          "中國成熟製程擴產與價格競爭可能壓低代工報價",
+          "再生能源政策、利率與案場建置放緩會間接影響電力電子晶片需求"
         ]
       }
     }

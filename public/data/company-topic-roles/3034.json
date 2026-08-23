@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3034",
   "companyName": "聯詠",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -176,23 +176,23 @@
       "topicId": "edge-ai-aiot",
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "topicType": "technology",
-      "directness": "supplier",
+      "directness": "indirect",
       "supplyChainStage": "ic_design",
       "roleType": "edge_ai_soc_candidate",
-      "roleSummary": "聯詠6月營收100.23億YoY+19.0%，累計518.05億YoY-2.8%。MOPS登記為語音/通訊/液晶顯示器驅動IC設計製造。台灣最大顯示驅動IC廠，跨足邊緣AI SoC，整合NPU推論引擎於顯示/影像IC，AI安防與車用ASIL-B認證IC為新成長動能。",
+      "roleSummary": "聯詠MOPS支持語音IC、通訊IC、嵌入式MCU、DSP、電腦周邊控制與LCD驅動IC，能對應Edge AI的感知與訊號處理周邊，但未揭露NPU TOPS、ASIL-B、Hikvision或Dahua客戶，故移除舊資料的過度規格。2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%、累計YoY+1.2%；公司整體成長不能全歸因Edge AI。",
       "products": [
-        "邊緣AI顯示SoC(整合NPU推論引擎TOPS>1)(28nm)",
-        "AI影像處理IC(ISP+NPU 4K/8K)(智慧安防用)",
-        "車用顯示與影像IC(ASIL-B認證)(儀表板/後視鏡)",
-        "智慧安防SoC(AI人臉辨識/物體偵測)(H.265)",
-        "電視用大型DDI(TDDI/Gate Driver IC)(4K120Hz)"
+        "數位訊號處理器（DSP）與系統",
+        "嵌入式微控制器與系統",
+        "通訊積體電路與系統",
+        "電腦周邊控制積體電路",
+        "液晶顯示器驅動積體電路與系統"
       ],
       "customers": [
-        "Hikvision(海康威視)(AI安防監控SoC)",
-        "Dahua(大華股份)(AI安防監控SoC)",
-        "Samsung(三星)(OLED DDI驅動IC)",
-        "Canon(佳能)(影像處理ISP IC)",
-        "BOE(京東方)(電視/手機DDI驅動IC)"
+        "友達（顯示應用對象，非MOPS揭露客戶）",
+        "群創（顯示應用對象，非MOPS揭露客戶）",
+        "BOE京東方（顯示應用對象，非MOPS揭露客戶）",
+        "Samsung Display（顯示應用對象，非MOPS揭露客戶）",
+        "海康威視（邊緣影像應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Rockchip",
@@ -223,36 +223,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務包含語音、通訊、嵌入式微控制器、DSP、電腦周邊控制與LCD驅動IC。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%、累計YoY+1.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "邊緣AI影像處理SoC設計(NPU+ISP整合)(28nm TOPS>1)",
-        "車用顯示驅動與影像處理整合(ASIL-B ISO26262)",
-        "AI推論加速器NPU整合至顯示SoC(INT8/INT4量化)"
+        "DSP影像／語音訊號鏈與即時數位濾波",
+        "嵌入式MCU的低功耗控制與周邊介面整合",
+        "顯示驅動時序、面板介面與影像資料路徑整合"
       ],
       "swot": {
         "strengths": [
-          "邊緣AI顯示SoC整合NPU推論引擎(28nm TOPS>1)切入智慧安防應用",
-          "AI影像處理IC(ISP+NPU 4K/8K)可做人臉辨識/物體偵測",
-          "Hikvision(海康威視)/Dahua(大華股份)等安防大廠客戶穩定"
+          "MOPS支持DSP、MCU、通訊與顯示驅動等邊緣訊號鏈能力",
+          "7月營收YoY+26.8%，公司整體需求較去年同期成長"
         ],
         "weaknesses": [
-          "Edge AI SoC NPU算力(TOPS>1)遠低於NVIDIA Jetson等專用平台",
-          "安防SoC市場競爭激烈(海思/富瀚微等中國廠)",
-          "AI安防應用受到隱私法規限制"
+          "MOPS未揭露NPU、AI推論效能、車規認證或邊緣AI客戶",
+          "累計YoY僅+1.2%，單月成長尚未形成強勁全年趨勢"
         ],
         "opportunities": [
-          "智慧安防監控攝影機AI化帶動SoC需求",
-          "車用AI顯示與影像處理(ASIL-B)在ADAS/座艙應用",
-          "8K電視AI畫質增長帶動電視SoC升級"
+          "終端裝置導入本地影像與語音處理，可增加DSP／MCU整合價值",
+          "智慧顯示與攝影機可帶動顯示驅動、控制與通訊IC協同"
         ],
         "threats": [
-          "華為海思在中國安防SoC市場主導地位",
-          "NVIDIA/AMD在Edge AI算力平台競爭",
-          "安防應用隱私法規趨嚴影響市場成長"
+          "大型SoC廠將NPU、ISP與顯示控制整合後，獨立周邊IC空間可能被壓縮",
+          "面板景氣循環與終端庫存波動仍會主導公司營運"
         ]
       }
     }

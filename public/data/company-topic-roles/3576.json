@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3576",
   "companyName": "聯合再生",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "renewable-energy",
@@ -89,20 +89,20 @@
       "directness": "indirect",
       "supplyChainStage": "ess",
       "roleType": "storage_system_provider",
-      "roleSummary": "聯合再生為台灣太陽能電池+模組+儲能整合廠商，6月營收2.08億元年減9.5%，累計年減24.1%。提供TOPCon/PERC太陽能電池、雙面雙玻模組及光儲合一微電網系統。MOPS主要經營：太陽能電池及相關系統、太陽能發電模組及晶圓。",
+      "roleSummary": "聯合再生MOPS只支持太陽能電池、太陽能模組、晶圓及相關系統，未揭露鋰電池、PCS、BMS或EMS；因此本題材改為可與儲能搭配的太陽能發電端，而非儲能系統供應商。2026年7月營收3.08億元，MoM+47.9%、YoY+72.7%，公司明確說明來自太陽能專案工程增加，但累計YoY仍-14.8%。",
       "products": [
-        "TOPCon太陽能電池(轉換效率>25%/182mm/210mm矽晶圓)",
-        "PERC太陽能電池(轉換效率>23%/多晶矽)",
-        "太陽能模組(580W-700W雙面雙玻/Bifacial)",
-        "光儲合一微電網系統(太陽能+鋰電池儲能)",
-        "儲能系統整合(PCS+BMS+EMS)"
+        "晶矽太陽能電池",
+        "太陽能發電模組",
+        "太陽能用矽晶圓",
+        "太陽能發電系統整合",
+        "太陽能專案工程服務"
       ],
       "customers": [
-        "NextEra Energy(美國太陽能電廠模組)",
-        "Engie(歐洲太陽能電廠電池)",
-        "台電(再生能源儲能標案)",
-        "森崴能源6806(台灣太陽能電廠模組)",
-        "中華電信2412(基地台太陽能+儲能)"
+        "台灣電力公司（光儲應用對象，非MOPS揭露客戶）",
+        "森崴能源（再生能源應用對象，非MOPS揭露客戶）",
+        "泓德能源（光儲整合對象，非MOPS揭露客戶）",
+        "中華電信（分散式能源應用對象，非MOPS揭露客戶）",
+        "NextEra Energy（太陽能應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華城",
@@ -125,32 +125,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3576 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：太陽能電池、太陽能發電模組、晶圓及相關系統。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收3.08億元，MoM+47.9%、YoY+72.7%、累計YoY-14.8%；公司說明太陽能專案工程收入增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "low",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "TOPCon太陽能電池轉換效率>25%(LPCVD隧穿氧化層)",
-        "Bifacial雙面雙玻模組背面發電增益10-25%",
-        "光儲合一微電網系統PCS+BMS+EMS整合"
+        "晶矽太陽能電池鈍化、金屬化與串聯電阻控制",
+        "模組串焊、封裝、旁路二極體與耐候可靠度驗證",
+        "太陽能案場直流側設計、逆變併網與發電監控"
       ],
       "swot": {
         "strengths": [
-          "台灣太陽能電池+模組+儲能垂直整合",
-          "TOPCon技術轉換效率>25%領先"
+          "MOPS直接支持太陽能電池、模組、晶圓與系統，具備光儲中的發電端基礎",
+          "7月營收YoY+72.7%，且公司明確說明太陽能專案工程收入增加"
         ],
         "weaknesses": [
-          "6月營收2.08億元年減9.5%，累計年減24.1%，太陽能電池價格持續下滑",
-          "太陽能電池業務虧損壓力大"
+          "MOPS未揭露電芯、PCS、BMS或EMS，不能視為直接儲能供應商",
+          "累計營收YoY-14.8%，單月專案增加尚未扭轉全年弱勢"
         ],
         "opportunities": [
-          "台灣再生能源目標2025年20GW帶動儲能需求",
-          "美國IRA法案帶動太陽能模組出口"
+          "太陽能案場搭配儲能可延伸專案整合與維運需求",
+          "企業綠電與分散式能源建置可增加模組及系統工程訂單"
         ],
         "threats": [
-          "中國太陽能電池產能過剩低價競爭",
-          "太陽能電池ASP持續下滑壓力"
+          "中國模組價格競爭與政策變動可能壓縮太陽能產品毛利",
+          "儲能價值若由電池與電力電子廠掌握，公司在本題材的附加價值有限"
         ]
       }
     }

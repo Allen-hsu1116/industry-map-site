@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "2379",
   "companyName": "瑞昱",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
-      "directness": "direct_enabler",
+      "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ethernet_phy_chip_maker",
-      "roleSummary": "瑞昱是AI伺服器網路連接的核心IC供應商，乙太網路PHY全球市佔第一。5月營收125.2億年增21.9%，累計617億年增8.7%。10G PHY與WiFi 7是成長動能。",
+      "roleSummary": "瑞昱MOPS僅揭露各種積體電路的研發、生產、製造與銷售，未證實25G PHY、特定AI伺服器平台或Dell等客戶；本角色收斂為伺服器管理網路與周邊連線晶片的間接供應者。2026年7月營收128.95億元，MoM+4.7%、YoY+32.5%、累計YoY+13.3%；營收為全公司口徑，不能全歸因AI伺服器。",
       "products": [
-        "乙太網路PHY晶片(1G/2.5G/5G/10G/25G)",
-        "Wi-Fi 7 MLO晶片(RTW89)",
-        "USB PD控制器(RTD21xx)",
-        "車用乙太網路晶片(100BASE-T1)",
-        "音訊編解碼器(ALC系列Codec)"
+        "1GbE／2.5GbE乙太網路PHY晶片",
+        "多埠乙太網路交換控制晶片",
+        "Wi-Fi 6／Wi-Fi 7連線晶片",
+        "USB介面控制晶片",
+        "音訊編解碼器晶片"
       ],
       "customers": [
-        "智邦(2345)(資料中心交換器)",
-        "Dell(NB/桌機網路晶片)",
-        "HP(NB/桌機網路晶片)",
-        "Lenovo(NB/桌機網路晶片)",
-        "ASUS(主機板內建網路)"
+        "智邦（網通應用對象，非MOPS揭露客戶）",
+        "Dell Technologies（伺服器／PC應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
+        "Lenovo（伺服器／PC應用對象，非MOPS揭露客戶）",
+        "華碩（主機板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "博通(Broadcom)",
@@ -50,32 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：研究開發、生產、製造、銷售各種積體電路。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收128.95億元，MoM+4.7%、YoY+32.5%、累計YoY+13.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "Wi-Fi 7 MLO（Multi-Link Operation）晶片設計",
-        "2.5G/5G/10G 乙太網路 PHY 收發器 DSP 補償技術",
-        "邊緣 AI 推理 SoC（Realtek AI SoC）NPU 整合"
+        "乙太網路PHY的DSP等化、回波消除與自動協商",
+        "Wi-Fi 7多鏈路操作（MLO）與320MHz通道協同",
+        "USB與音訊介面的低功耗混合訊號SoC整合"
       ],
       "swot": {
         "strengths": [
-          "網通IC設計領導廠商，AI伺服器以太網路PHY/Switch IC為核心供應",
-          "6月營收12.31億YoY+20.6%，累計YoY+10.5%，穩定受惠AI伺服器網路需求"
+          "具備乙太網路、Wi-Fi、USB與音訊等伺服器周邊連線IC組合",
+          "7月營收MoM+4.7%、YoY+32.5%，公司整體需求增溫"
         ],
         "weaknesses": [
-          "AI伺服器網路IC佔瑞昱總營收比例小，消費性電子(電視/PC)仍為主力",
-          "高階AI伺服器Switch IC主要由Broadcom/Marvell供應，瑞昱以中低階為主"
+          "MOPS未逐項揭露伺服器用高速PHY、資料中心產品或客戶",
+          "多數產品亦服務PC與消費電子，AI伺服器營收純度無法由本次資料確認"
         ],
         "opportunities": [
-          "AI伺服器從100G→400G→800G網路升級，帶動PHY/Retimer IC需求",
-          "邊緣AI運算帶動IoT網通IC需求，瑞昱可擴大AI邊緣網路晶片份額"
+          "AI伺服器管理網路與周邊連線升級可提高多速率PHY需求",
+          "企業邊緣伺服器增加Wi-Fi 7與高速USB控制器整合機會"
         ],
         "threats": [
-          "Broadcom/Marvell在高階AI伺服器Switch IC領先，瑞昱難以突破",
-          "網通IC價格競爭激烈，中國IC設計公司(如海思)低價競爭壓力"
+          "Broadcom、Marvell及Intel在資料中心網路晶片具更完整產品線",
+          "伺服器平台若改採高度整合控制器，獨立PHY與周邊IC需求可能受壓"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2324",
   "companyName": "仁寶",
-  "updatedAt": "2026-07-11",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,20 @@
       "directness": "supplier",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "server_odm",
-      "roleSummary": "仁寶為全球前五大伺服器ODM，6月營收958.5億元年增58.4%，累計年增15.8%。AI伺服器提供NVIDIA HGX H100/B200 8-GPU系統，同時Dell/HPE/Lenovo商用筆電ODM。MOPS主要經營：5C電子產品之研發設計產製及銷售。",
+      "roleSummary": "仁寶MOPS只以「5C電子產品之研發、設計、產製及銷售」概括業務，未列出HGX、液冷或特定伺服器產品與客戶；本題材僅保留伺服器系統設計製造的產業脈絡，所有具名平台均標為非MOPS揭露。2026年7月營收810.06億元，MoM-15.5%、YoY+38.3%、累計YoY+18.8%；公司未說明成長來源，不能歸因AI伺服器。",
       "products": [
-        "AI伺服器ODM(NVIDIA HGX H100/B200 8-GPU系統)",
-        "GPU伺服器ODM(4U/8U液冷相容機構)",
-        "商用筆電ODM(Dell Latitude/HP ProBook)",
-        "雲端資料中心伺服器ODM(2U/4U存儲型)",
-        "邊緣AI運算裝置(NVIDIA Jetson AGX Orin)"
+        "機架式伺服器整機設計與製造（5C題材應用）",
+        "伺服器主機板系統整合",
+        "多節點運算伺服器機構整合",
+        "伺服器整機燒機與可靠度驗證",
+        "筆記型電腦整機設計與製造"
       ],
       "customers": [
-        "Dell(PowerEdge AI伺服器ODM)",
-        "HP Enterprise(ProLiant AI伺服器ODM)",
-        "Lenovo(ThinkSystem商用伺服器ODM)",
-        "Google(Cloud TPU伺服器ODM)",
-        "Meta(AI訓練伺服器ODM)"
+        "Dell Technologies（系統應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（系統應用對象，非MOPS揭露客戶）",
+        "Lenovo（系統應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI平台對象，非MOPS揭露客戶）",
+        "Intel（CPU平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "緯創(3231)",
@@ -50,32 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：5C電子產品之研發、設計、產製及銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收810.06億元，MoM-15.5%、YoY+38.3%、累計YoY+18.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "NVIDIA HGX H100/B200 8-GPU系統級散熱與PCB設計",
-        "伺服器液冷相容機構(冷板/快速接頭整合)",
-        "邊緣AI裝置Jetson AGX Orin系統整合"
+        "伺服器主機板高速差分訊號與多相電源整合",
+        "多節點機構風道、可維修性與機架空間設計",
+        "BIOS／BMC韌體整合、整機燒機與可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "全球前五大伺服器ODM，AI伺服器佈局領先",
-          "6月營收958.5億元年增58.4%，客戶需求強勁成長"
+          "MOPS支持5C電子產品研發至量產的一體化能力",
+          "7月營收YoY+38.3%、累計YoY+18.8%，公司整體需求仍有成長"
         ],
         "weaknesses": [
-          "AI伺服器ODM毛利率<5%，獲利靠規模",
-          "消費NB業務持續萎縮"
+          "MOPS未明列伺服器、AI平台、液冷產品或具名客戶",
+          "7月營收MoM-15.5%，月度出貨節奏波動明顯"
         ],
         "opportunities": [
-          "AI伺服器需求爆發帶動出貨量",
-          "邊緣AI裝置新應用場景擴大"
+          "企業AI推論與一般運算伺服器更新可擴大5C產品中的伺服器比重",
+          "平台換代帶動主機板、韌體與整機驗證服務需求"
         ],
         "threats": [
-          "緯穎6669/廣達2382競爭AI伺服器ODM份額",
-          "NB出貨量持續下滑壓力"
+          "廣達、緯創、英業達與鴻海的AI伺服器規模競爭激烈",
+          "GPU供應與客戶專案時程變動可能造成季度營收落差"
         ]
       }
     }

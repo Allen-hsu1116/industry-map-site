@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4966",
   "companyName": "譜瑞-KY",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "interface_ic_design",
       "roleType": "high_speed_display_usb_interface_ic_provider",
-      "roleSummary": "譜瑞-KY MOPS主要經營：高速訊號傳輸介面及顯示與觸控晶片之研發設計及銷售。全球USB4/Thunderbolt重定時器IC領導廠商，AI伺服器PCIe Retimer為新成長動能。",
+      "roleSummary": "譜瑞-KY MOPS直接支持高速訊號傳輸介面及顯示／觸控晶片，題材定位成立；但MOPS未逐項揭露USB4、Thunderbolt 4、PCIe Gen6、80Gbps或Apple等客戶，故保留產品族群並移除未證實型號與客戶關係。TWSE月營收查無資料，FinMind顯示2026年7月營收13.53億元、MoM-19.1%；查詢區間不足以計算YoY。",
       "products": [
-        "USB4/Thunderbolt 4重定時器IC(DF8201)",
-        "DisplayPort 2.1訊號介面IC",
-        "HDMI 2.1訊號處理晶片",
-        "PCIe Gen5/6 Retimer IC",
-        "Type-C Alt Mode訊號切換IC"
+        "USB-C高速介面重定時器晶片",
+        "DisplayPort高速訊號處理晶片",
+        "HDMI高速影音介面晶片",
+        "PCI Express重定時器晶片",
+        "顯示與觸控整合控制晶片"
       ],
       "customers": [
-        "Apple(MacBook USB4/DP)",
-        "Intel(Thunderbolt 4重定時器)",
-        "AMD(PCIe Retimer)",
-        "Lenovo(NB Type-C)",
-        "Dell(筆電DP/HDMI)"
+        "Apple（高速介面應用對象，非MOPS揭露客戶）",
+        "Intel（介面平台驗證對象，非MOPS揭露客戶）",
+        "AMD（PCIe平台驗證對象，非MOPS揭露客戶）",
+        "Dell Technologies（終端應用對象，非MOPS揭露客戶）",
+        "Lenovo（終端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "譜瑞(Parade)",
@@ -50,36 +50,46 @@
           "title": "Page sitemap",
           "url": "https://www.paradetech.com/page-sitemap.xml",
           "claim": "Page sitemap supports 譜瑞-KY role as high_speed_display_usb_interface_ic_provider in 高速連接器與車工業連接 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：高速訊號傳輸介面及顯示與觸控晶片之研發設計及銷售。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收13.53億元、MoM-19.1%；查詢區間不足以計算YoY。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "USB4/Thunderbolt 4重定時器(CTLE/DFE等化)IC設計",
-        "PCIe Gen5/6 Retimer訊號完整性補償技術",
-        "DisplayPort 2.1 UHBR(80Gbps)訊號處理晶片設計"
+        "高速串列鏈路CTLE／DFE等化與時脈資料恢復",
+        "USB-C／DisplayPort替代模式協定與鏈路訓練",
+        "PCIe重定時器的抖動清理、通道補償與錯誤監測"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記為高速訊號傳輸介面及顯示與觸控晶片設計，USB4/Thunderbolt 4重定時器IC(DF8201)為核心",
-          "客戶含Apple(MacBook USB4/DP)、Intel(Thunderbolt 4)，頂級客戶基礎",
-          "DisplayPort 2.1訊號介面IC技術領先"
+          "MOPS直接支持高速訊號傳輸介面與顯示／觸控IC",
+          "USB-C、DisplayPort、HDMI與PCIe產品族群可覆蓋多種高速連線場景"
         ],
         "weaknesses": [
-          "7月營收13.53億MoM-19.1%，季度波動大",
-          "高速介面IC競爭激烈(祥碩5269/創意3443)",
-          "KY公司治理結構需關注"
+          "FinMind顯示7月營收MoM-19.1%，短期認列動能轉弱",
+          "MOPS未揭露協定世代、速率、型號或具名客戶，無法驗證舊資料的規格"
         ],
         "opportunities": [
-          "USB4/Thunderbolt 5下一代規格升級需求",
-          "AI伺服器高速互連(CXL/PCIe Gen5)新應用",
-          "DisplayPort 2.1 UHBR(超高頻寬)晶片打入新客戶"
+          "AI PC與伺服器提高PCIe、USB-C與顯示鏈路速率，增加Retimer需求",
+          "通道損耗隨速率提升，使主動等化晶片的單機使用量增加"
         ],
         "threats": [
-          "Intel/AMD可能自研重定時器IC減少外購",
-          "祥碩(5269)USB4控制器晶片競爭",
-          "消費性PC市場需求放緩影響USB4/DP出貨"
+          "介面控制功能被CPU／GPU或平台晶片整合，獨立晶片市場可能受壓",
+          "Astera Labs、Synopsys IP與其他高速介面廠競爭加劇"
         ]
       }
     }

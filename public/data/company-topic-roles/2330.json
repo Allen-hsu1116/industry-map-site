@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -176,20 +176,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "advanced_packaging",
       "roleType": "hbm_integration_packaging",
-      "roleSummary": "台積電MOPS主要經營：積體電路製造銷售/封裝測試/光罩設計。在HBM題材中為AI GPU+HBM整合封裝核心提供者，CoWoS-L/SoIC為HBM 3D堆疊關鍵技術。",
+      "roleSummary": "台積電MOPS支持積體電路晶圓製造及封裝測試服務，因此可作為邏輯晶片與HBM整合的直接賦能者；但MOPS未逐項揭露HBM3E、CoWoS-L、SoIC、TSV尺寸或任何具名客戶，舊資料的過度規格化敘述已收斂。2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%、累計YoY+37.0%；此為全公司口徑，不能全數歸因HBM。",
       "products": [
-        "CoWoS-L HBM+GPU整合封裝(NVIDIA B200/4x reticle/8-HBM stacks)",
-        "SoIC 3D堆疊(HBM on Logic/Cu-Cu hybrid bonding/TSV diameter<5μm)",
-        "CoWoS-S HBM 3e多晶片封裝(矽中介層/HBM3e 12-high/24GB)",
-        "InFO-AI HBM頻寬互連(InFO_B substrate/高密度RDL/819GB/s頻寬)",
-        "A16(1.6nm) Backside Power HBM支援(背面供電/降低IR drop 15%)"
+        "AI／HPC邏輯晶片晶圓製造服務",
+        "邏輯晶片與HBM的2.5D整合封裝服務",
+        "晶圓對晶圓／晶片對晶圓3D整合服務",
+        "先進封裝後測服務",
+        "封裝用光罩與電腦輔助設計服務"
       ],
       "customers": [
-        "NVIDIA(H100/B200 HBM封裝)",
-        "AMD(MI300X HBM整合)",
-        "Broadcom(客製ASIC+HBM封裝)",
-        "Marvell(客製ASIC HBM封裝)",
-        "Google(TPU HBM封裝)"
+        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
+        "AMD（AI加速器應用對象，非MOPS揭露客戶）",
+        "Broadcom（客製ASIC應用對象，非MOPS揭露客戶）",
+        "Marvell（客製ASIC應用對象，非MOPS揭露客戶）",
+        "SK hynix（HBM生態系對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Samsung I-Cube",
@@ -218,36 +218,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：依客戶設計製造積體電路，並提供封裝、測試、CAD與光罩服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%、累計YoY+37.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "CoWoS-L 2.5D封裝(Si interposer+HBM堆疊)",
-        "SoIC 3D堆疊(Chip-on-Wafer HBM on Logic)",
-        "TSV矽穿孔技術用於HBM 3D堆疊"
+        "矽中介層2.5D整合與高密度RDL互連",
+        "Cu-Cu混合鍵合的晶片對晶圓3D堆疊",
+        "邏輯晶片、HBM堆疊與封裝後測的協同良率管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收4426.8億YoY+67.9%，HBM封裝(CoWoS-L/SoIC)為AI GPU核心技術",
-          "CoWoS-L HBM+GPU整合封裝(NVIDIA B200/4x reticle/8-HBM stacks)獨占供應",
-          "SoIC 3D HBM on Logic堆疊(TSV<5μm/Cu-Cu hybrid bonding)技術領先"
+          "MOPS同時支持晶圓製造與封裝測試，具備邏輯晶片到整合封裝的完整能力",
+          "7月營收YoY+44.7%、累計YoY+37.0%，公司整體先進運算需求強"
         ],
         "weaknesses": [
-          "HBM供應鏈(SK hynix/三星/Micron)產能瓶頸影響台積電出片節奏",
-          "CoWoS產能不足可能限制HBM封裝營收貢獻時程",
-          "HBM封裝測試良率受TSV/微凸塊製程影響，除錯成本高"
+          "MOPS未逐項揭露HBM世代、CoWoS／SoIC產能或具名客戶",
+          "台積電不生產HBM DRAM裸晶，本題材依賴記憶體供應商共同交付"
         ],
         "opportunities": [
-          "HBM3e 12-high/24GB量產，AI GPU記憶體容量倍增帶動封裝ASP",
-          "A16(1.6nm)Backside Power降低IR drop 15%，支援HBM高頻寬操作",
-          "下世代AI ASIC(Marvell/Google TPU/Broadcom)均採CoWoS-L+HBM方案"
+          "AI加速器提高HBM堆疊數與封裝面積，推升2.5D／3D整合價值",
+          "邏輯製程與先進封裝共同最佳化可提高客戶轉換成本"
         ],
         "threats": [
-          "Samsung HBM3e封裝能力追趕，可能獲得NVIDIA部分訂單",
-          "Intel EMIB+HBM方案為替代路線(有機中介層vs矽中介層)",
-          "HBM供應商集中(SK hynix>三星>Micron)，議價能力受限"
+          "HBM供應、良率或基板短缺會限制封裝產能利用率",
+          "Samsung、Intel與其他先進封裝平台競爭可能分散訂單"
         ]
       }
     },

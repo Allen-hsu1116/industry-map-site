@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-07-14",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -172,23 +172,23 @@
       "topicId": "software-cloud-security",
       "topicName": "資安、雲端服務與企業軟體",
       "topicType": "theme",
-      "directness": "supplier",
+      "directness": "indirect",
       "supplyChainStage": "server_management",
       "roleType": "hardware_management_enabler",
-      "roleSummary": "信驊為全球BMC(Baseboard Management Controller)晶片龍頭，AST2600/AST3200系列主導伺服器帶外管理市場，資料中心安全監控核心供應商。",
+      "roleSummary": "信驊MOPS支持多媒體、電腦周邊與高階消費性IC，未直接揭露BMC、OpenBMC、Redfish或軟體雲端服務；本題材因此定位為伺服器帶外管理硬體對雲端維運與資安的間接賦能，而非企業軟體供應商。TWSE月營收查無資料，FinMind顯示2026年7月營收15.24億元、MoM+16.3%；查詢區間不足以計算YoY。",
       "products": [
-        "BMC韌體解決方案(AST2600/AST3200 SoC)",
-        "遠端伺服器管理平台(Redfish API)",
-        "資料中心硬體監控軟體(OpenBMC)",
-        "伺服器帶外管理(Out-of-Band Management)",
-        "雲端伺服器資產管理軟體"
+        "伺服器基板管理控制器（BMC）SoC",
+        "遠端KVM影像處理控制晶片",
+        "伺服器帶外管理周邊控制晶片",
+        "多媒體積體電路",
+        "電腦周邊積體電路"
       ],
       "customers": [
-        "Dell(iDRAC BMC AST2600)",
-        "HPE(iLO BMC AST2600)",
-        "Lenovo(XClarity BMC AST2600)",
-        "超微(8299)(Supermicro BMC AST2600)",
-        "緯穎(6669)(CSP伺服器BMC AST3200)"
+        "Dell Technologies（伺服器管理應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器管理應用對象，非MOPS揭露客戶）",
+        "Lenovo（伺服器管理應用對象，非MOPS揭露客戶）",
+        "Supermicro（伺服器管理應用對象，非MOPS揭露客戶）",
+        "OpenBMC專案（軟體生態系對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Nuvoton",
@@ -218,36 +218,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：多媒體IC、電腦周邊IC及高階消費性電子IC。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收15.24億元、MoM+16.3%；查詢區間不足以計算YoY。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "BMC韌體帶外管理(Out-of-Band Management)架構",
-        "Redfish API伺服器遠端管理協定(DMTF標準)",
-        "AST2600/AST3200 SoC系統監控架構(ARM Cortex)"
+        "BMC帶外管理、主機感測遙測與獨立管理網路",
+        "遠端KVM影像擷取、壓縮與網路傳輸",
+        "安全開機、韌體簽章與管理平面存取控制"
       ],
       "swot": {
         "strengths": [
-          "BMC韌體帶外管理(Out-of-Band Management)架構為伺服器管理事實標準",
-          "Redfish API伺服器遠端管理協定(DMTF標準)支援完整",
-          "Dell(iDRAC)/HPE(iLO)/Lenovo(XClarity)等Tier-1伺服器大廠深度嵌入"
+          "BMC與電腦周邊IC產業脈絡可直接支撐伺服器遠端維運硬體",
+          "FinMind顯示7月營收15.24億元、MoM+16.3%，短期動能轉強"
         ],
         "weaknesses": [
-          "BMC韌體為硬體附屬軟體，獨立軟體授權收入有限",
-          "OpenBMC開源方案可能侵蝕私有韌體市場",
-          "雲端伺服器資產管理軟體面臨微軟/Google等大廠競爭"
+          "MOPS未直接揭露BMC型號、Redfish、OpenBMC或資安軟體服務",
+          "公司本質是IC供應商，不是SaaS或雲端服務商，題材直接度有限"
         ],
         "opportunities": [
-          "AI伺服器帶外管理需求增長(功耗/溫度監控)",
-          "資料中心ESG碳排監控軟體新應用",
-          "雲端伺服器資產管理平台SaaS化"
+          "AI伺服器數量與功耗提高，帶動遙測、遠端管理與韌體安全需求",
+          "資料中心零接觸維運可提升BMC功能與平均單價"
         ],
         "threats": [
-          "OpenBMC開源社群降低私有BMC韌體需求",
-          "大型CSP(Google/AWS/Meta)自研伺服器管理軟體",
-          "資安市場競爭激烈"
+          "伺服器平台自研管理晶片或替代BMC方案可能削弱市占",
+          "BMC韌體漏洞與供應鏈攻擊會提高認證、維護與責任成本"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8046",
   "companyName": "南電",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -95,20 +95,20 @@
       "directness": "supplier",
       "supplyChainStage": "ic_substrate",
       "roleType": "advanced_packaging_substrate_supplier",
-      "roleSummary": "南電6月營收46.84億年增50.0%，累計年增37.2%，受市場需求成長帶動。ABF載板受惠AI GPU與CPU封裝需求，大尺寸FC-BGA為核心成長動能。",
+      "roleSummary": "南電MOPS只揭露電子元件與電池製造業別，未逐項證實ABF、FC-BGA、線寬或NVIDIA等客戶；依公司題材脈絡保留封裝載板供應角色，但將規格與客戶關係降為非MOPS揭露。2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%、累計YoY+39.4%，公司說明受市場需求成長影響，不能全數歸因先進封裝。",
       "products": [
-        "ABF載板(AI GPU用FC-BGA >100mm²大尺寸)",
-        "HDISTM高密度細線路載板(線寬/線距<5μm)",
-        "車用HDI載板(FR-4 High-Tg耐高溫)",
-        "AiO封裝用基板(All-in-One CPU載板)",
-        "FCCSP載板(手機AP封裝用細線路)"
+        "FC-BGA封裝載板",
+        "FC-CSP封裝載板",
+        "高密度互連（HDI）印刷電路板",
+        "多層印刷電路板",
+        "記憶體與運算晶片用封裝基板"
       ],
       "customers": [
-        "Intel(Core CPU FC-BGA載板)",
-        "AMD(Ryzen/EPYC CPU載板)",
-        "NVIDIA(AI GPU FC-BGA載板)",
-        "Broadcom(客製ASIC封裝載板)",
-        "聯發科(手機AP FCCSP載板)"
+        "Intel（處理器封裝應用對象，非MOPS揭露客戶）",
+        "AMD（處理器／GPU應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
+        "Broadcom（ASIC應用對象，非MOPS揭露客戶）",
+        "聯發科（行動SoC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "欣興(3037)",
@@ -139,36 +139,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務僅列電子元件製造與電池製造業別，未逐項揭露載板產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%、累計YoY+39.4%；公司說明受市場需求成長影響。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "ABF載板大尺寸FC-BGA量產技術(>100mm²/多層壓合/細線路)",
-        "HDISTM高密度細線路載板技術(線寬<5μm/雷射鑽孔)",
-        "車用HDI載板耐高溫材料(FR-4 High-Tg >170°C/AEC-Q100)"
+        "ABF增層載板的雷射微孔、電鍍填孔與細線路製程",
+        "大尺寸FC-BGA載板翹曲與層間對位控制",
+        "高頻高速封裝載板的阻抗與低損耗材料管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收46.8億YoY+50%，累計247.5億YoY+37.2%，受AI GPU載板需求強勁帶動",
-          "ABF載板FC-BGA >100mm²大尺寸量產能力，供貨Intel/AMD/NVIDIA高階CPU/GPU封裝",
-          "HDISTM高密度細線路技術(線寬<5μm)領先同業，打入手機AP FCCSP市場"
+          "公司題材脈絡與名稱均指向印刷電路板／封裝載板製造",
+          "7月營收MoM+16.1%、YoY+50.2%、累計YoY+39.4%，整體市場需求強"
         ],
         "weaknesses": [
-          "ABF載板技術仍落後日本Ibiden/新光電工，大尺寸AI GPU載板市佔有限",
-          "車用HDI載板營收佔比低，High-Tg材料技術尚在認證階段",
-          "資本額64.6億，擴產速度受限于母公司南亞塑膠集團資本排程"
+          "MOPS主要業務欄位過度概括，未逐項支持ABF、FC-BGA規格或客戶",
+          "先進封裝營收占比與產品組合無法由本次MCP確認"
         ],
         "opportunities": [
-          "AI伺服器GPU封裝從CoWoS走向多晶片reticle stitching，大尺寸ABF載板需求爆發",
-          "Intel Panther Lake與AMD Zen5放量帶動FC-BGA載板需求",
-          "供應鏈移轉效應：日商Ibiden產能不足，訂單外溢至台灣載板廠"
+          "AI GPU與高階CPU封裝面積增加，推升大尺寸載板層數與單價",
+          "先進封裝擴產可帶動載板認證與第二來源需求"
         ],
         "threats": [
-          "欣興(3037)與景碩(3189)同樣競逐ABF載板AI GPU訂單，價格競爭壓力",
-          "ABF基材供應受三菱瓦斯化學壟斷，原料成本波動影響毛利",
-          "半導體先進封裝從有機載板轉向矽中介層，長期可能壓縮ABF載板市場"
+          "欣興、景碩與日本載板廠擴產可能造成價格與稼動率壓力",
+          "ABF材料、良率與翹曲控制瓶頸可能延後高階產品放量"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3037",
   "companyName": "欣興",
-  "updatedAt": "2026-08-12",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "pcb_ic_substrate",
       "roleType": "pcb_ic_substrate_provider",
-      "roleSummary": "欣興6月營收149億年增36.3%，累計年增28.4%。MOPS主要經營：PCB製造。為全球前三大IC載板與HDI PCB廠，AI伺服器PCB與ABF載板為核心成長動能。",
+      "roleSummary": "欣興MOPS僅明確揭露PCB製造，未逐項證實ABF載板、24層、3微米線寬或任何具名客戶；本角色保留PCB與IC載板產品脈絡，但移除EUV等不恰當規格。2026年7月營收162.54億元，MoM+9.1%、YoY+43.7%、累計YoY+30.8%；營收為全公司口徑，不能全數歸因AI載板。",
       "products": [
-        "AI伺服器HDI高密度PCB(24+層)",
-        "IC載板(FC-BGA/FC-CSP)",
-        "先進封裝ABF載板(EUV level)",
-        "高速低損耗PCB(400G/800G網通)",
-        "Any-layer HDI(任意層高密度互連)"
+        "FC-BGA封裝載板",
+        "FC-CSP封裝載板",
+        "任意層高密度互連（Any-layer HDI）板",
+        "伺服器用高多層印刷電路板",
+        "高速網通交換器用低損耗印刷電路板"
       ],
       "customers": [
-        "NVIDIA(AI加速卡載板)",
-        "AMD(GPU/CPU載板)",
-        "英業達(2356)(伺服器PCB)",
-        "廣達(2382)(伺服器主板)",
-        "聯發科(2454)(手機IC載板)"
+        "NVIDIA（AI載板應用對象，非MOPS揭露客戶）",
+        "AMD（CPU／GPU載板應用對象，非MOPS揭露客戶）",
+        "Intel（處理器載板應用對象，非MOPS揭露客戶）",
+        "廣達（伺服器PCB應用對象，非MOPS揭露客戶）",
+        "聯發科（行動SoC載板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "南電(8046)",
@@ -50,36 +50,46 @@
           "title": "FCBGA",
           "url": "https://www.unimicron.com/en/product_FCBGA.html",
           "claim": "FCBGA supports 欣興 role as pcb_ic_substrate_provider in PCB、IC 載板與高階基板材料 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：PCB製造。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收162.54億元，MoM+9.1%、YoY+43.7%、累計YoY+30.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "confidence": "medium",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "ABF載板細線路製程(line/space <3μm)",
-        "Any-layer HDI任意層高密度互連壓合技術",
-        "AI伺服器超低損耗(Ultra Low Loss)PCB材料應用"
+        "ABF增層載板雷射微孔、電鍍填孔與細線路形成",
+        "Any-layer HDI逐層堆疊、微盲孔與層間對位",
+        "高速多層板阻抗、低損耗材料與壓合翹曲控制"
       ],
       "swot": {
         "strengths": [
-          "6月營收148.97億YoY+36.3%、累計803.36億YoY+28.4%，PCB載板需求強勁復甦",
-          "MOPS登記PCB製造，ABF載板細線路製程(line/space<3μm)與Any-layer HDI技術，NVIDIA AI加速卡載板供應商",
-          "資本額158.89億為台灣最大PCB載板廠，FC-BGA/FC-CSP載板產能規模領先同業"
+          "MOPS直接支持PCB製造，題材核心定位成立",
+          "7月營收MoM+9.1%、YoY+43.7%、累計YoY+30.8%，整體需求改善"
         ],
         "weaknesses": [
-          "ABF載板高階產能擴張速度追不上需求，產能利用率已近滿載但擴產需1-2年",
-          "NVIDIA/AMD載板客戶集中度高，議價能力受限於客戶規模",
-          "PCB載板屬資本密集產業，設備投資金額大且折舊壓力持續"
+          "MOPS未區分PCB與IC載板營收，也未揭露層數、線寬或客戶",
+          "高階載板資本密集且良率爬升慢，營收成長未必等比例轉化獲利"
         ],
         "opportunities": [
-          "AI伺服器GPU載板(H100/B200 FC-BGA)需求爆發，欣興ABF載板產能擴產有利營收持續增長",
-          "AI加速卡HDI PCB(24+層)需求隨CSP AI基建投資增長，Any-layer HDI技術具先發優勢",
-          "累計營收YoY+28.4%顯示載板景氣復甦動能強，2026年ABF載板供需持續吃緊"
+          "AI加速器與伺服器升級可同時推升載板面積與高多層PCB需求",
+          "800G／1.6T網通提高低損耗材料與高密度互連需求"
         ],
         "threats": [
-          "韓國LG Innotek/日本Ibiden競相擴產ABF載板，高階FC-BGA競爭加劇",
-          "台灣競爭對手南電(8046)與景碩(3189)同步擴產，產能過剩風險在2027年後浮現",
-          "ABF載板良率提升需時間，新產能爬坡期可能影響獲利"
+          "南電、景碩與海外載板廠擴產可能帶來報價壓力",
+          "終端庫存或AI資本支出波動可能造成高階產能利用率起伏"
         ]
       }
     }

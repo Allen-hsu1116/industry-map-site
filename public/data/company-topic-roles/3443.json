@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3443",
   "companyName": "創意",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "asic_design_service_provider",
-      "roleSummary": "創意6月營收4.93億年增103.7%，累計年增93.1%。台積電集團ASIC設計服務公司，AI ASIC需求暴增直接受惠，先進製程Turnkey設計為核心競爭力。",
+      "roleSummary": "創意MOPS直接支持應用積體電路、嵌入式記憶體與邏輯元件、設計元件資料庫、設計自動化工具及客戶委託技術服務；但未揭露N2、HBM、NVIDIA、Google等具體專案。2026年7月營收57.69億元，MoM+17.1%、YoY+158.4%、累計YoY+102.5%，公司說明主要為晶圓產品收入增加。",
       "products": [
-        "AI加速器ASIC Turnkey設計(7nm/5nm/3nm)",
-        "HBM整合SoC設計(CoWoS封裝搭配)",
-        "高速SerDes/PCIe Gen5介面IP設計",
-        "矽智財(IP)授權(嵌入式記憶體/介面IP)",
-        "客製化SoC設計服務(N2 GAA製程)"
+        "客製化應用積體電路（ASIC）設計服務",
+        "嵌入式記憶體與邏輯元件",
+        "ASIC設計用元件資料庫",
+        "積體電路設計自動化工具",
+        "客戶委託晶片設計與量產技術服務"
       ],
       "customers": [
-        "NVIDIA(AI GPU客製ASIC設計)",
-        "Broadcom(客製化ASIC Turnkey)",
-        "Marvell(資料中心客製IC)",
-        "Microsoft(Azure客製AI加速器)",
-        "Google(TPU客製ASIC設計支援)"
+        "台積電（製造生態系對象，非MOPS揭露客戶）",
+        "NVIDIA（AI晶片應用對象，非MOPS揭露客戶）",
+        "Broadcom（ASIC生態系對象，非MOPS揭露客戶）",
+        "Google（客製運算應用對象，非MOPS揭露客戶）",
+        "Microsoft（客製運算應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "世芯(3661)",
@@ -54,36 +54,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務包含應用IC、嵌入式記憶體與邏輯元件、設計資料庫、EDA工具及委託技術服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收57.69億元，MoM+17.1%、YoY+158.4%、累計YoY+102.5%；公司說明主要為晶圓產品收入增加。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "先進製程ASIC Turnkey設計(7nm/5nm/3nm/N2 GAA)",
-        "AI加速器HBM整合SoC設計(CoWoS/SoIC封裝)",
-        "高速SerDes/PCIe Gen5/Gen6介面IP設計"
+        "ASIC前端RTL至實體設計、時序收斂與設計驗證",
+        "製程設計套件、標準元件庫與記憶體編譯器整合",
+        "晶圓量產導入、測試程式與良率回饋閉環"
       ],
       "swot": {
         "strengths": [
-          "6月營收49.2億YoY+103.7%，累計YoY+93.1%，AI ASIC Turnkey設計需求爆發",
-          "先進製程ASIC Turnkey設計(7nm/5nm/3nm/N2 GAA)為台積電旗下ASIC設計服務公司",
-          "AI加速器HBM整合SoC設計(CoWoS封裝搭配)直接受惠NVIDIA/Broadcom/Google AI晶片"
+          "MOPS直接支持ASIC、設計資料庫、EDA工具與委託技術服務",
+          "7月營收YoY+158.4%、累計YoY+102.5%，且公司明確說明晶圓產品收入增加"
         ],
         "weaknesses": [
-          "台積電持股>40%，獨立性受限，客戶可能擔心IP保護",
-          "高速SerDes/PCIe Gen5 IP設計與Synopsys/Cadence競爭",
-          "ASIC Turnkey服務NRE成本高，中小客戶負擔能力有限"
+          "MOPS未揭露先進節點、HBM整合或任何具名專案客戶",
+          "晶圓產品認列使月營收受專案時程與量產批次影響"
         ],
         "opportunities": [
-          "AI客製化ASIC需求爆發(Microsoft Azure/Google TPU/Broadcom Jericho)",
-          "台積電N2 GAA製程ASIC設計服務先行者",
-          "先進封裝CoWoS/SoIC整合SoC設計新應用"
+          "雲端業者自研ASIC增加Turnkey設計與量產服務需求",
+          "先進製程設計複雜度提高，可推升設計資料庫與技術服務價值"
         ],
         "threats": [
-          "Marvell/Microsoft等大廠自建ASIC設計能力",
-          "Synopsys/Cadence在IP授權市場競爭",
-          "ASIC設計服務客戶集中度風險(NVIDIA/Broadcom)"
+          "世芯-KY、智原與國際ASIC服務商競爭高階專案",
+          "單一大型專案遞延或量產良率不佳會造成營收劇烈波動"
         ]
       }
     },

@@ -2,28 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "3529",
   "companyName": "力旺",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "ic-design",
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "direct_enabler",
       "supplyChainStage": "semiconductor_ip",
       "roleType": "embedded_nvm_security_ip_provider",
-      "roleSummary": "力旺是全球嵌入式非揮發性記憶體IP授權領導者，主要業務為IP授權（非晶片銷售），客戶為各大IC設計公司。上櫃公司無TWSE月營收資料，但IP授權模式營收穩定、毛利率高。",
+      "roleSummary": "力旺MOPS明確揭露嵌入式非揮發記憶體IP授權與技術服務，因此在IC設計題材中是矽智財賦能者而非晶片銷售商；MOPS未揭露聯發科、瑞昱等具名客戶。TWSE月營收查無資料，FinMind顯示2026年7月營收6.76億元、MoM+278.7%；查詢區間不足以計算YoY，且單月波動可能反映授權／權利金認列。",
       "products": [
-        "嵌入式非揮發性記憶體IP（eFlash OTP/MTP）",
-        "NeoPUF物理不可複製功能IP",
-        "安全晶片IP（Secure Element）",
-        "矽智財授權與技術服務"
+        "嵌入式一次性可編程記憶體（OTP）IP",
+        "嵌入式多次可編程記憶體（MTP）IP",
+        "嵌入式快閃記憶體（eFlash）IP",
+        "物理不可複製功能（PUF）安全IP",
+        "製程移植、驗證與矽智財技術服務"
       ],
       "customers": [
-        "聯發科(2454)",
-        "瑞昱(2379)",
-        "新唐(4919)",
-        "盛群(6202)",
-        "硅力-KY(6415)"
+        "聯發科（IC設計應用對象，非MOPS揭露客戶）",
+        "瑞昱（IC設計應用對象，非MOPS揭露客戶）",
+        "新唐（MCU應用對象，非MOPS揭露客戶）",
+        "盛群（MCU應用對象，非MOPS揭露客戶）",
+        "台積電（製程驗證生態系對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "ARM(IP授權)",
@@ -49,36 +50,46 @@
           "title": "力旺電子股份有限公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "力旺電子股份有限公司基本資料 supports 力旺 role as embedded_nvm_security_ip_provider in IC 設計與矽智財 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：嵌入式非揮發記憶體IP授權及技術服務。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收6.76億元、MoM+278.7%；查詢區間不足以計算YoY。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-02",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "嵌入式非揮發性記憶體IP(eFlash OTP/MTP)",
-        "NeoPUF物理不可複製功能IP(安全晶片)",
-        "矽智財授權與技術服務(NRE→Royalty)"
+        "OTP／MTP／eFlash記憶單元的製程移植與可靠度驗證",
+        "PUF晶片指紋的熵源、誤碼校正與金鑰衍生",
+        "NRE授權、製程驗證至量產權利金的商業化流程"
       ],
       "swot": {
         "strengths": [
-          "7月營收6.76億MoM+278.7%爆發性成長，IP授權認列模式帶動高ASP",
-          "MOPS登記為嵌入式非揮發記憶體IP授權，NeoPUF物理不可複製功能為全球獨特IP",
-          "客戶含聯發科(2454)、瑞昱(2379)、新唐(4919)，台灣前三大IC設計廠均授權"
+          "MOPS直接支持嵌入式非揮發記憶體IP與技術服務，角色清楚",
+          "FinMind顯示7月營收6.76億元、MoM+278.7%，單月認列動能強"
         ],
         "weaknesses": [
-          "IP授權營收波動大(NRE→Royalty認列時點不規律)",
-          "資本額僅7.47億，規模小抗風險能力弱",
-          "NVM IP授權市場規模有限，成長依賴新應用拓展"
+          "收入受授權、驗證與權利金認列時點影響，月營收波動大",
+          "本次資料未揭露具名客戶，且查詢區間不足以計算YoY"
         ],
         "opportunities": [
-          "車用安全晶片(ISO 21434)需要NeoPUF硬體信任根，ASP高",
-          "物聯網安全晶片需求帶動eFlash OTP IP授權增長",
-          "AI加速器安全啟動(Secure Boot)需要PUF IP"
+          "先進製程與車用MCU需要OTP／MTP作校準、金鑰與設定儲存",
+          "硬體安全需求提高PUF與安全記憶體IP滲透率"
         ],
         "threats": [
-          "Arm/Synopsys等大廠提供免費NVM IP壓縮授權市場",
-          "PUF技術替代方案(如SRAM PUF)競爭",
-          "IC設計客戶可能自研NVM減少授權需求"
+          "晶圓廠內建IP、競爭矽智財與客戶自研方案可能壓縮授權空間",
+          "客戶量產延遲會推遲權利金收入並放大月度波動"
         ]
       }
     }

@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "3450",
   "companyName": "聯鈞",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-23T19:04:34Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
       "topicName": "晶圓代工與第三代半導體",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "wide_bandgap",
       "roleType": "laser_dicing_equipment",
-      "roleSummary": "聯鈞6月營收11.39億YoY+88.2%，累計50.64億YoY+9.9%，MOPS備註「因客戶需求增加致使營收增加」。MOPS登記為光資訊/光通訊產品及功率半導體封裝測試。SiC/GaN第三代半導體晶圓雷射切割設備受功率半導體需求帶動，營收爆發成長。",
+      "roleSummary": "聯鈞MOPS揭露的是光資訊／光通訊產品與功率元件封裝測試，並非晶圓代工，也未支持SiC晶圓雷射切割設備、GaN鑽孔或Wolfspeed等客戶；舊資料把公司名稱中的「光電」誤推成設備能力，這鍋有夠扯，現已改為第三代功率元件的下游封測觀察角色。2026年7月營收12.19億元，MoM+7.0%、YoY+98.0%、累計YoY+20.3%，公司說明客戶需求增加，但未指向功率元件。",
       "products": [
-        "SiC晶圓雷射切割設備(6吋/8吋)(微切割精度±1μm)",
-        "GaN晶圓UV雷射微切割系統(355nm)",
-        "UV雷射鑽孔系統(微孔徑<30μm)(HDI PCB用)",
-        "光通訊雷射二極體封裝(1310nm/1550nm TO-CAN)",
-        "SiC MOSFET/GaN HEMT封裝測試(熱阻Zth<1K/W/1210封裝)"
+        "光通訊雷射元件封裝",
+        "光資訊收發元件",
+        "功率元件封裝服務",
+        "功率元件電性測試服務",
+        "光電元件組裝與可靠度驗證"
       ],
       "customers": [
-        "Wolfspeed(科銳)(SiC晶圓切割設備)",
-        "II-VI(科銳材料)(SiC基板切割)",
-        "意法半導體STMicro(SiC MOSFET封裝測試)",
-        "漢磊(3708)(SiC/GaN晶圓代工切割服務)",
-        "英飛凌Infineon(功率半導體封裝測試)"
+        "Wolfspeed（第三代功率元件生態系對象，非MOPS揭露客戶）",
+        "Infineon（功率元件應用對象，非MOPS揭露客戶）",
+        "STMicroelectronics（功率元件應用對象，非MOPS揭露客戶）",
+        "漢磊（晶圓製造生態系對象，非MOPS揭露客戶）",
+        "聯電（晶圓製造生態系對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Disco",
@@ -48,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3450 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：光資訊及光通訊產品、功率元件封裝測試。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收12.19億元，MoM+7.0%、YoY+98.0%、累計YoY+20.3%；公司說明客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "low",
+      "lastVerified": "2026-08-23",
       "status": "verified",
       "techFocus": [
-        "SiC/GaN晶圓UV雷射切割技術(355nm微切割±1μm)",
-        "UV雷射鑽孔精度控制(微孔徑<30μm)",
-        "功率半導體SiC MOSFET封裝測試(熱阻Zth<1K/W)"
+        "功率元件封裝的低熱阻接合、散熱路徑與絕緣設計",
+        "功率元件高電壓／大電流電性測試與失效篩選",
+        "光通訊元件的主動對準、耦光與氣密封裝"
       ],
       "swot": {
         "strengths": [
-          "6月營收11.3億YoY+88.2%，SiC/GaN功率半導體封裝測試需求強勁成長",
-          "SiC晶圓UV雷射切割技術(355nm微切割±1μm)全球少數供應商",
-          "Wolfspeed/II-VI/意法半導體等SiC/GaN大廠合作關係"
+          "MOPS直接支持功率元件封裝測試，可作為晶圓製造後段配套",
+          "7月營收MoM+7.0%、YoY+98.0%，公司整體客戶需求強"
         ],
         "weaknesses": [
-          "資本額14.5億，公司規模小，產能擴張受限",
-          "SiC/GaN功率半導體封裝測試為利基市場，規模有限",
-          "第三代半導體市場發展速度不確定"
+          "公司不是晶圓代工廠，MOPS也未揭露SiC／GaN產品或雷射切割設備",
+          "營收成長未說明來自功率元件，題材直接度與信心均低"
         ],
         "opportunities": [
-          "SiC MOSFET在電動車/充電樁應用滲透率快速提升",
-          "GaN HEMT在快充/電源應用增長",
-          "SiC 8吋晶圓切割需求隨產能轉換"
+          "SiC／GaN功率元件放量可增加後段封裝、散熱與高壓測試需求",
+          "光通訊封裝能力可支撐公司另一條成長曲線，降低單一題材依賴"
         ],
         "threats": [
-          "國際大廠(英飛凌/意法)內部封測能力提升",
-          "中國第三代半導體封測廠追趕",
-          "SiC/GaN技術路線競爭(模組 vs 分立)"
+          "IDM自有封測與大型OSAT擴充功率元件產能，競爭壓力高",
+          "若第三代功率元件需求放緩，本題材關聯可能無法轉化營收"
         ]
       }
     },
