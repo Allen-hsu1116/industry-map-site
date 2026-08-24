@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3380",
   "name": "明泰",
-  "generatedAt": "2026-08-21T12:34:39.234Z",
+  "generatedAt": "2026-08-24T12:37:19.892Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -58,29 +58,29 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "低軌衛星通訊",
+      "topicName": "高速交換器與網通設備",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "明泰提供低軌衛星地面段設備(用戶終端/閘道器)。7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%。",
-      "supplyChainStage": "satellite_ground_equipment",
-      "roleType": "satellite_ground_station_equipment",
+      "roleSummary": "明泰MOPS揭露射頻與無線通信設備製造，屬網通設備核心角色。2026年7月營收17.43億元、MoM-23.3%、YoY-2.1%，累計YoY僅+1.9%，短期出貨轉弱。",
+      "supplyChainStage": "networking_equipment",
+      "roleType": "networking_equipment_brand",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "低軌衛星用戶終端(Starlink/Kuiper相容)",
+        "name": "10G/25G/100G L2/L3資料中心乙太網路交換器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "衛星地面閘道器(Ka/Ku頻段)",
+        "name": "Wi-Fi 7三頻企業無線基地台（802.11be/MLO）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "衛星回傳網路路由器",
+        "name": "XGS-PON 10Gbps光纖網路終端ONT",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -93,29 +93,29 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 低軌衛星通訊（end_market/active） +14",
-      "角色證據 2 則 +12",
+      "題材 高速交換器與網通設備（supply_chain_segment/active） +16",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "明泰 在「低軌衛星通訊」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "明泰 在「高速交換器與網通設備」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：低軌衛星通訊 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 低軌衛星通訊（end_market/active） +14）",
-      "相關題材：高速交換器與網通設備 · 核心產品/平台",
+      "V2 題材角色：高速交換器與網通設備 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 高速交換器與網通設備（supply_chain_segment/active） +16）",
       "相關題材：面板、LED、光學鏡頭與感測 · 間接受惠",
+      "相關題材：高速連接器與車工業連接 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
-      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 高速交換器與網通設備：月營收或訂單能見度改善",
       "追蹤 高速交換器與網通設備：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
+      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "知識庫最後驗證：2026-05-26（stale）"
     ]
   },
   "knowledge": {
@@ -128,7 +128,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -151,16 +151,6 @@
   },
   "canonicalKnowledge": {
     "topicRoles": [
-      {
-        "topicId": "leo-satellite-communications",
-        "topicName": "低軌衛星通訊",
-        "canonicalTopicId": "leo-satellite-communications",
-        "canonicalTopicName": "低軌衛星通訊",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "明泰提供低軌衛星地面段設備(用戶終端/閘道器)。7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%。"
-      },
       {
         "topicId": "networking-infrastructure",
         "topicName": "高速交換器與網通設備",
@@ -200,21 +190,20 @@
         "directnessLabel": "間接受惠",
         "confidence": "high",
         "roleSummary": "明泰為網通IC設計公司重要客戶。7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%。"
+      },
+      {
+        "topicId": "leo-satellite-communications",
+        "topicName": "低軌衛星通訊",
+        "canonicalTopicId": "leo-satellite-communications",
+        "canonicalTopicName": "低軌衛星通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "明泰MOPS只揭露射頻器材與無線通信機械製造，未揭露低軌衛星終端、Ka／Ku相控陣、地面閘道器或星鏈營運商訂單。此角色改列為衛星地面網路可能採用的既有網通平台。2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%，且不能歸因衛星。"
       }
     ],
     "swot": [],
     "topics": [
-      {
-        "id": "leo-satellite-communications",
-        "name": "低軌衛星通訊",
-        "type": "end_market",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
       {
         "id": "networking-infrastructure",
         "name": "高速交換器與網通設備",
@@ -258,6 +247,17 @@
           "官方公告、年報或重大訊息揭露新產品/客戶/產能",
           "產業報價、資本支出或需求循環出現方向性變化"
         ]
+      },
+      {
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
       }
     ]
   },
@@ -293,12 +293,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

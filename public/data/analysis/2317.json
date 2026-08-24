@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2317",
   "name": "鴻海",
-  "generatedAt": "2026-08-21T12:34:38.942Z",
+  "generatedAt": "2026-08-24T12:37:19.594Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,13 +49,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "鴻海是全球最大AI伺服器ODM/EMS出貨商。6月營收8,218億年增52.1%，累計4.64兆年增35.0%。NVIDIA GB200 NVL72機櫃為旗艦產品，垂直整合從連接器到整機一條龍。",
+      "roleSummary": "鴻海MOPS揭露電腦系統設備周邊的連接器、線纜組件、殼體、基座與精密模具；2026年7月營收備註另明確指出伺服器產品需求與出貨成長，足以支持AI伺服器供應鏈核心角色，但MOPS未證實GB200 NVL72、HGX或任何具名雲端客戶。7月營收9,465.13億元，MoM+15.2%、YoY+54.2%、累計YoY+37.9%。",
       "supplyChainStage": "system_assembly",
       "roleType": "ai_server_ems_odm",
       "directness": "core",
@@ -63,21 +63,19 @@
     },
     "productNarratives": [
       {
-        "name": "AI 伺服器整機組裝與系統整合",
-        "description": "AI 伺服器整機組裝是把 GPU/CPU、主板、電源、散熱、機構件與網路模組整合成可交付給雲端或企業客戶的伺服器系統。",
-        "whyItMatters": "AI 伺服器價值鏈不只在晶片，還需要大規模製造、供應鏈協調與交付能力；鴻海的意義是把高階零組件轉成可量產的資料中心硬體。",
-        "topicFit": "應用端硬體平台：受 AI 資料中心建置需求帶動。",
-        "businessImpact": "AI 伺服器可提高鴻海伺服器業務比重，但仍需觀察毛利率、客戶拉貨與高階平台量產節奏。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：鴻海 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2317",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "伺服器用高速連接器",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "伺服器內部線纜組件",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "機架式伺服器殼體與基座",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -96,9 +94,9 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 5 項 +10",
       "風險 SWOT 扣分 -10",
@@ -106,9 +104,9 @@
     ],
     "summary": "鴻海 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -138,7 +136,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -168,8 +166,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "鴻海是全球最大AI伺服器ODM/EMS出貨商。6月營收8,218億年增52.1%，累計4.64兆年增35.0%。NVIDIA GB200 NVL72機櫃為旗艦產品，垂直整合從連接器到整機一條龍。"
+        "confidence": "medium",
+        "roleSummary": "鴻海MOPS揭露電腦系統設備周邊的連接器、線纜組件、殼體、基座與精密模具；2026年7月營收備註另明確指出伺服器產品需求與出貨成長，足以支持AI伺服器供應鏈核心角色，但MOPS未證實GB200 NVL72、HGX或任何具名雲端客戶。7月營收9,465.13億元，MoM+15.2%、YoY+54.2%、累計YoY+37.9%。"
       },
       {
         "topicId": "consumer-computing-devices",
@@ -327,12 +325,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

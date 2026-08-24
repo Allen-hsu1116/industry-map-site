@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1605",
   "name": "華新",
-  "generatedAt": "2026-08-21T12:34:38.881Z",
+  "generatedAt": "2026-08-24T12:37:19.527Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -111,7 +111,7 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：太陽能與離岸風電 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 太陽能與離岸風電（theme/active） +18）",
-      "相關題材：AI 伺服器整機與 EMS · 供應商角色",
+      "相關題材：AI 伺服器整機與 EMS · 間接受惠",
       "主要產品：電力電纜(161kV超高壓)",
       "主要產品：銅線及銅纜",
       "主要產品：不鏽鋼線材"
@@ -170,7 +170,7 @@
       "sources": [
         "financials:1605"
       ],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -208,10 +208,10 @@
         "topicName": "AI 伺服器",
         "canonicalTopicId": "ai-server",
         "canonicalTopicName": "AI 伺服器整機與 EMS",
-        "directness": "supplier",
-        "directnessLabel": "供應商角色",
-        "confidence": "high",
-        "roleSummary": "華新麗華提供AI資料中心配電所需的高壓電纜與特殊鋼材。5月營收174.6億年增11.1%，但累計740億年減5.4%。AI資料中心帶動高壓電纜與銅匯流排需求成長，不鏽鋼事業受景氣循環影響。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "華新麗華MOPS僅揭露電線電纜、鋼線鋼纜與特殊鋼，能合理對應資料中心外部供配電與機房建設材料，但未揭露GPU機架匯流排或Google、Microsoft等客戶，故本題材降為間接受惠。2026年7月公司營收157.14億元，MoM-6.0%、YoY+10.1%、累計YoY+1.0%；營收為全公司口徑，不能全數歸因AI伺服器。"
       }
     ],
     "swot": [
@@ -395,12 +395,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       },
       {
         "id": "risk.stop-distance",

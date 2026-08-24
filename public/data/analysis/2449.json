@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2449",
   "name": "京元電子",
-  "generatedAt": "2026-08-21T12:34:39.021Z",
+  "generatedAt": "2026-08-24T12:37:19.676Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -103,7 +103,7 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
-      "相關題材：HBM 高頻寬記憶體 · 核心產品/平台",
+      "相關題材：HBM 高頻寬記憶體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -130,7 +130,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -168,10 +168,10 @@
         "topicName": "HBM 高頻寬記憶體",
         "canonicalTopicId": "hbm",
         "canonicalTopicName": "HBM 高頻寬記憶體",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "京元電子5月營收37.77億年增36.61%，累計177.12億年增37.71%。HBM測試為AI浪潮下的高成長業務。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "京元電子MOPS只支持各類IC設計、製造、測試、加工與包裝，未揭露HBM、TSV、KGD或多層堆疊測試；本題材定位為可承接高階記憶體與邏輯IC測試的相鄰角色。2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%，但不能全歸因HBM。"
       }
     ],
     "swot": [
@@ -272,12 +272,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

@@ -2,17 +2,21 @@
   "schemaVersion": 1,
   "code": "6215",
   "name": "建準",
-  "generatedAt": "2026-08-21T12:34:39.459Z",
+  "generatedAt": "2026-08-24T12:37:20.115Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "A",
-    "label": "完整 evidence-backed",
-    "upgradePriority": "low",
-    "missingKnowledge": [],
-    "blockingReasons": []
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
+    "missingKnowledge": [
+      "verified_topic_role"
+    ],
+    "blockingReasons": [
+      "topic_role_not_verified"
+    ]
   },
   "technical": {
     "stance": "bullish",
@@ -44,36 +48,36 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=3；只做保守參考。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "和椿6月營收2.79億年增30.5%、累計年增53.7%，自動化零組件需求增加。散熱風扇馬達與精密軸承為間接供應，題材連結弱，非核心散熱標的。",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "directness": "core",
+      "roleLabel": "間接受惠",
+      "roleSummary": "和椿MOPS只揭露自動化設備與系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇。此角色改列為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，YoY+37.2%、累計YoY+50.4%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。",
+      "supplyChainStage": "automation_equipment_adjacent",
+      "roleType": "automation_for_cooling_production",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "散熱風扇馬達",
-        "description": "伺服器/工控用散熱風扇馬達。，並用於公司對應終端產品與客戶應用。",
-        "whyItMatters": "AI伺服器散熱需求帶動風扇馬達成長。，是公司接單動能與產品組合的重要觀察指標。",
-        "topicFit": "散熱風扇馬達",
-        "businessImpact": "營運觀察重點為和椿在散熱風扇馬達的訂單動能、客戶導入進度與產品組合變化。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：和椿科技股份有限公司 公司基本資料"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6215"
-        ],
-        "lastVerified": "2026-08-13",
-        "confidence": "high"
+        "name": "線性滑軌定位模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "滾珠螺桿傳動模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "真空吸附搬運模組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -91,24 +95,25 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 low +3",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
-      "角色證據 1 則 +6",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 4 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 52，上限 40）"
     ],
-    "summary": "建準 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "建準 在「AI 伺服器液冷散熱」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "已有 V2 role，但 status=verified、confidence=low、evidence=3；只做保守參考。",
       "V2 W：散熱非主力產品，題材連結弱。",
       "V2 W：散熱風扇馬達與精密軸承為間接供應AI伺服器散熱，題材連結弱，非核心散熱標的。",
       "V2 T：散熱並非核心業務且題材連結較弱，若同業擴產或需求轉弱，受惠幅度可能有限。",
@@ -133,7 +138,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -161,10 +166,10 @@
         "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "和椿6月營收2.79億年增30.5%、累計年增53.7%，自動化零組件需求增加。散熱風扇馬達與精密軸承為間接供應，題材連結弱，非核心散熱標的。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "和椿MOPS只揭露自動化設備與系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇。此角色改列為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，YoY+37.2%、累計YoY+50.4%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。"
       }
     ],
     "swot": [
@@ -268,7 +273,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 33,
+    "totalScore": 15,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -277,28 +282,32 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐",
-        "題材角色已 evidence-backed，可納入題材股策略"
+        "籌碼面有法人/信用籌碼支撐"
       ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       },
       {
         "id": "risk.stop-distance",
         "severity": "soft",
         "message": "距離 MA20 約 12.0%，部位需降速"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

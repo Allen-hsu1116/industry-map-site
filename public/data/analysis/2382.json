@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2382",
   "name": "廣達",
-  "generatedAt": "2026-08-21T12:34:38.988Z",
+  "generatedAt": "2026-08-24T12:37:19.640Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -52,31 +52,29 @@
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "AI 伺服器整機與 EMS",
+      "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "廣達為全球AI伺服器ODM龍頭，6月營收3852億元年增102.9%，累計年增86.5%。為Google TPU/AWS Graviton/Meta AI訓練/Microsoft Azure AI伺服器核心ODM。MOPS主要經營：電子筆記型電腦及相關產品。",
+      "roleSummary": "廣達是全球最大NB ODM，6月營收3852億元年增102.9%，累計年增86.5%。消費運算裝置領域為Apple MacBook獨家代工，同時Dell/HP/Lenovo商用筆電核心供應商。MOPS主要經營：電子筆記型電腦及相關產品。",
       "supplyChainStage": "system_assembly",
-      "roleType": "ai_server_odm",
+      "roleType": "notebook_odm",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "AI 伺服器 ODM 與雲端伺服器",
-        "description": "AI 伺服器 ODM 是依雲端服務商或品牌客戶需求設計、整合並量產伺服器平台，包含主機板、GPU 模組、電源、散熱與機構整合。",
-        "whyItMatters": "CSP 擴建 AI 資料中心時，需要能快速導入新平台並大量交付的 ODM；廣達的產品知識重點是雲端伺服器系統能力。",
-        "topicFit": "資料中心 AI 設備需求的系統端受益者。",
-        "businessImpact": "AI 伺服器產品組合提升可改善營收結構，但平台轉換、客戶驗證與 GPU 供給仍會影響出貨節奏。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS / TWSE 財報書系統：廣達 公司公告、年報與財務資訊",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "MacBook Air M3 13/15吋(NB ODM)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "Dell Latitude 7450/9450商用筆電(QCM ODM)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "HP EliteBook 1040/8040 G11商用筆電(ODM)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -92,19 +90,19 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 1 項 +5",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "廣達 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "廣達 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
-      "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
+      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
+      "相關題材：AI 伺服器整機與 EMS · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -114,10 +112,10 @@
     ],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
@@ -131,7 +129,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -155,16 +153,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "ai-server",
-        "topicName": "AI 伺服器整機與 EMS",
-        "canonicalTopicId": "ai-server",
-        "canonicalTopicName": "AI 伺服器整機與 EMS",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "廣達為全球AI伺服器ODM龍頭，6月營收3852億元年增102.9%，累計年增86.5%。為Google TPU/AWS Graviton/Meta AI訓練/Microsoft Azure AI伺服器核心ODM。MOPS主要經營：電子筆記型電腦及相關產品。"
-      },
-      {
         "topicId": "consumer-computing-devices",
         "topicName": "PC、手機與 AR/VR/XR 終端",
         "canonicalTopicId": "consumer-computing-devices",
@@ -173,6 +161,16 @@
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
         "roleSummary": "廣達是全球最大NB ODM，6月營收3852億元年增102.9%，累計年增86.5%。消費運算裝置領域為Apple MacBook獨家代工，同時Dell/HP/Lenovo商用筆電核心供應商。MOPS主要經營：電子筆記型電腦及相關產品。"
+      },
+      {
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器整機與 EMS",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "廣達MOPS主業欄只揭露電子筆記型電腦及相關產品，未支持既有Google TPU、AWS、Meta、Microsoft或特定GPU伺服器型號；基於本次MCP證據，本題材降為資料中心業務待其他公告驗證的相鄰觀察。2026年7月營收3,662.74億元，MoM-4.9%、YoY+131.3%，累計YoY+92.7%，備註為產品組合變更。"
       }
     ],
     "swot": [
@@ -209,9 +207,9 @@
     ],
     "topics": [
       {
-        "id": "ai-server",
-        "name": "AI 伺服器整機與 EMS",
-        "type": "theme",
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -220,9 +218,9 @@
         ]
       },
       {
-        "id": "consumer-computing-devices",
-        "name": "PC、手機與 AR/VR/XR 終端",
-        "type": "end_market",
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -267,12 +265,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

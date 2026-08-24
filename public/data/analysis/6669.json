@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6669",
   "name": "緯穎",
-  "generatedAt": "2026-08-21T12:34:39.534Z",
+  "generatedAt": "2026-08-24T12:37:20.192Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,13 +48,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "緯穎6月營收111.37億年增29.8%，累計年增41.7%。CSP專用AI伺服器ODM為核心業務，GPU基板OAM/UBB與液冷整合為技術門檻。",
+      "roleSummary": "緯穎MOPS僅以「資料中心產品」概括主業，足以支持資料中心硬體核心角色，但不支持既有H100/B200、特定CSP或液冷規格。2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%，強勁成長仍屬公司整體資料中心產品表現。",
       "supplyChainStage": "system_assembly",
       "roleType": "csp_ai_server_odm",
       "directness": "core",
@@ -62,17 +62,17 @@
     },
     "productNarratives": [
       {
-        "name": "CSP客製AI伺服器(GPU基板OAM/UBB)",
+        "name": "資料中心機架式運算系統",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "雲端資料中心伺服器(1U/2U機架式)",
+        "name": "資料中心儲存節點系統",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "AI推理伺服器(L40S/H100 PCIe)",
+        "name": "機櫃級電源與管理模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -86,18 +86,18 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 1 項 +5",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "緯穎 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：資安、雲端服務與企業軟體 · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -122,7 +122,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -152,8 +152,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "緯穎6月營收111.37億年增29.8%，累計年增41.7%。CSP專用AI伺服器ODM為核心業務，GPU基板OAM/UBB與液冷整合為技術門檻。"
+        "confidence": "medium",
+        "roleSummary": "緯穎MOPS僅以「資料中心產品」概括主業，足以支持資料中心硬體核心角色，但不支持既有H100/B200、特定CSP或液冷規格。2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%，強勁成長仍屬公司整體資料中心產品表現。"
       },
       {
         "topicId": "software-cloud-security",
@@ -236,12 +236,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

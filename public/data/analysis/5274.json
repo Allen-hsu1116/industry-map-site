@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "5274",
   "name": "信驊",
-  "generatedAt": "2026-08-21T12:34:39.373Z",
+  "generatedAt": "2026-08-24T12:37:20.030Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-21",
-  "chipDataDate": "2026-08-21",
+  "marketDataDate": "2026-08-24",
+  "chipDataDate": "2026-08-24",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -21,32 +21,32 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": 0,
-    "summary": "信驊 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "score": -15,
+    "summary": "信驊 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 4.4%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
-    "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "risks": [
+      "收盤跌破 MA20 4.4%"
+    ],
+    "watch": []
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "信驊 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +253張；外資近 5 日買超 +58張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -24,
+    "summary": "信驊 籌碼面目前為「籌碼偏空」：近 20 日法人偏買，合計 +274張；外資近 5 日買超 +86張。",
     "signals": [
-      "近 20 日法人偏買，合計 +253張",
-      "外資近 5 日買超 +58張"
+      "近 20 日法人偏買，合計 +274張",
+      "外資近 5 日買超 +86張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -6張",
-      "投信近 5 日賣超 -70張"
+      "三大法人近 5 日合計賣超 -10張",
+      "投信近 5 日賣超 -104張",
+      "融資近 5 日增加 12.7%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-08-21"
+      "最近法人資料日：2026-08-24"
     ]
   },
   "industry": {
@@ -100,7 +100,7 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 IC 設計與矽智財（supply_chain_segment/active） +16）",
-      "相關題材：資安、雲端服務與企業軟體 · 供應商角色",
+      "相關題材：資安、雲端服務與企業軟體 · 間接受惠",
       "相關題材：CXL 記憶體池化 · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -126,7 +126,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-21"
+      "lastVerified": "2026-08-24"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -163,10 +163,10 @@
         "topicName": "資安、雲端服務與企業軟體",
         "canonicalTopicId": "software-cloud-security",
         "canonicalTopicName": "資安、雲端服務與企業軟體",
-        "directness": "supplier",
-        "directnessLabel": "供應商角色",
-        "confidence": "high",
-        "roleSummary": "信驊為全球BMC(Baseboard Management Controller)晶片龍頭，AST2600/AST3200系列主導伺服器帶外管理市場，資料中心安全監控核心供應商。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "信驊MOPS支持多媒體、電腦周邊與高階消費性IC，未直接揭露BMC、OpenBMC、Redfish或軟體雲端服務；本題材因此定位為伺服器帶外管理硬體對雲端維運與資安的間接賦能，而非企業軟體供應商。TWSE月營收查無資料，FinMind顯示2026年7月營收15.24億元、MoM+16.3%；查詢區間不足以計算YoY。"
       },
       {
         "topicId": "cxl-memory-pooling",
@@ -229,7 +229,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 61,
+    "totalScore": 56,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 12,
@@ -238,8 +238,8 @@
         "月營收 YoY +18.4%，成長動能明確"
       ],
       "risks": [
-        "本益比 102.4 倍，需防估值壓縮",
-        "股價淨值比 74.5 倍偏高，需和 ROE/成長性比對"
+        "本益比 100.8 倍，需防估值壓縮",
+        "股價淨值比 73.3 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -252,11 +252,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：16201.00",
-      "波段多空分水嶺看 MA20：15784.50",
-      "追蹤法人是否延續 買超：最近 +6張",
+      "短線支撐/壓力先看 MA5：15820.00",
+      "波段多空分水嶺看 MA20：15805.50",
+      "追蹤法人是否延續 買超：最近 +5張",
       "月營收年增率 +18.4%，觀察基本面是否支撐估值",
-      "本益比 102.4 倍，需和同族群估值比較"
+      "本益比 100.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 18600.00 且量比 > 1.5：列為轉強訊號",

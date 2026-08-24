@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2324",
   "name": "仁寶",
-  "generatedAt": "2026-08-21T12:34:38.945Z",
+  "generatedAt": "2026-08-24T12:37:19.597Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -53,15 +53,15 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 92,
+    "score": 86,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "供應商角色",
-      "roleSummary": "仁寶為全球前五大伺服器ODM，6月營收958.5億元年增58.4%，累計年增15.8%。AI伺服器提供NVIDIA HGX H100/B200 8-GPU系統，同時Dell/HPE/Lenovo商用筆電ODM。MOPS主要經營：5C電子產品之研發設計產製及銷售。",
+      "roleSummary": "仁寶MOPS只以「5C電子產品之研發、設計、產製及銷售」概括業務，未列出HGX、液冷或特定伺服器產品與客戶；本題材僅保留伺服器系統設計製造的產業脈絡，所有具名平台均標為非MOPS揭露。2026年7月營收810.06億元，MoM-15.5%、YoY+38.3%、累計YoY+18.8%；公司未說明成長來源，不能歸因AI伺服器。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "server_odm",
       "directness": "supplier",
@@ -69,17 +69,17 @@
     },
     "productNarratives": [
       {
-        "name": "AI伺服器ODM(NVIDIA HGX H100/B200 8-GPU系統)",
+        "name": "機架式伺服器整機設計與製造（5C題材應用）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "GPU伺服器ODM(4U/8U液冷相容機構)",
+        "name": "伺服器主機板系統整合",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "商用筆電ODM(Dell Latitude/HP ProBook)",
+        "name": "多節點運算伺服器機構整合",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -100,19 +100,19 @@
     },
     "scoringFactors": [
       "直接度 供應商角色 +26",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "仁寶 在「AI 伺服器整機與 EMS」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 92/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "仁寶 在「AI 伺服器整機與 EMS」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 86/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 供應商角色 · high",
-      "產業評分：92/100（直接度 供應商角色 +26；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 供應商角色 · medium",
+      "產業評分：86/100（直接度 供應商角色 +26；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "主要產品：筆記型電腦(NB)",
       "主要產品：Chromebook",
       "主要產品：平板電腦",
@@ -173,7 +173,7 @@
       "sources": [
         "financials:2324"
       ],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -203,8 +203,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
-        "confidence": "high",
-        "roleSummary": "仁寶為全球前五大伺服器ODM，6月營收958.5億元年增58.4%，累計年增15.8%。AI伺服器提供NVIDIA HGX H100/B200 8-GPU系統，同時Dell/HPE/Lenovo商用筆電ODM。MOPS主要經營：5C電子產品之研發設計產製及銷售。"
+        "confidence": "medium",
+        "roleSummary": "仁寶MOPS只以「5C電子產品之研發、設計、產製及銷售」概括業務，未列出HGX、液冷或特定伺服器產品與客戶；本題材僅保留伺服器系統設計製造的產業脈絡，所有具名平台均標為非MOPS揭露。2026年7月營收810.06億元，MoM-15.5%、YoY+38.3%、累計YoY+18.8%；公司未說明成長來源，不能歸因AI伺服器。"
       }
     ],
     "swot": [
@@ -344,7 +344,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 36,
+    "totalScore": 35,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -367,12 +367,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       },
       {
         "id": "risk.stop-distance",

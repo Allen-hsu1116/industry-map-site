@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5388",
   "name": "中磊",
-  "generatedAt": "2026-08-21T12:34:39.384Z",
+  "generatedAt": "2026-08-24T12:37:20.041Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -114,7 +114,7 @@
       "追蹤 高速交換器與網通設備：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
       "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "知識庫最後驗證：2026-05-26（normal）"
+      "知識庫最後驗證：2026-05-26（stale）"
     ]
   },
   "knowledge": {
@@ -127,7 +127,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -177,8 +177,8 @@
         "canonicalTopicName": "軍工、航太與無人機",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "中磊為網通ODM大廠，國防通訊設備(加密路由器/戰術網路)為間接應用。7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%。"
+        "confidence": "low",
+        "roleSummary": "中磊MOPS僅揭露有線、無線網路產品，未揭露MIL-STD加密路由器、戰術Mesh、SATCOM或國防客戶。此角色應限於安全通訊可能採用的寬頻閘道器與無線接取平台。2026年7月營收79.80億元，YoY+51.3%、累計YoY+56.9%，公司說明為北美訂單增溫，不能歸因軍工。"
       },
       {
         "topicId": "energy-storage-battery",
@@ -314,12 +314,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

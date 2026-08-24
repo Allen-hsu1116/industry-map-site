@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3450",
   "name": "聯鈞",
-  "generatedAt": "2026-08-21T12:34:39.246Z",
+  "generatedAt": "2026-08-24T12:37:19.904Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -47,35 +47,37 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
+    "label": "題材關聯明確",
+    "score": 77,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "晶圓代工與第三代半導體",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "聯鈞6月營收11.39億YoY+88.2%，累計50.64億YoY+9.9%，MOPS備註「因客戶需求增加致使營收增加」。MOPS登記為光資訊/光通訊產品及功率半導體封裝測試。SiC/GaN第三代半導體晶圓雷射切割設備受功率半導體需求帶動，營收爆發成長。",
-      "supplyChainStage": "wide_bandgap",
-      "roleType": "laser_dicing_equipment",
-      "directness": "core",
+      "topicName": "矽光子、CPO 與高速光通訊",
+      "roleLabel": "間接受惠",
+      "roleSummary": "聯鈞是全球少數能提供矽光子波導雷射加工的廠商，掌握矽光子核心製程。5月營收9.6億年增49.9%，受惠AI光互連需求升溫，但累計營收39.2億年減1.9%，仍在恢復期。",
+      "supplyChainStage": "silicon_photonics",
+      "roleType": "laser_processing_equipment",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "SiC晶圓雷射切割設備(6吋/8吋)(微切割精度±1μm)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "GaN晶圓UV雷射微切割系統(355nm)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "UV雷射鑽孔系統(微孔徑<30μm)(HDI PCB用)",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "name": "雷射與光電加工能力",
+        "description": "雷射與光電加工能力是光電公司常見的精密加工與製程能力，可支援光通訊或半導體封測相關製程。",
+        "whyItMatters": "legacy 中的『全球 DRAM 模組龍頭之一』疑似跨公司噪音，僅作低信心別名收斂，不能當成聯鈞主業結論。",
+        "topicFit": "光電加工能力的低信心補充",
+        "businessImpact": "此項用於承接 legacy 噪音與雷射切割詞彙，投資判斷仍應以光通訊與功率半導體封測兩項主業為主。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：聯鈞 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3450",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
         "confidence": "low"
       }
     ],
@@ -92,21 +94,21 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
+      "直接度 間接受惠 +8",
       "角色信心 high +16",
-      "題材 晶圓代工與第三代半導體（supply_chain_segment/active） +16",
+      "題材 矽光子、CPO 與高速光通訊（technology/active） +17",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "聯鈞 在「晶圓代工與第三代半導體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "聯鈞 在「矽光子、CPO 與高速光通訊」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 77/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：晶圓代工與第三代半導體 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 晶圓代工與第三代半導體（supply_chain_segment/active） +16）",
-      "相關題材：矽光子、CPO 與高速光通訊 · 間接受惠",
+      "V2 題材角色：矽光子、CPO 與高速光通訊 · 間接受惠 · high",
+      "產業評分：77/100（直接度 間接受惠 +8；角色信心 high +16；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
+      "相關題材：晶圓代工與第三代半導體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -117,10 +119,10 @@
     "watch": [
       "V2 O：SiC/GaN功率半導體晶圓需要UV雷射切割（傳統刀片無法切SiC），矽光子CPO封裝也需要雷射加工，聯鈞在這兩個領域都有布局。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
-      "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
-      "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 晶圓代工與第三代半導體：月營收或訂單能見度改善",
+      "追蹤 晶圓代工與第三代半導體：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -133,7 +135,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -157,16 +159,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "wafer-foundry",
-        "topicName": "晶圓代工與第三代半導體",
-        "canonicalTopicId": "wafer-foundry",
-        "canonicalTopicName": "晶圓代工與第三代半導體",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "聯鈞6月營收11.39億YoY+88.2%，累計50.64億YoY+9.9%，MOPS備註「因客戶需求增加致使營收增加」。MOPS登記為光資訊/光通訊產品及功率半導體封裝測試。SiC/GaN第三代半導體晶圓雷射切割設備受功率半導體需求帶動，營收爆發成長。"
-      },
-      {
         "topicId": "silicon-photonics-optical-comm",
         "topicName": "矽光子、CPO 與高速光通訊",
         "canonicalTopicId": "silicon-photonics-optical-comm",
@@ -175,6 +167,16 @@
         "directnessLabel": "間接受惠",
         "confidence": "high",
         "roleSummary": "聯鈞是全球少數能提供矽光子波導雷射加工的廠商，掌握矽光子核心製程。5月營收9.6億年增49.9%，受惠AI光互連需求升溫，但累計營收39.2億年減1.9%，仍在恢復期。"
+      },
+      {
+        "topicId": "wafer-foundry",
+        "topicName": "晶圓代工與第三代半導體",
+        "canonicalTopicId": "wafer-foundry",
+        "canonicalTopicName": "晶圓代工與第三代半導體",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "聯鈞MOPS揭露的是光資訊／光通訊產品與功率元件封裝測試，並非晶圓代工，也未支持SiC晶圓雷射切割設備、GaN鑽孔或Wolfspeed等客戶；舊資料把公司名稱中的「光電」誤推成設備能力，這鍋有夠扯，現已改為第三代功率元件的下游封測觀察角色。2026年7月營收12.19億元，MoM+7.0%、YoY+98.0%、累計YoY+20.3%，公司說明客戶需求增加，但未指向功率元件。"
       }
     ],
     "swot": [
@@ -221,9 +223,9 @@
     ],
     "topics": [
       {
-        "id": "wafer-foundry",
-        "name": "晶圓代工與第三代半導體",
-        "type": "supply_chain_segment",
+        "id": "silicon-photonics-optical-comm",
+        "name": "矽光子、CPO 與高速光通訊",
+        "type": "technology",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -232,9 +234,9 @@
         ]
       },
       {
-        "id": "silicon-photonics-optical-comm",
-        "name": "矽光子、CPO 與高速光通訊",
-        "type": "technology",
+        "id": "wafer-foundry",
+        "name": "晶圓代工與第三代半導體",
+        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -257,7 +259,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 13,
+    "totalScore": 9,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -276,12 +278,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       },
       {
         "id": "risk.stop-distance",

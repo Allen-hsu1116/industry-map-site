@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6495",
   "name": "雃博",
-  "generatedAt": "2026-08-21T12:34:39.509Z",
+  "generatedAt": "2026-08-24T12:37:20.166Z",
   "sourceUpdatedAt": "2026-05-25",
   "marketDataDate": "2025-02-20",
   "mode": "rule-batch",
@@ -73,7 +73,7 @@
     ],
     "watch": [
       "補齊公司題材角色、產品知識與 SWOT 後再評分",
-      "知識庫最後驗證：2026-05-25（normal）",
+      "知識庫最後驗證：2026-05-25（stale）",
       "資料來源：MOPS company profile / financial statements、FinMind TaiwanStockPrice daily OHLCV、FinMind financial statements / MOPS quarterly reports"
     ]
   },
@@ -87,7 +87,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-25"
     },
     "dataSources": [
@@ -141,7 +141,7 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 547 天未更新"
+        "message": "股價資料已 550 天未更新"
       },
       {
         "id": "risk.stop-distance",

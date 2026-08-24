@@ -2,17 +2,21 @@
   "schemaVersion": 1,
   "code": "2426",
   "name": "鼎元",
-  "generatedAt": "2026-08-21T12:34:39.015Z",
+  "generatedAt": "2026-08-24T12:37:19.669Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "A",
-    "label": "完整 evidence-backed",
-    "upgradePriority": "low",
-    "missingKnowledge": [],
-    "blockingReasons": []
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
+    "missingKnowledge": [
+      "verified_topic_role"
+    ],
+    "blockingReasons": [
+      "topic_role_not_verified"
+    ]
   },
   "technical": {
     "stance": "bullish",
@@ -44,34 +48,34 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "鼎元為國內軍規光電元件供應商，6月營收2.49億元年增19.4%。提供軍規紅外線偵測元件、軍規LED、砷化鎵光電晶體及雷射二極體。MOPS主要經營：砷化鎵、紅外線、LED、雷射二極體、光電晶體研發製造。",
-      "supplyChainStage": "aerospace_mro",
-      "roleType": "military_ir_led_components",
-      "directness": "core",
+      "roleLabel": "間接受惠",
+      "roleSummary": "鼎元MOPS支持砷化鎵、紅外線LED、雷射二極體、光電晶體與光二極體，但未揭露InSb中波紅外線、MIL-STD認證、國防部或中科院客戶。國防角色改列為夜視、感測與測距系統可評估的光電元件鄰近供應。2026年7月營收2.55億元，YoY+36.3%、累計YoY+2.3%。",
+      "supplyChainStage": "optoelectronic_components_adjacent",
+      "roleType": "infrared_optoelectronics_adjacent_to_defense",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "軍規紅外線偵測元件(InSb 1-5um/MWIR)",
+        "name": "850nm／940nm紅外線LED晶粒",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "軍規LED發光二極體(850nm/940nm夜視相容)",
+        "name": "砷化鎵發光二極體晶粒",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "砷化鎵GaAs光電晶體(高頻開關/940nm)",
+        "name": "808nm／980nm雷射二極體晶粒",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -91,24 +95,25 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 low +3",
       "題材 軍工、航太與無人機（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 5 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 53，上限 40）"
     ],
-    "summary": "鼎元 在「軍工、航太與無人機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "鼎元 在「軍工、航太與無人機」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：軍工、航太與無人機 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 軍工、航太與無人機（theme/active） +18）",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：軍工、航太與無人機 · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 軍工、航太與無人機（theme/active） +18）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
       "V2 W：LED 產業競爭激烈，毛利壓力大",
       "V2 W：累計營收9.88億 YoY-7.0%，上半年需求偏弱",
       "V2 T：中國 LED 晶粒低價競爭",
@@ -133,7 +138,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -161,10 +166,10 @@
         "topicName": "軍工、航太與無人機",
         "canonicalTopicId": "defense-aerospace",
         "canonicalTopicName": "軍工、航太與無人機",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "鼎元為國內軍規光電元件供應商，6月營收2.49億元年增19.4%。提供軍規紅外線偵測元件、軍規LED、砷化鎵光電晶體及雷射二極體。MOPS主要經營：砷化鎵、紅外線、LED、雷射二極體、光電晶體研發製造。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "鼎元MOPS支持砷化鎵、紅外線LED、雷射二極體、光電晶體與光二極體，但未揭露InSb中波紅外線、MIL-STD認證、國防部或中科院客戶。國防角色改列為夜視、感測與測距系統可評估的光電元件鄰近供應。2026年7月營收2.55億元，YoY+36.3%、累計YoY+2.3%。"
       }
     ],
     "swot": [
@@ -277,7 +282,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 18,
+    "totalScore": 0,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -286,27 +291,31 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "趨勢股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "題材角色已 evidence-backed，可納入題材股策略"
+        "技術面符合趨勢股條件"
       ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       },
       {
         "id": "risk.stop-distance",
         "severity": "soft",
         "message": "距離 MA20 約 14.5%，部位需降速"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

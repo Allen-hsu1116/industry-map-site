@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3324",
   "name": "雙鴻",
-  "generatedAt": "2026-08-21T12:34:39.225Z",
+  "generatedAt": "2026-08-24T12:37:19.884Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -46,34 +46,34 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
+    "label": "題材關聯明確",
+    "score": 67,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "雙鴻為散熱模組專業製造商，MOPS登記為散熱模組。VC均熱板與熱管供AI伺服器散熱需求，受惠AI伺服器液冷滲透率提升。產品線涵蓋均熱板/熱管/氣冷模組/冷板式液冷模組，客戶涵蓋廣達/鴻海/緯創三大ODM及Dell/HPE。",
+      "roleLabel": "間接受惠",
+      "roleSummary": "雙鴻MOPS只揭露「散熱模組」，未點名冷板、CDU、浸沒式冷卻或任何AI伺服器客戶；保留散熱供應鏈角色，但將液冷產品與客戶關係降為未驗證。FinMind顯示2026年7月營收37.65億元，較6月增加38.5%。",
       "supplyChainStage": "thermal",
       "roleType": "liquid_cooling_module_provider",
-      "directness": "core",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "均熱板(Vapor Chamber)(單相/兩相VC)(>500W TDP散熱)",
+        "name": "伺服器用散熱模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "熱管(Heat Pipe)(U型/L型/扁平熱管)(直徑4-8mm)",
+        "name": "銅製均熱板模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "氣冷散熱模組(Sink+Fan)(伺服器用鋁擠型鰭片+PWM風扇)",
+        "name": "熱導管與散熱鰭片組件",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -84,18 +84,18 @@
       "risks": []
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "雙鴻 在「AI 伺服器液冷散熱」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "雙鴻 在「AI 伺服器液冷散熱」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 67/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器液冷散熱 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 間接受惠 · medium",
+      "產業評分：67/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器液冷散熱（technology/active） +17）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -118,7 +118,7 @@
       "opportunities": [],
       "threats": [],
       "sources": [],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -146,10 +146,10 @@
         "topicName": "AI 伺服器液冷散熱",
         "canonicalTopicId": "ai-server-liquid-cooling",
         "canonicalTopicName": "AI 伺服器液冷散熱",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "雙鴻為散熱模組專業製造商，MOPS登記為散熱模組。VC均熱板與熱管供AI伺服器散熱需求，受惠AI伺服器液冷滲透率提升。產品線涵蓋均熱板/熱管/氣冷模組/冷板式液冷模組，客戶涵蓋廣達/鴻海/緯創三大ODM及Dell/HPE。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "雙鴻MOPS只揭露「散熱模組」，未點名冷板、CDU、浸沒式冷卻或任何AI伺服器客戶；保留散熱供應鏈角色，但將液冷產品與客戶關係降為未驗證。FinMind顯示2026年7月營收37.65億元，較6月增加38.5%。"
       }
     ],
     "swot": [],
@@ -180,7 +180,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 11,
+    "totalScore": 4,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -189,7 +189,7 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "觀察股",
       "rationale": [
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
@@ -198,12 +198,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

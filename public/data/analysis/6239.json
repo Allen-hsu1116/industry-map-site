@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6239",
   "name": "力成",
-  "generatedAt": "2026-08-21T12:34:39.469Z",
+  "generatedAt": "2026-08-24T12:37:20.125Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-21",
-  "chipDataDate": "2026-08-21",
+  "marketDataDate": "2026-08-24",
+  "chipDataDate": "2026-08-24",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,12 +15,12 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "力成 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 30,
+    "summary": "力成 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列"
     ],
     "risks": [],
     "watch": [
@@ -32,69 +32,49 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "力成 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -4.8千張；近 20 日法人偏賣，合計 -3萬張。",
+    "summary": "力成 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -3.4千張；近 20 日法人偏賣，合計 -3萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -4.8千張",
+      "三大法人近 5 日合計賣超 -3.4千張",
       "近 20 日法人偏賣，合計 -3萬張",
-      "投信近 5 日賣超 -2.5千張",
-      "外資近 5 日賣超 -1.8千張"
+      "投信近 5 日賣超 -2.2千張",
+      "外資近 5 日賣超 -418張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-21",
-      "融券近 5 日增加 14.5%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-24"
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
+    "label": "題材關聯明確",
+    "score": 70,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 6 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "力成為台灣最大記憶體封測廠，6月營收76.2億年增21.7%，累計444億年增32.4%。受惠DRAM/NAND封測需求回升與HBM測試動能，先進封裝賦能角色明確。",
+      "roleLabel": "間接受惠",
+      "roleSummary": "力成MOPS明確揭露IC與半導體元件測試、自動測試軟體及電子製造，未揭露WLCSP、Flip Chip、SiP或HBM堆疊封裝；本題材應定位為先進封裝後段測試與量產驗證的相鄰角色。2026年7月營收82.70億元，MoM+8.5%、YoY+29.4%，累計YoY+31.9%。",
       "supplyChainStage": "memory_logic_osat",
       "roleType": "memory_logic_packaging_testing_provider",
-      "directness": "core",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "記憶體與邏輯 IC 封裝測試服務",
-        "description": "力成幫 DRAM、NAND Flash、NOR Flash、MCP 與邏輯晶片做晶圓測試、成品測試、晶圓級封裝、Flip Chip、Wire Bond BGA、SiP 與模組組裝。",
-        "whyItMatters": "記憶體與邏輯晶片量產需要大量測試與封裝產能；力成是記憶體封測供應鏈的重要服務商，直接受記憶體循環、AI 伺服器儲存/記憶體需求與封裝規格升級影響。",
-        "topicFit": "官方服務包含 WLCSP、Flip Chip、SiP、Panel Level Fan Out、TSV 等封裝技術。",
-        "businessImpact": "營收受記憶體客戶投片/出貨、封測委外量、測試時間、先進封裝占比與稼動率影響；記憶體景氣上行或高階封裝測試需求增加通常有利，但價格與產能利用率會隨循環波動。",
-        "sourceLabels": [
-          "Powertech Technology Inc.：Chip Probing",
-          "Powertech Technology Inc.：Final Test"
-        ],
-        "sourceUrls": [
-          "https://www.pti.com.tw/en/service/service/chip-probing",
-          "https://www.pti.com.tw/en/service/service/final-test"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
+        "name": "積體電路晶圓電性測試服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
-        "name": "WLCSP、Flip Chip 與 SiP 封裝服務",
-        "description": "力成提供晶圓級封裝、Flip Chip、SiP 等封裝服務，將晶片以更小尺寸、更高 I/O 或更好電熱性能的形式封裝，服務記憶體與邏輯晶片客戶。",
-        "whyItMatters": "AI、行動裝置、記憶體和高效能邏輯晶片都需要更高密度與更高可靠度的封裝；先進封裝服務提高單位封測價值量。",
-        "topicFit": "WLCSP、Flip Chip、SiP、Fan Out 與 TSV 直接屬先進封裝服務。",
-        "businessImpact": "先進封裝占比提升有助提高服務價值，但需要產能、良率與客戶產品放量支撐。",
-        "sourceLabels": [
-          "Powertech Technology Inc.：Wafer Level Packaging",
-          "Powertech Technology Inc.：Flip Chips"
-        ],
-        "sourceUrls": [
-          "https://www.pti.com.tw/en/service/packaging/wafer-level-packaging",
-          "https://www.pti.com.tw/en/service/packaging/flip-chips"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "high"
+        "name": "積體電路成品自動測試服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "半導體元件可靠度與分選服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -110,20 +90,20 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
       "題材 先進封裝與 CoWoS（process/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 6 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "力成 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "力成 在「先進封裝與 CoWoS」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 70/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：先進封裝與 CoWoS · 間接受惠 · medium",
+      "產業評分：70/100（直接度 間接受惠 +8；角色信心 medium +10；題材 先進封裝與 CoWoS（process/active） +16）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -151,7 +131,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-21"
+      "lastVerified": "2026-08-24"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -178,10 +158,10 @@
         "topicName": "先進封裝與 CoWoS",
         "canonicalTopicId": "advanced-packaging",
         "canonicalTopicName": "先進封裝與 CoWoS",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "力成為台灣最大記憶體封測廠，6月營收76.2億年增21.7%，累計444億年增32.4%。受惠DRAM/NAND封測需求回升與HBM測試動能，先進封裝賦能角色明確。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "力成MOPS明確揭露IC與半導體元件測試、自動測試軟體及電子製造，未揭露WLCSP、Flip Chip、SiP或HBM堆疊封裝；本題材應定位為先進封裝後段測試與量產驗證的相鄰角色。2026年7月營收82.70億元，MoM+8.5%、YoY+29.4%，累計YoY+31.9%。"
       }
     ],
     "swot": [
@@ -258,8 +238,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -267,10 +248,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：268.40",
-      "波段多空分水嶺看 MA20：262.63",
-      "追蹤法人是否延續 賣超：最近 -703張",
-      "本益比 26.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：266.70",
+      "波段多空分水嶺看 MA20：262.15",
+      "追蹤法人是否延續 買超：最近 +471張",
+      "本益比 26.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 296.00 且量比 > 1.5：列為轉強訊號",

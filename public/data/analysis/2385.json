@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2385",
   "name": "群光",
-  "generatedAt": "2026-08-21T12:34:38.991Z",
+  "generatedAt": "2026-08-24T12:37:19.644Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -49,34 +49,34 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 92,
+    "label": "題材關聯明確",
+    "score": 68,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
-      "roleLabel": "供應商角色",
-      "roleSummary": "群光提供AI伺服器高功率電源(2kW~3.3kW)，同時是全球NB鍵盤龍頭。5月營收72.3億年減11.0%，累計374億年減5.2%。AI伺服器電源為新成長動能但占比仍低。",
+      "roleLabel": "間接受惠",
+      "roleSummary": "群光MOPS支持電源供應器、鍵盤與數位影像產品，但未揭露2kW以上CRPS、GPU VRM或NVIDIA伺服器試樣，因此AI伺服器角色收斂為電源供應器的間接應用機會。2026年7月營收70.57億元，MoM-10.5%、YoY-12.2%、累計YoY-6.3%，目前全公司營運未呈現AI伺服器帶動的成長證據。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "server_psu_keyboard_supplier",
-      "directness": "supplier",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "AI伺服器電源(2kW~3.3kW CRPS)",
+        "name": "伺服器用電源供應器（題材應用產品）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "NB鍵盤模組(全球市佔第一)",
+        "name": "桌上型電腦電源供應器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "PC Camera/Webcam模組",
+        "name": "筆記型電腦電源轉接器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -96,20 +96,20 @@
       ]
     },
     "scoringFactors": [
-      "直接度 供應商角色 +26",
-      "角色信心 high +16",
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "群光 在「AI 伺服器整機與 EMS」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 92/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "群光 在「AI 伺服器整機與 EMS」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 68/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 供應商角色 · high",
-      "產業評分：92/100（直接度 供應商角色 +26；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 間接受惠 · medium",
+      "產業評分：68/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "主要產品：NB鍵盤(全球第一)",
       "主要產品：電源供應器(Adapter/充電器)",
       "主要產品：PC Camera/Webcam",
@@ -170,7 +170,7 @@
       "sources": [
         "financials:2385"
       ],
-      "freshness": "normal",
+      "freshness": "stale",
       "lastVerified": "2026-05-26"
     },
     "dataSources": [
@@ -198,10 +198,10 @@
         "topicName": "AI 伺服器",
         "canonicalTopicId": "ai-server",
         "canonicalTopicName": "AI 伺服器整機與 EMS",
-        "directness": "supplier",
-        "directnessLabel": "供應商角色",
-        "confidence": "high",
-        "roleSummary": "群光提供AI伺服器高功率電源(2kW~3.3kW)，同時是全球NB鍵盤龍頭。5月營收72.3億年減11.0%，累計374億年減5.2%。AI伺服器電源為新成長動能但占比仍低。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "群光MOPS支持電源供應器、鍵盤與數位影像產品，但未揭露2kW以上CRPS、GPU VRM或NVIDIA伺服器試樣，因此AI伺服器角色收斂為電源供應器的間接應用機會。2026年7月營收70.57億元，MoM-10.5%、YoY-12.2%、累計YoY-6.3%，目前全公司營運未呈現AI伺服器帶動的成長證據。"
       }
     ],
     "swot": [
@@ -341,7 +341,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 21,
+    "totalScore": 15,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -350,7 +350,7 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
@@ -360,12 +360,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 88 天未更新"
+        "message": "股價資料已 91 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 88 天未更新"
+        "message": "籌碼資料已 91 天未更新"
       }
     ]
   },

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3034",
   "name": "聯詠",
-  "generatedAt": "2026-08-21T12:34:39.160Z",
+  "generatedAt": "2026-08-24T12:37:19.818Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-21",
-  "chipDataDate": "2026-08-21",
+  "marketDataDate": "2026-08-24",
+  "chipDataDate": "2026-08-24",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,31 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "聯詠 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "聯詠 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.2%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 3.2%"
     ],
     "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 36,
-    "summary": "聯詠 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +2千張；近 20 日法人偏買，合計 +1.1萬張。",
+    "summary": "聯詠 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +4.1千張；近 20 日法人偏買，合計 +1.2萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2千張",
-      "近 20 日法人偏買，合計 +1.1萬張",
-      "投信近 5 日買超 +619張",
-      "外資近 5 日買超 +1.4千張"
+      "三大法人近 5 日合計買超 +4.1千張",
+      "近 20 日法人偏買，合計 +1.2萬張",
+      "投信近 5 日買超 +596張",
+      "外資近 5 日買超 +3.4千張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-21",
-      "融券近 5 日增加 37.3%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-24"
     ]
   },
   "industry": {
@@ -97,7 +94,7 @@
       "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 IC 設計與矽智財（supply_chain_segment/active） +16）",
       "相關題材：面板、LED、光學鏡頭與感測 · 直接賦能角色",
-      "相關題材：Edge AI / AIoT 邊緣智慧 · 供應商角色",
+      "相關題材：Edge AI / AIoT 邊緣智慧 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -122,7 +119,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-21"
+      "lastVerified": "2026-08-24"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -169,10 +166,10 @@
         "topicName": "Edge AI / AIoT 邊緣智慧",
         "canonicalTopicId": "edge-ai-aiot",
         "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
-        "directness": "supplier",
-        "directnessLabel": "供應商角色",
-        "confidence": "high",
-        "roleSummary": "聯詠6月營收100.23億YoY+19.0%，累計518.05億YoY-2.8%。MOPS登記為語音/通訊/液晶顯示器驅動IC設計製造。台灣最大顯示驅動IC廠，跨足邊緣AI SoC，整合NPU推論引擎於顯示/影像IC，AI安防與車用ASIL-B認證IC為新成長動能。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "聯詠MOPS支持語音IC、通訊IC、嵌入式MCU、DSP、電腦周邊控制與LCD驅動IC，能對應Edge AI的感知與訊號處理周邊，但未揭露NPU TOPS、ASIL-B、Hikvision或Dahua客戶，故移除舊資料的過度規格。2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%、累計YoY+1.2%；公司整體成長不能全歸因Edge AI。"
       }
     ],
     "swot": [],
@@ -225,7 +222,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 73,
+    "totalScore": 83,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 26,
@@ -233,14 +230,15 @@
       "signals": [
         "月營收 YoY +1.2%，溫和成長",
         "月營收 MoM +8.9%，短期動能改善",
-        "本益比 18.5 倍，估值尚可對照成長",
-        "殖利率 4.3%，提供部分下檔支撐"
+        "本益比 18.9 倍，估值尚可對照成長",
+        "殖利率 4.2%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
@@ -250,11 +248,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：521.00",
-      "波段多空分水嶺看 MA20：523.88",
-      "追蹤法人是否延續 買超：最近 +469張",
+      "短線支撐/壓力先看 MA5：527.60",
+      "波段多空分水嶺看 MA20：525.08",
+      "追蹤法人是否延續 買超：最近 +2千張",
       "月營收年增率 +1.2%，觀察基本面是否支撐估值",
-      "本益比 18.5 倍，需和同族群估值比較"
+      "本益比 18.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 572.00 且量比 > 1.5：列為轉強訊號",
