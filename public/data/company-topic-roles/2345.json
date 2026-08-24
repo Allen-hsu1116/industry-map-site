@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2345",
   "companyName": "智邦",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "data_center_switch_maker",
-      "roleSummary": "智邦是AI資料中心網路交換器核心供應商，Microsoft/Google/Meta為主要客戶。5月營收286.2億年增56.6%，累計1,261億年增60.0%，AI資料中心葉脊交換器為爆發成長引擎。",
+      "roleSummary": "智邦MOPS明確支持電腦網路系統、光電通訊設備、特定功能IC與UPS，足以定位為AI資料中心網路與電源周邊的直接賦能者；但MOPS未揭露800G／1.6T型號或Microsoft、Google、Meta等客戶。2026年7月營收394.73億元、YoY+71.7%，公司僅說明客戶需求增加。",
       "products": [
-        "800G/400G資料中心葉脊交換器(Leaf-Spine)",
-        "100G/400G乙太網路交換器(ToR)",
-        "Wi-Fi 6E/7企業AP(Aruba生態)",
-        "5G小基站(Small Cell)(企業專網)",
-        "SD-WAN企業路由器"
+        "400G／800G資料中心葉脊交換器",
+        "資料中心ToR乙太網路交換器",
+        "高速光電通訊設備",
+        "白牌網路交換器系統",
+        "資料中心不斷電電源設備"
       ],
       "customers": [
-        "Microsoft(Azure資料中心交換器)",
-        "Google(GCP葉脊架構)",
-        "Meta(資料中心網路)",
-        "Amazon(AWS網路設備)",
-        "NVIDIA(Spectrum-X生態合作)"
+        "Microsoft（Azure網路應用對象，非MOPS揭露客戶）",
+        "Google（GCP網路應用對象，非MOPS揭露客戶）",
+        "Meta（資料中心網路應用對象，非MOPS揭露客戶）",
+        "Amazon（AWS網路應用對象，非MOPS揭露客戶）",
+        "NVIDIA（Spectrum-X平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "明泰(3380)",
@@ -51,32 +51,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電腦網路系統、用戶端通訊設備、光電通訊設備、特定功能IC、UPS及其零組件。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收394.73億元，MoM-0.2%、YoY+71.7%、累計YoY+62.4%；公司備註客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "800G/400G 葉脊架構（Leaf-Spine）資料中心交換器設計",
-        "Tomahawk/Jericho 系列 Broadcom 交換器 ASIC 系統整合",
-        "SONiC（Software for Open Networking）白牌交換器軟體"
+        "400G／800G乙太網路交換器的高速SerDes與訊號完整性",
+        "Broadcom／Marvell交換ASIC的系統整合與熱管理",
+        "SONiC白牌交換器軟體、遙測與冗餘網路管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收39.55億YoY+61.2%，累計YoY+60.3%，AI資料中心網路交換器需求爆發",
-          "800G/1.6T Ethernet AI叢集交換器為雲端大廠核心採購標的"
+          "MOPS直接支持網路系統、光通訊、特定功能IC與UPS，AI資料中心鏈結清楚",
+          "7月營收YoY+71.7%、累計YoY+62.4%，公司整體客戶需求強"
         ],
         "weaknesses": [
-          "通信網路業營收規模小於ODM大廠，AI伺服器題材為間接受益",
-          "網路交換器IC仍依賴Broadcom/Marvell，自研能力有限"
+          "MOPS未揭露高速交換器型號、具名客戶或AI資料中心收入占比",
+          "核心交換ASIC仍仰賴外部平台，料源與產品節奏受晶片商影響"
         ],
         "opportunities": [
-          "AI叢集規模擴大帶動800G→1.6T交換器升級週期，智邦為ODM核心供應商",
-          "客戶需求持續增加，AI資料中心網路設備為長期成長賽道"
+          "AI叢集擴大可推升400G／800G並向1.6T交換器升級",
+          "開放網路與SONiC滲透有利白牌交換器ODM擴張"
         ],
         "threats": [
-          "網路設備ODM競爭者(明泰/中磊)同樣布局AI資料中心交換器",
-          "雲端大廠自研交換器(如Google Jupiter/Microsoft)可能壓縮ODM空間"
+          "雲端業者自研交換器與多供應商策略可能壓縮議價空間",
+          "Broadcom、Marvell平台轉換或高速光模組短缺會延遲系統出貨"
         ]
       }
     }

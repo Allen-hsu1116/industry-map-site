@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4908",
   "companyName": "前鼎",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "leo-satellite-communications",
@@ -95,20 +95,20 @@
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "前鼎光電為光纖通訊模組垂直整合廠，從LD/PD封裝到光收發模組一條龍。矽光子題材直接受惠，但上櫃規模較小，與眾達科、光迅等競爭壓力大。",
+      "directness": "indirect",
+      "roleSummary": "前鼎MOPS直接支持雷射二極體、受光二極體封裝與光傳接模組，因此光通訊角色成立；但未揭露矽光子晶片、CPO、100G／400G／800G速率、DFB／EML材料或具名客戶，應定位為矽光子鏈周邊光源、檢光與收發模組整合。FinMind顯示2026年7月營收0.99億元、YoY+51.6%。",
       "products": [
-        "100G/400G光收發模組(QSFP28/QSFP-DD)",
-        "雷射二極體封裝(TOSA/ROSA)",
-        "DWDM密集波分光模組(100GHz spacing)",
-        "光纖跳線(Single-mode/Multi-mode patch cord)",
-        "800G光收發模組(QSFP-DD800)"
+        "雷射二極體封裝元件",
+        "受光二極體封裝元件",
+        "光發射次模組",
+        "光接收次模組",
+        "可插拔式光收發模組"
       ],
       "customers": [
-        "NVIDIA(Spectrum-X光交換器用光模組)",
-        "Cisco(光通訊設備用光收發模組)",
-        "Amazon(AWS資料中心光模組)",
-        "華為(光傳輸設備用TOSA/ROSA)"
+        "Cisco（光通訊設備應用對象，非MOPS揭露客戶）",
+        "Nokia（電信光網路應用對象，非MOPS揭露客戶）",
+        "Ciena（光傳輸應用對象，非MOPS揭露客戶）",
+        "Broadcom（矽光子平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "眾達科(4977)",
@@ -127,38 +127,48 @@
           "title": "4908公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 4908 role in 矽光子、CPO 與高速光通訊 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：雷射二極體、受光二極體封裝及光傳接模組等光纖通訊產品。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收0.99億元，MoM+8.2%、YoY+51.6%；TWSE月營收工具查無資料。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-18",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "雷射二極體TO-CAN封裝技術(DFB/EML)",
-        "光收發模組COB(Chip-on-Board)封裝技術",
-        "DWDM波分複用光模組設計"
+        "LD／PD光電晶片的主動對準與氣密封裝",
+        "光收發模組的耦光效率、消光比與接收靈敏度校準",
+        "可插拔模組的熱管理、光功率監控與可靠度測試"
       ],
       "supplyChainStage": "optical_components",
       "roleType": "optical_transceiver_module_supplier",
       "swot": {
         "strengths": [
-          "100G/400G光收發模組(QSFP28/QSFP-DD)設計製造能力",
-          "雷射二極體TO-CAN封裝技術(DFB/EML)自有能力",
-          "DWDM密集波分光模組(100GHz spacing)設計"
+          "MOPS直接支持LD、PD封裝與光收發模組，光通訊產品基礎明確",
+          "FinMind顯示7月營收YoY+51.6%、MoM+8.2%，公司整體需求回升"
         ],
         "weaknesses": [
-          "光收發模組市場競爭激烈(中際旭創/新易盛/華工科技)",
-          "800G光收發模組(QSFP-DD800)開發進度落後一線大廠",
-          "公司規模小，研發資源有限"
+          "MOPS未揭露矽光子、CPO、資料速率、材料系統或具名客戶",
+          "7月營收僅0.99億元，規模小且研發、認證與量產資源有限"
         ],
         "opportunities": [
-          "AI資料中心800G光收發模組需求增長",
-          "NVIDIA Spectrum-X光交換器用光模組新應用",
-          "DWDM波分複用光模組在資料中心互連需求"
+          "AI資料中心光互連成長可提升LD、PD及收發模組需求",
+          "矽光子平台仍需光源、檢光與模組封裝，前鼎可作為周邊整合者"
         ],
         "threats": [
-          "中際旭創(300308)/新易盛(300502)在800G光模組市場領先",
-          "Cisco/華為等系統廠可能自研光模組",
-          "矽光子(CPO)技術可能取代可插拔光模組"
+          "CPO或共同封裝光學若加速滲透，可能壓縮傳統可插拔模組需求",
+          "中際旭創、新易盛及大型光模組廠的規模與價格競爭"
         ]
       }
     }

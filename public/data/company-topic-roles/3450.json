@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3450",
   "companyName": "聯鈞",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -98,20 +98,19 @@
       "directness": "indirect",
       "supplyChainStage": "silicon_photonics",
       "roleType": "laser_processing_equipment",
-      "roleSummary": "聯鈞是全球少數能提供矽光子波導雷射加工的廠商，掌握矽光子核心製程。5月營收9.6億年增49.9%，受惠AI光互連需求升溫，但累計營收39.2億年減1.9%，仍在恢復期。",
+      "roleSummary": "聯鈞MOPS支持光資訊、光通訊產品及功率半導體封裝測試，但未揭露矽光子波導加工、VCSEL／EML晶圓、奈米線寬、雷射波長或Intel／Broadcom客戶；因此應定位為矽光子鏈的光元件封裝與測試周邊，而非矽光子晶圓製程廠。2026年7月營收12.19億元、YoY+98.0%，公司僅說明客戶需求增加。",
       "products": [
-        "矽光子波導雷射加工設備(奈米級精度/波導寬度<500nm/UV 355nm)",
-        "VCSEL面射雷射晶圓(6吋/3D感測/光通訊400G-800G)",
-        "EEL邊射雷射晶圓(光纖通訊/CWDM/DWDM波長1270-1610nm)",
-        "高功率雷射鑽孔/切割代工(355nm UV/532nm Green/皮秒級脈衝)",
-        "光通訊雷射二極體晶圓(LD/EML/100G/400G/800G光收發模組用)"
+        "光通訊雷射二極體封裝元件",
+        "光通訊受光二極體封裝元件",
+        "光收發模組用光電次模組",
+        "光資訊讀寫頭與光學模組",
+        "功率半導體封裝測試服務"
       ],
       "customers": [
-        "Intel(矽光子平台)",
-        "Broadcom(光收發模組)",
-        "Coherent(光通訊元件)",
-        "Lumentum(VCSEL/3D感測)",
-        "II-VI(光通訊元件)"
+        "Intel（矽光子平台對象，非MOPS揭露客戶）",
+        "Broadcom（光通訊平台對象，非MOPS揭露客戶）",
+        "Cisco（光網路應用對象，非MOPS揭露客戶）",
+        "Lumentum（光元件供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Disco"
@@ -133,36 +132,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3450 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：光資訊及光通訊產品、功率半導體封裝測試。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收12.19億元，MoM+7.0%、YoY+98.0%、累計YoY+20.3%；公司備註客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-04",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "矽光子波導雷射加工技術(奈米級精度)",
-        "VCSEL面射雷射晶圓量產(3D感測/光通訊)",
-        "EML電吸收調變雷射晶圓(光纖通訊)"
+        "LD／PD光電元件的主動對準、耦光與封裝測試",
+        "光電次模組的熱管理、氣密性與可靠度驗證",
+        "高速光收發路徑的光功率與接收靈敏度校準"
       ],
       "swot": {
         "strengths": [
-          "矽光子波導雷射加工技術(奈米級精度/波導寬度<500nm/UV 355nm)領先",
-          "VCSEL面射雷射晶圓(3D感測/光通訊400G-800G)量產能力",
-          "EEL邊射雷射晶圓(光纖通訊/CWDM/DWDM 1270-1610nm)完整產品線"
+          "MOPS直接支持光資訊與光通訊產品，具光元件封裝測試基礎",
+          "7月營收YoY+98.0%、MoM+7.0%，公司整體客戶需求強勁"
         ],
         "weaknesses": [
-          "矽光子波導加工為高精度利基應用，市場規模尚小",
-          "VCSEL/EEL雷射晶圓面臨Lumentum/Coherent/II-VI等大廠競爭",
-          "光通訊市場週期波動影響出貨量"
+          "MOPS未揭露矽光子晶片、波導加工、VCSEL／EML或具名客戶",
+          "光通訊與功率半導體業務混合，月營收無法拆分矽光子周邊貢獻"
         ],
         "opportunities": [
-          "AI資料中心800G/1.6T光收發模組帶動LD/EML雷射晶圓需求",
-          "矽光子波導加工隨Intel/Broadcom矽光子平台推進",
-          "3D感測(VCSEL)在AR/VR/車用應用增長"
+          "AI資料中心高速光互連可增加光元件封裝與次模組測試需求",
+          "矽光子平台仍需要外部光源、檢光器與可靠度驗證服務"
         ],
         "threats": [
-          "Lumentum/Coherent/II-VI在雷射晶圓市場主導地位",
-          "中國雷射晶圓廠追趕",
-          "矽光子技術路線不確定性(CPO vs 可插拔)"
+          "Lumentum、Coherent及大型光模組廠具更完整垂直整合能力",
+          "CPO架構與光源整合方式變化可能使既有封裝產品快速改版"
         ]
       }
     }

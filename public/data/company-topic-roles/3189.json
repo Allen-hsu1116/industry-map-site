@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3189",
   "companyName": "景碩",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -89,18 +89,19 @@
       "directness": "indirect",
       "supplyChainStage": "advanced_packaging",
       "roleType": "packaging_substrate_supplier",
-      "roleSummary": "景碩為台灣前三大IC載板廠，6月營收4224.1億YoY32.3%，累計23601.2億YoY29.8%。6月營收42.2億年增32.3%，受惠AI/HPC用ABF載板需求成長。CoWoS用高階ABF載板為先進封裝供應鏈關鍵環節。",
+      "roleSummary": "景碩MOPS僅揭露電子零組件製造與電子材料買賣，未點名ABF、FC-BGA、CoWoS、線寬或台積電／Intel／AMD客戶；先進封裝角色應限於IC載板與封裝基板的上游供應，不等於承作封裝。2026年7月營收45.49億元、YoY+35.9%，為公司整體口徑。",
       "products": [
-        "CoWoS用高階ABF載板(2.5D封裝2/2mil L/S)",
-        "FC-BGA載板(HPC/AI晶片用)",
-        "FC-CSP載板(手機AP用)",
-        "SiP系統級封裝載板(無線模組)",
-        "BT載板(記憶體/利基型IC)"
+        "AI／HPC晶片用FC-BGA載板",
+        "2.5D封裝用高I/O ABF載板",
+        "手機AP用FC-CSP載板",
+        "SiP模組用系統級封裝載板",
+        "記憶體IC用BT載板"
       ],
       "customers": [
-        "台積電(2330)(CoWoS封裝載板間接)",
-        "Intel(FC-BGA CPU載板)",
-        "AMD(FC-BGA GPU/CPU載板)"
+        "台積電（先進封裝供應鏈對象，非MOPS揭露客戶）",
+        "Intel（CPU封裝應用對象，非MOPS揭露客戶）",
+        "AMD（AI／HPC封裝應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI加速器封裝應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "欣興",
@@ -125,36 +126,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件製造及電子材料批發零售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%、累計YoY+30.7%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "CoWoS用高階ABF載板設計(2/2mil L/S細線路)",
-        "2.5D封裝用細線載板製程(ABF介電層<5μm)",
-        "高頻高速載板材料開發(Megtron 7/EMC)"
+        "ABF增層載板的細線路與微盲孔製程",
+        "大尺寸FC-BGA載板的翹曲與層間對位控制",
+        "高速載板的插入損耗、阻抗與熱循環可靠度"
       ],
       "swot": {
         "strengths": [
-          "CoWoS用高階ABF載板(2/2mil L/S細線路)間接供應台積電先進封裝",
-          "2.5D封裝用細線載板製程(ABF介電層<5μm)技術能力",
-          "SiP系統級封裝載板(無線模組)量產經驗"
+          "7月營收YoY+35.9%、累計YoY+30.7%，公司整體載板需求強",
+          "具FC-BGA、FC-CSP、SiP與BT載板組合，可涵蓋多類封裝應用"
         ],
         "weaknesses": [
-          "CoWoS封裝載板為間接供應，直接受惠程度有限",
-          "高頻高速載板材料(Megtron 7/EMC)開發落後日商",
-          "先進封裝載板認證週期長"
+          "MOPS未揭露ABF、CoWoS、製程規格或具名客戶",
+          "景碩供應載板而非執行先進封裝，題材受惠屬上游間接傳導"
         ],
         "opportunities": [
-          "CoWoS/SoIC 2.5D/3D封裝產能擴張帶動ABF載板需求",
-          "AI ASIC封裝用高I/O密度ABF載板新訂單",
-          "FC-CSP載板(手機AP)需求隨5G滲透提升"
+          "AI加速器封裝尺寸與I/O數增加，可提高高階ABF載板用量與難度",
+          "2.5D／3D封裝擴產可帶動高可靠度載板認證與需求"
         ],
         "threats": [
-          "台積電CoWoS載板主要供應商為日本Ibiden/Shinko",
-          "欣興(3037)積極擴產ABF載板競爭加劇",
-          "ABF載板產能過剩風險"
+          "欣興、南電、Ibiden與Shinko擴產可能造成價格及稼動率壓力",
+          "ABF材料供應、良率或大尺寸翹曲問題可能限制出貨"
         ]
       }
     },

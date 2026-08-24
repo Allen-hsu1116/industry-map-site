@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2393",
   "companyName": "億光",
-  "updatedAt": "2026-08-09",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -247,18 +247,19 @@
       "directness": "indirect",
       "supplyChainStage": "optoelectronic_components",
       "roleType": "military_ir_led",
-      "roleSummary": "億光6月營收18.31億YoY+10.6%，累計104.0億YoY+3.2%。MOPS登記為電子製品加工製造/光電控制器加工買賣。軍規紅外線LED(850nm/940nm)為利基應用，用於夜視照明與目標標定系統，營收貢獻有限但毛利率較高。",
+      "roleSummary": "億光MOPS只揭露電子製品、光電控制器及半導體材料設備，沒有軍規、MIL-STD、夜視、標定系統或中科院／國防部客戶；國防航太角色只能視為紅外線與光感測元件可用於夜視、安防及無人載具的潛在應用。2026年7月營收19.74億元、YoY+17.4%，並非國防營收證明。",
       "products": [
-        "軍規紅外線LED(850nm/940nm高功率>500mW)",
-        "夜視用IR照明LED陣列(可調焦/可見光截止filter)",
-        "光電感測元件(PIN光敏二極體)(Si/InGaAs)",
-        "軍規UV LED(偽鈔/生化偵檢用)(365nm/395nm)"
+        "850nm紅外線LED封裝（夜視應用）",
+        "940nm紅外線LED封裝（隱蔽照明應用）",
+        "PIN光電二極體（光偵測應用）",
+        "光電晶體感測器（物體偵測應用）",
+        "365nm／395nm UV LED封裝（檢測應用）"
       ],
       "customers": [
-        "中科院(軍規光電標案/夜視IR LED模組)",
-        "漢翔(2634)(航空LED照明/座艙燈)",
-        "國防部(夜視裝備IR照明模組)",
-        "中山科學研究院(軍規UV LED偵檢應用)"
+        "國家中山科學研究院（驗證對象，非MOPS揭露客戶）",
+        "漢翔航空工業（航太應用對象，非MOPS揭露客戶）",
+        "L3Harris Technologies（夜視應用對象，非MOPS揭露客戶）",
+        "Rafael Advanced Defense Systems（光電系統應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "光寶科(2301)(軍規IR LED)",
@@ -285,36 +286,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子製品、光電控制器及半導體原料與設備之製造加工買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收19.74億元，MoM+7.8%、YoY+17.4%、累計YoY+5.2%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-11",
+      "confidence": "low",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "850nm/940nm紅外線LED高功率封裝(>500mW/MIL-STD-810抗震)",
-        "軍規環境可靠性LED設計(-55~125°C/MIL-STD-810G)",
-        "夜視照明IR LED陣列光學設計(可調焦collimator lens)"
+        "850nm／940nm紅外線LED封裝的光功率與熱阻控制",
+        "光電二極體暗電流、響應度與封裝雜訊管理",
+        "寬溫、振動與濕熱環境可靠度驗證（軍用應用仍待認證）"
       ],
       "swot": {
         "strengths": [
-          "850nm/940nm紅外線LED高功率封裝（>500mW/MIL-STD-810抗震）技術領先",
-          "軍規環境可靠性LED設計（-55~125°C/MIL-STD-810G）具國防認證優勢",
-          "與中科院/漢翔(2634)有軍規光電標案合作經驗"
+          "具紅外線LED、UV LED與光感測元件的產品組合，可對應夜視及檢測應用",
+          "7月營收YoY+17.4%、MoM+7.8%，公司整體需求改善"
         ],
         "weaknesses": [
-          "國防軍規LED市場規模有限，營收貢獻小",
-          "軍規認證週期長，打入新標案需時間",
-          "累計營收YoY+3.2%，軍規業務對整體營收帶動有限"
+          "MOPS未揭露軍規認證、軍用產品或任何國防客戶",
+          "國防應用收入占比未知，不能把民用紅外線元件直接當成軍品"
         ],
         "opportunities": [
-          "台灣國防自主政策帶動軍規光電標案需求增長",
-          "無人機夜視IR照明需求隨軍用無人機擴建增長",
-          "紅外線LED在安防/監控民用市場也有應用"
+          "無人載具與基地安防可增加紅外線照明及光感測需求",
+          "民規元件若完成寬溫與振動驗證，可望切入較高可靠度市場"
         ],
         "threats": [
-          "國外軍規LED供應商（OSRAM/Vishay）技術更成熟",
-          "軍規標案數量有限且競爭激烈",
-          "國防預算執行進度不確定性"
+          "ams OSRAM、Vishay等國際供應商具更完整高可靠度產品線",
+          "軍規認證時間長且標案不連續，投入未必能轉化穩定營收"
         ]
       }
     }

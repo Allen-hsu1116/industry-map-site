@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -268,20 +268,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "semiconductor",
       "roleType": "ai_accelerator_foundry_enabler",
-      "roleSummary": "台積電是AI伺服器供應鏈核心，從先進製程到CoWoS封裝一體掌握。5月營收4170億年增30.1%，累計1.96兆年增30.0%，AI/HPC需求為最大成長驅動力。",
+      "roleSummary": "台積電MOPS支持積體電路晶圓製造、封裝、測試、CAD及光罩服務，因此是AI伺服器運算晶片的直接賦能者，但不製造伺服器整機；MOPS未逐項揭露N3／N5、CoWoS、SoIC型號或任何具名客戶。2026年7月營收4,675.81億元、YoY+44.7%，為全公司口徑。",
       "products": [
-        "AI/HPC GPU晶圓代工(N3/N5/N2)",
-        "CoWoS-L先進封裝(AI加速器)",
-        "CoWoS-S 2.5D封裝",
-        "SoIC 3D堆疊封裝",
-        "A16(1.6nm)Backside Power"
+        "AI／HPC邏輯晶片晶圓製造服務",
+        "AI加速器2.5D整合封裝服務",
+        "AI晶片3D晶圓／晶片堆疊服務",
+        "AI／HPC晶片封裝後測服務",
+        "AI晶片用光罩與CAD技術服務"
       ],
       "customers": [
-        "NVIDIA(H100/B200)",
-        "AMD(MI300/Mi350)",
-        "Broadcom(客製AI ASIC)",
-        "Marvell(客製AI ASIC)",
-        "Qualcomm(AI晶片)"
+        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
+        "AMD（AI加速器應用對象，非MOPS揭露客戶）",
+        "Broadcom（客製AI ASIC應用對象，非MOPS揭露客戶）",
+        "Marvell（資料中心ASIC應用對象，非MOPS揭露客戶）",
+        "Google（TPU應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Samsung Foundry",
@@ -310,33 +310,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：依客戶設計製造積體電路與其他晶圓半導體裝置，並提供封裝、測試、CAD及光罩服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%、累計YoY+37.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-04",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "N3/N5 先進製程 AI/HPC GPU 晶圓代工量產",
-        "CoWoS-L 先進封裝（AI 加速器大晶片整合）",
-        "InFO 2.5D/3D 封裝技術（AI 推理晶片）"
+        "先進邏輯製程與AI／HPC晶片良率管理",
+        "矽中介層2.5D封裝與高密度RDL互連",
+        "Cu-Cu混合鍵合的晶片對晶圓3D整合"
       ],
       "swot": {
         "strengths": [
-          "AI/HPC GPU晶圓代工(N3/N5/N2)全球獨佔地位，6月營收442.68億YoY+67.9%",
-          "CoWoS-L先進封裝(AI加速器)為NVIDIA/AMD AI晶片唯一量產夥伴",
-          "累計營收2404.48億YoY+35.6%，先進製程需求持續增加"
+          "MOPS同時支持晶圓製造、封裝與測試，可提供AI晶片跨製程整合服務",
+          "7月營收YoY+44.7%、累計YoY+37.0%，公司整體先進運算需求強"
         ],
         "weaknesses": [
-          "AI伺服器題材中台積電為間接賦能角色，不直接出貨伺服器整機",
-          "CoWoS產能擴充速度受限，AI GPU需求可能因封裝瓶頸而延遲"
+          "台積電不生產AI伺服器整機，題材曝險來自晶片與封裝環節",
+          "MOPS未逐項揭露先進節點、封裝平台產能與具名客戶，精確歸因有限"
         ],
         "opportunities": [
-          "NVIDIA H100/B200/GB200/GB300全系列AI GPU均由台積電獨家代工",
-          "先進製程(N2/A16)持續領先，AI晶片代工護城河加深"
+          "AI加速器晶片面積與封裝複雜度提升，可增加晶圓及封裝價值量",
+          "邏輯製程、光罩、CAD與封裝協同最佳化可提高客戶轉換成本"
         ],
         "threats": [
-          "三星/Samsung 4nm GAA製程追趕，AI晶片代工可能面臨競爭",
-          "地緣政治風險影響先進製程設備取得，AI晶片供應鏈可能受衝擊"
+          "AI資本支出放緩或出口管制可能影響高階晶片投片節奏",
+          "Samsung與Intel在先進製程及2.5D／3D封裝競爭可能分散訂單"
         ]
       }
     }

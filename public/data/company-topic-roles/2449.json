@@ -2,28 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "2449",
   "companyName": "京元電子",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "core",
+      "directness": "direct_enabler",
       "supplyChainStage": "high_end_testing",
       "roleType": "test_house",
-      "roleSummary": "京元電子為全球最大獨立IC測試廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。6月營收36.2億年增28.6%，累計213.3億年增36.1%。MOPS主要經營：積體電路設計製造測試。AI GPU SLT系統級測試為先進封裝品質把關關鍵環節。",
+      "roleSummary": "京元電子MOPS支持積體電路測試、加工與包裝，足以定位為先進封裝後段測試及可靠度驗證的直接賦能者；但MOPS未揭露NVIDIA／AMD／Apple客戶、SLT機型或HAST條件。2026年7月營收39.91億元、YoY+36.7%，未拆分先進封裝貢獻。",
       "products": [
-        "AI GPU測試(NVIDIA H100/B200 SLT系統級測試)",
-        "SoC晶圓測試(CP/FT高溫測試)",
-        "記憶體測試(DDR5/LPDDR5/NAND)",
-        "5G RF射頻測試(mmWave/Sub-6G)"
+        "AI／HPC晶片晶圓CP測試服務",
+        "先進封裝晶片成品FT測試服務",
+        "AI加速器系統級SLT測試服務",
+        "高溫Burn-in可靠度篩選服務",
+        "高速介面與射頻IC量測服務"
       ],
       "customers": [
-        "NVIDIA(H100/B200 SLT系統級測試)",
-        "AMD(MI300X SoIC封裝測試)",
-        "Qualcomm(Snapdragon SoC測試)",
-        "聯發科(2454)(天璣SoC測試)",
-        "Apple(A18/M4封裝測試)"
+        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
+        "AMD（AI加速器應用對象，非MOPS揭露客戶）",
+        "Qualcomm（SoC測試應用對象，非MOPS揭露客戶）",
+        "聯發科（SoC測試供應鏈對象，非MOPS揭露客戶）",
+        "台積電（先進封裝供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "日月光投控",
@@ -48,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2449 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路之設計、製造、測試、加工、包裝及買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%、累計YoY+36.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "AI GPU系統級測試(SLT)與高溫老化測試(HAST 85°C/85%RH)",
-        "先進封裝後段測試(FT)與KGD良率測試",
-        "5G射頻測試與毫米波(mmWave 28/39GHz)量測技術"
+        "CP、FT與SLT測試程式及治具協同開發",
+        "高功耗封裝的溫控、供電完整性與失效隔離",
+        "先進封裝測試資料與KGD良率追溯"
       ],
       "swot": {
         "strengths": [
-          "6月營收3.62億YoY+28.6%、累計YoY+36.1%，AI GPU測試需求帶動封測營收成長",
-          "AI GPU系統級測試（SLT）與高溫老化測試（HAST 85°C/85%RH）技術領先",
-          "NVIDIA H100/B200 SLT測試與AMD MI300X SoIC封裝測試認證，客戶關係緊密"
+          "MOPS直接支持IC測試與包裝，可承接先進封裝後段驗證",
+          "7月營收YoY+36.7%、MoM+10.2%，公司整體測試需求強勁"
         ],
         "weaknesses": [
-          "MoM-4.1%，月度測試訂單波動",
-          "封測產業毛利率受限於測試價格競爭",
-          "AI GPU測試產能受限於測試機台交期"
+          "MOPS未揭露SLT設備、測試條件、具名客戶或先進封裝收入占比",
+          "高功耗AI晶片測試需要昂貴機台、治具與散熱配套，資本支出壓力高"
         ],
         "opportunities": [
-          "NVIDIA B200/GB200放量帶動SLT系統級測試需求大幅增長",
-          "先進封裝（CoWoS/SoIC）後段測試（FT）與KGD良率測試需求隨AI封裝增長",
-          "2.5D/3D封裝測試技術門檻高，測試單價提升"
+          "2.5D／3D封裝提升系統級測試、溫控與失效分析難度及單價",
+          "AI加速器出貨增加可帶動CP、FT、SLT與Burn-in多站測試需求"
         ],
         "threats": [
-          "日月光/安靠在封測市佔領先，京元電子為專業測試廠面臨整合競爭",
-          "測試機台（Advantest 9300等）交期長影響產能擴充",
-          "AI GPU測試規格變化快速，需持續投資新測試方案"
+          "日月光、安靠與其他大型OSAT可用封裝測試整合方案競爭",
+          "測試平台世代快速更新與機台交期可能限制擴產回報"
         ]
       }
     },

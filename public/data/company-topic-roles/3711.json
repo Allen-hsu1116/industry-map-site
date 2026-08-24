@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3711",
   "companyName": "日月光投控",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -98,20 +98,19 @@
       "directness": "indirect",
       "supplyChainStage": "server_odm",
       "roleType": "server_packaging_test",
-      "roleSummary": "日月光投控6月營收657.83億YoY+32.9%，累計3647.26億YoY+22.0%。MOPS登記為一般投資業(控股公司)，旗下日月光半導體為全球最大封測廠。AI GPU/ASIC封裝測試為核心成長動能，NVIDIA/AMD/Broadcom AI晶片封測需求持續擴大，CoWoS後段封測受益於先進封裝產能擴張。",
+      "roleSummary": "日月光投控本體MOPS僅為一般投資業，AI伺服器角色來自集團子公司之封裝、測試與電子製造服務，不能把子公司產品當成控股公司直接產品，也不能把具名晶片商當成MOPS確認客戶。2026年7月合併營收737.84億元、YoY+43.2%，為全公司口徑。",
       "products": [
-        "AI GPU FC-BGA封裝測試(NVIDIA H100/B200)",
-        "伺服器ASIC封裝(Broadcom/Marvell客製AI晶片)",
-        "高速SerDes訊號測試(112G/224G PAM4)",
-        "CoWoS後段封裝測試(2.5D/3D整合測試)",
-        "HBM記憶體封裝測試(TSV堆疊測試)"
+        "集團子公司AI加速器IC封裝服務",
+        "集團子公司AI／HPC晶片成品測試服務",
+        "集團子公司高速網路ASIC封裝測試服務",
+        "集團子公司資料中心電子製造服務"
       ],
       "customers": [
-        "NVIDIA(H100/B200 AI GPU封測)",
-        "AMD(MI300X AI加速器封測)",
-        "Broadcom(客製AI ASIC封測)",
-        "Marvell(資料中心ASIC封測)",
-        "Google(TPU AI晶片封測)"
+        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
+        "AMD（AI加速器應用對象，非MOPS揭露客戶）",
+        "Broadcom（資料中心ASIC應用對象，非MOPS揭露客戶）",
+        "Marvell（高速網路ASIC應用對象，非MOPS揭露客戶）",
+        "台積電（先進封裝供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "安靠",
@@ -134,36 +133,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3711 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：H201010 一般投資業。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%、累計YoY+25.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "AI GPU FC-BGA封裝測試量產( substrate 80x80mm)",
-        "高速SerDes訊號測試(112G/224G PAM4 BER<1e-12)",
-        "CoWoS後段封裝測試整合(2.5D/3D TSV)"
+        "集團子公司晶圓測試、封裝後測與系統級測試整合",
+        "高I/O封裝的翹曲、熱循環與訊號完整性驗證",
+        "AI伺服器電子製造的板級組裝與可追溯性管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收657.8億YoY+32.9%，累計YoY+22.0%，AI封測需求帶動強勁成長",
-          "AI GPU FC-BGA封裝測試量產(substrate 80x80mm+)，NVIDIA H100/B200主要封測夥伴",
-          "高速SerDes訊號測試(112G/224G PAM4 BER<1e-12)技術領先"
+          "7月合併營收YoY+43.2%、MoM+12.2%，集團整體營運動能強",
+          "集團具封裝、測試與電子製造服務，可涵蓋AI伺服器多個後段環節"
         ],
         "weaknesses": [
-          "AI封測產能擴張需要大量資本支出(測試機台/無塵室)",
-          "高階封裝測試人才招募競爭激烈",
-          "單一大客戶(NVIDIA)營收集中度風險"
+          "控股公司MOPS僅揭露一般投資業，角色完全依賴子公司能力",
+          "月營收未拆分AI伺服器、封裝測試與EMS貢獻，題材占比不透明"
         ],
         "opportunities": [
-          "AI ASIC封裝測試(Broadcom/Marvell/Google TPU)客戶擴展",
-          "CoWoS後段封裝測試(2.5D/3D TSV)受惠台積電先進封裝擴產",
-          "HBM記憶體封裝測試(TSV堆疊)新應用"
+          "AI加速器與高速交換ASIC增加封裝測試複雜度及單位價值",
+          "先進封裝產能擴張可帶動後段測試與板級組裝需求"
         ],
         "threats": [
-          "中國封測廠(長電科技/通富微電)在AI封測產能擴張競爭",
-          "Intel內部封測(idm)自給率提升",
-          "地緣政治風險影響AI晶片出口管制"
+          "晶圓代工廠與IDM擴大內製封裝可能壓縮外包空間",
+          "出口管制與AI晶片景氣循環會放大高階封測資本支出風險"
         ]
       }
     },

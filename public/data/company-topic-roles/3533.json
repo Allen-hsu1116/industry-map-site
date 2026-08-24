@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3533",
   "companyName": "嘉澤",
-  "updatedAt": "2026-07-08",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -89,18 +89,18 @@
       "directness": "indirect",
       "supplyChainStage": "silicon_photonics",
       "roleType": "optical_connector_supplier",
-      "roleSummary": "嘉澤跨入CPO光連接器與矽光子模組連接器，5月營收30.4億年增9%。CPO技術為矽光子下一世代互連關鍵，嘉澤為連接器端先佈局者。",
+      "roleSummary": "嘉澤MOPS只揭露「連接器」，沒有CPO、矽光子、Fiber Array、OSFP／QSFP-DD或Intel／Broadcom客戶；本題材應定位為高速交換器與光模組周邊的電連接器潛在供應，而非矽光子晶片或光耦合核心廠。2026年7月營收33.69億元、YoY+18.6%，未拆分光通訊貢獻。",
       "products": [
-        "CPO用光連接器(Co-Packaged Optics)(<1μm對位)",
-        "矽光子模組Fiber Array耦合連接器",
-        "OSFP/QSFP-DD光模組連接器(400G/800G)",
-        "CPU socket(LGA/PGA)(伺服器用)",
-        "高速背板連接器(112G PAM4)"
+        "OSFP光模組用高速電連接器（應用推定）",
+        "QSFP-DD光模組用高速電連接器（應用推定）",
+        "高速交換器背板連接器",
+        "CPO模組周邊電源與訊號連接器（應用推定）"
       ],
       "customers": [
-        "Intel(矽光子CPO光連接器)(CPU socket供應)",
-        "Broadcom(矽光子模組連接器)",
-        "台積電(2330)(先進封裝用測試插座)"
+        "Intel（CPO平台對象，非MOPS揭露客戶）",
+        "Broadcom（交換器／CPO平台對象，非MOPS揭露客戶）",
+        "NVIDIA（高速網路平台對象，非MOPS揭露客戶）",
+        "Amphenol（高速連接器競合／驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Amphenol"
@@ -124,36 +124,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3533 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：連接器。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收33.69億元，MoM+8.9%、YoY+18.6%、累計YoY+17.4%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "low",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "CPO用光連接器對位精度(<1μm)",
-        "矽光子模組fiber array耦合連接器",
-        "OSFP/QSFP光模組連接器量產"
+        "112G／224G PAM4電連接器的插入損耗與串擾控制",
+        "高速連接器端子阻抗、接觸電阻與鍍層可靠度",
+        "高密度連接器的熱插拔壽命與機構公差堆疊"
       ],
       "swot": {
         "strengths": [
-          "CPO用光連接器(Co-Packaged Optics)(<1μm對位精度)技術領先",
-          "矽光子模組Fiber Array耦合連接器與Intel/Broadcom合作",
-          "OSFP/QSFP-DD光模組連接器(400G/800G)量產"
+          "MOPS確認連接器主業，可對應光模組與高速交換器的電連接需求",
+          "7月營收YoY+18.6%、累計YoY+17.4%，公司整體需求穩健"
         ],
         "weaknesses": [
-          "CPO光連接器為新興應用，市場規模尚小",
-          "光連接器精度要求高(<1μm)，良率提升需要時間",
-          "CPO技術路線尚在標準化階段"
+          "MOPS未揭露矽光子、CPO或任何光纖耦合產品，題材僅屬周邊電連接",
+          "未揭露Intel、Broadcom或NVIDIA交易關係，客戶與營收占比無法驗證"
         ],
         "opportunities": [
-          "AI資料中心CPO封裝帶動光連接器新需求",
-          "800G/1.6T光模組連接器(OSFP-DD)升級週期",
-          "矽光子Fiber Array耦合連接器隨Intel/Broadcom平台推進"
+          "800G／1.6T光模組升級可提高高速電連接器的性能與價值要求",
+          "CPO仍需要模組周邊電源、控制及板端連接介面"
         ],
         "threats": [
-          "Amphenol/TE Connectivity在光連接器市場技術領先",
-          "CPO技術路線不確定性(是否取代可插拔光模組)",
-          "中國光連接器廠追趕"
+          "Amphenol、TE Connectivity等國際大廠在高速連接器標準與客戶驗證領先",
+          "CPO封裝架構若減少可插拔介面，可能改變或縮減既有連接器用量"
         ]
       }
     }

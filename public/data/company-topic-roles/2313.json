@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2313",
   "companyName": "華通",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "leo-satellite-communications",
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "satellite_ground_equipment",
       "roleType": "leo_satellite_pcb_supplier",
-      "roleSummary": "華通為PCB大廠，5月營收67.6億年增13.0%，低軌衛星PCB為新成長動能。SpaceX Starlink及Amazon Kuiper訂單放量，累計營收年增11.7%。",
+      "roleSummary": "華通MOPS只揭露多層印刷電路板，沒有衛星、Starlink、Kuiper、Rogers或PTFE材料等細項；本角色應定位為低軌衛星酬載、用戶終端與閘道器可能採用高多層PCB的上游應用。2026年7月營收69.55億元、YoY+16.0%，不能據此認定衛星營收。",
       "products": [
-        "低軌衛星用高多層PCB(HDI/BGA 20+層)",
-        "智慧手機/平板HDI軟硬結合板(Rigid-Flex)",
-        "伺服器/基地台高層數PCB(28+層)",
-        "車用高頻PCB(RF/Millimeter Wave)",
-        "IC載板用HDI PCB(BGA/CSP載板)"
+        "低軌衛星酬載控制板用高多層PCB（應用推定）",
+        "用戶終端相位陣列天線PCB（應用推定）",
+        "衛星閘道器高速背板PCB（應用推定）",
+        "衛星通訊模組用軟硬結合PCB（應用推定）"
       ],
       "customers": [
-        "SpaceX(Starlink衛星PCB)",
-        "Apple(iPhone/iPad HDI板)",
-        "Amazon(Project Kuiper衛星PCB)",
-        "華為(手機PCB)",
-        "Intel(伺服器PCB)"
+        "SpaceX（Starlink應用對象，非MOPS揭露客戶）",
+        "Amazon（Project Kuiper應用對象，非MOPS揭露客戶）",
+        "Eutelsat OneWeb（衛星網路應用對象，非MOPS揭露客戶）",
+        "聯發科（衛星通訊晶片平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "欣興（3037）",
@@ -48,36 +46,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2313 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：多層印刷電路板。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收69.55億元，MoM+0.6%、YoY+16.0%、累計YoY+13.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "高多層HDI/BGA PCB壓合技術(20+層雷射鑽孔)",
-        "低軌衛星用高頻PCB材料(Rogers/PTFE低損耗)",
-        "軟硬結合板(Rigid-Flex)動態彎折可靠性製程"
+        "高多層板壓合與雷射盲埋孔互連",
+        "射頻板差動阻抗與低插入損耗控制",
+        "熱循環下通孔與層間接合可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "6月營收69.2億YoY+21.0%，累計395.4億YoY+13.2%，PCB需求穩健增長",
-          "高多層HDI/BGA PCB(20+層)量產能力，供貨SpaceX Starlink衛星板",
-          "軟硬結合板(Rigid-Flex)技術打入Apple iPhone/iPad供應鏈"
+          "MOPS確認多層PCB主業，可對應衛星電子系統的高密度互連需求",
+          "7月營收YoY+16.0%、累計YoY+13.6%，公司整體接單維持成長"
         ],
         "weaknesses": [
-          "低軌衛星PCB佔營收比例仍低，主要靠消費性電子支撐",
-          "衛星PCB認證週期長，客戶替換風險",
-          "中國PCB廠(深南/滬電)低價競爭壓力"
+          "MOPS未揭露衛星產品、材料規格或具名客戶",
+          "衛星應用占比與認證狀態不明，不能把全公司成長歸因本題材"
         ],
         "opportunities": [
-          "SpaceX Starlink Gen2衛星發射加速，PCB採購量持續增長",
-          "Amazon Project Kuiper衛星進入量產階段，新增PCB訂單",
-          "低軌衛星用高頻PCB材料(Rogers/PTFE)ASP顯著高於傳統FR-4"
+          "低軌衛星數量增加可帶動酬載與地面終端用高多層板需求",
+          "相位陣列終端升級有利高頻、細線與高可靠度PCB價值量提升"
         ],
         "threats": [
-          "中國PCB廠(深南電路/滬電股份)低價搶單",
-          "衛星PCB認證週期長，一旦被替換難以重回供應鏈",
-          "Starlink自研PCB的可能性(垂直整合風險)"
+          "星系業者垂直整合或更換板廠會使訂單高度波動",
+          "深南電路、滬電與其他高階PCB廠的價格及產能競爭"
         ]
       }
     }

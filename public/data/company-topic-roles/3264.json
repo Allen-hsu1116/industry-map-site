@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -99,17 +99,19 @@
       "directness": "indirect",
       "supplyChainStage": "hbm_test",
       "roleType": "hbm_wafer_test_provider",
-      "roleSummary": "欣銓6月營收15.52億MoM+2.25%。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務，受惠AI GPU HBM需求爆發，但測試環節受惠程度低於封測廠。",
+      "roleSummary": "欣銓MOPS支持記憶體IC晶圓測試、數位／混合訊號IC測試與晶圓型式Burn-in，但未揭露HBM、TSV、KGD或SK hynix／Micron客戶；因此只能定位為HBM堆疊前記憶體裸晶篩選的潛在測試能力。FinMind顯示2026年7月營收17.67億元、YoY+52.3%，不能全數歸因HBM。",
       "products": [
-        "HBM晶圓測試(TSV前CP測試)",
-        "DRAM die測試與分類(KGD)",
-        "HBM成品測試(封裝後FT)",
-        "Burn-in測試(HBM高溫老化篩選)"
+        "記憶體IC晶圓CP測試服務",
+        "數位訊號IC晶圓與成品測試服務",
+        "混合訊號IC晶圓與成品測試服務",
+        "晶圓型式Burn-in可靠度篩選",
+        "HBM堆疊前裸晶KGD篩選（潛在應用）"
       ],
       "customers": [
-        "SK hynix(HBM供應鏈測試)",
-        "Micron(HBM供應鏈測試)",
-        "力積電(6770)(利基記憶體測試)"
+        "SK hynix（HBM生態系對象，非MOPS揭露客戶）",
+        "Micron（HBM生態系對象，非MOPS揭露客戶）",
+        "Samsung Electronics（HBM生態系對象，非MOPS揭露客戶）",
+        "力積電（記憶體供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "京元電(2449)(記憶體IC測試代工)",
@@ -136,36 +138,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位及混合訊號IC晶圓與成品測試、晶圓型式Burn-in測試。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收17.67億元，MoM+13.8%、YoY+52.3%；TWSE月營收工具查無資料。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "HBM TSV堆疊前DRAM die晶圓測試與分類(KGD)",
-        "高溫Burn-in篩選HBM記憶體可靠性驗證",
-        "記憶體IC晶圓級測試探針卡高密度對位技術"
+        "高密度探針接觸與記憶體晶圓並行測試",
+        "晶圓型式Burn-in的溫度、電壓與失效篩選控制",
+        "HBM堆疊前KGD分類與測試資料追溯（潛在流程）"
       ],
       "swot": {
         "strengths": [
-          "HBM晶圓測試(TSV前CP測試)與DRAM die測試分類(KGD)為HBM供應鏈核心環節，SK hynix/Micron為測試合作夥伴",
-          "MOPS登記記憶體IC晶圓測試為主營業務，高溫Burn-in篩選HBM記憶體可靠性驗證具技術壁壘",
-          "HBM TSV堆疊前DRAM die晶圓測試與分類(KGD)為HBM量產良率保證關鍵步驟"
+          "MOPS明確支持記憶體晶圓測試與晶圓型式Burn-in能力",
+          "FinMind顯示7月營收YoY+52.3%、MoM+13.8%，公司整體測試需求強"
         ],
         "weaknesses": [
-          "月營收資料無法取得(上櫃)，HBM測試收入占比與成長動能難以量化",
-          "HBM測試需高溫Burn-in設備投資金額大，設備取得週期影響產能擴張速度",
-          "HBM測試標準與規格隨SK hynix/Micron技術演進快速變化，測試方案需持續更新"
+          "MOPS未揭露HBM、TSV、KGD或具名記憶體客戶，題材直接性有限",
+          "TWSE月營收工具查無資料，且公司未拆分HBM測試收入"
         ],
         "opportunities": [
-          "AI GPU(H100/B200)搭載HBM3/HBM3e需求爆發，帶動DRAM die KGD測試需求倍增",
-          "HBM4世代堆疊層數增至12-16層，KGD篩選重要性提升有利測試單價增長",
-          "Micron HBM量產導入帶動台灣供應鏈測試需求，欣銓為Micron HBM測試合作夥伴可受惠"
+          "HBM堆疊層數提高將增加堆疊前裸晶篩選與資料追溯的重要性",
+          "記憶體供應商擴產可能增加第三方晶圓測試與Burn-in委外需求"
         ],
         "threats": [
-          "SK hynix/Micron可能擴大內部測試產能減少委外，影響欣銓HBM測試訂單",
-          "京元電子(2449)積極搶攻HBM測試市場，價格競爭可能壓縮測試毛利",
-          "HBM技術路線變化(如混合鍵合替代微凸塊)可能改變測試流程與需求"
+          "記憶體IDM擴大內部測試會壓縮外包訂單",
+          "京元電子、力成等測試與封測業者競爭可能壓低價格"
         ]
       }
     },

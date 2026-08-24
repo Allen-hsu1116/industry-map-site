@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "3231",
   "companyName": "緯創",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器整機與 EMS",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "direct_enabler",
       "supplyChainStage": "system_assembly",
       "roleType": "ai_server_odm",
-      "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。",
+      "roleSummary": "緯創MOPS只以「3C電子產品其他」概括主業，未揭露HGX型號或NVIDIA、Dell、Meta、Microsoft等客戶；AI伺服器ODM角色可由題材脈絡保留，但具名平台與客戶須標為非MOPS揭露。2026年7月營收3,082.19億元、YoY+60.8%、累計YoY+88.2%，公司僅說明客戶需求增加。",
       "products": [
-        "AI伺服器整機組裝(NVIDIA HGX H100/B200 platform/ODM)",
-        "GPU伺服器主板(NVLink互連/SXM5 socket/56G PAM4 PCB)",
-        "伺服器機殼與散熱模組組裝(1U/2U/4U氣冷+液冷版/3D均熱板)",
-        "AI邊緣運算伺服器(液冷版/40W-300W TDP/NVIDIA Jetson/IGX)",
-        "雲端資料中心伺服器EMS(Dell/HPE/Meta/Microsoft ODM代工)"
+        "AI GPU伺服器ODM設計與組裝服務",
+        "GPU伺服器主機板與加速器基板",
+        "機架式伺服器整機與機櫃整合",
+        "AI伺服器液冷就緒機構整合"
       ],
       "customers": [
-        "NVIDIA(AI伺服器ODM)",
-        "Dell(伺服器ODM)",
-        "HP Enterprise(伺服器)",
-        "Meta(資料中心伺服器)",
-        "Microsoft(Azure伺服器)"
+        "NVIDIA（GPU平台合作對象，非MOPS揭露客戶）",
+        "Dell（伺服器應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
+        "Meta（雲端資料中心應用對象，非MOPS揭露客戶）",
+        "Microsoft（Azure應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "鴻海(2317)",
@@ -55,32 +54,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：3C電子產品其他。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收3,082.19億元，MoM-4.2%、YoY+60.8%、累計YoY+88.2%；公司備註客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "NVIDIA HGX H100/B200 GPU伺服器ODM設計與量產",
-        "伺服器液冷散熱系統整合(冷板式Direct-to-Chip)",
-        "NVLink/NVSwitch互連拓撲主板佈線設計"
+        "GPU基板高密度SMT與高速差動訊號佈線",
+        "NVLink／PCIe互連拓撲的系統整合與測試",
+        "機櫃級電源、氣流及Direct-to-Chip液冷協同設計"
       ],
       "swot": {
         "strengths": [
-          "6月營收321.82億YoY+53.8%，累計YoY+94.0%，AI伺服器ODM增速最快",
-          "HGX H100/B200 GPU伺服器基板SXM/PCIe高密度SMT製程量產"
+          "7月營收YoY+60.8%、累計YoY+88.2%，公司整體需求成長非常強",
+          "具主機板、整機與機櫃量產整合能力，可承接AI伺服器高複雜度ODM"
         ],
         "weaknesses": [
-          "AI伺服器ODM毛利仍低，營收高成長但利潤貢獻有限",
-          "緯穎(6669)為緯創控股子公司，AI伺服器出貨部分透過緯穎，合併報表關係複雜"
+          "MOPS主業描述過於概括，未揭露AI伺服器產品與客戶明細",
+          "7月MoM-4.2%，出貨節奏仍可能受專案認列與零件供應影響"
         ],
         "opportunities": [
-          "累計營收YoY+94.0%接近翻倍，AI伺服器ODM擴產動能強勁",
-          "客戶需求持續增加，AI伺服器訂單能見度高"
+          "GPU叢集從整機走向機櫃級交付，提升整合與測試價值",
+          "企業與雲端業者擴大AI算力建置，可延長高階伺服器需求週期"
         ],
         "threats": [
-          "廣達(2382)6月YoY+102.9%增速超越緯創，競爭壓力大",
-          "AI伺服器ODM代工利潤率低，若需求放緩將面臨產能利用率問題"
+          "廣達、鴻海、英業達與緯穎爭奪相同AI伺服器平台訂單",
+          "客戶集中、平台世代切換與低毛利ODM結構可能放大獲利波動"
         ]
       }
     },

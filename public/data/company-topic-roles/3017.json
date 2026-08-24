@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3017",
   "companyName": "奇鋐",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "thermal",
       "roleType": "ai_server_thermal_solution_provider",
-      "roleSummary": "奇鋐為AI伺服器散熱與機殼核心供應商，6月營收176.2億元年增66.1%，累計年增85.5%。提供NVIDIA HGX伺服器液冷冷板、VC均熱板、熱管模組及機殼導風罩。MOPS主要經營：3C電子產品。",
+      "roleSummary": "奇鋐MOPS僅揭露3C電子產品，沒有冷板微通道尺寸、B200功耗或任何具名伺服器客戶；本角色保留為AI伺服器散熱模組與機構件供應者，但舊資料的精密規格與客戶直供敘述已收斂。2026年7月營收185.90億元、YoY+57.4%、累計YoY+80.3%，公司說明客戶需求增加，未拆分AI占比。",
       "products": [
-        "AI伺服器機殼與導風罩(1U/2U/4U NVIDIA HGX)",
-        "液冷冷板(銅微通道0.3mm寬/流量>30L/min)",
-        "伺服器熱管模組(U型熱管φ6mm/φ8mm)",
-        "VC均熱板(銅箔蝕刻毛細結構/厚度<2mm)",
-        "AI GPU散熱模組(NVIDIA B200 1000W TDP)"
+        "AI伺服器冷板散熱模組",
+        "伺服器VC均熱板模組",
+        "伺服器熱管與鰭片散熱模組",
+        "高風量伺服器風扇與導風罩",
+        "GPU伺服器機殼散熱整合件"
       ],
       "customers": [
-        "Dell(PowerEdge AI伺服器散熱)",
-        "HPE(Cray XD670 AI伺服器散熱)",
-        "Supermicro(GPU SuperServer散熱模組)",
-        "NVIDIA(HGX參考設計散熱)",
-        "緯穎(6669)(AI伺服器機殼/散熱)"
+        "NVIDIA（GPU平台應用對象，非MOPS揭露客戶）",
+        "Dell（伺服器應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
+        "Supermicro（伺服器應用對象，非MOPS揭露客戶）",
+        "緯穎（伺服器供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "其他散熱模組與液冷方案供應商",
@@ -53,32 +53,46 @@
           "title": "奇鋐科技股份有限公司 114 年度合併財務報告書",
           "url": "https://doc.twse.com.tw/pdf/202504_3017_AI1_20260528_000401.pdf",
           "claim": "Financial report confirms 114 revenue scale and main business scope covering electronic parts/materials, communication electronics and computer peripherals manufacturing/processing/trading."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：3C電子產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%；公司備註客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "銅微通道冷板通道寬度0.3mm/流量>30L/min",
-        "VC均熱板銅箔蝕刻毛細結構厚度<2mm",
-        "U型熱管φ6mm/φ8mm彎折半徑<3R"
+        "冷板流道壓降、均溫性與漏液可靠度設計",
+        "VC／熱管毛細結構與熱阻最佳化",
+        "風扇、導風罩與機殼的系統級氣流模擬"
       ],
       "swot": {
         "strengths": [
-          "散熱模組+機殼垂直整合，AI伺服器散熱方案領先",
-          "6月營收176.2億元年增66.1%，累計年增85.5%"
+          "7月營收YoY+57.4%、累計YoY+80.3%，整體需求與出貨動能強",
+          "具冷板、VC、熱管、風扇與機構整合的完整散熱產品組合"
         ],
         "weaknesses": [
-          "散熱方案ASP受限於客戶成本壓力",
-          "機殼同質化競爭"
+          "MOPS未逐項揭露散熱產品規格或客戶，精確AI營收占比無法驗證",
+          "高功耗平台散熱方案需共同設計，開發與驗證成本高且客戶集中"
         ],
         "opportunities": [
-          "AI GPU功耗1000W+帶動液冷方案需求爆發",
-          "NVIDIA B200散熱規格升級帶動ASP提升"
+          "GPU功耗提高將推升冷板、VC與機櫃氣流設計的單機價值",
+          "氣冷轉液冷的過渡期有利同時具備兩種散熱路線的供應商"
         ],
         "threats": [
-          "雙鴻(3324)競爭VC/熱管市場份額",
-          "伺服器機殼同質化競爭壓力"
+          "雙鴻、健策與國際散熱廠擴產可能加劇價格與人才競爭",
+          "平台設計變更、漏液事件或快接供應瓶頸可能延遲量產"
         ]
       }
     },

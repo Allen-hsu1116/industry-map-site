@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2409",
   "companyName": "友達",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "display_panel_supplier",
-      "roleSummary": "友達6月營收249.52億YoY+13.8%，累計1399.23億YoY-1.0%。MOPS登記為薄膜電晶體液晶顯示器及系統/垂直場域/智慧移動解決方案。AI伺服器關聯度低但AI PC/監視器面板需求間接受惠，主力轉型車用顯示器與MicroLED。",
+      "roleSummary": "友達MOPS支持TFT-LCD與顯示系統、垂直場域及智慧移動方案，沒有AI伺服器整機、主板或散熱產品；本角色只能定位為資料中心控制室、KVM維運終端與監控看板的顯示應用。2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%，公司整體營運轉弱，亦未揭露AI伺服器貢獻。",
       "products": [
-        "LTPS高解析手機面板(6.1\" 460ppi iPhone供應)",
-        "車用顯示器(12.3\"中控/儀表曲面OLED/LTPS)(-40~85°C寬溫)",
-        "8K4K大尺寸電視面板(65\" 8K/4K 120Hz)",
-        "MicroLED顯示技術(穿戴/AR微顯示)(巨量轉移)",
-        "商用顯示器(會議85\"互動式觸控面板)"
+        "資料中心機架KVM終端用TFT-LCD面板（應用推定）",
+        "資料中心控制室拼接顯示面板",
+        "伺服器維運終端用觸控顯示模組",
+        "機房能源監控看板用商用顯示器"
       ],
       "customers": [
-        "Apple(iPhone LTPS面板)",
-        "Tesla(車用中控曲面顯示)",
-        "BMW(車用儀表OLED顯示)",
-        "Sony(Bravia電視面板)",
-        "Dell(商用Monitor面板)"
+        "Dell（KVM終端應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（維運顯示應用對象，非MOPS揭露客戶）",
+        "Vertiv（機房監控應用對象，非MOPS揭露客戶）",
+        "Schneider Electric（資料中心看板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "群創(3481)",
@@ -50,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：薄膜電晶體液晶顯示器及其系統，並提供垂直場域與智慧移動解決方案。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%、累計YoY-1.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "low",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "LTPS低溫多晶矽高解析面板製程(460ppi+)",
-        "車用顯示器寬溫抗震設計(-40~85°C/抗震MIL-810)",
-        "MicroLED/Mini LED顯示器前瞻技術(巨量轉移mass transfer)"
+        "TFT-LCD顯示模組與觸控感測整合",
+        "長時間點亮的亮度均勻性與影像殘留控制",
+        "商用顯示器遠端管理與多畫面拼接校正"
       ],
       "swot": {
         "strengths": [
-          "6月營收24.95億YoY+13.8%，面板需求穩定回溫",
-          "LTPS高解析面板（460ppi+）技術成熟，車用顯示器（-40~85°C寬溫）打入Tesla供應鏈",
-          "資本額754.7億，面板雙虎之一，垂直場域及智慧移動解決方案佈局多元"
+          "MOPS直接支持顯示器及系統能力，可對應資料中心維運與監控介面",
+          "具面板到垂直場域解決方案的整合基礎"
         ],
         "weaknesses": [
-          "累計營收YoY-1.0%，面板產業整體需求仍疲軟",
-          "AI伺服器應用面板佔營收比重極小，非主力業務",
-          "LCD面板價格波動大，毛利率不穩定"
+          "不製造AI伺服器，題材只屬顯示與維運周邊應用",
+          "7月營收MoM-18.4%、YoY-2.6%、累計YoY-1.2%，公司整體需求偏弱"
         ],
         "opportunities": [
-          "AI伺服器機房管理顯示面板需求隨資料中心擴建增長",
-          "車用顯示器在電動車/自駕車滲透率持續提升",
-          "Micro LED/Mini LED面板在高端應用前景佳"
+          "大型AI資料中心擴建可增加控制室與能源監控顯示需求",
+          "KVM與遠端維運終端升級可導入觸控及高可靠度顯示模組"
         ],
         "threats": [
-          "中國京東方/華星光電在LCD面板產能過剩壓迫價格",
-          "OLED在高端手機/TV面板逐步取代LCD",
-          "AI伺服器面板需求規模有限，對營收貢獻不顯著"
+          "資料中心顯示器用量遠低於運算、網路與散熱設備，題材彈性有限",
+          "京東方、華星光電等面板廠的價格競爭壓縮商用顯示利潤"
         ]
       }
     }

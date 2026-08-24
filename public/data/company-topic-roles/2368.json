@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2368",
   "companyName": "金像電",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -95,19 +95,20 @@
       "directness": "supplier",
       "supplyChainStage": "pcb",
       "roleType": "ai_server_pcb_supplier",
-      "roleSummary": "金像電為AI伺服器PCB核心供應商，6月營收8255.2億YoY78.2%，累計43660.4億YoY68.7%。6月營收82.6億年增78.2%，受惠AI伺服器高階PCB訂單爆量。MOPS主要經營：雙層多層印刷電路板製造。",
+      "roleSummary": "金像電MOPS支持雙層、多層PCB及電腦、通訊週邊零件加工，足以定位為AI伺服器主板、GPU基板與高速背板的PCB供應者；但MOPS未揭露層數、材料或廣達／鴻海／緯創／技嘉客戶。2026年7月營收100.15億元、YoY+77.4%，公司備註接單量增加，未拆分AI占比。",
       "products": [
-        "AI伺服器高層數PCB(24+ layer)(GPU基板)",
-        "高階伺服器主板(18-24層)(Intel/AMD平台)",
-        "800G交換器PCB(High-speed/Low-loss)",
-        "伺服器背板(Backplane)(高速連接)",
-        "記憶體模組PCB DDR5 RDIMM"
+        "AI GPU伺服器高多層主板PCB",
+        "GPU加速器基板PCB",
+        "800G／1.6T交換器高速PCB",
+        "伺服器高速背板PCB",
+        "DDR5 RDIMM記憶體模組PCB"
       ],
       "customers": [
-        "廣達(2382)(AI伺服器主板)",
-        "鴻海(2317)(AI伺服器GPU基板)",
-        "緯創(3231)(伺服器背板)",
-        "技嘉(2376)(GPU伺服器PCB)"
+        "廣達（AI伺服器應用對象，非MOPS揭露客戶）",
+        "鴻海（AI伺服器應用對象，非MOPS揭露客戶）",
+        "緯創（AI伺服器應用對象，非MOPS揭露客戶）",
+        "技嘉（GPU伺服器應用對象，非MOPS揭露客戶）",
+        "NVIDIA（GPU平台應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "南電(8046)",
@@ -139,32 +140,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：雙層、多層印刷電路板，以及電腦、電子、通訊、資訊產品與週邊電子零件加工。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收100.15億元，MoM+21.3%、YoY+77.4%、累計YoY+70.3%；公司備註接單量增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "AI伺服器高層數PCB(24+ layer)壓合技術",
-        "GPU基板超低損耗(Ultra Low Loss)基板材料應用",
-        "高速伺服器主板阻抗控制(Impedance Control)製程"
+        "高多層板連續壓合、雷射鑽孔與層間對位",
+        "低損耗高速材料的阻抗與插入損耗控制",
+        "大尺寸GPU基板與背板的翹曲及熱循環可靠度"
       ],
       "swot": {
         "strengths": [
-          "AI伺服器高層數PCB(24+ layer)壓合技術領先，6月營收82.55億YoY+78.2%",
-          "GPU基板超低損耗(Ultra Low Loss)基板材料應用，累計YoY+68.7%，接單量增加"
+          "MOPS直接支持多層PCB與電腦通訊產品加工，AI伺服器鏈結合理",
+          "7月營收YoY+77.4%、MoM+21.3%，公司並說明接單量增加"
         ],
         "weaknesses": [
-          "PCB為中游零組件，毛利受限於銅箔基板材料成本",
-          "AI伺服器PCB佔總營收比例提升中，但傳統PCB仍佔相當比重"
+          "MOPS未揭露PCB層數、材料、AI營收占比或具名客戶",
+          "高階PCB擴產與良率爬坡需要大量資本支出，且受CCL材料供應影響"
         ],
         "opportunities": [
-          "AI伺服器PCB從24層邁向30+層，技術門檻提升有利金像電高階產品",
-          "接單量增加趨勢明確，AI伺服器PCB需求持續擴大"
+          "GPU伺服器與高速交換器提高PCB層數、尺寸與低損耗材料用量",
+          "機櫃級AI系統增加主板、交換板、背板與記憶體板的總價值量"
         ],
         "threats": [
-          "欣興(3037)/燿華(2380)同樣布局AI伺服器高層數PCB，競爭加劇",
-          "PCB產業為資本密集，AI伺服器PCB擴產需要大量資本支出"
+          "欣興、滬電股份與其他高階PCB廠擴產可能壓縮價格與市占",
+          "AI平台改版或雲端資本支出降溫會放大高階產能稼動率波動"
         ]
       }
     },

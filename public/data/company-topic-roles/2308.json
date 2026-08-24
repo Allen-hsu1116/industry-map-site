@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -180,19 +180,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "power",
       "roleType": "ai_server_power_and_thermal_infrastructure_provider",
-      "roleSummary": "台達電是AI伺服器電源核心供應商，5月營收58.96億YoY+43.7%，AI資料中心電源與液冷散熱需求爆發。NVIDIA GB200/GB300伺服器採用台達電CRPS電源與液冷方案，為AI伺服器供應鏈直接賦能者。",
+      "roleSummary": "台達電MOPS明確揭露電源供應、無刷直流風扇與散熱系統，足以支持AI伺服器的電源與熱管理賦能角色；但MOPS未揭露CRPS瓦數、CDU容量或NVIDIA／雲端客戶。2026年7月營收670.73億元、YoY+47.7%、累計YoY+42.1%，仍是公司整體數據。",
       "products": [
-        "AI伺服器電源供應器（CRPS 800W/2000W+/鈦金級>96%效率）",
-        "資料中心液冷散熱系統（CDU Coolant Distribution Unit/100-800kW）",
-        "AI機櫃級電源管理櫃（Power Shelf/3相480V/BUSBAR供電）",
-        "HVDC高效直流供電方案（380V DC/3kW-100kW/整流櫃+配電櫃）"
+        "AI伺服器高瓦數CRPS電源供應器",
+        "資料中心HVDC整流與配電系統",
+        "AI機櫃電源架與匯流排系統",
+        "資料中心液冷分配單元與冷卻系統",
+        "高靜壓無刷直流伺服器風扇"
       ],
       "customers": [
-        "NVIDIA(GB200/GB300電源+液冷方案供應)",
-        "Dell(AI伺服器CRPS電源供應器)",
-        "HP Enterprise(資料中心電源+散熱方案)",
-        "Microsoft Azure(資料中心電源基礎設施)",
-        "Google(AI資料中心電源+液冷方案)"
+        "NVIDIA（AI平台應用對象，非MOPS揭露客戶）",
+        "Dell（伺服器應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
+        "Microsoft（資料中心應用對象，非MOPS揭露客戶）",
+        "Google（資料中心應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "光寶科(2301)",
@@ -230,33 +231,46 @@
           "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
           "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
           "claim": "Financial report identifies Delta as a global power management and thermal solution provider."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電源供應系統、無刷直流風扇、散熱系統、微型化關鍵零組件、工業自動化、網通及智慧樓宇等。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%、累計YoY+42.1%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "CDU（Coolant Distribution Unit）液冷分配單元系統整合",
-        "CRPS 800W/2000W+ 鈦金級電源供應器設計",
-        "AI 伺服器兩相浸沒式液冷（Immersion Cooling）方案"
+        "48V／高壓直流電源轉換與機櫃級配電",
+        "CRPS高效率數位電源控制與熱插拔冗餘",
+        "CDU供回水控制、漏液偵測與風液冷協同管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收656.03億YoY+55.4%，MOPS明確標註AI相關產品需求旺盛，累計YoY+41.0%",
-          "CDU液冷分配單元系統整合+CRPS 800W/2000W+鈦金級電源雙布局領先",
-          "NVIDIA GB200/GB300伺服器採用台達電CRPS電源與液冷方案"
+          "MOPS直接支持電源、風扇與散熱系統三項核心能力，題材鏈結明確",
+          "7月營收YoY+47.7%、累計YoY+42.1%，公司整體需求維持高成長"
         ],
         "weaknesses": [
-          "電源管理為核心但AI伺服器液冷為新領域，量產經驗累積中",
-          "營收規模大但AI伺服器相關佔比仍個位數，短期對EPS貢獻有限"
+          "MOPS未揭露AI伺服器產品規格、具名客戶或題材營收占比",
+          "機櫃電源與液冷系統需長期共同設計，驗證責任與售後成本高"
         ],
         "opportunities": [
-          "AI資料中心液冷滲透率從<10%邁向30%+，CDU系統整合為台達電獨家優勢",
-          "BBU備援方案搭配NVIDIA GB200出貨，電源+散熱一站式方案競爭力強"
+          "高功耗GPU機櫃將同時提升電源轉換、配電、風扇與液冷價值量",
+          "資料中心從單機供電走向機櫃級HVDC架構，擴大系統方案機會"
         ],
         "threats": [
-          "光寶科(2301)AI伺服器CRPS電源競爭，價格壓力",
-          "液冷散熱技術門檻高但奇鋐(3017)等專業散熱廠積極搶進"
+          "光寶科、Vertiv與Schneider Electric在資料中心電源及熱管理競爭",
+          "電源架構或液冷標準快速變動可能造成開發與產能投資錯配"
         ]
       }
     },

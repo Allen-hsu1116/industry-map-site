@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "2357",
   "companyName": "華碩",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-24T19:03:41Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
-      "directness": "indirect",
+      "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ai_pc_gpu_system_maker",
-      "roleSummary": "華碩是GPU顯示卡與AI PC設計大廠，5月營收690.9億年增9.3%，累計3,594億年增34.5%。AI PC與電競ROG筆電帶動成長，也佈局GPU伺服器與AI工作站。",
+      "roleSummary": "華碩MOPS支持電腦系統、主機板與板卡的設計研發銷售，2026年7月月營收更明確備註成長主要來自AI伺服器銷售，題材直接性成立；但MOPS未揭露特定伺服器型號或具名客戶。7月營收841.31億元、YoY+53.3%，惟MoM-21.2%顯示出貨波動。",
       "products": [
-        "AI PC筆電(Zenbook Duo/Pro Art)",
-        "電競筆電/桌機(ROG Strix/TUF)",
-        "GPU顯示卡(RTX 5090/5080 AIB)",
-        "AI工作站(ProArt Station/ESC8000)",
-        "主機板(Z890/B860 DIY市場)"
+        "ASUS ESC8000系列GPU伺服器",
+        "ASUS RS系列雙路機架伺服器",
+        "ASUS AI工作站",
+        "GPU伺服器主機板與加速卡載板",
+        "AI伺服器叢集部署與管理方案"
       ],
       "customers": [
-        "消費者(DTC AI PC/電競)",
-        "NVIDIA(GPU AIB合作夥伴)",
-        "Amazon(AI PC/電競)",
-        "Newegg(DIY主機板通路)",
-        "微星(2377)(AI工作站經銷)"
+        "NVIDIA（GPU平台合作對象，非MOPS揭露客戶）",
+        "AMD（Instinct平台合作對象，非MOPS揭露客戶）",
+        "Intel（Xeon平台合作對象，非MOPS揭露客戶）",
+        "ASPEED（BMC供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "微星(2377)",
@@ -51,32 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：3C資訊產品（電腦系統、主機板、各類板卡及智慧型手機等）之設計、研發及銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收841.31億元，MoM-21.2%、YoY+53.3%、累計YoY+40.9%；公司明確備註主要來自AI伺服器銷售成長。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-24",
       "status": "verified",
       "techFocus": [
-        "AI PC Zenbook Duo 雙螢幕鉸鏈機構設計",
-        "電競筆電 ROG Strix GPU AIB 散熱模組",
-        "ProArt AI 創作工作站 NPU/GPU 效能調校"
+        "多GPU伺服器的PCIe／NVLink拓撲與高速主板設計",
+        "BMC遠端管理、韌體安全與叢集監控整合",
+        "高功耗GPU伺服器的風液冷與電源協同設計"
       ],
       "swot": {
         "strengths": [
-          "6月營收106.72億YoY+55.6%，MOPS明確標註AI伺服器銷售成長為主要動能",
-          "ASUS RS系列AI伺服器品牌+ODM雙模式，累計YoY+38.8%"
+          "公司明確說明7月營收成長主要來自AI伺服器銷售，題材證據直接",
+          "7月營收YoY+53.3%、累計YoY+40.9%，AI伺服器成長動能強"
         ],
         "weaknesses": [
-          "AI伺服器品牌出貨量遠小於ODM大廠(廣達/緯創)",
-          "3C資訊產品(主機板/顯卡/手機)為主力，AI伺服器佔比仍小"
+          "7月MoM-21.2%，專案認列與出貨節奏波動大",
+          "MOPS未揭露AI伺服器型號、客戶與收入占比，品牌伺服器規模仍難量化"
         ],
         "opportunities": [
-          "AI伺服器銷售成長為6月營收YoY+55.6%主要動能，成長趨勢明確",
-          "華碩品牌力+AI伺服器可切入企業端AI推論伺服器市場"
+          "企業私有AI與推論部署有利華碩品牌伺服器及工作站通路",
+          "主機板、板卡與整機能力可延伸至叢集管理及機櫃級方案"
         ],
         "threats": [
-          "技嘉(2376)6月YoY+68.6%在AI伺服器品牌競爭中增速超越華碩",
-          "ODM大廠(廣達/緯創)也可能推出品牌AI伺服器壓縮華碩空間"
+          "技嘉、Supermicro及大型ODM同時爭取企業AI伺服器市場",
+          "GPU供應、平台認證與售後服務成本可能限制成長轉化為利潤"
         ]
       }
     }
