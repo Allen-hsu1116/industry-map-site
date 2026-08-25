@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6182",
   "companyName": "合晶",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -89,17 +89,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "合晶6月營收9.66億MoM+8.67%。功率MOSFET/IGBT用6/8吋矽晶圓與EPI外延晶圓供應商，間接受惠儲能逆變器功率元件需求，主力仍為半導體矽晶圓材料。",
+      "roleSummary": "合晶MOPS僅揭露半導體及其材料，未揭露電芯、正負極材料或儲能系統；本題材關聯限於功率半導體所需矽晶圓上游。FinMind顯示2026年7月營收9.94億元、MoM+2.9%、YoY+18.9%，公司整體成長不能直接歸因儲能。",
       "products": [
-        "6吋/8吋矽晶圓(功率MOSFET/IGBT基板)",
-        "外延晶圓(EPI Wafer)(功率MOSFET/IGBT)",
-        "研磨晶圓(離散功率元件基板)",
-        "區熔晶圓(FZ Wafer)(高壓功率元件)"
+        "6吋重摻雜拋光矽晶圓（功率元件基板）",
+        "8吋重摻雜拋光矽晶圓（功率元件基板）",
+        "6吋矽磊晶晶圓（MOSFET／IGBT用）",
+        "8吋矽磊晶晶圓（功率管理IC用）"
       ],
       "customers": [
-        "世界先進(5347)(矽晶圓採購)",
-        "台積電(2330)(功率代工基板)",
-        "Vishay(功率MOSFET晶圓)"
+        "世界先進(5347；功率元件晶圓供應鏈對象，非MOPS揭露客戶)",
+        "漢磊(3707；功率半導體應用對象，非MOPS揭露客戶)",
+        "Infineon（功率元件應用對象，非MOPS揭露客戶）",
+        "STMicroelectronics（功率元件應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "環球晶(6488)(功率半導體用矽晶圓)",
@@ -107,9 +108,9 @@
         "昭和電工(外延晶圓)"
       ],
       "risks": [
-        "6月營收9.66億(FinMind)但儲能用功率半導體晶圓佔比低",
-        "SiC/GaN功率半導體逐漸替代矽基功率半導體",
-        "儲能BMS用IC晶圓需求與儲能建設進度連動"
+        "MOPS未揭露電池或儲能系統產品，題材僅屬上游間接關聯",
+        "月營收無法拆分功率元件用晶圓與其他半導體材料貢獻",
+        "SiC功率元件滲透可能分流部分矽基高壓應用"
       ],
       "legacy": {},
       "evidence": [
@@ -126,36 +127,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體及其材料之研發、設計、製造、進出口及代理銷售。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收9.94億元，MoM+2.9%、YoY+18.9%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "6/8吋矽晶圓長晶與切磨拋製程(CZ/FZ)",
-        "功率MOSFET/IGBT用EPI外延晶圓生長技術",
-        "區熔(FZ)高阻值矽晶圓(高壓功率元件)"
+        "重摻雜矽單晶電阻率與氧碳濃度控制",
+        "矽磊晶層厚度、摻雜均勻度與缺陷密度控制",
+        "6吋／8吋拋光平坦度與表面金屬污染控制"
       ],
       "swot": {
         "strengths": [
-          "6吋/8吋矽晶圓為功率MOSFET/IGBT基板，電動車儲能需求帶動",
-          "外延晶圓(EPI Wafer)可提升功率元件性能",
-          "7月營收9.94億MoM+2.9%，功率半導體基板需求穩定"
+          "矽晶圓與磊晶晶圓可切入儲能PCS所需功率半導體上游",
+          "FinMind顯示7月營收YoY+18.9%、MoM+2.9%，整體需求改善"
         ],
         "weaknesses": [
-          "儲能電池為間接角色，合晶不生產電池僅提供矽基板",
-          "功率MOSFET/IGBT矽基板ASP受限於大宗矽晶圓價格",
-          "SiC/GaN功率元件可能長期取代Si基板"
+          "MOPS未揭露電池或儲能系統產品，題材僅屬上游間接關聯",
+          "月營收無法拆分功率元件用晶圓與其他半導體材料貢獻"
         ],
         "opportunities": [
-          "電動車800V平台IGBT需求帶動8吋矽晶圓",
-          "儲能逆變器功率MOSFET需求增長",
-          "外延晶圓(EPI)在功率元件滲透率提升"
+          "儲能PCS與充電設備擴產可提升MOSFET／IGBT用矽晶圓需求",
+          "功率半導體國產化可增加在地晶圓驗證機會"
         ],
         "threats": [
-          "SiC晶圓(SiC substrate)取代Si晶圓在功率應用趨勢",
-          "中國功率半導體晶圓代工自建矽晶圓供應",
-          "儲能市場政策補貼退坡影響需求"
+          "SiC功率元件滲透可能分流部分矽基高壓應用",
+          "矽晶圓價格競爭與客戶庫存調整會壓縮成長"
         ]
       }
     },

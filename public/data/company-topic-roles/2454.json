@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2454",
   "companyName": "聯發科",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -93,18 +93,18 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "edge_ai_soc_provider",
-      "roleSummary": "聯發科為Edge AI SoC領導廠商，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。6月營收580.1億年增2.8%。Kompanio系列Chromebook SoC與Genio AIoT平台為端側AI推論核心產品，打入Samsung/Lenovo供應鏈。",
+      "roleSummary": "聯發科MOPS揭露多媒體IC、電腦週邊IC、高階消費性IC與特殊應用IC，與Edge AI／AIoT SoC直接相關；Genio、Kompanio與Dimensity NPU為題材上下文，客戶對應非MOPS揭露。2026年7月營收484.75億元、YoY+12.2%，但MoM-16.4%、累計YoY僅+0.8%，顯示單月成長未全面轉化為累計動能。",
       "products": [
-        "Kompanio系列Edge AI SoC(Chromebook/平板)",
-        "AIoT晶片平台(Genio 700/1200)",
-        "終端AI加速晶片(NPU APU整合TOPS>5)",
-        "智慧家居SoC(Matter/Wi-Fi 7整合)"
+        "Genio 700／1200 AIoT SoC平台",
+        "Kompanio系列Chromebook運算SoC",
+        "Dimensity系列整合NPU行動SoC",
+        "Pentonic系列智慧電視多媒體SoC"
       ],
       "customers": [
-        "Samsung(Galaxy Chromebook SoC)",
-        "小米(Chromebook/平板SoC)",
-        "Lenovo(ThinkPad Chromebook SoC)",
-        "Sony(Bravia電視SoC)"
+        "Google（Android／Chromebook平台對象，非MOPS揭露客戶）",
+        "Lenovo（Chromebook與平板應用對象，非MOPS揭露客戶）",
+        "小米（行動與AIoT應用對象，非MOPS揭露客戶）",
+        "Amazon（智慧顯示與串流裝置應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Qualcomm",
@@ -112,8 +112,9 @@
         "Amlogic"
       ],
       "risks": [
-        "Edge AI市場競爭加劇（高通/瑞芯微）",
-        "AIoT應用多樣化但單一規模較小"
+        "7月營收MoM-16.4%，且累計YoY僅+0.8%，成長續航需觀察",
+        "月營收未拆分Genio、Kompanio或NPU相關貢獻",
+        "Qualcomm、Apple與自研晶片客戶加劇高階終端競爭"
       ],
       "legacy": {
         "topicSlug": "edge-ai",
@@ -134,36 +135,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：多媒體IC、電腦週邊IC、高階消費性IC及其他特殊應用IC。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY+0.8%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "lastVerified": "2026-08-25",
       "status": "verified",
       "techFocus": [
-        "Edge AI SoC整合NPU加速器(端側推論TOPS>5)",
-        "AIoT平台Genio系列開發(ARM Cortex-A78+NPU)",
-        "終端裝置AI推論晶片設計(模型壓縮/INT8量化)"
+        "多核心Arm CPU、GPU與NPU異質運算",
+        "INT8／FP16低精度邊緣AI推論",
+        "4K／8K影像編解碼與低功耗多媒體處理"
       ],
       "swot": {
         "strengths": [
-          "AIoT晶片平台Genio 700/1200整合NPU加速器(ARM Cortex-A78+NPU)切入Edge AI",
-          "終端AI推論晶片(INT8/INT4量化)技術適合端側低功耗場景",
-          "智慧家居SoC整合Matter/Wi-Fi 7，物聯網平台佈局完整"
+          "MOPS產品範圍涵蓋多媒體、電腦週邊與特殊應用IC，可支持多種Edge AI終端",
+          "7月營收YoY+12.2%，單月規模達484.75億元"
         ],
         "weaknesses": [
-          "Edge AIoT晶片營收佔比低，需時間培育生態系",
-          "Edge AI SoC NPU算力(TOPS>5)不及NVIDIA Jetson等專用平台",
-          "AIoT客戶分散且客製化需求高，毛利率受壓"
+          "7月營收MoM-16.4%，且累計YoY僅+0.8%，成長續航需觀察",
+          "月營收未拆分Genio、Kompanio或NPU相關貢獻"
         ],
         "opportunities": [
-          "智慧家居Matter協議普及帶動物聯網SoC需求",
-          "工業Edge AI推論(智慧安防/品檢)市場快速增長",
-          "Chromebook AI化趨勢帶動Kompanio系列出貨"
+          "AI PC、智慧顯示與工業AIoT裝置擴大終端NPU滲透率",
+          "端側模型壓縮與低功耗推論可提高SoC內容價值"
         ],
         "threats": [
-          "NVIDIA Jetson/AMD Embedded在Edge AI算力領先",
-          "高通RB5/RB6平台在機器人/工業Edge AI競爭",
-          "中國全志/瑞芯微在低階AIoT SoC低價競爭"
+          "Qualcomm、Apple與自研晶片客戶加劇高階終端競爭",
+          "消費電子庫存與匯率波動可能抵銷Edge AI產品升級效益"
         ]
       }
     },

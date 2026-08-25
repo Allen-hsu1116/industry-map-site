@@ -2,26 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "1717",
   "companyName": "長興",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "core",
+      "directness": "indirect",
       "supplyChainStage": "packaging_materials",
       "roleType": "packaging_resin_supplier",
-      "roleSummary": "長興7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。為封裝用環氧樹脂與封膠材料供應商。",
+      "roleSummary": "長興MOPS揭露工業用合成樹脂、PCB與光阻材料、特殊化學品，具先進封裝材料配方的上游鄰近性，但未揭露特定EMC、Underfill或晶圓級封裝量產認證。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%、累計YoY+10.5%，為公司整體成長，不能全數歸因先進封裝。",
       "products": [
-        "封裝用環氧樹脂(EMC封裝樹脂/低介電常數)",
-        "底部填膠(Underfill/流動性<5um)",
-        "封裝用矽膠(高折射率LED封裝膠)",
-        "晶圓級封裝用PI(聚醯亞胺)"
+        "工業用環氧樹脂（封裝膠配方上游樹脂）",
+        "UV／EB光固化樹脂（晶圓級材料配方上游）",
+        "PCB乾膜光阻材料（封裝基板線路製程用）",
+        "特殊化學品添加劑（電子材料配方用）"
       ],
       "customers": [
-        "日月光投控(3711)",
-        "矽品(2325)",
-        "力成(6239)"
+        "日月光投控(3711；封裝材料驗證對象，非MOPS揭露客戶)",
+        "台積電(2330；晶圓級材料應用對象，非MOPS揭露客戶)",
+        "欣興(3037；封裝基板材料應用對象，非MOPS揭露客戶)",
+        "南電(8046；封裝基板材料應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "永信(1705)",
@@ -29,8 +30,9 @@
         "信越化學"
       ],
       "risks": [
-        "先進封裝材料認證週期長",
-        "國際材料大廠競爭"
+        "MOPS未揭露特定先進封裝材料品號或量產認證",
+        "公司營收跨工業樹脂與PCB材料，無法拆出先進封裝貢獻",
+        "住友化學、JSR等國際材料商在高階封裝認證具先行優勢"
       ],
       "legacy": {},
       "evidence": [
@@ -47,35 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各種工業用合成樹脂、印刷電路基板與光阻材料、特殊化學品之產銷。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收40.93億元，MoM+6.8%、YoY+23.9%，累計YoY+10.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "低介電常數封裝樹脂設計(Dk<3.0)",
-        "晶圓級封裝PI合成技術",
-        "奈米級二氧化矽分散技術"
+        "環氧樹脂玻璃轉移溫度與低吸濕配方控制",
+        "UV／EB光固化反應速率與低殘膠控制",
+        "乾膜光阻解析度、附著力與顯影窗口控制"
       ],
       "swot": {
         "strengths": [
-          "7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%穩定成長",
-          "封裝用環氧樹脂產品線完整",
-          "低介電封裝樹脂技術領先"
+          "樹脂、光阻與特殊化學品產品組合涵蓋電子材料配方上游",
+          "7月營收YoY+23.9%、累計YoY+10.5%，整體需求與出貨成長"
         ],
         "weaknesses": [
-          "先進封裝材料佔比仍低",
-          "與日東電工/信越等國際大廠差距"
+          "MOPS未揭露特定先進封裝材料品號或量產認證",
+          "公司營收跨工業樹脂與PCB材料，無法拆出先進封裝貢獻"
         ],
         "opportunities": [
-          "CoWoS/2.5D封裝材料需求爆發",
-          "AI封裝用低介電樹脂需求",
-          "HBM封裝用底部填膠需求"
+          "RDL、封裝基板與晶圓級製程擴產可增加低吸濕樹脂及光阻需求",
+          "在地化電子化學材料驗證可縮短封裝供應鏈交期"
         ],
         "threats": [
-          "國際材料大廠技術領先",
-          "封裝廠自製材料風險",
-          "先進封裝材料認證週期長"
+          "住友化學、JSR等國際材料商在高階封裝認證具先行優勢",
+          "若終端AI封裝擴產遞延，電子材料庫存可能反向修正"
         ]
       }
     },

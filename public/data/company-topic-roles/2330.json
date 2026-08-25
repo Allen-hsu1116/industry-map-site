@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -94,28 +94,28 @@
       "directness": "core",
       "supplyChainStage": "advanced_packaging",
       "roleType": "cowos_advanced_packaging_provider",
-      "roleSummary": "台積電在CoWoS先進封裝領域獨占鰲頭，5月營收4170億年增30.1%。2025年產能持續擴充，先進封裝為AI GPU出貨瓶頸與成長引擎。",
+      "roleSummary": "台積電MOPS明確揭露積體電路製造並提供封裝、測試、CAD與光罩服務，先進封裝屬核心延伸；CoWoS、SoIC與InFO為題材上下文中的具體平台，但客戶與平台對應非本次MOPS揭露。2026年7月營收4,675.81億元、MoM+5.6%、YoY+44.7%、累計YoY+37.0%，為公司整體數據。",
       "products": [
-        "CoWoS-S 2.5D封裝(矽中介層/5nm reticle interposer)",
-        "SoIC 3D堆疊封裝(Chip-on-Wafer hybrid bonding pitch<10μm)",
-        "InFO-POP封裝(AI手機AP/基頻晶片整合InFO_B substrate)",
-        "CoWoS-L(Large Die)封裝(>1700mm² reticle size/4x reticle stitching)",
-        "SoIC+CoWoS整合方案(3D SoIC on CoWoS-R for NVIDIA B200/AI ASIC)"
+        "CoWoS-S矽中介層2.5D整合封裝服務",
+        "CoWoS-L局部矽互連2.5D封裝服務",
+        "SoIC晶片對晶圓混合鍵合3D整合服務",
+        "InFO扇出型晶圓級封裝服務",
+        "先進封裝後段測試與設計協同服務"
       ],
       "customers": [
-        "NVIDIA(H100/B200 CoWoS)",
-        "AMD(MI300 SoIC)",
-        "Broadcom(客製ASIC CoWoS)",
-        "Apple(A18 InFO)",
-        "Qualcomm(Snapdragon SoIC)"
+        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
+        "AMD（AI／HPC應用對象，非MOPS揭露客戶）",
+        "Broadcom（客製ASIC應用對象，非MOPS揭露客戶）",
+        "Apple（行動與運算晶片應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Samsung I-Cube4",
         "Intel EMIB/Foveros"
       ],
       "risks": [
-        "CoWoS 產能長期供不應求，瓶頸可能限制客戶出貨",
-        "先進封裝良率挑戰影響毛利"
+        "月營收未拆分CoWoS、SoIC與InFO貢獻",
+        "先進封裝擴產資本密集，良率爬坡與設備交期增加執行風險",
+        "日月光、Amkor與Intel Foundry競逐高階封裝訂單"
       ],
       "legacy": {
         "topicSlug": "cowos-advanced-packaging",
@@ -136,36 +136,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：依客戶設計製造積體電路，並提供封裝、測試、CAD與光罩服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%，累計YoY+37.0%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "lastVerified": "2026-08-25",
       "status": "verified",
       "techFocus": [
-        "CoWoS-S/L 2.5D矽中介層封裝(>2x reticle stitching for AI GPU)",
-        "SoIC 3D堆疊混合鍵合(Cu-Cu direct bonding pitch<10μm/N3 node)",
-        "InFO-POP扇出型封裝(高密度RDL線寬2μm/手機AP整合)"
+        "矽中介層與局部矽互連的高密度2.5D整合",
+        "Cu-Cu混合鍵合的晶片對晶圓3D堆疊",
+        "封裝熱機應力、翹曲與高頻訊號完整性協同設計"
       ],
       "swot": {
         "strengths": [
-          "6月營收4426.8億YoY+67.9%，先進封裝(CoWoS/SoIC)為AI GPU出貨瓶頸關鍵",
-          "CoWoS-S/L 2.5D封裝獨占AI GPU(NVIDIA B200)市場，reticle stitching >4x",
-          "SoIC 3D堆疊(Cu-Cu hybrid bonding pitch<10μm)領先Samsung/Intel"
+          "MOPS明確支持封裝與測試服務，且具晶圓製造至先進封裝整合能力",
+          "7月營收YoY+44.7%、累計YoY+37.0%，AI／HPC整體需求動能強"
         ],
         "weaknesses": [
-          "CoWoS產能長期供不應求，瓶頸可能限制客戶出貨與營收貢獻",
-          "先進封裝良率挑戰(大尺寸reticle/多晶片堆疊)影響毛利",
-          "先進封裝資本支出高(設備/無塵室/測試)，ROI回收週期長"
+          "月營收未拆分CoWoS、SoIC與InFO貢獻",
+          "先進封裝擴產資本密集，良率爬坡與設備交期增加執行風險"
         ],
         "opportunities": [
-          "CoWoS產能2025年持續擴充(月產能>35k wafer)，AI GPU出貨放量",
-          "SoIC+CoWoS整合方案(3D SoIC on CoWoS-R)為NVIDIA B200/下世代AI ASIC主流",
-          "InFO-AI扇出封裝延伸至AI推理邊緣裝置"
+          "AI加速器與客製ASIC提高邏輯晶片加HBM的2.5D整合需求",
+          "SoIC混合鍵合可延伸至Chiplet與3D系統整合"
         ],
         "threats": [
-          "Samsung I-Cube4/Samsung ASEAL先進封裝競爭",
-          "Intel Foveros 3D封裝爭取AI ASIC客戶",
-          "矽中介層成本高，有機載板方案(如Intel EMIB)為替代路線"
+          "日月光、Amkor與Intel Foundry競逐高階封裝訂單",
+          "AI資本支出放緩或先進封裝供需轉鬆可能壓低產能利用率"
         ]
       }
     },

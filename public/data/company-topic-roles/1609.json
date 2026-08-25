@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
   "companyCode": "1609",
-  "companyName": "1609",
-  "updatedAt": "2026-07-15",
+  "companyName": "大亞",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "renewable-energy",
       "topicName": "太陽能與離岸風電",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "大亞為台灣電線電纜大廠，6月營收33.7億年增22.7%，累計180億年增19.0%。綠能轉型有成，離岸風電海纜與太陽能EPC為成長動能，但海纜起步較晚產能小於華新。",
+      "directness": "direct_enabler",
+      "roleSummary": "大亞MOPS揭露輸配電機械、電線電纜、鋼纜、配管與工程業務，可支援再生能源案場併網；但未揭露特定離岸風場海纜訂單，故不應視為風場核心設備商。2026年7月營收29.06億元、YoY+11.5%、累計YoY+17.9%，但MoM-13.8%，整體成長不能全歸因再生能源。",
       "products": [
-        "161kV超高壓電力電纜(XLPE交連PE/銅導體500-2000mm²/地下/架空)",
-        "69kV離岸風電陣列海纜(3芯銅導體/95-400mm²/XLPE絕緣/鎧裝)",
-        "銅導體電力電纜(低壓600V/中壓22.8kV/高壓161kV)",
-        "漆包線(聚胺酯/聚酯亞胺漆包銅線/F級/H級耐熱155-180°C)",
-        "太陽能電廠EPC與儲能系統整合(直流側/逆變器/PCS/容量1-50MW)"
+        "161kV交連聚乙烯XLPE高壓電力電纜",
+        "69kV交連聚乙烯XLPE輸配電電纜",
+        "600V太陽能案場低壓電力電纜",
+        "銅導體與鋼線鋼纜",
+        "再生能源案場配管與電纜工程"
       ],
       "customers": [
-        "台電(161kV輸電電纜採購)",
-        "中鋼(2002)(工業用電力電纜)",
-        "沃旭能源(Ørsted)(離岸風電海纜)",
-        "海龍離岸風電(海纜供應)"
+        "台電（再生能源併網對象，非MOPS揭露客戶）",
+        "沃旭能源Orsted（離岸風場應用對象，非MOPS揭露客戶）",
+        "哥本哈根基礎建設基金CIP（風場應用對象，非MOPS揭露客戶）",
+        "森崴能源(6806；綠能工程應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "華新(1605)(海纜/電力電纜)",
@@ -29,9 +29,9 @@
         "太平洋電線電纜(1602)"
       ],
       "risks": [
-        "海纜起步較晚，產能規模小於華新",
-        "漆包線屬成熟產品，成長空間有限",
-        "銅價波動影響電纜毛利"
+        "MOPS未揭露特定離岸風場海纜產品或客戶",
+        "7月營收MoM-13.8%，工程與出貨認列仍有波動",
+        "華新、華榮及國際海纜商競爭可能壓縮標案毛利"
       ],
       "evidence": [
         {
@@ -40,38 +40,48 @@
           "title": "1609公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 1609 role in 太陽能與離岸風電 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：輸配電機械、電線電纜、塑膠製品、鋼線鋼纜、配管及其他工程。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收29.06億元，MoM-13.8%、YoY+11.5%，累計YoY+17.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-18",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "超高壓交連PE(XLPE)電纜技術(161kV)",
-        "海纜鎧裝與防蝕技術(三層擠出護套)",
-        "漆包線聚酯亞胺絕緣技術(F/H級耐熱)"
+        "XLPE絕緣押出、局部放電與耐壓控制",
+        "高壓電纜接續、終端施工與併網測試",
+        "銅導體絞線與載流量／熱管理設計"
       ],
       "supplyChainStage": "electrical_equipment",
       "roleType": "high_voltage_power_cable_supplier",
       "swot": {
         "strengths": [
-          "6月營收33.7億YoY+22.7%，累計180.2億YoY+19.0%，營收增速高於同業",
-          "161kV超高壓XLPE電力電纜量產，供貨台電輸電網路",
-          "太陽能EPC與儲能系統整合能力(1-50MW)，從電纜跨入系統"
+          "MOPS揭露電線電纜、輸配電機械與工程，可支援案場併網",
+          "7月營收YoY+11.5%、累計YoY+17.9%，公司整體訂單動能正向"
         ],
         "weaknesses": [
-          "海纜起步較晚，產能規模小於華新(1605)",
-          "漆包線屬成熟產品，成長空間有限",
-          "銅價波動影響電纜毛利率，避險機制有限"
+          "MOPS未揭露特定離岸風場海纜產品或客戶",
+          "7月營收MoM-13.8%，工程與出貨認列仍有波動"
         ],
         "opportunities": [
-          "台電強化電網韌性計畫帶動161kV超高壓電纜採購需求",
-          "離岸風電區塊開發帶動69kV陣列海纜訂單(海龍風場已取得)",
-          "太陽能電廠EPC與儲能整合業務受惠能源轉型政策"
+          "太陽能、儲能與離岸風電併網增加高壓電纜及工程需求",
+          "台電強韌電網投資可與再生能源接入需求形成雙重動能"
         ],
         "threats": [
-          "華新(1605)海纜產能領先，競爭壓力大",
-          "中國電纜廠低價競爭低壓/中壓電纜市場",
-          "銅價上漲若無法及時轉嫁影響毛利"
+          "華新、華榮及國際海纜商競爭可能壓縮標案毛利",
+          "風場環評、融資與施工延期會推遲電纜需求"
         ]
       }
     }

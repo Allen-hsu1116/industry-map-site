@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1519",
   "companyName": "華城",
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -86,30 +86,30 @@
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "direct_enabler",
       "supplyChainStage": "ess",
       "roleType": "storage_electrical_integration",
-      "roleSummary": "華城6月營收17.30億YoY-25.8%，累計102.12億YoY-2.7%。MOPS登記為變壓器/配電盤/配電器材及統包工程。儲能領域聚焦電力整合設備(變壓器/PCS/微電網)，與風電/太陽能案場綁定，儲能標案節奏影響月營收波動。",
+      "roleSummary": "華城MOPS揭露變壓器、配電盤、配電器材與統包工程，能支援儲能站升壓及併網，但未揭露電芯、BMS、PCS或特定儲能案場產品。2026年7月營收20.50億元、MoM+18.5%，但YoY-8.3%、累計YoY-3.7%，公司整體營運仍較去年弱。",
       "products": [
-        "儲能變壓器(三相隔離/昇壓)(500kVA-10MVA)",
-        "微電網系統整合(EMS+PCS+儲能)(MW級)",
-        "太陽能變流器(PCS String/集中式)(100kW-5MW)",
-        "GIS開關設備(72kV/145kV SF6絕緣)",
-        "儲能貨櫃電力系統整合(40呎MW級完整方案)"
+        "儲能站用三相隔離／升壓變壓器",
+        "中壓金屬封閉配電盤與保護控制盤",
+        "儲能案場變電站EPC統包工程",
+        "併網用配電器材與電力品質設備"
       ],
       "customers": [
-        "台電(微電網/儲能標案)(光儲融合標案)",
-        "永鑫能源(儲能案場EPC)",
-        "台泥(1101)(儲能變壓器)(能量管理系統)",
-        "沃旭Orsted(離岸風電變壓器)(900MW大彰化風場)",
-        "達德能源(陸域風電變壓器)(雲林/苗栗風場)"
+        "台電（儲能併網與變電站應用對象，非MOPS揭露客戶）",
+        "台泥(1101；儲能案場應用對象，非MOPS揭露客戶)",
+        "台達電(2308；PCS整合供應鏈對象，非MOPS揭露客戶)",
+        "森崴能源(6806；儲能工程應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "中興電",
         "士電"
       ],
       "risks": [
-        "儲能標案競爭加劇，低價搶標壓力"
+        "MOPS未揭露電芯、BMS或PCS，僅屬儲能站電力設備角色",
+        "7月營收YoY-8.3%、累計YoY-3.7%，整體營運仍未恢復年增",
+        "士電、中興電與台達電競逐儲能電力設備及統包標案"
       ],
       "evidence": [
         {
@@ -125,36 +125,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 1519 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：變壓器、配電盤、配電器材及其他統包工程。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "儲能電廠用功率調節系統(PCS)雙向變流器設計",
-        "氫能PEM燃料電池固定式發電系統整合",
-        "儲能配電盤與變壓器整合(一次/二次側)(10MVA)"
+        "變壓器絕緣、溫升與短路耐受設計",
+        "中壓開關盤保護電驛與IEC 61850通訊整合",
+        "儲能站升壓、保護協調與併網測試"
       ],
       "swot": {
         "strengths": [
-          "儲能電廠用變壓器（500kVA-10MVA）與微電網系統整合能力完整",
-          "儲能貨櫃電力系統整合（40呎MW級完整方案）具一站式競爭力",
-          "與台電/台泥/沃旭等大型客戶已有合作基礎"
+          "變壓器、配電盤與EPC能力可覆蓋儲能站交流側併網",
+          "7月營收MoM+18.5%，短期工程與設備認列回升"
         ],
         "weaknesses": [
-          "6月營收1730億YoY-25.78%，年減超過25%，營運壓力大",
-          "累計營收10212億YoY-2.69%，衰退趨勢需改善",
-          "儲能業務占比仍低，變壓器/EPC為主要營收來源"
+          "MOPS未揭露電芯、BMS或PCS，僅屬儲能站電力設備角色",
+          "7月營收YoY-8.3%、累計YoY-3.7%，整體營運仍未恢復年增"
         ],
         "opportunities": [
-          "台電光儲融合標案帶動儲能變壓器與微電網系統需求",
-          "太陽能變流器（PCS）市場隨光電案場擴建成長",
-          "離岸風電儲能配套需求浮現"
+          "大型儲能案場與資料中心備援電力增加升壓變壓器需求",
+          "台電調頻與電網韌性標案可帶動配電盤及EPC商機"
         ],
         "threats": [
-          "台達電(2308)與東元(1504)在PCS領域具更大規模",
-          "儲能案場開發商（森崴/永鑫）議價能力強",
-          "進口變流器品牌（SMA/Sungrow）價格競爭"
+          "士電、中興電與台達電競逐儲能電力設備及統包標案",
+          "案場消防與併網規範變動可能延後驗收及收入認列"
         ]
       }
     },

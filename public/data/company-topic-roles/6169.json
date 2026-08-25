@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -155,25 +155,26 @@
       "directness": "indirect",
       "supplyChainStage": "optical_content",
       "roleType": "vr_streaming_content",
-      "roleSummary": "昱泉MOPS僅揭露遊戲與教育軟體，與矽光子/CPO沒有供應關係；此角色只是雲端遊戲對高速網路的終端需求映射。 FinMind顯示2026年7月營收僅2.3萬元，商業規模極小。",
+      "roleSummary": "昱泉MOPS僅揭露遊戲及教育軟體研發、生產、代理與銷售，與矽光子、雷射、光收發模組或光通訊元件沒有直接產品關聯；本角色僅能作為軟體內容與雲端串流需求的旁側觀察。FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%、YoY-99.2%，題材與營運規模均不支持直接曝險。",
       "products": [
-        "PC/主機跨平台3D遊戲軟體",
-        "VR互動遊戲與沉浸式內容",
-        "雲端遊戲低延遲串流軟體",
-        "教育訓練模擬軟體"
+        "PC與遊戲主機3D遊戲軟體",
+        "VR沉浸式互動遊戲內容",
+        "教育訓練模擬軟體",
+        "雲端遊戲低延遲串流軟體"
       ],
       "customers": [
-        "Sony Interactive Entertainment(PlayStation平台)",
-        "Nintendo(Switch平台)",
-        "Meta(Quest VR平台)",
-        "Microsoft(Xbox/雲端遊戲平台)",
-        "Valve(Steam平台)"
+        "Sony Interactive Entertainment（PlayStation平台對象，非MOPS揭露客戶）",
+        "Nintendo（Switch平台對象，非MOPS揭露客戶）",
+        "Valve（Steam平台對象，非MOPS揭露客戶）",
+        "Meta（Quest VR平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "其他遊戲開發商"
       ],
       "risks": [
-        "與光通訊供應鏈幾乎無關聯"
+        "MOPS未揭露任何矽光子或光通訊硬體產品，題材不匹配",
+        "FinMind顯示7月營收僅2.3萬元、YoY-99.2%，營運規模極小",
+        "把雲端串流需求誤列為矽光子供應鏈會造成嚴重角色錯配"
       ],
       "legacy": {},
       "evidence": [
@@ -190,33 +191,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收2.3萬元，MoM-42.5%、YoY-99.2%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "H.265/AV1壓縮與自適應位元率串流",
-        "遊戲狀態同步、輸入預測與延遲補償",
-        "Unity/Unreal跨平台與VR效能最佳化"
+        "Unity／Unreal即時3D遊戲引擎工作流",
+        "雲端遊戲影像編碼、串流與輸入延遲控制",
+        "VR頭部追蹤與沉浸式互動設計"
       ],
       "swot": {
         "strengths": [
-          "具遊戲教育軟體研發能力",
-          "低延遲串流是高速網路終端應用"
+          "具遊戲與教育軟體研發經驗，可服務雲端與VR內容",
+          "跨PC、主機與VR平台的內容技術可支援多終端發行"
         ],
         "weaknesses": [
-          "FinMind顯示2026年7月營收僅2.3萬元，商業規模極小",
-          "與矽光子/CPO無直接供應關係",
-          "MOPS未揭露VR或雲端遊戲收入"
+          "MOPS未揭露任何矽光子或光通訊硬體產品，題材不匹配",
+          "FinMind顯示7月營收僅2.3萬元、YoY-99.2%，營運規模極小"
         ],
         "opportunities": [
-          "VR與雲端遊戲增加資料中心流量",
-          "5G/FTTH降低互動串流延遲"
+          "雲端遊戲與VR流量成長可間接增加資料中心網路需求",
+          "教育模擬與沉浸式內容可拓展非娛樂軟體收入"
         ],
         "threats": [
-          "題材傳導極弱，不屬光通訊受惠股",
-          "平台抽成與流量成本侵蝕獲利"
+          "把雲端串流需求誤列為矽光子供應鏈會造成嚴重角色錯配",
+          "專案收入高度不穩定，7月營收MoM-42.5%且接近停滯"
         ]
       }
     },

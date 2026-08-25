@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3545",
   "companyName": "敦泰",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -159,16 +159,18 @@
       "directness": "indirect",
       "supplyChainStage": "hbm_related_ic",
       "roleType": "hbm_interface_ic",
-      "roleSummary": "敦泰IC產品與HBM無直接關聯。7月營收9.11億，YoY-14.3%，累計61.39億，累計YoY-13.6%。",
+      "roleSummary": "敦泰MOPS僅揭露手持式行動裝置應用晶片，未揭露HBM、TSV或記憶體堆疊產品；本題材只能視為終端AI裝置帶動顯示與觸控晶片需求的間接觀察角色。2026年7月營收9.11億元、MoM+1.2%、YoY-14.3%、累計YoY-13.6%，不能歸因於HBM。",
       "products": [
-        "觸控IC(智慧型手機/平板)",
-        "指紋辨識IC(手機/筆電)",
-        "AMOLED驅動IC(手機面板)"
+        "智慧型手機TDDI觸控顯示整合IC",
+        "AMOLED面板顯示驅動IC",
+        "電容式觸控控制IC",
+        "行動裝置指紋辨識IC"
       ],
       "customers": [
-        "小米(手機觸控/指紋IC)",
-        "OPPO(手機觸控IC)",
-        "vivo(手機指紋IC)"
+        "小米（行動裝置應用對象，非MOPS揭露客戶）",
+        "OPPO（行動裝置應用對象，非MOPS揭露客戶）",
+        "vivo（行動裝置應用對象，非MOPS揭露客戶）",
+        "京東方BOE（面板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "SK海力士",
@@ -176,7 +178,9 @@
         "美光(Micron)"
       ],
       "risks": [
-        "與HBM供應鏈無直接關聯"
+        "MOPS未揭露HBM、TSV或記憶體堆疊產品，題材連結極弱",
+        "7月營收YoY-14.3%、累計YoY-13.6%，本業需求仍承壓",
+        "把AI終端需求誤當HBM直接曝險，容易高估題材營收貢獻"
       ],
       "legacy": {},
       "evidence": [
@@ -193,32 +197,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：研究、開發、設計、製造及銷售手持式行動裝置應用晶片。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收9.11億元，MoM+1.2%、YoY-14.3%，累計YoY-13.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "觸控IC訊號處理設計(自容/互容)",
-        "指紋IC影像演算法(光學式/超音波式)"
+        "TDDI觸控掃描與顯示時序同步",
+        "AMOLED灰階補償與源極驅動",
+        "電容式觸控雜訊抑制與多點辨識"
       ],
       "swot": {
         "strengths": [
-          "觸控IC全球前三大供應商(FocalTech品牌)",
-          "指紋辨識IC在手機品牌客戶滲透率高",
-          "7月營收9.11億，雖YoY-14.3%但觸控IC設計能力深厚"
+          "TDDI、AMOLED驅動與觸控控制IC產品線可服務AI手機顯示介面",
+          "7月營收MoM+1.2%，短期出貨較6月小幅回穩"
         ],
         "weaknesses": [
-          "與HBM(高頻寬記憶體)完全無產品關聯",
-          "產品線集中在觸控/指紋IC，無記憶體相關IP"
+          "MOPS未揭露HBM、TSV或記憶體堆疊產品，題材連結極弱",
+          "7月營收YoY-14.3%、累計YoY-13.6%，本業需求仍承壓"
         ],
         "opportunities": [
-          "IC設計能力理論上可延伸至其他晶片領域，但HBM為記憶體技術非設計能力可覆蓋",
-          "觸控IC需求隨AI手機/折疊機成長可帶動營收回升"
+          "AI手機換機若提升AMOLED與觸控整合規格，可間接拉動TDDI需求",
+          "高更新率與低功耗面板升級可提高顯示驅動IC單機價值"
         ],
         "threats": [
-          "HBM題材關聯性極弱，市場不會將敦泰納入HBM供應鏈",
-          "中國觸控IC廠(匯頂/思立微)低价競爭壓縮毛利率"
+          "把AI終端需求誤當HBM直接曝險，容易高估題材營收貢獻",
+          "手機面板驅動IC價格競爭與庫存修正可能延續"
         ]
       }
     },

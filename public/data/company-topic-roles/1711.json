@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1711",
   "companyName": "永光",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -81,24 +81,27 @@
       "directness": "indirect",
       "supplyChainStage": "battery_chemicals",
       "roleType": "battery_chemical_supplier",
-      "roleSummary": "永光提供電池材料用化學品。7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%，累計YoY+9.0%。",
+      "roleSummary": "永光MOPS揭露色料、特用、電子、碳粉與醫藥化學品，未揭露鋰電池電解液、正極材料或儲能專用化學品；本題材僅能視為模組塑膠、塗層及功率元件製程化學品的潛在應用。2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%、累計YoY+9.0%，不能直接歸因儲能。",
       "products": [
-        "鋰電池電解液添加劑(過充保護/SEI成膜劑)",
-        "電極材料用色料/分散劑(正極漿料用)",
-        "電池外殼用耐候色母粒"
+        "色料分散劑（電池模組樹脂件配方用）",
+        "紫外線吸收劑（戶外儲能櫃塑膠件用）",
+        "電子級顯影化學品（功率元件製程用）",
+        "電子級清洗化學品（BMS與功率IC製程用）"
       ],
       "customers": [
-        "寧德時代(CATL)",
-        "國軒高科",
-        "台塑(1301)"
+        "台塑(1301；樹脂配方供應鏈對象，非MOPS揭露客戶)",
+        "台達電(2308；儲能模組應用對象，非MOPS揭露客戶)",
+        "世界先進(5347；功率元件製程應用對象，非MOPS揭露客戶)",
+        "寧德時代CATL（儲能模組應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "長興(1717)",
         "巴斯夫(BASF)"
       ],
       "risks": [
-        "電池化學品佔比低",
-        "電池材料認證週期長"
+        "MOPS未揭露電池電解液、電極或隔離膜材料",
+        "月營收跨多種化學品，無法確認儲能應用占比",
+        "若以一般特用化學品推論電池材料，題材直接性會被高估"
       ],
       "legacy": {},
       "evidence": [
@@ -115,31 +118,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：色料化學品、特用化學品、電子化學品、碳粉及醫藥化學品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收7.81億元，MoM+13.1%、YoY+25.7%，累計YoY+9.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "SEI成膜添加劑分子設計",
-        "電極漿料分散技術(奈米級)"
+        "顏料粒徑、表面處理與樹脂分散穩定性",
+        "UV吸收光譜與戶外耐候黃變控制",
+        "電子化學品金屬離子與微粒污染控制"
       ],
       "swot": {
         "strengths": [
-          "7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%，特用化學品研發能力強",
-          "電解液添加劑技術有基礎"
+          "具特用化學品與電子化學品配方及純化能力",
+          "7月營收YoY+25.7%、MoM+13.1%，公司整體需求改善"
         ],
         "weaknesses": [
-          "電池化學品佔比低",
-          "與電池供應鏈關聯間接"
+          "MOPS未揭露電池電解液、電極或隔離膜材料",
+          "月營收跨多種化學品，無法確認儲能應用占比"
         ],
         "opportunities": [
-          "儲能電池需求帶動電解液添加劑",
-          "固態電池新材料化學品需求"
+          "戶外儲能櫃耐候與功率元件擴產可增加相關化學品驗證機會",
+          "電子級化學品國產化有利切入BMS與PCS半導體製程"
         ],
         "threats": [
-          "國際化學大廠技術領先",
-          "中國化學品廠低價競爭"
+          "若以一般特用化學品推論電池材料，題材直接性會被高估",
+          "中國化學品供應商與原料價格波動可能壓縮毛利"
         ]
       }
     },

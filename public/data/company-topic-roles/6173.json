@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -90,19 +90,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "信昌電提供先進封裝用LTCC介電瓷粉與DPC/AMB陶瓷散熱基板，受惠先進封裝與SiC功率模組需求成長。",
+      "roleSummary": "信昌電MOPS揭露晶片電容、晶片電阻與介電瓷粉，未揭露封裝基板、DPC／AMB陶瓷基板或先進封裝材料認證；本題材應定位為封裝設備與基板供應鏈的被動元件／材料鄰近角色。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，不能直接歸因先進封裝。",
       "products": [
-        "介電瓷粉(封裝基板用低溫共燒陶瓷LTCC<900°C)",
-        "陶瓷基板(先進封裝散熱基板DPC/AMB)",
-        "晶片電容(封裝製程設備用高頻MLCC)",
-        "高導熱AlN陶瓷基板(>170 W/m·K)",
-        "AMB活性金屬釬焊基板(SiC功率模組用)"
+        "積層陶瓷晶片電容MLCC（封裝設備控制板用）",
+        "厚膜晶片電阻（封裝設備電源與控制板用）",
+        "介電陶瓷粉末（電子陶瓷配方原料）",
+        "高頻低損耗陶瓷電容（測試治具訊號路徑用）"
       ],
       "customers": [
-        "日月光(3711)(封裝基板介電材料)",
-        "台積電(2330)(先進封裝陶瓷材料)",
-        "國巨(2327)(MLCC瓷粉原料供應)",
-        "穩懋(3105)(封裝散熱陶瓷基板)"
+        "國巨(2327；被動元件供應鏈對象)",
+        "華新科(2492；電子陶瓷供應鏈對象)",
+        "欣興(3037；封裝基板應用對象，非MOPS揭露客戶)",
+        "日月光投控(3711；封裝設備應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "京瓷(Kyocera)",
@@ -110,8 +109,9 @@
         "九豪(6107)"
       ],
       "risks": [
-        "先進封裝陶瓷基板市場日商(京瓷/村田)主導",
-        "客戶台積電/日月光認證週期長"
+        "MOPS未揭露封裝基板或先進封裝專用陶瓷材料",
+        "營收成長為公司整體數據，無法拆分封裝題材貢獻",
+        "把介電瓷粉直接等同封裝基板材料，可能造成題材錯配"
       ],
       "legacy": {},
       "evidence": [
@@ -128,36 +128,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "LTCC低溫共燒陶瓷基板技術(<900°C燒結)",
-        "DPC直接鍍銅陶瓷基板技術(Al2O3/AlN)",
-        "AMB活性金屬釬焊基板技術(SiC/GaN功率封裝)"
+        "介電瓷粉粒徑分布與燒結溫度控制",
+        "MLCC多層共燒與內電極對位控制",
+        "厚膜電阻漿料印刷與阻值修調"
       ],
       "swot": {
         "strengths": [
-          "LTCC低溫共燒陶瓷基板技術(<900°C燒結)切入先進封裝散熱基板市場",
-          "DPC直接鍍銅與AMB活性金屬釬焊基板技術，打入SiC/GaN功率封裝供應鏈",
-          "高導熱AlN氮化鋁基板(>170 W/m·K)具備車用/功率半導體應用優勢"
+          "具MLCC、晶片電阻與介電瓷粉垂直材料能力",
+          "FinMind顯示7月營收YoY+47.9%，公司整體出貨動能明顯改善"
         ],
         "weaknesses": [
-          "陶瓷基板為新業務領域，量產經驗與良率尚在提升階段",
-          "先進封裝基板市場競爭者多(日本/德國廠商)，技術差距仍存在",
-          "AlN氮化鋁粉末原料依賴進口"
+          "MOPS未揭露封裝基板或先進封裝專用陶瓷材料",
+          "營收成長為公司整體數據，無法拆分封裝題材貢獻"
         ],
         "opportunities": [
-          "SiC/GaN第三代半導體功率模組封裝需求帶動AMB基板成長",
-          "AI GPU封裝用高導熱陶瓷基板需求增長",
-          "車用電子功率模組封裝基板滲透率提升"
+          "封裝設備與測試治具升級可增加高頻被動元件需求",
+          "高可靠電子陶瓷材料可爭取設備控制與電源模組驗證"
         ],
         "threats": [
-          "日本京瓷(Kyocera)/村田在陶瓷基板領域技術領先",
-          "DPC/AMB基板客戶認證週期長，打入速度受限",
-          "中國陶瓷基板廠低價競爭"
+          "把介電瓷粉直接等同封裝基板材料，可能造成題材錯配",
+          "國巨、村田等大廠的規模與高階認證形成競爭壓力"
         ]
       }
     },

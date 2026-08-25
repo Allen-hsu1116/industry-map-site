@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6241",
   "companyName": "鑫永洋",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -87,18 +87,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "鑫永洋MOPS僅揭露通訊產品製造買賣；液冷角色只適合定位為資料中心監控網路與M2M閘道器周邊應用。 FinMind顯示2026年7月營收0.63億元、MoM+12.1%，但MOPS未揭露液冷專案。",
+      "roleSummary": "鑫永洋MOPS僅揭露通訊產品製造及買賣，未揭露冷板、CDU、快接頭或液冷泵浦；在液冷題材中只能作為通訊與遠端監控的潛在應用觀察。FinMind顯示2026年7月營收0.63億元、MoM+12.1%、YoY+18.6%，公司規模仍小且成長不能歸因液冷。",
       "products": [
-        "工業乙太網路M2M閘道器",
-        "ARM/Linux遠端設備監控通訊模組",
-        "溫度/流量/漏液感測資料採集閘道器",
-        "SNMP/Modbus TCP資料中心監控設備"
+        "工業乙太網路M2M通訊閘道器",
+        "ARM／Linux遠端設備監控通訊模組",
+        "溫度／流量感測資料採集閘道器",
+        "機櫃設備用乙太網路交換器"
       ],
       "customers": [
-        "台達電(2308；資料中心BMS整合對象)",
-        "奇鋐(3017；CDU監控應用對象)",
-        "雙鴻(3324；液冷模組監控對象)",
-        "緯穎(6669；資料中心設備管理對象)"
+        "奇鋐(3017；CDU監控應用對象，非MOPS揭露客戶)",
+        "雙鴻(3324；液冷模組監控應用對象，非MOPS揭露客戶)",
+        "台達電(2308；資料中心BMS整合對象，非MOPS揭露客戶)",
+        "緯穎(6669；機櫃監控應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "智邦(2345)(網路設備)",
@@ -106,9 +106,9 @@
         "啟碁(6285)(通訊模組)"
       ],
       "risks": [
-        "6月營收0.56億(FinMind)月減26%且散熱關聯度極低",
-        "非散熱核心標的，題材傳導幾乎不存在",
-        "公司規模極小(資本額4.55億)抗風險能力有限"
+        "MOPS未揭露任何液冷機構或流體控制產品",
+        "7月營收僅0.63億元，規模小且題材訂單歸屬不可驗證",
+        "液冷設備商可直接內建控制器，壓縮外掛閘道器需求"
       ],
       "legacy": {},
       "evidence": [
@@ -125,33 +125,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：通訊產品製造及買賣。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收0.63億元，MoM+12.1%、YoY+18.6%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "ARM/Linux之Modbus TCP、SNMP與MQTT轉換",
-        "溫度流量漏液感測之RS-485資料聚合",
-        "雙網路備援、遠端韌體更新與告警"
+        "Modbus TCP／RTU感測資料轉換",
+        "SNMP與MQTT遠端設備遙測",
+        "雙網路備援與斷線資料緩存"
       ],
       "swot": {
         "strengths": [
-          "FinMind顯示2026年7月營收0.63億元、MoM+12.1%，但MOPS未揭露液冷專案",
-          "通訊產品能力可延伸監控閘道器",
-          "可整合多種液冷感測器至BMS/DCIM"
+          "通訊閘道器可延伸至CDU與機櫃環境感測資料回傳",
+          "FinMind顯示7月營收MoM+12.1%、YoY+18.6%，本業短期改善"
         ],
         "weaknesses": [
-          "不具冷板/CDU/泵浦流體設計",
-          "具名液冷客戶與量產專案未公開"
+          "MOPS未揭露任何液冷機構或流體控制產品",
+          "7月營收僅0.63億元，規模小且題材訂單歸屬不可驗證"
         ],
         "opportunities": [
-          "液冷增加感測與監控點位",
-          "CDU預防維護提升通訊需求"
+          "AI機櫃增加溫度、流量與漏液監控節點，可帶動工業通訊需求",
+          "CDU導入SNMP與Modbus標準可創造閘道器整合機會"
         ],
         "threats": [
-          "CDU廠可能自行整合控制器",
-          "工業閘道器替代性高"
+          "液冷設備商可直接內建控制器，壓縮外掛閘道器需求",
+          "市場若誤認為冷板或CDU供應商，將高估直接營收曝險"
         ]
       }
     }

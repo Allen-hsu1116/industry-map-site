@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2395",
   "companyName": "研華",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "edge-ai-aiot",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "edge_ai",
       "roleType": "edge_ai_platform",
-      "roleSummary": "研華5月營收77.3億年增32.1%，累計年增24.0%。Edge AI為成長主軸，NVIDIA Jetson整合方案在製造業AOI/瑕疵檢測需求增長。",
+      "roleSummary": "研華MOPS揭露工業測控、工業電腦、工作站、嵌入式電腦卡與超薄液晶電腦，能直接承載Edge AI推論。2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%、累計YoY+40.3%，公司並說明客戶積極下單與專案出貨暢旺，但增長仍不能全數歸因Edge AI。",
       "products": [
-        "Edge AI推論平台(NVIDIA Jetson Orin整合)",
-        "工業GPU運算平台(PCIe/NVMe)",
-        "邊緣AI軟體Platform-OA(模型部署/管理)",
-        "MIC-7系列工業物聯網閘道器(IP65)",
-        "AI視覺檢測系統(Deep Learning OCR/Defect)"
+        "AIR-030 NVIDIA Jetson AGX Orin邊緣AI系統",
+        "MIC-770 V3模組化工業電腦",
+        "EPC-B系列嵌入式無風扇電腦",
+        "WISE-EdgeLink工業IoT資料閘道軟體",
+        "ARK系列DIN-Rail邊緣運算電腦"
       ],
       "customers": [
-        "NVIDIA(Jetson生態系)",
-        "西門子(SI系統整合)",
-        "Rockwell(工業自動化)",
-        "Foxconn(產線AI檢測)",
-        "台達電(工廠AIoT)"
+        "NVIDIA（Jetson平台合作對象，非MOPS揭露客戶）",
+        "Intel（x86／OpenVINO平台合作對象，非MOPS揭露客戶）",
+        "Siemens（工業自動化整合對象，非MOPS揭露客戶）",
+        "Rockwell Automation（工業控制整合對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "新漢",
@@ -32,8 +31,9 @@
         "Dell Edge"
       ],
       "risks": [
-        "Edge AI 導入期長，訂單能見度不穩",
-        "高庫存風險"
+        "MOPS分類仍以工業電腦與測控為主，未拆分Edge AI營收",
+        "7月高成長含多產品與專案認列，不能直接外推題材成長率",
+        "樺漢、凌華等工業電腦業者競逐相同Edge AI專案"
       ],
       "evidence": [
         {
@@ -49,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2395 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：工業測控產品、工業用電腦／工作站、嵌入式電腦卡及超薄液晶電腦。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收112.72億元，MoM+11.4%、YoY+87.6%，累計YoY+40.3%；公司說明客戶積極下單、專案需求與出貨暢旺。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "lastVerified": "2026-08-25",
       "status": "verified",
       "techFocus": [
-        "NVIDIA Jetson Edge AI平台整合與SDK開發",
-        "工業GPU運算平台散熱與震動耐受設計",
-        "Edge AI軟體Platform-OA架構(模型壓縮/推論加速)"
+        "Jetson Orin CUDA／TensorRT邊緣推論",
+        "寬溫無風扇設計與DIN-Rail工業部署",
+        "OPC UA／MQTT資料匯流及設備管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收10.12億YoY+73.4%、累計YoY+32.2%，Edge AI平台需求爆發式成長",
-          "NVIDIA Jetson Edge AI平台整合與SDK開發能力全球領先，工業GPU運算平台（PCIe/NVMe）產品線完整",
-          "全球工業電腦龍頭，資本額86.8億，品牌與渠道佈局完整"
+          "工業電腦、嵌入式板卡與測控產品可形成完整Edge AI硬體平台",
+          "7月營收YoY+87.6%、累計YoY+40.3%，且公告指出專案需求與出貨暢旺"
         ],
         "weaknesses": [
-          "MoM+30.9%波動大，Edge AI專案出貨不均勻",
-          "Edge AI平台依賴NVIDIA Jetson生態系，自主性有限",
-          "工業GPU運算平台散熱與震動耐受設計客製化成本高"
+          "MOPS分類仍以工業電腦與測控為主，未拆分Edge AI營收",
+          "7月高成長含多產品與專案認列，不能直接外推題材成長率"
         ],
         "opportunities": [
-          "NVIDIA Jetson Orin/Thor產品升級帶動Edge AI平台換機需求",
-          "智慧城市/智慧製造Edge AI推論應用快速成長",
-          "AIoT平台WISE-PaaS數據採集與邊緣運算訂閱模式提升經常性收入"
+          "機器視覺、智慧製造與自主移動設備提高邊緣推論節點需求",
+          "Jetson與x86異質平台可擴大既有工業客戶升級商機"
         ],
         "threats": [
-          "研華(2395)在Edge AI面臨凌華(6166)、新漢(8234)競爭",
-          "NVIDIA Jetson供貨分配與價格策略影響成本",
-          "邊緣AI推論可能被雲端AI部分取代"
+          "樺漢、凌華等工業電腦業者競逐相同Edge AI專案",
+          "GPU模組供應與專案驗收時程可能造成季度波動"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4764",
   "companyName": "雙鍵",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -11,16 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "battery_additives",
       "roleType": "battery_additive_supplier",
-      "roleSummary": "雙鍵7月營收2.94億，MoM+3.4%。MOPS登記為塑膠添加劑及UV光固化產品。提供電池材料用添加劑。",
+      "roleSummary": "雙鍵MOPS揭露塑膠添加劑與UV光固化產品，未揭露電解液、電極或電池隔離膜專用材料；本題材只能視為電池模組塑膠件與塗層配方的潛在應用。2026年7月營收2.94億元、MoM+3.4%、YoY+44.1%、累計YoY+28.6%，不能直接歸因儲能。",
       "products": [
-        "電池隔離膜用抗靜電添加劑",
-        "電池外殼塑膠用UV吸收劑/光穩定劑",
-        "電解液添加劑(過充保護添加劑)"
+        "受阻胺光安定劑HALS（電池模組樹脂件配方用）",
+        "紫外線吸收劑（戶外儲能櫃塑膠件用）",
+        "抗氧化劑（線纜與塑膠外殼配方用）",
+        "UV光固化樹脂（電子模組保護塗層用）"
       ],
       "customers": [
-        "寧德時代(CATL)",
-        "億緯鋰能",
-        "台塑(1301)"
+        "台塑(1301；塑膠樹脂供應鏈對象，非MOPS揭露客戶)",
+        "長興(1717；UV樹脂供應鏈對象，非MOPS揭露客戶)",
+        "寧德時代CATL（儲能模組應用對象，非MOPS揭露客戶）",
+        "台達電(2308；儲能櫃應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "巴斯夫(BASF)",
@@ -28,8 +30,9 @@
         "松原(Songwon)"
       ],
       "risks": [
-        "電池添加劑佔營收比重低",
-        "國際化學大廠競爭"
+        "MOPS未揭露電解液、隔離膜或電極添加劑",
+        "儲能應用屬配方推論，月營收無法確認題材貢獻",
+        "把一般塑膠添加劑誤列為電池材料，容易高估直接曝險"
       ],
       "legacy": {},
       "evidence": [
@@ -46,31 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品之研發、製造與銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收2.94億元，MoM+3.4%、YoY+44.1%，累計YoY+28.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "UV光固化技術(UV引發聚合/秒級固化)",
-        "高分子添加劑分子設計(抗氧化/UV吸收)"
+        "HALS自由基捕捉與聚合物耐候配方",
+        "UV吸收光譜與戶外黃變抑制",
+        "UV光固化交聯密度與塗膜附著控制"
       ],
       "swot": {
         "strengths": [
-          "UV光固化技術可延伸至電池材料",
-          "塑膠添加劑產品線完整"
+          "具塑膠耐候添加劑與UV固化材料配方能力",
+          "7月營收YoY+44.1%、累計YoY+28.6%，公司整體出貨成長強"
         ],
         "weaknesses": [
-          "電池添加劑佔比極低",
-          "與國際化學大廠規模差距"
+          "MOPS未揭露電解液、隔離膜或電極添加劑",
+          "儲能應用屬配方推論，月營收無法確認題材貢獻"
         ],
         "opportunities": [
-          "儲能電池需求帶動添加劑增長",
-          "固態電池新材料添加劑需求"
+          "戶外儲能櫃增加耐候塑膠、線纜與保護塗層需求",
+          "高溫與UV可靠度規格提升可增加高階添加劑用量"
         ],
         "threats": [
-          "巴斯夫等大廠技術領先",
-          "中國添加劑廠低價競爭"
+          "把一般塑膠添加劑誤列為電池材料，容易高估直接曝險",
+          "中國低價添加劑與原料價格波動可能壓縮毛利"
         ]
       }
     },

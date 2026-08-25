@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2303",
   "companyName": "聯電",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "mature_node_foundry",
-      "roleSummary": "聯電是全球第二大晶圓代工廠，28/22nm HKMG為主力成熟製程，14nm FinFET為利基。5月營收229.4億年增17.8%，累計1,066億年增9.1%，AI需求帶動22nm放量。特殊製程(RF/CIS/BCD)在8吋晶圓具差異化優勢。",
+      "roleSummary": "聯電MOPS揭露積體電路及半導體相關產品，題材上下文可具體化為成熟與特殊製程晶圓製造，但MOPS未揭露特定節點或客戶。2026年7月營收238.44億元、MoM+3.1%、YoY+19.0%、累計YoY+12.4%，公司整體晶圓業務動能正向。",
       "products": [
-        "22nm/28nm HKMG Logic製程(AI/IoT SoC)",
-        "14nm FinFET製程(射頻/網通)",
-        "40nm嵌入式記憶體(eFlash MCU)",
-        "RF/BCD/CIS特殊製程(8吋/12吋)",
-        "高壓BCD製程(電源管理IC)"
+        "22／28nm平面式邏輯晶圓製造服務",
+        "40nm嵌入式非揮發記憶體製程服務",
+        "55／65nm高壓顯示驅動IC製程服務",
+        "90／110nm BCD電源管理IC製程服務",
+        "射頻SOI與特殊應用晶圓製造服務"
       ],
       "customers": [
-        "Qualcomm(RF前端模組)",
-        "聯發科(2454)(智慧型手機晶片)",
-        "Realtek(2379)(網通PHY/WiFi)",
-        "Broadcom(有線通訊ASIC)",
-        "聯詠(3034)(驅動IC)"
+        "聯發科(2454；IC設計應用對象，非MOPS揭露客戶)",
+        "瑞昱(2379；網通IC應用對象，非MOPS揭露客戶)",
+        "聯詠(3034；顯示驅動IC應用對象，非MOPS揭露客戶)",
+        "Qualcomm（射頻與連線IC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "台積電(2330)",
@@ -33,8 +32,9 @@
         "中芯國際"
       ],
       "risks": [
-        "先進製程停滯：14nm後未再推進，與台積電差距擴大",
-        "中國成熟製程產能過剩競爭（中芯國際28nm擴產）"
+        "MOPS未揭露節點別營收，無法判斷22／28nm成長占比",
+        "缺乏最先進邏輯節點，AI高階運算直接曝險有限",
+        "中國成熟製程新增產能可能引發價格競爭"
       ],
       "legacy": {},
       "evidence": [
@@ -51,36 +51,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路及各種半導體相關產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收238.44億元，MoM+3.1%、YoY+19.0%，累計YoY+12.4%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "lastVerified": "2026-08-25",
       "status": "verified",
       "techFocus": [
-        "22nm/28nm HKMG Logic製程(AI/IoT SoC)",
-        "14nm FinFET製程(射頻/網通)",
-        "特殊製程平台(RF/BCD/CIS/嵌入式記憶體)"
+        "22／28nm平面式邏輯與低漏電製程",
+        "高壓元件與BCD電源管理製程整合",
+        "嵌入式非揮發記憶體與特殊製程平台"
       ],
       "swot": {
         "strengths": [
-          "6月營收231.2億YoY+22.9%，累計1297.7億YoY+11.3%，成熟製程需求回溫",
-          "22nm/28nm HKMG Logic製程為全球第二大邏輯晶圓代工供應商",
-          "特殊製程平台(RF/BCD/CIS/嵌入式記憶體)具差異化優勢，客戶黏著度高"
+          "成熟與特殊製程平台可服務通訊、顯示與電源管理IC",
+          "7月營收YoY+19.0%、累計YoY+12.4%，公司整體出貨穩健成長"
         ],
         "weaknesses": [
-          "14nm後先進製程停滯，與台積電技術差距持續擴大",
-          "中國中芯國際28nm擴產帶來成熟製程價格競爭壓力",
-          "資本支出規模遠不及台積電，先進製程研發資源有限"
+          "MOPS未揭露節點別營收，無法判斷22／28nm成長占比",
+          "缺乏最先進邏輯節點，AI高階運算直接曝險有限"
         ],
         "opportunities": [
-          "AI/IoT SoC需求帶動22/28nm製程稼動率提升",
-          "RF與電源管理IC特殊製程受惠5G/WiFi 7/車用電子需求",
-          "與Intel合作18A製程，共享先進製程研發資源"
+          "車用、網通與電源管理IC回補可提升成熟製程利用率",
+          "特殊製程與長週期客戶認證可改善價格穩定度"
         ],
         "threats": [
-          "中芯國際成熟製程產能過剩，低價競爭壓縮毛利",
-          "台積電成熟製程(28/22nm)擴產，市佔遭擠壓",
-          "地緣政治風險影響客戶下單意願(中國客戶占比高)"
+          "中國成熟製程新增產能可能引發價格競爭",
+          "消費性顯示與通訊需求反轉將壓低產能利用率"
         ]
       }
     }

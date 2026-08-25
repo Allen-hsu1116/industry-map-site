@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2353",
   "companyName": "宏碁",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,20 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ai_pc_brand",
-      "roleSummary": "宏碁MOPS揭露資訊產品、軟體與維修服務的通路銷售；AI伺服器由Altos品牌切入，規模仍遠小於PC本業。2026年7月營收269.04億元、YoY+21.9%、累計YoY+23.1%，成長不能全數歸因AI伺服器。",
+      "roleSummary": "宏碁MOPS僅揭露資訊產品、軟體及維修服務的通路銷售，未直接揭露AI伺服器製造；Altos產品應明確視為集團／品牌產品，不能等同母公司MOPS確認的伺服器營收。2026年7月營收269.04億元、YoY+21.9%、累計YoY+23.1%，但MoM-3.3%，成長不可全歸因AI伺服器。",
       "products": [
-        "Altos NVIDIA GPU加速伺服器",
-        "Altos AMD EPYC雙路機架伺服器",
-        "Altos BrainSphere AI/HPC管理軟體",
-        "Veriton AI工作站",
-        "Swift Copilot+ AI PC"
+        "宏碁集團Altos GPU加速伺服器",
+        "宏碁集團Altos雙路AMD EPYC機架伺服器",
+        "宏碁集團Altos Intel Xeon機架伺服器",
+        "Altos BrainSphere伺服器管理軟體"
       ],
       "customers": [
-        "NVIDIA(GPU平台供應鏈對象)",
-        "AMD(EPYC伺服器平台對象)",
-        "Intel(Xeon伺服器平台對象)",
-        "Microsoft(Azure與Copilot生態整合對象)",
-        "Amazon(資訊產品銷售通路對象)"
+        "NVIDIA（GPU平台對象，非MOPS揭露客戶）",
+        "AMD（EPYC／Instinct平台對象，非MOPS揭露客戶）",
+        "Intel（Xeon平台對象，非MOPS揭露客戶）",
+        "Microsoft（AI軟體平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華碩(2357)",
@@ -33,8 +31,9 @@
         "Lenovo"
       ],
       "risks": [
-        "Altos伺服器品牌規模小，非主要AI伺服器供應鏈成員",
-        "PC品牌毛利低(5-8%)，AI PC競爭激烈"
+        "MOPS主要業務為資訊產品通路銷售，未直接揭露AI伺服器製造",
+        "7月營收MoM-3.3%，且無法拆分Altos伺服器貢獻",
+        "Dell、HPE與台灣ODM在AI伺服器規模及供應鏈優勢更強"
       ],
       "legacy": {},
       "evidence": [
@@ -53,37 +52,44 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         },
         {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：從事資訊產品、軟體及維修服務之通路銷售。"
+        },
+        {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收269.04億元，YoY+21.9%，累計YoY+23.1%"
+          "claim": "2026年7月營收269.04億元，MoM-3.3%、YoY+21.9%，累計YoY+23.1%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "lastVerified": "2026-08-25",
+      "status": "candidate",
       "techFocus": [
-        "PCIe GPU多卡拓撲、NVLink互連與高功率散熱配置",
-        "AMD EPYC/Intel Xeon雙路平台的DDR5與PCIe 5.0整合",
-        "BrainSphere叢集佈署、工作負載排程與遠端管理"
+        "PCIe GPU加速器與雙路伺服器平台整合",
+        "BMC遠端管理與虛擬化資源監控",
+        "GPU叢集排程與AI工作負載管理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收269.04億元、YoY+21.9%，品牌與全球通路需求回升",
-          "Altos伺服器、AI工作站與AI PC可形成企業端到端運算產品組合"
+          "Altos品牌具GPU與雙路機架伺服器產品組合",
+          "7月營收YoY+21.9%、累計YoY+23.1%，集團整體需求成長"
         ],
         "weaknesses": [
-          "MOPS核心仍是資訊產品通路銷售，AI伺服器並非主要營收來源",
-          "伺服器規模、客戶認證與供應鏈議價力落後Dell、HPE、Supermicro及台灣ODM"
+          "MOPS主要業務為資訊產品通路銷售，未直接揭露AI伺服器製造",
+          "7月營收MoM-3.3%，且無法拆分Altos伺服器貢獻"
         ],
         "opportunities": [
-          "企業私有AI與中小型推論工作負載可帶動Altos GPU伺服器與工作站",
-          "AI PC通路客戶可向上交叉銷售邊緣伺服器與叢集管理軟體"
+          "企業私有AI與推論伺服器需求可帶動Altos品牌專案",
+          "既有PC通路可交叉銷售中小企業AI基礎設施"
         ],
         "threats": [
-          "GPU供貨、出口管制與高功率散熱能力限制Altos專案交付",
-          "AI伺服器價格戰及大型雲端客戶直接採購ODM，壓縮品牌商空間"
+          "Dell、HPE與台灣ODM在AI伺服器規模及供應鏈優勢更強",
+          "若把集團產品直接算入母公司AI伺服器曝險，估值可能失真"
         ]
       }
     }

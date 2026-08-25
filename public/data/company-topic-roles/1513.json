@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1513",
   "companyName": "中興電",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -167,21 +167,22 @@
       "topicId": "renewable-energy",
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
-      "directness": "indirect",
+      "directness": "direct_enabler",
       "supplyChainStage": "electrical_equipment",
       "roleType": "wind_farm_electrical",
-      "roleSummary": "中興電在離岸風電題材中提供風場陸上變電站GIS設備與輸配電工程統包服務，並跨足氫能產氫系統。5月營收23.9億年增3.6%，累計111.9億年增2.3%，綠能工程動能穩定。",
+      "roleSummary": "中興電MOPS揭露綠能、輸配電設備與工程、節能空調、發電工程、氫能發電及產氫系統，可支援再生能源併網；但MOPS未揭露特定風場海纜終端或開發商訂單。2026年7月營收24.10億元、YoY+3.8%、累計YoY+3.5%，但MoM-14.9%，工程認列波動明顯。",
       "products": [
-        "風場陸上變電站GIS設備(161kV/345kV SF6氣體絕緣)",
-        "離岸風電海底電纜終端接頭(66kV陣列纜/輸出纜)",
-        "風場輸配電工程(EPC統包含基礎設施)",
-        "氫能發電暨產氫系統(水電解製氫/PEM)"
+        "161／345kV氣體絕緣開關GIS設備",
+        "再生能源併網用電力變壓器",
+        "中低壓配電盤與保護控制盤",
+        "綠能案場變電站EPC統包工程",
+        "PEM氫能發電與產氫系統"
       ],
       "customers": [
-        "台電(風場陸上變電站統包)",
-        "沃旭能源(Ørsted)(離岸風場併聯設備)",
-        "哥本哈根基礎建設基金(CIP)(風場輸配電)",
-        "北陸電力(Nordural)(氫能系統)"
+        "台電（綠能併網與變電站應用對象，非MOPS揭露客戶）",
+        "沃旭能源Orsted（離岸風場併網應用對象，非MOPS揭露客戶）",
+        "哥本哈根基礎建設基金CIP（風場併網應用對象，非MOPS揭露客戶）",
+        "中油(1328；氫能示範應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "士林電機(1503)",
@@ -190,9 +191,9 @@
         "中興電工同業"
       ],
       "risks": [
-        "離岸風電工程進度受天候與海事施工窗口影響，營收認列時點不確定",
-        "累計營收增幅僅2.3%，低於市場預期的綠能爆發性成長",
-        "氫能業務仍在示範階段，商業化量產時間未定"
+        "7月營收MoM-14.9%，大型工程認列波動明顯",
+        "MOPS未揭露特定離岸風場或海纜終端產品",
+        "士電、華城與ABB／Siemens競逐高壓設備標案"
       ],
       "legacy": {},
       "evidence": [
@@ -209,36 +210,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：綠能、輸配電力設備暨工程、節能空調及發電設備暨工程、氫能發電暨產氫系統。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收24.10億元，MoM-14.9%、YoY+3.8%，累計YoY+3.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-12",
+      "confidence": "medium",
+      "lastVerified": "2026-08-25",
       "status": "verified",
       "techFocus": [
-        "161kV/345kV GIS氣體絕緣變電站工程",
-        "離岸風電66kV海底電纜終端接頭技術",
-        "PEM水電解製氫系統"
+        "161／345kV GIS絕緣、電弧與局部放電控制",
+        "IEC 61850保護電驛、SCADA與變電站自動化",
+        "PEM燃料電池電堆與產氫系統整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收2833億YoY+8.31%，累計14024億YoY+3.48%，綠能工程動能穩定",
-          "風場陸上變電站GIS設備（161kV/345kV）為離岸風電併聯關鍵設備",
-          "EPC統包能力涵蓋風場輸配電工程全鏈條"
+          "MOPS明確支持綠能、輸配電工程與氫能系統角色",
+          "GIS、變壓器與EPC能力可覆蓋再生能源併網電力鏈"
         ],
         "weaknesses": [
-          "離岸風電工程占比仍小，營收貢獻有限",
-          "66kV海底電纜終端接頭技術與國際大廠（Prysmian/Nexans）有差距",
-          "PEM水電解製氫系統仍處早期階段"
+          "7月營收MoM-14.9%，大型工程認列波動明顯",
+          "MOPS未揭露特定離岸風場或海纜終端產品"
         ],
         "opportunities": [
-          "台灣離岸風場第三階段（2026-2030）區塊開發帶動變電站EPC需求",
-          "沃旭/CIP等開發商風場併聯設備訂單持續開出",
-          "氫能產氫系統受惠政府綠氫政策，具長期成長潛力"
+          "離岸風電與太陽能併網帶動GIS、變壓器與EPC需求",
+          "綠氫示範與微電網可延伸既有發電及產氫系統"
         ],
         "threats": [
-          "離岸風電開發商可能選用國際GIS設備供應商",
-          "風場建設時程受環評/漁權等不確定因素影響",
-          "中國低價風電設備競爭壓力"
+          "士電、華城與ABB／Siemens競逐高壓設備標案",
+          "風場環評、融資與併網時程延後會推遲營收認列"
         ]
       }
     }

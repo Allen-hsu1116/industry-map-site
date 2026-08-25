@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6770",
   "companyName": "力積電",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-25T19:03:16Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,18 +11,19 @@
       "directness": "core",
       "supplyChainStage": "wafer_fabrication",
       "roleType": "specialty_foundry",
-      "roleSummary": "力積電6月營收64.74億年增68.8%、月增12.2%，累計年增37.8%——客戶需求上升、量價齊揚。12吋利基DRAM代工與8吋利基製程雙引擎，SiC/GaN第三代功率代工為新成長動能。",
+      "roleSummary": "力積電MOPS明確揭露積體電路生產、製造、測試與封裝，以及特殊應用IC技術整合服務，屬晶圓製造核心角色；具體製程與客戶名屬題材上下文，非本次MOPS確認。2026年7月營收66.69億元、MoM+3.0%、YoY+70.5%、累計YoY+42.7%，公司說明客戶需求、銷量與售價均上升。",
       "products": [
-        "12吋利基DRAM代工(PSRAM/LPDDR4/DDR3)",
-        "8吋邏輯IC代工(0.18-0.35μm)",
-        "CIS影像感測器代工(BSI製程)",
-        "SiC/GaN第三代功率晶圓代工",
-        "特殊應用IC技術整合服務(ASIC NRE→MP)"
+        "12吋利基型DRAM晶圓製造服務",
+        "8吋高壓顯示驅動IC晶圓製造服務",
+        "8吋BCD電源管理IC晶圓製造服務",
+        "CMOS影像感測器晶圓製造服務",
+        "積體電路測試與封裝服務"
       ],
       "customers": [
-        "ISSI(利基DRAM代工)",
-        "OmniVision(CIS代工)",
-        "聯詠(3034)(驅動IC代工)"
+        "ISSI（利基記憶體應用對象，非MOPS揭露客戶）",
+        "OmniVision（影像感測器應用對象，非MOPS揭露客戶）",
+        "聯詠(3034；顯示驅動IC應用對象，非MOPS揭露客戶)",
+        "瑞昱(2379；特殊應用IC生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "台積電(2330)(晶圓代工龍頭)",
@@ -30,9 +31,9 @@
         "世界先進(5347)(利基代工)"
       ],
       "risks": [
-        "6月營收64.74億YoY+68.8%累計+37.8%需求上升價格調漲但基期低",
-        "成熟製程(0.18-0.35μm)面臗設備老化與產能利用率波動",
-        "利基DRAM代工受記憶體景氣循環影響大"
+        "產品組合集中成熟與利基製程，景氣循環敏感度高",
+        "月營收未拆分DRAM、顯示驅動與電源管理製程貢獻",
+        "中國成熟製程擴產可能壓低代工價格"
       ],
       "legacy": {},
       "evidence": [
@@ -49,36 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路及系統產品之生產、製造、測試、封裝；特殊應用IC技術整合與矽智財服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收66.69億元，MoM+3.0%、YoY+70.5%，累計YoY+42.7%；公司說明客戶需求上升、銷量增加且售價調漲。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-25",
       "status": "verified",
       "techFocus": [
-        "12吋利基DRAM代工(40nm DDR3/DDR4 PSRAM)",
-        "8吋BCD/CMOS利基製程平台(0.18-0.35μm)",
-        "SiC/GaN第三代寬能隙功率晶圓代工"
+        "12吋DRAM電容單元與記憶體製程整合",
+        "8吋高壓／BCD元件隔離與厚閘氧製程",
+        "晶圓測試、封裝與特殊應用IC協同製造"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月64.74億 YoY+68.8%，12吋利基DRAM代工(PSRAM/LPDDR4/DDR3)市佔領先",
-          "8吋BCD/CMOS利基製程平台(0.18-0.35μm)車用/工規IC",
-          "SiC/GaN第三代寬能隙功率晶圓代工佈局"
+          "MOPS明確支持IC製造、測試、封裝與技術整合服務",
+          "7月營收YoY+70.5%、累計YoY+42.7%，且公告指出需求、銷量與售價同步上升"
         ],
         "weaknesses": [
-          "先進製程(7nm以下)能力不足，與台積電差距大",
-          "8吋廠長期面臨設備老舊與產能受限",
-          "利基型DRAM代工毛利率低於先進製程"
+          "產品組合集中成熟與利基製程，景氣循環敏感度高",
+          "月營收未拆分DRAM、顯示驅動與電源管理製程貢獻"
         ],
         "opportunities": [
-          "利基DRAM(車用/工規)需求穩定成長",
-          "CIS影像感測器代工(BSI製程)手機/車用需求",
-          "SiC/GaN功率晶圓代工(電動車/快充)新市場"
+          "利基記憶體與高壓顯示驅動需求回升可提高產能利用率",
+          "晶圓製造加封測整合可承接特殊應用IC一站式訂單"
         ],
         "threats": [
-          "南亞科(2408)利基DRAM競爭",
-          "中國晶圓代工(中芯/華虹)低價競爭",
-          "8吋產能可能被12吋替代"
+          "中國成熟製程擴產可能壓低代工價格",
+          "記憶體價格反轉與客戶庫存修正會放大營收波動"
         ]
       }
     },
