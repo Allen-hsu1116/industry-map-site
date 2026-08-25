@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2301",
   "name": "光寶科",
-  "generatedAt": "2026-08-24T12:37:19.580Z",
+  "generatedAt": "2026-08-25T12:32:58.015Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,13 +50,13 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "直接賦能角色",
-      "roleSummary": "光寶科6月營收186.6億YoY+37.0%，累計961億YoY+25.1%。AI伺服器高瓦數CRPS鈦金級PSU為核心成長動能，GPU電源模組(VRM)需求隨AI加速器放量而增長。",
+      "roleSummary": "光寶科MOPS本次只概括電腦週邊、資料儲存、網路與影像設備，未逐項列出CRPS、VRM或具名AI伺服器客戶；依既有題材產品脈絡可保留電源與光電元件賦能角色，但舊資料的精密規格與直供敘述已降級。2026年7月營收190.06億元、YoY+37.6%，為全公司口徑。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "server_psu_maker",
       "directness": "direct_enabler",
@@ -64,17 +64,17 @@
     },
     "productNarratives": [
       {
-        "name": "雲端光電模組(光耦合器/感測器/850nm 1310nm/25G-100G)",
+        "name": "AI伺服器高瓦數CRPS電源供應器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "電源供應器(SPS/Server PSU)",
+        "name": "GPU板多相VRM電源模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "LED照明模組",
+        "name": "伺服器熱插拔電源與電源管理模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -95,9 +95,9 @@
     },
     "scoringFactors": [
       "直接度 直接賦能角色 +36",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
@@ -105,9 +105,9 @@
     ],
     "summary": "光寶科 在「AI 伺服器整機與 EMS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · high",
-      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · medium",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "主要產品：電源供應器(SPS/Server PSU)",
       "主要產品：LED照明模組",
       "主要產品：車用電子(ADAS/車用鏡頭)",
@@ -197,8 +197,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "high",
-        "roleSummary": "光寶科6月營收186.6億YoY+37.0%，累計961億YoY+25.1%。AI伺服器高瓦數CRPS鈦金級PSU為核心成長動能，GPU電源模組(VRM)需求隨AI加速器放量而增長。"
+        "confidence": "medium",
+        "roleSummary": "光寶科MOPS本次只概括電腦週邊、資料儲存、網路與影像設備，未逐項列出CRPS、VRM或具名AI伺服器客戶；依既有題材產品脈絡可保留電源與光電元件賦能角色，但舊資料的精密規格與直供敘述已降級。2026年7月營收190.06億元、YoY+37.6%，為全公司口徑。"
       }
     ],
     "swot": [
@@ -353,12 +353,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 91 天未更新"
+        "message": "股價資料已 92 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 91 天未更新"
+        "message": "籌碼資料已 92 天未更新"
       },
       {
         "id": "risk.stop-distance",

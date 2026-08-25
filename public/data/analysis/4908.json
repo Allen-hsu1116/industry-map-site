@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "4908",
   "name": "前鼎",
-  "generatedAt": "2026-08-24T12:37:19.999Z",
+  "generatedAt": "2026-08-25T12:32:58.425Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -45,34 +45,34 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
     "roleDetail": {
-      "topicName": "矽光子、CPO 與高速光通訊",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "前鼎光電為光纖通訊模組垂直整合廠，從LD/PD封裝到光收發模組一條龍。矽光子題材直接受惠，但上櫃規模較小，與眾達科、光迅等競爭壓力大。",
-      "supplyChainStage": "optical_components",
-      "roleType": "optical_transceiver_module_supplier",
-      "directness": "core",
+      "topicName": "低軌衛星通訊",
+      "roleLabel": "間接受惠",
+      "roleSummary": "前鼎MOPS直接支持雷射二極體、受光二極體封裝及光傳接模組，但未揭露星間光鏈路、抗輻射封裝或衛星營運商客戶。此角色應限於衛星地面站光纖回傳的鄰近光通訊元件。FinMind顯示2026年7月營收0.99億元，MoM+8.2%。",
+      "supplyChainStage": "terrestrial_optical_backhaul_adjacent",
+      "roleType": "optical_transceiver_adjacent_to_ground_backhaul",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "100G/400G光收發模組(QSFP28/QSFP-DD)",
+        "name": "1310nm／1550nm雷射二極體封裝",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "雷射二極體封裝(TOSA/ROSA)",
+        "name": "InGaAs受光二極體封裝",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "DWDM密集波分光模組(100GHz spacing)",
+        "name": "SFP／SFP+光傳接模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -92,25 +92,26 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
-      "題材 矽光子、CPO 與高速光通訊（technology/active） +17",
-      "角色證據 1 則 +6",
+      "直接度 間接受惠 +8",
+      "角色信心 low +3",
+      "題材 低軌衛星通訊（end_market/active） +14",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 5 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 49，上限 40）"
     ],
-    "summary": "前鼎 在「矽光子、CPO 與高速光通訊」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "前鼎 在「低軌衛星通訊」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：矽光子、CPO 與高速光通訊 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
-      "相關題材：低軌衛星通訊 · 間接受惠",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：低軌衛星通訊 · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 低軌衛星通訊（end_market/active） +14）",
+      "相關題材：矽光子、CPO 與高速光通訊 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
       "V2 W：衛星光通訊占比低，主要靠電信/資料中心",
       "V2 W：營運規模小，競爭力不如國際大廠（Lumentum/Coherent）",
       "V2 T：中國光模組低價競爭",
@@ -120,9 +121,9 @@
       "V2 O：資料中心 400G/800G 光模組升級",
       "V2 O：低軌衛星光通訊模組新應用",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
-      "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 低軌衛星通訊：月營收或訂單能見度改善"
+      "追蹤 低軌衛星通訊：月營收或訂單能見度改善",
+      "追蹤 低軌衛星通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -159,16 +160,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "silicon-photonics-optical-comm",
-        "topicName": "矽光子、CPO 與高速光通訊",
-        "canonicalTopicId": "silicon-photonics-optical-comm",
-        "canonicalTopicName": "矽光子、CPO 與高速光通訊",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "前鼎光電為光纖通訊模組垂直整合廠，從LD/PD封裝到光收發模組一條龍。矽光子題材直接受惠，但上櫃規模較小，與眾達科、光迅等競爭壓力大。"
-      },
-      {
         "topicId": "leo-satellite-communications",
         "topicName": "低軌衛星通訊",
         "canonicalTopicId": "leo-satellite-communications",
@@ -177,6 +168,16 @@
         "directnessLabel": "間接受惠",
         "confidence": "low",
         "roleSummary": "前鼎MOPS直接支持雷射二極體、受光二極體封裝及光傳接模組，但未揭露星間光鏈路、抗輻射封裝或衛星營運商客戶。此角色應限於衛星地面站光纖回傳的鄰近光通訊元件。FinMind顯示2026年7月營收0.99億元，MoM+8.2%。"
+      },
+      {
+        "topicId": "silicon-photonics-optical-comm",
+        "topicName": "矽光子、CPO 與高速光通訊",
+        "canonicalTopicId": "silicon-photonics-optical-comm",
+        "canonicalTopicName": "矽光子、CPO 與高速光通訊",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "前鼎MOPS直接支持雷射二極體、受光二極體封裝與光傳接模組，因此光通訊角色成立；但未揭露矽光子晶片、CPO、100G／400G／800G速率、DFB／EML材料或具名客戶，應定位為矽光子鏈周邊光源、檢光與收發模組整合。FinMind顯示2026年7月營收0.99億元、YoY+51.6%。"
       }
     ],
     "swot": [
@@ -273,9 +274,9 @@
     ],
     "topics": [
       {
-        "id": "silicon-photonics-optical-comm",
-        "name": "矽光子、CPO 與高速光通訊",
-        "type": "technology",
+        "id": "leo-satellite-communications",
+        "name": "低軌衛星通訊",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -284,9 +285,9 @@
         ]
       },
       {
-        "id": "leo-satellite-communications",
-        "name": "低軌衛星通訊",
-        "type": "end_market",
+        "id": "silicon-photonics-optical-comm",
+        "name": "矽光子、CPO 與高速光通訊",
+        "type": "technology",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -309,7 +310,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 18,
+    "totalScore": 1,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -318,28 +319,32 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐",
-        "題材角色已 evidence-backed，可納入題材股策略"
+        "籌碼面有法人/信用籌碼支撐"
       ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 91 天未更新"
+        "message": "股價資料已 92 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 91 天未更新"
+        "message": "籌碼資料已 92 天未更新"
       },
       {
         "id": "risk.stop-distance",
         "severity": "hard",
         "message": "距離 MA20 約 20.8%，停損距離過大"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

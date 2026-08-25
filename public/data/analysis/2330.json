@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-08-24T12:37:19.603Z",
+  "generatedAt": "2026-08-25T12:32:58.035Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-24",
-  "chipDataDate": "2026-08-24",
+  "marketDataDate": "2026-08-25",
+  "chipDataDate": "2026-08-25",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,35 +15,35 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "台積電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 40,
+    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列"
     ],
     "risks": [],
     "watch": [
       "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "量能低於 20 日均量，突破訊號可信度較低",
+      "接近 20 日高點 2445.00，觀察是否突破"
     ]
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -20,
-    "summary": "台積電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +807張；三大法人近 5 日合計賣超 -3.9千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "台積電 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +6.4千張；投信近 5 日買超 +839張。",
     "signals": [
-      "投信近 5 日買超 +807張"
+      "近 20 日法人偏買，合計 +6.4千張",
+      "投信近 5 日買超 +839張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -3.9千張",
-      "近 20 日法人偏賣，合計 -2.8千張",
-      "外資近 5 日賣超 -5.8千張"
+      "三大法人近 5 日合計賣超 -1.2千張",
+      "外資近 5 日賣超 -3.7千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-24",
-      "融券近 5 日增加 25.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-25"
     ]
   },
   "industry": {
@@ -119,7 +119,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-08-24"
+      "lastVerified": "2026-08-25"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -168,8 +168,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "high",
-        "roleSummary": "台積電是AI伺服器供應鏈核心，從先進製程到CoWoS封裝一體掌握。5月營收4170億年增30.1%，累計1.96兆年增30.0%，AI/HPC需求為最大成長驅動力。"
+        "confidence": "medium",
+        "roleSummary": "台積電MOPS支持積體電路晶圓製造、封裝、測試、CAD及光罩服務，因此是AI伺服器運算晶片的直接賦能者，但不製造伺服器整機；MOPS未逐項揭露N3／N5、CoWoS、SoIC型號或任何具名客戶。2026年7月營收4,675.81億元、YoY+44.7%，為全公司口徑。"
       },
       {
         "topicId": "hbm",
@@ -288,8 +288,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 62,
-    "recommendationState": "watchlist",
+    "totalScore": 75,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 24,
       "label": "基本面中性",
@@ -297,12 +297,13 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 9.6 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 9.7 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -311,11 +312,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2378.00",
-      "波段多空分水嶺看 MA20：2362.50",
-      "追蹤法人是否延續 賣超：最近 -1.5千張",
+      "短線支撐/壓力先看 MA5：2382.00",
+      "波段多空分水嶺看 MA20：2368.50",
+      "追蹤法人是否延續 賣超：最近 -17張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 27.5 倍，需和同族群估值比較"
+      "本益比 27.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2445.00 且量比 > 1.5：列為轉強訊號",

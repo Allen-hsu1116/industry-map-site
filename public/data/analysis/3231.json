@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-08-24T12:37:19.860Z",
+  "generatedAt": "2026-08-25T12:32:58.287Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-24",
-  "chipDataDate": "2026-08-24",
+  "marketDataDate": "2026-08-25",
+  "chipDataDate": "2026-08-25",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.4%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 4.4%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "緯創 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 0,
-    "summary": "緯創 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +10.4萬張；投信近 5 日買超 +1.1千張。",
+    "summary": "緯創 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +8.8萬張；投信近 5 日買超 +2.1千張。",
     "signals": [
-      "近 20 日法人偏買，合計 +10.4萬張",
-      "投信近 5 日買超 +1.1千張"
+      "近 20 日法人偏買，合計 +8.8萬張",
+      "投信近 5 日買超 +2.1千張"
     ],
     "risks": [
       "三大法人近 5 日合計賣超 -3萬張",
-      "外資近 5 日賣超 -3萬張"
+      "外資近 5 日賣超 -3.2萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-24"
+      "最近法人資料日：2026-08-25"
     ]
   },
   "industry": {
@@ -53,17 +52,27 @@
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "AI 伺服器整機與 EMS",
+      "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。",
+      "roleSummary": "緯創為全球前三大NB ODM，6月營收3218億元年增53.8%，累計年增94.0%。消費運算裝置為Dell/HP/Lenovo/Acer商用與消費筆電代工，亦為Chromebook主要供應商。MOPS主要經營：3C電子產品。",
       "supplyChainStage": "system_assembly",
-      "roleType": "ai_server_odm",
+      "roleType": "notebook_odm",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "伺服器機殼與散熱模組組裝(1U/2U/4U氣冷+液冷版/3D均熱板)",
+        "name": "Dell Latitude 3450/3550商用筆電(ODM)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "HP EliteBook 640/650 G11商用筆電(ODM)",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "Lenovo ThinkPad E14/E16商用筆電(ODM)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -78,18 +87,18 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 1 項 +5",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "緯創 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "緯創 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
-      "相關題材：PC、手機與 AR/VR/XR 終端 · 核心產品/平台",
+      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
+      "相關題材：AI 伺服器整機與 EMS · 直接賦能角色",
       "相關題材：AI 伺服器機構件與滑軌 · 供應商角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -98,10 +107,10 @@
     "watch": [
       "V2 O：AI 伺服器出貨占比提升可改善緯創產品組合，帶來高階伺服器與系統整合成長機會。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
-      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -115,7 +124,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-24"
+      "lastVerified": "2026-08-25"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -138,16 +147,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "ai-server",
-        "topicName": "AI 伺服器整機與 EMS",
-        "canonicalTopicId": "ai-server",
-        "canonicalTopicName": "AI 伺服器整機與 EMS",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "緯創6月營收3218.2億年增53.8%，累計年增94%。MOPS主要經營：3C電子產品。AI伺服器為強勁成長引擎，為NVIDIA核心ODM夥伴之一。"
-      },
-      {
         "topicId": "consumer-computing-devices",
         "topicName": "PC、手機與 AR/VR/XR 終端",
         "canonicalTopicId": "consumer-computing-devices",
@@ -156,6 +155,16 @@
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
         "roleSummary": "緯創為全球前三大NB ODM，6月營收3218億元年增53.8%，累計年增94.0%。消費運算裝置為Dell/HP/Lenovo/Acer商用與消費筆電代工，亦為Chromebook主要供應商。MOPS主要經營：3C電子產品。"
+      },
+      {
+        "topicId": "ai-server",
+        "topicName": "AI 伺服器整機與 EMS",
+        "canonicalTopicId": "ai-server",
+        "canonicalTopicName": "AI 伺服器整機與 EMS",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "緯創MOPS只以「3C電子產品其他」概括主業，未揭露HGX型號或NVIDIA、Dell、Meta、Microsoft等客戶；AI伺服器ODM角色可由題材脈絡保留，但具名平台與客戶須標為非MOPS揭露。2026年7月營收3,082.19億元、YoY+60.8%、累計YoY+88.2%，公司僅說明客戶需求增加。"
       },
       {
         "topicId": "ai-server-mechanical",
@@ -182,9 +191,9 @@
     ],
     "topics": [
       {
-        "id": "ai-server",
-        "name": "AI 伺服器整機與 EMS",
-        "type": "theme",
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -193,9 +202,9 @@
         ]
       },
       {
-        "id": "consumer-computing-devices",
-        "name": "PC、手機與 AR/VR/XR 終端",
-        "type": "end_market",
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -229,13 +238,13 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 53,
+    "totalScore": 63,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 13.9 倍，估值尚可對照成長",
+        "本益比 14.2 倍，估值尚可對照成長",
         "殖利率 3.1%，提供部分下檔支撐"
       ],
       "risks": []
@@ -250,10 +259,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：178.80",
-      "波段多空分水嶺看 MA20：183.58",
-      "追蹤法人是否延續 賣超：最近 -4.1千張",
-      "本益比 13.9 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：178.30",
+      "波段多空分水嶺看 MA20：184.00",
+      "追蹤法人是否延續 賣超：最近 -9.5千張",
+      "本益比 14.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 206.00 且量比 > 1.5：列為轉強訊號",

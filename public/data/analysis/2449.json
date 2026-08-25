@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2449",
   "name": "京元電子",
-  "generatedAt": "2026-08-24T12:37:19.676Z",
+  "generatedAt": "2026-08-25T12:32:58.106Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -47,31 +47,31 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "京元電子為全球最大獨立IC測試廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。6月營收36.2億年增28.6%，累計213.3億年增36.1%。MOPS主要經營：積體電路設計製造測試。AI GPU SLT系統級測試為先進封裝品質把關關鍵環節。",
+      "roleLabel": "直接賦能角色",
+      "roleSummary": "京元電子MOPS支持積體電路測試、加工與包裝，足以定位為先進封裝後段測試及可靠度驗證的直接賦能者；但MOPS未揭露NVIDIA／AMD／Apple客戶、SLT機型或HAST條件。2026年7月營收39.91億元、YoY+36.7%，未拆分先進封裝貢獻。",
       "supplyChainStage": "high_end_testing",
       "roleType": "test_house",
-      "directness": "core",
+      "directness": "direct_enabler",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "AI GPU測試(NVIDIA H100/B200 SLT系統級測試)",
+        "name": "AI／HPC晶片晶圓CP測試服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "SoC晶圓測試(CP/FT高溫測試)",
+        "name": "先進封裝晶片成品FT測試服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "記憶體測試(DDR5/LPDDR5/NAND)",
+        "name": "AI加速器系統級SLT測試服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -89,20 +89,20 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "直接度 直接賦能角色 +36",
+      "角色信心 medium +10",
       "題材 先進封裝與 CoWoS（process/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "京元電子 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "京元電子 在「先進封裝與 CoWoS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：先進封裝與 CoWoS · 直接賦能角色 · medium",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 先進封裝與 CoWoS（process/active） +16）",
       "相關題材：HBM 高頻寬記憶體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -158,10 +158,10 @@
         "topicName": "先進封裝與 CoWoS",
         "canonicalTopicId": "advanced-packaging",
         "canonicalTopicName": "先進封裝與 CoWoS",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "京元電子為全球最大獨立IC測試廠，6月營收3621.7億YoY28.6%，累計21333.6億YoY36.1%。6月營收36.2億年增28.6%，累計213.3億年增36.1%。MOPS主要經營：積體電路設計製造測試。AI GPU SLT系統級測試為先進封裝品質把關關鍵環節。"
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "京元電子MOPS支持積體電路測試、加工與包裝，足以定位為先進封裝後段測試及可靠度驗證的直接賦能者；但MOPS未揭露NVIDIA／AMD／Apple客戶、SLT機型或HAST條件。2026年7月營收39.91億元、YoY+36.7%，未拆分先進封裝貢獻。"
       },
       {
         "topicId": "hbm",
@@ -272,12 +272,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 91 天未更新"
+        "message": "股價資料已 92 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 91 天未更新"
+        "message": "籌碼資料已 92 天未更新"
       }
     ]
   },

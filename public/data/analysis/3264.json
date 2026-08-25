@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-08-24T12:37:19.869Z",
+  "generatedAt": "2026-08-25T12:32:58.295Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-24",
-  "chipDataDate": "2026-08-24",
+  "marketDataDate": "2026-08-25",
+  "chipDataDate": "2026-08-25",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,35 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "欣銓 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "欣銓 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 4.2%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 4.2%"
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": -11,
-    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +3.5千張；融資近 5 日下降 7.8%，籌碼壓力下降。",
+    "score": -16,
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +4.4千張；外資近 5 日買超 +1.2千張。",
     "signals": [
-      "近 20 日法人偏買，合計 +3.5千張",
-      "融資近 5 日下降 7.8%，籌碼壓力下降"
+      "近 20 日法人偏買，合計 +4.4千張",
+      "外資近 5 日買超 +1.2千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -2.7千張",
-      "投信近 5 日賣超 -2千張",
-      "外資近 5 日賣超 -123張"
+      "三大法人近 5 日合計賣超 -2.2千張",
+      "投信近 5 日賣超 -3.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-24"
+      "最近法人資料日：2026-08-25"
     ]
   },
   "industry": {
@@ -135,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-24"
+      "lastVerified": "2026-08-25"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -185,7 +184,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "欣銓6月營收15.52億MoM+2.25%。提供HBM晶圓TSV前CP測試與DRAM die KGD分類服務，受惠AI GPU HBM需求爆發，但測試環節受惠程度低於封測廠。"
+        "roleSummary": "欣銓MOPS支持記憶體IC晶圓測試、數位／混合訊號IC測試與晶圓型式Burn-in，但未揭露HBM、TSV、KGD或SK hynix／Micron客戶；因此只能定位為HBM堆疊前記憶體裸晶篩選的潛在測試能力。FinMind顯示2026年7月營收17.67億元、YoY+52.3%，不能全數歸因HBM。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -371,7 +370,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 53,
+    "totalScore": 62,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -380,8 +379,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -389,10 +389,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：206.80",
-      "波段多空分水嶺看 MA20：203.00",
-      "追蹤法人是否延續 賣超：最近 -37張",
-      "本益比 26.8 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：207.30",
+      "波段多空分水嶺看 MA20：204.38",
+      "追蹤法人是否延續 賣超：最近 -153張",
+      "本益比 27.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 238.00 且量比 > 1.5：列為轉強訊號",

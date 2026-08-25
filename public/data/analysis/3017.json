@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3017",
   "name": "奇鋐",
-  "generatedAt": "2026-08-24T12:37:19.807Z",
+  "generatedAt": "2026-08-25T12:32:58.235Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-24",
-  "chipDataDate": "2026-08-24",
+  "marketDataDate": "2026-08-25",
+  "chipDataDate": "2026-08-25",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,13 +15,13 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 15,
-    "summary": "奇鋐 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 3.4%。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "奇鋐 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 5.5%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 3.4%"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 5.5%"
     ],
     "risks": [],
     "watch": [
@@ -32,29 +32,29 @@
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 36,
-    "summary": "奇鋐 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +618張；近 20 日法人偏買，合計 +1.3萬張。",
+    "summary": "奇鋐 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +621張；近 20 日法人偏買，合計 +1.3萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +618張",
+      "三大法人近 5 日合計買超 +621張",
       "近 20 日法人偏買，合計 +1.3萬張",
-      "投信近 5 日買超 +136張",
-      "外資近 5 日買超 +790張"
+      "投信近 5 日買超 +775張",
+      "外資近 5 日買超 +50張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-24"
+      "最近法人資料日：2026-08-25"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "直接賦能角色",
-      "roleSummary": "奇鋐為AI伺服器散熱與機殼核心供應商，6月營收176.2億元年增66.1%，累計年增85.5%。提供NVIDIA HGX伺服器液冷冷板、VC均熱板、熱管模組及機殼導風罩。MOPS主要經營：3C電子產品。",
+      "roleSummary": "奇鋐MOPS僅揭露3C電子產品，沒有冷板微通道尺寸、B200功耗或任何具名伺服器客戶；本角色保留為AI伺服器散熱模組與機構件供應者，但舊資料的精密規格與客戶直供敘述已收斂。2026年7月營收185.90億元、YoY+57.4%、累計YoY+80.3%，公司說明客戶需求增加，未拆分AI占比。",
       "supplyChainStage": "thermal",
       "roleType": "ai_server_thermal_solution_provider",
       "directness": "direct_enabler",
@@ -93,9 +93,9 @@
     },
     "scoringFactors": [
       "直接度 直接賦能角色 +36",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -103,9 +103,9 @@
     ],
     "summary": "奇鋐 在「AI 伺服器整機與 EMS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · high",
-      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · medium",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "相關題材：AI 伺服器液冷散熱 · 供應商角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-24"
+      "lastVerified": "2026-08-25"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -163,8 +163,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "high",
-        "roleSummary": "奇鋐為AI伺服器散熱與機殼核心供應商，6月營收176.2億元年增66.1%，累計年增85.5%。提供NVIDIA HGX伺服器液冷冷板、VC均熱板、熱管模組及機殼導風罩。MOPS主要經營：3C電子產品。"
+        "confidence": "medium",
+        "roleSummary": "奇鋐MOPS僅揭露3C電子產品，沒有冷板微通道尺寸、B200功耗或任何具名伺服器客戶；本角色保留為AI伺服器散熱模組與機構件供應者，但舊資料的精密規格與客戶直供敘述已收斂。2026年7月營收185.90億元、YoY+57.4%、累計YoY+80.3%，公司說明客戶需求增加，未拆分AI占比。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -260,19 +260,20 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 71,
+    "totalScore": 77,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 0,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "股價淨值比 20.3 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 21.0 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
@@ -281,10 +282,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2967.00",
-      "波段多空分水嶺看 MA20：2761.25",
-      "追蹤法人是否延續 買超：最近 +460張",
-      "本益比 38.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：2950.00",
+      "波段多空分水嶺看 MA20：2796.75",
+      "追蹤法人是否延續 買超：最近 +197張",
+      "本益比 39.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 3320.00 且量比 > 1.5：列為轉強訊號",

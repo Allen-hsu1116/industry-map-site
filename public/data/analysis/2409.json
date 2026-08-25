@@ -2,19 +2,21 @@
   "schemaVersion": 1,
   "code": "2409",
   "name": "友達",
-  "generatedAt": "2026-08-24T12:37:19.660Z",
+  "generatedAt": "2026-08-25T12:32:58.091Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
     "missingKnowledge": [
+      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
+      "topic_role_not_verified",
       "incomplete_swot"
     ]
   },
@@ -50,16 +52,16 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "score": 74,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "間接受惠",
-      "roleSummary": "友達6月營收249.52億YoY+13.8%，累計1399.23億YoY-1.0%。MOPS登記為薄膜電晶體液晶顯示器及系統/垂直場域/智慧移動解決方案。AI伺服器關聯度低但AI PC/監視器面板需求間接受惠，主力轉型車用顯示器與MicroLED。",
+      "roleSummary": "友達MOPS支持TFT-LCD與顯示系統、垂直場域及智慧移動方案，沒有AI伺服器整機、主板或散熱產品；本角色只能定位為資料中心控制室、KVM維運終端與監控看板的顯示應用。2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%，公司整體營運轉弱，亦未揭露AI伺服器貢獻。",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "display_panel_supplier",
       "directness": "indirect",
@@ -67,17 +69,17 @@
     },
     "productNarratives": [
       {
-        "name": "LTPS高解析手機面板(6.1\" 460ppi iPhone供應)",
+        "name": "資料中心機架KVM終端用TFT-LCD面板（應用推定）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "車用顯示器(12.3\"中控/儀表曲面OLED/LTPS)(-40~85°C寬溫)",
+        "name": "資料中心控制室拼接顯示面板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "8K4K大尺寸電視面板(65\" 8K/4K 120Hz)",
+        "name": "伺服器維運終端用觸控顯示模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -98,25 +100,26 @@
     },
     "scoringFactors": [
       "直接度 間接受惠 +8",
-      "角色信心 high +16",
+      "角色信心 low +3",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 53，上限 40）"
     ],
-    "summary": "友達 在「AI 伺服器整機與 EMS」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 74/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "友達 在「AI 伺服器整機與 EMS」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 間接受惠 · high",
-      "產業評分：74/100（直接度 間接受惠 +8；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "主要產品：LTPS高解析手機面板",
       "主要產品：AMOLED手機面板(6代線)",
       "主要產品：車用顯示器(儀表/中控)",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
+      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
       "V2 W：4月營收221億年減4.5%，面板景氣仍在底部",
       "V2 W：LCD面板價格長期下降趨勢",
       "V2 T：京東方(BOE)低價競爭",
@@ -201,8 +204,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "友達6月營收249.52億YoY+13.8%，累計1399.23億YoY-1.0%。MOPS登記為薄膜電晶體液晶顯示器及系統/垂直場域/智慧移動解決方案。AI伺服器關聯度低但AI PC/監視器面板需求間接受惠，主力轉型車用顯示器與MicroLED。"
+        "confidence": "low",
+        "roleSummary": "友達MOPS支持TFT-LCD與顯示系統、垂直場域及智慧移動方案，沒有AI伺服器整機、主板或散熱產品；本角色只能定位為資料中心控制室、KVM維運終端與監控看板的顯示應用。2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%，公司整體營運轉弱，亦未揭露AI伺服器貢獻。"
       }
     ],
     "swot": [
@@ -342,7 +345,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 18,
+    "totalScore": 6,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -354,11 +357,10 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
-        "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
@@ -366,17 +368,22 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 91 天未更新"
+        "message": "股價資料已 92 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 91 天未更新"
+        "message": "籌碼資料已 92 天未更新"
       },
       {
         "id": "risk.stop-distance",
         "severity": "hard",
         "message": "距離 MA20 約 22.0%，停損距離過大"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },
