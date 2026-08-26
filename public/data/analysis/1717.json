@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1717",
   "name": "長興",
-  "generatedAt": "2026-08-25T12:32:57.985Z",
+  "generatedAt": "2026-08-26T12:34:34.559Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -58,27 +58,27 @@
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "先進封裝與 CoWoS",
+      "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "長興7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。為封裝用環氧樹脂與封膠材料供應商。",
-      "supplyChainStage": "packaging_materials",
-      "roleType": "packaging_resin_supplier",
+      "roleSummary": "長興為PCB基板用合成樹脂/光阻材料供應商。7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。",
+      "supplyChainStage": "pcb_materials",
+      "roleType": "pcb_resin_supplier",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "封裝用環氧樹脂(EMC封裝樹脂/低介電常數)",
+        "name": "PCB用環氧樹脂(FR-4基板樹脂)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "底部填膠(Underfill/流動性<5um)",
+        "name": "乾膜光阻(D/F光阻/感光絕緣層)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "封裝用矽膠(高折射率LED封裝膠)",
+        "name": "ABF載板用樹脂(Ajinomoto Build-up Film替代)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -91,28 +91,28 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 先進封裝與 CoWoS（process/active） +16",
+      "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
       "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "長興 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "長興 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
-      "相關題材：PCB、IC 載板與高階基板材料 · 核心產品/平台",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
       "相關題材：石化、塑橡膠與特用化學 · 核心產品/平台",
+      "相關題材：半導體設備與前段材料 · 核心產品/平台",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
-      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
+      "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "知識庫最後驗證：2026-05-26（stale）"
     ]
   },
@@ -150,16 +150,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "advanced-packaging",
-        "topicName": "先進封裝與 CoWoS",
-        "canonicalTopicId": "advanced-packaging",
-        "canonicalTopicName": "先進封裝與 CoWoS",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "長興7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。為封裝用環氧樹脂與封膠材料供應商。"
-      },
-      {
         "topicId": "pcb-substrates",
         "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
@@ -188,21 +178,20 @@
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
         "roleSummary": "長興提供半導體用光阻材料/電子化學品。7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。"
+      },
+      {
+        "topicId": "advanced-packaging",
+        "topicName": "先進封裝與 CoWoS",
+        "canonicalTopicId": "advanced-packaging",
+        "canonicalTopicName": "先進封裝與 CoWoS",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "長興MOPS揭露工業用合成樹脂、PCB與光阻材料、特殊化學品，具先進封裝材料配方的上游鄰近性，但未揭露特定EMC、Underfill或晶圓級封裝量產認證。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%、累計YoY+10.5%，為公司整體成長，不能全數歸因先進封裝。"
       }
     ],
     "swot": [],
     "topics": [
-      {
-        "id": "advanced-packaging",
-        "name": "先進封裝與 CoWoS",
-        "type": "process",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
       {
         "id": "pcb-substrates",
         "name": "PCB、IC 載板與高階基板材料",
@@ -229,6 +218,17 @@
         "id": "semiconductor-equipment-materials",
         "name": "半導體設備與前段材料",
         "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "advanced-packaging",
+        "name": "先進封裝與 CoWoS",
+        "type": "process",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -272,12 +272,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 92 天未更新"
+        "message": "股價資料已 93 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 92 天未更新"
+        "message": "籌碼資料已 93 天未更新"
       }
     ]
   },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1513",
   "name": "中興電",
-  "generatedAt": "2026-08-25T12:32:57.946Z",
+  "generatedAt": "2026-08-26T12:34:34.520Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -107,8 +107,8 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：重電、電纜與 EPC 工程 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 重電、電纜與 EPC 工程（supply_chain_segment/active） +16）",
+      "相關題材：太陽能與離岸風電 · 直接賦能角色",
       "相關題材：儲能、電芯與電池材料 · 間接受惠",
-      "相關題材：太陽能與離岸風電 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -124,7 +124,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
       "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善"
+      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -171,6 +171,16 @@
         "roleSummary": "2026年7月營收24.10億元、YoY+3.8%、MoM-14.9%，累計YoY+3.5%，標案穩定但認列節奏波動。"
       },
       {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "中興電MOPS揭露綠能、輸配電設備與工程、節能空調、發電工程、氫能發電及產氫系統，可支援再生能源併網；但MOPS未揭露特定風場海纜終端或開發商訂單。2026年7月營收24.10億元、YoY+3.8%、累計YoY+3.5%，但MoM-14.9%，工程認列波動明顯。"
+      },
+      {
         "topicId": "energy-storage-battery",
         "topicName": "儲能、電芯與電池材料",
         "canonicalTopicId": "energy-storage-battery",
@@ -179,16 +189,6 @@
         "directnessLabel": "間接受惠",
         "confidence": "high",
         "roleSummary": "中興電工在儲能題材中為台灣儲能EPC主要統包商，提供PCS功率調節系統、儲能電廠配電盤及氫能發電系統。6月營收28.33億YoY+8.31%，累計140.24億YoY+3.48%，MOPS登記涵蓋綠能/輸配電/氫能三大領域。台電調頻備轉標案EPC實績，具MW級儲能系統整合能力。"
-      },
-      {
-        "topicId": "renewable-energy",
-        "topicName": "太陽能與離岸風電",
-        "canonicalTopicId": "renewable-energy",
-        "canonicalTopicName": "太陽能與離岸風電",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "中興電在離岸風電題材中提供風場陸上變電站GIS設備與輸配電工程統包服務，並跨足氫能產氫系統。5月營收23.9億年增3.6%，累計111.9億年增2.3%，綠能工程動能穩定。"
       }
     ],
     "swot": [
@@ -431,8 +431,8 @@
         ]
       },
       {
-        "id": "energy-storage-battery",
-        "name": "儲能、電芯與電池材料",
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -442,8 +442,8 @@
         ]
       },
       {
-        "id": "renewable-energy",
-        "name": "太陽能與離岸風電",
+        "id": "energy-storage-battery",
+        "name": "儲能、電芯與電池材料",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -488,12 +488,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 92 天未更新"
+        "message": "股價資料已 93 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 92 天未更新"
+        "message": "籌碼資料已 93 天未更新"
       }
     ]
   },

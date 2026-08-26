@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6147",
   "name": "頎邦",
-  "generatedAt": "2026-08-25T12:32:58.503Z",
+  "generatedAt": "2026-08-26T12:34:35.082Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-25",
-  "chipDataDate": "2026-08-25",
+  "marketDataDate": "2026-08-26",
+  "chipDataDate": "2026-08-26",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,32 +18,32 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 55,
-    "summary": "頎邦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 11.0%。",
+    "summary": "頎邦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 19.5%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 11.0%"
+      "收盤站上 MA20 19.5%"
     ],
     "risks": [],
     "watch": [
-      "接近 20 日高點 171.00，觀察是否突破"
+      "接近 20 日高點 185.50，觀察是否突破"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 21,
-    "summary": "頎邦 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +3.4千張；投信近 5 日買超 +1.8千張。",
+    "summary": "頎邦 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +3.1千張；投信近 5 日買超 +1.4千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +3.4千張",
-      "投信近 5 日買超 +1.8千張",
-      "外資近 5 日買超 +923張",
-      "融資近 5 日下降 9.3%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +3.1千張",
+      "投信近 5 日買超 +1.4千張",
+      "外資近 5 日買超 +462張",
+      "融資近 5 日下降 9.1%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -8.5千張"
+      "近 20 日法人偏賣，合計 -1.4萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-25"
+      "最近法人資料日：2026-08-26"
     ]
   },
   "industry": {
@@ -140,7 +140,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-25"
+      "lastVerified": "2026-08-26"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -331,8 +331,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 73,
-    "recommendationState": "top_candidate",
+    "totalScore": 57,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -350,20 +350,20 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 9.9%，部位需降速"
+        "severity": "hard",
+        "message": "距離 MA20 約 16.3%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：161.50",
-      "波段多空分水嶺看 MA20：152.20",
-      "追蹤法人是否延續 買超：最近 +4.2千張",
-      "本益比 40.8 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：166.30",
+      "波段多空分水嶺看 MA20：155.18",
+      "追蹤法人是否延續 賣超：最近 -275張",
+      "本益比 44.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 171.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 185.50 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 113.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

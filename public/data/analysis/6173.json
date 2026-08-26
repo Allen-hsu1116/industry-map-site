@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-08-25T12:32:58.513Z",
+  "generatedAt": "2026-08-26T12:34:35.093Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-25",
-  "chipDataDate": "2026-08-25",
+  "marketDataDate": "2026-08-26",
+  "chipDataDate": "2026-08-26",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,10 +18,10 @@
     "stance": "neutral",
     "label": "中性震盪",
     "score": 15,
-    "summary": "信昌電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 10.2%。",
+    "summary": "信昌電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 5.8%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 10.2%"
+      "收盤站上 MA20 5.8%"
     ],
     "risks": [],
     "watch": [
@@ -29,19 +29,20 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 8,
-    "summary": "信昌電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +308張；外資近 5 日買超 +2千張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -23,
+    "summary": "信昌電 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +1千張；融資近 5 日下降 5.4%，籌碼壓力下降。",
     "signals": [
-      "三大法人近 5 日合計買超 +308張",
-      "外資近 5 日買超 +2千張"
+      "外資近 5 日買超 +1千張",
+      "融資近 5 日下降 5.4%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -1.3萬張"
+      "三大法人近 5 日合計賣超 -673張",
+      "近 20 日法人偏賣，合計 -1.4萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-25"
+      "最近法人資料日：2026-08-26"
     ]
   },
   "industry": {
@@ -135,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-25"
+      "lastVerified": "2026-08-26"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -174,8 +175,8 @@
         "canonicalTopicName": "先進封裝與 CoWoS",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "信昌電提供先進封裝用LTCC介電瓷粉與DPC/AMB陶瓷散熱基板，受惠先進封裝與SiC功率模組需求成長。"
+        "confidence": "low",
+        "roleSummary": "信昌電MOPS揭露晶片電容、晶片電阻與介電瓷粉，未揭露封裝基板、DPC／AMB陶瓷基板或先進封裝材料認證；本題材應定位為封裝設備與基板供應鏈的被動元件／材料鄰近角色。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，不能直接歸因先進封裝。"
       },
       {
         "topicId": "ai-server-power-backup",
@@ -371,7 +372,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 62,
+    "totalScore": 60,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -385,20 +386,14 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 9.3%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：210.60",
-      "波段多空分水嶺看 MA20：184.63",
-      "追蹤法人是否延續 買超：最近 +484張",
-      "本益比 38.3 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：207.50",
+      "波段多空分水嶺看 MA20：187.18",
+      "追蹤法人是否延續 賣超：最近 -1.3千張",
+      "本益比 37.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 230.00 且量比 > 1.5：列為轉強訊號",

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-08-25T12:32:58.035Z",
+  "generatedAt": "2026-08-26T12:34:34.609Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-25",
-  "chipDataDate": "2026-08-25",
+  "marketDataDate": "2026-08-26",
+  "chipDataDate": "2026-08-26",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -25,25 +25,23 @@
     "risks": [],
     "watch": [
       "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低",
       "接近 20 日高點 2445.00，觀察是否突破"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 0,
-    "summary": "台積電 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +6.4千張；投信近 5 日買超 +839張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 36,
+    "summary": "台積電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.1萬張；近 20 日法人偏買，合計 +1.6萬張。",
     "signals": [
-      "近 20 日法人偏買，合計 +6.4千張",
-      "投信近 5 日買超 +839張"
+      "三大法人近 5 日合計買超 +1.1萬張",
+      "近 20 日法人偏買，合計 +1.6萬張",
+      "投信近 5 日買超 +986張",
+      "外資近 5 日買超 +9千張"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -1.2千張",
-      "外資近 5 日賣超 -3.7千張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-25"
+      "最近法人資料日：2026-08-26"
     ]
   },
   "industry": {
@@ -52,17 +50,33 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台積電在CoWoS先進封裝領域獨占鰲頭，5月營收4170億年增30.1%。2025年產能持續擴充，先進封裝為AI GPU出貨瓶頸與成長引擎。",
+      "roleSummary": "台積電MOPS明確揭露積體電路製造並提供封裝、測試、CAD與光罩服務，先進封裝屬核心延伸；CoWoS、SoIC與InFO為題材上下文中的具體平台，但客戶與平台對應非本次MOPS揭露。2026年7月營收4,675.81億元、MoM+5.6%、YoY+44.7%、累計YoY+37.0%，為公司整體數據。",
       "supplyChainStage": "advanced_packaging",
       "roleType": "cowos_advanced_packaging_provider",
       "directness": "core",
       "source": "canonical"
     },
-    "productNarratives": [],
+    "productNarratives": [
+      {
+        "name": "CoWoS-S矽中介層2.5D整合封裝服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "CoWoS-L局部矽互連2.5D封裝服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "SoIC晶片對晶圓混合鍵合3D整合服務",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      }
+    ],
     "swotSnapshot": {
       "strengths": [
         "台積電同時具備先進邏輯晶圓代工、先進封裝與 AI/HPC 晶片製造相關能力，是 AI 半導體供應鏈的核心平台型公司。"
@@ -79,7 +93,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 先進封裝與 CoWoS（process/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -119,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-08-25"
+      "lastVerified": "2026-08-26"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -149,7 +163,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電在CoWoS先進封裝領域獨占鰲頭，5月營收4170億年增30.1%。2025年產能持續擴充，先進封裝為AI GPU出貨瓶頸與成長引擎。"
+        "roleSummary": "台積電MOPS明確揭露積體電路製造並提供封裝、測試、CAD與光罩服務，先進封裝屬核心延伸；CoWoS、SoIC與InFO為題材上下文中的具體平台，但客戶與平台對應非本次MOPS揭露。2026年7月營收4,675.81億元、MoM+5.6%、YoY+44.7%、累計YoY+37.0%，為公司整體數據。"
       },
       {
         "topicId": "wafer-foundry",
@@ -288,7 +302,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 75,
+    "totalScore": 81,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 24,
@@ -304,6 +318,7 @@
       "classification": "趨勢題材股",
       "rationale": [
         "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -312,15 +327,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2382.00",
-      "波段多空分水嶺看 MA20：2368.50",
-      "追蹤法人是否延續 賣超：最近 -17張",
+      "短線支撐/壓力先看 MA5：2395.00",
+      "波段多空分水嶺看 MA20：2379.25",
+      "追蹤法人是否延續 買超：最近 +4.9千張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 27.8 倍，需和同族群估值比較"
+      "本益比 28.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2445.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 2180.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 2190.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
