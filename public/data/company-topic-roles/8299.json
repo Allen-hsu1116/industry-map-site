@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8299",
   "companyName": "群聯",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "memory-modules",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "nand_controller_storage_module",
       "roleType": "nand_controller_ssd_solution_provider",
-      "roleSummary": "群聯為全球NAND Flash控制晶片龍頭。提供PCIe 5.0 NVMe SSD控制晶片、UFS 4.0/eMMC控制晶片及SSD模組，為Apple/Samsung/Kioxia/Western Digital核心供應商。MOPS主要經營：IC設計業半導體業電腦及週邊設備業。",
+      "roleSummary": "群聯MOPS僅概括揭露IC設計、半導體與電腦周邊業，既有公司產品資料支持NAND控制器與SSD方案，但MOPS未證明Apple、Samsung等直接客戶。FinMind顯示2026年7月營收271.62億元、MoM+9.3%、YoY+377.6%，高成長仍是公司整體口徑。",
       "products": [
-        "PCIe NVMe SSD控制晶片(PS5026-E26 PCIe 5.0)",
-        "UFS 4.0快閃儲存控制晶片(手機/汽車)",
-        "eMMC 5.1控制晶片(物聯網/工控)",
-        "USB 3.2隨身碟控制晶片(PS2251-18)",
-        "固態硬碟模組(消費/企業級/工規)"
+        "PCIe NVMe SSD控制晶片與參考設計",
+        "UFS嵌入式儲存控制晶片",
+        "eMMC嵌入式儲存控制晶片",
+        "USB快閃儲存控制晶片",
+        "消費、企業與工業用SSD儲存模組"
       ],
       "customers": [
-        "Apple(iPhone NAND快閃控制晶片)",
-        "Samsung(Galaxy手機UFS控制晶片)",
-        "Toshiba/Kioxia(NAND Flash控制晶片)",
-        "Western Digital(USB控制晶片)",
-        "Micron(Crucial SSD控制晶片)"
+        "Kioxia（NAND供應鏈對象，非MOPS揭露客戶)",
+        "Micron Technology（NAND供應鏈對象，非MOPS揭露客戶)",
+        "Intel（PCIe平台驗證對象，非MOPS揭露客戶)",
+        "AMD（伺服器平台驗證對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "慧榮(5274)",
@@ -32,7 +31,8 @@
         "Realtek"
       ],
       "risks": [
-        "NAND價格週期波動，中國控制晶片替代競爭，SSD市場需求放緩"
+        "NAND報價與庫存循環會同時影響控制晶片、模組需求與存貨評價",
+        "MOPS未支持具名客戶與速度規格，產品關係需依公司產品資料而非客戶傳聞"
       ],
       "evidence": [
         {
@@ -48,32 +48,46 @@
           "title": "群聯電子 113 年股東會年報",
           "url": "https://doc.twse.com.tw/",
           "claim": "群聯電子 113 年股東會年報 supports 群聯 role as nand_controller_ssd_solution_provider in 記憶體模組 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：IC設計、半導體及電腦周邊設備業。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收271.62億元，MoM+9.3%、YoY+377.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "PCIe 5.0 NVMe SSD控制晶片(PS5026-E26 14GB/s)",
-        "UFS 4.0快閃控制晶片(4.2GB/s讀寫速度)",
-        "NAND Flash管理演算法(LDPC糾錯/Wear Leveling)"
+        "NAND管理韌體、LDPC錯誤更正、磨耗平均與垃圾回收",
+        "PCIe／NVMe佇列、主機介面與快取一致性控制",
+        "不同NAND顆粒的訊號、壽命、資料保存與量產相容性驗證"
       ],
       "swot": {
         "strengths": [
-          "全球NAND Flash控制晶片龍頭，PCIe 5.0/UFS 4.0技術領先",
-          "Apple/Samsung/Kioxia等一線客戶認證"
+          "NAND控制器、韌體與SSD模組整合能力可涵蓋多種儲存介面",
+          "FinMind顯示2026年7月營收MoM+9.3%、YoY+377.6%，需求與產品出貨強勁"
         ],
         "weaknesses": [
-          "OTC上櫃，營收數據未透過TWSE OpenAPI揭露",
-          "控制晶片ASP受限於NAND原廠議價"
+          "營運高度依賴NAND產業循環與原廠供貨條件",
+          "本次MOPS僅揭露產業類別，未證實Apple／Samsung等直接客戶"
         ],
         "opportunities": [
-          "AI PC帶動PCIe 5.0 SSD需求",
-          "汽車UFS/eMMC車規儲存市場成長"
+          "AI PC與伺服器儲存升級可增加高效能NVMe SSD需求",
+          "工控、車載與邊緣設備需要長供貨週期與客製韌體方案"
         ],
         "threats": [
-          "慧榮3104/點序6485競爭控制晶片份額",
-          "NAND原廠自研控制晶片風險"
+          "慧榮、Marvell與NAND原廠自研控制器競爭",
+          "NAND價格快速下跌或客戶去庫存可能使高成長急轉直下"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6214",
   "companyName": "精誠",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "it_services",
       "roleType": "enterprise_it_services",
-      "roleSummary": "精誠MOPS揭露資訊軟體、電子資訊供應與資料處理服務，屬企業軟體、雲端與資安核心角色。2026年7月營收47.45億元、YoY+31.8%、累計YoY+36.2%，但MoM-29.6%反映專案驗收認列波動。",
+      "roleSummary": "精誠MOPS支持資訊軟體、電子資訊供應、資料處理與電腦設備零售，足以列為企業IT服務核心角色；但SOC／MDR、RAG Agent與Microsoft等合作關係並非本次MOPS逐項揭露。2026年7月營收47.45億元、YoY+31.8%、累計YoY+36.2%，但MoM-29.6%反映專案認列波動。",
       "products": [
-        "24x7 SOC資安監控與MDR代管偵測回應服務",
-        "AWS/Azure/Google Cloud雲端遷移與FinOps治理服務",
-        "SAP S/4HANA與Oracle ERP企業系統導入",
-        "Kubernetes微服務平台與DevSecOps導入",
-        "企業RAG知識庫與LLM Agent工作流整合"
+        "企業資訊軟體導入與系統整合服務",
+        "雲端遷移、託管與資料處理服務",
+        "資安監控與事件應變整合服務",
+        "ERP／資料庫與企業應用維運服務",
+        "電腦設備與資訊軟體授權零售"
       ],
       "customers": [
-        "Microsoft(雲端與企業軟體合作對象)",
-        "Amazon Web Services(AWS雲端合作對象)",
-        "Google Cloud(雲端與資料平台合作對象)",
-        "SAP(ERP解決方案合作對象)",
-        "Oracle(資料庫與企業應用合作對象)"
+        "Microsoft（雲端與企業軟體平台對象，非客戶）",
+        "Amazon Web Services（雲端平台對象，非客戶）",
+        "SAP（ERP平台供應鏈對象，非客戶）",
+        "Oracle（資料庫平台供應鏈對象，非客戶)"
       ],
       "competitors": [
         "零壹(3029)",
@@ -32,8 +31,8 @@
         "聚碩(6270)"
       ],
       "risks": [
-        "IT服務毛利率受限(15-25%)",
-        "人才流動率高"
+        "大型專案驗收與軟硬體授權轉售會造成單月營收波動",
+        "原廠直接服務、人才成本與平台綁定可能壓縮整合商毛利"
       ],
       "legacy": {},
       "evidence": [
@@ -56,7 +55,7 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：資訊軟體服務、電子資訊供應、資料處理、電腦設備與資訊軟體零售。"
+          "claim": "MOPS主要經營業務：資訊軟體、電子資訊供應、資料處理、電腦設備與資訊軟體零售服務。"
         },
         {
           "sourceId": "twse-monthly-revenue",
@@ -67,29 +66,29 @@
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-19",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "SIEM/SOAR整合、EDR遙測與MITRE ATT&CK事件映射",
-        "Kubernetes、Service Mesh、GitOps與DevSecOps供應鏈控管",
-        "向量資料庫、RAG權限過濾與LLM Agent可觀測性"
+        "混合雲身分、網路、資料與備援架構整合",
+        "SIEM日誌、EDR遙測、告警關聯與事件應變流程",
+        "ERP／資料庫遷移、API介接與批次資料品質治理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收YoY+31.8%、累計YoY+36.2%，企業數位轉型需求強",
-          "從ERP、雲端到SOC/MDR與AI導入具跨平台整合能力"
+          "MOPS支持軟體、資訊供應、資料處理與設備零售的跨域整合能力",
+          "7月營收YoY+31.8%、累計YoY+36.2%，企業數位化需求強"
         ],
         "weaknesses": [
-          "7月營收MoM-29.6%，專案驗收與授權轉售使月營收波動大",
-          "系統整合與軟硬體轉售占比提高時，整體毛利率容易被稀釋"
+          "7月營收MoM-29.6%，專案認列時點造成波動",
+          "本次MOPS未逐項支持SOC／MDR、RAG或具名平台合作，舊資料精確度過高"
         ],
         "opportunities": [
-          "生成式AI治理、RAG落地與Agent導入可帶動顧問及維運收入",
-          "零信任、雲端資安與法遵需求可擴大MDR長約占比"
+          "企業雲端治理、資安韌性與資料平台現代化可增加顧問及維運收入",
+          "生成式AI導入需要既有ERP、權限與資料治理整合，可擴大專案範圍"
         ],
         "threats": [
-          "IBM、Accenture及大型雲端原廠直接服務企業，壓縮整合商空間",
-          "資安人才短缺與大型專案交付失誤可能侵蝕毛利"
+          "Accenture、IBM與雲端原廠直接服務企業，壓縮本地SI空間",
+          "資安與雲端人才短缺、交付延誤或固定價專案超支可能侵蝕毛利"
         ]
       }
     }

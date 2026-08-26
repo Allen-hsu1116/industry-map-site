@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6168",
   "companyName": "宏齊",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -11,18 +11,18 @@
       "directness": "core",
       "supplyChainStage": "led_packaging",
       "roleType": "smd_led_manufacturer",
-      "roleSummary": "宏齊7月營收2.06億，MoM+0.8%。MOPS登記為表面黏著發光二極體(SMD LED)。為SMD LED封裝專業製造商。",
+      "roleSummary": "宏齊MOPS只明確揭露表面黏著發光二極體（SMD LED）生產銷售，足以支持LED封裝角色，但不支持VCSEL、940nm、AlN基板或Samsung／LG直接客戶。2026年7月營收2.06億元、MoM+0.8%、YoY+12.8%，累計YoY+7.8%。",
       "products": [
-        "SMD LED封裝(0402/0603/0805/1206微型LED)",
-        "Mini LED背光封裝(車用/顯示器用)",
-        "紅外線LED(VCSEL/940nm感測用)",
-        "紫外線UV LED(365nm/395nm固化用)"
+        "可見光SMD LED封裝元件",
+        "白光背光用SMD LED封裝元件",
+        "紅外光SMD發光元件",
+        "紫外光SMD發光元件"
       ],
       "customers": [
-        "三星(Samsung)(Mini LED背光)",
-        "LG(Mini LED電視背光)",
-        "群創(3481)(顯示器LED背光)",
-        "汽車車燈廠(車用LED)"
+        "Samsung Electronics（顯示背光應用對象，非MOPS揭露客戶）",
+        "LG Display（面板背光應用對象，非MOPS揭露客戶）",
+        "群創(3481；顯示模組應用對象，非MOPS揭露客戶)",
+        "友達(2409；顯示模組應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "億光(2393)",
@@ -30,8 +30,8 @@
         "東貝(2499)"
       ],
       "risks": [
-        "LED封裝市場價格競爭激烈",
-        "Mini LED滲透率低於預期"
+        "SMD LED封裝成熟且價格競爭激烈，規模較小時成本壓力更高",
+        "MOPS未支持Mini LED、VCSEL、波長與車規認證等既有精確宣稱"
       ],
       "legacy": {},
       "evidence": [
@@ -48,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：表面黏著發光二極體之生產與銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收2.06億元，MoM+0.8%、YoY+12.8%，累計YoY+7.8%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "Mini LED封裝技術(芯片間距<0.3mm)",
-        "VCSEL封裝技術(940nm/ToF感測)",
-        "UV LED封裝散熱設計(AlN陶瓷基板)"
+        "LED晶粒固晶、打線與樹脂封裝的一致性控制",
+        "光色分選、亮度分級與封裝光學設計",
+        "回焊耐熱、濕熱與熱循環可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "SMD LED封裝產品線完整(0402-1206全尺寸)",
-          "Mini LED/UV LED/IR LED技術佈局",
-          "車用LED認證通過"
+          "MOPS直接支持SMD LED生產銷售，角色沒有硬扯別的產業",
+          "2026年7月營收YoY+12.8%、累計YoY+7.8%，維持溫和成長"
         ],
         "weaknesses": [
-          "7月營收2.06億，MoM+0.8%LED封裝毛利率低",
-          "與億光/光寶等大廠規模差距",
-          "Mini LED訂單不穩定"
+          "單月營收僅2.06億元，規模與億光、光寶科存在差距",
+          "MOPS揭露範圍很窄，無法據此確認Mini LED、UV／IR規格或具名客戶"
         ],
         "opportunities": [
-          "Mini LED背光在電視/平板滲透率提升",
-          "車用LED(矩陣式頭燈)需求增長",
-          "UV LED固化/殺菌應用興起"
+          "車載顯示、工業指示與穿戴裝置可增加小型SMD LED用量",
+          "顯示背光與特殊波段應用可改善傳統指示燈產品組合"
         ],
         "threats": [
-          "億光/光寶等大廠規模優勢",
-          "中國LED封裝廠低價競爭",
-          "Micro LED技術可能替代Mini LED"
+          "中國LED封裝廠低價競爭持續壓縮標準品毛利",
+          "OLED與Micro LED等顯示技術演進可能改變既有背光需求"
         ]
       }
     },

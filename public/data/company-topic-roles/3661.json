@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3661",
   "companyName": "世芯-KY",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -11,20 +11,18 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "custom_asic_design_service",
-      "roleSummary": "世芯-KY是AI ASIC設計服務領導廠商，提供7nm/5nm/3nm先進製程SoC Turnkey服務。5月營收19.4億年減33.5%，累計82.5億年減50.1%，量產產品減少但新AI專案NRE持續推進。",
+      "roleSummary": "世芯-KY的MOPS主要業務明確支持ASIC／SoC設計與製造生產服務，但未揭露3nm、HBM、CoWoS或Amazon／Google客戶；因此保留客製ASIC核心角色，移除未受本次MCP支持的節點與具名客戶斷言。2026年7月營收74.33億元、MoM+108.1%、YoY+181.8%，主因量產產品增加，但累計YoY仍為-13.8%。",
       "products": [
-        "7nm/5nm/3nm AI加速器ASIC Turnkey設計",
-        "HBM整合SoC設計(CoWoS封裝搭配)",
-        "高速SerDes/PCIe Gen5介面IP設計",
-        "雲端Training/Inference ASIC(客製化)",
-        "SoC驗證與量產導入服務(NRE→MP)"
+        "客製ASIC系統單晶片架構與前端設計服務",
+        "ASIC／SoC RTL-to-GDSII實體設計服務",
+        "客製SoC驗證、測試程式與量產導入服務",
+        "AI／HPC應用之客製SoC設計服務（題材應用，MOPS未揭露節點）"
       ],
       "customers": [
-        "Amazon(AWS Trainium/Inferentia ASIC)",
-        "Google(TPU ASIC設計合作)",
-        "Fujitsu(AI加速器)",
-        "SambaNova(AI推論ASIC)",
-        "日本高速運算專案"
+        "台積電(2330；晶圓製造供應鏈對象，非MOPS揭露客戶)",
+        "Arm（處理器IP平台對象，非MOPS揭露客戶）",
+        "Synopsys（EDA／IP平台對象，非MOPS揭露客戶）",
+        "Amazon Web Services（雲端ASIC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "創意(3443)(台積電集團)",
@@ -32,8 +30,8 @@
         "Marvell(ASIC部門)"
       ],
       "risks": [
-        "累計營收年減50.1%，量產產品減少為重大警訊",
-        "客戶集中度極高，單一專案結束衝擊大"
+        "累計營收YoY-13.8%，顯示單月量產跳升尚未完全彌補前期專案缺口",
+        "客製ASIC收入受少數專案量產時點、晶圓產能與驗收節奏影響"
       ],
       "legacy": {
         "topicSlug": "asic-ip-design",
@@ -54,36 +52,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3661 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：專業特殊應用積體電路（ASIC）系統單晶片（SoC）設計及製造生產。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收74.33億元，MoM+108.1%、YoY+181.8%，累計YoY-13.8%；公司說明為量產產品增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "7nm/5nm/3nm AI加速器ASIC Turnkey設計(NRE→MP)",
-        "HBM整合SoC設計(CoWoS封裝搭配)",
-        "高速SerDes/PCIe Gen5介面IP設計"
+        "RTL整合、邏輯綜合、布局繞線與時序收斂的RTL-to-GDSII流程",
+        "DFT可測試性設計、功耗完整性與SoC驗證",
+        "NRE設計服務銜接晶圓製造、封裝測試與量產導入"
       ],
       "swot": {
         "strengths": [
-          "7月營收74.33億MoM+108.1%爆發性成長，AI ASIC Turnkey設計需求爆發",
-          "MOPS登記為ASIC SoC設計及製造，7nm/5nm/3nm先進製程設計能力",
-          "客戶含Amazon(AWS Trainium/Inferentia)、Google(TPU)，全球前兩大雲端ASIC客戶"
+          "MOPS直接支持ASIC／SoC設計與製造生產，題材角色明確",
+          "2026年7月營收MoM+108.1%、YoY+181.8%，量產產品增加帶來強勁單月動能"
         ],
         "weaknesses": [
-          "營收高度集中少數大客戶(Amazon/Google)，訂單波動風險大",
-          "ASIC Turnkey NRE收入認列不規律，季度營收波動大",
-          "先進製程(3nm)設計成本高昂，NRE投入回收週期長"
+          "累計營收YoY-13.8%，單月爆發與全年表現落差大",
+          "MOPS未揭露製程節點、HBM封裝規格或具名客戶，舊資料的精確關係不能當成已驗證事實"
         ],
         "opportunities": [
-          "AI推論ASIC需求隨雲端業者擴建AI基礎設施爆發",
-          "HBM整合SoC(CoWoS封裝)設計能力切入NVIDIA生態",
-          "Meta/Microsoft等新雲端客戶ASIC設計需求"
+          "雲端服務商擴大客製AI加速器可增加ASIC設計與量產導入需求",
+          "先進SoC複雜度提升，可提高NRE、驗證與供應鏈整合服務價值"
         ],
         "threats": [
-          "Broadcom/Marvell等大廠競爭ASIC Turnkey服務",
-          "AI ASIC設計客戶可能轉向自研(如Google TPU自研化)",
-          "台積電產能分配影響量產時程"
+          "Broadcom、Marvell與創意等ASIC服務競爭者爭取同一批AI專案",
+          "晶圓製造、封裝產能與大客戶專案延期可能造成營收劇烈波動"
         ]
       }
     }

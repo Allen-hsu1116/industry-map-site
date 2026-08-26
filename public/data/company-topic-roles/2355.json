@@ -1,28 +1,27 @@
 {
   "schemaVersion": 1,
   "companyCode": "2355",
-  "companyName": "2355",
-  "updatedAt": "2026-07-15",
+  "companyName": "敬鵬",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "敬鵬為台灣汽車板龍頭，6月營收13.7億年增4.4%，累計82.9億年增4.6%。電動車趨勢帶動厚銅板與高可靠性PCB需求，但消費性電子需求疲軟影響產能利用率。",
+      "roleSummary": "敬鵬MOPS支持電子用PCB、電子材料、PCB模具與絕緣板製造，足以列為PCB核心廠；但AEC-Q100是IC規範，且MOPS未揭露3oz至6oz、Bosch／Tesla客戶或汽車板占比。2026年7月營收14.73億元、YoY+15.9%，累計YoY+6.2%。",
       "products": [
-        "汽車用多層PCB(8-16層)(車規AEC-Q100)",
-        "HDI PCB(高密度互連板)",
-        "雙面PCB(2-layer剛性板)",
-        "厚銅PCB(電動車逆變器用3oz+)",
-        "軟硬結合PCB(Rigid-Flex)"
+        "車載電子用多層剛性PCB",
+        "雙面剛性印刷電路板",
+        "HDI高密度互連印刷電路板",
+        "電源控制用厚銅印刷電路板",
+        "PCB沖壓模具與絕緣板"
       ],
       "customers": [
-        "Bosch(汽車電子PCB)",
-        "Continental(車用控制板)",
-        "Tesla(電動車PCB)",
-        "Denso(車用電子PCB)",
-        "ZF(車規安全系統PCB)"
+        "Bosch（車載PCB應用對象，非MOPS揭露客戶)",
+        "Continental（車載控制板應用對象，非MOPS揭露客戶)",
+        "Denso（車用電子應用對象，非MOPS揭露客戶)",
+        "ZF（底盤控制電子應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "欣興電子(3037)(汽車PCB)",
@@ -30,9 +29,8 @@
         "先豐(2493)(汽車PCB)"
       ],
       "risks": [
-        "汽車板成長穩定但緩慢",
-        "消費性電子需求疲軟影響產能利用率",
-        "中國PCB廠低價競爭"
+        "車市景氣與Tier-1庫存調整會影響汽車板稼動率",
+        "MOPS未揭露車規認證、銅厚與具名客戶，不能沿用精確供應關係"
       ],
       "evidence": [
         {
@@ -41,38 +39,48 @@
           "title": "2355公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 2355 role in PCB、IC 載板與高階基板材料 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子用印刷線路板、電子材料、PCB模具與絕緣板之製造加工買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收14.73億元，MoM+7.8%、YoY+15.9%，累計YoY+6.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-18",
+      "confidence": "medium",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "車規PCB AEC-Q100可靠性認證製程",
-        "厚銅電路板蝕刻技術(3oz-6oz銅厚)",
-        "HDI微盲孔雷射鑽孔與填孔技術"
+        "多層板壓合、層間對位與通孔鍍銅可靠度控制",
+        "HDI雷射微孔、填孔電鍍與細線路成像",
+        "厚銅蝕刻、熱管理與車載溫循振動可靠度驗證"
       ],
       "supplyChainStage": "pcb",
       "roleType": "automotive_pcb_manufacturer",
       "swot": {
         "strengths": [
-          "6月營收13.7億YoY+4.4%，累計83.0億YoY+4.6%，汽車PCB需求穩定增長",
-          "車規PCB(AEC-Q100)8-16層量產能力，供貨Bosch/Continental/Tesla/Denso",
-          "厚銅PCB(3oz-6oz)蝕刻技術領先，切入EV逆變器/充電樁市場"
+          "MOPS直接支持PCB與電子材料製造，角色明確",
+          "2026年7月營收MoM+7.8%、YoY+15.9%，出貨較去年同期改善"
         ],
         "weaknesses": [
-          "營收增速僅+4.4%，遠低於AI/伺服器PCB同業(金像電/華通)，成長動能弱",
-          "產品集中於汽車/消費PCB，未切入AI伺服器高層數PCB(24+層)",
-          "中國PCB廠低價競爭雙面/多層板，毛利率承壓"
+          "累計YoY僅+6.2%，全年增速低於單月表現",
+          "未由MOPS證實高層數AI板、車規認證或具名客戶，題材規格需保守"
         ],
         "opportunities": [
-          "EV放量帶動厚銅PCB(逆變器/BMS/充電樁)需求增長，ASP高於標準PCB",
-          "車用ADAS Level 3+需要更多PCB層數與高頻材料，ASP提升",
-          "Rigid-Flex軟硬結合板切入車用顯示/感測器市場"
+          "電動車電控、BMS與ADAS增加高可靠度及厚銅PCB需求",
+          "車載域控制器提升多層、HDI與熱管理板用量"
         ],
         "threats": [
-          "中國PCB廠(深南/滬電/景旺)低價競爭汽車板",
-          "消費性電子需求疲軟影響產能利用率",
-          "汽車板成長穩定但緩慢(+4.6%)，缺乏AI題材爆發性增長"
+          "中國汽車板廠擴產與低價競爭壓縮報價",
+          "車廠降價、平台改款或終端需求轉弱會向上游轉嫁成本壓力"
         ]
       }
     }

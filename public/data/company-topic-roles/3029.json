@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3029",
   "companyName": "零壹",
-  "updatedAt": "2026-08-17T19:13:19.000Z",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,19 +11,19 @@
       "directness": "core",
       "supplyChainStage": "it_distribution",
       "roleType": "cybersecurity_value_added_distributor",
-      "roleSummary": "2026年7月營收32.42億元、YoY+59.2%、累計YoY+16.2%，IT基建AI化與資安韌性專案動能明確。",
+      "roleSummary": "零壹MOPS明確揭露網路資安、IT基礎架構、雲平台與大數據產品的代理、製造及開發，屬加值經銷與整合角色；原廠名稱應視為供應鏈對象，不是客戶。2026年7月營收32.42億元、MoM+27.8%、YoY+59.2%，公司明確說明受惠IT基建AI化與資安韌性專案。",
       "products": [
-        "Fortinet FortiGate次世代防火牆與SASE方案",
-        "Palo Alto Networks Prisma Cloud與Cortex XDR",
-        "Broadcom VMware Cloud Foundation私有雲平台",
-        "Nutanix超融合基礎架構",
-        "Splunk SIEM資安監控平台"
+        "次世代防火牆、SASE與零信任整合方案",
+        "EDR／XDR與SIEM資安監控整合方案",
+        "虛擬化與超融合私有雲基礎架構",
+        "企業備份、資料保護與災難復原方案",
+        "大數據分析與AI運算基礎架構"
       ],
       "customers": [
-        "中華電信(2412；企業網路與資安專案對象)",
-        "台灣大哥大(3045；雲端與資安專案對象)",
-        "國泰金控(2882；金融資安應用對象)",
-        "富邦金控(2881；金融雲端應用對象)"
+        "Fortinet（資安原廠供應鏈對象，非客戶）",
+        "Palo Alto Networks（資安原廠供應鏈對象，非客戶）",
+        "Broadcom VMware（虛擬化平台供應鏈對象，非客戶）",
+        "Nutanix（超融合平台供應鏈對象，非客戶）"
       ],
       "competitors": [
         "精誠(6214)",
@@ -31,8 +31,8 @@
         "聚碩(6270)"
       ],
       "risks": [
-        "加值經銷商毛利率受限(10-15%)",
-        "原廠直銷趨勢壓縮通路空間"
+        "代理權調整與原廠直銷可能改變產品組合及毛利",
+        "專案驗收、軟硬體轉售占比與大型標案時點會造成營收波動"
       ],
       "legacy": {},
       "evidence": [
@@ -49,33 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：網路軟硬體代理、製造與開發；涵蓋網路資安、IT基礎架構、雲平台、大數據。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收32.42億元，MoM+27.8%、YoY+59.2%，累計YoY+16.2%；公司說明受惠IT基建AI化與資安韌性專案。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "Zero Trust/SASE架構與防火牆政策調校",
-        "VMware/Nutanix超融合遷移與Kubernetes整合",
-        "SIEM/SOAR日誌關聯分析與EDR事件應變"
+        "防火牆策略、SASE連線與身分式零信任架構整合",
+        "EDR／XDR遙測、SIEM日誌關聯與事件應變流程",
+        "虛擬化、超融合、備份及混合雲遷移的容量與可用性設計"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收32.42億元、YoY+59.2%、累計YoY+16.2%，IT基建AI化與資安韌性專案動能明確",
-          "資安、私有雲與大數據代理線完整",
-          "具售前PoC、部署及維運FAE能力"
+          "MOPS直接支持資安、IT基礎架構、雲平台與大數據產品線",
+          "7月營收MoM+27.8%、YoY+59.2%，且公司明確歸因AI基建與資安韌性專案"
         ],
         "weaknesses": [
-          "代理通路毛利率低於自有軟體商",
-          "代理權與大型專案驗收時程影響收入"
+          "加值經銷模式毛利受原廠政策與轉售占比限制",
+          "MOPS未揭露終端客戶，不能以電信或金融機構名稱包裝成已確認關係"
         ],
         "opportunities": [
-          "零信任與資安韌性法規推升預算",
-          "企業AI基建升級帶動私有雲整合"
+          "企業AI基礎設施升級可帶動伺服器、虛擬化、資料保護與資安整合",
+          "零信任、SASE與資安韌性法遵可增加長期維運服務收入"
         ],
         "threats": [
-          "原廠直銷或代理權調整",
-          "精誠、敦陽、聚碩競標壓力"
+          "原廠併購、代理權重整或直接銷售會壓縮通路空間",
+          "精誠、敦陽與其他加值經銷商競價可能稀釋專案毛利"
         ]
       }
     }

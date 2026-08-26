@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6213",
   "companyName": "聯茂",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -11,18 +11,18 @@
       "directness": "supplier",
       "supplyChainStage": "substrate_materials",
       "roleType": "ccl_upstream_material_supplier",
-      "roleSummary": "聯茂5月營收38.03億YoY+29.3%，受惠於AI伺服器高階CCL需求。為全球前五大銅箔基板製造商，AI伺服器PCB用高階CCL為核心增長引擎。",
+      "roleSummary": "聯茂MOPS明確支持多層PCB基材、銅箔基板與半成品製造；2026年7月營收47.49億元、YoY+96.9%，公司也說明受惠漲價與AI相關需求。惟MOPS未逐項證實IT系列料號、Df數值、ABF替代或具名PCB客戶。",
       "products": [
-        "高速CCL銅箔基板(IT-180A/IT-968/IT-972)",
-        "高頻低損耗基板材料(M4/M6/M8系列)",
-        "高Tg多層板基材(IT-588/IT-600)",
-        "IC載板用BT基板材料"
+        "多層印刷電路板用銅箔基板（CCL）",
+        "多層板壓合用半固化片（Prepreg）",
+        "高耐熱多層PCB基材",
+        "高速運算與網通板用低損耗基板材料"
       ],
       "customers": [
-        "欣興(3037)(IC載板CCL)",
-        "南電(8046)(ABF載板基材)",
-        "燿華(2367)(高速PCB基板)",
-        "深南電路(中國)(高頻CCL)"
+        "欣興(3037；PCB基材應用對象，非MOPS揭露客戶)",
+        "南電(8046；高階基板應用對象，非MOPS揭露客戶)",
+        "臻鼎-KY(4958；多層板材料應用對象，非MOPS揭露客戶)",
+        "燿華(2367；PCB材料應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "台燿(6274)",
@@ -31,9 +31,8 @@
         "Rogers(USA)"
       ],
       "risks": [
-        "台燿/台光電在高頻CCL競爭激烈",
-        "6月營收YoY+48%但基期較低",
-        "ABF載板基材被味之素壟斷"
+        "玻纖布、銅箔與樹脂價格波動會影響利差",
+        "AI相關需求為公司說明，但MOPS未拆分產品與客戶，不能把全部營收增長歸因AI基板"
       ],
       "legacy": {
         "topicSlug": "ic-substrate",
@@ -54,36 +53,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6213 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：多層印刷電路基材、銅箔基板、半成品與成品之製造加工買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收47.49億元，MoM+12.7%、YoY+96.9%，累計YoY+34.7%；公司說明受惠漲價與AI相關需求。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-13",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "高速低損耗CCL配方技術(Df<0.002 @10GHz)",
-        "高Tg基板材料開發(Tg>200°C)",
-        "極低粗糙度銅箔基板製程(Rz<3μm)"
+        "樹脂、玻纖布與銅箔的配方及多層壓合均勻性控制",
+        "低介電損耗與高耐熱基材配方開發",
+        "銅箔表面粗糙度、剝離強度與阻抗一致性驗證"
       ],
       "swot": {
         "strengths": [
-          "7月營收47.49億MoM+12.7%，CCL銅箔基板需求強勁增長",
-          "MOPS登記為多層印刷電路基材及銅箔基板製造，高速CCL(IT-180A/IT-968)為核心",
-          "高頻低損耗基板(M4/M6/M8系列)打入AI伺服器PCB供應鏈"
+          "MOPS直接支持CCL及多層PCB基材核心角色",
+          "7月營收MoM+12.7%、YoY+96.9%，且公司明確提到漲價與AI相關需求"
         ],
         "weaknesses": [
-          "CCL市場由台光電(2383)/松厚(6409)競爭激烈，聯茂市佔中段",
-          "原材料(玻纖布/銅箔/樹脂)價格波動影響毛利率",
-          "高頻CCL技術門檻高但客户認證週期長"
+          "營收增幅同時含漲價效應，未必等同出貨量或市占同步翻倍",
+          "MOPS未揭露料號、介電數值與具名客戶，產品精確度需以技術資料表另證"
         ],
         "opportunities": [
-          "AI伺服器800G/1.6T交換器PCB帶動高速CCL需求爆發",
-          "IC載板CCL(ABF基材替代)新應用",
-          "電動車PCB用高Tg CCL需求增長"
+          "AI伺服器與800G／1.6T網通板升級增加低損耗CCL需求",
+          "車載電控與高功率設備提升高耐熱多層板材料用量"
         ],
         "threats": [
-          "台光電(2383)在AI伺服器CCL市佔領先壓縮聯茂空間",
-          "中國CCL廠(生益科技)低价競爭",
-          "CCL為大宗材料型產品，毛利率結構受限"
+          "台光電、台燿與中國CCL廠競爭認證與價格",
+          "原料漲價若無法完整轉嫁，營收增長仍可能伴隨毛利壓力"
         ]
       }
     }

@@ -1,28 +1,27 @@
 {
   "schemaVersion": 1,
   "companyCode": "1309",
-  "companyName": "1309",
-  "updatedAt": "2026-07-30",
+  "companyName": "台達化",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
       "topicName": "石化、塑橡膠與特用化學",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "台達化為台灣PS市占龍頭，6月營收6.0億年減51.7%，累計61.7億年減23.6%。PS屬成熟產品，受中國低價PS傾銷衝擊，部分客戶流失，營運承壓。",
+      "roleSummary": "台達化MOPS明確支持PS、ABS、SAN、玻璃棉與塑膠加工品，屬合成樹脂核心廠；MOPS未揭露台灣市占、聚合製程型式或台達電／鴻海等客戶。2026年7月營收10.32億元，MoM+71.6%，但YoY-10.6%、累計YoY-22.0%，反彈仍未扭轉衰退。",
       "products": [
-        "聚苯乙烯PS(GPPS通用級/HIPS耐衝擊級)",
-        "ABS樹脂(丙烯腈-丁二烯-苯乙烯共聚體)",
-        "SAN樹脂(苯乙烯-丙烯腈共聚體)",
-        "玻璃棉(玻璃纖維保溫材料)",
-        "塑膠原料加工品(射出/押出級粒料)"
+        "GPPS通用級聚苯乙烯樹脂",
+        "HIPS耐衝擊聚苯乙烯樹脂",
+        "ABS共聚樹脂",
+        "SAN苯乙烯－丙烯腈共聚樹脂",
+        "建築與工業保溫用玻璃棉"
       ],
       "customers": [
-        "奇美實業(ABS/SAN塑膠原料買賣)",
-        "台達電(1308)(塑膠外殼材料)",
-        "鴻海(2317)(NB外殼ABS原料)",
-        "仁寶(2324)(NB外殼ABS/SAN)",
-        "緯創(3231)(NB外殼ABS原料)"
+        "奇美實業（ABS／SAN產業鏈對象，非MOPS揭露客戶)",
+        "仁寶(2324；電子外殼材料應用對象，非MOPS揭露客戶)",
+        "緯創(3231；電子外殼材料應用對象，非MOPS揭露客戶)",
+        "鴻海(2317；塑膠材料應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "奇美實業(ABS/PS塑膠原料)",
@@ -30,9 +29,8 @@
         "台化(1326)(PS/ABS)"
       ],
       "risks": [
-        "PS屬成熟產品，成長動能有限",
-        "中國低價PS傾銷導致客戶流失",
-        "原料價格波動大影響毛利"
+        "7月YoY-10.6%、累計YoY-22.0%，單月MoM反彈可能只是低基期或出貨時點",
+        "PS、ABS與SAN受中國產能、苯乙烯與丁二烯原料價格夾擊"
       ],
       "evidence": [
         {
@@ -41,36 +39,48 @@
           "title": "1309公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 1309 role in 石化、塑橡膠與特用化學 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：聚苯乙烯、ABS、SAN、玻璃棉及塑膠原料加工品之製銷。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收10.32億元，MoM+71.6%、YoY-10.6%，累計YoY-22.0%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-18",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "PS連續本體聚合技術(批量/連續製程)",
-        "ABS乳液接枝聚合技術(橡膠接枝苯乙烯)",
-        "SAN連續本體聚合技術(高透明/高剛性)"
+        "GPPS／HIPS聚合之分子量、橡膠相與衝擊強度控制",
+        "ABS／SAN共聚比例、色澤、流動性與表面品質控制",
+        "玻璃棉纖維化、黏結與導熱性能控制"
       ],
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "ps_abs_san_resin_producer",
       "swot": {
         "strengths": [
-          "台灣PS市占龍頭，ABS/SAN樹脂具規模經濟",
-          "ABS連續本體聚合技術成熟，3C外殼供應鏈穩定"
+          "MOPS直接支持PS、ABS、SAN與玻璃棉等清楚產品線",
+          "7月營收MoM+71.6%，較6月明顯回升"
         ],
         "weaknesses": [
-          "6月營收602億YoY-51.72%，大幅衰退超過五成，客戶流失嚴重",
-          "累計營收6174億YoY-23.61%，公司自承「大陸貨低價搶單，部分客戶流失」",
-          "PS/ABS/SAN均屬成熟大宗產品，缺乏差異化高附加價值產品"
+          "7月營收YoY-10.6%、累計YoY-22.0%，全年需求仍弱",
+          "產品多為成熟樹脂，差異化與成本轉嫁能力有限"
         ],
         "opportunities": [
-          "ABS受惠3C/NB外殼需求回溫（AI PC帶動換機潮）",
-          "SAN高透明應用（食品容器/化妝品包裝）可開發利基市場"
+          "家電、汽車與AI PC外殼需求回溫可改善ABS／SAN出貨",
+          "建築節能規範可增加玻璃棉保溫材料需求"
         ],
         "threats": [
-          "中國PS/ABS低價傾銷為最大威脅，公司已實質受創",
-          "原料（苯乙烯/丁二烯）價格波動大，成本轉嫁能力弱",
-          "環保法規限制一次性塑膠，長期需求結構改變"
+          "中國PS／ABS低價供給持續搶單",
+          "苯乙烯、丙烯腈與丁二烯價格波動可能使利差再度惡化"
         ]
       }
     }

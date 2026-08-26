@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2453",
   "companyName": "凌群",
-  "updatedAt": "2026-07-24",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,27 +11,27 @@
       "directness": "core",
       "supplyChainStage": "enterprise_software_system_integration",
       "roleType": "system_integrator_enterprise_software_provider",
-      "roleSummary": "凌群5月營收5.44億年增6.79%，累計27.40億年增6.35%。MOPS登記為電腦系統整合及軟硬體維護。",
+      "roleSummary": "凌群MOPS支持電腦系統銷售出租、系統整合與軟硬體維護；既有公司產品資料可支撐DBMaker、NETCenter、OMFLOW與Ayuda，但MOPS未揭露行政院、兆豐金或台北捷運客戶。2026年7月營收5.87億元、YoY+5.3%，但MoM-8.2%。",
       "products": [
-        "DBMaker關聯式資料庫(自主研發SQL引擎)",
-        "NETCenter網管系統(SNMP/流量監控)",
-        "OMFLOW工作流程引擎( BPMN 2.0)",
-        "Ayuda客服中心系統(CTI/IVR整合)",
-        "AI智能監控安控系統(臉部辨識/異常偵測)"
+        "DBMaker關聯式資料庫與SQL應用平台",
+        "NETCenter網路與系統管理平台",
+        "OMFLOW流程管理與自動化平台",
+        "Ayuda客服中心與CTI／IVR整合系統",
+        "企業電腦系統整合與軟硬體維護服務"
       ],
       "customers": [
-        "行政院（政府標案）",
-        "中華電信(2412)（系統整合）",
-        "兆豐金(2886)（金融資安）",
-        "台北捷運（交通監控）"
+        "中華電信(2412；系統整合應用對象，非MOPS揭露客戶)",
+        "兆豐金(2886；金融IT應用對象，非MOPS揭露客戶)",
+        "台北捷運公司（交通IT應用對象，非MOPS揭露客戶）",
+        "台灣高鐵(2633；交通IT應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "系統整合商",
         "企業軟體與資安服務供應商"
       ],
       "risks": [
-        "資訊服務業毛利受限",
-        "政府標案受政策預算影響"
+        "系統整合收入受政府與企業專案驗收時點影響",
+        "MOPS未揭露具名客戶或AI監控功能，舊資料的客戶與功能宣稱需降級"
       ],
       "evidence": [
         {
@@ -47,36 +47,46 @@
           "title": "凌群電腦 113 年股東會年報",
           "url": "https://doc.twse.com.tw/",
           "claim": "凌群電腦 113 年股東會年報 supports 凌群 role as system_integrator_enterprise_software_provider in 資安、雲端服務與企業軟體 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電腦系統出租與銷售、系統整合及軟硬體維護。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收5.87億元，MoM-8.2%、YoY+5.3%，累計YoY+6.1%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "資料庫引擎與系統整合技術(自主研發SQL引擎)",
-        "AI智慧監控安控系統開發(電腦視覺/異常偵測)",
-        "工作流程引擎(OMFLOW)與客服系統(CTI/IVR)"
+        "關聯式資料庫SQL引擎、交易一致性與備援複寫",
+        "SNMP網管、事件告警與網路流量可視化",
+        "BPM工作流程、CTI／IVR與既有企業系統介接"
       ],
       "swot": {
         "strengths": [
-          "6月營收6.40億YoY+5.8%、累計YoY+6.2%，系統整合專案穩定成長",
-          "DBMaker關聯式資料庫自主研發SQL引擎，在政府標案具本土軟體優勢",
-          "NETCenter網管系統與AI智慧監控安控系統（電腦視覺/異常偵測）產品具差異化"
+          "具DBMaker、NETCenter、OMFLOW與Ayuda等自有軟體產品，差異化高於純轉售",
+          "2026年7月營收YoY+5.3%、累計YoY+6.1%，維持小幅成長"
         ],
         "weaknesses": [
-          "營收規模僅6.40億/月，與大型SI（如精誠）差距大",
-          "YoY+5.8%成長率溫和，政府標案為主要收入來源，民間企業訂單待拓展",
-          "資本額僅10億，研發與市場擴展資源有限"
+          "7月營收MoM-8.2%，專案型收入波動仍明顯",
+          "月營收5.87億元，研發與市場規模小於大型系統整合商"
         ],
         "opportunities": [
-          "政府資安標案（Zero Trust/AI資安）需求持續增長",
-          "AI智慧監控安控系統在企業/政府應用需求擴大",
-          "DBMaker資料庫在國產化政策下有政策紅利"
+          "資料庫自主化、流程數位化與網管現代化可擴大軟體維護收入",
+          "交通、金融與公部門系統汰換可帶動整合與長約維運需求"
         ],
         "threats": [
-          "精誠(6474)、敦陽科等大型SI在系統整合市場競爭激烈",
-          "政府標案預算執行進度不確定性高",
-          "國際資安大廠（Palo Alto/Fortinet）在企業資安市場主導"
+          "精誠、敦陽及國際軟體平台競爭大型標案",
+          "政府與企業預算遞延、缺工或交付延誤可能侵蝕專案毛利"
         ]
       }
     }

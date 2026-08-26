@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3311",
   "companyName": "閎暉",
-  "updatedAt": "2026-08-14",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -11,28 +11,26 @@
       "directness": "supplier",
       "supplyChainStage": "mechanical_module_components",
       "roleType": "consumer_automotive_mechanical_module_supplier",
-      "roleSummary": "閎暉6月營收2.45億YoY+14.1%，累計11.85億YoY-1.2%。MOPS登記為按鍵及模組產品機構整合元件。手機按鍵模組與玻璃蓋板為核心產品，車用機構件為新成長動能。",
+      "roleSummary": "閎暉MOPS只揭露按鍵及模組產品機構整合元件，足以支持手機、穿戴與車載人機介面機構模組角色，但不支持0.55mm玻璃、指紋模組精度或Apple供應關係。2026年7月營收2.35億元、YoY+25.7%，但MoM-4.4%、累計YoY僅+2.4%。",
       "products": [
-        "智慧機/平板按鍵模組(side key/volume key)(不鏽鏽鋼/鋁合金MIM)",
-        "2.5D/3D玻璃蓋板(CNC加工+化學強化)(0.55mm超薄弧面/AG防眩光)",
-        "車用中控機構件(儀表板/中控台按鍵)(IMD/IML模內裝飾)",
-        "穿戴裝置外殼件(智慧手錶金屬殼)(鈦合金/不鏽鋼MIM+CNC)",
-        "光學指紋辨識模組(紫外光固化膠合+感測器精度<5μm)"
+        "智慧手機側鍵與音量鍵模組",
+        "平板與穿戴裝置按鍵機構模組",
+        "車載中控與方向盤按鍵模組",
+        "消費電子金屬／塑膠機構整合件"
       ],
       "customers": [
-        "Apple(iPhone side key/按鍵模組)",
-        "Samsung(Galaxy手機機構件/玻璃蓋板)",
-        "Garmin(智慧手錶外殼件)",
-        "Ford(車用中控機構件)",
-        "Google(Pixel手機按鍵模組)"
+        "Apple（手機按鍵應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（手機機構應用對象，非MOPS揭露客戶）",
+        "Garmin（穿戴裝置應用對象，非MOPS揭露客戶）",
+        "Ford（車載按鍵應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "消費電子機構件廠",
         "車用與穿戴模組供應商"
       ],
       "risks": [
-        "終端產品生命週期與大客戶新品節奏會造成訂單波動。",
-        "屬機構件/模組供應，不應被寫成核心 AI 晶片供應商。"
+        "終端新品週期與客戶拉貨節奏會放大單月波動",
+        "MOPS未揭露具名客戶與玻璃蓋板／指紋模組規格，不能沿用直接供應宣稱"
       ],
       "evidence": [
         {
@@ -48,36 +46,46 @@
           "title": "閎暉實業 113 年股東會年報",
           "url": "https://doc.twse.com.tw/",
           "claim": "閎暉實業 113 年股東會年報 supports 閎暉 role as consumer_automotive_mechanical_module_supplier in PC、手機與 AR/VR/XR 終端 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：按鍵及模組產品機構整合元件。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收2.35億元，MoM-4.4%、YoY+25.7%，累計YoY+2.4%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "confidence": "medium",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "2.5D/3D玻璃蓋板CNC精密加工(0.55mm超薄弧面/AG防眩光)",
-        "光學指紋辨識模組貼合(紫外光固化膠合/精度<5μm)",
-        "穿戴精密機構件MIM/CNC(不鏽不鏽鋼/鈦合金粉末冶金)"
+        "金屬沖壓、塑膠射出與嵌件成形的按鍵模組整合",
+        "按鍵行程、回彈力與壽命的一致性量測",
+        "機構件表面處理、組裝公差與環境可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記為按鍵及模組產品機構整合元件，Apple iPhone side key核心供應商",
-          "2.5D/3D玻璃蓋板CNC加工技術(0.55mm超薄弧面)具差異化",
-          "車用中控機構件(IMD/IML)佈局新應用，分散消費電子風險"
+          "MOPS明確支持按鍵與機構整合元件，可對應手機、穿戴及車載終端",
+          "2026年7月營收YoY+25.7%，顯示終端需求較去年同期改善"
         ],
         "weaknesses": [
-          "7月營收僅2.35億MoM-4.4%，規模小抗風險能力弱",
-          "高度依賴Apple單一客戶，iPhone出貨週期直接影響營收",
-          "MIM/CNC精密加工為傳統製造，毛利率受人工成本壓力"
+          "7月營收MoM-4.4%，且累計YoY僅+2.4%，全年動能仍偏平",
+          "產品屬機構模組，議價能力與差異化通常低於晶片或核心平台"
         ],
         "opportunities": [
-          "iPhone 17系列新按鍵設計(固態按鍵/Action Button)帶來新規訂單",
-          "車用中控IMD/IML機構件打入Tesla/Bosch供應鏈",
-          "折疊手機鉸鏈機構件新應用"
+          "手機新增實體按鍵與穿戴裝置小型化可帶動客製機構模組需求",
+          "車載座艙按鍵與觸覺回饋整合可分散手機景氣曝險"
         ],
         "threats": [
-          "Apple分散供應鏈至中國/印度廠商壓低價格",
-          "智慧手機市場飽和，按鍵模組需求增長放緩",
-          "MIM競爭者(富采/恒耀)技術追趕壓縮市佔"
+          "中國與東南亞機構件供應商價格競爭可能壓縮毛利",
+          "無按鍵化、觸控整合與客戶供應鏈調整可能侵蝕既有需求"
         ]
       }
     }

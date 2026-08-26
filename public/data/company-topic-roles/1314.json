@@ -1,27 +1,26 @@
 {
   "schemaVersion": 1,
   "companyCode": "1314",
-  "companyName": "1314",
-  "updatedAt": "2026-07-30",
+  "companyName": "中石化",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
       "topicName": "石化、塑橡膠與特用化學",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "中石化為台灣唯一CPL自主生產商，6月營收10.4億年減29.3%，累計79.8億年減30.0%。CPL/AN屬大宗石化產品，受油價與中國產能過剩壓力影響大。",
+      "roleSummary": "中石化MOPS只明確揭露CPL與AN製造銷售，因此產品應聚焦己內醯胺及丙烯腈不同下游等級，移除尼龍66原料與中國中石化客戶等未支持敘述。2026年7月營收10.60億元，雖MoM+1.8%，但YoY-35.6%、累計YoY-30.7%，景氣壓力很重。",
       "products": [
-        "己內醯胺CPL(尼龍6上游原料)",
-        "丙烯腈AN(ABS/壓克力上游原料)",
-        "尼龍66原料(耐隆工程塑膠上游)",
-        "硫酸銨(副產品肥料用)",
-        "石油化學中間產品(CPL/AN衍生品)"
+        "尼龍6纖維級己內醯胺（CPL）",
+        "工程塑料聚合級己內醯胺（CPL）",
+        "ABS樹脂原料用丙烯腈（AN）",
+        "壓克力纖維原料用丙烯腈（AN）"
       ],
       "customers": [
-        "力麗(1444)(尼龍纖維CPL原料)",
-        "集盛(1455)(尼龍粒CPL原料)",
-        "台化(1326)(ABS用AN原料)",
-        "中石化(中國)(CPL/AN外銷)"
+        "力麗(1444；尼龍6產業鏈應用對象，非MOPS揭露客戶)",
+        "集盛(1455；尼龍聚合應用對象，非MOPS揭露客戶)",
+        "奇美實業（ABS產業鏈應用對象，非MOPS揭露客戶)",
+        "台化(1326；合成材料產業鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "中國石化(中國CPL/AN)",
@@ -29,9 +28,8 @@
         "台化(1326)(AN原料)"
       ],
       "risks": [
-        "CPL/AN屬大宗石化產品，受油價波動影響大",
-        "中國產能過剩壓縮CPL/AN價格",
-        "累計營收年減30.0%，景氣下行壓力明顯"
+        "2026年7月營收YoY-35.6%、累計YoY-30.7%，需求與價格壓力明顯",
+        "CPL與AN產品集中度高，受中國產能與原料價格變動放大"
       ],
       "evidence": [
         {
@@ -40,36 +38,48 @@
           "title": "1314公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 1314 role in 石化、塑橡膠與特用化學 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：石油化學產品己內醯胺（CPL）及丙烯腈（AN）之製造與銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收10.60億元，MoM+1.8%、YoY-35.6%，累計YoY-30.7%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-18",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "CPL製程觸媒技術(環己酮肟貝克曼重排)",
-        "AN丙烯氨氧化技術(Sohio製程觸媒)",
-        "硫酸銨回收與純化技術(副產品加值)"
+        "環己酮肟經貝克曼重排製造CPL的純度與副產物控制",
+        "丙烯氨氧化製造AN的觸媒選擇性與反應熱控制",
+        "大宗化學品連續製程的能耗、腐蝕與工安管理"
       ],
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "caprolactam_acrylonitrile_producer",
       "swot": {
         "strengths": [
-          "台灣唯一CPL（己內醯胺）自主生產商，尼龍6上游原料供應具獨占性",
-          "AN丙烯腈為ABS/壓克力上游，供應鏈地位關鍵"
+          "MOPS直接支持CPL與AN製造銷售，產品與供應鏈位置清楚",
+          "兩項產品分別連結尼龍6、ABS與壓克力纖維等大宗下游"
         ],
         "weaknesses": [
-          "6月營收1041億YoY-29.27%，累計7980億YoY-30.03%，衰退幅度大",
-          "CPL/AN屬大宗石化品，毛利率低且受油價直接影響",
-          "產品組合單一，缺乏高附加價值下游延伸"
+          "7月營收YoY-35.6%、累計YoY-30.7%，營運衰退幅度大",
+          "產品集中CPL與AN，缺少MOPS可驗證的高附加價值下游延伸"
         ],
         "opportunities": [
-          "尼龍6工程塑膠受惠車用/3C需求長期成長",
-          "硫酸銨副產品肥料外銷可创造額外收入"
+          "工程塑料與汽車輕量化若回溫，可改善CPL需求",
+          "ABS與壓克力纖維補庫可帶動AN稼動率回升"
         ],
         "threats": [
-          "中國CPL產能嚴重過剩，進口價格壓迫台灣市場",
-          "油價波動直接影響CPL/AN原料成本",
-          "尼龍纖維需求受環保替代材料（再生聚酯）挑戰"
+          "中國CPL與AN產能過剩持續壓低區域報價",
+          "油價、氨與丙烯等原料波動加上環保成本，可能進一步壓縮利差"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2337",
   "companyName": "旺宏",
-  "updatedAt": "2026-07-16",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "niche-memory",
@@ -102,20 +102,18 @@
       "directness": "supplier",
       "supplyChainStage": "semiconductor_design_and_products",
       "roleType": "non_volatile_memory_ic_product_company",
-      "roleSummary": "旺宏5月營收62.6億年增175.8%（受市場需求增加影響），累計年增110.9%。車用NOR Flash需求強勁，SLC NAND在工控應用出貨放量。",
+      "roleSummary": "旺宏MOPS支持積體電路與半導體產品從研發、設計到製造測試及銷售，屬非揮發性記憶體IDM而非純IC設計公司；本題材保留產品供應角色，但刪除MOPS未支持的節點、認證與Tesla等直接客戶宣稱。2026年7月營收77.25億元、MoM+11.0%、YoY+180.5%，公司說明為市場需求增加。",
       "products": [
-        "NOR Flash(Serial NOR/Parallel NOR/容量1Mb-2Gb/45nm/33nm)",
-        "NAND Flash(SLC NAND/容量1Gb-8Gb/19nm/38nm)",
-        "Mask ROM(唯讀記憶體/容量32Mb-1Gb/45nm)",
-        "車用NOR Flash(45nm/AEC-Q100 Grade 1/溫度範圍-40~125°C)",
-        "XtrMBit高密度ROM(38nm/面積效率比Mask ROM提升30%/AI推論用)"
+        "序列式／平行式NOR Flash記憶體",
+        "SLC NAND Flash記憶體",
+        "Mask ROM唯讀記憶體",
+        "嵌入式非揮發性記憶體之系統應用與技術支援"
       ],
       "customers": [
-        "Tesla(車用NOR Flash)",
-        "Bosch(車用記憶體)",
-        "Infineon(車規MCU ROM)",
-        "STMicroelectronics(車用NOR)",
-        "Sony(遊戲機ROM)"
+        "Infineon Technologies（車用／工控記憶體應用對象，非MOPS揭露客戶）",
+        "STMicroelectronics（嵌入式系統應用對象，非MOPS揭露客戶）",
+        "Kioxia（NAND產業鏈對象，非MOPS揭露客戶）",
+        "Sony（消費電子ROM應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華邦(2344)",
@@ -123,7 +121,8 @@
         "GigaDevice(兆易創新)"
       ],
       "risks": [
-        "需分清楚 IC 產品/應用支援與晶圓代工角色，避免供應鏈階段誤分類。"
+        "記憶體價格循環與庫存調整可快速反轉高成長",
+        "MOPS未揭露產品節點、車規等級或具名客戶，精確規格仍需年報與產品文件覆核"
       ],
       "legacy": {
         "topicSlug": "semiconductor-memory",
@@ -144,36 +143,46 @@
           "title": "旺宏 product knowledge",
           "url": "public/data/product-knowledge/2337.json",
           "claim": "產品知識庫將半導體系統應用與銷售顧問服務標示為 IC 產品導入、應用支援與客戶服務。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路、各種半導體零組件及其系統應用產品之研發、設計、製造、測試、銷售與顧問。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收77.25億元，MoM+11.0%、YoY+180.5%，累計YoY+137.8%；公司說明為市場需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "confidence": "medium",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "NOR Flash SLC製程微縮(33nm/45nm/嵌入式應用)",
-        "3D NAND SLC堆疊技術(38nm/19nm/charge trap技術)",
-        "Mask ROM光罩編程(45nm/one-time programming/低成本高密度)"
+        "NOR／NAND記憶單元的讀寫、耐久度與資料保存控制",
+        "ECC錯誤更正、壞區管理與系統啟動韌體整合",
+        "晶圓製造、封裝測試與終端系統相容性驗證"
       ],
       "swot": {
         "strengths": [
-          "6月營收69.6億YoY+216.1%，累計295.9億YoY+128.8%，記憶體市場需求強勁復甦",
-          "NOR Flash(Serial/Parallel 1Mb-2Gb)全球前三大供應商，車規/工控客戶黏著度高",
-          "XtrMBit高密度ROM(38nm/面積效率+30%)切入AI推論應用，具差異化"
+          "MOPS支持設計、製造、測試與銷售的一體化半導體能力",
+          "2026年7月營收YoY+180.5%、累計YoY+137.8%，需求回升明顯"
         ],
         "weaknesses": [
-          "產品線集中於NOR/NAND/ROM記憶體，缺乏DRAM/邏輯IC多元布局",
-          "IDM模式晶圓廠折舊壓力大(12吋晶圓廠產能利用率敏感)",
-          "Mask ROM屬利基產品，市場規模有限"
+          "NOR、SLC NAND與ROM屬利基記憶體，市場規模小於DRAM與主流3D NAND",
+          "本次MOPS資料未支持節點、容量或客戶細節，舊資料精確度過頭"
         ],
         "opportunities": [
-          "車用記憶體(ADAS/車載安全啟動)需求持續增長，ASP高於消費級",
-          "AI Edge推論用XtrMBit ROM為新藍海市場",
-          "SLC NAND切入車用/工控，替代部分NOR Flash應用"
+          "車用、工控與網通設備需要長供貨週期的非揮發性記憶體",
+          "邊緣裝置安全啟動與韌體容量增加可提升NOR Flash需求"
         ],
         "threats": [
-          "GigaDevice在NOR Flash低價競爭，消費級市佔受壓縮",
-          "記憶體價格循環波動大，高增長基期(YoY+216%)後面臨基期效應",
-          "車用半導體IDM(Infineon/STMicro)自研記憶體，委外訂單可能縮減"
+          "兆易創新、華邦電及國際IDM競爭可能壓低價格",
+          "需求高增長帶有低基期與循環性，產能利用率回落會放大折舊壓力"
         ]
       }
     }

@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2401",
   "companyName": "凌陽",
-  "updatedAt": "2026-07-27",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
       "topicName": "半導體製造｜晶圓代工",
       "topicType": "supply_chain_segment",
       "directness": "customer_or_channel",
-      "supplyChainStage": "upstream_petrochemical_materials",
+      "supplyChainStage": "fabless_ic_design",
       "roleType": "fabless_ic_design_house",
-      "roleSummary": "凌陽6月營收7.34億YoY+35.2%，累計38.82億YoY+19.5%。Fabless IC設計公司，MOPS登記為各種積體電路及模組之設計製造測試銷售。車用MCU(ASIL-B)與OTT串流SoC為主力，在聯電28nm投片，車用需求帶動強勁成長。",
+      "roleSummary": "凌陽MOPS支持IC與模組設計、製造、測試、銷售及應用軟體，但未證明自有晶圓廠、聯電28nm投片、車用MCU ASIL-B或具名客戶；在晶圓代工題材應定位為無廠IC設計需求方與平台整合對象。2026年7月營收7.46億元、YoY+37.6%、累計YoY+22.1%。",
       "products": [
-        "車用MCU(32-bit ARM Cortex-M4)(聯電28nm投片)(ASIL-B認證)",
-        "OTT串流媒體SoC(4K/8K HEVC硬解碼)",
-        "物聯網IoT MCU(低功耗WiFi6 SoC)",
-        "語音辨識IC(DSP+ADC+離線語音喚醒)",
-        "TDDI液晶顯示驅動IC(FHD+解析度整合觸控)"
+        "微控制器與控制IC模組",
+        "多媒體音訊／影像處理IC模組",
+        "積體電路應用軟體與韌體",
+        "IC測試、銷售與技術支援服務"
       ],
       "customers": [
-        "比亞迪(車用MCU BCM/空調控制)",
-        "吉利汽車(車用MCU儀表板控制)",
-        "小米(OTT機上盒4K/8K晶片)",
-        "美的集團(家電語音辨識IC)",
-        "群創光電(3481)(TDDI驅動IC)"
+        "聯電(2303；晶圓製造供應鏈對象，非MOPS揭露合作關係)",
+        "台積電(2330；晶圓製造供應鏈對象，非MOPS揭露合作關係)",
+        "Arm（處理器IP平台對象，非MOPS揭露合作關係)",
+        "Synopsys（EDA平台驗證對象，非MOPS揭露合作關係)"
       ],
       "competitors": [
         "盛群(6202)(MCU)",
@@ -32,8 +30,8 @@
         "新唐(4919)(MCU)"
       ],
       "risks": [
-        "營收規模小(月營收僅7.2億)，在車用MCU市佔低於NXP/瑞薩",
-        "中國OTT機上盒市場成長放緩"
+        "MOPS未揭露晶圓廠、製程節點、功能安全認證或具名客戶，不能列為晶圓代工廠",
+        "IC產品需求與委外晶圓產能、投片成本及庫存循環高度連動"
       ],
       "legacy": {},
       "evidence": [
@@ -50,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各種積體電路及模組之設計、製造、測試與銷售，以及積體電路應用軟體研發銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收7.46億元，MoM+1.6%、YoY+37.6%，累計YoY+22.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "medium",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "車用MCU ARM Cortex-M4 ASIL-B功能安全設計(聯電28nm)",
-        "OTT 4K/8K HEVC硬解碼SoC設計",
-        "TDDI液晶顯示驅動IC設計(整合觸控與驅動)"
+        "數位／混合訊號IC架構、RTL設計與模組整合",
+        "DFT測試設計、韌體驗證與量產測試程式",
+        "晶圓代工PDK介接、Tape-out與封裝測試協同"
       ],
       "swot": {
         "strengths": [
-          "6月營收0.73億YoY+35.2%，車用MCU需求帶動營收成長",
-          "車用MCU（32-bit ARM Cortex-M4）ASIL-B功能安全認證，聯電28nm投片量產",
-          "OTT 4K/8K HEVC硬解碼SoC在串流媒體市場具利基"
+          "MOPS支持IC設計、模組、應用軟體與測試銷售的完整產品化流程",
+          "2026年7月營收YoY+37.6%、累計YoY+22.1%，營運動能改善"
         ],
         "weaknesses": [
-          "營收規模僅0.73億/月，與聯發科/瑞昱等大型IC設計公司差距大",
-          "車用MCU市場競爭激烈，新進者多",
-          "累計營收YoY+19.5%，成長率中等"
+          "在晶圓代工題材屬需求方而非產能供應者，無法直接受惠代工漲價",
+          "MOPS未揭露具體產品節點與代工夥伴，舊資料的28nm與ASIL-B宣稱欠缺本次證據"
         ],
         "opportunities": [
-          "中國新能源車（比亞迪/吉利）車用MCU需求持續增長",
-          "ASIL-B認證車用MCU打入更多車廠供應鏈",
-          "4K/8K串流媒體SoC在OTT市場需求成長"
+          "車載、消費與邊緣裝置晶片需求可增加委外投片與測試需求",
+          "與成熟製程代工平台共同優化成本、功耗與長供貨週期可形成利基"
         ],
         "threats": [
-          "恩智浦NXP/英飛凌Infineon在車用MCU市場主導地位穩固",
-          "中國本土IC設計（兆易創新等）在車用MCU低價競爭",
-          "聯電28nm產能分配受限，擴產速度取決於晶圓代工產能"
+          "晶圓代工產能緊張或價格上升會直接壓縮IC設計公司毛利",
+          "大型MCU與多媒體SoC競爭者可能以規模、IP與生態系壓制市場空間"
         ]
       }
     }

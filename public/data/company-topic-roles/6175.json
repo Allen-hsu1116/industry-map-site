@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6175",
   "companyName": "立敦",
-  "updatedAt": "2026-07-09",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "passive-components",
@@ -11,28 +11,26 @@
       "directness": "supplier",
       "supplyChainStage": "capacitor_upstream_materials",
       "roleType": "aluminum_electrolytic_capacitor_foil_supplier",
-      "roleSummary": "立敦是全球前三大鋁電解電容器上游化成鋁箔供應商，MOPS登記為化成鋁箔與電蝕鋁箔生產銷售。產品涵蓋高壓化成鋁箔(400V-700V)、長壽命化成鋁箔(105C/5000hr)及固態電容用高純度鋁箔，客戶為Nichicon/Rubycon/Nippon Chemi-con三大日系電容器廠。",
+      "roleSummary": "立敦MOPS明確支持化成鋁箔與電蝕鋁箔生產銷售，屬鋁電解電容器上游材料；但未揭露400V至700V規格、全球排名或Nichicon等客戶。FinMind顯示2026年7月營收4.75億元、YoY+40.6%，但MoM-2.3%。",
       "products": [
-        "高壓化成鋁箔(400V-700V)(陽極氧化鋁膜形成)",
-        "電蝕鋁箔(低比電容/高強度)(直流蝕刻/交流蝕刻)",
-        "長壽命化成鋁箔(105C/5000hr)(高溫耐久級)",
-        "固態電容用高純度鋁箔(低阻抗/高頻用)",
-        "高壓化成鋁箔(700V+)(新能源/工業級)"
+        "鋁電解電容器用化成鋁箔",
+        "鋁電解電容器用電蝕鋁箔",
+        "高比電容量陽極鋁箔",
+        "高耐壓電容器用形成箔"
       ],
       "customers": [
-        "Nichicon(尼吉康)(鋁電解電容器用化成鋁箔)",
-        "Rubycon(紅寶石)(高壓化成鋁箔採購)",
-        "Nippon Chemi-con(日本貴彌功)(電蝕鋁箔)",
-        "智寶(2375)(化成鋁箔)",
-        "立隆(6246)(鋁電解電容器用鋁箔)"
+        "Nichicon（鋁電解電容應用對象，非MOPS揭露客戶)",
+        "Rubycon（鋁電解電容應用對象，非MOPS揭露客戶)",
+        "Nippon Chemi-Con（鋁電解電容應用對象，非MOPS揭露客戶)",
+        "立隆電(2472；鋁電解電容供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "鋁箔材料供應商",
         "電容器上游材料廠"
       ],
       "risks": [
-        "鋁價、能源成本、中國產能、下游庫存與電容器景氣會影響需求與毛利。",
-        "屬上游材料，不應直接等同於 AI 電源核心模組供應商。"
+        "鋁價、電力成本與下游電容器庫存會影響毛利與稼動率",
+        "MOPS未支持電壓、壽命、全球排名或具名客戶，不能保留過度精確的商業宣稱"
       ],
       "evidence": [
         {
@@ -48,36 +46,46 @@
           "title": "立敦科技股東會年報",
           "url": "https://doc.twse.com.tw/",
           "claim": "立敦科技股東會年報 supports 立敦 role as aluminum_electrolytic_capacitor_foil_supplier in 被動元件 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：化成鋁箔與電蝕鋁箔之生產及銷售。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "公司月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收4.75億元，MoM-2.3%、YoY+40.6%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "高壓化成鋁箔陽極氧化製程(400V-700V/磷酸-硫酸混合液)",
-        "電蝕鋁箔高比電容蝕刻技術(直流/交流複合蝕刻)",
-        "長壽命鋁箔(105C/5000hr)耐高溫配方與晶粒控制"
+        "鋁箔陽極氧化形成介電氧化膜與耐壓控制",
+        "直流／交流電蝕擴大有效表面積與比電容量",
+        "箔厚、晶粒、孔蝕均勻性及捲對捲製程控制"
       ],
       "swot": {
         "strengths": [
-          "MOPS明確登記為化成鋁箔/電蝕鋁箔生產銷售，全球前三大供應商",
-          "Nichicon/Rubycon/Nippon Chemi-con三大日系電容器廠為核心客戶",
-          "高壓化成鋁箔(400V-700V)具技術門檻，利基市場"
+          "MOPS直接支持化成鋁箔與電蝕鋁箔，供應鏈角色清楚",
+          "FinMind顯示7月營收YoY+40.6%，下游需求較去年同期改善"
         ],
         "weaknesses": [
-          "鋁電解電容器為成熟產品，成長空間有限",
-          "資本額15億，規模較小",
-          "中國化成鋁箔廠低價競爭壓力"
+          "7月營收MoM-2.3%，短期成長並非一路向上",
+          "產品集中鋁電解電容上游，受鋁價、電價與成熟市場議價影響"
         ],
         "opportunities": [
-          "新能源/電動車帶動高壓鋁電解電容器需求",
-          "長壽命化成鋁箔(105C/5000hr)可切入工業級市場",
-          "固態電容用高純度鋁箔為新成長方向"
+          "資料中心電源、工業變頻器與新能源設備可增加高耐壓電容用箔需求",
+          "提升比電容量與耐壓一致性可改善單位產品價值"
         ],
         "threats": [
-          "中國化成鋁箔廠(如新疆眾和)低價競爭",
-          "鋁原料價格波動影響成本",
-          "固態電容/陶瓷電容替代鋁電解電容的長期趨勢"
+          "中國化成箔擴產與低價競爭壓縮報價",
+          "薄膜電容、固態電容與MLCC在部分應用替代鋁電解電容"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1326",
   "companyName": "台化",
-  "updatedAt": "2026-07-30",
+  "updatedAt": "2026-08-26T19:04:29Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "pta_sm_abs_producer",
-      "roleSummary": "台化是亞洲最大PTA生產商之一，苯乙烯(SM)與ABS樹脂也具規模。5月營收273.9億年增15.5%，累計1,412億年增10.6%。PTA與ABS受惠於下游需求回溫。",
+      "roleSummary": "台化MOPS明確揭露PTA、苯乙烯、ABS、聚丙烯、芳香烴、酚酮及合成纖維產品，屬綜合石化核心廠；MOPS未揭露亞洲排名、製程授權或具名客戶。2026年7月營收312.67億元、MoM+13.0%、YoY+34.2%，累計YoY+13.9%。",
       "products": [
-        "純對苯二甲酸(PTA)(聚酯纖維原料)",
-        "苯乙烯(SM)(PS/ABS/SBR原料)",
-        "ABS樹脂(3C外殼/汽車零件)",
-        "聚丙烯(PP)(六輕一貫化)",
-        "耐隆66纖維(工業用/輪胎簾布)"
+        "純對苯二甲酸（PTA）",
+        "苯乙烯單體（SM）",
+        "ABS丙烯腈－丁二烯－苯乙烯樹脂",
+        "聚丙烯（PP）樹脂",
+        "耐隆絲與合成纖維紗布"
       ],
       "customers": [
-        "遠東新(1402)(聚酯纖維PTA原料)",
-        "新光合成纖維(1409)(聚酯纖維PTA)",
-        "奇美實業(ABS下游加工)",
-        "台塑(1301)(VCM/PE原料互供)",
-        "中國下游纖維廠(桐昆/新鳳鳴)(聚酯紡絲)"
+        "遠東新(1402；聚酯產業鏈應用對象，非MOPS揭露客戶)",
+        "新纖(1409；聚酯產業鏈應用對象，非MOPS揭露客戶)",
+        "奇美實業（ABS產業鏈對象，非MOPS揭露客戶)",
+        "台塑(1301；集團石化供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "遠東新(1402)(PTA)",
@@ -32,9 +31,8 @@
         "LG化學(ABS)"
       ],
       "risks": [
-        "6月營收276.7億YoY+11.6%,累計YoY+10.8%(石化景氣回升)",
-        "中國PTA產能過剩壓制外銷價格",
-        "ABS受3C需求疲軟影響,利差收窄"
+        "大宗石化利差受油價、原料與中國供需影響",
+        "MOPS未支持亞洲排名、特定製程授權或具名客戶，不能把產業常識寫成已驗證關係"
       ],
       "legacy": {},
       "evidence": [
@@ -51,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：PTA、聚苯乙烯、苯乙烯、芳香烴、酚酮、聚丙烯、ABS與合成纖維之製銷。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收312.67億元，MoM+13.0%、YoY+34.2%，累計YoY+13.9%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-17",
+      "lastVerified": "2026-08-26",
       "status": "verified",
       "techFocus": [
-        "PTA純對苯二甲酸量產技術(六輕一貫化)",
-        "ABS樹脂連續本體聚合製程",
-        "聚丙烯(PP)氣相聚合製程(Univation技術)"
+        "芳香烴分離與PTA氧化、精製的純度及能耗控制",
+        "苯乙烯與ABS聚合的分子量、衝擊強度及色澤控制",
+        "聚丙烯聚合與纖維紡絲、染整的一體化製程"
       ],
       "swot": {
         "strengths": [
-          "6月營收27666億YoY+11.59%，累計168904億YoY+10.79%，營收穩健成長",
-          "亞洲最大PTA生產商之一，六輕一貫化從上游PX到PTA具成本優勢",
-          "ABS/SM/PP多元產品組合，下游應用涵蓋聚酯/3C/車用"
+          "MOPS支持PTA、SM、ABS、PP與合成纖維的多元石化產品組合",
+          "2026年7月營收YoY+34.2%、累計YoY+13.9%，公司整體需求回升"
         ],
         "weaknesses": [
-          "PTA屬大宗石化品，毛利率受中國產能過剩壓縮",
-          "耐隆66纖維業務規模小，競爭力不如國際大廠",
-          "六輕環保與工安風險長期存在"
+          "產品多為大宗石化與纖維，報價及毛利高度循環",
+          "大型連續製程固定成本高，低稼動率時獲利槓桿不利"
         ],
         "opportunities": [
-          "PTA受惠聚酯纖維需求回溫（運動服飾/包材）",
-          "ABS受惠3C外殼與車用塑膠需求",
-          "中國下游纖維廠（桐昆/新鳳鳴）聚酯擴產帶動PTA需求"
+          "車用與家電材料需求可支撐ABS及PP產品升級",
+          "機能纖維、耐熱材料與循環塑料可改善大宗產品組合"
         ],
         "threats": [
-          "中國PTA自給率持續提升，外銷空間縮小",
-          "油價與PX價格波動影響PTA利差",
-          "全球減塑趨勢長期影響塑化產品需求"
+          "中國PTA、ABS與PP新增產能壓縮區域利差",
+          "油價、匯率、環保與工安成本上升可能抵銷營收成長"
         ]
       }
     }
