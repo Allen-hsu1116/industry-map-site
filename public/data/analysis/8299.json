@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "8299",
   "name": "群聯電子",
-  "generatedAt": "2026-08-26T12:34:35.261Z",
+  "generatedAt": "2026-08-27T12:35:14.080Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-26",
-  "chipDataDate": "2026-08-26",
+  "marketDataDate": "2026-08-27",
+  "chipDataDate": "2026-08-27",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,44 +18,42 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "群聯電子 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.9%。",
+    "summary": "群聯電子 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.6%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 6.9%"
+      "收盤站上 MA20 6.6%"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 0,
-    "summary": "群聯電子 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.1千張；外資近 5 日買超 +1.6千張。",
+    "summary": "群聯電子 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +2.2千張；外資近 5 日買超 +2.2千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.1千張",
-      "外資近 5 日買超 +1.6千張"
+      "三大法人近 5 日合計買超 +2.2千張",
+      "外資近 5 日買超 +2.2千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -3.2千張",
-      "投信近 5 日賣超 -360張"
+      "近 20 日法人偏賣，合計 -2.5千張",
+      "投信近 5 日賣超 -64張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-26"
+      "最近法人資料日：2026-08-27"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "記憶體模組",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "群聯為全球NAND Flash控制晶片龍頭。提供PCIe 5.0 NVMe SSD控制晶片、UFS 4.0/eMMC控制晶片及SSD模組，為Apple/Samsung/Kioxia/Western Digital核心供應商。MOPS主要經營：IC設計業半導體業電腦及週邊設備業。",
+      "roleSummary": "群聯MOPS僅概括揭露IC設計、半導體與電腦周邊業，既有公司產品資料支持NAND控制器與SSD方案，但MOPS未證明Apple、Samsung等直接客戶。FinMind顯示2026年7月營收271.62億元、MoM+9.3%、YoY+377.6%，高成長仍是公司整體口徑。",
       "supplyChainStage": "nand_controller_storage_module",
       "roleType": "nand_controller_ssd_solution_provider",
       "directness": "core",
@@ -94,9 +92,9 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 記憶體模組（product/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -104,9 +102,9 @@
     ],
     "summary": "群聯電子 在「記憶體模組」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：記憶體模組 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 記憶體模組（product/active） +16）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：記憶體模組 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 記憶體模組（product/active） +16）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -134,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-26"
+      "lastVerified": "2026-08-27"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -163,8 +161,8 @@
         "canonicalTopicName": "記憶體模組",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "群聯為全球NAND Flash控制晶片龍頭。提供PCIe 5.0 NVMe SSD控制晶片、UFS 4.0/eMMC控制晶片及SSD模組，為Apple/Samsung/Kioxia/Western Digital核心供應商。MOPS主要經營：IC設計業半導體業電腦及週邊設備業。"
+        "confidence": "medium",
+        "roleSummary": "群聯MOPS僅概括揭露IC設計、半導體與電腦周邊業，既有公司產品資料支持NAND控制器與SSD方案，但MOPS未證明Apple、Samsung等直接客戶。FinMind顯示2026年7月營收271.62億元、MoM+9.3%、YoY+377.6%，高成長仍是公司整體口徑。"
       }
     ],
     "swot": [
@@ -239,7 +237,7 @@
       "label": "基本面偏強",
       "signals": [
         "月營收 YoY +92.7%，成長動能明確",
-        "本益比 9.7 倍，估值尚可對照成長"
+        "本益比 9.9 倍，估值尚可對照成長"
       ],
       "risks": []
     },
@@ -255,15 +253,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2083.00",
-      "波段多空分水嶺看 MA20：1988.50",
-      "追蹤法人是否延續 買超：最近 +19張",
+      "短線支撐/壓力先看 MA5：2115.00",
+      "波段多空分水嶺看 MA20：2021.50",
+      "追蹤法人是否延續 買超：最近 +724張",
       "月營收年增率 +92.7%，觀察基本面是否支撐估值",
-      "本益比 9.7 倍，需和同族群估值比較"
+      "本益比 9.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2325.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 1445.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 1640.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

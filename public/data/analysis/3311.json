@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3311",
   "name": "閎暉",
-  "generatedAt": "2026-08-26T12:34:34.881Z",
+  "generatedAt": "2026-08-27T12:35:13.705Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-26",
-  "chipDataDate": "2026-08-26",
+  "marketDataDate": "2026-08-27",
+  "chipDataDate": "2026-08-27",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,12 +15,12 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 10,
-    "summary": "閎暉 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 40,
+    "summary": "閎暉 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列"
     ],
     "risks": [],
     "watch": [
@@ -32,29 +32,29 @@
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 8,
-    "summary": "閎暉 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +102張；外資近 5 日買超 +95張。",
+    "summary": "閎暉 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +81張；外資近 5 日買超 +74張。",
     "signals": [
-      "三大法人近 5 日合計買超 +102張",
-      "外資近 5 日買超 +95張"
+      "三大法人近 5 日合計買超 +81張",
+      "外資近 5 日買超 +74張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -54張"
+      "近 20 日法人偏賣，合計 -43張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-26"
+      "最近法人資料日：2026-08-27"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 92,
+    "score": 86,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "供應商角色",
-      "roleSummary": "閎暉6月營收2.45億YoY+14.1%，累計11.85億YoY-1.2%。MOPS登記為按鍵及模組產品機構整合元件。手機按鍵模組與玻璃蓋板為核心產品，車用機構件為新成長動能。",
+      "roleSummary": "閎暉MOPS只揭露按鍵及模組產品機構整合元件，足以支持手機、穿戴與車載人機介面機構模組角色，但不支持0.55mm玻璃、指紋模組精度或Apple供應關係。2026年7月營收2.35億元、YoY+25.7%，但MoM-4.4%、累計YoY僅+2.4%。",
       "supplyChainStage": "mechanical_module_components",
       "roleType": "consumer_automotive_mechanical_module_supplier",
       "directness": "supplier",
@@ -62,17 +62,17 @@
     },
     "productNarratives": [
       {
-        "name": "車用中控機構件(儀表板/中控台按鍵)(IMD/IML模內裝飾)",
+        "name": "智慧手機側鍵與音量鍵模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "穿戴裝置外殼件(智慧手錶金屬殼)(鈦合金/不鏽鋼MIM+CNC)",
+        "name": "平板與穿戴裝置按鍵機構模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "光學指紋辨識模組(紫外光固化膠合+感測器精度<5μm)",
+        "name": "車載中控與方向盤按鍵模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -91,19 +91,19 @@
     },
     "scoringFactors": [
       "直接度 供應商角色 +26",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "閎暉 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 92/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "閎暉 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 86/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 供應商角色 · high",
-      "產業評分：92/100（直接度 供應商角色 +26；角色信心 high +16；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 供應商角色 · medium",
+      "產業評分：86/100（直接度 供應商角色 +26；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -131,7 +131,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-26"
+      "lastVerified": "2026-08-27"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -160,8 +160,8 @@
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
-        "confidence": "high",
-        "roleSummary": "閎暉6月營收2.45億YoY+14.1%，累計11.85億YoY-1.2%。MOPS登記為按鍵及模組產品機構整合元件。手機按鍵模組與玻璃蓋板為核心產品，車用機構件為新成長動能。"
+        "confidence": "medium",
+        "roleSummary": "閎暉MOPS只揭露按鍵及模組產品機構整合元件，足以支持手機、穿戴與車載人機介面機構模組角色，但不支持0.55mm玻璃、指紋模組精度或Apple供應關係。2026年7月營收2.35億元、YoY+25.7%，但MoM-4.4%、累計YoY僅+2.4%。"
       }
     ],
     "swot": [
@@ -229,19 +229,20 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 66,
-    "recommendationState": "watchlist",
+    "totalScore": 71,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 18.1 倍，估值尚可對照成長"
+        "本益比 18.0 倍，估值尚可對照成長"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -249,10 +250,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：32.09",
-      "波段多空分水嶺看 MA20：32.10",
-      "追蹤法人是否延續 買超：最近 +95張",
-      "本益比 18.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：32.26",
+      "波段多空分水嶺看 MA20：32.15",
+      "追蹤法人是否延續 賣超：最近 -15張",
+      "本益比 18.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 33.20 且量比 > 1.5：列為轉強訊號",

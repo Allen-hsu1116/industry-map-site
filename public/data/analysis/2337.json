@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-08-26T12:34:34.612Z",
+  "generatedAt": "2026-08-27T12:35:13.441Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-26",
-  "chipDataDate": "2026-08-26",
+  "marketDataDate": "2026-08-27",
+  "chipDataDate": "2026-08-27",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,12 +15,12 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 30,
-    "summary": "旺宏 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "旺宏 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
@@ -29,20 +29,20 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 0,
-    "summary": "旺宏 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +8.2千張；外資近 5 日買超 +9.5千張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 20,
+    "summary": "旺宏 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +1.8萬張；近 20 日法人偏買，合計 +362張。",
     "signals": [
-      "三大法人近 5 日合計買超 +8.2千張",
-      "外資近 5 日買超 +9.5千張"
+      "三大法人近 5 日合計買超 +1.8萬張",
+      "近 20 日法人偏買，合計 +362張",
+      "外資近 5 日買超 +1.7萬張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -1.7萬張",
-      "投信近 5 日賣超 -1.4千張"
+      "投信近 5 日賣超 -129張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-26"
+      "最近法人資料日：2026-08-27"
     ]
   },
   "industry": {
@@ -168,7 +168,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-08-26"
+      "lastVerified": "2026-08-27"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -207,8 +207,8 @@
         "canonicalTopicName": "IC 設計與矽智財",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
-        "confidence": "high",
-        "roleSummary": "旺宏5月營收62.6億年增175.8%（受市場需求增加影響），累計年增110.9%。車用NOR Flash需求強勁，SLC NAND在工控應用出貨放量。"
+        "confidence": "medium",
+        "roleSummary": "旺宏MOPS支持積體電路與半導體產品從研發、設計到製造測試及銷售，屬非揮發性記憶體IDM而非純IC設計公司；本題材保留產品供應角色，但刪除MOPS未支持的節點、認證與Tesla等直接客戶宣稱。2026年7月營收77.25億元、MoM+11.0%、YoY+180.5%，公司說明為市場需求增加。"
       }
     ],
     "swot": [
@@ -290,7 +290,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 74,
+    "totalScore": 71,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 30,
@@ -302,9 +302,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -313,15 +313,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：123.20",
-      "波段多空分水嶺看 MA20：122.67",
-      "追蹤法人是否延續 買超：最近 +6.7千張",
+      "短線支撐/壓力先看 MA5：124.30",
+      "波段多空分水嶺看 MA20：124.45",
+      "追蹤法人是否延續 買超：最近 +7.7千張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值",
-      "本益比 29.7 倍，需和同族群估值比較"
+      "本益比 30.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 144.50 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 91.80：列為轉弱警訊",
+      "收盤跌破 20 日低點 100.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

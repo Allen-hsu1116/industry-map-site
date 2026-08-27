@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6175",
   "name": "立敦",
-  "generatedAt": "2026-08-26T12:34:35.096Z",
+  "generatedAt": "2026-08-27T12:35:13.918Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-26",
-  "chipDataDate": "2026-08-26",
+  "marketDataDate": "2026-08-27",
+  "chipDataDate": "2026-08-27",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,32 +15,31 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "立敦 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 3.1%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 3.1%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "立敦 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 28,
-    "summary": "立敦 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +145張；近 20 日法人偏買，合計 +355張。",
+    "summary": "立敦 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +240張；近 20 日法人偏買，合計 +754張。",
     "signals": [
-      "三大法人近 5 日合計買超 +145張",
-      "近 20 日法人偏買，合計 +355張",
-      "外資近 5 日買超 +152張"
+      "三大法人近 5 日合計買超 +240張",
+      "近 20 日法人偏買，合計 +754張",
+      "外資近 5 日買超 +239張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-08-26"
+      "最近法人資料日：2026-08-27"
     ]
   },
   "industry": {
@@ -49,11 +48,11 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "被動元件",
       "roleLabel": "供應商角色",
-      "roleSummary": "立敦是全球前三大鋁電解電容器上游化成鋁箔供應商，MOPS登記為化成鋁箔與電蝕鋁箔生產銷售。產品涵蓋高壓化成鋁箔(400V-700V)、長壽命化成鋁箔(105C/5000hr)及固態電容用高純度鋁箔，客戶為Nichicon/Rubycon/Nippon Chemi-con三大日系電容器廠。",
+      "roleSummary": "立敦MOPS明確支持化成鋁箔與電蝕鋁箔生產銷售，屬鋁電解電容器上游材料；但未揭露400V至700V規格、全球排名或Nichicon等客戶。FinMind顯示2026年7月營收4.75億元、YoY+40.6%，但MoM-2.3%。",
       "supplyChainStage": "capacitor_upstream_materials",
       "roleType": "aluminum_electrolytic_capacitor_foil_supplier",
       "directness": "supplier",
@@ -94,7 +93,7 @@
       "直接度 供應商角色 +26",
       "角色信心 high +16",
       "題材 被動元件（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -132,7 +131,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-26"
+      "lastVerified": "2026-08-27"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -162,7 +161,7 @@
         "directness": "supplier",
         "directnessLabel": "供應商角色",
         "confidence": "high",
-        "roleSummary": "立敦是全球前三大鋁電解電容器上游化成鋁箔供應商，MOPS登記為化成鋁箔與電蝕鋁箔生產銷售。產品涵蓋高壓化成鋁箔(400V-700V)、長壽命化成鋁箔(105C/5000hr)及固態電容用高純度鋁箔，客戶為Nichicon/Rubycon/Nippon Chemi-con三大日系電容器廠。"
+        "roleSummary": "立敦MOPS明確支持化成鋁箔與電蝕鋁箔生產銷售，屬鋁電解電容器上游材料；但未揭露400V至700V規格、全球排名或Nichicon等客戶。FinMind顯示2026年7月營收4.75億元、YoY+40.6%，但MoM-2.3%。"
       }
     ],
     "swot": [
@@ -230,13 +229,13 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 56,
+    "totalScore": 66,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面中性",
       "signals": [
-        "殖利率 4.1%，提供部分下檔支撐"
+        "殖利率 4.0%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -251,14 +250,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：73.28",
-      "波段多空分水嶺看 MA20：74.90",
-      "追蹤法人是否延續 買超：最近 +129張",
-      "本益比 23.2 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：73.18",
+      "波段多空分水嶺看 MA20：75.28",
+      "追蹤法人是否延續 買超：最近 +61張",
+      "本益比 23.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 84.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 65.70：列為轉弱警訊",
+      "收盤跌破 20 日低點 70.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
