@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2059",
   "companyName": "川湖",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "ai-server-mechanical",
@@ -86,19 +86,19 @@
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "roleSummary": "川湖MOPS直接支持伺服器導軌、滑軌及周邊零組件，未揭露液冷快接頭、冷板或CDU。其液冷角色應限於高重量GPU／液冷伺服器機箱的抽換與承載機構。2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%，公司說明新產品開始出貨，但未指明液冷。",
+      "roleSummary": "川湖MOPS直接支持伺服器導軌、滑軌及周邊零組件，未揭露冷板、CDU或液冷快接頭；本題材應限於高重量GPU與液冷伺服器機箱的承載及抽換機構。2026年7月營收64.07億元、YoY+355.5%、累計YoY+136.6%，公司說明新產品開始出貨，但未指明液冷。",
       "products": [
-        "1U／2U機架式伺服器滾珠滑軌",
-        "4U／8U高載重GPU伺服器滑軌",
+        "機架式伺服器滾珠滑軌",
+        "高載重GPU伺服器滑軌",
         "免工具快拆機架導軌",
-        "伺服器線纜管理臂與滑軌周邊件",
-        "筆記型電腦轉軸鉸鏈"
+        "伺服器線纜管理臂",
+        "伺服器滑軌鎖定零件"
       ],
       "customers": [
-        "Dell Technologies（伺服器滑軌應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（機架滑軌應用對象，非MOPS揭露客戶）",
-        "Super Micro Computer（GPU伺服器應用對象，非MOPS揭露客戶）",
-        "Wiwynn（雲端機架應用對象，非MOPS揭露客戶）"
+        "Dell Technologies（伺服器滑軌應用對象，非MOPS揭露客戶)",
+        "Hewlett Packard Enterprise（機架滑軌應用對象，非MOPS揭露客戶)",
+        "Supermicro（GPU伺服器應用對象，非MOPS揭露客戶)",
+        "緯穎(6669；雲端機架應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "Unical(美國伺服器滑軌)",
@@ -123,42 +123,42 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：伺服器等用導軌及周邊零組件、鉸鏈與滑軌之研發設計製造銷售。"
+          "claim": "MOPS主要經營業務：伺服器等用導軌及周邊零組件、筆電鉸鏈與滑軌之研發、設計、製造及銷售。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
           "title": "公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%；新產品開始出貨。"
+          "claim": "TWSE：2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%；備註為新產品開始出貨。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-21",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "高載重滾珠滑軌之撓度、摩擦與壽命控制",
+        "高載重滾珠滑軌之撓度、摩擦與循環壽命控制",
         "免工具快拆、盲裝與機架公差補償設計",
-        "運輸振動、循環抽拉與鎖定機構可靠度測試"
+        "運輸振動、抽拉循環與鎖定機構可靠度測試"
       ],
       "supplyChainStage": "server_mechanical_adjacent",
       "roleType": "server_rails_adjacent_to_liquid_cooled_racks",
       "swot": {
         "strengths": [
-          "MOPS直接支持伺服器導軌、滑軌與周邊件，機架機構角色清楚",
-          "2026年7月營收YoY+355.5%、累計YoY+136.6%，且公司說明新產品開始出貨"
+          "MOPS直接支持伺服器導軌、滑軌與周邊件，機架機構角色明確",
+          "2026年7月營收YoY+355.5%、累計YoY+136.6%，且公司明示新產品開始出貨"
         ],
         "weaknesses": [
           "MOPS未揭露冷板、CDU或液冷快接頭，不能列為流體散熱核心供應商",
-          "營收暴增未拆分產品，無法確認液冷機架貢獻比例"
+          "營收暴增未拆分產品，無法確認液冷機箱貢獻比例"
         ],
         "opportunities": [
           "GPU與液冷機箱重量上升可提高高載重滑軌單機價值",
-          "機架維修性與線纜／管路空間需求有利客製機構件升級"
+          "維修性與線纜／管路空間需求有利客製滑軌機構升級"
         ],
         "threats": [
-          "伺服器平台規格改版可能要求重新認證及模具投資",
-          "單月高成長基期墊高後，後續增速可能快速回落"
+          "平台改版可能要求重新認證與模具投資",
+          "高基期墊高後營收增速可能快速回落，且材料與同業競爭仍會影響毛利"
         ]
       }
     }

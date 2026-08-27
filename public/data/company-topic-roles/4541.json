@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "4541",
   "companyName": "晟田",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
+      "directness": "supplier",
       "supplyChainStage": "aerospace_mro",
       "roleType": "aerospace_precision_machining",
-      "roleSummary": "晟田MOPS明確揭露航太發動機、起落架及次系統精密件，另有半導體設備與食品充填業務。FinMind顯示2026年7月營收1.95億元、較6月減少2.5%；規模小且軍工收入未單獨揭露。",
+      "roleSummary": "晟田MOPS直接揭露航太發動機、起落架及次系統零組件，航太精密件供應角色成立；MOPS未揭露軍用機型、材料牌號、認證或具名客戶。FinMind顯示2026年7月營收1.95億元、MoM-2.5%、YoY+39.2%，但為全公司口徑。",
       "products": [
-        "鎳基超合金航空發動機機匣五軸加工件",
-        "鈦合金航空發動機支架與承力結構件",
-        "300M超高強度鋼起落架致動器殼體",
-        "航空液壓歧管與閥體精密加工件",
-        "航空傳動齒輪箱殼體與安裝座"
+        "航空發動機精密零件",
+        "航空起落架精密零件",
+        "航空器次系統機構零件",
+        "半導體設備精密零件",
+        "工業自動化精密傳動零件"
       ],
       "customers": [
-        "漢翔(2634；航太供應鏈對象)",
-        "GE Aerospace(發動機平台應用對象，非MOPS揭露客戶)",
-        "Safran(發動機/起落架平台應用對象，非MOPS揭露客戶)",
-        "Pratt & Whitney(發動機平台應用對象，非MOPS揭露客戶)"
+        "漢翔(2634；航太系統整合對象，非MOPS揭露客戶)",
+        "GE Aerospace（發動機平台應用對象，非MOPS揭露客戶）",
+        "Safran（起落架與發動機平台對象，非MOPS揭露客戶）",
+        "Collins Aerospace（航太次系統生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "寶一（8222）",
@@ -53,40 +53,40 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：航太發動機、起落架及次系統精密件；半導體設備精密件；無菌食品充填與自動化精密傳動件。"
+          "claim": "MOPS主要經營業務：航太發動機、起落架及其他次系統零組件；半導體設備零組件；無菌食品充填設備與工業自動化精密傳動零組件。"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收1.95億元，較6月減少2.5%；TWSE月營收查無資料，改採FinMind。"
+          "claim": "FinMind：2026年7月營收1.95億元，MoM-2.5%、YoY+39.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-19",
+      "confidence": "medium",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "Inconel 718與Ti-6Al-4V五軸切削、刀具磨耗補償及熱變形控制",
-        "300M鋼熱處理後精加工、殘留應力與尺寸穩定控制",
-        "AS9100製程追溯、首件檢驗FAI與三次元量測"
+        "航太零件多軸切削、薄壁變形與尺寸公差控制",
+        "起落架及發動機零件之表面完整性與量測驗證",
+        "小批量多品項製程排程、治具與全程批次追溯"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接揭露發動機、起落架與次系統精密件，航太題材連結明確",
-          "具難切削鎳基/鈦合金及高強度鋼五軸加工門檻"
+          "MOPS直接支持發動機、起落架與航太次系統零件，供應鏈定位清楚",
+          "2026年7月營收YoY+39.2%，精密加工需求較去年同期改善"
         ],
         "weaknesses": [
-          "2026年7月營收僅1.95億元且MoM-2.5%，規模與單月波動風險高",
-          "客製化精密件認證期長，設備、治具與品質人力固定成本高"
+          "7月營收僅1.95億元且MoM-2.5%，規模小、接單波動較大",
+          "公司另有半導體及食品設備業務，整體營收不能全歸因航太或軍工"
         ],
         "opportunities": [
-          "全球發動機維修缺口與新機交付增加，可帶動機匣及支架需求",
-          "國機國造與無人機國產化可增加航太級加工件在地採購"
+          "航太維修與新機交付可增加發動機、起落架替換件需求",
+          "供應鏈在地化有利具精密加工與追溯能力的零件廠送樣"
         ],
         "threats": [
-          "OEM砍價或單一專案延後，對小型供應商營收影響大",
-          "原料、航材認證與特殊製程外包瓶頸可能拖延交付"
+          "MOPS未揭露軍機型號、認證或客戶，題材若無新公告容易高估",
+          "航太認證週期長、原料與加工良率問題會延誤交付"
         ]
       }
     }

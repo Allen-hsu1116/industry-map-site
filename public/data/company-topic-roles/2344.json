@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2344",
   "companyName": "華邦電",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "hbm",
@@ -11,19 +11,19 @@
       "directness": "indirect",
       "supplyChainStage": "specialty_memory_adjacent",
       "roleType": "specialty_memory_not_hbm",
-      "roleSummary": "華邦電MOPS支持記憶體與半導體系統產品，但未揭露HBM、TSV堆疊或HBM量產。此角色應定位為利基型DRAM、NOR Flash與SLC NAND對記憶體景氣的間接曝險，不是HBM供應商。2026年7月營收267.73億元，YoY+291.5%、累計YoY+161.0%，公司說明受市場供需影響，不能歸因HBM。",
+      "roleSummary": "華邦電MOPS支持記憶體與半導體系統產品，但未揭露HBM、TSV堆疊或HBM量產；本題材只能定位為利基DRAM、NOR Flash與SLC NAND對記憶體景氣的間接曝險。2026年7月營收267.73億元、YoY+291.5%、累計YoY+161.0%，公司說明受市場供需影響，不能歸因HBM。",
       "products": [
-        "DDR3／DDR4利基型DRAM顆粒",
-        "LPDDR4行動與嵌入式DRAM",
-        "SpiFlash Serial NOR Flash",
-        "QspiNAND SLC NAND Flash",
-        "KGD裸晶與記憶體MCP產品"
+        "利基型DDR3／DDR4 DRAM顆粒",
+        "低功耗行動DRAM顆粒",
+        "Serial NOR Flash記憶體",
+        "SLC NAND Flash記憶體",
+        "記憶體裸晶與多晶片封裝產品"
       ],
       "customers": [
-        "SK hynix（HBM技術比較對象，非MOPS揭露客戶）",
-        "Micron Technology（HBM技術比較對象，非MOPS揭露客戶）",
-        "Samsung Electronics（HBM技術比較對象，非MOPS揭露客戶）",
-        "Nanya Technology（台灣DRAM生態對象，非MOPS揭露客戶）"
+        "金士頓Kingston（記憶體模組應用對象，非MOPS揭露客戶)",
+        "威剛(3260；記憶體模組應用對象，非MOPS揭露客戶)",
+        "創見(2451；工控記憶體應用對象，非MOPS揭露客戶)",
+        "宇瞻(8271；工控記憶體應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "美光(Micron)",
@@ -56,23 +56,23 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：積體電路、半導體記憶零組件及系統產品、電腦與數位通訊用半導體零組件。"
+          "claim": "MOPS主要經營業務：積體電路、半導體記憶零組件及系統產品、電腦與數位通訊用半導體零組件及相關軟體。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
           "title": "公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收267.73億元，MoM+30.0%、YoY+291.5%，累計YoY+161.0%；受市場供需影響。"
+          "claim": "TWSE：2026年7月營收267.73億元，MoM+30.0%、YoY+291.5%，累計YoY+161.0%；備註為市場供需影響。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "DDR3／DDR4與LPDDR4介面、低功耗刷新及寬溫驗證",
-        "Serial NOR之SPI／xSPI介面與高速讀取",
-        "SLC NAND之ECC、壞塊管理與資料保持可靠度"
+        "利基DRAM之低功耗刷新、高速介面與寬溫驗證",
+        "Serial NOR之SPI介面、高速讀取與資料保持可靠度",
+        "SLC NAND之錯誤修正、壞塊管理與寫入耐久控制"
       ],
       "swot": {
         "strengths": [
@@ -81,14 +81,14 @@
         ],
         "weaknesses": [
           "MOPS未揭露HBM、TSV或堆疊封裝量產，不能列為HBM供應商",
-          "公司說明成長受市場供需影響，營收高度循環且題材歸因有限"
+          "公司說明成長來自市場供需，營收高度循環且題材歸因有限"
         ],
         "opportunities": [
-          "AI邊緣裝置與工控系統可帶動利基DRAM與NOR Flash需求",
+          "邊緣AI與工控系統可帶動利基DRAM、NOR與SLC NAND需求",
           "記憶體報價回升可改善產能利用率與產品組合"
         ],
         "threats": [
-          "HBM資本與技術門檻高，與三大原廠差距難以短期跨越",
+          "HBM技術及資本門檻高，與三大原廠差距難以短期跨越",
           "記憶體報價反轉或中國新增產能會放大營收波動"
         ]
       }

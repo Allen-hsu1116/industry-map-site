@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1605",
   "companyName": "華新",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -97,19 +97,20 @@
       "topicId": "renewable-energy",
       "topicName": "太陽能與離岸風電",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "華新6月營收167.2億YoY+29.3%，累計907.7億YoY-0.4%。66kV離岸風電海纜為再生能源核心產品，受惠台灣離岸風場建置潮。電線電纜與特殊鋼為雙主業。",
+      "directness": "indirect",
+      "roleSummary": "華新MOPS只揭露電線電纜、鋼線鋼纜與特殊鋼，未明確揭露離岸風電海纜、電壓等級或風場客戶；在再生能源題材應定位為電網電纜與金屬材料供應的相鄰角色。2026年7月營收157.14億元、YoY+10.1%、累計YoY+1.0%，不能全歸因再生能源。",
       "products": [
-        "66kV級離岸風電海纜(三芯XLPE交連PE)",
-        "33kV陣列海纜(風機間互聯XLPE)",
-        "陸上輸電電纜(161kV/69kV地下電纜)",
-        "風場併聯用銅匯流排(Copper Busbar)"
+        "銅導體電力電纜",
+        "鋁導體電力電纜",
+        "鋼線與鋼纜",
+        "不鏽鋼盤元與線材",
+        "特殊鋼棒材"
       ],
       "customers": [
-        "沃旭能源Ørsted(離岸風場海纜)",
-        "台電(陸上輸電電纜採購/併聯)",
-        "中能離岸風電(風場海纜供應)",
-        "CIP哥本哈根基礎建設基金(風場電纜)"
+        "台灣電力公司（電網電纜應用對象，非MOPS揭露客戶）",
+        "沃旭能源Ørsted（離岸風場應用對象，非MOPS揭露客戶）",
+        "哥本哈根基礎建設基金CIP（風場開發生態對象，非MOPS揭露客戶）",
+        "中鋼(2002；特殊鋼產業生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "大亞(1609)(離岸風電海纜)",
@@ -128,38 +129,48 @@
           "title": "1605公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 1605 role in 太陽能與離岸風電 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電線電纜、鋼線鋼纜及特殊鋼之生產與銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收157.14億元，MoM-6.0%、YoY+10.1%，累計YoY+1.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "confidence": "medium",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "66kV高壓海纜擠出技術(三芯XLPE絕緣/鉛護套)",
-        "海纜防蝕與鎧裝技術(鉛護套+鍍鋅鋼絲鎧裝)",
-        "高壓電纜接頭與終端套管設計(矽橡膠預製式)"
+        "銅／鋁導體絞合、絕緣押出與護套製程",
+        "鋼線鋼纜之拉線、捻合與防蝕處理",
+        "不鏽鋼與特殊鋼之成分、熱處理及線材加工控制"
       ],
-      "supplyChainStage": "offshore_wind",
-      "roleType": "submarine_power_cable_supplier",
+      "supplyChainStage": "power_cable_adjacent",
+      "roleType": "power_cable_and_special_steel_supplier",
       "swot": {
         "strengths": [
-          "6月營收16720億YoY+29.34%，強勁成長，離岸風電海纜為核心驅動",
-          "66kV離岸風電海纜（三芯XLPE）為台灣少數具製造能力的供應商",
-          "電線電纜與特殊鋼雙主業，營收規模大（資本額443億）抗風險能力強"
+          "MOPS直接支持電線電纜、鋼纜與特殊鋼，具電網建設所需材料能力",
+          "2026年7月營收157.14億元、YoY+10.1%，公司整體規模與營運韌性高"
         ],
         "weaknesses": [
-          "累計營收90768億YoY-0.44%，特殊鋼事業受景氣循環拖累",
-          "離岸風電海纜占比仍小，主要營收來自傳統電纜與鋼材",
-          "海纜製造產能有限，需持續擴產才能滿足風場需求"
+          "MOPS未揭露海纜、電壓等級或風場客戶，離岸風電直接性不足",
+          "7月營收MoM-6.0%，且累計YoY僅+1.0%，成長動能並不均衡"
         ],
         "opportunities": [
-          "台灣離岸風場區塊開發（2026-2030）帶動66kV海纜長期需求",
-          "沃旭/CIP/中能等開發商風場海纜訂單持續開出",
-          "陸上輸電電纜受惠台電電網升級計畫"
+          "電網強韌、再生能源併網可提升電力電纜需求",
+          "特殊鋼與鋼纜能力可參與風場及輸配電設備材料供應"
         ],
         "threats": [
-          "國際海纜大廠（Prysmian/Nexans/住友電工）技術與規模領先",
-          "離岸風場建設時程延遲影響海纜交貨節奏",
-          "銅價波動影響電纜製造成本與利潤"
+          "銅、鎳及鋼材價格波動可能侵蝕加工利差",
+          "風場建設與電網標案延後會使題材轉單速度低於預期"
         ]
       }
     }

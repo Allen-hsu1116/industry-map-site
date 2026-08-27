@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -10,18 +10,20 @@
       "topicType": "supply_chain_segment",
       "directness": "indirect",
       "supplyChainStage": "back_end_process",
-      "roleType": "wafer_dicing_grinding",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。提供晶圓切割、研磨、測試與挑檢服務，是晶圓代工後段加工的專業供應商，受惠先進製程晶圓薄化與測試需求。",
+      "roleType": "dicing_grinding_test_service",
+      "roleSummary": "久元MOPS直接支持半導體與光電產品切割、研磨、測試、挑檢、基板切割，以及IC／CIS／CCM測試設備；其角色是晶圓製造後段加工與測試，不是晶圓代工廠。FinMind顯示2026年7月營收3.74億元、MoM-4.1%、YoY-6.5%。",
       "products": [
-        "晶圓背面研磨(BSP)設備(薄化至50um以下)",
-        "晶圓測試挑檢機(Probe Card/測試程式開發)",
-        "晶圓切割(Dicing)設備維護與服務",
-        "IC封裝前測試(CP)與成品測試(FT)委外服務"
+        "半導體晶圓切割服務",
+        "晶圓背面研磨服務",
+        "IC電性測試與挑檢服務",
+        "封裝基板切割服務",
+        "IC／CIS／CCM自動測試設備"
       ],
       "customers": [
-        "台積電(2330)(晶圓切割)",
-        "聯電(2303)(晶圓加工)",
-        "世界先進(5347)(晶圓加工)"
+        "台積電(2330；晶圓後段應用對象，非MOPS揭露客戶)",
+        "聯電(2303；晶圓後段應用對象，非MOPS揭露客戶)",
+        "世界先進(5347；成熟製程生態對象，非MOPS揭露客戶)",
+        "日月光投控(3711；封測生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "精測(6510)(晶圓測試探針卡)",
@@ -49,36 +51,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體及光電產品切割、研磨、測試、挑檢與基板切割；IC、CIS、CCM測試設備等半導體及光電設備之研發、製造與銷售。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "FinMind月營收歷史",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收3.74億元，MoM-4.1%、YoY-6.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "medium",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "晶圓級測試(Wafer Probing)高精度對位技術",
-        "IC測試分選機(Handler)精密機構設計",
-        "CIS封裝級測試探針卡技術"
+        "晶圓切割之刀痕、崩邊與顆粒污染控制",
+        "晶圓研磨之厚度均勻性、翹曲與破片控制",
+        "IC／CIS／CCM自動測試、影像檢測與分選整合"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，晶圓切割研磨設備國內市佔領先，台積電/聯電/世界先進長期客戶",
-          "BSP背面研磨技術薄化至50μm以下，領先同業精密加工能力",
-          "IC測試分選機(Handler)精密機構設計自有化，垂直整合切割+研磨+測試"
+          "MOPS直接支持切割、研磨、測試、挑檢及自研測試設備，後段服務範圍完整",
+          "加工服務與設備銷售並存，可交叉累積測試與自動化經驗"
         ],
         "weaknesses": [
-          "上櫃公司規模較小(資本額12.8億)，先進封裝測試產能有限",
-          "晶圓代工景氣循環影響設備維護需求，營收波動大",
-          "先進製程(3nm以下)切割設備技術門檻提高，需持續研發投入"
+          "2026年7月營收3.74億元、MoM-4.1%、YoY-6.5%，近期需求偏弱",
+          "公司不是晶圓代工廠，且MOPS未揭露先進節點或具名客戶"
         ],
         "opportunities": [
-          "台積電先進封裝(CoWoS/SoIC)擴產帶動晶圓切割研磨需求",
-          "第三代半導體(SiC/GaN)晶圓硬度高，需專用切割設備",
-          "CIS影像感測器需求成長(手機多鏡頭/車用/安防)帶動測試設備"
+          "CIS、CCM與IC測試需求可帶動自動測試設備及加工服務",
+          "晶圓薄化與高密度封裝增加切割、研磨及挑檢難度與附加價值"
         ],
         "threats": [
-          "Disco(日本)晶圓切割設備壟斷高端市場，久元主要做服務/維護",
-          "中國大陸測試設備廠商低價競爭壓縮毛利",
-          "半導體景氣下行週期影響資本支出與設備採購"
+          "客戶自建後段產能或大型封測廠擴充會壓縮委外需求",
+          "設備投資與稼動率受半導體景氣循環影響明顯"
         ]
       }
     },

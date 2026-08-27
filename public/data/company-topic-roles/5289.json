@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "5289",
   "companyName": "宜鼎",
-  "updatedAt": "2026-08-18T19:02:52Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "cxl-memory-pooling",
       "topicName": "CXL 記憶體池化",
       "topicType": "technology",
-      "directness": "core",
-      "supplyChainStage": "cxl_memory",
-      "roleType": "cxl_memory_device",
-      "roleSummary": "宜鼎MOPS揭露工業用嵌入式儲存裝置與DRAM模組；CXL角色屬工規記憶體能力向伺服器記憶體池化延伸，實際CXL量產客戶未由MOPS證實。FinMind顯示2026年7月營收84.95億元、MoM+3.5%。",
+      "directness": "indirect",
+      "supplyChainStage": "industrial_memory_adjacent",
+      "roleType": "industrial_memory_adjacent_to_cxl",
+      "roleSummary": "宜鼎MOPS直接支持工業用嵌入式儲存裝置與工業DRAM模組，但未揭露CXL控制器、CXL記憶體擴充卡或記憶體池化產品；本角色是工規記憶體能力對CXL生態的相鄰觀察。FinMind顯示2026年7月營收84.95億元、MoM+3.5%、YoY+636.5%，高增幅須留意基期與資料口徑，不能歸因CXL。",
       "products": [
-        "CXL 2.0 Type-3記憶體擴充模組",
-        "DDR5 ECC RDIMM工業級記憶體模組",
-        "EDSFF E1.S PCIe 5.0 NVMe SSD",
-        "M.2 2280工規PCIe 4.0 NVMe SSD"
+        "工業用SATA固態硬碟",
+        "工業用NVMe固態硬碟",
+        "工業用DRAM記憶體模組",
+        "嵌入式快閃儲存模組"
       ],
       "customers": [
-        "Intel(支援CXL平台驗證對象)",
-        "AMD(EPYC CXL相容驗證對象)",
-        "Supermicro(伺服器整合驗證對象)",
-        "研華(2395；工業伺服器應用對象)"
+        "Intel（CXL平台驗證對象，非MOPS揭露客戶)",
+        "AMD（伺服器平台驗證對象，非MOPS揭露客戶)",
+        "研華(2395；工業電腦應用對象，非MOPS揭露客戶)",
+        "Siemens（工業自動化應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "創見(2451)",
@@ -48,32 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind fallback：2026年7月營收84.95億元，MoM+3.5%"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用動態隨機記憶體模組。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "FinMind月營收歷史",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收84.95億元，MoM+3.5%、YoY+636.5%；高增幅需留意基期與資料口徑。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "confidence": "medium",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "CXL 2.0 Type-3記憶體裝置枚舉與容量擴充",
-        "DDR5 ECC/RAS與-40°C至85°C寬溫篩選",
-        "PCIe 5.0信號完整性及NVMe端到端資料保護"
+        "工業儲存之斷電保護、韌體管理與寫入耐久控制",
+        "DRAM模組訊號完整性、燒機與寬溫可靠度驗證",
+        "CXL協定與記憶體池化能力仍待正式產品揭露驗證"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認工業用DRAM模組與嵌入式儲存本業，具長供貨與寬溫驗證能力",
-          "FinMind顯示2026年7月營收84.95億元、MoM+3.5%，規模足以支撐新介面研發"
+          "MOPS直接支持工業嵌入式儲存與DRAM模組，工規記憶體基礎明確",
+          "FinMind顯示7月營收MoM+3.5%，工業儲存與記憶體整體出貨仍有動能"
         ],
         "weaknesses": [
-          "MOPS未揭露CXL產品營收或量產客戶，現階段題材多於財務貢獻",
-          "CXL控制器與伺服器韌體相容性門檻高，宜鼎仍依賴CPU平台生態"
+          "MOPS未揭露CXL控制器、擴充卡或記憶體池化產品，題材直接性不足",
+          "FinMind顯示YoY+636.5%異常高，需留意低基期、合併或資料口徑，不能直接當CXL成長"
         ],
         "opportunities": [
-          "AI推論伺服器需要以CXL擴充低成本容量與共享記憶體池",
-          "工業伺服器可結合CXL、DDR5與EDSFF SSD形成完整資料層方案"
+          "CXL平台普及可為既有工規DRAM與儲存客戶帶來相容性驗證需求",
+          "邊緣AI與工業伺服器升級可提高高可靠記憶體與NVMe用量"
         ],
         "threats": [
-          "三星、SK hynix與Micron可直接供應CXL記憶體裝置，壓縮模組商空間",
-          "CXL 3.x導入時程與主機板支援若延後，產品認列可能不如預期"
+          "CXL控制器與模組規格由大型晶片及記憶體廠主導，宜鼎議價空間有限",
+          "CXL導入延後或平台碎片化會拉長產品驗證及量產週期"
         ]
       }
     },

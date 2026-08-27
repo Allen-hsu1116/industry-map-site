@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5347",
   "companyName": "世界",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -10,19 +10,20 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "wafer_fabrication",
-      "roleType": "specialty_foundry",
-      "roleSummary": "世界先進是台灣第三大晶圓代工廠，專注8吋/12吋利基型IC代工，涵蓋電源管理IC(BCD)、顯示驅動IC與車用IC代工。上櫃公司月營收未透過TWSE OpenAPI揭露。",
+      "roleType": "customer_spec_foundry",
+      "roleSummary": "世界先進的MOPS揭露可確認客戶委託積體電路製造、封裝測試、光罩設計與IC電腦輔助設計服務；但未揭露8吋／12吋、BCD節點或具名客戶，本輪移除舊資料的過度規格。FinMind顯示2026年7月營收47.06億元、MoM-21.3%、YoY+30.3%，營收為全公司口徑。",
       "products": [
-        "8吋晶圓代工(電源管理IC BCD 0.35-0.6μm)",
-        "8吋晶圓代工(顯示驅動IC 0.18-0.35μm)",
-        "12吋晶圓代工(利基型SoC 0.13-0.18μm)",
-        "車用IC代工(車規AEC-Q100 BCD製程)"
+        "客戶委託積體電路晶圓製造服務",
+        "積體電路封裝服務",
+        "積體電路成品測試服務",
+        "半導體光罩製造與設計服務",
+        "積體電路電腦輔助設計服務"
       ],
       "customers": [
-        "德州儀器TI(電源管理IC代工)",
-        "聯詠(3034)(顯示驅動IC代工)",
-        "奇景(3222)(驅動IC代工)",
-        "ADI(類比IC代工)"
+        "德州儀器TI（成熟製程應用對象，非MOPS揭露客戶）",
+        "聯詠(3034；顯示驅動IC應用對象，非MOPS揭露客戶)",
+        "奇景光電Himax（顯示IC應用對象，非MOPS揭露客戶）",
+        "Analog Devices（類比IC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "聯電(2303)(晶圓代工二哥)",
@@ -30,9 +31,8 @@
         "中芯國際SMIC(中國8吋代工)"
       ],
       "risks": [
-        "8吋晶圓代工面臨設備老舊與產能擴充困難",
-        "利基型IC代工毛利率低於先進製程(台積電)",
-        "中國中芯SMIC低價競爭8吋/12吋成熟製程"
+        "成熟製程價格競爭與產能利用率變化會放大獲利循環",
+        "MOPS未揭露製程節點及客戶，外部題材規格不可當成已確認訂單"
       ],
       "legacy": {},
       "evidence": [
@@ -49,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：依客戶訂單與其提供之產品設計說明，從事製造與銷售積體電路。提供前述產品之封裝與測試服務。提供製造光罩及其設計服務。提供積體電路以及其他晶圓半導體裝置之電腦輔助設計技術服務。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "FinMind月營收歷史",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收47.06億元，MoM-21.3%、YoY+30.3%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-03",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "8吋/12吋利基製程平台(BCD/CMOS 0.13-0.6μm)",
-        "電源管理IC BCD高壓製程(0.35-0.6μm 5V-60V)",
-        "CIS影像感測器代工(BSI背照製程 0.18μm)"
+        "依客戶設計資料執行光罩、晶圓製造與製程控管",
+        "封裝、電性測試與晶圓製造的後段整合",
+        "IC電腦輔助設計資料轉換與光罩設計驗證"
       ],
       "swot": {
         "strengths": [
-          "7月營收47.06億，8吋晶圓代工電源管理IC(BCD 0.35-0.6μm)全球領先",
-          "MOPS登記為積體電路製造銷售+封裝測試+光罩設計，一條龍服務",
-          "客戶含德州儀器TI(電源管理IC)、聯詠(3034)(顯示驅動IC)，國際級客戶"
+          "MOPS直接支持IC製造、封裝測試、光罩及設計服務，服務鏈條完整",
+          "2026年7月營收YoY+30.3%，成熟製程需求較去年同期改善"
         ],
         "weaknesses": [
-          "7月營收MoM-21.3%，8吋晶圓代工需求放緩",
-          "8吋廠無法升级先進製程，成長天花板低",
-          "車用/工用IC庫存調整影響產能利用率"
+          "7月營收MoM-21.3%，月度拉貨與產能利用率波動明顯",
+          "MOPS未揭露8吋／12吋、BCD節點或客戶，無法用精確規格判斷產品組合"
         ],
         "opportunities": [
-          "電動車電源管理IC需求帶動8吋BCD平台訂單",
-          "OLED DDI顯示驅動IC 28nm製程升級",
-          "利基型記憶體(Pseudo-SRAM/ROM)代工新應用"
+          "電源、顯示與車用等成熟製程IC可支撐利基代工需求",
+          "光罩、設計支援與封測整合可提高客戶黏著度"
         ],
         "threats": [
-          "中國8吋晶圓代工(華虹/中芯)低价競爭",
-          "12吋成熟製程(28/40nm)取代8吋趨勢",
-          "車用半導體庫存調整延長影響訂單"
+          "中國成熟製程新增產能可能加劇報價競爭",
+          "終端庫存修正會迅速傳導至晶圓投片與產能利用率"
         ]
       }
     },

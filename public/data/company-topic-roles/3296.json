@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3296",
   "companyName": "勝德",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "battery_pack",
-      "roleType": "battery_pack_assembler",
-      "roleSummary": "勝德MOPS只揭露通信、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS或PCS；因此在儲能題材應定位為智慧配電與保護元件的潛在周邊角色，而非電池模組廠。2026年7月營收1.72億元、YoY+42.9%，但不能歸因儲能。",
+      "supplyChainStage": "power_distribution_adjacent",
+      "roleType": "power_protection_adjacent_to_storage",
+      "roleSummary": "勝德MOPS只揭露通信機械、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS、PCS或儲能櫃；本題材應限於電源分配、突波保護與遠端監控的周邊應用。2026年7月營收1.72億元、YoY+42.9%，但累計YoY僅+5.8%，且不能歸因儲能。",
       "products": [
-        "機架式智慧PDU（分路電流量測與遠端開關）",
-        "MOV突波保護電源排插（過壓/雷擊保護）",
-        "過流保護斷路與熱熔斷電源模組",
-        "RS-485/Modbus用電監測通訊模組"
+        "機架式電源分配器PDU",
+        "突波保護電源排插",
+        "遠端電源監控通訊模組",
+        "繼電器式電源開關模組"
       ],
       "customers": [
-        "台達電(2308；儲能配電應用對象，非MOPS揭露客戶)",
-        "Schneider Electric(智慧配電應用對象，非MOPS揭露客戶)",
-        "Eaton(UPS/PDU應用對象，非MOPS揭露客戶)",
-        "Vertiv(資料中心PDU應用對象，非MOPS揭露客戶)"
+        "台達電(2308；電源系統整合對象，非MOPS揭露客戶)",
+        "光寶科(2301；電源設備生態對象，非MOPS揭露客戶)",
+        "士電(1503；儲能系統應用對象，非MOPS揭露客戶)",
+        "中興電(1513；儲能與電網應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "華城電能(1513)",
@@ -54,40 +54,40 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：有線與無線通信機械器材、電子元件、電機與電子機械器材之製造買賣。"
+          "claim": "MOPS主要經營業務：有線及無線通信機械器材、電子零組件、電機與電子機械器材之製造買賣。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
           "title": "公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收1.72億元，MoM+4.3%、YoY+42.9%，累計YoY+5.8%。"
+          "claim": "TWSE：2026年7月營收1.72億元，MoM+4.3%、YoY+42.9%，累計YoY+5.8%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "MOV/GDT多級突波抑制與熱失控斷路設計",
-        "分路電流/電壓/功率量測及繼電器遠端控制",
-        "Modbus RTU/TCP、SNMP與MQTT能源資料上傳"
+        "電壓、電流與功率量測及遠端通訊監控",
+        "突波吸收、過流保護與繼電器切換",
+        "機架配電、接地與負載分路管理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收YoY+42.9%，本業通信與電機電子器材需求明顯回升",
-          "智慧PDU、突波保護與用電監測可對接儲能櫃輔助配電需求"
+          "電源分配、保護與通訊監控能力可支援儲能機房周邊配電",
+          "2026年7月營收YoY+42.9%，單月需求顯著改善"
         ],
         "weaknesses": [
-          "MOPS未揭露電池、BMS、PCS或儲能系統產品，題材連結間接",
-          "7月營收僅1.72億元，研發與認證資源落後大型電源廠"
+          "MOPS未揭露電芯、BMS、PCS或儲能櫃，不能列為核心儲能供應商",
+          "累計YoY僅+5.8%，單月高成長尚未形成全年同幅度趨勢"
         ],
         "opportunities": [
-          "工商儲能櫃增加分路量測、遠端斷電及消防聯動需求",
-          "既有通信能力可延伸至儲能EMS邊緣資料採集模組"
+          "工商儲能及資料中心擴建可增加智慧配電與遠端監控需求",
+          "儲能安全規範提高有利突波、過流與分路管理功能升級"
         ],
         "threats": [
-          "台達電、Schneider與Eaton已有完整儲能配電方案，通路與認證優勢大",
-          "若無實際儲能認證或訂單，題材溢價容易快速消退"
+          "儲能系統商可自行整合PDU與監控，周邊元件議價空間有限",
+          "MOPS產品揭露過於概括，若無專案公告容易把通用配電誤當儲能收入"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3443",
   "companyName": "創意",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -101,22 +101,22 @@
       "topicId": "wafer-foundry",
       "topicName": "半導體製造｜晶圓代工",
       "topicType": "supply_chain_segment",
-      "directness": "direct_enabler",
+      "directness": "indirect",
       "supplyChainStage": "design_enablement",
-      "roleType": "foundry_ecosystem_design_partner",
-      "roleSummary": "創意6月營收4.93億年增103.7%，累計年增93.1%，主因晶圓產品收入增加。台積電集團ASIC設計服務子公司，直接受惠AI ASIC需求暴增。",
+      "roleType": "asic_design_service_adjacent_to_foundry",
+      "roleSummary": "創意MOPS支持應用IC、嵌入式記憶體與邏輯元件、設計元件庫、自動化工具及委託技術服務；公司不是晶圓代工廠，而是投片前設計與量產導入的生態角色。2026年7月營收57.69億元、YoY+158.4%，公司明示晶圓產品收入增加，但MOPS未證實N2／N3、CoWoS或具名客戶。",
       "products": [
-        "ASIC Turnkey設計服務(台積電N3/N2/N4專用)",
-        "嵌入式記憶體IP(eFlash/MRAM/ReRAM)",
-        "設計用元件資料庫(IP Library)",
-        "設計自動化工具(EDA Flow客製化)",
-        "SoC客製化設計(客戶委託Turnkey)"
+        "客製應用積體電路設計服務",
+        "嵌入式記憶體與邏輯元件",
+        "IC設計用元件資料庫",
+        "IC設計自動化工具",
+        "客戶委託技術服務"
       ],
       "customers": [
-        "NVIDIA(AI GPU ASIC設計服務)",
-        "Broadcom(客製ASIC設計Turnkey)",
-        "Marvell(資料中心客製IC設計)",
-        "Microsoft(Azure客製加速器ASIC)"
+        "台積電(2330；晶圓製造平台合作對象，非MOPS揭露客戶)",
+        "Arm（處理器IP生態對象，非MOPS揭露客戶）",
+        "Synopsys（EDA生態對象，非MOPS揭露客戶）",
+        "Cadence（EDA生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "世芯(3661)",
@@ -124,8 +124,8 @@
         "eSilicon"
       ],
       "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "先進製程NRE與設計資源投入高，專案延誤會影響收入認列",
+        "MOPS未揭露製程節點及客戶，不得把平台傳聞當成已確認訂單"
       ],
       "legacy": {
         "topicSlug": "wafer-foundry",
@@ -146,36 +146,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：研究、開發、生產、製造及銷售各種應用積體電路，包括嵌入式記憶體及邏輯元件、設計用元件資料庫、設計用自動化工具，並提供相關及客戶委託技術服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收57.69億元，MoM+17.1%、YoY+158.4%，累計YoY+102.5%；備註為晶圓產品收入增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "confidence": "medium",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "台積電N3/N2先進製程ASIC設計支援(GAA/FinFET)",
-        "嵌入式記憶體IP(eFlash/MRAM)製程整合",
-        "先進封裝CoWoS/SoIC整合SoC設計"
+        "嵌入式記憶體與邏輯元件之SoC整合",
+        "標準元件庫建立、時序模型與實體設計驗證",
+        "自動化設計流程與客戶委託IC量產導入"
       ],
       "swot": {
         "strengths": [
-          "台積電N3/N2先進製程ASIC設計支援(GAA/FinFET)為台積電集團核心設計服務",
-          "嵌入式記憶體IP(eFlash/MRAM)製程整合能力",
-          "先進封裝CoWoS/SoIC整合SoC設計Turnkey服務"
+          "MOPS直接支持ASIC元件、設計資料庫、自動化工具與委託服務，設計鏈條完整",
+          "7月營收57.69億元、YoY+158.4%，且公司明示晶圓產品收入增加"
         ],
         "weaknesses": [
-          "6月累計營收YoY+93%主要來自少數大客戶(NVIDIA/Broadcom)貢獻",
-          "台積電集團內定位為ASIC設計服務，獨立IP授權業務規模小",
-          "先進製程NRE成本高，客戶取得門檻提高"
+          "創意不製造晶圓，在晶圓代工題材僅是設計導入角色",
+          "MOPS未揭露N2／N3、CoWoS或具名客戶，舊資料的精確平台敘述過度"
         ],
         "opportunities": [
-          "台積電N2 GAA製程ASIC設計服務先行者優勢",
-          "AI ASIC客製化需求持續增長(Microsoft/Google/Amazon)",
-          "先進封裝SoIC/CoWoS整合設計服務新應用"
+          "客製ASIC需求可帶動設計服務、元件庫與量產導入收入",
+          "晶圓產品收入增加顯示設計案轉量產可形成營運槓桿"
         ],
         "threats": [
-          "IC設計大廠(NVIDIA/Broadcom)可能自建ASIC設計團隊",
-          "Synopsys/Cadence在IP授權與設計服務競爭",
-          "台積電先進製程產能分配可能影響ASIC服務出貨"
+          "客戶自建設計團隊與大型EDA／IP廠競爭會壓縮服務價值",
+          "晶圓產能、驗證延誤或專案集中會造成季度波動"
         ]
       }
     }

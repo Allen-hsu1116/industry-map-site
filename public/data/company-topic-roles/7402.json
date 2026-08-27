@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "7402",
   "companyName": "邑錡",
-  "updatedAt": "2026-08-19T19:04:33Z",
+  "updatedAt": "2026-08-27T19:04:20Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "military_low_light_camera",
-      "roleSummary": "邑錡MOPS明確揭露自有ASIC、低功耗相機模組、低照度與航拍軍工影像設備；其軍工角色是小型影像感測與航拍模組，不是整機無人機廠。FinMind顯示2026年7月營收0.50億元、MoM+4.2%，規模仍小。",
+      "directness": "supplier",
+      "supplyChainStage": "imaging_payload",
+      "roleType": "low_power_imaging_equipment_supplier",
+      "roleSummary": "邑錡MOPS直接揭露自有ASIC、低功耗相機模組、低照度與航拍軍工影像設備，軍工影像設備題材有直接文字支持；但未揭露軍方客戶、機型、解析度或認證。FinMind顯示2026年7月營收0.50億元、MoM+4.2%、YoY+35.3%，規模仍小。",
       "products": [
-        "0.001Lux星光級低照度航拍相機模組",
-        "4K/60fps H.265無人機雲台相機模組",
-        "低於100mW自有影像壓縮ASIC",
-        "4G/LTE太陽能供電遠端縮時攝影機",
-        "雲端影像上傳與AI事件分析平台"
+        "低功耗相機ASIC晶片",
+        "低功耗相機模組",
+        "低照度影像設備",
+        "航拍軍工影像設備",
+        "雲端相機與AI影像分析平台"
       ],
       "customers": [
-        "漢翔(2634；無人機影像應用對象，非MOPS揭露客戶)",
-        "雷虎(8033；無人機整合應用對象，非MOPS揭露客戶)",
-        "DJI(航拍相機平台對象，非MOPS揭露客戶)",
-        "Autel Robotics(航拍平台對象，非MOPS揭露客戶)"
+        "國家中山科學研究院（軍工影像驗證對象，非MOPS揭露客戶）",
+        "漢翔(2634；航拍影像應用對象，非MOPS揭露客戶)",
+        "國家太空中心TASA（遙測影像應用對象，非MOPS揭露客戶)",
+        "雷虎(8033；無人載具整合對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "光隆(8927)",
@@ -53,40 +53,40 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：自有ASIC與低功耗相機模組；建築縮時、雲端相機、AI分析、低照度及航拍軍工影像設備。"
+          "claim": "MOPS主要經營業務：自有ASIC晶片與低功耗相機模組，具備軟硬體開發製造；產品含建築工程縮時相機、雲端相機與AI分析平台、低照度及航拍軍工影像設備。"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收0.50億元，較6月增加4.2%；TWSE月營收查無資料，改採FinMind。"
+          "claim": "FinMind：2026年7月營收0.50億元，MoM+4.2%、YoY+35.3%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-19",
+      "lastVerified": "2026-08-27",
       "status": "verified",
       "techFocus": [
-        "低照度CMOS多幀降噪、寬動態與電子防手震",
-        "低功耗H.265影像ASIC及邊緣錄影電源管理",
-        "4G/LTE遠端傳輸、斷線續傳與雲端AI事件標註"
+        "自有ASIC之低功耗影像擷取與相機模組控制",
+        "低照度影像感測、雜訊抑制與動態範圍處理",
+        "航拍影像模組、雲端傳輸與AI分析平台整合"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接揭露低照度及航拍軍工影像設備，題材連結有官方業務描述支撐",
-          "自有低功耗ASIC與相機軟硬體整合可降低無人機酬載功耗"
+          "MOPS直接點名低照度及航拍軍工影像設備，題材證據比一般光學鄰近股扎實",
+          "自有ASIC、相機模組、雲端與AI分析形成軟硬整合能力"
         ],
         "weaknesses": [
-          "2026年7月營收僅0.50億元，單一專案延遲即可能造成大幅波動",
-          "MOPS未揭露國防客戶或標案金額，不能把應用對象視為已確認客戶"
+          "2026年7月營收僅0.50億元，專案規模與量產能力有限",
+          "MOPS未揭露軍方客戶、軍規認證或機型，不能把驗證對象當成訂單"
         ],
         "opportunities": [
-          "台灣無人機國產化增加低照度偵察、航拍與長時間監控模組需求",
-          "邊緣AI可把影像壓縮模組升級為目標偵測與事件告警酬載"
+          "無人機國產化可增加低功耗航拍與低照度模組驗證需求",
+          "雲端相機與AI分析可延伸至巡檢、邊境與關鍵設施監控"
         ],
         "threats": [
-          "FLIR、DJI及中國影像模組廠在感測器、雲台與量產成本具優勢",
-          "軍規測試、資安與出口管制認證可能拉長導入時間"
+          "軍工影像設備驗證與採購週期長，專案遞延對小公司衝擊大",
+          "國際感測器、無人機酬載與影像AI供應商競爭激烈"
         ]
       }
     }
