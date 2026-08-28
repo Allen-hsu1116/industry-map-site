@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6415",
   "name": "矽力*-KY",
-  "generatedAt": "2026-08-27T12:35:13.978Z",
+  "generatedAt": "2026-08-28T12:32:50.207Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -52,11 +52,11 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "IC 設計與矽智財",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心公司，高壓BCD製程與快充IC為主要成長動能。",
+      "roleSummary": "矽力*-KY的MOPS只直接支持電源管理IC研發設計與銷售，足以確認類比電源IC設計核心角色，但不支持舊資料的700V、USB-PD版本、車規認證及具名客戶。2026年7月營收23.57億元、YoY+58.5%、累計YoY+30.1%，公司說明為終端需求增加與產品布局更完整。",
       "supplyChainStage": "ic_design",
       "roleType": "power_management_ic_provider",
       "directness": "core",
@@ -64,17 +64,17 @@
     },
     "productNarratives": [
       {
-        "name": "電源管理IC(DC-DC降壓轉換器 Buck/Boost)",
+        "name": "降壓型電源管理IC產品族",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高壓功率MOSFET驅動IC(700V HV-CMOS)",
+        "name": "升壓型電源管理IC產品族",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "類比/混合訊號IC(ADC/DAC/Op-amp)",
+        "name": "線性穩壓電源管理IC產品族",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -96,7 +96,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 3 項 +10",
       "風險 SWOT 扣分 -9",
@@ -166,7 +166,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "矽力-KY 6月營收20.84億年增37.8%，累計年增25.5%。電源管理IC設計核心公司，高壓BCD製程與快充IC為主要成長動能。"
+        "roleSummary": "矽力*-KY的MOPS只直接支持電源管理IC研發設計與銷售，足以確認類比電源IC設計核心角色，但不支持舊資料的700V、USB-PD版本、車規認證及具名客戶。2026年7月營收23.57億元、YoY+58.5%、累計YoY+30.1%，公司說明為終端需求增加與產品布局更完整。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -293,12 +293,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 94 天未更新"
+        "message": "股價資料已 95 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 94 天未更新"
+        "message": "籌碼資料已 95 天未更新"
       },
       {
         "id": "risk.stop-distance",

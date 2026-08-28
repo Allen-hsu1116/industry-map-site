@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3296",
   "name": "勝德",
-  "generatedAt": "2026-08-27T12:35:13.701Z",
+  "generatedAt": "2026-08-28T12:32:49.928Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -58,25 +58,25 @@
     "roleDetail": {
       "topicName": "儲能、電芯與電池材料",
       "roleLabel": "間接受惠",
-      "roleSummary": "勝德MOPS只揭露通信、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS或PCS；因此在儲能題材應定位為智慧配電與保護元件的潛在周邊角色，而非電池模組廠。2026年7月營收1.72億元、YoY+42.9%，但不能歸因儲能。",
-      "supplyChainStage": "battery_pack",
-      "roleType": "battery_pack_assembler",
+      "roleSummary": "勝德MOPS只揭露通信機械、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS、PCS或儲能櫃；本題材應限於電源分配、突波保護與遠端監控的周邊應用。2026年7月營收1.72億元、YoY+42.9%，但累計YoY僅+5.8%，且不能歸因儲能。",
+      "supplyChainStage": "power_distribution_adjacent",
+      "roleType": "power_protection_adjacent_to_storage",
       "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "機架式智慧PDU（分路電流量測與遠端開關）",
+        "name": "機架式電源分配器PDU",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "MOV突波保護電源排插（過壓/雷擊保護）",
+        "name": "突波保護電源排插",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "過流保護斷路與熱熔斷電源模組",
+        "name": "遠端電源監控通訊模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -157,7 +157,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "勝德MOPS只揭露通信、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS或PCS；因此在儲能題材應定位為智慧配電與保護元件的潛在周邊角色，而非電池模組廠。2026年7月營收1.72億元、YoY+42.9%，但不能歸因儲能。"
+        "roleSummary": "勝德MOPS只揭露通信機械、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS、PCS或儲能櫃；本題材應限於電源分配、突波保護與遠端監控的周邊應用。2026年7月營收1.72億元、YoY+42.9%，但累計YoY僅+5.8%，且不能歸因儲能。"
       },
       {
         "topicId": "medical-devices",
@@ -246,12 +246,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 94 天未更新"
+        "message": "股價資料已 95 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 94 天未更新"
+        "message": "籌碼資料已 95 天未更新"
       },
       {
         "id": "risk.topic-evidence",

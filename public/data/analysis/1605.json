@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1605",
   "name": "華新",
-  "generatedAt": "2026-08-27T12:35:13.370Z",
+  "generatedAt": "2026-08-28T12:32:49.592Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,34 +50,34 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
+    "label": "題材關聯明確",
+    "score": 68,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 1 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "太陽能與離岸風電",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "華新6月營收167.2億YoY+29.3%，累計907.7億YoY-0.4%。66kV離岸風電海纜為再生能源核心產品，受惠台灣離岸風場建置潮。電線電纜與特殊鋼為雙主業。",
-      "supplyChainStage": "offshore_wind",
-      "roleType": "submarine_power_cable_supplier",
-      "directness": "core",
+      "topicName": "AI 伺服器整機與 EMS",
+      "roleLabel": "間接受惠",
+      "roleSummary": "華新麗華MOPS僅揭露電線電纜、鋼線鋼纜與特殊鋼，能合理對應資料中心外部供配電與機房建設材料，但未揭露GPU機架匯流排或Google、Microsoft等客戶，故本題材降為間接受惠。2026年7月公司營收157.14億元，MoM-6.0%、YoY+10.1%、累計YoY+1.0%；營收為全公司口徑，不能全數歸因AI伺服器。",
+      "supplyChainStage": "upstream_petrochemical_materials",
+      "roleType": "power_cable_supplier",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "66kV級離岸風電海纜(三芯XLPE交連PE)",
+        "name": "高壓交連聚乙烯（XLPE）電力電纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "33kV陣列海纜(風機間互聯XLPE)",
+        "name": "低煙無鹵機房配線電纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "陸上輸電電纜(161kV/69kV地下電纜)",
+        "name": "鋼線與鋼纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -97,21 +97,21 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
-      "題材 太陽能與離岸風電（theme/active） +18",
-      "角色證據 1 則 +6",
+      "直接度 間接受惠 +8",
+      "角色信心 medium +10",
+      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "華新 在「太陽能與離岸風電」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "華新 在「AI 伺服器整機與 EMS」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 68/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：太陽能與離岸風電 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 太陽能與離岸風電（theme/active） +18）",
-      "相關題材：AI 伺服器整機與 EMS · 間接受惠",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 間接受惠 · medium",
+      "產業評分：68/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "相關題材：太陽能與離岸風電 · 間接受惠",
       "主要產品：電力電纜(161kV超高壓)",
       "主要產品：銅線及銅纜",
       "主要產品：不鏽鋼線材"
@@ -126,9 +126,9 @@
       "V2 O：離岸風電電纜需求",
       "V2 O：AI資料中心電力基礎建設",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
-      "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善"
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -194,16 +194,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "renewable-energy",
-        "topicName": "太陽能與離岸風電",
-        "canonicalTopicId": "renewable-energy",
-        "canonicalTopicName": "太陽能與離岸風電",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "華新6月營收167.2億YoY+29.3%，累計907.7億YoY-0.4%。66kV離岸風電海纜為再生能源核心產品，受惠台灣離岸風場建置潮。電線電纜與特殊鋼為雙主業。"
-      },
-      {
         "topicId": "ai-server",
         "topicName": "AI 伺服器",
         "canonicalTopicId": "ai-server",
@@ -212,6 +202,16 @@
         "directnessLabel": "間接受惠",
         "confidence": "medium",
         "roleSummary": "華新麗華MOPS僅揭露電線電纜、鋼線鋼纜與特殊鋼，能合理對應資料中心外部供配電與機房建設材料，但未揭露GPU機架匯流排或Google、Microsoft等客戶，故本題材降為間接受惠。2026年7月公司營收157.14億元，MoM-6.0%、YoY+10.1%、累計YoY+1.0%；營收為全公司口徑，不能全數歸因AI伺服器。"
+      },
+      {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "華新MOPS只揭露電線電纜、鋼線鋼纜與特殊鋼，未明確揭露離岸風電海纜、電壓等級或風場客戶；在再生能源題材應定位為電網電纜與金屬材料供應的相鄰角色。2026年7月營收157.14億元、YoY+10.1%、累計YoY+1.0%，不能全歸因再生能源。"
       }
     ],
     "swot": [
@@ -335,8 +335,8 @@
     ],
     "topics": [
       {
-        "id": "renewable-energy",
-        "name": "太陽能與離岸風電",
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -346,8 +346,8 @@
         ]
       },
       {
-        "id": "ai-server",
-        "name": "AI 伺服器整機與 EMS",
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -371,7 +371,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 39,
+    "totalScore": 33,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 18,
@@ -383,7 +383,7 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "趨勢股",
       "rationale": [
         "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
@@ -395,12 +395,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 94 天未更新"
+        "message": "股價資料已 95 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 94 天未更新"
+        "message": "籌碼資料已 95 天未更新"
       },
       {
         "id": "risk.stop-distance",
