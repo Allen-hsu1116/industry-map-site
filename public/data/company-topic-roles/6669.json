@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6669",
   "companyName": "緯穎",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -101,23 +101,21 @@
       "topicId": "software-cloud-security",
       "topicName": "資安、雲端服務與企業軟體",
       "topicType": "theme",
-      "directness": "direct_enabler",
+      "directness": "indirect",
       "supplyChainStage": "system_assembly",
       "roleType": "cloud_infrastructure_hardware_provider",
-      "roleSummary": "緯穎6月營收111.37億年增29.8%，累計年增41.7%。CSP專用AI伺服器ODM為核心，提供Bare Metal/DCaaS/AI訓練叢集代營服務。",
+      "roleSummary": "緯穎MOPS僅揭露資料中心產品，支持伺服器與資料中心硬體，但未揭露雲端託管、DCaaS、資安軟體或叢集代營服務；本題材改為資料中心硬體管理韌體與雲端基礎設施承載角色。2026年7月營收1,176.86億元、MoM+5.7%、YoY+39.2%，不能直接歸因軟體或資安。",
       "products": [
-        "雲端託管伺服器(Bare Metal as a Service)",
-        "資料中心即服務(DCaaS)解決方案",
-        "AI訓練叢集代營(GPU Cluster託管)",
-        "邊緣運算伺服器(Edge AI推理)",
-        "伺服器硬體監控管理軟體(BMC整合)"
+        "資料中心伺服器系統",
+        "伺服器機櫃與節點整合產品",
+        "伺服器管理控制器韌體整合服務",
+        "雲端基礎設施硬體驗證服務"
       ],
       "customers": [
-        "Google(CSP客製AI伺服器)",
-        "AWS(雲端資料中心伺服器ODM)",
-        "Microsoft(Azure AI伺服器ODM)",
-        "Meta(資料中心AI訓練伺服器)",
-        "Oracle(Cloud Infrastructure伺服器)"
+        "Microsoft（雲端基礎設施應用對象，非MOPS揭露客戶）",
+        "Meta（資料中心應用對象，非MOPS揭露客戶）",
+        "Amazon（雲端資料中心應用對象，非MOPS揭露客戶）",
+        "Google（雲端運算應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Equinix",
@@ -147,36 +145,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6669 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：資料中心產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%；未揭露軟體歸因。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
+      "confidence": "low",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "雲端裸金屬伺服器(Bare Metal)即服務架構",
-        "AI訓練叢集(GPU Cluster)高速網路整合(NVLink/IB)",
-        "資料中心即服務(DCaaS)營運管理平台"
+        "BMC帶外管理、硬體遙測與遠端韌體更新整合",
+        "機櫃節點之安全開機、韌體簽章與存取權限控制",
+        "大規模資料中心伺服器配置、自動化部署與故障監控介面"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月858.08億，CSP客製AI伺服器ODM(Google/AWS/Microsoft/Meta)一線夥伴",
-          "AI訓練叢集(GPU Cluster)高速網路整合(NVLink/IB)",
-          "資料中心即服務(DCaaS)營運管理平台"
+          "MOPS直接支持資料中心產品，為雲端服務的硬體承載層",
+          "2026年7月營收YoY+39.2%、累計YoY+41.3%，資料中心產品需求強"
         ],
         "weaknesses": [
-          "資安/雲端服務為間接題材，硬體ODM為主業",
-          "CSP客戶議價能力強壓縮ODM毛利",
-          "GPU供應(NVIDIA)瓶頸影響出貨節奏"
+          "MOPS未揭露雲端託管、資安軟體或SaaS收入，不能列為軟體服務商",
+          "公司營收以硬體產品為主，軟體議價與經常性收入證據不足"
         ],
         "opportunities": [
-          "CSP AI資本支出持續擴大(Google/AWS/Meta 2025 CapEx↑)",
-          "AI訓練/推理伺服器需求倍增",
-          "邊緣運算伺服器(Edge AI推理)新市場"
+          "雲端資料中心擴建可提升伺服器管理與安全韌體整合需求",
+          "AI叢集規模擴大會增加遙測、自動部署與故障隔離複雜度"
         ],
         "threats": [
-          "廣達(2382)AI伺服器ODM競爭(FinMind 6月YoY+53.8%)",
-          "CSP自研AI晶片(Google TPU/Meta MTIA)減少NVIDIA依賴",
-          "伺服器ODM毛利持續受CSP議價壓縮"
+          "雲端客戶自研硬體與管理軟體可能壓縮ODM附加價值",
+          "資料中心資本支出放緩或客戶集中會放大訂單波動"
         ]
       }
     }

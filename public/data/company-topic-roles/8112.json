@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -315,18 +315,18 @@
       "directness": "indirect",
       "supplyChainStage": "thermal_component_distribution",
       "roleType": "thermal_component_distributor",
-      "roleSummary": "至上不製造冷板、CDU或快接頭；液冷角色來自泵浦驅動、感測與功率元件通路。 2026年7月營收768.74億元、YoY+333.5%，但MOPS未拆分液冷相關收入。",
+      "roleSummary": "至上MOPS僅揭露電子零組件經銷，未揭露冷板、CDU、泵浦或液冷系統製造；本題材限縮為伺服器液冷控制所需記憶體、電源與感測零組件的通路角色。2026年7月營收768.74億元、MoM+24.7%、YoY+333.5%，公司說明由記憶體漲價及伺服器、手機客戶拉貨帶動，不能全數歸因液冷。",
       "products": [
-        "CDU泵浦用三相馬達驅動IC與MOSFET",
-        "冷板迴路用數位溫度感測器與NTC",
-        "CDU壓力/流量感測器訊號調理IC",
-        "風扇牆用BLDC驅動IC與電流感測器"
+        "伺服器控制板用記憶體零組件經銷",
+        "泵浦與風扇控制用功率半導體經銷",
+        "溫度／壓力／流量感測IC經銷",
+        "電源管理與馬達驅動IC經銷"
       ],
       "customers": [
-        "奇鋐(3017；CDU與冷板元件應用對象)",
-        "雙鴻(3324；液冷模組應用對象)",
-        "台達電(2308；液冷電源元件應用對象)",
-        "建準(2421；風扇驅動元件應用對象)"
+        "奇鋐(3017；液冷系統應用對象，非MOPS揭露客戶)",
+        "雙鴻(3324；液冷模組應用對象，非MOPS揭露客戶)",
+        "台達電(2308；散熱與電源應用對象，非MOPS揭露客戶)",
+        "建準(2421；風扇控制應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "文曄(3034)",
@@ -350,33 +350,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件經銷業務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，累計YoY+180.4%；記憶體漲價及伺服器、手機拉貨帶動。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
+      "confidence": "low",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "BLDC泵浦/風扇FOC控制與閘極驅動",
-        "溫度壓力流量感測器AFE與I2C/SPI整合",
-        "CDU寬溫耐壓與失效保護驗證"
+        "感測IC之I2C／SPI介面與類比前端選型支援",
+        "泵浦／風扇馬達驅動與功率元件散熱設計支援",
+        "伺服器控制板記憶體、電源與感測器料號供應管理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收768.74億元、YoY+333.5%，但MOPS未拆分液冷相關收入",
-          "可打包驅動IC、MOSFET與感測器BOM",
-          "FAE可支援泵浦控制與熱感測選型"
+          "MOPS支持電子零組件經銷，可受惠伺服器客戶拉貨擴大",
+          "2026年7月營收YoY+333.5%、累計YoY+180.4%，公司明示伺服器與手機拉貨強勁"
         ],
         "weaknesses": [
-          "不具冷板/CDU流體與機構設計能力",
-          "液冷收入占比未揭露"
+          "不製造冷板、CDU或泵浦，液冷直接性低",
+          "營收主要受記憶體價格與通路交易規模影響，不能視為液冷收入"
         ],
         "opportunities": [
-          "高功率AI平台提高CDU感測元件用量",
-          "預防維護增加感測器數量"
+          "液冷系統感測、馬達控制與電源管理零組件用量可隨部署增加",
+          "伺服器拉貨強勁可擴大通路備貨與設計導入機會"
         ],
         "threats": [
-          "CDU廠自製控制板或原廠直供",
-          "規格迭代造成料號庫存淘汰"
+          "記憶體價格反轉會使高基期營收快速回落",
+          "原廠直供或客戶縮短通路層級可能壓縮經銷毛利"
         ]
       }
     }

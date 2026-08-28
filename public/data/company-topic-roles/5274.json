@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -91,21 +91,21 @@
       "topicId": "cxl-memory-pooling",
       "topicName": "CXL 記憶體池化",
       "topicType": "technology",
-      "directness": "direct_enabler",
+      "directness": "indirect",
       "supplyChainStage": "ic_design",
       "roleType": "cxl_management_ic_candidate",
-      "roleSummary": "信驊為全球伺服器BMC管理晶片壟斷供應商，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。MOPS主要經營：多媒體/電腦周邊/高階消費性電子積體電路。AST2600/AST2750系列BMC晶片市佔率>90%，CXL 2.0控制器為新成長動能。",
+      "roleSummary": "信驊MOPS支持多媒體、電腦周邊與高階消費性電子IC，但未揭露CXL控制器、PCIe Retimer或記憶體池化交換器；本題材只能定位為伺服器BMC與周邊管理IC對CXL伺服器平台的鄰接角色。FinMind顯示2026年7月營收15.24億元、MoM+16.3%、YoY+97.6%，但無CXL歸因。",
       "products": [
-        "CXL記憶體擴展控制器(AST3200系列)",
-        "PCIe Gen5 Retimer IC",
-        "BMC管理晶片(AST2600/AST2750系列)"
+        "伺服器主機板管理控制器BMC",
+        "電腦周邊控制積體電路",
+        "遠端KVM多媒體控制積體電路",
+        "伺服器管理用高階控制積體電路"
       ],
       "customers": [
-        "Intel(CXL記憶池化伺服器)",
-        "AMD(EPYC平台BMC)",
-        "Samsung(CXL記憶體模組)",
-        "SK hynix(CXL記憶體擴展)",
-        "緯穎(6669)(CSP伺服器BMC)"
+        "Intel（CXL伺服器平台對象，非MOPS揭露客戶）",
+        "AMD（CXL伺服器平台對象，非MOPS揭露客戶）",
+        "緯穎(6669；伺服器整合應用對象，非MOPS揭露客戶)",
+        "廣達(2382；伺服器整合應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "Microchip",
@@ -135,36 +135,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：多媒體積體電路、電腦周邊積體電路、高階消費性電子積體電路。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收15.24億元，MoM+16.3%、YoY+97.6%；TWSE月營收查無資料，未揭露CXL歸因。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "low",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "AST3200 BMC晶片整合CXL 2.0控制器設計",
-        "PCIe Gen5/Gen6 Retimer訊號完整性技術(CTLE/DFE)",
-        "CXL Switch多埠記憶體擴展架構"
+        "BMC帶外管理、遠端KVM與主機板感測遙測整合",
+        "伺服器管理IC與PCIe／CXL平台的側帶管理介面協同",
+        "安全開機、韌體更新與資料中心遠端管理可靠度"
       ],
       "swot": {
         "strengths": [
-          "AST3200 CXL記憶體擴展控制器整合CXL 2.0控制器設計先發優勢",
-          "PCIe Gen5/Gen6 Retimer訊號完整性技術(CTLE/DFE)領先同業",
-          "CXL Switch多埠記憶體擴展架構與Intel/AMD/Samsung/SK hynix合作"
+          "MOPS直接支持電腦周邊與多媒體IC，具伺服器管理IC基礎",
+          "FinMind顯示2026年7月營收YoY+97.6%、MoM+16.3%，營運動能強"
         ],
         "weaknesses": [
-          "CXL記憶體池化市場尚在早期階段，營收貢獻有限",
-          "CXL標準持續演進(2.0→3.0)需持續研發投入",
-          "公司規模小，CXL Switch晶片研發資源受限"
+          "MOPS未揭露CXL控制器、Retimer或記憶體池化交換器",
+          "公司整體營收成長不能歸因CXL，題材屬平台鄰接而非直接產品"
         ],
         "opportunities": [
-          "CXL記憶體池化在AI資料中心加速落地",
-          "CXL 3.0多埠Switch晶片新應用",
-          "PCIe Gen6 Retimer在AI伺服器GPU互連需求"
+          "CXL伺服器增加裝置管理、遙測與韌體協同複雜度",
+          "AI資料中心擴建可帶動BMC與遠端管理IC需求"
         ],
         "threats": [
-          "Intel/AMD可能整合CXL控制器至CPU減少外購",
-          "Microchip/Marvell等大廠也在布局CXL Switch",
-          "CXL生態系成熟速度不確定"
+          "CPU平台商或大型客戶自研管理控制器可能壓縮外購需求",
+          "把BMC成長誤當CXL收入會造成估值與題材錯配"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -179,20 +179,18 @@
       "directness": "indirect",
       "supplyChainStage": "peripheral",
       "roleType": "indirect",
-      "roleSummary": "家登為上櫃半導體精密載具廠，MOPS登記為光罩解決方案/晶圓解決方案/機台設備產品。CoWoS先進封裝承載載具核心供應商，EUV光罩盒全球獨占地位支撐高毛利，受惠台積電先進封裝產能擴張。",
+      "roleSummary": "家登MOPS支持光罩、晶圓與機台設備解決方案，未揭露高速連接器、CPO耦合或資料傳輸產品；本題材限縮為半導體製程載具與設備對高速互連晶片製造的上游支援角色。FinMind顯示2026年7月營收8.71億元、MoM+15.8%、YoY+71.7%，不能歸因高速互連。",
       "products": [
-        "先進封裝承載環Carrier Ring(CoWoS/SoIC用)(±5μm)",
-        "CoWoS暫時性承載載具(Temporary Bonding Carrier)",
-        "EUV光罩盒Reticle Pod(光罩傳送/儲存保護)(雙層氣體密封)",
-        "12吋/8吋晶圓傳送盒FOUP(4625標準)",
-        "先進封裝機台載具(固晶/壓合用)"
+        "光罩傳送與儲存解決方案",
+        "晶圓傳送與儲存解決方案",
+        "半導體製程機台設備產品",
+        "先進封裝製程用承載解決方案（題材應用推定）"
       ],
       "customers": [
-        "台積電(2330)(CoWoS封裝承載載具/光罩盒)",
-        "日月光(3711)(先進封裝耗材)",
-        "Intel(先進封裝載具)(Foveros/EMIB)",
-        "Samsung(光罩盒)(3nm GAA EUV)",
-        "Amkor(先進封裝載具)(2.5D/3D)"
+        "台積電(2330；晶圓製程應用對象，非MOPS揭露客戶)",
+        "聯電(2303；晶圓製程應用對象，非MOPS揭露客戶)",
+        "日月光投控(3711；封裝製程應用對象，非MOPS揭露客戶)",
+        "Intel（半導體製程應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Entegris(先進封裝載具)",
@@ -219,36 +217,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：光罩解決方案產品、晶圓解決方案產品、機台設備產品。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "TaiwanStockMonthRevenue",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind：2026年7月營收8.71億元，MoM+15.8%、YoY+71.7%；TWSE月營收查無資料，未揭露高速互連歸因。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-09",
+      "confidence": "low",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "CoWoS暫時性承載載具(Carrier Ring)化學機械研磨精度",
-        "EUV光罩盒(Reticle Pod)奈米級潔淨度設計",
-        "FOUP晶圓傳送盒微環境控制(<Class 1潔淨度)"
+        "光罩載具之潔淨、密封與微環境污染控制",
+        "晶圓載具之機台介面、定位與搬運可靠度",
+        "先進封裝承載件之平整度、熱循環與材料相容性控制"
       ],
       "swot": {
         "strengths": [
-          "CoWoS暫時性承載載具(±5μm精度)為先進封裝關鍵耗材",
-          "SoIC封裝用承載環具高精密加工技術",
-          "7月營收8.71億MoM+15.8%，先進封裝需求帶動"
+          "MOPS直接支持光罩、晶圓與機台設備解決方案，半導體製程角色清楚",
+          "FinMind顯示2026年7月營收YoY+71.7%、MoM+15.8%，營運成長強"
         ],
         "weaknesses": [
-          "高速互連為間接角色，家登核心為封裝載具非連接器",
-          "客戶集中於台積電/日月光，議價能力弱",
-          "封裝載具規格客製化，難以跨客戶標準化"
+          "不生產高速連接器或光互連元件，題材直接性低",
+          "營收不能歸因高速互連，且舊有CPO精度規格缺乏MOPS支持"
         ],
         "opportunities": [
-          "CoWoS-L(Chiplet)封裝新載具需求",
-          "SoIC/3D堆疊封裝承載載具新規格",
-          "日月光(3711)先進封裝產能擴建帶動耗材"
+          "高速運算晶片擴產可間接增加光罩與晶圓載具需求",
+          "先進封裝複雜度提升可擴大承載與設備解決方案商機"
         ],
         "threats": [
-          "台積電SoIC封裝可能減少外部載具需求",
-          "先進封裝技術演進可能改變載具規格",
-          "載具精密加工競爭者(如辛耘3583)技術追趕"
+          "晶圓廠資本支出放緩會延後載具與設備採購",
+          "客戶驗證期長，題材訂單轉換可能落後市場預期"
         ]
       }
     },

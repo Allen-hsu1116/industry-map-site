@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2454",
   "companyName": "聯發科",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -182,23 +182,22 @@
       "topicId": "ic-design",
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
-      "directness": "direct_enabler",
+      "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "hpc_networking_soc_provider",
-      "roleSummary": "聯發科為全球第四大IC設計公司，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。MOPS主要經營：多媒體IC/電腦週邊IC/高階消費性IC。天璣9400採台積電3nm量產，Wi-Fi 7晶片打入Cisco/Netgear供應鏈。",
+      "roleSummary": "聯發科MOPS直接支持多媒體、電腦周邊、高階消費與特殊應用IC，IC設計角色成立；但MOPS未揭露特定SoC型號、3nm節點、基頻世代或具名網通客戶。2026年7月營收484.75億元、MoM-16.4%、YoY+12.2%，累計YoY僅+0.8%，月減與累計低成長是短期壓力。",
       "products": [
-        "天璣Dimensity 9400旗艦SoC(3nm)",
-        "5G基頻晶片(M80 modem Sub-6/mmWave)",
-        "Wi-Fi 7三頻連接晶片(Filogic 880)",
-        "ASIC客製化晶片服務(台積電3nm)",
-        "Wi-Fi 7/藍牙5.4Combo晶片"
+        "行動裝置多媒體系統單晶片",
+        "無線通訊與連線積體電路",
+        "智慧家庭與高階消費性電子積體電路",
+        "電腦周邊控制積體電路",
+        "特殊應用積體電路"
       ],
       "customers": [
-        "Cisco(企業網通SoC)",
-        "Netgear(Wi-Fi 7路由器晶片)",
-        "ASUS(華碩)(網通SoC)",
-        "中興通訊(5G基站晶片)",
-        "TP-Link(Wi-Fi 7晶片)"
+        "Samsung（行動裝置應用對象，非MOPS揭露客戶）",
+        "小米Xiaomi（行動裝置應用對象，非MOPS揭露客戶）",
+        "OPPO（行動裝置應用對象，非MOPS揭露客戶）",
+        "TP-Link（網通設備應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Broadcom",
@@ -228,36 +227,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：多媒體IC、電腦週邊IC、高階消費性IC、其他特殊應用IC。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY+0.8%；海外子公司營收以平均匯率換算。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "先進製程SoC設計(3nm Dimensity 9400)",
-        "5G/6G通訊晶片與基頻處理器(M80 modem)",
-        "Wi-Fi 7三頻晶片設計(Filogic 880 320MHz頻寬)"
+        "CPU／GPU／NPU與多媒體引擎之SoC異質整合",
+        "無線射頻、基頻、協定堆疊與低功耗連線整合",
+        "先進製程下的功耗、效能、面積協同最佳化"
       ],
       "swot": {
         "strengths": [
-          "先進製程SoC設計(3nm Dimensity 9400)量產能力驗證",
-          "5G/6G通訊晶片與基頻處理器(M80 modem)完整IP布局",
-          "ASIC客製化晶片服務(台積電3nm)打入Cisco/Netgear等企業網通客戶"
+          "MOPS支持多媒體、周邊、消費與特殊應用IC，產品平台廣",
+          "2026年7月營收仍YoY+12.2%，具跨終端產品分散能力"
         ],
         "weaknesses": [
-          "6月累計營收YoY-0.8%，整體IC設計業務成長放緩",
-          "高階SoC ASIC設計研發費用高(3nm NRE成本)",
-          "Wi-Fi 7/藍牙5.4 Combo晶片面臨博通/高通競爭"
+          "MOPS未揭露特定型號、節點或具名客戶，舊資料過度精確",
+          "2026年7月MoM-16.4%，累計YoY僅+0.8%，短期成長不均"
         ],
         "opportunities": [
-          "Wi-Fi 7企業網通SoC(Cisco/Netgear/TP-Link)滲透率提升",
-          "5G基站晶片(中興通訊)需求增長",
-          "客製化ASIC Turnkey服務(台積電先進製程)拓展新客戶"
+          "端側AI可提升SoC運算、記憶體與連線整合價值",
+          "Wi-Fi與行動通訊世代升級可帶動換機與新平台導入"
         ],
         "threats": [
-          "高通驍龍8系列在旗艦手機SoC持續領先",
-          "博通(Broadcom)在Wi-Fi 7企業級晶片競爭激烈",
-          "地緣政治風險影響中國客戶(小米/OPPO/vivo)出貨"
+          "高階手機需求疲弱與客戶庫存調整可能壓抑出貨",
+          "Qualcomm、Apple及中國IC設計商競爭會提高研發與價格壓力"
         ]
       }
     }

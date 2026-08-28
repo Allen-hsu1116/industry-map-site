@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2492",
   "companyName": "華新科",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -11,18 +11,19 @@
       "directness": "core",
       "supplyChainStage": "passive_components",
       "roleType": "mlcc_manufacturer",
-      "roleSummary": "華新科6月營收39.6億YoY+25.8%，累計209億YoY+14.7%。台灣第二大MLCC廠，車規AEC-Q200與高壓圓板電容為差異化成長動能，被動元件景氣回溫帶動YoY雙位數成長。",
+      "roleSummary": "華新科MOPS直接支持積層陶瓷與圓板電容、高壓／高頻／精密電容、電阻、電感、射頻元件及陶瓷粉末，MLCC角色明確；但MOPS未揭露封裝尺寸、耐壓範圍、AEC-Q200或具名客戶。2026年7月營收44.44億元、MoM+12.2%、YoY+42.0%，累計YoY+18.7%。",
       "products": [
-        "MLCC多層陶瓷電容(車規AEC-Q200 1005-3216)",
-        "圓板陶瓷電容(高壓1kV-6kV)",
-        "高頻MLCC(射頻電路Df<0.005)",
-        "BME卑金屬電極MLCC(Ni電極)"
+        "積層陶瓷電容MLCC",
+        "高壓陶瓷電容",
+        "高頻陶瓷電容",
+        "精密陶瓷電容",
+        "MLCC用陶瓷粉末"
       ],
       "customers": [
-        "Tesla(車用MLCC AEC-Q200)",
-        "Samsung(消費電子MLCC)",
-        "台達電(2308)(工控電源MLCC)",
-        "群光(2385)(電源模組MLCC)"
+        "台達電(2308；電源與工控應用對象，非MOPS揭露客戶)",
+        "鴻海(2317；電子製造供應鏈對象，非MOPS揭露客戶)",
+        "和碩(4938；電子製造供應鏈對象，非MOPS揭露客戶)",
+        "Bosch（車用電子應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "國巨(2327)(MLCC龍頭)",
@@ -49,36 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積層陶瓷及圓板電容、高壓高頻精密電容、電阻、電感、射頻元件與陶瓷粉末。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收44.44億元，MoM+12.2%、YoY+42.0%，累計YoY+18.7%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "車規AEC-Q200 MLCC多層陶瓷堆疊製程(1005-3216)",
-        "BME卑金屬電極(Ni)降低Pd/Ag貴金屬用量",
-        "高壓圓板陶瓷電容1kV-6kV燒結技術"
+        "積層陶瓷介電層薄化、電極印刷與共燒製程",
+        "高壓／高頻電容之介電材料、損耗與耐壓控制",
+        "陶瓷粉末粒徑、配方與燒結收縮一致性控制"
       ],
       "swot": {
         "strengths": [
-          "6月營收39.61億YoY+25.8%、累計209.28億YoY+14.7%，被動元件景氣復甦動能強",
-          "MOPS登記積層陶瓷電容(MLCC)為核心產品，車規AEC-Q200 1005-3216認證齊全打入Tesla供應鏈",
-          "BME卑金屬電極(Ni)製程降低Pd/Ag貴金屬用量，成本結構優於日系MLCC大廠"
+          "MOPS具體支持MLCC、高壓高頻精密電容與陶瓷粉末，產品鏈完整",
+          "2026年7月營收YoY+42.0%、MoM+12.2%，累計YoY+18.7%"
         ],
         "weaknesses": [
-          "MLCC市占與產能規模仍遠落後村田(Murata)/三星電機(SEMCO)，高階MLCC難以替代",
-          "車規MLCC認證週期長達1-2年，新規格導入速度受限",
-          "被動元件產品線分散(MLCC/電阻/電感/射頻)，MLCC資源投入可能不如專注型廠商"
+          "MOPS未揭露尺寸、耐壓、車規認證或具名客戶",
+          "MLCC標準品價格循環與稼動率變化會放大毛利波動"
         ],
         "opportunities": [
-          "AI伺服器電源管理需求帶動高容值MLCC(10μF-100μF)用量增長，伺服器MLCC ASP高於消費",
-          "車用電子化趨勢持續，Tesla/歐美車廠MLCC用量倍增，華新科AEC-Q200產品線具先發優勢",
-          "MLCC庫存去化完成進入補庫存週期，2026年稼動率回升有利營收持續增長"
+          "AI伺服器電源與高速運算板可增加高容值、高可靠度電容用量",
+          "電動車與工業電源可擴大高壓及精密電容需求"
         ],
         "threats": [
-          "中國MLCC廠(三環/風華高科)低價搶占中低階市場，壓縮華新科標準品毛利",
-          "MLCC價格波動大，景氣反轉時稼動率下降將侵蝕獲利",
-          "日系廠商(Murata/TDK)壟斷高階MLCC(車規/高頻)，華新科難以突破高毛利區間"
+          "日韓與中國被動元件廠擴產可能加劇價格競爭",
+          "終端庫存調整或原料能源成本上升會壓縮利潤"
         ]
       }
     },

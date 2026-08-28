@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2356",
   "companyName": "英業達",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -106,20 +106,18 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "notebook_odm",
-      "roleSummary": "英業達為全球前三大NB ODM，6月營收1022.6億元年增61.6%，累計年增36.8%。消費運算裝置領域為Dell/HP/Lenovo商用筆電核心代工，同時切入Apple裝置組裝。MOPS主要經營：筆記型電腦伺服器。",
+      "roleSummary": "英業達MOPS直接揭露筆記型電腦與伺服器，消費運算裝置ODM角色成立；但MOPS未揭露Dell、HP、Lenovo、Apple等機種與客戶。2026年7月營收901.90億元、MoM-11.8%、YoY+65.7%，公司稱客戶需求增加，但未區分筆電與伺服器。",
       "products": [
-        "Dell Latitude 5450/5550商用筆電(ODM)",
-        "HP ProBook 440/450 G11消費筆電(ODM)",
-        "Lenovo ThinkBook 14/16 Gen7商用筆電(ODM)",
-        "Acer Swift Go 14/16消費筆電(ODM)",
-        "Apple Device組裝(iPad/Apple Watch模組)"
+        "商用筆記型電腦ODM服務",
+        "消費型筆記型電腦ODM服務",
+        "教育用筆記型電腦ODM服務",
+        "筆記型電腦主機板與系統整合服務"
       ],
       "customers": [
-        "Dell(Latitude商用筆電系列)",
-        "HP(ProBook消費/商用筆電)",
-        "Lenovo(ThinkBook商用筆電)",
-        "Acer(Swift消費筆電)",
-        "Apple(iPad/Apple Watch組裝)"
+        "Dell（筆記型電腦應用對象，非MOPS揭露客戶）",
+        "HP（筆記型電腦應用對象，非MOPS揭露客戶）",
+        "Lenovo（筆記型電腦應用對象，非MOPS揭露客戶）",
+        "Acer(2353；筆記型電腦應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "廣達(2382)(筆電ODM)",
@@ -151,32 +149,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2356 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：筆記型電腦、伺服器。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%，累計YoY+40.8%；客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "商用筆電企業級安全管理整合(vPro/TPM)",
-        "多品牌混線生產彈性製造系統",
-        "消費筆電輕量化機構設計(碳纖維/鎂合金)"
+        "筆電主機板、電源、散熱與高速周邊介面系統整合",
+        "輕薄機構、電池續航與熱管理協同設計",
+        "多機種混線生產、自動測試與量產追溯"
       ],
       "swot": {
         "strengths": [
-          "伺服器+筆電雙主業，AI伺服器出貨帶動營收高成長",
-          "6月營收1022.6億元年增61.6%，客戶需求增加"
+          "MOPS直接支持筆記型電腦與伺服器，ODM製造基礎清楚",
+          "2026年7月營收YoY+65.7%、累計YoY+40.8%，公司明示客戶需求增加"
         ],
         "weaknesses": [
-          "筆電ODM毛利率個位數，獲利靠伺服器",
-          "消費NB品牌客戶分散，議價能力弱"
+          "MOPS未揭露具名客戶或機種，舊產品列表過度精確",
+          "7月MoM-11.8%，且營收成長未拆分筆電與伺服器貢獻"
         ],
         "opportunities": [
-          "AI PC推動商用筆電換機需求",
-          "Apple裝置組裝業務擴大(HomePod/Vision Pro)"
+          "AI PC換機可增加散熱、記憶體與電源設計複雜度",
+          "企業Windows換機與教育市場標案可支撐商用筆電需求"
         ],
         "threats": [
-          "全球NB出貨量年減5-10%，市場萎縮",
-          "緯創(3231)競爭商用筆電ODM訂單"
+          "筆電成熟市場價格競爭激烈，品牌客戶議價力高",
+          "需求季節性與零組件缺料可能放大月營收波動"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,20 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "power",
       "roleType": "power_product_application_side_user",
-      "roleSummary": "台達電6月營收656億年增55.4%，累計年增41%，MOPS備註：AI相關產品需求旺盛。為全球電源管理龍頭，AI伺服器電源為核心成長引擎。",
+      "roleSummary": "台達電MOPS支持電源、散熱、微型關鍵零組件、工業自動化與通訊產品，但未揭露晶圓代工服務；本題材為晶圓廠設備電源、散熱與自動化的供應鏈鄰接角色，不是代工廠。2026年7月營收670.73億元、MoM+2.2%、YoY+47.7%，無晶圓代工歸因。",
       "products": [
-        "Server PSU 800W+鈦金級電源供應器(CRPS form factor/效率>96%)",
-        "GPU供電模組(VRM/VRD 48V/多相降壓/100A+ per phase)",
-        "電動車充電樁(30kW/60kW DC快充/CCS1/CCS2/CHAdeMO)",
-        "工業自動化伺服驅動器(ASDA-A3系列/1-22kW/解析度24bit encoder)",
-        "DC-DC轉換器(48V/12V/隔離式/效率>95%/車規AEC-Q100)"
+        "晶圓廠設備用電源供應系統",
+        "晶圓廠機台用無刷直流風扇",
+        "製程設備散熱系統",
+        "工業自動化伺服驅動與控制系統"
       ],
       "customers": [
-        "NVIDIA(資料中心電源)",
-        "Dell(伺服器PSU)",
-        "HP(伺服器電源)",
-        "Tesla(充電設備)",
-        "Siemens(工業自動化)"
+        "台積電(2330；晶圓廠設備應用對象，非MOPS揭露客戶)",
+        "聯電(2303；晶圓廠設備應用對象，非MOPS揭露客戶)",
+        "世界先進(5347；晶圓廠設備應用對象，非MOPS揭露客戶)",
+        "Applied Materials（設備整合對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "光寶科(2301)",
@@ -62,36 +60,46 @@
           "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
           "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
           "claim": "Financial report lists EV power-related systems, EV charging equipment, renewable-energy applications and power/thermal products among main business items."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電源、風扇、散熱、關鍵零組件、工業自動化、網通與能源解決方案。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%；未揭露晶圓代工歸因。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "confidence": "medium",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "800W+鈦金級Server PSU數位控制電源設計",
-        "48V直接供電架構VRM/VRD設計",
-        "SiC/GaN寬能隙功率元件應用於電源轉換"
+        "設備電源之高效率轉換、電能品質與備援控制",
+        "無刷直流風扇與散熱系統之轉速、氣流及熱管理控制",
+        "工業自動化伺服驅動、運動控制與設備通訊整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收656.0億YoY+55.4%(AI產品需求旺盛)，累計3426.1億YoY+41.0%",
-          "800W+鈦金級Server PSU(CRPS/效率>96%)供貨NVIDIA/Dell/HP",
-          "48V直接供電VRM/VRD技術領先，切入AI GPU供電模組"
+          "MOPS直接支持電源、散熱及工業自動化，能服務晶圓廠設備需求",
+          "2026年7月營收YoY+47.7%、累計YoY+42.1%，整體營運動能強"
         ],
         "weaknesses": [
-          "在晶圓代工題材中為間接供應商(電源/散熱)，非晶圓製造直接參與者",
-          "電源供應器同業(光寶/群光)價格競爭壓力",
-          "EV充電樁業務政策依賴度高，市場推進速度不確定"
+          "不提供晶圓代工服務，題材僅為設備供應鏈鄰接",
+          "MOPS未揭露晶圓廠收入占比或具名客戶，營收不能歸因代工擴產"
         ],
         "opportunities": [
-          "AI伺服器功耗從1kW走向10kW+，高階PSU與VRM需求量價齊升",
-          "SiC/GaN寬能隙功率元件應用於電源轉換，效率提升帶動ASP",
-          "台積電CoWoS產能擴張帶動AI伺服器出貨，連帶電源需求"
+          "晶圓廠擴產與節能要求可增加高效率電源及設備散熱需求",
+          "智慧製造升級可帶動伺服驅動、控制與設備聯網方案"
         ],
         "threats": [
-          "電源供應器同業價格競爭(光寶2301/群光)",
-          "AI伺服器需求增速放緩風險",
-          "矽晶圓代工為資本密集產業，台達電作為電源供應商受代工廠排程影響"
+          "半導體資本支出循環放緩會延後設備相關需求",
+          "設備商自研電源與控制模組可能降低外購比例"
         ]
       }
     },

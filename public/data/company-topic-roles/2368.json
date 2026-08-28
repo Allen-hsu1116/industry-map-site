@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2368",
   "companyName": "金像電",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -190,20 +190,18 @@
       "directness": "supplier",
       "supplyChainStage": "pcb",
       "roleType": "networking_pcb_supplier",
-      "roleSummary": "金像電6月營收82.55億YoY+78.2%，累計436.60億YoY+68.7%，MOPS備註「接單量增加」。MOPS登記為雙層/多層印刷電路板製造及電腦電子通訊產品加工。AI帶動800G高速網通板需求同步成長，接單量增加帶動爆發性營收。",
+      "roleSummary": "金像電MOPS直接支持雙層／多層印刷電路板，以及電腦、通訊與資訊產品零件加工；在網通基礎建設題材中可定位為交換器、網路設備與伺服器用多層PCB供應端，但MOPS未揭露層數、材料牌號或具名客戶。2026年7月營收100.15億元、MoM+21.3%、YoY+77.4%，公司說明接單量增加。",
       "products": [
-        "400G/800G交換器PCB(高多層20+層)(Megtron6/Megtron7材料)",
-        "AI網路卡PCB(SmartNIC/DPU)(HDI 16層)",
-        "基地站PCB(5G mmWave)(高頻PTFE基材)",
-        "高速數位板(Mid-Loss/Low-Loss材料)(信號完整性SI)",
-        "伺服器主機板PCB(12-16層)(DDR5/PCIe Gen5)"
+        "交換器用多層印刷電路板",
+        "網路設備用高速數位印刷電路板",
+        "伺服器主機板用多層印刷電路板",
+        "通訊設備用雙層／多層印刷電路板"
       ],
       "customers": [
-        "Cisco(800G交換器PCB)(Nexus/Silicon One)",
-        "Arista(400G/800G交換器PCB)(7800R系列)",
-        "廣達(2382)(AI伺服器主機板PCB)",
-        "緯創(3231)(伺服器/網通PCB)",
-        "Celestica(400G交換器PCB代工)"
+        "智邦(2345；交換器應用對象，非MOPS揭露客戶)",
+        "啟碁(6285；網通設備應用對象，非MOPS揭露客戶)",
+        "廣達(2382；伺服器系統應用對象，非MOPS揭露客戶)",
+        "緯創(3231；伺服器／網通系統應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "南電(8046)",
@@ -233,36 +231,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：雙層、多層印刷電路板製造加工買賣；電腦、電子、通訊、資訊產品及零件加工。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收100.15億元，MoM+21.3%、YoY+77.4%，累計YoY+70.3%；備註為接單量增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "medium",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "800G/1.6T交換器PCB低損耗材料(Megtron6/7)疊構",
-        "5G mmWave基地站高頻PCB阻抗控制技術",
-        "SmartNIC/DPU高密度HDI PCB製程(16層微孔)"
+        "高速差動訊號之阻抗、串擾與插入損耗控制",
+        "高多層板壓合、鑽孔與層間對位製程",
+        "網通設備PCB的散熱、翹曲與長時間可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "800G/1.6T交換器PCB量產能力（Megtron6/Megtron7低損耗材料），技術領先同業",
-          "6月營收YoY+78.2%，AI網通PCB接單動能強",
-          "與Cisco、Arista等一線交換器品牌商建立穩固供應關係"
+          "MOPS直接支持多層PCB與通訊產品加工，題材角色清楚",
+          "2026年7月營收YoY+77.4%、累計YoY+70.3%，且公司明示接單量增加"
         ],
         "weaknesses": [
-          "網通PCB佔比較伺服器PCB小，營收貢獻有限",
-          "高頻PCB阻抗控制技術門檻高，良率爬坡需時間",
-          "5G mmWave基地站PCB需求成長不如預期"
+          "MOPS未揭露高速材料牌號、板層數或具名客戶",
+          "PCB業務資本密集，擴產與良率爬坡會影響現金流和毛利"
         ],
         "opportunities": [
-          "1.6T交換器世代升級帶動PCB規格升級，ASP提升空間大",
-          "SmartNIC/DPU AI網路卡PCB需求隨AI叢集擴建增長",
-          "資料中心交換器升級週期加速"
+          "資料中心交換器頻寬升級可提高多層高速PCB用量與技術門檻",
+          "AI伺服器網路擴建可同步帶動交換器與伺服器主板需求"
         ],
         "threats": [
-          "日本松下Megtron材料供應集中，議價空間有限",
-          "中國PCB廠（深南電路等）切入高層數PCB競爭",
-          "CPO共封裝光學技術若成熟可能減少PCB用量"
+          "客戶集中或雲端資本支出放緩會放大營收波動",
+          "同業擴產與低損耗材料成本上升可能壓縮利潤"
         ]
       }
     }

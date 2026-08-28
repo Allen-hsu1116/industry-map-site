@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2317",
   "companyName": "鴻海",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -105,20 +105,19 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "smartphone_assembly_provider",
-      "roleSummary": "鴻海為全球最大EMS代工廠，6月營收821762.9億YoY52.1%，累計4642860.7億YoY35.0%。6月營收8218億年增52.1%，受惠伺服器出貨增加及消費智能新產品。MOPS主要經營：電腦系統連接器線纜組件殼體/精密模具。",
+      "roleSummary": "鴻海MOPS支持電腦系統週邊連接器、線纜組件、殼體、基座與精密模具，能證明消費運算裝置零組件與製造基礎；但MOPS未揭露iPhone、AirPods、GB200等產品或具名客戶。2026年7月營收9,465.13億元、MoM+15.2%、YoY+54.2%，公司明示主要受伺服器需求與出貨成長，不能歸因消費裝置。",
       "products": [
-        "iPhone組裝(EMS代工)",
-        "AI伺服器機櫃組裝(GB200 NVL72整機櫃)",
-        "消費電子製造(AirPods/Apple Watch/穿戴)",
-        "精密連接器與線纜組件(高速差分訊號)",
-        "精密模具設計與製造(塑膠/金屬沖壓)"
+        "電腦系統週邊連接器",
+        "電腦週邊線纜組件",
+        "消費運算裝置殼體與基座",
+        "電子產品用精密模具",
+        "電腦系統設備整合製造服務"
       ],
       "customers": [
-        "Apple(iPhone/AirPods/Apple Watch EMS)",
-        "Samsung(Galaxy手機組裝)",
-        "小米(手機/消費電子EMS)",
-        "NVIDIA(GB200 AI伺服器機櫃)",
-        "Amazon(Echo/Alexa設備代工)"
+        "Apple（消費電子應用對象，非MOPS揭露客戶）",
+        "Dell（個人電腦應用對象，非MOPS揭露客戶）",
+        "HP（個人電腦應用對象，非MOPS揭露客戶）",
+        "Lenovo（個人電腦應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "和碩",
@@ -149,36 +148,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2317 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電腦系統設備及週邊連接器、線纜組件、殼體、基座與精密模具。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收9,465.13億元，MoM+15.2%、YoY+54.2%，累計YoY+37.9%；主要受伺服器需求與出貨成長。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "medium",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "iPhone EMS組裝(精密機構件+連接器垂直整合)",
-        "AI伺服器GB200 NVL72機櫃級系統組裝與液冷整合",
-        "精密連接器高速沖壓與電鍍製程(USB-C/PCIe)"
+        "高速連接器與線纜之阻抗、訊號完整性及耐插拔設計",
+        "薄型殼體、基座與精密模具的尺寸公差及量產控制",
+        "大規模電子組裝之自動化測試、追溯與良率管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收8217.6億YoY+52.1%，累計46428.6億YoY+35.0%，受惠伺服器+消費電子雙增長",
-          "全球最大EMS代工廠，iPhone/AirPods/Apple Watch組裝獨佔地位",
-          "精密連接器與模具垂直整合，從零組件到系統組裝一站式服務"
+          "MOPS支持連接器、線纜、殼體、基座及精密模具，製造鏈完整",
+          "2026年7月營收YoY+54.2%、累計YoY+37.9%，整體出貨動能強"
         ],
         "weaknesses": [
-          "蘋果iPhone營收佔比極高，成長受制於iPhone銷售週期",
-          "印度/越南產能轉移初期良率偏低，壓縮毛利",
-          "消費電子EMS毛利率低(個位數)，缺乏品牌溢價"
+          "MOPS未揭露具名消費裝置或品牌客戶，舊有機種精度過高",
+          "公司說明7月成長主要來自伺服器，不能當作消費裝置復甦證據"
         ],
         "opportunities": [
-          "AI伺服器(GB200 NVL72)機櫃組裝為新增長引擎，ASP遠高於消費電子",
-          "Apple Vision Pro/AR裝置量產帶動新代工需求",
-          "消費智能新產品出貨優於去年同期(公司公告)"
+          "AI PC與裝置換機可增加高速連接、機構件及系統整合需求",
+          "自動化製造與垂直整合有利縮短新產品量產導入時間"
         ],
         "threats": [
-          "蘋果自研自製比例提升(AirPods晶片/Mac螢幕)，代工份額萎縮",
-          "立訊精密(Luxshare)競爭iPhone組裝訂單",
-          "地緣政治(中美科技戰)影響全球消費電子需求"
+          "消費電子成熟且品牌議價力高，毛利率易受壓",
+          "產品週期縮短、地緣政治與生產基地移轉會提高資本支出"
         ]
       }
     }

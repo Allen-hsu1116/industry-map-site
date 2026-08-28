@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8150",
   "companyName": "南茂",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "hbm",
@@ -95,21 +95,22 @@
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
+      "directness": "core",
       "supplyChainStage": "display_panel",
       "roleType": "ddic_packaging",
-      "roleSummary": "南茂在面板驅動 IC 封裝領域有穩定份額；DDI 封裝金凸塊技術是核心。",
+      "roleSummary": "南茂MOPS直接支持顯示器驅動IC封裝測試、金凸塊、記憶體與混合訊號IC封測，顯示後段角色成立；但MOPS未揭露凸塊間距、COF／COG細節或具名IC客戶。2026年7月營收28.23億元、MoM+11.2%、YoY+43.6%，累計YoY+29.5%。",
       "products": [
-        "DDI金凸塊封裝(Gold Bumping pitch<20μm)",
-        "COF捲帶式薄膜覆晶封裝(TAB/COF)",
-        "COG玻璃覆晶封裝(Chip-on-Glass)",
-        "顯示驅動IC晶圓測試(CP/FT)"
+        "顯示器驅動IC封裝服務",
+        "顯示器驅動IC測試服務",
+        "顯示驅動IC金凸塊製程服務",
+        "混合訊號IC封裝服務",
+        "混合訊號IC測試服務"
       ],
       "customers": [
-        "聯詠(3034)",
-        "奇景(3036)",
-        "LX Semicon",
-        "瑞鼎(3593)"
+        "聯詠(3034；顯示驅動IC應用對象，非MOPS揭露客戶)",
+        "瑞鼎(3593；顯示驅動IC應用對象，非MOPS揭露客戶)",
+        "友達(2409；面板供應鏈對象，非MOPS揭露客戶)",
+        "群創(3481；面板供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "頎邦"
@@ -131,36 +132,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 8150 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：記憶體封裝測試、顯示器驅動IC封裝測試含金凸塊、混合訊號IC封裝測試。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-05-30",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "DDI金凸塊封裝(Gold Bumping)pitch<20μm",
-        "COF捲帶式薄膜覆晶封裝高頻訊號完整性",
-        "顯示驅動IC晶圓測試(CP/FT)與混合訊號測試"
+        "顯示驅動IC金凸塊之電鍍均勻性與接合可靠度",
+        "驅動IC封裝之薄型化、翹曲與細間距互連控制",
+        "混合訊號與顯示驅動IC之晶圓／成品電性測試"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月18.50億，DDI金凸塊封裝(Gold Bumping pitch<20μm)領先技術",
-          "COF捲帶式薄膜覆晶封裝(TAB/COF)量產能力",
-          "聯詠(3034)/奇景(3036)/瑞鼎(3593)DDI客戶"
+          "MOPS具體支持顯示驅動IC封裝測試與金凸塊，角色直接",
+          "2026年7月營收YoY+43.6%、累計YoY+29.5%，營運動能強"
         ],
         "weaknesses": [
-          "DDI封裝市場受面板景氣影響大",
-          "中國DDI封測廠(欣邦/長電)低價競爭",
-          "COG封裝需求減少(轉向COF/COP)"
+          "MOPS未揭露間距、封裝形式細節或具名客戶",
+          "顯示驅動IC封測受面板景氣與終端庫存循環影響"
         ],
         "opportunities": [
-          "OLED DDI封裝需求成長(手機/筆電OLED滲透)",
-          "車用DDI(儀表板/中控)封裝新應用",
-          "Mini LED驅動IC封裝新市場"
+          "高解析、窄邊框與車載顯示可提高驅動IC封測價值",
+          "OLED與大型顯示規格升級可增加測試複雜度"
         ],
         "threats": [
-          "面板自驅動(Embedded DDIC)技術減少外部DDI需求",
-          "中國封測廠低價競爭壓縮毛利",
-          "DDI製程微縮(pitch<15μm)技術挑戰"
+          "面板需求下滑會快速傳導至驅動IC投片與封測量",
+          "同業擴產及封測價格競爭可能壓縮毛利"
         ]
       }
     }

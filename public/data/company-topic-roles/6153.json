@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6153",
   "companyName": "嘉聯益",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "fpc",
       "roleType": "fpc_manufacturer",
-      "roleSummary": "嘉聯益6月營收5.57億YoY+25.0%，累計27.31億YoY+0.8%。MOPS登記為軟性電路板(FPC)之設計研究開發製造加工買賣。為Apple手機FPC主要供應商之一，LCP/MPI軟板為5G高頻利基，車用FPC為新成長動能。",
+      "roleSummary": "嘉聯益MOPS直接支持軟性電路板FPC的設計、研發、製造與加工；在PCB題材中是軟板供應商，而非ABF／BT封裝載板廠。MOPS未揭露LCP材料、線寬、層數或具名手機客戶。2026年7月營收5.66億元、MoM+1.6%、YoY+20.6%，累計YoY+3.7%。",
       "products": [
-        "手機FPC(顯示/觸控/天線模組)(line/space<30μm)",
-        "NB/平板FPC(USB-C/天線/攝像頭)(8層多層板)",
-        "可穿戴裝置軟板(智慧手錶/手環)(0.05mm超薄)",
-        "RF天線軟板(5G mmWave LCP/MPI材質)(Df<0.002)",
-        "車用FPC(車載攝像頭/雷達/電池BMS)"
+        "智慧型手機用軟性電路板FPC",
+        "筆記型電腦與平板用FPC",
+        "穿戴裝置用薄型FPC",
+        "相機與顯示模組用FPC",
+        "車用電子模組用FPC"
       ],
       "customers": [
-        "Apple(iPhone FPC天線/顯示模組)",
-        "Samsung(Galaxy手機FPC)",
-        "華為(手機/平板FPC)",
-        "小米(手機FPC)",
-        "OPPO/vivo(手機FPC)"
+        "Apple（消費電子應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（手機應用對象，非MOPS揭露客戶）",
+        "鴻海(2317；電子組裝供應鏈對象，非MOPS揭露客戶)",
+        "和碩(4938；電子組裝供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "台郡",
@@ -49,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6153 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：軟性電路板FPC之設計、研究、開發、製造、加工與買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收5.66億元，MoM+1.6%、YoY+20.6%，累計YoY+3.7%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "confidence": "medium",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "LCP/MPI高頻軟板材料應用(5G毫米波天線Df<0.002)",
-        "多層FPC壓合技術(8層以上/埋盲孔)",
-        "軟板細線路製程(line/space<30μm/微盲孔laser drill)"
+        "FPC細線路蝕刻、微孔與多層壓合製程",
+        "動態彎折壽命、聚醯亞胺材料與薄型化控制",
+        "高速訊號阻抗、電磁相容與模組組裝可靠度"
       ],
       "swot": {
         "strengths": [
-          "手機FPC(顯示/觸控/天線模組)(line/space<30μm)供應Apple/Samsung/華為等一線手機品牌",
-          "LCP/MPI高頻軟板材料(5G毫米波天線Df<0.002)技術領先",
-          "6月營收5.5億YoY+25.0%，FPC需求回溫"
+          "MOPS直接支持FPC全流程，軟板題材角色明確",
+          "2026年7月營收YoY+20.6%，短期需求改善"
         ],
         "weaknesses": [
-          "6月累計營收27.3億YoY僅+0.8%，整體FPC成長動能有限",
-          "FPC毛利受限於手機品牌廠(Apple/Samsung)議價壓力",
-          "FPC產線外移中國/東南亞影響台灣產能利用率"
+          "不是封裝載板廠，不能用ABF／BT載板成長邏輯估值",
+          "累計YoY僅+3.7%，且營收規模偏小、客戶集中風險高"
         ],
         "opportunities": [
-          "5G mmWave手機LCP/MPI高頻軟板需求增長",
-          "可穿戴裝置(智慧手錶/手環)超薄FPC(0.05mm)新應用",
-          "車用FPC(車載攝像頭/雷達/電池BMS)隨ADAS滲透增長"
+          "穿戴、摺疊裝置與相機模組可提升軟板用量及設計複雜度",
+          "車用電子線束輕量化可拓展FPC應用"
         ],
         "threats": [
-          "台郡(6269)/臻鼎(4958)在FPC市場規模競爭",
-          "中國FPC廠(鵬鼎/東山精密)低成本競爭",
-          "手機出貨量成熟化影響FPC需求"
+          "手機需求疲弱與客戶議價會壓縮稼動率及毛利",
+          "同業擴產與替代互連技術可能加劇價格競爭"
         ]
       }
     },

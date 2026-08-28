@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2393",
   "companyName": "億光",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -169,18 +169,18 @@
       "directness": "indirect",
       "supplyChainStage": "sensors",
       "roleType": "optical_sensor_supplier",
-      "roleSummary": "億光6月營收18.3億YoY+10.6%，累計104億YoY+3.2%。工控用光電感測器與光耦合器為穩定利基產品線，車用LED與UV LED為新成長動能。",
+      "roleSummary": "億光MOPS支持電子製品、光電控制器及半導體相關原料設備，與工業自動化的關聯在光電感測、光耦隔離與指示元件應用；MOPS未揭露IP等級、耐壓數值或具名自動化客戶。2026年7月營收19.74億元、MoM+7.8%、YoY+17.4%，但無法拆分工控貢獻。",
       "products": [
-        "工業用光電感測器(對射型/反射型IP67)",
-        "光耦合器(Photocoupler 10kV隔離)",
-        "紅外線感測LED(940nm/850nm工業級)",
-        "UV LED(365nm/395nm工業固化)"
+        "工業設備用光電感測發光元件",
+        "控制電路用光耦合器",
+        "機台狀態指示用可見光LED",
+        "工業檢測用紅外線發光元件"
       ],
       "customers": [
-        "西門子Siemens(工控光電感測)",
-        "Omron(自動化設備LED感測)",
-        "台達電(2308)(電源隔離光耦)",
-        "Keyence(工業感測器LED)"
+        "台達電(2308；工業控制應用對象，非MOPS揭露客戶)",
+        "研華(2395；工業電腦應用對象，非MOPS揭露客戶)",
+        "Omron（自動化感測應用對象，非MOPS揭露客戶）",
+        "Keyence（工業感測應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "光寶科(2301)(光耦合器)",
@@ -207,36 +207,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子製品、光電控制器加工買賣；半導體原料及設備製造買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收19.74億元，MoM+7.8%、YoY+17.4%，累計YoY+5.2%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-11",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "高隔離電壓光耦合器(10kV)封裝技術",
-        "工業級LED封裝(IP67防塵防水/寬溫-40~85°C)",
-        "UV LED 365nm/395nm工業固化封裝"
+        "光耦輸入輸出隔離、電流轉換比與老化穩定性控制",
+        "紅外線發射端之波長、光功率與感測器匹配",
+        "工業溫度循環下的封裝熱阻、焊點與光衰可靠度"
       ],
       "swot": {
         "strengths": [
-          "工業用光電感測器（對射型/反射型IP67）產品線完整，工業自動化應用經驗豐富",
-          "高隔離電壓光耦合器（10kV）封裝技術具安全性優勢",
-          "與西門子Siemens、Omron等工控大廠有合作關係"
+          "MOPS直接支持光電控制器及電子製品，具工控光電元件應用基礎",
+          "2026年7月營收YoY+17.4%、MoM+7.8%，短期營運改善"
         ],
         "weaknesses": [
-          "工業光電感測器佔億光整體營收比重小，非主力業務",
-          "工控感測器市場競爭激烈，毛利率受壓",
-          "累計營收YoY+3.2%，工控需求復甦不如預期"
+          "MOPS未揭露工控產品占比、規格或具名客戶",
+          "累計YoY僅+5.2%，成長幅度低於單月且不能歸因工業自動化"
         ],
         "opportunities": [
-          "工業4.0/智慧製造帶動光電感測器需求長期成長",
-          "IP67防塵防水LED封裝在惡劣環境工控應用具優勢",
-          "光耦合器在電動車高壓隔離應用新市場"
+          "工廠自動化升級可增加隔離、感測與機台指示元件需求",
+          "設備預知維護與光電檢測普及可擴大工業光電應用"
         ],
         "threats": [
-          "Omron/Keyence等日系品牌在工控感測器主導市場",
-          "中國光電感測器廠低價競爭",
-          "固態光電感測技術（不含LED）可能部分替代"
+          "工控景氣放緩與客戶去庫存可能延後拉貨",
+          "中國LED封裝價格競爭與產品同質化可能壓縮毛利"
         ]
       }
     },

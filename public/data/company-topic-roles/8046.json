@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "8046",
   "companyName": "南電",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
-      "directness": "core",
+      "directness": "direct_enabler",
       "supplyChainStage": "ic_substrate",
       "roleType": "abf_substrate_provider",
-      "roleSummary": "南電6月營收46.8億年增50%，累計年增37.2%。MOPS主要經營：電子零組件/電池。AI伺服器PCB與IC載板為主要成長動能，台塑集團旗下PCB大廠。",
+      "roleSummary": "南電MOPS登記僅支持電子零組件與電池製造，未具體揭露ABF、BT載板、HDI、材料牌號或具名客戶；考量公司題材脈絡，本角色保留為封裝載板與PCB產品觀察，但明確標示產品為公司既有產品範圍、非本次MOPS逐項證實。2026年7月營收54.40億元、MoM+16.1%、YoY+50.2%，公司說明受市場需求成長。",
       "products": [
-        "AI伺服器HDI高密度PCB(20+層)",
-        "BGA IC載板(FC-BGA/FCCSP)",
-        "高頻高速基板(Megtron 6/7材料)",
-        "記憶體模組PCB(DDR5/DDR4)",
-        "封裝載板(ABF基板)"
+        "FC-BGA封裝載板（既有產品範圍，非本次MOPS逐項揭露）",
+        "CSP封裝載板（既有產品範圍，非本次MOPS逐項揭露）",
+        "多層印刷電路板（既有產品範圍，非本次MOPS逐項揭露）",
+        "高密度互連PCB（既有產品範圍，非本次MOPS逐項揭露）"
       ],
       "customers": [
-        "NVIDIA(AI加速卡載板)",
-        "AMD(GPU/CPU載板)",
-        "Intel(伺服器PCB)",
-        "廣達(2382)(伺服器主板)",
-        "鴻海(2317)(伺服器PCB)"
+        "Intel（封裝載板應用對象，非MOPS揭露客戶）",
+        "AMD（CPU／GPU載板應用對象，非MOPS揭露客戶）",
+        "NVIDIA（加速器載板應用對象，非MOPS揭露客戶）",
+        "日月光投控(3711；封裝供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "欣興(3037)",
@@ -55,36 +53,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件製造業、電池製造業。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%，累計YoY+39.4%；受市場需求成長影響。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "confidence": "low",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "ABF載板細線路製程(line/space <5μm)",
-        "HDI高密度增層壓合技術(20+層)",
-        "AI伺服器超低損耗(Ultra Low Loss)基板材料應用"
+        "封裝載板增層、微孔與細線路製程控制（既有產品脈絡）",
+        "載板翹曲、熱膨脹匹配與封裝可靠度控制（既有產品脈絡）",
+        "高速PCB之阻抗、插入損耗與多層壓合控制（既有產品脈絡）"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月31.22億，ABF載板(AI GPU用FC-BGA >100mm²大尺寸)量產領先",
-          "HDI高密度增層壓合技術(20+層)",
-          "NVIDIA/AMD/Intel/廣達/鴻海一線客戶"
+          "公司題材脈絡具封裝載板與PCB製造基礎，可承接運算晶片需求",
+          "2026年7月營收YoY+50.2%、MoM+16.1%，累計YoY+39.4%，公司明示市場需求成長"
         ],
         "weaknesses": [
-          "ABF載板需求受GPU出貨瓶頸影響",
-          "載板線寬<5μm製程良率挑戰",
-          "PCB/載板景氣循環影響稼動率"
+          "本次MOPS僅揭露電子零組件／電池製造，未逐項支持載板產品與規格",
+          "MOPS未揭露具名客戶，營收成長不能完全歸因AI或高階載板"
         ],
         "opportunities": [
-          "AI伺服器GPU(NVIDIA B200/B300)ABF載板需求爆發",
-          "800G/1.6T光收發模組PCB需求",
-          "DDR5記憶體模組PCB需求成長"
+          "AI加速器與伺服器CPU可提高高階封裝載板面積與層數需求",
+          "高效能運算升級可帶動載板與高速PCB產品組合改善"
         ],
         "threats": [
-          "欣興(3037)FinMind 6月YoY+36.3%ABF載板需求爆發競爭",
-          "景碩(3189)FinMind 6月YoY+32.3%PCB載板競爭",
-          "中國載板廠(深南電路)追趕"
+          "載板擴產造成供需反轉時，價格與稼動率可能下滑",
+          "先進封裝技術路線改變或客戶集中會提高投資回收風險"
         ]
       }
     },

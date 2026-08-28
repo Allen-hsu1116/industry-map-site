@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2337",
   "companyName": "旺宏",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "niche-memory",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "memory_ic",
       "roleType": "nor_flash_and_non_volatile_memory_supplier",
-      "roleSummary": "旺宏6月營收69.56億YoY+216.1%，累計295.93億YoY+128.8%，MOPS備註「受市場需求增加影響」。MOPS登記為積體電路/半導體零組件及系統應用產品研發設計製造測試銷售。全球NOR Flash市佔第二大，車規記憶體與Mask ROM利基應用爆發，營收暴增反映車用/遊戲ROM需求強勁復甦。",
+      "roleSummary": "旺宏MOPS直接支持積體電路、半導體零組件及系統應用產品之研發、製造與測試，利基記憶體角色成立；但MOPS未揭露特定容量、節點、車規等級或具名客戶。2026年7月營收77.25億元、MoM+11.0%、YoY+180.5%，公司說明受市場需求增加影響。",
       "products": [
-        "NOR Flash(SPI NOR 1Gb-4Gb)(45nm)",
-        "NAND Flash(SLC/MLC 3D堆疊)(384Gb)",
-        "Mask ROM(遊戲卡帶/車用)(32nm)",
-        "XtraROM(車規級唯讀記憶體)(AEC-Q100 Grade 1)",
-        "ROTP(一次性可編程記憶體)(車規安全啟動用)"
+        "Serial NOR Flash記憶體",
+        "平行介面NOR Flash記憶體",
+        "SLC NAND Flash記憶體",
+        "唯讀記憶體ROM產品",
+        "嵌入式記憶體系統應用產品"
       ],
       "customers": [
-        "Tesla(車規NOR Flash/Boot ROM)",
-        "Bosch(博世)(車規XtraROM/安全啟動)",
-        "Infineon(英飛凌)(車規NOR Flash)",
-        "Qualcomm(手機NOR Flash)",
-        "聯發科(2454)(手機Boot Flash)"
+        "任天堂Nintendo（遊戲儲存應用對象，非MOPS揭露客戶）",
+        "聯發科(2454；系統晶片生態對象，非MOPS揭露客戶)",
+        "NXP（車用與工控應用對象，非MOPS揭露客戶）",
+        "Bosch（車用電子應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華邦電(2344)",
@@ -62,36 +61,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2337 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路、半導體零組件及系統應用產品之研發、設計、製造、測試與銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收77.25億元，MoM+11.0%、YoY+180.5%，累計YoY+137.8%；受市場需求增加影響。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "medium",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "SPI NOR Flash 1Gb-4Gb量產技術(45nm)",
-        "車規XtraROM唯讀記憶體(AEC-Q100 Grade 1)",
-        "SLC NAND Flash 3D堆疊技術(384Gb TLC→SLC)"
+        "NOR Flash之SPI介面、高速讀取與資料保持控制",
+        "SLC NAND之錯誤修正、壞塊管理與寫入耐久設計",
+        "嵌入式記憶體之安全啟動、韌體儲存與寬溫可靠度"
       ],
       "swot": {
         "strengths": [
-          "6月營收69.6億YoY+216.1%，累計295.9億YoY+128.8%，市場需求大幅增長(公司公告)",
-          "SPI NOR Flash 1Gb-4Gb量產(45nm)，車規/工控市佔全球前三",
-          "車規XtraROM(AEC-Q100 Grade 1)唯讀記憶體，安全啟動領域獨占性高"
+          "MOPS涵蓋IC研發、製造、測試與系統應用，垂直能力完整",
+          "2026年7月營收YoY+180.5%、累計YoY+137.8%，且公司明示市場需求增加"
         ],
         "weaknesses": [
-          "NOR Flash價格波動大，景氣循環明顯",
-          "中國GigaDevice低價競爭消費級NOR Flash",
-          "車用需求若放緩將影響高增長基期，YoY+216%不可持續"
+          "MOPS未揭露容量、製程節點、車規認證或具名客戶",
+          "記憶體價格與需求循環強，高基期成長未必可持續"
         ],
         "opportunities": [
-          "車用電子(ADAS/EV BMS/車載娛樂)NOR Flash用量持續增長",
-          "AI Edge推論裝置需要NOR Flash儲存模型，新應用領域開拓",
-          "SLC NAND 3D堆疊(384Gb)切入工控/車用料市場"
+          "車用、工控與邊緣裝置需要長供貨期的非揮發記憶體",
+          "AI終端韌體容量增加可提升NOR與嵌入式儲存需求"
         ],
         "threats": [
-          "GigaDevice(兆易創新)低價NOR Flash搶佔消費級市場",
-          "NOR Flash技術微縮至33nm後，摩爾定律邊際效益遞減",
-          "UMC/SMIC成熟製程產能變化影響投片成本"
+          "中國記憶體廠擴產與價格競爭可能壓縮利潤",
+          "終端庫存調整或報價反轉會快速放大營收波動"
         ]
       }
     },

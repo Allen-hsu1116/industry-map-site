@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3533",
   "companyName": "嘉澤",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "high_speed_connector",
       "roleType": "high_speed_connector_leader",
-      "roleSummary": "嘉澤6月營收30.94億YoY+17.3%，累計189.11億YoY+17.2%。MOPS登記為連接器製造。AI伺服器MCIO連接器與DDR5插槽為成長引擎，高頻連接器技術門檻高，受惠AI伺服器出貨放量帶動連接器需求。",
+      "roleSummary": "嘉澤MOPS僅以「連接器」概括主要業務，支持高速互連的產品類別但未揭露112G PAM4、PCIe世代、DDR速率、插座型號或具名客戶；本角色保留為伺服器與高速運算連接器供應商，移除無證據規格。2026年7月營收33.69億元、MoM+8.9%、YoY+18.6%，累計YoY+17.4%。",
       "products": [
-        "AI伺服器MCIO連接器(112G PAM4)",
-        "DDR5 DIMM插槽(UDIMM/RDIMM 4800-6400MT/s)",
-        "PCIe Gen5/6連接器(CEM5規範)",
-        "OSFP/QSFP-DD光模組連接器(400G/800G)",
-        "CPU插座(LGA4677/LGA7529 Intel/AMD)"
+        "伺服器CPU插座連接器",
+        "記憶體模組插槽連接器",
+        "高速板對板連接器",
+        "伺服器高速I/O連接器",
+        "電源與訊號端子連接器"
       ],
       "customers": [
-        "NVIDIA(HGX/AI伺服器MCIO連接器)",
-        "廣達(2382)(AI伺服器CPU插座/DIMM插槽)",
-        "緯穎(6669)(雲端伺服器連接器)",
-        "FCI(射頻連接器OEM)",
-        "Amphenol(高速背板連接器合作)"
+        "廣達(2382；伺服器應用對象，非MOPS揭露客戶)",
+        "緯穎(6669；資料中心伺服器應用對象，非MOPS揭露客戶)",
+        "鴻海(2317；電子製造供應鏈對象，非MOPS揭露客戶)",
+        "Intel（CPU平台驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Amphenol",
@@ -49,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3533 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：連接器。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收33.69億元，MoM+8.9%、YoY+18.6%，累計YoY+17.4%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "medium",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "MCIO高頻連接器訊號完整性設計(112G PAM4)",
-        "DDR5 DIMM插槽高頻量產(6400MT/s阻抗控制)",
-        "PCIe Gen5/6連接器阻抗控制(CEM5)"
+        "高速連接器之差動阻抗、插入損耗與串擾控制",
+        "CPU插座與記憶體插槽之接觸力、共面度及耐插拔設計",
+        "高電流端子之接觸電阻、溫升與鍍層可靠度"
       ],
       "swot": {
         "strengths": [
-          "6月營收30.9億YoY+17.3%，累計YoY+17.2%，AI伺服器連接器需求穩定增長",
-          "MCIO高頻連接器(112G PAM4)訊號完整性設計打入NVIDIA HGX供應鏈",
-          "DDR5 DIMM插槽(6400MT/s阻抗控制)與PCIe Gen5/6連接器(CEM5)量產"
+          "MOPS直接支持連接器，題材產品方向成立",
+          "2026年7月營收YoY+18.6%、MoM+8.9%，累計YoY+17.4%穩定成長"
         ],
         "weaknesses": [
-          "連接器ASP受限於伺服器ODM(廣達/緯穎)議價壓力",
-          "高頻連接器模具開發成本高，客戶切換風險",
-          "連接器產品客製化程度高，規模效應有限"
+          "MOPS未揭露協定世代、速率、型號或具名客戶",
+          "高速連接器驗證期長，產品切換與良率爬坡成本高"
         ],
         "opportunities": [
-          "AI伺服器MCIO連接器(112G PAM4)需求隨AI GPU出貨增長",
-          "DDR5 RDIMM插槽在AI伺服器記憶體擴充需求",
-          "CPU插座(LGA4677/LGA7529)隨Intel/AMD新平台升級"
+          "AI伺服器提高高速I/O、記憶體與電源連接器數量",
+          "CPU與記憶體平台升級可提高訊號完整性及電流承載要求"
         ],
         "threats": [
-          "Amphenol/Molex/TE Connectivity在高速連接器規模優勢",
-          "中國連接器廠(立訊精密/中航光電)低價競爭",
-          "伺服器連接器標準變動影響模具投資"
+          "國際連接器大廠與客戶自研規格可能提高競爭門檻",
+          "伺服器資本支出放緩或平台延期會影響新產品放量"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3711",
   "companyName": "日月光投控",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-28T19:04:07Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -183,20 +183,18 @@
       "directness": "indirect",
       "supplyChainStage": "silicon_photonics",
       "roleType": "optical_packaging_provider",
-      "roleSummary": "日月光投控6月營收657.83億YoY+32.9%，累計3647.26億YoY+22.0%。全球最大封測廠，切入矽光子模組封裝測試與CPO封裝，為下一世代光互連關鍵供應商，AI帶動高速封裝需求強勁成長。",
+      "roleSummary": "日月光投控MOPS僅揭露一般投資業，不能由母公司登記直接證明矽光子封裝規格或客戶；本角色限縮為集團旗下封測事業可能承接的光電晶片封裝、測試與系統級封裝能力，屬集團／子公司範圍且非母公司直接產品。2026年7月合併營收737.84億元、MoM+12.2%、YoY+43.2%，但公司未把成長歸因矽光子。",
       "products": [
-        "矽光子模組高精度耦合封裝(Graded Coupler精度<0.5μm)",
-        "光收發模組Hermetic封裝(To-can/BOX airtight seal)",
-        "Co-Packaged Optics(CPO)封裝測試(2.5D/3D)",
-        "高速SerDes晶片覆晶封裝(FC-BGA/FC-CSP)",
-        "光電子整合封裝(3D IC TSV 2.5D interposer)"
+        "集團旗下光電晶片封裝服務（子公司範圍）",
+        "集團旗下覆晶封裝服務（子公司範圍）",
+        "集團旗下系統級封裝服務（子公司範圍）",
+        "集團旗下半導體成品測試服務（子公司範圍）"
       ],
       "customers": [
-        "Intel(矽光子模組封裝/CPO測試)",
-        "Broadcom(800G光收發模組封裝)",
-        "Cisco(Silicon Photonics封測)",
-        "NVIDIA(800G/1.6T CPO封裝)",
-        "Marvell(光互連晶片封裝)"
+        "台積電(2330；矽光子生態系對象，非MOPS揭露客戶)",
+        "Broadcom（光通訊晶片應用對象，非MOPS揭露客戶）",
+        "Marvell（光互連晶片應用對象，非MOPS揭露客戶）",
+        "NVIDIA（資料中心光互連平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "安靠"
@@ -220,36 +218,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3711 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：H201010 一般投資業。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "公司月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE：2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%；未揭露矽光子歸因。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "confidence": "low",
+      "lastVerified": "2026-08-28",
       "status": "verified",
       "techFocus": [
-        "矽光子模組高精度耦合封裝(Graded Coupler alignment<0.5μm)",
-        "Co-Packaged Optics(CPO) 2.5D/3D封裝測試技術",
-        "光收發模組Hermetic氣密封裝(To-can/BOX helium leak rate)"
+        "光電晶片與光纖／波導之封裝對準及耦光控制（集團能力推定）",
+        "覆晶互連、底填與封裝翹曲控制（集團能力推定）",
+        "高速光電元件封裝後電性與光性測試整合（集團能力推定）"
       ],
       "swot": {
         "strengths": [
-          "矽光子模組高精度耦合封裝(Graded Coupler alignment<0.5μm)技術領先",
-          "光收發模組Hermetic氣密封裝(To-can/BOX helium leak rate)能力",
-          "Co-Packaged Optics(CPO) 2.5D/3D封裝測試與Intel/Broadcom/Cisco合作"
+          "集團封裝測試版圖可提供光電晶片後段整合的潛在平台",
+          "2026年7月合併營收YoY+43.2%、累計YoY+25.1%，集團營運動能強"
         ],
         "weaknesses": [
-          "矽光子封裝為新興應用，量產經驗與良率仍在累積",
-          "高精度耦合封裝設備投資成本高",
-          "CPO封裝標準尚未統一"
+          "MOPS母公司僅揭露一般投資業，不能直接證明矽光子產品與規格",
+          "合併營收涵蓋多項業務，無法歸因矽光子封裝"
         ],
         "opportunities": [
-          "800G/1.6T光收發模組封裝測試需求隨AI資料中心互連增長",
-          "CPO封裝測試隨NVIDIA/Intel矽光子平台推進",
-          "矽光子3D IC TSV 2.5D interposer封裝新應用"
+          "資料中心高速光互連可增加光電晶片封裝與測試需求",
+          "CPO與矽光子量產若擴大，封測整合複雜度可提高外包價值"
         ],
         "threats": [
-          "Intel矽光子內部封測能力提升可能減少外包",
-          "矽光子封裝技術門檻高，同業(安靠/京元電)也在切入",
-          "CPO技術路線不確定性"
+          "晶圓代工廠與光模組廠擴大內製可能壓縮外包空間",
+          "未具名客戶與量產節點揭露不足，題材容易被市場過度解讀"
         ]
       }
     },
