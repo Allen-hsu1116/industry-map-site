@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3131",
   "companyName": "弘塑",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -98,20 +98,21 @@
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "process_equipment_materials",
-      "roleType": "semi_process_equipment_chemicals",
-      "roleSummary": "弘塑6月營收6.31億(4月5.36億→6月6.31億成長)。MOPS登記為半導體IC製造設備工程承包/電子級混酸蝕刻液電鑄電鑄藥液。濕製程設備與電子級化學品雙業務，服務台積電等一線晶圓廠，前段設備+化學品一體化供應。",
+      "supplyChainStage": "process_equipment_and_chemicals",
+      "roleType": "wet_process_equipment_and_chemicals_provider",
+      "roleSummary": "弘塑MOPS明確揭露半導體及IC製造設備工程、製造、買賣與維修，以及工業級、試藥級、電子級混酸蝕刻液和電鑄藥液；是濕製程設備與電子化學品直接角色。FinMind顯示2026年7月營收7.93億元，MoM+25.6%、YoY+42.4%，整體動能強。",
       "products": [
-        "濕製程機台(客製化蝕刻/清洗/電鑄設備)",
-        "電子級混酸蝕刻液(BOE/SPM/HF系列)(試藥級/電子級)",
-        "電鑄藥液(銅電鑄用CuSO4+H2SO4配方)",
-        "製程設備維修與升級服務(24h快速響應在地化)",
-        "廠務管路工程配管(FMCS廠務監控系統/化學品輸送管路/特氣管路)"
+        "半導體濕式清洗設備",
+        "半導體濕式蝕刻設備",
+        "電子級混酸蝕刻液",
+        "電鑄製程藥液",
+        "半導體設備安裝維修服務"
       ],
       "customers": [
-        "台積電(2330)(製程設備/電子級化學品)",
-        "聯電(2303)(化學品/蝕刻液)",
-        "世界先進(5347)(設備工程/維修服務)"
+        "台積電(2330；晶圓製造應用對象，非MOPS揭露客戶）",
+        "聯電(2303；晶圓製造應用對象，非MOPS揭露客戶）",
+        "世界先進(5347；晶圓製造應用對象，非MOPS揭露客戶）",
+        "日月光投控(3711；封裝製程應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "辛耘(3583)",
@@ -137,36 +138,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "半導體及IC製造設備工程承包、製造、買賣、維修；工業級、試藥級、電子級混酸蝕刻液與電鑄藥液；半導體機械安裝及電子零組件製造。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收7.93億元，MoM+25.6%、YoY+42.4%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "濕製程設備客製化設計(蝕刻/清洗/電鑄)",
-        "電子級混酸配方技術(BOE/SPM/HF+HNO3試藥級)",
-        "製程設備在地化維修(24h快速響應/零件庫存)"
+        "濕式清洗／蝕刻設備之藥液流場、溫度與顆粒控制",
+        "電子級混酸之濃度、金屬雜質與批次穩定控制",
+        "電鑄藥液之添加劑、沉積均勻度與製程監控"
       ],
       "swot": {
         "strengths": [
-          "濕製程設備客製化設計(蝕刻/清洗/電鑄)具備台積電/聯電/世界先進認證",
-          "電子級混酸配方技術(BOE/SPM/HF+HNO3試藥級)為台灣少數自有配方供應商",
-          "製程設備在地化維修(24h快速響應/零件庫存)服務差異化"
+          "MOPS直接支持半導體設備工程、製造、維修與電子化學品雙產品線",
+          "FinMind顯示7月營收YoY+42.4%、MoM+25.6%，整體接單與認列強"
         ],
         "weaknesses": [
-          "資本額僅2.92億，研發與產能規模遠低於國際設備大廠",
-          "廠務管路工程配管(FMCS)為低毛利業務",
-          "電子級化學品面臨巴斯夫/默克等跨國大廠競爭"
+          "MOPS未揭露具名客戶、特定設備型號或藥液配方細節",
+          "設備及工程專案認列波動大，月營收不能拆分化學品貢獻"
         ],
         "opportunities": [
-          "半導體先進製程擴產(台積電N3/N2)帶動濕製程設備需求",
-          "電子級混酸國產化替代進口商機",
-          "製程設備維修/升級服務(在地化24h)需求持續"
+          "先進製程與封裝擴產可增加濕式清洗、蝕刻及電鑄需求",
+          "電子級化學品在地化可縮短供應與服務反應時間"
         ],
         "threats": [
-          "Lam Research/TEL/應材在半導體設備市場主導地位",
-          "默克(Merck)/巴斯夫(BASF)在電子級化學品規模優勢",
-          "半導體資本支出週期波動影響設備採購"
+          "國際設備與化學品大廠具規模、專利及客戶認證優勢",
+          "半導體資本支出循環與客戶延後驗收會影響營收節奏"
         ]
       }
     }

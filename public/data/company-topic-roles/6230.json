@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6230",
   "companyName": "尼得科超眾",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
@@ -95,22 +95,22 @@
       "topicName": "AI 伺服器電源與 BBU",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "psu",
-      "roleType": "psu_cooling_component",
-      "roleSummary": "尼得科超眾為Nidec集團旗下散熱模組供應商。提供AI伺服器高功率散熱風扇、VC均熱板散熱模組及車用IGBT散熱方案。MOPS主要經營：散熱模組、散熱片、熱導管及微均熱板。",
+      "supplyChainStage": "thermal_management_adjacent",
+      "roleType": "thermal_module_adjacent_to_bbu",
+      "roleSummary": "尼得科超眾MOPS僅揭露散熱模組、散熱片、熱導管及微均熱板，未揭露BBU、電池模組、電源供應器或高功率風扇；本題材只保留為AI伺服器電源與BBU的散熱鄰近角色。2026年7月營收7.89億元，MoM+4.1%、YoY-0.3%，累計YoY+7.6%，動能平淡。",
       "products": [
-        "AI伺服器高功率散熱風扇(12038/12052mm 12V/48V 200W+)",
-        "伺服器VC均熱板散熱模組(銅微通道/厚度<2.5mm)",
-        "BBU散熱模組(電池組被動散熱/鋁擠型鰭片)",
-        "車用散熱模組(IGBT/碳化矽SiC散熱基板)",
-        "熱導管(φ6mm/φ8mm U型/最大熱傳>100W)"
+        "伺服器散熱模組",
+        "鋁製散熱片",
+        "銅熱導管",
+        "微型均熱板",
+        "電源模組用被動散熱組件"
       ],
       "customers": [
-        "Dell(PowerEdge伺服器散熱風扇)",
-        "NVIDIA(間接/透過伺服器ODM散熱模組)",
-        "Supermicro(GPU伺服器散熱方案)",
-        "鴻海2317(AI伺服器散熱模組)",
-        "日產Nissan(電動車IGBT散熱模組)"
+        "台達電(2308；電源散熱應用對象，非MOPS揭露客戶）",
+        "光寶科(2301；電源散熱應用對象，非MOPS揭露客戶）",
+        "廣達(2382；伺服器整合對象，非MOPS揭露客戶）",
+        "緯穎(6669；AI伺服器應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI平台應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "奇鋐(3017)",
@@ -136,32 +136,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6230 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "散熱模組、散熱片、熱導管及微均熱板。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收7.89億元，MoM+4.1%、YoY-0.3%，累計YoY+7.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-29",
+      "status": "candidate",
       "techFocus": [
-        "高功率散熱風扇12V/48V 200W+風量>200CFM",
-        "VC均熱板銅微通道毛細結構厚度<2.5mm",
-        "車用IGBT散熱基板AM2/AlN陶瓷基板焊接"
+        "熱導管與微均熱板之毛細結構、工質回流與熱阻控制",
+        "散熱片鰭片幾何、接觸熱阻與風道匹配",
+        "電源模組局部熱點之導熱介面與被動散熱整合"
       ],
       "swot": {
         "strengths": [
-          "散熱模組+風扇垂直整合，日商Nidec集團資源",
-          "伺服器散熱風扇市佔領先"
+          "MOPS直接支持散熱模組、散熱片、熱導管與微均熱板產品組合",
+          "7月營收MoM+4.1%、累計YoY+7.6%，營運維持小幅成長"
         ],
         "weaknesses": [
-          "OTC上櫃規模較小，AI伺服器散熱競爭激烈",
-          "營收數據未透過TWSE OpenAPI揭露"
+          "MOPS未揭露BBU、電池模組、PSU或風扇，題材僅屬散熱鄰近",
+          "7月營收YoY-0.3%，公司整體成長動能偏平"
         ],
         "opportunities": [
-          "AI GPU功耗1000W+帶動高功率散熱風扇需求",
-          "電動車IGBT/SiC散熱模組市場成長"
+          "AI伺服器功耗提高可增加電源與備援電池周邊散熱需求",
+          "微均熱板與熱導管可切入更高熱流密度的電源模組設計"
         ],
         "threats": [
-          "奇鋐3017/雙鴻3324競爭VC/散熱模組份額",
-          "Nidec集團內部資源分配不確定性"
+          "奇鋐、雙鴻與國際散熱廠競爭伺服器熱管理份額",
+          "液冷滲透若取代部分被動散熱架構，傳統模組需求可能受壓"
         ]
       }
     }

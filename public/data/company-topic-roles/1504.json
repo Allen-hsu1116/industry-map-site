@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "1504",
   "companyName": "東元",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
       "topicName": "重電、電纜與 EPC 工程",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "electrical",
-      "roleType": "motor_manufacturer",
-      "roleSummary": "東元為台灣重電龍頭，5月營收56.9億年增10.6%，累計年增7.2%。主要產品涵蓋高壓馬達、變壓器、GIS及變頻器，受惠於台電強韌電網計畫與電動車趨勢。",
+      "supplyChainStage": "electrical_equipment",
+      "roleType": "motor_and_electrical_system_provider",
+      "roleSummary": "東元MOPS揭露電氣、運輸、產業與冷凍空調設備及附件之產銷承裝，核心可確認為馬達、驅動與工業電氣系統；既有345kV變壓器與GIS精確規格缺乏本次MOPS支持，已移除。2026年7月營收55.29億元，MoM+4.8%、YoY+13.8%，累計YoY+7.0%。",
       "products": [
-        "高壓馬達(IE4/IE5效率/1000-10000kW/345kV/690V)",
-        "低壓馬達(TEFC系列/0.75-375kW/IE3/IE4效率)",
-        "變頻器(JN700系列/0.75-630kW/向量控制/IGBT模組)",
-        "電力變壓器(345kV/161kV/容量20-500MVA/ONAN冷卻)",
-        "GIS氣體絕緣開關設備(72.5kV-345kV/SF6絕緣/模組化設計)"
+        "高壓工業馬達",
+        "低壓高效率馬達",
+        "變頻器與馬達驅動系統",
+        "工業冷凍空調設備",
+        "機電系統承裝與整合服務"
       ],
       "customers": [
-        "台塑(1301)(馬達/變頻器)",
-        "中鋼(2002)(大型馬達)",
-        "台電(變壓器/GIS)",
-        "中華電信(2412)(備用電力)",
-        "台灣高鐵(馬達/變壓器)"
+        "台電（機電工程應用對象，非MOPS揭露客戶）",
+        "中鋼(2002；工業馬達應用對象，非MOPS揭露客戶）",
+        "台塑(1301；工廠機電應用對象，非MOPS揭露客戶）",
+        "台灣高鐵(2633；運輸機電應用對象，非MOPS揭露客戶）",
+        "台積電(2330；廠務機電應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "大同",
@@ -49,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 1504 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "各種電氣、運輸、產業、冷凍空調、電子與事務設備及附件之產銷承裝。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收55.29億元，MoM+4.8%、YoY+13.8%，累計YoY+7.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "confidence": "medium",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "IE4/IE5超高效率馬達設計(銅轉子鑄造/磁阻馬達技術)",
-        "345kV超高壓變壓器設計(ONAN/ONAF冷卻/阻抗6-12%)",
-        "變頻器IGBT模組設計(三電平NPC拓樸/SiC寬能隙元件)"
+        "高效率馬達之電磁、絕緣與熱管理設計",
+        "變頻器向量控制與馬達驅動整合",
+        "大型冷凍空調之壓縮機、泵浦與控制系統整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收5277億，YoY+0.15%，累計30788億YoY+5.92%，穩定成長",
-          "台灣重電龍頭，IE4/IE5超高效率馬達具技術領先優勢",
-          "345kV超高壓變壓器與GIS切入台電強韌電網計畫供應鏈"
+          "MOPS支持電氣、運輸、產業與冷凍空調設備的廣泛產銷承裝能力",
+          "7月營收YoY+13.8%、累計YoY+7.0%，整體營運穩健成長"
         ],
         "weaknesses": [
-          "馬達業務屬成熟產品，成長動能有限",
-          "家電與冷凍空調業務受消費景氣影響",
-          "海外市場（中國/東南亞）競爭激烈"
+          "MOPS未支持既有345kV變壓器、GIS與特定效率級距等精確說法",
+          "業務橫跨馬達、空調與家電，月營收無法拆出重電EPC貢獻"
         ],
         "opportunities": [
-          "台電強韌電網計畫（10年5,645億）帶動變壓器/GIS長期需求",
-          "電動車趨勢帶動車用馬達新應用",
-          "IE4/IE5馬達受惠全球能效法規升級"
+          "工業節能與馬達能效升級可帶動高效率馬達及變頻器需求",
+          "資料中心、晶圓廠與公共工程可增加機電及空調整合案"
         ],
         "threats": [
-          "日立/三菱等日系大廠在超高壓變壓器競爭",
-          "中國重電廠低價競爭壓力",
-          "台電標案時程不確定性影響營收節奏"
+          "ABB、Siemens、三菱電機等國際品牌競爭工業驅動市場",
+          "大型工程認列時點與原物料價格波動可能造成營收及毛利起伏"
         ]
       }
     },

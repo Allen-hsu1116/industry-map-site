@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3189",
   "companyName": "景碩",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -176,18 +176,18 @@
       "directness": "indirect",
       "supplyChainStage": "ic_substrate_adjacent",
       "roleType": "ic_substrate_adjacent_to_hbm_packages",
-      "roleSummary": "景碩MOPS只概括揭露電子零組件與電子材料，未證實HBM專用BT載板、TSV對位或SK hynix／Samsung／Micron客戶。此角色應定位為高階IC載板對AI封裝的間接曝險。2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%，但不能全歸因HBM。",
+      "roleSummary": "景碩MOPS僅概括揭露電子零組件製造與電子材料買賣，未證實HBM專用載板、TSV製程或具名記憶體客戶；本題材限於高階IC載板對HBM封裝生態的間接曝險。2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%，但公司整體成長不能直接歸因HBM。",
       "products": [
         "FC-BGA高階IC載板",
-        "BT樹脂BGA／CSP載板",
+        "BGA／CSP用BT樹脂載板",
         "細線路多層IC封裝基板",
         "SiP系統級封裝載板"
       ],
       "customers": [
-        "SK hynix（HBM封裝驗證對象，非MOPS揭露客戶）",
-        "Micron Technology（HBM封裝驗證對象，非MOPS揭露客戶）",
-        "Samsung Electronics（記憶體封裝驗證對象，非MOPS揭露客戶）",
-        "ASE Technology（封裝整合生態對象，非MOPS揭露客戶）"
+        "SK hynix（HBM封裝應用對象，非MOPS揭露客戶）",
+        "Micron Technology（記憶體封裝驗證對象，非MOPS揭露客戶）",
+        "Samsung Electronics（記憶體封裝應用對象，非MOPS揭露客戶）",
+        "日月光投控(3711；封裝整合生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "欣興"
@@ -215,40 +215,40 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零組件製造、電子材料批發與零售。"
+          "claim": "電子零組件製造業、電子材料批發業、電子材料零售業。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%。"
+          "claim": "TWSE顯示2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-21",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "FC-BGA細線路／微盲孔與多層增層製程",
+        "FC-BGA細線路、微盲孔與多層增層製程",
         "大尺寸載板翹曲、熱膨脹係數與層間對位控制",
-        "BT與ABF基材之阻抗、可靠度與回焊壽命管理"
+        "BT／ABF載板阻抗、回焊與可靠度管理"
       ],
       "swot": {
         "strengths": [
-          "高階FC-BGA與多層IC載板能力可參與AI封裝生態",
-          "2026年7月營收YoY+35.9%、累計YoY+30.7%，公司整體成長強"
+          "具FC-BGA、BGA／CSP及SiP載板產品組合，可參與高階封裝供應鏈",
+          "7月營收YoY+35.9%、累計YoY+30.7%，公司整體出貨動能強"
         ],
         "weaknesses": [
-          "MOPS未揭露HBM專用載板、TSV或具名記憶體客戶",
-          "公司營收成長不能直接等同HBM收入，題材歸因仍有限"
+          "MOPS未揭露HBM專用載板、TSV製程或具名記憶體客戶",
+          "營收成長為公司整體數據，無法拆分HBM題材貢獻"
         ],
         "opportunities": [
-          "AI加速器與高頻寬記憶體擴大先進封裝載板需求",
-          "大尺寸FC-BGA與低翹曲製程可提高產品組合價值"
+          "HBM與AI加速器擴產可帶動高階封裝載板需求",
+          "大尺寸低翹曲載板升級有助提高產品組合價值"
         ],
         "threats": [
-          "欣興、南電與韓系載板廠競爭高階產能",
-          "HBM封裝架構若轉向矽中介層或其他基板方案，受惠幅度可能低於預期"
+          "欣興、南電與韓系載板廠競逐高階產能與客戶驗證",
+          "HBM若更多採用矽中介層或其他封裝架構，載板受惠幅度可能低於預期"
         ]
       }
     }

@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "6176",
   "companyName": "瑞儀",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "display_panel",
-      "roleType": "backlight_module_manufacturer",
-      "roleSummary": "瑞儀6月營收36.94億YoY-15.0%，累計231.25億YoY-6.0%。MOPS登記為電子零組件/模具/照明設備製造。背光模組領導廠，電視與監視器背光需求疲弱拖累營收，Mini LED背光與車用背光為轉型方向。",
+      "supplyChainStage": "backlight_and_optical_components",
+      "roleType": "backlight_module_provider",
+      "roleSummary": "瑞儀MOPS只概括揭露電子零組件、模具及照明設備製造，未列面板尺寸、分區數、車規溫度或具名客戶；依題材上下文可保留背光與光學模組角色，但移除未支持規格。2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%，需求仍偏弱。",
       "products": [
-        "LCD背光模組(電視55吋/65吋/75吋)(直下式DLED)",
-        "Mini LED背光模組(分區調光>2000 zones HDR)",
-        "車用背光模組(儀表板/中控12.3吋耐高溫85°C)",
-        "平板/NB薄型背光模組(側光式厚度<2.5mm)",
-        "監視器背光模組(27吋/32吋高刷新率144Hz+)"
+        "側光式LCD背光模組",
+        "直下式LCD背光模組",
+        "Mini LED背光模組",
+        "導光板與光學膜片模組",
+        "背光模組精密成型模具"
       ],
       "customers": [
-        "群創(3481)(電視/監視器面板背光模組)",
-        "友達(2409)(車用/工控面板背光模組)",
-        "LG Display(OLED/LCD背光模組)",
-        "BOE(京東方)(電視背光模組代工)",
-        "夏普Sharp(龜山面板廠背光模組)"
+        "友達(2409；面板應用對象，非MOPS揭露客戶）",
+        "群創(3481；面板應用對象，非MOPS揭露客戶）",
+        "BOE京東方（面板應用對象，非MOPS揭露客戶）",
+        "LG Display（顯示供應鏈對象，非MOPS揭露客戶）",
+        "Apple（終端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中光電",
@@ -48,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 6176 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "電子零組件製造、模具製造及照明設備製造。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
+      "confidence": "medium",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "Mini LED直下式背光光學設計(>2000 zones HDR)",
-        "超薄側光式(Edge-lit)LED背光模組(厚度<2.5mm)",
-        "車用背光模組耐高溫/防震設計(-40°C~85°C)"
+        "導光板微結構、光學膜片堆疊與亮度均勻控制",
+        "側光式與直下式背光之薄型化、散熱與漏光抑制",
+        "Mini LED分區驅動、光學混光與模組組裝良率控制"
       ],
       "swot": {
         "strengths": [
-          "LCD背光模組(電視55吋/65吋/75吋)供應群創/友達/LG Display一線面板廠",
-          "Mini LED背光模組(分區調光>2000 zones HDR)技術領先",
-          "車用背光模組(耐高溫-40°C~85°C)打入友達車用面板供應鏈"
+          "具背光模組、導光板、光學膜片與模具整合能力",
+          "7月營收MoM+1.8%，單月較前月小幅回升"
         ],
         "weaknesses": [
-          "6月營收36.9億YoY-15.0%，累計YoY-6.0%，背光模組需求持續衰退",
-          "LCD背光模組受OLED渗透壓縮，電視背光模組出貨量下降",
-          "面板廠議價能力強，背光模組毛利受限"
+          "7月營收YoY-9.5%、累計YoY-6.5%，整體需求仍收縮",
+          "MOPS未揭露背光產品規格、面板尺寸、車規認證或具名客戶"
         ],
         "opportunities": [
-          "Mini LED背光(分區調光>2000 zones)在高端電視/監視器滲透率提升",
-          "車用面板背光模組(儀表板/中控)需求隨ADAS增長",
-          "高刷新率(144Hz+)電競監視器背光模組新應用"
+          "Mini LED、高刷新顯示與車載面板可提高背光光學複雜度",
+          "模具與光學模組整合有助縮短新品導入與量產爬坡"
         ],
         "threats": [
-          "OLED面板自發光不需背光模組，長期替代風險",
-          "中國背光模組廠(瑞儀/偉志)低成本競爭",
-          "面板產業持續外移中國影響台灣供應鏈"
+          "OLED自發光面板滲透會減少傳統背光需求",
+          "中國背光模組供應商低價競爭與面板景氣循環壓縮毛利"
         ]
       }
     },

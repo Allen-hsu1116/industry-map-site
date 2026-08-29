@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "1519",
   "companyName": "華城",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
       "topicName": "重電、電纜與 EPC 工程",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "electrical",
-      "roleType": "transformer_manufacturer",
-      "roleSummary": "華城5月營收14.8億年減9.3%累計84.8億年增3.9%。核心產品為345kV超高壓變壓器與GIS，受惠於台電電網強韌計畫。",
+      "supplyChainStage": "transformers_and_epc",
+      "roleType": "transformer_switchgear_epc_provider",
+      "roleSummary": "華城MOPS明確揭露變壓器、配電盤、配電器材及統包工程，是重電與變電站EPC核心角色；本次移除MOPS未證實的特定電壓級距與具名客戶直供說法。2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%，短期認列波動仍需留意。",
       "products": [
-        "電力變壓器(161kV/345kV)",
-        "配電變壓器(22kV/69kV)",
-        "GIS氣體絕緣開關設備(72.5kV/145kV)",
-        "高壓配電盤(22kV/69kV)",
-        "超高壓變電站統包工程(EPC)"
+        "油浸式電力變壓器",
+        "配電變壓器",
+        "高低壓配電盤",
+        "變電站配電器材",
+        "變電站統包工程EPC"
       ],
       "customers": [
-        "台電(變壓器/GIS標案)",
-        "台塑(配電設備)",
-        "中鋼(配電盤)",
-        "欣興電子(3037)(廠房電力工程)",
-        "台積電(2330)(廠務電力)"
+        "台電（變電設備標案應用對象，非MOPS揭露客戶）",
+        "台積電(2330；廠務供電應用對象，非MOPS揭露客戶）",
+        "中鋼(2002；工業配電應用對象，非MOPS揭露客戶）",
+        "台塑(1301；工廠配電應用對象，非MOPS揭露客戶）",
+        "Orsted（離岸風電變電應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "士電",
@@ -49,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 1519 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "變壓器、配電盤、配電器材及其他統包工程。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-11",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "345kV超高壓電力變壓器設計與製造(油浸式)",
-        "GIS氣體絕緣開關設備(SF6/72.5kV-145kV)",
-        "超高壓變電站統包工程(設計/施工/試車)"
+        "變壓器繞組、絕緣、鐵心損耗與油冷設計",
+        "配電盤保護電驛、母線與短路耐受協調",
+        "變電站EPC之設計、安裝、試車與併網整合"
       ],
       "swot": {
         "strengths": [
-          "345kV超高壓電力變壓器設計與製造能力國內領先",
-          "超高壓變電站統包工程（EPC）整合能力強",
-          "台電變壓器/GIS核心供應商，客戶關係穩固"
+          "MOPS直接支持變壓器、配電盤、配電器材及統包工程完整產品線",
+          "7月營收MoM+18.5%，大型設備與工程認列回升"
         ],
         "weaknesses": [
-          "6月營收1730億YoY-25.78%，累計10212億YoY-2.69%，營收下滑需關注",
-          "公司規模較小（資本額31.6億），產能擴張受限",
-          "產品線集中於變壓器/GIS，多元性不如中興電/東元"
+          "7月營收YoY-8.3%、累計YoY-3.7%，訂單認列節奏偏弱",
+          "大型變壓器與EPC專案交期長，單月營收容易波動"
         ],
         "opportunities": [
-          "台電強韌電網計畫帶動345kV變壓器與GIS長期需求",
-          "半導體廠（台積電/欣興）廠房電力工程需求持續",
-          "離岸風電海上變電站統包工程為新藍海"
+          "台灣電網強韌、資料中心與晶圓廠擴建可增加變壓器需求",
+          "再生能源併網與海外電網更新可擴大變電站EPC機會"
         ],
         "threats": [
-          "中興電(1513)在GIS與EPC統包領域為主要競爭對手",
-          "台電標案時程不確定影響營收節奏",
-          "國際變壓器大廠（日立/西門子）在大型標案競爭"
+          "中興電、士電及Hitachi Energy等業者競逐大型標案",
+          "銅、電磁鋼片及運輸成本上升可能侵蝕專案毛利"
         ]
       }
     },

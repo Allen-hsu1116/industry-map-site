@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3034",
   "companyName": "聯詠",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -102,22 +102,22 @@
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "direct_enabler",
-      "supplyChainStage": "ic_design",
-      "roleType": "display_panel_ic_enabler",
-      "roleSummary": "聯詠為全球第二大顯示驅動IC設計公司，6月營收10022.6億YoY19.0%，累計51805.4億YoY-2.8%。OLED DDI在手機面板市佔率僅次Samsung LSI，車規DDI打入友達供應鏈。",
+      "supplyChainStage": "display_ic_design",
+      "roleType": "display_driver_and_control_ic_provider",
+      "roleSummary": "聯詠MOPS直接揭露液晶顯示器驅動IC、電腦周邊控制IC、DSP與嵌入式控制系統，是面板顯示驅動與控制晶片核心供應角色；既有製程節點、車規認證及具名客戶直供說法因MOPS未證實而移除。2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%，但累計YoY僅+1.2%。",
       "products": [
-        "OLED DDI驅動IC(28nm LTPO面板用)",
-        "LCD TDDI觸控顯示整合IC(40nm LTPS)",
-        "電視SoC(4K/8K HDR影像處理)",
-        "車規DDI驅動IC(ASIL-B認證12.3吋儀表板)",
-        "TCON時序控制晶片(Mini LED背光)"
+        "LCD顯示驅動IC",
+        "觸控顯示整合IC TDDI",
+        "顯示時序控制IC TCON",
+        "電視影像處理SoC",
+        "嵌入式顯示控制IC"
       ],
       "customers": [
-        "Samsung Display(OLED DDI)",
-        "LG Display(OLED/LCD TCON)",
-        "京東方(BOE)(LCD TDDI)",
-        "友達(2409)(車規DDI/TCON)",
-        "群創(3481)(電視SoC/TDDI)"
+        "友達(2409；面板應用對象，非MOPS揭露客戶）",
+        "群創(3481；面板應用對象，非MOPS揭露客戶）",
+        "BOE京東方（面板應用對象，非MOPS揭露客戶）",
+        "LG Display（面板應用對象，非MOPS揭露客戶）",
+        "Samsung Display（面板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Samsung LSI",
@@ -148,36 +148,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "語音、通訊、嵌入式微控制器、DSP、電腦周邊控制及液晶顯示器驅動積體電路與系統。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%，累計YoY+1.2%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "OLED DDI 28nm LTPO驅動IC設計(像素電路補償)",
-        "TDDI觸控顯示整合(40nm In-cell技術)",
-        "4K/8K HDR電視SoC影像處理引擎(AI畫質增強)"
+        "源極／閘極驅動、灰階電壓與像素補償控制",
+        "TDDI之觸控感測與顯示驅動時序整合",
+        "TCON與電視SoC之影像縮放、HDR及動態補償"
       ],
       "swot": {
         "strengths": [
-          "OLED DDI驅動IC(28nm LTPO像素補償電路)技術領先",
-          "4K/8K HDR電視SoC影像處理引擎(AI SR超解析)具備AI畫質增強能力",
-          "車規DDI(ASIL-B ISO26262)認證打入友達車用面板供應鏈"
+          "MOPS直接支持液晶顯示器驅動IC與控制系統研發製造",
+          "7月營收YoY+26.8%、MoM+2.7%，單月需求改善"
         ],
         "weaknesses": [
-          "6月累計營收YoY-2.8%，面板相關IC需求仍處低檔",
-          "OLED DDI 28nm製程良率與成本優化空間有限",
-          "Mini LED TCON晶片市場規模尚小"
+          "累計營收YoY僅+1.2%，顯示相關需求復甦仍不均衡",
+          "MOPS未揭露製程節點、車規認證、面板類別占比或具名客戶"
         ],
         "opportunities": [
-          "OLED筆電/平板滲透率提升帶動DDI需求增長",
-          "Mini LED背光電視/顯示器TCON晶片新應用",
-          "車用面板(儀表板/中控)DDI需求隨ADAS滲透增長"
+          "OLED筆電、平板、車用面板與高刷新顯示可增加驅動IC價值",
+          "觸控顯示整合及影像處理升級可擴大單機晶片內容"
         ],
         "threats": [
-          "Samsung Display內部DDI自製比例提升",
-          "中國面板廠(京東方/華星光電)自有驅動IC布局",
-          "面板景氣循環影響驅動IC訂單能見度"
+          "面板景氣循環與客戶庫存調整影響驅動IC訂單",
+          "Samsung LSI及中國顯示IC設計商競爭中高階市場"
         ]
       }
     },

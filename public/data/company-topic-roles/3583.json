@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3583",
   "companyName": "辛耘",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -97,20 +97,21 @@
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "equipment",
-      "roleType": "semi_equipment_distributor_manufacturer",
-      "roleSummary": "辛耘6月營收10.35億YoY-2.7%，累計61.15億YoY+6.8%。MOPS登記為半導體LED Solar LCD製程機台設備代理研發製造/晶圓再生技術/化學分析儀器。前段製程設備代理與晶圓再生雙引擎，服務台積電/聯電等一線客戶。",
+      "supplyChainStage": "equipment_reclaim_and_analysis",
+      "roleType": "process_equipment_reclaim_analysis_provider",
+      "roleSummary": "辛耘MOPS揭露半導體、LED、Solar與LCD製程設備代理、研發製造，晶圓再生服務及化學分析儀器；是設備、再生晶圓與分析整合的直接角色。2026年7月營收9.73億元，MoM-6.0%、YoY+6.6%，累計YoY+6.8%，成長溫和但月度回落。",
       "products": [
-        "前段製程機台(蝕刻/薄膜/清洗設備)(代理Lam Research/TEL)",
-        "晶圓再生(Wafer Reclaim)服務(8/12吋CMP化學機械研磨)",
-        "化學分析儀器(XRF/ICP-MS/OES)(代理Bruker/Shimadzu)",
-        "LED/Solar製程設備代理(MOCVD/PVD)",
-        "Lam Research/TEL蝕刻薄膜設備在地化維修與零件供應"
+        "半導體濕式製程設備",
+        "晶圓再生服務",
+        "化學分析儀器整合方案",
+        "LED製程設備",
+        "太陽能與LCD製程設備"
       ],
       "customers": [
-        "台積電(2330)(設備代理/晶圓再生/維修)",
-        "聯電(2303)(設備代理/化學分析儀器)",
-        "世界先進(5347)(晶圓再生服務)"
+        "台積電(2330；晶圓製造應用對象，非MOPS揭露客戶）",
+        "聯電(2303；晶圓製造應用對象，非MOPS揭露客戶）",
+        "世界先進(5347；再生晶圓應用對象，非MOPS揭露客戶）",
+        "友達(2409；LCD設備應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "弘塑(3131)",
@@ -137,36 +138,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "半導體、LED、Solar、LCD製程機台設備代理、研發與製造；晶圓再生技術研發服務；化學分析儀器代理、研發與製造。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收9.73億元，MoM-6.0%、YoY+6.6%，累計YoY+6.8%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-27",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "前段設備代理(蝕刻/薄膜/清洗)(Lam Research/TEL授權)",
-        "晶圓再生CMP技術(8/12吋化學機械研磨/良率>99%)",
-        "化學分析儀器整合方案(XRF/ICP-MS/OES痕量分析)"
+        "再生晶圓研磨、拋光、清洗與表面缺陷控制",
+        "濕式製程設備之藥液供應、溫控與顆粒管理",
+        "XRF、ICP-MS與OES之痕量元素分析整合"
       ],
       "swot": {
         "strengths": [
-          "前段設備代理(蝕刻/薄膜/清洗)(Lam Research/TEL授權)與台積電/聯電合作",
-          "晶圓再生CMP技術(8/12吋化學機械研磨/良率>99%)",
-          "化學分析儀器整合方案(XRF/ICP-MS/OES痕量分析)差異化"
+          "MOPS直接支持製程設備、晶圓再生與化學分析儀器三項能力",
+          "7月營收YoY+6.6%、累計YoY+6.8%，整體維持成長"
         ],
         "weaknesses": [
-          "6月營收10.3億YoY-2.7%，半導體設備需求短期放緩",
-          "設備代理業務受原廠(Lam Research/TEL)定價策略限制",
-          "晶圓再生服務市場規模有限"
+          "7月營收MoM-6.0%，設備與專案認列仍有波動",
+          "MOPS未揭露設備代理品牌、具名客戶或晶圓尺寸良率等精確資訊"
         ],
         "opportunities": [
-          "台積電N3/N2先進製程擴產帶動前段設備需求",
-          "化學分析儀器(XRF/ICP-MS)在半導體材料分析新應用",
-          "晶圓再生(8/12吋)隨先進製程測試晶圓需求增長"
+          "晶圓廠擴產可增加設備服務、再生晶圓與痕量分析需求",
+          "先進製程對顆粒與金屬污染控制升級可提高分析服務價值"
         ],
         "threats": [
-          "Lam Research/TEL/應材在半導體設備市場主導地位",
-          "半導體資本支出週期波動(記憶體/邏輯)影響設備採購",
-          "中國半導體設備廠在成熟製程設備追趕"
+          "國際設備原廠與本土設備商競爭客戶預算",
+          "半導體資本支出下修或客戶內製再生流程會壓縮需求"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3711",
   "companyName": "日月光投控",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -265,21 +265,21 @@
       "topicId": "wafer-foundry",
       "topicName": "晶圓代工與第三代半導體",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "roleSummary": "日月光投控是全球封測龍頭，6月營收658億年增32.9%，累計3,647億年增22.0%。在晶圓代工題材中為封測環節核心，AI/HPC先進封裝需求爆發帶動成長。",
+      "directness": "indirect",
+      "roleSummary": "日月光投控MOPS主要經營業務僅為一般投資業，母公司本身不是晶圓代工廠；本題材只能以集團旗下封裝測試與電子製造服務承接晶圓製造後段，屬間接角色。2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%，為集團整體數據，不能視為晶圓代工收入。",
       "products": [
-        "打線封裝(Wire Bond BGA/QFN/LOFP)",
-        "覆晶封裝(Flip Chip FC-BGA/FC-CSP)",
-        "SiP系統級封裝(System-in-Package)",
-        "先進封裝測試(2.5D/3D/CoWoS後段)",
-        "晶圓級封裝(WLP/Fan-out eWLB)"
+        "集團旗下晶圓凸塊服務",
+        "集團旗下覆晶封裝服務",
+        "集團旗下系統級封裝SiP服務",
+        "集團旗下晶圓級封裝服務",
+        "集團旗下半導體測試服務"
       ],
       "customers": [
-        "Apple(A系列AP封裝測試)",
-        "NVIDIA(H100/B200封裝測試)",
-        "AMD(Zen/MI300封裝測試)",
-        "Qualcomm(Snapdragon封測)",
-        "聯發科(天璣封測)"
+        "台積電(2330；晶圓製造供應鏈對象，非MOPS揭露客戶）",
+        "聯電(2303；晶圓製造供應鏈對象，非MOPS揭露客戶）",
+        "世界先進(5347；晶圓製造供應鏈對象，非MOPS揭露客戶）",
+        "聯發科(2454；封裝應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI封裝應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "安靠科技(Amkor)",
@@ -298,38 +298,48 @@
           "title": "3711公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS 公司基本資料 supports 3711 role in 晶圓代工與第三代半導體 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "H201010一般投資業。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月集團營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-29",
+      "status": "candidate",
       "techFocus": [
-        "FoCoS/SoIC 2.5D/3D先進封裝量產",
-        "SiP系統級封裝與FC倒裝封裝",
-        "Wafer Level/Bumping微凸塊技術(20μm pitch)"
+        "集團旗下晶圓凸塊與覆晶互連製程",
+        "集團旗下SiP與晶圓級封裝整合",
+        "集團旗下封裝後電性測試與可靠度篩選"
       ],
-      "supplyChainStage": "advanced_packaging_test",
-      "roleType": "semiconductor_packaging_test_provider",
+      "supplyChainStage": "holding_company_packaging_adjacent",
+      "roleType": "holding_company_adjacent_to_foundry",
       "swot": {
         "strengths": [
-          "全球最大封測集團，打線封裝/覆晶封裝/SiP系統級封裝全製程覆蓋",
-          "FoCoS/SoIC 2.5D/3D先進封裝量產與台積電CoWoS互補",
-          "Wafer Level/Bumping微凸塊技術(20μm pitch)適用先進封裝"
+          "集團具封裝、測試與電子製造服務，可承接晶圓製造後段價值鏈",
+          "7月集團營收YoY+43.2%、累計YoY+25.1%，整體營運動能強"
         ],
         "weaknesses": [
-          "傳統打線封裝業務毛利低，面臨中國封測廠低價競爭",
-          "先進封裝產能擴張需要高資本支出",
-          "成熟製程封測需求成長放緩"
+          "MOPS對母公司只揭露一般投資業，不能把子公司產品直接視為母公司製造業務",
+          "本角色不執行晶圓代工，營收亦未拆出任何晶圓製造貢獻"
         ],
         "opportunities": [
-          "先進封裝(CoWoS/SoIC/FoCoS)受惠AI/HPC需求持續擴產",
-          "SiP系統級封裝(射頻/物聯網/穿戴)需求增長",
-          "車用半導體封裝測試(功率/感測)新應用"
+          "晶圓代工與AI晶片成長可外溢至凸塊、封裝及測試需求",
+          "晶圓廠與封測廠協同設計可提高後段整合價值"
         ],
         "threats": [
-          "中國封測廠(長電科技/通富微電/華天)在傳統封裝低成本競爭",
-          "Intel IDM 2.0策略提升內部封測比例",
-          "地緣政治風險影響全球半導體供應鏈"
+          "晶圓代工廠擴大先進封裝內製可能壓縮外包空間",
+          "把控股公司封測能力誤標為晶圓代工會造成題材錯配"
         ]
       }
     }

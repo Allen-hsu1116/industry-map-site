@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -188,20 +188,21 @@
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "test_equipment",
-      "roleType": "mobile_camera_test",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。手機CIS/CCM測試設備為核心業務，受惠手機多鏡頭與車用CIS需求擴增，亦提供攝像模組MTF/畸變/色彩測試系統。",
+      "supplyChainStage": "test_equipment_and_services",
+      "roleType": "cis_ccm_test_equipment_adjacent_to_devices",
+      "roleSummary": "久元MOPS明確揭露半導體與光電產品切割、研磨、測試、挑檢及基板切割，以及IC、CIS、CCM測試設備；其對手機與消費終端屬攝像模組及感測器測試的間接角色。FinMind顯示2026年7月營收3.74億元，MoM-4.1%、YoY-6.5%，短期需求偏弱。",
       "products": [
-        "手機攝像模組(CCM)測試設備",
-        "CIS感測器測試設備(晶圓級/封裝級)",
-        "IC測試分選機(Handler)",
-        "LED封裝測試設備"
+        "CIS影像感測器測試設備",
+        "CCM攝像模組測試設備",
+        "IC自動測試分選設備",
+        "半導體晶粒切割與挑檢服務",
+        "光電基板切割服務"
       ],
       "customers": [
-        "Sony(Sony CIS測試)",
-        "舜宇(2342)(手機鏡頭模組測試)",
-        "舜宇光學(2382)(CCM測試)",
-        "日月光(3711)(IC測試代工)"
+        "Sony Semiconductor Solutions（CIS測試應用對象，非MOPS揭露客戶）",
+        "舜宇光學（CCM測試應用對象，非MOPS揭露客戶）",
+        "大立光(3008；攝像模組生態對象，非MOPS揭露客戶）",
+        "日月光投控(3711；IC測試供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "致茂科技(6130)(光電測試設備)",
@@ -229,36 +230,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "半導體及光電產品切割、研磨、測試、挑檢與基板切割；IC、CIS、CCM測試設備研發製造銷售。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收3.74億元，MoM-4.1%、YoY-6.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-21",
+      "confidence": "medium",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "CIS/CIS封裝級測試探針卡與分選機技術",
-        "CCM攝像模組MTF/畸變/色彩測試系統",
-        "晶圓級測試(Wafer Probing)高精度對位技術"
+        "CIS晶圓級與封裝級電性、影像測試整合",
+        "CCM之MTF、對焦、色彩與畸變量測",
+        "高速分選、精密對位與測試資料追溯"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，手機攝像模組(CCM)測試設備利基供應商",
-          "CIS感測器晶圓級+封裝級測試一條龍服務",
-          "IC測試分選機(Handler)自研精密機構設計"
+          "MOPS直接支持IC、CIS與CCM測試設備及半導體加工服務",
+          "測試設備與切割、挑檢服務可形成設備加代工的產品組合"
         ],
         "weaknesses": [
-          "消費電子終端需求疲軟影響CCM測試設備採購",
-          "手機出貨量年減趨勢壓縮測試設備市場",
-          "客戶集中度高(舜宇/Sony)，議價能力受限"
+          "FinMind顯示7月營收MoM-4.1%、YoY-6.5%，短期需求轉弱",
+          "MOPS未揭露具名手機或光學客戶，終端曝險無法直接驗證"
         ],
         "opportunities": [
-          "折疊手機多鏡頭設計增加CCM測試需求",
-          "AI手機(Edge AI SoC)帶動IC測試設備升級",
-          "穿戴裝置(智慧手錶/AR眼鏡)新增測試應用"
+          "手機多鏡頭、AR眼鏡與車用感測可增加CIS／CCM測試複雜度",
+          "高像素與主動對焦升級可提高影像品質測試設備價值"
         ],
         "threats": [
-          "手機品牌廠垂直整合測試線，減少外部委外",
-          "中國測試設備廠(如長川科技)低價競爭",
-          "消費電子景氣循環風險"
+          "中國測試設備業者低價競爭與客戶自建測試線壓縮外包需求",
+          "消費電子換機週期拉長可能延後設備資本支出"
         ]
       }
     },

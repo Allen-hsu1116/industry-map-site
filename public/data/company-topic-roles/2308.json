@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -463,23 +463,23 @@
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "product",
-      "directness": "core",
-      "supplyChainStage": "system_integration",
-      "roleType": "energy_storage_and_management_solution_provider",
-      "roleSummary": "台達電儲能業務受惠於全球綠電趨勢，5月營收589.6億年增43.7%。MW級PCS與BMS整合方案打入台電儲能標案及海外微電網市場。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "power_conversion_and_management",
+      "roleType": "energy_storage_power_electronics_provider",
+      "roleSummary": "台達電MOPS揭露電源供應、電動車電源、工業自動化與可再生能源應用，但未直接列出電芯製造；本題材聚焦儲能所需功率轉換、管理與能源控制，非電芯供應。2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%，但公司整體成長不能完全歸因儲能。",
       "products": [
-        "MW級儲能變流器(PCS/雙向逆變/500kW-2MW/1500V DC)",
-        "電池管理系統(BMS/SOC/SOH演算法/主動均衡/CAN bus)",
-        "微電網EMS能源管理控制系統(多機組群控/需量反應/孤島偵測)",
-        "再生能源功率調節器(PV Inverter/組串式/100-350kW/MPPT)",
-        "儲能貨櫃系統整合(40呎/MW級/液冷/UL 9540A認證)"
+        "雙向儲能功率轉換系統PCS",
+        "電池管理系統BMS控制器",
+        "微電網能源管理系統EMS",
+        "太陽能逆變器與功率調節器",
+        "貨櫃式儲能系統整合方案"
       ],
       "customers": [
-        "台電(儲能標案)",
-        "Tesla(Powerwall逆變器)",
-        "Delta Electronics USA(美國微電網)",
-        "台塑(工廠儲能)",
-        "澳洲AGL(儲能系統)"
+        "台電（儲能案場應用對象，非MOPS揭露客戶）",
+        "台泥(1101；工商儲能應用對象，非MOPS揭露客戶）",
+        "台塑(1301；工廠微電網應用對象，非MOPS揭露客戶）",
+        "AGL Energy（海外儲能應用對象，非MOPS揭露客戶）",
+        "Tesla（電源生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "儲能系統整合商",
@@ -508,36 +508,46 @@
           "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
           "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
           "claim": "Financial report lists renewable-energy applications, energy technology services and smart building management/control solutions among main business items."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "電源供應系統、散熱系統、電動車電源、工業自動化、可再生能源應用及智慧樓宇控制解決方案。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "confidence": "medium",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "MW級儲能變流器(PCS)雙向逆變/整流控制",
-        "電池管理系統(BMS)SOC/SOH演算法",
-        "微電網EMS多機組群控與調度演算法"
+        "PCS雙向逆變、併網控制與孤島保護",
+        "BMS之SOC／SOH估算、均衡與CAN通訊",
+        "EMS需量反應、多機調度與微電網控制"
       ],
       "swot": {
         "strengths": [
-          "6月營收656.0億YoY+55.4%，AI/能源基礎設施雙引擎增長",
-          "MW級儲能變流器(PCS/500kW-2MW/1500V DC)量產，供貨台電儲能標案",
-          "電池管理系統(BMS)與微電網EMS軟體演算法自研，技術壁壘高"
+          "MOPS直接支持電源系統、可再生能源及工業自動化整合能力",
+          "7月營收YoY+47.7%、累計YoY+42.1%，公司整體成長強勁"
         ],
         "weaknesses": [
-          "儲能業務佔集團營收比例仍低，規模效益尚不明顯",
-          "電池芯非自研，BMS/PCS與電池廠合作模式下附加價值受限",
-          "儲能案場導入受政策/電價/安全規範影響，需求波動大"
+          "MOPS未揭露電芯製造，本題材價值主要在PCS、BMS與EMS",
+          "公司月營收未拆分儲能，無法把高成長直接視為儲能收入"
         ],
         "opportunities": [
-          "台電儲能調頻備轉容量持續擴增，PCS與EMS採購需求增長",
-          "美國IRA法案帶動儲能補貼，Delta USA微電網業務受惠",
-          "再生能源+儲能整合方案(VPP虛擬電廠)市場快速成長"
+          "再生能源併網與工商儲能可擴大PCS及EMS需求",
+          "資料中心備援與微電網建置提高高可靠度電源管理價值"
         ],
         "threats": [
-          "Tesla/Sungrow等儲能系統整合商競爭",
-          "鋰電池價格下跌可能壓縮PCS/EMS的系統報價",
-          "儲能安全法規(UL 9540A)趨嚴增加認證成本"
+          "Sungrow、Tesla與大型系統整合商競爭儲能標案",
+          "儲能安全法規、電價制度與案場認列時程可能造成需求波動"
         ]
       }
     }

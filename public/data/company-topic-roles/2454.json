@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2454",
   "companyName": "聯發科",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -10,20 +10,21 @@
       "topicType": "end_market",
       "directness": "core",
       "supplyChainStage": "ic_design",
-      "roleType": "smartphone_soc_provider",
-      "roleSummary": "聯發科為全球智慧手機SoC第二大供應商，6月營收58011.8億YoY2.8%，累計301333.1億YoY-0.8%。6月營收580.1億年增2.8%。天璣9400採台積電3nm量產，打入Samsung/小米/OPPO供應鏈。",
+      "roleType": "mobile_and_consumer_soc_provider",
+      "roleSummary": "聯發科MOPS揭露多媒體、電腦周邊、高階消費性與特殊應用IC；依題材上下文，核心涵蓋行動SoC、連接晶片與平板／Chromebook平台，但具名品牌皆標示為應用對象。2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY僅+0.8%，月度波動明顯。",
       "products": [
-        "天璣Dimensity 9400旗艦SoC(3nm)",
-        "5G數據機晶片(Sub-6/mmWave M80)",
-        "Wi-Fi 7/藍牙5.4連接晶片",
-        "平板/Chromebook SoC(Kompanio 880)"
+        "Dimensity天璣旗艦智慧手機SoC",
+        "5G行動通訊數據機晶片",
+        "Filogic Wi-Fi 7連接晶片",
+        "Kompanio平板與Chromebook SoC",
+        "智慧電視多媒體SoC"
       ],
       "customers": [
-        "Samsung(Galaxy A/J系列手機SoC)",
-        "小米(Redmi/POCO手機SoC)",
-        "OPPO(Reno/Find手機SoC)",
-        "Vivo(V/X系列手機SoC)",
-        "傳音(Tecno/Infinix手機SoC)"
+        "Samsung Electronics（手機平台應用對象，非MOPS揭露客戶）",
+        "小米（手機SoC應用對象，非MOPS揭露客戶）",
+        "OPPO（手機SoC應用對象，非MOPS揭露客戶）",
+        "vivo（手機SoC應用對象，非MOPS揭露客戶）",
+        "Lenovo（平板與Chromebook應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Qualcomm Snapdragon",
@@ -53,36 +54,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "多媒體IC、電腦周邊IC、高階消費性IC及其他特殊應用IC。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY+0.8%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "天璣9400 SoC整合AI加速器(3nm N3E)",
-        "5G NR Sub-6/mmWave數據機技術(M80)",
-        "Wi-Fi 7三頻連接晶片設計(320MHz頻寬)"
+        "CPU、GPU、NPU與影像訊號處理器的異質SoC整合",
+        "5G NR數據機、射頻協同與低功耗連線管理",
+        "Wi-Fi 7多鏈路操作、320MHz頻寬與藍牙共存"
       ],
       "swot": {
         "strengths": [
-          "天璣Dimensity 9400旗艦SoC(3nm N3E)效能逼近高通驍龍8 Gen4，ASP提升",
-          "5G數據機晶片M80(Sub-6/mmWave)技術成熟，全球手機SoC市佔第二",
-          "Wi-Fi 7三頻連接晶片(Filogic 880 320MHz)量產領先"
+          "產品橫跨行動SoC、5G數據機、Wi-Fi與消費多媒體IC",
+          "7月營收YoY+12.2%，高階與連接產品維持成長"
         ],
         "weaknesses": [
-          "6月營收580.1億YoY僅+2.8%，累計YoY-0.8%，手機SoC成長動能放緩",
-          "旗艦SoC市場份額仍落後高通/Apple，品牌溢價能力有限",
-          "中國手機客戶(小米/OPPO/vivo)議價壓力持續"
+          "7月營收MoM-16.4%、累計YoY僅+0.8%，終端需求波動大",
+          "MOPS未揭露各產品線占比、具名客戶或旗艦產品出貨量"
         ],
         "opportunities": [
-          "天璣9400打入Samsung Galaxy旗艦系列擴大高階市佔",
-          "Wi-Fi 7路由器/手機滲透率提升帶動連接晶片出貨",
-          "Chromebook/平板SoC(Kompanio)受惠教育市場AI化"
+          "AI手機、Wi-Fi 7與平板端側AI可提高SoC內容與平均售價",
+          "多裝置連線與智慧家庭可擴大Filogic及多媒體平台需求"
         ],
         "threats": [
-          "高通驍龍X Elite切入ARM PC SoC市場競爭加劇",
-          "中國IC設計(紫光展銳)在中低階手機SoC追趕",
-          "手機市場成熟化，AI手機換機週期不確定"
+          "Qualcomm、Apple與中國IC設計商競爭手機與連接平台",
+          "中國手機品牌庫存、匯率與地緣管制可能影響訂單節奏"
         ]
       }
     },

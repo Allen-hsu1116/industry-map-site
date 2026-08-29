@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
       "topicName": "MLCC / 電容器",
       "topicType": "product",
       "directness": "core",
-      "supplyChainStage": "upstream_materials",
-      "roleType": "mlcc_dielectric_powder_supplier",
-      "roleSummary": "信昌電是國巨(2327)集團旗下MLCC上游介電瓷粉供應商，提供MLCC核心陶瓷材料，是台灣唯一MLCC瓷粉本土供應商。",
+      "supplyChainStage": "ceramic_components_and_materials",
+      "roleType": "mlcc_resistor_dielectric_powder_provider",
+      "roleSummary": "信昌電MOPS明確揭露晶片電容、晶片電阻與介電瓷粉，是MLCC及電子陶瓷材料的直接角色；本次刪除「台灣唯一」與未揭露直供客戶等過度精確說法。FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%，整體動能改善。",
       "products": [
-        "MLCC介電瓷粉(BaTiO3基)",
-        "高頻瓷粉(Class 1)",
-        "高容值瓷粉(Class 2/3)",
-        "晶片電容用陶瓷粉體"
+        "多層陶瓷晶片電容MLCC",
+        "高頻用陶瓷晶片電容",
+        "厚膜晶片電阻",
+        "MLCC用介電陶瓷粉末"
       ],
       "customers": [
-        "國巨(2327)(MLCC瓷粉採購)",
-        "華新科(2492)(MLCC瓷粉供應鏈夥伴)",
-        "太陽誘電(Taiyo Yuden)(瓷粉外銷)",
-        "YAGEO集團內部(垂直整合採購)",
-        "中國MLCC廠(風華高科)(瓷粉進口)"
+        "國巨(2327；集團供應鏈對象，非MOPS揭露客戶）",
+        "華新科(2492；電子陶瓷供應鏈對象，非MOPS揭露客戶）",
+        "村田製作所（MLCC市場應用對象，非MOPS揭露客戶）",
+        "太陽誘電（MLCC市場應用對象，非MOPS揭露客戶）",
+        "風華高科（MLCC市場應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "國巨(2327)瓷粉自製",
@@ -50,36 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "晶片電容、晶片電阻、介電瓷粉。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-17",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "BaTiO3鈦酸鋇瓷粉自行合成技術(奈米級粉體)",
-        "高溫共燒陶瓷製程(HTCC/LTCC)",
-        "Class 1/2/3瓷粉配方梯度設計"
+        "介電瓷粉粒徑分布、摻雜配方與燒結溫度控制",
+        "MLCC多層陶瓷與內電極共燒對位控制",
+        "厚膜電阻漿料印刷、燒結與雷射阻值修調"
       ],
       "swot": {
         "strengths": [
-          "台灣唯一MLCC介電瓷粉(BaTiO3)自有合成技術供應商，垂直整合從瓷粉到晶片電容一條龍",
-          "進入國巨(2327)/華新科(2492)供應鏈，YAGEO集團內部垂直整合採購帶來穩定訂單",
-          "Class 1/2/3瓷粉配方梯度設計能力，可客製化不同溫度特性(X7R/X5R/C0G)"
+          "MOPS直接支持晶片電容、晶片電阻與介電瓷粉的垂直產品組合",
+          "FinMind顯示7月營收YoY+47.9%、MoM+6.6%，整體出貨動能改善"
         ],
         "weaknesses": [
-          "資本額僅17.12億，規模相對小，研發資源受限",
-          "MLCC瓷粉屬利基型材料，市場規模受限於下游MLCC廠產能擴張速度",
-          "上游原料(鈦酸鋇/稀土氧化物)依賴進口，原料價格波動影響毛利"
+          "MOPS未揭露瓷粉市占率、唯一供應地位或具名客戶",
+          "月營收無法拆分MLCC、電阻與介電瓷粉各自貢獻"
         ],
         "opportunities": [
-          "AI伺服器與車規MLCC需求爆發，高容值/高頻瓷粉需求增長",
-          "中國MLCC國產化(風華高科)帶來瓷粉進口替代商機",
-          "車規AEC-Q200認證瓷粉打入車用供應鏈，ASP提升"
+          "AI伺服器、車用電子與高頻通訊增加高可靠度MLCC需求",
+          "介電粉體自主配方有機會提高材料內製與產品差異化"
         ],
         "threats": [
-          "日本信越化學(Shin-Etsu)/村田在MLCC瓷粉技術壁壘高",
-          "中國本土瓷粉廠崛起可能壓縮外銷市場份額",
-          "MLCC產業週期性波動直接影響瓷粉需求量"
+          "村田、太陽誘電與中國被動元件廠在規模及價格上競爭",
+          "MLCC庫存循環與原料價格波動可能壓縮稼動率及毛利"
         ]
       }
     },

@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "companyCode": "8150",
   "companyName": "南茂",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "hbm",
       "topicName": "HBM 高頻寬記憶體",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "hbm",
-      "roleType": "hbm_osat",
-      "roleSummary": "南茂MOPS揭露高密度記憶體、顯示驅動IC及混合訊號IC封裝測試，但沒有HBM、TSV或晶圓級封裝字樣；本題材應定位為記憶體封測能力的鄰近觀察，而非已確認HBM量產。2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%，惟公司整體成長不能全歸因HBM。",
+      "supplyChainStage": "memory_packaging_test_adjacent",
+      "roleType": "memory_osat_adjacent_to_hbm",
+      "roleSummary": "南茂MOPS揭露高集積度、高精密度記憶體封裝測試、顯示驅動IC金凸塊與混合訊號IC封測，但沒有HBM、TSV或堆疊封裝字樣；本題材是記憶體封測能力的鄰近觀察，不是已確認HBM量產。2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%，不能全歸因HBM。",
       "products": [
         "高集積度記憶體IC封裝服務",
         "高精密度記憶體IC測試服務",
@@ -20,7 +20,7 @@
       ],
       "customers": [
         "SK hynix（HBM應用生態對象，非MOPS揭露客戶）",
-        "Micron（記憶體驗證對象，非MOPS揭露客戶）",
+        "Micron Technology（記憶體驗證對象，非MOPS揭露客戶）",
         "Samsung Electronics（記憶體應用對象，非MOPS揭露客戶）",
         "NVIDIA（HBM終端平台對象，非MOPS揭露客戶）"
       ],
@@ -54,36 +54,36 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：高集積度高精密度記憶體封裝測試、顯示驅動IC封裝測試（含金凸塊）、混合訊號IC封裝測試。"
+          "claim": "高集積度、高精密度記憶體封裝及測試；顯示驅動IC封裝測試含金凸塊；混合訊號IC封裝測試。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%。"
+          "claim": "TWSE顯示2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
         "高集積度記憶體封裝良率與翹曲控制",
         "記憶體IC電性測試、分選與可靠度篩選",
-        "金凸塊製程及顯示驅動IC封裝整合"
+        "金凸塊製程與顯示驅動IC封裝整合"
       ],
       "swot": {
         "strengths": [
-          "既有高密度記憶體封裝測試能力與HBM後段需求相鄰",
+          "MOPS直接支持高密度記憶體封裝與測試服務",
           "7月營收YoY+43.6%、累計YoY+29.5%，整體封測動能強"
         ],
         "weaknesses": [
-          "MOPS未揭露HBM、TSV或堆疊封裝，不能把記憶體封測直接當HBM量產",
-          "業務同時涵蓋顯示驅動與混合訊號IC，營收成長無法歸因HBM"
+          "MOPS未揭露HBM、TSV或堆疊封裝，不能直接視為HBM量產",
+          "業務亦涵蓋顯示驅動與混合訊號IC，營收成長無法歸因HBM"
         ],
         "opportunities": [
-          "HBM供不應求可外溢至記憶體測試與可靠度篩選需求",
-          "既有記憶體封測產線若取得HBM驗證，可縮短切入時間"
+          "HBM供應擴張可外溢至記憶體測試與可靠度篩選需求",
+          "既有記憶體封測產線若取得新世代驗證，可縮短切入時間"
         ],
         "threats": [
           "HBM核心封裝由記憶體原廠與先進封裝大廠主導，切入門檻高",

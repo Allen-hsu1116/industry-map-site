@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "server_management_ic_provider",
-      "roleSummary": "信驊MOPS主要經營：多媒體IC/電腦周邊IC/高階消費性IC。全球BMC伺服器管理晶片市佔率超過70%，AI伺服器成長帶動BMC需求爆發，PCIe Retimer為新成長動能。",
+      "roleSummary": "信驊MOPS揭露多媒體、電腦周邊與高階消費性電子積體電路；依IC設計題材上下文，核心產品聚焦伺服器管理BMC與遠端管理SoC，但具名客戶皆標示為應用對象而非MOPS確認。FinMind顯示2026年7月營收15.24億元，MoM+16.3%、YoY+97.6%，成長強勁。",
       "products": [
-        "BMC伺服器管理晶片(AST2600/AST2750系列)",
-        "PCIe/CXL Retimer高速訊號中繼IC",
-        "遠端帶外管理SoC(Out-of-Band Management)",
-        "伺服器基礎設施監控IC",
-        "顯示控制晶片(VGA/BMC SoC)"
+        "AST2600系列伺服器管理BMC SoC",
+        "AST2700系列伺服器管理BMC SoC",
+        "伺服器遠端KVM管理控制器",
+        "BMC整合式VGA顯示控制晶片"
       ],
       "customers": [
-        "廣達(2382)(伺服器BMC)",
-        "鴻海(2317)(伺服器BMC)",
-        "緯創(3231)(伺服器BMC)",
-        "超微AMD(8299)(伺服器平台)",
-        "Dell/HPE(伺服器BMC)"
+        "Dell Technologies（伺服器BMC應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器BMC應用對象，非MOPS揭露客戶）",
+        "Lenovo（伺服器管理應用對象，非MOPS揭露客戶）",
+        "Supermicro（伺服器BMC應用對象，非MOPS揭露客戶）",
+        "廣達(2382；伺服器平台整合對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Nuvoton",
@@ -54,36 +53,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "多媒體積體電路、電腦周邊積體電路、高階消費性電子積體電路。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "FinMind顯示2026年7月營收15.24億元，MoM+16.3%、YoY+97.6%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-14",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "BMC伺服器管理晶片AST2600/AST2750 SoC架構設計",
-        "PCIe Gen5/6 Retimer訊號完整性補償技術",
-        "CXL 2.0/3.0記憶體池化Retimer IC設計"
+        "BMC SoC之遠端帶外管理與系統健康監控",
+        "KVM over IP影像擷取、壓縮與遠端控制",
+        "伺服器管理介面、韌體安全與硬體信任根整合"
       ],
       "swot": {
         "strengths": [
-          "全球BMC伺服器管理晶片(AST2600/AST2750)市佔率>90%，近乎壟斷",
-          "PCIe Gen5/6 Retimer訊號完整性補償技術(CTLE/DFE)領先",
-          "Dell/HPE/Lenovo/Supermicro等全球伺服器大廠核心供應商"
+          "BMC與遠端管理SoC在伺服器管理晶片市場具明確產品定位",
+          "FinMind顯示7月營收YoY+97.6%、MoM+16.3%，整體成長強"
         ],
         "weaknesses": [
-          "資本額僅3.78億，公司規模小，研發資源有限",
-          "BMC晶片產品線高度集中，多元化不足",
-          "上櫃公司流動性較低"
+          "MOPS只列IC大類，未揭露BMC型號、市占率或具名客戶",
+          "產品高度集中伺服器管理控制，終端景氣影響較直接"
         ],
         "opportunities": [
-          "AI伺服器出貨量增長帶動BMC晶片需求",
-          "PCIe Gen5/Gen6 Retimer在AI GPU互連需求爆發",
-          "CXL 2.0/3.0記憶體池化AST3200新應用"
+          "AI伺服器數量與單機管理複雜度提升可擴大BMC需求",
+          "平台安全、遠端維運與高可用性要求提升晶片價值量"
         ],
         "threats": [
-          "Intel/AMD可能自研BMC晶片降低外購",
-          "中國BMC晶片廠(超微/長城)在國產替代壓力下追趕",
-          "伺服器景氣循環影響BMC出貨量"
+          "伺服器CPU與平台業者自研管理控制器可能壓縮外購市場",
+          "大型雲端業者規格集中與客戶議價會提高產品迭代壓力"
         ]
       }
     },

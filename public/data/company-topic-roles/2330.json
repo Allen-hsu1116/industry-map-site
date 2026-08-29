@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "wafer_fabrication",
       "roleType": "advanced_logic_foundry",
-      "roleSummary": "台積電5月營收4170億年增30.1%，累計年增30.0%。N3/N5製程供不應求，N2預計2025量產，先進製程持續領先Samsung與Intel。",
+      "roleSummary": "台積電MOPS明確揭露依客戶設計製造與銷售積體電路及晶圓半導體裝置，並提供封裝測試、IC電腦輔助設計與光罩服務，是晶圓代工核心角色。2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%，累計YoY+37.0%，先進製程需求推升整體動能。",
       "products": [
-        "N3(3nm)FinFET量產",
-        "N2(2nm)GAA量產準備",
-        "N5(5nm)大量生產",
-        "成熟製程(28nm/40nm車用工業用)",
-        "A16(1.6nm)Backside Power"
+        "N3系列3奈米FinFET晶圓代工",
+        "N5系列5奈米FinFET晶圓代工",
+        "N2系列2奈米奈米片電晶體晶圓代工",
+        "A16背面供電晶圓代工平台",
+        "28／40奈米車用與工業IC晶圓代工"
       ],
       "customers": [
-        "NVIDIA(H100/B200)",
-        "Apple(A18/M4)",
-        "AMD(Zen5/RNA4)",
-        "Qualcomm(Snapdragon X)",
-        "Broadcom(客製ASIC)"
+        "Apple（先進製程應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI晶片應用對象，非MOPS揭露客戶）",
+        "AMD（CPU／GPU應用對象，非MOPS揭露客戶）",
+        "Qualcomm（行動SoC應用對象，非MOPS揭露客戶）",
+        "Broadcom（客製ASIC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Samsung Foundry",
@@ -54,36 +54,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "依客戶訂單與設計製造、銷售積體電路及其他晶圓半導體裝置；並提供封裝測試、IC電腦輔助設計與光罩製造設計服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%，累計YoY+37.0%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-06",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
-        "N3 FinFET量產與N2 GAA開發",
-        "EUV極紫外光微影技術",
-        "A16 Backside Power背供電架構"
+        "N3 FinFET量產與N2奈米片電晶體整合",
+        "EUV極紫外光微影與多重圖形化控制",
+        "A16背面供電網路與訊號繞線整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收4426.8億YoY+67.9%，累計24044.8億YoY+35.6%，先進製程需求驅動(公司公告)",
-          "N3(3nm)FinFET量產領先Samsung/Intel，N2(2nm)GAA準備量產",
-          "全球邏輯晶圓代工市佔>60%，先進製程(7nm以下)市佔>90%"
+          "MOPS直接支持晶圓製造、封裝測試、設計服務與光罩的一站式能力",
+          "7月營收YoY+44.7%、累計YoY+37.0%，整體先進製程需求強"
         ],
         "weaknesses": [
-          "先進製程資本支出龐大(年CapEx >500億美元)，折舊壓力重",
-          "海外建廠(亞利桑那/熊本/德國)成本高於台灣，毛利率承壓",
-          "2nm GAA量產良率驗證中，技術風險存在"
+          "先進節點與海外晶圓廠需要龐大資本支出及折舊負擔",
+          "公司月營收未拆分節點與客戶，無法量化N2、N3各自貢獻"
         ],
         "opportunities": [
-          "AI GPU(NVIDIA B200/B300)、手機AP(Apple A18/M4)需求帶動N3/N2稼動率滿載",
-          "A16(1.6nm)Backside Power背供電架構為下世代競爭壁壘",
-          "成熟製程(28/40nm)擴產切入車用/IoT/電源管理市場"
+          "AI加速器、智慧手機與客製ASIC持續擴大先進節點需求",
+          "N2與A16平台可延續效能、功耗與密度領先"
         ],
         "threats": [
-          "Samsung 3nm GAA量產推進，技術追趕風險",
-          "Intel 18A製程回歸代工，爭取AI客戶",
-          "地緣政治風險(台海局勢)影響客戶分散策略與長期投資意願"
+          "Samsung Foundry與Intel Foundry競逐先進製程客戶",
+          "地緣政治、出口管制與海外生產成本可能壓縮營運彈性"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2449",
   "companyName": "京元電子",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-29T19:02:58Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -97,18 +97,18 @@
       "topicName": "HBM 高頻寬記憶體",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "hbm",
-      "roleType": "hbm_test_house",
-      "roleSummary": "京元電子MOPS只支持各類IC設計、製造、測試、加工與包裝，未揭露HBM、TSV、KGD或多層堆疊測試；本題材定位為可承接高階記憶體與邏輯IC測試的相鄰角色。2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%，但不能全歸因HBM。",
+      "supplyChainStage": "test_adjacent",
+      "roleType": "memory_test_house_adjacent_to_hbm",
+      "roleSummary": "京元電子MOPS支持積體電路測試、加工與包裝，但未揭露HBM、TSV、KGD或堆疊記憶體測試；本題材定位為可承接高階記憶體與邏輯IC測試的相鄰角色。2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%，公司整體成長不能直接歸因HBM。",
       "products": [
         "積體電路晶圓測試服務",
         "積體電路成品測試服務",
         "積體電路加工與包裝服務",
-        "測試配件與測試程式整合"
+        "測試配件與量產測試程式整合"
       ],
       "customers": [
         "SK hynix（HBM測試應用對象，非MOPS揭露客戶）",
-        "Micron（記憶體測試應用對象，非MOPS揭露客戶）",
+        "Micron Technology（記憶體測試應用對象，非MOPS揭露客戶）",
         "Samsung Electronics（記憶體測試生態對象，非MOPS揭露客戶）",
         "NVIDIA（HBM終端平台對象，非MOPS揭露客戶）"
       ],
@@ -139,18 +139,18 @@
           "publisher": "公開資訊觀測站 MOPS",
           "title": "公司完整基本資料（MOPS 54欄位版）",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：各種積體電路設計、製造、測試、配件、加工與包裝。"
+          "claim": "各種積體電路之設計、製造、測試、配件、加工、包裝與買賣。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%。"
+          "claim": "TWSE顯示2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "lastVerified": "2026-08-29",
       "status": "verified",
       "techFocus": [
         "晶圓探針與成品自動化測試整合",
@@ -159,8 +159,8 @@
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持IC測試、加工與包裝能力",
-          "7月營收YoY+36.7%、累計YoY+36.2%"
+          "MOPS直接支持IC測試、加工及包裝能力",
+          "7月營收YoY+36.7%、累計YoY+36.2%，整體測試需求強"
         ],
         "weaknesses": [
           "MOPS未揭露HBM、TSV、KGD或堆疊測試",
@@ -172,7 +172,7 @@
         ],
         "threats": [
           "記憶體原廠自建測試產能會限制外包份額",
-          "HBM測試介面昂貴且世代更新快，折舊風險高"
+          "HBM測試介面昂貴且世代更新快，設備折舊風險高"
         ]
       }
     }
