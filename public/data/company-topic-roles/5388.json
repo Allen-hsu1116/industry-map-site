@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -10,31 +10,29 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "networking_equipment",
-      "roleType": "networking_equipment_odm",
-      "roleSummary": "中磊7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%，北美市場訂單增溫。MOPS登記為有線/無線網路產品。為北美電信運營商與企業網通設備ODM核心供應商。",
+      "roleType": "wired_wireless_network_product_manufacturer",
+      "roleSummary": "中磊MOPS揭露有線與無線網路產品，足以支持網通設備核心角色，但未揭露原角色中的特定協定版本、頻段或具名電信客戶。2026年7月營收79.80億元、MoM+9.7%、YoY+51.3%，累計YoY+56.9%，公司備註北美市場訂單增溫。",
       "products": [
-        "企業級Wi-Fi 6E/7 AP(4x4 MIMO/320MHz頻寬)",
-        "5G小基地台(Small Cell/Sub-6GHz/mmWave)",
-        "光纖到府ONT/GPON終端設備(XGS-PON/25G PON)",
-        "智慧家庭IoT閘道器(Zigbee/Thread/Matter協議)",
-        "邊緣運算閘道器(Intel Atom/x86/ARM平台)"
+        "寬頻網路閘道器",
+        "企業與家用無線存取點",
+        "光纖寬頻終端設備",
+        "固定無線接取CPE",
+        "智慧家庭與物聯網閘道器"
       ],
       "customers": [
-        "Cisco(企業Wi-Fi AP ODM)",
-        "Verizon(5G Small Cell/家用閘道器)",
-        "Comcast(Xfinity xFi閘道器/ONT)",
-        "AT&T(光纖終端設備/5G小基地台)",
-        "Telefonica(歐洲市場IoT閘道器)"
+        "Comcast（北美寬頻應用對象，非MOPS揭露客戶）",
+        "Verizon（電信網路應用對象，非MOPS揭露客戶）",
+        "AT&T（寬頻接取應用對象，非MOPS揭露客戶）",
+        "Charter Communications（有線寬頻應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "智邦(2391)",
         "啟碁(6285)",
+        "智邦(2345)",
         "正文(4906)"
       ],
       "risks": [
-        "網通設備ODM毛利率偏低(8-12%)",
-        "北美電信資本支出週期性波動",
-        "中國網通廠低價競爭"
+        "MOPS未揭露客戶、協定版本或各產品營收占比",
+        "北美電信資本支出與單一區域訂單波動可能影響營收"
       ],
       "legacy": {},
       "evidence": [
@@ -51,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：有線網路產品、無線網路產品及其他。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收79.80億元，MoM+9.7%、YoY+51.3%，累計YoY+56.9%；公司備註北美市場訂單增溫。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "Wi-Fi 7 320MHz頻寬與MLO多鏈路操作技術",
-        "5G Open RAN小基地台白盒化硬體設計",
-        "XGS-PON/25G PON光纖終端晶片整合"
+        "有線／無線閘道器SoC、射頻前端與天線整合",
+        "光纖接取終端的PON協定與營運商管理介面",
+        "CPE韌體、遠端管理、資安更新與量產測試"
       ],
       "swot": {
         "strengths": [
-          "7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%，北美訂單爆發性成長",
-          "北美Tier-1電信運營商(Verizon/Comcast/AT&T)核心ODM夥伴",
-          "Wi-Fi 7與5G Small Cell產品線完整"
+          "MOPS直接支持有線與無線網路產品製造",
+          "7月營收79.80億元、YoY+51.3%，公司說明北美訂單增溫"
         ],
         "weaknesses": [
-          "ODM毛利率偏低(8-12%)",
-          "高度依賴北美市場",
-          "無自有品牌"
+          "未揭露具名客戶、產品規格與毛利結構",
+          "電信設備ODM議價空間與區域集中度仍需追蹤"
         ],
         "opportunities": [
-          "Wi-Fi 7換機週期2026年啟動",
-          "5G Open RAN白盒化趨勢",
-          "Matter協議統一智能家居生態"
+          "寬頻升級與固定無線接取可帶動CPE換機",
+          "智慧家庭與遠端管理需求提高軟硬體整合價值"
         ],
         "threats": [
-          "品牌廠自建ODM能力",
-          "中國廠低價搶單",
-          "美國關稅政策風險"
+          "北美營運商資本支出轉弱會直接影響拉貨",
+          "啟碁、正文及中國網通ODM競價激烈"
         ]
       }
     },

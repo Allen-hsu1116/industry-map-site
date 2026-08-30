@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4764",
   "companyName": "雙鍵",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -171,28 +171,30 @@
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "indirect",
-      "supplyChainStage": "packaging_additives",
-      "roleType": "packaging_material_additive",
-      "roleSummary": "雙鍵MOPS揭露塑膠添加劑與UV光固化產品；在先進封裝題材僅能定位為UV固化樹脂添加劑的潛在材料供應者，未揭露量產封裝客戶。2026年7月營收2.94億元、YoY+44.1%、MoM+3.4%。",
+      "supplyChainStage": "uv_materials_adjacent",
+      "roleType": "uv_curing_material_adjacent",
+      "roleSummary": "雙鍵MOPS只揭露塑膠添加劑與UV光固化產品，沒有揭露晶圓暫時貼合、底部填膠、封裝膠或半導體客戶；在先進封裝題材僅屬UV固化材料的潛在應用鄰近者。2026年7月營收2.94億元、MoM+3.4%、YoY+44.1%，成長不能歸因於先進封裝。",
       "products": [
-        "365/395nm UV-LED固化封裝膠用光引發劑",
-        "環氧底部填膠用UV吸收劑與光安定劑",
-        "晶圓暫時貼合膠用UV解黏添加劑",
-        "封裝保護塗層用丙烯酸酯寡聚物"
+        "UV光固化樹脂配方",
+        "UV光固化塗層材料",
+        "塑膠用抗氧化添加劑",
+        "塑膠用光安定添加劑",
+        "塑膠用紫外線吸收添加劑"
       ],
       "customers": [
-        "長興(1717；封裝樹脂配方應用對象)",
-        "達興材料(5234；電子材料驗證對象)",
-        "日月光投控(3711；封裝材料終端驗證對象)",
-        "矽品精密(封裝材料終端驗證對象)"
+        "長興(1717；UV材料配方生態對象，非MOPS揭露客戶)",
+        "達興材料(5234；電子材料驗證對象，非MOPS揭露客戶)",
+        "日月光投控(3711；封裝材料終端驗證對象，非MOPS揭露客戶)",
+        "力成(6239；封裝材料終端驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "長興(1717)",
-        "巴斯夫(BASF)"
+        "BASF",
+        "ADEKA"
       ],
       "risks": [
-        "封裝材料添加劑佔比極低",
-        "先進封裝材料認證門檻高"
+        "MOPS未揭露半導體封裝材料或量產認證",
+        "先進封裝材料驗證週期長且電子級純度要求高"
       ],
       "legacy": {},
       "evidence": [
@@ -211,37 +213,44 @@
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
         },
         {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品之研發、製造與銷售。"
+        },
+        {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收2.94億元，YoY+44.1%，MoM+3.4%，累計YoY+28.6%"
+          "claim": "2026年7月營收2.94億元，MoM+3.4%、YoY+44.1%，累計YoY+28.6%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "365/395nm UV-LED自由基聚合與秒級固化",
-        "HALS/UV absorber分子設計及耐黃變控制",
-        "奈米添加劑分散與低離子雜質配方"
+        "UV自由基聚合、固化速率與表面黏著控制",
+        "抗氧化劑與光安定劑配方相容性設計",
+        "樹脂黏度、添加劑分散與耐黃變控制"
       ],
       "swot": {
         "strengths": [
-          "MOPS揭露UV光固化產品研發製造，具光引發與樹脂添加劑配方基礎",
-          "2026年7月營收2.94億元、YoY+44.1%，本業需求與出貨動能強"
+          "MOPS支持塑膠添加劑與UV光固化產品研發製造",
+          "7月營收2.94億元、YoY+44.1%、累計YoY+28.6%"
         ],
         "weaknesses": [
-          "未公開半導體封裝材料量產客戶或營收占比，題材純度低",
-          "缺乏先進封裝所需低離子污染、低翹曲與長期可靠度的公開驗證資料"
+          "未揭露封裝膠、底填膠或晶圓製程材料",
+          "營收成長無法拆分為先進封裝貢獻"
         ],
         "opportunities": [
-          "CoWoS與晶圓級封裝擴產增加UV解黏、暫時貼合與保護塗層材料驗證需求",
-          "UV-LED低溫快速固化可縮短敏感元件封裝節拍"
+          "封裝製程對低溫快速固化材料有潛在需求",
+          "既有UV固化與添加劑能力可作為電子材料開發起點"
         ],
         "threats": [
-          "信越化學、日東電工等材料商已有完整封裝認證與客戶黏著度",
-          "封裝客戶驗證期長，若配方未通過可靠度測試便無法轉成營收"
+          "日美電子化學品大廠掌握認證與客戶關係",
+          "材料離子純度或可靠度未達標將阻礙導入"
         ]
       }
     },

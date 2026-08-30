@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2059",
   "companyName": "川湖",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "ai-server-mechanical",
@@ -10,29 +10,29 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "server_mechanical_rails",
-      "roleType": "server_rail_cable_management_supplier",
-      "roleSummary": "川湖5月營收37.9億年增172.1%累計118.4億年增74.2%。全球伺服器滑軌龍頭，新產品出貨帶動爆發性成長，AI伺服器高載重需求為新動能。",
+      "roleType": "server_rail_manufacturer",
+      "roleSummary": "川湖MOPS直接揭露伺服器用導軌及周邊零組件，屬AI伺服器機構件的核心滑軌環節；但MOPS沒有揭露特定雲端或ODM客戶。2026年7月營收64.07億元、MoM+44.2%、YoY+355.5%，公司說明由新產品出貨帶動，仍不能把全部增幅都歸因於AI伺服器。",
       "products": [
-        "伺服器滑軌(1U/2U/4U/8U/載重50-150kg/深度550-1000mm)",
-        "機架理線器(Cable Management Arm/動態載重20kg)",
-        "AI伺服器GPU支架與導軌(SXM5/OAM form factor/散熱導風設計)",
-        "高載重滑軌(100kg+/靜音等級<35dB/鋼珠式滾動)",
-        "電子設備機架安裝套件(19吋標準機架/快拆式/工具免用)"
+        "機架式伺服器伸縮導軌",
+        "高載重伺服器滑軌組",
+        "伺服器導軌周邊固定組件",
+        "免工具機架安裝滑軌套件"
       ],
       "customers": [
-        "Dell(伺服器滑軌/理線器OEM)",
-        "HPE(伺服器滑軌/理線器OEM)",
-        "廣達(2382)(AI伺服器滑軌採購)",
-        "緯創(3231)(伺服器滑軌採購)",
-        "Supermicro(伺服器滑軌採購)"
+        "Dell Technologies（伺服器應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
+        "廣達(2382；伺服器ODM應用對象，非MOPS揭露客戶）",
+        "緯穎(6669；AI伺服器ODM應用對象，非MOPS揭露客戶）",
+        "Supermicro（伺服器應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "伺服器滑軌與機構件供應商",
-        "資料中心機架零組件廠"
+        "Accuride International",
+        "Jonathan Engineered Solutions",
+        "General Devices"
       ],
       "risks": [
-        "雲端資本支出、伺服器平台換代與主要客戶拉貨節奏會影響需求。",
-        "雖受 AI server 機構需求推動，但不是晶片或伺服器 ODM。"
+        "伺服器平台換代可能使導軌規格與驗證成本上升",
+        "客戶拉貨集中及高基期可能放大月營收波動"
       ],
       "evidence": [
         {
@@ -48,36 +48,46 @@
           "title": "川湖科技股份有限公司基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "川湖科技股份有限公司基本資料 supports 川湖 role as server_rail_cable_management_supplier in AI 伺服器機構件與滑軌 through disclosed product/service scope."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：研發、設計、製造和銷售伺服器等用導軌及其周邊零組件；鉸鏈與滑軌製造買賣。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%；公司備註新產品開始出貨。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "伺服器滑軌精密滾珠導軌設計(靜音/高載重)",
-        "AI伺服器GPU支架結構分析與散熱導風設計",
-        "Cable Management Arm動態應力模擬技術"
+        "多節伸縮滑軌、鋼珠保持與低摩擦運動設計",
+        "高載重條件下的鎖定、止擋與耐久循環驗證",
+        "沖壓、表面處理與總成公差鏈控制"
       ],
       "swot": {
         "strengths": [
-          "6月營收4.44億YoY+220.5%創歷史新高，累計16.3億YoY+99%，新產品出貨帶動爆發性增長",
-          "全球伺服器滑軌市佔率領先，Dell/HPE/Supermicro核心供應商",
-          "AI伺服器GPU支架(SXM5/OAM)與散熱導風設計，切入高附加價值機構件"
+          "MOPS直接支持伺服器導軌及周邊零組件製造",
+          "7月營收64.07億元、YoY+355.5%，且公司說明新產品開始出貨"
         ],
         "weaknesses": [
-          "滑軌為利基型零件，單價低，絕對營收規模小",
-          "產品線集中在機構件，不涉及晶片或伺服器ODM，附加價值有限",
-          "NB鉸鏈受筆電需求疲軟影響，非伺服器業務拖累整體"
+          "MOPS沒有揭露AI伺服器占比或具名客戶",
+          "7月MoM+44.2%與高基期並存，後續波動可能加大"
         ],
         "opportunities": [
-          "AI伺服器GB200 NVL72機櫃帶動高載重滑軌與理線器需求(8U/載重150kg+)",
-          "Dell/HPE AI伺服器出貨增長，滑軌採購量同步放大",
-          "GPU支架/導風結構件為新增長引擎，ASP顯著高於傳統滑軌"
+          "AI伺服器重量與維護需求提高高載重滑軌價值",
+          "機架密度提升可增加免工具安裝與維修導軌需求"
         ],
         "threats": [
-          "雲端資本支出放緩將直接影響伺服器出貨與滑軌拉貨",
-          "中國滑軌廠(如精元/貿聯)低價競爭",
-          "AI伺服器機構設計標準化後，新進入者門檻降低"
+          "ODM平台重新設計或替代供應商導入可能影響份額",
+          "鋼材、表面處理成本與專利競爭可能壓縮獲利"
         ]
       }
     },

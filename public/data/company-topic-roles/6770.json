@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6770",
   "companyName": "力積電",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -98,30 +98,30 @@
       "topicName": "NOR Flash 與利基記憶體",
       "topicType": "product",
       "directness": "core",
-      "supplyChainStage": "wafer_fabrication",
-      "roleType": "niche_dram_foundry",
-      "roleSummary": "力積電6月營收64.74億YoY+68.8%，累計308.63億YoY+37.8%，MOPS備註「客戶需求上升、銷售量增加、銷售價格調漲」。MOPS登記為積體電路生產製造測試封裝/ASIC技術整合服務/矽智財設計。利基型DRAM代工領導廠商，12吋廠提供PSRAM、利基DRAM與特殊記憶體代工服務，受惠DRAM價格上漲與需求回升。",
+      "supplyChainStage": "wafer_manufacturing",
+      "roleType": "memory_ic_manufacturing_service",
+      "roleSummary": "力積電MOPS揭露積體電路生產、製造、測試、封裝及ASIC技術整合，足以支持記憶體製造服務角色，但沒有揭露原角色中的特定製程節點、記憶體規格、車規認證或具名客戶。2026年7月營收66.69億元、YoY+70.5%、MoM+3.0%，公司說明由需求、銷量與價格同步上升帶動。",
       "products": [
-        "12吋利基DRAM代工(PSRAM/LPDDR4/DDR3)",
-        "特殊記憶體代工(SDR/Mobile RAM)",
-        "CIS記憶體整合代工(CIS+DRAM堆疊)",
-        "車規記憶體代工(AEC-Q100)"
+        "利基型記憶體晶圓製造服務",
+        "記憶體IC晶圓測試服務",
+        "記憶體IC封裝服務",
+        "特殊應用積體電路技術整合服務",
+        "矽智財設計與服務"
       ],
       "customers": [
-        "ISSI(利基DRAM設計)",
-        "兆易創新GigaDevice(利基DRAM)",
-        "Winbond(2344)(記憶體代工合作)",
-        "ESMT(利基DRAM)"
+        "GigaDevice（利基記憶體應用對象，非MOPS揭露客戶）",
+        "ISSI（利基記憶體應用對象，非MOPS揭露客戶）",
+        "華邦電(2344；記憶體供應鏈對象，非MOPS揭露客戶）",
+        "晶豪科(3006；利基記憶體生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "南亞科(2408)(利基DRAM)",
-        "華邦電(2344)(利基記憶體)",
-        "PSMC自身晶圓代工(6770)"
+        "世界(5347)",
+        "華邦電(2344)",
+        "南亞科(2408)"
       ],
       "risks": [
-        "6月營收64.74億YoY+68.8%累計+37.8%需求上升價格調漲但基期低",
-        "利基DRAM代工毛利低於先進製程，資本支出效率受限",
-        "12吋40nm製程面臗設備老化與維護成本上升"
+        "MOPS未分列記憶體品項、製程節點與客戶",
+        "記憶體價格與成熟製程產能利用率具有高度循環性"
       ],
       "legacy": {},
       "evidence": [
@@ -138,36 +138,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：積體電路生產、製造、測試、封裝；ASIC技術整合與矽智財服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收66.69億元，MoM+3.0%、YoY+70.5%，累計YoY+42.7%；公司說明客戶需求、銷量及售價上升。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "12吋40nm利基DRAM代工(DDR3/DDR4 PSRAM/LPDDR)",
-        "特殊記憶體CIS+DRAM 3D整合製程",
-        "車規AEC-Q100記憶體代工可靠性製程"
+        "成熟製程記憶體晶圓製造與良率控制",
+        "晶圓測試、封裝與製造資料回饋整合",
+        "ASIC製程整合、矽智財導入與量產移轉"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月64.74億 YoY+68.8%，12吋40nm利基DRAM代工(DDR3/DDR4 PSRAM/LPDDR)",
-          "特殊記憶體CIS+DRAM 3D整合製程",
-          "車規AEC-Q100記憶體代工可靠性製程"
+          "MOPS支持IC製造、測試、封裝與技術整合服務",
+          "7月營收66.69億元、YoY+70.5%，且公司說明量價齊升"
         ],
         "weaknesses": [
-          "利基DRAM代工毛利率低於標準型DRAM",
-          "記憶體景氣循環劇烈影響稼動率",
-          "40nm製程落後標準型DRAM(1a/1b nm)"
+          "未揭露利基記憶體產品別、節點與具名客戶",
+          "成熟製程與記憶體代工毛利受景氣循環影響大"
         ],
         "opportunities": [
-          "車用DRAM(IVI/ADAS)需求穩定成長",
-          "ISSI/兆易創新等利基DRAM設計公司代工需求",
-          "CIS+DRAM 3D整合(手機多鏡頭)新應用"
+          "利基型記憶體與特殊IC供應鏈分散可增加代工需求",
+          "製造、測試與封裝整合有助縮短客戶量產導入"
         ],
         "threats": [
-          "南亞科(2408)10nm級利基DRAM製程領先",
-          "中國利基DRAM(長鑫存储)低價競爭",
-          "利基DRAM市場規模有限"
+          "中國成熟製程擴產與記憶體供給增加壓抑價格",
+          "需求降溫時折舊與高固定成本會快速侵蝕獲利"
         ]
       }
     }

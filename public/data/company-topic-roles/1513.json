@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1513",
   "companyName": "中興電",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -87,33 +87,30 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "electrical_equipment",
-      "roleType": "ess_electrical_equipment",
-      "roleSummary": "中興電工在儲能題材中為台灣儲能EPC主要統包商，提供PCS功率調節系統、儲能電廠配電盤及氫能發電系統。6月營收28.33億YoY+8.31%，累計140.24億YoY+3.48%，MOPS登記涵蓋綠能/輸配電/氫能三大領域。台電調頻備轉標案EPC實績，具MW級儲能系統整合能力。",
+      "supplyChainStage": "grid_interconnection",
+      "roleType": "grid_equipment_and_epc_adjacent",
+      "roleSummary": "中興電MOPS揭露綠能、輸配電設備暨工程、發電設備暨工程及氫能系統，但沒有揭露電芯、電池模組、BMS或PCS；因此在儲能題材只屬案場併網與電力工程鄰近角色。2026年7月營收24.10億元、YoY+3.8%、MoM-14.9%，累計YoY+3.5%。",
       "products": [
-        "儲能用功率調節系統(PCS)(100kW-5MW級雙向變流器)(台電調頻備轉標案)",
-        "儲能電廠配電盤(MV/LV開關櫃含保護電驛)(中壓15kV/低壓380V)",
-        "氫能燃料電池發電系統(PEM型固定式發電)(中油示範場)",
-        "微電網控制系統(EMS能源管理整合)(太陽能+儲能混合)",
-        "輸配電力設備暨工程(161kV/69kV變電站統包工程)"
+        "輸配電力設備（儲能案場併網應用）",
+        "變電與配電工程統包服務",
+        "發電設備暨工程系統",
+        "節能空調與能源工程",
+        "氫能發電暨產氫系統"
       ],
       "customers": [
-        "台電(儲能調頻備轉EPC統包標案)",
-        "森崴能源(6806)(儲能案場PCS+配電盤採購)",
-        "台達電(2308)(儲能系統整合配電設備配套)",
-        "中油(氫能燃料電池示範場域)",
-        "台塑化(6505)(輸配電設備工程)"
+        "台灣電力公司（併網工程應用對象，非MOPS揭露客戶）",
+        "台達電(2308；儲能系統整合對象，非MOPS揭露客戶）",
+        "Fluence Energy（儲能案場生態對象，非MOPS揭露客戶）",
+        "台灣中油（氫能系統應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "士林電機(1503)",
         "東元(1504)",
-        "台達電(2308)",
         "華城(1519)"
       ],
       "risks": [
-        "儲能標案競爭加劇，PCS利潤率面臨下行壓力",
-        "氫能業務仍在示範階段，短期營收貢獻有限",
-        "累計營收增幅僅2.3%，低於綠能產業高成長預期"
+        "MOPS未揭露電池、BMS或PCS，儲能直接產品曝險有限",
+        "工程認列與標案時程使單月營收波動"
       ],
       "legacy": {},
       "evidence": [
@@ -130,36 +127,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：綠能／輸配電力設備暨工程、節能空調及發電設備暨工程、氫能發電暨產氫系統。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收24.10億元，MoM-14.9%、YoY+3.8%，累計YoY+3.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "儲能PCS雙向變流器(100kW-5MW級/四象限運轉)",
-        "PEM氫能燃料電池固定式發電系統(產氫+發電一體化)",
-        "微電網EMS能源管理整合控制(太陽能+儲能+柴油備援)"
+        "變電站保護電驛、開關設備與併網控制整合",
+        "EPC工程介面、測試送電與電能品質管理",
+        "產氫、氫能發電與站級控制系統整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收28.33億YoY+8.31%，累計140.24億YoY+3.48%，本業輸配電設備穩健支撐儲能投資",
-          "MOPS登記涵蓋綠能/輸配電/氫能三大領域，為台灣儲能EPC主要統包商",
-          "台電調頻備轉標案EPC實績，具備MW級儲能系統整合能力"
+          "MOPS支持輸配電設備、工程及綠能系統整合能力",
+          "7月營收24.10億元、YoY+3.8%，累計仍成長"
         ],
         "weaknesses": [
-          "儲能EPC毛利偏低，工程收入認列時點不確定性高",
-          "氫能燃料電池仍處示範階段，尚未規模化貢獻營收",
-          "資本額50.3億相對較小，大型標案融資壓力較大"
+          "沒有揭露電芯、電池模組、BMS或PCS產品",
+          "7月MoM-14.9%，工程認列動能轉弱"
         ],
         "opportunities": [
-          "台電2026年儲能標案持續釋出，EPC統包需求增長",
-          "氫能政策推動下產氫系統可切入工業用氫市場",
-          "微電網整合方案可拓展至離島與工業園區應用"
+          "大型儲能案場仍需要變電、保護與併網工程",
+          "電網強韌及氫能示範可擴大能源工程需求"
         ],
         "threats": [
-          "儲能EPC標案競爭加劇，中興電工面對華城(1519)、士電(1503)等對手",
-          "台電標案付款週期長，現金流壓力大",
-          "氫能商業化進度受政策與基礎設施建設速度制約"
+          "標案競價與驗收遞延可能壓縮毛利及營收",
+          "儲能系統商若垂直整合併網設備，外包商機可能下降"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -264,21 +264,20 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "信昌電提供太陽能逆變器用高壓陶瓷電容與突波保護元件，受惠太陽能裝置量持續成長帶動逆變器被動元件需求。",
+      "supplyChainStage": "inverter_passives_adjacent",
+      "roleType": "passive_component_application_adjacent",
+      "roleSummary": "信昌電MOPS僅揭露晶片電容、晶片電阻與介電瓷粉，未揭露太陽能或風電專案；本題材只定位為逆變器控制板可能採用的被動元件供應鄰近者。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，但公司整體成長不能直接歸因於再生能源。",
       "products": [
-        "高壓陶瓷電容(太陽能逆變器DC-Link濾波>1kV)",
-        "晶片電阻(太陽能監控電路0.1%精度)",
-        "突波吸收器(太陽能逆變器過壓保護Va>470V)",
-        "車規級被動元件(AEC-Q200認證)",
-        "介電瓷粉(高壓電容原料BaTiO3)"
+        "高壓多層陶瓷晶片電容（逆變器濾波應用）",
+        "精密晶片電阻（電壓／電流取樣應用）",
+        "介電瓷粉（多層陶瓷電容介電層材料）",
+        "晶片電容／電阻組合（光伏控制板應用）"
       ],
       "customers": [
-        "台達電(2308)(太陽能逆變器被動元件)",
-        "茂迪(6244)(太陽能系統被動元件)",
-        "康舒(6282)(太陽能逆變器被動元件)",
-        "SMA(德國太陽能逆變器被動元件)"
+        "台達電(2308；逆變器應用對象，非MOPS揭露客戶)",
+        "茂迪(6244；光伏設備應用對象，非MOPS揭露客戶)",
+        "SMA Solar Technology（逆變器應用對象，非MOPS揭露客戶）",
+        "SolarEdge Technologies（逆變器應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "國巨(2327)",
@@ -286,8 +285,8 @@
         "太陽誘電(Taiyo Yuden)"
       ],
       "risks": [
-        "太陽能被動元件市場規模有限",
-        "逆變器技術升級快速,被動元件需持續跟進"
+        "MOPS未揭露再生能源客戶或產品營收，題材歸因風險高",
+        "逆變器被動元件價格競爭與原料成本可能壓縮毛利"
       ],
       "legacy": {},
       "evidence": [
@@ -304,36 +303,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "高壓陶瓷電容耐壓設計(>1kV DC多層介電)",
-        "太陽能逆變器用突波吸收器(Va>470V壓敏電阻)",
-        "車規級被動元件認證(AEC-Q200溫度循環)"
+        "介電瓷粉粒徑、燒結與介電常數控制",
+        "多層陶瓷電容介電層與內電極共燒製程",
+        "晶片電阻薄膜阻值與雷射修整控制"
       ],
       "swot": {
         "strengths": [
-          "高壓陶瓷電容(>1kV DC-Link)切入太陽能逆變器供應鏈(台達電/康舒)",
-          "突波吸收器(Va>470V)提供太陽能逆變器過壓保護方案",
-          "車規AEC-Q200認證被動元件可跨足儲能/電動車應用"
+          "MOPS直接支持晶片電容、晶片電阻與介電瓷粉產品組合",
+          "7月營收5.37億元，MoM+6.6%、YoY+47.9%"
         ],
         "weaknesses": [
-          "太陽能/儲能被動元件佔整體營收比重低，規模效應有限",
-          "高壓陶瓷電容與突波吸收器競爭者多(台灣晶片電阻/國巨)",
-          "再生能源政策變動影響下游逆變器廠訂單能見度"
+          "MOPS沒有揭露太陽能、風電或逆變器產品",
+          "公司整體營收成長無法拆分為再生能源貢獻"
         ],
         "opportunities": [
-          "太陽能裝置量持續增長帶動逆變器被動元件需求",
-          "儲能系統PCS變流器需高壓濾波電容(>1500V)",
-          "車規被動元件打入充電樁供應鏈"
+          "光伏逆變器控制板需要高可靠度電容與精密取樣電阻",
+          "介電瓷粉垂直整合可支援高容量陶瓷元件開發"
         ],
         "threats": [
-          "中國太陽能逆變器廠(華為/陽光電源)低价競爭壓縮供應鏈",
-          "再生能源補助政策退坡影響下游需求",
-          "被動元件大宗商品化壓力"
+          "國巨、華新科與日系被動元件廠競爭激烈",
+          "再生能源裝置與逆變器庫存循環可能造成需求波動"
         ]
       }
     },

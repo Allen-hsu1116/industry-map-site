@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1608",
   "companyName": "華榮",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -175,32 +175,30 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "electrical_equipment",
-      "roleType": "wind_farm_cable",
-      "roleSummary": "華榮為台灣老牌電線電纜廠,離岸風電領域供應風場陣列海纜與陸上輸電電纜,6月營收11.0億YoY+13.4%,受惠電網升級與離岸風電建置。",
+      "supplyChainStage": "grid_cable_adjacent",
+      "roleType": "power_cable_grid_enabler",
+      "roleSummary": "華榮MOPS揭露電線電纜、銅製品與電力／通信工程，但沒有揭露離岸風場海纜或特定風場客戶；在再生能源題材應定位為併網與場內配電電纜的應用鄰近者。2026年7月營收12.68億元、MoM+15.0%、YoY+42.7%，公司整體動能強，但不能全數歸因於綠能。",
       "products": [
-        "離岸風場陣列電纜(33kV XLPE)(內陣列海纜)",
-        "離岸風場輸出電纜(66kV XLPE)(Export Cable)",
-        "風場陸上輸電電纜(161kV/345kV)(台電併聯)",
-        "海底電纜(配合中華電信海纜登段)",
-        "高壓電力電纜(15kV/25kV XLPE)(台電配電)"
+        "交連聚乙烯絕緣電力電纜（再生能源併網應用）",
+        "高壓電力電纜（升壓站至電網應用）",
+        "銅導體與銅製電纜材料",
+        "通信電纜（場站監控與通訊應用）",
+        "電力與通信工程設計施工服務"
       ],
       "customers": [
-        "台電(風場併聯輸電線路)",
-        "沃旭能源(Ørsted)(離岸風場海纜)",
-        "CIP哥本哈根基礎建設基金(風場電纜)",
-        "中華電信(2412)(海底電纜登陸段)",
-        "北陸能源(Northland Power)(風場電纜)"
+        "台灣電力公司（電網工程應用對象，非MOPS揭露客戶）",
+        "沃旭能源(Ørsted；風場併網應用對象，非MOPS揭露客戶)",
+        "Copenhagen Infrastructure Partners（風場應用對象，非MOPS揭露客戶）",
+        "中華電信(2412；通信工程應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "華新(1605)(風場電纜)",
-        "大亞(1609)(離岸風電電纜)",
-        "中華電纜(風場海底電纜)"
+        "華新(1605)",
+        "大亞(1609)",
+        "太平洋電線電纜"
       ],
       "risks": [
-        "6月營收11.03億YoY+13.4%但離岸風電電纜佔比低",
-        "海底電纜技術門檻高但市場規模有限",
-        "離岸風電進度受環評與海事工程影響"
+        "MOPS未揭露海底電纜或風場標案，離岸風電直接性不足",
+        "銅價與工程驗收時程會放大營收及毛利波動"
       ],
       "legacy": {},
       "evidence": [
@@ -217,36 +215,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各種電線電纜及銅製品之加工、製造、銷售及施工；電力與通信工程設計、施工維護及技術服務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收12.68億元，MoM+15.0%、YoY+42.7%，累計YoY+19.4%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "離岸風場高壓海底電纜製造(33kV/66kV)",
-        "風場陣列電纜與輸出電纜設計",
-        "交連PE(XLPE)絕緣電纜製程"
+        "XLPE絕緣押出、交連與局部放電控制",
+        "銅導體絞合、屏蔽與電纜熱容量設計",
+        "電纜終端接續、路由與現場工程整合"
       ],
       "swot": {
         "strengths": [
-          "6月營收11.0億YoY+13.4%，累計67.2億YoY+15.8%，受惠電網投資與離岸風電",
-          "具備33kV/66kV離岸風場海纜製造能力，供貨沃旭/CIP/北陸能源",
-          "161kV/345kV陸上輸電電纜供貨台電風場併聯，產品線完整"
+          "MOPS支持電線電纜、銅製品及電力工程一體化能力",
+          "7月營收12.68億元，MoM+15.0%、YoY+42.7%"
         ],
         "weaknesses": [
-          "離岸風場海纜產能有限，交期壓力大",
-          "海纜起步較晚，規模小於華新(1605)與大亞(1609)",
-          "銅價為主要原料成本，波動直接影響毛利"
+          "未揭露離岸風場海纜產品或風場客戶",
+          "公司整體營收成長不能直接視為再生能源收入"
         ],
         "opportunities": [
-          "離岸風電區塊開發(2026-2035)帶動海纜需求持續增長",
-          "台電強化電網韌性計畫投入數千億，高壓輸電電纜採購增加",
-          "中華電信海底電纜登陸段需求隨國際海纜擴建增長"
+          "再生能源併網與電網強韌計畫增加高壓電纜需求",
+          "場站監控可帶動電力與通信工程整合商機"
         ],
         "threats": [
-          "華新(1605)與大亞(1609)海纜產能較大，競爭劣勢",
-          "離岸風電開發商壓低海纜採購價格，壓縮毛利",
-          "中國電纜廠低價競爭成熟產品線"
+          "風場建置延誤與工程認列遞延會影響拉貨",
+          "銅價、同業競標及低價電纜競爭可能侵蝕毛利"
         ]
       }
     }

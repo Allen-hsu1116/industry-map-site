@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -275,30 +275,29 @@
       "topicType": "supply_chain_segment",
       "directness": "indirect",
       "supplyChainStage": "back_end_test",
-      "roleType": "wafer_test_service",
-      "roleSummary": "欣銓為專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。在半導體設備材料題材中屬後段測試環節，受記憶體與車用IC需求帶動。",
+      "roleType": "wafer_and_final_test_service",
+      "roleSummary": "欣銓MOPS直接揭露記憶體IC晶圓測試、數位／混合訊號IC晶圓與成品測試及晶圓型Burn-in；公司不是半導體設備或前段材料供應商，而是使用測試設備的後段服務業者。FinMind顯示2026年7月營收17.67億元、MoM+13.8%、YoY+52.3%。",
       "products": [
-        "晶圓測試CP(記憶體IC晶圓級 probing)",
-        "成品測試FT(封裝後功能測試/老化測試)",
-        "Burn-in測試(晶圓型/成品型高溫老化壽命篩選)",
-        "混合訊號IC測試(ADC/DAC/射頻IC量測)",
-        "車規IC測試(AEC-Q100車用晶片篩選)"
+        "記憶體IC晶圓測試服務",
+        "數位訊號IC晶圓測試服務",
+        "混合訊號IC晶圓測試服務",
+        "封裝後成品功能測試服務",
+        "晶圓型Burn-in老化測試"
       ],
       "customers": [
-        "華邦電(2344)(記憶體IC晶圓測試)",
-        "旺宏(2337)(NOR Flash測試代工)",
-        "力積電(6770)(記憶體/邏輯IC測試)",
-        "聯詠(3034)(顯示驅動IC測試代工)"
+        "華邦電(2344；記憶體測試應用對象，非MOPS揭露客戶)",
+        "旺宏(2337；記憶體測試應用對象，非MOPS揭露客戶)",
+        "聯詠(3034；數位／混合訊號測試應用對象，非MOPS揭露客戶)",
+        "力積電(6770；晶圓製造供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "京元電(2449)(IC測試代工龍頭)",
-        "力成(6239)(封測整合含測試)",
-        "矽格(6257)(利基IC測試)"
+        "京元電子(2449)",
+        "矽格(6257)",
+        "力成(6239)"
       ],
       "risks": [
-        "IC測試為資本密集產業，測試機台投資金額大",
-        "記憶體IC測試需求受記憶體景氣循環影響大",
-        "面臨京元電(2449)等同業價格競爭壓力"
+        "本題材屬設備使用端而非設備／材料供應端，直接性有限",
+        "測試機台資本支出與IC景氣循環會影響利用率"
       ],
       "legacy": {},
       "evidence": [
@@ -315,36 +314,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位及混合訊號IC晶圓與成品測試、晶圓型Burn-in。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收17.67億元，MoM+13.8%、YoY+52.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "記憶體IC晶圓級測試(Wafer Probing)高精度探針卡技術",
-        "Burn-in測試(晶圓型式/成品型式)高溫老化壽命篩選",
-        "混合訊號IC ADC/DAC射頻量測測試平台"
+        "探針卡、晶圓圖與自動測試機程式整合",
+        "高溫晶圓Burn-in、失效篩選與壽命資料分析",
+        "混合訊號量測、校正與量產測試時間優化"
       ],
       "swot": {
         "strengths": [
-          "MOPS核心業務為記憶體IC晶圓測試+Burn-in，技術深度高",
-          "客戶含華邦電(2344)、旺宏(2337)、力積電(6770)，記憶體測試生態完整",
-          "7月營收17.67億MoM+13.8%，測試產能利用率提升中"
+          "MOPS直接支持記憶體、數位與混合訊號IC測試能力",
+          "7月營收17.67億元、MoM+13.8%、YoY+52.3%"
         ],
         "weaknesses": [
-          "半導體設備材料為間接角色，欣銓本身不製造設備",
-          "Burn-in測試板與探針卡為耗材，需持續資本投入更新",
-          "6吋/8吋成熟製程測試ASP較低，利潤貢獻有限"
+          "不是半導體設備或前段材料供應商",
+          "MOPS未揭露具名客戶或各測試類別營收"
         ],
         "opportunities": [
-          "HBM需求帶動記憶體IC測試產能擴充，Burn-in需求同步增長",
-          "車用記憶體測試認證帶來新客戶與高ASP訂單",
-          "AI加速器SLT(System Level Test)測試新業務"
+          "IC複雜度提高可增加測試時間與Burn-in需求",
+          "記憶體與混合訊號需求復甦有利機台利用率"
         ],
         "threats": [
-          "記憶體景氣循環影響測試需求波動大",
-          "探針卡技術升級(垂直式Cantilever→MEMS)需持續投資",
-          "中國測試廠(如潤泰)低价競爭成熟製程訂單"
+          "京元電、矽格與力成競爭測試產能與報價",
+          "客戶自建測試產能或景氣反轉可能壓低稼動率"
         ]
       }
     },

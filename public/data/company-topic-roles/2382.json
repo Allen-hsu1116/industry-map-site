@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2382",
   "companyName": "廣達",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -105,30 +105,30 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "notebook_odm",
-      "roleSummary": "廣達是全球最大NB ODM，6月營收3852億元年增102.9%，累計年增86.5%。消費運算裝置領域為Apple MacBook獨家代工，同時Dell/HP/Lenovo商用筆電核心供應商。MOPS主要經營：電子筆記型電腦及相關產品。",
+      "roleSummary": "廣達MOPS直接揭露電子筆記型電腦及相關產品，足以支持筆電ODM核心角色，但未揭露原角色中的具體型號與品牌客戶。2026年7月營收3,662.74億元、YoY+131.3%、MoM-4.9%，累計YoY+92.7%；公司備註為產品組合變更，不能只歸因於消費筆電。",
       "products": [
-        "MacBook Pro M4/M4 Pro/M4 Max 14/16吋(NB ODM)",
-        "MacBook Air M3 13/15吋(NB ODM)",
-        "Dell Latitude 7450/9450商用筆電(QCM ODM)",
-        "HP EliteBook 1040/8040 G11商用筆電(ODM)",
-        "Lenovo ThinkPad X1 Carbon Gen12(ODM)"
+        "筆記型電腦ODM整機",
+        "輕薄型筆記型電腦",
+        "商用筆記型電腦",
+        "行動工作站",
+        "筆電主機板與系統組裝"
       ],
       "customers": [
-        "Apple(MacBook Pro/Air M4/M3系列)",
-        "Dell(Latitude商用筆電)",
-        "HP(EliteBook商用筆電)",
-        "Lenovo(ThinkPad X1系列)",
-        "ASUS(消費型筆電代工)"
+        "Apple（筆電品牌應用對象，非MOPS揭露客戶）",
+        "Dell Technologies（筆電品牌應用對象，非MOPS揭露客戶）",
+        "HP Inc.（筆電品牌應用對象，非MOPS揭露客戶）",
+        "Lenovo（筆電品牌應用對象，非MOPS揭露客戶）",
+        "ASUS(2357；筆電品牌應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "緯創",
-        "仁寶",
-        "英業達",
-        "和碩"
+        "緯創(3231)",
+        "仁寶(2324)",
+        "英業達(2356)",
+        "和碩(4938)"
       ],
       "risks": [
-        "PC 需求持續疲軟",
-        "AI PC 換機潮尚未明確啟動"
+        "MOPS未揭露品牌客戶、機種與各產品營收占比",
+        "PC需求循環及品牌庫存調整會影響稼動率"
       ],
       "legacy": {
         "topicSlug": "pc-nb-tablet",
@@ -149,32 +149,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 2382 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子筆記型電腦及相關產品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收3,662.74億元，MoM-4.9%、YoY+131.3%，累計YoY+92.7%；公司備註產品組合變更。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "Apple Silicon M4封裝整合設計(ODM層級散熱/PCB)",
-        "商用筆電企業級安全模組整合(TPM 2.0/vPro)",
-        "超薄機構設計(CNC鋁鎂合金一體成型)"
+        "輕薄機構、散熱模組與電池空間協同設計",
+        "主機板SMT、整機組裝與自動化功能測試",
+        "CPU平台、韌體、電源管理與周邊相容性驗證"
       ],
       "swot": {
         "strengths": [
-          "全球NB ODM龍頭，Apple MacBook獨家代工",
-          "6月營收3852億元年增102.9%，AI伺服器+NB雙引擎驅動"
+          "MOPS直接支持電子筆記型電腦及相關產品",
+          "7月營收3,662.74億元、YoY+131.3%，累計YoY+92.7%"
         ],
         "weaknesses": [
-          "消費NB毛利率偏低(個位數)，獲利靠伺服器",
-          "Apple單一客戶集中度高"
+          "未揭露具體筆電型號、品牌客戶或產品毛利",
+          "7月MoM-4.9%，且公司說明成長涉及產品組合變更"
         ],
         "opportunities": [
-          "Apple M4 MacBook換機潮帶動出貨量",
-          "AI PC(AI Accelerator NB)帶動ASP提升"
+          "AI PC與企業換機週期可帶動高階筆電ODM需求",
+          "平台整合與規模採購可提高製造效率"
         ],
         "threats": [
-          "NB市場出貨量持續下滑，需求疲軟",
-          "AI伺服器業務稀釋NB資源配置"
+          "同業競價與品牌議價壓縮ODM毛利",
+          "關稅、匯率與供應鏈區域化增加生產成本"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -323,26 +323,30 @@
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "optical_module_integration",
-      "roleType": "optical_transceiver_integration",
-      "roleSummary": "明泰網通設備整合光收發模組(光學元件)。7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%。",
+      "supplyChainStage": "network_equipment_outside_topic",
+      "roleType": "rf_network_equipment_not_optics",
+      "roleSummary": "明泰MOPS只揭露電信管制射頻器材與無線通信設備，沒有顯示器、LED、鏡頭、感測器或光收發模組；原角色將網通設備錯當光學模組，已改為題材外的射頻網通觀察。2026年7月營收17.43億元、MoM-23.3%、YoY-2.1%，累計YoY僅+1.9%。",
       "products": [
-        "光收發模組整合(100G/400G/800G QSFP-DD)",
-        "光纖通道設備(FC32/FC64)",
-        "PON光模組(XGS-PON/50G PON)"
+        "無線網路存取設備",
+        "射頻通信器材",
+        "寬頻網路閘道器",
+        "乙太網路交換設備",
+        "無線通信終端設備"
       ],
       "customers": [
-        "II-VI/Coherent(光收發模組供應)",
-        "中光電(5345)(光學元件)",
-        "華星光(4969)(光收發模組)"
+        "Cisco Systems（網通平台應用對象，非MOPS揭露客戶）",
+        "HPE Aruba（企業無線應用對象，非MOPS揭露客戶）",
+        "Broadcom（網通晶片平台對象，非MOPS揭露合作關係）",
+        "Qualcomm（無線晶片平台對象，非MOPS揭露合作關係）"
       ],
       "competitors": [
         "中磊(5388)",
-        "智邦(2391)"
+        "啟碁(6285)",
+        "正文(4906)"
       ],
       "risks": [
-        "光學元件為外購品",
-        "光模組技術迭代快"
+        "MOPS未揭露任何顯示、LED或光學產品，題材匹配度極低",
+        "7月營收MoM-23.3%、YoY-2.1%，短期動能偏弱"
       ],
       "legacy": {},
       "evidence": [
@@ -359,31 +363,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電信管制射頻器材製造業、無線通信機械器材製造業。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "800G光收發模組散熱設計",
-        "PON光模組波分复用(WDM)技術"
+        "射頻前端、天線與無線通信協定整合",
+        "乙太網路交換、封包處理與網路管理韌體",
+        "EMI／EMC、射頻法規與量產校正驗證"
       ],
       "swot": {
         "strengths": [
-          "網通設備整合光模組能力",
-          "高速光通訊產品線完整"
+          "MOPS支持射頻器材與無線通信設備製造能力",
+          "累計營收YoY+1.9%，全年仍勉強維持正成長"
         ],
         "weaknesses": [
-          "光模組為外購非自製",
-          "光學技術深度不足"
+          "沒有顯示器、LED、鏡頭、感測器或光模組產品",
+          "7月營收17.43億元，MoM-23.3%、YoY-2.1%"
         ],
         "opportunities": [
-          "800G/1.6T光模組需求隨AI資料中心增長",
-          "車用光達(LiDAR)模組代工新應用"
+          "若網通設備導入光纖上行，可形成外購光模組整合需求",
+          "無線設備升級可帶動射頻與網路管理能力深化"
         ],
         "threats": [
-          "光模組廠垂直整合",
-          "矽光子技術顛覆傳統光模組"
+          "光學題材敘事若持續高估，容易造成錯誤投資歸因",
+          "網通價格競爭與營運商需求波動壓迫成長"
         ]
       }
     }

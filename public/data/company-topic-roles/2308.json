@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -108,30 +108,31 @@
       "topicName": "AI 伺服器電源與 BBU",
       "topicType": "product",
       "directness": "core",
-      "supplyChainStage": "power",
-      "roleType": "power_supply_system_provider",
-      "roleSummary": "台達電是全球電源管理龍頭，6月營收656億元年增55.4%，累計年增41.0%。AI伺服器電源供應器、BBU電池備援系統、48V高壓直流供電方案的核心供應商，NVIDIA/Microsoft/Google等AI資料中心電源方案主要合作夥伴。MOPS主要經營：電源供應系統、散熱系統、工業自動化。",
+      "supplyChainStage": "power_and_backup",
+      "roleType": "power_system_provider",
+      "roleSummary": "台達電MOPS直接揭露電源供應系統、散熱系統與微型化關鍵零組件，能支援AI伺服器電源與備援架構；但MOPS沒有分列BBU規格、AI伺服器營收或具名雲端客戶。2026年7月營收670.73億元、MoM+2.2%、YoY+47.7%，累計YoY+42.1%。",
       "products": [
-        "BBU電池備援單元(18650電池組/48V輸出/2kW)",
-        "PDU智慧電力分配單元(三相480V/單相240V/分支迴路監控)",
-        "48V高壓直流供電系統(效率>97%/功率因數>0.99)",
-        "AI伺服器電源供應器(3kW-5kW鈦金級效率)",
-        "ORv3電源機櫃(Open Rack V3 48V架構)"
+        "伺服器用高功率電源供應系統",
+        "資料中心不斷電電源系統",
+        "機架式電力分配單元",
+        "直流電源轉換與備援模組",
+        "電源系統散熱與風扇模組"
       ],
       "customers": [
-        "NVIDIA(B100/B200 GPU供電方案)",
-        "Microsoft(Azure資料中心48V供電)",
-        "Google(Cloud TPU機架級供電)",
-        "Meta(AI訓練叢集電源管理)",
-        "AWS(Graviton伺服器電源)"
+        "NVIDIA（AI平台應用對象，非MOPS揭露客戶）",
+        "Microsoft（資料中心應用對象，非MOPS揭露客戶）",
+        "Google（資料中心應用對象，非MOPS揭露客戶）",
+        "Meta Platforms（AI叢集應用對象，非MOPS揭露客戶）",
+        "Amazon Web Services（雲端資料中心應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "伺服器電源供應器廠",
-        "工業/醫療電源供應商"
+        "光寶科(2301)",
+        "康舒(6282)",
+        "群電(6412)"
       ],
       "risks": [
-        "電源及零組件雖為最大部門，但仍需追蹤 AI 伺服器高瓦數電源占比與毛利率",
-        "功率元件成本、客戶平台切換與資料中心資本支出循環會影響需求"
+        "MOPS未分列BBU與AI伺服器電源收入，題材貢獻仍需法說驗證",
+        "功率半導體成本與雲端資本支出週期會影響需求"
       ],
       "legacy": {
         "topicSlug": "psu",
@@ -152,32 +153,46 @@
           "title": "台達電子工業股份有限公司 114 年度合併財務報告書",
           "url": "https://doc.twse.com.tw/pdf/202504_2308_AI1_20260528_003237.pdf",
           "claim": "Financial report identifies Delta as a global power management and thermal solution provider; 114 Power and Components external-customer revenue was NT$280,031,634 thousand."
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電源供應系統、無刷直流風扇、散熱系統、微型化關鍵零組件、工業自動化等。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "48V高壓直流(HVDC)供電架構效率>97%",
-        "BBU鋰電池備援切換<4ms無中斷",
-        "PDU分支迴路級電流監控精度±0.5%"
+        "高功率AC/DC轉換、功率因數校正與效率管理",
+        "冗餘電源熱插拔、故障隔離與備援切換",
+        "電池管理、直流匯流排與機架級電源監控整合"
       ],
       "swot": {
         "strengths": [
-          "全球電源管理龍頭，AI伺服器電源市佔>50%",
-          "6月營收656億元年增55.4%，AI需求爆發帶動電源業務爆發成長"
+          "MOPS直接支持電源供應、散熱與關鍵零組件能力",
+          "7月營收670.73億元、YoY+47.7%，累計YoY+42.1%"
         ],
         "weaknesses": [
-          "電源產品ASP受限於客戶議價壓力",
-          "BBU鋰電池供應鏈依賴日韓電池芯"
+          "MOPS未揭露BBU規格、出貨量或具名客戶",
+          "公司產品線廣，整體營收成長不能全部歸因於AI電源"
         ],
         "opportunities": [
-          "48V HVDC成為AI資料中心主流供電標準",
-          "ORv3開放機架標準帶來新增量"
+          "AI機架功率提高，帶動高功率電源與備援需求",
+          "資料中心直流化與機架級監控提升系統整合價值"
         ],
         "threats": [
-          "光寶(2301)競爭伺服器電源份額",
-          "中國廠商低價電源方案壓力"
+          "光寶科、康舒及國際電源廠競爭平台認證",
+          "雲端客戶架構切換或資本支出放緩可能造成拉貨波動"
         ]
       }
     },

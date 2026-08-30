@@ -2,38 +2,37 @@
   "schemaVersion": 1,
   "companyCode": "1536",
   "companyName": "和大",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "industrial-automation",
       "topicName": "工業自動化與 CNC 工具機",
       "topicType": "technology",
-      "directness": "core",
-      "supplyChainStage": "transmission_components",
-      "roleType": "precision_gear_manufacturer",
-      "roleSummary": "和大是台灣最大精密齒輪製造商，提供減速機齒輪、行星齒輪與精密軸類，工業自動化與CNC工具機的關鍵傳動元件供應商。",
+      "directness": "indirect",
+      "supplyChainStage": "precision_transmission_adjacent",
+      "roleType": "gear_and_shaft_manufacturer",
+      "roleSummary": "和大MOPS揭露汽車、機車與農業機械用齒輪、軸類及各種機械零件，沒有揭露機器人減速機、伺服齒輪箱或CNC主軸客戶；在工業自動化題材應定位為精密傳動加工的應用鄰近者。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，累計YoY僅+1.0%。",
       "products": [
-        "精密行星齒輪組(減速比1:3-1:100/背隙<3 arcmin/ISO 6級)",
-        "諧波減速機齒輪組件(柔輪/剛輪/波發生器/減速比1:50-1:200)",
-        "伺服馬達用精密齒輪箱(同軸式/直角式/慣量比<3:1)",
-        "CNC工具機主軸齒輪(高精度斜齒輪/DIN 5級/硬度HRC60)",
-        "RV減速機偏心軸承組件(工業機器人關節用/精度P4級)"
+        "汽車傳動齒輪",
+        "機車傳動齒輪",
+        "農業機械齒輪",
+        "精密傳動軸類",
+        "機械用齒輪與軸類加工件"
       ],
       "customers": [
-        "上銀(2049)(線性傳動用精密齒輪箱)",
-        "台達電(2308)(伺服馬達配套齒輪箱)",
-        "東元(1504)(伺服馬達精度齒輪)",
-        "台中精機(FV/VC系列CNC主軸齒輪)",
-        "永進機械(VCenter/VT系列工具機齒輪)"
+        "台達電(2308；伺服系統應用對象，非MOPS揭露客戶)",
+        "上銀(2049；自動化傳動生態對象，非MOPS揭露客戶)",
+        "FANUC（工業機器人應用對象，非MOPS揭露客戶）",
+        "Yaskawa Electric（伺服與機器人應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "NEUGART(德國精密行星齒輪)",
-        "Sumitomo(住友重機械)",
-        "SEW-EURODRIVE"
+        "英利-KY(2239)",
+        "KYB",
+        "Musashi Seimitsu"
       ],
       "risks": [
-        "齒輪加工毛利受鋼材價格波動影響",
-        "工業自動化齒輪需求受資本支出週期影響"
+        "MOPS未揭露自動化設備或機器人減速機產品",
+        "汽車與機械景氣循環、鋼材及能源成本影響獲利"
       ],
       "legacy": {},
       "evidence": [
@@ -50,36 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：汽機車及農業機械齒輪、軸類與各種機械零件製造加工。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY+1.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-13",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "行星齒輪精密研磨(ISO 6級精度/背隙<3 arcmin)",
-        "諧波減速機柔輪熱處理技術(滲碳淬火HRC58-62)",
-        "RV減速機偏心軸承加工精度控制(P4級/圓度<2μm)"
+        "齒輪滾削、研磨與齒形／齒向誤差控制",
+        "滲碳淬火、硬度梯度與疲勞壽命管理",
+        "軸類同心度、表面粗糙度與動平衡控制"
       ],
       "swot": {
         "strengths": [
-          "台灣最大精密齒輪製造商，行星齒輪組（ISO 6級精度）技術領先",
-          "諧波減速機齒輪組件為CNC工具機與自動化設備核心傳動元件",
-          "伺服馬達用精密齒輪箱供應台達電/東元等一線馬達廠"
+          "MOPS直接支持齒輪、軸類與機械零件製造能力",
+          "7月營收4.40億元、MoM+19.8%、YoY+9.6%"
         ],
         "weaknesses": [
-          "6月營收367億YoY+3.82%，但累計2360億YoY-0.21%，持平無成長",
-          "公司規模小（月營收僅3.67億），產能有限",
-          "工業齒輪屬利基市場，總體規模受限"
+          "沒有揭露機器人減速機、伺服齒輪箱或CNC產品",
+          "累計營收YoY僅+1.0%，中期成長仍偏弱"
         ],
         "opportunities": [
-          "工業4.0自動化升級帶動精密減速機長期需求",
-          "CNC工具機景氣回溫帶動主軸齒輪需求",
-          "伺服馬達市場隨自動化渗透率提升持續擴大"
+          "工業自動化擴張可增加高精度齒輪與軸類需求",
+          "既有熱處理與精密加工可延伸至非車用傳動件"
         ],
         "threats": [
-          "日本Harmonic Drive/Nabtesco在諧波與RV減速機具絕對主導地位",
-          "中國齒輪廠低價競爭壓力增大",
-          "工具機景氣循環波動大，影響齒輪訂單穩定性"
+          "日歐減速機與精密齒輪廠掌握高階客戶認證",
+          "車用主業循環若轉弱，可能限制跨域研發資源"
         ]
       }
     },

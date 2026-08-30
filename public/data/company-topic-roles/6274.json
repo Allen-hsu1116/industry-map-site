@@ -2,41 +2,38 @@
   "schemaVersion": 1,
   "companyCode": "6274",
   "companyName": "台燿",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "substrate_materials",
-      "roleType": "ccl_manufacturer",
-      "roleSummary": "台燿為銅箔基板/粘合片/多層壓合板專業製造商。提供高頻低損耗基板(Megtron 6/7)、高Tg基板及BT樹脂IC載板基板。MOPS主要經營：銅箔基板、粘合片、多層壓合板之製造加工及買賣。",
+      "supplyChainStage": "ccl_and_lamination",
+      "roleType": "ccl_prepreg_manufacturer",
+      "roleSummary": "台燿MOPS直接揭露銅箔基板、粘合片與多層壓合板，屬PCB上游核心材料；原角色中的他牌商品名、精確介電數值與具名客戶均無MOPS支持，已改為產品家族與應用對象。FinMind顯示2026年7月營收59.08億元、MoM+20.7%、YoY+121.5%。",
       "products": [
-        "高頻銅箔基板(Megtron 6/7 Df<0.002@10GHz)",
-        "低損耗多層壓合板(Megtron 7/Tachyon 100G)",
-        "高Tg銅箔基板(IT-180A Tg>200C)",
-        "HDI用粘合片(Prepreg 106/1080/2116)",
-        "IC載板用BT樹脂基板"
+        "高速網通用銅箔基板",
+        "高多層PCB用銅箔基板",
+        "粘合片(Prepreg)",
+        "多層壓合板",
+        "無鹵素銅箔基板"
       ],
       "customers": [
-        "欣興3037(HDI PCB用銅箔基板)",
-        "華通2313(多層PCB用壓合板)",
-        "燿華2367(高頻PCB用低損耗基板)",
-        "台光電2383(高速PCB用Prepreg)",
-        "南亞電路板8046(IC載板用BT基板)"
+        "欣興(3037；PCB材料應用對象，非MOPS揭露客戶)",
+        "華通(2313；多層板材料應用對象，非MOPS揭露客戶)",
+        "金像電(2368；伺服器PCB材料應用對象，非MOPS揭露客戶)",
+        "健鼎(3044；PCB材料應用對象，非MOPS揭露客戶)",
+        "臻鼎-KY(4958；PCB材料應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "聯茂電子(6213)(高階CCL)",
-        "台光電(2383)(高速CCL)",
-        "南亞(1303)(CCL/銅箔基板)",
-        "松下電工(Panasonic)(高頻CCL)",
-        "Rogers(高頻PTFE基板)"
+        "台光電(2383)",
+        "聯茂(6213)",
+        "南亞(1303)"
       ],
       "risks": [
-        "6月營收48.95億MoM+2.1%穩定，但CCL為大宗商品規格，利潤率受銅價與樹脂原料波動影響大",
-        "高頻CCL市場國際大廠Panasonic/Rogers市佔高，台燿技術追趕需持續研發投入",
-        "中國CCL產能過剩壓迫中低階產品價格"
+        "銅箔與樹脂成本波動可能侵蝕毛利",
+        "高速材料規格升級快，客戶認證失敗會延後量產"
       ],
       "legacy": {},
       "evidence": [
@@ -53,32 +50,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：銅箔基板、粘合片、多層壓合板之製造、加工及買賣。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收59.08億元，MoM+20.7%、YoY+121.5%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "高頻低損耗基板Megtron 6/7 Df<0.002@10GHz",
-        "高Tg銅箔基板IT-180A Tg>200C/CTE<3ppm",
-        "BT樹脂IC載板基板薄型化<50um"
+        "樹脂系統、玻纖布與銅箔的介電損耗協同控制",
+        "多層壓合溫壓曲線、板厚與層間對位控制",
+        "銅箔剝離強度、耐熱性與CAF可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "台灣銅箔基板/粘合片專業廠，高頻低損耗基板技術領先",
-          "Megtron 6/7高頻基板AI伺服器/100G供應鏈"
+          "MOPS直接支持銅箔基板、粘合片與多層壓合板量產",
+          "7月營收59.08億元、MoM+20.7%、YoY+121.5%"
         ],
         "weaknesses": [
-          "OTC上櫃，營收數據未透過TWSE OpenAPI揭露",
-          "銅箔基板同質化競爭壓力"
+          "MOPS未揭露高速產品占比與具名客戶",
+          "高階材料需長期認證，產能利用率可能隨景氣波動"
         ],
         "opportunities": [
-          "AI伺服器400G/800G PCB帶動高頻基板需求",
-          "IC載板需求成長帶動BT基板"
+          "AI伺服器與高速交換器提高低損耗CCL需求",
+          "PCB層數增加可提升粘合片與壓合材料用量"
         ],
         "threats": [
-          "台光電2383競爭高速Prepreg份額",
-          "中國/韓國銅箔基板低價競爭"
+          "台光電、聯茂及國際材料廠競爭高階規格",
+          "中國中低階CCL產能與原料價格波動壓迫報價"
         ]
       }
     },

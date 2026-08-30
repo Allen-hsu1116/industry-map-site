@@ -2,38 +2,37 @@
   "schemaVersion": 1,
   "companyCode": "3189",
   "companyName": "景碩",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "substrate",
+      "supplyChainStage": "ic_substrate",
       "roleType": "ic_substrate_manufacturer",
-      "roleSummary": "景碩為台灣前三大IC載板廠，6月營收4224.1億YoY32.3%，累計23601.2億YoY29.8%。6月營收42.2億年增32.3%，受惠AI/HPC用ABF載板需求成長。MOPS主要經營：電子零組件製造/電子材料批發。",
+      "roleSummary": "景碩MOPS本次僅揭露電子零組件製造及電子材料批零售，無法支持原角色的線寬、孔徑與具名客戶；本題材保留其既有IC載板產品家族，但將規格與關係降為待年報／法說交叉驗證。2026年7月營收45.49億元、MoM+7.7%、YoY+35.9%，累計YoY+30.7%。",
       "products": [
-        "ABF載板(FC-BGA CPU/GPU用2/2mil L/S)",
-        "BT載板(手機AP用0.8mm薄型)",
-        "CSP載板(記憶體/射頻IC用)",
-        "Any-Layer HDI載板(手機AP用)",
-        "SiP系統級封裝載板(無線模組)"
+        "FC-BGA封裝載板（既有產品家族）",
+        "BT樹脂封裝載板（既有產品家族）",
+        "CSP晶片尺寸封裝載板（既有產品家族）",
+        "高密度互連載板（既有產品家族）",
+        "系統級封裝用載板（既有產品家族）"
       ],
       "customers": [
-        "Intel(FC-BGA CPU載板)",
-        "AMD(FC-BGA GPU/CPU載板)",
-        "Qualcomm(手機AP BT載板)",
-        "聯發科(2454)(手機AP BT載板)",
-        "NVIDIA(AI加速器ABF載板)"
+        "Intel（CPU載板應用對象，非MOPS揭露客戶）",
+        "AMD（CPU／GPU載板應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI加速器載板應用對象，非MOPS揭露客戶）",
+        "聯發科(2454；行動晶片載板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "欣興",
-        "南電",
-        "Unimicron"
+        "欣興(3037)",
+        "南電(8046)",
+        "Ibiden"
       ],
       "risks": [
-        "ABF 載板景氣循環波動大",
-        "先進封裝技術如 CoWoS 可能減少載板用量"
+        "MOPS主要業務文字過於籠統，產品規格與客戶需另以年報驗證",
+        "載板景氣循環與高階產能利用率會放大獲利波動"
       ],
       "evidence": [
         {
@@ -49,36 +48,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件製造業、電子材料批發業與零售業。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-26",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "ABF高階載板細線製程(2/2mil L/S)",
-        "BT載板雷射鑽孔與填孔技術(φ50μm)",
-        "Any-Layer HDI載板製程(任意層互連)"
+        "增層介電材料與半加成銅線路製程",
+        "雷射微孔、電鍍填孔與層間對位控制",
+        "翹曲、熱循環與導通可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "ABF高階載板細線製程(2/2mil L/S)切入Intel/AMD/NVIDIA CPU/GPU載板供應鏈",
-          "6月營收42.2億YoY+32.3%，累計YoY+29.8%，AI/HPC載板需求強勁",
-          "Any-Layer HDI載板製程(任意層互連)技術成熟"
+          "既有產品家族涵蓋多種IC封裝載板與高密度互連",
+          "7月營收45.49億元、YoY+35.9%、累計YoY+30.7%"
         ],
         "weaknesses": [
-          "ABF載板產能規模不及欣興(3037)/南電(8046)，市佔率較低",
-          "ABF基板材料(Ajinomoto)依賴日商供應，成本控制受限",
-          "BT載板(手機AP用)面臨景碩與聯電集團內部競爭"
+          "Fresh MOPS僅揭露電子零組件製造，未分列載板規格與客戶",
+          "高階載板設備資本密集，利用率下降會侵蝕毛利"
         ],
         "opportunities": [
-          "AI加速器(GPU/ASIC)用高階ABF載板需求爆發",
-          "HBM3E用BT載板(pitch<80μm)受惠AI記憶體堆疊趨勢",
-          "Intel/AMD新平台CPU載板細線化需求"
+          "AI／HPC封裝擴張可增加高層數載板需求",
+          "行動與網通晶片封裝升級可推動細線與微孔製程"
         ],
         "threats": [
-          "欣興(3037)/南電(8046)在ABF載板產能規模優勢明顯",
-          "日本Ibiden/Shinko在高階ABF載板技術領先",
-          "ABF載板產能擴張競賽可能導致供過於求"
+          "欣興、南電與日系載板廠競爭高階認證",
+          "先進封裝架構與載板供需反轉可能造成價格壓力"
         ]
       }
     },

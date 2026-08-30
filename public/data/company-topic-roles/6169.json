@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -81,28 +81,30 @@
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "edge_ai_content",
-      "roleType": "edge_ai_game_content",
-      "roleSummary": "昱泉MOPS只確認遊戲及教育軟體，未揭露AIoT硬體或AI產品收入；Edge AI角色應視為遊戲NPC與離線互動功能的潛在軟體應用。FinMind顯示2026年7月營收2.3萬元、MoM-42.5%。",
+      "supplyChainStage": "software_content_outside_aiot",
+      "roleType": "game_and_education_software_adjacent",
+      "roleSummary": "昱泉MOPS只揭露遊戲及教育軟體研發、生產、代理與銷售，沒有Edge AI、AIoT硬體、端側模型或AI產品收入；原角色中的小型語言模型、ONNX與NPU規格均無資料支持，已刪除。FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%、YoY-99.2%。",
       "products": [
-        "離線NPC行為樹與小型語言模型互動模組",
-        "Windows遊戲端側AI推論外掛",
-        "教育訓練情境自適應推薦模組",
-        "Unity/Unreal邊緣裝置效能監控工具"
+        "遊戲軟體研發服務",
+        "教育軟體產品",
+        "遊戲軟體代理服務",
+        "數位遊戲內容銷售",
+        "教育互動內容製作"
       ],
       "customers": [
-        "Microsoft(Windows/DirectML平台驗證對象)",
-        "NVIDIA(RTX/TensorRT平台驗證對象)",
-        "Unity Technologies(遊戲引擎生態對象)",
-        "Epic Games(Unreal Engine生態對象)"
+        "Microsoft（遊戲平台生態對象，非MOPS揭露客戶）",
+        "Apple（行動應用平台生態對象，非MOPS揭露客戶）",
+        "Google（行動應用平台生態對象，非MOPS揭露客戶）",
+        "Unity Technologies（遊戲引擎生態對象，非MOPS揭露合作關係）"
       ],
       "competitors": [
-        "智冠(5470)",
-        "大宇資(6111)"
+        "智冠(5478)",
+        "大宇資(6111)",
+        "橘子(6180)"
       ],
       "risks": [
-        "Edge AI應用佔比極低",
-        "公司營收規模極小"
+        "MOPS未揭露Edge AI或AIoT產品，題材幾乎沒有直接營運支持",
+        "7月營收僅2.3萬元且YoY-99.2%，商業規模極小"
       ],
       "legacy": {},
       "evidence": [
@@ -119,32 +121,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售。"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2026年7月月營收",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "2026年7月營收2.3萬元，MoM-42.5%、YoY-99.2%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "4-bit/8-bit量化模型與ONNX Runtime端側推論",
-        "NPC行為樹結合檢索式對話及內容安全規則",
-        "GPU/NPU異質運算與遊戲幀率延遲預算控制"
+        "遊戲引擎腳本、內容資產與跨平台建置流程",
+        "連線遊戲內容更新、帳號與營運資料管理",
+        "教育內容互動流程與學習進度追蹤設計"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認具遊戲與教育軟體研發能力，能把AI功能嵌入互動情境",
-          "既有遊戲引擎流程可作為NPC與端側推論功能的整合入口"
+          "MOPS支持遊戲與教育軟體研發、代理及銷售能力",
+          "具軟體內容製作基礎，可觀察未來是否導入端側AI功能"
         ],
         "weaknesses": [
-          "FinMind顯示2026年7月營收僅2.3萬元，無足夠規模證明AI產品商業化",
-          "未揭露AIoT硬體、模型IP或具名AI客戶，題材屬潛在應用"
+          "沒有Edge AI、AIoT硬體或AI產品收入揭露",
+          "7月營收2.3萬元、MoM-42.5%、YoY-99.2%"
         ],
         "opportunities": [
-          "PC與遊戲主機NPU普及可讓NPC推論在裝置端執行，降低雲端成本",
-          "企業訓練模擬導入生成式AI可提高客製專案單價"
+          "端側推論成熟後，遊戲與教育軟體可加入離線互動功能",
+          "既有內容資產可用於教育情境與互動產品迭代"
         ],
         "threats": [
-          "Unity、Epic及大型工作室可直接提供AI工具，壓縮小型開發商差異化",
-          "模型授權、內容安全與推論成本可能阻礙商用導入"
+          "大型遊戲引擎與平台商可直接提供AI功能，壓縮差異化",
+          "營收規模過小可能不足以支撐持續研發與商業化"
         ]
       }
     },

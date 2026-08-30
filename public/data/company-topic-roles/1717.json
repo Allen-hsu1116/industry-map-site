@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1717",
   "companyName": "長興",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -252,29 +252,31 @@
       "topicId": "semiconductor-equipment-materials",
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "semi_materials",
-      "roleType": "photoresist_supplier",
-      "roleSummary": "長興提供半導體用光阻材料/電子化學品。7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。",
+      "directness": "indirect",
+      "supplyChainStage": "photoresist_materials_adjacent",
+      "roleType": "photoresist_and_specialty_chemicals",
+      "roleSummary": "長興MOPS揭露工業用合成樹脂、印刷電路基板、光阻材料與特殊化學品，但沒有分列半導體用光阻、曝光波長、先進節點或晶圓廠客戶；因此本題材定位為光阻／電子化學材料的潛在上游，而非已驗證先進光刻供應商。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%。",
       "products": [
-        "半導體用光阻材料(i-line/KrF/ArF光阻)",
-        "光阻用樹脂(酚醛樹脂/壓克力樹脂)",
-        "光阻用光酸產生劑(PAG)",
-        "CMP用研磨液樹脂"
+        "光阻材料",
+        "光阻用合成樹脂",
+        "印刷電路基板材料",
+        "工業用合成樹脂",
+        "電子級特殊化學品候選材料"
       ],
       "customers": [
-        "台積電(2330)",
-        "聯電(2303)",
-        "力積電(6770)"
+        "台積電(2330；半導體材料驗證對象，非MOPS揭露客戶)",
+        "聯電(2303；晶圓製程應用對象，非MOPS揭露客戶)",
+        "華邦電(2344；晶圓製程應用對象，非MOPS揭露客戶)",
+        "欣興(3037；PCB材料應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "JSR",
-        "信越化學",
-        "陶氏化學(Dow)"
+        "東京應化(TOK)",
+        "永光(1711)"
       ],
       "risks": [
-        "半導體光阻被日商壟斷",
-        "EUV光阻技術門檻極高"
+        "MOPS未揭露半導體用光阻世代、純度或晶圓廠認證",
+        "高階光阻長期由日美材料廠掌握，導入門檻高"
       ],
       "legacy": {},
       "evidence": [
@@ -291,36 +293,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：工業用合成樹脂、印刷電路基板、光阻材料及特殊化學品。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收40.93億元，MoM+6.8%、YoY+23.9%，累計YoY+10.5%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "ArF光阻樹脂合成技術(193nm)",
-        "光酸產生劑(PAG)分子設計",
-        "光阻解析度控制(<30nm)"
+        "感光樹脂分子量、溶解速率與膜厚均勻性控制",
+        "曝光、顯影與烘烤製程視窗的配方調整",
+        "金屬離子、顆粒與殘留溶劑的純度管理"
       ],
       "swot": {
         "strengths": [
-          "光阻用樹脂合成技術有基礎",
-          "KrF/ArF光阻材料開發中",
-          "與台積電/聯電有供應關係"
+          "MOPS支持合成樹脂、光阻、PCB材料與特殊化學品組合",
+          "7月營收40.93億元、MoM+6.8%、YoY+23.9%"
         ],
         "weaknesses": [
-          "EUV光阻技術與JSR/信越差距大",
-          "半導體光阻佔比仍低",
-          "材料認證週期極長"
+          "未揭露半導體光阻世代、先進節點或具名客戶",
+          "公司整體營收成長無法拆分為半導體材料貢獻"
         ],
         "opportunities": [
-          "半導體光阻國產化政策",
-          "先進製程光阻材料需求",
-          "EUV光阻材料研發"
+          "供應鏈在地化可增加光阻樹脂與電子化學品驗證機會",
+          "既有樹脂合成與配方能力可延伸高純度電子材料"
         ],
         "threats": [
-          "JSR/信越/陶氏等國際大廠壟斷",
-          "EUV光阻技術門檻極高",
-          "中國光阻材料廠追趕"
+          "JSR、TOK等國際廠掌握高階光阻技術與認證",
+          "純度或製程穩定性不達晶圓廠要求將延後商轉"
         ]
       }
     }

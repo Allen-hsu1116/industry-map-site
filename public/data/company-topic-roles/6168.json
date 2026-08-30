@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6168",
   "companyName": "宏齊",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -96,27 +96,29 @@
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "optical_led",
-      "roleType": "optical_comm_led",
-      "roleSummary": "宏齊核心為SMD LED；本題材僅屬IR LED封裝的鄰近能力，不能視為矽光子或CPO供應商。 2026年7月營收2.06億元、YoY+12.8%；MOPS未揭露矽光子、CPO或光收發模組產品。",
+      "supplyChainStage": "smd_led_adjacent",
+      "roleType": "led_packaging_adjacent",
+      "roleSummary": "宏齊MOPS只揭露表面黏著發光二極體生產與銷售，未揭露矽光子、CPO、雷射光源、光檢測器或光收發模組；因此本題材只能保留為光電封裝能力的遠端鄰近觀察。2026年7月營收2.06億元、MoM+0.8%、YoY+12.8%。",
       "products": [
-        "850nm近紅外線SMD發光元件封裝",
-        "940nm近紅外線SMD發光元件封裝",
-        "光耦合器用紅外線發射端LED封裝"
+        "表面黏著發光二極體封裝",
+        "小型化SMD LED指示元件",
+        "多色SMD LED封裝",
+        "顯示與背光用SMD LED"
       ],
       "customers": [
-        "光寶科(2301；光電模組應用對象)",
-        "億光(2393；IR LED供應鏈對象)",
-        "聯亞(3081；高速光源供應鏈對照)",
-        "華星光(4979；光收發模組供應鏈對照)"
+        "億光(2393；LED封裝供應鏈對照，非MOPS揭露客戶)",
+        "光寶科(2301；光電應用對象，非MOPS揭露客戶)",
+        "聯亞(3081；高速光源供應鏈對照，非MOPS揭露客戶)",
+        "華星光(4979；光收發模組供應鏈對照，非MOPS揭露客戶）"
       ],
       "competitors": [
         "億光(2393)",
-        "光寶(2301)"
+        "光寶科(2301)",
+        "Everlight Electronics"
       ],
       "risks": [
-        "光通訊LED佔比極低",
-        "矽光子技術可能替代LED"
+        "MOPS沒有矽光子或高速光通訊產品，題材直接性極低",
+        "LED封裝價格競爭與產品同質化壓縮毛利"
       ],
       "legacy": {},
       "evidence": [
@@ -133,33 +135,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：表面黏著發光二極體之生產與銷售。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收2.06億元，MoM+0.8%、YoY+12.8%，累計YoY+7.8%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "IR LED固晶、鍵合與低熱阻SMD封裝",
-        "850/940nm光譜、光功率與可靠度篩選",
-        "發射/感測端光軸對準與氣密控制"
+        "SMD LED固晶、打線與封裝界面控制",
+        "螢光粉配方、色座標與亮度一致性分選",
+        "回焊耐熱、濕氣敏感度與封裝可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收2.06億元、YoY+12.8%；MOPS未揭露矽光子、CPO或光收發模組產品",
-          "具IR LED封裝與量產測試能力",
-          "既有設備可支援小型低熱阻封裝"
+          "MOPS直接支持SMD LED生產與銷售能力",
+          "7月營收2.06億元、YoY+12.8%，累計YoY+7.8%"
         ],
         "weaknesses": [
-          "未揭露VCSEL或矽光子晶片產品",
-          "與800G/1.6T CPO技術差距大"
+          "未揭露雷射、光檢測器、CPO或矽光子產品",
+          "公司整體成長不能視為高速光通訊營收"
         ],
         "opportunities": [
-          "IR光感測與光耦仍需可靠發射元件",
-          "導入VCSEL可延伸3D感測"
+          "封裝可靠度與小型化能力可作為光電元件開發基礎",
+          "資料中心光連接成長可提供跨入新光源封裝的長期選項"
         ],
         "threats": [
-          "專業雷射與磊晶廠主導高速光源",
-          "市場易誤把IR LED視為CPO題材"
+          "矽光子採用雷射與光檢測器，SMD LED通常不在核心光路",
+          "億光、光寶及中國LED封裝廠價格競爭激烈"
         ]
       }
     },

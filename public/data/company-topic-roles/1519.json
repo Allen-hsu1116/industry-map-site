@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1519",
   "companyName": "華城",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -183,24 +183,30 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "offshore_wind",
-      "roleType": "wind_electrical_equipment",
-      "roleSummary": "華城5月營收14.8億年減9.3%累計84.8億年增3.9%。離岸風電變電站設備為新需求，但短期營收波動大。",
+      "supplyChainStage": "grid_interconnection",
+      "roleType": "transformer_and_switchboard_enabler",
+      "roleSummary": "華城MOPS直接揭露變壓器、配電盤、配電器材與統包工程，能支援風電與太陽能升壓併網；但未揭露離岸風場專案、海上變電站或具名開發商。2026年7月營收20.50億元、MoM+18.5%、YoY-8.3%，累計YoY-3.7%。",
       "products": [
-        "風場併聯變壓器(161kV/345kV)",
-        "GIS氣體絕緣開關設備(72.5kV/145kV)",
-        "陸上變電站統包工程(EPC)"
+        "電力變壓器（再生能源升壓併網應用）",
+        "配電變壓器",
+        "中低壓配電盤",
+        "配電器材與保護設備",
+        "變電站統包工程"
       ],
       "customers": [
-        "台電(風場併聯標案)",
-        "沃旭(Ørsted)(離岸風電變電站)",
-        "CIP(風場輸配電)"
+        "台灣電力公司（電網併聯應用對象，非MOPS揭露客戶）",
+        "沃旭能源(Ørsted；風場併網應用對象，非MOPS揭露客戶)",
+        "Copenhagen Infrastructure Partners（風場應用對象，非MOPS揭露客戶）",
+        "wpd達德能源（再生能源應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "士電"
+        "士林電機(1503)",
+        "中興電(1513)",
+        "東元(1504)"
       ],
       "risks": [
-        "離岸風電進度延遲風險"
+        "MOPS未揭露離岸風電設備或風場客戶，題材直接性有限",
+        "變壓器交期、原料與工程驗收會影響營收認列"
       ],
       "evidence": [
         {
@@ -216,36 +222,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 1519 的月營收、股價、估值與法人資料。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：變壓器、配電盤、配電器材及其他統包工程。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-11",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "345kV超高壓電力變壓器設計與製造",
-        "GIS氣體絕緣開關設備(SF6絕緣)",
-        "離岸風電海上變電站統包工程整合"
+        "變壓器鐵心、繞組、絕緣與冷卻設計",
+        "配電盤開關、保護電驛與短路耐受整合",
+        "變電站EPC介面、試運轉與電網併聯"
       ],
       "swot": {
         "strengths": [
-          "風場併聯變壓器（161kV/345kV）為離岸風電併網關鍵設備",
-          "離岸風電海上變電站統包工程整合能力國內少數具備",
-          "已與沃旭(Ørsted)/CIP等國際風電開發商建立合作"
+          "MOPS支持變壓器、配電盤與統包工程完整組合",
+          "7月營收MoM+18.5%，單月較上月回升"
         ],
         "weaknesses": [
-          "6月營收1730億YoY-25.78%，短期營收波動大",
-          "離岸風電變電站工程占比小，收入貢獻有限",
-          "GIS設備（72.5kV/145kV）電壓等級低於中興電的345kV"
+          "未揭露離岸風場專案或海上變電站產品",
+          "7月營收YoY-8.3%、累計YoY-3.7%"
         ],
         "opportunities": [
-          "台灣離岸風場區塊開發（2026-2030）帶動併聯變壓器需求",
-          "沃旭大彰化風場（900MW）變壓器訂單持續貢獻",
-          "太陽能與陸域風電案場變壓器需求穩定"
+          "風光電升壓站與電網強韌計畫增加變壓器需求",
+          "大型再生能源案場可帶動配電盤及統包工程"
         ],
         "threats": [
-          "中興電(1513)在345kV GIS與EPC統包領域競爭",
-          "國際風電變壓器大廠（西門子能源/日立）可能介入大型標案",
-          "風場建設時程延遲影響設備交貨與營收認列"
+          "風場時程遞延與併網審查可能推遲設備出貨",
+          "國際電機廠競爭及銅鋼成本可能壓縮毛利"
         ]
       }
     }

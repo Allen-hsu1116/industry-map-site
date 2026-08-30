@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3231",
   "companyName": "緯創",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -103,31 +103,31 @@
       "topicType": "end_market",
       "directness": "core",
       "supplyChainStage": "system_assembly",
-      "roleType": "notebook_odm",
-      "roleSummary": "緯創為全球前三大NB ODM，6月營收3218億元年增53.8%，累計年增94.0%。消費運算裝置為Dell/HP/Lenovo/Acer商用與消費筆電代工，亦為Chromebook主要供應商。MOPS主要經營：3C電子產品。",
+      "roleType": "consumer_device_odm",
+      "roleSummary": "緯創MOPS只揭露3C電子產品，無法支持原角色中的具體筆電型號、軍規認證或品牌客戶；本題材保留消費運算ODM產品家族，並將品牌全數標為應用對象。2026年7月營收3,082.19億元、YoY+60.8%、MoM-4.2%，公司說明成長主因為客戶需求增加。",
       "products": [
-        "Dell Latitude 3450/3550商用筆電(ODM)",
-        "HP EliteBook 640/650 G11商用筆電(ODM)",
-        "Lenovo ThinkPad E14/E16商用筆電(ODM)",
-        "Acer Aspire/Spin消費筆電(ODM)",
-        "Chromebook 14/15教育筆電(ODM)"
+        "筆記型電腦ODM整機",
+        "商用電腦ODM整機",
+        "桌上型電腦與工作站ODM",
+        "3C主機板與系統組裝",
+        "可攜式運算終端整合服務"
       ],
       "customers": [
-        "Dell(Latitude商用筆電系列)",
-        "HP(EliteBook商用筆電)",
-        "Lenovo(ThinkPad E系列商用筆電)",
-        "Acer(Aspire/Spin消費筆電)",
-        "Google(Chromebook教育市場)"
+        "Dell Technologies（筆電品牌應用對象，非MOPS揭露客戶）",
+        "HP Inc.（PC品牌應用對象，非MOPS揭露客戶）",
+        "Lenovo（PC品牌應用對象，非MOPS揭露客戶）",
+        "Acer(2353；PC品牌應用對象，非MOPS揭露客戶）",
+        "Google（Chromebook平台生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "廣達",
-        "仁寶",
-        "英業達",
-        "和碩"
+        "廣達(2382)",
+        "仁寶(2324)",
+        "英業達(2356)",
+        "和碩(4938)"
       ],
       "risks": [
-        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "MOPS未揭露筆電產品占比、型號或具名客戶",
+        "PC需求循環、價格競爭與品牌庫存會影響ODM毛利"
       ],
       "legacy": {
         "topicSlug": "pc-nb-tablet",
@@ -148,32 +148,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：3C電子產品及其他。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收3,082.19億元，MoM-4.2%、YoY+60.8%，累計YoY+88.2%；公司備註客戶需求增加。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-31",
+      "confidence": "medium",
+      "lastVerified": "2026-08-30",
       "status": "verified",
       "techFocus": [
-        "商用筆電耐用性設計(MIL-STD-810H認證)",
-        "Chromebook低成本ARM架構方案整合",
-        "多品牌共用平台模組化設計(降低BOM成本)"
+        "SMT、整機組裝與自動化測試流程整合",
+        "ODM平台DFM、BOM共用與供應鏈切換管理",
+        "主機板電源、散熱、EMI與機構協同驗證"
       ],
       "swot": {
         "strengths": [
-          "筆電+伺服器+穿戴多元布局，累計營收年增94%",
-          "6月營收3218億元年增53.8%，客戶需求強勁"
+          "MOPS支持3C電子產品製造與系統整合範圍",
+          "7月營收3,082.19億元、YoY+60.8%，公司說明客戶需求增加"
         ],
         "weaknesses": [
-          "筆電ODM毛利率<5%，獲利靠伺服器/穿戴",
-          "Chromebook ASP極低，利潤貢獻有限"
+          "未揭露消費運算產品組合與品牌客戶",
+          "7月營收MoM-4.2%，月度拉貨出現回落"
         ],
         "opportunities": [
-          "AI PC推動商用筆電換機週期",
-          "印度/越南產能轉移降低關稅風險"
+          "AI PC換機與企業Windows更新可提高ODM出貨",
+          "模組化平台與自動化製造可改善多品牌成本效率"
         ],
         "threats": [
-          "全球NB出貨量持續下滑",
-          "英業達(2356)競爭商用筆電ODM份額"
+          "廣達、仁寶、英業達與和碩競價激烈",
+          "品牌庫存修正與關稅／匯率變動可能壓縮毛利"
         ]
       }
     },

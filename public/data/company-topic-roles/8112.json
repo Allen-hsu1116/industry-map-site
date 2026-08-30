@@ -2,35 +2,37 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-08-30T19:04:23Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "battery_component_distribution",
-      "roleType": "battery_component_distributor",
-      "roleSummary": "至上MOPS僅揭露電子零組件經銷；儲能角色屬BMS、功率元件與記憶體的間接應用。 2026年7月營收768.74億元、YoY+333.5%，但公司說明主因是記憶體漲價及伺服器、手機拉貨。",
+      "supplyChainStage": "component_distribution_adjacent",
+      "roleType": "electronic_component_distributor",
+      "roleSummary": "至上MOPS只揭露電子零組件經銷，沒有揭露電芯、電池模組、BMS、PCS或儲能客戶；本題材僅能視為儲能控制板可能採用的電子元件通路鄰近者。2026年7月營收768.74億元、YoY+333.5%、MoM+24.7%，公司明確說明主因是記憶體漲價與伺服器、手機拉貨，不能歸因於儲能。",
       "products": [
-        "BMS電池監控IC與電流感測器通路方案",
-        "儲能PCS用1200V IGBT與SiC MOSFET",
-        "電池保護板用MOSFET、保險絲與TVS",
-        "EMS控制器用DDR4與eMMC元件"
+        "電池管理IC通路方案（儲能應用）",
+        "功率半導體通路方案（PCS應用）",
+        "記憶體元件通路方案（EMS控制器應用）",
+        "電流與溫度感測元件通路方案",
+        "保護MOSFET與浪湧保護元件通路方案"
       ],
       "customers": [
-        "台達電(2308；儲能PCS元件應用對象)",
-        "台泥(1101；儲能系統元件應用對象)",
-        "AES-KY(6781；儲能電池模組應用對象)",
-        "新盛力(4931；BMS元件應用對象)"
+        "台達電(2308；儲能應用對象，非MOPS揭露客戶)",
+        "AES-KY(6781；電池模組應用對象，非MOPS揭露客戶)",
+        "新盛力(4931；BMS應用對象，非MOPS揭露客戶)",
+        "Samsung Electronics（記憶體供應鏈對象，MOPS未揭露代理關係）"
       ],
       "competitors": [
-        "文曄(3034)",
-        "世平(2451)"
+        "文曄(3036)",
+        "大聯大(3702)",
+        "益登(3048)"
       ],
       "risks": [
-        "通路商毛利低",
-        "電池元件經銷佔比低"
+        "MOPS未揭露儲能產品或客戶，直接曝險無法確認",
+        "通路毛利薄且庫存價格波動可能造成跌價損失"
       ],
       "legacy": {},
       "evidence": [
@@ -47,33 +49,46 @@
           "title": "Taiwan Stock Market Datasets",
           "url": "https://finmindtrade.com/analysis/#/data/api",
           "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+        },
+        {
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件經銷業務。"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，累計YoY+180.4%；公司說明主因為記憶體價格上漲及伺服器、手機拉貨。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-30",
+      "status": "candidate",
       "techFocus": [
-        "BMS多串電芯量測、均衡與隔離通訊選型",
-        "1200V IGBT/SiC閘極驅動與熱設計",
-        "保護MOSFET SOA與浪湧保護搭配"
+        "BOM選型、替代料驗證與供應生命週期管理",
+        "功率與保護元件額定值、熱設計及安全裕度配套",
+        "批號追溯、庫存配置與客戶認證文件管理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收768.74億元、YoY+333.5%，但公司說明主因是記憶體漲價及伺服器、手機拉貨",
-          "大型通路具庫存物流與FAE能力",
-          "可整合BMS、功率元件與記憶體BOM"
+          "MOPS支持電子零組件經銷與供應鏈服務角色",
+          "7月營收768.74億元、YoY+333.5%、MoM+24.7%"
         ],
         "weaknesses": [
-          "MOPS未拆分儲能產品線或營收",
-          "通路毛利低且具名關係待驗證"
+          "沒有揭露電池、BMS或PCS產品線",
+          "營收大增主因為記憶體價格與伺服器／手機拉貨，而非儲能"
         ],
         "opportunities": [
-          "表後儲能增加BMS/PCS元件需求",
-          "SiC提高PCS單機元件價值"
+          "儲能控制器與PCS需要多種功率、感測及記憶體元件",
+          "元件短缺時通路庫存與替代料能力可提高服務價值"
         ],
         "threats": [
-          "原廠直供大型系統商",
-          "價格反轉造成庫存評價風險"
+          "記憶體價格反轉可能造成營收與庫存評價下滑",
+          "大聯大、文曄等大型通路商具規模與代理線優勢"
         ]
       }
     },
