@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1717",
   "name": "長興",
-  "generatedAt": "2026-08-28T12:32:49.613Z",
+  "generatedAt": "2026-08-31T12:34:30.526Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -102,7 +102,7 @@
       "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
       "相關題材：石化、塑橡膠與特用化學 · 核心產品/平台",
-      "相關題材：半導體設備與前段材料 · 核心產品/平台",
+      "相關題材：先進封裝與 CoWoS · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -170,16 +170,6 @@
         "roleSummary": "長興MOPS揭露工業用合成樹脂、PCB材料、光阻與特殊化學品，是石化下游特用材料廠。2026年7月營收40.93億元、YoY+23.9%、MoM+6.8%，累計YoY+10.5%。"
       },
       {
-        "topicId": "semiconductor-equipment-materials",
-        "topicName": "半導體設備與前段材料",
-        "canonicalTopicId": "semiconductor-equipment-materials",
-        "canonicalTopicName": "半導體設備與前段材料",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "長興提供半導體用光阻材料/電子化學品。7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。"
-      },
-      {
         "topicId": "advanced-packaging",
         "topicName": "先進封裝與 CoWoS",
         "canonicalTopicId": "advanced-packaging",
@@ -188,6 +178,16 @@
         "directnessLabel": "間接受惠",
         "confidence": "medium",
         "roleSummary": "長興MOPS揭露工業用合成樹脂、PCB與光阻材料、特殊化學品，具先進封裝材料配方的上游鄰近性，但未揭露特定EMC、Underfill或晶圓級封裝量產認證。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%、累計YoY+10.5%，為公司整體成長，不能全數歸因先進封裝。"
+      },
+      {
+        "topicId": "semiconductor-equipment-materials",
+        "topicName": "半導體設備與前段材料",
+        "canonicalTopicId": "semiconductor-equipment-materials",
+        "canonicalTopicName": "半導體設備與前段材料",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "長興MOPS揭露工業用合成樹脂、印刷電路基板、光阻材料與特殊化學品，但沒有分列半導體用光阻、曝光波長、先進節點或晶圓廠客戶；因此本題材定位為光阻／電子化學材料的潛在上游，而非已驗證先進光刻供應商。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%。"
       }
     ],
     "swot": [],
@@ -215,9 +215,9 @@
         ]
       },
       {
-        "id": "semiconductor-equipment-materials",
-        "name": "半導體設備與前段材料",
-        "type": "supply_chain_segment",
+        "id": "advanced-packaging",
+        "name": "先進封裝與 CoWoS",
+        "type": "process",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -226,9 +226,9 @@
         ]
       },
       {
-        "id": "advanced-packaging",
-        "name": "先進封裝與 CoWoS",
-        "type": "process",
+        "id": "semiconductor-equipment-materials",
+        "name": "半導體設備與前段材料",
+        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -272,12 +272,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
       }
     ]
   },

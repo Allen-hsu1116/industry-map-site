@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6274",
   "name": "台燿",
-  "generatedAt": "2026-08-28T12:32:50.191Z",
+  "generatedAt": "2026-08-31T12:34:31.116Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -52,29 +52,29 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台燿為銅箔基板/粘合片/多層壓合板專業製造商。提供高頻低損耗基板(Megtron 6/7)、高Tg基板及BT樹脂IC載板基板。MOPS主要經營：銅箔基板、粘合片、多層壓合板之製造加工及買賣。",
-      "supplyChainStage": "substrate_materials",
-      "roleType": "ccl_manufacturer",
+      "roleSummary": "台燿MOPS直接揭露銅箔基板、粘合片與多層壓合板，屬PCB上游核心材料；原角色中的他牌商品名、精確介電數值與具名客戶均無MOPS支持，已改為產品家族與應用對象。FinMind顯示2026年7月營收59.08億元、MoM+20.7%、YoY+121.5%。",
+      "supplyChainStage": "ccl_and_lamination",
+      "roleType": "ccl_prepreg_manufacturer",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "高頻銅箔基板(Megtron 6/7 Df<0.002@10GHz)",
+        "name": "高速網通用銅箔基板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "低損耗多層壓合板(Megtron 7/Tachyon 100G)",
+        "name": "高多層PCB用銅箔基板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高Tg銅箔基板(IT-180A Tg>200C)",
+        "name": "粘合片(Prepreg)",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -97,7 +97,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 4 項 +10",
       "風險 SWOT 扣分 -10",
@@ -168,7 +168,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台燿為銅箔基板/粘合片/多層壓合板專業製造商。提供高頻低損耗基板(Megtron 6/7)、高Tg基板及BT樹脂IC載板基板。MOPS主要經營：銅箔基板、粘合片、多層壓合板之製造加工及買賣。"
+        "roleSummary": "台燿MOPS直接揭露銅箔基板、粘合片與多層壓合板，屬PCB上游核心材料；原角色中的他牌商品名、精確介電數值與具名客戶均無MOPS支持，已改為產品家族與應用對象。FinMind顯示2026年7月營收59.08億元、MoM+20.7%、YoY+121.5%。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -328,12 +328,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
       },
       {
         "id": "risk.stop-distance",

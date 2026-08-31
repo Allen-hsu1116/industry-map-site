@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2492",
   "name": "華新科",
-  "generatedAt": "2026-08-28T12:32:49.767Z",
+  "generatedAt": "2026-08-31T12:34:30.682Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -56,11 +56,11 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "MLCC / 電容器",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "華新科6月營收39.6億YoY+25.8%，累計209億YoY+14.7%。台灣第二大MLCC廠，車規AEC-Q200與高壓圓板電容為差異化成長動能，被動元件景氣回溫帶動YoY雙位數成長。",
+      "roleSummary": "華新科MOPS直接支持積層陶瓷與圓板電容、高壓／高頻／精密電容、電阻、電感、射頻元件及陶瓷粉末，MLCC角色明確；但MOPS未揭露封裝尺寸、耐壓範圍、AEC-Q200或具名客戶。2026年7月營收44.44億元、MoM+12.2%、YoY+42.0%，累計YoY+18.7%。",
       "supplyChainStage": "passive_components",
       "roleType": "mlcc_manufacturer",
       "directness": "core",
@@ -68,17 +68,17 @@
     },
     "productNarratives": [
       {
-        "name": "MLCC多層陶瓷電容(車規AEC-Q200 1005-3216)",
+        "name": "積層陶瓷電容MLCC",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "圓板陶瓷電容(高壓1kV-6kV)",
+        "name": "高壓陶瓷電容",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高頻MLCC(射頻電路Df<0.005)",
+        "name": "高頻陶瓷電容",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -92,7 +92,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 MLCC / 電容器（product/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -157,7 +157,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "華新科6月營收39.6億YoY+25.8%，累計209億YoY+14.7%。台灣第二大MLCC廠，車規AEC-Q200與高壓圓板電容為差異化成長動能，被動元件景氣回溫帶動YoY雙位數成長。"
+        "roleSummary": "華新科MOPS直接支持積層陶瓷與圓板電容、高壓／高頻／精密電容、電阻、電感、射頻元件及陶瓷粉末，MLCC角色明確；但MOPS未揭露封裝尺寸、耐壓範圍、AEC-Q200或具名客戶。2026年7月營收44.44億元、MoM+12.2%、YoY+42.0%，累計YoY+18.7%。"
       },
       {
         "topicId": "passive-components-resistor",
@@ -292,12 +292,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
       },
       {
         "id": "risk.stop-distance",

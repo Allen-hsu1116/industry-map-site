@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6215",
   "name": "建準",
-  "generatedAt": "2026-08-28T12:32:50.170Z",
+  "generatedAt": "2026-08-31T12:34:31.094Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -53,11 +53,11 @@
     "knowledgeBasis": "canonical_pending",
     "confidence": "low",
     "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=3；只做保守參考。",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "間接受惠",
-      "roleSummary": "和椿MOPS只揭露自動化設備與系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇。此角色改列為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，YoY+37.2%、累計YoY+50.4%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。",
+      "roleSummary": "和椿MOPS揭露自動化設備及系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇；本題材僅定位為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，MoM+35.5%、YoY+37.2%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。",
       "supplyChainStage": "automation_equipment_adjacent",
       "roleType": "automation_for_cooling_production",
       "directness": "indirect",
@@ -113,7 +113,7 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "已有 V2 role，但 status=verified、confidence=low、evidence=3；只做保守參考。",
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。",
       "V2 W：散熱非主力產品，題材連結弱。",
       "V2 W：散熱風扇馬達與精密軸承為間接供應AI伺服器散熱，題材連結弱，非核心散熱標的。",
       "V2 T：散熱並非核心業務且題材連結較弱，若同業擴產或需求轉弱，受惠幅度可能有限。",
@@ -169,7 +169,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "和椿MOPS只揭露自動化設備與系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇。此角色改列為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，YoY+37.2%、累計YoY+50.4%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。"
+        "roleSummary": "和椿MOPS揭露自動化設備及系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇；本題材僅定位為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，MoM+35.5%、YoY+37.2%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。"
       }
     ],
     "swot": [
@@ -292,12 +292,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
       },
       {
         "id": "risk.stop-distance",

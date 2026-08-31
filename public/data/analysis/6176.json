@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6176",
   "name": "瑞儀",
-  "generatedAt": "2026-08-28T12:32:50.148Z",
+  "generatedAt": "2026-08-31T12:34:31.071Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -55,31 +55,31 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "面板、LED、光學鏡頭與感測",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "瑞儀6月營收36.94億YoY-15.0%，累計231.25億YoY-6.0%。MOPS登記為電子零組件/模具/照明設備製造。背光模組領導廠，電視與監視器背光需求疲弱拖累營收，Mini LED背光與車用背光為轉型方向。",
-      "supplyChainStage": "display_panel",
-      "roleType": "backlight_module_manufacturer",
+      "roleSummary": "瑞儀MOPS只概括揭露電子零組件、模具及照明設備製造，未列面板尺寸、分區數、車規溫度或具名客戶；依題材上下文可保留背光與光學模組角色，但移除未支持規格。2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%，需求仍偏弱。",
+      "supplyChainStage": "backlight_and_optical_components",
+      "roleType": "backlight_module_provider",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "LCD背光模組(電視55吋/65吋/75吋)(直下式DLED)",
+        "name": "側光式LCD背光模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "Mini LED背光模組(分區調光>2000 zones HDR)",
+        "name": "直下式LCD背光模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "車用背光模組(儀表板/中控12.3吋耐高溫85°C)",
+        "name": "Mini LED背光模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -95,9 +95,9 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 1 項 +5",
       "風險 SWOT 扣分 -3",
@@ -105,9 +105,9 @@
     ],
     "summary": "瑞儀 在「面板、LED、光學鏡頭與感測」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：面板、LED、光學鏡頭與感測 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：面板、LED、光學鏡頭與感測 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
       "相關題材：AI 伺服器液冷散熱 · 間接受惠",
       "相關題材：PC、手機與 AR/VR/XR 終端 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -165,8 +165,8 @@
         "canonicalTopicName": "面板、LED、光學鏡頭與感測",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "瑞儀6月營收36.94億YoY-15.0%，累計231.25億YoY-6.0%。MOPS登記為電子零組件/模具/照明設備製造。背光模組領導廠，電視與監視器背光需求疲弱拖累營收，Mini LED背光與車用背光為轉型方向。"
+        "confidence": "medium",
+        "roleSummary": "瑞儀MOPS只概括揭露電子零組件、模具及照明設備製造，未列面板尺寸、分區數、車規溫度或具名客戶；依題材上下文可保留背光與光學模組角色，但移除未支持規格。2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%，需求仍偏弱。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -277,12 +277,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
       }
     ]
   },

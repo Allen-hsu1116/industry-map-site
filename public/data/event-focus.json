@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T12:31:18.176Z",
+  "generatedAt": "2026-08-31T12:34:30.299Z",
   "status": "partial",
   "source": {
     "name": "TWSE OpenAPI t187ap04_L",
@@ -8,9 +8,51 @@
     "scope": "listed-company-major-news",
     "semantics": "official subject preserved; topic mapping is derived, not official"
   },
-  "latestDate": "2026-08-27",
+  "latestDate": "2026-08-30",
   "itemCount": 80,
   "items": [
+    {
+      "id": "twse-3032-2026-08-30-193240-第26款",
+      "date": "2026-08-30",
+      "announcedAt": "2026-08-30 19:32:40",
+      "companyCode": "3032",
+      "companyName": "偉訓",
+      "officialSubject": "本公司部份資訊系統遭受網路安全事件說明",
+      "clause": "第26款",
+      "derivedTopics": [],
+      "mappingMethod": "unmapped_official_event",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
+    {
+      "id": "twse-1721-2026-08-30-070003-第51款",
+      "date": "2026-08-30",
+      "announcedAt": "2026-08-30 07:00:03",
+      "companyCode": "1721",
+      "companyName": "三晃",
+      "officialSubject": "公告本公司名稱由「三晃股份有限公司」更名為 「國慶科技股份有限公司」 ，公告期間：115年07月01日至115年9月30日。",
+      "clause": "第51款",
+      "derivedTopics": [],
+      "mappingMethod": "unmapped_official_event",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
+    {
+      "id": "twse-3708-2026-08-30-070003-第51款",
+      "date": "2026-08-30",
+      "announcedAt": "2026-08-30 07:00:03",
+      "companyCode": "3708",
+      "companyName": "上緯投控",
+      "officialSubject": "公告本公司名稱由「上緯國際投資控股股份有限公司」更名為 「上緯國際控股股份有限公司」，公告期間：115年6月11日至 115年9月10日。",
+      "clause": "第51款",
+      "derivedTopics": [],
+      "mappingMethod": "unmapped_official_event",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
     {
       "id": "twse-3413-2026-08-27-203838-第51款",
       "date": "2026-08-27",
@@ -198,9 +240,9 @@
         {
           "topicId": "ai-server-power-backup",
           "topicName": "AI 伺服器電源與 BBU",
-          "roleLabel": "psu_cooling_component",
-          "confidence": "high",
-          "status": "verified"
+          "roleLabel": "thermal_module_adjacent_to_bbu",
+          "confidence": "low",
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -227,9 +269,9 @@
         {
           "topicId": "ai-server-power-backup",
           "topicName": "AI 伺服器電源與 BBU",
-          "roleLabel": "psu_cooling_component",
-          "confidence": "high",
-          "status": "verified"
+          "roleLabel": "thermal_module_adjacent_to_bbu",
+          "confidence": "low",
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -710,7 +752,7 @@
           "topicId": "networking-infrastructure",
           "topicName": "高速交換器與網通設備",
           "roleLabel": "networking_pcb_supplier",
-          "confidence": "high",
+          "confidence": "medium",
           "status": "verified"
         },
         {
@@ -746,7 +788,7 @@
           "topicId": "networking-infrastructure",
           "topicName": "高速交換器與網通設備",
           "roleLabel": "networking_pcb_supplier",
-          "confidence": "high",
+          "confidence": "medium",
           "status": "verified"
         },
         {
@@ -931,7 +973,7 @@
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
           "roleLabel": "optical_packaging_provider",
-          "confidence": "high",
+          "confidence": "low",
           "status": "verified"
         }
       ],
@@ -967,7 +1009,7 @@
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
           "roleLabel": "optical_packaging_provider",
-          "confidence": "high",
+          "confidence": "low",
           "status": "verified"
         }
       ],
@@ -1003,7 +1045,7 @@
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
           "roleLabel": "optical_packaging_provider",
-          "confidence": "high",
+          "confidence": "low",
           "status": "verified"
         }
       ],
@@ -1039,7 +1081,7 @@
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
           "roleLabel": "optical_packaging_provider",
-          "confidence": "high",
+          "confidence": "low",
           "status": "verified"
         }
       ],
@@ -1075,7 +1117,7 @@
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
           "roleLabel": "optical_packaging_provider",
-          "confidence": "high",
+          "confidence": "low",
           "status": "verified"
         }
       ],
@@ -1310,7 +1352,7 @@
           "topicId": "consumer-computing-devices",
           "topicName": "PC、手機與 AR/VR/XR 終端",
           "roleLabel": "smartphone_assembly_provider",
-          "confidence": "high",
+          "confidence": "medium",
           "status": "verified"
         }
       ],
@@ -1339,7 +1381,7 @@
           "topicId": "consumer-computing-devices",
           "topicName": "PC、手機與 AR/VR/XR 終端",
           "roleLabel": "smartphone_assembly_provider",
-          "confidence": "high",
+          "confidence": "medium",
           "status": "verified"
         }
       ],
@@ -1408,48 +1450,6 @@
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-3596-2026-08-26-173346-第12款",
-      "date": "2026-08-26",
-      "announcedAt": "2026-08-26 17:33:46",
-      "companyCode": "3596",
-      "companyName": "智易",
-      "officialSubject": "本公司受邀參加機構投資人說明會",
-      "clause": "第12款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-2323-2026-08-26-173248-第20款",
-      "date": "2026-08-26",
-      "announcedAt": "2026-08-26 17:32:48",
-      "companyCode": "2323",
-      "companyName": "中環",
-      "officialSubject": "公告本公司處分有價證券",
-      "clause": "第20款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-2323-2026-08-26-173206-第20款",
-      "date": "2026-08-26",
-      "announcedAt": "2026-08-26 17:32:06",
-      "companyCode": "2323",
-      "companyName": "中環",
-      "officialSubject": "公告本公司處分有價證券",
-      "clause": "第20款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
       "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
       "source": "TWSE OpenAPI t187ap04_L",
       "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"

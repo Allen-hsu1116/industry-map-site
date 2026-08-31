@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-08-28T12:32:49.924Z",
+  "generatedAt": "2026-08-31T12:34:30.840Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-28",
-  "chipDataDate": "2026-08-28",
+  "marketDataDate": "2026-08-31",
+  "chipDataDate": "2026-08-31",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,33 +17,31 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 55,
-    "summary": "欣銓 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 10.5%。",
+    "score": 45,
+    "summary": "欣銓 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.2%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 10.5%"
+      "收盤站上 MA20 6.2%"
     ],
     "risks": [],
-    "watch": [
-      "接近 20 日高點 238.00，觀察是否突破"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 20,
-    "summary": "欣銓 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +4.9千張；近 20 日法人偏買，合計 +1.1萬張。",
+    "summary": "欣銓 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +4千張；近 20 日法人偏買，合計 +9.6千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +4.9千張",
-      "近 20 日法人偏買，合計 +1.1萬張",
-      "外資近 5 日買超 +8千張"
+      "三大法人近 5 日合計買超 +4千張",
+      "近 20 日法人偏買，合計 +9.6千張",
+      "外資近 5 日買超 +6.4千張"
     ],
     "risks": [
-      "投信近 5 日賣超 -4千張"
+      "投信近 5 日賣超 -3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-28",
-      "融券近 5 日增加 57.5%，留意軋空或空方壓力"
+      "最近法人資料日：2026-08-31",
+      "融券近 5 日增加 108.4%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -135,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-28"
+      "lastVerified": "2026-08-31"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -224,8 +222,8 @@
         "canonicalTopicName": "半導體設備與前段材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "欣銓為專業IC測試代工廠，提供記憶體/邏輯/混合訊號IC晶圓與成品測試服務。在半導體設備材料題材中屬後段測試環節，受記憶體與車用IC需求帶動。"
+        "confidence": "medium",
+        "roleSummary": "欣銓MOPS直接揭露記憶體IC晶圓測試、數位／混合訊號IC晶圓與成品測試及晶圓型Burn-in；公司不是半導體設備或前段材料供應商，而是使用測試設備的後段服務業者。FinMind顯示2026年7月營收17.67億元、MoM+13.8%、YoY+52.3%。"
       }
     ],
     "swot": [
@@ -371,7 +369,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 67,
+    "totalScore": 69,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -387,24 +385,18 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": [
-      {
-        "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 9.5%，部位需降速"
-      }
-    ]
+    "riskGates": []
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：218.10",
-      "波段多空分水嶺看 MA20：212.73",
-      "追蹤法人是否延續 買超：最近 +4.5千張",
-      "本益比 30.7 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：222.60",
+      "波段多空分水嶺看 MA20：214.75",
+      "追蹤法人是否延續 賣超：最近 -942張",
+      "本益比 29.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 238.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 179.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 183.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

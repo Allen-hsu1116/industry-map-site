@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1536",
   "name": "和大",
-  "generatedAt": "2026-08-28T12:32:49.585Z",
+  "generatedAt": "2026-08-31T12:34:30.497Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -45,66 +45,36 @@
     ]
   },
   "industry": {
-    "label": "核心題材受惠",
-    "score": 94,
-    "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
+    "confidence": "low",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=4；只做保守參考。",
     "roleDetail": {
-      "topicName": "工業自動化與 CNC 工具機",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "和大是台灣最大精密齒輪製造商，提供減速機齒輪、行星齒輪與精密軸類，工業自動化與CNC工具機的關鍵傳動元件供應商。",
-      "supplyChainStage": "transmission_components",
-      "roleType": "precision_gear_manufacturer",
-      "directness": "core",
+      "topicName": "儲能、電芯與電池材料",
+      "roleLabel": "間接受惠",
+      "roleSummary": "和大MOPS揭露汽機車、農機齒輪與軸件，以及機械零件製造，未揭露電池、儲能櫃、PCS或儲能傳動產品；本題材至多是電動車動力系統與儲能產業景氣的旁側觀察。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，但累計YoY僅+1.0%。",
+      "supplyChainStage": "peripheral",
+      "roleType": "indirect",
+      "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "諧波減速機",
-        "description": "諧波減速機 是 和大 的主要產品/服務之一，需搭配公開資料追蹤其在對應產業鏈中的量產、銷售與客戶應用。",
-        "whyItMatters": "精密齒輪與減速機製造商，提供工業機器人關鍵減速機，是工業自動化核心零組件供應商。",
-        "topicFit": "在 工業自動化與 CNC 工具機 題材中：精密齒輪與減速機製造商，提供工業機器人關鍵減速機，是工業自動化核心零組件供應商。",
-        "businessImpact": "該產品貢獻和大在相關題材的營收。1536月營收資料待確認",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：和大 公司基本資料"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1536"
-        ],
-        "lastVerified": "2026-06-01",
-        "confidence": "medium"
+        "name": "電動車減速機精密斜齒輪",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
-        "name": "精密齒輪",
-        "description": "精密齒輪 是 和大 的主要產品/服務之一，需搭配公開資料追蹤其在對應產業鏈中的量產、銷售與客戶應用。",
-        "whyItMatters": "精密齒輪與減速機製造商，提供工業機器人關鍵減速機，是工業自動化核心零組件供應商。",
-        "topicFit": "在 工業自動化與 CNC 工具機 題材中：精密齒輪與減速機製造商，提供工業機器人關鍵減速機，是工業自動化核心零組件供應商。",
-        "businessImpact": "該產品貢獻和大在相關題材的營收。1536月營收資料待確認",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：和大 公司基本資料"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1536"
-        ],
-        "lastVerified": "2026-06-01",
-        "confidence": "medium"
+        "name": "汽車變速箱齒輪組",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       },
       {
-        "name": "RV 減速機",
-        "description": "RV 減速機 是 和大 的主要產品/服務之一，需搭配公開資料追蹤其在對應產業鏈中的量產、銷售與客戶應用。",
-        "whyItMatters": "精密齒輪與減速機製造商，提供工業機器人關鍵減速機，是工業自動化核心零組件供應商。",
-        "topicFit": "在 工業自動化與 CNC 工具機 題材中：精密齒輪與減速機製造商，提供工業機器人關鍵減速機，是工業自動化核心零組件供應商。",
-        "businessImpact": "該產品貢獻和大在相關題材的營收。1536月營收資料待確認",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：和大 公司基本資料"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1536"
-        ],
-        "lastVerified": "2026-06-01",
-        "confidence": "medium"
+        "name": "傳動軸與花鍵軸件",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -122,26 +92,27 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
-      "題材 工業自動化與 CNC 工具機（technology/active） +17",
-      "角色證據 2 則 +12",
+      "直接度 間接受惠 +8",
+      "角色信心 low +3",
+      "題材 儲能、電芯與電池材料（theme/active） +18",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 13 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 53，上限 40）"
     ],
-    "summary": "和大 在「工業自動化與 CNC 工具機」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "和大 在「儲能、電芯與電池材料」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：工業自動化與 CNC 工具機 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 工業自動化與 CNC 工具機（technology/active） +17）",
-      "相關題材：人形機器人與實體 AI · 核心產品/平台",
-      "相關題材：儲能、電芯與電池材料 · 間接受惠",
+      "資料基礎：V2 待驗證（low）",
+      "V2 題材角色：儲能、電芯與電池材料 · 間接受惠 · low",
+      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 儲能、電芯與電池材料（theme/active） +18）",
+      "相關題材：工業自動化與 CNC 工具機 · 間接受惠",
+      "相關題材：太陽能與離岸風電 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=4；只做保守參考。",
       "V2 W：減速機市佔遠低於 Nabtesco/Harmonic Drive",
       "V2 W：6月營收3.67億元，累計YoY-0.2%持平，再生能源相關齒輪佔營收比重低，對整體業績影響有限。",
       "V2 T：Nabtesco/Harmonic Drive 在減速機市場的寡佔地位",
@@ -151,9 +122,9 @@
       "V2 O：工業機器人需求帶動減速機成長，人形機器人帶動新規格需求",
       "V2 O：儲能電池櫃散熱風扇傳動齒輪需求隨儲能裝機量成長，和大可切入台達電/東元供應鏈。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善",
-      "追蹤 工業自動化與 CNC 工具機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 人形機器人與實體 AI：月營收或訂單能見度改善"
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
+      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -190,26 +161,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "industrial-automation",
-        "topicName": "工業自動化與 CNC 工具機",
-        "canonicalTopicId": "industrial-automation",
-        "canonicalTopicName": "工業自動化與 CNC 工具機",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "和大是台灣最大精密齒輪製造商，提供減速機齒輪、行星齒輪與精密軸類，工業自動化與CNC工具機的關鍵傳動元件供應商。"
-      },
-      {
-        "topicId": "robotics-physical-ai",
-        "topicName": "人形機器人與實體 AI",
-        "canonicalTopicId": "robotics-physical-ai",
-        "canonicalTopicName": "人形機器人與實體 AI",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "和大是台灣精密齒輪製造龍頭，在機器人題材中供應諧波減速機與RV減速機的精密齒輪組件。5月營收3.95億年增12.2%，受惠機器人及電動車齒輪需求成長。諧波齒輪為六軸機器人與協作型機器人關節核心零組件。"
-      },
-      {
         "topicId": "energy-storage-battery",
         "topicName": "儲能、電芯與電池材料",
         "canonicalTopicId": "energy-storage-battery",
@@ -220,6 +171,16 @@
         "roleSummary": "和大MOPS揭露汽機車、農機齒輪與軸件，以及機械零件製造，未揭露電池、儲能櫃、PCS或儲能傳動產品；本題材至多是電動車動力系統與儲能產業景氣的旁側觀察。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，但累計YoY僅+1.0%。"
       },
       {
+        "topicId": "industrial-automation",
+        "topicName": "工業自動化與 CNC 工具機",
+        "canonicalTopicId": "industrial-automation",
+        "canonicalTopicName": "工業自動化與 CNC 工具機",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "medium",
+        "roleSummary": "和大MOPS揭露汽車、機車與農業機械用齒輪、軸類及各種機械零件，沒有揭露機器人減速機、伺服齒輪箱或CNC主軸客戶；在工業自動化題材應定位為精密傳動加工的應用鄰近者。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，累計YoY僅+1.0%。"
+      },
+      {
         "topicId": "renewable-energy",
         "topicName": "太陽能與離岸風電",
         "canonicalTopicId": "renewable-energy",
@@ -228,6 +189,16 @@
         "directnessLabel": "間接受惠",
         "confidence": "high",
         "roleSummary": "和大在再生能源題材中為太陽能追日系統精密驅動齒輪供應商，提供減速比1:100-1:1000行星齒輪。6月營收3.67億YoY+3.82%，MOPS登記為汽機車/農業機械齒輪製造。HOTA品牌在北美追日系統市場具知名度，亦跨足風電變槳齒輪箱與電動車減速機齒輪。"
+      },
+      {
+        "topicId": "robotics-physical-ai",
+        "topicName": "人形機器人與實體 AI",
+        "canonicalTopicId": "robotics-physical-ai",
+        "canonicalTopicName": "人形機器人與實體 AI",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "和大MOPS僅揭露汽機車、農業機械齒輪與軸類，以及一般機械零件製造買賣，未揭露諧波減速機、RV減速機、人形機器人關節或具名機器人客戶；本題材應降為精密齒輪加工能力對機器人傳動的間接鄰近角色。2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY+1.0%。"
       }
     ],
     "swot": [
@@ -477,28 +448,6 @@
     ],
     "topics": [
       {
-        "id": "industrial-automation",
-        "name": "工業自動化與 CNC 工具機",
-        "type": "technology",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
-      {
-        "id": "robotics-physical-ai",
-        "name": "人形機器人與實體 AI",
-        "type": "theme",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
-      {
         "id": "energy-storage-battery",
         "name": "儲能、電芯與電池材料",
         "type": "theme",
@@ -510,8 +459,30 @@
         ]
       },
       {
+        "id": "industrial-automation",
+        "name": "工業自動化與 CNC 工具機",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
         "id": "renewable-energy",
         "name": "太陽能與離岸風電",
+        "type": "theme",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "robotics-physical-ai",
+        "name": "人形機器人與實體 AI",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -535,7 +506,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 25,
+    "totalScore": 8,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 4,
@@ -548,22 +519,26 @@
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "觀察股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
-        "題材角色已 evidence-backed，可納入題材股策略"
+        "籌碼面有法人/信用籌碼支撐"
       ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
+      },
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
       }
     ]
   },

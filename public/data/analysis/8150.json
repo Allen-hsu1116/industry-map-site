@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8150",
   "name": "南茂",
-  "generatedAt": "2026-08-28T12:32:50.295Z",
+  "generatedAt": "2026-08-31T12:34:31.220Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -47,19 +47,19 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "score": 72,
+    "label": "核心題材受惠",
+    "score": 94,
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "面板、LED、光學鏡頭與感測",
-      "roleLabel": "間接受惠",
-      "roleSummary": "南茂在面板驅動 IC 封裝領域有穩定份額；DDI 封裝金凸塊技術是核心。",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "南茂MOPS直接支持顯示器驅動IC封裝測試、金凸塊、記憶體與混合訊號IC封測，顯示後段角色成立；但MOPS未揭露凸塊間距、COF／COG細節或具名IC客戶。2026年7月營收28.23億元、MoM+11.2%、YoY+43.6%，累計YoY+29.5%。",
       "supplyChainStage": "display_panel",
       "roleType": "ddic_packaging",
-      "directness": "indirect",
+      "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
@@ -87,18 +87,18 @@
       "risks": []
     },
     "scoringFactors": [
-      "直接度 間接受惠 +8",
+      "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "南茂 在「面板、LED、光學鏡頭與感測」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 72/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "南茂 在「面板、LED、光學鏡頭與感測」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：面板、LED、光學鏡頭與感測 · 間接受惠 · high",
-      "產業評分：72/100（直接度 間接受惠 +8；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
+      "V2 題材角色：面板、LED、光學鏡頭與感測 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
       "相關題材：HBM 高頻寬記憶體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -151,10 +151,10 @@
         "topicName": "面板、LED、光學鏡頭與感測",
         "canonicalTopicId": "display-led-optics",
         "canonicalTopicName": "面板、LED、光學鏡頭與感測",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "南茂在面板驅動 IC 封裝領域有穩定份額；DDI 封裝金凸塊技術是核心。"
+        "roleSummary": "南茂MOPS直接支持顯示器驅動IC封裝測試、金凸塊、記憶體與混合訊號IC封測，顯示後段角色成立；但MOPS未揭露凸塊間距、COF／COG細節或具名IC客戶。2026年7月營收28.23億元、MoM+11.2%、YoY+43.6%，累計YoY+29.5%。"
       },
       {
         "topicId": "hbm",
@@ -164,7 +164,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "南茂MOPS揭露高密度記憶體、顯示驅動IC及混合訊號IC封裝測試，但沒有HBM、TSV或晶圓級封裝字樣；本題材應定位為記憶體封測能力的鄰近觀察，而非已確認HBM量產。2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%，惟公司整體成長不能全歸因HBM。"
+        "roleSummary": "南茂MOPS揭露高集積度、高精密度記憶體封裝測試、顯示驅動IC金凸塊與混合訊號IC封測，但沒有HBM、TSV或堆疊封裝字樣；本題材是記憶體封測能力的鄰近觀察，不是已確認HBM量產。2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%，不能全歸因HBM。"
       }
     ],
     "swot": [],
@@ -206,7 +206,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 12,
+    "totalScore": 18,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -224,12 +224,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
       }
     ]
   },

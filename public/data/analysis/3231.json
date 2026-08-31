@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-08-28T12:32:49.915Z",
+  "generatedAt": "2026-08-31T12:34:30.832Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-28",
-  "chipDataDate": "2026-08-28",
+  "marketDataDate": "2026-08-31",
+  "chipDataDate": "2026-08-31",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,11 +18,11 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.1%。",
+    "summary": "緯創 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 3.9%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 4.1%"
+      "收盤跌破 MA20 3.9%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
@@ -32,49 +32,49 @@
     "stance": "neutral",
     "label": "籌碼中性",
     "score": -8,
-    "summary": "緯創 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +4.9萬張；投信近 5 日買超 +180張。",
+    "summary": "緯創 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +2萬張；投信近 5 日買超 +1.4千張。",
     "signals": [
-      "近 20 日法人偏買，合計 +4.9萬張",
-      "投信近 5 日買超 +180張"
+      "近 20 日法人偏買，合計 +2萬張",
+      "投信近 5 日買超 +1.4千張"
     ],
     "risks": [
       "三大法人近 5 日合計賣超 -2.5萬張",
-      "外資近 5 日賣超 -2.5萬張",
-      "融資近 5 日增加 16.0%，但技術面未同步轉強"
+      "外資近 5 日賣超 -2.6萬張",
+      "融資近 5 日增加 15.2%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-08-28"
+      "最近法人資料日：2026-08-31"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "緯創為全球前三大NB ODM，6月營收3218億元年增53.8%，累計年增94.0%。消費運算裝置為Dell/HP/Lenovo/Acer商用與消費筆電代工，亦為Chromebook主要供應商。MOPS主要經營：3C電子產品。",
+      "roleSummary": "緯創MOPS只揭露3C電子產品，無法支持原角色中的具體筆電型號、軍規認證或品牌客戶；本題材保留消費運算ODM產品家族，並將品牌全數標為應用對象。2026年7月營收3,082.19億元、YoY+60.8%、MoM-4.2%，公司說明成長主因為客戶需求增加。",
       "supplyChainStage": "system_assembly",
-      "roleType": "notebook_odm",
+      "roleType": "consumer_device_odm",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "Dell Latitude 3450/3550商用筆電(ODM)",
+        "name": "筆記型電腦ODM整機",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "HP EliteBook 640/650 G11商用筆電(ODM)",
+        "name": "商用電腦ODM整機",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "Lenovo ThinkPad E14/E16商用筆電(ODM)",
+        "name": "桌上型電腦與工作站ODM",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -88,18 +88,18 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 high +16",
+      "角色信心 medium +10",
       "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 1 項 +5",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "緯創 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · medium",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
       "相關題材：AI 伺服器整機與 EMS · 直接賦能角色",
       "相關題材：AI 伺服器機構件與滑軌 · 供應商角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -126,7 +126,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-28"
+      "lastVerified": "2026-08-31"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -155,8 +155,8 @@
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "緯創為全球前三大NB ODM，6月營收3218億元年增53.8%，累計年增94.0%。消費運算裝置為Dell/HP/Lenovo/Acer商用與消費筆電代工，亦為Chromebook主要供應商。MOPS主要經營：3C電子產品。"
+        "confidence": "medium",
+        "roleSummary": "緯創MOPS只揭露3C電子產品，無法支持原角色中的具體筆電型號、軍規認證或品牌客戶；本題材保留消費運算ODM產品家族，並將品牌全數標為應用對象。2026年7月營收3,082.19億元、YoY+60.8%、MoM-4.2%，公司說明成長主因為客戶需求增加。"
       },
       {
         "topicId": "ai-server",
@@ -261,14 +261,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：178.70",
-      "波段多空分水嶺看 MA20：185.70",
-      "追蹤法人是否延續 賣超：最近 -8.3千張",
+      "短線支撐/壓力先看 MA5：179.20",
+      "波段多空分水嶺看 MA20：185.30",
+      "追蹤法人是否延續 賣超：最近 -3.2千張",
       "本益比 14.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 206.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 169.50：列為轉弱警訊",
+      "收盤跌破 20 日低點 172.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

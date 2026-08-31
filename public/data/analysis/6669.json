@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6669",
   "name": "緯穎",
-  "generatedAt": "2026-08-28T12:32:50.244Z",
+  "generatedAt": "2026-08-31T12:34:31.169Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -98,7 +98,7 @@
       "資料基礎：V2 已驗證（medium）",
       "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
-      "相關題材：資安、雲端服務與企業軟體 · 直接賦能角色",
+      "相關題材：資安、雲端服務與企業軟體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -160,10 +160,10 @@
         "topicName": "資安、雲端服務與企業軟體",
         "canonicalTopicId": "software-cloud-security",
         "canonicalTopicName": "資安、雲端服務與企業軟體",
-        "directness": "direct_enabler",
-        "directnessLabel": "直接賦能角色",
-        "confidence": "high",
-        "roleSummary": "緯穎6月營收111.37億年增29.8%，累計年增41.7%。CSP專用AI伺服器ODM為核心，提供Bare Metal/DCaaS/AI訓練叢集代營服務。"
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "low",
+        "roleSummary": "緯穎MOPS僅揭露資料中心產品，支持伺服器與資料中心硬體，但未揭露雲端託管、DCaaS、資安軟體或叢集代營服務；本題材改為資料中心硬體管理韌體與雲端基礎設施承載角色。2026年7月營收1,176.86億元、MoM+5.7%、YoY+39.2%，不能直接歸因軟體或資安。"
       }
     ],
     "swot": [
@@ -236,12 +236,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 95 天未更新"
+        "message": "股價資料已 98 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 95 天未更新"
+        "message": "籌碼資料已 98 天未更新"
       }
     ]
   },

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-08-28T12:32:50.142Z",
+  "generatedAt": "2026-08-31T12:34:31.066Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-28",
-  "chipDataDate": "2026-08-28",
+  "marketDataDate": "2026-08-31",
+  "chipDataDate": "2026-08-31",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,31 +17,30 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 55,
-    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 21.9%。",
+    "score": 63,
+    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 22.8%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 21.9%"
+      "收盤站上 MA20 22.8%",
+      "帶量上漲，量比 1.83x"
     ],
     "risks": [],
-    "watch": [
-      "接近 20 日高點 239.00，觀察是否突破"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 8,
-    "summary": "信昌電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +2.4千張；外資近 5 日買超 +2.2千張。",
+    "summary": "信昌電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.9千張；外資近 5 日買超 +1.8千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2.4千張",
-      "外資近 5 日買超 +2.2千張"
+      "三大法人近 5 日合計買超 +1.9千張",
+      "外資近 5 日買超 +1.8千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -1萬張"
+      "近 20 日法人偏賣，合計 -1.2萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-28"
+      "最近法人資料日：2026-08-31"
     ]
   },
   "industry": {
@@ -50,13 +49,13 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "MLCC / 電容器",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "信昌電是國巨(2327)集團旗下MLCC上游介電瓷粉供應商，提供MLCC核心陶瓷材料，是台灣唯一MLCC瓷粉本土供應商。",
-      "supplyChainStage": "upstream_materials",
-      "roleType": "mlcc_dielectric_powder_supplier",
+      "roleSummary": "信昌電MOPS明確揭露晶片電容、晶片電阻與介電瓷粉，是MLCC及電子陶瓷材料的直接角色；本次刪除「台灣唯一」與未揭露直供客戶等過度精確說法。FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%，整體動能改善。",
+      "supplyChainStage": "ceramic_components_and_materials",
+      "roleType": "mlcc_resistor_dielectric_powder_provider",
       "directness": "core",
       "source": "canonical"
     },
@@ -95,7 +94,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 MLCC / 電容器（product/active） +16",
-      "角色證據 2 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -135,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-28"
+      "lastVerified": "2026-08-31"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -165,7 +164,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "信昌電是國巨(2327)集團旗下MLCC上游介電瓷粉供應商，提供MLCC核心陶瓷材料，是台灣唯一MLCC瓷粉本土供應商。"
+        "roleSummary": "信昌電MOPS明確揭露晶片電容、晶片電阻與介電瓷粉，是MLCC及電子陶瓷材料的直接角色；本次刪除「台灣唯一」與未揭露直供客戶等過度精確說法。FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%，整體動能改善。"
       },
       {
         "topicId": "advanced-packaging",
@@ -224,8 +223,8 @@
         "canonicalTopicName": "太陽能與離岸風電",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "信昌電提供太陽能逆變器用高壓陶瓷電容與突波保護元件，受惠太陽能裝置量持續成長帶動逆變器被動元件需求。"
+        "confidence": "medium",
+        "roleSummary": "信昌電MOPS僅揭露晶片電容、晶片電阻與介電瓷粉，未揭露太陽能或風電專案；本題材只定位為逆變器控制板可能採用的被動元件供應鄰近者。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，但公司整體成長不能直接歸因於再生能源。"
       }
     ],
     "swot": [
@@ -371,14 +370,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 52,
+    "totalScore": 54,
     "recommendationState": "blocked",
     "fundamental": {
       "score": -12,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "本益比 45.0 倍，需防估值壓縮"
+        "本益比 46.3 倍，需防估值壓縮"
       ]
     },
     "strategy": {
@@ -392,20 +391,20 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 17.9%，停損距離過大"
+        "message": "距離 MA20 約 18.5%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：212.20",
-      "波段多空分水嶺看 MA20：196.10",
-      "追蹤法人是否延續 買超：最近 +3.8千張",
-      "本益比 45.0 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：220.80",
+      "波段多空分水嶺看 MA20：200.40",
+      "追蹤法人是否延續 賣超：最近 -1.1千張",
+      "本益比 46.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 239.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 145.50：列為轉弱警訊",
+      "收盤突破 20 日高點 259.50 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 154.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }
