@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5347",
   "companyName": "世界",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -97,22 +97,22 @@
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "wafer_fabrication",
-      "roleType": "military_ic_foundry",
-      "roleSummary": "世界先進MOPS只揭露依客戶設計進行IC晶圓製造及相關服務，未揭露軍規客戶、JAN認證或國防收入；國防航太角色應定位為8吋BCD/類比/電源製程的潛在上游代工。FinMind顯示2026年7月營收47.06億元、MoM-21.3%。",
+      "supplyChainStage": "commercial_foundry_adjacent",
+      "roleType": "foundry_outside_defense",
+      "roleSummary": "世界先進MOPS支持依客戶設計進行IC晶圓製造、封裝測試服務、光罩製作與電腦輔助設計，但未揭露8吋、BCD節點、軍規認證、國防客戶或航太收入。本角色只能列為成熟製程晶圓製造對國防電子的潛在上游。FinMind顯示2026年7月營收47.06億元、MoM-21.3%、YoY+30.3%，公司整體波動大。",
       "products": [
-        "0.18µm至0.35µm高壓BCD電源管理IC晶圓代工",
-        "8吋類比/混合訊號CMOS晶圓代工",
-        "高壓顯示與馬達驅動IC晶圓代工",
-        "低壓/中壓功率MOSFET晶圓代工",
-        "光罩製作與IC電腦輔助設計服務"
+        "客戶設計IC之晶圓製造服務",
+        "積體電路封裝與測試服務",
+        "光罩製造與光罩設計服務",
+        "積體電路電腦輔助設計技術服務",
+        "其他晶圓半導體裝置製造服務"
       ],
       "customers": [
-        "茂達(6138；電源IC產業鏈對象，非MOPS揭露客戶)",
-        "矽力*-KY(6415；電源IC產業鏈對象，非MOPS揭露客戶)",
-        "立錡科技(電源IC產業鏈對象，非MOPS揭露客戶)",
-        "力智(6719；電源IC產業鏈對象，非MOPS揭露客戶)",
-        "致新(8081；類比IC產業鏈對象，非MOPS揭露客戶)"
+        "茂達(6138；電源IC產業鏈對象，非MOPS揭露客戶）",
+        "矽力*-KY(6415；電源管理IC應用對象，非MOPS揭露客戶）",
+        "立錡科技（類比IC產業鏈對象，非MOPS揭露客戶）",
+        "力智(6719；電源IC應用對象，非MOPS揭露客戶）",
+        "致新(8081；類比IC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "力積電(6770)",
@@ -120,65 +120,50 @@
         "台積電(2330)(軍規少量)"
       ],
       "risks": [
-        "軍規IC代工佔世界先進營收比重極低，主要為商用IC",
-        "8吋晶圓廠面臨設備老舊與產能受限問題",
-        "軍規IC認證週期長且量小，投入產出比不佳"
+        "MOPS沒有軍規認證、國防客戶或航太收入，題材直接性極低",
+        "2026年7月營收MoM-21.3%，成熟製程與專案認列波動顯著"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 依客戶訂單與其提供之產品設計說明，從事製造與銷售積體電路。提供前述產品之封裝與測試服務。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：依客戶設計從事積體電路晶圓製造，並提供封裝測試、光罩及IC電腦輔助設計服務。"
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5347",
+          "claim": "MOPS主要業務為依客戶設計製造IC、提供封裝測試、光罩製作與設計、以及IC與晶圓裝置CAD技術服務；未揭露國防或航太。"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收47.06億元，較6月減少21.3%；TWSE月營收查無資料，改採FinMind。"
+          "claim": "2026年7月營收47.06億元、MoM-21.3%、YoY+30.3%；為公司整體口徑，不能歸因國防航太。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "8吋0.18µm至0.35µm高壓BCD之DMOS、隔離與高壓元件整合",
-        "類比/混合訊號元件匹配、低漏電與高溫可靠度製程控制",
-        "功率MOSFET導通電阻、崩潰電壓與閘極氧化層可靠度控制"
+        "晶圓製程整合、批次追溯、參數管制與良率回饋",
+        "光罩資料準備、圖形轉移與設計規則檢查",
+        "晶圓製造銜接封裝測試、測試資料與失效分析閉環"
       ],
       "swot": {
         "strengths": [
-          "8吋BCD、類比與電源管理製程可支援航太電子的成熟節點需求",
-          "晶圓製造、光罩、設計服務及封裝測試協調能力完整"
+          "MOPS確認晶圓製造、光罩、設計支援及封裝測試服務鏈完整",
+          "FinMind顯示2026年7月營收47.06億元、YoY+30.3%，較去年同期成長"
         ],
         "weaknesses": [
-          "2026年7月營收47.06億元、MoM-21.3%，成熟製程拉貨波動顯著",
-          "MOPS未揭露軍規認證、國防客戶或軍工收入，題材連結偏低"
+          "MOPS未揭露軍規流程、認證、可追溯要求或具名國防客戶",
+          "2026年7月營收MoM-21.3%，公司整體拉貨波動大且不能歸因國防"
         ],
         "opportunities": [
-          "國防自主提高成熟節點電源、馬達驅動與類比IC在地代工需求",
-          "航太長生命週期產品偏好成熟製程，可延長8吋產線商業壽命"
+          "國防自主若擴大，可增加成熟製程電源、馬達驅動與類比IC在地製造需求",
+          "長生命週期電子產品偏好穩定製程，可延長成熟產線商業價值"
         ],
         "threats": [
-          "若缺乏軍規流程、長期供貨承諾與可追溯性，難切入真正航太專案",
-          "中國成熟製程擴產與景氣循環可能壓低8吋代工價格"
+          "缺乏軍規品質系統與長期供貨承諾時，難切入真正航太專案",
+          "中國成熟製程擴產與景氣循環可能壓低晶圓代工價格"
         ]
       }
     },

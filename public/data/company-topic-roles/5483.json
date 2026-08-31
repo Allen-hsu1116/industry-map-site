@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5483",
   "companyName": "中美晶",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "renewable-energy",
@@ -171,71 +171,71 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "solar_plus_storage",
-      "roleType": "solar_plus_storage_system",
-      "roleSummary": "中美晶MOPS揭露太陽能晶錠、晶圓、電池、模組與發電系統；儲能屬光儲案場延伸，並非電芯製造商。 FinMind顯示2026年7月營收69.98億元、MoM-9.2%，光伏出貨仍受景氣波動。",
+      "supplyChainStage": "solar_generation_adjacent",
+      "roleType": "solar_outside_storage",
+      "roleSummary": "中美晶MOPS只揭露太陽能晶錠、晶圓、電池、模組與發電系統，沒有儲能電芯、PCS、BMS或EMS產品；因此本角色改為可與儲能共案的太陽能發電端，而非儲能供應商。FinMind顯示2026年7月營收69.98億元、MoM-9.2%、YoY+27.7%，為公司整體口徑。",
       "products": [
-        "太陽能模組搭配儲能櫃之光儲系統",
-        "工商業表後儲能與尖離峰移轉方案",
-        "太陽能電站EPC與儲能併網工程",
-        "光儲EMS能源管理與需量控制系統"
+        "太陽能晶錠",
+        "太陽能晶圓",
+        "太陽能電池",
+        "太陽能模組",
+        "太陽能發電系統"
       ],
       "customers": [
-        "台電(光儲案場併網與電力交易對象)",
-        "台積電(2330；綠電採購對象)",
-        "聯電(2303；園區綠電應用對象)",
-        "Google Taiwan(資料中心綠電採購對象)"
+        "台灣電力公司（發電系統併網對象，非MOPS揭露客戶）",
+        "台積電(2330；再生能源應用對象，非MOPS揭露客戶）",
+        "聯電(2303；再生能源應用對象，非MOPS揭露客戶）",
+        "Google Taiwan（資料中心綠電應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華城電能(1513)",
         "勝德(3296)"
       ],
       "risks": [
-        "儲能系統整合佔比低",
-        "儲能市場競爭激烈"
+        "MOPS未揭露任何儲能電芯、PCS、BMS或EMS，題材直接性低",
+        "2026年7月營收MoM-9.2%，光伏與半導體業務仍有月度波動"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5483",
+          "claim": "MOPS主要經營業務為太陽能晶錠、晶圓、電池、模組與發電系統；未揭露儲能產品。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "2026年7月營收69.98億元、MoM-9.2%、YoY+27.7%；為公司整體口徑，不能歸因儲能。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "光伏逆變器、PCS與電池櫃之AC/DC耦合",
-        "EMS需量反應與電池SOC/SOH管理",
-        "光儲案場併網保護及EPC整合"
+        "太陽能晶體成長、切片與晶圓厚度／翹曲控制",
+        "太陽能電池轉換效率、金屬化與模組封裝可靠度",
+        "太陽能發電系統的逆變、併網保護與發電監控"
       ],
       "swot": {
         "strengths": [
-          "太陽能晶圓至模組與電站系統垂直整合",
-          "既有案場可導入儲能提高售電價值"
+          "MOPS確認太陽能晶錠至模組及發電系統的垂直產品鏈",
+          "FinMind顯示2026年7月營收69.98億元、YoY+27.7%，整體規模較去年同期成長"
         ],
         "weaknesses": [
-          "FinMind顯示2026年7月營收69.98億元、MoM-9.2%，光伏出貨仍受景氣波動",
-          "MOPS未列電芯或電池材料製造",
-          "電芯與PCS仰賴外部供應商"
+          "不製造儲能電芯、PCS、BMS或EMS，不能列為儲能核心供應商",
+          "2026年7月營收MoM-9.2%，出貨與專案認列仍具波動"
         ],
         "opportunities": [
-          "表後儲能與需量反應需求成長",
-          "企業RE100推升綠電長約需求"
+          "光伏案場搭配第三方儲能可提升併網彈性與綠電利用率",
+          "企業綠電與自發自用需求可增加太陽能發電系統專案"
         ],
         "threats": [
-          "台達電、台泥儲能及大型EPC競爭",
-          "電池消防規範提高專案風險"
+          "把光伏系統誤列儲能產品會高估題材純度與營收彈性",
+          "太陽能供應過剩、模組價格競爭與併網限制可能壓縮回報"
         ]
       }
     }

@@ -2,80 +2,77 @@
   "schemaVersion": 1,
   "companyCode": "3545",
   "companyName": "敦泰",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "display_driver_ic",
+      "directness": "direct",
+      "supplyChainStage": "mobile_display_ic",
       "roleType": "touch_display_ic",
-      "roleSummary": "敦泰7月營收9.11億，YoY-14.3%，累計61.39億，累計YoY-13.6%，累計YoY-13.6%。MOPS登記為手持式行動裝置應用晶片。為全球觸控IC與指紋辨識IC領導廠商。",
+      "roleSummary": "敦泰MOPS只概括揭露手持式行動裝置應用晶片，未逐項證實TDDI、AMOLED DDI、螢幕下指紋、製程節點或小米／OPPO等客戶；依既有產品脈絡保留觸控與顯示IC角色，但所有具名公司改列應用對象。2026年7月營收9.11億元、MoM+1.2%、YoY-14.3%、累計YoY-13.6%，終端需求仍承壓。",
       "products": [
-        "電容式觸控IC(自電容/互電容多點觸控)",
-        "光學式螢幕下指紋辨識IC(OLED屏下)",
-        "TDDI觸控顯示驅動整合IC(整合觸控+驅動)",
-        "AMOLED DDI驅動IC"
+        "電容式多點觸控控制IC",
+        "觸控與顯示驅動整合IC（TDDI）",
+        "行動裝置顯示驅動IC",
+        "光學式螢幕下指紋感測IC"
       ],
       "customers": [
-        "小米(Redmi手機觸控IC)",
-        "OPPO(手機觸控/指紋IC)",
-        "vivo(螢幕下指紋辨識IC)",
-        "三星(Galaxy A系列TDDI)"
+        "小米（行動裝置應用對象，非MOPS揭露客戶）",
+        "OPPO（行動裝置應用對象，非MOPS揭露客戶）",
+        "vivo（行動裝置應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（顯示／觸控應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "聯詠(3034)",
         "匯頂(Goodix)"
       ],
       "risks": [
-        "7月營收YoY-14.3%手機市場需求疲軟",
-        "中國觸控IC廠(匯頂)低價競爭"
+        "2026年7月營收YoY-14.3%、累計YoY-13.6%，行動終端拉貨仍弱",
+        "MOPS未揭露產品細項、製程節點與具名客戶，舊資料精度不可直接沿用"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3545",
+          "claim": "MOPS主要經營業務為研究、開發、設計、製造及銷售手持式行動裝置應用晶片；未逐項揭露TDDI、指紋或客戶。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收9.11億元、MoM+1.2%、YoY-14.3%、累計YoY-13.6%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-08-31",
       "status": "verified",
       "techFocus": [
-        "光學式螢幕下指紋辨識技術(OLED穿透率優化)",
-        "TDDI觸控+驅動單晶片整合(40nm/28nm)"
+        "互電容／自電容觸控感測、雜訊抑制與多指座標演算",
+        "觸控掃描與顯示時序整合、面板雜訊隔離及功耗管理",
+        "OLED穿透光學訊號擷取、指紋影像校正與特徵前處理"
       ],
       "swot": {
         "strengths": [
-          "全球觸控IC市佔率前三大",
-          "光學螢幕下指紋辨識技術領先",
-          "TDDI整合IC產品線完整"
+          "手持式行動裝置應用晶片本業可直接對應觸控、顯示與感測需求",
+          "TDDI整合可減少面板零件與連接複雜度，具系統整合價值"
         ],
         "weaknesses": [
-          "7月營收9.11億，YoY-14.3%，累計61.39億，累計YoY-13.6%手機需求疲軟",
-          "高度依賴中國手機客戶",
-          "聯詠在DDI領域領先"
+          "2026年7月營收9.11億元、YoY-14.3%、累計YoY-13.6%，需求復甦不足",
+          "MOPS未逐項支持AMOLED DDI、指紋產品占比或具名客戶關係"
         ],
         "opportunities": [
-          "OLED螢幕下指紋辨識滲透率提升",
-          "車用觸控IC新應用",
-          "AR/VR手勢辨識IC"
+          "OLED與窄邊框裝置升級可增加觸控顯示整合及指紋感測需求",
+          "車載與平板大尺寸觸控若通過長期驗證，可分散手機市場集中"
         ],
         "threats": [
-          "匯頂科技低價競爭",
-          "手機市場出貨量下滑",
-          "OLED DDI價格競爭加劇"
+          "聯詠、Goodix及中國顯示驅動廠的價格競爭可能壓縮毛利",
+          "手機出貨停滯與面板客戶去庫存會直接影響晶片拉貨"
         ]
       }
     },

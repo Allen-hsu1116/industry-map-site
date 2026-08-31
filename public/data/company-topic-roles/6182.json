@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6182",
   "companyName": "合晶",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -175,18 +175,20 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "合晶科技為台灣矽晶圓供應商,在PCB載板題材中屬邊際參與(矽晶圓用於載板測試/驗證),主要營收來自半導體矽晶圓與外延晶圓。",
+      "supplyChainStage": "semiconductor_wafer_outside_topic",
+      "roleType": "silicon_wafer_outside_topic",
+      "roleSummary": "合晶MOPS只支持半導體及其材料研發、設計與製銷，未揭露PCB、IC載板、鑽孔測試或載板廠客戶。此角色改列為題材外的矽晶圓材料觀察，不能再把矽晶圓包裝成載板製程耗材。FinMind顯示2026年7月營收9.94億元、MoM+2.9%、YoY+18.9%，但屬公司整體半導體材料營收。",
       "products": [
-        "矽晶圓基板(IC載板鑽孔測試用)",
-        "外延晶圓(EPI Wafer)(IC載板品質驗證用)",
-        "研磨晶圓(載板對位校正用)"
+        "半導體矽晶圓（公司產品範圍，非PCB載板）",
+        "拋光矽晶圓（公司產品範圍，非PCB載板）",
+        "研磨矽晶圓（公司產品範圍，非PCB載板）",
+        "外延矽晶圓（公司產品範圍，非PCB載板）"
       ],
       "customers": [
-        "欣興(3037)(IC載板製程驗證)",
-        "南電(8046)(載板材料測試)",
-        "景碩(3189)(IC載板品質驗證)"
+        "環球晶(6488；矽晶圓產業比較對象，非MOPS揭露客戶）",
+        "台勝科(3532；矽晶圓產業比較對象，非MOPS揭露客戶）",
+        "台積電(2330；晶圓應用對象，非MOPS揭露客戶）",
+        "聯電(2303；晶圓應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "環球晶(6488)(矽晶圓龍頭)",
@@ -194,55 +196,50 @@
         "合晶科技自身(6吋/8吋矽晶圓)"
       ],
       "risks": [
-        "6月營收9.66億(FinMind)但PCB載板相關佔比極低",
-        "矽晶圓與PCB載板供應鏈關聯度極低",
-        "題材傳導非常微弱，合晶核心為半導體矽晶圓"
+        "MOPS未揭露任何PCB或IC載板產品，題材歸類本身偏離本業",
+        "FinMind營收成長屬全公司口徑，不能歸因載板需求"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及其材料之研發、設計、製造、進出口及代理銷售等"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6182",
+          "claim": "MOPS主要經營業務為半導體及其材料之研發、設計、製造、進出口及代理銷售；未揭露PCB或IC載板。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "2026年7月營收9.94億元、MoM+2.9%、YoY+18.9%；為公司整體口徑，不能歸因PCB／載板。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "矽晶圓基板用於IC載板鑽孔測試校正",
-        "EPI外延晶圓用於IC載板品質驗證",
-        "研磨晶圓表面平坦化用於載板對位"
+        "矽晶體成長、摻雜與電阻率均勻性控制",
+        "晶圓切割、研磨、拋光與表面缺陷控制",
+        "外延層厚度、摻雜濃度與晶格缺陷管理"
       ],
       "swot": {
         "strengths": [
-          "矽晶圓基板可用於IC載板製程驗證與鑽孔測試",
-          "7月營收9.94億MoM+2.9%，整體營運穩定",
-          "客戶含欣興(3037)、南電(8046)，載板大廠製程驗證需求"
+          "MOPS確認半導體材料研發製造能力，可提供晶圓材料技術基礎",
+          "2026年7月營收9.94億元、MoM+2.9%、YoY+18.9%，公司整體營運改善"
         ],
         "weaknesses": [
-          "PCB載板為間接角色，合晶不生產載板僅提供測試基板",
-          "矽晶圓用於載板測試為小量應用，營收貢獻微",
-          "載板製程驗證用矽基板可能被其他材料取代"
+          "不生產PCB、IC載板或載板材料，題材直接性極低",
+          "原角色所稱載板鑽孔測試與欣興、南電關係沒有MOPS支持"
         ],
         "opportunities": [
-          "ABF載板需求隨AI伺服器增長帶動製程驗證需求",
-          "載板鑽孔測試用矽基板規格升級",
-          "載板良率提升需求帶動測試基板量增"
+          "半導體成熟製程與功率元件需求回升可帶動矽晶圓本業",
+          "晶圓表面品質與外延規格升級可提高產品附加價值"
         ],
         "threats": [
-          "載板廠可能使用其他測試基板材料",
-          "矽基板測試量小且替代性高",
-          "載板景氣循環影響測試需求"
+          "把半導體晶圓誤當PCB載板材料會造成題材營收歸因錯誤",
+          "矽晶圓景氣循環、價格競爭與產能利用率會放大營收波動"
         ]
       }
     },

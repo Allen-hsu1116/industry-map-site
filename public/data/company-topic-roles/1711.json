@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1711",
   "companyName": "永光",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -242,18 +242,20 @@
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "semi_chemicals",
-      "roleType": "semi_photoresist_chemicals",
-      "roleSummary": "永光電子化學品可用於半導體製程。7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%。",
+      "supplyChainStage": "electronic_chemicals",
+      "roleType": "electronic_chemical_materials_adjacent",
+      "roleSummary": "永光MOPS明列電子化學品，但未逐項揭露DNQ／PAC、蝕刻液、晶圓清洗劑、純度等級或台積電／聯電客戶。半導體材料角色可保留為電子化學品的應用相鄰，不能把特定配方與認證寫死。2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%、累計YoY+9.0%，為色料、特化、電子、碳粉與醫藥等全公司口徑。",
       "products": [
-        "光阻用感光劑(DNQ/PAC)",
-        "蝕刻液添加劑(緩蝕劑/界面活性劑)",
-        "晶圓清洗劑成分(有機酸/溶劑)"
+        "電子級製程化學品（MOPS支持產品類別）",
+        "光阻配方用感光／功能性化學品（題材應用，MOPS未逐項揭露）",
+        "晶圓清洗用高純度溶劑與添加劑（題材應用，MOPS未逐項揭露）",
+        "蝕刻／顯影製程用配方添加劑（題材應用，MOPS未逐項揭露）"
       ],
       "customers": [
-        "台積電(2330)",
-        "聯電(2303)",
-        "JSR/信越(光阻材料供應)"
+        "台積電(2330；半導體材料驗證對象，非MOPS揭露客戶）",
+        "聯電(2303；半導體材料驗證對象，非MOPS揭露客戶）",
+        "JSR（光阻材料生態對象，非MOPS揭露客戶）",
+        "信越化學（電子材料生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "長興(1717)",
@@ -261,49 +263,50 @@
         "信越化學"
       ],
       "risks": [
-        "電子化學品佔比低",
-        "半導體材料認證週期極長"
+        "MOPS只揭露電子化學品大類，沒有半導體產品規格與客戶驗證證據",
+        "半導體材料認證期長，且電子化學品占全公司比重未揭露"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "claim": "MOPS主要經營業務含色料化學品、特用化學品、電子化學品、碳粉產品與醫藥化學品；未逐項揭露半導體配方或客戶。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%、累計YoY+9.0%；為公司整體口徑。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "光阻感光劑合成技術(DNQ/PAC)",
-        "電子級化學品純化技術(ppb級)"
+        "功能性有機化合物合成、反應副產物控制與批次一致性",
+        "高純度化學品精製、過濾、金屬離子與微粒管理",
+        "配方相容性、儲存安定性與晶圓製程驗證流程"
       ],
       "swot": {
         "strengths": [
-          "光阻感光劑合成技術有基礎",
-          "電子化學品純化能力"
+          "MOPS確認電子化學品與特用化學品本業，具功能性材料合成基礎",
+          "2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%，整體營收改善"
         ],
         "weaknesses": [
-          "半導體化學品佔比極低",
-          "與國際材料大廠差距大"
+          "MOPS未揭露半導體級純度、特定配方或晶圓廠認證，題材信心僅中等",
+          "公司產品線橫跨色料、碳粉與醫藥，月營收無法拆分半導體材料貢獻"
         ],
         "opportunities": [
-          "先進製程光阻材料國產化需求",
-          "EUV光阻材料新應用"
+          "供應鏈在地化可增加電子化學品送樣、驗證與替代料機會",
+          "成熟與先進製程對微粒、金屬離子與配方穩定性的要求持續提高"
         ],
         "threats": [
-          "JSR/信越等國際大廠壟斷",
-          "半導體材料認證門檻高"
+          "JSR、信越、BASF等國際材料商具認證、規模與客戶黏著優勢",
+          "任一批次純度或污染異常都可能導致長期停單與高額品質成本"
         ]
       }
     }

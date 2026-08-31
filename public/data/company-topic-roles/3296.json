@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3296",
   "companyName": "勝德",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -96,71 +96,71 @@
       "topicName": "醫療器材與體外診斷",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "medical_power",
-      "roleType": "medical_power_supply",
-      "roleSummary": "勝德MOPS未明列醫療產品；醫療角色僅能定位於電源分配、突波保護與備援電力的潛在延伸。 2026年7月營收1.72億元、YoY+42.9%、累計YoY+5.8%，但MOPS未明列醫療產品。",
+      "supplyChainStage": "electromechanical_outside_medical",
+      "roleType": "power_and_communication_adjacent",
+      "roleSummary": "勝德MOPS只支持有線／無線通訊器材、電子零組件與電機電子機械器材，未揭露醫療設備、IEC 60601認證、低漏電規格或GE HealthCare等客戶。本角色只能列為電源分配與機電整合可能延伸醫療場域的題材外觀察。2026年7月營收1.72億元、MoM+4.3%、YoY+42.9%、累計YoY+5.8%。",
       "products": [
-        "醫療推車用隔離式AC電源分配器",
-        "IEC 60601-1應用低漏電流電源模組",
-        "手術室設備用突波保護電源排插",
-        "可攜式醫療設備鋰電備援模組"
+        "通訊設備用機電整合組件",
+        "電子設備用電源分配單元（歷史產品範圍）",
+        "突波保護電源排插（歷史產品範圍）",
+        "有線／無線通訊機械器材",
+        "電機與電子機械器材組件"
       ],
       "customers": [
-        "GE HealthCare(影像設備電源應用對象)",
-        "Philips Healthcare(監護設備電源應用對象)",
-        "Siemens Healthineers(檢驗設備電源對象)",
-        "佳世達(2352；醫療設備應用對象)"
+        "GE HealthCare（醫療供電應用對象，非MOPS揭露客戶）",
+        "Philips（醫療設備應用對象，非MOPS揭露客戶）",
+        "Siemens Healthineers（醫療設備應用對象，非MOPS揭露客戶）",
+        "佳世達(2352；醫療設備生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "明緯(6159)",
         "康舒(6282)"
       ],
       "risks": [
-        "醫療電源佔比低",
-        "醫療認證週期長"
+        "MOPS未揭露醫療產品、認證或客戶，題材直接性極低",
+        "醫療供電涉及長期驗證與失效責任，無公開認證前不能視為供應商"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3296",
+          "claim": "MOPS主要業務為有線及無線通信機械器材、電子零組件、電機與電子機械器材之製造買賣；未揭露醫療產品。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收1.72億元、MoM+4.3%、YoY+42.9%、累計YoY+5.8%；為公司整體口徑。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "IEC 60601-1雙重絕緣與爬電距離設計",
-        "低於100μA漏電流之濾波與隔離",
-        "浪湧、ESD與EMC抗擾度設計"
+        "電源分配、突波吸收、過流保護與EMI濾波（歷史技術範圍）",
+        "機電組件的端子、線材、外殼與組裝公差控制",
+        "醫療隔離與低漏電設計要求（題材應用要求，MOPS未揭露認證）"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收1.72億元、YoY+42.9%、累計YoY+5.8%，但MOPS未明列醫療產品",
-          "電源保護與機電整合可延伸醫療供電",
-          "小量多樣客製適合醫療PDU"
+          "MOPS確認通訊、電子零件及電機電子機械器材製造能力",
+          "2026年7月營收1.72億元、YoY+42.9%，單月營運改善"
         ],
         "weaknesses": [
-          "醫療產品與客戶未由MOPS揭露",
-          "醫療認證與供應商稽核紀錄未公開"
+          "沒有MOPS支持的醫療產品、IEC 60601認證或具名客戶",
+          "累計YoY僅+5.8%，且公司規模小，無法證明醫療題材貢獻"
         ],
         "opportunities": [
-          "醫療推車與居家醫療增加隔離供電需求",
-          "智慧醫院增加UPS與突波保護"
+          "醫療推車、監護與居家醫療設備需要電源分配及機電整合能力",
+          "若取得醫療電氣安全與品質系統認證，既有電源保護能力可延伸新場域"
         ],
         "threats": [
-          "明緯與康舒具認證及規模優勢",
-          "產品失效責任與召回風險高"
+          "明緯、康舒等具醫療認證與規模的供應商競爭門檻高",
+          "產品失效、漏電或EMC不合格會帶來召回與責任風險"
         ]
       }
     },

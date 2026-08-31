@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3454",
   "companyName": "晶睿",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -90,20 +90,20 @@
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "optical_components",
-      "roleType": "surveillance_optics",
-      "roleSummary": "晶睿為安防監控設備製造商，光學鏡頭模組為產品核心零組件之一。6月營收資料未揭露，安防監控需求受AI影像分析帶動高階鏡頭升級。",
+      "supplyChainStage": "display_optics_outside_topic",
+      "roleType": "surveillance_imaging_adjacent",
+      "roleSummary": "3454本次MOPS完整基本資料與一般公司資料皆查無；既有晶睿安防影像產品僅能列為歷史產品範圍，不能再把特定鏡頭規格或Axis、Hikvision關係寫成已驗證事實。FinMind最新僅到2026年2月營收4.54億元、MoM-28.0%，缺乏近月資料，對顯示／光學題材僅保留安防成像的間接觀察。",
       "products": [
-        "監控攝影機鏡頭模組(varifocal 12MP/autofocus)",
-        "熱成像光學模組(384×288/640×480非製冷)",
-        "車載攝影鏡頭(廣角/魚眼/紅外濾片)",
-        "360度全景監控光學模組"
+        "網路型監控攝影機（歷史產品範圍，MOPS本次查無）",
+        "網路錄影機與影像管理設備（歷史產品範圍）",
+        "360度全景監控攝影機（歷史產品範圍）",
+        "熱感／多感測監控攝影機（歷史產品範圍）"
       ],
       "customers": [
-        "Axis Communications(安防攝影機OEM)",
-        "Hikvision(安防鏡頭模組)",
-        "研華(2395)(工業影像鏡頭)",
-        "Bosch Security(安防光學模組)"
+        "Axis Communications（安防生態比較對象，非MOPS揭露客戶）",
+        "Hikvision（安防生態比較對象，非MOPS揭露客戶）",
+        "Bosch Building Technologies（安防應用比較對象，非MOPS揭露客戶）",
+        "研華(2395；工業影像應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "舜宇光學(2342)(監控鏡頭)",
@@ -111,55 +111,51 @@
         "大立光(3008)(光學鏡頭)"
       ],
       "risks": [
-        "營收資料無法取得(MOPS/FinMind均失敗)",
-        "監控光學鏡頭市場競爭激烈，中國低價競爭壓力大",
-        "熱成像模組單價高但市場規模有限"
+        "MOPS兩條公司資料路徑均查無3454，無法驗證既有產品規格與客戶關係",
+        "FinMind營收只更新到2026年2月，資訊時效不足",
+        "安防影像與面板／LED供應鏈僅屬間接關聯"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: (MOPS查無，安全監控產品製造：網路攝影機、NVR、門禁系統)"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3454",
+          "claim": "2026-09-01查詢MOPS完整基本資料與一般公司資料均找不到3454；此失敗只證明已嘗試驗證，不支持舊有產品規格或客戶聲明。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind最新只到2026年2月，營收4.54億元、MoM-28.0%；查詢區間沒有2025年2月，未計算YoY，且沒有2026年3月以後資料。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "監控攝影機varifocal鏡頭光學設計(12MP高解析)",
-        "熱成像非製冷型焦平面陣列(FPA)光學整合",
-        "車載廣角鏡頭非球面光學設計(畸變<3%)"
+        "ONVIF網路視訊互通、影像編碼與串流管理（歷史技術範圍）",
+        "低照度、寬動態與紅外補光的監控成像整合（歷史技術範圍）",
+        "邊緣影像事件偵測與攝影機韌體管理（歷史技術範圍）"
       ],
       "swot": {
         "strengths": [
-          "監控攝影機varifocal鏡頭12MP高解析光學設計能力",
-          "熱成像非製冷型FPA光學整合技術具差異化",
-          "客戶含Axis Communications、Hikvision，國際安防品牌OEM"
+          "歷史產品範圍涵蓋網路攝影機、錄影與影像管理，可對應安防成像應用",
+          "監控系統需整合低照度、寬動態、紅外與邊緣分析，技術鏈條完整"
         ],
         "weaknesses": [
-          "MOPS與FinMind均無法取得資料，資訊透明度低(上櫃)",
-          "安防鏡頭市場競爭激烈，大立光(3008)、玉晶光(3406)也跨入",
-          "光學鏡頭模組ASP受中國廠商低价競爭壓縮"
+          "MOPS本次查無3454公司資料，任何型號、客戶與規格都缺乏新揭露支持",
+          "FinMind最新僅到2026年2月營收4.54億元且MoM-28.0%，近月營運不可判讀"
         ],
         "opportunities": [
-          "4K/8K超高解析監控攝影機鏡頭升級需求",
-          "車載攝影鏡頭(廣角/魚眼/紅外)隨ADAS滲透率提升增長",
-          "熱成像模組打入工業安全/消防應用"
+          "智慧建築與工業安全仍需要網路影像、熱感與事件偵測整合",
+          "邊緣AI可提高監控攝影機的即時告警與影像檢索價值"
         ],
         "threats": [
-          "中國安防鏡頭廠(舜宇/聯合光學)低价競爭",
-          "智慧手機鏡頭廠跨入安防領域競爭",
-          "Hikvision被美國制裁可能影響OEM訂單"
+          "安防設備價格競爭與資安法規可能同時壓縮毛利並增加開發成本",
+          "資料長期缺漏會降低市場對題材純度、營運延續性與客戶關係的可信度"
         ]
       }
     },

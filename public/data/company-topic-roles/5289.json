@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5289",
   "companyName": "宜鼎",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "cxl-memory-pooling",
@@ -244,70 +244,70 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "memory_pcb",
-      "roleType": "memory_module_pcb_user",
-      "roleSummary": "宜鼎不製造PCB或IC載板，而是DDR5模組與NVMe SSD板的需求端。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，出貨成長可帶動高層數低損耗PCB採購，但關聯屬間接。",
+      "supplyChainStage": "memory_module_pcb_demand",
+      "roleType": "industrial_memory_module_pcb_user",
+      "roleSummary": "宜鼎MOPS明確支持工業嵌入式儲存裝置與工業DRAM模組，但公司不是PCB或IC載板製造商；本角色僅是模組板的規格定義與採購需求端。FinMind顯示2026年7月營收84.95億元、MoM+3.5%、YoY+636.5%，跳升幅度異常大，須留意資料口徑且不能歸因PCB。",
       "products": [
-        "DDR5 RDIMM 10層低損耗記憶體模組板",
-        "M.2 2280 PCIe 4.0 NVMe SSD載板",
-        "EDSFF E1.S PCIe 5.0企業級SSD板",
-        "eMMC/UFS嵌入式儲存測試載板"
+        "工業DRAM記憶體模組板組",
+        "工業NVMe固態硬碟板組",
+        "工業SATA固態硬碟板組",
+        "嵌入式快閃儲存模組板組"
       ],
       "customers": [
-        "欣興(3037；模組PCB供應鏈對象)",
-        "健鼎(3044；多層PCB供應鏈對象)",
-        "瀚宇博(5469；伺服器PCB供應鏈對象)",
-        "金像電(2368；高速PCB技術比較對象)"
+        "欣興(3037；模組PCB供應鏈對象，非MOPS揭露供應關係）",
+        "健鼎(3044；多層PCB供應鏈對象，非MOPS揭露供應關係）",
+        "瀚宇博(5469；伺服器PCB供應鏈對象，非MOPS揭露供應關係）",
+        "金像電(2368；高速PCB技術比較對象，非MOPS揭露供應關係）"
       ],
       "competitors": [
         "創見(2451)",
         "宇瞻(8271)"
       ],
       "risks": [
-        "PCB為外購品",
-        "PCB漲價壓縮模組毛利"
+        "PCB全數屬外購或委製，宜鼎不具壓合、鑽孔、電鍍製造能力",
+        "FinMind 2026年7月YoY+636.5%的跳升需額外核對資料口徑與併購因素"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用DRAM模組"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5289",
+          "claim": "MOPS主要業務為工業用嵌入式儲存裝置與工業用動態隨機記憶體模組；未揭露PCB製造。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind fallback：2026年7月營收84.95億元，MoM+3.5%"
+          "claim": "2026年7月營收84.95億元、MoM+3.5%、YoY+636.5%；跳升幅度需核對資料口徑，且不能歸因PCB。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-08-31",
       "status": "verified",
       "techFocus": [
-        "DDR5 5600MT/s阻抗控制、串擾抑制與10層疊構",
-        "PCIe 5.0 32GT/s低損耗材料與差分走線設計",
-        "工規板級三防塗覆、寬溫與振動可靠度"
+        "記憶體模組板的差分阻抗、串擾與電源完整性設計",
+        "SSD控制器、NAND與快取間的高速走線及韌體相容性驗證",
+        "寬溫、抗振、三防塗覆與斷電保護的工規可靠度設計"
       ],
       "swot": {
         "strengths": [
-          "宜鼎工規記憶體與SSD產品可定義高層數、低損耗及寬溫PCB規格",
-          "FinMind顯示2026年7月營收84.95億元、MoM+3.5%，模組出貨可形成穩定PCB採購量"
+          "MOPS確認工業儲存與DRAM模組本業，可定義板級訊號與可靠度需求",
+          "FinMind顯示2026年7月營收84.95億元、MoM+3.5%，整體出貨規模擴張"
         ],
         "weaknesses": [
-          "PCB全數外購，宜鼎不具板材、鑽孔、電鍍或壓合製造能力",
-          "此題材僅為下游需求映射，無法直接享受PCB擴產毛利"
+          "不製造PCB或IC載板，只能作為下游需求端而非板廠直接受惠者",
+          "YoY+636.5%遠高於一般營運變化，未核對口徑前不宜推論題材爆發"
         ],
         "opportunities": [
-          "DDR5與PCIe 5.0提升板層數、材料等級與單板價值",
-          "EDSFF企業級SSD成長增加高速小型板與可靠度測試需求"
+          "工業AI與邊緣設備升級可增加高可靠度DRAM與SSD模組板需求",
+          "高速介面與更高密度封裝會提高阻抗、散熱及材料規格價值"
         ],
         "threats": [
-          "高階PCB交期或良率異常會直接延誤記憶體模組出貨",
-          "銅箔基板與金屬價格上升將侵蝕模組產品毛利"
+          "高階PCB交期、良率或材料漲價會延誤模組出貨並侵蝕毛利",
+          "記憶體價格循環與工業客戶庫存調整會放大模組採購波動"
         ]
       }
     }

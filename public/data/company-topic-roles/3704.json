@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3704",
   "companyName": "合勤控",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -177,20 +177,20 @@
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "consumer_networking",
-      "roleType": "consumer_wifi_router",
-      "roleSummary": "合勤控本體MOPS為一般投資業，消費裝置角色來自集團的家庭閘道器、Wi-Fi路由器與Mesh產品。2026年7月營收19.17億元、YoY-11.8%、MoM-44.7%，換機需求尚未穩定反映。",
+      "supplyChainStage": "holding_company_group_networking",
+      "roleType": "group_consumer_networking",
+      "roleSummary": "合勤控母公司MOPS主要業務只有一般投資業；家庭路由器、Mesh與PON閘道器均屬集團／子公司產品，不能當成母公司MOPS直接揭露。2026年7月營收19.17億元、MoM-44.7%、YoY-11.8%，累計YoY仍+10.3%，顯示集團專案出貨波動大。",
       "products": [
-        "Wi-Fi 7 BE級三頻Mesh路由器",
-        "Wi-Fi 6E 6GHz家庭閘道器",
-        "GPON/XGS-PON光纖家庭閘道器",
-        "Matter/Thread智慧家庭中樞"
+        "集團／子公司家庭無線路由器",
+        "集團／子公司Mesh Wi-Fi節點",
+        "集團／子公司GPON／XGS-PON家庭閘道器",
+        "集團／子公司智慧家庭網路中樞"
       ],
       "customers": [
-        "中華電信(2412；家庭閘道器應用對象)",
-        "Deutsche Telekom(寬頻設備應用對象)",
-        "Orange(家庭寬頻設備應用對象)",
-        "Telefónica(光纖閘道器應用對象)"
+        "中華電信(2412；集團寬頻設備應用對象，非MOPS揭露客戶）",
+        "Deutsche Telekom（集團電信設備應用對象，非MOPS揭露客戶）",
+        "Orange（集團家庭寬頻應用對象，非MOPS揭露客戶）",
+        "Telefónica（集團光纖閘道應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中磊(5388)",
@@ -198,57 +198,50 @@
         "啟碁(6285)"
       ],
       "risks": [
-        "消費級網通設備毛利率低",
-        "中國品牌低價競爭"
+        "母公司本體為投資業，產品與客戶都必須限縮為集團層級",
+        "2026年7月營收MoM-44.7%、YoY-11.8%，專案出貨波動顯著"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：一般投資業；產品角色來自集團網通子公司"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3704",
+          "claim": "MOPS主要經營業務為一般投資業；家庭網通產品必須視為集團／子公司範圍，非母公司直接產品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收19.17億元，YoY-11.8%，MoM-44.7%，累計YoY+10.3%"
+          "claim": "2026年7月營收19.17億元、MoM-44.7%、YoY-11.8%、累計YoY+10.3%；為集團整體口徑。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "Wi-Fi 7 Multi-Link Operation、320MHz頻寬與4K-QAM",
-        "EasyMesh自組網、頻段轉向與無縫漫遊",
-        "XGS-PON 10Gbps光纖接取及Matter/Thread邊界路由"
+        "集團產品的Wi-Fi多頻段資源管理、Mesh漫遊與回程鏈路整合",
+        "集團產品的PON光纖接取、家庭閘道與電信商遠端管理",
+        "集團產品的智慧家庭裝置配對、邊界路由與網路安全管理"
       ],
       "swot": {
         "strengths": [
-          "集團長期投入家庭閘道器與無線網路，能整合PON、Wi-Fi與雲端管理",
-          "Wi-Fi 7、XGS-PON與Matter技術可支撐下一波家庭網路升級"
+          "集團具家庭路由、Mesh與光纖閘道產品組合，可承接寬頻升級需求",
+          "累計營收YoY+10.3%，顯示前七月集團整體仍維持成長"
         ],
         "weaknesses": [
-          "2026年7月營收YoY-11.8%、MoM-44.7%，消費與電信專案出貨波動大",
-          "消費路由器標準化程度高，品牌及零售行銷資源弱於ASUS與TP-Link"
+          "MOPS母公司只揭露一般投資業，所有產品與客戶關係都不是本體直接證據",
+          "2026年7月營收19.17億元、MoM-44.7%、YoY-11.8%，單月出貨大幅回落"
         ],
         "opportunities": [
-          "Wi-Fi 7終端普及與多Gigabit光纖升級帶動家庭閘道器換機",
-          "Matter裝置成長可使路由器升級為智慧家庭邊界中樞"
+          "Wi-Fi 7與多Gigabit光纖可帶動家庭路由與閘道設備換機",
+          "智慧家庭裝置增加可提升Mesh節點、邊界路由與雲端管理需求"
         ],
         "threats": [
-          "TP-Link、小米與電信商白牌設備持續壓低售價",
-          "電信商延長設備租賃週期會減少一次性閘道器採購"
+          "TP-Link、小米與大型網通ODM的價格及規模競爭激烈",
+          "電信商延長設備租賃週期或專案遞延會造成集團營收劇烈波動"
         ]
       }
     },

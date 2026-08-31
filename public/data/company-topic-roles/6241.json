@@ -2,25 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "6241",
   "companyName": "鑫永洋",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
       "topicName": "資安、雲端服務與企業軟體",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "hardware",
-      "roleType": "communication_product_manufacturer",
-      "roleSummary": "鑫永洋(原易通展)6月營收0.56億MoM-26%，通訊產品OEM為主。資安硬體appliance OEM題材純度低，非核心資安軟體標的，營收規模小且波動大。",
+      "supplyChainStage": "communication_hardware_adjacent",
+      "roleType": "network_hardware_adjacent",
+      "roleSummary": "鑫永洋MOPS只揭露通訊產品製造及買賣，未揭露防火牆軟體、SOC、雲端服務或Palo Alto Networks／Fortinet客戶。本角色只能列為網路通訊硬體對資安部署的相鄰供應。FinMind顯示2026年7月營收0.63億元、MoM+12.1%、YoY+18.6%，規模仍小且不能歸因資安。",
       "products": [
-        "網路安全硬體設備(防火牆 appliance)",
-        "VPN路由器(SD-WAN硬體)",
-        "工業級通訊設備(M2M/IoT gateway)"
+        "工業乙太網路M2M通訊閘道器（歷史產品範圍）",
+        "ARM／Linux遠端設備監控通訊模組（歷史產品範圍）",
+        "VPN／路由通訊設備硬體（資安應用範圍，MOPS未逐項揭露）",
+        "網路設備OEM／ODM組裝服務（通訊硬體範圍）"
       ],
       "customers": [
-        "Palo Alto Networks",
-        "Fortinet",
-        "研華(2395)"
+        "研華(2395；工業通訊應用對象，非MOPS揭露客戶）",
+        "Fortinet（資安硬體生態比較對象，非MOPS揭露客戶）",
+        "Palo Alto Networks（資安設備生態比較對象，非MOPS揭露客戶）",
+        "Microsoft（雲端連線應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "智邦(2345)(網路安全硬體OEM)",
@@ -28,55 +30,50 @@
         "啟碁(6285)(通訊設備)"
       ],
       "risks": [
-        "6月營收0.56億(FinMind)月減26%波動大且規模極小",
-        "資安硬體OEM為低毛利代工，差異化有限",
-        "資安軟體標的非核心，題材純度極低"
+        "MOPS只支持通訊硬體，沒有獨立資安軟體或雲端訂閱證據",
+        "2026年7月營收僅0.63億元，規模小且月度波動風險高"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 通訊產品製造及買賣"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6241",
+          "claim": "MOPS主要經營業務為通訊產品製造及買賣；未揭露資安軟體、雲端服務或具名客戶。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "2026年7月營收0.63億元、MoM+12.1%、YoY+18.6%；為公司整體口徑，不能歸因資安。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "網路安全硬體 appliance OEM/ODM設計製造",
-        "SD-WAN邊緣路由器硬體平台",
-        "工業級M2M通訊模組(ARM-based)"
+        "乙太網路封包轉送、多埠通訊與嵌入式Linux平台整合",
+        "SNMP／MQTT遠端設備遙測與斷線資料緩存（歷史技術範圍）",
+        "VPN、憑證與韌體更新機制（資安應用要求，MOPS未逐項揭露）"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記為通訊產品製造及買賣，網路安全硬體(防火牆appliance/VPN路由器)具硬體設計能力",
-          "客戶含Palo Alto Networks、Fortinet，全球前兩大網路安全公司",
-          "7月營收0.63億MoM+12.1%，通訊硬體需求回升"
+          "通訊設備製造能力可承接閘道器、路由與遠端監控硬體需求",
+          "2026年7月營收0.63億元、MoM+12.1%、YoY+18.6%，近期出貨回升"
         ],
         "weaknesses": [
-          "7月營收僅0.63億，規模極小抗風險能力弱",
-          "軟體雲端安全為間接角色，鑫永洋核心為通訊硬體製造",
-          "資本額僅4.55億(含私募2.2億)，研發資源有限"
+          "MOPS未揭露防火牆、SOC或雲端服務，資安題材純度低",
+          "營收規模小，研發、認證與客戶集中風險較難分散"
         ],
         "opportunities": [
-          "網路安全硬體需求隨企業資安支出增長",
-          "SD-WAN硬體設備隨企業混合雲架構普及",
-          "零信任網路存取(ZTNA)硬體appliance新需求"
+          "企業邊緣設備增加可帶動具VPN、憑證與遠端管理功能的通訊硬體",
+          "工業設備連網需要可管理的閘道器與安全韌體更新機制"
         ],
         "threats": [
-          "網路安全硬體可能被純軟體方案取代(virtual firewall)",
-          "Palo Alto Networks/Fortinet可能分散供應商",
-          "中國網通硬體廠(新華三/銳捷)低价競爭"
+          "虛擬防火牆與雲端原生安全服務可能取代部分專用硬體",
+          "大型網通ODM與資安設備商具規模、軟體生態及通路優勢"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4976",
   "companyName": "佳凌",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -275,67 +275,71 @@
       "topicName": "AI 伺服器機構件與滑軌",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "server_optics",
-      "roleType": "server_inspection_lens",
-      "roleSummary": "佳凌提供工業檢測鏡頭可用於AI伺服器PCB檢測。7月營收0.97億，MoM+1.3%。",
+      "supplyChainStage": "optics_outside_server_mechanical",
+      "roleType": "industrial_optics_outside_topic",
+      "roleSummary": "佳凌MOPS支持車載、相機、安控、工業、辨識與醫療鏡頭，以及塑膠成型機構部品、精密模具與量測治具；未揭露AI伺服器機殼、滑軌、冷板或伺服器客戶。本角色改列為伺服器／PCB製造檢測可能使用的工業鏡頭與治具，屬題材外圍。2026年7月營收0.97億元、MoM+1.3%、YoY+9.5%、累計YoY+1.3%。",
       "products": [
-        "PCB AOI檢測鏡頭(高解析/遠心)",
-        "晶圓外觀檢查鏡頭(高倍率/UV)",
-        "伺服器機殼視窗鏡頭(壓克力/玻璃)"
+        "工業機器視覺檢測鏡頭",
+        "辨識系統用成像鏡頭",
+        "塑膠成型機構部品",
+        "精密模具、研磨治具與量測治具",
+        "光學鏡頭組裝服務"
       ],
       "customers": [
-        "志聖(2467)(AOI設備鏡頭)",
-        "均豪(5344)(晶圓檢查鏡頭)",
-        "AI伺服器機殼廠(視窗鏡頭)"
+        "志聖(2467；製程設備影像應用對象，非MOPS揭露客戶）",
+        "均豪(5443；自動化檢測應用對象，非MOPS揭露客戶）",
+        "由田(3455；AOI應用對象，非MOPS揭露客戶）",
+        "金像電(2368；PCB檢測終端對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "先進光(3362)",
         "亞洲光學(3019)"
       ],
       "risks": [
-        "AOI檢測鏡頭佔比極低"
+        "MOPS沒有AI伺服器機構件或冷卻產品，題材直接性低",
+        "2026年7月營收僅0.97億元且累計YoY+1.3%，規模與成長有限"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4976",
+          "claim": "MOPS主要業務為車載、相機、安控、視訊、穿戴、工業、辨識、醫療鏡頭，以及塑膠機構、精密模具與量測治具；未揭露伺服器機構件。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收0.97億元、MoM+1.3%、YoY+9.5%、累計YoY+1.3%；為公司整體口徑。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "遠心鏡頭設計(畸變<0.1%)",
-        "UV波段鏡頭設計(365nm/313nm)"
+        "工業鏡頭焦距、像差、景深與照明條件協同設計",
+        "塑膠射出成型、精密模具公差與機構件尺寸控制",
+        "鏡頭組裝對心、MTF成像品質與量測治具校正"
       ],
       "swot": {
         "strengths": [
-          "7月營收0.97億YoY+9.5%，精密光學鏡頭製造能力穩定",
-          "遠心鏡頭設計(畸變<0.1%)可用於PCB AOI檢測，服務AI伺服器PCB製造",
-          "MOPS登記車載/安控/工業/辨識/醫療鏡頭，產品線跨足檢測應用"
+          "MOPS直接支持多場域鏡頭、塑膠機構、精密模具與量測治具能力",
+          "2026年7月營收0.97億元、YoY+9.5%，單月維持溫和成長"
         ],
         "weaknesses": [
-          "AI伺服器相關檢測鏡頭佔比極低",
-          "與AI伺服器機構件供應鏈關聯弱(非滑軌/機殼本業)"
+          "不生產伺服器機殼、滑軌或冷板，只能透過檢測應用間接連結題材",
+          "營收規模小且累計YoY僅+1.3%，難證明AI伺服器帶來顯著貢獻"
         ],
         "opportunities": [
-          "AI伺服器高階PCB檢測需求帶動AOI鏡頭採購",
-          "晶圓檢查鏡頭隨先進封裝良率要求提升而增長"
+          "高層數PCB與精密機構件檢測可增加工業鏡頭及治具需求",
+          "先進封裝與自動化產線提高成像品質、量測校正與缺陷辨識門檻"
         ],
         "threats": [
-          "AOI設備廠可能自製鏡頭降低成本",
-          "中國光學鏡頭廠低价競爭"
+          "AOI設備商自研光學模組或中國鏡頭供應商低價競爭會壓縮空間",
+          "若伺服器製造投資放緩，外圍檢測設備需求會先受影響"
         ]
       }
     }

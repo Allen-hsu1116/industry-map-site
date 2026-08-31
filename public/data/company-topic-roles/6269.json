@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6269",
   "companyName": "台郡",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -95,23 +95,23 @@
       "topicId": "consumer-computing-devices",
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "topicType": "end_market",
-      "directness": "core",
-      "supplyChainStage": "mobile_fpc",
-      "roleType": "mobile_fpc_supplier",
-      "roleSummary": "2026年7月營收20.45億元、YoY+4.0%、MoM+19.2%，累計YoY+2.0%，旺季回溫但全年成長溫和。",
+      "directness": "direct",
+      "supplyChainStage": "consumer_fpc",
+      "roleType": "consumer_fpc_supplier",
+      "roleSummary": "台郡MOPS直接揭露加成銅箔基層板、多層加成PCB、FPC與聚醯亞胺銅箔基層板零組配件，可供手機、穿戴與XR等消費裝置使用；但未揭露Apple、鴻海等客戶、30/30μm線寬或特定終端。2026年7月營收20.45億元、MoM+19.2%、YoY+4.0%、累計YoY+2.0%，旺季回升但全年成長溫和。",
       "products": [
-        "智慧手機天線/相機/顯示多層FPC",
-        "平板觸控與顯示模組FPC",
-        "智慧手錶SiP與感測器超薄FPC",
-        "AR/VR顯示與眼動追蹤FPC",
-        "聚醯亞胺FCCL軟性銅箔基材"
+        "多層加成式印刷電路板",
+        "軟式印刷電路板（FPC）",
+        "加成式銅箔基層板",
+        "聚醯亞胺薄膜銅箔基層板零組配件",
+        "消費電子模組用可彎折互連板"
       ],
       "customers": [
-        "Apple(iPhone、iPad與Watch供應鏈)",
-        "鴻海(2317；消費電子組裝鏈)",
-        "和碩(4938；手機組裝鏈)",
-        "立訊精密(Apple穿戴供應鏈)",
-        "廣達(2382；XR裝置供應鏈)"
+        "Apple（手機／平板／穿戴應用對象，非MOPS揭露客戶）",
+        "鴻海(2317；消費電子組裝應用對象，非MOPS揭露客戶）",
+        "和碩(4938；消費電子組裝應用對象，非MOPS揭露客戶）",
+        "立訊精密（穿戴裝置供應鏈對象，非MOPS揭露客戶）",
+        "廣達(2382；XR終端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "臻鼎(4958)",
@@ -119,51 +119,50 @@
         "鵬鼎(3047)"
       ],
       "risks": [
-        "高度依賴Apple單一客戶",
-        "iPhone出貨量波動"
+        "終端與應用對象集中，消費電子拉貨波動大",
+        "MOPS未揭露具名客戶與細線路規格，供應關係不能直接假定"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6269",
+          "claim": "MOPS主要經營業務為加成銅箔基層板、多層加成印刷電路板、FPC及聚醯亞胺薄膜銅箔基層板零組配件。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收20.45億元、MoM+19.2%、YoY+4.0%、累計YoY+2.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "confidence": "medium",
+      "lastVerified": "2026-08-31",
       "status": "verified",
       "techFocus": [
-        "30/30μm以下細線路與多層FPC",
-        "動態彎折壽命與超薄聚醯亞胺控制",
-        "mSAP微孔、阻抗與高速信號完整性"
+        "加成板雷射微孔、逐層堆疊與層間對位控制",
+        "聚醯亞胺薄膜、銅箔與覆蓋膜的FPC壓合製程",
+        "動態彎折、差分阻抗與回焊環境可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收20.45億元、YoY+4.0%、MoM+19.2%，累計YoY+2.0%，旺季回溫但全年成長溫和",
-          "FPC、Build-up PCB與FCCL整合",
-          "Apple供應鏈經驗形成認證門檻"
+          "MOPS確認Build-up基層板、多層加成板、FPC與PI銅箔基材完整製造能力",
+          "2026年7月營收20.45億元、MoM+19.2%，旺季出貨回升"
         ],
         "weaknesses": [
-          "終端與客戶集中度高",
-          "FPC價格受品牌議價壓力"
+          "YoY僅+4.0%、累計YoY+2.0%，全年成長仍偏溫和",
+          "高階消費裝置需求與議價集中，且具名客戶未由MOPS揭露"
         ],
         "opportunities": [
-          "折疊手機與XR增加高密度FPC",
-          "車用FPC可分散消費集中風險"
+          "折疊裝置、穿戴與XR增加可彎折、高密度互連板需求",
+          "車用與工業FPC若擴大，可降低消費電子集中度"
         ],
         "threats": [
-          "臻鼎、嘉聯益與中國廠競爭",
-          "Apple調整供應配比造成波動"
+          "臻鼎、嘉聯益及中國FPC廠競爭可能壓低價格",
+          "品牌調整供應配比或延後新機上市會造成季度出貨波動"
         ]
       }
     }

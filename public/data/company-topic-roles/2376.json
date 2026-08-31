@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2376",
   "companyName": "技嘉",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -194,22 +194,22 @@
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "topicType": "end_market",
       "directness": "core",
-      "supplyChainStage": "brand",
-      "roleType": "pc_component_brand",
-      "roleSummary": "技嘉6月營收428.92億YoY+68.6%，累計2492.69億YoY+48.4%，MOPS備註「AI訂單需求暢旺」。MOPS登記為電腦硬體/週邊設備製造加工買賣。主機板、顯卡與Mini-PC為消費核心產品，AI伺服器帶動整體爆發成長，消費性PC產品穩定但非主力。",
+      "supplyChainStage": "pc_brand",
+      "roleType": "pc_component_and_system_brand",
+      "roleSummary": "技嘉MOPS支持電腦硬體、零件、系統週邊與軟體製造銷售，消費PC角色成立；但MOPS未逐項揭露AORUS、BRIX型號或Intel、NVIDIA、AMD為客戶。2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%，公司說明AI訂單暢旺，因此成長不能全歸因消費PC。",
       "products": [
-        "Z890/B760主機板(Intel LGA1851/Core Ultra)",
-        "RTX 40/50系列顯示卡(AORUS品牌)(NVIDIA GPU)",
-        "Mini-PC(BRIX系列)(Intel N100/Core i7)",
-        "AORUS電競筆電(17吋/16吋QHD+ 240Hz)",
-        "伺服器用主機板(MX系列)(AI推理/邊緣運算)"
+        "GIGABYTE／AORUS桌上型電腦主機板",
+        "GIGABYTE／AORUS獨立顯示卡",
+        "AORUS電競筆記型電腦",
+        "BRIX迷你電腦",
+        "電腦週邊設備與系統軟體"
       ],
       "customers": [
-        "Intel(主機板晶片組Z890/B760)",
-        "NVIDIA(GPU板卡RTX 40/50系列)",
-        "AMD(主機板晶片組X870/B850)",
-        "Newegg(北美電腦通路)(主機板/顯卡)",
-        "Amazon(全球電商通路)(BRIX/電競筆電)"
+        "Intel（處理器與晶片組平台對象，非MOPS揭露客戶）",
+        "AMD（CPU／GPU平台對象，非MOPS揭露客戶）",
+        "NVIDIA（GPU平台對象，非MOPS揭露客戶）",
+        "Newegg（零售通路應用對象，非MOPS揭露客戶）",
+        "Amazon（電商通路應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華碩",
@@ -217,8 +217,8 @@
         "華擎"
       ],
       "risks": [
-        "PC/NB 需求疲軟，DIY 市場萎縮",
-        "電競成長放緩"
+        "消費PC需求循環與DIY市場萎縮會影響主機板及顯示卡出貨",
+        "2026年7月營收成長由AI訂單帶動，不能當成消費終端全面復甦"
       ],
       "legacy": {
         "topicSlug": "pc-nb-tablet",
@@ -227,48 +227,44 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "技嘉 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 技嘉 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2376",
+          "claim": "MOPS主要經營業務為電腦硬體及零件、電腦系統週邊設備與軟體之製造加工及買賣。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%、累計YoY+50.0%；公司備註AI訂單需求暢旺。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "lastVerified": "2026-08-31",
       "status": "verified",
       "techFocus": [
-        "Intel LGA1851主機板設計(支援Core Ultra)",
-        "AORUS品牌顯示卡散熱方案(WindForce 3x)",
-        "Mini-PC BRIX小型化設計(0.6L體積)"
+        "主機板高速差分訊號、多相供電與BIOS平台整合",
+        "顯示卡散熱器、風扇曲線與GPU板級供電設計",
+        "迷你電腦的小型化機構、熱管理與I/O整合"
       ],
       "swot": {
         "strengths": [
-          "AORUS品牌顯示卡在电竞市場具高知名度，RTX 40/50系列GPU板卡散熱方案（WindForce 3x）獲好評",
-          "Intel LGA1851主機板（Z890/B760）產品線完整，支援Core Ultra處理器",
-          "資本額67億，品牌渠道全球佈局完整"
+          "MOPS直接支持電腦硬體、零件、系統週邊與軟體，本題材產品鏈完整",
+          "2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%，整體出貨動能強"
         ],
         "weaknesses": [
-          "消費性主機板/顯卡市場受PC需求疲軟影響，成長動能有限",
-          "AI伺服器營收佔比上升但消費業務仍佔相當比重，毛利率受消費市場波動",
-          "顯卡業務依賴NVIDIA GPU供貨，自主性低"
+          "公司說明成長主要來自AI訂單，消費PC貢獻未分拆",
+          "主機板與顯示卡依賴Intel、AMD、NVIDIA平台節奏及供貨"
         ],
         "opportunities": [
-          "Intel Core Ultra（Arrow Lake）平台升級週期帶動主機板換機需求",
-          "AI PC概念帶動高階主機板與GPU板卡需求",
-          "电竞周邊品牌AORUS持續擴展，提升品牌溢價"
+          "AI PC與新一代CPU／GPU平台可帶動主機板、顯示卡及電競筆電換機",
+          "BRIX與小型電腦可切入家庭、商用與邊緣運算等多元終端"
         ],
         "threats": [
-          "華碩(2357)、微星(2377)在主機板/顯卡市場競爭激烈",
-          "NVIDIA GPU分配供貨，中小品牌商取得量受限",
-          "DIY PC市場長期萎縮，品牌板卡需求結構性下降"
+          "華碩、微星與華擎在主機板、顯示卡及電競品牌市場競爭激烈",
+          "DIY PC結構性縮減或GPU供應配置變動可能壓抑消費產品出貨"
         ]
       }
     }

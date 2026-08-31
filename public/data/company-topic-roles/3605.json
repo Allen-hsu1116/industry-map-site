@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3605",
   "companyName": "宏致",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -97,76 +97,71 @@
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "led_connector",
-      "roleType": "automotive_led_connector",
-      "roleSummary": "宏致MOPS揭露車用、消費、網通與工業連接器及線組；在顯示光學題材屬車燈與顯示模組的連接介面供應者。2026年7月營收11.54億元、YoY+29.8%、累計YoY+17.2%。",
+      "supplyChainStage": "display_connector",
+      "roleType": "display_and_lighting_interconnect",
+      "roleSummary": "宏致MOPS直接支持車用、網通、消費、工業與醫療連接器、線組、RF線組及金屬沖壓件；在顯示／LED題材中是模組互連與線束供應者，不是面板、LED晶粒或鏡頭廠。2026年7月營收11.54億元、MoM+3.3%、YoY+29.8%、累計YoY+17.2%，但公司未拆分顯示應用。",
       "products": [
-        "車用矩陣LED頭燈防水連接器",
-        "車用尾燈薄型板對板連接器",
-        "Mini LED背光板端連接器",
-        "顯示器eDP高速線束組"
+        "車用燈具與顯示模組用連接器",
+        "消費顯示裝置用板對板連接器",
+        "顯示器高速訊號線束組",
+        "無線通訊射頻連接器線組",
+        "連接器金屬沖壓端子"
       ],
       "customers": [
-        "帝寶(6605；車燈應用對象)",
-        "大茂偉瑞柯(車燈模組應用對象)",
-        "友達(2409；顯示模組應用對象)",
-        "群創(3481；顯示模組應用對象)"
+        "帝寶(6605；車燈應用對象，非MOPS揭露客戶）",
+        "大茂偉瑞柯（車燈模組應用對象，非MOPS揭露客戶）",
+        "友達(2409；顯示模組應用對象，非MOPS揭露客戶）",
+        "群創(3481；顯示模組應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "鴻海(2317)",
         "正崴(2392)"
       ],
       "risks": [
-        "車用LED連接器佔比低"
+        "顯示與LED只是多終端應用之一，題材營收占比未揭露",
+        "連接器標準化與下游議價可能限制產品毛利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：車用、網通、消費、工業及醫療連接器、線組、RF連接器與沖壓件"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3605",
+          "claim": "MOPS主要業務為電子、電腦、車用、網通、消費、工業與醫療連接器、連接線組、RF線組及金屬沖壓件。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收11.54億元，YoY+29.8%，累計YoY+17.2%"
+          "claim": "2026年7月營收11.54億元、MoM+3.3%、YoY+29.8%、累計YoY+17.2%；未拆分顯示應用。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-08-31",
       "status": "verified",
       "techFocus": [
-        "IP67/IP69K密封、125°C耐熱與車用振動可靠度",
-        "0.4mm pitch薄型板對板連接及端子沖壓",
-        "eDP高速差分線束阻抗控制與EMI屏蔽"
+        "板對板連接器端子沖壓、塑膠射出、電鍍與組裝公差控制",
+        "顯示高速差分線束的阻抗、串音與EMI屏蔽設計",
+        "車用連接器密封、耐熱、振動與端子保持力驗證"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認連接器、線組、RF與金屬沖壓件的完整製造能力",
-          "2026年7月營收11.54億元、YoY+29.8%，車用與電子連接需求強"
+          "MOPS確認連接器、線組、RF線組與金屬沖壓件的垂直製造能力",
+          "2026年7月營收11.54億元、YoY+29.8%，整體連接需求成長"
         ],
         "weaknesses": [
-          "面板、LED晶粒與光學元件均非自製，題材價值集中在介面小零件",
-          "車燈與顯示客戶認證週期長，單一平台設計變更可能影響出貨"
+          "不製造面板、LED晶粒或光學元件，題材價值集中於互連小零件",
+          "MOPS未揭露顯示應用占比或帝寶、友達等具名客戶關係"
         ],
         "opportunities": [
-          "矩陣式LED、Mini LED與車內大尺寸顯示增加連接點與高速線束需求",
-          "車規防水、高溫與抗振規格可提高單顆連接器價值"
+          "車內大尺寸顯示與智慧車燈增加連接點、線束與可靠度要求",
+          "Mini LED與高解析顯示升級可提高高速訊號與電源連接需求"
         ],
         "threats": [
-          "TE Connectivity、Amphenol及中國連接器商競爭價格與認證資源",
-          "無線化與整合式模組設計可能減少部分線束與連接器用量"
+          "TE Connectivity、Amphenol與中國連接器廠在價格、認證及規模上競爭",
+          "模組整合或無線化設計可能減少部分線束與連接器用量"
         ]
       }
     }

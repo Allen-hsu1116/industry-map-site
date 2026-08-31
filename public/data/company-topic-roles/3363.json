@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3363",
   "companyName": "上詮",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "silicon-photonics-optical-comm",
@@ -96,68 +96,69 @@
       "topicName": "水資源、環保與電子廢料回收",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "fiber_recycling",
-      "roleType": "fiber_optic_recycling",
-      "roleSummary": "上詮核心為光纖被動元件、模組、系統與測試設備；環保題材僅為製程廢料分類及委外回收，非商業回收業者。 FinMind顯示2026年7月營收1.71億元、MoM+8.5%，核心光纖元件出貨改善。",
+      "supplyChainStage": "optical_components_outside_environment",
+      "roleType": "fiber_optics_outside_recycling",
+      "roleSummary": "上詮MOPS只支持光纖被動元件、光纖模組／整合系統與光纖生產測試設備，未揭露商業廢棄物處理、廢光纖回收或製程用水回用。環保角色只能列為工廠內部減廢監測題材，不能把回收料當產品。FinMind顯示2026年7月營收1.71億元、MoM+8.5%、YoY+12.1%。",
       "products": [
-        "石英光纖切屑與廢光纖分類回收料",
-        "氧化鋯陶瓷套管與插芯廢料回收料",
-        "銅合金光纖接頭與金屬端子回收料"
+        "光纖被動元件",
+        "光纖模組",
+        "光纖整合系統",
+        "光纖生產與測試儀器設備"
       ],
       "customers": [
-        "光洋科(1785；電子材料回收處理對象)",
-        "可寧衛(8422；事業廢棄物處理對象)",
-        "台境(8476；工業廢棄物處理對象)",
-        "中台資源科技(6923；電子廢棄物資源化對象)"
+        "光洋科(1785；資源循環生態對象，非MOPS揭露承攬關係）",
+        "可寧衛(8422；事業廢棄物處理對象，非MOPS揭露承攬關係）",
+        "台境(8476；工業環境服務對象，非MOPS揭露承攬關係）",
+        "中台資源科技(6923；電子廢棄物資源化對象，非MOPS揭露承攬關係）"
       ],
       "competitors": [
         "華星光(4969)"
       ],
       "risks": [
-        "回收市場極小"
+        "MOPS未揭露商業回收或水處理業務，題材屬工廠內部管理而非收入來源",
+        "環保服務商關係與廢棄物流向均未公開，不能推定合作"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3363",
+          "claim": "MOPS主要業務為光纖被動元件、光纖模組及整合系統、光纖生產測試設備；未揭露回收或水處理。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "FinMind月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "2026年7月營收1.71億元、MoM+8.5%、YoY+12.1%；為光纖本業公司整體口徑，不能歸因環保服務。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-08-31",
+      "status": "candidate",
       "techFocus": [
-        "石英、氧化鋯陶瓷與金屬端子分流",
-        "光纖端面研磨污泥減量與固液分離",
-        "製程用水過濾回用與廢棄物流向追溯"
+        "光纖被動元件的耦合效率、插入損耗與回波損耗控制",
+        "光纖模組的精密對準、固定與環境可靠度驗證",
+        "光功率、回波損耗與端面品質的自動化測試"
       ],
       "swot": {
         "strengths": [
-          "FinMind顯示2026年7月營收1.71億元、MoM+8.5%，核心光纖元件出貨改善",
-          "材料種類明確，具源頭分類與減廢條件",
-          "光纖測試能力可降低製程報廢"
+          "MOPS確認光纖元件、模組、系統與測試設備完整產品鏈",
+          "FinMind顯示2026年7月營收1.71億元、MoM+8.5%、YoY+12.1%，核心光纖業務改善"
         ],
         "weaknesses": [
-          "MOPS未揭露商業回收業務",
-          "回收料量體小且處理關係未公開"
+          "沒有MOPS支持的回收、水處理或資源化產品，環保題材純度極低",
+          "既有角色把廢光纖與陶瓷廢料寫成產品，但沒有商業銷售證據"
         ],
         "opportunities": [
-          "CPO擴產增加廢光纖與陶瓷插芯回收量",
-          "碳盤查提高再生料與追溯需求"
+          "擴產可推動製程良率、耗材追蹤與源頭減廢管理數位化",
+          "光纖測試設備可降低報廢並支持內部品質與資源效率改善"
         ],
         "threats": [
-          "石英陶瓷混合廢料分離成本高",
-          "危廢與運輸法規提高成本"
+          "若把內部環保管理誤認為商業回收收入，會嚴重高估題材曝險",
+          "光通訊景氣反轉時，環保改善支出可能讓位於產能與現金流管理"
         ]
       }
     }

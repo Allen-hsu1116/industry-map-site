@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2395",
   "companyName": "研華",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "edge-ai-aiot",
@@ -175,74 +175,71 @@
       "topicId": "robotics-physical-ai",
       "topicName": "人形機器人與實體 AI",
       "topicType": "technology",
-      "directness": "indirect",
-      "supplyChainStage": "robotics",
-      "roleType": "robotics_platform",
-      "roleSummary": "研華是全球工業電腦(IPC)龍頭，在機器人控制與AI邊緣運算領域具平台型優勢。5月營收77.3億年增32.1%，累計363.9億年增24.0%，AIoT需求帶動強勁成長。",
+      "directness": "direct",
+      "supplyChainStage": "industrial_edge_control",
+      "roleType": "robotics_edge_computing_platform",
+      "roleSummary": "研華MOPS直接支持工業測控、工業電腦、工作站、嵌入式電腦卡與工業顯示終端，可作為機器人控制、視覺與邊緣推論平台；但未揭露ROS 2產品、Tesla／FANUC客戶或人形機器人訂單。2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%，公司說明專案需求與出貨暢旺，仍不能全數歸因機器人。",
       "products": [
-        "MIC-720工業電腦(Intel Core)",
-        "ROS2機器人整合平台",
-        "AI邊緣運算IPC(EI-P系列)",
-        "機器視覺系統(VE系列)",
-        "IoT通訊模組(MQTT/OPC UA)"
+        "機器人控制用工業電腦",
+        "嵌入式邊緣運算電腦卡",
+        "工業測控與遠端I/O模組",
+        "機器視覺用工業工作站",
+        "工業觸控顯示電腦"
       ],
       "customers": [
-        "台達電(機器人控制器)",
-        "西門子(SI)(工業自動化)",
-        "發那科(FANUC)(CNC整合)",
-        "工研院(AMR專案)",
-        "ABB(機器人IPC)"
+        "NVIDIA（邊緣AI平台對象，非MOPS揭露客戶）",
+        "Siemens（工業自動化整合對象，非MOPS揭露客戶）",
+        "Rockwell Automation（控制系統整合對象，非MOPS揭露客戶）",
+        "ABB（機器人應用對象，非MOPS揭露客戶）",
+        "FANUC（機器人／CNC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "新漢"
       ],
       "risks": [
-        "機器人市場仍在早期，出貨量小"
+        "MOPS未揭露特定機器人客戶或人形機器人營收，題材歸因需保守",
+        "工業電腦平台面臨客製控制器、專用SoC與機器人廠自研硬體替代"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "研華 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2395",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 研華 的營業項目、產品組合與財務資料。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2395",
+          "claim": "MOPS主要經營業務為工業測控產品、工業用電腦／工作站、嵌入式電腦卡與超薄液晶電腦。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2395 的月營收、股價、估值與法人資料。"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%、累計YoY+40.3%；公司說明客戶積極下單、專案需求與出貨暢旺。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "medium",
+      "lastVerified": "2026-08-31",
       "status": "verified",
       "techFocus": [
-        "ROS2機器人整合平台與AI邊緣運算IPC",
-        "機器視覺系統(VE系列)深度學習推論",
-        "IoT通訊模組(MQTT/OPC UA)工業互聯"
+        "x86／ARM邊緣運算、GPU加速卡與隔離式工業I/O整合",
+        "EtherCAT、Modbus與OPC UA等控制／資料協定介接",
+        "ROS 2／DDS機器人軟體整合（題材應用能力，MOPS未逐項揭露）"
       ],
       "swot": {
         "strengths": [
-          "MIC-720工業電腦（Intel Core）與ROS2機器人整合平台具先發優勢",
-          "機器視覺系統（VE系列）深度學習推論能力整合完整",
-          "6月營收YoY+73.4%，機器人相關需求帶動工業電腦出貨成長"
+          "MOPS確認工業測控、工業電腦、工作站與嵌入式電腦卡，可承載機器人控制與視覺",
+          "2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%，專案需求與出貨動能強"
         ],
         "weaknesses": [
-          "機器人IPC佔整體營收比重小，非主力業務",
-          "ROS2機器人整合平台面臨開源生態競爭，差異化有限",
-          "人形機器人市場尚未成熟，營收貢獻時間不確定"
+          "營收為全公司口徑，沒有機器人或Physical AI占比拆分",
+          "ROS 2、人形機器人客戶及特定GPU平台未由MOPS逐項支持"
         ],
         "opportunities": [
-          "人形機器人（如Tesla Optimus/Figure）量產帶動工業電腦需求",
-          "ROS2機器人生態系在工業/服務機器人應用快速擴展",
-          "AI邊緣運算IPC在機器人視覺/控制整合需求增長"
+          "AMR、協作機器人與機器視覺升級增加工業邊緣運算與I/O需求",
+          "工廠導入AI推論可提高工業電腦、工作站與測控模組的單機價值"
         ],
         "threats": [
-          "NVIDIA Isaac機器人平台可能自成生態系，邊緣化第三方IPC",
-          "機器人專用控制器廠（如台達電）可能內建IPC減少外購",
-          "人形機器人商業化時程不確定性高"
+          "NVIDIA等平台商或機器人整機廠自建控制硬體可能壓縮通用IPC角色",
+          "工業專案驗證期長且客製化程度高，容易造成訂單與毛利波動"
         ]
       }
     }

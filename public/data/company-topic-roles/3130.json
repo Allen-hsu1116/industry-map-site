@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3130",
   "companyName": "一零四",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-08-31T19:06:27Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -96,22 +96,22 @@
       "topicId": "software-cloud-security",
       "topicName": "資安、雲端服務與企業軟體",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "software_service",
-      "roleType": "hr_saas_platform",
-      "roleSummary": "一零四MOPS揭露一般廣告與電子資訊就業服務，核心是104人力銀行及企業HR數位服務；資安屬HR SaaS必要能力而非獨立資安產品。2026年7月營收2.75億元、YoY+12.4%、累計YoY+7.8%。",
+      "directness": "direct",
+      "supplyChainStage": "hr_digital_service",
+      "roleType": "hr_platform_and_saas",
+      "roleSummary": "一零四MOPS支持一般廣告與電子資訊就業服務，軟體／雲端題材可對應線上招募與企業HR數位服務；但資安只是平台必要能力，MOPS未揭露獨立SOC、MDR產品或Microsoft等合作關係。2026年7月營收2.75億元、MoM+4.3%、YoY+12.4%、累計YoY+7.8%。",
       "products": [
-        "104人力銀行線上招募平台",
-        "企業招募管理ATS雲端服務",
-        "人資管理與績效考核SaaS",
-        "履歷語意搜尋與職缺推薦引擎",
-        "線上職能測評與教育訓練平台"
+        "104人力銀行線上職缺與履歷平台",
+        "企業招募流程管理雲端服務",
+        "企業人資管理與績效流程服務",
+        "履歷搜尋與職缺推薦服務",
+        "線上職能測評與學習服務"
       ],
       "customers": [
-        "Microsoft(Azure/Entra整合對象)",
-        "Google(Workspace單一登入整合對象)",
-        "SAP(SuccessFactors資料整合對象)",
-        "Oracle(HCM資料整合對象)"
+        "Microsoft（企業身分／雲端整合對象，非MOPS揭露客戶）",
+        "Google（企業協作整合對象，非MOPS揭露客戶）",
+        "SAP（人資系統資料介接對象，非MOPS揭露客戶）",
+        "Oracle（企業HCM介接對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "1111人力銀行(線上招募)",
@@ -119,58 +119,50 @@
         "LinkedIn(國際招募平台)"
       ],
       "risks": [
-        "6月營收2.63億YoY+7.9%累計+6.9%穩定成長但與資安關聯薄弱",
-        "資安題材純度極低，104核心為HR SaaS非資安",
-        "台灣人力銀行市場成熟，成長空間受限"
+        "資安能力屬平台內控需求，沒有獨立資安產品營收證據",
+        "個資外洩、推薦偏誤與就業法規會直接衝擊平台信任"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：一般廣告服務及電子資訊就業服務"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3130",
+          "claim": "MOPS主要經營業務為一般廣告服務業與電子資訊就業服務；未揭露獨立資安產品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "publisher": "TWSE OpenAPI",
+          "title": "TWSE 2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收2.75億元，YoY+12.4%，累計YoY+7.8%"
+          "claim": "2026年7月營收2.75億元、MoM+4.3%、YoY+12.4%、累計YoY+7.8%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-08-31",
       "status": "verified",
       "techFocus": [
-        "履歷與職缺的NLP向量檢索、語意匹配及排序模型",
-        "多租戶HR SaaS微服務、RBAC權限與稽核軌跡",
-        "OIDC/SAML單一登入、個資加密與資料留存治理"
+        "履歷與職缺的語意檢索、推薦排序及重複資料治理",
+        "多租戶HR服務的角色權限、稽核軌跡與個資隔離",
+        "OIDC／SAML單一登入、傳輸加密與資料留存管理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收2.75億元、YoY+12.4%，平台訂閱與招募需求維持成長",
-          "MOPS確認電子資訊就業服務本業，具台灣求職履歷與職缺資料規模"
+          "MOPS確認電子資訊就業服務本業，平台具職缺、履歷與企業招募流程資料規模",
+          "2026年7月營收2.75億元、MoM+4.3%、YoY+12.4%，服務需求穩定成長"
         ],
         "weaknesses": [
-          "資安只是HR SaaS的必要功能，沒有獨立防火牆、SOC或資安訂閱收入",
-          "台灣人口與就業市場規模限制長期成長，跨境資料法規也提高擴張成本"
+          "資安並非獨立產品線，SOC、MDR或資安訂閱收入未由MOPS揭露",
+          "台灣就業市場規模限制長期成長，跨境擴張也受個資與勞動法規約束"
         ],
         "opportunities": [
-          "生成式AI可提升履歷摘要、職缺撰寫與人才推薦效率",
-          "企業人資流程雲端化可增加ATS、績效與測評模組的交叉銷售"
+          "生成式AI可提升履歷摘要、職缺撰寫、人才匹配與客服效率",
+          "企業HR流程雲端化可增加招募、測評、學習及人資模組交叉銷售"
         ],
         "threats": [
-          "LinkedIn、Indeed及AI原生招募工具可能分流企業預算",
-          "個資外洩或推薦演算法偏誤將造成法遵、品牌與客戶流失風險"
+          "LinkedIn、Indeed與AI原生招募工具可能分流企業預算與履歷供給",
+          "個資事件或演算法歧視爭議可能引發法遵成本與客戶流失"
         ]
       }
     },
