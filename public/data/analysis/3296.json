@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3296",
   "name": "勝德",
-  "generatedAt": "2026-08-31T12:34:30.845Z",
+  "generatedAt": "2026-09-01T12:34:38.139Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -13,10 +13,12 @@
     "upgradePriority": "high",
     "missingKnowledge": [
       "product_knowledge",
+      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
       "missing_product_knowledge",
+      "topic_role_not_verified",
       "missing_swot"
     ]
   },
@@ -166,8 +168,8 @@
         "canonicalTopicName": "醫療器材與體外診斷",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "勝德MOPS未明列醫療產品；醫療角色僅能定位於電源分配、突波保護與備援電力的潛在延伸。 2026年7月營收1.72億元、YoY+42.9%、累計YoY+5.8%，但MOPS未明列醫療產品。"
+        "confidence": "low",
+        "roleSummary": "勝德MOPS只支持有線／無線通訊器材、電子零組件與電機電子機械器材，未揭露醫療設備、IEC 60601認證、低漏電規格或GE HealthCare等客戶。本角色只能列為電源分配與機電整合可能延伸醫療場域的題材外觀察。2026年7月營收1.72億元、MoM+4.3%、YoY+42.9%、累計YoY+5.8%。"
       },
       {
         "topicId": "renewable-energy",
@@ -246,12 +248,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 98 天未更新"
+        "message": "股價資料已 99 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 98 天未更新"
+        "message": "籌碼資料已 99 天未更新"
       },
       {
         "id": "risk.topic-evidence",

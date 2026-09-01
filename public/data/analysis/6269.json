@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6269",
   "name": "台郡",
-  "generatedAt": "2026-08-31T12:34:31.113Z",
+  "generatedAt": "2026-09-01T12:34:38.399Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -52,31 +52,33 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "PC、手機與 AR/VR/XR 終端",
+      "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "2026年7月營收20.45億元、YoY+4.0%、MoM+19.2%，累計YoY+2.0%，旺季回溫但全年成長溫和。",
-      "supplyChainStage": "mobile_fpc",
-      "roleType": "mobile_fpc_supplier",
+      "roleSummary": "台郡MOPS明確揭露加成銅箔基層板、多層加成PCB、FPC與聚醯亞胺薄膜銅箔基層板零組件，核心是軟板與加成板，不足以證明AI伺服器8至12層FPC或Apple直接客戶。2026年7月營收20.45億元、MoM+19.2%，但YoY僅+4.0%、累計YoY+2.0%。",
+      "supplyChainStage": "fpc",
+      "roleType": "fpc_manufacturer",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "智慧手機天線/相機/顯示多層FPC",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "平板觸控與顯示模組FPC",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "智慧手錶SiP與感測器超薄FPC",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "軟式印刷電路板 FPC",
+        "description": "FPC 軟式印刷電路板是可彎折的電路連接板，常用於手機、平板、穿戴、車用與顯示模組內部連接。",
+        "whyItMatters": "終端產品薄型化與模組化會提高 FPC 用量與規格要求；客戶新品週期會直接影響出貨。",
+        "topicFit": "PCB / FPC 供應鏈核心產品",
+        "businessImpact": "營運受手機與消費電子週期、車用導入、客戶集中度與良率影響。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：台郡 公司基本資料",
+          "FinMind：Taiwan Stock Market Datasets"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=6269",
+          "https://finmindtrade.com/analysis/#/data/api"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "medium"
       }
     ],
     "swotSnapshot": {
@@ -87,27 +89,27 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
-      "角色證據 2 則 +12",
+      "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "台郡 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "台郡 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
-      "相關題材：PCB、IC 載板與高階基板材料 · 核心產品/平台",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
+      "相關題材：PC、手機與 AR/VR/XR 終端 · 供應商角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
-      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 PCB、IC 載板與高階基板材料：月營收或訂單能見度改善",
       "追蹤 PCB、IC 載板與高階基板材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "知識庫最後驗證：2026-05-26（stale）"
     ]
   },
@@ -145,16 +147,6 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "consumer-computing-devices",
-        "topicName": "PC、手機與 AR/VR/XR 終端",
-        "canonicalTopicId": "consumer-computing-devices",
-        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "2026年7月營收20.45億元、YoY+4.0%、MoM+19.2%，累計YoY+2.0%，旺季回溫但全年成長溫和。"
-      },
-      {
         "topicId": "pcb-substrates",
         "topicName": "PCB、IC 載板與高階基板材料",
         "canonicalTopicId": "pcb-substrates",
@@ -163,14 +155,24 @@
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
         "roleSummary": "台郡MOPS明確揭露加成銅箔基層板、多層加成PCB、FPC與聚醯亞胺薄膜銅箔基層板零組件，核心是軟板與加成板，不足以證明AI伺服器8至12層FPC或Apple直接客戶。2026年7月營收20.45億元、MoM+19.2%，但YoY僅+4.0%、累計YoY+2.0%。"
+      },
+      {
+        "topicId": "consumer-computing-devices",
+        "topicName": "PC、手機與 AR/VR/XR 終端",
+        "canonicalTopicId": "consumer-computing-devices",
+        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "台郡MOPS直接揭露加成銅箔基層板、多層加成PCB、FPC與聚醯亞胺銅箔基層板零組配件，可供手機、穿戴與XR等消費裝置使用；但未揭露Apple、鴻海等客戶、30/30μm線寬或特定終端。2026年7月營收20.45億元、MoM+19.2%、YoY+4.0%、累計YoY+2.0%，旺季回升但全年成長溫和。"
       }
     ],
     "swot": [],
     "topics": [
       {
-        "id": "consumer-computing-devices",
-        "name": "PC、手機與 AR/VR/XR 終端",
-        "type": "end_market",
+        "id": "pcb-substrates",
+        "name": "PCB、IC 載板與高階基板材料",
+        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -179,9 +181,9 @@
         ]
       },
       {
-        "id": "pcb-substrates",
-        "name": "PCB、IC 載板與高階基板材料",
-        "type": "supply_chain_segment",
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -222,12 +224,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 98 天未更新"
+        "message": "股價資料已 99 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 98 天未更新"
+        "message": "籌碼資料已 99 天未更新"
       }
     ]
   },

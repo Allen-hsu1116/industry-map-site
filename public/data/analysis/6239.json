@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6239",
   "name": "力成",
-  "generatedAt": "2026-08-31T12:34:31.104Z",
+  "generatedAt": "2026-09-01T12:34:38.391Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-31",
-  "chipDataDate": "2026-08-31",
+  "marketDataDate": "2026-09-01",
+  "chipDataDate": "2026-09-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,32 +15,31 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "力成 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "力成 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.3%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 3.3%"
     ],
     "risks": [],
-    "watch": [
-      "股價貼近 MA20，留意方向選擇"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "力成 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -9.1千張；近 20 日法人偏賣，合計 -3萬張。",
+    "summary": "力成 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -3.2千張；近 20 日法人偏賣，合計 -2.5萬張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -9.1千張",
-      "近 20 日法人偏賣，合計 -3萬張",
-      "投信近 5 日賣超 -574張",
-      "外資近 5 日賣超 -8.5千張"
+      "三大法人近 5 日合計賣超 -3.2千張",
+      "近 20 日法人偏賣，合計 -2.5萬張",
+      "投信近 5 日賣超 -220張",
+      "外資近 5 日賣超 -3.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-31"
+      "最近法人資料日：2026-09-01"
     ]
   },
   "industry": {
@@ -130,7 +129,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-31"
+      "lastVerified": "2026-09-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -228,7 +227,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 49,
+    "totalScore": 58,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -237,8 +236,9 @@
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -246,14 +246,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：280.10",
-      "波段多空分水嶺看 MA20：273.52",
-      "追蹤法人是否延續 賣超：最近 -7.2千張",
-      "本益比 27.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：282.20",
+      "波段多空分水嶺看 MA20：274.90",
+      "追蹤法人是否延續 買超：最近 +5.1千張",
+      "本益比 28.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 298.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 235.50：列為轉弱警訊",
+      "收盤跌破 20 日低點 249.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

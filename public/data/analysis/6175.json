@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6175",
   "name": "立敦",
-  "generatedAt": "2026-08-31T12:34:31.069Z",
+  "generatedAt": "2026-09-01T12:34:38.357Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-31",
-  "chipDataDate": "2026-08-31",
+  "marketDataDate": "2026-09-01",
+  "chipDataDate": "2026-09-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -28,19 +28,18 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -8,
-    "summary": "立敦 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +244張；三大法人近 5 日合計賣超 -421張。",
-    "signals": [
-      "近 20 日法人偏買，合計 +244張"
-    ],
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -28,
+    "summary": "立敦 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -483張；近 20 日法人偏賣，合計 -173張。",
+    "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -421張",
-      "外資近 5 日賣超 -425張"
+      "三大法人近 5 日合計賣超 -483張",
+      "近 20 日法人偏賣，合計 -173張",
+      "外資近 5 日賣超 -484張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-31"
+      "最近法人資料日：2026-09-01"
     ]
   },
   "industry": {
@@ -132,7 +131,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-31"
+      "lastVerified": "2026-09-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -230,7 +229,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 53,
+    "totalScore": 49,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -250,10 +249,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：73.78",
-      "波段多空分水嶺看 MA20：75.60",
-      "追蹤法人是否延續 賣超：最近 -329張",
-      "本益比 23.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：74.16",
+      "波段多空分水嶺看 MA20：75.53",
+      "追蹤法人是否延續 買超：最近 +20張",
+      "本益比 23.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 84.00 且量比 > 1.5：列為轉強訊號",

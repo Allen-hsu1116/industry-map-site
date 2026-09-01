@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-08-31T12:34:30.609Z",
+  "generatedAt": "2026-09-01T12:34:37.903Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-31",
-  "chipDataDate": "2026-08-31",
+  "marketDataDate": "2026-09-01",
+  "chipDataDate": "2026-09-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -24,25 +24,26 @@
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 20,
-    "summary": "技嘉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +711張；近 20 日法人偏買，合計 +1.6萬張。",
+    "summary": "技嘉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +107張；近 20 日法人偏買，合計 +1.1萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +711張",
-      "近 20 日法人偏買，合計 +1.6萬張",
-      "外資近 5 日買超 +2.8千張"
+      "三大法人近 5 日合計買超 +107張",
+      "近 20 日法人偏買，合計 +1.1萬張",
+      "外資近 5 日買超 +1.9千張"
     ],
     "risks": [
-      "投信近 5 日賣超 -1.9千張"
+      "投信近 5 日賣超 -1.5千張"
     ],
     "watch": [
-      "最近法人資料日：2026-08-31",
-      "融券近 5 日增加 25.4%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-01",
+      "融券近 5 日增加 34.1%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -55,25 +56,25 @@
     "roleDetail": {
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "技嘉6月營收428.92億YoY+68.6%，累計2492.69億YoY+48.4%，MOPS備註「AI訂單需求暢旺」。MOPS登記為電腦硬體/週邊設備製造加工買賣。主機板、顯卡與Mini-PC為消費核心產品，AI伺服器帶動整體爆發成長，消費性PC產品穩定但非主力。",
-      "supplyChainStage": "brand",
-      "roleType": "pc_component_brand",
+      "roleSummary": "技嘉MOPS支持電腦硬體、零件、系統週邊與軟體製造銷售，消費PC角色成立；但MOPS未逐項揭露AORUS、BRIX型號或Intel、NVIDIA、AMD為客戶。2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%，公司說明AI訂單暢旺，因此成長不能全歸因消費PC。",
+      "supplyChainStage": "pc_brand",
+      "roleType": "pc_component_and_system_brand",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "Z890/B760主機板(Intel LGA1851/Core Ultra)",
+        "name": "GIGABYTE／AORUS桌上型電腦主機板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "RTX 40/50系列顯示卡(AORUS品牌)(NVIDIA GPU)",
+        "name": "GIGABYTE／AORUS獨立顯示卡",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "Mini-PC(BRIX系列)(Intel N100/Core i7)",
+        "name": "AORUS電競筆記型電腦",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -134,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-31"
+      "lastVerified": "2026-09-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -164,7 +165,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "技嘉6月營收428.92億YoY+68.6%，累計2492.69億YoY+48.4%，MOPS備註「AI訂單需求暢旺」。MOPS登記為電腦硬體/週邊設備製造加工買賣。主機板、顯卡與Mini-PC為消費核心產品，AI伺服器帶動整體爆發成長，消費性PC產品穩定但非主力。"
+        "roleSummary": "技嘉MOPS支持電腦硬體、零件、系統週邊與軟體製造銷售，消費PC角色成立；但MOPS未逐項揭露AORUS、BRIX型號或Intel、NVIDIA、AMD為客戶。2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%，公司說明AI訂單暢旺，因此成長不能全歸因消費PC。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -287,7 +288,7 @@
       "signals": [
         "月營收 YoY +72.2%，成長動能明確",
         "本益比 13.4 倍，估值尚可對照成長",
-        "殖利率 3.4%，提供部分下檔支撐"
+        "殖利率 3.3%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -303,15 +304,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：350.20",
-      "波段多空分水嶺看 MA20：352.93",
-      "追蹤法人是否延續 買超：最近 +1.8千張",
+      "短線支撐/壓力先看 MA5：352.50",
+      "波段多空分水嶺看 MA20：354.28",
+      "追蹤法人是否延續 賣超：最近 -497張",
       "月營收年增率 +72.2%，觀察基本面是否支撐估值",
       "本益比 13.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 402.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 320.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 335.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2383",
   "name": "台光電",
-  "generatedAt": "2026-08-31T12:34:30.616Z",
+  "generatedAt": "2026-09-01T12:34:37.910Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-08-31",
-  "chipDataDate": "2026-08-31",
+  "marketDataDate": "2026-09-01",
+  "chipDataDate": "2026-09-01",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -30,
-    "summary": "台光電 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "台光電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
       "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "台光電 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +2.1千張；外資近 5 日買超 +53張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -24,
+    "summary": "台光電 籌碼面目前為「籌碼偏空」：近 20 日法人偏買，合計 +1.9千張；三大法人近 5 日合計賣超 -595張。",
     "signals": [
-      "近 20 日法人偏買，合計 +2.1千張",
-      "外資近 5 日買超 +53張"
+      "近 20 日法人偏買，合計 +1.9千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -593張",
-      "投信近 5 日賣超 -778張"
+      "三大法人近 5 日合計賣超 -595張",
+      "投信近 5 日賣超 -518張",
+      "外資近 5 日賣超 -155張",
+      "融資近 5 日增加 16.1%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-08-31"
+      "最近法人資料日：2026-09-01"
     ]
   },
   "industry": {
@@ -54,25 +55,25 @@
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台光電5月營收156.2億年增114.6%（受惠於AI伺服器成長力道），累計年增73.2%。高速CCL為AI伺服器PCB上游關鍵材料，需求爆發。",
-      "supplyChainStage": "substrate_materials",
-      "roleType": "high_end_ccl_supplier",
+      "roleSummary": "台光電MOPS直接揭露銅箔基板、黏合片與多層壓合板，是PCB上游材料核心供應者；但未揭露ABF／BT載板材料、EMC牌號、Df數值或具名客戶。2026年7月營收192.07億元、MoM+8.3%、YoY+129.4%、累計YoY+89.4%，公司明示受惠AI伺服器成長。",
+      "supplyChainStage": "ccl_and_prepreg",
+      "roleType": "ccl_prepreg_supplier",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "高階銅箔基板CCL(MID-Loss/High-Tg)",
+        "name": "高速低損耗銅箔基板（伺服器／網通PCB應用）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "低損耗高速材料EMC-6M/M7(Df<0.001)",
+        "name": "高耐熱銅箔基板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "IC載板上游BT/ABF基板材料",
+        "name": "印刷電路板用黏合片（Prepreg）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -130,7 +131,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-08-31"
+      "lastVerified": "2026-09-01"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -160,7 +161,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台光電5月營收156.2億年增114.6%（受惠於AI伺服器成長力道），累計年增73.2%。高速CCL為AI伺服器PCB上游關鍵材料，需求爆發。"
+        "roleSummary": "台光電MOPS直接揭露銅箔基板、黏合片與多層壓合板，是PCB上游材料核心供應者；但未揭露ABF／BT載板材料、EMC牌號、Df數值或具名客戶。2026年7月營收192.07億元、MoM+8.3%、YoY+129.4%、累計YoY+89.4%，公司明示受惠AI伺服器成長。"
       },
       {
         "topicId": "ai-server",
@@ -245,7 +246,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 60,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
@@ -255,8 +256,8 @@
         "月營收 MoM +15.9%，短期動能改善"
       ],
       "risks": [
-        "本益比 85.8 倍，需防估值壓縮",
-        "股價淨值比 33.7 倍偏高，需和 ROE/成長性比對"
+        "本益比 88.2 倍，需防估值壓縮",
+        "股價淨值比 34.6 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -270,15 +271,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：5593.00",
-      "波段多空分水嶺看 MA20：5641.75",
-      "追蹤法人是否延續 賣超：最近 -20張",
+      "短線支撐/壓力先看 MA5：5602.00",
+      "波段多空分水嶺看 MA20：5666.75",
+      "追蹤法人是否延續 賣超：最近 -61張",
       "月營收年增率 +93.6%，觀察基本面是否支撐估值",
-      "本益比 85.8 倍，需和同族群估值比較"
+      "本益比 88.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 6470.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 4875.00：列為轉弱警訊",
+      "收盤跌破 20 日低點 5105.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

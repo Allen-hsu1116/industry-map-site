@@ -2,20 +2,22 @@
   "schemaVersion": 1,
   "code": "6241",
   "name": "鑫永洋",
-  "generatedAt": "2026-08-31T12:34:31.105Z",
+  "generatedAt": "2026-09-01T12:34:38.393Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge"
+      "product_knowledge",
+      "verified_topic_role"
     ],
     "blockingReasons": [
-      "missing_product_knowledge"
+      "missing_product_knowledge",
+      "topic_role_not_verified"
     ]
   },
   "technical": {
@@ -174,8 +176,8 @@
         "canonicalTopicName": "資安、雲端服務與企業軟體",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "鑫永洋(原易通展)6月營收0.56億MoM-26%，通訊產品OEM為主。資安硬體appliance OEM題材純度低，非核心資安軟體標的，營收規模小且波動大。"
+        "confidence": "low",
+        "roleSummary": "鑫永洋MOPS只揭露通訊產品製造及買賣，未揭露防火牆軟體、SOC、雲端服務或Palo Alto Networks／Fortinet客戶。本角色只能列為網路通訊硬體對資安部署的相鄰供應。FinMind顯示2026年7月營收0.63億元、MoM+12.1%、YoY+18.6%，規模仍小且不能歸因資安。"
       }
     ],
     "swot": [
@@ -274,12 +276,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 98 天未更新"
+        "message": "股價資料已 99 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 98 天未更新"
+        "message": "籌碼資料已 99 天未更新"
       },
       {
         "id": "risk.topic-evidence",

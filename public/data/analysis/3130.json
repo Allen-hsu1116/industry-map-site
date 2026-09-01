@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3130",
   "name": "一零四",
-  "generatedAt": "2026-08-31T12:34:30.805Z",
+  "generatedAt": "2026-09-01T12:34:38.099Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -53,29 +53,29 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "資安、雲端服務與企業軟體",
-      "roleLabel": "核心產品/平台",
-      "roleSummary": "一零四MOPS揭露一般廣告與電子資訊就業服務，核心是104人力銀行及企業HR數位服務；資安屬HR SaaS必要能力而非獨立資安產品。2026年7月營收2.75億元、YoY+12.4%、累計YoY+7.8%。",
-      "supplyChainStage": "software_service",
-      "roleType": "hr_saas_platform",
-      "directness": "core",
+      "roleLabel": "直接賦能角色",
+      "roleSummary": "一零四MOPS支持一般廣告與電子資訊就業服務，軟體／雲端題材可對應線上招募與企業HR數位服務；但資安只是平台必要能力，MOPS未揭露獨立SOC、MDR產品或Microsoft等合作關係。2026年7月營收2.75億元、MoM+4.3%、YoY+12.4%、累計YoY+7.8%。",
+      "supplyChainStage": "hr_digital_service",
+      "roleType": "hr_platform_and_saas",
+      "directness": "direct_enabler",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "104人力銀行線上招募平台",
+        "name": "104人力銀行線上職缺與履歷平台",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "企業招募管理ATS雲端服務",
+        "name": "企業招募流程管理雲端服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "人資管理與績效考核SaaS",
+        "name": "企業人資管理與績效流程服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -93,20 +93,20 @@
       ]
     },
     "scoringFactors": [
-      "直接度 核心產品/平台 +42",
+      "直接度 直接賦能角色 +36",
       "角色信心 medium +10",
       "題材 資安、雲端服務與企業軟體（theme/active） +18",
-      "角色證據 3 則 +12",
+      "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "一零四 在「資安、雲端服務與企業軟體」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "一零四 在「資安、雲端服務與企業軟體」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：資安、雲端服務與企業軟體 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 資安、雲端服務與企業軟體（theme/active） +18）",
+      "V2 題材角色：資安、雲端服務與企業軟體 · 直接賦能角色 · medium",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 資安、雲端服務與企業軟體（theme/active） +18）",
       "相關題材：軍工、航太與無人機 · 間接受惠",
       "相關題材：記憶體模組 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -163,10 +163,10 @@
         "topicName": "資安、雲端服務與企業軟體",
         "canonicalTopicId": "software-cloud-security",
         "canonicalTopicName": "資安、雲端服務與企業軟體",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "一零四MOPS揭露一般廣告與電子資訊就業服務，核心是104人力銀行及企業HR數位服務；資安屬HR SaaS必要能力而非獨立資安產品。2026年7月營收2.75億元、YoY+12.4%、累計YoY+7.8%。"
+        "roleSummary": "一零四MOPS支持一般廣告與電子資訊就業服務，軟體／雲端題材可對應線上招募與企業HR數位服務；但資安只是平台必要能力，MOPS未揭露獨立SOC、MDR產品或Microsoft等合作關係。2026年7月營收2.75億元、MoM+4.3%、YoY+12.4%、累計YoY+7.8%。"
       },
       {
         "topicId": "defense-aerospace",
@@ -302,12 +302,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 98 天未更新"
+        "message": "股價資料已 99 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 98 天未更新"
+        "message": "籌碼資料已 99 天未更新"
       }
     ]
   },
