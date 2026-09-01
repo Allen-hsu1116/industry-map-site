@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -235,19 +235,18 @@
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "terrestrial_networking_adjacent",
-      "roleType": "terrestrial_networking_adjacent_to_satellite",
-      "roleSummary": "明泰MOPS只揭露射頻器材與無線通信機械製造，未揭露低軌衛星終端、Ka／Ku相控陣、地面閘道器或星鏈營運商訂單。此角色改列為衛星地面網路可能採用的既有網通平台。2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%，且不能歸因衛星。",
+      "supplyChainStage": "terrestrial_wireless_adjacent",
+      "roleType": "wireless_equipment_outside_satellite",
+      "roleSummary": "明泰MOPS只支持電信管制射頻器材與無線通信機械製造，未揭露低軌衛星終端、Ka／Ku相控陣、地面閘道器或具名星系營運商。本角色降為地面無線網路對衛星通訊的相鄰觀察。2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，且不能歸因衛星。",
       "products": [
-        "Wi-Fi 7三頻企業無線基地台",
-        "5G NR室內小型基地台",
-        "5G固定無線接取CPE",
-        "L2／L3乙太網路交換器",
-        "XGS-PON 10Gbps光纖網路終端"
+        "電信管制射頻器材",
+        "無線通信終端設備",
+        "無線網路接取設備",
+        "無線通信機械組件"
       ],
       "customers": [
         "SpaceX（衛星地面網路驗證對象，非MOPS揭露客戶）",
-        "Amazon（Project Kuiper驗證對象，非MOPS揭露客戶）",
+        "Amazon Project Kuiper（衛星地面網路驗證對象，非MOPS揭露客戶）",
         "Eutelsat OneWeb（地面網路驗證對象，非MOPS揭露客戶）",
         "Hughes Network Systems（衛星閘道應用對象，非MOPS揭露客戶）"
       ],
@@ -263,41 +262,27 @@
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3380",
           "claim": "MOPS主要經營業務：電信管制射頻器材製造、無線通信機械器材製造。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%。"
+          "claim": "2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%、累計YoY+1.9%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
-      "status": "verified",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "IEEE 802.11be MLO與320MHz企業無線接取",
-        "5G NR Sub-6GHz CPE射頻與網路切片整合",
-        "L2／L3路由、VLAN、QoS與遠端網管"
+        "射頻前端匹配、發射功率與雜散輻射法規測試",
+        "無線通信基頻、天線介面與網路協定整合",
+        "量產校準、OTA測試與遠端韌體管理"
       ],
       "swot": {
         "strengths": [

@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3454",
   "companyName": "晶睿",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "security_equipment",
-      "roleType": "military_surveillance_equipment",
-      "roleSummary": "晶睿為網路攝影機與影像管理方案商，但本輪MOPS公司資料及月營收查詢均失敗；國防角色應限於基地安防與影像監控的潛在應用，不能宣稱軍規客戶或軍用量產。",
+      "supplyChainStage": "security_monitoring_adjacent",
+      "roleType": "historical_security_video_scope",
+      "roleSummary": "本輪MOPS完整基本資料與一般公司資料均查無3454資料，不能用MCP確認現行主業、軍規、國防客戶或軍用量產；僅以歷史網路攝影機與VMS範圍列為基地安防相鄰觀察。FinMind最新月營收停在2026年2月4.54億元、MoM-28.0%，屬過時歷史資料。",
       "products": [
-        "IP66/IK10戶外型網路攝影機",
-        "H.265多感測器全景網路攝影機",
-        "熱成像異常偵測網路攝影機",
-        "VAST影像管理系統(VMS)"
+        "戶外防護型網路攝影機（歷史產品範圍）",
+        "多感測器全景網路攝影機（歷史產品範圍）",
+        "影像管理系統VMS（歷史產品範圍）",
+        "熱影像／事件偵測攝影機（歷史產品範圍）"
       ],
       "customers": [
-        "中科院(基地安防應用對象)",
-        "漢翔(2634；廠區監控應用對象)",
-        "台船(2208；船廠周界監控應用對象)",
-        "雷虎(8033；無人載具影像整合對象)"
+        "漢翔(2634；廠區安防應用對象，非MOPS揭露客戶)",
+        "台船(2208；船廠周界監控應用對象，非MOPS揭露客戶)",
+        "中科院（基地安防應用對象，非MOPS揭露客戶）",
+        "雷虎(8033；無人載具影像整合對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "陞泰(6265)(安防監控)",
@@ -37,51 +37,44 @@
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: (MOPS查無，安全監控產品製造：網路攝影機、NVR、門禁系統)"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3454",
+          "claim": "2026-09-02查詢：MOPS完整基本資料與一般公司資料皆查無，不能視為現行產品證據。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
-          "sourceId": "twse-monthly-revenue",
-          "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "本輪MOPS公司資料、TWSE月營收及FinMind月營收均查無資料"
+          "claim": "FinMind最新只到2026年2月：營收4.54億元，MoM-28.0%；資料已明顯落後目前申報週期，TWSE月營收路徑查無資料。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "ONVIF Profile S/T、H.265壓縮與多串流影像傳輸",
-        "Secure Boot、簽章韌體、TLS加密與802.1X網路存取",
-        "IP66/IK10防護、低照度成像與AI周界事件偵測"
+        "ONVIF Profile S／T、H.265與多串流影像傳輸（歷史技術範圍）",
+        "Secure Boot、簽章韌體、TLS與802.1X網路存取（歷史技術範圍）",
+        "IP66／IK10防護、低照度成像與周界事件偵測（歷史技術範圍）"
       ],
       "swot": {
         "strengths": [
-          "網路攝影機、VMS與AI事件偵測可組成基地周界安防方案",
-          "ONVIF、H.265及網路資安能力適合既有監控系統整合"
+          "歷史網路攝影機、VMS與事件偵測能力可對應基地周界安防",
+          "網路影像壓縮、裝置資安與戶外防護是監控整合基礎"
         ],
         "weaknesses": [
-          "本輪MOPS與月營收工具均無資料，無法以官方資料驗證國防收入或客戶",
-          "產品屬一般安防設備，未見MIL-STD軍規、航太光電酬載或武器系統認證證據"
+          "MOPS兩條公司資料路徑皆查無，無法驗證現行產品與國防收入",
+          "FinMind只到2026年2月且MoM-28.0%，資料過時，不能當成近期營運證據"
         ],
         "opportunities": [
-          "國防設施汰換可增加高解析、低照度與資安強化攝影機需求",
-          "邊境、港區及機場周界監控可導入熱成像與AI事件分析"
+          "若後續恢復有效揭露，可重新評估國防設施資安攝影機需求",
+          "港區、機場與基地周界可能採用低照度及熱影像事件分析"
         ],
         "threats": [
-          "Axis、Bosch與Teledyne FLIR在高階安防及熱影像領域競爭強",
-          "標案資安規範與產地限制若不符，產品可能無法進入採購清單"
+          "缺乏MIL-STD、軍用光電酬載與採購證據，難證明直接軍工曝險",
+          "Axis、Bosch與Teledyne FLIR在高階安防市場競爭強"
         ]
       }
     },

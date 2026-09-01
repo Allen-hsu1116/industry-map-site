@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2317",
   "companyName": "鴻海",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,7 +11,7 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "ai_server_ems_odm",
-      "roleSummary": "鴻海MOPS揭露電腦系統設備周邊的連接器、線纜組件、殼體、基座與精密模具；2026年7月營收備註另明確指出伺服器產品需求與出貨成長，足以支持AI伺服器供應鏈核心角色，但MOPS未證實GB200 NVL72、HGX或任何具名雲端客戶。7月營收9,465.13億元，MoM+15.2%、YoY+54.2%、累計YoY+37.9%。",
+      "roleSummary": "鴻海MOPS支持電腦系統設備周邊之連接器、線纜、殼體、基座與精密模具；月營收備註又直接指出伺服器需求及出貨成長，AI伺服器供應鏈角色成立，但未證實特定GPU平台或雲端客戶。2026年7月營收9,465.13億元，YoY+54.2%。",
       "products": [
         "伺服器用高速連接器",
         "伺服器內部線纜組件",
@@ -43,36 +43,22 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "鴻海 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2317",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 鴻海 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2317 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦系統設備周邊之連接器、線纜組件、殼體、基座及精密模具。"
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2317",
+          "claim": "MOPS主要經營業務：電腦系統設備周邊之連接器、線纜組件、殼體、基座，以及精密模具之開發、設計、製造與銷售。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收9,465.13億元，MoM+15.2%、YoY+54.2%、累計YoY+37.9%；公司說明主要受惠伺服器產品需求提升及出貨成長。"
+          "claim": "2026年7月營收9,465.13億元，MoM+15.2%、YoY+54.2%、累計YoY+37.9%；公司備註為伺服器需求提升及出貨成長。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-23",
+      "lastVerified": "2026-09-01",
       "status": "verified",
       "techFocus": [
         "高速連接器阻抗控制與高速差分訊號完整性",

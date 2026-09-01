@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3231",
   "companyName": "緯創",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -195,21 +195,21 @@
       "topicId": "ai-server-mechanical",
       "topicName": "AI 伺服器機構件與滑軌",
       "topicType": "supply_chain_segment",
-      "directness": "supplier",
-      "supplyChainStage": "mechanical",
-      "roleType": "server_mechanical_integration",
-      "roleSummary": "緯創MOPS主要業務僅以3C電子產品概括，沒有細列AI伺服器機箱或滑軌；其角色應定位為伺服器ODM的系統與機構整合，而不是獨立滑軌製造商。2026年7月營收3,082.19億元，MoM-4.2%、YoY+60.8%，累計YoY+88.2%，公司說明是客戶需求增加，但成長不能全歸因機構件。",
+      "directness": "indirect",
+      "supplyChainStage": "system_integration_adjacent",
+      "roleType": "system_odm_mechanical_unverified",
+      "roleSummary": "緯創MOPS只以「3C電子產品及其他」概括主業，未細列AI伺服器機箱、OCP托盤或滑軌；本角色應視為系統ODM的機構整合相鄰能力，不是MCP已證實的獨立滑軌供應商。2026年7月營收3,082.19億元，YoY+60.8%、累計YoY+88.2%，但成長不能全歸因機構件。",
       "products": [
-        "1U／2U GPU伺服器整機與機箱整合",
-        "OCP相容伺服器節點與機櫃托盤",
-        "GPU加速器底板與I/O鈑金組件",
-        "伺服器線纜管理與風扇牆模組"
+        "3C電子產品整機組裝",
+        "電子主機板與I/O組件整合",
+        "金屬／塑膠機構件裝配",
+        "風扇、線纜與電源模組系統整合"
       ],
       "customers": [
-        "NVIDIA（HGX平台整合對象，非MOPS揭露客戶）",
-        "Microsoft（雲端伺服器應用對象，非MOPS揭露客戶）",
-        "Dell Technologies（伺服器ODM應用對象，非MOPS揭露客戶）",
-        "HPE（企業伺服器應用對象，非MOPS揭露客戶）"
+        "NVIDIA（AI平台整合對象，非MOPS揭露客戶）",
+        "Microsoft（雲端系統應用對象，非MOPS揭露客戶）",
+        "Dell Technologies（系統ODM應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（企業系統應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "川湖(2059)",
@@ -227,41 +227,27 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "緯創 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3231",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯創 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3231",
           "claim": "MOPS主要經營業務：3C電子產品及其他。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收3,082.19億元，MoM-4.2%、YoY+60.8%，累計YoY+88.2%；備註為客戶需求增加。"
+          "claim": "2026年7月營收3,082.19億元，MoM-4.2%、YoY+60.8%、累計YoY+88.2%；公司備註為客戶需求增加。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-20",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "OCP機構規格、鈑金公差與免工具維修設計",
-        "高功率GPU風道、風扇牆與機箱壓降分析",
-        "整機振動、承重、EMI與高速線纜管理驗證"
+        "整機鈑金公差、承重、振動與免工具維修設計",
+        "高速線纜、電源模組與風扇風道之機構協同",
+        "整機EMI、熱流、跌落與燒機可靠度驗證"
       ],
       "swot": {
         "strengths": [

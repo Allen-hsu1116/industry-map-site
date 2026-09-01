@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3324",
   "companyName": "雙鴻",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
@@ -10,19 +10,19 @@
       "topicType": "technology",
       "directness": "indirect",
       "supplyChainStage": "thermal",
-      "roleType": "liquid_cooling_module_provider",
-      "roleSummary": "雙鴻MOPS只揭露「散熱模組」，未點名冷板、CDU、浸沒式冷卻或任何AI伺服器客戶；保留散熱供應鏈角色，但將液冷產品與客戶關係降為未驗證。FinMind顯示2026年7月營收37.65億元，較6月增加38.5%。",
+      "roleType": "thermal_module_liquid_cooling_unverified",
+      "roleSummary": "雙鴻MOPS只揭露「散熱模組」，未點名冷板、CDU、浸沒式冷卻或任何AI伺服器客戶；本角色因此維持散熱鄰近供應商，不能把液冷產品當成MOPS已驗證。FinMind顯示2026年7月營收37.65億元，MoM+38.5%、YoY+116.7%，但成長仍是公司整體口徑。",
       "products": [
-        "伺服器用散熱模組",
-        "銅製均熱板模組",
-        "熱導管與散熱鰭片組件",
-        "風扇與導風罩整合模組"
+        "伺服器用散熱模組（題材應用產品）",
+        "熱導管與散熱鰭片組件（題材應用產品）",
+        "均熱板散熱模組（題材應用產品）",
+        "風扇與導風罩整合模組（題材應用產品）"
       ],
       "customers": [
         "NVIDIA（AI加速器熱設計應用對象，非MOPS揭露客戶）",
-        "AMD（伺服器CPU／GPU應用對象，非MOPS揭露客戶）",
-        "Quanta（伺服器整機生態對象，非MOPS揭露客戶）",
-        "Wistron（伺服器整機生態對象，非MOPS揭露客戶）"
+        "AMD（伺服器處理器熱設計應用對象，非MOPS揭露客戶）",
+        "廣達(2382；伺服器整機生態對象，非MOPS揭露客戶)",
+        "緯創(3231；伺服器整機生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "奇鋐(3017)",
@@ -41,58 +41,44 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "雙鴻 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3324",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 雙鴻 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3324 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3324",
           "claim": "MOPS主要經營業務：散熱模組。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "title": "月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收37.65億元，較6月增加38.5%。"
+          "claim": "FinMind顯示2026年7月營收37.65億元，MoM+38.5%、YoY+116.7%；TWSE月營收路徑查無資料。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-22",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "均熱板兩相傳熱、毛細結構與氣密封裝",
-        "熱導管、鰭片與風扇之系統熱阻最佳化",
-        "伺服器高熱通量熱點模擬與可靠度驗證"
+        "熱導管與均熱板之兩相傳熱、毛細回流及氣密封裝",
+        "鰭片密度、風扇PQ曲線與系統熱阻最佳化",
+        "高熱通量熱點模擬、溫循與振動可靠度驗證"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持散熱模組主業，與AI伺服器熱管理相鄰",
-          "FinMind顯示7月營收37.65億元、月增38.5%"
+          "MOPS直接支持散熱模組主業，具伺服器熱管理的相鄰製造基礎",
+          "FinMind顯示7月營收37.65億元、MoM+38.5%、YoY+116.7%"
         ],
         "weaknesses": [
-          "MOPS未揭露冷板、CDU或浸沒式液冷產品",
-          "月營收未拆分AI伺服器與液冷貢獻，不能以成長直接驗證"
+          "MOPS未揭露冷板、CDU、快接頭或浸沒式液冷產品",
+          "月營收未拆分AI伺服器與液冷貢獻，不能用高成長直接驗證題材"
         ],
         "opportunities": [
-          "AI加速器功耗上升推高均熱板與散熱模組內容價值",
-          "若冷板產品取得客戶驗證，可由氣冷跨入直接液冷"
+          "AI加速器功耗上升可提高均熱板與高效散熱模組內容價值",
+          "若後續冷板產品取得公開驗證，才可由氣冷鄰近轉為直接液冷角色"
         ],
         "threats": [
-          "冷板與CDU供應商競爭加劇，傳統氣冷產品可能被替代",
-          "伺服器平台改版快，認證延遲會影響出貨節奏"
+          "直接液冷滲透可能替代部分傳統熱管、鰭片與風扇模組",
+          "伺服器平台改版快，驗證延遲會造成出貨波動"
         ]
       }
     }

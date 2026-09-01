@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -196,7 +196,7 @@
       "directness": "direct_enabler",
       "supplyChainStage": "advanced_packaging",
       "roleType": "hbm_integration_packaging",
-      "roleSummary": "台積電MOPS支持積體電路晶圓製造及封裝測試服務，因此可作為邏輯晶片與HBM整合的直接賦能者；但MOPS未逐項揭露HBM3E、CoWoS-L、SoIC、TSV尺寸或任何具名客戶，舊資料的過度規格化敘述已收斂。2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%、累計YoY+37.0%；此為全公司口徑，不能全數歸因HBM。",
+      "roleSummary": "台積電MOPS支持積體電路晶圓製造、封裝及測試，因此可作為邏輯晶片與HBM整合的直接賦能者；但MOPS未逐項揭露HBM世代、CoWoS／SoIC平台、TSV規格或具名客戶。2026年7月營收4,675.81億元，YoY+44.7%，為全公司口徑。",
       "products": [
         "AI／HPC邏輯晶片晶圓製造服務",
         "邏輯晶片與HBM的2.5D整合封裝服務",
@@ -226,36 +226,22 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "台積電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：依客戶設計製造積體電路，並提供封裝、測試、CAD與光罩服務。"
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2330",
+          "claim": "MOPS主要經營業務：依客戶訂單與設計製造、銷售積體電路及其他晶圓半導體裝置，並提供封裝測試、IC電腦輔助設計與光罩服務。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
           "claim": "2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%、累計YoY+37.0%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-23",
+      "lastVerified": "2026-09-01",
       "status": "verified",
       "techFocus": [
         "矽中介層2.5D整合與高密度RDL互連",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -396,20 +396,20 @@
       "topicName": "水資源、環保與電子廢料回收",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "digital_content",
-      "roleType": "environmental_education_content",
-      "roleSummary": "昱泉MOPS只確認遊戲與教育軟體，沒有水處理、回收設備或環境工程業務；本題材最多是環境教育與ESG訓練內容的潛在應用。FinMind顯示2026年7月營收2.3萬元、MoM-42.5%。",
+      "supplyChainStage": "digital_content_outside_topic",
+      "roleType": "education_software_outside_environment",
+      "roleSummary": "昱泉MOPS只確認遊戲與教育軟體研發、生產、代理及銷售，沒有水處理、回收設備或環境工程業務；本題材僅能列為環境教育數位內容的可能應用。FinMind顯示2026年7月營收僅2.3萬元，MoM-42.5%、YoY-99.2%，規模極小且不能歸因環保題材。",
       "products": [
-        "水資源循環互動教育教材",
-        "工廠節水情境模擬訓練軟體",
-        "碳排與資源回收遊戲化課程",
-        "ESG稽核流程VR訓練內容"
+        "線上遊戲軟體研發與營運",
+        "教育軟體研發與授權",
+        "遊戲軟體代理發行",
+        "數位內容生產與銷售"
       ],
       "customers": [
-        "台達電(2308；ESG訓練應用對象)",
-        "台積電(2330；節水教育應用對象)",
-        "Microsoft(教育平台整合對象)",
-        "Google(教育平台整合對象)"
+        "台達電(2308；企業教育內容應用對象，非MOPS揭露客戶)",
+        "台積電(2330；企業教育內容應用對象，非MOPS揭露客戶)",
+        "Microsoft（教育平台整合對象，非MOPS揭露客戶）",
+        "Google（教育平台整合對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "其他教育軟體公司"
@@ -420,44 +420,44 @@
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6169",
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
+          "claim": "FinMind顯示2026年7月營收2.3萬元，MoM-42.5%、YoY-99.2%；TWSE月營收路徑查無資料。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "Unity/Unreal情境模擬與遊戲化學習流程",
-        "WebGL跨平台教材部署及LMS的SCORM/xAPI串接",
-        "VR互動操作紀錄與學習成效分析"
+        "遊戲引擎互動流程、即時渲染與跨平台內容封裝",
+        "教育軟體課程邏輯、學習紀錄與帳號權限管理",
+        "數位內容版本管理、線上更新與代理發行流程"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認具教育軟體研發能力，可製作互動式環境教育內容",
-          "遊戲化與VR可提升節水、回收及ESG流程訓練的參與度"
+          "MOPS確認遊戲及教育軟體研發能力，可承作互動式學習內容",
+          "既有數位內容與代理流程可快速部署線上教育產品"
         ],
         "weaknesses": [
-          "不具膜材、藥劑、設備或工程能力，與水循環產業鏈無直接關係",
-          "FinMind顯示2026年7月營收僅2.3萬元，缺乏專案規模與續約證據"
+          "不具膜材、藥劑、設備或工程能力，與水資源產業鏈無直接關係",
+          "2026年7月營收僅2.3萬元、YoY-99.2%，營運規模與延續性極弱"
         ],
         "opportunities": [
-          "企業ESG揭露與員工訓練需求可帶動客製化數位教材",
-          "公共環境教育可從一次性活動轉向可重複使用的線上模擬課程"
+          "企業ESG與環境教育可採遊戲化數位教材",
+          "若與環工顧問合作，可補足內容正確性與課程設計"
         ],
         "threats": [
-          "通用LMS與內容工作室可快速複製環境教育教材，替代性高",
-          "若沒有環工專業夥伴，內容正確性與標案資格可能不足"
+          "通用LMS與內容工作室可快速替代，差異化有限",
+          "缺乏環工實績與標案資格時，難承接專業水處理教育案"
         ]
       }
     }

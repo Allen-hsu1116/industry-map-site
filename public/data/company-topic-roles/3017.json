@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3017",
   "companyName": "奇鋐",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -100,23 +100,22 @@
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "technology",
-      "directness": "supplier",
+      "directness": "indirect",
       "supplyChainStage": "thermal",
-      "roleType": "liquid_cooling_solution_candidate",
-      "roleSummary": "奇鋐MOPS僅以「3C電子產品」概括，無法單憑本次MCP證實銅微通道尺寸、CDU流量、熱阻、客戶或液冷產品組合；因此保留散熱產業脈絡，但降低信心並移除過度規格化斷言。2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%，公司說明為客戶需求增加；仍不能全數歸因液冷。",
+      "roleType": "thermal_solution_liquid_cooling_unverified",
+      "roleSummary": "奇鋐MOPS僅以「3C電子產品」概括主業，無法單憑MCP證實冷板、CDU、液冷規格或具名伺服器客戶；公司官網可支持整體熱管理脈絡，因此本角色保留為低信心候選。2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%，但不能全歸因液冷。",
       "products": [
-        "伺服器散熱風扇模組（題材應用產品）",
-        "熱管散熱模組（題材應用產品）",
-        "均熱板散熱模組（題材應用產品）",
-        "直接液冷冷板（MOPS未逐項列名）",
-        "液冷歧管與迴路組件（MOPS未逐項列名）"
+        "3C電子產品散熱模組（公司官網題材脈絡）",
+        "伺服器風扇散熱組件（MOPS未逐項列名）",
+        "熱管／均熱板模組（MOPS未逐項列名）",
+        "液冷冷板與迴路組件（MOPS未逐項列名）"
       ],
       "customers": [
         "NVIDIA（AI平台驗證對象，非MOPS揭露客戶）",
         "Dell Technologies（伺服器應用對象，非MOPS揭露客戶）",
         "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
-        "廣達（系統整合對象，非MOPS揭露客戶）",
-        "緯創（系統整合對象，非MOPS揭露客戶）"
+        "廣達(2382；系統整合對象，非MOPS揭露客戶)",
+        "緯創(3231；系統整合對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "液冷模組供應商",
@@ -149,25 +148,25 @@
         {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務僅概括為3C電子產品，未逐項揭露液冷產品。"
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3017",
+          "claim": "MOPS主要經營業務：3C電子產品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%；公司說明客戶需求增加。"
+          "claim": "2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%；公司備註為客戶需求增加。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-23",
-      "status": "verified",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "熱管與均熱板的兩相傳熱、毛細結構與熱擴散設計",
-        "冷板微流道、歧管流量平衡與壓降控制",
-        "液冷迴路氣密、耐壓與漏液可靠度驗證"
+        "熱管／均熱板兩相傳熱、毛細回流與氣密封裝",
+        "冷板流道與歧管之流量平衡、壓降及耐壓設計",
+        "散熱模組溫循、振動、漏液與材料相容性驗證"
       ],
       "swot": {
         "strengths": [

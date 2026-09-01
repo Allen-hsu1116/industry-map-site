@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1536",
   "companyName": "和大",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "industrial-automation",
@@ -274,22 +274,21 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "和大在再生能源題材中為太陽能追日系統精密驅動齒輪供應商，提供減速比1:100-1:1000行星齒輪。6月營收3.67億YoY+3.82%，MOPS登記為汽機車/農業機械齒輪製造。HOTA品牌在北美追日系統市場具知名度，亦跨足風電變槳齒輪箱與電動車減速機齒輪。",
+      "supplyChainStage": "drivetrain_outside_topic",
+      "roleType": "gear_manufacturer_outside_renewables",
+      "roleSummary": "和大MOPS只支持汽機車、農業機械齒輪與軸類，以及一般機械零件加工；未揭露太陽能追日、風電變槳、減速比1:100-1:1000或任何再生能源客戶。此角色降為精密傳動能力對再生能源驅動系統的遠端應用觀察。2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY僅+1.0%，不能歸因再生能源。",
       "products": [
-        "太陽能追日系統精密行星齒輪(減速比1:100-1:1000)(單軸/雙軸追日支架)",
-        "風電變槳系統齒輪箱組件(高扭矩行星齒輪)",
-        "電動車減速機齒輪組(高精度斜齒輪/行星齒輪)",
-        "工業機械用精密齒輪箱(JIS N1級精度)",
-        "農業機械傳動齒輪軸(大模數齒輪)"
+        "汽車變速與減速機齒輪",
+        "機車傳動齒輪與齒輪軸",
+        "農業機械用齒輪與軸件",
+        "工業機械精密齒輪",
+        "汽機車機械加工零件"
       ],
       "customers": [
-        "昱成光電(太陽能追日追蹤器製造)",
-        "東元(1504)(太陽能追日馬達減速機配套)",
-        "程達光電(太陽能追日系統整合)",
-        "和大美國子公司HOTA(風電齒輪箱組件)",
-        "Eaton(電動車減速機齒輪OEM)"
+        "東元(1504；再生能源驅動系統應用對象，非MOPS揭露客戶)",
+        "上緯投控(3708；風電生態系對象，非MOPS揭露客戶)",
+        "永冠-KY(1589；風電機械供應鏈對象，非MOPS揭露客戶)",
+        "Tesla（電動車傳動應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "NEUGART(德國精密行星齒輪)",
@@ -304,48 +303,44 @@
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1536",
+          "claim": "MOPS主要經營業務：汽機車與農業機械齒輪、軸類；機械及零件加工；汽機車零件製造與經銷。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%、累計YoY+1.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "精密行星齒輪減速機設計(減速比1:100-1:1000/JIS N1級精度)",
-        "太陽能追日支架驅動齒輪抗腐蝕/抗UV材料技術",
-        "高扭矩風電變槳齒輪箱熱處理與表面硬化技術"
+        "齒形研削、齒向修整與齒輪嚙合誤差控制",
+        "滲碳淬火、表面硬度與齒根疲勞壽命管理",
+        "軸類同軸度、花鍵精度與量產尺寸統計管制"
       ],
       "swot": {
         "strengths": [
-          "全球太陽能追日系統精密齒輪主要供應商，減速比1:100-1:1000客製化設計能力強",
-          "6月營收3.67億YoY+3.82%，本業汽機車齒輪穩定貢獻",
-          "HOTA品牌在北美追日系統齒輪市場具知名度"
+          "MOPS直接支持齒輪、軸類與機械零件量產加工能力",
+          "7月營收MoM+19.8%、YoY+9.6%，短期出貨回升"
         ],
         "weaknesses": [
-          "太陽能齒輪佔比小，營收貢獻有限，累計YoY-0.21%接近持平",
-          "齒輪屬傳統機加工，ASP提升空間有限",
-          "風電齒輪箱仍處開發階段，尚未規模化出貨"
+          "MOPS未揭露太陽能追日或風電變槳產品與客戶",
+          "累計YoY僅+1.0%，且公司營收不能驗證再生能源題材貢獻"
         ],
         "opportunities": [
-          "全球太陽能追日系統滲透率提升帶動精密齒輪需求",
-          "電動車減速機齒輪市場長期成長",
-          "美國HOTA子公司可就近供應北美太陽能/風電客戶"
+          "既有精密齒輪與軸件能力可評估追日器或變槳驅動應用",
+          "再生能源設備在地化可創造傳動零件送樣機會"
         ],
         "threats": [
-          "追日系統市場競爭者多，中國低價齒輪替代風險",
-          "鋼材價格波動影響齒輪成本",
-          "太陽能補貼政策變動影響下游追日系統需求"
+          "無客戶認證與實際訂單證據時，題材容易停留在概念階段",
+          "中國齒輪廠價格競爭及鋼材成本波動可能壓縮毛利"
         ]
       }
     }

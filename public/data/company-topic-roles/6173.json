@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -428,21 +428,19 @@
       "topicName": "AI 伺服器電源與 BBU",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "信昌電提供AI伺服器電源供應器(PSU)用高頻陶瓷電容與晶片電阻，受惠AI伺服器高功率PSU需求成長。",
+      "supplyChainStage": "passive_components",
+      "roleType": "passive_components_power_adjacent",
+      "roleSummary": "信昌電MOPS只支持晶片電容、晶片電阻與介電瓷粉，未揭露AI伺服器、BBU、AEC-Q200或具名電源客戶；本題材僅能定位為伺服器電源可能採用的被動元件上游。FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%，但公司整體成長不能歸因AI伺服器。",
       "products": [
-        "高頻陶瓷電容(AI伺服器PWM控制電路>100kHz)",
-        "晶片電阻(AI伺服器PSU電源控制電路)",
-        "車規/AI伺服器雙認證MLCC(電源濾波10μF+)",
-        "突波吸收器(伺服器PSU過壓保護)",
-        "介電瓷粉(AI伺服器高頻電容原料)"
+        "多層晶片陶瓷電容（MLCC）",
+        "厚膜晶片電阻",
+        "MLCC用介電陶瓷粉體"
       ],
       "customers": [
-        "台達電(2308)(AI伺服器PSU被動元件)",
-        "光寶科(2301)(AI伺服器電源供應器被動元件)",
-        "康舒(6282)(AI伺服器PSU被動元件)",
-        "群電(6412)(伺服器電源被動元件)"
+        "台達電(2308；電源系統應用對象，非MOPS揭露客戶)",
+        "光寶科(2301；電源供應器應用對象，非MOPS揭露客戶)",
+        "康舒(6282；電源供應器應用對象，非MOPS揭露客戶)",
+        "群電(6412；電源供應器應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "國巨(2327)",
@@ -457,48 +455,44 @@
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 晶片電容、晶片電阻、介電瓷粉"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6173",
+          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "月營收歷史",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%；TWSE月營收路徑查無資料。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "高頻PWM控制電路用MLCC(>100kHz低ESR設計)",
-        "電源濾波用高容值陶瓷電容(10μF+/X7R介電)",
-        "車規AEC-Q200與AI伺服器雙認證被動元件"
+        "MLCC介電層薄化、積層印刷與燒結收縮控制",
+        "晶片電阻厚膜印刷、雷射調阻與溫度係數控制",
+        "介電瓷粉粒徑、成分均勻性與高溫燒結配方"
       ],
       "swot": {
         "strengths": [
-          "高頻PWM控制電路用MLCC(>100kHz低ESR)切入AI伺服器PSU供應鏈",
-          "車規/AI伺服器雙認證被動元件(10μF+電源濾波)跨足多元應用",
-          "突波吸收器提供伺服器PSU過壓保護方案"
+          "MOPS直接支持MLCC、晶片電阻與介電瓷粉，具材料到元件的產品鏈",
+          "FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%"
         ],
         "weaknesses": [
-          "AI伺服器被動元件佔整體營收比重仍低",
-          "AI伺服器PSU被動元件競爭對手包含國巨/華新科等大廠",
-          "高頻MLCC量產規模不及一線MLCC廠"
+          "MOPS未揭露AI伺服器、BBU、電源規格或具名客戶",
+          "公司月營收未拆分伺服器電源貢獻，題材直接性偏低"
         ],
         "opportunities": [
-          "AI伺服器電源功率密度提升帶動高頻MLCC需求",
-          "BBU備用電池單元用突波保護元件新應用",
-          "液冷散熱系統用高頻被動元件需求"
+          "高功率伺服器電源增加去耦、濾波與電流感測元件需求",
+          "自製介電粉體可支援高容值MLCC配方與供應穩定性"
         ],
         "threats": [
-          "國巨(2327)/華新科(2492)在AI伺服器MLCC規模優勢明顯",
-          "伺服器PSU設計變更可能改變被動元件規格需求",
-          "中國被動元件廠低價競爭"
+          "國巨、華新科及日系被動元件廠的規模與認證優勢強",
+          "電源架構與料號替換會改變單機被動元件用量及價格"
         ]
       }
     },

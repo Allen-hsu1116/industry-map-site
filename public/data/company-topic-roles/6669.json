@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6669",
   "companyName": "緯穎",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,7 +11,7 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "csp_ai_server_odm",
-      "roleSummary": "緯穎MOPS僅以「資料中心產品」概括主業，足以支持資料中心硬體核心角色，但不支持既有H100/B200、特定CSP或液冷規格。2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%，強勁成長仍屬公司整體資料中心產品表現。",
+      "roleSummary": "緯穎MOPS以「資料中心產品」概括主業，足以支持資料中心硬體核心角色，但不支持特定GPU平台、CSP客戶或液冷規格。2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%、累計YoY+41.3%，仍是公司整體資料中心產品表現。",
       "products": [
         "資料中心機架式運算系統",
         "資料中心儲存節點系統",
@@ -42,36 +42,22 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "緯穎 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6669",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯穎 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6669 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6669",
           "claim": "MOPS主要經營業務：資料中心產品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%。"
+          "claim": "2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%、累計YoY+41.3%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "lastVerified": "2026-09-01",
       "status": "verified",
       "techFocus": [
         "OCP機架級機構、供電與管理介面整合",

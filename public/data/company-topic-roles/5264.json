@@ -2,20 +2,20 @@
   "schemaVersion": 1,
   "companyCode": "5264",
   "companyName": "鎧勝-KY",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "uav_airframe_structures",
-      "roleSummary": "本次MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證既有中科院標案、無人機起落架、旋翼或軍規材料規格。為避免把舊題材吹成軍火庫，此角色降級為歷史金屬機殼加工能力對航太結構件的觀察名單。",
+      "supplyChainStage": "historical_metalwork_outside_topic",
+      "roleType": "historical_metal_enclosure_scope",
+      "roleSummary": "本輪MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證現行公司狀態、無人機產品、軍規材料或具名客戶。為免把舊題材吹成軍火庫，本角色只保留歷史金屬機殼加工能力作為航太結構件的低信心觀察。",
       "products": [
-        "CNC鋁／鎂合金金屬機殼（歷史產品範圍，待新揭露驗證）",
-        "壓鑄內構件與金屬支撐框架（歷史產品範圍，待新揭露驗證）",
-        "陽極處理與噴砂金屬外觀件（歷史產品範圍，待新揭露驗證）"
+        "CNC鋁／鎂合金金屬機殼（歷史產品範圍）",
+        "壓鑄內構件與金屬支撐框架（歷史產品範圍）",
+        "陽極處理與噴砂金屬外觀件（歷史產品範圍）"
       ],
       "customers": [
         "漢翔(2634；航太結構應用對象，非MOPS揭露客戶)",
@@ -33,58 +33,44 @@
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "鎧勝-KY 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5264",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 鎧勝-KY 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5264 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：MOPS完整基本資料與一般基本資料皆查無。"
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5264",
+          "claim": "2026-09-02查詢：MOPS完整基本資料與一般公司資料皆查無，不能視為現行產品證據。"
         },
         {
-          "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE與FinMind均查無2026年月營收資料。"
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind／TWSE OpenAPI",
+          "title": "月營收查詢結果",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "MOPS完整基本資料、一般公司資料、TWSE月營收及FinMind月營收皆查無資料。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-20",
-      "status": "verified",
+      "lastVerified": "2026-09-01",
+      "status": "candidate",
       "techFocus": [
-        "鋁／鎂合金壓鑄、CNC加工與尺寸公差控制",
-        "金屬機殼陽極處理、噴砂與耐蝕表面處理",
-        "結構件輕量化、EMI遮蔽與裝配可靠度設計"
+        "鋁／鎂合金壓鑄、CNC加工與尺寸公差控制（歷史技術範圍）",
+        "陽極處理、噴砂與耐蝕表面處理（歷史技術範圍）",
+        "金屬結構輕量化、EMI遮蔽與裝配可靠度（歷史技術範圍）"
       ],
       "swot": {
         "strengths": [
-          "若歷史金屬機殼加工能力仍存續，壓鑄、CNC與表面處理可作為結構件基礎",
-          "產品方向可對應輕量化金屬結構與EMI遮蔽需求"
+          "若歷史金屬加工能力仍存續，壓鑄、CNC與表面處理可作為輕量結構件基礎",
+          "歷史產品方向可對應金屬外殼、支撐框架與EMI遮蔽需求"
         ],
         "weaknesses": [
-          "四項MCP資料來源皆查無資料，連公司現況與月營收都無法驗證",
-          "中科院、漢翔、雷虎等既有具名關係沒有MOPS證據，已全部改標非揭露對象"
+          "四條MCP資料路徑皆查無，現行公司狀態、產品及營收均無法驗證",
+          "沒有軍規認證、國防收入或具名供應關係的官方證據"
         ],
         "opportunities": [
-          "若公司重新揭露有效營業資料，可再評估金屬結構件進入無人機供應鏈的可行性",
-          "台灣無人機國產化確實需要輕量機構件，但仍須客戶認證證據"
+          "若後續恢復有效揭露，可再評估金屬結構件送樣與認證能力",
+          "台灣無人機在地化需要輕量機構件，但仍須實際客戶驗證"
         ],
         "threats": [
-          "資料缺失與可能的歷史／下市狀態使此角色具有極高資訊過時風險",
-          "拓凱等已有航太複材認證者在技術、規模與可驗證性上明顯領先"
+          "資料缺失與可能的歷史／下市狀態造成極高資訊過時風險",
+          "已有航太認證與可驗證產能的供應商在競爭上明顯領先"
         ]
       }
     }

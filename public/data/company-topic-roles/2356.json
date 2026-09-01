@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2356",
   "companyName": "英業達",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-01T19:06:18Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -11,7 +11,7 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "server_notebook_odm",
-      "roleSummary": "英業達MOPS直接揭露筆記型電腦與伺服器，AI伺服器供應鏈角色成立；但未支持HGX H100/B200、IGX、液冷或特定雲端客戶。2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%，累計YoY+40.8%，公司說明為客戶需求增加。",
+      "roleSummary": "英業達MOPS直接揭露筆記型電腦與伺服器，AI伺服器系統製造角色有基本證據；但未揭露HGX／GB200、液冷或具名雲端客戶。2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%、累計YoY+40.8%，公司說明為客戶需求增加。",
       "products": [
         "機架式伺服器整機",
         "多節點伺服器系統",
@@ -44,36 +44,22 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "英業達 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2356",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 英業達 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2356 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：筆記型電腦、伺服器。"
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2356",
+          "claim": "MOPS主要經營業務：筆記型電腦伺服器"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%，累計YoY+40.8%；公司說明客戶需求增加。"
+          "claim": "2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%、累計YoY+40.8%；公司備註為客戶需求增加。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "lastVerified": "2026-09-01",
       "status": "verified",
       "techFocus": [
         "伺服器主機板高速訊號與多相電源設計",
