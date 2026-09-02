@@ -2,26 +2,26 @@
   "schemaVersion": 1,
   "companyCode": "3711",
   "companyName": "日月光投控",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "indirect",
-      "supplyChainStage": "advanced_packaging",
-      "roleType": "osat_leader",
-      "roleSummary": "日月光投控本體MOPS僅揭露一般投資業，既有FC-BGA、SiP與WLP敘述屬集團子公司能力，不能當成投控本體產品或特定客戶關係。2026年7月合併營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%，但未拆分先進封裝貢獻。",
+      "supplyChainStage": "holding_company_group_packaging",
+      "roleType": "group_level_advanced_packaging_exposure",
+      "roleSummary": "日月光投控本體MOPS只揭露一般投資業；封裝、測試與電子製造能力必須明確視為集團子公司範圍，不能當作投控本體產品或具名客戶關係。2026年7月合併營收737.84億元、YoY+43.2%、累計YoY+25.1%，未拆分先進封裝貢獻。",
       "products": [
-        "集團子公司之積體電路封裝服務",
-        "集團子公司之晶圓與成品測試服務",
-        "集團子公司之系統級封裝整合服務",
-        "集團子公司之電子製造服務"
+        "集團子公司積體電路封裝服務",
+        "集團子公司晶圓與成品測試服務",
+        "集團子公司系統級封裝整合服務",
+        "集團子公司電子製造服務"
       ],
       "customers": [
-        "TSMC（先進封裝生態對象，非MOPS揭露客戶）",
+        "台積電(2330；先進封裝生態對象，非MOPS揭露客戶）",
         "NVIDIA（AI晶片應用對象，非MOPS揭露客戶）",
-        "AMD（高效運算晶片應用對象，非MOPS揭露客戶）",
+        "AMD（高效運算應用對象，非MOPS揭露客戶）",
         "Qualcomm（行動晶片應用對象，非MOPS揭露客戶）",
         "Apple（終端應用對象，非MOPS揭露客戶）"
       ],
@@ -31,63 +31,49 @@
         "南茂"
       ],
       "risks": [
-        "客戶自建封裝產能風險",
-        "先進封裝資本支出壓力大"
+        "投控本體與子公司能力容易被混寫",
+        "先進封裝收入占比與具名客戶未揭露"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "日月光投控 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3711",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 日月光投控 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3711 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：一般投資業。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3711",
+          "claim": "MOPS主要經營業務：本體主要經營一般投資業；封裝、測試及電子製造能力屬集團子公司範圍。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%。"
+          "claim": "2026年7月合併營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
         "集團層級封裝、測試與電子製造資源配置",
-        "封裝後電性測試與系統級驗證整合",
-        "多晶片封裝量產之良率、翹曲與熱管理控制"
+        "多晶片封裝後的電性測試與系統級驗證整合",
+        "封裝量產的良率、翹曲、熱管理與供應鏈協調"
       ],
       "swot": {
         "strengths": [
-          "投控集團涵蓋封裝、測試與電子製造，可整合後段資源",
-          "7月合併營收YoY+43.2%、累計YoY+25.1%"
+          "集團橫跨封裝、測試與電子製造，服務範圍完整",
+          "7月合併營收YoY+43.2%、累計YoY+25.1%，公司整體動能良好"
         ],
         "weaknesses": [
-          "MOPS本體只揭露一般投資業，產品與客戶必須明確標示為集團層級",
-          "合併營收未拆分先進封裝，不能直接驗證題材貢獻"
+          "投控本體MOPS僅揭露一般投資業，產品敘述必須限定集團子公司",
+          "合併營收未拆分先進封裝平台、客戶與產品貢獻"
         ],
         "opportunities": [
-          "AI與異質整合提高封裝及測試內容價值",
-          "集團跨封測與EMS可承接模組到系統級驗證"
+          "AI與Chiplet提高多晶片封裝、系統級封裝及測試需求",
+          "集團製造與測試整合可承接複雜封裝的一站式委託"
         ],
         "threats": [
-          "先進封裝資本支出高，產能利用率下滑會壓縮回報",
-          "晶圓代工廠擴大自有先進封裝可能加劇競爭"
+          "台積電、Amkor與其他OSAT持續擴充高階封裝能力",
+          "資本支出、良率爬坡及AI需求波動可能影響新增產能回收"
         ]
       }
     },

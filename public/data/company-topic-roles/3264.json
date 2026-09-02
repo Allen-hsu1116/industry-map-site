@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "indirect",
-      "supplyChainStage": "advanced_packaging_test",
-      "roleType": "memory_ic_wafer_test",
-      "roleSummary": "欣銓MOPS揭露記憶體、數位及混合訊號IC晶圓／成品測試與晶圓型Burn-in，沒有封裝製程；本題材應定位為封裝前後測試與可靠度驗證，而非先進封裝供應商。FinMind顯示2026年7月營收17.67億元，較6月增加13.8%。",
+      "supplyChainStage": "wafer_and_final_test",
+      "roleType": "advanced_package_test_enabler",
+      "roleSummary": "欣銓MOPS明確支持記憶體、數位與混合訊號IC的晶圓／成品測試及晶圓型Burn-in，沒有封裝製程揭露；本題材定位為先進封裝前後的電性與可靠度驗證。TWSE查無資料，FinMind顯示2026年7月營收17.67億元、MoM+13.8%、YoY+52.3%。",
       "products": [
-        "記憶體IC晶圓測試服務",
-        "數位訊號IC晶圓與成品測試",
-        "混合訊號IC晶圓與成品測試",
-        "晶圓型Burn-in可靠度測試"
+        "記憶體IC晶圓電性測試服務",
+        "數位訊號IC晶圓與成品測試服務",
+        "混合訊號IC晶圓與成品測試服務",
+        "晶圓型Burn-in可靠度測試服務"
       ],
       "customers": [
         "Micron（記憶體測試應用對象，非MOPS揭露客戶）",
-        "Nanya Technology（DRAM測試應用對象，非MOPS揭露客戶）",
-        "Winbond Electronics（記憶體測試應用對象，非MOPS揭露客戶）",
-        "TSMC（晶圓測試生態對象，非MOPS揭露客戶）"
+        "南亞科(2408；DRAM測試應用對象，非MOPS揭露客戶）",
+        "華邦電(2344；記憶體測試應用對象，非MOPS揭露客戶）",
+        "台積電(2330；晶圓測試生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "京元電(2449)(IC測試代工龍頭)",
@@ -30,65 +30,50 @@
         "矽格(6257)(利基IC測試)"
       ],
       "risks": [
-        "6月營收15.52億(FinMind)持續成長但OTC流動性較低",
-        "先進封裝測試需求受HBM景氣循環影響大",
-        "測試機台資本支出高(Advantest/Teradyne)折舊壓力"
+        "公司未揭露封裝製程，不能列為封裝供應商",
+        "高階測試設備利用率受客戶專案節奏影響"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位與混合訊號IC晶圓及成品測試、晶圓型Burn-in。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
+          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位及混合訊號IC晶圓與成品測試，以及晶圓型Burn-in測試。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收17.67億元，較6月增加13.8%。"
+          "claim": "TWSE查無資料；FinMind顯示2026年7月營收17.67億元，MoM+13.8%、YoY+52.3%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "晶圓探針測試與多站點並行測試",
-        "數位／混合訊號IC測試程式與介面開發",
-        "晶圓型高溫Burn-in與壽命篩選"
+        "晶圓探針接觸、測試程式與多站點並行量測",
+        "數位與混合訊號IC的電性規格分選及資料追溯",
+        "晶圓型高溫Burn-in、壽命篩選與失效分析"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持晶圓、成品與Burn-in測試能力",
-          "FinMind顯示7月營收17.67億元、月增13.8%"
+          "MOPS直接支持晶圓、成品及Burn-in測試服務",
+          "FinMind顯示7月營收MoM+13.8%、YoY+52.3%，測試需求成長"
         ],
         "weaknesses": [
-          "MOPS未揭露任何封裝製程，直接性低於封裝廠",
-          "營收未拆分先進封裝相關測試占比"
+          "不執行先進封裝製程，主題價值集中於測試驗證",
+          "TWSE月營收路徑查無資料，且公司未拆分先進封裝測試占比"
         ],
         "opportunities": [
-          "異質整合提高封裝前後測試與可靠度篩選需求",
-          "AI與車用IC可增加多溫與長時間Burn-in測試時數"
+          "Chiplet與多晶片封裝增加測試向量、溫度條件與追溯需求",
+          "高成本封裝提高Known Good Die與早期失效篩選價值"
         ],
         "threats": [
-          "晶片業者自建測試產能可能壓縮委外份額",
-          "先進封裝測試介面昂貴且世代更新快，折舊風險高"
+          "封裝廠或晶圓廠擴大自有測試能力可能排擠外包量",
+          "高階測試設備投資及測試時間拉長可能壓縮報酬率"
         ]
       }
     },

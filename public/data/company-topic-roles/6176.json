@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6176",
   "companyName": "瑞儀",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -171,19 +171,19 @@
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "roleSummary": "瑞儀MOPS只支持電子零組件、模具與照明設備製造，未揭露冷板、CDU、快接頭、冷卻液或AI伺服器散熱；本題材僅能視為顯示模組熱管理與精密模具的鄰近能力。2026年7月營收37.61億元、YoY-9.5%、累計YoY-6.5%，本業仍承壓。",
+      "roleSummary": "瑞儀MOPS只支持電子零組件、模具及照明設備製造，沒有AI伺服器液冷設備證據；本題材僅保留背光模組的光熱機整合與模具能力作遠距鄰近觀察。2026年7月營收37.61億元、YoY-9.5%、累計YoY-6.5%，不能歸因液冷。",
       "products": [
-        "筆記型電腦LED背光模組",
-        "平板電腦LED背光模組",
+        "側光式LCD背光模組",
+        "直下式LCD背光模組",
         "Mini LED分區背光模組",
-        "車用顯示背光模組",
-        "導光板與光學膜組件"
+        "導光板與光學膜片模組",
+        "背光模組精密成型模具"
       ],
       "customers": [
-        "Apple（平板與筆電背光應用對象，非MOPS揭露客戶)",
-        "友達(2409；顯示背光應用對象，非MOPS揭露客戶)",
-        "群創(3481；顯示背光應用對象，非MOPS揭露客戶)",
-        "LG Display（顯示背光應用對象，非MOPS揭露客戶)"
+        "Apple（顯示終端應用對象，非MOPS揭露客戶）",
+        "友達(2409；面板應用對象，非MOPS揭露客戶）",
+        "群創(3481；面板應用對象，非MOPS揭露客戶）",
+        "LG Display（面板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中強光電(2442)(背光模組)",
@@ -191,58 +191,51 @@
         "達方(8163)(散熱元件)"
       ],
       "risks": [
-        "OLED滲透降低傳統背光需求，會削弱可移轉至其他熱管理領域的規模",
-        "奇鋐、雙鴻與Cooler Master已有冷板／CDU經驗，瑞儀跨入液冷缺乏證據與認證"
+        "公司未揭露液冷收入或產品，容易被題材誤分類",
+        "顯示熱管理能力不能直接等同伺服器流體散熱能力"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "6176公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 6176 role in AI 伺服器液冷散熱 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零組件、模具及照明設備製造；MOPS未揭露液冷產品。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6176",
+          "claim": "MOPS主要經營業務：電子零組件製造、模具製造及照明設備製造；未揭露液冷產品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%。"
+          "claim": "2026年7月營收37.61億元，MoM+1.8%、YoY-9.5%，累計YoY-6.5%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-27",
-      "status": "verified",
+      "lastVerified": "2026-09-02",
+      "status": "candidate",
       "techFocus": [
-        "導光板微結構、光學膜堆疊與亮度均勻性控制",
-        "Mini LED分區調光、熱點抑制與薄型化設計",
+        "導光板微結構與光學膜片堆疊的亮度均勻控制",
+        "Mini LED分區調光、熱點抑制與薄型模組設計",
         "精密模具、射出成形與光學組件自動貼合"
       ],
-      "supplyChainStage": "display_thermal_adjacent",
-      "roleType": "display_module_not_liquid_cooling",
+      "supplyChainStage": "outside_liquid_cooling",
+      "roleType": "display_thermal_adjacent",
       "swot": {
         "strengths": [
-          "背光模組需整合光、熱與機構設計，具量產製程經驗",
-          "車用與Mini LED背光可提高顯示產品附加價值"
+          "具背光、導光板、光學膜片與模具的量產整合經驗",
+          "光熱機協同設計可處理高亮度顯示模組熱點"
         ],
         "weaknesses": [
-          "MOPS未揭露任何液冷零件，不能把瑞儀列為冷板或CDU供應商",
-          "2026年7月營收YoY-9.5%、累計YoY-6.5%，整體本業仍衰退"
+          "MOPS未揭露任何AI伺服器液冷產品，題材直接性極低",
+          "7月營收YoY-9.5%、累計YoY-6.5%，本業需求仍收縮"
         ],
         "opportunities": [
-          "精密模具與模組熱點控制能力可尋找資料中心周邊顯示合作",
-          "車用高亮度顯示可降低傳統筆電背光衰退影響"
+          "高亮度機櫃顯示與監控終端可能需要薄型背光及熱管理",
+          "車用與Mini LED顯示可分散傳統筆電背光下滑風險"
         ],
         "threats": [
-          "OLED滲透降低傳統背光需求，削弱本業規模",
-          "既有液冷廠商已有流體、可靠度與系統認證經驗，跨入門檻高"
+          "OLED滲透持續替代傳統背光模組",
+          "液冷市場已有具流體設計與系統驗證經驗的專業廠商"
         ]
       }
     }

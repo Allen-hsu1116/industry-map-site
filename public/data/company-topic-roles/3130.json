@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3130",
   "companyName": "一零四",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -171,21 +171,21 @@
       "topicName": "記憶體模組",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "一零四在記憶體模組題材僅提供招聘廣告、獵才、ATS與薪資情報，不製造DRAM、NAND或模組；下列公司是產業應用對象，非MOPS揭露客戶。2026年7月營收2.75億元、YoY+12.4%、累計YoY+7.8%。",
+      "supplyChainStage": "talent_service_outside_memory_hardware",
+      "roleType": "memory_industry_recruiting_platform",
+      "roleSummary": "一零四MOPS只支持一般廣告與電子資訊就業服務，不製造DRAM、NAND、SSD或記憶體模組；本題材僅是記憶體產業招募、獵才與人才資料服務。2026年7月營收2.75億元、YoY+12.4%、累計YoY+7.8%，不能歸因記憶體景氣。",
       "products": [
-        "104人力銀行DRAM/NAND工程職缺刊登與媒合",
-        "記憶體模組韌體/測試/FAE人才獵才服務",
-        "104企業大師ATS招募與面試流程管理",
-        "記憶體產業薪資情報與技能供需分析報告"
+        "記憶體產業職缺刊登廣告服務",
+        "DRAM／NAND工程人才履歷搜尋服務",
+        "企業招募流程管理服務",
+        "半導體人才薪資與技能供需分析"
       ],
       "customers": [
-        "威剛(3260；記憶體人才招募應用對象，非MOPS揭露客戶)",
-        "創見(2451；模組人才招募應用對象，非MOPS揭露客戶)",
-        "宇瞻(8271；工業記憶體人才應用對象，非MOPS揭露客戶)",
-        "南亞科(2408；DRAM人才應用對象，非MOPS揭露客戶)",
-        "華邦電(2344；利基記憶體人才應用對象，非MOPS揭露客戶)"
+        "威剛(3260；記憶體人才招募應用對象，非MOPS揭露客戶）",
+        "創見(2451；模組人才招募應用對象，非MOPS揭露客戶）",
+        "宇瞻(8271；工業記憶體人才應用對象，非MOPS揭露客戶）",
+        "南亞科(2408；DRAM人才應用對象，非MOPS揭露客戶）",
+        "華邦電(2344；利基記憶體人才應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "1111人力銀行(半導體人才招募)",
@@ -193,65 +193,50 @@
         "LinkedIn(國際半導體人才)"
       ],
       "risks": [
-        "記憶體產業人才需求為間接受益，佔整體營收比重極小",
-        "記憶體產業景氣循環影響徵才需求，下行期招募縮減",
-        "人才招募平台同業競爭激烈"
+        "記憶體產業相關收入未揭露",
+        "人才需求屬景氣落後指標且與實體產品價格高度脫鉤"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：一般廣告服務與電子資訊就業服務。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3130",
+          "claim": "MOPS主要經營業務：一般廣告服務與電子資訊就業服務；不製造記憶體晶片或模組。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
           "claim": "2026年7月營收2.75億元，MoM+4.3%、YoY+12.4%，累計YoY+7.8%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-09-02",
+      "status": "candidate",
       "techFocus": [
-        "DRAM/NAND/SSD韌體技能詞典與職缺-履歷語意匹配",
-        "人才推薦排序、重複履歷消歧與企業ATS串接",
-        "記憶體景氣循環下的職缺量、薪資與人才流動分析"
+        "DRAM、NAND、SSD韌體與測試技能詞典建模",
+        "職缺與履歷語意匹配、推薦排序及重複資料消歧",
+        "產業職缺量、薪資與人才流動的時間序列分析"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收YoY+12.4%，平台流量與企業招募需求穩定",
-          "履歷資料可細分DRAM製程、SSD韌體、模組測試及FAE職能"
+          "MOPS直接支持電子資訊就業服務，人才平台定位明確",
+          "7月營收YoY+12.4%、累計YoY+7.8%，服務收入穩定成長"
         ],
         "weaknesses": [
-          "不在記憶體實體供應鏈，模組報價與出貨不會直接轉成104營收",
-          "記憶體客戶與相關收入未揭露，題材純屬人才服務間接連結"
+          "不在記憶體實體供應鏈，模組報價與出貨不會直接轉為營收",
+          "公司未拆分記憶體產業客戶與收入，主題曝險極低"
         ],
         "opportunities": [
-          "AI伺服器、企業SSD與HBM擴產可增加韌體、測試及製程人才缺口",
-          "可用產業人才報告與ATS長約提高企業端經常性收入"
+          "AI、企業SSD及記憶體擴產可增加韌體、測試與製程人才需求",
+          "人才供需報告與招募流程服務可提高企業端經常性收入"
         ],
         "threats": [
-          "記憶體景氣反轉時，企業通常先凍結招募與獵才預算",
-          "LinkedIn、Cake及企業內推平台分食工程人才媒合市場"
+          "記憶體景氣反轉時企業通常先縮減招募與獵才預算",
+          "LinkedIn、Cake及企業內推工具分食科技人才媒合市場"
         ]
       }
     }

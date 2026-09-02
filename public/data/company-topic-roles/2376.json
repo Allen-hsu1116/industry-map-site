@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2376",
   "companyName": "技嘉",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -102,20 +102,20 @@
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "technology",
       "directness": "direct_enabler",
-      "supplyChainStage": "thermal_system",
-      "roleType": "liquid_cooling_server_solution",
-      "roleSummary": "技嘉MOPS支持電腦硬體、零件與系統週邊設備，但未逐項揭露冷板、CDU、浸沒式設備或雲端客戶；液冷角色應定位為GPU伺服器平台與機櫃層的系統整合，而不是自製所有液冷元件。2026年7月營收442.13億元、YoY+59.7%，且公司備註AI訂單暢旺，但未拆分液冷貢獻。",
+      "supplyChainStage": "server_system_integration",
+      "roleType": "liquid_cooled_server_integrator",
+      "roleSummary": "技嘉MOPS支持電腦硬體、零件與系統周邊設備，但未逐項揭露冷板、CDU或浸沒式設備；液冷題材定位為GPU伺服器與機櫃層的系統整合，而非自製所有流體元件。2026年7月營收442.13億元、YoY+59.7%，公司備註AI訂單暢旺，但未拆分液冷貢獻。",
       "products": [
-        "GIGABYTE G系列GPU伺服器的液冷配置",
-        "GIGABYTE H系列高密度伺服器的液冷配置",
-        "GPU伺服器主機板與加速器基板",
-        "液冷機櫃與冷卻迴路系統整合服務"
+        "GPU伺服器液冷配置整合",
+        "高密度機架式伺服器系統",
+        "GPU伺服器主機板與加速器載板",
+        "液冷就緒機櫃與管路配置服務"
       ],
       "customers": [
-        "NVIDIA（HGX平台合作對象，非MOPS揭露客戶）",
-        "AMD（Instinct平台合作對象，非MOPS揭露客戶）",
-        "Intel（Xeon平台合作對象，非MOPS揭露客戶）",
-        "Supermicro（液冷伺服器競合／驗證對象，非MOPS揭露客戶）"
+        "NVIDIA（GPU平台合作對象，非MOPS揭露客戶）",
+        "AMD（加速器平台合作對象，非MOPS揭露客戶）",
+        "Intel（伺服器平台合作對象，非MOPS揭露客戶）",
+        "Supermicro（液冷伺服器競合對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "雙鴻(3324)",
@@ -124,8 +124,8 @@
         "Asetek"
       ],
       "risks": [
-        "液冷技術仍在快速迭代，路線未定",
-        "一體式水冷單價高但出貨量有限"
+        "液冷零件自製程度與收入占比未揭露",
+        "平台更新快，整機驗證及庫存風險高"
       ],
       "legacy": {
         "topicSlug": "liquid_cooling_advanced",
@@ -134,58 +134,44 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "技嘉 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 技嘉 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦硬體及其零件之製造加工及買賣；電腦系統週邊設備（包括軟體）之製造加工及買賣。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2376",
+          "claim": "MOPS主要經營業務：電腦硬體、零件及電腦系統周邊設備與軟體之製造、加工及買賣；未逐項揭露液冷產品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收442.13億元，MoM+3.1%、YoY+59.7%、累計YoY+50.0%；公司備註AI訂單需求暢旺。"
+          "claim": "2026年7月營收442.13億元，MoM+3.1%、YoY+59.7%，累計YoY+50.0%；公司備註AI訂單需求暢旺。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "Direct-to-Chip冷板迴路與伺服器機構整合",
-        "BMC對流量、溫度與漏液感測的監控整合",
-        "OCP機櫃供回水管路與快接介面的相容性驗證"
+        "Direct-to-Chip液冷迴路與伺服器機構的系統整合",
+        "BMC對溫度、流量及漏液感測的監控整合",
+        "機櫃供回水管路、快接介面與維修空間的相容性驗證"
       ],
       "swot": {
         "strengths": [
-          "7月營收YoY+59.7%、累計YoY+50.0%，公司並明確說明AI訂單暢旺",
-          "具備伺服器主機板、整機與機櫃層系統整合能力，可承接液冷配置"
+          "電腦硬體與系統周邊本業可支撐伺服器平台整合",
+          "7月營收YoY+59.7%、累計YoY+50.0%，且公司明示AI訂單需求暢旺"
         ],
         "weaknesses": [
-          "MOPS未揭露冷板、CDU或浸沒式產品，自製深度與營收占比無法確認",
-          "7月雖成長但液冷方案高度客製，驗證與維護成本較氣冷高"
+          "MOPS未逐項揭露液冷產品、自製比例或液冷營收",
+          "系統整合依賴冷板、泵浦與換熱等外部元件供應商"
         ],
         "opportunities": [
-          "高功耗GPU平台提高Direct-to-Chip液冷滲透率",
-          "企業私有AI與HPC部署可擴大品牌伺服器的液冷整合需求"
+          "高功耗GPU平台促使客戶由氣冷轉向液冷配置",
+          "整機、機櫃與BMC監控共同驗證可提高方案服務價值"
         ],
         "threats": [
-          "廣達、緯穎、Supermicro等伺服器商同步擴充液冷方案",
-          "冷板、CDU與快接標準分歧可能造成庫存及重複驗證成本"
+          "雲端客戶自訂機櫃與ODM直接供貨可能壓縮品牌伺服器空間",
+          "液冷介面標準快速變動會增加驗證與庫存風險"
         ]
       }
     },

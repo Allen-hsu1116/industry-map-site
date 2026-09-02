@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2059",
   "companyName": "川湖",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "ai-server-mechanical",
@@ -96,19 +96,19 @@
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "roleSummary": "川湖MOPS直接支持伺服器導軌、滑軌及周邊零組件，未揭露冷板、CDU或液冷快接頭；本題材應限於高重量GPU與液冷伺服器機箱的承載及抽換機構。2026年7月營收64.07億元、YoY+355.5%、累計YoY+136.6%，公司說明新產品開始出貨，但未指明液冷。",
+      "roleSummary": "川湖MOPS直接支持伺服器導軌、滑軌與周邊零組件，但未揭露流體散熱設備；液冷題材應限於高重量GPU與液冷伺服器的承載、抽換及維修機構。2026年7月營收64.07億元、MoM+44.2%、YoY+355.5%，公司說明新產品開始出貨但未指明液冷。",
       "products": [
         "機架式伺服器滾珠滑軌",
-        "高載重GPU伺服器滑軌",
-        "免工具快拆機架導軌",
+        "高載重GPU伺服器導軌",
+        "免工具快拆機架滑軌",
         "伺服器線纜管理臂",
-        "伺服器滑軌鎖定零件"
+        "伺服器滑軌鎖定與止擋零件"
       ],
       "customers": [
-        "Dell Technologies（伺服器滑軌應用對象，非MOPS揭露客戶)",
-        "Hewlett Packard Enterprise（機架滑軌應用對象，非MOPS揭露客戶)",
-        "Supermicro（GPU伺服器應用對象，非MOPS揭露客戶)",
-        "緯穎(6669；雲端機架應用對象，非MOPS揭露客戶)"
+        "Dell Technologies（伺服器滑軌應用對象，非MOPS揭露客戶）",
+        "Hewlett Packard Enterprise（機架導軌應用對象，非MOPS揭露客戶）",
+        "Supermicro（GPU伺服器應用對象，非MOPS揭露客戶）",
+        "緯穎(6669；雲端機架應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Unical(美國伺服器滑軌)",
@@ -116,59 +116,51 @@
         "Accuride(美國滑軌)"
       ],
       "risks": [
-        "產品單價低，毛利率受材料成本影響",
-        "NB鉸鏈受筆電需求疲軟影響",
-        "滑軌市場利基型，成長空間受限"
+        "液冷題材貢獻未由公司收入拆分",
+        "高速成長基期與新品出貨節奏可能造成營收大幅波動"
       ],
       "evidence": [
         {
-          "sourceId": "mops-2059-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "2059公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 2059 role in AI 伺服器液冷散熱 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：伺服器等用導軌及周邊零組件、筆電鉸鏈與滑軌之研發、設計、製造及銷售。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2059",
+          "claim": "MOPS主要經營業務：研發、設計、製造及銷售伺服器用導軌與周邊零組件，另製造鉸鏈及滑軌。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%；備註為新產品開始出貨。"
+          "claim": "2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%；公司備註新產品開始出貨。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "高載重滾珠滑軌之撓度、摩擦與循環壽命控制",
+        "高載重滾珠滑軌的撓度、摩擦與循環壽命控制",
         "免工具快拆、盲裝與機架公差補償設計",
-        "運輸振動、抽拉循環與鎖定機構可靠度測試"
+        "運輸振動、抽拉循環與鎖定機構可靠度驗證"
       ],
-      "supplyChainStage": "server_mechanical_adjacent",
-      "roleType": "server_rails_adjacent_to_liquid_cooled_racks",
+      "supplyChainStage": "server_mechanical",
+      "roleType": "rack_rail_enabler",
       "swot": {
         "strengths": [
-          "MOPS直接支持伺服器導軌、滑軌與周邊件，機架機構角色明確",
-          "2026年7月營收YoY+355.5%、累計YoY+136.6%，且公司明示新產品開始出貨"
+          "MOPS直接支持伺服器導軌與滑軌，產品定位清楚",
+          "7月營收YoY+355.5%、累計YoY+136.6%，且公司說明新產品開始出貨"
         ],
         "weaknesses": [
-          "MOPS未揭露冷板、CDU或液冷快接頭，不能列為流體散熱核心供應商",
-          "營收暴增未拆分產品，無法確認液冷機箱貢獻比例"
+          "不供應流體散熱核心元件，液冷曝險只在機構承載環節",
+          "營收未拆分液冷伺服器與一般伺服器滑軌貢獻"
         ],
         "opportunities": [
-          "GPU與液冷機箱重量上升可提高高載重滑軌單機價值",
-          "維修性與線纜／管路空間需求有利客製滑軌機構升級"
+          "GPU與液冷模組增加整機重量，提升高載重導軌價值",
+          "高密度機櫃維修需求增加快拆與盲裝機構的設計門檻"
         ],
         "threats": [
-          "平台改版可能要求重新認證與模具投資",
-          "高基期墊高後營收增速可能快速回落，且材料與同業競爭仍會影響毛利"
+          "伺服器架構改版可能導致滑軌規格重新驗證與庫存風險",
+          "客戶集中及同業擴產可能壓縮價格與交期優勢"
         ]
       }
     }

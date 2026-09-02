@@ -2,29 +2,29 @@
   "schemaVersion": 1,
   "companyCode": "2449",
   "companyName": "京元電子",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "direct_enabler",
-      "supplyChainStage": "high_end_testing",
-      "roleType": "test_house",
-      "roleSummary": "京元電子MOPS支持積體電路測試、加工與包裝，足以定位為先進封裝後段測試及可靠度驗證的直接賦能者；但MOPS未揭露NVIDIA／AMD／Apple客戶、SLT機型或HAST條件。2026年7月營收39.91億元、YoY+36.7%，未拆分先進封裝貢獻。",
+      "supplyChainStage": "post_package_test",
+      "roleType": "advanced_package_test_enabler",
+      "roleSummary": "京元電子MOPS支持積體電路測試、加工與包裝，可定位為先進封裝後段測試及可靠度驗證的直接賦能者；但未揭露特定測試平台、封裝型式或具名客戶。2026年7月營收39.91億元、YoY+36.7%、累計YoY+36.2%，未拆分先進封裝貢獻。",
       "products": [
-        "AI／HPC晶片晶圓CP測試服務",
-        "先進封裝晶片成品FT測試服務",
-        "AI加速器系統級SLT測試服務",
+        "積體電路晶圓電性測試服務",
+        "積體電路成品功能測試服務",
+        "封裝後晶片系統級測試服務",
         "高溫Burn-in可靠度篩選服務",
-        "高速介面與射頻IC量測服務"
+        "高速數位與混合訊號IC量測服務"
       ],
       "customers": [
-        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
-        "AMD（AI加速器應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI加速器測試應用對象，非MOPS揭露客戶）",
+        "AMD（高效運算晶片測試應用對象，非MOPS揭露客戶）",
         "Qualcomm（SoC測試應用對象，非MOPS揭露客戶）",
-        "聯發科（SoC測試供應鏈對象，非MOPS揭露客戶）",
-        "台積電（先進封裝供應鏈對象，非MOPS揭露客戶）"
+        "聯發科(2454；SoC測試應用對象，非MOPS揭露客戶）",
+        "台積電(2330；先進封裝生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "日月光投控",
@@ -32,63 +32,49 @@
         "矽格"
       ],
       "risks": [
-        "半導體測試市場競爭激烈",
-        "測試機台資本支出大"
+        "具名客戶與平台關係未由MOPS揭露",
+        "高階測試設備投資與專案波動可能影響報酬率"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "京元電子 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2449",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 京元電子 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2449 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：積體電路之設計、製造、測試、加工、包裝及買賣。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2449",
+          "claim": "MOPS主要經營業務：積體電路之設計、製造、測試、配件、加工及包裝業務。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%、累計YoY+36.2%。"
+          "claim": "2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "CP、FT與SLT測試程式及治具協同開發",
-        "高功耗封裝的溫控、供電完整性與失效隔離",
-        "先進封裝測試資料與KGD良率追溯"
+        "晶圓測試、成品測試與系統級測試程式協同開發",
+        "高功耗封裝測試的供電完整性、溫控與失效隔離",
+        "測試資料追溯、已知良品篩選與量產良率分析"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持IC測試與包裝，可承接先進封裝後段驗證",
-          "7月營收YoY+36.7%、MoM+10.2%，公司整體測試需求強勁"
+          "MOPS直接支持IC測試、加工與包裝，後段驗證角色明確",
+          "7月營收YoY+36.7%、累計YoY+36.2%，測試需求穩健成長"
         ],
         "weaknesses": [
-          "MOPS未揭露SLT設備、測試條件、具名客戶或先進封裝收入占比",
-          "高功耗AI晶片測試需要昂貴機台、治具與散熱配套，資本支出壓力高"
+          "MOPS未揭露測試平台、封裝型式及先進封裝營收占比",
+          "不掌握中介層、RDL或鍵合等前段封裝核心製程"
         ],
         "opportunities": [
-          "2.5D／3D封裝提升系統級測試、溫控與失效分析難度及單價",
-          "AI加速器出貨增加可帶動CP、FT、SLT與Burn-in多站測試需求"
+          "高功耗AI晶片與多晶片封裝增加系統級測試及失效分析需求",
+          "封裝成本上升提高早期篩選與測試資料追溯價值"
         ],
         "threats": [
-          "日月光、安靠與其他大型OSAT可用封裝測試整合方案競爭",
-          "測試平台世代快速更新與機台交期可能限制擴產回報"
+          "客戶自建測試產能與同業擴產可能壓低委外價格",
+          "測試時間與設備功耗上升可能壓縮產能利用效率"
         ]
       }
     },

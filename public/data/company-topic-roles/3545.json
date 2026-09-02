@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3545",
   "companyName": "敦泰",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -154,20 +154,20 @@
       "topicName": "HBM 高頻寬記憶體",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "hbm_related_ic",
-      "roleType": "hbm_interface_ic",
-      "roleSummary": "敦泰MOPS僅揭露手持式行動裝置應用晶片，未揭露HBM、TSV或記憶體堆疊產品；本題材只能視為終端AI裝置帶動顯示與觸控晶片需求的間接觀察角色。2026年7月營收9.11億元、MoM+1.2%、YoY-14.3%、累計YoY-13.6%，不能歸因於HBM。",
+      "supplyChainStage": "mobile_display_outside_hbm",
+      "roleType": "mobile_ic_not_hbm",
+      "roleSummary": "敦泰MOPS只支持手持式行動裝置應用晶片，未揭露HBM、TSV或記憶體堆疊產品；本題材屬終端AI裝置與顯示控制晶片的遠距需求觀察。2026年7月營收9.11億元、YoY-14.3%、累計YoY-13.6%，不能歸因HBM。",
       "products": [
-        "智慧型手機TDDI觸控顯示整合IC",
+        "智慧手機TDDI觸控顯示整合IC",
         "AMOLED面板顯示驅動IC",
-        "電容式觸控控制IC",
+        "電容式多點觸控控制IC",
         "行動裝置指紋辨識IC"
       ],
       "customers": [
         "小米（行動裝置應用對象，非MOPS揭露客戶）",
         "OPPO（行動裝置應用對象，非MOPS揭露客戶）",
         "vivo（行動裝置應用對象，非MOPS揭露客戶）",
-        "京東方BOE（面板應用對象，非MOPS揭露客戶）"
+        "BOE京東方（面板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "SK海力士",
@@ -175,65 +175,50 @@
         "美光(Micron)"
       ],
       "risks": [
-        "MOPS未揭露HBM、TSV或記憶體堆疊產品，題材連結極弱",
-        "7月營收YoY-14.3%、累計YoY-13.6%，本業需求仍承壓",
-        "把AI終端需求誤當HBM直接曝險，容易高估題材營收貢獻"
+        "被歸類為HBM概念股但沒有產品揭露支持",
+        "手機需求與顯示驅動價格競爭造成營收壓力"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：研究、開發、設計、製造及銷售手持式行動裝置應用晶片。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3545",
+          "claim": "MOPS主要經營業務：研究、開發、設計、製造及銷售手持式行動裝置應用晶片；未揭露HBM產品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
           "claim": "2026年7月營收9.11億元，MoM+1.2%、YoY-14.3%，累計YoY-13.6%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-02",
       "status": "candidate",
       "techFocus": [
         "TDDI觸控掃描與顯示時序同步",
-        "AMOLED灰階補償與源極驅動",
-        "電容式觸控雜訊抑制與多點辨識"
+        "AMOLED灰階補償、源極驅動與低功耗控制",
+        "電容式觸控雜訊抑制、手勢辨識與防誤觸"
       ],
       "swot": {
         "strengths": [
-          "TDDI、AMOLED驅動與觸控控制IC產品線可服務AI手機顯示介面",
-          "7月營收MoM+1.2%，短期出貨較6月小幅回穩"
+          "MOPS確認手持裝置應用晶片設計製造本業",
+          "觸控與顯示整合可降低終端裝置零件數與功耗"
         ],
         "weaknesses": [
-          "MOPS未揭露HBM、TSV或記憶體堆疊產品，題材連結極弱",
-          "7月營收YoY-14.3%、累計YoY-13.6%，本業需求仍承壓"
+          "沒有HBM產品、堆疊技術或供應關係，題材直接性極低",
+          "7月營收YoY-14.3%、累計YoY-13.6%，本業仍衰退"
         ],
         "opportunities": [
-          "AI手機換機若提升AMOLED與觸控整合規格，可間接拉動TDDI需求",
-          "高更新率與低功耗面板升級可提高顯示驅動IC單機價值"
+          "端側AI手機換機若回升，可帶動高階顯示與觸控晶片需求",
+          "AMOLED滲透可提高顯示驅動與觸控整合複雜度"
         ],
         "threats": [
-          "把AI終端需求誤當HBM直接曝險，容易高估題材營收貢獻",
-          "手機面板驅動IC價格競爭與庫存修正可能延續"
+          "中國顯示驅動IC同業價格競爭激烈",
+          "手機需求疲弱與面板規格整合可能壓縮單機價值"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -103,29 +103,28 @@
       "topicType": "process",
       "directness": "core",
       "supplyChainStage": "advanced_packaging",
-      "roleType": "cowos_advanced_packaging_provider",
-      "roleSummary": "台積電MOPS明確揭露積體電路製造並提供封裝、測試、CAD與光罩服務，先進封裝屬核心延伸；CoWoS、SoIC與InFO為題材上下文中的具體平台，但客戶與平台對應非本次MOPS揭露。2026年7月營收4,675.81億元、MoM+5.6%、YoY+44.7%、累計YoY+37.0%，為公司整體數據。",
+      "roleType": "advanced_packaging_platform_provider",
+      "roleSummary": "台積電MOPS直接支持積體電路封裝與測試服務，因此先進封裝屬核心角色；CoWoS、SoIC與InFO為題材脈絡中的平台名稱，不把具名公司寫成已證實客戶。2026年7月營收4,675.81億元、YoY+44.7%、累計YoY+37.0%，但公司月營收未拆分封裝貢獻。",
       "products": [
         "CoWoS-S矽中介層2.5D整合封裝服務",
         "CoWoS-L局部矽互連2.5D封裝服務",
-        "SoIC晶片對晶圓混合鍵合3D整合服務",
+        "SoIC晶片對晶圓3D整合服務",
         "InFO扇出型晶圓級封裝服務",
         "先進封裝後段測試與設計協同服務"
       ],
       "customers": [
-        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
-        "AMD（AI／HPC應用對象，非MOPS揭露客戶）",
-        "Broadcom（客製ASIC應用對象，非MOPS揭露客戶）",
-        "Apple（行動與運算晶片應用對象，非MOPS揭露客戶）"
+        "NVIDIA（AI加速器應用對象，非本次MOPS揭露客戶）",
+        "AMD（AI／HPC應用對象，非本次MOPS揭露客戶）",
+        "Broadcom（客製ASIC應用對象，非本次MOPS揭露客戶）",
+        "Apple（行動與運算晶片應用對象，非本次MOPS揭露客戶）"
       ],
       "competitors": [
         "Samsung I-Cube4",
         "Intel EMIB/Foveros"
       ],
       "risks": [
-        "月營收未拆分CoWoS、SoIC與InFO貢獻",
-        "先進封裝擴產資本密集，良率爬坡與設備交期增加執行風險",
-        "日月光、Amkor與Intel Foundry競逐高階封裝訂單"
+        "擴產與新製程良率爬坡需要龐大資本及工程資源",
+        "營收未拆分平台，題材貢獻仍須由後續財報交叉驗證"
       ],
       "legacy": {
         "topicSlug": "cowos-advanced-packaging",
@@ -134,58 +133,44 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "台積電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：依客戶設計製造積體電路，並提供封裝、測試、CAD與光罩服務。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2330",
+          "claim": "MOPS主要經營業務：依客戶設計製造積體電路及晶圓半導體裝置，並提供封裝、測試、IC電腦輔助設計及光罩服務。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
           "claim": "2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%，累計YoY+37.0%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
         "矽中介層與局部矽互連的高密度2.5D整合",
         "Cu-Cu混合鍵合的晶片對晶圓3D堆疊",
-        "封裝熱機應力、翹曲與高頻訊號完整性協同設計"
+        "封裝翹曲、熱機應力與高速訊號完整性的協同設計"
       ],
       "swot": {
         "strengths": [
-          "MOPS明確支持封裝與測試服務，且具晶圓製造至先進封裝整合能力",
-          "7月營收YoY+44.7%、累計YoY+37.0%，AI／HPC整體需求動能強"
+          "MOPS直接支持晶圓製造、封裝、測試、CAD與光罩的一站式服務",
+          "7月營收YoY+44.7%、累計YoY+37.0%，公司整體需求強勁"
         ],
         "weaknesses": [
-          "月營收未拆分CoWoS、SoIC與InFO貢獻",
-          "先進封裝擴產資本密集，良率爬坡與設備交期增加執行風險"
+          "月營收未拆分CoWoS、SoIC與InFO，無法量化題材貢獻",
+          "先進封裝擴產資本密集，設備交期與良率爬坡增加執行風險"
         ],
         "opportunities": [
-          "AI加速器與客製ASIC提高邏輯晶片加HBM的2.5D整合需求",
-          "SoIC混合鍵合可延伸至Chiplet與3D系統整合"
+          "AI加速器與客製ASIC提高邏輯晶片、HBM及Chiplet整合需求",
+          "晶圓製程與封裝共同最佳化可增加每片晶圓的服務價值"
         ],
         "threats": [
-          "日月光、Amkor與Intel Foundry競逐高階封裝訂單",
-          "AI資本支出放緩或先進封裝供需轉鬆可能壓低產能利用率"
+          "日月光、Amkor、Samsung與Intel持續競逐高階封裝訂單",
+          "AI資本支出放緩或封裝供需轉鬆可能壓低新增產能利用率"
         ]
       }
     },

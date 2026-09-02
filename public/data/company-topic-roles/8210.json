@@ -2,26 +2,26 @@
   "schemaVersion": 1,
   "companyCode": "8210",
   "companyName": "勤誠",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "roleSummary": "勤誠MOPS只概括揭露電腦周邊設備及系統研製、製造與買賣，未明確揭露伺服器規格、冷板、CDU或液冷機櫃；本題材保留機箱機構與系統整合的相鄰角色。2026年7月營收24.62億元、YoY+41.5%、累計YoY+53.4%，公司說明為終端產品大量出貨，但未指明液冷。",
+      "roleSummary": "勤誠MOPS支持電腦周邊設備與系統的研製、製造及買賣，但沒有冷卻液分配、冷板或泵浦的直接揭露；液冷題材定位為伺服器機箱、托盤與管路空間的機構整合。2026年7月營收24.62億元、YoY+41.5%，惟MoM-23.9%，公司只說明終端產品大量出貨。",
       "products": [
         "機架式伺服器機殼",
-        "GPU伺服器機箱",
-        "高密度儲存伺服器機殼",
-        "伺服器托盤與機架機構",
-        "風扇牆與線纜管理組件"
+        "高密度GPU伺服器機箱",
+        "儲存伺服器機殼",
+        "伺服器托盤與滑入式機構",
+        "機箱風扇牆與線纜管理組件"
       ],
       "customers": [
-        "Supermicro（伺服器機殼應用對象，非MOPS揭露客戶)",
-        "Dell Technologies（企業伺服器應用對象，非MOPS揭露客戶)",
-        "技嘉(2376；GPU伺服器應用對象，非MOPS揭露客戶)",
-        "緯穎(6669；雲端伺服器應用對象，非MOPS揭露客戶)"
+        "Supermicro（伺服器機箱應用對象，非MOPS揭露客戶）",
+        "Dell Technologies（企業伺服器應用對象，非MOPS揭露客戶）",
+        "技嘉(2376；GPU伺服器應用對象，非MOPS揭露客戶）",
+        "緯穎(6669；雲端伺服器應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "富奇想(6776)(伺服器機殼)",
@@ -30,58 +30,51 @@
         "緯穎(6669)(AI伺服器ODM)"
       ],
       "risks": [
-        "晟銘電、迎廣、富士康與ODM自製機殼形成價格及認證競爭",
-        "若NVIDIA／CSP機櫃規格改版，既有模具與機構設計可能需快速重投資"
+        "液冷核心價值集中於流體元件，機箱供應商議價力可能受限",
+        "出貨集中大型專案，月營收波動高"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "8210公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 8210 role in AI 伺服器液冷散熱 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦應用軟體設計，以及電腦用品、周邊設備、耗材、主件與系統之研製、製造、加工、買賣及進出口。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=8210",
+          "claim": "MOPS主要經營業務：電腦軟體設計及電腦周邊設備、用品、耗材與系統之研發、製造、加工及買賣；未逐項揭露液冷設備。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收24.62億元，MoM-23.9%、YoY+41.5%，累計YoY+53.4%；備註為終端產品大量出貨。"
+          "claim": "2026年7月營收24.62億元，MoM-23.9%、YoY+41.5%，累計YoY+53.4%；備註為終端客戶所需產品大量出貨。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "機架鈑金之承重、振動與免工具維修設計",
-        "高功率伺服器風道、壓降與熱點分析",
-        "托盤、線纜管理及冷卻管路預留空間整合"
+        "機架鈑金承重、振動與免工具維修設計",
+        "高功率伺服器風道、壓降與熱點的機構協同",
+        "托盤、線纜與液冷管路預留空間的公差管理"
       ],
-      "supplyChainStage": "server_mechanical_adjacent",
-      "roleType": "computer_chassis_adjacent_to_liquid_cooling",
+      "supplyChainStage": "server_chassis_integration",
+      "roleType": "liquid_ready_chassis_enabler",
       "swot": {
         "strengths": [
-          "2026年7月營收YoY+41.5%、累計YoY+53.4%，終端產品出貨動能強",
-          "機殼、托盤、風扇牆與線纜管理可隨伺服器密度提升增加設計價值"
+          "伺服器機箱與托盤機構可直接承接高密度運算設備需求",
+          "7月營收YoY+41.5%、累計YoY+53.4%，出貨動能強"
         ],
         "weaknesses": [
-          "7月營收MoM-23.9%，平台切換與拉貨節奏造成大幅波動",
-          "MOPS未揭露冷板、CDU、快接頭或液冷營收，不能列為液冷核心供應商"
+          "MOPS未揭露液冷核心元件或相關營收占比",
+          "7月營收MoM-23.9%，顯示專案出貨波動明顯"
         ],
         "opportunities": [
-          "液冷伺服器仍需管路預留、承重、維修動線與防漏隔離機構",
-          "整櫃式AI系統增加高密度托盤與線纜管理需求"
+          "GPU伺服器重量及熱密度提高，增加機箱承載與管路整合難度",
+          "液冷就緒機箱可提高客製化機構與驗證服務價值"
         ],
         "threats": [
-          "ODM自製機殼與同業競爭可能壓縮價格及認證優勢",
-          "平台規格改版可能要求重新開模與驗證，增加投資風險"
+          "系統廠可能把液冷機構設計內製或交由整櫃供應商整合",
+          "若AI資本支出放緩，高階伺服器機箱需求與產能利用率將承壓"
         ]
       }
     }

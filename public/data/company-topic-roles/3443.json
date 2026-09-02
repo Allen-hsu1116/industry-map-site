@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3443",
   "companyName": "創意",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "ic-design",
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "ic_design",
-      "roleType": "asic_design_service_provider",
-      "roleSummary": "創意MOPS直接支持應用積體電路、嵌入式記憶體與邏輯元件、設計元件資料庫、設計自動化工具及客戶委託技術服務；但未揭露N2、HBM、NVIDIA、Google等具體專案。2026年7月營收57.69億元，MoM+17.1%、YoY+158.4%、累計YoY+102.5%，公司說明主要為晶圓產品收入增加。",
+      "supplyChainStage": "asic_design_service",
+      "roleType": "custom_asic_design_service",
+      "roleSummary": "創意MOPS直接支持應用積體電路、嵌入式記憶體與邏輯元件、設計元件庫、自動化工具及委託技術服務，屬ASIC設計服務核心角色；製程節點與具名客戶未揭露。2026年7月營收57.69億元、YoY+158.4%、累計YoY+102.5%，公司說明主要由晶圓產品收入增加。",
       "products": [
         "客製化應用積體電路（ASIC）設計服務",
         "嵌入式記憶體與邏輯元件",
         "ASIC設計用元件資料庫",
         "積體電路設計自動化工具",
-        "客戶委託晶片設計與量產技術服務"
+        "客戶委託晶片量產技術服務"
       ],
       "customers": [
-        "台積電（製造生態系對象，非MOPS揭露客戶）",
+        "台積電(2330；晶圓製造生態對象，非MOPS揭露客戶）",
         "NVIDIA（AI晶片應用對象，非MOPS揭露客戶）",
-        "Broadcom（ASIC生態系對象，非MOPS揭露客戶）",
+        "Broadcom（ASIC生態對象，非MOPS揭露客戶）",
         "Google（客製運算應用對象，非MOPS揭露客戶）",
         "Microsoft（客製運算應用對象，非MOPS揭露客戶）"
       ],
@@ -32,8 +32,8 @@
         "eSilicon(GlobalFoundries)"
       ],
       "risks": [
-        "大客戶集中度高（單一客戶佔比可能過高）",
-        "ASIC 設計 NRE 費用回收期長"
+        "大型專案集中與里程碑認列造成營收波動",
+        "先進晶片驗證、晶圓供應及量產良率風險高"
       ],
       "legacy": {
         "topicSlug": "asic-ip-design",
@@ -42,58 +42,44 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "創意 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務包含應用IC、嵌入式記憶體與邏輯元件、設計資料庫、EDA工具及委託技術服務。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3443",
+          "claim": "MOPS主要經營業務：應用積體電路、嵌入式記憶體及邏輯元件、設計元件庫、自動化工具與客戶委託技術服務。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收57.69億元，MoM+17.1%、YoY+158.4%、累計YoY+102.5%；公司說明主要為晶圓產品收入增加。"
+          "claim": "2026年7月營收57.69億元，MoM+17.1%、YoY+158.4%，累計YoY+102.5%；公司備註主要為晶圓產品收入增加。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-23",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "ASIC前端RTL至實體設計、時序收斂與設計驗證",
+        "ASIC前端RTL整合、實體設計、時序收斂與驗證",
         "製程設計套件、標準元件庫與記憶體編譯器整合",
         "晶圓量產導入、測試程式與良率回饋閉環"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持ASIC、設計資料庫、EDA工具與委託技術服務",
-          "7月營收YoY+158.4%、累計YoY+102.5%，且公司明確說明晶圓產品收入增加"
+          "MOPS直接支持ASIC產品、設計工具與客戶委託服務",
+          "7月營收YoY+158.4%、累計YoY+102.5%，晶圓產品收入成長強勁"
         ],
         "weaknesses": [
-          "MOPS未揭露先進節點、HBM整合或任何具名專案客戶",
-          "晶圓產品認列使月營收受專案時程與量產批次影響"
+          "MOPS未揭露製程節點、專案客戶與收入集中度",
+          "量產晶圓收入比重提高也增加存貨、交期與良率管理責任"
         ],
         "opportunities": [
-          "雲端業者自研ASIC增加Turnkey設計與量產服務需求",
-          "先進製程設計複雜度提高，可推升設計資料庫與技術服務價值"
+          "雲端業者自研AI ASIC可擴大設計服務與量產委託需求",
+          "IP、元件庫及設計自動化工具可縮短高複雜度晶片開發週期"
         ],
         "threats": [
-          "世芯-KY、智原與國際ASIC服務商競爭高階專案",
-          "單一大型專案遞延或量產良率不佳會造成營收劇烈波動"
+          "客戶內製、世芯與國際ASIC服務商競爭可能分散案源",
+          "單一大型專案遞延或晶圓供應受限會造成營收波動"
         ]
       }
     },

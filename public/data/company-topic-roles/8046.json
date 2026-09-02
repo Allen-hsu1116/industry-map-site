@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8046",
   "companyName": "南電",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -100,23 +100,22 @@
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "supplier",
+      "directness": "indirect",
       "supplyChainStage": "ic_substrate",
-      "roleType": "advanced_packaging_substrate_supplier",
-      "roleSummary": "南電MOPS只揭露電子元件與電池製造業別，未逐項證實ABF、FC-BGA、線寬或NVIDIA等客戶；依公司題材脈絡保留封裝載板供應角色，但將規格與客戶關係降為非MOPS揭露。2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%、累計YoY+39.4%，公司說明受市場需求成長影響，不能全數歸因先進封裝。",
+      "roleType": "advanced_package_substrate_supplier",
+      "roleSummary": "南電MOPS只概括支持電子零組件及電池製造，未逐項揭露IC載板、ABF材料或封裝製程；依題材脈絡可定位為高階封裝載板供應商，不是封裝服務商。2026年7月營收54.40億元、YoY+50.2%、累計YoY+39.4%，公司說明受市場需求成長影響。",
       "products": [
-        "FC-BGA封裝載板",
-        "FC-CSP封裝載板",
-        "高密度互連（HDI）印刷電路板",
-        "多層印刷電路板",
-        "記憶體與運算晶片用封裝基板"
+        "FC-BGA積體電路封裝載板",
+        "FC-CSP行動晶片封裝載板",
+        "高I/O多層增層封裝載板",
+        "記憶體IC封裝載板",
+        "系統級封裝用載板"
       ],
       "customers": [
+        "台積電(2330；先進封裝生態對象，非MOPS揭露客戶）",
         "Intel（處理器封裝應用對象，非MOPS揭露客戶）",
-        "AMD（處理器／GPU應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
-        "Broadcom（ASIC應用對象，非MOPS揭露客戶）",
-        "聯發科（行動SoC應用對象，非MOPS揭露客戶）"
+        "AMD（高效運算封裝應用對象，非MOPS揭露客戶）",
+        "NVIDIA（AI加速器封裝應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "欣興(3037)",
@@ -125,8 +124,8 @@
         "Shennan Circuits"
       ],
       "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "MOPS產品揭露過於概括，具體載板組合需其他正式資料驗證",
+        "載板資本密集且景氣循環會放大折舊壓力"
       ],
       "legacy": {
         "topicSlug": "cowos-advanced-packaging",
@@ -135,58 +134,44 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "南電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務僅列電子元件製造與電池製造業別，未逐項揭露載板產品。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=8046",
+          "claim": "MOPS主要經營業務：電子零組件與電池製造；MOPS未逐項揭露IC載板、ABF材料或封裝服務。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%、累計YoY+39.4%；公司說明受市場需求成長影響。"
+          "claim": "2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%，累計YoY+39.4%；公司備註受市場需求成長影響。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-23",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "ABF增層載板的雷射微孔、電鍍填孔與細線路製程",
-        "大尺寸FC-BGA載板翹曲與層間對位控制",
-        "高頻高速封裝載板的阻抗與低損耗材料管理"
+        "增層載板的雷射微孔、電鍍填孔與細線路製程",
+        "大尺寸載板的層間對位、翹曲與熱循環可靠度控制",
+        "高速封裝載板的阻抗、插入損耗與材料界面管理"
       ],
       "swot": {
         "strengths": [
-          "公司題材脈絡與名稱均指向印刷電路板／封裝載板製造",
-          "7月營收MoM+16.1%、YoY+50.2%、累計YoY+39.4%，整體市場需求強"
+          "題材脈絡支持高階IC載板量產與封裝基板供應能力",
+          "7月營收MoM+16.1%、YoY+50.2%，且公司說明市場需求成長"
         ],
         "weaknesses": [
-          "MOPS主要業務欄位過度概括，未逐項支持ABF、FC-BGA規格或客戶",
-          "先進封裝營收占比與產品組合無法由本次MCP確認"
+          "MOPS未逐項揭露載板產品、製程規格及先進封裝營收占比",
+          "只供應載板，不執行晶片鍵合與完整封裝測試服務"
         ],
         "opportunities": [
-          "AI GPU與高階CPU封裝面積增加，推升大尺寸載板層數與單價",
-          "先進封裝擴產可帶動載板認證與第二來源需求"
+          "AI加速器與Chiplet擴大載板面積、層數及低損耗材料需求",
+          "先進封裝擴產可提高高I/O載板的驗證與量產需求"
         ],
         "threats": [
-          "欣興、景碩與日本載板廠擴產可能造成價格與稼動率壓力",
-          "ABF材料、良率與翹曲控制瓶頸可能延後高階產品放量"
+          "欣興、景碩及海外載板同業擴產可能造成價格競爭",
+          "封裝架構改變、終端修正或產能過剩將壓低稼動率"
         ]
       }
     }

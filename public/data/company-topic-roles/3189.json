@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3189",
   "companyName": "景碩",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-02T19:03:57Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -96,20 +96,20 @@
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "indirect",
-      "supplyChainStage": "advanced_packaging",
-      "roleType": "packaging_substrate_supplier",
-      "roleSummary": "景碩MOPS僅揭露電子零組件製造與電子材料買賣，未點名ABF、FC-BGA、CoWoS、線寬或台積電／Intel／AMD客戶；先進封裝角色應限於IC載板與封裝基板的上游供應，不等於承作封裝。2026年7月營收45.49億元、YoY+35.9%，為公司整體口徑。",
+      "supplyChainStage": "ic_substrate",
+      "roleType": "advanced_package_substrate_supplier",
+      "roleSummary": "景碩MOPS僅概括支持電子零組件製造與電子材料買賣，未逐項揭露ABF、FC-BGA或具名客戶；依題材脈絡可定位為IC載板與封裝基板供應商，但不是封裝服務商。2026年7月營收45.49億元、YoY+35.9%、累計YoY+30.7%，為公司整體口徑。",
       "products": [
-        "AI／HPC晶片用FC-BGA載板",
-        "2.5D封裝用高I/O ABF載板",
-        "手機AP用FC-CSP載板",
-        "SiP模組用系統級封裝載板",
-        "記憶體IC用BT載板"
+        "FC-BGA積體電路封裝載板",
+        "FC-CSP行動晶片封裝載板",
+        "高I/O多層增層封裝載板",
+        "系統級封裝用載板",
+        "記憶體IC用封裝載板"
       ],
       "customers": [
-        "台積電（先進封裝供應鏈對象，非MOPS揭露客戶）",
-        "Intel（CPU封裝應用對象，非MOPS揭露客戶）",
-        "AMD（AI／HPC封裝應用對象，非MOPS揭露客戶）",
+        "台積電(2330；先進封裝生態對象，非MOPS揭露客戶）",
+        "Intel（處理器封裝應用對象，非MOPS揭露客戶）",
+        "AMD（高效運算封裝應用對象，非MOPS揭露客戶）",
         "NVIDIA（AI加速器封裝應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
@@ -117,64 +117,49 @@
         "南電"
       ],
       "risks": [
-        "6月營收4.22億YoY+32.3%,累計YoY+29.8%(AI載板需求強勁)",
-        "ABF載板技術門檻高但日本Ibiden/新光電氣競爭加劇",
-        "載板資本支出大,折舊壓力持續"
+        "MOPS揭露範圍過於概括，產品細節需其他正式資料交叉驗證",
+        "載板景氣循環與擴產折舊可能壓縮獲利"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "景碩 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3189",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 景碩 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3189 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零組件製造及電子材料批發零售。"
+          "title": "公司完整基本資料（MOPS 54欄位版，2026-09-03查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3189",
+          "claim": "MOPS主要經營業務：電子零組件製造及電子材料批發零售；MOPS未逐項揭露載板類型或製程規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月月營收（2026-09-03查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%、累計YoY+30.7%。"
+          "claim": "2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "lastVerified": "2026-09-02",
       "status": "verified",
       "techFocus": [
-        "ABF增層載板的細線路與微盲孔製程",
-        "大尺寸FC-BGA載板的翹曲與層間對位控制",
-        "高速載板的插入損耗、阻抗與熱循環可靠度"
+        "增層載板的雷射微孔、電鍍填孔與細線路形成",
+        "大尺寸封裝載板的翹曲、層間對位與熱循環控制",
+        "高速載板的阻抗、插入損耗與材料界面可靠度"
       ],
       "swot": {
         "strengths": [
-          "7月營收YoY+35.9%、累計YoY+30.7%，公司整體載板需求強",
-          "具FC-BGA、FC-CSP、SiP與BT載板組合，可涵蓋多類封裝應用"
+          "題材脈絡支持IC載板量產與電子材料供應能力",
+          "7月營收YoY+35.9%、累計YoY+30.7%，公司整體需求改善"
         ],
         "weaknesses": [
-          "MOPS未揭露ABF、CoWoS、製程規格或具名客戶",
-          "景碩供應載板而非執行先進封裝，題材受惠屬上游間接傳導"
+          "MOPS未逐項揭露載板類型、製程規格或具名客戶",
+          "只供應封裝載板，不執行晶片鍵合、封裝或測試"
         ],
         "opportunities": [
-          "AI加速器封裝尺寸與I/O數增加，可提高高階ABF載板用量與難度",
-          "2.5D／3D封裝擴產可帶動高可靠度載板認證與需求"
+          "AI與Chiplet封裝面積增加，可提高高階載板層數與價值量",
+          "高速運算推升低損耗材料與大尺寸翹曲控制需求"
         ],
         "threats": [
-          "欣興、南電、Ibiden與Shinko擴產可能造成價格及稼動率壓力",
-          "ABF材料供應、良率或大尺寸翹曲問題可能限制出貨"
+          "欣興、南電及韓日載板廠擴產可能加劇價格競爭",
+          "終端需求修正或封裝架構改變可能造成產能利用率波動"
         ]
       }
     },
