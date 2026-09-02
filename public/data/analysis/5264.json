@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5264",
   "name": "鎧勝-KY",
-  "generatedAt": "2026-09-01T12:34:38.293Z",
+  "generatedAt": "2026-09-02T12:33:21.416Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
@@ -44,29 +44,29 @@
     "knowledgeBasis": "canonical_pending",
     "confidence": "low",
     "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=2；只做保守參考。",
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
       "roleLabel": "間接受惠",
-      "roleSummary": "本次MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證既有中科院標案、無人機起落架、旋翼或軍規材料規格。為避免把舊題材吹成軍火庫，此角色降級為歷史金屬機殼加工能力對航太結構件的觀察名單。",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "uav_airframe_structures",
+      "roleSummary": "本輪MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證現行公司狀態、無人機產品、軍規材料或具名客戶。為免把舊題材吹成軍火庫，本角色只保留歷史金屬機殼加工能力作為航太結構件的低信心觀察。",
+      "supplyChainStage": "historical_metalwork_outside_topic",
+      "roleType": "historical_metal_enclosure_scope",
       "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "CNC鋁／鎂合金金屬機殼（歷史產品範圍，待新揭露驗證）",
+        "name": "CNC鋁／鎂合金金屬機殼（歷史產品範圍）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "壓鑄內構件與金屬支撐框架（歷史產品範圍，待新揭露驗證）",
+        "name": "壓鑄內構件與金屬支撐框架（歷史產品範圍）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "陽極處理與噴砂金屬外觀件（歷史產品範圍，待新揭露驗證）",
+        "name": "陽極處理與噴砂金屬外觀件（歷史產品範圍）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -89,7 +89,7 @@
       "直接度 間接受惠 +8",
       "角色信心 low +3",
       "題材 軍工、航太與無人機（theme/active） +18",
-      "角色證據 4 則 +12",
+      "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 5 項 +10",
       "風險 SWOT 扣分 -10",
@@ -103,7 +103,7 @@
       "月營收可由 FinMind 拉長歷史，驗證題材是否反映到營收"
     ],
     "risks": [
-      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=2；只做保守參考。",
       "V2 W：營運規模小，訂單集中度高",
       "V2 W：MOPS與月營收API均無資料，資訊透明度極低，營運追蹤困難。",
       "V2 T：無人機構體進入門檻不高，競爭加劇",
@@ -149,7 +149,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "本次MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證既有中科院標案、無人機起落架、旋翼或軍規材料規格。為避免把舊題材吹成軍火庫，此角色降級為歷史金屬機殼加工能力對航太結構件的觀察名單。"
+        "roleSummary": "本輪MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無5264資料，無法驗證現行公司狀態、無人機產品、軍規材料或具名客戶。為免把舊題材吹成軍火庫，本角色只保留歷史金屬機殼加工能力作為航太結構件的低信心觀察。"
       }
     ],
     "swot": [

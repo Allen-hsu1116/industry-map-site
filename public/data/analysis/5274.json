@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "5274",
   "name": "信驊",
-  "generatedAt": "2026-09-01T12:34:38.295Z",
+  "generatedAt": "2026-09-02T12:33:21.419Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-01",
-  "chipDataDate": "2026-09-01",
+  "marketDataDate": "2026-09-02",
+  "chipDataDate": "2026-09-02",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "B",
@@ -19,32 +19,32 @@
     ]
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 15,
-    "summary": "信驊 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 5.0%。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 33,
+    "summary": "信驊 技術面目前為「偏多」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 8.2%。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 5.0%"
+      "收盤站上 MA20 8.2%",
+      "帶量上漲，量比 2.58x"
     ],
     "risks": [],
     "watch": []
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": -16,
-    "summary": "信驊 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +245張；外資近 5 日買超 +109張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 36,
+    "summary": "信驊 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +51張；近 20 日法人偏買，合計 +349張。",
     "signals": [
-      "近 20 日法人偏買，合計 +245張",
-      "外資近 5 日買超 +109張"
+      "三大法人近 5 日合計買超 +51張",
+      "近 20 日法人偏買，合計 +349張",
+      "投信近 5 日買超 +16張",
+      "外資近 5 日買超 +19張"
     ],
-    "risks": [
-      "三大法人近 5 日合計賣超 -68張",
-      "投信近 5 日賣超 -193張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-01"
+      "最近法人資料日：2026-09-02"
     ]
   },
   "industry": {
@@ -124,7 +124,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-01"
+      "lastVerified": "2026-09-02"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -227,8 +227,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 64,
-    "recommendationState": "watchlist",
+    "totalScore": 77,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 12,
       "label": "基本面中性",
@@ -236,13 +236,15 @@
         "月營收 YoY +18.4%，成長動能明確"
       ],
       "risks": [
-        "本益比 114.2 倍，需防估值壓縮",
-        "股價淨值比 83.1 倍偏高，需和 ROE/成長性比對"
+        "本益比 118.2 倍，需防估值壓縮",
+        "股價淨值比 86.0 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -250,11 +252,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：15962.00",
-      "波段多空分水嶺看 MA20：16298.75",
-      "追蹤法人是否延續 賣超：最近 -23張",
+      "短線支撐/壓力先看 MA5：16369.00",
+      "波段多空分水嶺看 MA20：16384.00",
+      "追蹤法人是否延續 買超：最近 +151張",
       "月營收年增率 +18.4%，觀察基本面是否支撐估值",
-      "本益比 114.2 倍，需和同族群估值比較"
+      "本益比 118.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 18600.00 且量比 > 1.5：列為轉強訊號",

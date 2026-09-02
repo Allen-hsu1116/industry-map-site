@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6175",
   "name": "立敦",
-  "generatedAt": "2026-09-01T12:34:38.357Z",
+  "generatedAt": "2026-09-02T12:33:21.486Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-01",
-  "chipDataDate": "2026-09-01",
+  "marketDataDate": "2026-09-02",
+  "chipDataDate": "2026-09-02",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,29 +17,30 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -30,
-    "summary": "立敦 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
+    "score": -55,
+    "summary": "立敦 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 5.1%。",
     "signals": [],
     "risks": [
-      "收盤價、MA5、MA20 呈空頭排列"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 5.1%"
     ],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "接近 20 日低點 70.30，留意支撐是否失守"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -28,
-    "summary": "立敦 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -483張；近 20 日法人偏賣，合計 -173張。",
+    "summary": "立敦 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -889張；近 20 日法人偏賣，合計 -449張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -483張",
-      "近 20 日法人偏賣，合計 -173張",
-      "外資近 5 日賣超 -484張"
+      "三大法人近 5 日合計賣超 -889張",
+      "近 20 日法人偏賣，合計 -449張",
+      "外資近 5 日賣超 -881張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-01"
+      "最近法人資料日：2026-09-02"
     ]
   },
   "industry": {
@@ -131,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-01"
+      "lastVerified": "2026-09-02"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -229,13 +230,13 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 49,
+    "totalScore": 44,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面中性",
       "signals": [
-        "殖利率 4.1%，提供部分下檔支撐"
+        "殖利率 4.2%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -249,10 +250,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：74.16",
-      "波段多空分水嶺看 MA20：75.53",
-      "追蹤法人是否延續 買超：最近 +20張",
-      "本益比 23.6 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：73.92",
+      "波段多空分水嶺看 MA20：75.26",
+      "追蹤法人是否延續 賣超：最近 -276張",
+      "本益比 22.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 84.00 且量比 > 1.5：列為轉強訊號",

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-09-01T12:34:38.354Z",
+  "generatedAt": "2026-09-02T12:33:21.482Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-01",
-  "chipDataDate": "2026-09-01",
+  "marketDataDate": "2026-09-02",
+  "chipDataDate": "2026-09-02",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,29 +18,31 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 27.4%。",
+    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 24.0%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 27.4%"
+      "收盤站上 MA20 24.0%"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 16,
-    "summary": "信昌電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +2.4千張；投信近 5 日買超 +66張。",
+    "summary": "信昌電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +3.7千張；投信近 5 日買超 +66張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2.4千張",
+      "三大法人近 5 日合計買超 +3.7千張",
       "投信近 5 日買超 +66張",
-      "外資近 5 日買超 +2.1千張"
+      "外資近 5 日買超 +3.5千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -1萬張"
+      "近 20 日法人偏賣，合計 -6.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-01"
+      "最近法人資料日：2026-09-02"
     ]
   },
   "industry": {
@@ -134,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-01"
+      "lastVerified": "2026-09-02"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -183,8 +185,8 @@
         "canonicalTopicName": "AI 伺服器電源與 BBU",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "信昌電提供AI伺服器電源供應器(PSU)用高頻陶瓷電容與晶片電阻，受惠AI伺服器高功率PSU需求成長。"
+        "confidence": "low",
+        "roleSummary": "信昌電MOPS只支持晶片電容、晶片電阻與介電瓷粉，未揭露AI伺服器、BBU、AEC-Q200或具名電源客戶；本題材僅能定位為伺服器電源可能採用的被動元件上游。FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%，但公司整體成長不能歸因AI伺服器。"
       },
       {
         "topicId": "display-led-optics",
@@ -377,7 +379,7 @@
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "本益比 49.3 倍，需防估值壓縮"
+        "本益比 49.1 倍，需防估值壓縮"
       ]
     },
     "strategy": {
@@ -391,16 +393,16 @@
       {
         "id": "risk.stop-distance",
         "severity": "hard",
-        "message": "距離 MA20 約 21.5%，停損距離過大"
+        "message": "距離 MA20 約 19.4%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：232.40",
-      "波段多空分水嶺看 MA20：205.25",
-      "追蹤法人是否延續 買超：最近 +1.1千張",
-      "本益比 49.3 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：244.90",
+      "波段多空分水嶺看 MA20：210.03",
+      "追蹤法人是否延續 賣超：最近 -34張",
+      "本益比 49.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 270.50 且量比 > 1.5：列為轉強訊號",

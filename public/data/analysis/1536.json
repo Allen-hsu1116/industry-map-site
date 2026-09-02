@@ -2,17 +2,21 @@
   "schemaVersion": 1,
   "code": "1536",
   "name": "和大",
-  "generatedAt": "2026-09-01T12:34:37.793Z",
+  "generatedAt": "2026-09-02T12:33:20.875Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "A",
-    "label": "完整 evidence-backed",
-    "upgradePriority": "low",
-    "missingKnowledge": [],
-    "blockingReasons": []
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
+    "missingKnowledge": [
+      "verified_topic_role"
+    ],
+    "blockingReasons": [
+      "topic_role_not_verified"
+    ]
   },
   "technical": {
     "stance": "neutral",
@@ -187,8 +191,8 @@
         "canonicalTopicName": "太陽能與離岸風電",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "和大在再生能源題材中為太陽能追日系統精密驅動齒輪供應商，提供減速比1:100-1:1000行星齒輪。6月營收3.67億YoY+3.82%，MOPS登記為汽機車/農業機械齒輪製造。HOTA品牌在北美追日系統市場具知名度，亦跨足風電變槳齒輪箱與電動車減速機齒輪。"
+        "confidence": "low",
+        "roleSummary": "和大MOPS只支持汽機車、農業機械齒輪與軸類，以及一般機械零件加工；未揭露太陽能追日、風電變槳、減速比1:100-1:1000或任何再生能源客戶。此角色降為精密傳動能力對再生能源驅動系統的遠端應用觀察。2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY僅+1.0%，不能歸因再生能源。"
       },
       {
         "topicId": "robotics-physical-ai",
@@ -528,12 +532,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 99 天未更新"
+        "message": "股價資料已 100 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 99 天未更新"
+        "message": "籌碼資料已 100 天未更新"
       },
       {
         "id": "risk.topic-evidence",
