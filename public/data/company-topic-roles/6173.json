@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -187,20 +187,19 @@
       "topicType": "supply_chain_segment",
       "directness": "indirect",
       "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "信昌電提供LED散熱陶瓷基板與驅動電路晶片電容，DPC/AMB陶瓷基板技術為Mini/Micro LED散熱核心方案。",
+      "roleType": "passive_components_display_led_adjacent",
+      "roleSummary": "信昌電MOPS只揭露晶片電容、晶片電阻與介電瓷粉，未揭露DPC／AMB陶瓷基板、AlN基板或LED封裝產品；本題材只能定位為顯示與LED控制板所需被動元件的應用鄰近角色。FinMind顯示2026年7月營收5.37億元，MoM+6.62%、YoY+47.87%，但公司整體成長不能歸因本題材。",
       "products": [
-        "陶瓷基板(LED散熱基板Al2O3/AlN DPC製程)",
-        "晶片電容(LED驅動電路用0201/0402微型)",
-        "介電瓷粉(LED封裝用低溫共燒陶瓷)",
-        "車用LED基板(AMB活性金屬釬焊)",
-        "高導熱陶瓷基板(>170 W/m·K氮化鋁)"
+        "多層陶瓷晶片電容MLCC（顯示控制板應用）",
+        "高頻陶瓷晶片電容（影像訊號電路應用）",
+        "厚膜晶片電阻（LED驅動板應用）",
+        "MLCC用介電陶瓷粉末"
       ],
       "customers": [
-        "億光(2393)(LED散熱陶瓷基板)",
-        "光寶科(2301)(LED驅動電路晶片電容)",
-        "宏齊(6168)(LED封裝介電瓷粉)",
-        "億豐(2467)(車用LED陶瓷基板)"
+        "友達(2409；顯示器應用對象，非MOPS揭露客戶)",
+        "群創(3481；顯示器應用對象，非MOPS揭露客戶)",
+        "億光(2393；LED應用對象，非MOPS揭露客戶)",
+        "宏齊(6168；LED應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "九豪(6107)",
@@ -208,54 +207,50 @@
         "京瓷(Kyocera)"
       ],
       "risks": [
-        "LED散熱基板市場競爭激烈(中國低價競爭)",
-        "LED產業景氣波動影響需求"
+        "MOPS未揭露DPC、AMB、AlN基板或LED封裝產品",
+        "顯示與LED需求僅屬被動元件應用情境，營收不可直接歸因"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 晶片電容、晶片電阻、介電瓷粉"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind顯示2026年7月營收5.37億元，MoM+6.62%、YoY+47.87%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "LED散熱陶瓷基板(Al2O3/AlN DPC直接鍍銅製程)",
-        "高導熱係數基板材料(>170 W/m·K AlN氮化鋁)",
-        "晶片電容微型化技術(0201/0402封裝)"
+        "介電瓷粉粒徑分布、摻雜配方與燒結溫度控制",
+        "MLCC多層陶瓷與內電極共燒對位控制",
+        "厚膜電阻漿料印刷、燒結與雷射阻值修調"
       ],
       "swot": {
         "strengths": [
-          "LED散熱陶瓷基板(Al2O3/AlN DPC製程)切入億光(2393)/宏齊(6168)供應鏈",
-          "高導熱AlN基板(>170 W/m·K)適用高功率LED封裝",
-          "AMB活性金屬釬焊基板打入車用LED應用"
+          "MOPS直接支持晶片電容、晶片電阻與介電瓷粉能力",
+          "2026年7月公司整體營收YoY+47.87%、MoM+6.62%"
         ],
         "weaknesses": [
-          "LED背光/照明市場成長趨緩，陶瓷基板需求增長有限",
-          "LED散熱基板競爭激烈，同業(如中國三環集團)低價競爭",
-          "車用LED基板認證週期長"
+          "沒有MOPS證據支持LED散熱陶瓷基板或直接客戶關係",
+          "公司營收未拆分顯示與LED應用貢獻"
         ],
         "opportunities": [
-          "Mini LED背光分區調光帶動散熱基板需求",
-          "車用LED照明滲透率提升帶動AMB基板成長",
-          "Micro LED顯示用高導熱基板未來應用"
+          "高解析顯示器與Mini LED控制板增加小型高頻被動元件需求",
+          "介電材料配方能力可延伸高可靠度顯示電源應用驗證"
         ],
         "threats": [
-          "中國陶瓷基板廠(三環/潮州三環)規模與成本優勢明顯",
-          "LED產業外移中國影響台灣本土供應鏈",
-          "OLED面板自發光不需背光，長期影響LED散熱基板需求"
+          "顯示面板景氣與LED庫存循環會影響下游拉貨",
+          "村田、太陽誘電與中國被動元件廠形成價格及規模競爭"
         ]
       }
     },

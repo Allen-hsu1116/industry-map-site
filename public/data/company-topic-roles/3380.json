@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -97,67 +97,70 @@
       "topicName": "高速連接器與車工業連接",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "networking_connector",
-      "roleType": "networking_connector_user",
-      "roleSummary": "明泰網通設備使用高速連接器(QSFP/SFP/DD)。7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%。",
+      "supplyChainStage": "outside_topic_network_equipment",
+      "roleType": "network_equipment_outside_connector",
+      "roleSummary": "明泰MOPS揭露電信管制射頻器材與無線通信機械器材製造，未揭露QSFP-DD、SFP、RJ45連接器或Retimer；本題材應定位為使用高速互連元件的網通設備廠，而不是連接器供應商。2026年7月營收17.43億元，MoM-23.26%、YoY-2.15%。",
       "products": [
-        "QSFP-DD 400G/800G光模組插座",
-        "SFP28/SFP56光模組連接器",
-        "RJ45乙太網路連接器(10G/25G)"
+        "乙太網路交換器",
+        "無線網路存取點",
+        "企業級無線路由設備",
+        "寬頻網路終端設備"
       ],
       "customers": [
-        "安費諾(Amphenol)(光模組連接器供應)",
-        "莫仕(Molex)(高速背板連接器)",
-        "立訊精密(高速I/O連接器)"
+        "Cisco（網通設備應用對象，非MOPS揭露客戶）",
+        "Nokia（電信設備應用對象，非MOPS揭露客戶）",
+        "D-Link（網通生態系對象，非MOPS揭露客戶）",
+        "Qualcomm（無線平台驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "中磊(5388)",
         "智邦(2391)"
       ],
       "risks": [
-        "連接器為採購品非自製",
-        "高速連接器供應受產能影響"
+        "MOPS沒有高速連接器、光模組插座或Retimer產品證據",
+        "網通專案出貨集中造成月營收明顯波動"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電信管制射頻器材製造業、無線通信機械器材製造業"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收17.43億元，MoM-23.26%、YoY-2.15%，累計YoY+1.86%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "QSFP-DD 800G熱插拔設計",
-        "高速信號完整性(Signal Integrity)分析"
+        "乙太網路交換、VLAN、QoS與封包轉送整合",
+        "Wi-Fi射頻前端、MIMO天線與頻道管理",
+        "PoE供電、網路管理與設備韌體整合"
       ],
       "swot": {
         "strengths": [
-          "網通設備大量採購高速連接器帶動需求",
-          "與國際連接器大廠有穩定供應關係"
+          "MOPS直接支持射頻與無線通信設備製造能力",
+          "網通設備具高速乙太網路及無線連線整合需求"
         ],
         "weaknesses": [
-          "連接器為外購品無自製能力",
-          "連接器漲價壓縮設備毛利"
+          "不是MOPS揭露的QSFP、SFP或RJ45連接器供應商",
+          "2026年7月營收MoM-23.26%、YoY-2.15%"
         ],
         "opportunities": [
-          "800G連接器需求隨AI資料中心增長",
-          "1.6T高速連接器下一代規格導入"
+          "企業網路升級可增加高速介面整合與交換設備需求",
+          "Wi-Fi與PoE管理整合有利企業AP及交換器產品"
         ],
         "threats": [
-          "連接器供應商漲價",
-          "連接器技術迭代快"
+          "將設備廠誤列為連接器供應商會高估直接曝險",
+          "白牌網通競價與電信客戶資本支出波動影響接單"
         ]
       }
     },

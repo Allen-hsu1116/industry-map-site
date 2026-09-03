@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4764",
   "companyName": "雙鍵",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -259,67 +259,70 @@
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "semi_chemical_materials",
-      "roleType": "semi_chemical_additive",
-      "roleSummary": "雙鍵UV光固化產品與特用化學品可用於半導體製程。7月營收2.94億，MoM+3.4%。",
+      "supplyChainStage": "outside_topic_specialty_chemicals",
+      "roleType": "uv_plastic_additives_outside_semiconductor",
+      "roleSummary": "雙鍵MOPS只揭露塑膠添加劑與UV光固化產品，未揭露半導體光阻添加劑、晶圓清洗劑或CMP研磨液；本題材應改列為一般特殊化學品的遠端鄰近角色，而非半導體前段材料供應商。2026年7月營收2.94億元，MoM+3.45%、YoY+44.07%。",
       "products": [
-        "光阻添加劑(感光劑/溶解抑制劑)",
-        "晶圓清洗劑添加劑(界面活性劑/緩蝕劑)",
-        "CMP研磨液添加劑(pH調節劑/分散劑)"
+        "UV光固化樹脂配方產品",
+        "UV光固化用添加劑",
+        "塑膠用抗氧化添加劑",
+        "塑膠用光安定與耐候添加劑"
       ],
       "customers": [
-        "陶氏化學(Dow)",
-        "JSR",
-        "長興(1717)"
+        "長興(1717；UV材料應用對象，非MOPS揭露客戶)",
+        "BASF（塑膠添加劑生態系對象，非MOPS揭露客戶）",
+        "Covestro（UV樹脂應用對象，非MOPS揭露客戶）",
+        "Arkema（光固化材料生態系對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "巴斯夫(BASF)",
         "信越化學"
       ],
       "risks": [
-        "半導體化學品佔比極低",
-        "認證週期長"
+        "MOPS未揭露光阻、晶圓清洗或CMP材料產品",
+        "原料價格、匯率與中國化工同業競價影響利差"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品之研發、製造與銷售"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收2.94億元，MoM+3.45%、YoY+44.07%，累計YoY+28.61%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "UV光固化光阻添加劑技術",
-        "奈米級化學品分散技術"
+        "UV自由基固化的光引發、交聯速度與膜厚控制",
+        "塑膠抗氧化劑的熱穩定與長期黃變抑制",
+        "光安定劑配方的紫外吸收與耐候壽命管理"
       ],
       "swot": {
         "strengths": [
-          "7月營收2.94億YoY+44.1%，UV光固化技術可延伸至光阻材料",
-          "化學品研發能力可客製化半導體添加劑"
+          "MOPS直接支持塑膠添加劑與UV光固化產品能力",
+          "2026年7月公司整體營收YoY+44.07%、MoM+3.45%"
         ],
         "weaknesses": [
-          "半導體化學品營收佔比極微",
-          "與半導體材料供應鏈關聯弱"
+          "沒有MOPS證據支持半導體前段化學品或設備",
+          "營收成長不能歸因半導體材料題材"
         ],
         "opportunities": [
-          "先進製程光阻材料需求增長",
-          "CMP研磨液添加劑市場擴大"
+          "UV固化材料可拓展電子塗層與一般工業應用驗證",
+          "高耐候與低黃變添加劑可提高產品差異化"
         ],
         "threats": [
-          "國際化學大廠(Dow/JSR/信越)壟斷半導體材料",
-          "半導體客戶認證週期長(2-3年)"
+          "把一般UV材料等同半導體光阻會造成題材錯配",
+          "化工原料波動及低價競爭可能壓縮毛利"
         ]
       }
     },

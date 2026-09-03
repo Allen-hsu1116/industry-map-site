@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3545",
   "companyName": "敦泰",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -81,71 +81,71 @@
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "topicType": "end_market",
       "directness": "core",
-      "supplyChainStage": "mobile_ic",
-      "roleType": "mobile_touch_ic",
-      "roleSummary": "敦泰為手機觸控/指紋IC核心供應商。7月營收9.11億，YoY-14.3%，累計61.39億，累計YoY-13.6%。",
+      "supplyChainStage": "human_interface_ic",
+      "roleType": "touch_display_ic_provider",
+      "roleSummary": "敦泰MOPS揭露手持式行動裝置應用晶片，支持手機與平板的人機介面IC角色；但MOPS未確認超音波指紋、解鎖時間、功耗數值或具名終端客戶。本次收斂為觸控、顯示驅動與整合型應用晶片。2026年7月營收9.11億元，MoM+1.20%、YoY-14.27%。",
       "products": [
-        "手機觸控IC(多點觸控/防水/手套模式)",
-        "螢幕下指紋辨識IC(光學式/超音波式)",
-        "平板觸控IC(主動筆支援)"
+        "智慧手機電容式觸控控制IC",
+        "平板電腦觸控控制IC",
+        "觸控與顯示驅動整合IC（TDDI）",
+        "手持裝置顯示驅動IC"
       ],
       "customers": [
-        "小米",
-        "OPPO",
-        "vivo",
-        "三星(Samsung)",
-        "Motorola"
+        "小米（手機應用對象，非MOPS揭露客戶）",
+        "OPPO（手機應用對象，非MOPS揭露客戶）",
+        "vivo（手機應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（手機應用對象，非MOPS揭露客戶）",
+        "Lenovo（平板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "匯頂(Goodix)",
         "聯詠(3034)"
       ],
       "risks": [
-        "手機出貨量下滑影響IC需求",
-        "中國IC廠低價競爭"
+        "MOPS未揭露IC型號、規格或具名手機品牌客戶",
+        "手機市場成熟與中國IC設計商價格競爭壓縮毛利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：研究、開發、設計、製造及銷售手持式行動裝置應用晶片"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收9.11億元，MoM+1.20%、YoY-14.27%，累計YoY-13.61%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "confidence": "medium",
+      "lastVerified": "2026-09-03",
       "status": "verified",
       "techFocus": [
-        "螢幕下指紋辨識技術(0.3秒解3秒解鎖)",
-        "觸控IC超低功耗設計(<5mW)"
+        "In-cell／On-cell電容觸控感測與雜訊抑制",
+        "TDDI觸控掃描與顯示驅動的時序多工整合",
+        "手持裝置低功耗類比前端與ESD可靠度設計"
       ],
       "swot": {
         "strengths": [
-          "手機觸控IC全球前三大",
-          "螢幕下指紋辨識技術領先",
-          "中國手機品牌客戶基礎深厚"
+          "MOPS直接支持手持式行動裝置應用晶片研發與銷售",
+          "觸控與顯示驅動可在手機和平板共用設計能力"
         ],
         "weaknesses": [
-          "7月營收9.11億，YoY-14.3%，累計61.39億，累計YoY-13.6%反映手機需求疲軟",
-          "缺乏基頻/SoC等核心晶片",
-          "客戶集中於中國手機品牌"
+          "2026年7月營收YoY-14.27%、累計YoY-13.61%",
+          "MOPS未揭露各IC產品占比及品牌客戶"
         ],
         "opportunities": [
-          "折疊手機觸控IC新需求",
-          "車用手機互聯觸控應用"
+          "中階手機導入TDDI可提高單機整合價值",
+          "平板、工控手持裝置可分散智慧手機需求風險"
         ],
         "threats": [
-          "匯頂科技技術追趕",
-          "手機市場持續萎縮"
+          "中國觸控與顯示驅動IC供應商持續擴產競價",
+          "終端庫存修正與面板價格波動影響晶片拉貨"
         ]
       }
     },

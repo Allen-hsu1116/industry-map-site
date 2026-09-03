@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -256,70 +256,70 @@
       "topicName": "AI 伺服器機構件與滑軌",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "server_component_distribution",
-      "roleType": "server_component_distributor",
-      "roleSummary": "至上並非滑軌或機殼製造商；此題材僅透過AI伺服器主板、電源與儲存元件間接參與。 2026年7月營收768.74億元、YoY+333.5%，公司明指伺服器客戶拉貨強勁。",
+      "supplyChainStage": "component_distribution",
+      "roleType": "electronics_distributor_outside_mechanical",
+      "roleSummary": "至上MOPS僅揭露電子零組件經銷，未揭露伺服器機殼、滑軌、機櫃或其他機構件；其與AI伺服器的可驗證關聯是零組件通路。2026年7月營收768.74億元，MoM+24.74%、YoY+333.48%，公司明示主要來自記憶體漲價及伺服器、手機客戶拉貨，仍不能解讀為機構件營收。",
       "products": [
-        "AI伺服器主板用DDR5 RDIMM元件",
-        "BMC/BIOS用SPI NOR Flash與eMMC",
-        "伺服器電源板用MOSFET與電源管理IC",
-        "PCIe 5.0連接器與Retimer周邊元件"
+        "記憶體IC經銷服務",
+        "快閃記憶體與嵌入式儲存元件經銷",
+        "電源管理與功率半導體經銷",
+        "顯示及消費電子IC經銷"
       ],
       "customers": [
-        "廣達(2382；AI伺服器ODM應用對象)",
-        "緯穎(6669；雲端伺服器應用對象)",
-        "緯創(3231；AI主板元件應用對象)",
-        "英業達(2356；伺服器ODM應用對象)"
+        "Samsung Electronics（零組件供應鏈對象，非MOPS揭露代理品牌）",
+        "廣達(2382；伺服器應用對象，非MOPS揭露客戶)",
+        "緯穎(6669；伺服器應用對象，非MOPS揭露客戶)",
+        "緯創(3231；伺服器應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "文曄(3034)",
         "世平(2451)"
       ],
       "risks": [
-        "AI伺服器元件經銷佔比低"
+        "MOPS未揭露機殼、滑軌或其他AI伺服器機構件",
+        "記憶體價格與通路庫存變化會放大營收及資金需求"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電子零組件經銷業務"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收768.74億元，MoM+24.74%、YoY+333.48%，累計YoY+180.42%；備註稱記憶體價格上漲及伺服器、手機客戶拉貨強勁。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "DDR5/PCIe 5.0主板BOM與信號完整性支援",
-        "高功率伺服器電源MOSFET效率與SOA選型",
-        "BMC開機儲存可靠度與壽命驗證"
+        "伺服器BOM料號配對、替代料驗證與生命週期管理",
+        "記憶體速度、容量、ECC相容性與平台認證支援",
+        "原廠批號追溯、庫存配置與EDI供應鏈管理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收768.74億元、YoY+333.5%，公司明指伺服器客戶拉貨強勁",
-          "可一次供應記憶體、儲存及電源元件",
-          "通路庫存與FAE支援平台快速改版"
+          "7月公告直接指出伺服器及手機客戶拉貨、記憶體價格上漲",
+          "2026年7月營收YoY+333.48%、MoM+24.74%"
         ],
         "weaknesses": [
-          "不生產機殼或滑軌，僅間接相關",
-          "AI伺服器元件占比未揭露"
+          "公司是電子零組件通路商，不是機構件製造商",
+          "營收高速成長含價格上漲效應，未揭露AI伺服器占比"
         ],
         "opportunities": [
-          "平台升級推升DDR5與PCIe元件用量",
-          "ODM擴產增加備貨需求"
+          "AI伺服器記憶體容量提升可增加通路出貨金額",
+          "平台換代帶動記憶體、儲存與電源元件驗證需求"
         ],
         "threats": [
-          "ODM直接向原廠採購",
-          "記憶體價格反轉造成庫存風險"
+          "記憶體價格反轉或客戶去庫存可能造成營收快速回落",
+          "供應商集中、授信與應收帳款風險會隨營收擴張升高"
         ]
       }
     },

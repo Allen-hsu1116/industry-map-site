@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -347,18 +347,20 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "test",
-      "roleType": "test_service",
-      "roleSummary": "欣銓為專業IC測試服務商，提供IC載板封裝前後測試與Burn-in服務。受惠ABF載板需求成長，間接支援PCB載板良率驗證。",
+      "supplyChainStage": "post_package_test",
+      "roleType": "ic_test_outside_pcb_substrate",
+      "roleSummary": "欣銓MOPS揭露記憶體、數位及混合訊號IC的晶圓與成品測試，以及晶圓型Burn-in；它是測試服務商，不生產PCB或IC載板。本題材僅保留「載板封裝後元件需測試」的下游關聯。FinMind顯示2026年7月營收17.67億元，MoM+13.83%、YoY+52.26%。",
       "products": [
-        "IC成品測試(FT)(封裝後載板IC功能驗證)",
-        "Burn-in測試(載板封裝IC高溫老化篩選)",
-        "混合訊號IC測試(載板封裝射頻/類比IC量測)"
+        "記憶體IC晶圓測試服務",
+        "數位IC晶圓與成品測試服務",
+        "混合訊號IC晶圓與成品測試服務",
+        "晶圓級Burn-in可靠度測試服務"
       ],
       "customers": [
-        "欣興(3037)(ABF載板封裝IC測試代工)",
-        "南電(8046)(IC載板封裝測試委外)",
-        "景碩(3189)(BT載板IC測試代工)"
+        "台積電(2330；晶圓測試生態系對象，非MOPS揭露客戶)",
+        "日月光投控(3711；封測生態系對象，非MOPS揭露客戶)",
+        "南亞科(2408；記憶體測試應用對象，非MOPS揭露客戶)",
+        "Micron（記憶體測試應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "京元電(2449)(IC測試代工)",
@@ -366,55 +368,50 @@
         "矽格(6257)(利基IC測試)"
       ],
       "risks": [
-        "與PCB載板為間接關係，題材傳導非常微弱",
-        "載板封裝IC測試佔欣銓營收比重低",
-        "ABF載板需求波動不直接影響測試訂單"
+        "公司不製造PCB或IC載板，題材屬封裝後測試關聯",
+        "測試稼動率受客戶投片、產品組合與半導體週期影響"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：記憶體IC之晶圓測試；數位訊號IC及混合訊號IC之晶圓及成品測試；晶圓型式Burn-in測試"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind顯示2026年7月營收17.67億元，MoM+13.83%、YoY+52.26%。"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "confidence": "high",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "封裝後IC成品測試(FT)功能驗證與良率篩選",
-        "Burn-in測試載板封裝IC高溫老化壽命篩選",
-        "混合訊號IC射頻/類比量測測試平台"
+        "ATE測試程式、探針介面與晶圓良率分類",
+        "數位及混合訊號IC的時序、類比與射頻量測",
+        "晶圓級Burn-in溫度應力、測試覆蓋率與失效篩選"
       ],
       "swot": {
         "strengths": [
-          "封裝後IC成品測試(FT) + Burn-in覆蓋ABF/BT載板封裝全流程",
-          "客戶含欣興(3037)、南電(8046)、景碩(3189)，台灣前三大載板廠均為客戶",
-          "7月營收17.67億MoM+13.8%，載板封裝測試需求穩定增長"
+          "MOPS直接支持記憶體、數位與混合訊號IC測試能力",
+          "2026年7月營收YoY+52.26%、MoM+13.83%"
         ],
         "weaknesses": [
-          "PCB載板為間接角色，欣銓不生產載板僅提供測試服務",
-          "載板封裝IC測試ASP受限於封測代工價格競爭",
-          "先進封裝(2.5D/3D)測試難度高，需新測試平台投資"
+          "沒有PCB、ABF載板或基板材料製造能力的MOPS證據",
+          "營收成長屬測試本業，不能當作PCB載板需求證明"
         ],
         "opportunities": [
-          "AI伺服器ABF載板需求爆發帶動封裝IC測試量增",
-          "CoWoS封裝測試需求隨台積電產能擴充增長",
-          "載板封裝IC混合訊號測試(射頻/類比)差異化服務"
+          "高階封裝與載板元件複雜度提升可增加成品測試需求",
+          "車用及高可靠IC可帶動Burn-in與長時測試需求"
         ],
         "threats": [
-          "載板廠可能整合內部測試減少委外",
-          "先進封裝測試技術門檻高，競爭者(力成6239)具規模優勢",
-          "載板景氣循環影響測試訂單波動"
+          "把測試服務誤列為載板供應會高估直接曝險",
+          "封測同業擴產及客戶自建測試產能形成競爭"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3454",
   "companyName": "晶睿",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -157,20 +157,20 @@
       "topicName": "工業自動化與 CNC 工具機",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "security_equipment",
-      "roleType": "industrial_video_surveillance",
-      "roleSummary": "晶睿為安防監控設備製造商，在工業自動化題材中以AI影像監控攝影機切入工廠安全與產線檢測應用。題材純度中等，工控為延伸應用非核心產品線。",
+      "supplyChainStage": "outside_topic_monitoring",
+      "roleType": "video_surveillance_outside_automation",
+      "roleSummary": "本次MOPS公司基本資料與月營收查詢均無資料；依既有歷史範圍，晶睿的核心是網路影像監控，而非PLC、伺服、CNC或工業機器人。故本題材降為工廠安全監控的外圍應用角色。FinMind僅更新至2026年2月營收4.54億元，MoM-27.95%、YoY-21.15%，屬過時歷史資料。",
       "products": [
-        "工廠AI影像監控攝影機(IP Camera 4K/Edge AI)",
-        "產線安全AI辨識系統(邊緣推論YOLO/NPU)",
-        "熱成像監控模組(溫度異常偵測/預警)",
-        "工廠AOI視覺檢測攝影機(缺陷檢測)"
+        "網路監控攝影機",
+        "網路錄影主機NVR",
+        "影像管理軟體VMS",
+        "PoE影像監控設備"
       ],
       "customers": [
-        "研華(2395)(工控系統整合)",
-        "台達電(2308)(廠房安防監控)",
-        "西門子Siemens(工業影像系統)",
-        "鴻海(2317)(工廠自動化監控)"
+        "台達電(2308；工廠自動化應用對象，非MOPS揭露客戶)",
+        "研華(2395；工業運算應用對象，非MOPS揭露客戶)",
+        "鴻海(2317；工廠監控應用對象，非MOPS揭露客戶)",
+        "Siemens（工業自動化平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "研華(2395)(工業影像)",
@@ -178,55 +178,50 @@
         "Moxa(工業網路攝影)"
       ],
       "risks": [
-        "營收資料無法取得(MOPS/FinMind均失敗)",
-        "工廠AI影像監控為利基應用，非核心工控元件",
-        "AI邊緣推論攝影機需NPU整合，技術門檻高"
+        "MOPS基本資料查詢失敗，無法用新揭露確認產品與客戶",
+        "FinMind月營收只到2026年2月，資料缺口使營運判讀失真"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: (MOPS查無，安全監控產品製造：網路攝影機、NVR、門禁系統)"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "2026-09-03查詢公司代號3454，MOPS完整公司基本資料端點未回傳資料；此失敗查詢不構成對既有產品或客戶的確認。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年2月月營收（過時歷史資料）",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind資料僅至2026年2月：營收4.54億元，MoM-27.95%、YoY-21.15%；截至2026年9月已明顯過時。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "AI邊緣推論影像分析(CV2/YOLO on NPU/Hailo)",
-        "熱成像溫度異常偵測演算法整合(±2°C精度)",
-        "工業級IP66防護攝影機光學設計(寬溫/抗震)"
+        "ONVIF網路影像互通與RTSP串流整合",
+        "H.264／H.265影像編碼、事件錄影與儲存管理",
+        "PoE供電、網路安全與多攝影機VMS管理"
       ],
       "swot": {
         "strengths": [
-          "工廠AI影像監控(IP Camera 4K/Edge AI)整合YOLO/NPU邊緣推論",
-          "熱成像溫度異常偵測(±2°C精度)可用於設備預知保養",
-          "客戶含研華(2395)、台達電(2308)，工控通路完整"
+          "歷史產品範圍具網路攝影機、NVR與影像管理整合能力",
+          "影像監控可服務工廠安全與事件追溯等外圍需求"
         ],
         "weaknesses": [
-          "MOPS與FinMind均無法取得資料，公開資訊有限(上櫃)",
-          "工業自動化為間接角色，非晶睿核心安防本業",
-          "AI邊緣推論技術需持續投資NPU/Hailo平台"
+          "未證實PLC、伺服、CNC或機器人等核心自動化產品",
+          "2026年2月歷史營收MoM-27.95%、YoY-21.15%，且後續資料缺失"
         ],
         "opportunities": [
-          "智慧工廠4.0帶動AI影像監控需求增長",
-          "產線安全AI辨識(防護衣/安全帽偵測)法規驅動需求",
-          "熱成像預知保養打入半導體廠無塵室應用"
+          "工廠安全、門禁與影像事件管理可形成自動化周邊需求",
+          "ONVIF與VMS整合可連接工業邊緣運算平台"
         ],
         "threats": [
-          "研華(2395)、台達電(2308)可能自建影像監控方案",
-          "工業AI視覺競爭者多(創意3443/智原3035)",
-          "Edge AI硬體快速迭代需持續升級投資"
+          "MOPS及近期營收資料缺失提高資訊不對稱風險",
+          "安控設備價格競爭與資安合規可能削弱工廠導入意願"
         ]
       }
     },

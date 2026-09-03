@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "6182",
   "companyName": "合晶",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "upstream_materials",
-      "roleType": "silicon_wafer_manufacturer",
-      "roleSummary": "合晶科技為台灣矽晶圓專業製造商(WAFER WORKS)，提供6吋/8吋矽晶圓與EPI外延晶圓，是晶圓代工與利基功率IC的上游材料供應商。為環球晶集團旗下公司。",
+      "supplyChainStage": "silicon_wafer_materials",
+      "roleType": "silicon_wafer_supplier",
+      "roleSummary": "合晶MOPS僅概括揭露半導體及其材料研發、製造與銷售，未確認既有的尺寸、摻雜型別、FZ高阻值或均勻性數值；本次保留矽晶圓材料家族並移除未揭露規格。FinMind顯示2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%。",
       "products": [
-        "8吋矽晶圓(N型/P型CZ長晶)",
-        "6吋矽晶圓(離散元件用)",
-        "外延晶圓(EPI Wafer)(功率MOSFET/IGBT)",
-        "區熔矽晶圓(FZ)(高壓功率元件用高阻值)"
+        "拋光矽晶圓",
+        "磊晶矽晶圓",
+        "重摻雜矽晶圓",
+        "功率元件用矽晶圓材料"
       ],
       "customers": [
-        "世界先進(5347)(8吋晶圓代工基板)",
-        "力積電(6770)(利基記憶體晶圓)",
-        "漢磊(3707)(SiC/GaN功率代工基板)",
-        "Vishay(功率MOSFET晶圓)"
+        "聯電(2303；晶圓材料應用對象，非MOPS揭露客戶)",
+        "世界先進(5347；晶圓材料應用對象，非MOPS揭露客戶)",
+        "台積電(2330；晶圓材料應用對象，非MOPS揭露客戶)",
+        "onsemi（功率元件應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "環球晶(6488)(矽晶圓龍頭)",
@@ -30,55 +30,50 @@
         "SILTRONIC(12吋矽晶圓)"
       ],
       "risks": [
-        "6月營收9.66億(FinMind)持續成長但矽晶圓價格受記憶體景氣影響",
-        "6/8吋矽晶圓面臗12吋產能移轉壓力，長期需求可能萎縮",
-        "矽晶圓原物料(多晶矽)價格波動影響毛利"
+        "MOPS未揭露晶圓尺寸、產品占比或具名客戶",
+        "成熟製程矽晶圓報價受產能供需與庫存循環影響"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及其材料之研發、設計、製造、進出口及代理銷售等"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體及其材料之研發、設計、製造、進出口及代理銷售等"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind顯示2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "confidence": "medium",
+      "lastVerified": "2026-09-03",
       "status": "verified",
       "techFocus": [
-        "6/8吋矽晶圓CZ長晶與切磨拋製程(直徑精度±0.1mm)",
-        "功率半導體EPI外延晶圓生長技術(厚度均勻性±3%)",
-        "區熔(FZ)高阻值矽晶圓(>1000Ω·cm用於高壓功率元件)"
+        "單晶矽長晶之氧含量、電阻率與缺陷密度控制",
+        "切片、研磨與鏡面拋光的平坦度及表面顆粒控制",
+        "矽磊晶層厚度、摻雜濃度與均勻性控制"
       ],
       "swot": {
         "strengths": [
-          "7月營收9.94億MoM+2.9%，矽晶圓需求穩定增長",
-          "MOPS登記為半導體材料研發製造，8吋/6吋N型/P型CZ長晶技術",
-          "客戶含世界先進(5347)、力積電(6770)，台灣前三大利基晶圓代工廠"
+          "MOPS直接支持半導體材料研發、製造與銷售角色",
+          "2026年7月營收YoY+18.90%、MoM+2.90%"
         ],
         "weaknesses": [
-          "8吋/6吋矽晶圓為成熟產品，ASP成長有限",
-          "GlobalWafers(6488)為台灣矽晶圓龍頭，合晶市佔較小",
-          "矽晶圓長晶週期長(45-60天)，產能調整不靈活"
+          "MOPS揭露過於概括，未確認尺寸、摻雜與FZ產品規格",
+          "公司月營收未拆分拋光、磊晶與功率材料貢獻"
         ],
         "opportunities": [
-          "車用功率MOSFET/IGBT帶動6吋/8吋矽晶圓需求",
-          "外延晶圓(EPI Wafer)更高ASP產品滲透率提升",
-          "半導體在地化供應鏈(日韓台)趨勢"
+          "功率半導體與成熟製程擴產增加矽晶圓需求",
+          "客戶在地化供應可提升區域晶圓材料驗證機會"
         ],
         "threats": [
-          "中國矽晶圓廠(中環/有研)產能擴張低价競爭",
-          "12吋矽晶圓取代8吋趨勢長期壓力",
-          "矽晶圓景氣循環影響ASP與產能利用率"
+          "SUMCO、信越與中國晶圓廠的規模及價格競爭",
+          "晶圓廠降稼動或去庫存可能壓低材料報價"
         ]
       }
     },

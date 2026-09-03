@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -454,18 +454,21 @@
       "topicName": "MLCC / 電容器",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。提供MLCC晶圓級測試探針卡與陶瓷電容分選機，間接受惠被動元件產業，但佔營收比重極低。",
+      "supplyChainStage": "outside_topic_test_services",
+      "roleType": "semiconductor_test_outside_mlcc",
+      "roleSummary": "久元MOPS揭露半導體與光電產品切割、研磨、測試、挑檢，以及IC／CIS／CCM測試設備，沒有MLCC測試分選機、陶瓷電容探針卡或SAW／BAW設備；本題材改列為測試技術的外圍觀察角色，不視為MLCC供應商。FinMind顯示2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。",
       "products": [
-        "MLCC測試分選機(Handler)(電容量測/耐壓篩選)",
-        "陶瓷電容晶圓級測試探針卡",
-        "高頻射頻元件測試系統(SAW/BAW濾波器)"
+        "IC測試設備",
+        "CIS影像感測器測試設備",
+        "CCM相機模組測試設備",
+        "半導體與光電產品切割服務",
+        "基板切割、研磨與挑檢服務"
       ],
       "customers": [
-        "國巨(2327)(MLCC測試設備採購)",
-        "華新科(2492)(被動元件測試設備)",
-        "太陽誘電(射頻元件測試設備)"
+        "國巨(2327；MLCC產業驗證對象，非MOPS揭露客戶)",
+        "華新科(2492；MLCC產業驗證對象，非MOPS揭露客戶)",
+        "村田製作所（MLCC產業驗證對象，非MOPS揭露客戶）",
+        "TDK（MLCC產業驗證對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "精測(6510)(晶圓測試探針卡)",
@@ -473,55 +476,50 @@
         "致茂(2360)(電子量測儀器)"
       ],
       "risks": [
-        "6月營收3.90億(FinMind)但MLCC測試設備佔比極低",
-        "被動元件測試設備市場規模小，客戶資本支出週期長",
-        "久元核心為CIS/CCM測試設備，被動元件非主營"
+        "MOPS沒有揭露MLCC產品或MLCC專用測試設備",
+        "測試與加工需求受半導體及光電景氣循環影響"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割；IC/CIS/CCM測試設備之研發、製造與銷售"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind顯示2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "MLCC晶圓級測試探針卡設計(高密度微間距)",
-        "陶瓷電容測試分選機(Handler)精密機構設計",
-        "高頻射頻元件(SAW/BAW)測試系統射頻量測"
+        "IC／CIS／CCM測試程式、治具與量測自動化",
+        "晶粒及基板切割的刀具路徑、崩邊與顆粒控制",
+        "光電產品AOI挑檢與分類演算法整合"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，MLCC測試分選機(Handler)利基供應商，國巨/華新科客戶",
-          "陶瓷電容晶圓級測試探針卡高密度微間距設計",
-          "高頻射頻元件(SAW/BAW)測試系統射頻量測能力"
+          "MOPS直接支持半導體與光電測試、切割及挑檢能力",
+          "具IC、CIS與CCM測試設備的量測自動化基礎"
         ],
         "weaknesses": [
-          "被動元件為間接題材，MLCC測試佔營收比重低",
-          "MLCC測試設備市場小，國巨/華新科可能自建測試線",
-          "被動元件景氣循環影響測試設備採購意願"
+          "不是MOPS揭露的MLCC或陶瓷電容供應商",
+          "2026年7月營收MoM-4.07%、YoY-6.49%"
         ],
         "opportunities": [
-          "MLCC需求復甦(AI伺服器/車用)帶動測試設備需求",
-          "車規MLCC(AEC-Q200)測試設備認證需求",
-          "高頻射頻元件(5G/mmWave)測試系統新增長"
+          "若被動元件廠導入更高自動化測試，可作為跨域驗證機會",
+          "影像與光電測試設備升級可支撐本業產品延伸"
         ],
         "threats": [
-          "村田(Murata)等MLCC大廠自建測試線",
-          "被動元件景氣下行週期影響設備採購",
-          "中國被動元件廠低價競爭壓縮測試設備預算"
+          "將IC／光電測試誤認為MLCC測試會高估題材曝險",
+          "設備客製化與客戶驗證週期可能造成接單波動"
         ]
       }
     },

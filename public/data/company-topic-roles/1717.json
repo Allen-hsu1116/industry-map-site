@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1717",
   "companyName": "長興",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -97,19 +97,21 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "pcb_materials",
-      "roleType": "pcb_resin_supplier",
-      "roleSummary": "長興為PCB基板用合成樹脂/光阻材料供應商。7月營收40.93億，YoY+23.9%，累計262.62億，累計YoY+10.5%，累計YoY+10.5%。",
+      "supplyChainStage": "pcb_chemicals",
+      "roleType": "pcb_resin_photoresist_supplier",
+      "roleSummary": "長興MOPS明確揭露工業合成樹脂、印刷電路基板、光阻材料與特殊化學品，可支持PCB材料角色；但未揭露ABF替代膜、介電常數或5微米解析度，本次刪除這些過度精確宣稱。2026年7月營收40.93億元，MoM+6.82%、YoY+23.86%。",
       "products": [
-        "PCB用環氧樹脂(FR-4基板樹脂)",
-        "乾膜光阻(D/F光阻/感光絕緣層)",
-        "ABF載板用樹脂(Ajinomoto Build-up Film替代)",
-        "玻璃纖維布用浸膠樹脂"
+        "PCB銅箔基板用合成樹脂",
+        "乾膜型光阻材料",
+        "液態感光阻材料",
+        "PCB製程用特殊化學品",
+        "印刷電路基板材料"
       ],
       "customers": [
-        "台光電(2383)(銅箔基板樹脂)",
-        "聯茂(8210)(CCL樹脂)",
-        "欣興(3037)(載板用光阻)"
+        "南亞電路板(8046；PCB材料應用對象，非MOPS揭露客戶)",
+        "欣興(3037；PCB材料應用對象，非MOPS揭露客戶)",
+        "臻鼎-KY(4958；PCB材料應用對象，非MOPS揭露客戶)",
+        "台燿(6274；銅箔基板應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "台光電(2383)",
@@ -117,53 +119,50 @@
         "日東電工(Nitto)"
       ],
       "risks": [
-        "PCB材料競爭激烈",
-        "ABF載板樹脂被味之素壟斷"
+        "MOPS未揭露ABF載板膜、材料規格或具名客戶",
+        "PCB景氣、銅價與石化原料價格會影響需求及利差"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各種工業用合成樹脂之產銷、印刷電路基板與光阻材料之產銷、特殊化學品"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收40.93億元，MoM+6.82%、YoY+23.86%，累計YoY+10.48%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-16",
+      "lastVerified": "2026-09-03",
       "status": "verified",
       "techFocus": [
-        "低介電常數環氧樹脂設計(Dk<4.0/高頻用)",
-        "ABF載板樹脂替代技術",
-        "乾膜光阻感光技術(解析度<5um)"
+        "環氧與丙烯酸樹脂的交聯密度、耐熱與黏著控制",
+        "乾膜光阻的塗布、曝光顯影與線路解析控制",
+        "PCB濕製程化學品的金屬離子、潔淨度與槽液穩定性管理"
       ],
       "swot": {
         "strengths": [
-          "PCB用合成樹脂國內領導廠商",
-          "乾膜光阻技術自主",
-          "ABF替代樹脂開發中"
+          "MOPS直接支持合成樹脂、PCB、光阻與特殊化學品完整材料組合",
+          "2026年7月營收YoY+23.86%、MoM+6.82%"
         ],
         "weaknesses": [
-          "ABF載板樹脂仍被味之素壟斷",
-          "高階CCL樹脂與日商競爭"
+          "MOPS未揭露高階載板材料規格或各產品營收占比",
+          "材料業受原料成本與下游客戶庫存循環影響"
         ],
         "opportunities": [
-          "AI伺服器高階CCL(低介電)需求",
-          "ABF替代樹脂國產化商機",
-          "IC載板用光阻需求增長"
+          "高層數與高密度PCB提升耐熱樹脂及細線光阻需求",
+          "供應鏈在地化有利電子化學品驗證與替代"
         ],
         "threats": [
-          "味之素ABF壟斷地位難以撼動",
-          "日東電工乾膜光阻技術領先",
-          "PCB材料價格競爭"
+          "日本與中國材料商在高階樹脂及光阻領域競爭",
+          "終端需求下修可能導致PCB廠去庫存並壓低材料售價"
         ]
       }
     },

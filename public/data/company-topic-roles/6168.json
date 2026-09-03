@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6168",
   "companyName": "宏齊",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -183,69 +183,70 @@
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "led_driver_ic",
-      "roleType": "led_driver_ic_customer",
-      "roleSummary": "宏齊MOPS僅揭露SMD LED生產銷售，並非IC設計公司；本題材定位為LED驅動IC的整合與採購端。 2026年7月營收2.06億元、YoY+12.8%、累計YoY+7.8%，LED封裝出貨回升。",
+      "supplyChainStage": "outside_topic_led_packaging",
+      "roleType": "smd_led_outside_ic_design",
+      "roleSummary": "宏齊MOPS揭露表面黏著發光二極體的生產與銷售，沒有IC設計、矽智財或晶片設計服務；本題材只能視為LED驅動IC的下游應用端，不應列為IC設計公司。2026年7月營收2.06億元，MoM+0.79%、YoY+12.75%。",
       "products": [
-        "Mini LED背光SMD LED與驅動板整合模組",
-        "RGB SMD LED與定電流驅動參考設計",
-        "車用照明SMD LED與PWM調光模組"
+        "白光表面黏著型LED",
+        "RGB表面黏著型LED",
+        "顯示與指示用SMD LED",
+        "照明應用SMD LED"
       ],
       "customers": [
-        "聚積(3527；LED驅動IC供應鏈對象)",
-        "聯詠(3034；顯示驅動IC對象)",
-        "友達(2409；Mini LED背光應用對象)",
-        "群創(3481；顯示背光應用對象)"
+        "億光(2393；LED同業與應用對象，非MOPS揭露客戶)",
+        "光寶科(2301；LED應用對象，非MOPS揭露客戶)",
+        "友達(2409；顯示應用對象，非MOPS揭露客戶)",
+        "群創(3481；顯示應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "億光(2393)",
         "光寶(2301)"
       ],
       "risks": [
-        "LED驅動IC為外購品"
+        "MOPS未揭露IC設計、矽智財或驅動IC產品",
+        "LED封裝面臨中國廠價格競爭與顯示景氣循環"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：表面黏著發光二極體之生產與銷售"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收2.06億元，MoM+0.79%、YoY+12.75%，累計YoY+7.84%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "PWM/類比混合調光與定電流通道匹配",
-        "Mini LED分區背光之封裝與PCB熱設計",
-        "車用LED負載突降與EMI元件選型"
+        "LED晶粒固晶、打線與封裝界面可靠度控制",
+        "螢光粉配方、色溫、色座標與亮度一致性分選",
+        "SMD封裝的熱阻、濕氣敏感度與回焊可靠度管理"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收2.06億元、YoY+12.8%、累計YoY+7.8%，LED封裝出貨回升",
-          "封裝與驅動整合可提供模組方案",
-          "Mini LED需封裝與驅動共同驗證"
+          "MOPS直接支持SMD LED生產與銷售能力",
+          "2026年7月公司整體營收YoY+12.75%、MoM+0.79%"
         ],
         "weaknesses": [
-          "無IC設計能力，驅動IC須外購",
-          "MOPS未揭露驅動板收入"
+          "不是MOPS揭露的IC設計或矽智財供應商",
+          "營收未拆分顯示、照明或其他LED應用"
         ],
         "opportunities": [
-          "Mini LED與矩陣車燈提高驅動需求",
-          "Micro LED增加巨量通道控制需求"
+          "顯示背光與車載照明升級可增加高可靠SMD LED需求",
+          "封裝色彩與熱管理能力可爭取利基應用驗證"
         ],
         "threats": [
-          "IC原廠可直接與面板廠合作",
-          "中國LED封裝低價競爭"
+          "把LED封裝廠歸類IC設計會高估題材直接性",
+          "中國LED封裝產能與價格競爭可能壓縮毛利"
         ]
       }
     }

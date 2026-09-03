@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6176",
   "companyName": "瑞儀",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -96,73 +96,70 @@
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "pc_nb",
-      "roleType": "nb_backlight_supplier",
-      "roleSummary": "瑞儀6月營收36.94億YoY-15.0%，累計231.25億YoY-6.0%。MOPS登記為電子零組件/模具/照明設備製造。NB用薄型背光模組為核心產品，AI PC與Mini LED NB背光為新成長方向，但電視/監視器背光需求疲弱拖累營收。",
+      "supplyChainStage": "display_module",
+      "roleType": "backlight_module_device_enabler",
+      "roleSummary": "瑞儀MOPS僅以電子零組件、模具及照明設備製造業登記，沒有揭露特定終端品牌、尺寸、Mini LED分區數或薄型化規格；本題材保留為PC／平板顯示背光模組的供應鏈角色，但所有終端品牌僅列應用對象。2026年7月營收37.61億元，MoM+1.82%、YoY-9.48%。",
       "products": [
-        "NB薄型背光模組(側光式Edge-lit厚度<2.5mm)",
-        "平板背光模組(10.1吋/12.9吋iPad等級)",
-        "AIO PC背光模組(27吋/32吋一體成型電腦)",
-        "Mini LED NB背光模組(分區調光>1000 zones)",
-        "車用背光模組(儀表板/中控10.1吋/12.3吋)"
+        "筆記型電腦用LED背光模組",
+        "平板電腦用LED背光模組",
+        "桌上型顯示器用背光模組",
+        "背光模組用導光板與精密模具",
+        "LED照明模組"
       ],
       "customers": [
-        "廣達(2382)(MacBook/NB背光模組代工)",
-        "仁寶(2324)(商用NB背光模組)",
-        "緯創(3231)(AIO PC背光模組)",
-        "和碩(4938)(iPad/平板背光模組)",
-        "友達(2409)(車用面板背光模組)"
+        "Apple（平板與筆電應用對象，非MOPS揭露客戶）",
+        "Dell（筆電應用對象，非MOPS揭露客戶）",
+        "HP（筆電應用對象，非MOPS揭露客戶）",
+        "Lenovo（筆電應用對象，非MOPS揭露客戶）",
+        "華碩(2357；筆電應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "中光電"
       ],
       "risks": [
-        "OLED NB 滲透壓縮背光需求"
+        "MOPS營業項目過於概括，未證實特定品牌與產品規格",
+        "OLED滲透及終端換機疲弱可能壓縮LCD背光需求"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "瑞儀 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6176",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 瑞儀 的營業項目、產品組合與財務資料。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：CC01080電子零組件製造業、CQ01010模具製造業、CC01040照明設備製造業"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6176 的月營收、股價、估值與法人資料。"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收37.61億元，MoM+1.82%、YoY-9.48%，累計YoY-6.48%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-28",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "超薄型LED背光光學微結構設計(厚度<2.5mm)",
-        "NB背光模組導光板(LGP)精密射出(均勻度>85%)",
-        "Mini LED分區調光背光技術(>1000 zones HDR)"
+        "導光板微結構與光學膜片堆疊的亮度均勻性控制",
+        "薄型背光模組的機構公差與光學耦合設計",
+        "精密射出模具與導光板表面缺陷控制"
       ],
       "swot": {
         "strengths": [
-          "NB薄型背光模組(側光式Edge-lit厚度<2.5mm)供應廣達/仁寶/緯創",
-          "Mini LED NB背光模組(分區調光>1000 zones)具備高階NB應用能力",
-          "導光板(LGP)精密射出(均勻度>85%)技術"
+          "具電子零組件、模具與照明設備製造的垂直整合基礎",
+          "2026年7月公司整體營收MoM+1.82%，月度小幅回升"
         ],
         "weaknesses": [
-          "6月累計營收23.1億YoY-6.0%，NB背光模組需求放緩",
-          "NB OLED面板滲透率提升壓縮背光模組需求",
-          "NB品牌廠(蘋果/戴爾)轉向OLED面板影響背光訂單"
+          "7月營收YoY-9.48%、累計YoY-6.48%，整體需求仍弱",
+          "MOPS未揭露背光產品組合、品牌客戶或技術規格"
         ],
         "opportunities": [
-          "iPad/平板背光模組(10.1吋/12.9吋)需求穩定",
-          "Mini LED NB背光(高動態對比)在創作者筆電應用",
-          "AIO PC背光模組(27吋/32吋)需求"
+          "高亮度筆電與平板顯示升級可提高精密背光模組價值",
+          "導光板與模具整合可延伸車載及工控顯示應用"
         ],
         "threats": [
-          "NB OLED滲透率持續提升直接替代背光模組",
-          "中國背光模組廠低成本競爭",
-          "NB市場成熟化出貨量下滑"
+          "OLED取代LCD將減少部分消費終端背光模組需求",
+          "終端品牌集中與價格議價可能壓縮模組毛利"
         ]
       }
     },

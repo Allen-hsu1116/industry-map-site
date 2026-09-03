@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3583",
   "companyName": "辛耘",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -187,21 +187,19 @@
       "topicType": "supply_chain_segment",
       "directness": "indirect",
       "supplyChainStage": "equipment",
-      "roleType": "led_equipment_distributor",
-      "roleSummary": "辛耘6月營收10.35億YoY-2.67%，累計61.15億YoY+6.79%。MOPS登記為半導體/LED/Solar/LCD等製程機台設備代理、晶圓再生技術研發與服務、化學分析儀器代理。LED/Solar製程設備代理與化學分析儀器服務光電產業客戶，晶圓再生服務為台積電供應商。",
+      "roleType": "display_led_process_equipment_integrator",
+      "roleSummary": "辛耘MOPS揭露半導體、LED、Solar與LCD製程機台之代理、研發製造，以及晶圓再生與化學分析儀器；因此在顯示／LED題材的可驗證角色是製程設備與分析服務，而非特定品牌MOCVD設備或LED晶粒產品。2026年7月營收9.73億元，MoM-5.96%、YoY+6.58%。",
       "products": [
-        "LED MOCVD製程機台代理(Veeco/ASM設備)(氮化鎵磊晶)",
-        "LED晶粒分檢/封裝設備代理(分光分色/點膠機)",
-        "化學分析儀器(XRF螢光光譜/ICP-MS質譜儀)(材料分析)",
-        "太陽能製程設備(PECVD/擴散爐代理)",
-        "晶圓再生服務(8吋/12吋測試晶圓回收)"
+        "LED製程機台代理與整合服務",
+        "LCD面板製程機台代理與整合服務",
+        "製程用化學分析儀器代理服務",
+        "晶圓再生與表面處理服務"
       ],
       "customers": [
-        "晶電(2448)(LED MOCVD設備採購)",
-        "億光(2393)(LED封裝/分檢設備)",
-        "友達(2409)/群創(3481)(面板製程分析儀器)",
-        "台積電(2330)(晶圓再生服務)",
-        "茂迪(6244)(太陽能PECVD設備)"
+        "富采(3714；LED設備應用對象，非MOPS揭露客戶)",
+        "友達(2409；LCD設備應用對象，非MOPS揭露客戶)",
+        "群創(3481；LCD設備應用對象，非MOPS揭露客戶)",
+        "台積電(2330；晶圓再生應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "弘塑(3131)",
@@ -209,55 +207,50 @@
         "萬潤(6187)"
       ],
       "risks": [
-        "LED產業景氣波動影響設備需求",
-        "Solar設備代理受中國低價競爭",
-        "代理業務缺乏自有IP護城河"
+        "MOPS未揭露代理品牌、機台型號或具名客戶",
+        "顯示與LED設備投資受面板景氣及資本支出循環影響"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體/LED/Solar/LCD等製程機台設備代理、研發與製造晶圓再生技術研發與服務化學分析儀器代理"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：半導體/LED/Solar/LCD等製程機台設備代理、研發與製造；晶圓再生技術研發與服務；化學分析儀器代理技術、研發與製造"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收9.73億元，MoM-5.96%、YoY+6.58%，累計YoY+6.76%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-05",
+      "confidence": "medium",
+      "lastVerified": "2026-09-03",
       "status": "verified",
       "techFocus": [
-        "MOCVD設備代理與在地化維修(LED氮化鎵磊晶)",
-        "化學分析儀器技術應用(XRF/ICP-MS材料成分分析)",
-        "晶圓再生製程(8吋/12吋測試晶圓化學機械研磨回收)"
+        "LED／LCD製程機台安裝、參數整合與在地維修",
+        "化學分析儀器的製程污染與材料成分量測",
+        "再生晶圓清洗、研磨拋光與表面缺陷控制"
       ],
       "swot": {
         "strengths": [
-          "6月營收10.35億，累計61.15億YoY+6.79%穩定成長",
-          "MOPS登記涵蓋半導體/LED/Solar/LCD四大領域設備代理",
-          "晶圓再生服務具技術門檻，為台積電供應商"
+          "MOPS直接支持LED與LCD製程設備及化學分析儀器業務",
+          "2026年7月公司整體營收YoY+6.58%，維持成長"
         ],
         "weaknesses": [
-          "6月營收YoY-2.67%，短期營收動能減弱",
-          "設備代理業務毛利受限(代理佣金15-20%)",
-          "LED/Solar設備需求受產業景氣影響大"
+          "7月公司整體營收MoM-5.96%，短期出貨有波動",
+          "MOPS未揭露顯示／LED業務占比與具名客戶"
         ],
         "opportunities": [
-          "晶圓再生需求受AI/HPC測試晶圓消耗增加帶動",
-          "半導體設備在地化維修需求持續增長",
-          "化學分析儀器可切入新能源材料檢測市場"
+          "Micro LED與先進顯示試產可增加製程整合及分析需求",
+          "在地設備維修與晶圓再生能力可提高客戶黏著度"
         ],
         "threats": [
-          "LED/Solar設備需求低迷，客戶資本支出縮減",
-          "原廠(Veeco/ASM)可能直接切入台灣市場",
-          "半導體設備代理商競爭激烈(如崇越5434、帆宣6206)"
+          "面板廠資本支出遞延會直接壓抑設備接單",
+          "原廠代理權變動與設備自製商競爭可能壓縮毛利"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5289",
   "companyName": "宜鼎",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "cxl-memory-pooling",
@@ -96,71 +96,72 @@
       "topicName": "記憶體模組",
       "topicType": "product",
       "directness": "core",
-      "supplyChainStage": "memory_module",
-      "roleType": "industrial_memory_module",
-      "roleSummary": "宜鼎MOPS明確揭露工業用嵌入式儲存裝置與DRAM模組，是工規記憶體直接供應者。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，但客戶名未由MOPS揭露。",
+      "supplyChainStage": "industrial_memory_storage",
+      "roleType": "industrial_dram_storage_module_provider",
+      "roleSummary": "宜鼎MOPS直接揭露工業用嵌入式儲存裝置與工業用DRAM模組，支持其記憶體模組核心角色；本次移除未由MOPS證實的介面版本、溫度範圍與安全規格，只保留產品家族和實作技術。FinMind顯示2026年7月營收84.95億元，MoM+3.49%、YoY+636.53%，公司整體成長強但未拆分模組與儲存貢獻。",
       "products": [
-        "DDR5 ECC UDIMM/SODIMM工業級模組",
-        "DDR5 ECC RDIMM伺服器記憶體模組",
-        "M.2 2280 PCIe 4.0工規NVMe SSD",
-        "2.5吋SATA III寬溫工業SSD",
-        "eMMC 5.1嵌入式快閃儲存模組"
+        "工業用DDR4 DRAM模組",
+        "工業用DDR5 DRAM模組",
+        "工業用2.5吋固態硬碟",
+        "工業用M.2／mSATA嵌入式儲存裝置",
+        "工業用eMMC與快閃記憶體模組"
       ],
       "customers": [
-        "研華(2395；工業電腦應用對象)",
-        "新漢(8234；邊緣伺服器應用對象)",
-        "友通(2397；嵌入式主機板應用對象)",
-        "凌華(6166；工業電腦驗證對象)"
+        "研華(2395；工業電腦應用對象，非MOPS揭露客戶)",
+        "Siemens（工業控制應用對象，非MOPS揭露客戶）",
+        "Rockwell Automation（工業控制應用對象，非MOPS揭露客戶）",
+        "Beckhoff（工業控制應用對象，非MOPS揭露客戶）",
+        "NVIDIA（邊緣運算平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "創見(2451)",
         "宇瞻(8271)"
       ],
       "risks": [
-        "工規記憶體市場規模有限",
-        "消費級記憶體降價波及工規"
+        "記憶體價格上漲可能同時推升營收與採購成本",
+        "MOPS未揭露介面版本、溫度範圍或具名客戶"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用DRAM模組"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置、工業用動態隨機記憶體模組"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind fallback：2026年7月營收84.95億元，MoM+3.5%"
+          "claim": "FinMind顯示2026年7月營收84.95億元，MoM+3.49%、YoY+636.53%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-09-03",
       "status": "verified",
       "techFocus": [
-        "-40°C至85°C寬溫DRAM篩選、抗震與長供貨管理",
-        "DDR5 ECC與On-die ECC錯誤修正及信號完整性",
-        "NVMe斷電保護、TCG Opal 2.0與端到端資料保護"
+        "DRAM模組PCB佈線、SPD參數與平台相容性驗證",
+        "工業SSD斷電保護、ECC、壞區管理與耗損平均",
+        "寬溫元件篩選、抗震固定與長期供貨料號管理"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認工業用DRAM模組與嵌入式儲存為核心業務，題材直接",
-          "FinMind顯示2026年7月營收84.95億元、MoM+3.5%，產品組合與出貨維持成長"
+          "MOPS直接支持工業嵌入式儲存與工業DRAM模組兩大產品線",
+          "2026年7月營收YoY+636.53%、MoM+3.49%，公司整體動能強"
         ],
         "weaknesses": [
-          "DRAM與NAND晶粒成本受三星、SK hynix、Micron供給週期制約",
-          "工規產品需長期備料，庫存跌價與終端專案延後風險較高"
+          "營收未拆分DRAM模組、SSD與其他嵌入式儲存貢獻",
+          "MOPS未揭露規格、產品毛利或具名終端客戶"
         ],
         "opportunities": [
-          "Edge AI、機器視覺與醫療設備升級帶動DDR5及NVMe寬溫需求",
-          "車載與軌道交通需要長供貨、抗震及斷電保護儲存方案"
+          "Edge AI與工業電腦升級增加高容量DRAM及耐用SSD需求",
+          "工業客戶長供貨與遠端維護需求提高模組服務價值"
         ],
         "threats": [
-          "創見、宇瞻及威剛在工規模組市場競爭價格與通路",
-          "原廠擴大自有工規產品線可能壓縮第三方模組商毛利"
+          "記憶體價格反轉與庫存調整可能使高成長快速降溫",
+          "原廠供貨、匯率與工控平台認證時程影響出貨"
         ]
       }
     },

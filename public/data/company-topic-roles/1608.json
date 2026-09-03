@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1608",
   "companyName": "華榮",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -97,20 +97,20 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "electrical_equipment",
-      "roleType": "ess_cable_supplier",
-      "roleSummary": "華榮6月營收11.0億YoY+13.4%，累計67.2億YoY+15.8%。儲能電廠用電力電纜為間接受益標的，受惠於台電儲能調頻備轉標案與民間儲能案場建置需求。",
+      "supplyChainStage": "power_cabling",
+      "roleType": "storage_site_power_cable_adjacent",
+      "roleSummary": "華榮MOPS揭露電線電纜、銅製品及電力／通信工程，沒有電芯、電池模組、PCS或儲能系統產品；在儲能題材中只能定位為案場配電與工程鄰近角色。2026年7月營收12.68億元，MoM+14.96%、YoY+42.67%，公司整體成長不可直接歸因儲能。",
       "products": [
-        "儲能電廠用高壓電力電纜(22kV/69kV XLPE)",
-        "電池櫃間連接電纜(直流1000VDC太陽能級)",
-        "儲能案場接地電纜(絕緣/遮蔽)",
-        "儲能變流器配電電纜(AC/DC雙向)"
+        "XLPE絕緣電力電纜",
+        "銅導體與銅製線材",
+        "控制及通信電纜",
+        "電力工程設計與施工服務"
       ],
       "customers": [
-        "台電(儲能調頻備轉標案輸配電)",
-        "森崴能源(6806)(儲能案場電纜)",
-        "華城(1519)(儲能變電站配電)",
-        "台泥(1101)(儲能案場電力電纜)"
+        "台電（電力工程應用對象，非MOPS揭露客戶）",
+        "台達電(2308；儲能系統應用對象，非MOPS揭露客戶)",
+        "Tesla Energy（儲能案場應用對象，非MOPS揭露客戶）",
+        "Fluence（儲能案場應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "華新(1605)(儲能用電纜)",
@@ -118,55 +118,50 @@
         "合機(1618)(電力電纜)"
       ],
       "risks": [
-        "6月營收11.03億YoY+13.4%但儲能電纜佔比低",
-        "儲能電纜為標準品差異化低，價格競爭激烈",
-        "儲能案場建設進度受政策與環評影響"
+        "沒有MOPS證據支持電池、PCS或儲能系統製造",
+        "銅價波動與工程驗收時點會影響營收及毛利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 各種電線電纜及銅製品等之加工,製造,銷售及施工等各種電力,通信工程設計,施工維護及技術服務等"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：各種電線電纜及銅製品之加工、製造、銷售及施工；電力與通信工程設計、施工維護及技術服務"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE OpenAPI",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "TWSE顯示2026年7月營收12.68億元，MoM+14.96%、YoY+42.67%，累計YoY+19.38%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "高壓交直流電力電纜製造(635kV以下XLPE絕緣)",
-        "儲能電池櫃直流連接電纜(1000VDC太陽能級絕緣)",
-        "電力電纜銅導體伸線與被覆製程(無氧銅)"
+        "XLPE絕緣押出、交聯與局部放電品質控制",
+        "銅導體伸線、絞合與導體電阻控制",
+        "電力電纜耐壓測試、接地與案場敷設工程"
       ],
       "swot": {
         "strengths": [
-          "6月營收11.0億YoY+13.4%，累計67.2億YoY+15.8%，受惠電網投資與儲能案場建置",
-          "具備22kV/69kV高壓XLPE電力電纜量產能力，供貨台電儲能調頻備轉標案",
-          "銅導體伸線與被覆製程垂直整合，原料成本控制能力佳"
+          "MOPS直接支持電線電纜、銅製品與電力工程能力",
+          "2026年7月公司整體營收YoY+42.67%、MoM+14.96%"
         ],
         "weaknesses": [
-          "儲能電纜為標準電力電纜延伸，產品差異化程度低，競爭者多",
-          "儲能相關營收佔比仍低，主要營收來自傳統電力電纜",
-          "銅價波動直接影響毛利率，缺乏上游銅原料避險機制"
+          "未揭露電芯、電池模組、PCS或EMS產品",
+          "營收無法拆分儲能案場配電與傳統電纜需求"
         ],
         "opportunities": [
-          "台電儲能調頻備轉容量持續擴增，高壓電力電纜採購需求增長",
-          "民間儲能案場(森崴/華城)帶動電池櫃間連接電纜與配電電纜需求",
-          "離岸風電併網輸電線路投資帶動高壓電纜訂單"
+          "大型儲能案場併網可增加中高壓電纜與施工需求",
+          "電網韌性投資有利電力工程及控制電纜接單"
         ],
         "threats": [
-          "大亞(1609)與華新(1605)同樣競逐儲能與電網電纜標案，價格競爭激烈",
-          "銅價上漲若無法轉嫁將壓縮毛利",
-          "儲能政策若調整(如E-dReg費率下修)，案場投資放緩影響電纜需求"
+          "若儲能建置遞延，題材對實際出貨的貢獻有限",
+          "銅價與標案價格競爭可能壓縮工程及電纜毛利"
         ]
       }
     },

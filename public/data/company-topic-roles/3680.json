@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -97,22 +97,21 @@
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "process_materials",
-      "roleType": "reticle_wafer_handling",
-      "roleSummary": "家登6月營收7.52億MoM+11%。全球EUV光罩盒獨占供應商，FOUP晶圓傳送盒與先進封裝承載載具技術領先，受惠台積電先進製程擴產。",
+      "supplyChainStage": "wafer_reticle_handling",
+      "roleType": "reticle_wafer_carrier_provider",
+      "roleSummary": "家登MOPS直接揭露光罩解決方案、晶圓解決方案與機台設備產品，支持其半導體載具及設備角色；但MOPS未揭露Class 1、AMC濾除效率或任何具名客戶。本次保留可驗證產品家族並移除過度精確性能宣稱。FinMind顯示2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。",
       "products": [
-        "EUV/DUV光罩盒(Reticle Pod)(光罩傳送儲存保護)",
-        "12吋晶圓傳送盒(FOUP)(晶圓微環境控制)",
-        "12吋晶圓廠客製化載具(FOUP/Reticle Pod/OHT Carrier)",
-        "晶圓載具(Wafer Cassette)",
-        "光罩傳送盒(RPO)"
+        "EUV／DUV光罩傳送與保存載具",
+        "12吋晶圓傳送盒FOUP",
+        "晶圓匣與製程載具",
+        "光罩及晶圓載具清洗設備",
+        "自動化物料搬運介面設備"
       ],
       "customers": [
-        "台積電(2330)(光罩盒/晶圓載具)",
-        "聯電(2303)(光罩傳送)",
-        "ASML(EUV光罩盒配合)",
-        "Intel(光罩盒)",
-        "Samsung(晶圓傳送載具)"
+        "台積電(2330；晶圓廠應用對象，非MOPS揭露客戶)",
+        "三星電子（晶圓廠應用對象，非MOPS揭露客戶）",
+        "Intel（晶圓廠應用對象，非MOPS揭露客戶）",
+        "ASML（EUV設備生態系對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "Entegris(光罩盒/晶圓載具全球龍頭)",
@@ -120,55 +119,50 @@
         "信紘科(6432)(半導體耗材)"
       ],
       "risks": [
-        "6月營收7.52億(FinMind)月增11%但波動大(4月8.86→5月6.78)",
-        "客戶集中度高(台積電佔比大)，議價能力受限",
-        "半導體耗材為利基市場，總量成長受限於晶圓廠資本支出"
+        "MOPS未揭露具名客戶、潔淨等級或性能數值",
+        "先進製程資本支出遞延會影響載具與設備驗收節奏"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 光罩解決方案產品晶圓解決方案產品機台設備產品"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：光罩解決方案產品、晶圓解決方案產品、機台設備產品"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind顯示2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-09-03",
       "status": "verified",
       "techFocus": [
-        "EUV光罩盒(Reticle Pod)奈米級潔淨度設計(<Class 1)",
-        "FOUP晶圓傳送盒微環境控制(溫濕度/AMC過濾)",
-        "半導體精密載具CNC加工與表面處理技術"
+        "光罩載具密封、微環境潔淨與低釋氣材料控制",
+        "FOUP晶圓載具的顆粒、靜電與機械介面控制",
+        "AMHS搬運介面、載具識別與設備自動化整合"
       ],
       "swot": {
         "strengths": [
-          "EUV/DUV光罩盒(Reticle Pod)為高精密半導體耗材，進入門檻高",
-          "12吋FOUP晶圓傳送盒具微環境控制技術",
-          "7月營收8.71億MoM+15.8%，半導體耗材需求穩定增長"
+          "MOPS直接支持光罩、晶圓解決方案與機台設備三項產品線",
+          "2026年7月營收YoY+71.69%、MoM+15.81%，公司整體動能強"
         ],
         "weaknesses": [
-          "光罩盒/FOUP市場由日本信越/Daifuku主導，家登市佔有限",
-          "資本額僅9.6億，產能與研發資源受限",
-          "高度依賴台積電/聯電少數客戶"
+          "產品驗證週期長且營收可能隨客戶驗收時點波動",
+          "MOPS未揭露各產品線占比或具名晶圓廠客戶"
         ],
         "opportunities": [
-          "EUV光罩盒需求隨台積電2nm/1nm量產增長",
-          "FOUP升級(含APC環境控制)更高ASP產品",
-          "韓國/日本半導體廠新客戶拓展"
+          "EUV層數增加帶動光罩保存與傳送載具需求",
+          "先進晶圓廠自動化擴充可增加FOUP與清洗設備需求"
         ],
         "threats": [
-          "日本信越化學/Daifuku技術領先且規模大",
-          "半導體設備材料商可能整合減少供應商家數",
-          "EUV光罩盒技術規格快速升級需持續投資"
+          "全球晶圓廠資本支出循環可能造成訂單遞延",
+          "國際載具與自動化設備供應商競爭及認證門檻高"
         ]
       }
     },

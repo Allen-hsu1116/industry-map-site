@@ -2,77 +2,77 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-03T19:04:21Z",
   "roles": [
     {
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "display_content",
-      "roleType": "game_graphics_content",
-      "roleSummary": "昱泉MOPS僅揭露遊戲與教育軟體，與面板、LED或光學製造沒有供應關係；此角色只是高解析3D內容的終端應用映射。FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%。",
+      "supplyChainStage": "outside_topic_software",
+      "roleType": "game_software_outside_display_optics",
+      "roleSummary": "昱泉MOPS明確揭露遊戲及教育軟體研發、生產、代理與銷售，沒有面板、LED、鏡頭或感測器產品；本題材只能視為顯示終端上的內容應用，而非光電供應鏈。FinMind顯示2026年7月營收僅2.3萬元，MoM-42.50%、YoY-99.25%，規模極小且波動劇烈。",
       "products": [
-        "Windows PC即時3D遊戲軟體",
-        "PlayStation平台遊戲移植版本",
-        "Nintendo Switch平台遊戲移植版本",
-        "VR沉浸式教育訓練內容"
+        "PC平台遊戲軟體",
+        "遊戲主機平台移植軟體",
+        "行動裝置遊戲軟體",
+        "教育訓練軟體"
       ],
       "customers": [
-        "Sony Interactive Entertainment(平台驗證對象)",
-        "Nintendo(平台驗證對象)",
-        "Valve(Steam發行平台對象)",
-        "Meta(Quest VR平台對象)"
+        "Sony Interactive Entertainment（主機平台對象，非MOPS揭露客戶）",
+        "Nintendo（主機平台對象，非MOPS揭露客戶）",
+        "Valve（PC遊戲平台對象，非MOPS揭露客戶）",
+        "Apple（行動軟體平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
         "智冠(5470)",
         "大宇資(6111)"
       ],
       "risks": [
-        "遊戲營收規模極小(月營收<0.1億)",
-        "與顯示面板供應鏈關聯極弱"
+        "沒有MOPS證據支持面板、LED、鏡頭或感測器業務",
+        "月營收規模極小且YoY大幅衰退，營運可見度低"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
           "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
+          "claim": "FinMind顯示2026年7月營收2.3萬元，MoM-42.50%、YoY-99.25%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-03",
+      "status": "candidate",
       "techFocus": [
-        "Unity/Unreal即時渲染、LOD與GPU批次最佳化",
-        "VR雙眼渲染、90Hz畫面更新與動態解析度",
-        "HDR色彩映射與多解析度UI縮放"
+        "即時3D引擎的渲染管線、LOD與資源串流",
+        "跨PC、主機與行動平台的輸入、效能及畫面適配",
+        "教育軟體互動腳本、內容管理與學習進度紀錄"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認具遊戲及教育軟體研發能力，可製作高解析互動內容",
-          "跨PC、主機與VR的內容可作為高更新率顯示裝置終端應用"
+          "MOPS直接支持遊戲與教育軟體研發能力",
+          "軟體可跨PC、主機與行動顯示終端部署"
         ],
         "weaknesses": [
-          "FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%，商業規模極小",
-          "不製造面板、LED、鏡頭或感測器，題材關聯極弱"
+          "不屬面板、LED、光學或感測硬體供應鏈",
+          "2026年7月營收僅2.3萬元，YoY-99.25%、MoM-42.50%"
         ],
         "opportunities": [
-          "OLED與VR頭顯更新率提升，增加沉浸式內容最佳化需求",
-          "教育訓練導入3D模擬可擴充軟體授權與專案收入"
+          "多平台移植與教育互動內容可擴大軟體授權場景",
+          "新型顯示終端可能增加沉浸式內容需求，但仍屬應用端"
         ],
         "threats": [
-          "顯示硬體成長不代表昱泉能取得內容訂單，題材傳導可能為零",
-          "大型遊戲工作室與平台自有內容競爭，昱泉研發資源有限"
+          "遊戲專案遞延與單一作品表現造成營收高度波動",
+          "將內容軟體誤列為光電硬體供應鏈會誤導題材判讀"
         ]
       }
     },
