@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2344",
   "name": "華邦電",
-  "generatedAt": "2026-09-02T12:33:20.971Z",
+  "generatedAt": "2026-09-03T12:31:24.098Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -55,11 +55,11 @@
     "knowledgeBasis": "canonical_pending",
     "confidence": "low",
     "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=2；只做保守參考。",
     "roleDetail": {
       "topicName": "HBM 高頻寬記憶體",
       "roleLabel": "間接受惠",
-      "roleSummary": "華邦電MOPS支持記憶體與半導體系統產品，但未揭露HBM、TSV堆疊或HBM量產；本題材只能定位為利基DRAM、NOR Flash與SLC NAND對記憶體景氣的間接曝險。2026年7月營收267.73億元、YoY+291.5%、累計YoY+161.0%，公司說明受市場供需影響，不能歸因HBM。",
+      "roleSummary": "華邦電MOPS支持記憶體及半導體系統產品，但未揭露HBM或TSV堆疊量產；本題材應定位為利基型記憶體供應商對記憶體景氣的間接曝險，而非HBM供應商。2026年7月營收267.73億元、YoY+291.5%、累計YoY+161.0%，公司僅說明受市場供需影響。",
       "supplyChainStage": "specialty_memory_adjacent",
       "roleType": "specialty_memory_not_hbm",
       "directness": "indirect",
@@ -100,7 +100,7 @@
       "直接度 間接受惠 +8",
       "角色信心 low +3",
       "題材 HBM 高頻寬記憶體（product/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
@@ -117,7 +117,7 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=2；只做保守參考。",
       "V2 W：DRAM價格波動大影響獲利",
       "V2 W：與三星/SK海力士在DRAM的規模差距大",
       "V2 T：三星/SK海力士DRAM降價競爭",
@@ -203,7 +203,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "華邦電MOPS支持記憶體與半導體系統產品，但未揭露HBM、TSV堆疊或HBM量產；本題材只能定位為利基DRAM、NOR Flash與SLC NAND對記憶體景氣的間接曝險。2026年7月營收267.73億元、YoY+291.5%、累計YoY+161.0%，公司說明受市場供需影響，不能歸因HBM。"
+        "roleSummary": "華邦電MOPS支持記憶體及半導體系統產品，但未揭露HBM或TSV堆疊量產；本題材應定位為利基型記憶體供應商對記憶體景氣的間接曝險，而非HBM供應商。2026年7月營收267.73億元、YoY+291.5%、累計YoY+161.0%，公司僅說明受市場供需影響。"
       }
     ],
     "swot": [
@@ -366,12 +366,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 100 天未更新"
+        "message": "股價資料已 101 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 100 天未更新"
+        "message": "籌碼資料已 101 天未更新"
       },
       {
         "id": "risk.stop-distance",

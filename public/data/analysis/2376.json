@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2376",
   "name": "技嘉",
-  "generatedAt": "2026-09-02T12:33:20.996Z",
+  "generatedAt": "2026-09-03T12:31:24.135Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-02",
-  "chipDataDate": "2026-09-02",
+  "marketDataDate": "2026-09-03",
+  "chipDataDate": "2026-09-03",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -24,25 +24,25 @@
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 36,
-    "summary": "技嘉 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +969張；近 20 日法人偏買，合計 +6.5千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "技嘉 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +3.4千張；投信近 5 日買超 +781張。",
     "signals": [
-      "三大法人近 5 日合計買超 +969張",
-      "近 20 日法人偏買，合計 +6.5千張",
-      "投信近 5 日買超 +379張",
-      "外資近 5 日買超 +790張"
+      "近 20 日法人偏買，合計 +3.4千張",
+      "投信近 5 日買超 +781張"
     ],
-    "risks": [],
+    "risks": [
+      "三大法人近 5 日合計賣超 -55張",
+      "外資近 5 日賣超 -356張"
+    ],
     "watch": [
-      "最近法人資料日：2026-09-02",
-      "融券近 5 日增加 37.8%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-03",
+      "融券近 5 日增加 44.8%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-02"
+      "lastVerified": "2026-09-03"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -174,7 +174,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "技嘉MOPS支持電腦硬體、零件與系統週邊設備，但未逐項揭露冷板、CDU、浸沒式設備或雲端客戶；液冷角色應定位為GPU伺服器平台與機櫃層的系統整合，而不是自製所有液冷元件。2026年7月營收442.13億元、YoY+59.7%，且公司備註AI訂單暢旺，但未拆分液冷貢獻。"
+        "roleSummary": "技嘉MOPS支持電腦硬體、零件與系統周邊設備，但未逐項揭露冷板、CDU或浸沒式設備；液冷題材定位為GPU伺服器與機櫃層的系統整合，而非自製所有流體元件。2026年7月營收442.13億元、YoY+59.7%，公司備註AI訂單暢旺，但未拆分液冷貢獻。"
       },
       {
         "topicId": "ai-server",
@@ -279,22 +279,21 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 74,
-    "recommendationState": "top_candidate",
+    "totalScore": 67,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 32,
       "label": "基本面偏強",
       "signals": [
         "月營收 YoY +72.2%，成長動能明確",
-        "本益比 13.5 倍，估值尚可對照成長",
-        "殖利率 3.3%，提供部分下檔支撐"
+        "本益比 13.1 倍，估值尚可對照成長",
+        "殖利率 3.4%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -303,11 +302,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：354.50",
-      "波段多空分水嶺看 MA20：355.25",
-      "追蹤法人是否延續 買超：最近 +392張",
+      "短線支撐/壓力先看 MA5：355.60",
+      "波段多空分水嶺看 MA20：355.58",
+      "追蹤法人是否延續 賣超：最近 -1.4千張",
       "月營收年增率 +72.2%，觀察基本面是否支撐估值",
-      "本益比 13.5 倍，需和同族群估值比較"
+      "本益比 13.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 402.00 且量比 > 1.5：列為轉強訊號",

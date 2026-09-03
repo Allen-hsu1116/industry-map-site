@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8210",
   "name": "勤誠",
-  "generatedAt": "2026-09-02T12:33:21.653Z",
+  "generatedAt": "2026-09-03T12:31:25.107Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,13 +51,13 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "間接受惠",
-      "roleSummary": "勤誠MOPS只概括揭露電腦周邊設備及系統研製、製造與買賣，未明確揭露伺服器規格、冷板、CDU或液冷機櫃；本題材保留機箱機構與系統整合的相鄰角色。2026年7月營收24.62億元、YoY+41.5%、累計YoY+53.4%，公司說明為終端產品大量出貨，但未指明液冷。",
-      "supplyChainStage": "server_mechanical_adjacent",
-      "roleType": "computer_chassis_adjacent_to_liquid_cooling",
+      "roleSummary": "勤誠MOPS支持電腦周邊設備與系統的研製、製造及買賣，但沒有冷卻液分配、冷板或泵浦的直接揭露；液冷題材定位為伺服器機箱、托盤與管路空間的機構整合。2026年7月營收24.62億元、YoY+41.5%，惟MoM-23.9%，公司只說明終端產品大量出貨。",
+      "supplyChainStage": "server_chassis_integration",
+      "roleType": "liquid_ready_chassis_enabler",
       "directness": "indirect",
       "source": "canonical"
     },
@@ -68,12 +68,12 @@
         "confidence": "low"
       },
       {
-        "name": "GPU伺服器機箱",
+        "name": "高密度GPU伺服器機箱",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高密度儲存伺服器機殼",
+        "name": "儲存伺服器機殼",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -94,7 +94,7 @@
       "直接度 間接受惠 +8",
       "角色信心 medium +10",
       "題材 AI 伺服器液冷散熱（technology/active） +17",
-      "角色證據 3 則 +12",
+      "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -162,7 +162,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "勤誠MOPS只概括揭露電腦周邊設備及系統研製、製造與買賣，未明確揭露伺服器規格、冷板、CDU或液冷機櫃；本題材保留機箱機構與系統整合的相鄰角色。2026年7月營收24.62億元、YoY+41.5%、累計YoY+53.4%，公司說明為終端產品大量出貨，但未指明液冷。"
+        "roleSummary": "勤誠MOPS支持電腦周邊設備與系統的研製、製造及買賣，但沒有冷卻液分配、冷板或泵浦的直接揭露；液冷題材定位為伺服器機箱、托盤與管路空間的機構整合。2026年7月營收24.62億元、YoY+41.5%，惟MoM-23.9%，公司只說明終端產品大量出貨。"
       }
     ],
     "swot": [
@@ -249,12 +249,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 100 天未更新"
+        "message": "股價資料已 101 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 100 天未更新"
+        "message": "籌碼資料已 101 天未更新"
       }
     ]
   },

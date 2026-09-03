@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3711",
   "name": "日月光投控",
-  "generatedAt": "2026-09-02T12:33:21.346Z",
+  "generatedAt": "2026-09-03T12:31:24.647Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-02",
-  "chipDataDate": "2026-09-02",
+  "marketDataDate": "2026-09-03",
+  "chipDataDate": "2026-09-03",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -24,24 +24,25 @@
       "收盤價、MA5、MA20 呈空頭排列"
     ],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -44,
-    "summary": "日月光投控 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -9.4千張；近 20 日法人偏賣，合計 -1.5萬張。",
+    "summary": "日月光投控 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -6.2千張；近 20 日法人偏賣，合計 -7.8千張。",
     "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -9.4千張",
-      "近 20 日法人偏賣，合計 -1.5萬張",
-      "投信近 5 日賣超 -7.8千張",
-      "外資近 5 日賣超 -2.7千張",
-      "融資近 5 日增加 10.7%，但技術面未同步轉強"
+      "三大法人近 5 日合計賣超 -6.2千張",
+      "近 20 日法人偏賣，合計 -7.8千張",
+      "投信近 5 日賣超 -6.3千張",
+      "外資近 5 日賣超 -1.1千張",
+      "融資近 5 日增加 12.9%，但技術面未同步轉強"
     ],
     "watch": [
-      "最近法人資料日：2026-09-02"
+      "最近法人資料日：2026-09-03"
     ]
   },
   "industry": {
@@ -50,13 +51,13 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "間接受惠",
-      "roleSummary": "日月光投控本體MOPS僅揭露一般投資業，既有FC-BGA、SiP與WLP敘述屬集團子公司能力，不能當成投控本體產品或特定客戶關係。2026年7月合併營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%，但未拆分先進封裝貢獻。",
-      "supplyChainStage": "advanced_packaging",
-      "roleType": "osat_leader",
+      "roleSummary": "日月光投控本體MOPS只揭露一般投資業；封裝、測試與電子製造能力必須明確視為集團子公司範圍，不能當作投控本體產品或具名客戶關係。2026年7月合併營收737.84億元、YoY+43.2%、累計YoY+25.1%，未拆分先進封裝貢獻。",
+      "supplyChainStage": "holding_company_group_packaging",
+      "roleType": "group_level_advanced_packaging_exposure",
       "directness": "indirect",
       "source": "canonical"
     },
@@ -95,7 +96,7 @@
       "直接度 間接受惠 +8",
       "角色信心 medium +10",
       "題材 先進封裝與 CoWoS（process/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 2 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -135,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-02"
+      "lastVerified": "2026-09-03"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -165,7 +166,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "日月光投控本體MOPS僅揭露一般投資業，既有FC-BGA、SiP與WLP敘述屬集團子公司能力，不能當成投控本體產品或特定客戶關係。2026年7月合併營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%，但未拆分先進封裝貢獻。"
+        "roleSummary": "日月光投控本體MOPS只揭露一般投資業；封裝、測試與電子製造能力必須明確視為集團子公司範圍，不能當作投控本體產品或具名客戶關係。2026年7月合併營收737.84億元、YoY+43.2%、累計YoY+25.1%，未拆分先進封裝貢獻。"
       },
       {
         "topicId": "ai-server",
@@ -319,9 +320,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：601.80",
-      "波段多空分水嶺看 MA20：603.25",
-      "追蹤法人是否延續 賣超：最近 -6.8千張",
+      "短線支撐/壓力先看 MA5：598.60",
+      "波段多空分水嶺看 MA20：602.95",
+      "追蹤法人是否延續 買超：最近 +3.6千張",
       "月營收年增率 +19.2%，觀察基本面是否支撐估值",
       "本益比 42.6 倍，需和同族群估值比較"
     ],

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6147",
   "name": "頎邦",
-  "generatedAt": "2026-09-02T12:33:21.470Z",
+  "generatedAt": "2026-09-03T12:31:24.835Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-02",
-  "chipDataDate": "2026-09-02",
+  "marketDataDate": "2026-09-03",
+  "chipDataDate": "2026-09-03",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,32 +17,31 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 45,
-    "summary": "頎邦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 9.7%。",
+    "score": 63,
+    "summary": "頎邦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 12.3%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 9.7%"
+      "收盤站上 MA20 12.3%",
+      "帶量上漲，量比 2.27x"
     ],
     "risks": [],
-    "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
-    ]
+    "watch": []
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "頎邦 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -8.4千張；近 20 日法人偏賣，合計 -1.8萬張。",
-    "signals": [],
+    "summary": "頎邦 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +466張；三大法人近 5 日合計賣超 -929張。",
+    "signals": [
+      "外資近 5 日買超 +466張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -8.4千張",
-      "近 20 日法人偏賣，合計 -1.8萬張",
-      "投信近 5 日賣超 -79張",
-      "外資近 5 日賣超 -8.2千張"
+      "三大法人近 5 日合計賣超 -929張",
+      "近 20 日法人偏賣，合計 -4.8千張",
+      "投信近 5 日賣超 -54張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-02",
-      "融券近 5 日增加 12.5%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-03"
     ]
   },
   "industry": {
@@ -139,7 +138,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-02"
+      "lastVerified": "2026-09-03"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -330,13 +329,15 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 64,
+    "totalScore": 62,
     "recommendationState": "watchlist",
     "fundamental": {
-      "score": 0,
-      "label": "基本面資料不足",
+      "score": -12,
+      "label": "基本面中性",
       "signals": [],
-      "risks": []
+      "risks": [
+        "本益比 45.6 倍，需防估值壓縮"
+      ]
     },
     "strategy": {
       "classification": "趨勢題材股",
@@ -345,14 +346,20 @@
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 11.0%，部位需降速"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：182.30",
-      "波段多空分水嶺看 MA20：166.40",
-      "追蹤法人是否延續 賣超：最近 -541張",
-      "本益比 44.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：182.60",
+      "波段多空分水嶺看 MA20：168.30",
+      "追蹤法人是否延續 買超：最近 +6.5千張",
+      "本益比 45.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 203.00 且量比 > 1.5：列為轉強訊號",

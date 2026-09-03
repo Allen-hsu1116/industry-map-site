@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8046",
   "name": "南電",
-  "generatedAt": "2026-09-02T12:33:21.630Z",
+  "generatedAt": "2026-09-03T12:31:25.074Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -95,7 +95,7 @@
       "資料基礎：V2 待驗證（low）",
       "V2 題材角色：PCB、IC 載板與高階基板材料 · 直接賦能角色 · low",
       "產業評分：40/100（直接度 直接賦能角色 +36；角色信心 low +3；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
-      "相關題材：先進封裝與 CoWoS · 供應商角色",
+      "相關題材：先進封裝與 CoWoS · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -159,10 +159,10 @@
         "topicName": "先進封裝與 CoWoS",
         "canonicalTopicId": "advanced-packaging",
         "canonicalTopicName": "先進封裝與 CoWoS",
-        "directness": "supplier",
-        "directnessLabel": "供應商角色",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "南電MOPS只揭露電子元件與電池製造業別，未逐項證實ABF、FC-BGA、線寬或NVIDIA等客戶；依公司題材脈絡保留封裝載板供應角色，但將規格與客戶關係降為非MOPS揭露。2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%、累計YoY+39.4%，公司說明受市場需求成長影響，不能全數歸因先進封裝。"
+        "roleSummary": "南電MOPS只概括支持電子零組件及電池製造，未逐項揭露IC載板、ABF材料或封裝製程；依題材脈絡可定位為高階封裝載板供應商，不是封裝服務商。2026年7月營收54.40億元、YoY+50.2%、累計YoY+39.4%，公司說明受市場需求成長影響。"
       }
     ],
     "swot": [],
@@ -220,12 +220,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 100 天未更新"
+        "message": "股價資料已 101 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 100 天未更新"
+        "message": "籌碼資料已 101 天未更新"
       },
       {
         "id": "risk.topic-evidence",
