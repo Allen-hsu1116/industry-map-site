@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2467",
   "name": "志聖",
-  "generatedAt": "2026-09-03T12:31:24.223Z",
+  "generatedAt": "2026-09-04T12:32:50.147Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -101,7 +101,7 @@
       "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
       "相關題材：工業自動化與 CNC 工具機 · 核心產品/平台",
-      "相關題材：半導體設備與前段材料 · 核心產品/平台",
+      "相關題材：電阻與被動保護元件 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -169,16 +169,6 @@
         "roleSummary": "志聖MOPS直接揭露AI供應鏈PCB與先進封裝的貼膜、撕膜、壓合、熱製程、電鍍前處理與清潔設備，工業自動化角色明確；但未揭露特定客戶與±5μm精度。2026年7月營收11.68億元、MoM+34.3%、YoY+132.7%、累計YoY+87.0%，公司說明客戶需求提升。"
       },
       {
-        "topicId": "semiconductor-equipment-materials",
-        "topicName": "半導體設備與前段材料",
-        "canonicalTopicId": "semiconductor-equipment-materials",
-        "canonicalTopicName": "半導體設備與前段材料",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "high",
-        "roleSummary": "志聖7月營收11.68億，YoY+132.7%，累計62.12億，累計YoY+87.0%，累計YoY+87.0%，客戶需求提升。MOPS登記為AI供應鏈用印刷電路製程設備(貼膜/撕膜/熱製程/電鍍前處理)。為PCB製程設備專業供應商。"
-      },
-      {
         "topicId": "passive-components-resistor",
         "topicName": "電阻與被動保護元件",
         "canonicalTopicId": "passive-components-resistor",
@@ -187,6 +177,16 @@
         "directnessLabel": "間接受惠",
         "confidence": "medium",
         "roleSummary": "MOPS僅揭露志聖的PCB與先進封裝貼膜、撕膜、熱製程及電鍍前處理設備；在電阻題材屬製程設備延伸，不代表已取得被動元件客戶訂單。2026年7月營收11.68億元、YoY+132.7%，成長主要由AI供應鏈設備需求帶動，不能全數歸因電阻設備。"
+      },
+      {
+        "topicId": "semiconductor-equipment-materials",
+        "topicName": "半導體設備與前段材料",
+        "canonicalTopicId": "semiconductor-equipment-materials",
+        "canonicalTopicName": "半導體設備與前段材料",
+        "directness": "indirect",
+        "directnessLabel": "間接受惠",
+        "confidence": "high",
+        "roleSummary": "志聖MOPS已明確揭露AI供應鏈用PCB貼膜、撕膜、熱製程與電鍍前處理設備，以及先進封裝貼膜、壓合、撕膜、熱製程與清潔設備；這支持後段封裝／PCB設備角色，但不等同晶圓前段設備。2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，公告稱客戶需求提升。"
       },
       {
         "topicId": "software-cloud-security",
@@ -224,9 +224,9 @@
         ]
       },
       {
-        "id": "semiconductor-equipment-materials",
-        "name": "半導體設備與前段材料",
-        "type": "supply_chain_segment",
+        "id": "passive-components-resistor",
+        "name": "電阻與被動保護元件",
+        "type": "product",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -235,9 +235,9 @@
         ]
       },
       {
-        "id": "passive-components-resistor",
-        "name": "電阻與被動保護元件",
-        "type": "product",
+        "id": "semiconductor-equipment-materials",
+        "name": "半導體設備與前段材料",
+        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -290,12 +290,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 101 天未更新"
+        "message": "股價資料已 102 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 101 天未更新"
+        "message": "籌碼資料已 102 天未更新"
       },
       {
         "id": "risk.stop-distance",

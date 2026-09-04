@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "8299",
   "name": "群聯電子",
-  "generatedAt": "2026-09-03T12:31:25.127Z",
+  "generatedAt": "2026-09-04T12:32:50.704Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-03",
-  "chipDataDate": "2026-09-03",
+  "marketDataDate": "2026-09-04",
+  "chipDataDate": "2026-09-04",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,15 +15,14 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -15,
-    "summary": "群聯電子 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 4.4%。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
-    ],
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "群聯電子 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 3.7%。",
+    "signals": [],
     "risks": [
-      "收盤跌破 MA20 4.4%"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 3.7%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
@@ -33,17 +32,17 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "群聯電子 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +136張；三大法人近 5 日合計賣超 -361張。",
+    "summary": "群聯電子 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +305張；三大法人近 5 日合計賣超 -83張。",
     "signals": [
-      "外資近 5 日買超 +136張"
+      "外資近 5 日買超 +305張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -361張",
-      "近 20 日法人偏賣，合計 -3.6千張",
-      "投信近 5 日賣超 -137張"
+      "三大法人近 5 日合計賣超 -83張",
+      "近 20 日法人偏賣，合計 -2.9千張",
+      "投信近 5 日賣超 -157張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-03"
+      "最近法人資料日：2026-09-04"
     ]
   },
   "industry": {
@@ -135,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-03"
+      "lastVerified": "2026-09-04"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -233,7 +232,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 58,
+    "totalScore": 51,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 32,
@@ -255,9 +254,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2101.00",
-      "波段多空分水嶺看 MA20：2092.25",
-      "追蹤法人是否延續 賣超：最近 -101張",
+      "短線支撐/壓力先看 MA5：2074.00",
+      "波段多空分水嶺看 MA20：2092.00",
+      "追蹤法人是否延續 買超：最近 +157張",
       "月營收年增率 +92.7%，觀察基本面是否支撐估值",
       "本益比 9.2 倍，需和同族群估值比較"
     ],

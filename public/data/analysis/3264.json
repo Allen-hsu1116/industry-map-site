@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3264",
   "name": "欣銓",
-  "generatedAt": "2026-09-03T12:31:24.500Z",
+  "generatedAt": "2026-09-04T12:32:50.321Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-03",
-  "chipDataDate": "2026-09-03",
+  "marketDataDate": "2026-09-04",
+  "chipDataDate": "2026-09-04",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -29,20 +29,21 @@
     ]
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 36,
-    "summary": "欣銓 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +4.7千張；近 20 日法人偏買，合計 +10千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 5,
+    "summary": "欣銓 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +9千張；投信近 5 日買超 +226張。",
     "signals": [
-      "三大法人近 5 日合計買超 +4.7千張",
-      "近 20 日法人偏買，合計 +10千張",
-      "投信近 5 日買超 +473張",
-      "外資近 5 日買超 +4.1千張"
+      "近 20 日法人偏買，合計 +9千張",
+      "投信近 5 日買超 +226張",
+      "融資近 5 日下降 6.2%，籌碼壓力下降"
     ],
-    "risks": [],
+    "risks": [
+      "三大法人近 5 日合計賣超 -342張",
+      "外資近 5 日賣超 -130張"
+    ],
     "watch": [
-      "最近法人資料日：2026-09-03",
-      "融券近 5 日增加 11.5%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-04"
     ]
   },
   "industry": {
@@ -134,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-03"
+      "lastVerified": "2026-09-04"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -213,8 +214,8 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "欣銓為專業IC測試服務商，提供IC載板封裝前後測試與Burn-in服務。受惠ABF載板需求成長，間接支援PCB載板良率驗證。"
+        "confidence": "high",
+        "roleSummary": "欣銓MOPS揭露記憶體、數位及混合訊號IC的晶圓與成品測試，以及晶圓型Burn-in；它是測試服務商，不生產PCB或IC載板。本題材僅保留「載板封裝後元件需測試」的下游關聯。FinMind顯示2026年7月營收17.67億元，MoM+13.83%、YoY+52.26%。"
       },
       {
         "topicId": "semiconductor-equipment-materials",
@@ -370,7 +371,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 65,
+    "totalScore": 59,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -381,7 +382,6 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -389,10 +389,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：232.00",
-      "波段多空分水嶺看 MA20：219.25",
-      "追蹤法人是否延續 買超：最近 +16張",
-      "本益比 29.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：230.40",
+      "波段多空分水嶺看 MA20：220.23",
+      "追蹤法人是否延續 賣超：最近 -557張",
+      "本益比 29.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 239.50 且量比 > 1.5：列為轉強訊號",

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-09-03T12:31:24.085Z",
+  "generatedAt": "2026-09-04T12:32:50.064Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-03",
-  "chipDataDate": "2026-09-03",
+  "marketDataDate": "2026-09-04",
+  "chipDataDate": "2026-09-04",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,16 +15,17 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "台積電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 40,
+    "summary": "台積電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列"
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "接近 20 日高點 2445.00，觀察是否突破"
     ]
   },
   "chips": {
@@ -37,11 +38,11 @@
     ],
     "risks": [
       "三大法人近 5 日合計賣超 -1.2萬張",
-      "投信近 5 日賣超 -3.4千張",
-      "外資近 5 日賣超 -8.7千張"
+      "投信近 5 日賣超 -2千張",
+      "外資近 5 日賣超 -9.9千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-03"
+      "最近法人資料日：2026-09-04"
     ]
   },
   "industry": {
@@ -133,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-09-03"
+      "lastVerified": "2026-09-04"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -302,8 +303,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 63,
-    "recommendationState": "watchlist",
+    "totalScore": 72,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 24,
       "label": "基本面中性",
@@ -311,12 +312,13 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 9.6 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 9.7 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -325,11 +327,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2408.00",
-      "波段多空分水嶺看 MA20：2397.25",
-      "追蹤法人是否延續 賣超：最近 -998張",
+      "短線支撐/壓力先看 MA5：2406.00",
+      "波段多空分水嶺看 MA20：2399.25",
+      "追蹤法人是否延續 買超：最近 +2千張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 27.7 倍，需和同族群估值比較"
+      "本益比 27.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2445.00 且量比 > 1.5：列為轉強訊號",

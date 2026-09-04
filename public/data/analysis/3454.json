@@ -2,19 +2,21 @@
   "schemaVersion": 1,
   "code": "3454",
   "name": "晶睿",
-  "generatedAt": "2026-09-03T12:31:24.557Z",
+  "generatedAt": "2026-09-04T12:32:50.358Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-03-18",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
     "upgradePriority": "high",
     "missingKnowledge": [
-      "product_knowledge"
+      "product_knowledge",
+      "verified_topic_role"
     ],
     "blockingReasons": [
-      "missing_product_knowledge"
+      "missing_product_knowledge",
+      "topic_role_not_verified"
     ]
   },
   "technical": {
@@ -176,8 +178,8 @@
         "canonicalTopicName": "工業自動化與 CNC 工具機",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "晶睿為安防監控設備製造商，在工業自動化題材中以AI影像監控攝影機切入工廠安全與產線檢測應用。題材純度中等，工控為延伸應用非核心產品線。"
+        "confidence": "low",
+        "roleSummary": "本次MOPS公司基本資料與月營收查詢均無資料；依既有歷史範圍，晶睿的核心是網路影像監控，而非PLC、伺服、CNC或工業機器人。故本題材降為工廠安全監控的外圍應用角色。FinMind僅更新至2026年2月營收4.54億元，MoM-27.95%、YoY-21.15%，屬過時歷史資料。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -318,7 +320,7 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 169 天未更新"
+        "message": "股價資料已 170 天未更新"
       },
       {
         "id": "risk.topic-evidence",

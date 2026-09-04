@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6239",
   "name": "力成",
-  "generatedAt": "2026-09-03T12:31:24.912Z",
+  "generatedAt": "2026-09-04T12:32:50.575Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-03",
-  "chipDataDate": "2026-09-03",
+  "marketDataDate": "2026-09-04",
+  "chipDataDate": "2026-09-04",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -29,20 +29,21 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 16,
-    "summary": "力成 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +4.2千張；投信近 5 日買超 +96張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -31,
+    "summary": "力成 籌碼面目前為「籌碼偏空」：融資近 5 日下降 7.0%，籌碼壓力下降；三大法人近 5 日合計賣超 -6.6千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +4.2千張",
-      "投信近 5 日買超 +96張",
-      "外資近 5 日買超 +3.8千張"
+      "融資近 5 日下降 7.0%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -2.5萬張"
+      "三大法人近 5 日合計賣超 -6.6千張",
+      "近 20 日法人偏賣，合計 -2.3萬張",
+      "投信近 5 日賣超 -16張",
+      "外資近 5 日賣超 -6千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-03"
+      "最近法人資料日：2026-09-04"
     ]
   },
   "industry": {
@@ -132,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-03"
+      "lastVerified": "2026-09-04"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -230,7 +231,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 58,
+    "totalScore": 49,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -248,10 +249,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：280.20",
-      "波段多空分水嶺看 MA20：276.25",
-      "追蹤法人是否延續 賣超：最近 -621張",
-      "本益比 27.2 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：278.10",
+      "波段多空分水嶺看 MA20：276.95",
+      "追蹤法人是否延續 賣超：最近 -1.3千張",
+      "本益比 27.4 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 298.00 且量比 > 1.5：列為轉強訊號",

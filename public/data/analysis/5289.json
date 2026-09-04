@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5289",
   "name": "宜鼎",
-  "generatedAt": "2026-09-03T12:31:24.759Z",
+  "generatedAt": "2026-09-04T12:32:50.481Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -60,25 +60,25 @@
     "roleDetail": {
       "topicName": "記憶體模組",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "宜鼎MOPS明確揭露工業用嵌入式儲存裝置與DRAM模組，是工規記憶體直接供應者。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，但客戶名未由MOPS揭露。",
-      "supplyChainStage": "memory_module",
-      "roleType": "industrial_memory_module",
+      "roleSummary": "宜鼎MOPS直接揭露工業用嵌入式儲存裝置與工業用DRAM模組，支持其記憶體模組核心角色；本次移除未由MOPS證實的介面版本、溫度範圍與安全規格，只保留產品家族和實作技術。FinMind顯示2026年7月營收84.95億元，MoM+3.49%、YoY+636.53%，公司整體成長強但未拆分模組與儲存貢獻。",
+      "supplyChainStage": "industrial_memory_storage",
+      "roleType": "industrial_dram_storage_module_provider",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "DDR5 ECC UDIMM/SODIMM工業級模組",
+        "name": "工業用DDR4 DRAM模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "DDR5 ECC RDIMM伺服器記憶體模組",
+        "name": "工業用DDR5 DRAM模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "M.2 2280 PCIe 4.0工規NVMe SSD",
+        "name": "工業用2.5吋固態硬碟",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -157,7 +157,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "宜鼎MOPS明確揭露工業用嵌入式儲存裝置與DRAM模組，是工規記憶體直接供應者。FinMind顯示2026年7月營收84.95億元、MoM+3.5%，但客戶名未由MOPS揭露。"
+        "roleSummary": "宜鼎MOPS直接揭露工業用嵌入式儲存裝置與工業用DRAM模組，支持其記憶體模組核心角色；本次移除未由MOPS證實的介面版本、溫度範圍與安全規格，只保留產品家族和實作技術。FinMind顯示2026年7月營收84.95億元，MoM+3.49%、YoY+636.53%，公司整體成長強但未拆分模組與儲存貢獻。"
       },
       {
         "topicId": "niche-memory",
@@ -269,12 +269,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 101 天未更新"
+        "message": "股價資料已 102 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 101 天未更新"
+        "message": "籌碼資料已 102 天未更新"
       }
     ]
   },
