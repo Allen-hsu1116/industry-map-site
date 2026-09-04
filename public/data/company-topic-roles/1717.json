@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1717",
   "companyName": "長興",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -171,21 +171,21 @@
       "topicName": "石化、塑橡膠與特用化學",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "synthetic_resin",
-      "roleType": "synthetic_resin_producer",
-      "roleSummary": "長興MOPS揭露工業用合成樹脂、PCB材料、光阻與特殊化學品，是石化下游特用材料廠。2026年7月營收40.93億元、YoY+23.9%、MoM+6.8%，累計YoY+10.5%。",
+      "supplyChainStage": "specialty_resins_and_chemicals",
+      "roleType": "synthetic_resin_and_electronic_materials_supplier",
+      "roleSummary": "長興MOPS直接支持工業用合成樹脂、印刷電路基板、光阻材料與特殊化學品，是石化下游特用材料核心角色；但未逐項揭露樹脂牌號或具名客戶。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%、累計YoY+10.5%。",
       "products": [
-        "低VOC水性壓克力樹脂",
-        "UV固化丙烯酸酯寡聚物",
-        "覆銅板用高Tg環氧樹脂",
-        "乾膜光阻用感光樹脂",
-        "聚氨酯接著劑樹脂"
+        "工業塗料與接著劑用合成樹脂",
+        "印刷電路基板用樹脂材料",
+        "PCB製程用光阻材料",
+        "UV光固化樹脂材料",
+        "電子與工業用特殊化學品"
       ],
       "customers": [
-        "南亞(1303；環氧樹脂與基板應用對象)",
-        "台光電(2383；覆銅板樹脂應用對象)",
-        "聯茂(6213；低介電基板材料應用對象)",
-        "欣興(3037；PCB光阻應用對象)"
+        "南亞(1303；基板與樹脂材料應用對象，非MOPS揭露客戶)",
+        "台光電(2383；PCB基板材料應用對象，非MOPS揭露客戶)",
+        "聯茂(6213；覆銅板材料應用對象，非MOPS揭露客戶)",
+        "欣興(3037；PCB光阻應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "永光(1711)",
@@ -193,57 +193,50 @@
         "巴斯夫(BASF)"
       ],
       "risks": [
-        "合成樹脂市場競爭激烈",
-        "原油價格波動影響成本"
+        "通用樹脂受原油與基礎化學品價格波動影響利差",
+        "產品線多元但月營收未拆分電子材料與一般樹脂占比"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：工業用合成樹脂、PCB、光阻材料及特殊化學品"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1717",
+          "claim": "MOPS主要經營業務：工業用合成樹脂、印刷電路基板、光阻材料及特殊化學品。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收40.93億元，YoY+23.9%，累計YoY+10.5%"
+          "claim": "2026年7月營收40.93億元，MoM+6.8%、YoY+23.9%、累計YoY+10.5%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-09-04",
       "status": "verified",
       "techFocus": [
-        "高Tg低介電環氧樹脂改質與交聯密度控制",
-        "UV丙烯酸酯寡聚物官能度及365/395nm固化配方",
-        "水性樹脂粒徑、黏度與低VOC成膜控制"
+        "合成樹脂分子量、交聯密度與黏著／耐熱平衡",
+        "光阻感光反應、顯影解析度與線寬控制",
+        "UV樹脂官能度、光引發效率與固化收縮控制"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認合成樹脂、PCB、光阻與特殊化學品的多產品平台",
+          "MOPS支持合成樹脂、PCB、光阻與特殊化學品的多產品平台",
           "2026年7月營收40.93億元、YoY+23.9%，累計YoY+10.5%，需求回升"
         ],
         "weaknesses": [
-          "通用樹脂受原油與基礎化學品價格波動，毛利穩定度較低",
-          "產品線橫跨塗料、接著與電子材料，研發及產能配置複雜"
+          "原料價格與產品組合波動會影響樹脂及化學品毛利",
+          "公開月營收無法判斷高附加價值電子材料占比"
         ],
         "opportunities": [
-          "AI伺服器PCB需要高Tg、低介電與低損耗樹脂，提高電子材料單價",
-          "低VOC水性及UV固化樹脂可替代溶劑型塗料與接著劑"
+          "高速PCB可增加耐熱、低損耗樹脂與精細光阻需求",
+          "低VOC與UV固化材料可替代溶劑型塗層及接著劑"
         ],
         "threats": [
-          "中國樹脂廠擴產與低價出口壓縮通用材料報價",
-          "原油、雙酚A與丙烯酸酯原料急漲會侵蝕訂單毛利"
+          "中國樹脂與化學材料擴產帶來低價競爭",
+          "雙酚A、丙烯酸酯與溶劑價格急漲可能侵蝕訂單毛利"
         ]
       }
     },

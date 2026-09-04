@@ -2,28 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "3704",
   "companyName": "合勤控",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
       "topicName": "資安、雲端服務與企業軟體",
       "topicType": "theme",
-      "directness": "core",
-      "supplyChainStage": "network_security",
-      "roleType": "network_security_appliance",
-      "roleSummary": "合勤控MOPS本體為一般投資業，資安與雲端產品來自集團網通子公司；角色應以Zyxel防火牆、VPN與Nebula雲端管理為主。2026年7月營收19.17億元、YoY-11.8%、MoM-44.7%，但累計YoY+10.3%。",
+      "directness": "indirect",
+      "supplyChainStage": "holding_company_group_software_adjacency",
+      "roleType": "holding_company_group_exposure",
+      "roleSummary": "合勤控MOPS本體只揭露一般投資業，軟體、雲端管理與資安產品屬集團營運公司脈絡，不能直接視為控股公司產品。2026年7月營收19.17億元、MoM-44.7%、YoY-11.8%，雖累計YoY+10.3%，但波動與題材貢獻均需看子公司。",
       "products": [
-        "Zyxel USG FLEX次世代防火牆",
-        "Zyxel ATP沙箱防火牆",
-        "Nebula雲端網路管理平台",
-        "Site-to-Site/SSL VPN企業閘道器",
-        "SD-WAN分支網路安全設備"
+        "集團子公司網路防火牆設備",
+        "集團子公司VPN安全閘道器",
+        "集團子公司雲端網路管理平台",
+        "集團子公司乙太網路交換設備"
       ],
       "customers": [
-        "中華電信(2412；企業網路應用對象)",
-        "Deutsche Telekom(電信通路應用對象)",
-        "Orange(電信通路應用對象)",
-        "Telefónica(企業網路通路對象)"
+        "合勤科技(Zyxel Communications；集團營運公司，非MOPS揭露客戶)",
+        "兆勤科技(Zyxel Networks；集團營運公司，非MOPS揭露客戶)",
+        "Microsoft(雲端平台生態對象，非MOPS揭露客戶)",
+        "Amazon Web Services(雲端平台生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "明泰(3380)",
@@ -31,57 +30,50 @@
         "Fortinet"
       ],
       "risks": [
-        "網通安全設備品牌競爭激烈",
-        "中小企業IT預算有限"
+        "MOPS本體只有一般投資業，產品與客戶均須下鑽子公司驗證",
+        "單月營收大幅下滑且控股合併數據無法拆分資安占比"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：一般投資業；產品角色來自集團網通子公司"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3704",
+          "claim": "MOPS主要經營業務：一般投資業。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收19.17億元，YoY-11.8%，MoM-44.7%，累計YoY+10.3%"
+          "claim": "2026年7月營收19.17億元，MoM-44.7%、YoY-11.8%、累計YoY+10.3%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "DPI、IDS/IPS、應用識別與雲端沙箱威脅分析",
-        "IPsec/SSL VPN、SD-WAN路徑選擇與零信任存取政策",
-        "Nebula多租戶雲端佈署、韌體管理與設備遙測"
+        "集團產品的狀態式封包檢測、存取規則與威脅阻擋",
+        "集團產品的IPsec／SSL VPN加密通道與身分驗證",
+        "集團雲端平台的多租戶設備佈署、設定同步與告警"
       ],
       "swot": {
         "strengths": [
-          "集團具Zyxel防火牆、VPN、SD-WAN與Nebula雲管產品組合",
-          "2026年前7月累計營收YoY+10.3%，中期需求仍較去年成長"
+          "集團脈絡涵蓋網路設備、VPN與雲端管理，可形成硬體加服務組合",
+          "前七月累計營收YoY+10.3%，全年累計仍維持成長"
         ],
         "weaknesses": [
-          "MOPS本體只揭露一般投資業，產品與技術需透過子公司才能落地",
-          "2026年7月營收YoY-11.8%、MoM-44.7%，單月出貨波動顯著"
+          "母公司MOPS未揭露任何軟體、雲端或資安產品",
+          "2026年7月營收MoM-44.7%、YoY-11.8%，認列波動大"
         ],
         "opportunities": [
-          "中小企業從單機防火牆升級雲端集中管理與訂閱式安全服務",
-          "Wi-Fi、交換器與防火牆整合可提高Nebula每客戶訂閱價值"
+          "企業分支網路雲端化可增加集中管理與安全訂閱需求",
+          "零信任與遠端辦公可推動VPN、防火牆及身分整合升級"
         ],
         "threats": [
-          "Fortinet、Palo Alto Networks及Cisco在企業資安品牌與研發規模領先",
-          "SASE與純雲端安全服務可能取代部分實體防火牆需求"
+          "Fortinet、Cisco等大廠以平台綁定壓縮集團產品空間",
+          "若未分辨母子公司，容易把投資收益與產品營收混為一談"
         ]
       }
     },

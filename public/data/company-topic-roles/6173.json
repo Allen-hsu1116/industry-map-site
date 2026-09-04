@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -496,21 +496,19 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "信昌電為晶片電容/電阻/介電瓷粉專業製造商，提供儲能系統用高壓陶瓷電容與突波保護元件，受惠儲能變流器需求成長。",
+      "supplyChainStage": "passive_component_adjacency",
+      "roleType": "passive_component_application",
+      "roleSummary": "信昌電MOPS支持晶片電容、晶片電阻與介電瓷粉，未揭露電芯、正負極材料、BMS或儲能變流器；本題材僅是被動元件在儲能電力電子中的應用鄰接。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，但不能歸因儲能。",
       "products": [
-        "高壓陶瓷電容(儲能變流器DC-Link濾波>1500V)",
-        "晶片電阻(儲能BMS電路0.1%精度)",
-        "突波吸收器(儲能系統過壓保護Va>600V)",
-        "車規級MLCC(儲能逆變器功率模組用)",
-        "介電瓷粉(儲能用高壓電容原料)"
+        "儲能控制板應用的晶片電容",
+        "電池監控與電源電路應用的晶片電阻",
+        "多層陶瓷電容用介電瓷粉"
       ],
       "customers": [
-        "台達電(2308)(儲能變流器被動元件)",
-        "東元(1504)(儲能系統被動元件)",
-        "康舒(6282)(儲能PCS被動元件)",
-        "禾伸堂(3028)(儲能BMS用被動元件)"
+        "台達電(2308；儲能電力電子應用對象，非MOPS揭露客戶)",
+        "康舒(6282；電源轉換應用對象，非MOPS揭露客戶)",
+        "東元(1504；儲能系統應用對象，非MOPS揭露客戶)",
+        "國巨(2327；被動元件產業鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "國巨(2327)",
@@ -518,54 +516,50 @@
         "太陽誘電(Taiyo Yuden)"
       ],
       "risks": [
-        "儲能被動元件佔營收比重低",
-        "中國被動元件廠低價競爭"
+        "未揭露電芯、電池材料、BMS或PCS產品",
+        "公司月營收無法拆分儲能應用占比"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 晶片電容、晶片電阻、介電瓷粉"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6173",
+          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind：2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-19",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "儲能BMS用精密電阻(0.1%精度薄膜製程)",
-        "高壓變流器濾波電容(>1500V DC耐壓設計)",
-        "突波保護元件(Va>600V氧化鋅壓敏電阻)"
+        "介電瓷粉配方、粒徑與燒結溫度控制",
+        "晶片電容多層疊印與電極共燒製程",
+        "晶片電阻厚膜印刷與雷射修阻"
       ],
       "swot": {
         "strengths": [
-          "高壓陶瓷電容(>1500V DC-Link)切入儲能變流器供應鏈",
-          "儲能BMS用精密電阻(0.1%精度薄膜製程)技術能力",
-          "突波保護元件(Va>600V氧化鋅壓敏電阻)適用儲能系統"
+          "MOPS直接支持晶片電容、晶片電阻與介電瓷粉的垂直材料能力",
+          "2026年7月公司營收5.37億元、YoY+47.9%，整體需求回升"
         ],
         "weaknesses": [
-          "儲能被動元件佔整體營收比重極低",
-          "儲能市場競爭激烈，被動元件ASP壓力大",
-          "高壓電容與突波吸收器面臨國巨/興勤等競爭"
+          "不生產電芯、正負極材料或儲能系統，題材直接性低",
+          "公司整體營收成長不能證明儲能訂單增加"
         ],
         "opportunities": [
-          "儲能系統裝置量快速增長帶動PCS被動元件需求",
-          "BMS精密電阻在電池管理系統應用增長",
-          "電動車充電樁用高壓被動元件新應用"
+          "儲能PCS與BMS擴產可增加電容及電阻用量",
+          "高可靠電力電子設計可帶動介電材料與被動元件規格升級"
         ],
         "threats": [
-          "儲能系統降價壓力傳導至被動元件供應鏈",
-          "中國儲能逆變器廠低成本競爭",
-          "被動元件大宗化風險"
+          "國巨、華新科與日系被動元件商競爭規模與認證",
+          "儲能系統降價可能向上游傳導價格壓力"
         ]
       }
     }

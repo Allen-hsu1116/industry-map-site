@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -259,22 +259,19 @@
       "topicName": "電商零售與物流平台",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "家登為晶圓載具(FOUP/Reticle Pod)製造商，建立晶圓廠耗材B2B電子採購平台，數位化供應鏈管理服務台積電等一線客戶。",
+      "supplyChainStage": "semiconductor_products_outside_ecommerce",
+      "roleType": "outside_topic_monitoring",
+      "roleSummary": "家登MOPS只揭露光罩、晶圓與機台設備產品，未揭露電商平台、零售或物流服務；本角色降為半導體B2B產品交付的題外觀察，不能把自有接單流程寫成電商業務。FinMind顯示2026年7月營收8.71億元、MoM+15.8%、YoY+71.7%，但成長不能歸因電商。",
       "products": [
-        "晶圓傳送盒(FOUP)B2B線上採購平台",
-        "光罩盒(Reticle Pod)線上訂購系統(EUV/DUV)",
-        "晶圓載具數位化供應鏈管理平台(SCM)",
-        "廠務備品耗材B2B電子採購系統",
-        "晶圓廠耗材線上規格選配與報價系統"
+        "光罩傳送與保護盒類光罩解決方案",
+        "晶圓傳送載具類晶圓解決方案",
+        "半導體製程機台設備產品"
       ],
       "customers": [
-        "台積電(2330)(晶圓傳送耗材B2B採購)",
-        "聯電(2303)(光罩盒線上採購)",
-        "世界先進(5347)(晶圓載具電子訂購)",
-        "日月光(3711)(封裝耗材採購)",
-        "力積電(5770)(晶圓廠耗材B2B)"
+        "台積電(2330；半導體載具應用對象，非MOPS揭露客戶)",
+        "聯電(2303；晶圓載具應用對象，非MOPS揭露客戶)",
+        "世界先進(5347；晶圓廠應用對象，非MOPS揭露客戶)",
+        "力積電(6770；晶圓廠應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "Entegris(半導體耗材線上銷售)",
@@ -282,55 +279,49 @@
         "Versum(半導體材料電子採購)"
       ],
       "risks": [
-        "與電商零售物流題材關聯度低，此分類可能有誤",
-        "半導體耗材為B2B直銷模式，非電商零售模式",
-        "建議重新評估此題材分類是否保留"
+        "MOPS未揭露任何電商、零售或第三方物流營收",
+        "把半導體產品接單流程誤當平台服務會高估題材曝險"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 光罩解決方案產品晶圓解決方案產品機台設備產品"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3680",
+          "claim": "MOPS主要經營業務：光罩解決方案產品、晶圓解決方案產品、機台設備產品。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind：2026年7月營收8.71億元，MoM+15.8%、YoY+71.7%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "晶圓廠耗材B2B電子商務平台架構(微服務)",
-        "供應鏈數位化管理系統(SCM)API整合",
-        "FOUP/Reticle Pod線上規格選配與報價引擎"
+        "載具密封、微粒控制與潔淨度管理",
+        "光罩／晶圓載具尺寸精度及自動搬運介面整合"
       ],
       "swot": {
         "strengths": [
-          "半導體耗材B2B線上採購平台(FOUP/光罩盒)具數位化差異化",
-          "客戶含台積電/聯電，B2B採購量穩定",
-          "7月營收8.71億MoM+15.8%，線上採購滲透率提升"
+          "MOPS明確支持光罩、晶圓與機台設備三類產品",
+          "2026年7月公司營收8.71億元、YoY+71.7%，本業出貨動能強"
         ],
         "weaknesses": [
-          "電商零售物流為間接角色，家登核心為半導體耗材製造",
-          "B2B採購平台市場規模受限於半導體耗材總量",
-          "平台技術與物流基礎設施投入有限"
+          "沒有MOPS證據支持電商平台、零售或第三方物流產品",
+          "營收為公司整體口徑，不能歸因本題材"
         ],
         "opportunities": [
-          "半導體耗材線上採購數位化趨勢",
-          "擴展至更多半導體耗材品項(化學品/氣體)",
-          "中小型半導體廠B2B採購平台新客群"
+          "半導體供應鏈可透過序號追溯與數位訂單介面改善交付效率",
+          "晶圓廠擴產可增加載具與機台設備需求，但仍屬半導體本業"
         ],
         "threats": [
-          "大型半導體廠(台積電)有自有採購系統",
-          "半導體耗材B2B電商競爭者少但進入門檻低",
-          "傳統代理商數位化轉型競爭"
+          "晶圓廠自建採購系統，無法自然形成外部平台收入",
+          "題材分類失真可能把製造收入錯算成電商成長"
         ]
       }
     },

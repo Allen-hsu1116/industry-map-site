@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5483",
   "companyName": "中美晶",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "renewable-energy",
@@ -97,72 +97,71 @@
       "topicName": "晶圓代工與第三代半導體",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "silicon_wafer",
-      "roleType": "solar_grade_silicon_wafer",
-      "roleSummary": "中美晶本體以太陽能產品為主，晶圓代工題材主要透過子公司環球晶的半導體矽晶圓、SOI與SiC基板間接曝險。 FinMind顯示2026年7月營收69.98億元、MoM-9.2%，短期出貨仍有波動。",
+      "supplyChainStage": "solar_business_group_adjacency",
+      "roleType": "parent_outside_foundry_topic",
+      "roleSummary": "中美晶本體MOPS只揭露太陽能晶錠、晶圓、電池、模組與發電系統，未揭露半導體晶圓代工；題材脈絡可提及集團與環球晶的關聯，但不能把子公司產品冒充母公司MOPS本業。FinMind顯示2026年7月營收69.98億元、MoM-9.2%、YoY+27.7%，無法拆分晶圓代工貢獻。",
       "products": [
-        "環球晶4/6/8吋拋光矽晶圓",
-        "環球晶12吋拋光與磊晶矽晶圓",
-        "SOI絕緣層上矽晶圓",
-        "6吋碳化矽SiC基板與磊晶片"
+        "太陽能單晶晶錠",
+        "太陽能矽晶圓",
+        "太陽能電池",
+        "太陽能模組",
+        "太陽能發電系統"
       ],
       "customers": [
-        "台積電(2330；矽晶圓供應鏈對象)",
-        "聯電(2303；成熟製程矽晶圓對象)",
-        "Intel(邏輯晶片矽晶圓對象)",
-        "Infineon(功率半導體/SiC對象)",
-        "Micron(記憶體矽晶圓對象)"
+        "環球晶(6488；集團半導體矽晶圓關聯公司，非MOPS揭露客戶)",
+        "台積電(2330；集團半導體晶圓下游對象，非MOPS揭露客戶)",
+        "聯電(2303；集團半導體晶圓下游對象，非MOPS揭露客戶)",
+        "世界先進(5347；集團半導體晶圓下游對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "環球晶(6488)",
         "台勝科(3532)"
       ],
       "risks": [
-        "半導體矽晶圓與太陽能矽晶圓純度要求不同",
-        "半導體矽晶圓認證週期極長"
+        "母公司MOPS未揭露半導體晶圓或晶圓代工產品",
+        "集團子公司曝險若未分層描述，容易重複計算營收與產能"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5483",
+          "claim": "MOPS主要經營業務：太陽能晶錠、太陽能晶圓、太陽能電池、太陽能模組、太陽能發電系統。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind：2026年7月營收69.98億元，MoM-9.2%、YoY+27.7%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "CZ長晶與低缺陷密度單晶控制",
-        "12吋切片、研磨、拋光及磊晶均勻性控制",
-        "SiC基板微管缺陷降低與高品質磊晶"
+        "太陽能單晶長晶、切片與厚度均勻性控制",
+        "太陽能電池接面形成、表面鈍化與電極製程",
+        "模組層壓、封裝可靠度與發電系統整合"
       ],
       "swot": {
         "strengths": [
-          "透過環球晶具4至12吋完整產品線",
-          "掌握拋光、磊晶、SOI與SiC多基板技術"
+          "MOPS支持從太陽能晶錠、晶圓到電池、模組及電站的完整鏈條",
+          "2026年7月公司營收69.98億元、YoY+27.7%，整體規模具支撐"
         ],
         "weaknesses": [
-          "FinMind顯示2026年7月營收69.98億元、MoM-9.2%，短期出貨仍有波動",
-          "曝險主要來自子公司環球晶而非中美晶本體",
-          "12吋擴產資本支出大且認證期長"
+          "本體揭露是太陽能而非晶圓代工，題材需降為集團間接曝險",
+          "7月營收MoM-9.2%，且數據無法拆分集團半導體貢獻"
         ],
         "opportunities": [
-          "AI/HPC推升12吋高品質矽晶圓需求",
-          "車用功率元件推升SiC需求"
+          "集團層級可受惠半導體矽晶圓需求，但須以子公司資料另行驗證",
+          "太陽能電池與模組效率提升可改善本體產品競爭力"
         ],
         "threats": [
-          "信越、SUMCO與Siltronic競爭",
-          "成熟製程修正壓抑8吋價格"
+          "把環球晶產品直接掛到中美晶會造成公司層級錯置",
+          "太陽能價格競爭與半導體晶圓景氣可能同時放大集團波動"
         ]
       }
     },

@@ -2,29 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "1513",
   "companyName": "中興電",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
       "topicName": "重電、電纜與 EPC 工程",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "electrical_equipment",
-      "roleType": "electrical_equipment_manufacturer",
-      "roleSummary": "2026年7月營收24.10億元、YoY+3.8%、MoM-14.9%，累計YoY+3.5%，標案穩定但認列節奏波動。",
+      "supplyChainStage": "electrical_equipment_and_epc",
+      "roleType": "grid_equipment_epc_supplier",
+      "roleSummary": "中興電MOPS直接支持輸配電設備暨工程、節能空調與發電工程，以及氫能發電和產氫系統，是重電與EPC核心角色；但未逐項揭露電壓等級或具名客戶。2026年7月營收24.10億元、MoM-14.9%、YoY+3.8%、累計YoY+3.5%，工程認列節奏偏波動。",
       "products": [
-        "161/345kV GIS氣體絕緣開關設備",
-        "161/345kV電力與配電變壓器",
-        "中低壓配電盤與保護控制盤",
-        "變電站與輸配電工程EPC統包",
-        "固定式PEM燃料電池與產氫系統"
+        "氣體絕緣開關設備(GIS)",
+        "電力與配電變壓器",
+        "變電站與輸配電工程EPC",
+        "節能空調及發電設備工程",
+        "氫能發電與產氫系統"
       ],
       "customers": [
-        "台電(GIS、變壓器與變電站EPC)",
-        "中鋼(2002；廠區配電設備)",
-        "台積電(2330；晶圓廠供配電對象)",
-        "沃旭能源Orsted(離岸風電併網對象)",
-        "台灣高鐵(2633；站區供配電對象)"
+        "台電(輸配電設備與工程應用對象，非MOPS揭露客戶)",
+        "台積電(2330；廠務供配電應用對象，非MOPS揭露客戶)",
+        "中鋼(2002；工業供配電應用對象，非MOPS揭露客戶)",
+        "台灣高鐵(2633；交通供配電應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "士林電機(1503)(GIS/變壓器)",
@@ -33,52 +32,50 @@
         "中天(1516)(電力工程)"
       ],
       "risks": [
-        "6月營收28.33億年增8.3%、累計年增3.5%，輸配電設備標案收入穩定但成長有限",
-        "GIS/變壓器市場國際大廠ABB/Siemens競爭壓力",
-        "氫能發電為新佈局，短期營收貢獻有限，研發投入侵蝕利潤"
+        "大型標案受驗收里程碑影響，月營收波動明顯",
+        "氫能系統仍需面對設備成本、供氫效率與安全認證"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 綠能/輸配電力設備暨工程節能空調及發電設備暨工程氫能發電暨產氫系統"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1513",
+          "claim": "MOPS主要經營業務：綠能／輸配電力設備暨工程、節能空調及發電設備暨工程、氫能發電暨產氫系統。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收24.10億元，MoM-14.9%、YoY+3.8%、累計YoY+3.5%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-09-04",
       "status": "verified",
       "techFocus": [
-        "345kV GIS絕緣、電弧消除與局部放電控制",
-        "IEC 61850保護電驛與SCADA整合",
-        "PEM燃料電池電堆與氫氣供應整合"
+        "GIS絕緣協調、電弧遮斷與局部放電監測",
+        "變壓器繞組、絕緣油冷卻與損耗控制",
+        "產氫、儲氫與燃料電池發電的系統整合"
       ],
       "swot": {
         "strengths": [
-          "161/345kV GIS與EPC具長期實績",
-          "輸配電、節能與氫能可交叉承攬"
+          "MOPS支持輸配電設備、工程、節能發電與氫能的多元能力",
+          "2026年7月營收YoY+3.8%、累計YoY+3.5%，整體維持成長"
         ],
         "weaknesses": [
-          "2026年7月營收24.10億元、YoY+3.8%、MoM-14.9%，累計YoY+3.5%，標案穩定但認列節奏波動",
-          "大型工程認列造成月營收波動",
-          "客戶集中台電與公共標案"
+          "7月營收MoM-14.9%，工程認列時點造成明顯波動",
+          "重電與EPC需占用營運資金並承擔履約及原料成本風險"
         ],
         "opportunities": [
-          "台電強韌電網帶動重電需求",
-          "AI資料中心增加高可靠供配電工程"
+          "強韌電網與資料中心用電成長可擴大變電設備及EPC需求",
+          "氫能示範案可帶動產氫與燃料電池系統整合經驗"
         ],
         "threats": [
-          "華城、士電與ABB/Siemens競爭",
-          "SF6規範增加替代技術成本"
+          "士電、華城及國際重電商競爭標案與交期",
+          "環保絕緣介質、氫安規及工程成本上升增加研發投入"
         ]
       }
     },

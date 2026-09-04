@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -336,67 +336,70 @@
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "ic_distribution",
-      "roleType": "networking_ic_customer",
-      "roleSummary": "中磊為網通IC設計公司的重要終端客戶，採購Wi-Fi/5G晶片用於ODM產品。7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%。",
+      "supplyChainStage": "broadband_equipment_ic_application",
+      "roleType": "downstream_ic_platform_user",
+      "roleSummary": "中磊MOPS揭露有線與無線網路產品，屬通訊IC的下游整機應用者而非IC設計商；Qualcomm、Broadcom等只能標示平台或供應鏈對象。2026年7月營收79.80億元、YoY+51.3%、累計YoY+56.9%，公司說明北美訂單增溫，但不能歸因特定晶片。",
       "products": [
-        "網通SoC採購(Qualcomm Wi-Fi 7/Broadcom/MediaTek)",
-        "5G數據機晶片採購(Qualcomm X系列)",
-        "乙太網路交換器晶片採購(Broadcom/Marvell)"
+        "寬頻網路閘道器",
+        "Wi-Fi無線路由器與存取點",
+        "有線網路接取終端",
+        "行動寬頻CPE設備"
       ],
       "customers": [
-        "Qualcomm(採購Wi-Fi/5G晶片)",
-        "Broadcom(採購交換器晶片)",
-        "MediaTek(採購網通SoC)"
+        "Qualcomm(無線晶片平台對象，非MOPS揭露供應商)",
+        "Broadcom(寬頻晶片平台對象，非MOPS揭露供應商)",
+        "聯發科(2454；網通晶片平台對象，非MOPS揭露供應商)",
+        "瑞昱(2379；乙太網路晶片平台對象，非MOPS揭露供應商)"
       ],
       "competitors": [
         "智邦(2391)",
         "啟碁(6285)"
       ],
       "risks": [
-        "晶片供應受地緣政治影響",
-        "IC設計公司漲價壓縮ODM毛利"
+        "角色是晶片採購與平台整合，不是IC設計收入",
+        "北美訂單集中可能提高客戶與區域波動"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5388",
+          "claim": "MOPS主要經營業務：有線網路產品、無線網路產品及其他。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收79.80億元，MoM+9.7%、YoY+51.3%、累計YoY+56.9%；公司說明北美市場訂單增溫。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "Wi-Fi 7晶片選型與系統整合(802.11be)",
-        "5G Open RAN白盒化硬體參考設計"
+        "有線寬頻接取、乙太網路與家庭閘道路由整合",
+        "Wi-Fi射頻校準、MIMO天線及多裝置吞吐驗證",
+        "CPE韌體、遠端佈署、電信商管理介面與安全更新"
       ],
       "swot": {
         "strengths": [
-          "ODM規模採購力強，可與IC設計公司議價",
-          "7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%帶動晶片採購量增長"
+          "MOPS支持有線與無線網路產品的整機整合能力",
+          "2026年7月營收79.80億元、YoY+51.3%，北美訂單增溫"
         ],
         "weaknesses": [
-          "無自有IC設計能力",
-          "晶圓代工產能波動影響供應"
+          "不設計IC，對上游晶片規格、價格與供貨高度依賴",
+          "營收成長為整機口徑，無法歸因任何單一晶片平台"
         ],
         "opportunities": [
-          "Wi-Fi 7/5G升級週期帶動採購量",
-          "國產化晶片降低供應鏈風險"
+          "寬頻與Wi-Fi設備升級可提高網通SoC、PHY與射頻元件價值量",
+          "電信商更新家庭閘道器可擴大平台驗證案量"
         ],
         "threats": [
-          "IC設計公司垂直整合進入ODM",
-          "晶片缺貨風險"
+          "北美電信商拉貨反轉會造成庫存與出貨波動",
+          "晶片平台改版或出口限制可能拉長產品認證週期"
         ]
       }
     },

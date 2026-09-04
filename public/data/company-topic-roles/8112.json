@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -97,69 +97,69 @@
       "topicName": "水資源、環保與電子廢料回收",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "ewaste_component_recovery",
-      "roleType": "ewaste_component_distributor",
-      "roleSummary": "至上並非廢棄物處理商；環保角色限於退貨、呆滯庫存與報廢電子元件的分級及委外資源化。 2026年7月營收768.74億元、YoY+333.5%，龐大交易量同時放大逆向物流與呆滯料管理需求。",
+      "supplyChainStage": "distribution_operations_adjacency",
+      "roleType": "reverse_logistics_monitoring",
+      "roleSummary": "至上MOPS只揭露電子零組件經銷，未揭露水處理、廢棄物清運、金屬回收或資源化服務；本題材最多是通路庫存、退貨與報廢料管理的營運鄰接。2026年7月營收768.74億元、YoY+333.5%，主因零組件漲價與伺服器、手機拉貨，不能算成環保收入。",
       "products": [
-        "退貨記憶體與IC功能測試分級批次",
-        "呆滯電子元件可追溯轉售服務",
-        "報廢PCB與IC含金屬廢料委外資源化"
+        "記憶體IC經銷服務",
+        "伺服器用電子元件經銷服務",
+        "手機用電子元件經銷服務"
       ],
       "customers": [
-        "光洋科(1785；貴金屬電子廢料處理對象)",
-        "中台資源科技(6923；電子廢棄物資源化對象)",
-        "可寧衛(8422；事業廢棄物處理對象)",
-        "台灣鋼聯(6581；含金屬廢棄物資源化對象)"
+        "三星電子(Samsung Electronics；零組件供應鏈對象，非MOPS揭露代理品牌)",
+        "鴻海(2317；電子元件應用對象，非MOPS揭露客戶)",
+        "廣達(2382；伺服器元件應用對象，非MOPS揭露客戶)",
+        "聯發科(2454；IC產業鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "文曄(3034)",
         "世平(2451)"
       ],
       "risks": [
-        "回收電子元件市場極小"
+        "MOPS未揭露回收處理、再生材料或水資源產品",
+        "營收高速增長也會放大庫存跌價與報廢料管理風險"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=8112",
+          "claim": "MOPS主要經營業務：電子零組件經銷業務。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%、累計YoY+180.4%；公司說明記憶體等零組件漲價且伺服器、手機客戶拉貨強。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "IC功能測試、批號追溯與良品分級",
-        "RMA逆向物流及RoHS/REACH管理",
-        "報廢料序號銷毀與處理流向稽核"
+        "批號、序號、效期與倉儲環境的元件追溯",
+        "RMA退貨分流、功能判定與逆向物流管理",
+        "RoHS／REACH物質資料及報廢流向稽核"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收768.74億元、YoY+333.5%，龐大交易量同時放大逆向物流與呆滯料管理需求",
-          "通路網路可跨客戶重新配置停產料號",
-          "倉儲與批號追溯可提高再利用率"
+          "大型電子元件通路規模有利建立批號追溯與逆向物流流程",
+          "2026年7月營收768.74億元、YoY+333.5%，通路週轉量大幅增加"
         ],
         "weaknesses": [
-          "非回收處理商，最終資源化須委外",
-          "MOPS未揭露循環經濟收入"
+          "不是水處理或資源化業者，最終廢料處理須委外",
+          "公司營收成長來自零組件價格與拉貨，不能歸因環保題材"
         ],
         "opportunities": [
-          "碳盤查提高可追溯再利用需求",
-          "原廠RMA帶動逆向物流服務"
+          "供應鏈碳盤查可增加可追溯退貨與報廢流向管理需求",
+          "原廠RMA與庫存再配置可降低呆滯料損失"
         ],
         "threats": [
-          "再利用元件失效造成保固風險",
-          "廢棄物轉移法規提高成本"
+          "記憶體價格反轉可能造成庫存跌價與報廢量上升",
+          "廢棄物轉移及跨境電子料規範提高通路合規成本"
         ]
       }
     },

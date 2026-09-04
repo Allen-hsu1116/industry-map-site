@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5289",
   "companyName": "宜鼎",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "cxl-memory-pooling",
@@ -169,22 +169,21 @@
       "topicId": "niche-memory",
       "topicName": "NOR Flash 與利基記憶體",
       "topicType": "product",
-      "directness": "indirect",
-      "supplyChainStage": "niche_storage",
-      "roleType": "industrial_niche_storage",
-      "roleSummary": "FinMind顯示2026年7月營收8.49億元、MoM+3.5%，工控記憶體需求維持成長。",
+      "directness": "core",
+      "supplyChainStage": "industrial_memory_module",
+      "roleType": "industrial_storage_and_dram_module",
+      "roleSummary": "宜鼎MOPS直接支持工業用嵌入式儲存裝置與工業用DRAM模組，屬利基記憶體直接角色，但未揭露NOR Flash產品或具名客戶。FinMind顯示2026年8月營收86.80億元、MoM+2.2%、YoY+576.3%；增幅為公司整體口徑，需防高基期與產品組合波動。",
       "products": [
-        "工規SLC/iSLC NAND SSD(SATA/PCIe)",
-        "工規eMMC 5.1與SD記憶卡",
-        "寬溫DDR4/DDR5 ECC模組",
-        "斷電保護2.5吋SATA與M.2 NVMe SSD"
+        "工業用SATA固態硬碟",
+        "工業用PCIe NVMe固態硬碟",
+        "工業用eMMC與記憶卡",
+        "工業用DDR4／DDR5記憶體模組"
       ],
       "customers": [
-        "研華(2395；工業電腦儲存應用)",
-        "新漢(8234；邊緣平台工規儲存)",
-        "友通(2397；工業主機板嵌入式儲存)",
-        "艾訊(3088；工業電腦寬溫SSD)",
-        "凌華(6166；自動化平台記憶體)"
+        "研華(2395；工業電腦記憶體應用對象，非MOPS揭露客戶)",
+        "新漢(8234；邊緣電腦儲存應用對象，非MOPS揭露客戶)",
+        "友通(2397；工業主板記憶體應用對象，非MOPS揭露客戶)",
+        "凌華(6166；工業運算平台應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "創見(2451)",
@@ -192,51 +191,50 @@
         "旺宏(2337)"
       ],
       "risks": [
-        "NOR Flash佔比低",
-        "NOR Flash原廠(旺宏/華邦)競爭"
+        "MOPS未揭露NOR Flash，題材應聚焦工業NAND儲存與DRAM模組",
+        "上游NAND／DRAM價格及供貨循環會放大庫存波動"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5289",
+          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置、工業用動態隨機記憶體模組。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年8月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "claim": "FinMind：2026年8月營收86.80億元，MoM+2.2%、YoY+576.3%。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
+      "confidence": "high",
+      "lastVerified": "2026-09-04",
       "status": "verified",
       "techFocus": [
-        "iSLC寫入放大控制與P/E壽命延長",
-        "iCell硬體斷電保護與資料完整性",
-        "-40至85°C寬溫篩選與固定BOM"
+        "NAND磨耗平均、ECC與壞區管理韌體",
+        "斷電保護、寫入快取與資料完整性設計",
+        "寬溫篩選、固定BOM與長供貨生命週期管理"
       ],
       "swot": {
         "strengths": [
-          "FinMind顯示2026年7月營收8.49億元、MoM+3.5%，工控記憶體需求維持成長",
-          "MOPS直接揭露工業儲存與DRAM模組",
-          "iSLC、斷電保護與寬溫形成差異化"
+          "MOPS直接支持工業嵌入式儲存與DRAM模組兩大產品線",
+          "2026年8月營收86.80億元、YoY+576.3%，整體出貨規模大幅擴張"
         ],
         "weaknesses": [
-          "NAND/DRAM顆粒依賴上游原廠",
-          "工規驗證期長且訂單分散"
+          "不生產記憶體晶粒，成本與交期依賴上游NAND／DRAM原廠",
+          "超高年增率為公司整體口徑，不能直接視為利基記憶體長期常態"
         ],
         "opportunities": [
-          "Edge AI增加高耐久儲存需求",
-          "車載醫療推升長供貨產品"
+          "Edge AI、機器視覺與自動化增加高耐久工業儲存需求",
+          "設備長生命週期有利固定BOM、寬溫與斷電保護產品提高附加價值"
         ],
         "threats": [
-          "創見、宇瞻及國際模組廠競爭",
-          "記憶體循環造成庫存跌價"
+          "記憶體價格反轉可能造成庫存跌價與客戶延後採購",
+          "創見、宇瞻及國際工控儲存商競爭認證與價格"
         ]
       }
     },

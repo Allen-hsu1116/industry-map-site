@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2492",
   "companyName": "華新科",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -98,20 +98,21 @@
       "topicName": "電阻與被動保護元件",
       "topicType": "product",
       "directness": "core",
-      "supplyChainStage": "passive_components",
-      "roleType": "chip_resistor_manufacturer",
-      "roleSummary": "華新科6月營收39.6億YoY+25.8%，累計209億YoY+14.7%。台灣第二大晶片電阻廠，車規AEC-Q200產品為差異化優勢，被動元件景氣復甦帶動YoY雙位數成長。",
+      "supplyChainStage": "resistor_and_protection_components",
+      "roleType": "chip_and_special_resistor_manufacturer",
+      "roleSummary": "華新科MOPS直接揭露晶片電阻、車用與工業用特殊電阻及保險絲，是電阻與保護元件核心廠；但未揭露特定尺寸、精度、AEC認證或Tesla／Bosch客戶。2026年7月營收44.44億元、MoM+12.2%、YoY+42.0%、累計YoY+18.7%。",
       "products": [
-        "晶片電阻(厚膜0402-2512)",
-        "薄膜精密電阻(0.1% tolerance/低TCR)",
-        "車用特殊電阻(AEC-Q200車規認證)",
-        "保險絲(過電流保護電阻)"
+        "厚膜晶片電阻",
+        "精密晶片電阻",
+        "車用特殊電阻",
+        "工業用特殊電阻",
+        "過電流保護保險絲"
       ],
       "customers": [
-        "Tesla(車用電阻AEC-Q200)",
-        "Bosch(車規被動元件)",
-        "台達電(2308)(電源模組電阻)",
-        "群光(2385)(電源用電阻)"
+        "台達電(2308；電源電阻應用對象，非MOPS揭露客戶)",
+        "群光(2385；電源模組應用對象，非MOPS揭露客戶)",
+        "鴻海(2317；電子設備被動元件應用對象，非MOPS揭露客戶)",
+        "Bosch(車用電阻應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "國巨(2327)(晶片電阻龍頭)",
@@ -119,55 +120,50 @@
         "Vishay(車用電阻)"
       ],
       "risks": [
-        "6月營收39.61億YoY+25.8%晶片電阻需求復甦",
-        "晶片電阻為標準品差異化低，價格競爭激烈",
-        "車規AEC-Q200認證週期長且量產爬坡慢"
+        "標準晶片電阻同質化高，價格容易受產能循環影響",
+        "MOPS未證實特定車廠、認證或高階規格，不能據此估算高毛利占比"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2492",
+          "claim": "MOPS主要經營業務：積層陶瓷與圓板電容、晶片電阻、保險絲、電感、射頻元件、高壓／高頻／精密電容、車用與工業用特殊電阻及陶瓷粉末。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收44.44億元，MoM+12.2%、YoY+42.0%、累計YoY+18.7%。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-09",
+      "lastVerified": "2026-09-04",
       "status": "verified",
       "techFocus": [
-        "厚膜/薄膜晶片電阻BME卑金屬電極製程",
-        "車規AEC-Q200認證電阻(-55~125°C寬溫)",
-        "陶瓷粉末自主調配與燒結技術(Ni電極)"
+        "厚膜電阻漿料印刷、燒結與阻值均勻性控制",
+        "雷射修阻、阻值公差與溫度係數控制",
+        "陶瓷基板、端電極鍍層與熱循環可靠度"
       ],
       "swot": {
         "strengths": [
-          "晶片電阻產品線完整(厚膜0402-2512/薄膜精密0.1% tolerance)，車規AEC-Q200認證打入Tesla/Bosch供應鏈",
-          "BME卑金屬電極製程降低貴金屬成本，6月營收39.61億YoY+25.8%反映被動元件全面復甦",
-          "薄膜精密電阻(低TCR)切入工控/量測儀器高毛利應用，產品組合持續優化"
+          "MOPS支持晶片、車用、工業用電阻與保險絲的完整產品組合",
+          "2026年7月營收44.44億元、YoY+42.0%，整體需求強勁"
         ],
         "weaknesses": [
-          "晶片電阻市占落後國巨(2327)，集團內部資源分配可能影響電阻產品線投入",
-          "車規電阻認證客戶集中於Tesla/Bosch，新車廠導入進度較慢",
-          "標準厚膜晶片電阻屬大宗化產品，毛利率受限於中國低價競爭"
+          "公司亦有電容、電感與射頻元件，月營收不能單獨代表電阻景氣",
+          "標準厚膜電阻易受低價競爭，產品組合與良率決定毛利"
         ],
         "opportunities": [
-          "AI伺服器電源管理電路需大量精密電阻(0.1% tolerance)，薄膜電阻ASP高於厚膜3-5倍",
-          "車用電子化帶動車規電阻用量持續增長，L2+自動駕駛每車用量倍增",
-          "5G/6G基站建設帶動高頻電路用薄膜電阻需求"
+          "車用與工控電源管理可增加高可靠特殊電阻用量",
+          "AI伺服器電源與高速板卡升級可提高精密電阻需求"
         ],
         "threats": [
-          "中國國巨(2327)收購後市占集中，華新科晶片電阻議價空間受限",
-          "陸廠厚膜晶片電阻低價傾銷壓迫標準品毛利",
-          "車規認證投入成本高但回報週期長，若客戶流失將造成沉沒成本損失"
+          "國巨、Vishay與中國廠競爭價格、交期及認證資源",
+          "原料、陶瓷基板與金屬電極價格波動侵蝕報價利差"
         ]
       }
     },

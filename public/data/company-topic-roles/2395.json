@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2395",
   "companyName": "研華",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "edge-ai-aiot",
@@ -97,77 +97,69 @@
       "topicName": "工業自動化與 CNC 工具機",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "industrial_automation",
-      "roleType": "industrial_automation_platform",
-      "roleSummary": "研華MOPS明確揭露工業測控、工業電腦、嵌入式電腦卡與液晶電腦，是工業自動化直接供應者。2026年7月營收112.72億元、YoY+87.6%、MoM+11.4%，公告說明專案需求與出貨暢旺。",
+      "supplyChainStage": "industrial_control_and_edge_computing",
+      "roleType": "industrial_computing_platform",
+      "roleSummary": "研華MOPS直接揭露工業測控、工業電腦／工作站、嵌入式電腦卡及超薄液晶電腦，是工業自動化的控制與邊緣運算平台供應者；MOPS未逐項揭露特定型號、協議或具名客戶。2026年7月營收112.72億元、YoY+87.6%、累計YoY+40.3%，公司說明專案需求及出貨暢旺。",
       "products": [
-        "ADAM-4000/6000系列Modbus遠端I/O模組",
-        "UNO無風扇DIN-rail工業電腦",
-        "WISE-EdgeLink協議轉換閘道器",
-        "WebAccess/SCADA監控軟體",
-        "TPC系列觸控人機介面"
+        "工業量測與控制模組",
+        "工業用電腦與工作站",
+        "嵌入式電腦卡",
+        "超薄液晶工業電腦與人機介面"
       ],
       "customers": [
-        "西門子(Siemens；工業協議整合對象)",
-        "Rockwell Automation(控制系統整合對象)",
-        "台塑(1301；製程監控應用對象)",
-        "中鋼(2002；產線自動化應用對象)",
-        "台積電(2330；廠務監控應用對象)"
+        "台積電(2330；工廠監控應用對象，非MOPS揭露客戶)",
+        "台塑(1301；製程自動化應用對象，非MOPS揭露客戶)",
+        "中鋼(2002；產線控制應用對象，非MOPS揭露客戶)",
+        "Siemens(工業協議整合對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "泓格",
         "新漢"
       ],
       "risks": [
-        "大廠如 Siemens 自建方案競爭"
+        "標準IPC與I/O模組面臨同質化及中國工控商價格競爭",
+        "專案型出貨受製造業資本支出與驗收時點影響"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "研華 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2395",
-          "claim": "MOPS主要經營業務：工業測控、工業電腦、嵌入式電腦卡及液晶電腦"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2395 的月營收、股價、估值與法人資料。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2395",
+          "claim": "MOPS主要經營業務：工業測控產品、工業用電腦／工作站、嵌入式電腦卡、超薄液晶電腦。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收112.72億元，YoY+87.6%，公告稱專案需求與出貨暢旺"
+          "claim": "2026年7月營收112.72億元，MoM+11.4%、YoY+87.6%、累計YoY+40.3%；公司說明專案需求與出貨暢旺。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-09-04",
       "status": "verified",
       "techFocus": [
-        "Modbus RTU/TCP、OPC UA與MQTT多協議邊緣轉換",
-        "無風扇寬溫工業電腦、DIN-rail安裝與24VDC隔離I/O",
-        "SCADA時序資料採集、設備告警與邊緣規則引擎"
+        "Modbus／OPC UA／MQTT設備資料採集與協議轉換",
+        "無風扇寬溫工業電腦、隔離I/O與24VDC電源設計",
+        "SCADA時序資料、設備告警與邊緣規則處理"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認工業測控與工業電腦本業，從I/O、IPC到SCADA產品鏈完整",
-          "2026年7月營收112.72億元、YoY+87.6%，專案需求與出貨暢旺"
+          "MOPS支持從測控、嵌入式板卡到工業電腦的完整平台",
+          "2026年7月營收112.72億元、YoY+87.6%，專案與出貨需求暢旺"
         ],
         "weaknesses": [
-          "標準I/O與IPC硬體面臨同質化，軟體訂閱占比仍需提高",
-          "跨眾多垂直產業客製整合，專案交付與技術支援成本高"
+          "跨產業客製整合增加技術支援與交付成本",
+          "MOPS未拆分硬體、軟體與服務占比，平台黏著度不易量化"
         ],
         "opportunities": [
           "工廠數位化、能源管理與預測維護增加邊緣資料採集需求",
-          "OPC UA與MQTT標準化有利WISE-EdgeLink及WebAccess跨設備整合"
+          "開放工業協議可擴大跨設備整合及軟體服務機會"
         ],
         "threats": [
-          "西門子、Rockwell、Beckhoff與中國工控商同時競爭平台與價格",
-          "製造業資本支出轉弱會延後IPC、I/O與SCADA專案驗收"
+          "Siemens、Rockwell、Beckhoff與中國工控商競爭生態與價格",
+          "製造業資本支出轉弱會延後IPC、I/O與監控專案驗收"
         ]
       }
     },

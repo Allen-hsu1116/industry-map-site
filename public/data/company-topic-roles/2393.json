@@ -2,27 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2393",
   "companyName": "億光",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "led_packaging",
-      "roleType": "led_package_manufacturer",
-      "roleSummary": "億光6月營收18.3億YoY+10.6%，累計104億YoY+3.2%。台灣最大LED封裝廠，產品涵蓋可見光/不可見光LED、Mini LED背光、車用LED，LED封裝全球市佔前五。",
+      "supplyChainStage": "optoelectronic_components",
+      "roleType": "led_and_optoelectronic_component_supplier",
+      "roleSummary": "億光MOPS揭露電子製品、光電控制器與半導體原料／設備，支持光電元件本業，但未逐項證實Mini LED尺寸、850／940nm、AEC認證、市占或具名客戶。2026年7月營收19.74億元、MoM+7.8%、YoY+17.4%、累計YoY+5.2%，公司整體穩健回升。",
       "products": [
-        "SMD LED封裝(0402-5050白光/RGB)",
-        "Mini LED背光封裝(chip<200μm)",
-        "紅外線LED(850nm/940nm IR/VCSEL)",
-        "車用LED(頭燈/尾燈/車內照明AEC-Q102)"
+        "顯示器背光用LED封裝元件",
+        "照明用可見光LED封裝元件",
+        "感測用紅外線光電元件",
+        "車載照明用LED元件"
       ],
       "customers": [
-        "Samsung(Mini LED背光封裝)",
-        "Sony(顯示器LED背光)",
-        "汽車車燈廠(Stanley/小糸車用LED)",
-        "小米(消費電子LED)"
+        "友達(2409；顯示背光應用對象，非MOPS揭露客戶)",
+        "群創(3481；顯示背光應用對象，非MOPS揭露客戶)",
+        "光寶科(2301；光電產業鏈對象，非MOPS揭露客戶)",
+        "Stanley Electric(車燈應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "光寶科(2301)(LED封裝)",
@@ -31,55 +31,50 @@
         "億光自身(2393)(LED封裝龍頭)"
       ],
       "risks": [
-        "6月營收18.31億YoY+10.6%累計+3.2%LED需求溫和復甦",
-        "LED封裝為成熟產業，價格競爭激烈毛利受限",
-        "Mini LED背光需求受消費電子景氣影響大"
+        "MOPS業務文字較概括，未證實特定封裝尺寸、波長或車規認證",
+        "中國LED封裝產能與顯示技術替代壓抑標準品價格"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 電子製品之加工製造買賣業務各種光電控制器之加工買賣業務半導體原料及其設備之製造買賣業務"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2393",
+          "claim": "MOPS主要經營業務：電子製品加工製造買賣、光電控制器加工買賣、半導體原料及設備製造買賣。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收19.74億元，MoM+7.8%、YoY+17.4%、累計YoY+5.2%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "confidence": "medium",
+      "lastVerified": "2026-09-04",
       "status": "verified",
       "techFocus": [
-        "高功率LED封裝(陶瓷基板散熱/晶粒級封裝)",
-        "Mini LED區域調光封裝技術(chip size<200μm)",
-        "車規AEC-Q102 LED可靠性驗證(-40~125°C)"
+        "LED晶粒固晶、打線、封膠與光色分選",
+        "封裝熱路徑、接面溫度與光衰可靠度控制",
+        "紅外線發射／接收元件的波長、靈敏度與雜訊管理"
       ],
       "swot": {
         "strengths": [
-          "6月營收1.83億YoY+10.6%，LED封裝出貨穩定成長",
-          "SMD LED封裝（0402-5050）產品線完整，Mini LED背光封裝（chip<200μm）技術成熟",
-          "陶瓷基板散熱與晶粒級封裝技術在高功率LED具優勢"
+          "具可見光、紅外線及顯示背光等多元光電應用脈絡",
+          "2026年7月營收19.74億元、YoY+17.4%，單月需求回升"
         ],
         "weaknesses": [
-          "累計營收YoY+3.2%，成長動能溫和，消費性LED市場復甦緩慢",
-          "LED封裝產業毛利率偏低，Mini LED良率爬坡影響獲利",
-          "中國LED封裝廠（三安光電等）低價競爭壓力持續"
+          "MOPS未拆分LED品類營收，無法驗證Mini LED或車用占比",
+          "前七月累計YoY僅+5.2%，成長速度低於單月表現"
         ],
         "opportunities": [
-          "Mini LED背光在TV/NB/車用顯示器滲透率持續提升",
-          "Micro LED顯示技術在AR/VR應用前景廣闊",
-          "高功率LED在車用照明/植物照明新應用成長"
+          "車載照明、感測與工業光源可提升高可靠元件需求",
+          "顯示背光分區控制與更小型封裝可提高單機價值量"
         ],
         "threats": [
-          "中國三安光電/國星光電在LED封裝低價競爭",
-          "OLED面板在高端顯示器取代LED背光方案",
-          "Mini LED背光成本下降速度不如預期"
+          "中國封裝廠低價競爭與OLED替代壓縮背光市場",
+          "終端顯示需求波動可能造成封裝庫存與價格壓力"
         ]
       }
     },

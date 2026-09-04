@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -420,18 +420,20 @@
       "topicName": "MLCC / 電容器",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "test",
-      "roleType": "test_service",
-      "roleSummary": "欣銓為專業IC測試服務商，提供MLCC驅動IC晶圓與成品測試服務，間接受惠MLCC產業需求成長帶動測試量增加。",
+      "supplyChainStage": "ic_test_outside_mlcc",
+      "roleType": "outside_topic_test_service",
+      "roleSummary": "欣銓MOPS支持記憶體、數位與混合訊號IC晶圓／成品測試及晶圓級Burn-in，未揭露MLCC、介電粉體或電容器測試；舊資料所稱「MLCC驅動IC」沒有本次證據，故降為題外IC測試觀察。FinMind顯示2026年8月營收17.94億元、MoM+1.6%、YoY+46.6%，不能歸因MLCC。",
       "products": [
-        "被動元件驅動IC晶圓測試(CP)",
-        "被動元件控制IC成品測試(FT)",
-        "混合訊號IC測試(MLCC量測電路用類比IC)"
+        "記憶體IC晶圓測試服務",
+        "數位訊號IC晶圓與成品測試服務",
+        "混合訊號IC晶圓與成品測試服務",
+        "晶圓型式Burn-in老化測試服務"
       ],
       "customers": [
-        "國巨(2327)(被動元件驅動IC測試委外)",
-        "華新科(2492)(MLCC相關IC測試)",
-        "Yageo(被動元件控制IC測試)"
+        "南亞科(2408；記憶體測試應用對象，非MOPS揭露客戶)",
+        "華邦電(2344；記憶體測試應用對象，非MOPS揭露客戶)",
+        "聯發科(2454；數位／混合訊號IC測試對象，非MOPS揭露客戶)",
+        "聯詠(3034；混合訊號IC測試對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "京元電(2449)(IC測試代工)",
@@ -439,55 +441,50 @@
         "矽格(6257)(利基IC測試)"
       ],
       "risks": [
-        "與MLCC供應鏈關聯度極低，題材傳導幾乎不存在",
-        "MLCC本身不需IC測試服務，僅驅動IC有間接關聯",
-        "此題材分類可能有誤，建議重新評估是否保留"
+        "未揭露MLCC或電容器製造與測試能力",
+        "把IC測試營收連到MLCC景氣缺乏直接傳導證據"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
+          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位與混合訊號IC晶圓及成品測試、晶圓型式Burn-in測試。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年8月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind：2026年8月營收17.94億元，MoM+1.6%、YoY+46.6%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "混合訊號IC ADC/DAC量測測試平台(被動元件量測電路)",
-        "晶圓級測試探針卡高密度對位技術",
-        "Burn-in測試(控制IC高溫老化篩選)"
+        "晶圓探針測試、探針對位與測試良率資料分析",
+        "混合訊號ATE的電壓、電流、時序與類比參數量測",
+        "晶圓級高溫Burn-in與早期失效篩選"
       ],
       "swot": {
         "strengths": [
-          "混合訊號IC ADC/DAC量測平台可支援被動元件量測電路IC測試",
-          "客戶含國巨(2327)、華新科(2492)，台灣前兩大被動元件廠",
-          "7月營收17.67億MoM+13.8%，整體測試動能良好"
+          "MOPS明確支持多類IC晶圓、成品及Burn-in測試能力",
+          "2026年8月營收17.94億元、YoY+46.6%，整體測試需求強"
         ],
         "weaknesses": [
-          "被動元件為間接角色，僅測試其驅動/控制IC非MLCC本身",
-          "MLCC相關IC測試量佔比小，非營收主力",
-          "被動元件驅動IC技術門檻低，測試ASP有限"
+          "不生產MLCC、介電瓷粉或電容器設備，題材直接性低",
+          "公司月營收不能拆分任何MLCC相關需求"
         ],
         "opportunities": [
-          "車規MLCC需求增長帶動控制IC測試認證需求",
-          "AI伺服器電源管理用被動元件驅動IC測試新增長",
-          "高壓MLCC量測電路IC測試差異化"
+          "車用與工控混合訊號IC增加可擴大測試需求",
+          "高可靠晶圓級Burn-in可支援更嚴格的IC品質要求"
         ],
         "threats": [
-          "被動元件IC可能整合進SoC減少獨立測試需求",
-          "MLCC景氣波動影響驅動IC測試量",
-          "國巨可能自建測試線降低委外"
+          "MLCC景氣與欣銓測試量沒有可驗證的一對一關係",
+          "IDM自建測試或同業擴產可能壓低委外測試價格"
         ]
       }
     },

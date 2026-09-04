@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -169,67 +169,69 @@
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "networking_ic_customer",
-      "roleType": "networking_ic_buyer",
-      "roleSummary": "明泰為網通IC設計公司重要客戶。7月營收17.43億，YoY-2.1%，累計122.23億，累計YoY+1.9%。",
+      "supplyChainStage": "network_equipment_ic_application",
+      "roleType": "downstream_ic_platform_user",
+      "roleSummary": "明泰MOPS支持電信射頻與無線通信設備製造，不是IC設計公司；本題材角色是網通設備對通訊IC的下游應用與驗證，不能把晶片商寫成明泰客戶。2026年7月營收17.43億元、MoM-23.3%、YoY-2.1%，累計YoY僅+1.9%。",
       "products": [
-        "網通SoC採購(Broadcom/Marvell/Realtek)",
-        "5G RF晶片採購(Qualcomm)",
-        "PHY晶片採購(Marvell/Broadcom)"
+        "Wi-Fi無線基地台與路由器",
+        "電信射頻傳輸設備",
+        "乙太網路交換與寬頻接取設備"
       ],
       "customers": [
-        "Broadcom(交換器晶片供應)",
-        "Marvell(乙太網路PHY/SoC)",
-        "Realtek(低成本網通晶片)"
+        "聯發科(2454；網通晶片平台對象，非MOPS揭露供應商)",
+        "瑞昱(2379；乙太網路晶片平台對象，非MOPS揭露供應商)",
+        "Broadcom(網通晶片平台對象，非MOPS揭露供應商)",
+        "Qualcomm(無線晶片平台對象，非MOPS揭露供應商)"
       ],
       "competitors": [
         "中磊(5388)",
         "智邦(2391)"
       ],
       "risks": [
-        "晶片供應受地緣政治影響",
-        "IC設計公司漲價壓力"
+        "公司是IC下游應用端而非IC設計供應者",
+        "單月營收明顯下滑顯示網通設備接單波動"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3380",
+          "claim": "MOPS主要經營業務：電信管制射頻器材製造、無線通信機械器材製造。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%、累計YoY+1.9%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "400G交換器晶片選型與系統設計",
-        "5G Open RAN晶片整合"
+        "Wi-Fi MIMO射頻校準、天線匹配與吞吐量驗證",
+        "乙太網路交換、PHY介面與封包轉送整合",
+        "網路設備韌體、遠端管理與安全更新機制"
       ],
       "swot": {
         "strengths": [
-          "網通IC採購規模大可議價",
-          "與Broadcom/Marvell等一線IC廠穩定合作"
+          "MOPS直接支持射頻與無線通信設備製造能力",
+          "設備開發可同時驗證多家網通晶片平台"
         ],
         "weaknesses": [
-          "無自有IC設計能力",
-          "完全依賴外部晶片供應商"
+          "不設計或銷售IC，題材曝險來自採購與平台整合",
+          "2026年7月營收MoM-23.3%、YoY-2.1%，累計成長近乎停滯"
         ],
         "opportunities": [
-          "國產網通IC(聯發科/瑞昱)崛起降低採購成本",
-          "WiFi 7/5G NR IC自製需求帶動網通設備升級"
+          "Wi-Fi與寬頻設備升級可提高交換器及射頻IC搭載價值",
+          "多晶片平台設計可降低單一供應來源風險"
         ],
         "threats": [
-          "晶片缺貨影響出貨",
-          "IC設計公司進入設備市場"
+          "終端設備價格競爭可能壓縮晶片升級成本空間",
+          "晶片缺貨、停產或平台改版會延後產品認證與出貨"
         ]
       }
     },

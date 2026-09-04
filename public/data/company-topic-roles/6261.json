@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -528,18 +528,21 @@
       "topicName": "電阻與被動保護元件",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元6月營收3.90億MoM+11.8%。提供晶片電阻測試分選機與精密電阻量測系統，間接受惠被動元件產業，但佔營收比重極低。",
+      "supplyChainStage": "semiconductor_test_outside_resistor",
+      "roleType": "outside_topic_equipment_service",
+      "roleSummary": "久元MOPS支持半導體與光電產品切割、研磨、測試、挑檢，以及IC／CIS／CCM測試設備，沒有晶片電阻或電阻分選機；舊資料的電阻量測與AEC-Q200設備主張應刪除。FinMind顯示2026年7月營收3.74億元、MoM-4.1%、YoY-6.5%。",
       "products": [
-        "晶片電阻測試分選機(Handler)(電阻值量測/精度篩選)",
-        "高精密電阻值量測系統(0.1% tolerance)",
-        "車規電阻AEC-Q200測試設備"
+        "半導體晶粒切割與研磨加工服務",
+        "光電產品測試與挑檢服務",
+        "基板精密切割服務",
+        "IC自動測試設備",
+        "CIS／CCM影像模組測試設備"
       ],
       "customers": [
-        "國巨(2327)(晶片電阻測試設備)",
-        "華新科(2492)(電阻測試設備)",
-        "KOA(車規電阻測試設備)"
+        "原相(3227；CIS測試應用對象，非MOPS揭露客戶)",
+        "晶相光(3530；影像感測測試應用對象，非MOPS揭露客戶)",
+        "京元電子(2449；測試設備產業鏈對象，非MOPS揭露客戶)",
+        "群創(3481；光電測試應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "精測(6510)(晶圓測試探針卡)",
@@ -547,55 +550,50 @@
         "致茂(2360)(電子量測儀器)"
       ],
       "risks": [
-        "6月營收3.90億(FinMind)但電阻測試設備佔比極低",
-        "被動元件測試設備客戶資本支出週期長",
-        "久元核心為CIS/CCM測試設備，電阻測試非主營"
+        "MOPS未揭露任何電阻、保護元件或其測試設備",
+        "2026年7月營收YoY-6.5%，本業需求亦有壓力"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "MOPS主要經營業務：半導體及光電產品切割、研磨、測試、挑檢與基板切割；IC／CIS／CCM測試設備研發製造銷售。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
+          "title": "2026年7月月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "claim": "FinMind：2026年7月營收3.74億元，MoM-4.1%、YoY-6.5%。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "晶片電阻測試分選機精密機構設計(高速分類)",
-        "高精密電阻值量測系統(四線式Kelvin量測)",
-        "車規電阻AEC-Q200測試設備(溫度循環/耐壓)"
+        "精密切割、研磨、崩邊控制與尺寸量測",
+        "IC／CIS自動測試的光源、影像與電性同步量測",
+        "CCM模組自動對焦、解析度與色彩校正"
       ],
       "swot": {
         "strengths": [
-          "FinMind 6月2.92億，晶片電阻測試分選機(Handler)利基供應商，國巨/華新科客戶",
-          "高精密電阻值量測系統(0.1% tolerance)四線式Kelvin量測",
-          "車規電阻AEC-Q200測試設備(溫度循環/耐壓)自有技術"
+          "MOPS支持切割、研磨、測試、挑檢及自研測試設備的整合能力",
+          "IC、CIS與CCM測試涵蓋加工及設備兩種收入模式"
         ],
         "weaknesses": [
-          "電阻測試為間接題材，佔營收比重極低",
-          "電阻測試設備市場規模小於MLCC",
-          "車規電阻測試認證週期長，投入回收慢"
+          "與電阻及被動保護元件題材沒有直接產品連結",
+          "2026年7月營收3.74億元、MoM-4.1%、YoY-6.5%，動能轉弱"
         ],
         "opportunities": [
-          "車用電阻需求成長(電動車/ADAS)帶動AEC-Q200測試",
-          "高精密薄膜電阻(0.01%)測試設備升級需求",
-          "電動車SiC MOSFET驅動電阻測試新應用"
+          "影像感測器與相機模組升級可增加CIS／CCM測試複雜度",
+          "高精度基板與晶粒切割需求可推動設備更新"
         ],
         "threats": [
-          "國巨收購併購後可能整合測試線",
-          "中國電阻廠低價競爭壓縮測試設備預算",
-          "電阻小型化(0201/01005)測試難度提升但設備單價未增"
+          "錯把半導體測試設備寫成電阻設備會造成題材誤判",
+          "封測廠自建設備與專業量測商競爭可能壓縮訂單"
         ]
       }
     },

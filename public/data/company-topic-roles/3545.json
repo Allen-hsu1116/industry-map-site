@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3545",
   "companyName": "敦泰",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -227,77 +227,70 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "ic_substrate",
-      "roleType": "ic_substrate_user",
-      "roleSummary": "敦泰MOPS核心是手持式行動裝置應用晶片，不製造PCB或載板；本題材是觸控、顯示與指紋IC封裝板的下游需求。2026年7月營收9.11億元、YoY-14.3%，累計YoY-13.6%。",
+      "supplyChainStage": "mobile_ic_substrate_application",
+      "roleType": "downstream_ic_packaging_user",
+      "roleSummary": "敦泰MOPS支持手持式行動裝置應用晶片，並不製造PCB、IC載板或COF載帶；本角色應定位為行動晶片封裝與載板的規格使用端。2026年7月營收9.11億元、YoY-14.3%、累計YoY-13.6%，終端需求與產品組合承壓。",
       "products": [
-        "觸控控制IC用WLCSP重布線封裝",
-        "TDDI顯示觸控整合IC用COF載帶",
-        "指紋感測IC用CSP封裝基板",
-        "AMOLED驅動IC用細間距COF載帶"
+        "觸控控制IC",
+        "顯示驅動IC",
+        "觸控顯示整合IC",
+        "行動裝置感測控制IC"
       ],
       "customers": [
-        "欣興(3037；IC載板供應鏈對象)",
-        "景碩(3189；CSP載板供應鏈對象)",
-        "頎邦(6147；COF凸塊與載帶封裝對象)",
-        "南茂(8150；顯示驅動IC封測對象)"
+        "頎邦(6147；顯示驅動IC封測對象，非MOPS揭露供應商)",
+        "南茂(8150；顯示驅動IC封測對象，非MOPS揭露供應商)",
+        "景碩(3189；IC載板供應鏈對象，非MOPS揭露供應商)",
+        "欣興(3037；IC載板供應鏈對象，非MOPS揭露供應商)"
       ],
       "competitors": [
         "聯詠(3034)",
         "匯頂"
       ],
       "risks": [
-        "IC載板為採購品",
-        "載板產能可能受限"
+        "公司不製造PCB或載板，只是封裝與互連需求端",
+        "智慧手機需求疲弱會同步壓抑IC出貨及載板採購"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：手持式行動裝置應用晶片之研發、設計、製造及銷售"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3545",
+          "claim": "MOPS主要經營業務：手持式行動裝置應用晶片之研究、開發、設計、製造及銷售。"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "title": "2026年7月月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收9.11億元，YoY-14.3%，累計YoY-13.6%"
+          "claim": "2026年7月營收9.11億元，MoM+1.2%、YoY-14.3%、累計YoY-13.6%。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "WLCSP重布線層、細間距凸塊與翹曲控制",
-        "COF細線路載帶及顯示驅動高速訊號完整性",
-        "行動IC薄型封裝的散熱、ESD與跌落可靠度"
+        "電容式觸控感測、雜訊抑制與多點座標運算",
+        "顯示驅動時序、灰階／電壓控制與觸控整合",
+        "WLCSP／COF介面腳位、封裝翹曲與ESD可靠度協同設計"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認手持式行動裝置IC設計本業，可定義WLCSP、CSP與COF封裝規格",
-          "觸控、指紋及顯示整合產品可形成多種細間距封裝需求"
+          "MOPS直接支持手持式行動裝置應用晶片研發與銷售",
+          "觸控與顯示整合可提高單顆晶片及封裝協同設計價值"
         ],
         "weaknesses": [
-          "不製造載板或COF載帶，僅為規格制定與採購端",
-          "2026年7月營收YoY-14.3%、累計YoY-13.6%，終端需求與產品組合承壓"
+          "不生產PCB、IC載板或COF載帶，題材直接性低",
+          "2026年7月營收YoY-14.3%、累計YoY-13.6%，營運仍衰退"
         ],
         "opportunities": [
-          "AMOLED滲透與窄邊框設計推升細間距COF及薄型封裝需求",
-          "觸控與顯示整合可減少晶片數並提高單顆封裝複雜度"
+          "AMOLED與窄邊框裝置可提高細間距互連及薄型封裝需求",
+          "觸控顯示整合可減少零件數並提高封裝規格複雜度"
         ],
         "threats": [
-          "智慧手機需求疲弱會同時壓抑IC出貨與載板採購量",
-          "載板、COF或封測良率異常可能造成交期延誤及成本上升"
+          "手機換機疲弱與中國IC設計商競爭壓低出貨與價格",
+          "載板、COF或封測良率異常可能造成交期及成本風險"
         ]
       }
     }

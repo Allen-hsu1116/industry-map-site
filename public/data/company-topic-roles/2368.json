@@ -2,29 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "2368",
   "companyName": "金像電",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "pcb",
-      "roleType": "server_pcb_manufacturer",
-      "roleSummary": "金像電5月營收87.7億年增87.3%（接單量增加），累計年增66.7%。AI伺服器高層數PCB需求爆發，為營收翻倍成長核心動能。",
+      "supplyChainStage": "pcb_manufacturing",
+      "roleType": "multilayer_pcb_manufacturer",
+      "roleSummary": "金像電MOPS直接支持雙面與多層PCB製造，並指向電腦、電子、通訊及資訊設備應用；但未揭露24至40層、800G、GPU板或具名客戶。2026年7月營收100.15億元、MoM+21.3%、YoY+77.4%、累計YoY+70.3%，公司僅說明接單量增加，不能把全部成長歸因AI伺服器。",
       "products": [
-        "高層數伺服器PCB(24-40層壓合)",
-        "HDI/硬板PCB(Any-Layer HDI)",
-        "網通與伺服器主板(800G交換器用)",
-        "AI加速器用高階PCB(GPU基板)",
-        "車用PCB(ADAS/車載娛樂系統)"
+        "雙面印刷電路板",
+        "多層電腦主板PCB",
+        "多層通訊設備PCB",
+        "電子與資訊周邊設備PCB"
       ],
       "customers": [
-        "廣達(2382)(伺服器PCB)",
-        "鴻海(2317)(伺服器PCB)",
-        "緯創(3231)(NB PCB)",
-        "英業達(伺服器PCB)",
-        "Supermicro(伺服器板)"
+        "廣達(2382；伺服器與電腦PCB應用對象，非MOPS揭露客戶)",
+        "鴻海(2317；電子設備PCB應用對象，非MOPS揭露客戶)",
+        "緯創(3231；電腦PCB應用對象，非MOPS揭露客戶)",
+        "英業達(2356；伺服器PCB應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "南電(8046)",
@@ -33,8 +31,8 @@
         "滬士電子"
       ],
       "risks": [
-        "原物料（銅箔/玻纖布）價格波動",
-        "陸廠低價競爭"
+        "MOPS未揭露特定層數、低損耗材料等級或AI伺服器客戶",
+        "銅箔、玻纖布與樹脂成本及多層板良率影響毛利"
       ],
       "legacy": {
         "topicSlug": "pcb-manufacturing",
@@ -43,48 +41,44 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "金像電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 金像電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2368",
+          "claim": "MOPS主要經營業務：雙層、多層印刷電路板製造加工及買賣；電腦、電子、通訊、資訊產品與周邊設備及電子零件加工。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收100.15億元，MoM+21.3%、YoY+77.4%、累計YoY+70.3%；公司說明接單量增加。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-11",
+      "lastVerified": "2026-09-04",
       "status": "verified",
       "techFocus": [
-        "高層數伺服器PCB(24-40層)壓合與對位技術",
-        "AI伺服器用低損耗(Ultra Low Loss)材料PCB",
-        "HDI微孔雷射鑽孔與Any-Layer互連製程"
+        "多層板壓合、層間對位與樹脂流動控制",
+        "機械／雷射鑽孔、孔壁鍍銅與導通可靠度",
+        "高速數位板阻抗、串擾與訊號完整性控制"
       ],
       "swot": {
         "strengths": [
-          "6月營收82.55億創歷史新高，YoY+78.2%、累計YoY+68.7%，AI伺服器PCB接單動能強勁",
-          "24-40層高多層PCB壓合技術成熟，AI伺服器主板與HDI Any-Layer製程具技術壁壘",
-          "資本額52.3億，財務結構穩健，擴產能力充足"
+          "MOPS直接支持雙面及多層PCB製造與電腦／通訊應用",
+          "2026年7月營收100.15億元、YoY+77.4%，公司說明接單量增加"
         ],
         "weaknesses": [
-          "月營收MoM-5.9%，短期接單節奏波動",
-          "高層數PCB良率挑戰大，良率波動影響毛利",
-          "產能擴充速度受限於設備交期"
+          "MOPS未拆分伺服器、網通與其他PCB收入占比",
+          "高多層板的壓合、鑽孔與電鍍良率會放大成本波動"
         ],
         "opportunities": [
-          "AI伺服器出貨放量帶動高層數PCB需求持續增長",
-          "Ultra Low Loss材料PCB在800G/1.6T交換器應用擴大",
-          "海外擴廠（泰國）分散產能風險"
+          "伺服器與高速交換設備升級可增加多層及高速PCB需求",
+          "海外產能布局可降低單一地區製造風險"
         ],
         "threats": [
-          "競爭對手欣電子、燿華同樣佈局AI伺服器PCB，價格競爭加劇",
-          "PCB上游CCL材料價格波動影響成本",
-          "AI伺服器規格迭代快速，需持續投資新製程"
+          "中國PCB廠擴產與價格競爭可能壓縮報價",
+          "材料漲價或客戶平台改版可能造成庫存與認證損失"
         ]
       }
     },

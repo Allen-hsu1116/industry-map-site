@@ -2,75 +2,78 @@
   "schemaVersion": 1,
   "companyCode": "1711",
   "companyName": "永光",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-04T19:06:48Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
       "topicName": "重電、電纜與 EPC 工程",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "electrical_chemicals",
-      "roleType": "electrical_insulation_chemicals",
-      "roleSummary": "永光7月營收7.81億，YoY+25.7%，累計49.58億，累計YoY+9.0%，累計YoY+9.0%。提供電氣絕緣用化學材料。",
+      "supplyChainStage": "specialty_chemicals_outside_epc",
+      "roleType": "materials_application_adjacency",
+      "roleSummary": "永光MOPS只揭露色料、特用、電子與醫藥化學品及碳粉，沒有變壓器、開關設備、電纜或EPC工程；本題材僅能視為特用化學品可能進入絕緣與塗層配方的應用鄰接。2026年7月營收7.81億元、YoY+25.7%、累計YoY+9.0%，不能歸因重電。",
       "products": [
-        "電氣絕緣樹脂添加劑(環氧樹脂用色料/硬化劑)",
-        "電纜護套用色母粒(耐候/抗UV)",
-        "變壓器絕緣油添加劑(抗氧化劑)"
+        "工業色料化學品",
+        "特用化學品",
+        "電子化學品",
+        "碳粉產品",
+        "醫藥化學品"
       ],
       "customers": [
-        "台達電(2308)",
-        "士電(1503)",
-        "中興電(1513)"
+        "中興電(1513；電氣材料應用對象，非MOPS揭露客戶)",
+        "士電(1503；絕緣與塗層應用對象，非MOPS揭露客戶)",
+        "東元(1504；電機材料應用對象，非MOPS揭露客戶)",
+        "華城(1519；變壓器材料應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
         "長興(1717)",
         "東洋(1605)"
       ],
       "risks": [
-        "電氣化學品佔比低",
-        "電氣設備市場週期性"
+        "MOPS未揭露任何重電設備、電纜或工程服務",
+        "推定絕緣材料用途仍缺乏產品型號與營收占比證據"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司完整基本資料（MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "claim": "MOPS主要經營業務：色料化學品、特用化學品、電子化學品、碳粉產品、醫藥化學品。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "臺灣證券交易所 TWSE",
+          "title": "2026年7月月營收",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "2026年7月營收7.81億元，MoM+13.1%、YoY+25.7%、累計YoY+9.0%。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-04",
+      "status": "candidate",
       "techFocus": [
-        "耐高壓絕緣色料分散技術",
-        "環氧樹脂硬化劑分子設計"
+        "色料粒徑、表面處理與樹脂分散穩定性",
+        "特用化學品分子設計、反應純度與批次一致性",
+        "電子化學品微量金屬、離子污染與潔淨度控制"
       ],
       "swot": {
         "strengths": [
-          "7月營收7.81億YoY+25.7%，色料/特用化學品需求增長",
-          "色料/特用化學品可用於電氣絕緣(環氧樹脂色料/硬化劑)",
-          "化學品研發能力可客製化電氣應用配方"
+          "MOPS支持色料、特用與電子化學品的多元研發平台",
+          "2026年7月營收7.81億元、YoY+25.7%，整體需求回升"
         ],
         "weaknesses": [
-          "電氣化學品佔比極低，主力為色料/電子化學品",
-          "與重電供應鏈關聯弱(僅為材料供應)"
+          "不製造重電設備或承攬EPC，題材直接性低",
+          "公司整體營收無法拆分電氣材料應用"
         ],
         "opportunities": [
-          "電動車充電樁絕緣材料需求",
-          "變壓器/電纜用特用化學品隨電網投資增長"
+          "電網與設備擴產可能增加絕緣、塗層及電子化學品需求",
+          "高可靠電氣材料可帶動低離子與耐候配方升級"
         ],
         "threats": [
-          "國際化學大廠(BASF/Dow)競爭",
-          "重電廠可能自製絕緣材料"
+          "BASF、Dow等國際化學商在電氣材料認證與規模上具優勢",
+          "缺乏直接揭露時，重電題材容易被市場過度解讀"
         ]
       }
     },
