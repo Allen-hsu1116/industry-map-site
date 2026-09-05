@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4764",
   "companyName": "雙鍵",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -97,72 +97,89 @@
       "topicName": "工業自動化與 CNC 工具機",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "industrial_additives",
-      "roleType": "cnc_cutting_fluid_additive",
-      "roleSummary": "2026年7月營收2.94億元、YoY+44.1%、累計YoY+28.6%，添加劑需求強勁。",
+      "supplyChainStage": "automation_consumables_adjacent",
+      "roleType": "uv_process_materials_adjacent",
+      "roleSummary": "雙鍵MOPS為塑膠添加劑與UV光固化產品，官網確認多種丙烯酸酯寡聚物和光起始劑。工業自動化題材限於UV固化製程耗材鄰接，移除無來源的CNC切削液、液壓油與齒輪潤滑極壓添加劑宣稱。 2026年7月營收2.94億元，MoM+3.45%、YoY+44.07%，累計YoY+28.61%。此為全公司營收，未拆分「工業自動化與 CNC 工具機」貢獻，不能全部歸因於本題材。",
       "products": [
-        "CNC水性切削液用極壓與抗磨添加劑",
-        "工具機液壓油用抗氧化與防鏽添加劑",
-        "設備護罩用UV固化塗料寡聚物",
-        "塑膠齒輪潤滑脂用耐磨添加劑"
+        "環氧丙烯酸酯寡聚物",
+        "聚酯丙烯酸酯寡聚物",
+        "脂肪族聚氨酯丙烯酸酯寡聚物",
+        "水性UV固化寡聚物",
+        "Norrish I／II型光起始劑"
       ],
       "customers": [
-        "中油(1328；工業潤滑油配方對象)",
-        "台灣福斯FUCHS(切削液配方對象)",
-        "台中精機(工具機應用對象)",
-        "程泰(1583；CNC加工應用對象)",
-        "東台(4526；工具機加工液應用對象)"
+        "長興（UV樹脂配方生態對象，非MOPS揭露客戶）",
+        "Henkel（UV接著配方應用對象，非MOPS揭露客戶）",
+        "3M（功能塗層應用對象，非MOPS揭露客戶）",
+        "志聖（UV製程設備生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "巴斯夫(BASF)",
-        "潤泰化學"
+        "長興（UV固化材料同業）",
+        "永光（特化添加劑同業）"
       ],
       "risks": [
-        "工業添加劑佔比低",
-        "工業自動化市場波動"
+        "未確認切削液極壓、液壓油或齒輪潤滑產品，不能將塑膠添加劑直接移植為工具機油品",
+        "光源、膜厚與基材不同使材料替換須重驗，未必能快速切入自動化訂單"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "4764 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4764",
+          "claim": "本次MCP主要經營業務原文：塑膠添加劑及UV光固化產品等產品之研發、製造與銷售。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE",
+          "title": "4764 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收2.94億元，MoM+3.45%、YoY+44.07%，累計YoY+28.61%。此為全公司營收，未拆分「工業自動化與 CNC 工具機」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "雙鍵官方網站",
+          "title": "DBC",
+          "url": "https://www.dbc.com.tw/products_main_list.php?pid=67",
+          "claim": "DBC UV Curable Materials官網列環氧、聚酯、脂肪族聚氨酯丙烯酸酯寡聚物、水性寡聚物及Norrish I／II光起始劑；不支持原CNC切削液產品。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4764",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "硫/磷系極壓添加劑摩擦膜與抗磨配方",
-        "水性切削液防鏽消泡與生物穩定控制",
-        "UV寡聚物秒級固化與耐化學性設計"
+        "技術分析：丙烯酸酯官能度、黏度與固化收縮對自動塗佈製程的影響",
+        "Norrish I／II與陽離子光起始體系的反應路徑差異；產品分類由官網支持",
+        "技術分析：UV劑量、氧阻聚、接著與耐化學性測試，非已證實秒級固化規格"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收2.94億元、YoY+44.1%、累計YoY+28.6%，添加劑需求強勁",
-          "塑膠添加劑與UV材料雙平台",
-          "客製配方可依加工條件調整"
+          "官網揭露多類寡聚物和光起始劑，可形成UV製程材料配方組合",
+          "2026年7月營收2.94億元，MoM+3.45%、YoY+44.07%，累計YoY+28.61%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "不製造CNC設備，僅為耗材材料端",
-          "切削液收入未單獨揭露"
+          "未確認切削液極壓、液壓油或齒輪潤滑產品，不能將塑膠添加劑直接移植為工具機油品",
+          "不生產控制器或自動化整機，本題材營收僅為潛在材料應用且未分拆"
         ],
         "opportunities": [
-          "難削材加工增加高性能添加劑需求",
-          "低VOC推動UV固化塗層"
+          "自動塗佈與UV接著產線增加，可提升固化材料一致性與配方服務需求",
+          "水性UV體系可回應塗層減溶劑需求，但仍須實際客戶驗證"
         ],
         "threats": [
-          "BASF、Lubrizol與FUCHS競爭",
-          "環規限制特定極壓添加劑"
+          "光源、膜厚與基材不同使材料替換須重驗，未必能快速切入自動化訂單",
+          "UV原料競價與環保法規增加研發及配方合規成本"
         ]
       }
     },

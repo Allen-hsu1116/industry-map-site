@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3704",
   "companyName": "合勤控",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -241,87 +241,99 @@
       "topicId": "networking-infrastructure",
       "topicName": "高速交換器與網通設備",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "networking_equipment",
-      "roleType": "networking_brand",
-      "roleSummary": "合勤控MOPS本體僅登記一般投資業；網通角色來自集團旗下Zyxel與MitraStar，分析不可把控股公司本體誤寫成設備製造商。2026年7月合併營收19.17億元、MoM-44.7%、YoY-11.8%，但累計YoY仍+10.3%。",
+      "directness": "indirect",
+      "supplyChainStage": "group_networking_platforms",
+      "roleType": "networking_investment_holding",
+      "roleSummary": "合勤控MOPS主要業務為一般投資業；集團官網確認透過Zyxel及MitraStar提供固定／行動寬頻、企業網路與DMS服務。產品須明確標為集團範圍，不把控股公司當成直接設備製造商，也不沿用未核實GS1920 PoE++瓦數等型號細節。 2026年7月營收19.17億元，MoM-44.66%、YoY-11.75%，累計YoY+10.29%。此為全公司營收，未拆分「高速交換器與網通設備」貢獻，不能全部歸因於本題材。",
       "products": [
-        "Zyxel XGS1930系列10G上行L2+管理型交換器",
-        "Zyxel GS1920系列802.3bt PoE++交換器",
-        "Zyxel Nebula雲端管理交換器與無線網路平台",
-        "Zyxel USG FLEX系列次世代防火牆",
-        "MitraStar 5G NR室內/戶外CPE"
+        "集團Zyxel固定寬頻接取設備",
+        "集團Zyxel行動寬頻接取設備",
+        "集團Zyxel USG FLEX H防火牆（官網搜尋索引）",
+        "集團Nebula集中式雲端網路管理（官網搜尋索引）",
+        "集團MitraStar網路設備設計製造服務"
       ],
       "customers": [
-        "Deutsche Telekom(電信CPE應用對象，非MOPS揭露客戶)",
-        "Vodafone(電信CPE應用對象，非MOPS揭露客戶)",
-        "Orange(電信CPE應用對象，非MOPS揭露客戶)",
-        "中華電信(2412；寬頻CPE應用對象，非MOPS揭露客戶)"
+        "Deutsche Telekom（寬頻服務應用對象，非MOPS揭露客戶）",
+        "Vodafone（寬頻接取應用對象，非MOPS揭露客戶）",
+        "Orange（電信網路應用對象，非MOPS揭露客戶）",
+        "中華電信（固定／行動寬頻應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "明泰(3380)",
-        "中磊(5388)",
-        "智邦(2391)"
+        "中磊（寬頻網通同業）",
+        "明泰（網路設備同業）"
       ],
       "risks": [
-        "企業級網通設備競爭激烈",
-        "品牌知名度低於Cisco/HPE"
+        "控股母體MOPS不揭露子公司逐項產品與客戶收入，集團產品不能視為母體直接生產",
+        "電信訂單與出貨季節性使合併營收波動，不能以控股架構淡化營運風險"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：一般投資業；網通題材係透過合勤集團旗下Zyxel與MitraStar營運。"
+          "title": "3704 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3704",
+          "claim": "本次MCP主要經營業務原文：一般投資業。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收19.17億元，MoM-44.7%、YoY-11.8%，累計YoY+10.3%。"
+          "publisher": "TWSE",
+          "title": "3704 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收19.17億元，MoM-44.66%、YoY-11.75%，累計YoY+10.29%。此為全公司營收，未拆分「高速交換器與網通設備」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "合勤控官方網站",
+          "title": "合勤投控",
+          "url": "https://www.zyxelgroup.com/products&lang=en",
+          "claim": "合勤集團Products & Services頁確認Zyxel品牌、固定／行動寬頻、企業網路及MitraStar DMS；MOPS母體業務仍為一般投資業。USG FLEX H與Nebula細節另標為官方搜尋索引，頁面擷取轉登入頁，未宣稱已全文核實。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-search-index",
+          "publisher": "Zyxel Networks（官方搜尋索引）",
+          "title": "USG FLEX H Series | Firewall NGFW | Zyxel Networks",
+          "url": "https://www.zyxel.com/global/en/products/firewall-ngfw/usg-flex-h-series",
+          "claim": "搜尋索引列USG FLEX H及Nebula集中管理無線、交換、安全與FWA；頁面擷取轉登入頁，未取得全文，未驗證型號規格與功能測試。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3704",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "Nebula多租戶雲端管理、零接觸佈署與設備遙測",
-        "IEEE 802.3bt PoE++ 60W/90W供電與分路功率管理",
-        "5G NR Sub-6GHz CPE、Wi-Fi 7回程與TR-069/TR-369管理"
+        "集團方案分析：固定與行動寬頻接取、家庭閘道與遠端設備管理整合",
+        "Nebula集中管理無線、交換、安全與FWA，來源為官網搜尋索引，非本次登入後實測",
+        "集團DMS服務分析：客製硬體／軟體整合與量產測試；不宣稱未查明PoE瓦數"
       ],
       "swot": {
         "strengths": [
-          "Zyxel品牌、MitraStar ODM與Nebula雲管平台涵蓋企業及電信網路",
-          "2026年前7月累計營收YoY+10.3%，中期營運仍較去年成長"
+          "集團官網明確區分Zyxel品牌與MitraStar DMS服務，商業模式較單一設備線多元",
+          "MOPS與集團官網可交叉確認控股層及子公司營運範圍"
         ],
         "weaknesses": [
-          "2026年7月營收MoM-44.7%、YoY-11.8%，單月拉貨明顯轉弱",
-          "控股公司MOPS只揭露投資業，設備產品與客戶需從子公司層級驗證"
+          "控股母體MOPS不揭露子公司逐項產品與客戶收入，集團產品不能視為母體直接生產",
+          "本期營收月減與年減，累計成長不代表各產品線都持續回升",
+          "2026年7月營收19.17億元，MoM-44.66%、YoY-11.75%，累計YoY+10.29%；公司整體衰退須與題材想像分開。"
         ],
         "opportunities": [
-          "Wi-Fi 7、2.5G/10G交換器與5G FWA升級可帶動換機",
-          "Nebula訂閱與資安服務可提高軟體經常性收入占比"
+          "固定與行動寬頻升級可帶動集團品牌及DMS客製需求",
+          "企業網路集中雲端管理可提升部署效率，收入貢獻仍須看子公司披露"
         ],
         "threats": [
-          "Cisco、HPE Aruba、Ubiquiti及中國網通廠在品牌或價格上競爭",
-          "歐洲電信商資本支出延後可能加劇CPE營收波動"
+          "電信訂單與出貨季節性使合併營收波動，不能以控股架構淡化營運風險",
+          "網路安全事件、長期韌體更新與品牌維護可能提高服務成本"
         ]
       }
     }

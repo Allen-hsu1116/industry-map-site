@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2467",
   "companyName": "志聖",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -170,72 +170,82 @@
       "topicName": "資安、雲端服務與企業軟體",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "industrial_software",
-      "roleType": "equipment_software_integration",
-      "roleSummary": "2026年7月營收11.68億元、YoY+132.7%、累計YoY+87.0%，AI供應鏈設備需求強勁。",
+      "supplyChainStage": "equipment_embedded_software_adjacent",
+      "roleType": "equipment_control_outside_cloud_security",
+      "roleSummary": "志聖MOPS直接列PCB與先進封裝的貼膜、撕膜、熱製程、壓合與清潔設備，並未列獨立雲端、資安或SaaS產品。本題材降為設備控制軟體鄰接觀察；SECS/GEM、OPC UA及EDA介面不再當成已出貨模組。 2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%。此為全公司營收，未拆分「資安、雲端服務與企業軟體」貢獻，不能全部歸因於本題材。",
       "products": [
-        "貼膜/撕膜設備AOI對位與缺陷辨識軟體",
-        "熱製程設備溫度配方與多區PID軟體",
-        "壓合設備壓力/真空曲線追溯系統",
-        "SECS/GEM與OPC UA設備聯網模組"
+        "PCB製程貼膜設備",
+        "PCB製程撕膜設備",
+        "先進封裝壓合設備",
+        "PCB／封裝熱製程設備",
+        "電鍍前處理與封裝清潔設備"
       ],
       "customers": [
-        "台積電(2330；先進封裝設備應用對象)",
-        "日月光投控(3711；封裝設備應用對象)",
-        "欣興(3037；PCB設備應用對象)",
-        "臻鼎-KY(4958；高階PCB設備應用對象)",
-        "南電(8046；IC載板設備應用對象)"
+        "台積電（封裝設備應用對象，非MOPS揭露客戶）",
+        "日月光投控（封裝設備應用對象，非MOPS揭露客戶）",
+        "欣興（PCB設備應用對象，非MOPS揭露客戶）",
+        "南電（載板設備應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "群翊(6624)",
-        "大量(3402)"
+        "辛耘（製程設備同業比較）",
+        "群翊（熱製程設備同業比較）"
       ],
       "risks": [
-        "軟體佔營收比重極低",
-        "缺乏雲端SaaS能力"
+        "未披露獨立資安、雲端平台或軟體授權營收，不能列為純軟體供應商",
+        "設備資本支出及驗收時點波動，不具SaaS收入的天然穩定性"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "2467 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2467",
+          "claim": "本次MCP主要經營業務原文：AI供應鏈用印刷電路製程設備:貼膜,撕膜,熱製程與電鍍前處理AI供應鏈用先進封裝設備:貼膜,壓合,撕膜,熱製程,清潔其他電子應用製程設備。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE",
+          "title": "2467 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%。此為全公司營收，未拆分「資安、雲端服務與企業軟體」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。 公告備註：客戶需求提升。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2467",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "SECS/GEM、EDA與OPC UA/MES整合",
-        "機器視覺自動對位與缺陷分類",
-        "多區PID、壓力真空曲線與配方追溯"
+        "設備控制分析：貼膜張力、溫度與壓合壓力的配方及閉迴路控制",
+        "設備控制分析：熱製程多區溫度紀錄與異常告警，非已證實獨立SaaS",
+        "設備聯網評估：配方版本、工單和機台狀態追溯；通訊協定需另查產品文件"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收11.68億元、YoY+132.7%、累計YoY+87.0%，AI供應鏈設備需求強勁",
-          "軟體與製程設備深度整合，切換成本高",
-          "MOPS明列PCB與先進封裝設備場景"
+          "MOPS明列實際製程站點，設備控制與資料記錄具清楚的應用基礎",
+          "月營收公告指出客戶需求提升，反映設備業務需求而非已證實雲端訂閱收入",
+          "2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "軟體隨設備銷售，缺乏獨立SaaS",
-          "依賴PCB與封裝資本支出"
+          "未披露獨立資安、雲端平台或軟體授權營收，不能列為純軟體供應商",
+          "原SECS/GEM、EDA與OPC UA模組缺少型錄或專案證據，已改為聯網評估"
         ],
         "opportunities": [
-          "先進封裝擴產增加設備聯網需求",
-          "預防維護可形成持續服務收入"
+          "製程設備安裝基數增加後，配方管理與良率資料串接可能帶動附加服務",
+          "若日後披露設備管理授權收入，可重新評估軟體經常性收入價值"
         ],
         "threats": [
-          "客戶自建MES或AI模型",
-          "群翊、均豪整套方案競爭"
+          "設備資本支出及驗收時點波動，不具SaaS收入的天然穩定性",
+          "設備聯網帶來的資安責任與客製整合成本可能侵蝕附加服務獲利"
         ]
       }
     },

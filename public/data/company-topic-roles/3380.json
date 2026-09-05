@@ -2,93 +2,96 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
       "topicName": "高速交換器與網通設備",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "networking_equipment",
-      "roleType": "networking_equipment_brand",
-      "roleSummary": "明泰MOPS揭露射頻與無線通信設備製造，屬網通設備核心角色。2026年7月營收17.43億元、MoM-23.3%、YoY-2.1%，累計YoY僅+1.9%，短期出貨轉弱。",
+      "supplyChainStage": "network_systems_manufacturing",
+      "roleType": "network_equipment_manufacturer",
+      "roleSummary": "明泰MOPS確認射頻與無線通訊製造，官方2025年3月法說新聞補充400G交換器、800G量產規劃、Wi-Fi 7與DOCSIS 4.0產品布局。可維持網通本業核心角色，但歷史產品規劃不等於本次已核實量產進度；刪除無證據的特定交換ASIC、寬溫環網及XGS-PON型號規格。 2026年7月營收17.43億元，MoM-23.26%、YoY-2.15%，累計YoY+1.86%。此為全公司營收，未拆分「高速交換器與網通設備」貢獻，不能全部歸因於本題材。",
       "products": [
-        "10G/25G/100G L2/L3資料中心乙太網路交換器",
-        "Wi-Fi 7三頻企業無線基地台（802.11be/MLO）",
-        "XGS-PON 10Gbps光纖網路終端ONT",
-        "5G NR企業小型基地台與室內CPE",
-        "工業乙太網路交換器（寬溫/冗餘環網）"
+        "400G資料中心交換器（官方歷史產品布局）",
+        "800G資料中心交換器（官方歷史量產規劃，本次未核實達成）",
+        "Wi-Fi 7無線寬頻產品",
+        "DOCSIS 4.0纜線寬頻產品（官方布局，未核實本次出貨占比）"
       ],
       "customers": [
-        "Nokia(網通ODM/平台合作對象)",
-        "Ericsson(無線接取平台合作對象)",
-        "HPE Aruba(企業網通生態對象，非MOPS揭露客戶)",
-        "Cisco(網通ODM生態對象，非MOPS揭露客戶)"
+        "Nokia（網路設備生態對象，非已證實ODM客戶）",
+        "Ericsson（無線網路生態對象，非已證實客戶）",
+        "HPE Aruba（企業網路生態對象，非已證實客戶）",
+        "Cisco（交換器應用生態對象，非已證實客戶）"
       ],
       "competitors": [
-        "中磊(5388)",
-        "智邦(2391)",
-        "啟碁(6285)"
+        "智邦（交換器同業）",
+        "中磊（寬頻與無線網通同業）"
       ],
       "risks": [
-        "7月MoM-23.3%月減明顯",
-        "網通設備競爭激烈毛利率壓縮"
+        "近期營收月減與年減，產品升級布局尚不能直接等同銷售加速",
+        "電信與企業網路資本支出延後會拉長庫存消化與設備驗證期"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電信管制射頻器材與無線通信機械器材製造。"
+          "title": "3380 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3380",
+          "claim": "本次MCP主要經營業務原文：電信管制射頻器材製造業無線通信機械器材製造業。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%。"
+          "publisher": "TWSE",
+          "title": "3380 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收17.43億元，MoM-23.26%、YoY-2.15%，累計YoY+1.86%。此為全公司營收，未拆分「高速交換器與網通設備」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "明泰官方網站",
+          "title": "最新消息:Alpha Networks Sets Sight on Switch and Wireless Broadband Demand in Emerging Markets for 2025-Alpha Networks Inc.",
+          "url": "https://www.alphanetworks.com/en/news/9e597323cf0f4230",
+          "claim": "明泰2025-03-03官方新聞載400G交換器、800G量產計畫、1.6T年底樣品預期與Wi-Fi 7／DOCSIS 4.0布局；本次僅作歷史布局證據，不作2026年出貨達成確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3380",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-19",
+      "confidence": "medium",
+      "lastVerified": "2026-09-06",
       "status": "verified",
       "techFocus": [
-        "Broadcom/Marvell交換晶片之高速SerDes、ACL與L3路由整合",
-        "IEEE 802.11be MLO、320MHz頻寬與企業漫遊",
-        "XGS-PON 10Gbps對稱傳輸、OMCI與電信級QoS"
+        "技術分析：400G／800G交換平台的高速電介面、訊號完整性與散熱；不指定未核實交換ASIC",
+        "技術分析：Wi-Fi 7多鏈路與通道協同為平台設計重點，機型支援細節需型錄驗證",
+        "DOCSIS 4.0寬頻接取為官網揭露布局；不據此推定已完成各地電信驗證"
       ],
       "swot": {
         "strengths": [
-          "具交換器、Wi-Fi、PON與5G接取設備完整ODM平台",
-          "Nokia/Ericsson等電信設備生態合作經驗有助國際認證"
+          "MOPS與官網共同確認網通本業，官方新聞提供交換器及寬頻產品的具體方向",
+          "有線交換與無線寬頻產品可分散單一接取技術的需求風險"
         ],
         "weaknesses": [
-          "2026年7月營收MoM-23.3%、YoY-2.1%，出貨與拉貨節奏偏弱",
-          "累計YoY僅+1.9%，且ODM模式受客戶集中與議價壓力影響"
+          "近期營收月減與年減，產品升級布局尚不能直接等同銷售加速",
+          "800G量產和1.6T樣品屬2025年展望，本次沒有達成證據，亦未取得具名買方",
+          "2026年7月營收17.43億元，MoM-23.26%、YoY-2.15%，累計YoY+1.86%；公司整體衰退須與題材想像分開。"
         ],
         "opportunities": [
-          "Wi-Fi 7企業換機與XGS-PON升級可提高單機價值",
-          "企業專網與工業乙太網可分散消費網通週期"
+          "若800G交換器量產規劃轉成可驗證出貨，可提高高速網通產品比重",
+          "Wi-Fi 7與DOCSIS升級可能帶來寬頻換機，但需持續觀察訂單及庫存"
         ],
         "threats": [
-          "智邦、中磊與中國ODM在規模、成本和400G/800G產品上競爭",
-          "電信商資本支出延後會直接壓縮PON與5G設備拉貨"
+          "電信與企業網路資本支出延後會拉長庫存消化與設備驗證期",
+          "不能將過期出貨預測寫成目前量產事實，高速交換器競爭也可能壓縮毛利"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -408,67 +408,89 @@
       "topicName": "工業自動化與 CNC 工具機",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "industrial_iot_gateway",
-      "roleType": "industrial_iot_gateway_provider",
-      "roleSummary": "中磊提供工業物聯網(IIoT)邊緣閘道器。7月營收79.80億，YoY+51.3%，累計452.42億，累計YoY+56.9%。",
+      "supplyChainStage": "factory_connectivity_adjacent",
+      "roleType": "private_cellular_network_enabler",
+      "roleSummary": "MOPS確認中磊有線與無線網路產品；官網具體列出5G Sub-6G、mmWave與4G LTE小型基地台，並支持私人蜂巢網路。工業自動化角色限於工廠網路接取層，不能直接推定EtherCAT／Profinet數據採集、PLC控制或西門子ODM合約。 2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計YoY+56.86%。此為全公司營收，未拆分「工業自動化與 CNC 工具機」貢獻，不能全部歸因於本題材。",
       "products": [
-        "工業邊緣運算閘道器(Intel x86/ARM/OPC UA)",
-        "工廠數據採集模組(Modbus/Profinet/EtherCAT)",
-        "工業級5G專網小基地台"
+        "5G Sub-6G 4×4 MIMO小型基地台",
+        "5G mmWave室內／室外小型基地台",
+        "4G LTE企業型小型基地台",
+        "統一設備管理系統（UDM）與edgeEPC網路方案"
       ],
       "customers": [
-        "西門子(Siemens IIoT閘道器ODM)",
-        "Rockwell Automation(工廠數據採集)",
-        "台達電(工業自動化通訊模組)"
+        "Siemens（工廠網路整合應用對象，非MOPS揭露客戶）",
+        "Rockwell Automation（自動化網路整合應用對象，非MOPS揭露客戶）",
+        "台達電（工廠通訊應用對象，非MOPS揭露客戶）",
+        "中華電信（專網服務生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "研華(2395)",
-        "新漢(8234)"
+        "Nokia（私人行動網路方案比較）",
+        "Ericsson（行動網路設備比較）"
       ],
       "risks": [
-        "工業自動化網通模組佔比低",
-        "工規認證門檻"
+        "MOPS及所查官網未證實OPC UA／Profinet／EtherCAT採集模組或PLC產品",
+        "工業控制的確定性延遲與安全要求不能用蜂巢頻段規格直接替代"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "5388 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5388",
+          "claim": "本次MCP主要經營業務原文：有線網路產品無線網路產品其他。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE",
+          "title": "5388 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計YoY+56.86%。此為全公司營收，未拆分「工業自動化與 CNC 工具機」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。 公告備註：北美市場訂單增溫。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "中磊官方網站",
+          "title": "Small Cell | Mobile Network | Solutions",
+          "url": "https://www.sercomm.com/en/solutions/product/1/0/1",
+          "claim": "Sercomm Small Cell頁列5G Sub-6G與mmWave、4G LTE、私人蜂巢網路、UDM／edgeEPC、各機型頻段及PTP／GPS與TR-069／O1；未證實工控協定採集產品。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5388",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-16",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "OPC UA工業通訊協議整合",
-        "5G專網(Private Network)企業級部署"
+        "官網5G Sub-6G機型支援4×4 MIMO，按機型提供n48／n77／n78／n79頻段",
+        "官網列PTP／GPS同步及TR-069／O1遠端管理，屬行動網路設備能力",
+        "私人蜂巢網路與UDM／edgeEPC整合；不能據此宣稱具EtherCAT即時運動控制"
       ],
       "swot": {
         "strengths": [
-          "網通ODM技術可延伸至IIoT閘道器",
-          "北美企業客戶基礎有利工業市場切入"
+          "官網具有可檢查的小型基地台頻段、同步及管理介面，不只是泛稱工業IoT",
+          "營收公告說明北美市場訂單增溫，但未指明來自工廠專網",
+          "2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計YoY+56.86%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "工業自動化營收佔比極低",
-          "缺乏工業自動化領域知識"
+          "MOPS及所查官網未證實OPC UA／Profinet／EtherCAT採集模組或PLC產品",
+          "公司營收以有線與無線網路整體計算，工業專網占比與客戶未披露"
         ],
         "opportunities": [
-          "5G專網推動工廠智慧化升級",
-          "美國製造回流帶動IIoT需求"
+          "工廠無線覆蓋與行動設備連線需求可擴大小型基地台部署場景",
+          "網路設備統一管理與私網核心整合有助降低企業維運負擔"
         ],
         "threats": [
-          "研華/新漢等工業電腦廠競爭",
-          "工業客戶要求高客製化"
+          "工業控制的確定性延遲與安全要求不能用蜂巢頻段規格直接替代",
+          "北美需求與電信資本支出轉弱時，即使專網題材升溫也不保證總營收成長"
         ]
       }
     }

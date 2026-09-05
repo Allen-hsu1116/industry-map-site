@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -346,75 +346,89 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "信昌電為PCB基板上游陶瓷介電材料供應商，MOPS登記為晶片電容晶片電阻介電瓷粉。間接受惠高速PCB/IC載板需求，屬利基型材料供應商，高頻陶瓷配方為核心技術壁壘。",
+      "supplyChainStage": "board_level_components_adjacent",
+      "roleType": "ceramic_and_passives_adjacent",
+      "roleSummary": "信昌電MOPS確認晶片電容、晶片電阻與介電瓷粉，官網進一步列鈦酸鋇基材、積層電容瓷粉、微波瓷粉與LTCC粉末。但未確認高速CCL填料配方或具名PCB材料買方，本題材維持陶瓷材料與板級被動元件鄰接，不能將瓷粉直接視為ABF載板收入。 2026年7月營收5.37億元，MoM+6.62%、YoY+47.87%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。",
       "products": [
-        "高頻陶瓷介電填料(Df<0.002@10GHz)(用於高速CCL基板)",
-        "MLCC陶瓷基材(BaTiO3鈦酸鋇配方)(X7R/X5R溫度特性)",
-        "晶片電阻用氧化鋁基板(96%Al2O3)",
-        "高頻陶瓷材料(MWL-7低介電常數配方)"
+        "MLCC晶片電容",
+        "晶片電阻",
+        "鈦酸鋇基材與積層電容瓷粉",
+        "微波瓷粉",
+        "低溫共燒陶瓷粉（LTCC）"
       ],
       "customers": [
-        "台燿科技(6279)(高頻CCL基板陶瓷填料)",
-        "華新科(2492)(MLCC陶瓷材料供應)",
-        "國巨(2327)(MLCC BaTiO3瓷粉採購)",
-        "聯茂電子(6213)(高速CCL陶瓷填料)"
+        "華新科（陶瓷與被動元件供應鏈對象，非已證實採購客戶）",
+        "國巨（介電材料應用觀察對象，非已證實採購客戶）",
+        "台燿（CCL材料應用觀察對象，非已證實採購客戶）",
+        "聯茂（CCL材料應用觀察對象，非已證實採購客戶）"
       ],
       "competitors": [
-        "村田Murata(陶瓷材料垂直整合)",
-        "Dupont(高頻基板材料)",
-        "信昌電自身亦生產MLCC(垂直整合)"
+        "國巨（被動元件同業比較）",
+        "村田製作所（陶瓷電容同業比較）"
       ],
       "risks": [
-        "PCB基板填料市場利基型,成長空間有限",
-        "與國際化工大廠(Dupont/松下)技術差距"
+        "MOPS未揭露高速CCL專用填料、96%氧化鋁基板或MWL-7配方，不能保留原精密規格宣稱",
+        "CCL配方導入受吸水率、分散及壓合可靠度限制，MLCC材料經驗不能直接替代驗證"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 晶片電容、晶片電阻、介電瓷粉"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "6173 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6173",
+          "claim": "本次MCP主要經營業務原文：晶片電容、晶片電阻、介電瓷粉。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "title": "6173 2026年7月營收（MCP）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6173&start_date=2025-06-01&end_date=2026-09-06",
+          "claim": "2026年7月營收5.37億元，MoM+6.62%、YoY+47.87%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。 TWSE主查無資料，採FinMind回傳的revenue_year/revenue_month；原始單位新台幣元，MoM及YoY依對應月份計算。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "信昌電官方網站",
+          "title": "介電瓷粉 - 信昌電子陶瓷股份有限公司",
+          "url": "https://www.pdc.com.tw/tw/powder",
+          "claim": "信昌電介電瓷粉官網明列鈦酸鋇基材、積層電容瓷粉、微波瓷粉與低溫共燒陶瓷粉；本次未確認CCL買方、MWL-7或原Df／D50門檻。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6173",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-07-27",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "高頻陶瓷填充材料配方(Df<0.002@10GHz低損耗優化)",
-        "BaTiO3鈦酸鋇MLCC瓷粉粒徑控制(D50<1μm)",
-        "低CTE熱膨脹係數陶瓷填料配方(α<5ppm/°C)"
+        "官網揭露鈦酸鋇基材、積層電容瓷粉及微波瓷粉；技術分析關注粒徑分散與介電特性，未支持原D50／Df門檻",
+        "官網揭露LTCC低溫共燒陶瓷粉；共燒收縮與材料匹配為技術分析，不等同高速CCL配方認證",
+        "技術分析：晶片電容／電阻的容量、阻值、端電極及熱循環可靠度控制"
       ],
       "swot": {
         "strengths": [
-          "高頻陶瓷介電填料(Df<0.002@10GHz)切入高速CCL基板供應鏈",
-          "BaTiO3鈦酸鋇MLCC瓷粉粒徑控制(D50<1μm)技術領先",
-          "低CTE熱膨脹係數陶瓷填料配方(α<5ppm/°C)適用高階基板"
+          "MOPS及官網確認成品被動元件與多種陶瓷粉末，材料本業不必依靠虛構配方成立",
+          "2026年7月營收5.37億元，MoM+6.62%、YoY+47.87%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "CCL陶瓷填料為新應用，市場認知度與客戶驗證尚在初期",
-          "高頻基板填料市場規模有限",
-          "與台燿(6279)/聯茂(6213)合作深度待加強"
+          "MOPS未揭露高速CCL專用填料、96%氧化鋁基板或MWL-7配方，不能保留原精密規格宣稱",
+          "PCB／載板材料營收與實際買方未分拆，陶瓷材料業務不能直接換算ABF需求"
         ],
         "opportunities": [
-          "AI伺服器高速PCB用低損耗CCL基板需求增長",
-          "5G毫米波高頻基板用陶瓷填料應用",
-          "半導體封裝用ABF基板介電填料新應用"
+          "若瓷粉通過CCL樹脂相容性與介電損耗測試，才可能拓展高速板材填料應用",
+          "板級電源去耦與訊號匹配需求可增加晶片電容、電阻的應用機會"
         ],
         "threats": [
-          "日本/美國CCL填料供應商技術領先",
-          "CCL廠可能自行開發陶瓷填料降低外購比例",
-          "基板材料技術迭代速度快"
+          "CCL配方導入受吸水率、分散及壓合可靠度限制，MLCC材料經驗不能直接替代驗證",
+          "將陶瓷瓷粉題材誤認為已量產載板材料，可能高估營收與估值連動"
         ]
       }
     },

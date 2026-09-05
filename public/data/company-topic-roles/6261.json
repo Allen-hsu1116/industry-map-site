@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -278,86 +278,82 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元MOPS揭露半導體/光電切磨測與IC/CIS/CCM測試設備，未揭露BMS或功率元件專用設備；儲能題材僅是既有IC測試平台可能承接BMS、隔離器與閘極驅動IC的應用延伸。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。",
+      "supplyChainStage": "battery_control_ic_testing_adjacent",
+      "roleType": "ic_test_outside_battery_systems",
+      "roleSummary": "久元MOPS確認切割、研磨、測試、挑檢與IC／CIS／CCM測試設備，未確認BMS專用AFE測試、儲能控制板或電池系統產品。本題材保留IC測試可能應用於儲能控制晶片的鄰接觀察，不將一般測試能力直接提升為電池供應商。 2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。此為全公司營收，未拆分「儲能、電芯與電池材料」貢獻，不能全部歸因於本題材。",
       "products": [
-        "BMS類比前端IC晶圓切割與成品測試服務",
-        "電流/電壓感測IC自動測試與挑檢服務",
-        "隔離閘極驅動IC高低溫成品測試服務",
-        "功率模組控制板用CIS/光學感測器測試設備"
+        "IC晶圓切割與研磨加工",
+        "IC成品測試與挑檢加工",
+        "IC自動測試設備",
+        "CIS影像感測器測試設備",
+        "CCM相機模組測試設備"
       ],
       "customers": [
-        "Texas Instruments(BMS IC應用對象，非MOPS揭露客戶)",
-        "Analog Devices(BMS AFE應用對象，非MOPS揭露客戶)",
-        "Infineon(閘極驅動IC應用對象，非MOPS揭露客戶)",
-        "onsemi(電池感測與驅動IC應用對象，非MOPS揭露客戶)"
+        "Texas Instruments（電源管理IC測試應用對象，非MOPS揭露客戶）",
+        "Analog Devices（類比IC測試應用對象，非MOPS揭露客戶）",
+        "Infineon（控制IC測試應用對象，非MOPS揭露客戶）",
+        "onsemi（感測與控制IC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "京元電(2449)(IC測試代工)",
-        "精測(6510)(晶圓測試探針卡)",
-        "蔚華科(3054)(半導體測試設備)"
+        "欣銓（IC測試服務比較）",
+        "京元電子（IC測試服務比較）"
       ],
       "risks": [
-        "6月營收3.90億(FinMind)但儲能相關佔比極低",
-        "儲能IC測試設備市場規模小，成長空間有限",
-        "題材傳導非常微弱，久元核心為CIS/CCM測試設備"
+        "未取得BMS AFE專用測試平台或儲能客戶資料，不能宣稱電池管理晶片量產測試能力",
+        "精密類比測試平台須重新驗證，既有CIS設備能力不保證可轉入BMS測試"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體與光電產品之切割、研磨、測試、挑檢與基板切割；IC/CIS/CCM測試設備研製銷售。"
+          "title": "6261 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "本次MCP主要經營業務原文：半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收3.74億元，較6月減少4.1%；TWSE月營收查無資料，改採FinMind。"
+          "title": "6261 2026年7月營收（MCP）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6261&start_date=2025-06-01&end_date=2026-09-06",
+          "claim": "2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。此為全公司營收，未拆分「儲能、電芯與電池材料」貢獻，不能全部歸因於本題材。 TWSE主查無資料，採FinMind回傳的revenue_year/revenue_month；原始單位新台幣元，MoM及YoY依對應月份計算。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "多通道微伏/微安量測與BMS AFE通道一致性校正",
-        "-40°C至125°C高低溫成品測試及資料追溯",
-        "晶圓切割、挑檢、Handler上下料與測試機台整合"
+        "加工流程分析：晶圓切割、背面研磨、挑檢與測試批次追溯",
+        "IC測試分析：測試治具接觸、量測重複性與上下料整合；不宣稱微伏精度或特定溫度範圍",
+        "影像測試分析：CIS／CCM電性和影像品質量測，與電池AFE測試分開"
       ],
       "swot": {
         "strengths": [
-          "MOPS揭露切割、研磨、測試、挑檢與自研IC測試設備，具後段整合基礎",
-          "可把類比/混合訊號測試平台延伸至BMS AFE與隔離驅動IC"
+          "MOPS同時揭露加工服務與IC測試設備，具有測試服務及設備兩種業務模式",
+          "CIS／CCM設備項目可明確辨認，避免把影像設備當成儲能控制板產品"
         ],
         "weaknesses": [
-          "2026年7月營收3.74億元、MoM-4.1%，短期動能轉弱",
-          "MOPS未揭露BMS、IGBT或SiC專用測試設備，儲能收入占比無法驗證"
+          "未取得BMS AFE專用測試平台或儲能客戶資料，不能宣稱電池管理晶片量產測試能力",
+          "本期營收月減及年減，且未拆分任何儲能相關收入",
+          "2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%；公司整體衰退須與題材想像分開。"
         ],
         "opportunities": [
-          "儲能櫃與電動車增加多通道BMS AFE及隔離驅動IC測試需求",
-          "客製Handler與測試整合可切入中小型IC設計公司的委外量產"
+          "若未來取得電源控制IC客戶測試驗證，才可能增加儲能周邊測試需求",
+          "IC製程切割與成品測試整合可縮短服務交期，但須以實際訂單驗證"
         ],
         "threats": [
-          "Advantest、Teradyne與專業封測廠具完整功率/類比測試平台",
-          "客戶自建測試程式或需求規格變動，可能提高客製成本"
+          "精密類比測試平台須重新驗證，既有CIS設備能力不保證可轉入BMS測試",
+          "測試設備驗收與加工稼動率波動可能拖累本業，不應以儲能題材掩蓋"
         ]
       }
     },

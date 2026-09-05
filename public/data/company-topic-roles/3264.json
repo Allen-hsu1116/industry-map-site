@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -171,86 +171,80 @@
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "test",
-      "roleType": "edge_ai_ic_test",
-      "roleSummary": "欣銓MOPS揭露記憶體、數位與混合訊號IC晶圓/成品測試及晶圓級Burn-in；Edge AI角色在於NPU/SoC的CP、FT與可靠度篩選，而非AI晶片設計。FinMind顯示2026年7月營收17.67億元、MoM+13.8%。",
+      "supplyChainStage": "edge_ic_testing_adjacent",
+      "roleType": "digital_mixed_signal_test_adjacent",
+      "roleSummary": "欣銓MOPS確認記憶體晶圓測試、數位與混合訊號IC晶圓／成品測試及晶圓Burn-in，可作為Edge AI晶片測試的鄰接服務。未揭露NPU特定平台、RF前端量測或邊緣AI專屬收入；營收採FinMind已回傳的2026年8月，不沿用較舊7月。 2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%。此為全公司營收，未拆分「Edge AI / AIoT 邊緣智慧」貢獻，不能全部歸因於本題材。",
       "products": [
-        "邊緣AI SoC晶圓針測CP服務",
-        "NPU/MCU成品功能測試FT服務",
-        "AIoT混合訊號ADC/DAC與射頻前端測試",
-        "晶圓級Burn-in與高溫壽命篩選服務"
+        "記憶體IC晶圓測試服務",
+        "數位訊號IC晶圓與成品測試服務",
+        "混合訊號IC晶圓與成品測試服務",
+        "晶圓型式Burn-in測試服務"
       ],
       "customers": [
-        "MediaTek(邊緣SoC應用對象，非MOPS揭露客戶)",
-        "Realtek(2379；AIoT SoC應用對象，非MOPS揭露客戶)",
-        "Novatek(3034；影像/邊緣IC應用對象，非MOPS揭露客戶)",
-        "Nuvoton(4919；MCU/NPU應用對象，非MOPS揭露客戶)"
+        "聯發科（Edge AI SoC測試應用對象，非MOPS揭露客戶）",
+        "瑞昱（AIoT晶片測試應用對象，非MOPS揭露客戶）",
+        "聯詠（邊緣影像IC應用對象，非MOPS揭露客戶）",
+        "新唐（MCU測試應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "京元電(2449)(AI GPU測試代工)",
-        "力成(6239)(邏輯IC測試)",
-        "矽格(6257)(利基SoC測試)"
+        "京元電子（IC測試同業）",
+        "矽格（IC測試同業）"
       ],
       "risks": [
-        "邊緣AI IC測試佔欣銓營收比重低，6月營收15.52億(FinMind)主要來自記憶體測試",
-        "AI SoC測試需高速數位測試機台投資金額大",
-        "邊緣AI晶片客戶可能自有測試能力，委外比例不確定"
+        "未拆分Edge AI或NPU測試收入，不能把全公司營收成長視為NPU訂單增幅",
+        "測試機台利用率與資本支出回收受到客戶產品週期影響"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位與混合訊號IC晶圓/成品測試、晶圓級Burn-in測試。"
+          "title": "3264 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
+          "claim": "本次MCP主要經營業務原文：記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收17.67億元，較6月增加13.8%；TWSE月營收查無資料，改採FinMind。"
+          "title": "3264 2026年8月營收（MCP）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3264&start_date=2025-06-01&end_date=2026-09-06",
+          "claim": "2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%。此為全公司營收，未拆分「Edge AI / AIoT 邊緣智慧」貢獻，不能全部歸因於本題材。 TWSE主查無資料，採FinMind回傳的revenue_year/revenue_month；原始單位新台幣元，MoM及YoY依對應月份計算。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "多Site數位SoC CP/FT與高速介面功能測試",
-        "ADC/DAC、PLL、RF前端之混合訊號量測",
-        "晶圓級Burn-in之溫控、供電應力與失效追溯"
+        "測試流程分析：CP探針接觸、FT功能向量與失效分類",
+        "混合訊號量測分析：電壓／電流與數位時序交互測試，不推定射頻頻段能力",
+        "晶圓Burn-in分析：供電應力、溫控及良率資料追溯，不宣稱未揭露溫度規格"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收17.67億元、MoM+13.8%，測試產能利用率動能改善",
-          "CP、FT、混合訊號及晶圓級Burn-in可涵蓋Edge AI SoC量產流程"
+          "MOPS直接揭露數位與混合訊號IC測試，可對應邊緣裝置控制晶片的測試需求",
+          "2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "MOPS未揭露Edge AI收入與客戶，題材仍屬應用推論",
-          "NPU高速介面與高功耗測試需持續投入ATE及治具，折舊壓力高"
+          "未拆分Edge AI或NPU測試收入，不能把全公司營收成長視為NPU訂單增幅",
+          "原ADC／DAC／PLL及RF前端詳列為測試能力缺少產品級支持，已縮回流程分析"
         ],
         "opportunities": [
-          "AI PC周邊、機器視覺與工業AIoT增加中低功耗NPU測試需求",
-          "車用Edge AI可提高高溫測試與Burn-in單價"
+          "Edge AI SoC整合更多數位與類比功能，可能增加測試複雜度與工時",
+          "若有客戶平台或量產測試案揭露，可升級本題材可信度"
         ],
         "threats": [
-          "京元電、矽格等測試廠擴充AI SoC平台，價格與產能競爭加劇",
-          "客戶自建測試程式或轉移封測供應商，設備利用率可能下滑"
+          "測試機台利用率與資本支出回收受到客戶產品週期影響",
+          "SoC平台測試自建或轉單會限制外包量，不能以AI標籤推定市占"
         ]
       }
     },

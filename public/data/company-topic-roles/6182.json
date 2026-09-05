@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6182",
   "companyName": "合晶",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -243,86 +243,88 @@
       "topicName": "水資源、環保與電子廢料回收",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "合晶MOPS只揭露半導體與材料，核心是矽晶圓，不是水處理設備或濾材供應商；環保題材應限於自身長晶、切片、研磨、拋光與清洗製程的超純水管理及廢水回收。FinMind顯示2026年7月營收9.94億元、MoM+2.9%。",
+      "supplyChainStage": "industrial_water_user_outside_topic",
+      "roleType": "wafer_manufacturing_outside_water_services",
+      "roleSummary": "合晶MOPS揭露材料研發製造，官網確認拋光、外延、SOI與客製矽晶圓及長晶／外延技術。環境水資源題材應限於晶圓製造廠自身的資源管理場景，未證實對外水處理、矽粉回收或廢液工程收入。 2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%。此為全公司營收，未拆分「水資源、環保與電子廢料回收」貢獻，不能全部歸因於本題材。",
       "products": [
-        "6吋重摻雜矽晶圓（切磨拋製程用水管理場景）",
-        "8吋拋光矽晶圓（超純水清洗與再生水回用場景）",
-        "6吋/8吋外延矽晶圓（RCA清洗與廢液分流場景）",
-        "矽晶圓切片研磨泥水分離與矽粉回收流程"
+        "拋光矽晶圓",
+        "外延矽晶圓",
+        "絕緣層上覆矽（SOI）晶圓",
+        "雙面拋光與超厚／超薄客製矽晶圓"
       ],
       "customers": [
-        "台積電(2330；矽晶圓應用對象，非MOPS揭露水處理客戶)",
-        "聯電(2303；矽晶圓應用對象，非MOPS揭露水處理客戶)",
-        "世界先進(5347；8吋晶圓應用對象，非MOPS揭露客戶)",
-        "力積電(6770；矽晶圓應用對象，非MOPS揭露客戶)"
+        "聯電（矽晶圓應用對象，非已證實水處理客戶）",
+        "世界先進（矽材料應用對象，非已證實水處理客戶）",
+        "力積電（矽晶圓應用對象，非已證實水處理客戶）",
+        "台積電（晶圓材料應用對象，非已證實水處理客戶）"
       ],
       "competitors": [
-        "環球晶(6488)(矽晶圓用水管理)",
-        "台勝科(3532)(矽晶圓廠務系統)",
-        "勝國(3551)(水處理設備)"
+        "環球晶（矽晶圓同業）",
+        "SUMCO（矽晶圓同業）"
       ],
       "risks": [
-        "6月營收9.66億(FinMind)但水處理相關佔比極低",
-        "矽晶圓製程用水回收為廠務支援非核心產品",
-        "題材傳導非常微弱，合晶核心為半導體矽晶圓製造"
+        "MOPS與所查官網未列對外再生水、RCA廢液處理或矽粉回收方案",
+        "缺水與排放規範可能增加晶圓生產成本，是用水風險而非天然環保收入"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及其材料之研發、設計、製造、進出口及代理銷售等"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體及其材料之研發、設計、製造、進出口與代理銷售。"
+          "title": "6182 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6182",
+          "claim": "本次MCP主要經營業務原文：半導體及其材料之研發、設計、製造、進出口及代理銷售等。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收9.94億元，較6月增加2.9%；TWSE月營收查無資料，改採FinMind。"
+          "title": "6182 2026年7月營收（MCP）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6182&start_date=2025-06-01&end_date=2026-09-06",
+          "claim": "2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%。此為全公司營收，未拆分「水資源、環保與電子廢料回收」貢獻，不能全部歸因於本題材。 TWSE主查無資料，採FinMind回傳的revenue_year/revenue_month；原始單位新台幣元，MoM及YoY依對應月份計算。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "合晶官方網站",
+          "title": "客製化矽晶圓服務，以客為本 的半導體材料供應商 - WAFER WORKS",
+          "url": "https://www.waferworks.com/en/products-and-service/service",
+          "claim": "合晶客製晶圓官網明列12吋及以下拋光、外延、SOI、雙面與超厚薄晶圓，以及長晶、接合和多層外延技術；未揭露本題材對外水處理業務。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6182",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "UPW超純水末端供水、TOC/電阻率監控與多段回收",
-        "切片/研磨廢水之固液分離、矽粉回收與濁度控制",
-        "RCA清洗酸鹼廢液及含氟廢水分流與濃度監測"
+        "官網揭露低電阻率高摻雜、高電阻率低氧與低缺陷長晶技術",
+        "官網揭露雙面拋光、應力控制、背面鍍膜與晶圓接合",
+        "官網揭露多層、超厚及埋層外延；廢水回用屬廠內管理議題，非已證實對外產品"
       ],
       "swot": {
         "strengths": [
-          "FinMind顯示2026年7月營收9.94億元、MoM+2.9%，矽晶圓本業短期穩定",
-          "矽晶圓製程用水量大，內部回收可直接降低單位製造成本與用水風險"
+          "官網有可追溯的拋光／外延／SOI產品與長晶技術，真實材料本業清楚",
+          "2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "MOPS未揭露對外水處理產品，原資料把矽晶圓描述成過濾基材並無佐證",
-          "環保效益主要是廠務內部改善，難形成可獨立估算的題材營收"
+          "MOPS與所查官網未列對外再生水、RCA廢液處理或矽粉回收方案",
+          "廠內用水需求不等同水處理供應商營收，環保題材不能由晶圓銷售反推"
         ],
         "opportunities": [
-          "科學園區用水限制可加速UPW回收、研磨泥水分離與矽粉資源化投資",
-          "客戶碳水足跡要求可促使合晶提高再生水率並取得供應鏈評分優勢"
+          "若公司公布製程節水與回收率，可用於評估材料製造成本與ESG改善",
+          "日後若披露對外回收服務及營收，再重新評估環境產業鏈角色"
         ],
         "threats": [
-          "專業水處理商掌握系統設計與維運，合晶缺乏對外銷售優勢",
-          "旱災、園區限水或廢水標準加嚴會提高資本支出與停線風險"
+          "缺水與排放規範可能增加晶圓生產成本，是用水風險而非天然環保收入",
+          "矽晶圓景氣與新增產能會影響利用率，即使節水成效良好也不保證獲利改善"
         ]
       }
     }

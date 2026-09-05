@@ -2,94 +2,107 @@
   "schemaVersion": 1,
   "companyCode": "2327",
   "companyName": "國巨",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "passive-components",
       "topicName": "被動元件",
       "topicType": "product",
       "directness": "core",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "mlcc_chip_resistor_leader",
-      "roleSummary": "國巨MOPS直接揭露被動元件、電阻原料半成品、天線及相關零件製造銷售，被動元件核心角色無疑。2026年7月營收161.31億元，MoM+5.0%、YoY+51.5%，累計YoY+32.5%，公司說明為客戶需求強勁；但MOPS未揭露Apple、Tesla、Intel或NVIDIA為客戶。",
+      "supplyChainStage": "passive_component_production",
+      "roleType": "passive_component_manufacturer",
+      "roleSummary": "國巨MOPS揭露被動元件及電阻材料，官方產品目錄確認MLCC與厚膜、薄膜、金屬膜、繞線電阻。被動元件核心角色成立；產品規格及車規認證須落到個別系列，不將某系列AEC-Q200或尺寸範圍擴大成全產品通則。 2026年7月營收161.31億元，MoM+5.03%、YoY+51.51%，累計YoY+32.52%。此為全公司營收，未拆分「被動元件」貢獻，不能全部歸因於本題材。",
       "products": [
-        "0201～2220多層陶瓷電容MLCC",
-        "0201～2512厚膜／薄膜晶片電阻",
-        "功率電感與高頻RF電感",
-        "鉭質／聚合物電容",
-        "5G／Wi-Fi天線與射頻元件"
+        "積層陶瓷電容（MLCC）",
+        "厚膜電阻",
+        "薄膜電阻",
+        "金屬膜電阻",
+        "繞線電阻"
       ],
       "customers": [
         "Apple（消費電子被動元件應用對象，非MOPS揭露客戶）",
         "Tesla（車用被動元件應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI加速卡被動元件應用對象，非MOPS揭露客戶）",
-        "Intel（伺服器被動元件應用對象，非MOPS揭露客戶）",
-        "Samsung Electronics（消費電子應用對象，非MOPS揭露客戶）"
+        "NVIDIA（運算板被動元件應用對象，非MOPS揭露客戶）",
+        "Intel（運算平台被動元件應用對象，非MOPS揭露客戶）",
+        "Samsung Electronics（電子終端應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "三星電機(Samsung Electro-Mechanics)",
-        "太陽誘電(Taiyo Yuden)",
-        "國巨(2327)併購KEMET/普思"
+        "村田製作所（陶瓷電容同業）",
+        "TDK（被動元件同業）",
+        "華新科（電容與電阻同業）"
       ],
       "risks": [
-        "Murata、Samsung Electro-Mechanics與Taiyo Yuden在高階MLCC競爭",
-        "需求反轉時通路去庫存與價格下跌會快速影響營收及產能利用率"
+        "合併營收未按本次產品清單拆分，不能直接比較各MLCC／電阻系列的增幅",
+        "大宗被動元件價格與通路庫存調整會影響出貨成長持續性"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：被動元件、電阻原料半成品、天線、主動元件與機器設備零件。"
+          "title": "2327 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2327",
+          "claim": "本次MCP主要經營業務原文：被動元件、電阻原料半成品天線、主動元件機器設備、零件製造及銷售。。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收161.31億元，MoM+5.0%、YoY+51.5%，累計YoY+32.5%；備註為客戶需求強勁。"
+          "publisher": "TWSE",
+          "title": "2327 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收161.31億元，MoM+5.03%、YoY+51.51%，累計YoY+32.52%。此為全公司營收，未拆分「被動元件」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。 公告備註：主要係因客戶需求強勁。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "國巨官方網站",
+          "title": "Capacitors | YAGEO Group",
+          "url": "https://yageogroup.com/products/Capacitors?79=558",
+          "claim": "國巨集團電容目錄支持MLCC；電阻目錄明確列thick film、thin film、metal film及wire-wound，強調公差、功率、TCR，不代表全系列具有相同尺寸或車規認證。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-resistor-products",
+          "publisher": "YAGEO Group",
+          "title": "Resistors | YAGEO Group",
+          "url": "https://yageogroup.com/products/Resistors",
+          "claim": "官方電阻目錄列厚膜、薄膜、金屬膜與繞線電阻；產品規格依系列而異。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2327",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-20",
+      "lastVerified": "2026-09-06",
       "status": "verified",
       "techFocus": [
-        "BME鎳內電極MLCC積層、燒結與介電層薄化",
-        "AEC-Q200高溫、高濕、耐壓與脈衝可靠度",
-        "低ESR／ESL、高容值與小型化被動元件設計"
+        "官網MLCC目錄按介電溫度係數、耐壓與封裝選型，不將C0G／X7R等規格混為同一料號",
+        "官網電阻產品強調阻值公差、功率與低TCR，對應分壓、電流感測與訊號調理",
+        "技術分析：依直流偏壓、溫升及脈衝負載降額選型；車規認證需逐系列核對"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持被動元件與天線製造，產品涵蓋MLCC、電阻、電感與鉭電容",
-          "2026年7月營收161.31億元、YoY+51.5%，累計YoY+32.5%，且公司明確說明客戶需求強勁"
+          "MOPS及官網共同支持多類被動元件，可服務不同電路功能與可靠度需求",
+          "營收公告註明客戶需求強勁，但沒有把成長指定給某一家終端客戶",
+          "2026年7月營收161.31億元，MoM+5.03%、YoY+51.51%，累計YoY+32.52%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "MOPS未揭露Apple、Tesla、NVIDIA等客戶，具名應用關係不能當成確認訂單",
-          "中低階被動元件標準化高，報價與庫存循環仍會壓縮毛利"
+          "合併營收未按本次產品清單拆分，不能直接比較各MLCC／電阻系列的增幅",
+          "未披露具名採購客戶與單項認證覆蓋範圍，應用公司只作生態觀察"
         ],
         "opportunities": [
-          "AI伺服器高功率電源與GPU板增加MLCC、電阻及電感用量",
-          "電動車與ADAS提高AEC-Q200元件數量及高可靠度產品占比"
+          "高功率運算與電源管理可提高去耦、感測與精密電阻需求",
+          "工業與車用長生命週期設計可增加高可靠度產品的驗證價值"
         ],
         "threats": [
-          "Murata、Samsung Electro-Mechanics與Taiyo Yuden在高階MLCC競爭",
-          "需求反轉時通路去庫存與價格下跌會快速影響營收及產能利用率"
+          "大宗被動元件價格與通路庫存調整會影響出貨成長持續性",
+          "認證與替換料評估週期長，不能把終端AI需求直接線性外推成公司毛利"
         ]
       }
     }

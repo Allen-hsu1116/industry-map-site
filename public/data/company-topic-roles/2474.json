@@ -2,91 +2,94 @@
   "schemaVersion": 1,
   "companyCode": "2474",
   "companyName": "可成",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "ai-server-mechanical",
       "topicName": "AI 伺服器機構件與滑軌",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "metal_casing",
-      "roleType": "metal_casing_leader",
-      "roleSummary": "可成MOPS僅明確揭露機殼及內構件生產、銷售與開發，未揭露AI伺服器冷板、滑軌或Dell／HPE訂單。其金屬加工能力可延伸至伺服器機構件，但目前應列為潛在應用角色。2026年7月營收10.56億元，雖MoM+31.3%，仍YoY-34.3%、累計YoY-32.0%。",
+      "supplyChainStage": "mechanical_processing_adjacent",
+      "roleType": "metal_housing_server_adjacent",
+      "roleSummary": "可成MOPS確認機殼與內構件，官方技術頁確認金屬高壓壓鑄及CNC切削等能力。可支持伺服器機構件的潛在加工鄰接，但未取得AI機架、冷板或具名伺服器合約證據，不能把3C機殼能力直接算成AI營收。 2026年7月營收10.56億元，MoM+31.28%、YoY-34.29%，累計YoY-31.97%。此為全公司營收，未拆分「AI 伺服器機構件與滑軌」貢獻，不能全部歸因於本題材。",
       "products": [
-        "鋁／鎂合金CNC精密機殼",
-        "鋁合金壓鑄內構件與支撐框架",
-        "NMT金屬塑膠一體成形外觀件",
-        "陽極處理／噴砂／雷雕金屬外觀件"
+        "鋁合金壓鑄機殼",
+        "鎂合金壓鑄內構件",
+        "CNC切削金屬機殼與結構件"
       ],
       "customers": [
-        "廣達(2382；伺服器機構件應用對象，非MOPS揭露客戶)",
-        "緯創(3231；伺服器機構件應用對象，非MOPS揭露客戶)",
-        "緯穎(6669；機櫃內構件應用對象，非MOPS揭露客戶)",
-        "Supermicro超微（伺服器機殼應用對象，非MOPS揭露客戶)"
+        "廣達（伺服器機構應用對象，非MOPS揭露客戶）",
+        "緯創（機殼加工應用對象，非MOPS揭露客戶）",
+        "緯穎（機架內構應用對象，非MOPS揭露客戶）",
+        "Supermicro（伺服器機殼應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "鴻海/富士康",
-        "和碩",
-        "Casetek"
+        "鴻準（金屬機構加工同業比較）",
+        "巨騰國際（機殼製造同業比較）"
       ],
       "risks": [
-        "勤誠、晟銘電與ODM自製機殼具有既有認證和客戶優勢",
-        "若轉型驗證進度不如預期，消費機殼衰退仍會主導營運"
+        "近期營收仍年減且累計年減，月增反彈未證明本業衰退已結束",
+        "終端需求疲弱與加工設備固定成本會放大利用率下降壓力"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "可成 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2474",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 可成 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2474 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：機殼及內構件相關產品生產、銷售與開發。"
+          "title": "2474 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2474",
+          "claim": "本次MCP主要經營業務原文：機殼及內構件各式相關產品之生產、銷售與開發。。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收10.56億元，MoM+31.3%、YoY-34.3%，累計YoY-32.0%。"
+          "publisher": "TWSE",
+          "title": "2474 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收10.56億元，MoM+31.28%、YoY-34.29%，累計YoY-31.97%。此為全公司營收，未拆分「AI 伺服器機構件與滑軌」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "可成官方網站",
+          "title": "\n\tTechnology\n",
+          "url": "https://www.catcher-group.com/technology_more.aspx?KindID=9&ID=18",
+          "claim": "可成Pressure Die Casting官方頁說明鋁／鎂等合金高壓注模成形並連結CNC切削；支持機殼加工技術，但不支持AI伺服器客戶與冷板收入。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2474",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-20",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "鋁／鎂合金壓鑄、CNC精加工與尺寸公差控制",
-        "NMT金屬塑膠接合、天線隔離與結構一體化",
-        "陽極氧化、噴砂與耐蝕表面處理"
+        "官網高壓壓鑄以鋁、鎂等熔融合金注入鋼模後凝固成形",
+        "官網連結CNC切削製程；技術分析重點為刀具、加工變形與尺寸一致性",
+        "機構應用分析：內構件裝配公差與受力路徑；未取得AI機架或散熱冷板量產證明"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持機殼與內構件製造，金屬加工能力可遷移至伺服器機構件",
-          "2026年7月營收MoM+31.3%，短期出貨較6月回升"
+          "MOPS機殼內構件與官網金屬成形相互支持，可明確定位機構加工本業",
+          "壓鑄與CNC加工可服務複雜外形，但應用範圍須依實際產品案確認"
         ],
         "weaknesses": [
-          "7月營收YoY-34.3%、累計YoY-32.0%，本業規模仍明顯收縮",
-          "MOPS未揭露AI伺服器、液冷冷板或具名伺服器客戶，直接供應關係缺乏證據"
+          "近期營收仍年減且累計年減，月增反彈未證明本業衰退已結束",
+          "AI伺服器機構件、客戶名單與相關營收未揭露，維持低信心鄰接角色",
+          "2026年7月營收10.56億元，MoM+31.28%、YoY-34.29%，累計YoY-31.97%；公司整體衰退須與題材想像分開。"
         ],
         "opportunities": [
-          "高功率伺服器增加金屬框架、承重與EMI／散熱結構需求",
-          "既有壓鑄、CNC與表面處理產線可承接少量多樣機構件"
+          "若取得伺服器內構件量產驗證，可擴大金屬成形與加工應用",
+          "可維修性與輕量化要求可能提升內構件設計價值，需產品級證據支持"
         ],
         "threats": [
-          "勤誠、晟銘電與ODM自製機殼具有既有認證和客戶優勢",
-          "若轉型驗證進度不如預期，消費機殼衰退仍會主導營運"
+          "終端需求疲弱與加工設備固定成本會放大利用率下降壓力",
+          "伺服器機構的尺寸、承載與散熱要求不同，3C加工經驗不保證可無縫切入"
         ]
       }
     }

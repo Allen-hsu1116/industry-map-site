@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2492",
   "companyName": "華新科",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -172,76 +172,80 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "華新科為被動元件陶瓷材料供應商，6月營收39.6億年增25.8%，累計209億年增14.7%。間接供應陶瓷材料予基板與PCB上游材料鏈，被動元件需求回溫帶動成長。",
+      "supplyChainStage": "pcb_component_and_material_adjacent",
+      "roleType": "passive_components_material_adjacent",
+      "roleSummary": "華新科MOPS確認陶瓷粉末、MLCC、晶片電阻、高壓高頻電容等產品；這支持PCB板級被動元件角色，但不直接證明是高速CCL介電填料或IC載板材料供應商。移除未有證據的Df門檻與特定載板材料買方關係。 2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。",
       "products": [
-        "陶瓷粉末(基板材料上游介電填料)",
-        "積層陶瓷電容MLCC用陶瓷基材(BME卑金屬電極)",
-        "高頻陶瓷材料(基板介電層Df<0.005)",
-        "車規晶片電阻(車用被動元件)",
-        "高壓陶瓷電容(工業/車規用)"
+        "積層陶瓷電容（MLCC）",
+        "高壓與高頻精密電容",
+        "車用與工業用晶片電阻",
+        "陶瓷粉末"
       ],
       "customers": [
-        "信昌電(6173)(陶瓷材料供應鏈)",
-        "台燿(6274)(高頻基板材料)",
-        "聯茂(6213)(CCL陶瓷填充材)"
+        "信昌電（陶瓷材料供應鏈對象，非MOPS揭露客戶）",
+        "台燿（高頻板材應用觀察對象，非MOPS揭露客戶）",
+        "聯茂（CCL材料應用觀察對象，非MOPS揭露客戶）",
+        "欣興（板級被動元件應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "國巨(2327)(陶瓷粉末自主製造)",
-        "信昌電(6173)(陶瓷材料專業廠)",
-        "Ferrotec(陶瓷基板材料)"
+        "國巨（被動元件同業）",
+        "村田製作所（陶瓷電容同業）"
       ],
       "risks": [
-        "6月營收39.61億YoY+25.8%但陶瓷材料佔營收比重低",
-        "陶瓷材料供應PCB基板為間接應用，題材傳導有限",
-        "陶瓷粉末配方為核心IP但面臗國際大廠專利競爭"
+        "MOPS未證實陶瓷粉末已用於CCL介電層，不能當成板材出貨事實",
+        "板材填料與電容瓷粉對介電常數、損耗及流變要求不同，跨市場導入可能失敗"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "2492 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2492",
+          "claim": "本次MCP主要經營業務原文：電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE",
+          "title": "2492 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2492",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "MLCC陶瓷粉末自主調配與燒結技術(BME製程)",
-        "車規AEC-Q200被動元件製程",
-        "BME卑金屬電極MLCC堆疊製程(Ni電極)"
+        "技術分析：陶瓷粉體分散、成形與燒結；CCL樹脂相容性需另行驗證",
+        "技術分析：MLCC介電層與內電極堆疊、容量及耐壓控制",
+        "技術分析：晶片電阻的阻值精度、溫度係數與脈衝負載測試"
       ],
       "swot": {
         "strengths": [
-          "陶瓷粉末自主調配與燒結技術(BME製程)供應MLCC陶瓷基材，為PCB基板上游介電填料關鍵供應商",
-          "6月營收39.61億YoY+25.8%，被動元件復甦帶動陶瓷粉末需求同步增長",
-          "MOPS登記陶瓷粉末製造加工，具備從粉末到成品一貫化生產能力"
+          "MOPS揭露陶瓷粉末與高壓高頻電容，可在材料和電路板元件兩端觀察需求",
+          "2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "陶瓷粉末供應基板材料屬間接角色，非直接PCB基板製造商，附加價值有限",
-          "PCB基板市場以ABF載板/CCL為主流，陶瓷基材應用範圍限於高頻/高功率場景",
-          "信昌電(6173)/台燿(6274)等基板材料廠為主要客戶，華新科處於供應鏈上游議價力較弱"
+          "MOPS未證實陶瓷粉末已用於CCL介電層，不能當成板材出貨事實",
+          "未取得本題材客戶、板材認證及營收拆分，AEC-Q200也不能由業務類別推定全面適用"
         ],
         "opportunities": [
-          "AI伺服器高頻PCB需求帶動低損耗介電材料(Df<0.005)成長，陶瓷粉末具高頻特性優勢",
-          "5G/6G基站高頻基板材料需求增加，陶瓷填料應用範圍擴大",
-          "車用雷達(77GHz)基板需高頻陶瓷材料，電動車滲透率提升帶動需求"
+          "高速PCB的電源完整性要求可增加去耦電容與精密電阻選型需求",
+          "若材料通過低損耗CCL配方驗證，才有機會從被動元件延伸至板材填料"
         ],
         "threats": [
-          "ABF載板/CCL廠商可能自行開發介電材料，減少對外部陶瓷粉末供應商依賴",
-          "日本陶瓷粉末大廠(信越/村田)技術領先，高階應用可能被替代",
-          "PCB基板產業景氣循環明顯，陶瓷粉末需求隨被動元件庫存波動"
+          "板材填料與電容瓷粉對介電常數、損耗及流變要求不同，跨市場導入可能失敗",
+          "被動元件價格競爭與客戶庫存調整可能削弱營收增長持續性"
         ]
       }
     },

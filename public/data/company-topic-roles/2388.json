@@ -2,92 +2,96 @@
   "schemaVersion": 1,
   "companyCode": "2388",
   "companyName": "威盛",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "edge_ai_chipmaker",
-      "roleSummary": "威盛MOPS揭露積體電路、記憶體零件組及軟體設計銷售，並未揭露資料中心AI伺服器產品。此角色僅能視為邊緣運算晶片與嵌入式平台對AI運算生態的間接曝險。2026年7月營收11.36億元，MoM-9.0%、YoY+43.3%，成長是公司整體數據，不能直接歸因AI伺服器。",
+      "supplyChainStage": "edge_computing_outside_server_racks",
+      "roleType": "embedded_edge_platform_adjacent",
+      "roleSummary": "威盛MOPS揭露IC與電腦軟體業務，官網可直接查到SOM-7000／5000／3000與EPIA-M930嵌入式平台。這些是Edge AI與工業應用板卡，不是機房AI訓練伺服器；本題材保留邊緣運算鄰接，移除未證實車載CAN／LIN及特定INT8能力。 2026年7月營收11.36億元，MoM-8.98%、YoY+43.29%，累計YoY+35.69%。此為全公司營收，未拆分「AI 伺服器」貢獻，不能全部歸因於本題材。",
       "products": [
-        "x86嵌入式處理器與主機板平台",
-        "ARM Android／Linux系統模組",
-        "邊緣AI影像辨識閘道器",
-        "車載資訊娛樂與數位座艙參考平台"
+        "VIA SOM-7000系統模組（MediaTek Genio 1200）",
+        "VIA SOM-5000系統模組（MediaTek Genio 700）",
+        "VIA SOM-3000系統模組（MediaTek Genio 350）",
+        "VIA EPIA-M930 Mini-ITX主機板（Intel Celeron四核心）"
       ],
       "customers": [
-        "研華(2395；嵌入式平台應用對象，非MOPS揭露客戶)",
-        "新漢(8234；邊緣運算應用對象，非MOPS揭露客戶)",
-        "友通(2397；工業主機板應用對象，非MOPS揭露客戶)",
-        "凌華(6166；邊緣AI平台對象，非MOPS揭露客戶)"
+        "MediaTek（官網列示Genio平台供應鏈，非採購客戶）",
+        "Intel（官網列示Celeron平台供應鏈，非採購客戶）",
+        "研華（邊緣運算應用生態對象，非已證實客戶）",
+        "新漢（嵌入式應用生態對象，非已證實客戶）"
       ],
       "competitors": [
-        "Intel(x86邊緣)",
-        "AMD(嵌入式x86)",
-        "NVIDIA(Jetson)"
+        "研華（嵌入式平台比較）",
+        "友通（工業主機板同業比較）"
       ],
       "risks": [
-        "NVIDIA Jetson、Intel Edge與Qualcomm平台在工具鏈及生態上更完整",
-        "若市場只追逐GPU伺服器，威盛的邊緣AI曝險容易被題材過度解讀"
+        "SOM及Mini-ITX板卡不等同AI GPU伺服器整機，MOPS未拆分資料中心收入",
+        "SoC平台更迭與軟體維護成本可能壓縮模組產品生命週期報酬"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：積體電路與記憶體零件組設計製造測試銷售；軟體設計及資料處理。"
+          "title": "2388 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2388",
+          "claim": "本次MCP主要經營業務原文：設計、製造、測試、銷售積體電路、半導體記憶零件組等電腦軟體程式設計、銷售、測試及電腦資料處理前各項產品之代理及進出口貿易業務。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收11.36億元，MoM-9.0%、YoY+43.3%，累計YoY+35.7%。"
+          "publisher": "TWSE",
+          "title": "2388 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收11.36億元，MoM-8.98%、YoY+43.29%，累計YoY+35.69%。此為全公司營收，未拆分「AI 伺服器」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "威盛官方網站",
+          "title": "VIA Intelligent Edge Modules and Boards",
+          "url": "https://www.viatech.com/en/edge/via-intelligent-edge-modules-and-boards/",
+          "claim": "威盛Intelligent Edge Modules and Boards頁列SOM-7000／5000／3000對應Genio 1200／700／350及EPIA-M930 Intel Celeron、SOM／Mini-ITX／Pico-ITX與Android／Linux BSP／EVK；未證實資料中心GPU整機。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2388",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-20",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "x86／ARM異質運算、Linux驅動與長週期BSP維護",
-        "INT8邊緣視覺推論、影像前處理與低功耗熱設計",
-        "車載乙太網、CAN／LIN與多媒體顯示介面整合"
+        "官網列SOM、Mini-ITX與Pico-ITX板型，區分模組、載板與完整機架伺服器",
+        "官網提供Arm平台Android／Linux BSP與EVK，支援硬體／軟體客製整合",
+        "技術分析：嵌入式I/O、功耗與長生命週期維護；不推定特定AI量化精度或車載協定"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收YoY+43.3%、累計YoY+35.7%，整體營運動能改善",
-          "具處理器、嵌入式主機板與軟體整合能力，可服務邊緣AI場景"
+          "官方產品頁提供明確模組名稱及SoC平台，邊緣運算產品的可核查性高",
+          "2026年7月營收11.36億元，MoM-8.98%、YoY+43.29%，累計YoY+35.69%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "MOPS未揭露AI伺服器、GPU加速卡或資料中心整機，題材直接性低",
-          "7月營收MoM-9.0%，且公司規模與主流AI晶片／伺服器供應商差距大"
+          "SOM及Mini-ITX板卡不等同AI GPU伺服器整機，MOPS未拆分資料中心收入",
+          "本月營收較上月回落，年增不能直接作為機房AI訂單增長證據",
+          "本期整體營收MoM-8.98%，年增與短期月減並存，不能只呈現成長面。"
         ],
         "opportunities": [
-          "工業視覺與智慧城市需要在現場完成低延遲推論，帶動邊緣平台升級",
-          "既有x86／ARM軟硬整合可切入AI閘道器而非硬擠資料中心伺服器"
+          "邊緣AI與嵌入式設備可受惠Android／Linux BSP及客製服務降低開發時間",
+          "若雲邊協同專案揭露實際採用，才可估計本題材與資料中心需求的間接連動"
         ],
         "threats": [
-          "NVIDIA Jetson、Intel Edge與Qualcomm平台在工具鏈及生態上更完整",
-          "若市場只追逐GPU伺服器，威盛的邊緣AI曝險容易被題材過度解讀"
+          "SoC平台更迭與軟體維護成本可能壓縮模組產品生命週期報酬",
+          "將Edge AI板卡當成機櫃GPU整機會造成營收曝險與技術角色誤判"
         ]
       }
     }

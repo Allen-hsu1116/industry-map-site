@@ -2,92 +2,96 @@
   "schemaVersion": 1,
   "companyCode": "2352",
   "companyName": "佳世達",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "display_peripheral_supplier",
-      "roleSummary": "佳世達MOPS主要業務是液晶顯示器、投影機與醫療服務，未揭露AI伺服器整機、主板或加速器產品。此角色只適合作為資料中心營運顯示與醫療AI視覺化的間接周邊觀察。2026年7月營收181.94億元，MoM-2.6%、YoY+4.1%，累計YoY+1.5%，成長偏平。",
+      "supplyChainStage": "data_center_peripherals_adjacent",
+      "roleType": "display_and_application_computing_adjacent",
+      "roleSummary": "佳世達MOPS主要業務為LCD顯示器、投影機與醫療服務，官網補充專業顯示與工業／商業電腦。這支持資料中心周邊顯示及應用端角色，不足以證實AI GPU伺服器整機出貨；亦不能由醫療服務推定彩色都卜勒設備產品。 2026年7月營收181.94億元，MoM-2.56%、YoY+4.13%，累計YoY+1.48%。此為全公司營收，未拆分「AI 伺服器」貢獻，不能全部歸因於本題材。",
       "products": [
-        "4K商用LCD監視器",
-        "雷射光源商務／教育投影機",
-        "DICOM校正醫療診斷顯示器",
-        "彩色都卜勒與床邊超音波系統"
+        "商用LCD監視器",
+        "專業醫療顯示器",
+        "投影機",
+        "工業／商業電腦"
       ],
       "customers": [
-        "Dell Technologies（商用顯示應用對象，非MOPS揭露客戶）",
-        "HP Inc.（商用顯示應用對象，非MOPS揭露客戶）",
-        "BenQ明基（顯示／投影生態對象，非MOPS揭露客戶）",
-        "Philips（醫療顯示應用對象，非MOPS揭露客戶）"
+        "Dell Technologies（顯示終端應用對象，非本次資料揭露客戶）",
+        "HP Inc.（商用顯示應用對象，非本次資料揭露客戶）",
+        "BenQ明基（顯示與投影集團生態對象，非採購客戶證據）",
+        "Vertiv（資料中心維運顯示應用對象，非本次資料揭露客戶）"
       ],
       "competitors": [
-        "群創(3481)顯示器",
-        "明基友達集團",
-        "ViewSonic"
+        "中光電（顯示投影同業比較）",
+        "仁寶（顯示／電腦製造同業比較）"
       ],
       "risks": [
-        "顯示器與投影機成熟、價格競爭激烈，AI題材未必提升毛利",
-        "若市場要求直接GPU／伺服器曝險，佳世達的周邊角色容易被高估"
+        "本次來源未證實AI訓練伺服器、GPU機櫃與相關收入，角色應維持周邊鄰接",
+        "顯示產品競價與醫療投資回收不確定，不能用AI整機估值邏輯掩蓋"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：液晶顯示器、投影機與醫療服務。"
+          "title": "2352 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2352",
+          "claim": "本次MCP主要經營業務原文：液晶顯示器產品投影機產品醫療服務。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收181.94億元，MoM-2.6%、YoY+4.1%，累計YoY+1.5%。"
+          "publisher": "TWSE",
+          "title": "2352 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收181.94億元，MoM-2.56%、YoY+4.13%，累計YoY+1.48%。此為全公司營收，未拆分「AI 伺服器」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "佳世達官方網站",
+          "title": "About Qisda | QISDA",
+          "url": "https://www.qisda.com/en/about",
+          "claim": "佳世達About頁確認LCD監視器、專業醫療顯示、投影、工業／商業電腦與醫療服務；未支持本次AI GPU伺服器或彩色都卜勒設備細項。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2352",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-20",
-      "status": "verified",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "LCD色彩校正、均勻度補償與高解析顯示",
-        "DICOM GSDF醫療灰階校正與亮度穩定性",
-        "雷射螢光輪投影光機、幾何校正與散熱設計"
+        "顯示工程分析：LCD色彩、亮度與均勻性校正，不宣稱全部醫療顯示符合DICOM",
+        "投影工程分析：光機成像、影像幾何校正與散熱，光源形式需逐機型核對",
+        "應用端分析：工業／商業電腦的I/O與長期維護整合，非GPU伺服器系統能力證明"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持顯示、投影與醫療服務，可提供AI運算結果的人機視覺化終端",
-          "月營收181.94億元，產品與服務組合較單一顯示器廠分散"
+          "官網明列專業顯示、投影與工業電腦，可辨識資料中心周邊的真實產品基礎",
+          "2026年7月營收181.94億元，MoM-2.56%、YoY+4.13%，累計YoY+1.48%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "MOPS未揭露AI伺服器產品，原角色與資料中心核心供應鏈關聯低",
-          "2026年7月營收MoM-2.6%、累計YoY僅+1.5%，公司整體成長平淡"
+          "本次來源未證實AI訓練伺服器、GPU機櫃與相關收入，角色應維持周邊鄰接",
+          "營收含顯示、醫療與其他集團業務，且本月較上月回落，不能全歸AI伺服器",
+          "本期整體營收MoM-2.56%，年增與短期月減並存，不能只呈現成長面。"
         ],
         "opportunities": [
-          "醫療影像AI與遠距診斷增加高解析、校正型顯示器需求",
-          "資料中心控制室與企業AI應用可帶動專業監視器及投影整合"
+          "資料中心維運與控制室可增加專業顯示終端需求，但需採購證據確認規模",
+          "工業與醫療數位化可支持應用端設備需求，應另於相對應題材追蹤"
         ],
         "threats": [
-          "顯示器與投影機成熟、價格競爭激烈，AI題材未必提升毛利",
-          "若市場要求直接GPU／伺服器曝險，佳世達的周邊角色容易被高估"
+          "顯示產品競價與醫療投資回收不確定，不能用AI整機估值邏輯掩蓋",
+          "將關聯集團或終端應用視為實際AI供應合約會高估題材敏感度"
         ]
       }
     }

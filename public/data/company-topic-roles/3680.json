@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -330,78 +330,89 @@
       "topicName": "水資源、環保與電子廢料回收",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "家登為光罩/晶圓/機台設備解決方案供應商，MOPS登記為光罩解決方案產品/晶圓解決方案產品/機台設備產品。提供FOUP晶圓傳送盒清潔維修再使用服務與光罩盒翻新校驗，客戶涵蓋台積電/聯電/世界先進/Intel/三星。循環經濟題材符合ESG趨勢。",
+      "supplyChainStage": "semiconductor_carrier_lifecycle_services",
+      "roleType": "carrier_cleaning_reuse_adjacent",
+      "roleSummary": "MOPS確認光罩、晶圓解決方案與機台設備；家登官網另明列載具Class 1清洗、粒子／離子／有機污染檢測與維護服務，可支持載具延壽的循環使用鄰接角色。未取得廢水工程、再生水銷售或循環經濟認證的證據，不能歸為水處理統包商。 2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。此為全公司營收，未拆分「水資源、環保與電子廢料回收」貢獻，不能全部歸因於本題材。",
       "products": [
-        "FOUP晶圓傳送盒清潔/維修/再使用服務(300mm/200mm)",
-        "光罩盒(Reticle Pod)翻新與奈米級校驗(EUV/Duv用)",
-        "晶圓載具耐化學清洗(超純水+化學溶劑)(Class 1潔淨度)",
-        "晶圓傳送耗材循環經濟方案(認證體系)(FOUP/RPod翻新)",
-        "機台設備維護零件供應(晶圓廠廠務系統)"
+        "光罩盒與RSP150載具清洗服務",
+        "8吋晶圓Cassette清洗服務",
+        "12吋FOUP／FOSB載具清洗服務",
+        "載具粒子、離子與有機污染檢測服務",
+        "半導體載具維護服務"
       ],
       "customers": [
-        "台積電(2330)(FOUP耗材回收與重複使用)",
-        "聯電(2303)(光罩盒翻新服務)",
-        "世界先進(5347)(載具循環使用)",
-        "Intel(光罩盒校驗)",
-        "三星(韓國晶圓廠FOUP清潔)"
+        "台積電（載具清洗應用對象，非本次資料揭露客戶）",
+        "聯電（晶圓載具維護應用對象，非本次資料揭露客戶）",
+        "Intel（光罩載具應用對象，非本次資料揭露客戶）",
+        "Samsung Electronics（載具污染檢測應用對象，非本次資料揭露客戶）"
       ],
       "competitors": [
-        "Entegris(晶圓載具清潔服務)",
-        "信紘科(6432)(半導體耗材翻新)",
-        "Mitsui(半導體耗材回收)"
+        "Entegris（晶圓載具生態同業，非證實相同清洗合約競爭）",
+        "信越聚合物（載具產品同業比較）"
       ],
       "risks": [
-        "與環境水資源回收題材關聯度為間接，半導體耗材回收非核心環保業務",
-        "耗材回收服務佔營收比重低",
-        "此題材分類較勉強，家登核心為半導體精密耗材製造"
+        "載具清洗延壽屬循環使用鄰接活動，尚無廢水統包、再生水或回收認證證據",
+        "交叉污染或清洗殘留會使載具復用失去經濟性並增加品質責任"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 光罩解決方案產品晶圓解決方案產品機台設備產品"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "3680 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3680",
+          "claim": "本次MCP主要經營業務原文：光罩解決方案產品晶圓解決方案產品機台設備產品。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "title": "3680 2026年7月營收（MCP）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3680&start_date=2025-06-01&end_date=2026-09-06",
+          "claim": "2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。此為全公司營收，未拆分「水資源、環保與電子廢料回收」貢獻，不能全部歸因於本題材。 TWSE主查無資料，採FinMind回傳的revenue_year/revenue_month；原始單位新台幣元，MoM及YoY依對應月份計算。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "家登官方網站",
+          "title": "Other Service - Gudeng",
+          "url": "https://www.gudeng.com/Page?itemid=121&mid=1418",
+          "claim": "官網Other Service明列Class 1清洗、Reticle box／RSP150、8吋Cassette、12吋FOUP／FOSB，以及粒子、離子、有機污染檢測與維護；未揭露水處理EPC或循環經濟認證。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3680",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "FOUP晶圓傳送盒耐化學清洗製程(超純水+化學溶劑/UPW Grade)",
-        "光罩盒(Reticle Pod)奈米級潔淨度校驗(Class 1)",
-        "晶圓載具循環經濟認證體系(翻新品質標準化)"
+        "官網揭露Class 1無塵清洗，對象包括光罩盒、RSP150、8吋Cassette及12吋FOUP／FOSB",
+        "官網揭露粒子、離子與有機污染三類檢測，區別於未證實的奈米尺寸校驗",
+        "技術分析：清洗後污染殘留與載具相容性檢查，有助延長可使用週期但不等同回收認證"
       ],
       "swot": {
         "strengths": [
-          "MOPS登記為光罩/晶圓/機台設備解決方案，FOUP/RPod翻新具進入壁壘",
-          "為台積電/Intel等大廠供應商，客戶品質高",
-          "循環經濟題材符合ESG趨勢，具長期成長潛力"
+          "官網明確揭露清洗、檢測與維護，比單靠晶圓載具產品推定回收服務有更直接證據",
+          "2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "耗材回收/翻新業務規模小，營收貢獻有限",
-          "資本額9.6億，規模較小",
-          "題材連結度低，環境水回收題材與家登主業關聯薄弱"
+          "載具清洗延壽屬循環使用鄰接活動，尚無廢水統包、再生水或回收認證證據",
+          "清洗與維護營收未分拆，不能把公司整體成長全歸給循環經濟"
         ],
         "opportunities": [
-          "ESG/循環經濟趨勢帶動晶圓廠耗材回收需求",
-          "EUV光罩盒翻新需求隨先進製程擴產增長",
-          "可拓展至非半導體產業的精密載具循環使用"
+          "高潔淨載具增加後，污染檢測與維護需求有機會隨裝機基數擴大",
+          "客戶若提高載具重複使用率，清洗與檢測可形成持續性的售後需求"
         ],
         "threats": [
-          "FOUP原廠(如Entegris)可能自行提供翻新服務",
-          "晶圓廠可能自行清洗FOUP降低外包需求",
-          "題材連結度低，為間接受惠"
+          "交叉污染或清洗殘留會使載具復用失去經濟性並增加品質責任",
+          "載具延壽服務與水資源工程商不同，錯誤分類會高估環保工程市場規模"
         ]
       }
     }

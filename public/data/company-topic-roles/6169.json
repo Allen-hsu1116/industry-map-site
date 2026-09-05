@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -255,69 +255,78 @@
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "pcb_end_user",
-      "roleType": "game_hardware_pcb",
-      "roleSummary": "昱泉不生產PCB、載板或基板材料；本題材只描述遊戲在主機與PC硬體上的終端需求，不能列為PCB供應商。 FinMind顯示2026年7月營收僅2.3萬元，且公司不生產PCB或基板材料。",
+      "supplyChainStage": "outside_pcb_supply_chain",
+      "roleType": "game_software_outside_pcb",
+      "roleSummary": "昱泉MOPS僅確認遊戲及教育軟體研發、生產、代理和銷售，與PCB／IC載板製造無直接關聯。移除未經查證的PlayStation、Switch與Unity／Unreal產品宣稱，保留軟體本業作為題材排除觀察，不把遊戲終端使用電路板當成供應鏈證據。 2026年7月營收2.30萬元，MoM-42.50%、YoY-99.25%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。",
       "products": [
-        "PlayStation平台遊戲軟體",
-        "Nintendo Switch平台遊戲軟體",
-        "Windows PC遊戲軟體",
-        "Unity/Unreal跨平台引擎客製模組"
+        "遊戲軟體研發服務",
+        "教育軟體開發服務",
+        "遊戲與教育軟體代理銷售服務"
       ],
       "customers": [
-        "Sony Interactive Entertainment(PlayStation平台)",
-        "Nintendo(Switch平台)",
-        "Microsoft(Xbox/Windows平台)",
-        "Valve(Steam平台)"
+        "Sony Interactive Entertainment（遊戲平台生態觀察，非已確認授權或客戶）",
+        "Nintendo（遊戲平台生態觀察，非已確認授權或客戶）",
+        "Microsoft（遊戲／教育平台生態觀察，非已確認授權或客戶）"
       ],
       "competitors": [
-        "其他遊戲開發商"
+        "大宇資（遊戲軟體同業比較）",
+        "宇峻（遊戲軟體同業比較）"
       ],
       "risks": [
-        "與PCB供應鏈完全無直接關聯"
+        "與PCB／載板製造無直接產品關聯，不能用遊戲平台生態補作硬體供貨證據",
+        "低營收下固定研發與維運支出壓力高，需進一步查財報確認持續營運狀況"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "6169 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6169",
+          "claim": "本次MCP主要經營業務原文：遊戲及教育軟體研究開發、生產、代理及銷售。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "title": "6169 2026年7月營收（MCP）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6169&start_date=2025-06-01&end_date=2026-09-06",
+          "claim": "2026年7月營收2.30萬元，MoM-42.50%、YoY-99.25%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。 TWSE主查無資料，採FinMind回傳的revenue_year/revenue_month；原始單位新台幣元，MoM及YoY依對應月份計算。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6169",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-18",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "x86/ARM與主機SoC跨平台編譯最佳化",
-        "DirectX/Vulkan與Shader管線調校",
-        "主機儲存I/O與資產串流最佳化"
+        "軟體開發分析：遊戲事件狀態、互動邏輯與資產版本控制；非MOPS揭露引擎清單",
+        "教育軟體分析：課程互動流程、作答資料與相容性測試；非PCB設計能力"
       ],
       "swot": {
         "strengths": [
-          "跨平台遊戲能力覆蓋PC與主機生態",
-          "內容可間接刺激主機硬體換機"
+          "MOPS確認遊戲與教育軟體開發，能辨認真實本業而非載板材料",
+          "研發與代理銷售均在經營範圍內，可區分自製內容與代理模式"
         ],
         "weaknesses": [
-          "FinMind顯示2026年7月營收僅2.3萬元，且公司不生產PCB或基板材料",
-          "與PCB產業無直接供應鏈關係",
-          "硬體平台不是PCB客戶"
+          "與PCB／載板製造無直接產品關聯，不能用遊戲平台生態補作硬體供貨證據",
+          "FinMind最新營收規模極小且大幅衰退，既有大型平台合作敘述缺少支持",
+          "2026年7月營收2.30萬元，MoM-42.50%、YoY-99.25%；公司整體衰退須與題材想像分開。"
         ],
         "opportunities": [
-          "次世代主機週期帶動新內容需求",
-          "PC光追與NPU創造新遊戲功能"
+          "若推出可驗證的教育或遊戲產品，可重新評估軟體本業的營收復原機會",
+          "代理授權與內容更新可作為本業追蹤指標，與PCB題材分開觀察"
         ],
         "threats": [
-          "PCB景氣與公司營運幾乎無連動",
-          "平台認證與抽成限制小型開發商"
+          "低營收下固定研發與維運支出壓力高，需進一步查財報確認持續營運狀況",
+          "硬把軟體公司塞進載板鏈會製造不存在的AI硬體營收曝險"
         ]
       }
     },

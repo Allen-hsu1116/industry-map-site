@@ -2,93 +2,97 @@
   "schemaVersion": 1,
   "companyCode": "1608",
   "companyName": "華榮",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
       "topicName": "重電、電纜與 EPC 工程",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "electrical_equipment",
-      "roleType": "wire_cable_manufacturer",
-      "roleSummary": "華榮MOPS直接揭露電線電纜、銅製品，以及電力與通信工程設計、施工、維護與技術服務，是重電電纜與EPC題材的核心供應角色。2026年7月營收12.68億元，MoM+15.0%、YoY+42.7%，累計YoY+19.4%，但未揭露成長全部來自台電標案。",
+      "supplyChainStage": "power_cable_manufacturing_and_installation",
+      "roleType": "power_cable_and_engineering_provider",
+      "roleSummary": "華榮MOPS確認電纜、銅製品及電力／通信工程；官網進一步列69／161／345kV超高壓XLPE電纜、46kV以下配電電纜和儀表線。維持電力設備與工程核心角色，規格以官網可核實內容為限，未把台電等應用對象當作已確認合約。 2026年7月營收12.68億元，MoM+14.96%、YoY+42.67%，累計YoY+19.38%。此為全公司營收，未拆分「重電、電纜與 EPC 工程」貢獻，不能全部歸因於本題材。",
       "products": [
-        "69kV／161kV XLPE高壓電力電纜",
-        "600V低壓PVC／XLPE電力電纜",
-        "光纖與同軸通信電纜",
-        "無氧銅桿、裸銅線與銅導體"
+        "69／161／345kV超高壓XLPE-PVC電力電纜",
+        "46kV以下XLPE-PVC／LSFH配電電纜",
+        "鋁線／鐵線鎧裝地下直埋電纜",
+        "PE／PVC絕緣遮蔽儀表電纜",
+        "電力及通信工程設計、施工與維護服務"
       ],
       "customers": [
-        "台灣電力公司（電網電纜應用對象，非本次MOPS揭露客戶）",
-        "中華電信(2412；通信電纜應用對象，非本次MOPS揭露客戶)",
-        "台灣高鐵(2633；軌道供電應用對象，非本次MOPS揭露客戶)",
-        "中鋼(2002；廠區電力電纜應用對象，非本次MOPS揭露客戶)"
+        "台灣電力公司（輸配電電纜應用對象，非本次MOPS揭露客戶）",
+        "中華電信（通信工程應用對象，非本次MOPS揭露客戶）",
+        "台灣高鐵（電力配線應用對象，非本次MOPS揭露客戶）",
+        "中鋼（工業配電應用對象，非本次MOPS揭露客戶）"
       ],
       "competitors": [
-        "華新(1605)(電線電纜)",
-        "大亞(1609)(電線電纜)",
-        "億泰(1616)(電線電纜)",
-        "合機(1618)(電線電纜)"
+        "華新（電線電纜同業）",
+        "大亞（電線電纜同業）",
+        "太平洋電線電纜（電纜同業）"
       ],
       "risks": [
-        "華新、大亞與合機在高壓電纜及標案價格上競爭",
-        "銅價急漲、工期延誤或政府預算遞延可能侵蝕毛利與營收認列"
+        "營收同時涵蓋銅製品與工程，未剔除銅價變動及專案認列影響",
+        "銅價波動、帳期與工程備料可能增加營運資金需求"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 各種電線電纜及銅製品等之加工,製造,銷售及施工等各種電力,通信工程設計,施工維護及技術服務等"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電線電纜、銅製品；電力與通信工程設計施工維護及器材製造買賣。"
+          "title": "1608 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1608",
+          "claim": "本次MCP主要經營業務原文：各種電線電纜及銅製品等之加工,製造,銷售及施工等各種電力,通信工程設計,施工維護及技術服務等各種電氣器具,電力及通信器材,通信用戶迴路配線器材等之製造買賣。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收12.68億元，MoM+15.0%、YoY+42.7%，累計YoY+19.4%。"
+          "publisher": "TWSE",
+          "title": "1608 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收12.68億元，MoM+14.96%、YoY+42.67%，累計YoY+19.38%。此為全公司營收，未拆分「重電、電纜與 EPC 工程」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "華榮官方網站",
+          "title": "各類型電力電纜(高、中、低壓)-華榮電線電纜股份有限公司",
+          "url": "https://www.hegroup.com.tw/index.php?option=product&lang=cht&task=showlist&id=2&index=2",
+          "claim": "華榮電力電纜官網列69／161／345kV超高壓XLPE、46kV以下XLPE-PVC／LSFH、鎧裝與遮蔽儀表電纜，支持保留明確電壓及材料規格。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1608",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-20",
+      "lastVerified": "2026-09-06",
       "status": "verified",
       "techFocus": [
-        "XLPE絕緣擠出、導體屏蔽與局部放電控制",
-        "無氧銅伸線、絞線與導體電阻一致性控制",
-        "光纖鬆套、防水阻燃護套與現地佈纜接續"
+        "官網確認XLPE絕緣與PVC／LSFH被覆；依輸電／配電電壓區間選型",
+        "官網列單心鋁線、多心鍍鋅鐵線鎧裝，提供地下直埋機械保護",
+        "官網列鋁箔麥拉、銅帶或銅網遮蔽與單／雙層遮蔽，控制儀表訊號干擾"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電纜製造與電力／通信工程服務，題材連結完整",
-          "2026年7月營收12.68億元、YoY+42.7%，累計YoY+19.4%，出貨動能強"
+          "電纜製造與工程設計施工均由MOPS支持，可連結輸配電設備與施工需求",
+          "2026年7月營收12.68億元，MoM+14.96%、YoY+42.67%，累計YoY+19.38%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "收入仍受大型標案交貨節奏影響，單月成長不代表常態毛利提升",
-          "銅材占成本高，產品報價與庫存利益易受銅價波動干擾"
+          "營收同時涵蓋銅製品與工程，未剔除銅價變動及專案認列影響",
+          "公開產品電壓範圍不等同已取得各案場供貨資格或未交訂單"
         ],
         "opportunities": [
-          "台電強韌電網與資料中心用電增加高壓電纜需求",
-          "5G回傳、軌道建設與再生能源併網可擴大通信及電力工程商機"
+          "電網汰換與地下化可增加高壓電纜、鎧裝與施工維護需求",
+          "工業設備控制及量測升級有助提升遮蔽儀表電纜的應用"
         ],
         "threats": [
-          "華新、大亞與合機在高壓電纜及標案價格上競爭",
-          "銅價急漲、工期延誤或政府預算遞延可能侵蝕毛利與營收認列"
+          "銅價波動、帳期與工程備料可能增加營運資金需求",
+          "工期延誤、施工事故與電纜品質責任可能侵蝕專案毛利"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3296",
   "companyName": "勝德",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -169,85 +169,88 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "solar_inverter",
-      "roleType": "solar_inverter_manufacturer",
-      "roleSummary": "勝德MOPS未揭露太陽能逆變器或光伏產品；再生能源題材僅能視為智慧配電、突波保護及監控通訊器材的潛在周邊應用。2026年7月營收1.72億元、YoY+42.9%，成長來源未證實來自太陽能。",
+      "supplyChainStage": "renewable_energy_load_side_adjacent",
+      "roleType": "end_use_power_management_adjacent",
+      "roleSummary": "勝德MOPS為通訊、電機與電子器材，官網確認突波保護、PDU、Wi-Fi／ZigBee智慧插座等產品。再生能源題材限於用電端保護與控制鄰接，未取得光伏逆變器遙測、Modbus閘道器或再生能源專案出貨證據。 2026年7月營收1.72億元，MoM+4.34%、YoY+42.88%，累計YoY+5.76%。此為全公司營收，未拆分「太陽能與離岸風電」貢獻，不能全部歸因於本題材。",
       "products": [
-        "光伏交流側MOV突波保護電源模組",
-        "太陽能監控用RS-485/Modbus通訊閘道器",
-        "屋頂光伏配電箱用分路電流監測模組",
-        "混合式逆變器周邊遠端斷電控制模組"
+        "S9P905可更換突波保護模組PDU",
+        "S9PC09突波保護USB充電插座",
+        "Wi-Fi智慧安全延長線",
+        "ZigBee智慧壁插與調光開關"
       ],
       "customers": [
-        "台達電(2308；光伏電力電子應用對象，非MOPS揭露客戶)",
-        "SMA Solar Technology(逆變器生態對象，非MOPS揭露客戶)",
-        "SolarEdge(逆變器生態對象，非MOPS揭露客戶)",
-        "Enphase Energy(微型逆變器生態對象，非MOPS揭露客戶)"
+        "台達電（電源管理應用觀察對象，非已證實客戶）",
+        "Schneider Electric（用電管理生態對象，非已證實客戶）",
+        "SMA Solar Technology（光伏周邊應用觀察對象，非已證實客戶）",
+        "Enphase Energy（家庭能源應用觀察對象，非已證實客戶）"
       ],
       "competitors": [
-        "華城電能(1513)",
-        "達方(6176)",
-        "康舒(6282)"
+        "Belkin（突波保護與用電產品比較）",
+        "Schneider Electric（配電保護與管理產品比較）"
       ],
       "risks": [
-        "太陽能逆變器市場競爭激烈",
-        "中國逆變器廠低價"
+        "未取得光伏交流保護認證、逆變器通訊閘道器與再生能源客戶證據",
+        "再生能源案場的電氣安全及通訊要求不同，消費型插座無法直接替代工規設備"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：有線與無線通信機械器材、電子元件、電機與電子機械器材之製造買賣。"
+          "title": "3296 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3296",
+          "claim": "本次MCP主要經營業務原文：有線及無線通信機械器材製造買賣電子零組件製造買賣電機與電子機械器材製造買賣。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收1.72億元，MoM+4.3%、YoY+42.9%，累計YoY+5.8%。"
+          "publisher": "TWSE",
+          "title": "3296 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收1.72億元，MoM+4.34%、YoY+42.88%，累計YoY+5.76%。此為全公司營收，未拆分「太陽能與離岸風電」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "勝德官方網站",
+          "title": "POWERTECH 勝德國際研發股份有限公司",
+          "url": "https://www.power-tech.com.tw/products",
+          "claim": "勝德官網Products列S9P905可更換突波保護模組PDU、S9PC09突波保護USB充電插座、Wi-Fi安全延長線與ZigBee壁插／調光開關；未證實光伏Modbus產品。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3296",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-09-06",
+      "status": "candidate",
       "techFocus": [
-        "IEC 61643概念之MOV/GDT交流突波保護與熱斷路",
-        "Modbus RTU/TCP太陽能逆變器遙測資料轉換",
-        "分路電流感測、遠端繼電器與故障告警"
+        "官網列可更換突波保護模組PDU，關注保護模組維護與配電可靠度",
+        "官網列Wi-Fi與ZigBee智慧插座／開關；不推定支援Modbus或逆變器專用協定",
+        "技術分析：負載開關、接點溫升與異常斷電，與光伏發電控制分開"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收YoY+42.9%，本業短期復甦提供產品開發現金流",
-          "通信與電機器材能力可延伸至光伏監控及交流側保護"
+          "官網可查到PDU與智慧插座實際系列，不必靠通訊營業項目猜產品",
+          "2026年7月營收1.72億元，MoM+4.34%、YoY+42.88%，累計YoY+5.76%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "MOPS未揭露微型、串列或混合式逆變器，原資料把公司誤列為逆變器製造商",
-          "營收規模小，缺乏可驗證的光伏安規認證與客戶名單"
+          "未取得光伏交流保護認證、逆變器通訊閘道器與再生能源客戶證據",
+          "家庭或機房用電管理不等於太陽能發電設備，本題材收入未分拆"
         ],
         "opportunities": [
-          "屋頂光伏與儲能整合增加遠端關斷、監控與突波保護需求",
-          "可與既有逆變器廠合作開發通訊閘道器，而非直接競爭主機"
+          "智慧家庭與分路用電管理需求可能增加智慧插座的能源管理應用",
+          "可更換保護模組設計可降低配電端维護更換成本，但尚非光伏營收證據"
         ],
         "threats": [
-          "逆變器廠通常自行整合監控與保護功能，外購空間有限",
-          "中國通訊閘道器與保護元件價格競爭激烈"
+          "再生能源案場的電氣安全及通訊要求不同，消費型插座無法直接替代工規設備",
+          "智慧插座價格競爭、通訊平台相容性與資安維護可能增加成本"
         ]
       }
     }

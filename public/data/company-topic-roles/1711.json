@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1711",
   "companyName": "永光",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-05T19:17:30Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -169,74 +169,89 @@
       "topicName": "石化、塑橡膠與特用化學",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "specialty_chemicals",
-      "roleType": "dye_and_specialty_chemical_producer",
-      "roleSummary": "2026年7月營收7.81億元、YoY+25.7%、累計YoY+9.0%，多產品線帶動成長。",
+      "supplyChainStage": "specialty_chemical_materials",
+      "roleType": "polymer_additives_and_colorants",
+      "roleSummary": "永光MOPS揭露色料、特用與電子化學品、碳粉及醫藥化學品；官網具體確認染料、UV吸收劑、光安定劑、抗氧化劑和反應型PUR膠。本題材聚焦塑料與塗料用特化添加及著色，避免以未證實PAG或原料藥細項填充石化分析。 2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%。此為全公司營收，未拆分「石化、塑橡膠與特用化學」貢獻，不能全部歸因於本題材。",
       "products": [
-        "棉用反應性染料與聚酯分散染料",
-        "光阻感光劑、光酸產生劑與電子級溶劑",
-        "雷射印表機化學碳粉與電荷控制劑",
-        "UV吸收劑與高分子光安定劑",
-        "原料藥與醫藥中間體"
+        "紡織與皮革用染料",
+        "塑料／塗料用UV吸收劑",
+        "高分子光安定劑",
+        "高分子抗氧化劑",
+        "反應型PUR接著劑（Evereco PUR）"
       ],
       "customers": [
-        "遠東新(1402；聚酯纖維染料應用對象)",
-        "儒鴻(1476；機能布染整對象)",
-        "聚陽(1477；成衣供應鏈染整對象)",
-        "台積電(2330；電子化學品驗證對象)",
-        "聯電(2303；光阻周邊材料驗證對象)"
+        "遠東新（纖維染色應用對象，非本次來源揭露客戶）",
+        "儒鴻（紡織染整應用對象，非本次來源揭露客戶）",
+        "南亞（塑料耐候添加劑應用對象，非本次來源揭露客戶）",
+        "Covestro（聚合物配方生態對象，非本次來源揭露客戶）"
       ],
       "competitors": [
-        "長興(1717)",
-        "東洋(1605)",
-        "巴斯夫(BASF)"
+        "雙鍵（塑料添加與UV材料同業）",
+        "BASF（特化添加劑同業）"
       ],
       "risks": [
-        "染料市場萎縮(紡織業外移)",
-        "電子化學品競爭激烈"
+        "多事業部合併營收不能作為塑料添加劑單項成長率，細分毛利尚未取得",
+        "化學原料波動與低價同業競爭可能壓縮配方產品毛利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "1711 公司完整基本資料（MCP MOPS t05st03）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "claim": "本次MCP主要經營業務原文：色料化學品,特用化學品,電子化學品,碳粉產品,醫藥化學品。主要業務不等於具名客戶或全部細項規格已確認。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE",
+          "title": "1711 2026年7月營收（MCP）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%。此為全公司營收，未拆分「石化、塑橡膠與特用化學」貢獻，不能全部歸因於本題材。 TWSE原始金額單位為新台幣千元，換算億元後呈現。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "official-product-scope-v45",
+          "publisher": "永光官方網站",
+          "title": "Everlight Chemical - Better Chemistry Better Life",
+          "url": "https://en.ecic.com/",
+          "claim": "永光官網Products確認Dye、UV Absorbers、Light Stabilizers、Antioxidants及Reactive PUR Adhesives／Evereco PUR，支持本題材具體產品。",
+          "accessedAt": "2026-09-05T19:17:30Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v45",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "推論、客戶關係與規格邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "claim": "標示「技術分析／工程分析／流程分析／應用分析」的內容為由產品功能導出的工程判讀，不代表公司已揭露製程或達成認證。所有未證實關係的公司名只作應用或生態觀察；平台供應方不是買方。",
+          "accessedAt": "2026-09-05T19:17:30Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-09-06",
       "status": "verified",
       "techFocus": [
-        "高固色率與低鹽染色配方",
-        "光阻感光劑高純度合成與金屬離子控制",
-        "化學碳粉粒徑與帶電量控制"
+        "技術分析：UV吸收與光安定配方的耐候性、黃變及樹脂相容性評估",
+        "技術分析：抗氧化添加劑對加工熱穩定性與長期老化的影響",
+        "技術分析：反應型PUR接著的黏度、濕氣固化與基材接著性能控制"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收7.81億元、YoY+25.7%、累計YoY+9.0%，多產品線帶動成長",
-          "五大化學產品線分散景氣風險",
-          "精密有機合成能力可跨半導體材料"
+          "MOPS與官網共同支持色料與特化產品，且官網可辨認UV吸收、光安定與抗氧化功能",
+          "2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%；反映整體營運變化，非本題材專屬收入。"
         ],
         "weaknesses": [
-          "傳統染料受紡織景氣影響",
-          "電子化學品收入占比未拆分"
+          "多事業部合併營收不能作為塑料添加劑單項成長率，細分毛利尚未取得",
+          "未披露各樹脂體系採用牌號與買方，不應將下游紡織公司直接視為客戶"
         ],
         "opportunities": [
-          "先進製程增加高純度材料需求",
-          "醫藥中間體提高毛利結構"
+          "戶外塑料與塗料耐候要求提升，有利光安定劑與UV吸收劑配方升級",
+          "低黃變接著與耐老化材料需求可帶來特化產品組合改善機會"
         ],
         "threats": [
-          "中國化學品低價競爭",
-          "環保登錄規範提高成本"
+          "化學原料波動與低價同業競爭可能壓縮配方產品毛利",
+          "法規對化學品毒理、排放及可追溯性要求提高，增加驗證與合規成本"
         ]
       }
     },
