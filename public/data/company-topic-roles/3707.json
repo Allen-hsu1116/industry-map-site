@@ -2,91 +2,85 @@
   "schemaVersion": 1,
   "companyCode": "3707",
   "companyName": "漢磊",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "power_foundry_adjacent",
-      "roleType": "power_semiconductor_foundry_adjacent_to_aerospace",
-      "roleSummary": "漢磊MOPS支持功率半導體與類比IC晶圓代工，但未揭露JAN軍規認證、中科院客戶或軍工收入。此角色應定位為航太電源系統可能採用的功率元件製程平台。FinMind顯示2026年7月營收6.48億元，MoM+4.4%，不能歸因軍工。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "power_foundry_adjacent_to_aerospace",
+      "roleSummary": "MOPS支持功率及類比晶圓代工；官網明列GaN、SiC與第三代SiC平面MOSFET平台，應保留寬能隙技術，不能因MOPS概括而刪掉。惟未取得軍規／抗輻射或航太專案證據，國防角色仍為電源應用鄰接。 FinMind：2026年7月營收6.48億元，MoM+4.44%、YoY+30.57%；全公司口徑，不能歸因本題材。",
       "products": [
-        "高壓功率MOSFET晶圓代工",
-        "類比積體電路晶圓代工",
-        "高壓二極體晶圓代工",
-        "馬達驅動與電源管理IC代工"
+        "功率半導體晶圓代工服務",
+        "線性雙極類比IC晶圓代工",
+        "GaN化合物半導體晶圓代工",
+        "第三代SiC平面MOSFET技術平台"
       ],
       "customers": [
-        "Infineon Technologies（功率元件驗證對象，非MOPS揭露客戶）",
-        "onsemi（功率元件驗證對象，非MOPS揭露客戶）",
-        "STMicroelectronics（功率IC驗證對象，非MOPS揭露客戶）",
-        "漢翔(2634)（航太電源應用對象，非MOPS揭露客戶）"
+        "Infineon Technologies（功率元件生態對象，非已揭露客戶）",
+        "onsemi（功率元件生態對象，非已揭露客戶）",
+        "漢翔（航太電源潛在應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "穩懋(2455)(GaN HEMT)",
-        "環宇通訊(3282)(GaN)",
-        "VisIC(SiC)"
+        "世界（功率IC代工）",
+        "X-FAB（特色製程）"
       ],
       "risks": [
-        "上櫃公司營收規模小，SiC/GaN代工產能有限",
-        "6吋SiC與國際8吋SiC代工廠(Wolfspeed/II-VI)有世代差距"
+        "未揭露航太客戶、抗輻射製程及軍規認證",
+        "航太需另行驗證長期可靠度及供應保證",
+        "國際IDM自有產能與價格競爭可能影響代工需求"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "漢磊 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3707",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 漢磊 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3707 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：功率半導體及類比積體電路的晶圓代工。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3707",
+          "claim": "主要經營業務：功率半導體及類比積體電路的晶圓代工"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收6.48億元，MoM+4.4%；為公司整體數據。"
+          "claim": "TWSE查無本公司月營收，改用FinMind；2026年7月營收6.48億元，MoM+4.44%、YoY+30.57%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-3707-1",
+          "publisher": "漢磊 官方網站",
+          "title": "漢磊科技股份有限公司",
+          "url": "https://episil.com/en-US",
+          "claim": "官方網站列GaN及SiC晶圓代工、線性雙極IC，並列2024/07/01第三代SiC Planar MOSFET平台；未披露航太認證。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
-      "status": "verified",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "高壓Trench MOSFET閘極與導通電阻控制",
-        "BCD類比／功率整合製程與高壓隔離結構",
-        "外延層厚度、崩潰電壓與晶圓級可靠度量測"
+        "SiC Planar MOSFET平台（官方2024/07公告）",
+        "GaN／SiC化合物與線性雙極IC製程範圍（官網披露）",
+        "崩潰電壓、導通損耗及晶圓良率取捨（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持功率半導體與類比IC晶圓代工",
-          "FinMind顯示7月營收6.48億元、MoM+4.4%，短期連續回升"
+          "功率及類比代工可支援電源轉換設計",
+          "官網SiC與GaN技術補強具體製程產品範圍",
+          "2026年7月營收6.48億元，MoM+4.44%、YoY+30.57%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "MOPS未揭露JAN、MIL-STD或具名國防客戶",
-          "軍工收入無法拆分，航太角色僅屬功率元件應用鄰近"
+          "未揭露航太客戶、抗輻射製程及軍規認證",
+          "一般功率需求成長不能歸因國防"
         ],
         "opportunities": [
-          "航太電源轉換與致動系統可增加高壓功率元件驗證需求",
-          "供應鏈在地化有利本土功率半導體製程平台送樣"
+          "高效率航太地面電源可評估寬能隙技術",
+          "SiC平台升級可增加工業與電源應用選擇"
         ],
         "threats": [
-          "軍用認證週期長且批量小，未必能帶來顯著營收",
-          "國際IDM與成熟製程代工廠在成本及可靠度資料庫上競爭"
+          "航太需另行驗證長期可靠度及供應保證",
+          "國際IDM自有產能與價格競爭可能影響代工需求"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -257,77 +257,86 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "ess_communication",
-      "roleType": "ess_energy_management_gateway",
-      "roleSummary": "中磊MOPS揭露有線與無線網路產品；儲能題材角色是EMS、逆變器與智慧電表的通訊閘道器，而非電芯或電池模組供應商。2026年7月營收79.80億元、YoY+51.3%，北美市場訂單增溫。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "smart_energy_iot_monitoring_adjacent",
+      "roleSummary": "MOPS支持有線與無線網通；官網進一步確認S1智慧能源平台與TPM530M模組，可保留能源監測的間接角色。未找到PCS、BMS、VPP調度或IEC 61850／OpenADR實作證據，不把IoT能源管理寫成電池控制。 TWSE：2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計YoY+56.86%；全公司口徑，不能歸因本題材。",
       "products": [
-        "儲能EMS Modbus TCP通訊閘道器",
-        "太陽能逆變器Wi-Fi/4G遠端監控模組",
-        "AMI智慧電表Cat-M1/NB-IoT通訊模組",
-        "VPP虛擬電廠邊緣控制閘道器"
+        "S1 IoT智慧能源資料平台",
+        "TPM530M LTE-M／NB-IoT蜂巢式IoT模組",
+        "S1行動IoT閘道器能源資料整合方案"
       ],
       "customers": [
-        "Tesla(Powerwall通訊應用對象)",
-        "Enphase Energy(逆變器監控應用對象)",
-        "Fluence(儲能EMS整合對象)",
-        "台達電(2308；儲能與逆變器整合對象)"
+        "Nordic Semiconductor（官網揭露晶片供應／平台合作對象，非客戶）",
+        "台達電（儲能通訊應用對象，非已揭露客戶）",
+        "Fluence（能源資料平台應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "智邦(2391)",
-        "正文(4906)"
+        "研華（IoT閘道器）",
+        "Digi International（IoT通訊）"
       ],
       "risks": [
-        "儲能通訊模組佔營收比重低",
-        "電力系統認證門檻"
+        "未揭露儲能控制器或電池系統產品",
+        "電網／資安相容性仍須個案驗證",
+        "不能從能源監測推論取得虛擬電廠控制訂單"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：有線及無線網路產品"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5388",
+          "claim": "主要經營業務：有線網路產品、無線網路產品、其他"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "臺灣證券交易所 TWSE",
-          "title": "月營收資料",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收79.80億元，YoY+51.3%，北美市場訂單增溫"
+          "claim": "原始金額單位千元，已換算億元；2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計YoY+56.86%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-5388-1",
+          "publisher": "中磊 官方網站",
+          "title": "Smart Energy | S1 | Enterprise Solutions | Solutions",
+          "url": "https://sercomm.com/en/solutions/application/4/7/3",
+          "claim": "S1為智慧能源IoT資料平台，TPM530M採Nordic nRF91、LTE-M／NB-IoT、GNSS與PSM／eDRX。未揭露VPP排程或電網控制協定。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
+        },
+        {
+          "sourceId": "official-role-v46-5388-2",
+          "publisher": "中磊 官方網站",
+          "title": "Sercomm's TPM530M: A New Era for Cellular IoT with Nordic Technology | Product News | News | Company",
+          "url": "https://sercomm.com/en/news/3/415",
+          "claim": "S1為智慧能源IoT資料平台，TPM530M採Nordic nRF91、LTE-M／NB-IoT、GNSS與PSM／eDRX。未揭露VPP排程或電網控制協定。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-18",
+      "lastVerified": "2026-09-07",
       "status": "verified",
       "techFocus": [
-        "Modbus TCP/RTU、DNP3與IEC 61850電力通訊轉換",
-        "LTE Cat-M1/NB-IoT低功耗廣域連線與遠端OTA",
-        "IEEE 2030.5/OpenADR需求響應與VPP排程介面"
+        "TPM530M採Nordic nRF91、64MHz Arm Cortex-M33及GNSS",
+        "LTE-M／NB-IoT的PSM與eDRX省電模式",
+        "S1閘道器即時資料採集與能源配置（未揭露電網控制協定）"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認有線與無線網路產品能力，可移植至儲能通訊閘道器",
-          "2026年7月營收79.80億元、YoY+51.3%，北美訂單增溫有利切入當地能源連網應用"
+          "官網確認智慧能源平台而非純題材推測",
+          "Nordic模組整合及省電設計適合分散式電表／感測節點",
+          "2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計YoY+56.86%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "不生產電芯、PCS或BMS，儲能題材僅占通訊層",
-          "MOPS未揭露儲能產品營收與具名客戶，實際貢獻仍待驗證"
+          "未揭露儲能控制器或電池系統產品",
+          "月營收備註為北美訂單增溫，不是儲能業務拆分"
         ],
         "opportunities": [
-          "VPP與需求響應需要大量家庭儲能閘道器及雲端連線",
-          "北美太陽能加儲能安裝量成長可帶動逆變器監控模組"
+          "儲能案場需要低功耗資料回傳與遠端監測",
+          "S1可整合工廠能源資料形成跨設備管理服務"
         ],
         "threats": [
-          "Tesla、Enphase及PCS廠可能自研通訊模組，ODM議價空間有限",
-          "電力通訊資安與認證要求提高，驗證失敗會延後專案認列"
+          "電網／資安相容性仍須個案驗證",
+          "不能從能源監測推論取得虛擬電廠控制訂單"
         ]
       }
     },

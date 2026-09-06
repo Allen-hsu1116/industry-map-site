@@ -2,92 +2,85 @@
   "schemaVersion": 1,
   "companyCode": "4908",
   "companyName": "前鼎",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "leo-satellite-communications",
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "terrestrial_optical_backhaul_adjacent",
-      "roleType": "optical_transceiver_adjacent_to_ground_backhaul",
-      "roleSummary": "前鼎MOPS直接支持雷射二極體、受光二極體封裝及光傳接模組，但未揭露星間光鏈路、抗輻射封裝或衛星營運商客戶。此角色應限於衛星地面站光纖回傳的鄰近光通訊元件。FinMind顯示2026年7月營收0.99億元，MoM+8.2%。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "optical_backhaul_adjacent_to_satellite",
+      "roleSummary": "MOPS確認LD／PD封裝與光傳接模組；2011年LS48官方型錄提供可查的波長、SFP及診斷設計，但不保證該型號目前仍供貨。定位為衛星地面設施的光纖回傳鄰接，非星間雷射通訊或太空光學模組。 FinMind：2026年7月營收0.99億元，MoM+8.20%、YoY+51.63%；全公司口徑，不能歸因本題材。",
       "products": [
-        "1310nm／1550nm雷射二極體封裝",
-        "InGaAs受光二極體封裝",
-        "SFP／SFP+光傳接模組",
-        "TOSA／ROSA光次模組",
-        "PON用雙向光收發模組"
+        "雷射二極體封裝元件",
+        "受光二極體封裝元件",
+        "LS48-C3U 1.25Gbps BiDi SFP模組（歷史型錄）",
+        "單纖雙向光收發次模組"
       ],
       "customers": [
-        "Ciena（地面光傳輸應用對象，非MOPS揭露客戶）",
-        "Nokia（地面光回傳應用對象，非MOPS揭露客戶）",
-        "SES（衛星地面站驗證對象，非MOPS揭露客戶）",
-        "Eutelsat OneWeb（地面回傳驗證對象，非MOPS揭露客戶）"
+        "Ciena（地面光傳輸應用對象，非已揭露客戶）",
+        "Nokia（光回傳設備應用對象，非已揭露客戶）",
+        "中華電信（地面光纖網路應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "Lumentum",
-        "Coherent",
-        "聯亞（3081）"
+        "光環（光通訊元件）",
+        "Coherent（光通訊模組）"
       ],
       "risks": [
-        "規模較小，受光通訊市場波動影響",
-        "衛星光通訊應用仍在拓展中"
+        "精確型號依歷史型錄，現行供貨須再確認",
+        "歷史1.25Gbps型號不能代替現代高速回傳選型",
+        "星間自由空間光通訊與光纖模組技術不同"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "前鼎 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=4908",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 前鼎 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 4908 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：雷射二極體、受光二極體封裝及光傳接模組相關光纖通訊產品。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4908",
+          "claim": "主要經營業務：設計、研發、生產及銷售雷射二極體、受光二極體封裝及光傳接模組之相關光纖通訊產品"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收0.99億元，MoM+8.2%；為公司整體數據。"
+          "claim": "TWSE查無本公司月營收，改用FinMind；2026年7月營收0.99億元，MoM+8.20%、YoY+51.63%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-4908-1",
+          "publisher": "前鼎 官方網站",
+          "title": "Microsoft Word - LS48-C3U-Tx-N-P5-V1.0.doc",
+          "url": "https://www.apacoe.com.tw/files/LS48-C3U-Tx-N-P5-V1.0.pdf",
+          "claim": "2011年LS48-C3U型錄列TX1550/RX1310、1.25Gbps、SC、3.3V、診斷監控及InGaAsP LD／InGaAs PIN PD；產品歷史設計非現行供貨承諾。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
-      "status": "verified",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "1310nm／1550nm LD與InGaAs PD封裝耦光",
-        "TOSA／ROSA主動對準與光功率校準",
-        "SFP／SFP+模組之數位診斷監控與鏈路預算"
+        "歷史LS48型錄：1550nm InGaAsP LD／InGaAs PIN PD及WDM濾光片整合",
+        "LS48採TX1550／RX1310、Simplex SC與3.3V供電",
+        "LS48數位診斷監控溫度、電壓、偏流及收發光功率"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持LD、PD封裝與光傳接模組，地面光回傳角色可驗證",
-          "FinMind顯示7月營收0.99億元、MoM+8.2%，短期回升"
+          "LD／PD封裝與光收發設計具地面光纖傳輸基礎",
+          "歷史型錄提供單纖雙向WDM與光功率監控設計",
+          "2026年7月營收0.99億元，MoM+8.20%、YoY+51.63%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "MOPS未揭露衛星光通訊、抗輻射規格或具名衛星客戶",
-          "月營收不足1億元，規模小且題材貢獻未拆分"
+          "精確型號依歷史型錄，現行供貨須再確認",
+          "未披露衛星地面站客戶或星載資格"
         ],
         "opportunities": [
-          "衛星地面站擴建可增加城域與骨幹光纖回傳模組需求",
-          "PON與乙太網光模組升級可提高地面網路傳輸容量"
+          "分散地面站需要可靠光纖接入及鏈路診斷",
+          "單纖雙向傳輸可用於受限纖芯的地面網路"
         ],
         "threats": [
-          "中國光模組廠價格競爭壓縮標準產品毛利",
-          "若低軌衛星採用專用星間光鏈路，既有電信模組未必能直接切入"
+          "歷史1.25Gbps型號不能代替現代高速回傳選型",
+          "星間自由空間光通訊與光纖模組技術不同"
         ]
       }
     },

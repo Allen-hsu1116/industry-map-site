@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3023",
   "companyName": "信邦",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -96,88 +96,80 @@
       "topicId": "high-speed-interconnect",
       "topicName": "高速連接器與車工業連接",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "connectors",
-      "roleType": "high_speed_connector_maker",
-      "roleSummary": "信邦MOPS揭露電子零件、電腦周邊、通訊器材與電腦網路零組件製造及經銷，高速連接與線束角色成立；但MOPS未揭露Tesla、NVIDIA或廣達為客戶。2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%，公司整體動能穩健。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "industrial_interconnect",
+      "roleType": "industrial_ethernet_interconnect_provider",
+      "roleSummary": "MOPS的電子零件與網通製造範圍由官網工業產品目錄補強，可確認SPE、M系列及ix Industrial互連。撤除無來源的PCIe Gen6與112G PAM4；工業乙太網路互連不等於資料中心高速銅連接認證。 TWSE：2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計YoY+11.44%；全公司口徑，不能歸因本題材。",
       "products": [
-        "PCIe Gen5／Gen6高速線纜組件",
-        "1000BASE-T1／FPD-Link車用線束",
-        "M8／M12工業乙太網連接器",
-        "伺服器內部高速I/O線纜與連接組件"
+        "Hybrid M8 SPE連接器與線纜組件",
+        "M系列IP67／IP68防水連接器",
+        "ix Industrial乙太網路連接器",
+        "機器手臂工業自動化線纜"
       ],
       "customers": [
-        "廣達(2382；伺服器互連應用對象，非MOPS揭露客戶)",
-        "研華(2395；工業互連應用對象，非MOPS揭露客戶)",
-        "Siemens（工業自動化應用對象，非MOPS揭露客戶）",
-        "Tesla（車用線束應用對象，非MOPS揭露客戶）",
-        "Bosch（車用／工業互連應用對象，非MOPS揭露客戶）"
+        "研華（工業互連應用對象，非已揭露客戶）",
+        "Siemens（工業自動化應用對象，非已揭露客戶）",
+        "Bosch（工業互連應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "安費諾(Amphenol)",
-        "泰科電子(TE Connectivity)",
-        "鴻海(2317)(連接器)",
-        "正淩(6147)"
+        "Amphenol",
+        "TE Connectivity"
       ],
       "risks": [
-        "Amphenol、TE與Molex在高速互連規格、認證和客戶覆蓋較強",
-        "CPO／矽光子逐步取代部分長距離銅互連，壓縮高階銅纜成長空間"
+        "本次未驗證PCIe Gen5／Gen6或112G PAM4產品規格",
+        "資料中心高速產品不能從工業介面產品直接外推",
+        "Amphenol及TE等完整產品線帶來競爭"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 各種電子零件加工、製造及其成品之買賣業務電腦週邊設備、通訊器材、電腦通訊網路及其零組件之製造加工買賣代理"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零件、電腦周邊、通訊器材與電腦網路零組件製造加工買賣。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3023",
+          "claim": "主要經營業務：各種電子零件加工、製造及其成品之買賣；電腦週邊設備、通訊器材、電腦通訊網路及其零組件製造加工買賣；代理各種電子零件有關產品報價經銷"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%。"
+          "claim": "原始金額單位千元，已換算億元；2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計YoY+11.44%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-3023-1",
+          "publisher": "信邦 官方網站",
+          "title": "SINBON Industrial Application product catalog（瀏覽器讀取）",
+          "url": "https://www.sinbon.com/product/industrial-application?cate=industrial-application&page=1",
+          "claim": "瀏覽器讀取官方目錄列IP67 SPE／Hybrid M8、M系列IP67／IP68、ix Industrial連接器及機器手臂線纜；未由本次來源確認PCIe Gen6／112G PAM4。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-20",
+      "lastVerified": "2026-09-07",
       "status": "verified",
       "techFocus": [
-        "112G PAM4通道阻抗、插入損耗與串擾控制",
-        "1000BASE-T1／FPD-Link車用屏蔽與EMC設計",
-        "M8／M12 IP67密封、耐振與線束應力釋放"
+        "SPE單對乙太網路與電力傳輸整合（官網方案）",
+        "M系列IP67／IP68防水與線纜端接",
+        "工業互連阻抗、串擾及彎折可靠度（工程分析，未宣稱112G認證）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持通訊、網路與電子零件製造，高速線束與連接器角色合理",
-          "2026年7月營收31.67億元、YoY+29.0%，累計YoY+11.4%，需求動能穩健"
+          "官網已有SPE、防水連接器及機器手臂線纜產品",
+          "客製設計與組裝可匹配工業設備的複合需求",
+          "2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計YoY+11.44%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "MOPS未揭露Tesla、NVIDIA或廣達客戶，具名關係只能列為應用對象",
-          "高階連接器規模與Amphenol、TE Connectivity相比仍小"
+          "本次未驗證PCIe Gen5／Gen6或112G PAM4產品規格",
+          "月營收未拆分高速互連及其他醫療／車用線纜"
         ],
         "opportunities": [
-          "AI伺服器PCIe Gen5／6與112G通道增加高速線纜及連接器價值",
-          "車用乙太網與ADAS感測器數量增加，帶動屏蔽線束與防水連接器"
+          "工業乙太網路小型化可帶動SPE與ix介面採用",
+          "機器人關節增加資料及電源線纜客製需求"
         ],
         "threats": [
-          "Amphenol、TE與Molex在高速互連規格、認證和客戶覆蓋較強",
-          "CPO／矽光子逐步取代部分長距離銅互連，壓縮高階銅纜成長空間"
+          "資料中心高速產品不能從工業介面產品直接外推",
+          "Amphenol及TE等完整產品線帶來競爭"
         ]
       }
     }

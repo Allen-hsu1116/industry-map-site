@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2492",
   "companyName": "華新科",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -343,75 +343,79 @@
       "topicName": "石英頻率控制元件",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "華新科間接供應石英振盪器應用電路之配套被動元件(電阻/電容/電感/TVS)。6月營收39.6億YoY+25.8%，累計209億YoY+14.7%。石英相關被動元件為邊際性供應，非核心產品線。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "quartz_circuit_passive_component_adjacent",
+      "roleSummary": "MOPS與官網支持MLCC、電阻、電感及壓敏電阻；本角色是石英振盪電路周邊被動元件應用，不是石英諧振器製造。移除無來源Q值、Df門檻與TVS二極體說法，具名石英公司並非已證實客戶。 TWSE：2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%；全公司口徑，不能歸因本題材。",
       "products": [
-        "石英振盪器配套晶片電阻(0402-2512厚膜/薄膜)",
-        "石英電路用積層陶瓷電容MLCC(0.1μF-10μF)",
-        "石英振盪器保護用突波吸收器(TVS)",
-        "高頻射頻電感(石英諧振器匹配電路用)"
+        "RF積層陶瓷電容（RF MLCC）",
+        "精密薄膜晶片電阻",
+        "繞線陶瓷晶片電感",
+        "MOV／MLV壓敏電阻"
       ],
       "customers": [
-        "台灣晶技(3042)(石英振盪器配套被動元件)",
-        "加高(6423)(石英元件配套MLCC)",
-        "泰藝(4934)(石英振盪器配套電阻)"
+        "台灣晶技（振盪電路應用對象，非已揭露客戶）",
+        "加高（振盪電路應用對象，非已揭露客戶）",
+        "泰藝（振盪電路應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "國巨(2327)(石英配套MLCC/電阻)",
-        "村田Murata(石英電路MLCC)",
-        "太陽誘電(石英電路電感)"
+        "國巨（被動元件）",
+        "村田製作所（被動元件）"
       ],
       "risks": [
-        "6月營收39.61億YoY+25.8%但石英相關佔比極低",
-        "石英振盪器配套被動元件為利基市場，規模有限",
-        "石英元件市場受智慧手機/物聯網需求波動影響"
+        "未揭露石英元件客戶及專用料號",
+        "整合式時脈模組可能減少外掛被動元件",
+        "國巨、村田等產品替代及價格競爭"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工"
+          "sourceId": "mops-company-profile",
+          "publisher": "公開資訊觀測站 MOPS",
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2492",
+          "claim": "主要經營業務：電子零組件製造業；積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售；高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月營收，2026-09-07查詢",
+          "url": "https://openapi.twse.com.tw/",
+          "claim": "原始金額單位千元，已換算億元；2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-2492-1",
+          "publisher": "華新科 官方網站",
+          "title": "Products",
+          "url": "http://passivecomponent.com/products",
+          "claim": "官網列RF MLCC、精密薄膜電阻（0.01%／0.1%、低至1ppm TCR）、繞線陶瓷電感及MOV／MLV；不支持石英客戶供貨或TVS二極體。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-09",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "石英振盪器匹配電路用高頻電感設計(Q值>50)",
-        "射頻電路用MLCC低損耗介電配方(Df<0.005)",
-        "石英晶體諧振器保護TVS突波吸收器設計"
+        "RF MLCC與繞線電感的高頻匹配選型（電路應用分析）",
+        "薄膜電阻0.01%／0.1%精度及低至1ppm TCR產品系列",
+        "MOV／MLV突波箝位與振盪電路保護（應用分析，非TVS二極體）"
       ],
       "swot": {
         "strengths": [
-          "石英振盪器配套晶片電阻(0402-2512)與積層陶瓷電容(0.1μF-10μF)為石英電路必需被動元件",
-          "射頻電路用MLCC低損耗介電配方(Df<0.005)具高頻應用技術優勢",
-          "台灣晶技(3042)/加高(6423)為石英振盪器大廠客戶，供應鏈關係穩固"
+          "可搭配電容、電阻與電感提供振盪周邊選型",
+          "官網列精密薄膜與RF元件，支持具體產品範圍",
+          "2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "石英振盪器配套被動元件屬附屬供應角色，非石英元件本體，附加價值有限",
-          "石英元件市場以振盪器/晶片為主，華新科僅提供配套被動元件，話語權弱",
-          "高頻電感設計(Q值>50)需與石英振盪器匹配調校，技術門檻但難以獨立定價"
+          "未揭露石英元件客戶及專用料號",
+          "不能將被動元件整體營收歸因石英振盪器需求"
         ],
         "opportunities": [
-          "5G/6G通訊帶動高頻石英振盪器需求增長，配套MLCC/電阻用量同步增加",
-          "AI邊緣裝置需精準時脈控制，石英振盪器配套高頻被動元件ASP較高",
-          "車用Ethernet時脈同步需求帶動車規石英元件及配套被動元件成長"
+          "低相位雜訊時脈電路增加精密被動元件選型需求",
+          "車用與工業時脈可提高溫漂及可靠度要求"
         ],
         "threats": [
-          "Si MEMS振盪器替代石英振盪器趨勢，配套被動元件需求可能隨之減少",
-          "石英振盪器大廠(愛普生/NDK)可能整合被動元件供應，減少外部採購",
-          "高頻被動元件市場競爭激烈，國巨/村田等大廠同具低損耗MLCC技術"
+          "整合式時脈模組可能減少外掛被動元件",
+          "國巨、村田等產品替代及價格競爭"
         ]
       }
     }

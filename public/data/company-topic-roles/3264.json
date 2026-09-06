@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -487,86 +487,71 @@
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "test",
-      "roleType": "satellite_ic_test",
-      "roleSummary": "欣銓在低軌衛星題材僅能以數位/混合訊號IC CP、FT及Burn-in平台承接衛星終端基頻、波束控制與射頻前端IC；MOPS未揭露衛星客戶或mmWave專線。FinMind顯示2026年7月營收17.67億元、MoM+13.8%。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "general_ic_test_adjacent_to_satellite",
+      "roleSummary": "MOPS確認記憶體、數位與混合訊號測試及晶圓Burn-in，但未揭露衛星／Ku-Ka射頻測試、125°C條件或特定星系專案；限於地面終端晶片測試的潛在間接應用。 FinMind：2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%；全公司口徑，不能歸因本題材。",
       "products": [
-        "衛星終端基頻SoC晶圓針測CP服務",
-        "波束成形控制IC混合訊號FT服務",
-        "Ku/Ka頻段射頻前端控制IC成品測試",
-        "衛星用記憶體與控制IC晶圓級Burn-in服務"
+        "記憶體IC晶圓針測CP服務",
+        "數位訊號IC晶圓／成品測試服務",
+        "混合訊號IC晶圓／成品測試服務",
+        "晶圓型式Burn-in篩選服務"
       ],
       "customers": [
-        "Qualcomm(衛星終端晶片應用對象，非MOPS揭露客戶)",
-        "MediaTek(衛星通訊SoC應用對象，非MOPS揭露客戶)",
-        "Qorvo(射頻前端應用對象，非MOPS揭露客戶)",
-        "Skyworks Solutions(射頻前端應用對象，非MOPS揭露客戶)"
+        "Qualcomm（地面終端IC測試應用對象，非已揭露客戶）",
+        "MediaTek（地面終端IC測試應用對象，非已揭露客戶）",
+        "Qorvo（通訊IC測試應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "京元電(2449)(射頻IC測試代工)",
-        "力成(6239)(封測含測試)",
-        "矽格(6257)(利基射頻IC測試)"
+        "京元電子（IC測試）",
+        "矽格（IC測試）"
       ],
       "risks": [
-        "衛星通訊IC測試佔欣銓營收比重低，題材傳導有限",
-        "衛星IC測試需特殊射頻測試機台，設備投資需求高",
-        "低軌衛星IC設計公司可能自有測試能力，委外意願不確定"
+        "未披露衛星IC測試案及太空輻射資格",
+        "射頻量測能力須另驗證，不能由混合訊號測試推定",
+        "星載資格與一般商規測試門檻不同"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位與混合訊號IC晶圓/成品測試、晶圓級Burn-in測試。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3264",
+          "claim": "主要經營業務：記憶體IC之晶圓測試；數位訊號IC及混合訊號IC之晶圓及成品測試；晶圓型式之Burn in之測試"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "2026年8月營收，2026-09-07查詢",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收17.67億元，較6月增加13.8%；TWSE月營收查無資料，改採FinMind。"
+          "claim": "TWSE查無本公司月營收，改用FinMind；2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%。全公司口徑，非題材拆分。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "基頻SoC之高速數位介面、PLL與多Site CP/FT",
-        "射頻前端控制IC之增益、線性度與功耗量測",
-        "125°C高溫應力、晶圓級Burn-in與失效位址追蹤"
+        "晶圓探針接觸與CP／FT良率分選（測試流程分析）",
+        "混合訊號IC功能／參數量測（測試流程分析）",
+        "晶圓Burn-in的應力篩選與失效追溯（未指定溫度）"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收MoM+13.8%，本業測試需求與產能利用率回升",
-          "數位、混合訊號及晶圓級Burn-in能力可支援衛星終端IC可靠度篩選"
+          "晶圓測試及成品測試能串接驗證流程",
+          "Burn-in可支援晶片可靠度篩選",
+          "2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "MOPS未揭露衛星營收或客戶，不能把Qualcomm/MediaTek視為已確認訂單",
-          "真正Ka/Ku高頻RF量測需專用ATE、探針與校正，現有能力未獲MOPS佐證"
+          "未披露衛星IC測試案及太空輻射資格",
+          "記憶體與數位測試成長不能直接歸因低軌衛星"
         ],
         "opportunities": [
-          "手機直連衛星與相控陣終端增加基頻、波束控制及電源IC測試需求",
-          "高可靠度通訊IC可提高Burn-in與長時間測試服務單價"
+          "地面終端SoC數量增加可能帶動一般IC測試",
+          "通訊IC複雜化提高測試程式開發需求"
         ],
         "threats": [
-          "衛星晶片量產時程易延後，專用測試投資回收期長",
-          "京元電、日月光及國際OSAT具更完整RF與可靠度平台"
+          "射頻量測能力須另驗證，不能由混合訊號測試推定",
+          "星載資格與一般商規測試門檻不同"
         ]
       }
     }

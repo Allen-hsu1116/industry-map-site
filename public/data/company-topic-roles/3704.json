@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3704",
   "companyName": "合勤控",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -82,85 +82,87 @@
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "holding_company_networking_adjacent",
-      "roleType": "holding_company_with_networking_subsidiaries",
-      "roleSummary": "合勤控MOPS對母公司只揭露一般投資業，沒有低軌衛星終端、相控陣天線或衛星營運商客戶證據。此角色僅能透過集團寬頻閘道器、企業AP與交換器視為地面網路鄰近題材。2026年7月營收19.17億元，MoM-44.7%、YoY-11.8%，累計YoY+10.3%。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "networking_subsidiaries_adjacent_to_satellite",
+      "roleSummary": "母公司MOPS僅為一般投資業；集團產品頁及Zyxel型錄支持子公司寬頻、企業網路與MitraStar服務。精確限定地面LAN／寬頻接取，未證明衛星RF終端、星載設備或星系供貨；Wi-Fi 7規格不是衛星協定相容證據。 TWSE：2026年7月營收19.17億元，MoM-44.66%、YoY-11.75%，累計YoY+10.29%；全公司口徑，不能歸因本題材。",
       "products": [
-        "集團寬頻網路閘道器",
-        "集團Wi-Fi 6／7企業無線基地台",
-        "集團L2／L3乙太網路交換器",
-        "集團5G固定無線接取CPE"
+        "集團Zyxel Networks NWA130BE Wi-Fi 7基地台",
+        "集團Zyxel企業乙太網路交換器",
+        "集團Zyxel固定／行動寬頻接取設備",
+        "集團MitraStar網通設計製造服務"
       ],
       "customers": [
-        "SpaceX（衛星地面網路驗證對象，非MOPS揭露客戶）",
-        "Eutelsat OneWeb（地面網路驗證對象，非MOPS揭露客戶）",
-        "SES（衛星回傳應用對象，非MOPS揭露客戶）",
-        "Telesat（地面終端驗證對象，非MOPS揭露客戶）"
+        "Qualcomm（NWA130BE平台供應鏈對象，非客戶）",
+        "SpaceX（地面區域網路應用對象，非已揭露客戶）",
+        "Eutelsat OneWeb（地面回傳應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "明泰(3380)",
-        "中磊(5388)",
-        "啟碁(6285)"
+        "中磊（網通設備）",
+        "TP-Link（企業網路）"
       ],
       "risks": [
-        "低軌衛星終端市場競爭激烈",
-        "衛星認證週期長"
+        "母公司營收未拆分衛星或地面回傳貢獻",
+        "寬頻設備訂單季節性與競爭可加劇波動",
+        "星系採購與互通驗證仍未獲證實"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：一般投資業。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3704",
+          "claim": "主要經營業務：一般投資業"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收19.17億元，MoM-44.7%、YoY-11.8%，累計YoY+10.3%。"
+          "claim": "原始金額單位千元，已換算億元；2026年7月營收19.17億元，MoM-44.66%、YoY-11.75%，累計YoY+10.29%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-3704-1",
+          "publisher": "合勤控 官方網站",
+          "title": "合勤投控",
+          "url": "https://www.zyxelgroup.com/products&lang=en",
+          "claim": "集團頁確認Zyxel及MitraStar各自產品範圍；NWA130BE規格為三頻Wi-Fi7、320MHz、雙2.5GbE、802.3at、WPA3及雲／單機管理，不是衛星射頻設備。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
+        },
+        {
+          "sourceId": "official-role-v46-3704-2",
+          "publisher": "合勤控 官方網站",
+          "title": "NWA130BE - BE11000 WiFi 7 Triple-Radio NebulaFlex Access Point | Zyxel Networks",
+          "url": "https://zyxel.com/global/en/products/wireless/be11000-wifi-7-triple-radio-nebulaflex-access-point-nwa130be/specifications",
+          "claim": "集團頁確認Zyxel及MitraStar各自產品範圍；NWA130BE規格為三頻Wi-Fi7、320MHz、雙2.5GbE、802.3at、WPA3及雲／單機管理，不是衛星射頻設備。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
-      "status": "verified",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "Wi-Fi 6／7企業漫遊、MLO與集中網管",
-        "5G FWA CPE之Sub-6GHz射頻與QoS整合",
-        "L2／L3路由、VLAN與衛星回傳備援策略"
+        "NWA130BE三頻802.11be、最高320MHz頻寬",
+        "NWA130BE雙2.5GbE、802.3at PoE及WPA3",
+        "Nebula雲端／Standalone管理與VLAN分段（集團產品）"
       ],
       "swot": {
         "strengths": [
-          "集團具有寬頻閘道、企業AP、交換器與5G CPE平台",
-          "累計營收YoY+10.3%，公司整體仍維持成長"
+          "集團同時具有品牌網通及設計製造服務",
+          "具體Wi-Fi 7與2.5GbE型錄支援地面LAN設備角色"
         ],
         "weaknesses": [
-          "MOPS母公司僅為一般投資業，衛星產品與子公司收入都未在本資料揭露",
-          "7月MoM-44.7%、YoY-11.8%，出貨波動顯著"
+          "母公司營收未拆分衛星或地面回傳貢獻",
+          "地面LAN能力不代表已接入特定星系",
+          "2026年7月營收19.17億元，MoM-44.66%、YoY-11.75%，累計YoY+10.29%；營收收縮或波動需留意，不能當成題材成長。"
         ],
         "opportunities": [
-          "衛星與地面寬頻融合可增加企業閘道器及備援路由需求",
-          "低軌衛星地面站可採用既有交換器與Wi-Fi網管平台"
+          "衛星回傳落地後仍需企業LAN及無線覆蓋",
+          "雲端管理可降低分散站點網路維運負擔"
         ],
         "threats": [
-          "相控陣天線與衛星認證並非現有MOPS可證實能力",
-          "集團多層架構容易把子公司鄰近技術誤當母公司直接收入"
+          "寬頻設備訂單季節性與競爭可加劇波動",
+          "星系採購與互通驗證仍未獲證實"
         ]
       }
     },

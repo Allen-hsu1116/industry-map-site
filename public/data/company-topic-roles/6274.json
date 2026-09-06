@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6274",
   "companyName": "台燿",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -98,86 +98,79 @@
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "substrate_materials",
-      "roleType": "satellite_ccl_supplier",
-      "roleSummary": "台燿MOPS直接揭露銅箔基板、粘合片與多層壓合板製造，但未揭露SpaceX、OneWeb或衛星營收。低軌衛星角色應定位為高頻低損耗CCL對衛星通訊板的材料應用，而非衛星營運商直接供應商。FinMind顯示2026年7月營收59.08億元，較6月增加20.7%，成長仍是公司整體數據。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "high_frequency_laminate_adjacent_to_satellite",
+      "roleSummary": "MOPS確認CCL、粘合片及多層壓合板，官網支持PegaClad、ThunderClad及特殊Prepreg系列。這些是RF／高速電路材料，不等於已供貨星載酬載或通過太空認證；衛星題材保留為材料應用鄰接。 FinMind：2026年8月營收59.15億元，MoM+0.11%、YoY+132.48%；全公司口徑，不能歸因本題材。",
       "products": [
-        "低Dk／Df高頻低損耗銅箔基板",
-        "高速多層板用Low-Loss Prepreg粘合片",
-        "高Tg無鹵銅箔基板",
-        "射頻多層壓合板材料"
+        "PegaClad 300高頻銅箔基板",
+        "PegaClad 338／345／365高頻銅箔基板",
+        "ThunderClad 400G超低損耗銅箔基板",
+        "ULVP低空隙粘合片與LDP雷射可鑽粘合片"
       ],
       "customers": [
-        "欣興(3037；高頻PCB材料應用對象，非MOPS揭露客戶)",
-        "臻鼎-KY(4958；衛星／網通PCB應用對象，非MOPS揭露客戶)",
-        "華通(2313；衛星通訊PCB應用對象，非MOPS揭露客戶)",
-        "燿華(2367；射頻PCB應用對象，非MOPS揭露客戶)",
-        "金像電(2368；高速PCB應用對象，非MOPS揭露客戶)"
+        "華通（高頻PCB應用對象，非已揭露客戶）",
+        "欣興（多層PCB材料應用對象，非已揭露客戶）",
+        "燿華（射頻板材應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "台光電(4913)",
-        "聯茂(6213)",
-        "Panasonic(MEGTRON系列)"
+        "台光電",
+        "Rogers Corporation"
       ],
       "risks": [
-        "台光電、聯茂、Panasonic與Rogers在高頻材料市場競爭激烈",
-        "衛星認證周期長且終端建置節奏易受發射、資本支出與法規影響"
+        "未揭露衛星客戶、星載材料認證或題材營收",
+        "航太級環境認證與普通FR-4可靠度要求不同",
+        "台光電、Rogers等材料競爭及樹脂／銅箔成本波動"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：銅箔基板、粘合片、多層壓合板製造加工買賣。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6274",
+          "claim": "主要經營業務：銅箔基板、粘合片、多層壓合板之製造、加工及買賣"
         },
         {
-          "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE查無；FinMind：2026年7月營收59.08億元，較6月增加20.7%。"
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收，2026-09-07查詢",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "TWSE查無本公司月營收，改用FinMind；2026年8月營收59.15億元，MoM+0.11%、YoY+132.48%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-6274-1",
+          "publisher": "台燿 官方網站",
+          "title": "Products - Taiwan Union Technology Corporation",
+          "url": "https://tuc.com.tw/en-us/products",
+          "claim": "官方材料目錄列PegaClad、ThunderClad 400G、VLP銅箔、ULVP／LDP粘合片、低CTE與CAF可靠度；未披露特定衛星專案。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-20",
-      "status": "verified",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "低Dk／Df樹脂配方、玻纖與銅箔界面控制",
-        "超低粗糙度銅箔與高頻導體損耗抑制",
-        "多層壓合厚度、CTE與CAF可靠度控制"
+        "VLP低輪廓銅箔與樹脂／玻纖材料搭配",
+        "CCL／Prepreg尺寸穩定性、低CTE與CAF耐受控制",
+        "無鉛SnAgCu組裝260°C耐熱需求（官方材料頁規格）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持CCL、Prepreg與多層壓合板製造，材料角色明確",
-          "FinMind顯示2026年7月營收59.08億元、MoM+20.7%，整體出貨動能強"
+          "高頻及低損耗材料系列適用RF與高速電路選型",
+          "CCL與Prepreg可支援多層板材供應整合",
+          "2026年8月營收59.15億元，MoM+0.11%、YoY+132.48%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "MOPS未揭露SpaceX、OneWeb或衛星板營收，不能稱其為直接客戶",
-          "公司整體營收成長無法切分衛星、高速網通與一般PCB材料貢獻"
+          "未揭露衛星客戶、星載材料認證或題材營收",
+          "公司整體高速板材成長不能全部歸屬衛星通訊"
         ],
         "opportunities": [
-          "Ka／Ku頻段終端與低軌衛星增加低損耗CCL、Prepreg用量",
-          "高速交換器與衛星通訊共同推升低Dk／Df材料規格，可共享研發與產能"
+          "地面終端天線及回傳設備可能增加高頻板材需求",
+          "PCB客戶材料升級可提高低損耗產品組合"
         ],
         "threats": [
-          "台光電、聯茂、Panasonic與Rogers在高頻材料市場競爭激烈",
-          "衛星認證周期長且終端建置節奏易受發射、資本支出與法規影響"
+          "航太級環境認證與普通FR-4可靠度要求不同",
+          "台光電、Rogers等材料競爭及樹脂／銅箔成本波動"
         ]
       }
     }

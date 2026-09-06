@@ -2,37 +2,37 @@
   "schemaVersion": 1,
   "companyCode": "3035",
   "companyName": "智原",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "ic-design",
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "asic_design_ip",
+      "supplyChainStage": "ic_design",
       "roleType": "asic_design_service_ip_provider",
-      "roleSummary": "智原MOPS直接揭露ASIC設計、矽智財與ASIC EDA工具，IC設計服務角色明確；但未揭露Google、Amazon、Intel或STMicro為客戶，也不能由MOPS證明特定N5／N7案。2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，但累計YoY-46.1%，專案與量產收入波動仍大。",
+      "roleSummary": "MOPS支持ASIC、矽智財與設計工具；2026/03/03官方公告確認UMC 14FFC矽驗證PHY及2.5D／3D整合服務。以可查的IP規格取代籠統清單，不把晶圓或EDA平台寫成客戶。 TWSE：2026年7月營收10.62億元，MoM-25.04%、YoY+9.97%，累計YoY-46.08%；全公司口徑，不能歸因本題材。",
       "products": [
-        "ASIC NRE前端／後端設計服務",
-        "USB／PCIe／DDR／SerDes矽智財IP",
-        "SoC整合與量產Turnkey服務",
-        "ASIC設計自動化與驗證工具"
+        "ASIC設計與實體實作服務",
+        "FPGA-Go-ASIC轉換服務",
+        "UMC 14FFC USB 2.0／USB 3.2 Gen1 PHY IP",
+        "UMC 14FFC DDR3／DDR4與LPDDR4／4X／5 PHY IP",
+        "Fabless OSAT 2.5D／3D封裝整合服務"
       ],
       "customers": [
-        "聯電(2303；晶圓代工平台對象，非MOPS揭露客戶)",
-        "Arm（CPU IP生態對象，非MOPS揭露客戶）",
-        "Synopsys（EDA／IP平台對象，非MOPS揭露客戶）",
-        "Cadence（EDA／IP平台對象，非MOPS揭露客戶）",
-        "台積電(2330；先進製程平台對象，非MOPS揭露客戶)"
+        "聯電（官網揭露14FFC製程平台，非客戶）",
+        "Arm（CPU IP生態對象，非已揭露客戶）",
+        "Synopsys（EDA驗證平台對象，非已揭露客戶）",
+        "Cadence（EDA驗證平台對象，非已揭露客戶）"
       ],
       "competitors": [
-        "創意(3443)",
-        "世芯-KY(3661)",
-        "Alchip"
+        "創意",
+        "世芯-KY"
       ],
       "risks": [
-        "世芯、創意與國際ASIC服務商競逐先進製程大案",
-        "Synopsys、Cadence與Arm掌握關鍵EDA／IP，授權成本與平台依賴度高"
+        "NRE與量產收入時點不一，單月營收容易波動",
+        "ASIC量產案遞延可能抵銷NRE成長",
+        "創意、世芯與IP供應商競逐客製晶片專案"
       ],
       "evidence": [
         {
@@ -52,42 +52,52 @@
         {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：ASIC設計、矽智財與系統平台、ASIC EDA工具。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3035",
+          "claim": "主要經營業務：特殊應用積體電路設計(ASIC)；ASIC設計用矽智財及系統平台(IP & System Platform)；ASIC電子設計自動化軟體工具(ASIC EDA Tools)"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，累計YoY-46.1%。"
+          "claim": "原始金額單位千元，已換算億元；2026年7月營收10.62億元，MoM-25.04%、YoY+9.97%，累計YoY-46.08%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-3035-1",
+          "publisher": "智原 官方網站",
+          "title": "[Faraday News] Faraday Broadens IP Offerings on UMC’s 14nm Process for Edge AI and Consumer Markets",
+          "url": "https://eftp.faraday-tech.com/html/News/pressRelease/ENG_01_0448.jsp",
+          "claim": "2026/03/03官方公告確認UMC 14FFC USB PHY、DDR3／4最高4.2Gbps與LPDDR4／4X／5最高6.4Gbps；並列FPGA-Go-ASIC及2.5D／3D整合服務。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-20",
+      "lastVerified": "2026-09-07",
       "status": "verified",
       "techFocus": [
-        "RTL-to-GDSII實作、時序收斂與低功耗SoC整合",
-        "PCIe／USB／DDR PHY介面IP及矽驗證",
-        "DFT、scan／BIST、量產測試與ASIC Turnkey管理"
+        "14FFC DDR3／4 PHY最高4.2Gbps及LPDDR4／4X／5 PHY最高6.4Gbps",
+        "矽驗證介面IP與ASIC實體設計整合",
+        "2.5D／3D封裝的記憶體控制器與I/O整合"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持ASIC、矽智財與EDA工具三項核心能力",
-          "2026年7月營收YoY+10.0%，單月仍有設計或量產收入支撐"
+          "ASIC設計、介面IP與封裝整合具一站式服務價值",
+          "官方公告指14FFC IP已矽驗證，有助降低設計導入風險",
+          "2026年7月營收10.62億元，MoM-25.04%、YoY+9.97%，累計YoY-46.08%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "7月營收MoM-25.0%、累計YoY-46.1%，專案里程碑與量產案波動明顯",
-          "MOPS未揭露Google、Amazon、Intel等客戶，原具名客戶敘述過度延伸"
+          "NRE與量產收入時點不一，單月營收容易波動",
+          "未揭露各IP授權及封裝整合業務收入，不能推定AI比重",
+          "2026年7月營收10.62億元，MoM-25.04%、YoY+9.97%，累計YoY-46.08%；營收收縮或波動需留意，不能當成題材成長。"
         ],
         "opportunities": [
-          "AI、網通與邊緣運算客製SoC增加ASIC NRE與介面IP需求",
-          "chiplet與先進封裝使Die-to-Die、SerDes及系統整合服務更重要"
+          "Edge AI及工業控制可利用成熟FinFET優化成本與效能",
+          "FPGA轉ASIC與2.5D／3D可擴大設計服務範圍"
         ],
         "threats": [
-          "世芯、創意與國際ASIC服務商競逐先進製程大案",
-          "Synopsys、Cadence與Arm掌握關鍵EDA／IP，授權成本與平台依賴度高"
+          "ASIC量產案遞延可能抵銷NRE成長",
+          "創意、世芯與IP供應商競逐客製晶片專案"
         ]
       }
     }

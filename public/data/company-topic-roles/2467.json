@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2467",
   "companyName": "志聖",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -328,83 +328,79 @@
       "topicName": "電阻與被動保護元件",
       "topicType": "product",
       "directness": "indirect",
-      "supplyChainStage": "resistor_mfg_equipment",
-      "roleType": "resistor_process_equipment",
-      "roleSummary": "MOPS僅揭露志聖的PCB與先進封裝貼膜、撕膜、熱製程及電鍍前處理設備；在電阻題材屬製程設備延伸，不代表已取得被動元件客戶訂單。2026年7月營收11.68億元、YoY+132.7%，成長主要由AI供應鏈設備需求帶動，不能全數歸因電阻設備。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "pcb_thermal_equipment_adjacent_to_resistor",
+      "roleSummary": "主要經營業務指向PCB及先進封裝貼膜、撕膜、熱製程與前處理。保留設備產品，撤除「電阻專用生產線」及厚膜燒成實績暗示；電阻題材只能是可移轉製程的候選應用。 TWSE：2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%；全公司口徑，不能歸因本題材。",
       "products": [
-        "乾膜壓膜機（薄膜電阻基板線路成像前貼膜）",
-        "乾膜剝膜機（電阻電極圖形製程後去膜）",
-        "分區熱風固化爐（厚膜電阻漿料乾燥/燒成前段）",
-        "電鍍前處理清洗線（晶片電阻端電極鍍鎳/鍍錫前處理）"
+        "PCB乾膜貼膜設備",
+        "PCB撕膜設備",
+        "電子製程熱固化／烘烤設備",
+        "電鍍前表面處理設備"
       ],
       "customers": [
-        "國巨(2327；設備應用對象，非MOPS揭露客戶)",
-        "華新科(2492；設備應用對象，非MOPS揭露客戶)",
-        "大毅(2478；設備應用對象，非MOPS揭露客戶)",
-        "旺詮(2437；設備應用對象，非MOPS揭露客戶)"
+        "國巨（電阻製程潛在應用對象，非已揭露客戶）",
+        "華新科（電阻製程潛在應用對象，非已揭露客戶）",
+        "大毅（電阻製程潛在應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "群翊(6624)"
+        "群翊（熱製程設備）",
+        "其他客製化熱製程設備供應商"
       ],
       "risks": [
-        "被動元件設備佔比極低",
-        "被動元件產業週期性"
+        "沒有本次可驗證的電阻專用機台或客戶",
+        "電阻材料及燒成條件不同，不能直接套用PCB設備",
+        "電阻客戶資本支出與驗證週期可能限制轉入速度"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：AI供應鏈用印刷電路製程設備：貼膜、撕膜、熱製程、電鍍前處理；先進封裝設備：貼膜、壓合、撕膜、熱製程、清潔。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2467",
+          "claim": "主要經營業務：AI供應鏈用印刷電路製程設備：貼膜、撕膜、熱製程與電鍍前處理；AI供應鏈用先進封裝設備：貼膜、壓合、撕膜、熱製程、清潔；其他電子應用製程設備"
         },
         {
           "sourceId": "twse-monthly-revenue",
           "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收11.68億元，MoM+34.3%、YoY+132.7%，累計YoY+87.0%；公司備註為客戶需求提升。"
+          "claim": "原始金額單位千元，已換算億元；2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-2467-1",
+          "publisher": "志聖 官方網站",
+          "title": "Home page - 志聖工業",
+          "url": "https://csun.com.tw/en",
+          "claim": "官方介紹確認Plasma、UV、Lamination、Thermal與Wet製程設備；未證明電阻專用產線。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "乾膜壓合之滾輪壓力、膜厚與基板溫度閉迴路控制",
-        "多溫區熱風循環與爐內均溫控制",
-        "酸洗/微蝕/水洗之藥液濃度與帶出量控制"
+        "乾膜貼合的溫度／壓力控制（設備工程分析）",
+        "熱固化爐溫曲線與均溫控制（工程分析）",
+        "電鍍前表面潔淨度及藥液管理（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "2026年7月營收11.68億元、YoY+132.7%，設備需求與交付動能強",
-          "貼膜、撕膜、熱製程與電鍍前處理平台可延伸至薄膜/厚膜電阻基板製程"
+          "貼膜、熱製程與前處理具可組合的設備基礎",
+          "官網確認光／熱／濕製程設備能力",
+          "2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "MOPS未揭露電阻設備或被動元件客戶，題材屬跨製程延伸",
-          "營收成長主要來自AI PCB/先進封裝，無法拆分電阻設備貢獻"
+          "沒有本次可驗證的電阻專用機台或客戶",
+          "整體設備成長不能證明電阻設備需求"
         ],
         "opportunities": [
-          "車用高可靠度電阻擴產可增加自動貼膜與熱製程設備需求",
-          "台灣被動元件廠推動製程自動化，提供既有設備平台跨域驗證機會"
+          "若電阻電極圖形製程需要固化，可評估既有設備移轉",
+          "客製熱曲線及表面處理可能增加製程服務價值"
         ],
         "threats": [
-          "日系被動元件專用設備商具既有認證與製程資料優勢",
-          "若被動元件資本支出降溫，跨域設備驗證可能延後"
+          "電阻材料及燒成條件不同，不能直接套用PCB設備",
+          "電阻客戶資本支出與驗證週期可能限制轉入速度"
         ]
       }
     }

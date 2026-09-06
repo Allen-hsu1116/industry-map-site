@@ -2,90 +2,95 @@
   "schemaVersion": 1,
   "companyCode": "5371",
   "companyName": "中光電",
-  "updatedAt": "2026-08-20T19:05:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "aerospace_components",
-      "roleType": "military_electro_optical_payload",
-      "roleSummary": "中光電MOPS揭露液晶顯示器、投射系統、背光裝置與多媒體簡報設備，未揭露IR／EO軍用酬載、熱像儀或國防客戶。此角色只能定位為光機與投影技術可能延伸至訓練／指揮顯示的間接角色。FinMind顯示2026年7月營收35.35億元，較6月減少2.4%，不能歸因軍工。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "subsidiary_drone_systems",
+      "roleType": "subsidiary_isr_drone_platform_provider",
+      "roleSummary": "MOPS母公司主業偏顯示與投影，但官方集團新聞明確揭露CiRC無人機，不能因此抹除國防關聯。恢復子公司產品範圍：Mini ISR／ISR曾通過國防部測試，Hummer 2 Pro及GCS7為2024年公告產品；不把歷史測試或展出寫成2026年得標／量產收入。 FinMind：2026年7月營收35.35億元，MoM-2.38%、YoY+12.37%；全公司口徑，不能歸因本題材。",
       "products": [
-        "DLP雷射投影機與光機模組",
-        "LCD顯示器與商用數位看板",
-        "電視／監視器背光模組",
-        "多媒體簡報與互動投影系統"
+        "集團CiRC Mini ISR偵察無人機",
+        "集團CiRC ISR偵察無人機",
+        "集團CiRC Hummer 2 Pro ISR無人機",
+        "集團CiRC／Teledyne FLIR共同開發SIRAS無人機",
+        "集團CiRC GCS7遙控器"
       ],
       "customers": [
-        "Barco（專業投影平台對象，非MOPS揭露客戶）",
-        "BenQ明基（投影與顯示生態對象，非MOPS揭露客戶）",
-        "ViewSonic優派（商用顯示應用對象，非MOPS揭露客戶）",
-        "Epson（投影系統生態對象，非MOPS揭露客戶）"
+        "Teledyne FLIR（官方揭露SIRAS共同開發對象，非客戶）",
+        "Qualcomm（官方揭露GCS7模組供應鏈對象，非客戶）",
+        "漢翔（航太應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "群創（3481）",
-        "友達（2409）"
+        "雷虎（無人機）",
+        "Parrot（無人機）"
       ],
       "risks": [
-        "軍規夜視與熱像需要不同感測器、可靠度與資安認證，不能靠投影技術直接跨越",
-        "Barco、Christie與軍規顯示整合商在專業市場具既有認證與通路"
+        "母公司月營收未拆分CiRC或國防業務",
+        "採購審查、出口及資安條件可能限制市場",
+        "測試通過不保證持續得標或具有規模經濟"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "中光電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5371",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 中光電 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5371 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：液晶顯示器／電視、投射系統、背光裝置及多媒體簡報設備。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5371",
+          "claim": "主要經營業務：研發、生產製造、銷售各式液晶顯示器／電視、投射系統及其模組與背光裝置；多媒體簡報系統設備及軟體；液晶顯示型網路個人電腦、視窗終端機、數位傳輸式液晶監視器"
         },
         {
-          "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE查無；FinMind：2026年7月營收35.35億元，較6月減少2.4%。"
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年7月營收，2026-09-07查詢",
+          "url": "https://finmindtrade.com/analysis/#/data/api",
+          "claim": "TWSE查無本公司月營收，改用FinMind；2026年7月營收35.35億元，MoM-2.38%、YoY+12.37%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-5371-1",
+          "publisher": "中光電 官方網站",
+          "title": "CiRC Shows R&D Strength-the Groundbreaking Drone Products Debut at the Taipei Aerospace & Defense Technology Exhibition.-Latest Updates-News-Coretronic Corporation-中強光電-中光電",
+          "url": "https://www.coretronic.com/en/news/AyplYy/detail",
+          "claim": "官方集團消息列CiRC Mini ISR／ISR通過國防部測試、Teledyne FLIR共同開發SIRAS；2024/04/22公告Hummer 2 Pro及採Qualcomm模組的GCS7。屬歷史產品／測試披露，非2026年得標證明。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
+        },
+        {
+          "sourceId": "official-role-v46-5371-2",
+          "publisher": "中光電 官方網站",
+          "title": "Coretronic Intelligent Robotics Corporation (CiRC) Launches Drone Compliant with the U.S. National Defense Authorization Act (NDAA) in the United States.-Latest Updates-News-Coretronic Corporation-中強光電-中光電",
+          "url": "https://coretronic.com/index.php/en/news/GyARdW/detail",
+          "claim": "官方集團消息列CiRC Mini ISR／ISR通過國防部測試、Teledyne FLIR共同開發SIRAS；2024/04/22公告Hummer 2 Pro及採Qualcomm模組的GCS7。屬歷史產品／測試披露，非2026年得標證明。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-20",
+      "confidence": "medium",
+      "lastVerified": "2026-09-07",
       "status": "verified",
       "techFocus": [
-        "DLP光機、雷射螢光輪與色彩校正",
-        "背光導光、分區調光與亮度均勻性控制",
-        "投影幾何校正、影像拼接與互動感測整合"
+        "GCS7整合Qualcomm無線通訊模組（官方2024年公告）",
+        "ISR飛行平台與自研酬載相機整合（官方產品披露）",
+        "Hummer 2 Pro由官方宣稱符合NDAA供應鏈要求，非等同美軍採購證明"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持投影、顯示、背光與軟體整合，具成熟光機量產基礎",
-          "2026年7月營收35.35億元，規模足以支撐專業顯示與投影研發"
+          "官方具名披露偵察無人機與Teledyne FLIR共同開發產品",
+          "Mini ISR／ISR通過測試的歷史紀錄支持集團研發能力",
+          "2026年7月營收35.35億元，MoM-2.38%、YoY+12.37%，支持整體營運動能，非本題材收入證明。"
         ],
         "weaknesses": [
-          "MOPS完全未揭露IR／EO Pod、熱影像或軍方客戶，原核心軍工定位證據不足",
-          "FinMind顯示7月營收MoM-2.4%，且公司整體營收無法分辨軍工貢獻"
+          "母公司月營收未拆分CiRC或國防業務",
+          "歷史測試及NDAA符合宣稱不是本期採購訂單證明",
+          "2026年7月營收35.35億元，MoM-2.38%、YoY+12.37%；營收收縮或波動需留意，不能當成題材成長。"
         ],
         "opportunities": [
-          "模擬訓練、指揮中心與沉浸式簡報需要高亮度投影及多畫面拼接",
-          "既有光機與軟體能力可透過具軍規認證的系統商進入國防顯示"
+          "偵察及商業檢測可共用部分飛行與影像技術",
+          "非中國供應鏈需求可增加合規平台商機"
         ],
         "threats": [
-          "軍規夜視與熱像需要不同感測器、可靠度與資安認證，不能靠投影技術直接跨越",
-          "Barco、Christie與軍規顯示整合商在專業市場具既有認證與通路"
+          "採購審查、出口及資安條件可能限制市場",
+          "測試通過不保證持續得標或具有規模經濟"
         ]
       }
     }

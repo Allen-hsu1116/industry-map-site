@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -598,86 +598,79 @@
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元MOPS揭露IC/CIS/CCM測試設備與半導體光電切磨測，未揭露mmWave、光通訊或衛星專用測試系統；低軌衛星角色只限於射頻/影像IC後段測試的潛在應用。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "ic_optical_test_adjacent_to_satellite",
+      "roleSummary": "MOPS與官網確認IC／CIS／CCM加工與設備，不支持既有的星載相機、波束成形專用測試或衛星終端自動對焦實績。保留通訊IC及光電後段的候選關聯，不列作確定衛星供應商。 FinMind：2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%；全公司口徑，不能歸因本題材。",
       "products": [
-        "衛星終端基頻IC晶圓切割與成品測試服務",
-        "波束成形控制IC混合訊號成品測試服務",
-        "星載地球觀測CIS感測器測試設備",
-        "衛星終端相機模組CCM自動對焦測試設備"
+        "IC晶圓切割／研磨與挑檢加工",
+        "邏輯／混合訊號IC測試服務",
+        "CIS影像感測器測試設備",
+        "CCM相機模組生產測試設備"
       ],
       "customers": [
-        "MediaTek(衛星基頻IC應用對象，非MOPS揭露客戶)",
-        "Qualcomm(衛星終端晶片應用對象，非MOPS揭露客戶)",
-        "Qorvo(射頻前端應用對象，非MOPS揭露客戶)",
-        "Sony Semiconductor Solutions(CIS應用對象，非MOPS揭露客戶)"
+        "MediaTek（終端IC應用對象，非已揭露客戶）",
+        "Qualcomm（終端IC應用對象，非已揭露客戶）",
+        "Sony Semiconductor Solutions（CIS設備應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "精測(6510)(晶圓測試探針卡)",
-        "蔚華科(3054)(半導體測試設備)",
-        "致茂(2360)(電子量測儀器)"
+        "欣銓（IC測試）",
+        "矽格（IC測試）"
       ],
       "risks": [
-        "6月營收3.90億(FinMind)但衛星相關佔比極低",
-        "低軌衛星測試設備市場規模小且客戶集中",
-        "久元核心為消費電子CIS/CCM測試設備，衛星非主營"
+        "未披露星載CIS設備或衛星終端專案",
+        "航太環境與輻射可靠度需要獨立驗證",
+        "終端客戶自行測試或委外競爭可能壓縮加工價格"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體與光電產品之切割、研磨、測試、挑檢與基板切割；IC/CIS/CCM測試設備研製銷售。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "主要經營業務：半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等；半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收3.74億元，較6月減少4.1%；TWSE月營收查無資料，改採FinMind。"
+          "claim": "TWSE查無本公司月營收，改用FinMind；2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-6261-1",
+          "publisher": "久元 官方網站",
+          "title": "公司資訊",
+          "url": "http://wip.ytec.com.tw/ytec_web/profile.php",
+          "claim": "官網確認邏輯／混合訊號／MCU／RF等後段加工，以及CIS、LED、光學檢查與CCM設備；未披露衛星專用設備。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "混合訊號基頻IC之ADC/DAC、時脈與介面功能量測",
-        "CIS暗電流、壞點、PRNU與高動態範圍測試",
-        "CCM主動對焦、光軸偏移與影像均勻度校正"
+        "晶圓切割、研磨與晶粒挑檢之後段流程整合",
+        "CIS／CCM光學檢測與影像分析設備（官網產品範圍）",
+        "邏輯與混合訊號IC自製測試機台整合"
       ],
       "swot": {
         "strengths": [
-          "MOPS揭露IC/CIS/CCM測試設備，可對應衛星終端與地球觀測影像元件後段需求",
-          "切割、研磨、測試與挑檢一體化可縮短中小量專案交付"
+          "加工與自製測試設備具流程整合彈性",
+          "CIS及CCM技術可作為一般影像檢測基礎"
         ],
         "weaknesses": [
-          "2026年7月營收MoM-4.1%，且衛星收入未揭露",
-          "MOPS未證實mmWave或光通訊測試能力，不能把SpaceX列為實際客戶"
+          "未披露星載CIS設備或衛星終端專案",
+          "光電與IC產品組合波動使營收不代表衛星滲透率",
+          "2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%；營收收縮或波動需留意，不能當成題材成長。"
         ],
         "opportunities": [
-          "手機直連衛星增加基頻、波束控制及射頻前端IC測試需求",
-          "地球觀測衛星提高高動態範圍CIS與相機模組測試需求"
+          "衛星地面終端一般IC可使用後段加工服務",
+          "若未來取得航太光電認證，既有設備可評估延伸"
         ],
         "threats": [
-          "衛星元件量小且客製規格多，設備攤提與程式開發成本高",
-          "大型ATE與封測廠在高頻及航太可靠度測試更具優勢"
+          "航太環境與輻射可靠度需要獨立驗證",
+          "終端客戶自行測試或委外競爭可能壓縮加工價格"
         ]
       }
     }

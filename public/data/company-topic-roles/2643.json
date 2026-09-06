@@ -2,91 +2,85 @@
   "schemaVersion": 1,
   "companyCode": "2643",
   "companyName": "捷迅",
-  "updatedAt": "2026-08-21T19:04:04Z",
+  "updatedAt": "2026-09-06T19:15:54Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "integrated_logistics_adjacent",
-      "roleType": "integrated_logistics_for_aerospace",
-      "roleSummary": "捷迅MOPS僅揭露整合型物流服務，未揭露國防部、中科院、漢翔合約或軍品安全等級。此角色限於航太零件與高價設備可能採用的報關、保稅倉儲及運輸服務。FinMind顯示2026年7月營收7.04億元，MoM+1.1%。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "integrated_logistics_adjacent_to_aerospace",
+      "roleSummary": "MOPS確認整合物流，官網明列空海運、報關、VMI及EDI。航太角色是潛在航材運輸與備品管理，不是航空器製造；不再保留未由本次資料確認的溫濕度監控能力或軍品運輸實績。 FinMind：2026年7月營收7.04億元，MoM+1.10%、YoY-1.78%；全公司口徑，不能歸因本題材。",
       "products": [
-        "航空貨運承攬與門到門配送",
-        "海運貨櫃承攬與多式聯運",
-        "保稅倉儲與庫存管理",
-        "進出口報關與文件代理",
-        "溫濕度監控高價設備物流"
+        "航空進出口貨運承攬服務",
+        "海運FCL／LCL整櫃與併櫃服務",
+        "進出口及保稅貨物報關服務",
+        "VMI倉儲與備品庫存管理服務"
       ],
       "customers": [
-        "漢翔(2634)（航太物流應用對象，非MOPS揭露客戶）",
-        "長榮航太(2645)（航材物流應用對象，非MOPS揭露客戶）",
-        "Boeing（航材物流應用對象，非MOPS揭露客戶）",
-        "Airbus（航材物流應用對象，非MOPS揭露客戶）"
+        "漢翔（航材物流應用對象，非已揭露客戶）",
+        "長榮航太（維修備品物流應用對象，非已揭露客戶）",
+        "Airbus（航材物流應用對象，非已揭露客戶）"
       ],
       "competitors": [
-        "中菲行（5601）",
-        "台驊（2636）"
+        "DHL Global Forwarding",
+        "Kuehne+Nagel"
       ],
       "risks": [
-        "營收受軍工標案時程影響大",
-        "航太物流利基型業務規模有限"
+        "沒有本次可驗證的航太客戶或軍品運輸資格",
+        "出口管制與報關錯誤可能延誤敏感航材",
+        "運能價格波動及大型物流商競爭壓縮利差"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "捷迅 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2643",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 捷迅 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2643 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：整合型物流服務。"
+          "title": "公司基本資料，2026-09-07查詢",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2643",
+          "claim": "主要經營業務：整合型物流服務"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
+          "title": "2026年7月營收，2026-09-07查詢",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收7.04億元，MoM+1.1%；為公司整體數據。"
+          "claim": "TWSE查無本公司月營收，改用FinMind；2026年7月營收7.04億元，MoM+1.10%、YoY-1.78%。全公司口徑，非題材拆分。"
+        },
+        {
+          "sourceId": "official-role-v46-2643-1",
+          "publisher": "捷迅 官方網站",
+          "title": "Services | Soonest Express Co., Ltd.",
+          "url": "http://www.soonest.com/en/services/",
+          "claim": "官網明列空運、FCL／LCL海運、報關、VMI、PDA、GLS以及H2000／QP EDI；未用本頁證明軍品物流或溫濕度監控能力。",
+          "retrievedAt": "2026-09-06T19:15:54Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
-      "status": "verified",
+      "lastVerified": "2026-09-07",
+      "status": "candidate",
       "techFocus": [
-        "AEO供應鏈安全、報關文件與貨況追蹤",
-        "保稅倉儲批號、序號與先進先出管理",
-        "高價精密設備防震、防潮與溫濕度紀錄"
+        "GLS倉儲庫存與線上管理（官方服務頁）",
+        "H2000／QP及EDI報關資料整合（官方服務頁）",
+        "VMI／RMA及PDA揀貨作業整合"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持整合型物流服務，可承接高價航材跨境運輸",
-          "FinMind顯示7月營收7.04億元、MoM+1.1%，短期維持成長"
+          "空海運、報關與倉儲可串接航材跨境流程",
+          "GLS及EDI提高貨況與庫存資訊整合程度"
         ],
         "weaknesses": [
-          "MOPS未揭露軍品、國防客戶或安全分級服務",
-          "物流毛利受運價、匯率與客戶議價影響，題材直接性低"
+          "沒有本次可驗證的航太客戶或軍品運輸資格",
+          "運價與貨量共同影響營收，不能當成航太訂單量",
+          "2026年7月營收7.04億元，MoM+1.10%、YoY-1.78%；營收收縮或波動需留意，不能當成題材成長。"
         ],
         "opportunities": [
-          "航太維修在地化增加航材報關、保稅與緊急配送需求",
-          "供應鏈去風險可提升可追溯精密設備物流價值"
+          "MRO備品時效需求可提高整合物流服務價值",
+          "VMI及RMA可用於維修件返修及備庫管理"
         ],
         "threats": [
-          "全球貨運價格回落可能壓縮營收與毛利",
-          "出口管制或軍民兩用規範提高合規成本與延誤風險"
+          "出口管制與報關錯誤可能延誤敏感航材",
+          "運能價格波動及大型物流商競爭壓縮利差"
         ]
       }
     }
