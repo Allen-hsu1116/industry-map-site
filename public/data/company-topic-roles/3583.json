@@ -2,93 +2,99 @@
   "schemaVersion": 1,
   "companyCode": "3583",
   "companyName": "辛耘",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "indirect",
-      "supplyChainStage": "equipment_distribution",
-      "roleType": "packaging_equipment_distributor",
-      "roleSummary": "辛耘MOPS揭露半導體等製程設備代理／研發製造、晶圓再生及化學分析儀器，未列出任何先進封裝專用機台。故本題材定位為設備整合與晶圓服務的相鄰角色。2026年7月營收9.73億元，MoM-6.0%、YoY+6.6%，累計YoY+6.8%。",
+      "directness": "core",
+      "supplyChainStage": "advanced_packaging_wet_equipment",
+      "roleType": "polar_wse_pyxis_equipment",
+      "roleSummary": "辛耘MOPS支持設備代理、自研及晶圓再生，官網自製設備頁則具體支持先進封裝濕製程、面板級封裝與解鍵合後清潔；將原泛稱設備改為Polar／WSE／Pyxis系列，保留有證據的直接角色。 2026年7月營收9.73億元，MoM-5.96%、YoY+6.58%，累計年增率+6.76%。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。",
       "products": [
-        "半導體製程設備代理與整合服務",
-        "自研半導體製程機台",
-        "再生晶圓處理服務",
-        "化學分析儀器與量測方案"
+        "Polar單晶圓濕製程設備",
+        "Polar Panel單面板濕製程設備",
+        "WSE Panel批次面板濕製程設備",
+        "Pyxis解鍵合後清潔設備",
+        "Pyxis RL玻璃釋放層塗布設備"
       ],
       "customers": [
-        "TSMC（半導體設備應用對象，非MOPS揭露客戶）",
-        "UMC（晶圓製程應用對象，非MOPS揭露客戶）",
-        "ASE Technology（封裝設備應用對象，非MOPS揭露客戶）",
-        "Powertech Technology（測試與封裝應用對象，非MOPS揭露客戶）"
+        "台積電（先進封裝應用對象，非已證實採購客戶）",
+        "日月光投控（封裝設備應用對象，非已證實採購客戶）",
+        "力成（封裝設備應用對象，非已證實採購客戶）",
+        "3M（官方披露Pyxis開發合作對象，非採購客戶）"
       ],
       "competitors": [
-        "弘塑(3131)",
-        "崇越(5434)",
-        "京鼎(3413)"
+        "弘塑（濕製程設備同業比較）",
+        "盛美半導體（濕製程設備同業比較）"
       ],
       "risks": [
-        "6月營收1.03億YoY-2.7%,累計YoY+6.8%(成長放緩)",
-        "設備代理業務受原廠策略影響大(利潤率受限)",
-        "晶圓再生為利基但市場規模有限"
+        "MCP未拆分設備代理、自製設備與再生晶圓收入",
+        "面板尺寸與封裝路徑變更可能造成設備重設計",
+        "設備驗收節奏、蝕刻均勻度與化學液管理增加交付風險"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體/LED/Solar/LCD等製程機台設備代理、研發與製造晶圓再生技術研發與服務化學分析儀器代理"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體等製程機台設備代理研發製造、晶圓再生、化學分析儀器。"
+          "title": "3583 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3583",
+          "claim": "本次MCP主要經營業務摘錄：半導體/LED/Solar/LCD等製程機台設備代理、研發與製造；晶圓再生技術研發與服務；化學分析儀器代理技術、研發與製造；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收9.73億元，MoM-6.0%、YoY+6.6%，累計YoY+6.8%。"
+          "publisher": "TWSE",
+          "title": "3583 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收9.73億元，MoM-5.96%、YoY+6.58%，累計年增率+6.76%。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "辛耘官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.scientech.com.tw/en/Products/Scientech/All",
+          "claim": "官方自製設備頁列Polar、Polar Panel、WSE Panel與Pyxis清潔／釋放層塗布，應用包括先進封裝、UBM Etch、FOPLP；Pyxis列與3M合作。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3583",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "製程機台導入、廠務介面與自動化整合",
-        "再生晶圓表面去膜、清洗與缺陷檢測",
-        "製程化學品濃度、金屬離子與污染分析"
+        "官方Polar／Polar Panel列PR Strip、UBM Etch與Metal Etch",
+        "WSE Panel以多槽批次處理支援FOPLP、FoCoS與PiFO應用",
+        "Pyxis RL提供玻璃釋放層塗布與噴嘴自清；薄化及BGBM玻璃載板流程有明確產品依據"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持設備代理、自研製造、晶圓再生與化學分析",
-          "7月營收YoY+6.6%、累計YoY+6.8%"
+          "自製設備覆蓋單晶圓與面板級封裝的去光阻、蝕刻及清潔",
+          "官網披露Pyxis與3M合作開發，具釋放層／解鍵合流程協作基礎",
+          "2026年7月公司營收YoY+6.58%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露先進封裝專用機台或製程步驟",
-          "7月營收MoM-6.0%，設備認列具季度波動"
+          "MCP未拆分設備代理、自製設備與再生晶圓收入",
+          "3M是官方披露合作對象而非本次證實的設備買方；其他具名買方亦未確認",
+          "2026年7月營收9.73億元，MoM-5.96%、YoY+6.58%，累計年增率+6.76%。單月與累計變化需連同產品組合／比較基期判讀；此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "先進封裝擴產可拉動設備整合、量測與再生晶圓需求",
-          "在地設備服務可受惠供應鏈本土化"
+          "FOPLP與玻璃載板處理增加單片／批次濕製程需求",
+          "UBM蝕刻與解鍵合清潔的均勻度要求提升可形成設備升級"
         ],
         "threats": [
-          "客戶資本支出遞延與驗收延後會造成營收波動",
-          "國際設備原廠競爭與代理權變動可能壓縮業務"
+          "面板尺寸與封裝路徑變更可能造成設備重設計",
+          "設備驗收節奏、蝕刻均勻度與化學液管理增加交付風險"
         ]
       }
     },

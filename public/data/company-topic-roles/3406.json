@@ -2,94 +2,107 @@
   "schemaVersion": 1,
   "companyCode": "3406",
   "companyName": "玉晶光",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "optical_components",
-      "roleType": "optical_lens_manufacturer",
-      "roleSummary": "玉晶光MOPS直接揭露各類光學鏡頭、鏡片及高功率LED照明，光學元件角色成立；但MOPS未揭露Apple、Meta、Microsoft或車用客戶。2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%，旺季拉貨強但單月年增溫和。",
+      "supplyChainStage": "optical_lens_manufacturing",
+      "roleType": "mobile_automotive_ar_optics",
+      "roleSummary": "玉晶光MOPS確認鏡頭、鏡片及LED照明；官網具體列手機、車載、工業AI與AR眼鏡光學產品。保留可查證光學產品，移除未由本次資料支持的7P／8P、dToF與Pancake指定架構。 2026年7月營收24.22億元，MoM+39.28%、YoY+1.63%，累計年增率+14.20%。此為全公司營收，未拆分「面板、LED、光學鏡頭與感測」收入，不能全部歸因本題材。",
       "products": [
-        "7P／8P塑膠非球面手機鏡頭",
-        "dToF／結構光3D感測接收鏡頭",
-        "Pancake折疊光路XR鏡頭",
-        "ADAS／DMS車載攝影鏡頭",
-        "高功率LED室內外照明模組"
+        "手機攝影鏡頭與感測光學件",
+        "ADAS／LiDAR車載鏡頭",
+        "AR眼鏡Transmission Lens",
+        "AR眼鏡Projection Lens",
+        "工業AI機器視覺鏡頭"
       ],
       "customers": [
-        "Apple（手機鏡頭應用對象，非MOPS揭露客戶）",
-        "Meta Platforms（XR鏡頭應用對象，非MOPS揭露客戶）",
-        "Microsoft（AR裝置應用對象，非MOPS揭露客戶）",
-        "Continental（車載鏡頭應用對象，非MOPS揭露客戶）"
+        "Apple（手機鏡頭應用對象，非本次證實採購客戶）",
+        "Meta Platforms（XR鏡頭應用對象，非本次證實採購客戶）",
+        "Microsoft（AR裝置應用對象，非本次證實採購客戶）",
+        "Continental（車載鏡頭應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "大立光(3008)(手機鏡頭龍頭)",
-        "舜宇光學(中國光學鏡頭)",
-        "康達智(日本手機鏡頭)"
+        "大立光（手機鏡頭同業比較）",
+        "舜宇光學（車載與手機光學同業比較）"
       ],
       "risks": [
-        "6月營收17.4億YoY+4.5%成長溫和,累計YoY+17.2%",
-        "Apple iPhone前鏡頭订单受手機出貨循環影響",
-        "中國舜宇光學低價競爭壓力增大(車用/消費鏡頭)"
+        "各應用營收比重與具名採購客戶未在MCP揭露",
+        "新光學架構驗證期長，研發投入未必及時轉成出貨",
+        "手機拉貨季節性及其他精密光學廠競爭增加毛利壓力"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 各類光學鏡頭、鏡片研發及生產製造。高功率LED室內外照明產品。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：各類光學鏡頭、鏡片研發及生產製造；高功率LED室內外照明產品。"
+          "title": "3406 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3406",
+          "claim": "本次MCP主要經營業務摘錄：各類光學鏡頭、鏡片研發及生產製造。高功率LED室內外照明產品。；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%。"
+          "publisher": "TWSE",
+          "title": "3406 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收24.22億元，MoM+39.28%、YoY+1.63%，累計年增率+14.20%。此為全公司營收，未拆分「面板、LED、光學鏡頭與感測」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "玉晶光官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.gseo.com/",
+          "claim": "官網列Mobile、Car、Industrial AI及AR Smart Glasses；AR頁明列Transmission Lens與Projection Lens，未確認7P／8P或Pancake。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-supplement-v47-0",
+          "publisher": "玉晶光官方網站",
+          "title": "補充產品／集團來源",
+          "url": "https://www.gseo.com/products/ar-vr-optics",
+          "claim": "AR產品頁明列Transmission Lens及Projection Lens。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3406",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-21",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "多片塑膠非球面成形、鏡組偏心與MTF公差控制",
-        "dToF窄頻濾光、接收視場與主動對焦模組整合",
-        "Pancake偏振折疊光路、鬼影抑制與輕量化"
+        "官網列AR Transmission／Projection Lens；光路效率與畸變校正為工程分析，非Pancake製程已確認",
+        "官網列ADAS／LiDAR車載鏡頭；MTF、偏心與視場公差為光學工程分析",
+        "工程分析：手機鏡頭光學設計、模具補償與鏡組裝調；未指定7P／8P片數"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持光學鏡頭、鏡片及高功率LED產品，題材角色可驗證",
-          "2026年7月營收MoM+39.3%、累計YoY+14.2%，旺季出貨動能回升"
+          "官網產品組合橫跨手機、車載及AR投影／傳輸鏡片，光學角色直接",
+          "官網說明光學設計、設備開發、製程及製造垂直整合",
+          "2026年7月公司營收YoY+1.63%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "7月YoY僅+1.6%，高月增主要可能是季節性而非結構性爆發",
-          "MOPS未揭露具名終端客戶，既有客戶關係只能列為應用對象"
+          "各應用營收比重與具名採購客戶未在MCP揭露",
+          "AR產品公開不等於特定頭戴裝置量產供貨，無法指定Meta或Apple訂單",
+          "此為全公司營收，未拆分「面板、LED、光學鏡頭與感測」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "XR薄型化推升Pancake鏡頭與精密組裝需求",
-          "手機3D感測與ADAS／DMS鏡頭可擴大高階光學應用"
+          "AR眼鏡的投影與追蹤相機可擴展鏡頭應用",
+          "ADAS與工業機器視覺升級增加成像精度及可靠度需求"
         ],
         "threats": [
-          "大立光與舜宇光學在手機及XR鏡頭持續競爭",
-          "智慧手機與XR出貨不及預期會壓低高階鏡頭產能利用率"
+          "新光學架構驗證期長，研發投入未必及時轉成出貨",
+          "手機拉貨季節性及其他精密光學廠競爭增加毛利壓力"
         ]
       }
     },

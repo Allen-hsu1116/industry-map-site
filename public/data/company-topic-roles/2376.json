@@ -2,38 +2,36 @@
   "schemaVersion": 1,
   "companyCode": "2376",
   "companyName": "技嘉",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI伺服器與液冷技術",
       "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "system_brand",
-      "roleType": "ai_server_platform_brand",
-      "roleSummary": "技嘉MOPS支持電腦硬體、電腦系統與周邊設備，但未揭露G593、HGX、H100/B200或液冷規格；可保留運算系統整合角色，特定AI平台關係則標示未驗證。2026年7月營收442.13億元，MoM+3.1%、YoY+59.7%，累計YoY+50.0%，公司明示AI訂單需求暢旺。",
+      "directness": "core",
+      "supplyChainStage": "gpu_server_rack_integration",
+      "roleType": "gpu_server_and_rack_systems",
+      "roleSummary": "技嘉MOPS業務較廣，官網直接支持HGX、GB300 NVL72及GIGAPOD機櫃產品，因此AI伺服器為直接角色，不能因MOPS簡略而降成泛用電腦。月營收備註明列AI訂單需求暢旺，但未量化各GPU平台貢獻。 2026年7月營收442.13億元，MoM+3.08%、YoY+59.67%，累計年增率+49.96%。MCP備註：AI訂單需求暢旺。此為全公司營收，未拆分「AI伺服器與液冷技術」收入，不能全部歸因本題材。",
       "products": [
-        "機架式運算系統",
-        "伺服器主機板",
-        "GPU加速運算卡",
-        "電腦系統管理軟體與周邊"
+        "G593-SD1-LAX3 HGX H200液冷GPU伺服器",
+        "G4L4-SD3-LAX7 HGX B300液冷GPU伺服器",
+        "GIGAPOD GB300 NVL72機櫃方案",
+        "G-REX機房冷卻與電力管理中介軟體"
       ],
       "customers": [
-        "NVIDIA（GPU平台對象，非MOPS揭露客戶）",
-        "AMD（CPU／GPU平台對象，非MOPS揭露客戶）",
-        "Intel（伺服器CPU平台對象，非MOPS揭露客戶）",
-        "Microsoft（AI運算應用對象，非MOPS揭露客戶）"
+        "NVIDIA（官方GPU平台供應／整合對象，非本次證實採購客戶）",
+        "AMD（官方GPU平台供應／整合對象，非本次證實採購客戶）",
+        "Intel（CPU平台應用對象，非本次證實採購客戶）",
+        "Microsoft（AI運算應用觀察對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "超微(8299)",
-        "廣達",
-        "緯穎",
-        "Dell",
-        "HPE"
+        "Supermicro（GPU伺服器同業比較）",
+        "華碩（GPU伺服器同業比較）"
       ],
       "risks": [
-        "AI 伺服器從自研品牌進入 ODM 領域，需與代工廠競爭",
-        "GPU 取決於 NVIDIA 供貨分配"
+        "MCP未拆分GB300、HGX或主機板營收，也未提供具名買方",
+        "GPU世代切換可能形成庫存及相容性壓力",
+        "整櫃液冷漏液、服務責任及驗收延遲可能影響獲利"
       ],
       "legacy": {
         "topicSlug": "ai-server",
@@ -42,58 +40,64 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "技嘉 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2376",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 技嘉 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2376 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦硬體、電腦系統與周邊設備製造加工買賣。"
+          "title": "2376 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2376",
+          "claim": "本次MCP主要經營業務摘錄：電腦硬體及其零件之製造加工及買賣；電腦系統週邊設備(包括軟體)之製造加工及買賣；前項有關商品進口及代理國內外廠商之投標報價及經營業務；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收442.13億元，MoM+3.1%、YoY+59.7%，累計YoY+50.0%；備註為AI訂單需求暢旺。"
+          "publisher": "TWSE",
+          "title": "2376 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收442.13億元，MoM+3.08%、YoY+59.67%，累計年增率+49.96%。MCP備註：AI訂單需求暢旺。此為全公司營收，未拆分「AI伺服器與液冷技術」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "技嘉官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.gigabyte.com/Solutions/gigabyte-dlc",
+          "claim": "DLC方案明列G593、G4L4、GB300 NVL72／GIGAPOD及G-REX的Modbus、Redfish、REST接口；NVIDIA／AMD為運算平台，非此頁披露的採購客戶。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2376",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "伺服器主機板PCIe高速訊號與電源完整性",
-        "GPU運算系統BIOS／BMC韌體與相容性驗證",
-        "機架系統散熱、風道與整機燒機測試"
+        "官網GIGAPOD整合GPU伺服器、網路、供電及液冷，GB300方案列140kW機櫃配置",
+        "官網G-REX支援Modbus、Redfish與REST API串接CDU與機櫃監控",
+        "官網DLC以冷板在熱源處移除熱量；具體熱捕捉率屬公司方案宣稱，非所有配置保證"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持電腦硬體與系統整合，且公司備註AI訂單需求暢旺",
-          "7月營收YoY+59.7%、累計YoY+50.0%"
+          "公開GPU伺服器與機櫃型號支持從單機到整櫃供應能力",
+          "G-REX整合OT冷卻與IT管理，增加部署與維運附加價值",
+          "2026年7月公司營收YoY+59.67%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露特定AI伺服器型號、GPU平台或液冷規格",
-          "AI訂單成長未拆分伺服器、主機板與消費產品貢獻"
+          "MCP未拆分GB300、HGX或主機板營收，也未提供具名買方",
+          "高功耗機櫃交付受GPU到貨、配電與機房水路條件制約",
+          "此為全公司營收，未拆分「AI伺服器與液冷技術」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "企業AI與邊緣運算可帶動品牌伺服器系統需求",
-          "CPU／GPU平台換代增加主機板與整機驗證價值"
+          "AI訓練／推論叢集升級可帶動GPU與整櫃部署需求",
+          "Modbus／Redfish監控整合可降低異質CDU導入障礙"
         ],
         "threats": [
-          "GPU供應與客戶專案遞延會影響出貨",
-          "ODM與品牌伺服器競爭激烈，庫存與價格壓力高"
+          "GPU世代切換可能形成庫存及相容性壓力",
+          "整櫃液冷漏液、服務責任及驗收延遲可能影響獲利"
         ]
       }
     },

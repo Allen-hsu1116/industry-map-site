@@ -2,93 +2,99 @@
   "schemaVersion": 1,
   "companyCode": "4976",
   "companyName": "佳凌",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "optical_lens_adjacent",
-      "roleType": "camera_lens_adjacent_to_defense",
-      "roleSummary": "佳凌MOPS支持車載、相機、安控、視訊、穿戴、工業辨識與醫療鏡頭，但未揭露軍規鏡頭、無人機光電酬載或國防客戶。此角色改列為安控與機器視覺鏡頭對航太影像系統的鄰近能力。2026年7月營收0.97億元，YoY+9.5%、累計YoY+1.3%，規模仍小。",
+      "supplyChainStage": "civilian_optics_defense_adjacent",
+      "roleType": "civilian_lens_application_adjacent",
+      "roleSummary": "佳凌MOPS與官網支持車載、安控、工業及醫療鏡頭；本次以可查CAR系列規格替換未註明來源的製程推斷。國防航太仍僅為民用光學可能延伸，未確認軍用IR／EO酬載或軍方訂單。 2026年7月營收0.97億元，MoM+1.33%、YoY+9.49%，累計年增率+1.33%。此為全公司營收，未拆分「軍工、航太與無人機」收入，不能全部歸因本題材。",
       "products": [
-        "ADAS／環視車載攝影鏡頭",
-        "IP安控攝影鏡頭",
-        "機器視覺辨識鏡頭",
-        "醫療影像光學鏡頭",
-        "塑膠射出成型鏡筒與機構件"
+        "CAR-50 ADAS前視全玻璃鏡頭",
+        "CAR-31 DMS全玻璃鏡頭",
+        "CAR-20 3D環視鏡頭",
+        "CCTV安控鏡頭",
+        "塑膠成型機構部品"
       ],
       "customers": [
-        "Mobileye（ADAS鏡頭應用對象，非MOPS揭露客戶）",
-        "Continental（車載視覺應用對象，非MOPS揭露客戶）",
-        "Bosch（機器視覺應用對象，非MOPS揭露客戶）",
-        "Hanwha Vision（安控鏡頭應用對象，非MOPS揭露客戶）"
+        "Mobileye（ADAS鏡頭應用對象，非本次證實採購客戶）",
+        "Continental（車載視覺應用對象，非本次證實採購客戶）",
+        "Bosch（機器視覺應用對象，非本次證實採購客戶）",
+        "Hanwha Vision（安控鏡頭應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "大立光(3008)",
-        "先進光(3362)",
-        "亞洲光學(3019)"
+        "舜宇光學（車載鏡頭同業比較）",
+        "玉晶光（精密光學同業比較）"
       ],
       "risks": [
-        "軍規認證週期長",
-        "國防訂單不穩定"
+        "本次來源未確認軍用酬載、軍規環測或航太適航資格",
+        "軍事採購有出口管制、保密及認證要求，民用品導入不保證成立",
+        "車載鏡頭價格競爭與專案開發週期可能拖累回收"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：車載、相機、安控、視訊、穿戴、工業辨識與醫療鏡頭；塑膠成型機構部品及精密模具。"
+          "title": "4976 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4976",
+          "claim": "本次MCP主要經營業務摘錄：車載.相機.安控.視訊.行動穿戴.工業.辨識.醫療等鏡頭開發製作。各類塑膠成型機構部品開發及製作。精密模具.研磨皿.傘具.計測具.組裝等。；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收0.97億元，MoM+1.3%、YoY+9.5%，累計YoY+1.3%。"
+          "publisher": "TWSE",
+          "title": "4976 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收0.97億元，MoM+1.33%、YoY+9.49%，累計年增率+1.33%。此為全公司營收，未拆分「軍工、航太與無人機」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "佳凌官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.calin.com.tw/en/product/application/48",
+          "claim": "車載目錄列CAR-50 5.3M／7.9mm／F1.7、CAR-31 6mm／F2.8及CAR-20 IP6K9K；皆非軍用酬載採購證據。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4976",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
-      "status": "verified",
+      "lastVerified": "2026-09-08",
+      "status": "candidate",
       "techFocus": [
-        "塑膠非球面鏡片射出、模具補償與面形控制",
-        "鏡組偏心、MTF與畸變校正",
-        "車載寬溫、振動與日夜共焦光學設計"
+        "官網CAR-50：5.3M、焦距7.9mm、F1.7、HFOV 62.5度，屬車載非軍規產品",
+        "官網CAR-31：焦距6mm、F2.8、全玻璃DMS鏡組",
+        "官網CAR-20列IP6K9K；此防護標示不能代替軍用光電酬載認證"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持多場域鏡頭與塑膠成型機構件開發製造",
-          "車載、安控與工業辨識經驗可延伸高可靠影像應用"
+          "具前視、環視與駕駛監控鏡頭公開型號，產品能力可核對",
+          "MOPS同時列鏡頭與機構部品，具光機整合業務基礎",
+          "2026年7月公司營收YoY+9.49%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "2026年7月營收僅0.97億元，累計YoY僅+1.3%，規模與成長有限",
-          "MOPS未揭露軍規、無人機酬載或國防客戶"
+          "本次來源未確認軍用酬載、軍規環測或航太適航資格",
+          "軍工營收與客戶未拆分，不能將車用防水等級轉成軍規認證",
+          "此為全公司營收，未拆分「軍工、航太與無人機」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "無人載具與邊緣辨識可增加寬溫、低畸變鏡頭驗證需求",
-          "車載鏡頭量產經驗可支援高振動環境的可靠度改善"
+          "無人載具視覺若採民用鏡头並完成額外驗證，可形成新應用",
+          "工業辨識鏡頭經耐候與振動測試後可探索戶外載具"
         ],
         "threats": [
-          "大立光、舜宇光學及中國安控鏡頭廠競爭激烈",
-          "未通過軍規環境測試前，光學能力不能直接等同軍工訂單"
+          "軍事採購有出口管制、保密及認證要求，民用品導入不保證成立",
+          "車載鏡頭價格競爭與專案開發週期可能拖累回收"
         ]
       }
     },

@@ -2,92 +2,97 @@
   "schemaVersion": 1,
   "companyCode": "3363",
   "companyName": "上詮",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "technology",
-      "directness": "indirect",
-      "supplyChainStage": "optical_passive_components",
-      "roleType": "optical_passive_component_manufacturer",
-      "roleSummary": "上詮MOPS揭露光纖被動元件、光纖模組／整合系統及光纖測試設備，沒有CPO或矽光子晶片；本題材可確認的是光纖耦合與測試的周邊角色。FinMind顯示2026年7月營收1.71億元，較6月增加8.5%。",
+      "directness": "core",
+      "supplyChainStage": "cpo_fiber_array_interconnect",
+      "roleType": "relfacon_and_pm_fiber_array",
+      "roleSummary": "上詮MOPS確認光纖被動元件，官方ReLFACon資料明列矽光子CPO用光纖陣列連接器與FA／MPO保偏封裝；本次恢復有官方證據的CPO元件定位，並把產品能力與實際量產訂單規模分開。 2026年8月營收2.04億元，MoM+19.69%、YoY+13.20%。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。",
       "products": [
-        "PLC光纖分光器",
-        "WDM波分多工被動元件",
-        "MPO／LC光纖連接模組",
-        "光纖生產測試儀器"
+        "ReLFACon可回焊透鏡光纖陣列連接器",
+        "矽光子封裝用FA光纖陣列",
+        "MPO多通道保偏光纖陣列封裝"
       ],
       "customers": [
-        "Broadcom（矽光子平台對象，非MOPS揭露客戶）",
-        "NVIDIA（CPO應用生態對象，非MOPS揭露客戶）",
-        "Arista Networks（資料中心交換器應用對象，非MOPS揭露客戶）",
-        "Cisco（光網路設備應用對象，非MOPS揭露客戶）"
+        "Broadcom（矽光子平台對象，非本次證實採購客戶）",
+        "NVIDIA（CPO應用生態對象，非本次證實採購客戶）",
+        "Arista Networks（資料中心交換器應用對象，非本次證實採購客戶）",
+        "Cisco（光網路設備應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "華星光(4969)",
-        "光環(2353)",
-        "II-VI/Coherent"
+        "Furukawa Electric（光纖陣列同業比較）",
+        "SENKO（光連接器同業比較）"
       ],
       "risks": [
-        "光纖元件價格競爭激烈",
-        "矽光子技術可能替代部分被動元件"
+        "官網產品宣告及量產能力說明不能證明目前所有通道配置大量出貨",
+        "CPO平台規格及耦光方式分歧可能延後量產",
+        "高密度光纖對準良率與國際元件供應商競爭形成壓力"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：光纖被動元件、光纖模組與整合系統、光纖生產測試儀器設備。"
+          "title": "3363 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3363",
+          "claim": "本次MCP主要經營業務摘錄：光纖被動元件之設計、生產與銷售服務；光纖模組及整合系統之設計、生產與銷售服務；光纖相關之生產測試儀器設備之設計、生產與銷售服務；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收1.71億元，較6月增加8.5%。"
+          "title": "3363 2026年8月營收（本次MCP最新回傳）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3363&start_date=2025-06-01&end_date=2026-09-08",
+          "claim": "2026年8月營收2.04億元，MoM+19.69%、YoY+13.20%。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。 TWSE主查無資料，採FinMind的revenue_year/revenue_month，原始單位元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "上詮官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.foci.com.tw/ReLFACon_news",
+          "claim": "官方ReLFACon發表列可回焊、矽熱膨脹匹配、8～128通道及FA／MPO保偏封裝；保留公司能力宣稱與当期訂單的區別。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3363",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "PLC平面光波導分光與插入損耗控制",
-        "MPO多芯光纖端面研磨、對位與回損測試",
-        "WDM波長選擇、封裝與溫度穩定性驗證"
+        "官方ReLFACon宣告支援8至128通道光輸入／輸出",
+        "官方列可承受回焊且熱膨脹係數匹配矽晶圓的材料設計",
+        "工程分析：FA／MPO保偏光纖須控制偏振軸向、耦光與端面品質；不擅加損耗門檻"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持光纖被動元件、模組整合與測試設備",
-          "FinMind顯示7月營收1.71億元、月增8.5%"
+          "有針對CPO封裝的具名產品與通道範圍，不是純粹產業聯想",
+          "耐回焊與熱膨脹匹配設計對應半導體封裝導入需求",
+          "2026年8月公司營收YoY+13.20%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露CPO、矽光子晶片或特定高速規格",
-          "公司規模小，月營收未拆分資料中心光互連占比"
+          "官網產品宣告及量產能力說明不能證明目前所有通道配置大量出貨",
+          "未披露NVIDIA、Broadcom的直接採購或CPO收入比重",
+          "此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "CPO與矽光子模組仍需要高密度光纖耦合與測試",
-          "800G／1.6T網路升級可提升MPO與WDM需求"
+          "CPO封裝量增加可帶動高密度FA接續與組裝需求",
+          "可回焊連接器有機會降低光封裝與電子封裝的流程整合難度"
         ],
         "threats": [
-          "矽光子封裝方案尚未定型，客戶規格變動快",
-          "被動光元件價格競爭與良率爬坡可能壓縮毛利"
+          "CPO平台規格及耦光方式分歧可能延後量產",
+          "高密度光纖對準良率與國際元件供應商競爭形成壓力"
         ]
       }
     },

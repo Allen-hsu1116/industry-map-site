@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2383",
   "companyName": "台光電",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -89,32 +89,32 @@
       "topicId": "ai-server",
       "topicName": "AI伺服器與液冷技術",
       "topicType": "theme",
-      "directness": "supplier",
-      "supplyChainStage": "substrate_materials",
-      "roleType": "ai_server_ccl_supplier",
-      "roleSummary": "台光電MOPS直接揭露銅箔基板、黏合片與多層壓合板，且2026年7月月營收備註明確寫明「受惠於AI伺服器成長力道」，題材證據成立；但MOPS未揭露ABF載板用材料、特定材料牌號或具名客戶。7月營收192.07億元，MoM+8.3%、YoY+129.4%、累計YoY+89.4%。",
+      "directness": "core",
+      "supplyChainStage": "ccl_prepreg_materials",
+      "roleType": "low_loss_ccl_provider",
+      "roleSummary": "台光電MOPS揭露CCL、黏合片及多層壓合板，官方列Ultra／Extreme Low Loss等級與AI／雲端資料中心應用。AI伺服器材料角色直接，月營收備註也提AI伺服器成長，但不能將公司全部營收視為AI。 2026年7月營收192.07億元，MoM+8.31%、YoY+129.40%，累計年增率+89.40%。MCP備註：受惠於AI伺服器成長力道。此為全公司營收，未拆分「AI伺服器與液冷技術」收入，不能全部歸因本題材。",
       "products": [
-        "高速低損耗銅箔基板（CCL）",
-        "伺服器主機板用黏合片（Prepreg）",
-        "高多層印刷電路壓合板",
-        "高耐熱無鹵銅箔基板",
-        "高速交換器用低損耗基板材料"
+        "Ultra Low Loss低損耗銅箔基板",
+        "Extreme Low Loss極低損耗銅箔基板",
+        "無鹵FR-4銅箔基板",
+        "Prepreg黏合片",
+        "多層壓合板"
       ],
       "customers": [
-        "欣興（PCB供應鏈對象，非MOPS揭露客戶）",
-        "金像電（伺服器PCB供應鏈對象，非MOPS揭露客戶）",
-        "健鼎（PCB供應鏈對象，非MOPS揭露客戶）",
-        "廣達（伺服器應用對象，非MOPS揭露客戶）",
-        "緯穎（伺服器應用對象，非MOPS揭露客戶）"
+        "欣興（PCB供應鏈對象，非本次證實採購客戶）",
+        "金像電（伺服器PCB供應鏈對象，非本次證實採購客戶）",
+        "健鼎（PCB供應鏈對象，非本次證實採購客戶）",
+        "廣達（伺服器應用對象，非本次證實採購客戶）",
+        "緯穎（伺服器應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "聯茂(6213)",
-        "松下電工",
-        "Rogers"
+        "台燿（低損耗CCL同業比較）",
+        "聯茂（CCL同業比較）"
       ],
       "risks": [
-        "AI 伺服器 CCL 規格持續升級但良率挑戰大",
-        "客戶向陸廠採購低階 CCL 壓縮台廠空間"
+        "未提供低損耗各等級收入、產能利用率或具名PCB買方",
+        "客戶認證時間與玻纖布、銅箔等供應限制影響產能釋放",
+        "材料同業擴產與客戶議價可能削弱高階材料溢價"
       ],
       "legacy": {
         "topicSlug": "ai-server",
@@ -123,58 +123,64 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "台光電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2383",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台光電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2383 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：銅箔基板、黏合片、多層壓合板。"
+          "title": "2383 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2383",
+          "claim": "本次MCP主要經營業務摘錄：銅箔基板；黏合片；多層壓合板；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收192.07億元，MoM+8.3%、YoY+129.4%、累計YoY+89.4%；公司說明受惠AI伺服器成長力道。"
+          "publisher": "TWSE",
+          "title": "2383 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收192.07億元，MoM+8.31%、YoY+129.40%，累計年增率+89.40%。MCP備註：受惠於AI伺服器成長力道。此為全公司營收，未拆分「AI伺服器與液冷技術」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "台光電官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.emctw.com/zh-TW/about_milestone/index",
+          "claim": "官方介紹列無鹵FR-4、Prepreg及Mid至Extreme Low Loss分級，應用含Anylayer、mSAP、超高層板及AI/雲端資料中心。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2383",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-23",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "低介電損耗樹脂配方與玻纖布浸潤控制",
-        "多層板壓合厚度、樹脂流動與層間對位控制",
-        "高速差分通道的Dk／Df與銅箔粗糙度管理"
+        "官網列Mid／Low／Very Low／Ultra Low／Extreme Low Loss材料分級，不擅加EM型號或Df門檻",
+        "官網產品對應Anylayer、mSAP、超高層板及高速傳輸；樹脂流動與材料相容為工程分析",
+        "工程分析：高速CCL須平衡Dk／Df、銅箔粗糙度與熱循環可靠度，不代表台光電製造完成PCB"
       ],
       "swot": {
         "strengths": [
-          "MOPS產品直接對應AI伺服器高層數PCB上游材料",
-          "月營收備註直接歸因AI伺服器，7月YoY+129.4%、累計YoY+89.4%"
+          "官方低損耗材料分級與高階PCB應用可核對，產品具體",
+          "MCP營收備註明確指出AI伺服器成長力道，題材動能有來源支持",
+          "2026年7月公司營收YoY+129.40%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露材料牌號、傳輸速率、終端客戶或ABF載板材料",
-          "高速材料認證週期長，擴產轉換為合格出貨存在時間差"
+          "未提供低損耗各等級收入、產能利用率或具名PCB買方",
+          "材料供應不等同完成PCB／封裝載板製造，須避免價值鏈混淆",
+          "此為全公司營收，未拆分「AI伺服器與液冷技術」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "800G／1.6T交換器與AI加速器主板提高低損耗CCL用量與等級",
-          "高層數板與更長高速通道推升高階黏合片及壓合材料價值"
+          "高速交換器與GPU主板提高低損耗材料需求",
+          "更高層數與高密度互連可能增加高可靠黏合片應用"
         ],
         "threats": [
-          "Panasonic、聯茂等高階CCL供應商競爭與客戶第二來源策略",
-          "玻纖布、銅箔及樹脂供應緊張可能限制出貨與毛利"
+          "客戶認證時間與玻纖布、銅箔等供應限制影響產能釋放",
+          "材料同業擴產與客戶議價可能削弱高階材料溢價"
         ]
       }
     }

@@ -2,93 +2,97 @@
   "schemaVersion": 1,
   "companyCode": "3023",
   "companyName": "信邦",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器整機與 EMS",
       "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "connectors",
-      "roleType": "server_connector_supplier",
-      "roleSummary": "信邦MOPS只揭露電子零件加工、電腦周邊、通信器材與網路組件，沒有112G PAM4、MCIO或AI伺服器專案；因此定位為連接與線束整合的相鄰角色。2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%。",
+      "directness": "core",
+      "supplyChainStage": "data_center_cable_interconnect",
+      "roleType": "qsfp_passive_cable_provider",
+      "roleSummary": "信邦MOPS屬電子與通訊組件，官方商店則直接列100G／200G／400G QSFP被動線纜，恢復資料中心高速互連的具體產品角色；這支持AI機房周邊連接，不等同GPU整機或具名雲端客戶訂單。 2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計年增率+11.44%。此為全公司營收，未拆分「AI 伺服器整機與 EMS」收入，不能全部歸因本題材。",
       "products": [
-        "電腦周邊內部線束組件",
-        "通訊設備訊號連接線組",
-        "網路設備電源線組",
-        "客製連接器與線纜加工服務"
+        "100G QSFP28對QSFP28被動線纜",
+        "200G QSFP56對QSFP56被動線纜",
+        "400G QSFP-DD對QSFP-DD被動線纜"
       ],
       "customers": [
-        "Quanta（伺服器整機應用對象，非MOPS揭露客戶）",
-        "Wistron（伺服器整機應用對象，非MOPS揭露客戶）",
-        "Inventec（伺服器整機應用對象，非MOPS揭露客戶）",
-        "Cisco（網路設備應用對象，非MOPS揭露客戶）"
+        "Quanta（伺服器整機應用對象，非本次證實採購客戶）",
+        "Wistron（伺服器整機應用對象，非本次證實採購客戶）",
+        "Inventec（伺服器整機應用對象，非本次證實採購客戶）",
+        "Cisco（網路設備應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "安費諾Amphenol(連接器龍頭)",
-        "泰科TE Connectivity(連接器大廠)",
-        "莫仕Molex(高速連接器)"
+        "貿聯-KY（互連組件同業比較）",
+        "Amphenol（高速線纜同業比較）"
       ],
       "risks": [
-        "6月營收30.9億YoY+17.6%穩定成長,AI伺服器連接器為新動能",
-        "連接器市場被國際大廠(安費諾/泰科)主導,信邦為利基供應商",
-        "AI伺服器高速連接器規格升級快(224Gbps)需持續研發"
+        "未披露AI伺服器專屬收入或廣達、緯創的採購關係",
+        "更高速架構轉向主動銅纜或光纖可能改變產品需求",
+        "高速線纜同業價格競爭與認證重測增加成本"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 各種電子零件加工、製造及其成品之買賣業務電腦週邊設備、通訊器材、電腦通訊網路及其零組件之製造加工買賣代理"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零件加工製造、電腦周邊、通訊器材及網路零組件製造加工買賣。"
+          "title": "3023 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3023",
+          "claim": "本次MCP主要經營業務摘錄：各種電子零件加工、製造及其成品之買賣業務；電腦週邊設備、通訊器材、電腦通訊網路及其零組件之製造加工買賣；代理各種電子零件有關產品之報價經銷；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%。"
+          "publisher": "TWSE",
+          "title": "3023 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計年增率+11.44%。此為全公司營收，未拆分「AI 伺服器整機與 EMS」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "信邦官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://shop.sinbon.com/us/NewsCenter",
+          "claim": "官方商店NewsCenter明列100G QSFP28、200G QSFP56及400G QSFP-DD被動線纜與線長，支持資料中心短距離互連產品。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3023",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "高速差分線束阻抗與串音控制",
-        "連接器壓接、焊接與拉拔力可靠度",
-        "線纜組件耐彎折、溫升與訊號完整性測試"
+        "官方商店100G被動線纜列1至5m，200G列1至3m",
+        "官方400G QSFP-DD被動線纜列0.5、1、2、2.5m；不外推800G／1.6T能力",
+        "工程分析：差分阻抗、插入損耗與串擾須按完整通道測試，未指定PCIe世代"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持電腦周邊、通訊與網路連接組件製造",
-          "7月營收YoY+29.0%、累計YoY+11.4%"
+          "官方可購產品提供三種速率與明確線長，可核對資料中心互連能力",
+          "QSFP系列覆蓋不同交換器連接需求，產品範圍比泛用線束更具體",
+          "2026年7月公司營收YoY+28.97%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露AI伺服器、112G PAM4或特定連接介面",
-          "整體營收無法拆出AI伺服器線束占比"
+          "未披露AI伺服器專屬收入或廣達、緯創的採購關係",
+          "被動銅纜有距離限制，不能視為長距離光模組或CPO產品",
+          "此為全公司營收，未拆分「AI 伺服器整機與 EMS」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "AI伺服器提高高速與高電流線束用量",
-          "機櫃模組化可增加客製連接組件的單機價值"
+          "資料中心短距離交換器連結可使用100G至400G線纜",
+          "雲端更新交換器時可爭取不同線長及端接客製"
         ],
         "threats": [
-          "介面規格快速更迭造成模具與庫存淘汰",
-          "ODM客戶議價與銅價波動可能壓縮毛利"
+          "更高速架構轉向主動銅纜或光纖可能改變產品需求",
+          "高速線纜同業價格競爭與認證重測增加成本"
         ]
       }
     },

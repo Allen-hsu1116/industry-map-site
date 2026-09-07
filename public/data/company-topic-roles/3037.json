@@ -2,39 +2,38 @@
   "schemaVersion": 1,
   "companyCode": "3037",
   "companyName": "欣興",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "pcb_ic_substrate",
-      "roleType": "pcb_ic_substrate_provider",
-      "roleSummary": "欣興MOPS僅明確揭露PCB製造，未逐項證實ABF載板、24層、3微米線寬或任何具名客戶；本角色保留PCB與IC載板產品脈絡，但移除EUV等不恰當規格。2026年7月營收162.54億元，MoM+9.1%、YoY+43.7%、累計YoY+30.8%；營收為全公司口徑，不能全數歸因AI載板。",
+      "supplyChainStage": "pcb_ic_substrate_manufacturing",
+      "roleType": "fcbga_fccsp_hdi_provider",
+      "roleSummary": "欣興MOPS僅寫PCB製造，官方FC-BGA／FC-CSP頁卻具體揭露封裝載板與2.5D／chiplets應用。保留載板直接角色並補可核對線寬、跨距及封裝尺寸；這些產品級規格不等同每一客戶案皆達最大能力。 2026年7月營收162.54億元，MoM+9.11%、YoY+43.69%，累計年增率+30.76%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」收入，不能全部歸因本題材。",
       "products": [
-        "FC-BGA封裝載板",
-        "FC-CSP封裝載板",
-        "任意層高密度互連（Any-layer HDI）板",
-        "伺服器用高多層印刷電路板",
-        "高速網通交換器用低損耗印刷電路板"
+        "FC-BGA覆晶封裝載板",
+        "FC-CSP晶片尺寸覆晶載板",
+        "HDI高密度連結板",
+        "全層互連HDI板",
+        "多層印刷電路板"
       ],
       "customers": [
-        "NVIDIA（AI載板應用對象，非MOPS揭露客戶）",
-        "AMD（CPU／GPU載板應用對象，非MOPS揭露客戶）",
-        "Intel（處理器載板應用對象，非MOPS揭露客戶）",
-        "廣達（伺服器PCB應用對象，非MOPS揭露客戶）",
-        "聯發科（行動SoC載板應用對象，非MOPS揭露客戶）"
+        "NVIDIA（AI載板應用對象，非本次證實採購客戶）",
+        "AMD（CPU／GPU載板應用對象，非本次證實採購客戶）",
+        "Intel（處理器載板應用對象，非本次證實採購客戶）",
+        "廣達（伺服器PCB應用對象，非本次證實採購客戶）",
+        "聯發科（行動SoC載板應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "南電(8046)",
-        "景碩(3189)",
-        "IBIDEN(Japan)"
+        "南電（封裝載板同業比較）",
+        "景碩（封裝載板同業比較）"
       ],
       "risks": [
-        "ABF載板供需缺口縮小",
-        "中國PCB低價競爭",
-        "AI伺服器需求放緩影響高階HDI"
+        "未拆分FC-BGA、FC-CSP與PCB的當月貢獻",
+        "載板擴產折舊、稼動率與產品良率會影響毛利",
+        "同業新增產能與客戶產品延遲可能改變供需"
       ],
       "evidence": [
         {
@@ -54,42 +53,70 @@
         {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：PCB製造。"
+          "title": "3037 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3037",
+          "claim": "本次MCP主要經營業務摘錄：PCB製造；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收162.54億元，MoM+9.1%、YoY+43.7%、累計YoY+30.8%。"
+          "publisher": "TWSE",
+          "title": "3037 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收162.54億元，MoM+9.11%、YoY+43.69%，累計年增率+30.76%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "欣興官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.unimicron.com/product_FCBGA.html",
+          "claim": "瀏覽器讀取官方FC-BGA／FC-CSP頁，確認8/8μm、10/15μm線寬／線距、封裝尺寸與2.5D/chiplet應用；最大規格並非所有組合保證。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-supplement-v47-0",
+          "publisher": "欣興官方網站",
+          "title": "補充產品／集團來源",
+          "url": "https://www.unimicron.com/product_FCCSP.html",
+          "claim": "FC-CSP列3×3至19×19mm、10/15μm及2～16層板。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3037",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-23",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "ABF增層載板雷射微孔、電鍍填孔與細線路形成",
-        "Any-layer HDI逐層堆疊、微盲孔與層間對位",
-        "高速多層板阻抗、低損耗材料與壓合翹曲控制"
+        "官方FC-BGA列8／8μm最小線寬／線距、90μm最小凸塊跨距及最高110×110mm封裝尺寸",
+        "官方FC-CSP列10／15μm線寬／線距、3×3至19×19mm封裝尺寸與2至16層疊構",
+        "FC-BGA官網列2.5D／chiplets與low Dk／Df材料；阻抗、翹曲控制為工程分析"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持PCB製造，題材核心定位成立",
-          "7月營收MoM+9.1%、YoY+43.7%、累計YoY+30.8%，整體需求改善"
+          "具PCB與封裝載板兩類官方產品，不應因MOPS簡述誤降分類",
+          "FC-BGA細線路、低介電材料與chiplet應用規格可核對",
+          "2026年7月公司營收YoY+43.69%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未區分PCB與IC載板營收，也未揭露層數、線寬或客戶",
-          "高階載板資本密集且良率爬升慢，營收成長未必等比例轉化獲利"
+          "未拆分FC-BGA、FC-CSP與PCB的當月貢獻",
+          "官網能力極值不保證所有疊構同時達標，也沒有具名買方披露",
+          "此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "AI加速器與伺服器升級可同時推升載板面積與高多層PCB需求",
-          "800G／1.6T網通提高低損耗材料與高密度互連需求"
+          "HPC／AI chiplet整合可提升大尺寸高密度載板需求",
+          "智慧裝置與5G應用增加FC-CSP及高密度PCB應用"
         ],
         "threats": [
-          "南電、景碩與海外載板廠擴產可能帶來報價壓力",
-          "終端庫存或AI資本支出波動可能造成高階產能利用率起伏"
+          "載板擴產折舊、稼動率與產品良率會影響毛利",
+          "同業新增產能與客戶產品延遲可能改變供需"
         ]
       }
     }

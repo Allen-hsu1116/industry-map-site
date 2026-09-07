@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3034",
   "companyName": "聯詠",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -195,33 +195,29 @@
       "topicId": "edge-ai-aiot",
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "topicType": "technology",
-      "directness": "indirect",
-      "supplyChainStage": "ic_design",
-      "roleType": "edge_ai_soc_candidate",
-      "roleSummary": "聯詠MOPS支持語音IC、通訊IC、嵌入式MCU、DSP、電腦周邊控制與LCD驅動IC，能對應Edge AI的感知與訊號處理周邊，但未揭露NPU TOPS、ASIL-B、Hikvision或Dahua客戶，故移除舊資料的過度規格。2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%、累計YoY+1.2%；公司整體成長不能全歸因Edge AI。",
+      "directness": "core",
+      "supplyChainStage": "edge_ai_soc_design",
+      "roleType": "npu_vision_multimodal_soc",
+      "roleSummary": "聯詠MOPS廣列DSP、MCU及顯示驅動，但官網2025技術里程碑已直接揭露自研NPU Edge AI SoC及VLM機器視覺晶片。原分析僅列通用DSP低估實際能力，本次恢復具體Edge AI角色；官方效能宣稱與採購客戶、出貨規模分開。 2026年7月營收102.96億元，MoM+2.73%、YoY+26.80%，累計年增率+1.15%。此為全公司營收，未拆分「Edge AI / AIoT 邊緣智慧」收入，不能全部歸因本題材。",
       "products": [
-        "數位訊號處理器（DSP）與系統",
-        "嵌入式微控制器與系統",
-        "通訊積體電路與系統",
-        "電腦周邊控制積體電路",
-        "液晶顯示器驅動積體電路與系統"
+        "自研NPU架構Edge AI SoC",
+        "Edge Vision & Imaging AI SoC機器視覺晶片",
+        "IPCAM／NVR／NAS外掛AI Box晶片方案"
       ],
       "customers": [
-        "友達（顯示應用對象，非MOPS揭露客戶）",
-        "群創（顯示應用對象，非MOPS揭露客戶）",
-        "BOE京東方（顯示應用對象，非MOPS揭露客戶）",
-        "Samsung Display（顯示應用對象，非MOPS揭露客戶）",
-        "海康威視（邊緣影像應用對象，非MOPS揭露客戶）"
+        "海康威視（智慧影像應用觀察對象，非已證實採購客戶）",
+        "大華股份（安控應用觀察對象，非已證實採購客戶）",
+        "群暉科技（NAS外掛AI應用觀察對象，非已證實採購客戶）",
+        "威聯通（NAS外掛AI應用觀察對象，非已證實採購客戶）"
       ],
       "competitors": [
-        "Rockchip",
-        "Ambarella",
-        "Qualcomm",
-        "Horizon Robotics"
+        "安霸（邊緣影像AI SoC同業比較）",
+        "聯發科（Edge AI SoC同業比較）"
       ],
       "risks": [
-        "Edge AI市場競爭激烈",
-        "AI應用拓展仍需時間驗證"
+        "MCP未拆分NPU、機器視覺與顯示驅動收入",
+        "軟體模型移植、記憶體頻寬及功耗可能限制客戶導入",
+        "聯發科、安霸等平台競爭與顯示景氣會影響獲利"
       ],
       "legacy": {
         "topicSlug": "edge-ai",
@@ -230,58 +226,64 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯詠 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯詠 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務包含語音、通訊、嵌入式微控制器、DSP、電腦周邊控制與LCD驅動IC。"
+          "title": "3034 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3034",
+          "claim": "本次MCP主要經營業務摘錄：研究.開發.設計.生產.製造.銷售下列產品:A語音積體電路及系統B通訊積體電路及系統C內崁式微控制器及系統D數位訊號處理器及系統E電腦週邊控制積體電路及系統F液晶顯示器驅動積體電路及系統；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%、累計YoY+1.2%。"
+          "publisher": "TWSE",
+          "title": "3034 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收102.96億元，MoM+2.73%、YoY+26.80%，累計年增率+1.15%。此為全公司營收，未拆分「Edge AI / AIoT 邊緣智慧」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "聯詠官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.novatek.com.tw/zh-TW/Milestone/aboutus_milestones",
+          "claim": "官方2025里程碑列自研NPU Edge AI SoC、MLLM、PCIe多核心級聯、VLM機器視覺與IPCAM/NVR/NAS AI Box應用；模型效能屬公司宣稱。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3034",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-23",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "DSP影像／語音訊號鏈與即時數位濾波",
-        "嵌入式MCU的低功耗控制與周邊介面整合",
-        "顯示驅動時序、面板介面與影像資料路徑整合"
+        "官方2025里程碑列自研NPU、裝置端MLLM與PCIe多核心級聯",
+        "官方機器視覺SoC支援VLM、HDR與低照度成像，車用涵蓋APA／CMS／DMS／OMS",
+        "官方列Ultra-HD 4K、EIS及影像編碼；7B超過20 TPS為公司宣稱，非本次實測"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持DSP、MCU、通訊與顯示驅動等邊緣訊號鏈能力",
-          "7月營收YoY+26.8%，公司整體需求較去年同期成長"
+          "官方直接列MLLM／VLM與自研NPU架構，邊緣AI角色有產品支持",
+          "AI Box晶片方案可為既有IPCAM／NVR／NAS增加算力，不限更換攝影硬體",
+          "2026年7月公司營收YoY+26.80%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露NPU、AI推論效能、車規認證或邊緣AI客戶",
-          "累計YoY僅+1.2%，單月成長尚未形成強勁全年趨勢"
+          "MCP未拆分NPU、機器視覺與顯示驅動收入",
+          "官網模型效能缺本次獨立測試條件，不能與其他SoC直接排名",
+          "此為全公司營收，未拆分「Edge AI / AIoT 邊緣智慧」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "終端裝置導入本地影像與語音處理，可增加DSP／MCU整合價值",
-          "智慧顯示與攝影機可帶動顯示驅動、控制與通訊IC協同"
+          "多模態邊緣視覺與自然語言檢索可增加AI安控需求",
+          "車內／車外低延遲感知與機器人視覺提供新應用"
         ],
         "threats": [
-          "大型SoC廠將NPU、ISP與顯示控制整合後，獨立周邊IC空間可能被壓縮",
-          "面板景氣循環與終端庫存波動仍會主導公司營運"
+          "軟體模型移植、記憶體頻寬及功耗可能限制客戶導入",
+          "聯發科、安霸等平台競爭與顯示景氣會影響獲利"
         ]
       }
     }

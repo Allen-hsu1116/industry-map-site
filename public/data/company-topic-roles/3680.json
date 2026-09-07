@@ -2,93 +2,107 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "indirect",
-      "supplyChainStage": "packaging_consumables",
-      "roleType": "advanced_packaging_carrier_solution",
-      "roleSummary": "家登MOPS揭露光罩、晶圓與機台設備解決方案，足以支持半導體載具與設備角色，但未點名CoWoS承載環、台積電客戶或特定封裝規格。FinMind顯示2026年7月營收8.71億元，較6月增加15.8%；該成長未拆分先進封裝貢獻。",
+      "directness": "core",
+      "supplyChainStage": "advanced_packaging_carrier",
+      "roleType": "wafer_and_panel_packaging_carrier",
+      "roleSummary": "家登MOPS確認光罩、晶圓及機台方案；2026/5/28官方法說第13頁直接列先進封裝Frame／P300／Panel FOUP等載具。原先只列EUV光罩且將封裝視為間接的分析過度收窄，本次改回直接的先進封裝搬運載具角色，不等同製造封裝晶片。 2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。",
       "products": [
-        "EUV／DUV光罩傳送與儲存載具",
-        "300mm晶圓傳送與儲存載具",
-        "晶圓廠自動化機台設備",
-        "半導體載具清洗與維護方案"
+        "先進封裝Frame FOUP",
+        "300mm Diffuser FOUP",
+        "P300 FOUP",
+        "Chip on Panel FOUP／FOSB",
+        "面板級封裝Quarter Panel FOUP"
       ],
       "customers": [
-        "TSMC（晶圓與光罩應用對象，非MOPS揭露客戶）",
-        "Samsung Electronics（EUV應用對象，非MOPS揭露客戶）",
-        "Intel（先進製程應用對象，非MOPS揭露客戶）",
-        "ASML（EUV設備生態對象，非MOPS揭露客戶）"
+        "台積電（2026/5/28官方法說列主要客戶／AP6～AP7，未量化本題材營收）",
+        "Samsung Electronics（同份法說列主要客戶，未拆分封裝載具採購）",
+        "SK hynix（同份法說列主要客戶，未拆分封裝載具採購）",
+        "日月光投控（封裝載具應用觀察對象，非已證實採購客戶）"
       ],
       "competitors": [
-        "Entegris(先進封裝載具)",
-        "Brooks(晶圓傳送盒)",
-        "信紘科(6432)(半導體耗材)"
+        "Entegris（半導體載具同業比較）",
+        "信越聚合物（晶圓載具同業比較）"
       ],
       "risks": [
-        "6月營收7.52億(FinMind)月增11%但波動大",
-        "CoWoS載具為利基型耗材，單價高但總量有限",
-        "先進封裝技術演進快，載具規格需持續跟隨客戶升級"
+        "法說產品組合並未量化單一封裝平台當期訂單",
+        "封裝尺寸未標準化可能增加客製成本與庫存",
+        "客戶建廠與設備驗證遞延可能延後交貨"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 光罩解決方案產品晶圓解決方案產品機台設備產品"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：光罩解決方案、晶圓解決方案、機台設備產品。"
+          "title": "3680 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3680",
+          "claim": "本次MCP主要經營業務摘錄：光罩解決方案產品；晶圓解決方案產品；機台設備產品；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收8.71億元，較6月增加15.8%。"
+          "title": "3680 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3680&start_date=2025-06-01&end_date=2026-09-08",
+          "claim": "2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。 TWSE主查無資料，採FinMind的revenue_year/revenue_month，原始單位元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "家登官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.gudeng.com/UploadFile/PageEdit/639159042343038958.pdf",
+          "claim": "2026/5/28官方法說第13頁列Frame FOUP、Diffuser FOUP、P300、Chip on Panel FOUP/FOSB與Quarter Panel FOUP；主要客戶頁列台積電AP6～AP7、Samsung/Hynix，未拆分本題材收入。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-supplement-v47-0",
+          "publisher": "家登官方網站",
+          "title": "補充產品／集團來源",
+          "url": "https://www.gudeng.com/Product?itemid=50&mid=318",
+          "claim": "300mm FOUP／Diffuser FOUP／FOSB與SEMI介面及微環境污染控制。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3680",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "EUV光罩防微粒、密封與傳送介面控制",
-        "300mm晶圓載具潔淨度與自動搬運相容性",
-        "載具材料低逸氣、耐化學與尺寸穩定設計"
+        "官網300mm Diffuser FOUP以擴散器控制載具內微環境與污染",
+        "2026/5/28法說第13頁列Chip on Wafer、Chip on Panel與FoPLP載具方案",
+        "工程分析：面板及薄晶圓載具須兼顧翹曲、接觸支撐與設備介面；尺寸以法說各產品配置為準"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持光罩、晶圓與機台設備三類解決方案",
-          "FinMind顯示7月營收8.71億元、月增15.8%"
+          "官方法說提供晶圓級及面板級封裝專用載具，題材關係直接",
+          "官網Diffuser FOUP與FOSB揭露污染防護及物流設計",
+          "2026年7月公司營收YoY+71.69%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露CoWoS承載環或特定封裝客戶",
-          "月營收未拆分光罩、晶圓載具與先進封裝設備貢獻"
+          "法說產品組合並未量化單一封裝平台當期訂單",
+          "光罩、晶圓、封裝載具及其他業務共同構成營收，不能全部算CoWoS",
+          "此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "EUV與先進封裝擴產提高高潔淨載具及自動化設備需求",
-          "在地化維護服務可提高耗材與設備黏著度"
+          "Chip on Panel與FoPLP發展可增加不同面板尺寸載具需求",
+          "薄晶圓搬運、污染控制及廠內自動化可帶動載具升級"
         ],
         "threats": [
-          "晶圓廠資本支出遞延會直接影響設備訂單",
-          "客戶認證期長，單一載具污染事件可能造成高額損失"
+          "封裝尺寸未標準化可能增加客製成本與庫存",
+          "客戶建廠與設備驗證遞延可能延後交貨"
         ]
       }
     },

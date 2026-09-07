@@ -2,94 +2,106 @@
   "schemaVersion": 1,
   "companyCode": "2385",
   "companyName": "群光",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "server_psu_keyboard_supplier",
-      "roleSummary": "群光MOPS支持電源供應器、鍵盤與數位影像產品，但未揭露2kW以上CRPS、GPU VRM或NVIDIA伺服器試樣，因此AI伺服器角色收斂為電源供應器的間接應用機會。2026年7月營收70.57億元，MoM-10.5%、YoY-12.2%、累計YoY-6.3%，目前全公司營運未呈現AI伺服器帶動的成長證據。",
+      "supplyChainStage": "group_server_power",
+      "roleType": "subsidiary_power_exposure",
+      "roleSummary": "群光MOPS列鍵盤、影像與電源；集團官方資料確認群光電能子公司拓展伺服器電源及AI資料中心。AI角色需區分子公司電源業務與母體鍵盤／影像產品，不能把整體收入或NVIDIA平台名直接等同AI伺服器訂單。 2026年7月營收70.57億元，MoM-10.54%、YoY-12.24%，累計年增率-6.27%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。",
       "products": [
-        "伺服器用電源供應器（題材應用產品）",
-        "桌上型電腦電源供應器",
-        "筆記型電腦電源轉接器",
-        "鍵盤模組",
-        "數位影像攝影模組"
+        "群光電能子公司之伺服器電源系統（集團業務）",
+        "群光電能子公司之筆電電源供應器（集團業務）",
+        "筆記型電腦鍵盤模組",
+        "網路攝影與筆電相機模組"
       ],
       "customers": [
-        "Dell Technologies（電源／鍵盤應用對象，非MOPS揭露客戶）",
-        "HP Inc.（電源／鍵盤應用對象，非MOPS揭露客戶）",
-        "Lenovo（電源／鍵盤應用對象，非MOPS揭露客戶）",
-        "Apple（鍵盤／電源應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI平台驗證對象，非MOPS揭露客戶）"
+        "Dell Technologies（電源／鍵盤應用對象，非本次證實採購客戶）",
+        "HP Inc.（電源／鍵盤應用對象，非本次證實採購客戶）",
+        "Lenovo（電源／鍵盤應用對象，非本次證實採購客戶）",
+        "Apple（鍵盤／電源應用對象，非本次證實採購客戶）",
+        "NVIDIA（AI平台驗證對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "群電(6412)(電源)",
-        "台達電(2308)(伺服器電源)",
-        "光寶(2301)"
+        "光寶科（電源供應同業比較）",
+        "台達電（伺服器電源同業比較）"
       ],
       "risks": [
-        "營收年減11%，NB鍵盤需求疲軟拖累整體",
-        "AI伺服器電源面臨台達電強勢競爭"
+        "集團AI電源收入未拆分，母體鍵盤出貨不能視為伺服器電源成長",
+        "PC與相機終端疲弱可能抵銷子公司AI電源成長",
+        "高功率電源認證及競爭者擴張可能延長投資回收"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：鍵盤、數位影像產品及電源供應器之製造銷售。"
+          "title": "2385 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2385",
+          "claim": "本次MCP主要經營業務摘錄：鍵盤製造及銷售；數位影像產品之製造及銷售；電源供應器產品之製造及銷售；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收70.57億元，MoM-10.5%、YoY-12.2%、累計YoY-6.3%。"
+          "publisher": "TWSE",
+          "title": "2385 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收70.57億元，MoM-10.54%、YoY-12.24%，累計年增率-6.27%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "群光官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://esg.chicony.com/chicony/en/esg/sustainable_chicony/corporate_introduction/",
+          "claim": "群光官方集團介紹確認群光電能為子公司，並說明其筆電電源與AI資料中心策略；未揭露AI電源當月貢獻或特定瓦數。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-supplement-v47-0",
+          "publisher": "群光官方網站",
+          "title": "補充產品／集團來源",
+          "url": "https://eftp.chicony.com/ChiconyESG/2023ChiconyESGReport_EN.pdf",
+          "claim": "官方2023永續報告搜尋索引摘要列子公司群光電能發展server power systems；本條僅索引摘要，未以摘要作當期出貨證據。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2385",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-23",
-      "status": "verified",
+      "lastVerified": "2026-09-08",
+      "status": "candidate",
       "techFocus": [
-        "高功率開關式電源的功率因數校正與同步整流",
-        "電源供應器數位控制、遙測與過壓／過流保護",
-        "鍵盤薄型機構與數位影像模組的光機電整合"
+        "集團官方說明群光電能拓展AI資料中心供電，未披露特定CRPS瓦數／認證",
+        "工程分析：伺服器開關式電源須控制功率因數、轉換損耗與保護動作，未證明全部配置採數位遙測",
+        "工程分析：鍵盤與相機模組是終端周邊，不因應用AI而變成GPU電源"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電源供應器製造與銷售，具備切入伺服器電源的產品基礎",
-          "電源、鍵盤與影像模組量產能力可分散單一產品風險"
+          "集團官方說明旗下群光電能發展伺服器與AI機房電源，題材不是憑空想像",
+          "鍵盤、影像與電源多元業務提供不同終端產品基礎"
         ],
         "weaknesses": [
-          "MOPS未揭露AI伺服器高功率規格、CRPS產品或具名伺服器客戶",
-          "7月營收MoM-10.5%、YoY-12.2%、累計YoY-6.3%，公司整體動能偏弱"
+          "集團AI電源收入未拆分，母體鍵盤出貨不能視為伺服器電源成長",
+          "未確認NVIDIA客戶關係或特定伺服器電源瓦數規格",
+          "2026年7月營收70.57億元，MoM-10.54%、YoY-12.24%，累計年增率-6.27%。單月與累計變化需連同產品組合／比較基期判讀；此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "AI伺服器功耗提高可帶動高瓦數、高效率電源供應器驗證需求",
-          "既有PC電源量產能力可延伸至邊緣伺服器與工作站"
+          "群光電能若提高伺服器電源比重可擴大非PC應用",
+          "AI機房功率密度提升提供供電效率與可靠度升級需求"
         ],
         "threats": [
-          "台達電、光寶科與康舒在伺服器電源領域競爭激烈",
-          "AI伺服器專案若未通過平台認證，題材難轉化為實際營收"
+          "PC與相機終端疲弱可能抵銷子公司AI電源成長",
+          "高功率電源認證及競爭者擴張可能延長投資回收"
         ]
       }
     }

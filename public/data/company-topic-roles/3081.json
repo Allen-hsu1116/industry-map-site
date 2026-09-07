@@ -2,34 +2,37 @@
   "schemaVersion": 1,
   "companyCode": "3081",
   "companyName": "聯亞",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "technology",
-      "directness": "supplier",
-      "supplyChainStage": "optical_component_epiwafer",
-      "roleType": "optical_communication_ld_pd_epiwafer_supplier",
-      "roleSummary": "聯亞MOPS直接支持雷射磊晶片與檢光器磊晶片，是光通訊光源／接收器上游；但未揭露InP、GaAs、EML、APD或800G型號，相關材料與速率不再當成已確認產品。FinMind顯示2026年7月營收5.01億元，較6月增加19.2%。",
+      "directness": "core",
+      "supplyChainStage": "optoelectronic_epitaxy",
+      "roleType": "laser_detector_siphotonics_epi",
+      "roleSummary": "聯亞MOPS確認雷射與檢光器磊晶片，官方資料中心頁進一步明列DFB、VCSEL、CW及矽光子BH型DFB磊晶片；應定位光通訊／矽光子上游材料直接角色，而非只有泛用磊晶服務。 2026年8月營收5.20億元，MoM+3.84%、YoY+180.90%。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。",
       "products": [
-        "光通訊雷射用磊晶片",
-        "光通訊檢光器用磊晶片",
-        "有線通信光元件用客製磊晶結構"
+        "25G／10G DFB雷射磊晶片",
+        "50G／25G 850nm VCSEL磊晶片",
+        "高功率CW連續波雷射磊晶片",
+        "矽光子用BH型DFB LD磊晶片",
+        "50G／25G／10G GaAs檢光器磊晶片"
       ],
       "customers": [
-        "Coherent（光元件製造生態對象，非MOPS揭露客戶）",
-        "Lumentum（光元件製造生態對象，非MOPS揭露客戶）",
-        "Broadcom（光通訊平台對象，非MOPS揭露客戶）",
-        "Marvell（高速光連結平台對象，非MOPS揭露客戶）"
+        "Coherent（光元件製造生態對象，非本次證實採購客戶）",
+        "Lumentum（光元件製造生態對象，非本次證實採購客戶）",
+        "Broadcom（光通訊平台對象，非本次證實採購客戶）",
+        "Marvell（高速光連結平台對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "光通訊磊晶與元件供應商",
-        "化合物半導體光元件廠"
+        "IQE（化合物磊晶同業比較）",
+        "全新（光電磊晶同業比較）"
       ],
       "risks": [
-        "800G/1.6T 放量、客戶認證與資料中心投資循環會影響需求。",
-        "需避免把光通訊上游元件直接寫成伺服器整機受惠。"
+        "未披露各磊晶種類營收比重或Coherent、Broadcom採購關係",
+        "下游客戶設計變更與認證時間可能延後出貨",
+        "外延均勻度、缺陷與材料供應波動可能影響良率"
       ],
       "evidence": [
         {
@@ -49,42 +52,70 @@
         {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：雷射磊晶片與檢光器磊晶片研發設計生產銷售。"
+          "title": "3081 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3081",
+          "claim": "本次MCP主要經營業務摘錄：有線通信機械器材製造業、電子零組件製造業、國際貿易業；研發、設計、生產及銷售下列產品:1.雷射磊晶片 2.檢光器磊晶片 3.兼營前述產品相關之國際貿易業；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收5.01億元，較6月增加19.2%。"
+          "title": "3081 2026年8月營收（本次MCP最新回傳）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3081&start_date=2025-06-01&end_date=2026-09-08",
+          "claim": "2026年8月營收5.20億元，MoM+3.84%、YoY+180.90%。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。 TWSE主查無資料，採FinMind的revenue_year/revenue_month，原始單位元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "聯亞官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.lmoc.com.tw/index.php?temp=intro&lang=en",
+          "claim": "官方Overview列GaAs／InP與OMVPE；Data center頁列DFB 25G/10G、850nm VCSEL 50G/25G、CW及BH型矽光子磊晶。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-supplement-v47-0",
+          "publisher": "聯亞官方網站",
+          "title": "補充產品／集團來源",
+          "url": "https://www.lmoc.com.tw/index.php?option=module&lang=en&task=pageinfo&id=110&index=2",
+          "claim": "官方Overview列GaAs／InP與OMVPE；Data center頁列DFB 25G/10G、850nm VCSEL 50G/25G、CW及BH型矽光子磊晶。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3081",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-22",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "雷射磊晶層厚、摻雜與發光波長控制",
-        "檢光器磊晶暗電流、響應度與均勻性控制",
-        "外延晶圓缺陷檢測與光電參數晶圓級量測"
+        "官網揭露GaAs／InP材料與OMVPE外延生長；層厚與摻雜控制屬工程分析",
+        "資料中心產品頁列DFB光柵E-beam／Nano Imprint與P-metal completed",
+        "官網矽光子產品列AlQ-MQW DFB LD base wafer與BH型DFB LD epiwafer，未確認特定CPO客戶"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持雷射與檢光器磊晶片兩項核心產品",
-          "FinMind顯示7月營收5.01億元、月增19.2%"
+          "具雷射與檢光器磊晶產品，涵蓋光發射與光接收端",
+          "官方明列Si-Photonics磊晶及GaAs／InP OMVPE能力，矽光子連結有直接產品依據",
+          "2026年8月公司營收YoY+180.90%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露材料系統、傳輸速率或特定CPO產品",
-          "產品集中光通訊磊晶，客戶認證與景氣波動影響大"
+          "未披露各磊晶種類營收比重或Coherent、Broadcom採購關係",
+          "基板與外延產品不等於下游完整CPO模組，不能混算附加價值",
+          "此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "AI資料中心升速可推升高速雷射與檢光器磊晶需求",
-          "矽光子仍需外接或整合光源，磊晶供應角色可延續"
+          "高速光鏈路擴充可能提高CW光源與DFB外延需求",
+          "客製磊晶結構及光柵加工有機會提高共同開發深度"
         ],
         "threats": [
-          "矽光子光源整合路線競爭，規格變動可能縮短產品週期",
-          "外延良率與客戶集中度造成獲利波動"
+          "下游客戶設計變更與認證時間可能延後出貨",
+          "外延均勻度、缺陷與材料供應波動可能影響良率"
         ]
       }
     }

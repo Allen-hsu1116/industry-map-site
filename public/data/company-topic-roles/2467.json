@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2467",
   "companyName": "志聖",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -83,9 +83,9 @@
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "core",
-      "supplyChainStage": "packaging_equipment",
-      "roleType": "advanced_packaging_equipment",
-      "roleSummary": "志聖MOPS已明確揭露AI供應鏈先進封裝設備，包括貼膜、壓合、撕膜、熱製程與清潔，題材連結直接；但未揭露特定客戶、TAIW或電漿／超音波規格。2026年7月營收11.68億元，MoM+34.3%、YoY+132.7%，累計YoY+87.0%，公司說明為客戶需求提升。",
+      "supplyChainStage": "packaging_process_equipment",
+      "roleType": "lamination_thermal_clean_equipment",
+      "roleSummary": "志聖MOPS直接列AI供應鏈先進封裝的貼膜、壓合、撕膜、熱製程及清潔設備；本次保留五項具體設備，將未披露的站點規格標為工程分析。營收備註僅說客戶需求提升，沒有分拆CoWoS訂單。 2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計年增率+87.05%。MCP備註：客戶需求提升。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。",
       "products": [
         "先進封裝貼膜設備",
         "先進封裝壓合設備",
@@ -94,74 +94,73 @@
         "先進封裝清潔設備"
       ],
       "customers": [
-        "TSMC（先進封裝設備應用對象，非MOPS揭露客戶）",
-        "ASE Technology（封裝設備應用對象，非MOPS揭露客戶）",
-        "Amkor Technology（封裝設備應用對象，非MOPS揭露客戶）",
-        "Powertech Technology（封裝設備應用對象，非MOPS揭露客戶）"
+        "TSMC（先進封裝設備應用對象，非本次證實採購客戶）",
+        "ASE Technology（封裝設備應用對象，非本次證實採購客戶）",
+        "Amkor Technology（封裝設備應用對象，非本次證實採購客戶）",
+        "Powertech Technology（封裝設備應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "群翊(6624)",
-        "大量(3402)"
+        "辛耘（部分封裝設備同業比較）",
+        "弘塑（濕製程設備同業比較）"
       ],
       "risks": [
-        "先進封裝設備驗證週期長",
-        "應材/ASM等國際大廠競爭"
+        "未揭露CoWoS特定設備型號、良率門檻或具名客戶",
+        "設備驗收時間與客戶擴產進度造成單月波動",
+        "封裝製程路徑改變及競爭設備切入可能降低訂單延續"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：AI供應鏈先進封裝設備：貼膜、壓合、撕膜、熱製程、清潔。"
+          "title": "2467 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2467",
+          "claim": "本次MCP主要經營業務摘錄：AI供應鏈用印刷電路製程設備:貼膜,撕膜,熱製程與電鍍前處理；AI供應鏈用先進封裝設備:貼膜,壓合,撕膜,熱製程,清潔；其他電子應用製程設備；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收11.68億元，MoM+34.3%、YoY+132.7%，累計YoY+87.0%；公司說明客戶需求提升。"
+          "publisher": "TWSE",
+          "title": "2467 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計年增率+87.05%。MCP備註：客戶需求提升。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2467",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-22",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "晶圓／載板貼膜張力、氣泡與對位控制",
-        "真空壓合溫度、壓力與翹曲控制",
-        "撕膜、熱處理與清潔站點之自動化搬送整合"
+        "工程分析：貼膜張力、貼合氣泡與對位影響載板／晶圓良率，MOPS未披露量化精度",
+        "工程分析：壓合溫度、壓力與翹曲須協同控制，未將真空配置視為已查證規格",
+        "工程分析：撕膜與清潔站需控制殘膠、微粒及薄片搬送破損"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接列出五類先進封裝設備，產品證據完整",
-          "7月營收YoY+132.7%、累計YoY+87.0%，且公司說明客戶需求提升"
+          "MOPS明列先進封裝設備，題材關係比泛稱電子設備更直接",
+          "貼膜到清潔涵蓋多個製程站點，可提供不同製程環節設備",
+          "2026年7月公司營收YoY+132.73%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露特定客戶、平台或設備規格",
-          "設備認列集中，基期與驗收時點會放大月增率"
+          "未揭露CoWoS特定設備型號、良率門檻或具名客戶",
+          "PCB設備與封裝設備皆在業務內，全公司收入不可視為封裝收入",
+          "此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "AI先進封裝擴產帶動貼膜、壓合、撕膜與清潔需求",
-          "設備站點整合可提高單線訂單價值與服務收入"
+          "封裝面積與薄片搬送難度上升可能提高熱製程與貼膜需求",
+          "客戶擴充多站設備可帶來製程協同驗證機會"
         ],
         "threats": [
-          "主要客戶資本支出放緩會造成訂單與驗收遞延",
-          "國際設備商競爭及技術路線變動可能壓縮市占"
+          "設備驗收時間與客戶擴產進度造成單月波動",
+          "封裝製程路徑改變及競爭設備切入可能降低訂單延續"
         ]
       }
     },

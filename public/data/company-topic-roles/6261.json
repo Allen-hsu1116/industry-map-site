@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -362,86 +362,90 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "久元MOPS只揭露半導體/光電加工及IC/CIS/CCM測試設備，未揭露太陽能電池IV、模組EL或逆變器功率元件專用設備；再生能源角色應限縮為光學檢測與IC測試能力的潛在延伸。FinMind顯示2026年7月營收3.74億元、MoM-4.1%。",
+      "supplyChainStage": "test_equipment_renewables_adjacent",
+      "roleType": "test_services_application_adjacent",
+      "roleSummary": "久元MOPS確認IC／CIS／CCM測試設備與晶圓加工，官方歷史開發頁也支持此產品脈絡；未確認太陽能模組專用檢測、逆變器隔離閘極驅動IC測試訂單。本角色改為再生能源電控與影像檢測的間接應用觀察，不是光伏設備直接供應商。 2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。此為全公司營收，未拆分「太陽能與離岸風電」收入，不能全部歸因本題材。",
       "products": [
-        "光伏模組缺陷影像用CIS相機測試設備",
-        "逆變器控制IC晶圓切割與成品測試服務",
-        "隔離式閘極驅動IC高低溫測試服務",
-        "太陽能監控用CMOS影像模組CCM測試設備"
+        "IC晶片測試設備",
+        "CIS影像感測器測試設備",
+        "CCM相機模組測試設備",
+        "晶圓切割、研磨與挑檢加工服務"
       ],
       "customers": [
-        "元晶(6443；光伏檢測應用對象，非MOPS揭露客戶)",
-        "茂迪(6244；光伏檢測應用對象，非MOPS揭露客戶)",
-        "台達電(2308；逆變器IC應用對象，非MOPS揭露客戶)",
-        "SMA Solar Technology(逆變器生態對象，非MOPS揭露客戶)"
+        "元晶(6443；光伏檢測應用對象，非本次證實採購客戶)",
+        "茂迪(6244；光伏檢測應用對象，非本次證實採購客戶)",
+        "台達電(2308；逆變器IC應用對象，非本次證實採購客戶)",
+        "SMA Solar Technology(逆變器生態對象，非本次證實採購客戶)"
       ],
       "competitors": [
-        "精測(6510)(晶圓測試探針卡)",
-        "蔚華科(3054)(半導體測試設備)",
-        "致茂(2360)(太陽能IV測試)"
+        "致茂（電子量測同業比較）",
+        "京元電子（IC測試服務同業比較）"
       ],
       "risks": [
-        "6月營收3.90億(FinMind)但太陽能相關佔比極低",
-        "太陽能設備市場競爭激烈且受政策補貼影響大",
-        "久元核心業務為CIS/CCM測試設備，太陽能非主營"
+        "未披露光伏檢測機型與逆變器IC客戶；原專用產品宣稱已移除",
+        "光伏資本支出降溫未必直接對應久元業績，題材連結弱",
+        "測試設備更新與晶片加工價格競爭可能壓縮投資回收"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體與光電產品之切割、研磨、測試、挑檢與基板切割；IC/CIS/CCM測試設備研製銷售。"
+          "title": "6261 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "本次MCP主要經營業務摘錄：半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
-          "sourceId": "twse-monthly-revenue",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收3.74億元，較6月減少4.1%；TWSE月營收查無資料，改採FinMind。"
+          "title": "6261 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6261&start_date=2025-06-01&end_date=2026-09-08",
+          "claim": "2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。此為全公司營收，未拆分「太陽能與離岸風電」收入，不能全部歸因本題材。 TWSE主查無資料，採FinMind的revenue_year/revenue_month，原始單位元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "久元官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "http://wip.ytec.com.tw/index3_1.php",
+          "claim": "官方歷史研發成果列SCUD-CIS、CCM及IC測試分類設備；作歷史脈絡，不宣稱舊機型當期量產或太陽能專案。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-19",
-      "status": "verified",
+      "lastVerified": "2026-09-08",
+      "status": "candidate",
       "techFocus": [
-        "CIS/CCM影像均勻度、壞點與色彩校正自動測試",
-        "逆變器控制IC之PWM、ADC與保護腳位量測",
-        "高低溫Handler、晶圓切割與成品挑檢流程整合"
+        "工程分析：IC測試需控制測試向量、量測精度與分選追溯",
+        "工程分析：CIS／CCM需評估壞點、均勻度與影像品質；不等同光伏板缺陷檢測整機已交付",
+        "流程分析：晶圓切割、研磨及挑檢串接，降低薄晶片破損"
       ],
       "swot": {
         "strengths": [
-          "CIS/CCM測試設備可支援EL/可見光缺陷檢測相機供應鏈",
-          "半導體切磨測與自研設備能力可承接逆變器控制IC後段流程"
+          "MOPS同時支持晶圓加工與自研測試設備，具服務與設備兩種能力",
+          "CIS／CCM測試可支援影像感測器品質驗證，但非光伏板檢測出貨證據"
         ],
         "weaknesses": [
-          "2026年7月營收MoM-4.1%，且再生能源收入未單獨揭露",
-          "原資料宣稱IV曲線與EL整機設備，但MOPS無相應佐證"
+          "未披露光伏檢測機型與逆變器IC客戶；原專用產品宣稱已移除",
+          "舊官網研發里程僅供技術脈絡，不能認定歷史機型目前仍量產",
+          "2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。單月與累計變化需連同產品組合／比較基期判讀；此為全公司營收，未拆分「太陽能與離岸風電」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "TOPCon/HJT擴產提高模組缺陷影像檢測與相機校正需求",
-          "SiC逆變器普及帶動控制、隔離及感測IC量產測試"
+          "若切入逆變器控制晶片驗證，可拓展電控IC測試應用",
+          "若下游採用影像巡檢，可爭取感測器測試需求，須先證實訂單"
         ],
         "threats": [
-          "光伏設備商通常提供完整EL/IV檢測線，久元跨入門檻高",
-          "中國光伏設備價格戰可能壓低外購測試模組預算"
+          "光伏資本支出降溫未必直接對應久元業績，題材連結弱",
+          "測試設備更新與晶片加工價格競爭可能壓縮投資回收"
         ]
       }
     },

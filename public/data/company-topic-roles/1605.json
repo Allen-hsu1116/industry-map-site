@@ -2,94 +2,98 @@
   "schemaVersion": 1,
   "companyCode": "1605",
   "companyName": "華新",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "power_cable_supplier",
-      "roleSummary": "華新麗華MOPS僅揭露電線電纜、鋼線鋼纜與特殊鋼，能合理對應資料中心外部供配電與機房建設材料，但未揭露GPU機架匯流排或Google、Microsoft等客戶，故本題材降為間接受惠。2026年7月公司營收157.14億元，MoM-6.0%、YoY+10.1%、累計YoY+1.0%；營收為全公司口徑，不能全數歸因AI伺服器。",
+      "supplyChainStage": "data_center_grid_power_adjacent",
+      "roleType": "power_cable_infrastructure_adjacent",
+      "roleSummary": "華新MOPS為電線電纜、鋼線鋼纜及特殊鋼，官方目錄支持中高壓XLPE具體電纜。AI伺服器題材限於資料中心供配電間接需求，不能把電纜當GPU內部高速線或假設Google、Microsoft直接採購。 2026年7月營收157.14億元，MoM-6.02%、YoY+10.08%，累計年增率+0.98%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。",
       "products": [
-        "高壓交連聚乙烯（XLPE）電力電纜",
-        "低煙無鹵機房配線電纜",
-        "鋼線與鋼纜",
-        "不鏽鋼盤元與線材",
-        "特殊鋼管材"
+        "5～25kV XLPE-PVC電力電纜",
+        "69kV XLPE電力電纜",
+        "161kV XLPE電力電纜"
       ],
       "customers": [
-        "台灣電力公司（供配電應用對象，非MOPS揭露客戶）",
-        "台積電（廠務用電應用對象，非MOPS揭露客戶）",
-        "Google（資料中心應用對象，非MOPS揭露客戶）",
-        "Microsoft（資料中心應用對象，非MOPS揭露客戶）",
-        "Amazon Web Services（資料中心應用對象，非MOPS揭露客戶）"
+        "台灣電力公司（供配電應用對象，非本次證實採購客戶）",
+        "台積電（廠務用電應用對象，非本次證實採購客戶）",
+        "Google（資料中心應用對象，非本次證實採購客戶）",
+        "Microsoft（資料中心應用對象，非本次證實採購客戶）",
+        "Amazon Web Services（資料中心應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "華電電纜(1603)",
-        "大亞電纜(1609)",
-        "太平洋電纜"
+        "大亞（電力電纜同業比較）",
+        "華榮（電力電纜同業比較）"
       ],
       "risks": [
-        "累計營收年減5.4%，不鏽鋼與鋼鐵受景氣循環壓力",
-        "銅價波動影響電纜毛利率"
+        "未拆分資料中心電纜訂單，AI營收歸因仍無證據",
+        "銅與鎳等價格及一般製造業需求可能主導營運而非AI",
+        "輸配電工程許可與建置延遲可能推遲電纜採購"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電線電纜、鋼線鋼纜及特殊鋼之生產與銷售。"
+          "title": "1605 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1605",
+          "claim": "本次MCP主要經營業務摘錄：電線電纜、鋼線鋼纜及特殊鋼之生產與銷售；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收157.14億元，MoM-6.0%、YoY+10.1%、累計YoY+1.0%。"
+          "publisher": "TWSE",
+          "title": "1605 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收157.14億元，MoM-6.02%、YoY+10.08%，累計年增率+0.98%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "華新官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.walsin.com/product/powercable5/",
+          "claim": "中高壓電纜目錄列5～25kV、69kV、161kV XLPE與導體規格；正常90°C、短路250°C以5秒為條件。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1605",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-23",
-      "status": "verified",
+      "lastVerified": "2026-09-08",
+      "status": "candidate",
       "techFocus": [
-        "XLPE絕緣與高壓電纜押出／交連製程",
-        "低煙無鹵護套與耐燃機房配線設計",
-        "特殊鋼冶煉、熱軋與耐蝕成分控制"
+        "官方69kV XLPE電纜列400～1600mm²導體，161kV列400～2000mm²",
+        "官網XLPE電纜正常導體溫度90°C，短路250°C以最大5秒為條件",
+        "工程分析：資料中心供配電須驗證載流量、壓降與保護協調，未證實指定機房供貨"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電線電纜與特殊鋼主業，可對應資料中心外部電力與基建材料",
-          "7月營收YoY+10.1%、累計YoY+1.0%，公司整體營運維持成長"
+          "官網具中高壓電纜額定電壓及導體規格，可對應大型設施輸配電",
+          "電線電纜為MOPS明確本業，能源基建角色有產品基礎",
+          "2026年7月公司營收YoY+10.08%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露GPU機架匯流排、伺服器內部線纜或特定雲端客戶",
-          "7月營收MoM-6.0%，且不鏽鋼景氣會稀釋AI資料中心題材純度"
+          "未拆分資料中心電纜訂單，AI營收歸因仍無證據",
+          "特殊鋼與一般電纜景氣會混入公司營收，無法只用AI需求解釋",
+          "2026年7月營收157.14億元，MoM-6.02%、YoY+10.08%，累計年增率+0.98%。單月與累計變化需連同產品組合／比較基期判讀；此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "資料中心擴建可增加高壓電纜、耐燃配線與廠務鋼材需求",
-          "電網強韌與園區變電工程可放大AI機房上游供電材料需求"
+          "新增資料中心若擴建變電設施，可增加高壓電纜需求",
+          "機房供配電擴容與既有電網更新可能帶來工程配線機會"
         ],
         "threats": [
-          "銅、鎳與不鏽鋼原料價格波動可能壓縮加工利差",
-          "雲端業者資本支出延後時，間接基建需求可能晚於伺服器出貨反映"
+          "銅與鎳等價格及一般製造業需求可能主導營運而非AI",
+          "輸配電工程許可與建置延遲可能推遲電纜採購"
         ]
       }
     },

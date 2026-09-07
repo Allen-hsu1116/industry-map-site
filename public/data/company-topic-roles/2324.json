@@ -2,94 +2,97 @@
   "schemaVersion": 1,
   "companyCode": "2324",
   "companyName": "仁寶",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
-      "directness": "supplier",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "server_odm",
-      "roleSummary": "仁寶MOPS只以「5C電子產品之研發、設計、產製及銷售」概括業務，未列出HGX、液冷或特定伺服器產品與客戶；本題材僅保留伺服器系統設計製造的產業脈絡，所有具名平台均標為非MOPS揭露。2026年7月營收810.06億元，MoM-15.5%、YoY+38.3%、累計YoY+18.8%；公司未說明成長來源，不能歸因AI伺服器。",
+      "directness": "core",
+      "supplyChainStage": "ai_server_system_integration",
+      "roleType": "mgx_gpu_server_platforms",
+      "roleSummary": "仁寶MOPS僅簡列5C電子產品，但官方GTC發表明確列三款MGX伺服器平台；本次以實際型號取代泛用製造服務，保留AI伺服器直接角色。發表與產品支援不等於已取得Dell／HPE採購或已達特定出貨規模。 2026年7月營收810.06億元，MoM-15.49%、YoY+38.26%，累計年增率+18.82%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。",
       "products": [
-        "機架式伺服器整機設計與製造（5C題材應用）",
-        "伺服器主機板系統整合",
-        "多節點運算伺服器機構整合",
-        "伺服器整機燒機與可靠度驗證",
-        "筆記型電腦整機設計與製造"
+        "SX420-2A 4U NVIDIA MGX AI伺服器",
+        "SX224-2A 2U NVIDIA MGX AI伺服器",
+        "SX220-1N NVIDIA MGX伺服器平台"
       ],
       "customers": [
-        "Dell Technologies（系統應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（系統應用對象，非MOPS揭露客戶）",
-        "Lenovo（系統應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI平台對象，非MOPS揭露客戶）",
-        "Intel（CPU平台對象，非MOPS揭露客戶）"
+        "NVIDIA（官方MGX／GPU平台整合對象，非本次證實採購客戶）",
+        "AMD（官方SX224-2A x86平台對象，非本次證實採購客戶）",
+        "Dell Technologies（AI整機應用觀察對象，非本次證實採購客戶）",
+        "Hewlett Packard Enterprise（AI整機應用觀察對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "緯創(3231)",
-        "英業達(2356)",
-        "廣達(2382)"
+        "技嘉（GPU伺服器同業比較）",
+        "緯創（伺服器製造同業比較）"
       ],
       "risks": [
-        "NB ODM毛利偏低(3-4%)，AI伺服器貢獻占比仍小",
-        "伺服器ODM競爭激烈，緯創/廣達AI伺服器份額領先"
+        "MCP未披露AI伺服器占比與各平台出貨數量",
+        "筆電季節性及產品組合波動會影響整體業績",
+        "GPU平台快速更換與整機價格競爭可能降低回收"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：5C電子產品之研發、設計、產製及銷售。"
+          "title": "2324 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2324",
+          "claim": "本次MCP主要經營業務摘錄：5C電子產品之研發、設計、產製及銷售。；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收810.06億元，MoM-15.5%、YoY+38.3%、累計YoY+18.8%。"
+          "publisher": "TWSE",
+          "title": "2324 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收810.06億元，MoM-15.49%、YoY+38.26%，累計年增率+18.82%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "仁寶官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.compal.com/en-us/media/257/ren-bao-tui-chu-nvidia-mgxjia-gou-de-xin-xing-gao",
+          "claim": "官方GTC 2025發表SX420-2A、SX220-1N、SX224-2A MGX伺服器；SX420-2A列4U、最高8張RTX PRO 6000 Blackwell及19/21吋機架；產品發表不等於訂單。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2324",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-23",
+      "confidence": "high",
+      "lastVerified": "2026-09-08",
       "status": "verified",
       "techFocus": [
-        "伺服器主機板高速差分訊號與多相電源整合",
-        "多節點機構風道、可維修性與機架空間設計",
-        "BIOS／BMC韌體整合、整機燒機與可靠度驗證"
+        "官方SX420-2A列EIA 19吋／ORV3 21吋機架及最高8張RTX PRO 6000 Blackwell GPU配置",
+        "SX224-2A採2U、NVIDIA MGX及AMD x86平台，未外推未公布GPU數量",
+        "工程分析：多GPU系統須協同驗證高速互連、供電、風道與燒機穩定性"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持5C電子產品研發至量產的一體化能力",
-          "7月營收YoY+38.3%、累計YoY+18.8%，公司整體需求仍有成長"
+          "官方MGX平台型號、機架規格與GPU配置提供可查證產品依據",
+          "4U與2U平台可對應不同企業AI／HPC機房需求",
+          "2026年7月公司營收YoY+38.26%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未明列伺服器、AI平台、液冷產品或具名客戶",
-          "7月營收MoM-15.5%，月度出貨節奏波動明顯"
+          "MCP未披露AI伺服器占比與各平台出貨數量",
+          "GPU供應、系統可靠度與機房驗收仍會限制營收轉化",
+          "2026年7月營收810.06億元，MoM-15.49%、YoY+38.26%，累計年增率+18.82%。單月與累計變化需連同產品組合／比較基期判讀；此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "企業AI推論與一般運算伺服器更新可擴大5C產品中的伺服器比重",
-          "平台換代帶動主機板、韌體與整機驗證服務需求"
+          "企業RTX PRO與MGX推論伺服器有助拓展非筆電產品",
+          "19吋／21吋機架配置可涵蓋不同資料中心部署"
         ],
         "threats": [
-          "廣達、緯創、英業達與鴻海的AI伺服器規模競爭激烈",
-          "GPU供應與客戶專案時程變動可能造成季度營收落差"
+          "筆電季節性及產品組合波動會影響整體業績",
+          "GPU平台快速更換與整機價格競爭可能降低回收"
         ]
       }
     }

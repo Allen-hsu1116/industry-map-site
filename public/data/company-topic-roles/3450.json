@@ -2,92 +2,97 @@
   "schemaVersion": 1,
   "companyCode": "3450",
   "companyName": "聯鈞",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
       "topicName": "晶圓代工與第三代半導體",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "wide_bandgap",
-      "roleType": "laser_dicing_equipment",
-      "roleSummary": "聯鈞MOPS揭露的是光資訊／光通訊產品與功率元件封裝測試，並非晶圓代工，也未支持SiC晶圓雷射切割設備、GaN鑽孔或Wolfspeed等客戶；舊資料把公司名稱中的「光電」誤推成設備能力，這鍋有夠扯，現已改為第三代功率元件的下游封測觀察角色。2026年7月營收12.19億元，MoM+7.0%、YoY+98.0%、累計YoY+20.3%，公司說明客戶需求增加，但未指向功率元件。",
+      "supplyChainStage": "power_backend_foundry_adjacent",
+      "roleType": "power_osat_outside_foundry",
+      "roleSummary": "聯鈞MOPS揭露光資訊、光通訊及功率封裝測試，官方2026Q1財報亦列功率封裝測試。其在晶圓代工題材應定位後段配套，而不是自有晶圓製程／SiC磊晶供應商；客戶需求增加的營收說明不能證明晶圓代工收入。 2026年7月營收12.19億元，MoM+7.02%、YoY+98.00%，累計年增率+20.29%。MCP備註：因客戶需求增加，致使營收增加。。此為全公司營收，未拆分「晶圓代工與第三代半導體」收入，不能全部歸因本題材。",
       "products": [
-        "光通訊雷射元件封裝",
-        "光資訊收發元件",
-        "功率元件封裝服務",
-        "功率元件電性測試服務",
-        "光電元件組裝與可靠度驗證"
+        "功率半導體封裝服務",
+        "功率半導體電性測試服務",
+        "光通訊元件與模組"
       ],
       "customers": [
-        "Wolfspeed（第三代功率元件生態系對象，非MOPS揭露客戶）",
-        "Infineon（功率元件應用對象，非MOPS揭露客戶）",
-        "STMicroelectronics（功率元件應用對象，非MOPS揭露客戶）",
-        "漢磊（晶圓製造生態系對象，非MOPS揭露客戶）",
-        "聯電（晶圓製造生態系對象，非MOPS揭露客戶）"
+        "Wolfspeed（第三代功率元件生態系對象，非本次證實採購客戶）",
+        "Infineon（功率元件應用對象，非本次證實採購客戶）",
+        "STMicroelectronics（功率元件應用對象，非本次證實採購客戶）",
+        "漢磊（晶圓製造生態系對象，非本次證實採購客戶）",
+        "聯電（晶圓製造生態系對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "Disco",
-        "KLA"
+        "菱生（封裝服務同業比較）",
+        "日月光投控（封測同業比較）"
       ],
       "risks": [
-        "SiC/GaN 擴產進度影響設備下單節奏",
-        "累計營收仍年減 11.8%"
+        "未確認自有晶圓製造、製程節點或SiC／GaN特定封裝訂單",
+        "封測同業價格競爭及終端庫存會影響稼動率",
+        "把後段封裝誤認前段代工將高估技術壁壘與受惠程度"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯鈞 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3450",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯鈞 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3450 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：光資訊及光通訊產品、功率元件封裝測試。"
+          "title": "3450 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3450",
+          "claim": "本次MCP主要經營業務摘錄：光資訊及光通訊產品；功率半導體封裝測試；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收12.19億元，MoM+7.0%、YoY+98.0%、累計YoY+20.3%；公司說明客戶需求增加。"
+          "publisher": "TWSE",
+          "title": "3450 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收12.19億元，MoM+7.02%、YoY+98.00%，累計年增率+20.29%。MCP備註：因客戶需求增加，致使營收增加。。此為全公司營收，未拆分「晶圓代工與第三代半導體」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "聯鈞官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "http://www.elaser.com.tw/download/Consolidated%20Financial%20Statements%202026Q1.pdf",
+          "claim": "2026Q1官方合併財報General節列光資訊／光通訊、功率半導體封裝測試及矽光子；沒有支持將封測改稱前段晶圓代工。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3450",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-23",
-      "status": "verified",
+      "lastVerified": "2026-09-08",
+      "status": "candidate",
       "techFocus": [
-        "功率元件封裝的低熱阻接合、散熱路徑與絕緣設計",
-        "功率元件高電壓／大電流電性測試與失效篩選",
-        "光通訊元件的主動對準、耦光與氣密封裝"
+        "工程分析：功率封裝需管理接合熱阻、絕緣及散熱路徑，未聲稱特定電壓達標",
+        "工程分析：功率元件測試需驗證漏電、耐壓與熱可靠度，不等於晶圓製程能力",
+        "流程分析：晶圓製造後的封裝／成品測試與前段晶圓代工分屬不同環節"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持功率元件封裝測試，可作為晶圓製造後段配套",
-          "7月營收MoM+7.0%、YoY+98.0%，公司整體客戶需求強"
+          "MOPS直接支持功率半導體封裝測試，後段服務有事業依據",
+          "光通訊與功率元件業務組合提供不同應用需求來源",
+          "2026年7月公司營收YoY+98.00%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "公司不是晶圓代工廠，MOPS也未揭露SiC／GaN產品或雷射切割設備",
-          "營收成長未說明來自功率元件，題材直接度與信心均低"
+          "未確認自有晶圓製造、製程節點或SiC／GaN特定封裝訂單",
+          "功率封測與光通訊收入未拆分，不能把公司成長視為foundry成長",
+          "此為全公司營收，未拆分「晶圓代工與第三代半導體」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "SiC／GaN功率元件放量可增加後段封裝、散熱與高壓測試需求",
-          "光通訊封裝能力可支撐公司另一條成長曲線，降低單一題材依賴"
+          "功率晶片投片增加後可能拉動封裝測試需求，須驗證客戶導入",
+          "高效率電源需求可探索散熱與高可靠封裝應用"
         ],
         "threats": [
-          "IDM自有封測與大型OSAT擴充功率元件產能，競爭壓力高",
-          "若第三代功率元件需求放緩，本題材關聯可能無法轉化營收"
+          "封測同業價格競爭及終端庫存會影響稼動率",
+          "把後段封裝誤認前段代工將高估技術壁壘與受惠程度"
         ]
       }
     },

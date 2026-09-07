@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -170,85 +170,89 @@
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "networking_adjacent",
-      "roleType": "networking_equipment_adjacent_to_defense",
-      "roleSummary": "中磊MOPS僅揭露有線、無線網路產品，未揭露MIL-STD加密路由器、戰術Mesh、SATCOM或國防客戶。此角色應限於安全通訊可能採用的寬頻閘道器與無線接取平台。2026年7月營收79.80億元，YoY+51.3%、累計YoY+56.9%，公司說明為北美訂單增溫，不能歸因軍工。",
+      "supplyChainStage": "commercial_networking_defense_adjacent",
+      "roleType": "commercial_broadband_outside_defense",
+      "roleSummary": "中磊MOPS揭露有線／無線網路，官網確認PON及Wi-Fi 7終端規格；國防角色僅是民用寬頻接取的潛在延伸，不是L3Harris或RTX供應鏈已成立。營收備註指北美訂單增溫，不是國防訂單。 2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計年增率+56.86%。MCP備註：北美市場訂單增溫。此為全公司營收，未拆分「軍工、航太與無人機」收入，不能全部歸因本題材。",
       "products": [
-        "DOCSIS寬頻纜線閘道器",
-        "XGS-PON光纖網路終端",
-        "Wi-Fi 6／7家庭與企業路由器",
-        "4G／5G固定無線接取CPE",
-        "IoT蜂巢式通訊閘道器"
+        "三頻Wi-Fi 7 10G PON家庭閘道器",
+        "雙頻Wi-Fi 7 G／E PON閘道器",
+        "XGS-PON SFU光纖終端"
       ],
       "customers": [
-        "L3Harris Technologies（安全通訊驗證對象，非MOPS揭露客戶）",
-        "RTX（戰術網路驗證對象，非MOPS揭露客戶）",
-        "Nokia（電信網路平台對象，非MOPS揭露客戶）",
-        "Ericsson（5G接取平台對象，非MOPS揭露客戶）"
+        "Nokia（電信接取生態觀察對象，非已證實採購客戶）",
+        "Ericsson（電信接取生態觀察對象，非已證實採購客戶）",
+        "中華電信（寬頻應用觀察對象，非已證實採購客戶）"
       ],
       "competitors": [
-        "啟碁(6285)",
-        "正文(4906)"
+        "智易（寬頻終端同業比較）",
+        "啟碁（無線網通同業比較）"
       ],
       "risks": [
-        "國防訂單佔比極低",
-        "軍規認證週期長"
+        "未披露戰術通訊、軍用加密或軍方採購專案",
+        "國防資安及供應鏈審查可能阻止民用終端導入",
+        "電信標案遞延、客戶庫存及價格競爭可能影響拉貨"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：有線網路產品、無線網路產品及其他。"
+          "title": "5388 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5388",
+          "claim": "本次MCP主要經營業務摘錄：有線網路產品無線網路產品其他；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收79.80億元，MoM+9.7%、YoY+51.3%，累計YoY+56.9%；北美市場訂單增溫。"
+          "publisher": "TWSE",
+          "title": "5388 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收79.80億元，MoM+9.75%、YoY+51.30%，累計年增率+56.86%。MCP備註：北美市場訂單增溫。此為全公司營收，未拆分「軍工、航太與無人機」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "中磊官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "https://www.sercomm.com/en/solutions/product/6/0/19",
+          "claim": "FTTx頁列三頻Wi-Fi 7 10G PON、雙頻G/E PON、XGS-PON SFU、LAN與遠端管理規格；未證實軍規產品。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5388",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-21",
-      "status": "verified",
+      "lastVerified": "2026-09-08",
+      "status": "candidate",
       "techFocus": [
-        "DOCSIS 3.1／XGS-PON寬頻接取與遠端管理",
-        "Wi-Fi 6／7 MLO、Mesh漫遊與QoS",
-        "5G NR Sub-6GHz CPE射頻、天線與網路切片整合"
+        "官網XGS-PON終端支援10／10Gbps及OMCI、TR-069／TR-369管理",
+        "官網三頻Wi-Fi 7 10G PON列2個10Gbps與4個1Gbps LAN埠",
+        "工程分析：電信接取與遠端維運安全須分別驗證，未證實軍用網路切片或戰術加密"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持有線與無線網路產品，接取設備平台完整",
-          "2026年7月營收YoY+51.3%、累計YoY+56.9%，北美訂單增溫"
+          "10G PON與Wi-Fi 7整合平台具公開規格，非泛稱無線通訊",
+          "終端具OMCI與TR遠端管理介面，適合電信網路部署",
+          "2026年7月公司營收YoY+51.30%，反映整體成長，非本題材專屬成長。"
         ],
         "weaknesses": [
-          "MOPS未揭露軍規加密、MIL-STD、SATCOM或國防客戶",
-          "公司整體高成長來自北美市場，不能直接歸因國防題材"
+          "未披露戰術通訊、軍用加密或軍方採購專案",
+          "北美需求增溫沒有被資料來源分類為國防收入",
+          "此為全公司營收，未拆分「軍工、航太與無人機」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "安全通訊與基地網路升級可增加寬頻閘道與5G CPE驗證需求",
-          "網路備援與零信任邊緣架構可提高企業閘道器功能價值"
+          "非敏感基地或設施若需民用寬頻，可探索固定接取應用",
+          "商用終端升級安全維運能力有助企業網路應用，但須獨立驗證"
         ],
         "threats": [
-          "戰術通訊需專用加密與環境驗證，民用網通平台未必能切入",
-          "北美電信商拉貨波動與關稅政策可能反轉高成長"
+          "國防資安及供應鏈審查可能阻止民用終端導入",
+          "電信標案遞延、客戶庫存及價格競爭可能影響拉貨"
         ]
       }
     },

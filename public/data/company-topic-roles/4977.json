@@ -1,88 +1,99 @@
 {
   "schemaVersion": 1,
   "companyCode": "4977",
-  "companyName": "4977",
-  "updatedAt": "2026-08-22T19:05:32Z",
+  "companyName": "眾達-KY",
+  "updatedAt": "2026-09-07T19:16:13Z",
   "roles": [
     {
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "roleSummary": "眾達-KY MOPS只揭露光收發模組設計、研發、生產與銷售，沒有CPO、矽光子晶片或800G規格；可確認的是光模組整合，矽光子僅為可能採用的上游平台。2026年7月營收1.81億元，MoM+120.2%、YoY+136.6%，但因7月起納入品固集團，累計YoY仍-1.4%，不可把跳升全歸因AI光通訊。",
+      "directness": "core",
+      "roleSummary": "眾達-KY的MOPS確認光收發模組，HTTP官網可讀既有SFP／SFP+及QSFP+目錄。這支持光通訊角色，但舊目錄不足確認最新CPO世代與訂單。7月營收躍增備註為納入品固集團，不能把併表增幅當成矽光子有機成長；並修正companyName原為代碼4977的錯誤。 2026年7月營收1.81億元，MoM+120.25%、YoY+136.63%，累計年增率-1.35%。MCP備註：因7/1納入品固集團營收。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。",
       "products": [
-        "可插拔式光收發模組",
-        "單模長距離光收發模組",
-        "多模短距離光收發模組",
-        "光電收發次模組整合服務"
+        "SFP光收發模組（官網既有產品目錄）",
+        "SFP+ LR單模光收發模組（官網既有產品目錄）",
+        "SFP+ SR多模光收發模組（官網既有產品目錄）",
+        "QSFP+ SR AOC主動光纜（官網既有產品目錄）",
+        "TOSA／ROSA光收發次模組（官網既有產品目錄）"
       ],
       "customers": [
-        "Broadcom（光通訊平台對象，非MOPS揭露客戶）",
-        "Marvell（光DSP平台對象，非MOPS揭露客戶）",
-        "Arista Networks（資料中心交換器應用對象，非MOPS揭露客戶）",
-        "Cisco（網路設備應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI網路應用對象，非MOPS揭露客戶）"
+        "Broadcom（光通訊平台對象，非本次證實採購客戶）",
+        "Marvell（光DSP平台對象，非本次證實採購客戶）",
+        "Arista Networks（資料中心交換器應用對象，非本次證實採購客戶）",
+        "Cisco（網路設備應用對象，非本次證實採購客戶）",
+        "NVIDIA（AI網路應用對象，非本次證實採購客戶）"
       ],
       "competitors": [
-        "中際旭創(中國光收發模組龍頭)",
-        "新易盛(Eoptol)(中國光模組)",
-        "Coherent(II-VI)(美國光通訊)",
-        "Lumentum(美國光通訊)"
+        "光環（光收發元件同業比較）",
+        "前鼎（光收發模組同業比較）"
       ],
       "risks": [
-        "6月營收0.82億YoY+8.1%但累計YoY-20.8%(轉型期陣痛)",
-        "光收發模組市場被中際旭創/新易盛低價競爭",
-        "矽光子CPO技術仍在早期階段,量產時程不確定"
+        "7月起納入品固集團造成比較基礎變化，年增率不可直接解讀成原有光通訊成長",
+        "併表掩蓋本業成長與新業務整合成本的風險",
+        "光模組價格下滑及平台代際汰換可能壓縮毛利"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "4977公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 4977 role in 矽光子、CPO 與高速光通訊 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：設計、研發、生產及銷售光收發模組。"
+          "title": "4977 公司完整基本資料（MCP）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4977",
+          "claim": "本次MCP主要經營業務摘錄：設計、研發、生產及銷售光收發模組；主要業務不等於具名客戶或所有技術細項已證實。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收1.81億元，MoM+120.2%、YoY+136.6%，累計YoY-1.4%；7月起納入品固集團。"
+          "publisher": "TWSE",
+          "title": "4977 2026年7月營收（本次MCP最新回傳）",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收1.81億元，MoM+120.25%、YoY+136.63%，累計年增率-1.35%。MCP備註：因7/1納入品固集團營收。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。 TWSE原始單位千元，金額已換算億元。 此為來源回傳截止月份，不保證所有公司八月均已公告。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "official-product-scope-v47",
+          "publisher": "眾達-KY官方網站",
+          "title": "本次產品／技術範圍覆核",
+          "url": "http://www.pcltech.com/02-1.htm",
+          "claim": "HTTP官方Manufacturing舊版目錄列SFP、SFP+ LR/SR、QSFP+ SR AOC及TOSA/ROSA；頁尾版權2013，僅採既有產品家族及該目錄規格，不當作最新高速CPO能力。",
+          "accessedAt": "2026-09-07T19:16:13Z"
+        },
+        {
+          "sourceId": "topic-analysis-scope-v47",
+          "publisher": "題材分析（非公司直接披露）",
+          "title": "客戶、技術推論與收入邊界",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4977",
+          "claim": "標為工程分析／流程分析的內容是由產品功能導出的技術判讀，不代表公司已披露實作或達成認證；未證實關係的公司名僅為應用／生態觀察，平台供應方不是買方。",
+          "accessedAt": "2026-09-07T19:16:13Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-22",
-      "status": "verified",
+      "lastVerified": "2026-09-08",
+      "status": "candidate",
       "techFocus": [
-        "光發射／接收次模組耦合與封裝整合",
-        "單模與多模光鏈路功率預算及眼圖測試",
-        "光模組韌體監控、溫度補償與量產校準"
+        "既有官網SFP+ LR列6～10Gb/s、單模10km；SR列6～10Gb/s、多模300m",
+        "既有官網TOSA／ROSA列LC、SC與pigtail介面及SM／MM光路",
+        "工程分析：光模組測試關注發射光功率、接收靈敏度與熱校準；舊目錄不證明800G／CPO量產"
       ],
-      "supplyChainStage": "optical_components",
-      "roleType": "silicon_photonics_transceiver_supplier",
+      "supplyChainStage": "optical_transceiver_manufacturing",
+      "roleType": "optical_module_and_subassembly",
       "swot": {
         "strengths": [
-          "MOPS直接支持光收發模組研發製造，位於高速光互連下游",
-          "7月營收MoM+120.2%、YoY+136.6%，單月規模明顯放大"
+          "MOPS確認光收發模組設計至生產銷售，非僅通路角色",
+          "官網既有目錄可核對單模、雙向光次模組及主動光纜產品"
         ],
         "weaknesses": [
-          "MOPS未揭露矽光子、CPO或特定傳輸速率",
-          "成長包含7月起納入品固集團，累計營收仍YoY-1.4%"
+          "7月起納入品固集團造成比較基礎變化，年增率不可直接解讀成原有光通訊成長",
+          "官網目錄年代較舊，未確認當期高階產品世代與CPO營收",
+          "2026年7月營收1.81億元，MoM+120.25%、YoY+136.63%，累計年增率-1.35%。MCP備註：因7/1納入品固集團營收。單月與累計變化需連同產品組合／比較基期判讀；此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。"
         ],
         "opportunities": [
-          "AI資料中心升速可增加光收發模組需求",
-          "矽光子引擎成熟後可降低高速模組功耗與成本"
+          "既有光模組整合能力可探索更高速資料中心光連接，須新規格及訂單驗證",
+          "集團整合若形成製造協同可能改善產品組合，仍需看獲利與現金流"
         ],
         "threats": [
-          "光模組價格下降快，產品世代切換帶來庫存風險",
-          "上游雷射、DSP與矽光子平台受少數供應商制約"
+          "併表掩蓋本業成長與新業務整合成本的風險",
+          "光模組價格下滑及平台代際汰換可能壓縮毛利"
         ]
       }
     }
