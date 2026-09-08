@@ -2,90 +2,87 @@
   "schemaVersion": 1,
   "companyCode": "2313",
   "companyName": "華通",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "leo-satellite-communications",
       "topicName": "低軌衛星通訊",
       "topicType": "end_market",
-      "directness": "indirect",
-      "supplyChainStage": "satellite_ground_equipment",
-      "roleType": "leo_satellite_pcb_supplier",
-      "roleSummary": "華通MOPS只揭露多層印刷電路板，沒有衛星、Starlink、Kuiper、Rogers或PTFE材料等細項；本角色應定位為低軌衛星酬載、用戶終端與閘道器可能採用高多層PCB的上游應用。2026年7月營收69.55億元、YoY+16.0%，不能據此認定衛星營收。",
+      "directness": "supplier",
+      "supplyChainStage": "printed_circuit_boards",
+      "roleType": "satellite_communications_pcb_supplier",
+      "roleSummary": "華通MOPS確認多層PCB，2026年8月官方法說直接列衛星通訊硬板及LEO HLC＋HDI／HLC產品策略，應提升為衛星PCB供應環節，不再僅憑MOPS簡述標為遠端鄰接。法說2026Q2 Aerospace占比22%是航太大類，不能直接視為全部LEO；軌道資料中心仍為策略方向而非已確認訂單。 本次TWSE回傳2026年7月營收69.55億元，MoM+0.58%、YoY+16.01%，累計年增率+13.61%。",
       "products": [
-        "低軌衛星酬載控制板用高多層PCB（應用推定）",
-        "用戶終端相位陣列天線PCB（應用推定）",
-        "衛星閘道器高速背板PCB（應用推定）",
-        "衛星通訊模組用軟硬結合PCB（應用推定）"
+        "衛星通訊用高層數硬性印刷電路板",
+        "低軌衛星HLC＋HDI板技術方案（2026年8月產品策略）",
+        "衛星地面接收設備HLC板方案（產品策略）",
+        "20／20µm mSAP Anylayer薄板（公司通用能力，非衛星專用規格）",
+        "最高52層／6mm高可靠度厚板（公司通用能力）"
       ],
       "customers": [
-        "SpaceX（Starlink應用對象，非MOPS揭露客戶）",
-        "Amazon（Project Kuiper應用對象，非MOPS揭露客戶）",
-        "Eutelsat OneWeb（衛星網路應用對象，非MOPS揭露客戶）",
-        "聯發科（衛星通訊晶片平台對象，非MOPS揭露客戶）"
+        "SpaceX（LEO星座應用對象，非本次揭露客戶）",
+        "Amazon（LEO星座應用對象，非本次揭露客戶）",
+        "Eutelsat（LEO星座應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "欣興（3037）",
-        "燿華（2367）"
+        "TTM Technologies",
+        "欣興",
+        "滬電股份"
       ],
       "risks": [
-        "中國 PCB 廠（深南/滬電）低價競爭",
-        "衛星 PCB 認證週期長，替換風險"
+        "航太類別及公司月營收未逐項拆分LEO、地面終端與個別客戶",
+        "星座部署時程、客戶設計變更或發射延遲可能造成訂單不連續",
+        "新廠良率、厚板可靠度及高精度製程投資可能增加成本"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "華通 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2313",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 華通 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2313 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：多層印刷電路板。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2313",
+          "claim": "股票代碼2313；本次MCP成功取得主要經營業務，摘要：多層印刷電路板。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收69.55億元，MoM+0.6%、YoY+16.0%、累計YoY+13.6%。"
+          "claim": "2026年7月營收69.55億元，MoM+0.58%、YoY+16.01%，累計年增率+13.61%。來源原始當月值6955176，單位NTD thousand；申報備註：- 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-2026-08-presentation",
+          "publisher": "華通 官方網站",
+          "title": "2026-08-presentation（2026-09-09查詢）",
+          "url": "https://www.compeq.com.tw/doc/conference/4e1de50a-9b5e-11f1-8e03-2200977aacff/20260819_140518_cn.pdf",
+          "claim": "2026年8月官方法說列衛星通訊硬板、LEO HLC＋HDI／HLC策略、公司20/20µm mSAP及最高52層6mm厚板能力；2026Q2 Aerospace占比22%，未將其全部等同LEO；軌道資料中心屬策略展望。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "高多層板壓合與雷射盲埋孔互連",
-        "射頻板差動阻抗與低插入損耗控制",
-        "熱循環下通孔與層間接合可靠度驗證"
+        "HLC與HDI互連結構整合（官方低軌衛星產品策略）",
+        "20／20µm mSAP細線路及Anylayer製程能力",
+        "高層數厚板到SMT的一站式PCB製造整合"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認多層PCB主業，可對應衛星電子系統的高密度互連需求",
-          "7月營收YoY+16.0%、累計YoY+13.6%，公司整體接單維持成長"
+          "最新官方法說明列衛星通訊PCB，題材角色有直接產品揭露支持",
+          "2026Q2 Aerospace占營收22%，提供航太業務實際比重但不與LEO畫等號",
+          "2026年7月營收69.55億元，MoM+0.58%、YoY+16.01%，累計年增率+13.61%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未揭露衛星產品、材料規格或具名客戶",
-          "衛星應用占比與認證狀態不明，不能把全公司成長歸因本題材"
+          "航太類別及公司月營收未逐項拆分LEO、地面終端與個別客戶",
+          "最高52層與20／20µm為公司通用技術範圍，不能套成每個衛星產品規格",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "低軌衛星數量增加可帶動酬載與地面終端用高多層板需求",
-          "相位陣列終端升級有利高頻、細線與高可靠度PCB價值量提升"
+          "LEO網路及地面設備擴大可能提高高層數、HDI衛星通訊板需求",
+          "公司衛星／地面設備策略可與一站式PCB及SMT服務結合"
         ],
         "threats": [
-          "星系業者垂直整合或更換板廠會使訂單高度波動",
-          "深南電路、滬電與其他高階PCB廠的價格及產能競爭"
+          "星座部署時程、客戶設計變更或發射延遲可能造成訂單不連續",
+          "新廠良率、厚板可靠度及高精度製程投資可能增加成本"
         ]
       }
     }

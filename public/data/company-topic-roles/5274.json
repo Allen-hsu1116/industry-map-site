@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -191,32 +191,29 @@
       "topicId": "software-cloud-security",
       "topicName": "資安、雲端服務與企業軟體",
       "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "server_management",
-      "roleType": "hardware_management_enabler",
-      "roleSummary": "信驊MOPS支持多媒體、電腦周邊與高階消費性IC，未直接揭露BMC、OpenBMC、Redfish或軟體雲端服務；本題材因此定位為伺服器帶外管理硬體對雲端維運與資安的間接賦能，而非企業軟體供應商。TWSE月營收查無資料，FinMind顯示2026年7月營收15.24億元、MoM+16.3%；查詢區間不足以計算YoY。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "server_management_ic",
+      "roleType": "bmc_hardware_security_cloud_enabler",
+      "roleSummary": "信驊MOPS業務分類較廣，但官方AST2700／AST2600頁確認BMC與硬體安全功能，為雲端管理及資安的硬體賦能者而非SaaS或SOC服務商。AST2700整合Caliptra、CAN及LTPI，AST2600支援Secure Boot／TrustZone；安全功能依晶片世代區分，不把軟體專案OpenBMC當公司客戶。 本次FinMind回傳2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%。",
       "products": [
-        "伺服器基板管理控制器（BMC）SoC",
-        "遠端KVM影像處理控制晶片",
-        "伺服器帶外管理周邊控制晶片",
-        "多媒體積體電路",
-        "電腦周邊積體電路"
+        "AST2700 12nm伺服器BMC SoC",
+        "AST2600 28nm伺服器BMC SoC",
+        "AST2700整合Caliptra Root-of-Trust管理平台"
       ],
       "customers": [
-        "Dell Technologies（伺服器管理應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（伺服器管理應用對象，非MOPS揭露客戶）",
-        "Lenovo（伺服器管理應用對象，非MOPS揭露客戶）",
-        "Supermicro（伺服器管理應用對象，非MOPS揭露客戶）",
-        "OpenBMC專案（軟體生態系對象，非MOPS揭露客戶）"
+        "ASUS（官方伺服器頁列名AST2600平台採用對象，不推定直接採購）",
+        "Dell Technologies（BMC管理應用對象，非本次揭露客戶）",
+        "Hewlett Packard Enterprise（BMC管理應用對象，非本次揭露客戶）",
+        "Supermicro（BMC管理應用對象，非本次揭露客戶）"
       ],
       "competitors": [
         "Nuvoton",
-        "Microchip",
-        "Intel"
+        "Microchip Technology"
       ],
       "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "本質為IC銷售及管理平台硬體，不能把全公司營收列作資安訂閱收入",
+        "管理平面漏洞或供應鏈韌體風險可能增加客戶驗證與修補成本",
+        "伺服器平台改版、競爭方案或自研控制器可能影響設計採用"
       ],
       "legacy": {
         "topicSlug": "enterprise-saas",
@@ -225,58 +222,67 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "信驊 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：多媒體IC、電腦周邊IC及高階消費性電子IC。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5274",
+          "claim": "股票代碼5274；本次MCP成功取得主要經營業務，摘要：多媒體積體電路、電腦周邊積體電路、高階消費性電子積體電路。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收15.24億元、MoM+16.3%；查詢區間不足以計算YoY。"
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind via CasualMarket MCP",
+          "title": "2026年8月營收資料（2026-09-09查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=5274&start_date=2025-07-01&end_date=2026-09-09",
+          "claim": "2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%。來源原始當月值1625937000，單位NTD；TWSE主查詢回傳找不到月營收，改用FinMind；比較基期按revenue_year／revenue_month，不以資料列date誤判月份。 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-ast2700",
+          "publisher": "信驊 官方網站",
+          "title": "ast2700（2026-09-09查詢）",
+          "url": "https://www.aspeedtech.com/server_ast2700/",
+          "claim": "AST2700官方頁列12nm、四核A35／雙M4、PCIe Gen4、DDR5-3200、CAN、LTPI與Caliptra矽Root-of-Trust。"
+        },
+        {
+          "sourceId": "official-role-ast2600",
+          "publisher": "信驊 官方網站",
+          "title": "ast2600（2026-09-09查詢）",
+          "url": "https://www.aspeedtech.com/server_ast2600/",
+          "claim": "AST2600官方頁列28nm、雙核Cortex-A7、Secure Boot與TrustZone。"
+        },
+        {
+          "sourceId": "official-role-asus-ast2600-adoption",
+          "publisher": "ASUS 官方伺服器產品頁",
+          "title": "asus-ast2600-adoption（2026-09-09查詢）",
+          "url": "https://servers.asus.com/products/Servers/GPU-Servers/ESC8000-E11",
+          "claim": "ASUS ESC8000-E11官方頁列ASMB11-iKVM採ASPEED AST2600；可確認平台採用，不能推定直接採購關係。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-23",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "BMC帶外管理、主機感測遙測與獨立管理網路",
-        "遠端KVM影像擷取、壓縮與網路傳輸",
-        "安全開機、韌體簽章與管理平面存取控制"
+        "AST2700四核心Cortex-A35及雙獨立Cortex-M4，支援PCIe Gen4／DDR5-3200",
+        "AST2700以Caliptra矽Root-of-Trust保護管理平面",
+        "AST2600 Secure Boot與Cortex-A7 TrustZone，AST2700 CAN／LTPI管理介面"
       ],
       "swot": {
         "strengths": [
-          "BMC與電腦周邊IC產業脈絡可直接支撐伺服器遠端維運硬體",
-          "FinMind顯示7月營收15.24億元、MoM+16.3%，短期動能轉強"
+          "官網明列硬體信任根及安全開機，雲端管理與資安相關性有具體依據",
+          "BMC帶外管理可監控主機與電源，支援高功耗AI系統的管理需求",
+          "2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未直接揭露BMC型號、Redfish、OpenBMC或資安軟體服務",
-          "公司本質是IC供應商，不是SaaS或雲端服務商，題材直接度有限"
+          "本質為IC銷售及管理平台硬體，不能把全公司營收列作資安訂閱收入",
+          "硬體安全仍需韌體、金鑰管理及系統部署配合，不等同端到端防護保證",
+          "本次FinMind營收資料截止2026年8月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "AI伺服器數量與功耗提高，帶動遙測、遠端管理與韌體安全需求",
-          "資料中心零接觸維運可提升BMC功能與平均單價"
+          "AI伺服器電源與設備管理複雜度提升，可增加BMC介面及運算需求",
+          "DC-SCM與開放信任根架構可擴大平台導入與韌體生態系整合"
         ],
         "threats": [
-          "伺服器平台自研管理晶片或替代BMC方案可能削弱市占",
-          "BMC韌體漏洞與供應鏈攻擊會提高認證、維護與責任成本"
+          "管理平面漏洞或供應鏈韌體風險可能增加客戶驗證與修補成本",
+          "伺服器平台改版、競爭方案或自研控制器可能影響設計採用"
         ]
       }
     }

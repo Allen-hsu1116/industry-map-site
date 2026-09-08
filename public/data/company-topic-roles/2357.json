@@ -2,94 +2,96 @@
   "schemaVersion": 1,
   "companyCode": "2357",
   "companyName": "華碩",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "core",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "ai_pc_gpu_system_maker",
-      "roleSummary": "華碩MOPS支持電腦系統、主機板與板卡的設計研發銷售，2026年7月月營收更明確備註成長主要來自AI伺服器銷售，題材直接性成立；但MOPS未揭露特定伺服器型號或具名客戶。7月營收841.31億元、YoY+53.3%，惟MoM-21.2%顯示出貨波動。",
+      "supplyChainStage": "gpu_server_systems",
+      "roleType": "enterprise_gpu_server_system_provider",
+      "roleSummary": "華碩MOPS支持電腦系統與板卡，官方ESC8000-E12／E11產品頁確認八GPU 4U伺服器及BMC管理。7月月營收備註更明確指出主要差異來自AI伺服器銷售成長，因此AI角色不只是推測；但沒有拆出AI收入金額。本次按機種區分Xeon、記憶體、PCIe與散熱規格，不將E11氣冷機種泛寫成液冷產品。 本次TWSE回傳2026年7月營收841.31億元，MoM-21.17%、YoY+53.33%，累計年增率+40.88%。",
       "products": [
-        "ASUS ESC8000系列GPU伺服器",
-        "ASUS RS系列雙路機架伺服器",
-        "ASUS AI工作站",
-        "GPU伺服器主機板與加速卡載板",
-        "AI伺服器叢集部署與管理方案"
+        "ESC8000-E12 Intel Xeon 6／八GPU 4U伺服器",
+        "ESC8000-E11第五代Xeon／八GPU 4U伺服器",
+        "ASMB11-iKVM AST2600遠端伺服器管理模組",
+        "ASUS Control Center伺服器IT管理軟體"
       ],
       "customers": [
-        "NVIDIA（GPU平台合作對象，非MOPS揭露客戶）",
-        "AMD（Instinct平台合作對象，非MOPS揭露客戶）",
-        "Intel（Xeon平台合作對象，非MOPS揭露客戶）",
-        "ASPEED（BMC供應鏈對象，非MOPS揭露客戶）"
+        "NVIDIA（官方GPU支援及平台合作對象，非採購證明）",
+        "Intel（Xeon／Gaudi平台供應鏈對象，非下游客戶）",
+        "ASPEED（ASMB11-iKVM列名AST2600供應鏈對象）"
       ],
       "competitors": [
-        "微星(2377)",
-        "技嘉(2376)",
-        "宏碁(2353)",
-        "HP"
+        "Dell Technologies",
+        "Hewlett Packard Enterprise",
+        "Supermicro",
+        "技嘉"
       ],
       "risks": [
-        "月營收月減15.7%，季節性因素明顯",
-        "GPU顯示卡受NVIDIA晶片供給制約，AIB毛利受限"
+        "即使備註支持AI成長，仍未揭露AI營收占比、毛利及特定GPU機種貢獻",
+        "企業AI預算延後、GPU供應限制及同業競價可能影響交付及毛利",
+        "高功率系統維護、韌體安全及電力需求提高售後支援成本"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：3C資訊產品（電腦系統、主機板、各類板卡及智慧型手機等）之設計、研發及銷售。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2357",
+          "claim": "股票代碼2357；本次MCP成功取得主要經營業務，摘要：3C資訊產品（電腦系統產品、主機板及各類板卡、智慧型手機等手持裝置）之設計研發及銷售。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收841.31億元，MoM-21.2%、YoY+53.3%、累計YoY+40.9%；公司明確備註主要來自AI伺服器銷售成長。"
+          "claim": "2026年7月營收841.31億元，MoM-21.17%、YoY+53.33%，累計年增率+40.88%。來源原始當月值84131254，單位NTD thousand；申報備註：本月增減差異說明：主要來自AI伺服器之銷售成長。 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-esc8000-e12",
+          "publisher": "華碩 官方網站",
+          "title": "esc8000-e12（2026-09-09查詢）",
+          "url": "https://servers.asus.com/products/Servers/GPU-Servers/ESC8000-E12",
+          "claim": "官方ESC8000-E12列Xeon6雙路4U、八雙槽GPU、DDR5-6400及ASUS Control Center／硬體信任根。"
+        },
+        {
+          "sourceId": "official-role-esc8000-e11",
+          "publisher": "華碩 官方網站",
+          "title": "esc8000-e11（2026-09-09查詢）",
+          "url": "https://servers.asus.com/products/Servers/GPU-Servers/ESC8000-E11",
+          "claim": "官方ESC8000-E11列第五代Xeon、八GPU、PCIe5、NVLink Bridge、OCP3及四顆3000W冗餘電源，ASMB11-iKVM使用AST2600；此機型明列氣冷。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "多GPU伺服器的PCIe／NVLink拓撲與高速主板設計",
-        "BMC遠端管理、韌體安全與叢集監控整合",
-        "高功耗GPU伺服器的風液冷與電源協同設計"
+        "ESC8000-E12雙路Xeon 6、八個雙槽GPU及DDR5-6400平台整合",
+        "ESC8000-E11 PCIe 5.0、NVLink Bridge及OCP 3.0網路擴充",
+        "AST2600 BMC帶外管理、硬體Root-of-Trust與四顆3000W冗餘電源配置"
       ],
       "swot": {
         "strengths": [
-          "公司明確說明7月營收成長主要來自AI伺服器銷售，題材證據直接",
-          "7月營收YoY+53.3%、累計YoY+40.9%，AI伺服器成長動能強"
+          "官方機種頁提供CPU、GPU、機構與管理規格，可核對整機供應能力",
+          "7月營收備註直接提及AI伺服器銷售成長，題材營運關係有本期揭露支持",
+          "2026年7月營收841.31億元，MoM-21.17%、YoY+53.33%，累計年增率+40.88%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "7月MoM-21.2%，專案認列與出貨節奏波動大",
-          "MOPS未揭露AI伺服器型號、客戶與收入占比，品牌伺服器規模仍難量化"
+          "即使備註支持AI成長，仍未揭露AI營收占比、毛利及特定GPU機種貢獻",
+          "多GPU系統依賴CPU、GPU及電源供應，配置相容性與交期需個別驗證",
+          "2026年7月營收841.31億元，MoM-21.17%、YoY+53.33%，累計年增率+40.88%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "企業私有AI與推論部署有利華碩品牌伺服器及工作站通路",
-          "主機板、板卡與整機能力可延伸至叢集管理及機櫃級方案"
+          "企業私有AI及推論部署可擴大八GPU機架系統及管理方案需求",
+          "控制中心軟體與BMC管理可增加整機部署及維護黏著度"
         ],
         "threats": [
-          "技嘉、Supermicro及大型ODM同時爭取企業AI伺服器市場",
-          "GPU供應、平台認證與售後服務成本可能限制成長轉化為利潤"
+          "企業AI預算延後、GPU供應限制及同業競價可能影響交付及毛利",
+          "高功率系統維護、韌體安全及電力需求提高售後支援成本"
         ]
       }
     }

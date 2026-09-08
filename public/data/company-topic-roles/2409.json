@@ -2,92 +2,87 @@
   "schemaVersion": 1,
   "companyCode": "2409",
   "companyName": "友達",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "display_panel_supplier",
-      "roleSummary": "友達MOPS支持TFT-LCD與顯示系統、垂直場域及智慧移動方案，沒有AI伺服器整機、主板或散熱產品；本角色只能定位為資料中心控制室、KVM維運終端與監控看板的顯示應用。2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%，公司整體營運轉弱，亦未揭露AI伺服器貢獻。",
+      "supplyChainStage": "display_systems_adjacent",
+      "roleType": "control_room_display_ai_server_adjacent",
+      "roleSummary": "友達MOPS確認TFT-LCD與垂直場域方案，官方Video Wall說明列控制室應用；可作AI資料中心維運顯示的間接觀察對象，並非AI伺服器算力、液冷或GPU零件供應商。本次去掉未驗證的資料中心KVM專用板與機房能源看板料號，顯示應用並不表示已取得AI機房訂單。 本次TWSE回傳2026年7月營收203.70億元，MoM-18.36%、YoY-2.64%，累計年增率-1.21%。",
       "products": [
-        "資料中心機架KVM終端用TFT-LCD面板（應用推定）",
-        "資料中心控制室拼接顯示面板",
-        "伺服器維運終端用觸控顯示模組",
-        "機房能源監控看板用商用顯示器"
+        "TFT-LCD商用顯示面板",
+        "液晶多屏拼接顯示系統",
+        "控制室LED Video Wall顯示方案"
       ],
       "customers": [
-        "Dell（KVM終端應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（維運顯示應用對象，非MOPS揭露客戶）",
-        "Vertiv（機房監控應用對象，非MOPS揭露客戶）",
-        "Schneider Electric（資料中心看板應用對象，非MOPS揭露客戶）"
+        "Dell Technologies（維運顯示應用觀察對象，未證實供貨）",
+        "Hewlett Packard Enterprise（維運顯示應用觀察對象，未證實供貨）",
+        "Vertiv（控制室顯示應用觀察對象，未證實供貨）",
+        "Schneider Electric（控制室顯示應用觀察對象，未證實供貨）"
       ],
       "competitors": [
-        "群創(3481)",
-        "京東方(BOE)",
-        "Samsung Display"
+        "群創",
+        "BOE",
+        "LG Display"
       ],
       "risks": [
-        "累計營收年減3.7%，面板景氣復甦緩慢",
-        "AI伺服器題材關聯度低，非直接供應鏈成員"
+        "題材關係限顯示及維運應用，本次沒有AI機房專用產品或客戶實證",
+        "控制室顯示支出與AI算力資本支出不成比例，題材彈性可能很低",
+        "面板價格、LED替代及商用顯示競爭可能削弱獲利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：薄膜電晶體液晶顯示器及其系統，並提供垂直場域與智慧移動解決方案。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2409",
+          "claim": "股票代碼2409；本次MCP成功取得主要經營業務，摘要：研究開發生產銷售薄膜電晶體液晶顯示器及其系統，提供垂直場域及智慧移動解決方案。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%、累計YoY-1.2%。"
+          "claim": "2026年7月營收203.70億元，MoM-18.36%、YoY-2.64%，累計年增率-1.21%。來源原始當月值20370071，單位NTD thousand；申報備註：- 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-control-room-video-wall",
+          "publisher": "友達 官方網站",
+          "title": "control-room-video-wall（2026-09-09查詢）",
+          "url": "https://leddisplay.auo.com/trends/seamless-video-wall",
+          "claim": "AUO官方Video Wall應用文列LCD/LED拼接與控制室用途；不代表已提供特定AI資料中心、KVM料號或機房專案。"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-24",
-      "status": "verified",
+      "lastVerified": "2026-09-09",
+      "status": "candidate",
       "techFocus": [
-        "TFT-LCD顯示模組與觸控感測整合",
-        "長時間點亮的亮度均勻性與影像殘留控制",
-        "商用顯示器遠端管理與多畫面拼接校正"
+        "TFT-LCD面板及系統驅動整合",
+        "LCD／LED多屏顯示的拼接與亮度校正（工程分析）",
+        "長時間控制室顯示之影像一致性及維護設計（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持顯示器及系統能力，可對應資料中心維運與監控介面",
-          "具面板到垂直場域解決方案的整合基礎"
+          "MOPS顯示器及系統業務與官方控制室Video Wall應用一致",
+          "面板與場域方案可服務設備維運可視化，不必虛構GPU供應鏈能力"
         ],
         "weaknesses": [
-          "不製造AI伺服器，題材只屬顯示與維運周邊應用",
-          "7月營收MoM-18.4%、YoY-2.6%、累計YoY-1.2%，公司整體需求偏弱"
+          "題材關係限顯示及維運應用，本次沒有AI機房專用產品或客戶實證",
+          "官方Video Wall文章為應用介紹，不代表資料中心專案已部署",
+          "2026年7月營收203.70億元，MoM-18.36%、YoY-2.64%，累計年增率-1.21%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "大型AI資料中心擴建可增加控制室與能源監控顯示需求",
-          "KVM與遠端維運終端升級可導入觸控及高可靠度顯示模組"
+          "大型機房及跨站維運中心可能需要告警與多屏可視化呈現",
+          "商用顯示及垂直場域整合可延伸維運介面需求，但要另追訂單"
         ],
         "threats": [
-          "資料中心顯示器用量遠低於運算、網路與散熱設備，題材彈性有限",
-          "京東方、華星光電等面板廠的價格競爭壓縮商用顯示利潤"
+          "控制室顯示支出與AI算力資本支出不成比例，題材彈性可能很低",
+          "面板價格、LED替代及商用顯示競爭可能削弱獲利"
         ]
       }
     }

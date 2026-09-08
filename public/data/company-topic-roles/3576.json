@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3576",
   "companyName": "聯合再生",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "renewable-energy",
@@ -96,85 +96,87 @@
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "ess",
-      "roleType": "storage_system_provider",
-      "roleSummary": "聯合再生MOPS只支持太陽能電池、太陽能模組、晶圓及相關系統，未揭露鋰電池、PCS、BMS或EMS；因此本題材改為可與儲能搭配的太陽能發電端，而非儲能系統供應商。2026年7月營收3.08億元，MoM+47.9%、YoY+72.7%，公司明確說明來自太陽能專案工程增加，但累計YoY仍-14.8%。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "energy_storage_system_integration",
+      "roleType": "battery_storage_system_integrator",
+      "roleSummary": "聯合再生MOPS主要列太陽能電池與模組，但官方現行儲能事業頁及2021年南鹽田15MW／15MWh得標公告確認其儲能系統整合業務，應從泛太陽能鄰接角色修正為直接系統整合者。台電為歷史採購業主，Saft與士林電機為供應夥伴；不把歷史得標、預計完工或本月太陽能工程收入當成新增儲能訂單。 本次TWSE回傳2026年7月營收3.08億元，MoM+47.90%、YoY+72.75%，累計年增率-14.82%。",
       "products": [
-        "晶矽太陽能電池",
-        "太陽能發電模組",
-        "太陽能用矽晶圓",
-        "太陽能發電系統整合",
-        "太陽能專案工程服務"
+        "電網級儲能系統整合與案場建置服務",
+        "AFC調頻輔助服務儲能方案",
+        "PV Smoothing太陽能發電平滑輸出儲能方案",
+        "工商業尖離峰移轉及備用電力儲能方案"
       ],
       "customers": [
-        "台灣電力公司（光儲應用對象，非MOPS揭露客戶）",
-        "森崴能源（再生能源應用對象，非MOPS揭露客戶）",
-        "泓德能源（光儲整合對象，非MOPS揭露客戶）",
-        "中華電信（分散式能源應用對象，非MOPS揭露客戶）",
-        "NextEra Energy（太陽能應用對象，非MOPS揭露客戶）"
+        "台灣電力公司（2021年官方公告南鹽田儲能系統採購業主）",
+        "Saft（2021年南鹽田案電池供應鏈對象，非下游客戶）",
+        "士林電機（2021年南鹽田案變壓器供應鏈對象，非下游客戶）"
       ],
       "competitors": [
-        "華城",
-        "中興電"
+        "台達電",
+        "泓德能源"
       ],
       "risks": [
-        "儲能業務尚在初期，獲利不穩"
+        "7月增長備註明確是太陽能專案工程收入，不可歸因儲能出貨",
+        "電池熱失控、消防要求及長期衰減可能增加保固與維運成本",
+        "輔助服務價格、併網時程或工程驗收延期會改變專案報酬"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯合再生 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3576",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯合再生 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3576 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：太陽能電池、太陽能發電模組、晶圓及相關系統。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3576",
+          "claim": "股票代碼3576；本次MCP成功取得主要經營業務，摘要：研究開發設計製造銷售太陽能電池及相關系統、太陽能發電模組及晶圓，兼營相關進出口貿易。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收3.08億元，MoM+47.9%、YoY+72.7%、累計YoY-14.8%；公司說明太陽能專案工程收入增加。"
+          "claim": "2026年7月營收3.08億元，MoM+47.90%、YoY+72.75%，累計年增率-14.82%。來源原始當月值307968，單位NTD thousand；申報備註：太陽能專案工程收入增加，以致本月營收較去年同月增加。 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-storage-business",
+          "publisher": "聯合再生 官方網站",
+          "title": "storage-business（2026-09-09查詢）",
+          "url": "https://www.urecorp.com/energy/",
+          "claim": "現行儲能事業頁本文確認系統選型、容量規劃、安裝施工、監控及調頻／尖離峰／備援應用；搜尋索引另顯示BESS、PCS、EMS與SCADA技術架構，後者本次擷取正文未完整展開。"
+        },
+        {
+          "sourceId": "official-role-nanyantian-contract",
+          "publisher": "聯合再生 官方網站",
+          "title": "nanyantian-contract（2026-09-09查詢）",
+          "url": "https://www.urecorp.com/investors_detail/110/",
+          "claim": "2021-05-05官方公告：取得台電南鹽田15MW／15MWh儲能標案，URE負責系統整合，Saft供電池、士林電機供變壓器；支援AFC及PV Smoothing。公告預計一年內完工不是本次驗收確認。"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-23",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "晶矽太陽能電池鈍化、金屬化與串聯電阻控制",
-        "模組串焊、封裝、旁路二極體與耐候可靠度驗證",
-        "太陽能案場直流側設計、逆變併網與發電監控"
+        "BESS電池櫃、PCS及EMS系統整合（官網技術架構索引揭露）",
+        "AFC頻率調節與PV Smoothing輸出控制",
+        "SCADA即時監控與儲能調度（官網技術架構索引揭露）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持太陽能電池、模組、晶圓與系統，具備光儲中的發電端基礎",
-          "7月營收YoY+72.7%，且公司明確說明太陽能專案工程收入增加"
+          "官方公告有具名台電儲能標案、系統容量及合作分工，支持實際整合角色",
+          "現行儲能事業涵蓋案場建置、設備銷售及規劃施工，不只是太陽能模組供應",
+          "2026年7月營收3.08億元，MoM+47.90%、YoY+72.75%，累計年增率-14.82%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未揭露電芯、PCS、BMS或EMS，不能視為直接儲能供應商",
-          "累計營收YoY-14.8%，單月專案增加尚未扭轉全年弱勢"
+          "7月增長備註明確是太陽能專案工程收入，不可歸因儲能出貨",
+          "歷史公告預計一年內完工不等於本次已核實驗收，也未揭露目前儲能營收占比",
+          "2026年7月營收3.08億元，MoM+47.90%、YoY+72.75%，累計年增率-14.82%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "太陽能案場搭配儲能可延伸專案整合與維運需求",
-          "企業綠電與分散式能源建置可增加模組及系統工程訂單"
+          "再生能源滲透率提高，可能增加調頻及發電平滑輸出的儲能需求",
+          "工業尖離峰移轉、備用電力與綠電整合可延伸系統服務"
         ],
         "threats": [
-          "中國模組價格競爭與政策變動可能壓縮太陽能產品毛利",
-          "儲能價值若由電池與電力電子廠掌握，公司在本題材的附加價值有限"
+          "電池熱失控、消防要求及長期衰減可能增加保固與維運成本",
+          "輔助服務價格、併網時程或工程驗收延期會改變專案報酬"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3533",
   "companyName": "嘉澤",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -96,83 +96,94 @@
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "process",
       "directness": "indirect",
-      "supplyChainStage": "silicon_photonics",
-      "roleType": "optical_connector_supplier",
-      "roleSummary": "嘉澤MOPS只揭露「連接器」，沒有CPO、矽光子、Fiber Array、OSFP／QSFP-DD或Intel／Broadcom客戶；本題材應定位為高速交換器與光模組周邊的電連接器潛在供應，而非矽光子晶片或光耦合核心廠。2026年7月營收33.69億元、YoY+18.6%，未拆分光通訊貢獻。",
+      "supplyChainStage": "electrical_interconnect_adjacent",
+      "roleType": "electrical_interconnect_optical_ecosystem_adjacent",
+      "roleSummary": "嘉澤MOPS揭露連接器，官方MCIO產品頁確認SFF-TA-1016、85Ω及PCIe Gen4／Gen5線組，MGX公告確認與NVIDIA的平台合作。矽光子題材應定位在交換器及AI系統的電互連周邊；本次未取得OSFP／QSFP-DD、224G PAM4或CPO光連接產品證據，移除原先推定規格，不把電連接器寫成光學耦合元件。 本次TWSE回傳2026年7月營收33.69億元，MoM+8.88%、YoY+18.60%，累計年增率+17.44%。",
       "products": [
-        "OSFP光模組用高速電連接器（應用推定）",
-        "QSFP-DD光模組用高速電連接器（應用推定）",
-        "高速交換器背板連接器",
-        "CPO模組周邊電源與訊號連接器（應用推定）"
+        "MCIO X8 Flat Cable（AMCIA529-P014G51DX）",
+        "SFF-TA-1016 MCIO高速電連接器",
+        "PCIe Riser Cable高速延伸線組",
+        "DDR5記憶體電連接器"
       ],
       "customers": [
-        "Intel（CPO平台對象，非MOPS揭露客戶）",
-        "Broadcom（交換器／CPO平台對象，非MOPS揭露客戶）",
-        "NVIDIA（高速網路平台對象，非MOPS揭露客戶）",
-        "Amphenol（高速連接器競合／驗證對象，非MOPS揭露客戶）"
+        "NVIDIA（官網揭露MGX平台合作對象，不等同光模組採購客戶）",
+        "Broadcom（交換器電互連應用對象，未證實採購）",
+        "Intel（CPU／PCIe平台應用對象，非本次揭露客戶）",
+        "AMD（CPU／PCIe平台應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "Amphenol"
+        "Amphenol",
+        "TE Connectivity",
+        "Molex"
       ],
       "risks": [
-        "6月營收3.09億YoY+17.3%,累計YoY+17.2%(穩健成長)",
-        "CPO連接器量產時程仍具不確定性(規格未標準化)",
-        "連接器毛利率受銅價與加工費壓縮"
+        "本次可驗證範圍是電連接器與線組，未能證實光纖耦合或矽光子晶片產品",
+        "CPO架構若改變電介面與連接距離，現有線組不一定直接沿用",
+        "高速連接器規格升級及競爭可能推高研發成本與認證周期"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "嘉澤 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3533",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 嘉澤 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3533 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：連接器。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3533",
+          "claim": "股票代碼3533；本次MCP成功取得主要經營業務，摘要：連接器。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收33.69億元，MoM+8.9%、YoY+18.6%、累計YoY+17.4%。"
+          "claim": "2026年7月營收33.69億元，MoM+8.88%、YoY+18.60%，累計年增率+17.44%。來源原始當月值3368915，單位NTD thousand；申報備註：- 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-mcio-cable",
+          "publisher": "嘉澤 官方網站",
+          "title": "mcio-cable（2026-09-09查詢）",
+          "url": "https://www.lotes.cc/en/product.php?act=view&id=1174",
+          "claim": "AMCIA529-P014G51DX MCIO X8 Flat Cable頁列SFF-TA-1016、0.6mm pitch、85Ω、PCIe Gen4 16GT/s／Gen5 32GT/s與AI伺服器、交換器用途。"
+        },
+        {
+          "sourceId": "official-role-product-catalog",
+          "publisher": "嘉澤 官方網站",
+          "title": "product-catalog（2026-09-09查詢）",
+          "url": "https://www.lotes.cc/en/",
+          "claim": "瀏覽器讀取官方產品目錄，列DDR5、PCIe、MCIO及Riser Cable等電互連；不能推論為光纖耦合產品。"
+        },
+        {
+          "sourceId": "official-role-mgx-collaboration",
+          "publisher": "嘉澤 官方網站",
+          "title": "mgx-collaboration（2026-09-09查詢）",
+          "url": "https://www.lotes.cc/en/news.php?act=view&id=34",
+          "claim": "2026-06-02官方公告列與NVIDIA MGX生態系合作及電互連、供電、液冷技術；不是CPO光模組採購證明。"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-24",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-09",
+      "status": "candidate",
       "techFocus": [
-        "112G／224G PAM4電連接器的插入損耗與串擾控制",
-        "高速連接器端子阻抗、接觸電阻與鍍層可靠度",
-        "高密度連接器的熱插拔壽命與機構公差堆疊"
+        "MCIO 0.6mm pitch、85Ω阻抗與PCIe Gen4／Gen5傳輸",
+        "銅合金端子、金鍍層與高溫塑膠的接觸可靠度",
+        "高速電互連插入損耗及串擾控制（工程分析，非光耦合技術）"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認連接器主業，可對應光模組與高速交換器的電連接需求",
-          "7月營收YoY+18.6%、累計YoY+17.4%，公司整體需求穩健"
+          "MCIO有可追溯料號、接點、阻抗與PCIe傳輸規格，不再依賴題材泛稱",
+          "官方MGX合作揭露支持AI平台電互連相關性，但保留上下游關係方向",
+          "2026年7月營收33.69億元，MoM+8.88%、YoY+18.60%，累計年增率+17.44%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未揭露矽光子、CPO或任何光纖耦合產品，題材僅屬周邊電連接",
-          "未揭露Intel、Broadcom或NVIDIA交易關係，客戶與營收占比無法驗證"
+          "本次可驗證範圍是電連接器與線組，未能證實光纖耦合或矽光子晶片產品",
+          "MGX合作與公司營收成長皆未揭露CPO產品收入或量產訂單",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "800G／1.6T光模組升級可提高高速電連接器的性能與價值要求",
-          "CPO仍需要模組周邊電源、控制及板端連接介面"
+          "高速交換器即使採用光互連，仍需要板間電連接、電源及系統介接",
+          "PCIe與高密度伺服器升級可增加高性能線組與連接器需求"
         ],
         "threats": [
-          "Amphenol、TE Connectivity等國際大廠在高速連接器標準與客戶驗證領先",
-          "CPO封裝架構若減少可插拔介面，可能改變或縮減既有連接器用量"
+          "CPO架構若改變電介面與連接距離，現有線組不一定直接沿用",
+          "高速連接器規格升級及競爭可能推高研發成本與認證周期"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5347",
   "companyName": "世界",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -172,88 +172,82 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "世界先進MOPS支持依客戶設計從事積體電路製造、封裝測試、光罩與CAD服務，但未揭露BCD節點、太陽能MPPT／逆變器IC、功率MOSFET或任何具名客戶；因此本題材僅保留再生能源電力電子晶片的晶圓代工間接角色。TWSE月營收查無資料，FinMind顯示2026年7月營收47.06億元、MoM-21.3%；查詢區間不足以計算YoY。",
+      "supplyChainStage": "power_semiconductor_foundry",
+      "roleType": "power_ic_foundry_green_energy_enabler",
+      "roleSummary": "世界先進MOPS支持晶圓代工，官方技術頁明列BCD、UHV及BCD-on-SOI電壓與節點，部分UHV平台定位green energy應用。本題材定位為綠能電源控制IC製程的間接供應環節，不是太陽能模組或逆變器整機；不能將700V製程直接等同光伏主功率元件訂單。 本次FinMind回傳2026年7月營收47.06億元，MoM-21.26%、YoY+30.25%。",
       "products": [
-        "類比與電源管理IC晶圓製造服務",
-        "高電壓控制IC晶圓製造服務",
-        "功率元件晶圓製造服務",
-        "積體電路封裝與測試服務",
-        "光罩製造與電腦輔助設計服務"
+        "5V至120V BCD電源管理IC晶圓製程",
+        "200V至700V UHV高壓IC晶圓製程",
+        "10V至200V BCD-on-SOI晶圓製程",
+        "整合OTP／MTP的智慧電源管理IC製程"
       ],
       "customers": [
-        "茂達（電源管理IC生態系對象，非MOPS揭露客戶）",
-        "矽力杰（電源管理IC生態系對象，非MOPS揭露客戶）",
-        "致新（電源管理IC生態系對象，非MOPS揭露客戶）",
-        "立錡（電源管理IC生態系對象，非MOPS揭露客戶）",
-        "Infineon（功率元件生態系對象，非MOPS揭露客戶）"
+        "茂達（電源管理IC應用對象，非本次揭露客戶）",
+        "矽力杰（電源管理IC應用對象，非本次揭露客戶）",
+        "致新（電源管理IC應用對象，非本次揭露客戶）",
+        "Infineon（功率IC生態系對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "力積電(6770)",
-        "聯電(2303)",
-        "中芯國際(SMIC)"
+        "聯電",
+        "Tower Semiconductor",
+        "GlobalFoundries"
       ],
       "risks": [
-        "太陽能IC代工佔世界先進營收比重低，非主力產品線",
-        "8吋晶圓代工面臨12吋競爭壓力，太陽能IC可能轉12吋製程",
-        "太陽能逆變器IC市場競爭激烈，客戶可能分散代工來源"
+        "官網green energy同時包含照明與AC/DC等應用，不可全部歸類再生能源收入",
+        "綠能功率轉換若轉向其他材料或整合架構，既有製程未必直接受益",
+        "特殊製程價格競爭、產能擴張及利用率波動可能影響報酬"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 依客戶訂單與其提供之產品設計說明，從事製造與銷售積體電路。提供前述產品之封裝與測試服務。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：依客戶設計製造積體電路，並提供封裝、測試、光罩及CAD服務。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5347",
+          "claim": "股票代碼5347；本次MCP成功取得主要經營業務，摘要：依客戶訂單與產品設計說明製造銷售積體電路，提供封裝測試、光罩製造設計與積體電路及晶圓半導體装置電腦輔助設計技術服務。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收47.06億元、MoM-21.3%；查詢區間不足以計算YoY。"
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=5347&start_date=2025-07-01&end_date=2026-09-09",
+          "claim": "2026年7月營收47.06億元，MoM-21.26%、YoY+30.25%。來源原始當月值4705722000，單位NTD；TWSE主查詢回傳找不到月營收，改用FinMind；比較基期按revenue_year／revenue_month，不以資料列date誤判月份。 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-power-process",
+          "publisher": "世界 官方網站",
+          "title": "power-process（2026-09-09查詢）",
+          "url": "https://www.vis.com.tw/en/technology",
+          "claim": "VIS技術頁明列BCD 5至120V／0.5至0.11µm、UHV 200至700V／0.5µm、BCD-on-SOI 10至200V／0.5至0.15µm，以及OTP／MTP、SiCr電阻；green energy包含照明、AC/DC等，不能全歸因再生能源。"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-23",
+      "confidence": "medium",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "高電壓類比／電源製程的隔離結構與耐壓元件整合",
-        "功率元件導通電阻、崩潰電壓與熱可靠度控制",
-        "光罩、晶圓製造、封裝測試與良率回饋整合"
+        "BCD 0.5µm至0.11µm元件整合及低比導通電阻設計",
+        "0.5µm UHV 200V至700V高壓元件製程",
+        "BCD-on-SOI 0.5µm至0.15µm隔離及SiCr薄膜電阻"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持晶圓製造、封裝測試、光罩與CAD的完整代工服務",
-          "類比、高電壓與功率元件可對應逆變器、充電與電源管理應用"
+          "官方提供BCD／SOI耐壓與製程範圍，支持電源管理技術角色",
+          "OTP／MTP及高精度電阻選項有利智慧電源控制IC整合",
+          "2026年7月營收47.06億元，MoM-21.26%、YoY+30.25%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未揭露太陽能、風電、MPPT、BCD節點或具名客戶",
-          "FinMind顯示7月營收MoM-21.3%，短期認列動能轉弱"
+          "官網green energy同時包含照明與AC/DC等應用，不可全部歸類再生能源收入",
+          "未公布光伏逆變器、風電或儲能客戶與專案占比",
+          "2026年7月營收47.06億元，MoM-21.26%、YoY+30.25%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次FinMind營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "再生能源逆變器與儲能系統增加高電壓控制及功率元件需求",
-          "客戶尋求成熟製程第二來源，可提升特色製程產能利用率"
+          "再生能源設備的輔助電源、控制及隔離電路可能提高特殊製程需求",
+          "高可靠度工業電源平台導入可延長產品生命週期"
         ],
         "threats": [
-          "中國成熟製程擴產與價格競爭可能壓低代工報價",
-          "再生能源政策、利率與案場建置放緩會間接影響電力電子晶片需求"
+          "綠能功率轉換若轉向其他材料或整合架構，既有製程未必直接受益",
+          "特殊製程價格競爭、產能擴張及利用率波動可能影響報酬"
         ]
       }
     }

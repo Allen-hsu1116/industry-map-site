@@ -2,38 +2,36 @@
   "schemaVersion": 1,
   "companyCode": "3231",
   "companyName": "緯創",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器整機與 EMS",
       "topicType": "theme",
       "directness": "direct_enabler",
-      "supplyChainStage": "system_assembly",
-      "roleType": "ai_server_odm",
-      "roleSummary": "緯創MOPS只以「3C電子產品其他」概括主業，未揭露HGX型號或NVIDIA、Dell、Meta、Microsoft等客戶；AI伺服器ODM角色可由題材脈絡保留，但具名平台與客戶須標為非MOPS揭露。2026年7月營收3,082.19億元、YoY+60.8%、累計YoY+88.2%，公司僅說明客戶需求增加。",
+      "supplyChainStage": "server_odm_manufacturing",
+      "roleType": "ai_gpu_server_odm_integrator",
+      "roleSummary": "緯創MOPS僅概述3C產品；NVIDIA 2025年官方公告直接列緯創為RTX PRO伺服器系統夥伴，另有緯創GB200液冷裝配與數位孿生新聞的搜尋索引佐證。本次緯創原站擷取及瀏覽器均拒絕存取，歷史新聞僅標示索引層級；不將公告的供應規劃寫成當月特定機型量產或銷售份額。 本次TWSE回傳2026年7月營收3,082.19億元，MoM-4.23%、YoY+60.76%，累計年增率+88.16%。",
       "products": [
-        "AI GPU伺服器ODM設計與組裝服務",
-        "GPU伺服器主機板與加速器基板",
-        "機架式伺服器整機與機櫃整合",
-        "AI伺服器液冷就緒機構整合"
+        "GPU加速伺服器ODM系統整合服務",
+        "NVIDIA RTX PRO 6000 Blackwell伺服器平台方案（2025年合作公告）",
+        "GB200加速器液冷裝配服務（歷史官方新聞索引）"
       ],
       "customers": [
-        "NVIDIA（GPU平台合作對象，非MOPS揭露客戶）",
-        "Dell（伺服器應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
-        "Meta（雲端資料中心應用對象，非MOPS揭露客戶）",
-        "Microsoft（Azure應用對象，非MOPS揭露客戶）"
+        "NVIDIA（官方RTX PRO系統平台合作對象，不等同採購客戶）",
+        "Dell Technologies（伺服器應用對象，非本次揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器應用對象，非本次揭露客戶）",
+        "Microsoft（資料中心應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "鴻海(2317)",
-        "廣達(2382)",
-        "英業達(2356)",
-        "緯穎(6669)"
+        "廣達",
+        "鴻海",
+        "英業達"
       ],
       "risks": [
-        "AI伺服器ODM毛利低(3-4%)，營收暴增但獲利增幅有限",
-        "CSP客戶集中度高，單一客戶需求波動衝擊大"
+        "MOPS本月只稱客戶需求增加，沒有RTX PRO、GB200或GPU基板營收拆分",
+        "昂貴GPU料件墊款、交期變化及訂單集中可能增加營運資金壓力",
+        "AI平台改版、驗證延期與同業競爭可能壓縮ODM製造報酬"
       ],
       "legacy": {
         "topicSlug": "ai-server-odm",
@@ -42,58 +40,61 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "緯創 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3231",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯創 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3231 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：3C電子產品其他。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3231",
+          "claim": "股票代碼3231；本次MCP成功取得主要經營業務，摘要：3C電子產品其他。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收3,082.19億元，MoM-4.2%、YoY+60.8%、累計YoY+88.2%；公司備註客戶需求增加。"
+          "claim": "2026年7月營收3,082.19億元，MoM-4.23%、YoY+60.76%，累計年增率+88.16%。來源原始當月值308219198，單位NTD thousand；申報備註：主係客戶需求增加，較去年同期成長。 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-nvidia-rtx-pro-partners",
+          "publisher": "NVIDIA 官方新聞室",
+          "title": "nvidia-rtx-pro-partners（2026-09-09查詢）",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-rtx-pro-servers-speed-trillion-dollar-enterprise-it-industry-transition-to-ai-factories",
+          "claim": "NVIDIA 2025-05-18官方公告將Wistron列為將提供RTX PRO Servers的系統夥伴；為歷史合作與產品規劃證據，不是本月特定機型出貨確認。"
+        },
+        {
+          "sourceId": "official-role-wistron-historical-index",
+          "publisher": "緯創 官方網站",
+          "title": "wistron-historical-index（2026-09-09查詢）",
+          "url": "https://www.wistron.com/Newsroom/2024-05-31",
+          "claim": "2024-05-31緯創官方新聞搜尋索引涉及GB200加速器裝配精度、液冷及工廠數位孿生。本次原站擷取與瀏覽器皆Access Denied，僅以歷史索引為補充，未假稱讀取全文。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "GPU基板高密度SMT與高速差動訊號佈線",
-        "NVLink／PCIe互連拓撲的系統整合與測試",
-        "機櫃級電源、氣流及Direct-to-Chip液冷協同設計"
+        "GPU加速系統組裝與製造精度驗證（工程分析）",
+        "RTX PRO Blackwell伺服器平台與網路／儲存整合（平台應用）",
+        "液冷裝配精度與製造流程數位孿生（歷史官方新聞索引）"
       ],
       "swot": {
         "strengths": [
-          "7月營收YoY+60.8%、累計YoY+88.2%，公司整體需求成長非常強",
-          "具主機板、整機與機櫃量產整合能力，可承接AI伺服器高複雜度ODM"
+          "NVIDIA官方具名系統夥伴名單支持AI伺服器角色，不僅依3C營業登記推論",
+          "系統整合與液冷裝配的製造角色可對應AI設備複雜度提升",
+          "2026年7月營收3,082.19億元，MoM-4.23%、YoY+60.76%，累計年增率+88.16%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS主業描述過於概括，未揭露AI伺服器產品與客戶明細",
-          "7月MoM-4.2%，出貨節奏仍可能受專案認列與零件供應影響"
+          "MOPS本月只稱客戶需求增加，沒有RTX PRO、GB200或GPU基板營收拆分",
+          "緯創歷史新聞本次只取得索引，製造細節及當期量產狀態仍需後續官方資料驗證",
+          "2026年7月營收3,082.19億元，MoM-4.23%、YoY+60.76%，累計年增率+88.16%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "GPU叢集從整機走向機櫃級交付，提升整合與測試價值",
-          "企業與雲端業者擴大AI算力建置，可延長高階伺服器需求週期"
+          "企業GPU伺服器與AI基礎設施部署可擴大ODM設計組裝需求",
+          "液冷系統與高精度裝配增加製造工程及整合測試價值"
         ],
         "threats": [
-          "廣達、鴻海、英業達與緯穎爭奪相同AI伺服器平台訂單",
-          "客戶集中、平台世代切換與低毛利ODM結構可能放大獲利波動"
+          "昂貴GPU料件墊款、交期變化及訂單集中可能增加營運資金壓力",
+          "AI平台改版、驗證延期與同業競爭可能壓縮ODM製造報酬"
         ]
       }
     },

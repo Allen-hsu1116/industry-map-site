@@ -2,95 +2,97 @@
   "schemaVersion": 1,
   "companyCode": "2303",
   "companyName": "聯電",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
       "topicName": "半導體製造｜晶圓代工",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "mature_node_foundry",
-      "roleSummary": "聯電MOPS揭露積體電路及半導體相關產品，題材上下文可具體化為成熟與特殊製程晶圓製造，但MOPS未揭露特定節點或客戶。2026年7月營收238.44億元、MoM+3.1%、YoY+19.0%、累計YoY+12.4%，公司整體晶圓業務動能正向。",
+      "supplyChainStage": "wafer_fabrication",
+      "roleType": "specialty_logic_foundry",
+      "roleSummary": "聯電為晶圓代工核心角色；MOPS僅概述積體電路業務，本次用官方成熟製程頁補上BCD、RF SOI、eHV及eNVM。22nm ULP／ULL和180nm至28nm eNVM範圍來自2021年官方公告的搜尋索引，標示歷史平台資訊；移除未取得對應依據的40nm eNVM及90／110nm BCD綁定規格。 本次TWSE回傳2026年7月營收238.44億元，MoM+3.11%、YoY+18.98%，累計年增率+12.41%。",
       "products": [
-        "22／28nm平面式邏輯晶圓製造服務",
-        "40nm嵌入式非揮發記憶體製程服務",
-        "55／65nm高壓顯示驅動IC製程服務",
-        "90／110nm BCD電源管理IC製程服務",
-        "射頻SOI與特殊應用晶圓製造服務"
+        "22nm ULP／ULL低功耗邏輯晶圓製程平台（官方歷史揭露）",
+        "180nm至28nm嵌入式非揮發記憶體eNVM製程平台（官方歷史揭露）",
+        "BCD雙極／CMOS／DMOS電源管理IC晶圓製程",
+        "RF SOI射頻絕緣層上矽製程",
+        "eHV嵌入式高壓顯示驅動IC製程"
       ],
       "customers": [
-        "聯發科(2454；IC設計應用對象，非MOPS揭露客戶)",
-        "瑞昱(2379；網通IC應用對象，非MOPS揭露客戶)",
-        "聯詠(3034；顯示驅動IC應用對象，非MOPS揭露客戶)",
-        "Qualcomm（射頻與連線IC應用對象，非MOPS揭露客戶）"
+        "聯發科（邏輯IC應用對象，非本次揭露客戶）",
+        "瑞昱（網通IC應用對象，非本次揭露客戶）",
+        "聯詠（顯示驅動IC應用對象，非本次揭露客戶）",
+        "Qualcomm（射頻IC應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "台積電(2330)",
         "GlobalFoundries",
-        "Samsung Foundry",
+        "世界先進",
+        "力積電",
         "中芯國際"
       ],
       "risks": [
-        "MOPS未揭露節點別營收，無法判斷22／28nm成長占比",
-        "缺乏最先進邏輯節點，AI高階運算直接曝險有限",
-        "中國成熟製程新增產能可能引發價格競爭"
+        "公司月營收沒有製程平台拆分，不能量化22nm或BCD的成長貢獻",
+        "成熟製程新增產能可能加劇報價競爭與產能利用率波動",
+        "終端庫存調整及客戶移轉替代平台可能壓抑投片"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：積體電路及各種半導體相關產品。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2303",
+          "claim": "股票代碼2303；本次MCP成功取得主要經營業務，摘要：積體電路各種半導體相關零組件。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收238.44億元，MoM+3.1%、YoY+19.0%，累計YoY+12.4%。"
+          "claim": "2026年7月營收238.44億元，MoM+3.11%、YoY+18.98%，累計年增率+12.41%。來源原始當月值23844045，單位NTD thousand；申報備註：- 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-mature-foundry",
+          "publisher": "聯電 官方網站",
+          "title": "mature-foundry（2026-09-09查詢）",
+          "url": "https://umc.com/en/Product/technologies/Detail/mature_technologies",
+          "claim": "官網成熟製程頁可讀本文列Logic/MS、RFCMOS、RFSOI、eHV、BCD、CIS、eFlash、eE2PROM及OTP/MTP選項；提供矽驗證元件庫。"
+        },
+        {
+          "sourceId": "official-role-historical-specialty-index",
+          "publisher": "聯電 官方網站",
+          "title": "historical-specialty-index（2026-09-09查詢）",
+          "url": "https://www.umc.com/en/News/press_release/Content/corporate/20210401",
+          "claim": "2021-04-01官方公告的本次搜尋索引列22nm ULP/ULL及180nm至28nm eNVM；全文擷取未呈現此規格段，故保留歷史索引證據邊界，不聲稱當期平台資格。"
         }
       ],
-      "confidence": "high",
-      "lastVerified": "2026-08-25",
+      "confidence": "medium",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "22／28nm平面式邏輯與低漏電製程",
-        "高壓元件與BCD電源管理製程整合",
-        "嵌入式非揮發記憶體與特殊製程平台"
+        "22nm超低功耗／超低漏電邏輯與eNVM製程選配",
+        "BCD功率元件及eHV高壓元件整合",
+        "RF SOI隔離、矽驗證標準元件與記憶體編譯器支援"
       ],
       "swot": {
         "strengths": [
-          "成熟與特殊製程平台可服務通訊、顯示與電源管理IC",
-          "7月營收YoY+19.0%、累計YoY+12.4%，公司整體出貨穩健成長"
+          "成熟製程頁涵蓋邏輯、射頻、高壓及非揮發記憶體，可服務多種晶片設計",
+          "矽驗證元件庫與記憶體編譯器有助客戶縮短設計導入時間",
+          "2026年7月營收238.44億元，MoM+3.11%、YoY+18.98%，累計年增率+12.41%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未揭露節點別營收，無法判斷22／28nm成長占比",
-          "缺乏最先進邏輯節點，AI高階運算直接曝險有限"
+          "公司月營收沒有製程平台拆分，不能量化22nm或BCD的成長貢獻",
+          "歷史節點揭露不表示所有功能可在任意節點組合，實際供應仍以平台資格為準",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "車用、網通與電源管理IC回補可提升成熟製程利用率",
-          "特殊製程與長週期客戶認證可改善價格穩定度"
+          "工業控制、車用電源與低功耗IoT可提高特殊製程附加價值",
+          "在既有成熟製程加入eNVM與高壓功能，可增加設計黏著度"
         ],
         "threats": [
-          "中國成熟製程新增產能可能引發價格競爭",
-          "消費性顯示與通訊需求反轉將壓低產能利用率"
+          "成熟製程新增產能可能加劇報價競爭與產能利用率波動",
+          "終端庫存調整及客戶移轉替代平台可能壓抑投片"
         ]
       }
     }

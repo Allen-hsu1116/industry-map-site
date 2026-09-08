@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-09-07T19:16:13Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -98,88 +98,82 @@
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
-      "directness": "core",
-      "supplyChainStage": "test_equipment",
-      "roleType": "cis_ccm_test_equipment",
-      "roleSummary": "久元MOPS直接揭露半導體與光電產品切割、研磨、測試、挑檢，以及IC／CIS／CCM測試設備研製，光學感測測試角色成立；但未揭露既有資料中的Sony、OmniVision或舜宇為客戶。FinMind顯示2026年7月營收3.74億元，較6月減少4.1%，營運仍受設備驗收與加工量波動。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "testing_equipment_services",
+      "roleType": "optoelectronic_test_equipment_service_provider",
+      "roleSummary": "久元MOPS直接揭露IC／CIS／CCM測試設備及切割、研磨、測試、挑檢加工，為光學與顯示領域的測試加工供應者而非鏡頭或面板製造商。歷史官方法說補充LED測試分選設備；本次將PRNU／DSNU、MTF等未核實機台能力改為工程分析範圍，不冒充現行量產規格。 本次FinMind回傳2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。",
       "products": [
-        "CIS晶圓／成品電性與光學測試設備",
-        "CCM相機模組功能與影像品質測試設備",
-        "LED晶粒光電參數測試分選設備",
-        "光電晶圓切割、研磨與挑檢加工服務"
+        "CIS影像感測IC測試設備",
+        "CCM相機模組測試設備",
+        "LED測試及分選設備（歷史官方產品系列）",
+        "光電晶圓切割、研磨及晶粒挑檢加工服務"
       ],
       "customers": [
-        "Sony Semiconductor Solutions（CIS驗證對象，非MOPS揭露客戶）",
-        "OmniVision豪威科技（CIS驗證對象，非MOPS揭露客戶）",
-        "舜宇光學（CCM設備應用對象，非MOPS揭露客戶）",
-        "丘鈦科技Q Technology（CCM設備應用對象，非MOPS揭露客戶）",
-        "晶電／富采(3714；LED測試應用對象，非MOPS揭露客戶)"
+        "Sony Semiconductor Solutions（CIS設備應用對象，未證實採購）",
+        "OmniVision（CIS設備應用對象，未證實採購）",
+        "舜宇光學（CCM設備應用對象，未證實採購）",
+        "富采（LED測試應用對象，未證實採購）"
       ],
       "competitors": [
-        "致茂科技(6130)(光電測試設備)",
-        "由田新(3455)(機器視覺檢測)",
-        "精測(6510)(晶圓測試探針卡)",
-        "旺捷科技(測試分選機)"
+        "致茂",
+        "Teradyne",
+        "Advantest"
       ],
       "risks": [
-        "Sony、Samsung等IDM內製測試及中國設備商低價競爭壓縮外購空間",
-        "手機鏡頭規格升級放緩會延後CCM設備換機週期"
+        "本次LED機台補充來源為2014年法說，不代表舊料號目前持續銷售",
+        "設備投資循環及客戶自建測試能力可能造成接單波動",
+        "LED供過於求或影像模組出貨下滑，可能降低後段加工利用率"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體及光電產品切割、研磨、測試、挑檢、基板切割；IC／CIS／CCM測試設備研製銷售。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "股票代碼6261；本次MCP成功取得主要經營業務，摘要：半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等；半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
-          "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI / FinMind",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE查無；FinMind：2026年7月營收3.74億元，較6月減少4.1%。"
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6261&start_date=2025-07-01&end_date=2026-09-09",
+          "claim": "2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%。來源原始當月值374346000，單位NTD；TWSE主查詢回傳找不到月營收，改用FinMind；比較基期按revenue_year／revenue_month，不以資料列date誤判月份。 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-historical-led-equipment",
+          "publisher": "久元 官方網站",
+          "title": "historical-led-equipment（2026-09-09查詢）",
+          "url": "http://wip.ytec.com.tw/icp/1030211.pdf",
+          "claim": "2014-02-11官方法說列LED tester／prober／sorter、CCM設備、CIS與LED後段加工；僅作歷史產品範圍，不認定舊機型當期仍銷售。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-20",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "CIS暗電流、PRNU／DSNU、色彩與解析度自動化量測",
-        "CCM MTF、畸變、對焦與影像品質校正",
-        "LED光通量、色座標、順向電壓與漏電高速分選"
+        "CIS暗訊號與亮度響應一致性量測（工程分析，非已核實機台規格）",
+        "CCM影像品質與對焦量測流程（工程分析）",
+        "LED光電測試、晶粒分選及晶圓切割加工整合"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持CIS／CCM測試設備與光電加工雙主線",
-          "設備研發搭配切割、研磨、測試與挑檢，可提供較完整後段流程"
+          "MOPS直接支持CIS／CCM設備及光電加工，題材定位清楚",
+          "測試設備開發與切割、研磨、挑檢服務可串接光電後段流程"
         ],
         "weaknesses": [
-          "FinMind顯示2026年7月營收3.74億元、MoM-4.1%，設備驗收波動仍明顯",
-          "MOPS未揭露客戶名與各產品營收占比，不能把生態系公司寫成已確認客戶"
+          "本次LED機台補充來源為2014年法說，不代表舊料號目前持續銷售",
+          "未取得現行CIS／CCM機台的完整精度、產能與客戶驗收資料",
+          "2026年7月營收3.74億元，MoM-4.07%、YoY-6.49%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次FinMind營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "ADAS、安控與機器視覺增加CIS及CCM測試量與品質規格",
-          "高畫素、多攝與3D感測提高MTF、色彩及深度校正設備需求"
+          "影像感測器及相機模組升級，可增加光學與電性測試需求",
+          "光電晶粒薄化與小型化有助提高切割研磨、挑檢的加工價值"
         ],
         "threats": [
-          "Sony、Samsung等IDM內製測試及中國設備商低價競爭壓縮外購空間",
-          "手機鏡頭規格升級放緩會延後CCM設備換機週期"
+          "設備投資循環及客戶自建測試能力可能造成接單波動",
+          "LED供過於求或影像模組出貨下滑，可能降低後段加工利用率"
         ]
       }
     },

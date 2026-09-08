@@ -2,95 +2,90 @@
   "schemaVersion": 1,
   "companyCode": "2345",
   "companyName": "智邦",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "direct_enabler",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "data_center_switch_maker",
-      "roleSummary": "智邦MOPS明確支持電腦網路系統、光電通訊設備、特定功能IC與UPS，足以定位為AI資料中心網路與電源周邊的直接賦能者；但MOPS未揭露800G／1.6T型號或Microsoft、Google、Meta等客戶。2026年7月營收394.73億元、YoY+71.7%，公司僅說明客戶需求增加。",
+      "supplyChainStage": "data_center_networking",
+      "roleType": "ai_cluster_ethernet_fabric_provider",
+      "roleSummary": "智邦MOPS支持電腦網路與光電通訊設備，官網直接揭露800G Ethernet／VoQ AI叢集交換方案，因此是AI伺服器網路的直接賦能者，而非GPU整機製造商。本次將籠統ToR與不斷電產品換成具體交換器配置；不再把NVIDIA Spectrum-X寫成已驗證的平台關係。 本次TWSE回傳2026年7月營收394.73億元，MoM-0.21%、YoY+71.69%，累計年增率+62.36%。",
       "products": [
-        "400G／800G資料中心葉脊交換器",
-        "資料中心ToR乙太網路交換器",
-        "高速光電通訊設備",
-        "白牌網路交換器系統",
-        "資料中心不斷電電源設備"
+        "51.2Tbps、64×800G乙太網路交換器（2RU）",
+        "51.2Tbps、64×800G乙太網路交換器（4RU）",
+        "128×400G雙埠光模組配置交換器",
+        "Dual Ramon3 128×800G VoQ Fabric交換系統",
+        "Jericho3-AI 18×800G網路介面交換系統"
       ],
       "customers": [
-        "Microsoft（Azure網路應用對象，非MOPS揭露客戶）",
-        "Google（GCP網路應用對象，非MOPS揭露客戶）",
-        "Meta（資料中心網路應用對象，非MOPS揭露客戶）",
-        "Amazon（AWS網路應用對象，非MOPS揭露客戶）",
-        "NVIDIA（Spectrum-X平台對象，非MOPS揭露客戶）"
+        "Broadcom（官網列名交換ASIC供應鏈對象，非下游客戶）",
+        "Microsoft（AI叢集網路應用對象，未證實採購）",
+        "Google（AI叢集網路應用對象，未證實採購）",
+        "Meta（AI叢集網路應用對象，未證實採購）"
       ],
       "competitors": [
-        "明泰(3380)",
-        "FII(鴻海子公司)",
-        "Cisco",
-        "Arista Networks"
+        "Arista Networks",
+        "Cisco Systems",
+        "Celestica"
       ],
       "risks": [
-        "客戶集中度高：Microsoft+Google占比可能過半",
-        "交換器規格快速迭代，800G→1.6T需持續研發投入"
+        "營收備註僅稱客戶需求增加，未將增幅拆至800G或特定雲端公司",
+        "AI資本支出或網路架構轉向可能改變交換器需求組合",
+        "高速ASIC、光模組供應受限或同業削價，可能壓縮系統毛利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦網路系統、用戶端通訊設備、光電通訊設備、特定功能IC、UPS及其零組件。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2345",
+          "claim": "股票代碼2345；本次MCP成功取得主要經營業務，摘要：研發開發製造銷售電腦網路系統、用戶端通訊電子設備、光電通訊設備、特定功能積體電路、不斷電系統電源供應器及其零組件，相關進出口貿易。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收394.73億元，MoM-0.2%、YoY+71.7%、累計YoY+62.4%；公司備註客戶需求增加。"
+          "claim": "2026年7月營收394.73億元，MoM-0.21%、YoY+71.69%，累計年增率+62.36%。來源原始當月值39472637，單位NTD thousand；申報備註：客戶需求增加 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-800g-fabrics",
+          "publisher": "智邦 官方網站",
+          "title": "800g-fabrics（2026-09-09查詢）",
+          "url": "https://www.accton.com/800g-ai-ml-fabrics/",
+          "claim": "官方AI/ML fabrics頁揭露51.2T 2RU／4RU、64×800G或128×400G，以及Jericho3-AI／Dual Ramon3 VoQ系統；產品架構並非具名客戶採購證明。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "400G／800G乙太網路交換器的高速SerDes與訊號完整性",
-        "Broadcom／Marvell交換ASIC的系統整合與熱管理",
-        "SONiC白牌交換器軟體、遙測與冗餘網路管理"
+        "Tomahawk 5交換ASIC與51.2Tbps Ethernet fabric整合",
+        "VoQ分散式機箱架構及Jericho3-AI／Ramon3交換分工",
+        "64×800G與128×400G共用硬體，依光模組配置擴展頻寬"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持網路系統、光通訊、特定功能IC與UPS，AI資料中心鏈結清楚",
-          "7月營收YoY+71.7%、累計YoY+62.4%，公司整體客戶需求強"
+          "官方800G方案提供交換容量、埠數與ASIC架構，可驗證AI網路產品相關性",
+          "Ethernet與VoQ雙架構能回應不同規模叢集的交換延遲及擴充需求",
+          "2026年7月營收394.73億元，MoM-0.21%、YoY+71.69%，累計年增率+62.36%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未揭露高速交換器型號、具名客戶或AI資料中心收入占比",
-          "核心交換ASIC仍仰賴外部平台，料源與產品節奏受晶片商影響"
+          "營收備註僅稱客戶需求增加，未將增幅拆至800G或特定雲端公司",
+          "高速交換系統需配合ASIC與光模組交期，整機交付存在供應協調風險",
+          "2026年7月營收394.73億元，MoM-0.21%、YoY+71.69%，累計年增率+62.36%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "AI叢集擴大可推升400G／800G並向1.6T交換器升級",
-          "開放網路與SONiC滲透有利白牌交換器ODM擴張"
+          "AI訓練與推論叢集擴大，提高800G交換器及網路升級需求",
+          "同一硬體支援400G／800G配置，有助叢集分階段升級"
         ],
         "threats": [
-          "雲端業者自研交換器與多供應商策略可能壓縮議價空間",
-          "Broadcom、Marvell平台轉換或高速光模組短缺會延遲系統出貨"
+          "AI資本支出或網路架構轉向可能改變交換器需求組合",
+          "高速ASIC、光模組供應受限或同業削價，可能壓縮系統毛利"
         ]
       }
     }

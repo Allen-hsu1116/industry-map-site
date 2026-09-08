@@ -2,37 +2,38 @@
   "schemaVersion": 1,
   "companyCode": "3017",
   "companyName": "奇鋐",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI伺服器與液冷技術",
       "topicType": "theme",
       "directness": "direct_enabler",
-      "supplyChainStage": "thermal",
+      "supplyChainStage": "thermal_management",
       "roleType": "ai_server_thermal_solution_provider",
-      "roleSummary": "奇鋐MOPS僅揭露3C電子產品，沒有冷板微通道尺寸、B200功耗或任何具名伺服器客戶；本角色保留為AI伺服器散熱模組與機構件供應者，但舊資料的精密規格與客戶直供敘述已收斂。2026年7月營收185.90億元、YoY+57.4%、累計YoY+80.3%，公司說明客戶需求增加，未拆分AI占比。",
+      "roleSummary": "奇鋐MOPS僅概述3C電子產品，但官方Cooling Solutions頁可確認風扇陣列、熱管／均熱板、液冷式遠端散熱器與氣液／液液熱交換器，支持AI伺服器散熱供應鏈角色。本次按可讀產品目錄具體化，不以MOPS簡略文字否認散熱業務；特定GPU冷板型號與出貨份額仍未由本次來源證实。 本次TWSE回傳2026年7月營收185.90億元，MoM+5.52%、YoY+57.39%，累計年增率+80.34%。",
       "products": [
-        "AI伺服器冷板散熱模組",
-        "伺服器VC均熱板模組",
-        "伺服器熱管與鰭片散熱模組",
-        "高風量伺服器風扇與導風罩",
-        "GPU伺服器機殼散熱整合件"
+        "伺服器散熱用DC／EC風扇陣列",
+        "熱管／Vapor Chamber均熱板散熱模組",
+        "液冷式遠端散熱器",
+        "氣液／液液熱交換器",
+        "主動式鰭片散熱器"
       ],
       "customers": [
-        "NVIDIA（GPU平台應用對象，非MOPS揭露客戶）",
-        "Dell（伺服器應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
-        "Supermicro（伺服器應用對象，非MOPS揭露客戶）",
-        "緯穎（伺服器供應鏈對象，非MOPS揭露客戶）"
+        "NVIDIA（GPU散熱應用對象，非本次揭露客戶）",
+        "Dell Technologies（伺服器散熱應用對象，非本次揭露客戶）",
+        "Hewlett Packard Enterprise（伺服器散熱應用對象，非本次揭露客戶）",
+        "緯穎（伺服器散熱應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "其他散熱模組與液冷方案供應商",
-        "機構件/散熱整合廠"
+        "雙鴻",
+        "建準",
+        "台達電"
       ],
       "risks": [
-        "散熱競爭者眾（雙鴻/泰碩等）",
-        "客戶集中度偏高"
+        "本次營收沒有AI、液冷或GPU冷板拆分，客戶需求增加不能等同冷板份額提升",
+        "液路洩漏、材料腐蝕及裝配良率風險可能增加售後成本",
+        "AI平台改版、同業擴產與價格競爭可能改變散熱產品利潤組合"
       ],
       "legacy": {
         "topicSlug": "ai-server",
@@ -57,42 +58,51 @@
         {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：3C電子產品。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3017",
+          "claim": "股票代碼3017；本次MCP成功取得主要經營業務，摘要：3C電子產品。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收185.90億元，MoM+5.5%、YoY+57.4%、累計YoY+80.3%；公司備註客戶需求增加。"
+          "claim": "2026年7月營收185.90億元，MoM+5.52%、YoY+57.39%，累計年增率+80.34%。來源原始當月值18590152，單位NTD thousand；申報備註：因客戶需求增加,使營收成長 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-cooling-solutions",
+          "publisher": "奇鋐 官方網站",
+          "title": "cooling-solutions（2026-09-09查詢）",
+          "url": "https://www.avc.co/en-us/ProductTechnology/%E6%95%A3%E7%86%B1%E7%94%A2%E5%93%81/%E6%95%A3%E7%86%B1%E6%96%B9%E6%A1%88",
+          "claim": "瀏覽器讀取官方Cooling Solutions本文，列DC/EC風扇、風扇陣列、熱管／均熱板、液冷式遠端散熱器、氣液／液液換熱器及熱流模擬能力；未逐項核實特定GPU冷板型號。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "冷板流道壓降、均溫性與漏液可靠度設計",
-        "VC／熱管毛細結構與熱阻最佳化",
-        "風扇、導風罩與機殼的系統級氣流模擬"
+        "熱管與均熱板兩相傳熱、毛細回流及封裝氣密性（工程分析）",
+        "氣液／液液換熱迴路的熱阻、流量與壓降配合（工程分析）",
+        "風扇陣列與系統熱流模擬的散熱整合"
       ],
       "swot": {
         "strengths": [
-          "7月營收YoY+57.4%、累計YoY+80.3%，整體需求與出貨動能強",
-          "具冷板、VC、熱管、風扇與機構整合的完整散熱產品組合"
+          "官網揭露氣冷與液冷多種產品，可提供跨風扇、均熱板與熱交換器的散熱整合",
+          "官方強調散熱模擬與分析能力，能回應不同運算設備的熱設計需求",
+          "2026年7月營收185.90億元，MoM+5.52%、YoY+57.39%，累計年增率+80.34%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未逐項揭露散熱產品規格或客戶，精確AI營收占比無法驗證",
-          "高功耗平台散熱方案需共同設計，開發與驗證成本高且客戶集中"
+          "本次營收沒有AI、液冷或GPU冷板拆分，客戶需求增加不能等同冷板份額提升",
+          "總散熱方案範圍很廣，特定AI平台需要另行驗證設計、可靠度與交付資格",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "GPU功耗提高將推升冷板、VC與機櫃氣流設計的單機價值",
-          "氣冷轉液冷的過渡期有利同時具備兩種散熱路線的供應商"
+          "AI伺服器功耗提高，可增加兩相傳熱與液冷熱交換方案的單機價值",
+          "氣冷及液冷混合部署可帶動系統級散熱與維護需求"
         ],
         "threats": [
-          "雙鴻、健策與國際散熱廠擴產可能加劇價格與人才競爭",
-          "平台設計變更、漏液事件或快接供應瓶頸可能延遲量產"
+          "液路洩漏、材料腐蝕及裝配良率風險可能增加售後成本",
+          "AI平台改版、同業擴產與價格競爭可能改變散熱產品利潤組合"
         ]
       }
     },

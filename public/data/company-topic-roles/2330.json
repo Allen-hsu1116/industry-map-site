@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -257,30 +257,32 @@
       "topicName": "AI伺服器與液冷技術",
       "topicType": "theme",
       "directness": "direct_enabler",
-      "supplyChainStage": "semiconductor",
-      "roleType": "ai_accelerator_foundry_enabler",
-      "roleSummary": "台積電MOPS支持積體電路晶圓製造、封裝、測試、CAD及光罩服務，因此是AI伺服器運算晶片的直接賦能者，但不製造伺服器整機；MOPS未逐項揭露N3／N5、CoWoS、SoIC型號或任何具名客戶。2026年7月營收4,675.81億元、YoY+44.7%，為全公司口徑。",
+      "supplyChainStage": "semiconductor_fabrication_packaging",
+      "roleType": "ai_hpc_foundry_packaging_enabler",
+      "roleSummary": "台積電MOPS支持晶圓製造、封裝測試、光罩與CAD，2024年官方年報HPC章節明列N4X、N3X、CoWoS及TSMC-SoIC；本次恢復已有依據的AI／HPC平台名稱。台積電提供AI運算晶片與整合封裝，不製造AI伺服器整機，年報平台揭露也不等於本月各平台出貨或產能數據。 本次TWSE回傳2026年7月營收4,675.81億元，MoM+5.62%、YoY+44.69%，累計年增率+37.01%。",
       "products": [
-        "AI／HPC邏輯晶片晶圓製造服務",
-        "AI加速器2.5D整合封裝服務",
-        "AI晶片3D晶圓／晶片堆疊服務",
-        "AI／HPC晶片封裝後測服務",
-        "AI晶片用光罩與CAD技術服務"
+        "N4X HPC用5nm家族晶圓製程平台",
+        "N3X HPC用3nm家族晶圓製程平台",
+        "CoWoS AI／HPC異質整合封裝服務",
+        "TSMC-SoIC先進矽堆疊服務",
+        "AI／HPC晶片光罩與CAD協同設計服務"
       ],
       "customers": [
-        "NVIDIA（AI加速器應用對象，非MOPS揭露客戶）",
-        "AMD（AI加速器應用對象，非MOPS揭露客戶）",
-        "Broadcom（客製AI ASIC應用對象，非MOPS揭露客戶）",
-        "Marvell（資料中心ASIC應用對象，非MOPS揭露客戶）",
-        "Google（TPU應用對象，非MOPS揭露客戶）"
+        "NVIDIA（AI加速器應用對象，非本次揭露客戶）",
+        "AMD（CPU／GPU應用對象，非本次揭露客戶）",
+        "Broadcom（客製AI ASIC應用對象，非本次揭露客戶）",
+        "Marvell（資料中心ASIC應用對象，非本次揭露客戶）",
+        "Google（TPU應用對象，非本次揭露客戶）"
       ],
       "competitors": [
         "Samsung Foundry",
-        "Intel Foundry"
+        "Intel Foundry",
+        "Samsung先進封裝"
       ],
       "risks": [
-        "先進製程 CoWoS 產能瓶頸限制 AI 晶片出貨量",
-        "大客戶議價力強壓縮代工毛利"
+        "月營收未拆分AI伺服器晶片、CoWoS及N3X，不能用公司成長率代替題材貢獻",
+        "出口限制、AI資本支出調整及大客戶投片波動可能影響成長",
+        "HBM、基板與設備供應協調或新廠成本可能限制整體交付效率"
       ],
       "legacy": {
         "topicSlug": "ai-server",
@@ -289,58 +291,53 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "台積電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：依客戶設計製造積體電路與其他晶圓半導體裝置，並提供封裝、測試、CAD及光罩服務。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2330",
+          "claim": "股票代碼2330；本次MCP成功取得主要經營業務，摘要：依客戶訂單與產品設計說明製造銷售積體電路及其他晶圓半導體裝置；提供封裝測試、積體電路電腦輔助設計技術、光罩製造及設計服務。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%、累計YoY+37.0%。"
+          "claim": "2026年7月營收4,675.81億元，MoM+5.62%、YoY+44.69%，累計年增率+37.01%。來源原始當月值467580548，單位NTD thousand；申報備註：- 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-2024-hpc-platform",
+          "publisher": "台積電 官方網站",
+          "title": "2024-hpc-platform（2026-09-09查詢）",
+          "url": "https://investor.tsmc.com/static/annualReports/2024/english/ebook/files/basic-html/page20.html",
+          "claim": "2024年官方年報HPC章節明列N4X／N3X（5nm／3nm家族）、TSMC-SoIC、InFO及CoWoS平台，支援AI GPU、ASIC及server processor等用途；不是當期產能或個別平台收入。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "先進邏輯製程與AI／HPC晶片良率管理",
-        "矽中介層2.5D封裝與高密度RDL互連",
-        "Cu-Cu混合鍵合的晶片對晶圓3D整合"
+        "N4X／N3X針對HPC效能與時脈最佳化",
+        "CoWoS與TSMC-SoIC支援異質整合及高運算密度",
+        "邏輯製程、封裝互連與光罩設計協同（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS同時支持晶圓製造、封裝與測試，可提供AI晶片跨製程整合服務",
-          "7月營收YoY+44.7%、累計YoY+37.0%，公司整體先進運算需求強"
+          "HPC官方年報將先進製程及3DFabric封裝相互串接，題材定位可直接核對",
+          "晶圓、光罩、CAD及封裝測試的一站式配合有助複雜AI晶片導入",
+          "2026年7月營收4,675.81億元，MoM+5.62%、YoY+44.69%，累計年增率+37.01%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "台積電不生產AI伺服器整機，題材曝險來自晶片與封裝環節",
-          "MOPS未逐項揭露先進節點、封裝平台產能與具名客戶，精確歸因有限"
+          "月營收未拆分AI伺服器晶片、CoWoS及N3X，不能用公司成長率代替題材貢獻",
+          "先進製程及封裝擴產需要大量資本與良率爬坡時間",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "AI加速器晶片面積與封裝複雜度提升，可增加晶圓及封裝價值量",
-          "邏輯製程、光罩、CAD與封裝協同最佳化可提高客戶轉換成本"
+          "AI加速器及客製ASIC需求提高高效能邏輯與異質封裝價值",
+          "高密度運算與記憶體整合需求可擴大製程封裝共同最佳化空間"
         ],
         "threats": [
-          "AI資本支出放緩或出口管制可能影響高階晶片投片節奏",
-          "Samsung與Intel在先進製程及2.5D／3D封裝競爭可能分散訂單"
+          "出口限制、AI資本支出調整及大客戶投片波動可能影響成長",
+          "HBM、基板與設備供應協調或新廠成本可能限制整體交付效率"
         ]
       }
     }

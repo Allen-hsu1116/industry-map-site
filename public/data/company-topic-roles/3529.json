@@ -2,94 +2,102 @@
   "schemaVersion": 1,
   "companyCode": "3529",
   "companyName": "力旺",
-  "updatedAt": "2026-08-23T19:04:34Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ic-design",
       "topicName": "IC 設計與矽智財",
       "topicType": "supply_chain_segment",
       "directness": "direct_enabler",
-      "supplyChainStage": "semiconductor_ip",
+      "supplyChainStage": "silicon_ip",
       "roleType": "embedded_nvm_security_ip_provider",
-      "roleSummary": "力旺MOPS明確揭露嵌入式非揮發記憶體IP授權與技術服務，因此在IC設計題材中是矽智財賦能者而非晶片銷售商；MOPS未揭露聯發科、瑞昱等具名客戶。TWSE月營收查無資料，FinMind顯示2026年7月營收6.76億元、MoM+278.7%；查詢區間不足以計算YoY，且單月波動可能反映授權／權利金認列。",
+      "roleSummary": "力旺MOPS確認嵌入式非揮發記憶體IP授權及技術服務，官網完整列名NeoBit、NeoFuse、NeoMTP、NeoFlash及NeoPUF。本次恢復可驗證的IP品牌與NeoMTP實作細節，將授權到權利金的商業流程從techFocus移出，避免把IP供應商誤寫成記憶體晶片製造商。 本次FinMind回傳2026年8月營收3.57億元，MoM-47.19%、YoY+42.77%。",
       "products": [
-        "嵌入式一次性可編程記憶體（OTP）IP",
-        "嵌入式多次可編程記憶體（MTP）IP",
-        "嵌入式快閃記憶體（eFlash）IP",
-        "物理不可複製功能（PUF）安全IP",
-        "製程移植、驗證與矽智財技術服務"
+        "NeoBit嵌入式OTP記憶體IP",
+        "NeoFuse嵌入式OTP記憶體IP",
+        "NeoMTP可重寫非揮發記憶體IP",
+        "NeoFlash嵌入式快閃記憶體IP",
+        "NeoPUF晶片指紋安全IP"
       ],
       "customers": [
-        "聯發科（IC設計應用對象，非MOPS揭露客戶）",
-        "瑞昱（IC設計應用對象，非MOPS揭露客戶）",
-        "新唐（MCU應用對象，非MOPS揭露客戶）",
-        "盛群（MCU應用對象，非MOPS揭露客戶）",
-        "台積電（製程驗證生態系對象，非MOPS揭露客戶）"
+        "台積電（官網列名IP製程驗證生態系對象，非終端晶片客戶）",
+        "GlobalFoundries（官網列名NeoMTP製程平台對象，非終端晶片客戶）",
+        "聯發科（IC設計應用對象，非本次揭露客戶）",
+        "新唐（MCU應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "ARM(IP授權)",
         "Synopsys",
-        "Cadence"
+        "晶圓製程平台自有NVM IP（替代方案）"
       ],
       "risks": [
-        "IC設計客戶去庫存影響授權收入",
-        "新製程節點IP驗證週期長",
-        "IP授權市場競爭"
+        "月營收沒有IP品牌、授權費及權利金拆分，不能由單月推定所有產品量產",
+        "客戶自建IP或替代記憶體方案可能影響授權與權利金",
+        "設計導入延期、量產投片變化或製程移轉可能增加收入波動"
       ],
       "evidence": [
         {
-          "sourceId": "ememory-products",
-          "publisher": "eMemory Technology",
-          "title": "Products",
-          "url": "https://www.ememory.com.tw/en/Products",
-          "claim": "Products supports 力旺 role as embedded_nvm_security_ip_provider in IC 設計與矽智財 through disclosed product/service scope."
-        },
-        {
-          "sourceId": "mops-3529-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "力旺電子股份有限公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "力旺電子股份有限公司基本資料 supports 力旺 role as embedded_nvm_security_ip_provider in IC 設計與矽智財 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：嵌入式非揮發記憶體IP授權及技術服務。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3529",
+          "claim": "股票代碼3529；本次MCP成功取得主要經營業務，摘要：嵌入式非揮發記憶體IP授權及技術服務。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收6.76億元、MoM+278.7%；查詢區間不足以計算YoY。"
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind via CasualMarket MCP",
+          "title": "2026年8月營收資料（2026-09-09查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3529&start_date=2025-07-01&end_date=2026-09-09",
+          "claim": "2026年8月營收3.57億元，MoM-47.19%、YoY+42.77%。來源原始當月值356928000，單位NTD；TWSE主查詢回傳找不到月營收，改用FinMind；比較基期按revenue_year／revenue_month，不以資料列date誤判月份。 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-logic-nvm-ip",
+          "publisher": "力旺 官方網站",
+          "title": "logic-nvm-ip（2026-09-09查詢）",
+          "url": "https://ememory.com.tw/en-US/Products",
+          "claim": "官方產品頁列NeoBit、NeoFuse、NeoMTP、NeoFlash及NeoPUF，分屬OTP、MTP、eFlash與Security。"
+        },
+        {
+          "sourceId": "official-role-neomtp-details",
+          "publisher": "力旺 官方網站",
+          "title": "neomtp-details（2026-09-09查詢）",
+          "url": "https://ememory.com.tw/en-US/Products/MTP/NeoMTP",
+          "claim": "NeoMTP頁揭露single-poly、16K至512K bits、1K寫抹循環、zero additional masking layers、CHEI寫入及F-N抹除，並列TSMC及GlobalFoundries相關平台消息。"
+        },
+        {
+          "sourceId": "official-role-puf-index",
+          "publisher": "力旺 官方網站",
+          "title": "puf-index（2026-09-09查詢）",
+          "url": "https://www.ememory.com.tw/en-US/Applications/Functionality/Physical-Unclonable-Function",
+          "claim": "官方PUF應用頁搜尋索引描述利用IC奈米尺度製程變異形成silicon fingerprint；本次未另擷取此頁全文。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-23",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "OTP／MTP／eFlash記憶單元的製程移植與可靠度驗證",
-        "PUF晶片指紋的熵源、誤碼校正與金鑰衍生",
-        "NRE授權、製程驗證至量產權利金的商業化流程"
+        "NeoMTP單層多晶矽、零額外光罩，16K至512K bits與1K次寫抹循環",
+        "NeoMTP CHEI浮動閘注入寫入與Fowler–Nordheim穿隧抹除",
+        "NeoPUF以製程微觀差異生成晶片指紋的硬體安全機制"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持嵌入式非揮發記憶體IP與技術服務，角色清楚",
-          "FinMind顯示7月營收6.76億元、MoM+278.7%，單月認列動能強"
+          "具名OTP、MTP、eFlash與PUF產品覆蓋設定儲存及硬體安全需求",
+          "NeoMTP官方揭露零額外光罩及寫抹機制，技術差異可以核對",
+          "2026年8月營收3.57億元，MoM-47.19%、YoY+42.77%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "收入受授權、驗證與權利金認列時點影響，月營收波動大",
-          "本次資料未揭露具名客戶，且查詢區間不足以計算YoY"
+          "月營收沒有IP品牌、授權費及權利金拆分，不能由單月推定所有產品量產",
+          "不同IP依賴特定晶圓製程與驗證條件，不能任意跨節點移植",
+          "2026年8月營收3.57億元，MoM-47.19%、YoY+42.77%；月減、年減或累計走弱部分需獨立評估，不以題材敘事掩蓋。",
+          "本次FinMind營收資料截止2026年8月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "先進製程與車用MCU需要OTP／MTP作校準、金鑰與設定儲存",
-          "硬體安全需求提高PUF與安全記憶體IP滲透率"
+          "MCU、電源控制與邊緣AI晶片需要嵌入式NVM及裝置身分驗證",
+          "安全開機與防複製需求可擴大PUF及非揮發記憶體IP的整合空間"
         ],
         "threats": [
-          "晶圓廠內建IP、競爭矽智財與客戶自研方案可能壓縮授權空間",
-          "客戶量產延遲會推遲權利金收入並放大月度波動"
+          "客戶自建IP或替代記憶體方案可能影響授權與權利金",
+          "設計導入延期、量產投片變化或製程移轉可能增加收入波動"
         ]
       }
     }

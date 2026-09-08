@@ -2,94 +2,89 @@
   "schemaVersion": 1,
   "companyCode": "2301",
   "companyName": "光寶科",
-  "updatedAt": "2026-08-24T19:03:41Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "direct_enabler",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "server_psu_maker",
-      "roleSummary": "光寶科MOPS本次只概括電腦週邊、資料儲存、網路與影像設備，未逐項列出CRPS、VRM或具名AI伺服器客戶；依既有題材產品脈絡可保留電源與光電元件賦能角色，但舊資料的精密規格與直供敘述已降級。2026年7月營收190.06億元、YoY+37.6%，為全公司口徑。",
+      "supplyChainStage": "rack_power_and_cooling",
+      "roleType": "ai_rack_power_thermal_solution_provider",
+      "roleSummary": "光寶MOPS僅廣述資訊與系統設備，但官方GTC 2026公告明列800 VDC Power Rack、110kW Power Shelf、MGX液冷與2.1MW列間CDU。本次以官方展示產品取代未逐項驗證的GPU板VRM與光耦合器角色；展示及平台合作不等於所有方案已量產或形成營收。 本次TWSE回傳2026年7月營收190.06億元，MoM+1.88%、YoY+37.61%，累計年增率+26.99%。",
       "products": [
-        "AI伺服器高瓦數CRPS電源供應器",
-        "GPU板多相VRM電源模組",
-        "伺服器熱插拔電源與電源管理模組",
-        "伺服器用光耦合器與感測元件",
-        "資料中心網路設備電源模組"
+        "800 VDC Power Rack直流電源機櫃方案（GTC 2026展示）",
+        "110kW Power Shelf電源機架（GTC 2026展示）",
+        "2.1MW In-row CDU列間冷卻液分配單元（GTC 2026展示）",
+        "NVIDIA MGX液冷系統與機櫃方案（官方展示）",
+        "AI資料中心Power Brick電源模組"
       ],
       "customers": [
-        "Dell（伺服器應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
-        "Microsoft（資料中心應用對象，非MOPS揭露客戶）",
-        "NVIDIA（GPU平台應用對象，非MOPS揭露客戶）"
+        "NVIDIA（GTC官方揭露MGX／Vera Rubin平台合作對象，非採購證明）",
+        "Dell Technologies（AI電源應用對象，非本次揭露客戶）",
+        "Hewlett Packard Enterprise（AI電源應用對象，非本次揭露客戶）",
+        "Microsoft（資料中心應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "台達電(2308)(伺服器PSU龍頭)",
-        "群光(2385)(伺服器PSU)",
-        "康舒(6282)(伺服器電源)"
+        "台達電",
+        "Vertiv",
+        "康舒"
       ],
       "risks": [
-        "6月營收186.6億YoY+37.0%創高,AI伺服器PSU需求強勁",
-        "伺服器PSU市場競爭激烈(台達電市佔領先)",
-        "AI伺服器PSU規格升級快(3000W+)需持續研發投入"
+        "展會發表未逐項揭露量產時間、訂單及110kW／2.1MW產品營收",
+        "高壓直流安全認證、機房導入成本及架構標準化可能延後部署",
+        "液路可靠度、平台改版及其他電源業者競爭可能拉長回收期"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦資訊系統與週邊設備、多功能事務機、資料儲存、網路與影像處理設備。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2301",
+          "claim": "股票代碼2301；本次MCP成功取得主要經營業務，摘要：電腦資訊系統及週邊設備、多功能事務機、資料儲存設備、網路設備、系統設備及其他影像處理設備之製造加工及買賣。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收190.06億元，MoM+1.9%、YoY+37.6%、累計YoY+27.0%。"
+          "claim": "2026年7月營收190.06億元，MoM+1.88%、YoY+37.61%，累計年增率+26.99%。來源原始當月值19005536，單位NTD thousand；申報備註：- 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-gtc-2026-rack",
+          "publisher": "光寶科 官方網站",
+          "title": "gtc-2026-rack（2026-09-09查詢）",
+          "url": "https://www.liteon.com/en/news/press-center/content/liteon-nvidia-gtc-2026",
+          "claim": "GTC 2026官方展示800 VDC Power Rack、110kW Power Shelf、NVIDIA MGX液冷機櫃、2.1MW In-row CDU與power bricks，並揭露NVIDIA合作；不代表逐產品量產或當期營收。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "CRPS高效率功率轉換、熱插拔與N+1冗餘控制",
-        "GPU板多相降壓VRM的瞬態響應與電流均流",
-        "數位電源遙測、故障隔離與高溫可靠度設計"
+        "800 VDC功率轉換、直流配電與系統能源管理整合",
+        "110kW Power Shelf及機櫃級動態負載供電",
+        "MGX液冷機櫃與2.1MW列間CDU熱管理整合"
       ],
       "swot": {
         "strengths": [
-          "7月營收YoY+37.6%、累計YoY+27.0%，公司整體需求穩健成長",
-          "具伺服器電源、板級電源及光電感測元件的組合，可跨多個AI硬體環節"
+          "電源、直流配電、機構與液冷組合具官方產品規格，可對應高密度AI機櫃需求",
+          "與NVIDIA平台合作已由光寶官方公告，關係標示為合作而非客戶",
+          "2026年7月營收190.06億元，MoM+1.88%、YoY+37.61%，累計年增率+26.99%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "本次MOPS主業未逐項揭露CRPS、VRM或AI伺服器營收",
-          "電源產品競爭激烈，效率升級與客製化驗證可能推高研發成本"
+          "展會發表未逐項揭露量產時間、訂單及110kW／2.1MW產品營收",
+          "公司營收未拆分AI電源與液冷，不能將年增幅全歸因新架構",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "GPU功耗與機櫃密度提高，帶動高瓦數CRPS及板級VRM價值量",
-          "資料中心網路設備升級也會增加電源與光電感測元件需求"
+          "AI機櫃功耗提高，可能加速由伺服器內電源轉向機櫃級供電",
+          "800 VDC及液冷基礎架構可增加系統整合與能源管理價值"
         ],
         "threats": [
-          "台達電、群光等電源供應商競爭可能壓縮價格與市占",
-          "AI平台電源架構改版、功率元件短缺或客戶去庫存會放大波動"
+          "高壓直流安全認證、機房導入成本及架構標準化可能延後部署",
+          "液路可靠度、平台改版及其他電源業者競爭可能拉長回收期"
         ]
       }
     }

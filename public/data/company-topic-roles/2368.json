@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2368",
   "companyName": "金像電",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-08T19:19:28Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -87,33 +87,31 @@
       "topicName": "AI伺服器與液冷技術",
       "topicType": "theme",
       "directness": "supplier",
-      "supplyChainStage": "pcb",
-      "roleType": "ai_server_pcb_supplier",
-      "roleSummary": "金像電MOPS支持雙層、多層PCB及電腦、通訊週邊零件加工，足以定位為AI伺服器主板、GPU基板與高速背板的PCB供應者；但MOPS未揭露層數、材料或廣達／鴻海／緯創／技嘉客戶。2026年7月營收100.15億元、YoY+77.4%，公司備註接單量增加，未拆分AI占比。",
+      "supplyChainStage": "printed_circuit_boards",
+      "roleType": "ai_server_network_pcb_supplier",
+      "roleSummary": "金像電的MOPS及官方產品頁直接支持AI／高階伺服器與網路設備PCB，屬AI運算及互連板材供應環節；此次移除官網未逐項確認的1.6T交換器板、DDR5 RDIMM模組板與特定GPU基板宣稱，不混淆PCB與半導體封裝載板。 本次TWSE回傳2026年7月營收100.15億元，MoM+21.31%、YoY+77.38%，累計年增率+70.29%。",
       "products": [
-        "AI GPU伺服器高多層主板PCB",
-        "GPU加速器基板PCB",
-        "800G／1.6T交換器高速PCB",
-        "伺服器高速背板PCB",
-        "DDR5 RDIMM記憶體模組PCB"
+        "AI／高效能伺服器高多層HDI印刷電路板",
+        "資料中心交換器低損耗多層印刷電路板",
+        "路由器高頻多層印刷電路板",
+        "光網路設備阻抗控制印刷電路板"
       ],
       "customers": [
-        "廣達（AI伺服器應用對象，非MOPS揭露客戶）",
-        "鴻海（AI伺服器應用對象，非MOPS揭露客戶）",
-        "緯創（AI伺服器應用對象，非MOPS揭露客戶）",
-        "技嘉（GPU伺服器應用對象，非MOPS揭露客戶）",
-        "NVIDIA（GPU平台應用對象，非MOPS揭露客戶）"
+        "廣達（AI伺服器應用對象，非本次揭露客戶）",
+        "緯創（AI伺服器應用對象，非本次揭露客戶）",
+        "技嘉（GPU伺服器應用對象，非本次揭露客戶）",
+        "智邦（交換器應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "南電(8046)",
-        "欣興(3037)",
-        "深南電路",
-        "滬士電子"
+        "欣興",
+        "健鼎",
+        "滬電股份",
+        "勝宏科技"
       ],
       "risks": [
-        "6月營收8.26億YoY+78.2%!接單量大增(AI伺服器PCB需求爆發)",
-        "累計營收YoY+68.7%,AI伺服器PCB為核心成長動能",
-        "產能利用率高但擴產需要時間,交期緊張"
+        "營收備註稱接單量增加，但未公布特定傳輸速率或客戶的收入",
+        "高層數壓合良率及低損耗材料成本可能拖累擴產效益",
+        "伺服器訂單集中、產品改版及同業新增產能可能增加營收波動"
       ],
       "legacy": {
         "topicSlug": "pcb-manufacturing",
@@ -122,58 +120,53 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "金像電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 金像電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：雙層、多層印刷電路板，以及電腦、電子、通訊、資訊產品與週邊電子零件加工。"
+          "title": "公司完整基本資料（MOPS 54欄位版；2026-09-09查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2368",
+          "claim": "股票代碼2368；本次MCP成功取得主要經營業務，摘要：雙層、多層印刷電路板之製造加工及買賣業務；各種電腦、電子、通訊、資訊產品及其週邊設備與電子零件加工。主要業務不自動證實具名客戶或全部技術規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE via CasualMarket MCP",
+          "title": "2026年7月營收資料（2026-09-09查詢）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收100.15億元，MoM+21.3%、YoY+77.4%、累計YoY+70.3%；公司備註接單量增加。"
+          "claim": "2026年7月營收100.15億元，MoM+21.31%、YoY+77.38%，累計年增率+70.29%。來源原始當月值10014527，單位NTD thousand；申報備註：接單量增加 公司口徑，無本題材獨立收入拆分。"
+        },
+        {
+          "sourceId": "official-role-ai-network-pcb",
+          "publisher": "金像電 官方網站",
+          "title": "ai-network-pcb（2026-09-09查詢）",
+          "url": "https://www.gce.com.tw/en/product.html",
+          "claim": "產品頁明列AI/Advanced Server及Networking；內容揭露高多層HDI、低損耗材料與阻抗控制，未提供本次舊有1.6T、DDR5 RDIMM等特定板型證據。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "confidence": "high",
+      "lastVerified": "2026-09-09",
       "status": "verified",
       "techFocus": [
-        "高多層板連續壓合、雷射鑽孔與層間對位",
-        "低損耗高速材料的阻抗與插入損耗控制",
-        "大尺寸GPU基板與背板的翹曲及熱循環可靠度"
+        "高多層HDI互連與低損耗板材整合",
+        "高速差動訊號阻抗及插入損耗控制",
+        "伺服器PCB熱管理與多層結構可靠度（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持多層PCB與電腦通訊產品加工，AI伺服器鏈結合理",
-          "7月營收YoY+77.4%、MoM+21.3%，公司並說明接單量增加"
+          "官網明列AI／Advanced Server及Networking產品，題材關係並非僅由營業登記推定",
+          "高層數、HDI及低損耗材料符合AI伺服器的高速訊號與可靠度需求",
+          "2026年7月營收100.15億元，MoM+21.31%、YoY+77.38%，累計年增率+70.29%；為全公司口徑，不直接證明本題材貢獻。"
         ],
         "weaknesses": [
-          "MOPS未揭露PCB層數、材料、AI營收占比或具名客戶",
-          "高階PCB擴產與良率爬坡需要大量資本支出，且受CCL材料供應影響"
+          "營收備註稱接單量增加，但未公布特定傳輸速率或客戶的收入",
+          "產品頁沒有逐項DDR5 RDIMM、1.6T及GPU板型，不能將應用通稱當量產料號",
+          "本次TWSE營收資料截止2026年7月；未揭露本題材完整收入拆分，不能將公司總營收全部歸因本角色。"
         ],
         "opportunities": [
-          "GPU伺服器與高速交換器提高PCB層數、尺寸與低損耗材料用量",
-          "機櫃級AI系統增加主板、交換板、背板與記憶體板的總價值量"
+          "AI系統及高速網路提升高多層PCB的設計複雜度與加工價值",
+          "HDI互連及低損耗材料的共同開發有助增加伺服器客戶黏著度"
         ],
         "threats": [
-          "欣興、滬電股份與其他高階PCB廠擴產可能壓縮價格與市占",
-          "AI平台改版或雲端資本支出降溫會放大高階產能稼動率波動"
+          "高層數壓合良率及低損耗材料成本可能拖累擴產效益",
+          "伺服器訂單集中、產品改版及同業新增產能可能增加營收波動"
         ]
       }
     },
