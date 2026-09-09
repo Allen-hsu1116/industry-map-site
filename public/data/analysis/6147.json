@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6147",
   "name": "頎邦",
-  "generatedAt": "2026-09-04T12:32:50.527Z",
+  "generatedAt": "2026-09-09T12:33:15.257Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-04",
-  "chipDataDate": "2026-09-04",
+  "marketDataDate": "2026-09-09",
+  "chipDataDate": "2026-09-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -3,
-    "summary": "頎邦 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤站上 MA20 7.3%。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 45,
+    "summary": "頎邦 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 13.0%。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列",
-      "收盤站上 MA20 7.3%"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "收盤站上 MA20 13.0%"
     ],
-    "risks": [
-      "帶量下跌，量比 2.04x"
-    ],
+    "risks": [],
     "watch": []
   },
   "chips": {
-    "stance": "distribution",
-    "label": "籌碼偏空",
-    "score": -36,
-    "summary": "頎邦 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -1.1萬張；近 20 日法人偏賣，合計 -2.1萬張。",
-    "signals": [],
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "頎邦 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +3.3千張；外資近 5 日買超 +1.5千張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +3.3千張",
+      "外資近 5 日買超 +1.5千張"
+    ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.1萬張",
-      "近 20 日法人偏賣，合計 -2.1萬張",
-      "投信近 5 日賣超 -873張",
-      "外資近 5 日賣超 -1萬張"
+      "近 20 日法人偏賣，合計 -3.1千張",
+      "投信近 5 日賣超 -158張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-04"
+      "最近法人資料日：2026-09-09",
+      "融券近 5 日增加 27.1%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -138,7 +138,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-04"
+      "lastVerified": "2026-09-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -177,8 +177,8 @@
         "canonicalTopicName": "低軌衛星通訊",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "頎邦MOPS只支持金凸塊、錫鉛凸塊、晶圓測試、TCP、COF與COG封裝，完全未揭露衛星、射頻、抗輻射或低軌終端產品；舊資料把顯示封裝硬扯成衛星通訊，這種題材黏法跟口香糖一樣煩，現改為極弱的終端顯示封裝觀察角色。TWSE月營收查無資料，FinMind顯示2026年7月營收25.23億元、MoM+10.2%；查詢區間不足以計算YoY。"
+        "confidence": "medium",
+        "roleSummary": "頎邦MOPS的凸塊、CP及COF／COG業務之外，官方WLCSP頁也確認RF模組、功率放大器及GPS等應用。本次從過度偏重顯示驅動封裝修正為可驗證的RF／通訊封裝鄰接角色；官網的4G／5G與GPS應用不等同已獲LEO星座訂單或太空耐輻射資格。 本次FinMind回傳2026年8月營收26.20億元，MoM+3.85%、YoY+43.61%。"
       }
     ],
     "swot": [
@@ -329,32 +329,41 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 54,
+    "totalScore": 65,
     "recommendationState": "watchlist",
     "fundamental": {
-      "score": 0,
-      "label": "基本面資料不足",
+      "score": -12,
+      "label": "基本面中性",
       "signals": [],
-      "risks": []
+      "risks": [
+        "本益比 47.8 倍，需防估值壓縮"
+      ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.stop-distance",
+        "severity": "soft",
+        "message": "距離 MA20 約 11.5%，部位需降速"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：182.60",
-      "波段多空分水嶺看 MA20：170.10",
-      "追蹤法人是否延續 賣超：最近 -1.6萬張",
-      "本益比 44.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：189.40",
+      "波段多空分水嶺看 MA20：175.28",
+      "追蹤法人是否延續 買超：最近 +1.5萬張",
+      "本益比 47.8 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 203.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 146.50：列為轉弱警訊",
+      "收盤跌破 20 日低點 152.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

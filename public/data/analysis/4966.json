@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "4966",
   "name": "譜瑞-KY",
-  "generatedAt": "2026-09-04T12:32:50.465Z",
+  "generatedAt": "2026-09-09T12:33:15.169Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-04",
-  "chipDataDate": "2026-09-04",
+  "marketDataDate": "2026-09-09",
+  "chipDataDate": "2026-09-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,32 +17,32 @@
   "technical": {
     "stance": "bearish",
     "label": "偏空",
-    "score": -30,
-    "summary": "譜瑞-KY 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
+    "score": -55,
+    "summary": "譜瑞-KY 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 3.4%。",
     "signals": [],
     "risks": [
-      "收盤價、MA5、MA20 呈空頭排列"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 3.4%"
     ],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "量能低於 20 日均量，突破訊號可信度較低",
+      "接近 20 日低點 545.00，留意支撐是否失守"
     ]
   },
   "chips": {
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -36,
-    "summary": "譜瑞-KY 籌碼面目前為「籌碼偏空」：外資近 5 日買超 +308張；三大法人近 5 日合計賣超 -139張。",
-    "signals": [
-      "外資近 5 日買超 +308張"
-    ],
+    "summary": "譜瑞-KY 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -364張；近 20 日法人偏賣，合計 -1.1千張。",
+    "signals": [],
     "risks": [
-      "三大法人近 5 日合計賣超 -139張",
+      "三大法人近 5 日合計賣超 -364張",
       "近 20 日法人偏賣，合計 -1.1千張",
-      "投信近 5 日賣超 -449張"
+      "投信近 5 日賣超 -292張",
+      "外資近 5 日賣超 -68張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-04"
+      "最近法人資料日：2026-09-09"
     ]
   },
   "industry": {
@@ -51,13 +51,13 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 5 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "高速連接器與車工業連接",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "譜瑞-KY MOPS直接支持高速訊號傳輸介面及顯示／觸控晶片，題材定位成立；但MOPS未逐項揭露USB4、Thunderbolt 4、PCIe Gen6、80Gbps或Apple等客戶，故保留產品族群並移除未證實型號與客戶關係。TWSE月營收查無資料，FinMind顯示2026年7月營收13.53億元、MoM-19.1%；查詢區間不足以計算YoY。",
-      "supplyChainStage": "interface_ic_design",
-      "roleType": "high_speed_display_usb_interface_ic_provider",
+      "roleSummary": "譜瑞MOPS支持高速傳輸介面與顯示觸控IC，官網PS8936與PS8835產品頁提供PCIe Gen5、CXL 2.0、USB4及DP 2.1實作規格。本次改成可追溯Retimer料號，區分重定時器與線性Redriver；不以產品協定相容性推導特定客戶已採用。 本次FinMind回傳2026年8月營收13.27億元，MoM-1.96%、YoY+0.23%。",
+      "supplyChainStage": "high_speed_interface_ic",
+      "roleType": "pcie_usb_display_retimer_ic_provider",
       "directness": "core",
       "source": "canonical"
     },
@@ -96,7 +96,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 高速連接器與車工業連接（supply_chain_segment/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 5 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-04"
+      "lastVerified": "2026-09-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -164,7 +164,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "譜瑞-KY MOPS直接支持高速訊號傳輸介面及顯示／觸控晶片，題材定位成立；但MOPS未逐項揭露USB4、Thunderbolt 4、PCIe Gen6、80Gbps或Apple等客戶，故保留產品族群並移除未證實型號與客戶關係。TWSE月營收查無資料，FinMind顯示2026年7月營收13.53億元、MoM-19.1%；查詢區間不足以計算YoY。"
+        "roleSummary": "譜瑞MOPS支持高速傳輸介面與顯示觸控IC，官網PS8936與PS8835產品頁提供PCIe Gen5、CXL 2.0、USB4及DP 2.1實作規格。本次改成可追溯Retimer料號，區分重定時器與線性Redriver；不以產品協定相容性推導特定客戶已採用。 本次FinMind回傳2026年8月營收13.27億元，MoM-1.96%、YoY+0.23%。"
       }
     ],
     "swot": [
@@ -232,15 +232,15 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 52,
+    "totalScore": 46,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 20,
       "label": "基本面中性",
       "signals": [
         "月營收 YoY +8.2%，溫和成長",
-        "本益比 18.1 倍，估值尚可對照成長",
-        "殖利率 3.1%，提供部分下檔支撐"
+        "本益比 17.5 倍，估值尚可對照成長",
+        "殖利率 3.2%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -255,14 +255,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：572.80",
-      "波段多空分水嶺看 MA20：575.70",
-      "追蹤法人是否延續 買超：最近 +100張",
+      "短線支撐/壓力先看 MA5：558.00",
+      "波段多空分水嶺看 MA20：569.55",
+      "追蹤法人是否延續 買超：最近 +50張",
       "月營收年增率 +8.2%，觀察基本面是否支撐估值",
-      "本益比 18.1 倍，需和同族群估值比較"
+      "本益比 17.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 602.00 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 601.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 545.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

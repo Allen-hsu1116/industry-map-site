@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3406",
   "name": "玉晶光",
-  "generatedAt": "2026-09-04T12:32:50.348Z",
+  "generatedAt": "2026-09-09T12:33:14.997Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,31 +54,31 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 5 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "PC、手機與 AR/VR/XR 終端",
+      "topicName": "面板、LED、光學鏡頭與感測",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "玉晶光MOPS直接揭露各類光學鏡頭與鏡片研發製造，消費裝置光學角色成立；但MOPS未揭露Apple、Meta、Microsoft或車廠客戶。2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%，旺季拉貨明顯但年增仍溫和。",
-      "supplyChainStage": "optical_components",
-      "roleType": "mobile_ar_lens",
+      "roleSummary": "玉晶光MOPS確認鏡頭、鏡片及LED照明；官網具體列手機、車載、工業AI與AR眼鏡光學產品。保留可查證光學產品，移除未由本次資料支持的7P／8P、dToF與Pancake指定架構。 2026年7月營收24.22億元，MoM+39.28%、YoY+1.63%，累計年增率+14.20%。此為全公司營收，未拆分「面板、LED、光學鏡頭與感測」收入，不能全部歸因本題材。",
+      "supplyChainStage": "optical_lens_manufacturing",
+      "roleType": "mobile_automotive_ar_optics",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "7P／8P塑膠非球面智慧手機鏡頭",
+        "name": "手機攝影鏡頭與感測光學件",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "dToF／3D感測接收鏡頭",
+        "name": "ADAS／LiDAR車載鏡頭",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "Pancake折疊光路XR鏡頭",
+        "name": "AR眼鏡Transmission Lens",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -97,20 +97,20 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
-      "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
-      "角色證據 4 則 +12",
+      "角色信心 high +16",
+      "題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16",
+      "角色證據 5 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "玉晶光 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "玉晶光 在「面板、LED、光學鏡頭與感測」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
-      "相關題材：面板、LED、光學鏡頭與感測 · 核心產品/平台",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：面板、LED、光學鏡頭與感測 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 面板、LED、光學鏡頭與感測（supply_chain_segment/active） +16）",
+      "相關題材：PC、手機與 AR/VR/XR 終端 · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -121,10 +121,10 @@
     "watch": [
       "V2 O：AR/VR/MR裝置（Apple Vision Pro）需要高精度光學鏡頭，玉晶光在Pancake鏡頭及MR光學模組有量產能力，為長期成長動能。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
-      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
-      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 PC、手機與 AR/VR/XR 終端：月營收或訂單能見度改善",
+      "追蹤 PC、手機與 AR/VR/XR 終端：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -161,24 +161,24 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "consumer-computing-devices",
-        "topicName": "PC、手機與 AR/VR/XR 終端",
-        "canonicalTopicId": "consumer-computing-devices",
-        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "玉晶光MOPS直接揭露各類光學鏡頭與鏡片研發製造，消費裝置光學角色成立；但MOPS未揭露Apple、Meta、Microsoft或車廠客戶。2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%，旺季拉貨明顯但年增仍溫和。"
-      },
-      {
         "topicId": "display-led-optics",
         "topicName": "面板、LED、光學鏡頭與感測",
         "canonicalTopicId": "display-led-optics",
         "canonicalTopicName": "面板、LED、光學鏡頭與感測",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "玉晶光MOPS確認鏡頭、鏡片及LED照明；官網具體列手機、車載、工業AI與AR眼鏡光學產品。保留可查證光學產品，移除未由本次資料支持的7P／8P、dToF與Pancake指定架構。 2026年7月營收24.22億元，MoM+39.28%、YoY+1.63%，累計年增率+14.20%。此為全公司營收，未拆分「面板、LED、光學鏡頭與感測」收入，不能全部歸因本題材。"
+      },
+      {
+        "topicId": "consumer-computing-devices",
+        "topicName": "PC、手機與 AR/VR/XR 終端",
+        "canonicalTopicId": "consumer-computing-devices",
+        "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "玉晶光MOPS直接揭露各類光學鏡頭、鏡片及高功率LED照明，光學元件角色成立；但MOPS未揭露Apple、Meta、Microsoft或車用客戶。2026年7月營收24.22億元，MoM+39.3%、YoY+1.6%，累計YoY+14.2%，旺季拉貨強但單月年增溫和。"
+        "roleSummary": "MOPS確認鏡頭／鏡片製造；官網列Mobile及AR／VR鏡頭，AR頁具體列傳輸與投影鏡頭。保留消費光學直接角色，去除未由本次來源支持的7P／8P、Pancake與dToF型號化敘述。 TWSE：2026年7月營收24.22億元，MoM+39.28%、YoY+1.63%，累計YoY+14.20%；全公司口徑，不能歸因本題材。"
       }
     ],
     "swot": [
@@ -225,9 +225,9 @@
     ],
     "topics": [
       {
-        "id": "consumer-computing-devices",
-        "name": "PC、手機與 AR/VR/XR 終端",
-        "type": "end_market",
+        "id": "display-led-optics",
+        "name": "面板、LED、光學鏡頭與感測",
+        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -236,9 +236,9 @@
         ]
       },
       {
-        "id": "display-led-optics",
-        "name": "面板、LED、光學鏡頭與感測",
-        "type": "supply_chain_segment",
+        "id": "consumer-computing-devices",
+        "name": "PC、手機與 AR/VR/XR 終端",
+        "type": "end_market",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -281,12 +281,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       },
       {
         "id": "risk.stop-distance",

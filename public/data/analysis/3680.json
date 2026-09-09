@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3680",
   "name": "家登",
-  "generatedAt": "2026-09-04T12:32:50.403Z",
+  "generatedAt": "2026-09-09T12:33:15.077Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -48,33 +48,31 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 5 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "半導體設備與前段材料",
+      "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "家登MOPS直接揭露光罩解決方案、晶圓解決方案與機台設備產品，支持其半導體載具及設備角色；但MOPS未揭露Class 1、AMC濾除效率或任何具名客戶。本次保留可驗證產品家族並移除過度精確性能宣稱。FinMind顯示2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。",
-      "supplyChainStage": "wafer_reticle_handling",
-      "roleType": "reticle_wafer_carrier_provider",
+      "roleSummary": "家登MOPS確認光罩、晶圓及機台方案；2026/5/28官方法說第13頁直接列先進封裝Frame／P300／Panel FOUP等載具。原先只列EUV光罩且將封裝視為間接的分析過度收窄，本次改回直接的先進封裝搬運載具角色，不等同製造封裝晶片。 2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。",
+      "supplyChainStage": "advanced_packaging_carrier",
+      "roleType": "wafer_and_panel_packaging_carrier",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "晶圓解決方案與封裝連接方案",
-        "description": "晶圓解決方案是圍繞晶圓保存、搬運、製程輔助與封裝/測試連接的精密零組件或載具。",
-        "whyItMatters": "先進封裝與晶圓廠自動化提升時，晶圓與封裝周邊載具的規格、潔淨與精密度要求會提高。",
-        "topicFit": "晶圓製程周邊材料",
-        "businessImpact": "題材需以實際客戶導入與訂單驗證，不能只看先進封裝概念。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：家登 公司基本資料",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3680",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "先進封裝Frame FOUP",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "300mm Diffuser FOUP",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "P300 FOUP",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -92,19 +90,19 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 半導體設備與前段材料（supply_chain_segment/active） +16",
-      "角色證據 2 則 +12",
+      "題材 先進封裝與 CoWoS（process/active） +16",
+      "角色證據 5 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "家登 在「半導體設備與前段材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "家登 在「先進封裝與 CoWoS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：半導體設備與前段材料 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 半導體設備與前段材料（supply_chain_segment/active） +16）",
-      "相關題材：先進封裝與 CoWoS · 間接受惠",
+      "V2 題材角色：先進封裝與 CoWoS · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 先進封裝與 CoWoS（process/active） +16）",
+      "相關題材：半導體設備與前段材料 · 核心產品/平台",
       "相關題材：電商零售與物流平台 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -116,10 +114,10 @@
     "watch": [
       "V2 O：AI晶片先進封裝（CoWoS/SoIC/Chiplet）需要新型載具與傳輸方案，家登在先進封裝載具解決方案有獨家產品。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 半導體設備與前段材料：月營收或訂單能見度改善",
-      "追蹤 半導體設備與前段材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
-      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 半導體設備與前段材料：月營收或訂單能見度改善",
+      "追蹤 半導體設備與前段材料：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -156,6 +154,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "advanced-packaging",
+        "topicName": "先進封裝與 CoWoS",
+        "canonicalTopicId": "advanced-packaging",
+        "canonicalTopicName": "先進封裝與 CoWoS",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "家登MOPS確認光罩、晶圓及機台方案；2026/5/28官方法說第13頁直接列先進封裝Frame／P300／Panel FOUP等載具。原先只列EUV光罩且將封裝視為間接的分析過度收窄，本次改回直接的先進封裝搬運載具角色，不等同製造封裝晶片。 2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。"
+      },
+      {
         "topicId": "semiconductor-equipment-materials",
         "topicName": "半導體設備與前段材料",
         "canonicalTopicId": "semiconductor-equipment-materials",
@@ -166,16 +174,6 @@
         "roleSummary": "家登MOPS直接揭露光罩解決方案、晶圓解決方案與機台設備產品，支持其半導體載具及設備角色；但MOPS未揭露Class 1、AMC濾除效率或任何具名客戶。本次保留可驗證產品家族並移除過度精確性能宣稱。FinMind顯示2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。"
       },
       {
-        "topicId": "advanced-packaging",
-        "topicName": "先進封裝與 CoWoS",
-        "canonicalTopicId": "advanced-packaging",
-        "canonicalTopicName": "先進封裝與 CoWoS",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "家登MOPS揭露光罩、晶圓與機台設備解決方案，足以支持半導體載具與設備角色，但未點名CoWoS承載環、台積電客戶或特定封裝規格。FinMind顯示2026年7月營收8.71億元，較6月增加15.8%；該成長未拆分先進封裝貢獻。"
-      },
-      {
         "topicId": "ecommerce-retail-logistics",
         "topicName": "電商零售與物流平台",
         "canonicalTopicId": "ecommerce-retail-logistics",
@@ -183,7 +181,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "家登為晶圓載具(FOUP/Reticle Pod)製造商，建立晶圓廠耗材B2B電子採購平台，數位化供應鏈管理服務台積電等一線客戶。"
+        "roleSummary": "家登MOPS只揭露光罩、晶圓與機台設備產品，未揭露電商平台、零售或物流服務；本角色降為半導體B2B產品交付的題外觀察，不能把自有接單流程寫成電商業務。FinMind顯示2026年7月營收8.71億元、MoM+15.8%、YoY+71.7%，但成長不能歸因電商。"
       },
       {
         "topicId": "environment-water-recycling",
@@ -192,8 +190,8 @@
         "canonicalTopicName": "水資源、環保與電子廢料回收",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "家登為光罩/晶圓/機台設備解決方案供應商，MOPS登記為光罩解決方案產品/晶圓解決方案產品/機台設備產品。提供FOUP晶圓傳送盒清潔維修再使用服務與光罩盒翻新校驗，客戶涵蓋台積電/聯電/世界先進/Intel/三星。循環經濟題材符合ESG趨勢。"
+        "confidence": "medium",
+        "roleSummary": "MOPS確認光罩、晶圓解決方案與機台設備；家登官網另明列載具Class 1清洗、粒子／離子／有機污染檢測與維護服務，可支持載具延壽的循環使用鄰接角色。未取得廢水工程、再生水銷售或循環經濟認證的證據，不能歸為水處理統包商。 2026年7月營收8.71億元，MoM+15.81%、YoY+71.69%。此為全公司營收，未拆分「水資源、環保與電子廢料回收」貢獻，不能全部歸因於本題材。"
       },
       {
         "topicId": "high-speed-interconnect",
@@ -258,9 +256,9 @@
     ],
     "topics": [
       {
-        "id": "semiconductor-equipment-materials",
-        "name": "半導體設備與前段材料",
-        "type": "supply_chain_segment",
+        "id": "advanced-packaging",
+        "name": "先進封裝與 CoWoS",
+        "type": "process",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -269,9 +267,9 @@
         ]
       },
       {
-        "id": "advanced-packaging",
-        "name": "先進封裝與 CoWoS",
-        "type": "process",
+        "id": "semiconductor-equipment-materials",
+        "name": "半導體設備與前段材料",
+        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -346,12 +344,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       }
     ]
   },

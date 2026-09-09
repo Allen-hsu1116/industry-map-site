@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3035",
   "name": "智原",
-  "generatedAt": "2026-09-04T12:32:50.273Z",
+  "generatedAt": "2026-09-09T12:33:14.892Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-04",
-  "chipDataDate": "2026-09-04",
+  "marketDataDate": "2026-09-09",
+  "chipDataDate": "2026-09-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -24,23 +24,24 @@
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 28,
-    "summary": "智原 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +27張；近 20 日法人偏買，合計 +2.7千張。",
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 0,
+    "summary": "智原 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +3.3千張；投信近 5 日買超 +40張。",
     "signals": [
-      "三大法人近 5 日合計買超 +27張",
-      "近 20 日法人偏買，合計 +2.7千張",
-      "外資近 5 日買超 +167張"
+      "近 20 日法人偏買，合計 +3.3千張",
+      "投信近 5 日買超 +40張",
+      "外資近 5 日買超 +340張"
     ],
-    "risks": [],
+    "risks": [
+      "三大法人近 5 日合計賣超 -22張"
+    ],
     "watch": [
-      "最近法人資料日：2026-09-04"
+      "最近法人資料日：2026-09-09"
     ]
   },
   "industry": {
@@ -49,31 +50,50 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 5 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "IC 設計與矽智財",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "智原MOPS直接揭露ASIC設計、矽智財與ASIC EDA工具，IC設計服務角色明確；但未揭露Google、Amazon、Intel或STMicro為客戶，也不能由MOPS證明特定N5／N7案。2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，但累計YoY-46.1%，專案與量產收入波動仍大。",
-      "supplyChainStage": "asic_design_ip",
+      "roleSummary": "MOPS支持ASIC、矽智財與設計工具；2026/03/03官方公告確認UMC 14FFC矽驗證PHY及2.5D／3D整合服務。以可查的IP規格取代籠統清單，不把晶圓或EDA平台寫成客戶。 TWSE：2026年7月營收10.62億元，MoM-25.04%、YoY+9.97%，累計YoY-46.08%；全公司口徑，不能歸因本題材。",
+      "supplyChainStage": "ic_design",
       "roleType": "asic_design_service_ip_provider",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "ASIC NRE前端／後端設計服務",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "ASIC 設計服務與矽智財 IP",
+        "description": "智原幫客戶把晶片想法做成可量產的客製化 ASIC，也提供自有矽智財 IP、FPGA 轉 ASIC、先進封裝整合等服務。",
+        "whyItMatters": "ASIC 是 AI、HPC、網通、工控、IoT 等系統降低成本、功耗並提高整合度的重要路徑；智原的價值在於設計服務、IP 庫與晶圓代工/封裝供應鏈整合能力。",
+        "topicFit": "官方定位為 ASIC Design Service 與 Silicon IP 供應者，屬 IC 設計服務與矽智財題材。",
+        "businessImpact": "NRE、IP 授權、量產 royalty/turnkey 收入受客戶新案量、先進製程設計需求、AI/HPC ASIC 專案進度與量產放量影響；大型 ASIC 專案成功量產可帶來長尾營收，但設計週期長、專案波動較大。",
+        "sourceLabels": [
+          "Faraday Technology：ASIC Design Service",
+          "Faraday Technology：Silicon IP"
+        ],
+        "sourceUrls": [
+          "https://www.faraday-tech.com/en/entry/ASICService",
+          "https://www.faraday-tech.com/en/entry/SiliconIP"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
       },
       {
-        "name": "USB／PCIe／DDR／SerDes矽智財IP",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "SoC整合與量產Turnkey服務",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "FPGA-Go-ASIC 與先進封裝整合服務",
+        "description": "智原提供 FPGA 轉 ASIC 與先進封裝整合服務，協助客戶把原型或小量 FPGA 方案轉成成本、功耗與供應更適合量產的 ASIC，並整合多 die/chiplet 封裝。",
+        "whyItMatters": "當系統從原型走向量產，FPGA 可能面臨成本、功耗或停產風險；轉 ASIC 與先進封裝服務可降低長期 BOM、提升效能並服務 AI/HPC 客製晶片需求。",
+        "topicFit": "FPGA 轉 ASIC 是客製晶片設計服務的一種。",
+        "businessImpact": "若 AI/HPC、工控與網通客戶由 FPGA 原型轉量產 ASIC，智原可取得 NRE、IP 與量產服務收入；但專案時程長且成功量產具有不確定性。",
+        "sourceLabels": [
+          "Faraday Technology：Advanced Packaging Service",
+          "Faraday Technology：FPGA-Go-ASIC Service"
+        ],
+        "sourceUrls": [
+          "https://www.faraday-tech.com/en/content/Product/ASIC_Service/AdvancedPackageSolution",
+          "https://www.faraday-tech.com/en/content/Product/ASIC_Service/FPGA-to-ASIC"
+        ],
+        "lastVerified": "2026-05-28",
+        "confidence": "high"
       }
     ],
     "swotSnapshot": {
@@ -92,7 +112,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 5 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -130,7 +150,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-04"
+      "lastVerified": "2026-09-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -160,7 +180,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "智原MOPS直接揭露ASIC設計、矽智財與ASIC EDA工具，IC設計服務角色明確；但未揭露Google、Amazon、Intel或STMicro為客戶，也不能由MOPS證明特定N5／N7案。2026年7月營收10.62億元，MoM-25.0%、YoY+10.0%，但累計YoY-46.1%，專案與量產收入波動仍大。"
+        "roleSummary": "MOPS支持ASIC、矽智財與設計工具；2026/03/03官方公告確認UMC 14FFC矽驗證PHY及2.5D／3D整合服務。以可查的IP規格取代籠統清單，不把晶圓或EDA平台寫成客戶。 TWSE：2026年7月營收10.62億元，MoM-25.04%、YoY+9.97%，累計YoY-46.08%；全公司口徑，不能歸因本題材。"
       }
     ],
     "swot": [
@@ -228,7 +248,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 58,
+    "totalScore": 53,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": -40,
@@ -237,13 +257,12 @@
       "risks": [
         "月營收 YoY -43.1%，基本面承壓",
         "月營收 MoM -9.3%，短期動能轉弱",
-        "本益比 70.7 倍，需防估值壓縮"
+        "本益比 69.5 倍，需防估值壓縮"
       ]
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -251,11 +270,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：180.50",
-      "波段多空分水嶺看 MA20：176.35",
-      "追蹤法人是否延續 賣超：最近 -69張",
+      "短線支撐/壓力先看 MA5：178.00",
+      "波段多空分水嶺看 MA20：176.23",
+      "追蹤法人是否延續 買超：最近 +741張",
       "月營收年增率 -43.1%，觀察基本面是否支撐估值",
-      "本益比 70.7 倍，需和同族群估值比較"
+      "本益比 69.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 187.50 且量比 > 1.5：列為轉強訊號",

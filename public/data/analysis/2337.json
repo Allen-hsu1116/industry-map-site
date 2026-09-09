@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-09-04T12:32:50.066Z",
+  "generatedAt": "2026-09-09T12:33:14.598Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-04",
-  "chipDataDate": "2026-09-04",
+  "marketDataDate": "2026-09-09",
+  "chipDataDate": "2026-09-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,36 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -45,
-    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 3.8%。",
-    "signals": [],
-    "risks": [
-      "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 3.8%"
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "旺宏 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
     ],
+    "risks": [],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": -11,
-    "summary": "旺宏 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +222張；融資近 5 日下降 5.8%，籌碼壓力下降。",
+    "score": 0,
+    "summary": "旺宏 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +2.4千張；外資近 5 日買超 +3.6千張。",
     "signals": [
-      "近 20 日法人偏買，合計 +222張",
-      "融資近 5 日下降 5.8%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +2.4千張",
+      "外資近 5 日買超 +3.6千張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -1.8萬張",
-      "投信近 5 日賣超 -3.8千張",
-      "外資近 5 日賣超 -1.4萬張"
+      "近 20 日法人偏賣，合計 -1.9萬張",
+      "投信近 5 日賣超 -1.2千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-04",
-      "融券近 5 日增加 24.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-09"
     ]
   },
   "industry": {
@@ -170,7 +167,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-09-04"
+      "lastVerified": "2026-09-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -292,7 +289,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 67,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
@@ -314,11 +311,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：122.00",
-      "波段多空分水嶺看 MA20：126.33",
-      "追蹤法人是否延續 買超：最近 +1.8千張",
+      "短線支撐/壓力先看 MA5：123.10",
+      "波段多空分水嶺看 MA20：125.05",
+      "追蹤法人是否延續 買超：最近 +594張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值",
-      "本益比 28.8 倍，需和同族群估值比較"
+      "本益比 30.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 144.50 且量比 > 1.5：列為轉強訊號",

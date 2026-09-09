@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2467",
   "name": "志聖",
-  "generatedAt": "2026-09-04T12:32:50.147Z",
+  "generatedAt": "2026-09-09T12:33:14.713Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -55,13 +55,13 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "志聖MOPS已明確揭露AI供應鏈先進封裝設備，包括貼膜、壓合、撕膜、熱製程與清潔，題材連結直接；但未揭露特定客戶、TAIW或電漿／超音波規格。2026年7月營收11.68億元，MoM+34.3%、YoY+132.7%，累計YoY+87.0%，公司說明為客戶需求提升。",
-      "supplyChainStage": "packaging_equipment",
-      "roleType": "advanced_packaging_equipment",
+      "roleSummary": "志聖MOPS直接列AI供應鏈先進封裝的貼膜、壓合、撕膜、熱製程及清潔設備；本次保留五項具體設備，將未披露的站點規格標為工程分析。營收備註僅說客戶需求提升，沒有分拆CoWoS訂單。 2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計年增率+87.05%。MCP備註：客戶需求提升。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。",
+      "supplyChainStage": "packaging_process_equipment",
+      "roleType": "lamination_thermal_clean_equipment",
       "directness": "core",
       "source": "canonical"
     },
@@ -91,7 +91,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 先進封裝與 CoWoS（process/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
@@ -156,7 +156,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "志聖MOPS已明確揭露AI供應鏈先進封裝設備，包括貼膜、壓合、撕膜、熱製程與清潔，題材連結直接；但未揭露特定客戶、TAIW或電漿／超音波規格。2026年7月營收11.68億元，MoM+34.3%、YoY+132.7%，累計YoY+87.0%，公司說明為客戶需求提升。"
+        "roleSummary": "志聖MOPS直接列AI供應鏈先進封裝的貼膜、壓合、撕膜、熱製程及清潔設備；本次保留五項具體設備，將未披露的站點規格標為工程分析。營收備註僅說客戶需求提升，沒有分拆CoWoS訂單。 2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計年增率+87.05%。MCP備註：客戶需求提升。此為全公司營收，未拆分「先進封裝與 CoWoS」收入，不能全部歸因本題材。"
       },
       {
         "topicId": "industrial-automation",
@@ -175,8 +175,8 @@
         "canonicalTopicName": "電阻與被動保護元件",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "MOPS僅揭露志聖的PCB與先進封裝貼膜、撕膜、熱製程及電鍍前處理設備；在電阻題材屬製程設備延伸，不代表已取得被動元件客戶訂單。2026年7月營收11.68億元、YoY+132.7%，成長主要由AI供應鏈設備需求帶動，不能全數歸因電阻設備。"
+        "confidence": "low",
+        "roleSummary": "主要經營業務指向PCB及先進封裝貼膜、撕膜、熱製程與前處理。保留設備產品，撤除「電阻專用生產線」及厚膜燒成實績暗示；電阻題材只能是可移轉製程的候選應用。 TWSE：2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%；全公司口徑，不能歸因本題材。"
       },
       {
         "topicId": "semiconductor-equipment-materials",
@@ -195,8 +195,8 @@
         "canonicalTopicName": "資安、雲端服務與企業軟體",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "2026年7月營收11.68億元、YoY+132.7%、累計YoY+87.0%，AI供應鏈設備需求強勁。"
+        "confidence": "low",
+        "roleSummary": "志聖MOPS直接列PCB與先進封裝的貼膜、撕膜、熱製程、壓合與清潔設備，並未列獨立雲端、資安或SaaS產品。本題材降為設備控制軟體鄰接觀察；SECS/GEM、OPC UA及EDA介面不再當成已出貨模組。 2026年7月營收11.68億元，MoM+34.33%、YoY+132.73%，累計YoY+87.05%。此為全公司營收，未拆分「資安、雲端服務與企業軟體」貢獻，不能全部歸因於本題材。"
       }
     ],
     "swot": [],
@@ -290,12 +290,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       },
       {
         "id": "risk.stop-distance",

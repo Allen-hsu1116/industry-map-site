@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3034",
   "name": "聯詠",
-  "generatedAt": "2026-09-04T12:32:50.271Z",
+  "generatedAt": "2026-09-09T12:33:14.891Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-04",
-  "chipDataDate": "2026-09-04",
+  "marketDataDate": "2026-09-09",
+  "chipDataDate": "2026-09-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -24,24 +24,23 @@
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 36,
-    "summary": "聯詠 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +3.3千張；近 20 日法人偏買，合計 +1.2萬張。",
+    "summary": "聯詠 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +2.2千張；近 20 日法人偏買，合計 +1.4萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +3.3千張",
-      "近 20 日法人偏買，合計 +1.2萬張",
-      "投信近 5 日買超 +903張",
-      "外資近 5 日買超 +2.5千張"
+      "三大法人近 5 日合計買超 +2.2千張",
+      "近 20 日法人偏買，合計 +1.4萬張",
+      "投信近 5 日買超 +160張",
+      "外資近 5 日買超 +2.1千張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-04"
+      "最近法人資料日：2026-09-09"
     ]
   },
   "industry": {
@@ -52,27 +51,27 @@
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "IC 設計與矽智財",
+      "topicName": "Edge AI / AIoT 邊緣智慧",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "聯詠MOPS直接支持語音、通訊、微控制器、DSP、電腦周邊與液晶顯示驅動IC系統，IC設計角色明確；但MOPS未揭露OLED製程節點、車規認證或具名面板客戶。2026年7月營收102.96億元、MoM+2.7%、YoY+26.8%，累計YoY僅+1.2%，單月改善尚未形成強勁全年成長。",
-      "supplyChainStage": "ic_design",
-      "roleType": "display_driver_ic_provider",
+      "roleSummary": "聯詠MOPS廣列DSP、MCU及顯示驅動，但官網2025技術里程碑已直接揭露自研NPU Edge AI SoC及VLM機器視覺晶片。原分析僅列通用DSP低估實際能力，本次恢復具體Edge AI角色；官方效能宣稱與採購客戶、出貨規模分開。 2026年7月營收102.96億元，MoM+2.73%、YoY+26.80%，累計年增率+1.15%。此為全公司營收，未拆分「Edge AI / AIoT 邊緣智慧」收入，不能全部歸因本題材。",
+      "supplyChainStage": "edge_ai_soc_design",
+      "roleType": "npu_vision_multimodal_soc",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "液晶顯示器驅動積體電路及系統",
+        "name": "自研NPU架構Edge AI SoC",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "觸控與顯示整合控制積體電路",
+        "name": "Edge Vision & Imaging AI SoC機器視覺晶片",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "數位訊號處理器及影像處理系統",
+        "name": "IPCAM／NVR／NAS外掛AI Box晶片方案",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -85,28 +84,28 @@
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
-      "題材 IC 設計與矽智財（supply_chain_segment/active） +16",
+      "題材 Edge AI / AIoT 邊緣智慧（technology/active） +17",
       "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "聯詠 在「IC 設計與矽智財」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "聯詠 在「Edge AI / AIoT 邊緣智慧」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
       "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：IC 設計與矽智財 · 核心產品/平台 · high",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 IC 設計與矽智財（supply_chain_segment/active） +16）",
+      "V2 題材角色：Edge AI / AIoT 邊緣智慧 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 Edge AI / AIoT 邊緣智慧（technology/active） +17）",
+      "相關題材：IC 設計與矽智財 · 核心產品/平台",
       "相關題材：面板、LED、光學鏡頭與感測 · 直接賦能角色",
-      "相關題材：Edge AI / AIoT 邊緣智慧 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 Edge AI / AIoT 邊緣智慧：月營收或訂單能見度改善",
+      "追蹤 Edge AI / AIoT 邊緣智慧：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 IC 設計與矽智財：月營收或訂單能見度改善",
       "追蹤 IC 設計與矽智財：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 面板、LED、光學鏡頭與感測：月營收或訂單能見度改善",
-      "追蹤 面板、LED、光學鏡頭與感測：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "V2 SWOT 最後驗證：2026-05-28"
     ]
   },
@@ -121,7 +120,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-04"
+      "lastVerified": "2026-09-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -144,6 +143,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "edge-ai-aiot",
+        "topicName": "Edge AI / AIoT 邊緣智慧",
+        "canonicalTopicId": "edge-ai-aiot",
+        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "聯詠MOPS廣列DSP、MCU及顯示驅動，但官網2025技術里程碑已直接揭露自研NPU Edge AI SoC及VLM機器視覺晶片。原分析僅列通用DSP低估實際能力，本次恢復具體Edge AI角色；官方效能宣稱與採購客戶、出貨規模分開。 2026年7月營收102.96億元，MoM+2.73%、YoY+26.80%，累計年增率+1.15%。此為全公司營收，未拆分「Edge AI / AIoT 邊緣智慧」收入，不能全部歸因本題材。"
+      },
+      {
         "topicId": "ic-design",
         "topicName": "IC 設計與矽智財",
         "canonicalTopicId": "ic-design",
@@ -162,20 +171,21 @@
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
         "roleSummary": "聯詠MOPS直接揭露液晶顯示器驅動IC、電腦周邊控制IC、DSP與嵌入式控制系統，是面板顯示驅動與控制晶片核心供應角色；既有製程節點、車規認證及具名客戶直供說法因MOPS未證實而移除。2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%，但累計YoY僅+1.2%。"
-      },
-      {
-        "topicId": "edge-ai-aiot",
-        "topicName": "Edge AI / AIoT 邊緣智慧",
-        "canonicalTopicId": "edge-ai-aiot",
-        "canonicalTopicName": "Edge AI / AIoT 邊緣智慧",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "聯詠MOPS支持語音IC、通訊IC、嵌入式MCU、DSP、電腦周邊控制與LCD驅動IC，能對應Edge AI的感知與訊號處理周邊，但未揭露NPU TOPS、ASIL-B、Hikvision或Dahua客戶，故移除舊資料的過度規格。2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%、累計YoY+1.2%；公司整體成長不能全歸因Edge AI。"
       }
     ],
     "swot": [],
     "topics": [
+      {
+        "id": "edge-ai-aiot",
+        "name": "Edge AI / AIoT 邊緣智慧",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
       {
         "id": "ic-design",
         "name": "IC 設計與矽智財",
@@ -191,17 +201,6 @@
         "id": "display-led-optics",
         "name": "面板、LED、光學鏡頭與感測",
         "type": "supply_chain_segment",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
-      {
-        "id": "edge-ai-aiot",
-        "name": "Edge AI / AIoT 邊緣智慧",
-        "type": "technology",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -232,8 +231,8 @@
       "signals": [
         "月營收 YoY +1.2%，溫和成長",
         "月營收 MoM +8.9%，短期動能改善",
-        "本益比 18.3 倍，估值尚可對照成長",
-        "殖利率 4.4%，提供部分下檔支撐"
+        "本益比 18.9 倍，估值尚可對照成長",
+        "殖利率 4.2%，提供部分下檔支撐"
       ],
       "risks": []
     },
@@ -249,11 +248,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：537.20",
-      "波段多空分水嶺看 MA20：535.35",
-      "追蹤法人是否延續 買超：最近 +287張",
+      "短線支撐/壓力先看 MA5：533.60",
+      "波段多空分水嶺看 MA20：535.25",
+      "追蹤法人是否延續 買超：最近 +1.5千張",
       "月營收年增率 +1.2%，觀察基本面是否支撐估值",
-      "本益比 18.3 倍，需和同族群估值比較"
+      "本益比 18.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 567.00 且量比 > 1.5：列為轉強訊號",

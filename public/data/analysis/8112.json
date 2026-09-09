@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8112",
   "name": "至上",
-  "generatedAt": "2026-09-04T12:32:50.685Z",
+  "generatedAt": "2026-09-09T12:33:15.486Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,33 +51,33 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 84,
+    "score": 90,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "MLCC / 電容器",
       "roleLabel": "供應商角色",
-      "roleSummary": "至上MOPS只揭露電子零組件經銷，未列明MLCC代理品牌；因此此角色是電子通路商對MLCC／電容器的供應鏈角色，不是製造商。2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，公司說明主要來自記憶體價格上漲與伺服器、手機客戶拉貨，不能把爆發成長歸因MLCC。",
-      "supplyChainStage": "mlcc_distribution",
-      "roleType": "mlcc_distributor",
+      "roleSummary": "MOPS只揭露電子通路，但官網三星電機頁明載至上在台灣／中國代理MLCC，因此保留已確認的MLCC通路角色。去除未確認村田／國巨／KEMET／Vishay代理暗示及鉭／鋁電容品項；三星電機是供應品牌，不是買方客戶。 TWSE：2026年7月營收768.74億元，MoM+24.74%、YoY+333.48%，累計YoY+180.42%；全公司口徑，不能歸因本題材。",
+      "supplyChainStage": "component_distribution",
+      "roleType": "confirmed_semco_mlcc_distributor",
       "directness": "supplier",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "車規／工規MLCC選型與經銷服務",
+        "name": "Samsung Electro-Mechanics積層陶瓷電容經銷",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "聚合物鉭質電容選型與經銷服務",
+        "name": "三星MLCC電腦／記憶體模組去耦選型服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "鋁電解電容選型與經銷服務",
+        "name": "三星MLCC電視／顯示設備電容選型服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -89,17 +89,17 @@
     },
     "scoringFactors": [
       "直接度 供應商角色 +26",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 MLCC / 電容器（product/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "至上 在「MLCC / 電容器」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 84/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "至上 在「MLCC / 電容器」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 90/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：MLCC / 電容器 · 供應商角色 · medium",
-      "產業評分：84/100（直接度 供應商角色 +26；角色信心 medium +10；題材 MLCC / 電容器（product/active） +16）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：MLCC / 電容器 · 供應商角色 · high",
+      "產業評分：90/100（直接度 供應商角色 +26；角色信心 high +16；題材 MLCC / 電容器（product/active） +16）",
       "相關題材：AI 伺服器液冷散熱 · 間接受惠",
       "相關題材：AI 伺服器機構件與滑軌 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -155,8 +155,8 @@
         "canonicalTopicName": "MLCC / 電容器",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
-        "confidence": "medium",
-        "roleSummary": "至上MOPS只揭露電子零組件經銷，未列明MLCC代理品牌；因此此角色是電子通路商對MLCC／電容器的供應鏈角色，不是製造商。2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，公司說明主要來自記憶體價格上漲與伺服器、手機客戶拉貨，不能把爆發成長歸因MLCC。"
+        "confidence": "high",
+        "roleSummary": "MOPS只揭露電子通路，但官網三星電機頁明載至上在台灣／中國代理MLCC，因此保留已確認的MLCC通路角色。去除未確認村田／國巨／KEMET／Vishay代理暗示及鉭／鋁電容品項；三星電機是供應品牌，不是買方客戶。 TWSE：2026年7月營收768.74億元，MoM+24.74%、YoY+333.48%，累計YoY+180.42%；全公司口徑，不能歸因本題材。"
       },
       {
         "topicId": "ai-server-liquid-cooling",
@@ -195,8 +195,8 @@
         "canonicalTopicName": "水資源、環保與電子廢料回收",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "至上並非廢棄物處理商；環保角色限於退貨、呆滯庫存與報廢電子元件的分級及委外資源化。 2026年7月營收768.74億元、YoY+333.5%，龐大交易量同時放大逆向物流與呆滯料管理需求。"
+        "confidence": "low",
+        "roleSummary": "至上MOPS只揭露電子零組件經銷，未揭露水處理、廢棄物清運、金屬回收或資源化服務；本題材最多是通路庫存、退貨與報廢料管理的營運鄰接。2026年7月營收768.74億元、YoY+333.5%，主因零組件漲價與伺服器、手機拉貨，不能算成環保收入。"
       }
     ],
     "swot": [],
@@ -271,7 +271,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 5,
+    "totalScore": 7,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -289,12 +289,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       }
     ]
   },

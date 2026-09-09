@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3023",
   "name": "信邦",
-  "generatedAt": "2026-09-04T12:32:50.265Z",
+  "generatedAt": "2026-09-09T12:33:14.882Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -53,31 +53,31 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "高速連接器與車工業連接",
+      "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "信邦MOPS揭露電子零件、電腦周邊、通訊器材與電腦網路零組件製造及經銷，高速連接與線束角色成立；但MOPS未揭露Tesla、NVIDIA或廣達為客戶。2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%，公司整體動能穩健。",
-      "supplyChainStage": "connectors",
-      "roleType": "high_speed_connector_maker",
+      "roleSummary": "信邦MOPS屬電子與通訊組件，官方商店則直接列100G／200G／400G QSFP被動線纜，恢復資料中心高速互連的具體產品角色；這支持AI機房周邊連接，不等同GPU整機或具名雲端客戶訂單。 2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計年增率+11.44%。此為全公司營收，未拆分「AI 伺服器整機與 EMS」收入，不能全部歸因本題材。",
+      "supplyChainStage": "data_center_cable_interconnect",
+      "roleType": "qsfp_passive_cable_provider",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "PCIe Gen5／Gen6高速線纜組件",
+        "name": "100G QSFP28對QSFP28被動線纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "1000BASE-T1／FPD-Link車用線束",
+        "name": "200G QSFP56對QSFP56被動線纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "M8／M12工業乙太網連接器",
+        "name": "400G QSFP-DD對QSFP-DD被動線纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -96,20 +96,20 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
-      "題材 高速連接器與車工業連接（supply_chain_segment/active） +16",
+      "角色信心 high +16",
+      "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "信邦 在「高速連接器與車工業連接」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "信邦 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：高速連接器與車工業連接 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 高速連接器與車工業連接（supply_chain_segment/active） +16）",
-      "相關題材：AI 伺服器整機與 EMS · 間接受惠",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "相關題材：高速連接器與車工業連接 · 直接賦能角色",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -120,10 +120,10 @@
     "watch": [
       "V2 O：AI 伺服器出貨放量帶動營收大幅成長，液冷 ASP 提升",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 高速連接器與車工業連接：月營收或訂單能見度改善",
-      "追蹤 高速連接器與車工業連接：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 高速連接器與車工業連接：月營收或訂單能見度改善",
+      "追蹤 高速連接器與車工業連接：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -160,24 +160,24 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
-        "topicId": "high-speed-interconnect",
-        "topicName": "高速連接器與車工業連接",
-        "canonicalTopicId": "high-speed-interconnect",
-        "canonicalTopicName": "高速連接器與車工業連接",
-        "directness": "core",
-        "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "信邦MOPS揭露電子零件、電腦周邊、通訊器材與電腦網路零組件製造及經銷，高速連接與線束角色成立；但MOPS未揭露Tesla、NVIDIA或廣達為客戶。2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%，公司整體動能穩健。"
-      },
-      {
         "topicId": "ai-server",
         "topicName": "AI 伺服器整機與 EMS",
         "canonicalTopicId": "ai-server",
         "canonicalTopicName": "AI 伺服器整機與 EMS",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "信邦MOPS屬電子與通訊組件，官方商店則直接列100G／200G／400G QSFP被動線纜，恢復資料中心高速互連的具體產品角色；這支持AI機房周邊連接，不等同GPU整機或具名雲端客戶訂單。 2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計年增率+11.44%。此為全公司營收，未拆分「AI 伺服器整機與 EMS」收入，不能全部歸因本題材。"
+      },
+      {
+        "topicId": "high-speed-interconnect",
+        "topicName": "高速連接器與車工業連接",
+        "canonicalTopicId": "high-speed-interconnect",
+        "canonicalTopicName": "高速連接器與車工業連接",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "信邦MOPS只揭露電子零件加工、電腦周邊、通信器材與網路組件，沒有112G PAM4、MCIO或AI伺服器專案；因此定位為連接與線束整合的相鄰角色。2026年7月營收31.67億元，MoM+2.4%、YoY+29.0%，累計YoY+11.4%。"
+        "roleSummary": "MOPS的電子零件與網通製造範圍由官網工業產品目錄補強，可確認SPE、M系列及ix Industrial互連。撤除無來源的PCIe Gen6與112G PAM4；工業乙太網路互連不等於資料中心高速銅連接認證。 TWSE：2026年7月營收31.67億元，MoM+2.41%、YoY+28.97%，累計YoY+11.44%；全公司口徑，不能歸因本題材。"
       }
     ],
     "swot": [
@@ -220,9 +220,9 @@
     ],
     "topics": [
       {
-        "id": "high-speed-interconnect",
-        "name": "高速連接器與車工業連接",
-        "type": "supply_chain_segment",
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
+        "type": "theme",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -231,9 +231,9 @@
         ]
       },
       {
-        "id": "ai-server",
-        "name": "AI 伺服器整機與 EMS",
-        "type": "theme",
+        "id": "high-speed-interconnect",
+        "name": "高速連接器與車工業連接",
+        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -276,12 +276,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       }
     ]
   },

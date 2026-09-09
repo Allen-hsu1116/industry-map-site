@@ -2,19 +2,21 @@
   "schemaVersion": 1,
   "code": "4764",
   "name": "雙鍵",
-  "generatedAt": "2026-09-04T12:32:50.447Z",
+  "generatedAt": "2026-09-09T12:33:15.141Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
     "missingKnowledge": [
+      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
+      "topic_role_not_verified",
       "missing_swot"
     ]
   },
@@ -176,7 +178,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "雙鍵MOPS核心為塑膠添加劑與UV光固化產品，環境題材的合理角色是低VOC塗層與延長塑膠壽命，並非水處理設備或藥劑供應商。2026年7月營收2.94億元、YoY+44.1%、MoM+3.4%。"
+        "roleSummary": "雙鍵MOPS支持塑膠添加劑與UV光固化產品，未揭露水處理藥劑、膜材、回收設備或廢棄物服務；本題材只保留低VOC固化與延長塑膠壽命的材料永續鄰接。2026年7月營收2.94億元、YoY+44.1%、累計YoY+28.6%，不能全歸因環保應用。"
       },
       {
         "topicId": "industrial-automation",
@@ -185,8 +187,8 @@
         "canonicalTopicName": "工業自動化與 CNC 工具機",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "2026年7月營收2.94億元、YoY+44.1%、累計YoY+28.6%，添加劑需求強勁。"
+        "confidence": "low",
+        "roleSummary": "雙鍵MOPS為塑膠添加劑與UV光固化產品，官網確認多種丙烯酸酯寡聚物和光起始劑。工業自動化題材限於UV固化製程耗材鄰接，移除無來源的CNC切削液、液壓油與齒輪潤滑極壓添加劑宣稱。 2026年7月營收2.94億元，MoM+3.45%、YoY+44.07%，累計YoY+28.61%。此為全公司營收，未拆分「工業自動化與 CNC 工具機」貢獻，不能全部歸因於本題材。"
       },
       {
         "topicId": "semiconductor-equipment-materials",
@@ -289,12 +291,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       },
       {
         "id": "risk.stop-distance",

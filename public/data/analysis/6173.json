@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-09-04T12:32:50.538Z",
+  "generatedAt": "2026-09-09T12:33:15.272Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-04",
-  "chipDataDate": "2026-09-04",
+  "marketDataDate": "2026-09-09",
+  "chipDataDate": "2026-09-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,10 +18,10 @@
     "stance": "bullish",
     "label": "偏多",
     "score": 45,
-    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 19.1%。",
+    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 15.6%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 19.1%"
+      "收盤站上 MA20 15.6%"
     ],
     "risks": [],
     "watch": []
@@ -29,19 +29,20 @@
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": 16,
-    "summary": "信昌電 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +792張；投信近 5 日買超 +237張。",
+    "score": -15,
+    "summary": "信昌電 籌碼面目前為「籌碼中性」：投信近 5 日買超 +242張；融資近 5 日下降 8.1%，籌碼壓力下降。",
     "signals": [
-      "三大法人近 5 日合計買超 +792張",
-      "投信近 5 日買超 +237張",
-      "外資近 5 日買超 +1.1千張"
+      "投信近 5 日買超 +242張",
+      "融資近 5 日下降 8.1%，籌碼壓力下降"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -3.7千張"
+      "三大法人近 5 日合計賣超 -836張",
+      "近 20 日法人偏賣，合計 -2.5千張",
+      "外資近 5 日賣超 -600張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-04",
-      "融券近 5 日增加 69.4%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-09",
+      "融券近 5 日增加 165.2%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -135,7 +136,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-04"
+      "lastVerified": "2026-09-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -204,8 +205,8 @@
         "canonicalTopicName": "儲能、電芯與電池材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "信昌電為晶片電容/電阻/介電瓷粉專業製造商，提供儲能系統用高壓陶瓷電容與突波保護元件，受惠儲能變流器需求成長。"
+        "confidence": "medium",
+        "roleSummary": "信昌電MOPS支持晶片電容、晶片電阻與介電瓷粉，未揭露電芯、正負極材料、BMS或儲能變流器；本題材僅是被動元件在儲能電力電子中的應用鄰接。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，但不能歸因儲能。"
       },
       {
         "topicId": "pcb-substrates",
@@ -214,8 +215,8 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "high",
-        "roleSummary": "信昌電為PCB基板上游陶瓷介電材料供應商，MOPS登記為晶片電容晶片電阻介電瓷粉。間接受惠高速PCB/IC載板需求，屬利基型材料供應商，高頻陶瓷配方為核心技術壁壘。"
+        "confidence": "low",
+        "roleSummary": "信昌電MOPS確認晶片電容、晶片電阻與介電瓷粉，官網進一步列鈦酸鋇基材、積層電容瓷粉、微波瓷粉與LTCC粉末。但未確認高速CCL填料配方或具名PCB材料買方，本題材維持陶瓷材料與板級被動元件鄰接，不能將瓷粉直接視為ABF載板收入。 2026年7月營收5.37億元，MoM+6.62%、YoY+47.87%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。"
       },
       {
         "topicId": "renewable-energy",
@@ -371,14 +372,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 51,
-    "recommendationState": "blocked",
+    "totalScore": 62,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": -12,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "本益比 49.1 倍，需防估值壓縮"
+        "本益比 50.6 倍，需防估值壓縮"
       ]
     },
     "strategy": {
@@ -391,21 +392,21 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "hard",
-        "message": "距離 MA20 約 16.1%，停損距離過大"
+        "severity": "soft",
+        "message": "距離 MA20 約 13.5%，部位需降速"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：253.90",
-      "波段多空分水嶺看 MA20：218.65",
-      "追蹤法人是否延續 買超：最近 +411張",
-      "本益比 49.1 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：266.00",
+      "波段多空分水嶺看 MA20：232.23",
+      "追蹤法人是否延續 賣超：最近 -743張",
+      "本益比 50.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 270.50 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 161.50：列為轉弱警訊",
+      "收盤突破 20 日高點 286.50 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 189.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

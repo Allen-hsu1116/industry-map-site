@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2643",
   "name": "捷迅",
-  "generatedAt": "2026-09-04T12:32:50.209Z",
+  "generatedAt": "2026-09-09T12:33:14.803Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -57,29 +57,29 @@
     "knowledgeBasis": "canonical_pending",
     "confidence": "low",
     "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。",
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
       "roleLabel": "間接受惠",
-      "roleSummary": "捷迅MOPS僅揭露整合型物流服務，未揭露國防部、中科院、漢翔合約或軍品安全等級。此角色限於航太零件與高價設備可能採用的報關、保稅倉儲及運輸服務。FinMind顯示2026年7月營收7.04億元，MoM+1.1%。",
-      "supplyChainStage": "integrated_logistics_adjacent",
-      "roleType": "integrated_logistics_for_aerospace",
+      "roleSummary": "MOPS確認整合物流，官網明列空海運、報關、VMI及EDI。航太角色是潛在航材運輸與備品管理，不是航空器製造；不再保留未由本次資料確認的溫濕度監控能力或軍品運輸實績。 FinMind：2026年7月營收7.04億元，MoM+1.10%、YoY-1.78%；全公司口徑，不能歸因本題材。",
+      "supplyChainStage": "adjacent_application_monitoring",
+      "roleType": "integrated_logistics_adjacent_to_aerospace",
       "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "航空貨運承攬與門到門配送",
+        "name": "航空進出口貨運承攬服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "海運貨櫃承攬與多式聯運",
+        "name": "海運FCL／LCL整櫃與併櫃服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "保稅倉儲與庫存管理",
+        "name": "進出口及保稅貨物報關服務",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -102,7 +102,7 @@
       "直接度 間接受惠 +8",
       "角色信心 low +3",
       "題材 軍工、航太與無人機（theme/active） +18",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 4 項 +10",
       "風險 SWOT 扣分 -10",
@@ -117,7 +117,7 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。",
       "V2 W：國防物流收入占比受軍方標案排程影響大",
       "V2 W：資本額僅3.5億，營運規模有限",
       "V2 T：大型物流業者（如中菲行）跨足國防物流",
@@ -173,7 +173,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "捷迅MOPS僅揭露整合型物流服務，未揭露國防部、中科院、漢翔合約或軍品安全等級。此角色限於航太零件與高價設備可能採用的報關、保稅倉儲及運輸服務。FinMind顯示2026年7月營收7.04億元，MoM+1.1%。"
+        "roleSummary": "MOPS確認整合物流，官網明列空海運、報關、VMI及EDI。航太角色是潛在航材運輸與備品管理，不是航空器製造；不再保留未由本次資料確認的溫濕度監控能力或軍品運輸實績。 FinMind：2026年7月營收7.04億元，MoM+1.10%、YoY-1.78%；全公司口徑，不能歸因本題材。"
       }
     ],
     "swot": [
@@ -293,12 +293,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       },
       {
         "id": "risk.topic-evidence",

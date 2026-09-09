@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2345",
   "name": "智邦",
-  "generatedAt": "2026-09-04T12:32:50.073Z",
+  "generatedAt": "2026-09-09T12:33:14.608Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -53,31 +53,31 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "直接賦能角色",
-      "roleSummary": "智邦MOPS明確支持電腦網路系統、光電通訊設備、特定功能IC與UPS，足以定位為AI資料中心網路與電源周邊的直接賦能者；但MOPS未揭露800G／1.6T型號或Microsoft、Google、Meta等客戶。2026年7月營收394.73億元、YoY+71.7%，公司僅說明客戶需求增加。",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "data_center_switch_maker",
+      "roleSummary": "智邦MOPS支持電腦網路與光電通訊設備，官網直接揭露800G Ethernet／VoQ AI叢集交換方案，因此是AI伺服器網路的直接賦能者，而非GPU整機製造商。本次將籠統ToR與不斷電產品換成具體交換器配置；不再把NVIDIA Spectrum-X寫成已驗證的平台關係。 本次TWSE回傳2026年7月營收394.73億元，MoM-0.21%、YoY+71.69%，累計年增率+62.36%。",
+      "supplyChainStage": "data_center_networking",
+      "roleType": "ai_cluster_ethernet_fabric_provider",
       "directness": "direct_enabler",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "400G／800G資料中心葉脊交換器",
+        "name": "51.2Tbps、64×800G乙太網路交換器（2RU）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "資料中心ToR乙太網路交換器",
+        "name": "51.2Tbps、64×800G乙太網路交換器（4RU）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高速光電通訊設備",
+        "name": "128×400G雙埠光模組配置交換器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -98,9 +98,9 @@
     },
     "scoringFactors": [
       "直接度 直接賦能角色 +36",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
@@ -108,9 +108,9 @@
     ],
     "summary": "智邦 在「AI 伺服器整機與 EMS」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · medium",
-      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 直接賦能角色 · high",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "主要產品：100G/400G乙太網路交換器",
       "主要產品：Wi-Fi 6/7企業AP",
       "主要產品：5G小基站(Small Cell)",
@@ -200,8 +200,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
-        "confidence": "medium",
-        "roleSummary": "智邦MOPS明確支持電腦網路系統、光電通訊設備、特定功能IC與UPS，足以定位為AI資料中心網路與電源周邊的直接賦能者；但MOPS未揭露800G／1.6T型號或Microsoft、Google、Meta等客戶。2026年7月營收394.73億元、YoY+71.7%，公司僅說明客戶需求增加。"
+        "confidence": "high",
+        "roleSummary": "智邦MOPS支持電腦網路與光電通訊設備，官網直接揭露800G Ethernet／VoQ AI叢集交換方案，因此是AI伺服器網路的直接賦能者，而非GPU整機製造商。本次將籠統ToR與不斷電產品換成具體交換器配置；不再把NVIDIA Spectrum-X寫成已驗證的平台關係。 本次TWSE回傳2026年7月營收394.73億元，MoM-0.21%、YoY+71.69%，累計年增率+62.36%。"
       }
     ],
     "swot": [
@@ -356,12 +356,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       }
     ]
   },

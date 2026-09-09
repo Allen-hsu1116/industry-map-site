@@ -2,19 +2,21 @@
   "schemaVersion": 1,
   "code": "6169",
   "name": "昱泉",
-  "generatedAt": "2026-09-04T12:32:50.536Z",
+  "generatedAt": "2026-09-09T12:33:15.269Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
     "missingKnowledge": [
+      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
+      "topic_role_not_verified",
       "incomplete_swot"
     ]
   },
@@ -187,8 +189,8 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "昱泉不生產PCB、載板或基板材料；本題材只描述遊戲在主機與PC硬體上的終端需求，不能列為PCB供應商。 FinMind顯示2026年7月營收僅2.3萬元，且公司不生產PCB或基板材料。"
+        "confidence": "low",
+        "roleSummary": "昱泉MOPS僅確認遊戲及教育軟體研發、生產、代理和銷售，與PCB／IC載板製造無直接關聯。移除未經查證的PlayStation、Switch與Unity／Unreal產品宣稱，保留軟體本業作為題材排除觀察，不把遊戲終端使用電路板當成供應鏈證據。 2026年7月營收2.30萬元，MoM-42.50%、YoY-99.25%。此為全公司營收，未拆分「PCB、IC 載板與高階基板材料」貢獻，不能全部歸因於本題材。"
       },
       {
         "topicId": "semiconductor-equipment-materials",
@@ -197,8 +199,8 @@
         "canonicalTopicName": "半導體設備與前段材料",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "昱泉不生產半導體設備或材料；MOPS僅揭露遊戲與教育軟體。此角色只代表遊戲軟體消耗GPU/SoC算力的終端需求，不能列為半導體設備受惠者。FinMind顯示2026年7月營收2.3萬元。"
+        "confidence": "low",
+        "roleSummary": "昱泉MOPS只支持遊戲與教育軟體研發、生產、代理及銷售，沒有蝕刻、沉積、量測設備或前段材料；本角色是完全題外監測，不應列為半導體設備受惠者。FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%、YoY-99.2%。"
       },
       {
         "topicId": "silicon-photonics-optical-comm",
@@ -310,12 +312,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       },
       {
         "id": "risk.stop-distance",

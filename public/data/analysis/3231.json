@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-09-04T12:32:50.313Z",
+  "generatedAt": "2026-09-09T12:33:14.947Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-04",
-  "chipDataDate": "2026-09-04",
+  "marketDataDate": "2026-09-09",
+  "chipDataDate": "2026-09-09",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,31 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 45,
-    "summary": "緯創 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 7.1%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "緯創 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 7.1%"
-    ],
-    "risks": [],
-    "watch": []
-  },
-  "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 36,
-    "summary": "緯創 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +5.9萬張；近 20 日法人偏買，合計 +2.3萬張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +5.9萬張",
-      "近 20 日法人偏買，合計 +2.3萬張",
-      "投信近 5 日買超 +2.7萬張",
-      "外資近 5 日買超 +3萬張"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-04"
+      "股價貼近 MA20，留意方向選擇"
+    ]
+  },
+  "chips": {
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -28,
+    "summary": "緯創 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +2.1萬張；三大法人近 5 日合計賣超 -303張。",
+    "signals": [
+      "投信近 5 日買超 +2.1萬張"
+    ],
+    "risks": [
+      "三大法人近 5 日合計賣超 -303張",
+      "近 20 日法人偏賣，合計 -3.7萬張",
+      "外資近 5 日賣超 -2.4萬張",
+      "融資近 5 日增加 14.5%，但技術面未同步轉強"
+    ],
+    "watch": [
+      "最近法人資料日：2026-09-09"
     ]
   },
   "industry": {
@@ -122,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-04"
+      "lastVerified": "2026-09-09"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -162,7 +165,7 @@
         "directness": "direct_enabler",
         "directnessLabel": "直接賦能角色",
         "confidence": "medium",
-        "roleSummary": "緯創MOPS只以「3C電子產品其他」概括主業，未揭露HGX型號或NVIDIA、Dell、Meta、Microsoft等客戶；AI伺服器ODM角色可由題材脈絡保留，但具名平台與客戶須標為非MOPS揭露。2026年7月營收3,082.19億元、YoY+60.8%、累計YoY+88.2%，公司僅說明客戶需求增加。"
+        "roleSummary": "緯創MOPS僅概述3C產品；NVIDIA 2025年官方公告直接列緯創為RTX PRO伺服器系統夥伴，另有緯創GB200液冷裝配與數位孿生新聞的搜尋索引佐證。本次緯創原站擷取及瀏覽器均拒絕存取，歷史新聞僅標示索引層級；不將公告的供應規劃寫成當月特定機型量產或銷售份額。 本次TWSE回傳2026年7月營收3,082.19億元，MoM-4.23%、YoY+60.76%，累計年增率+88.16%。"
       },
       {
         "topicId": "ai-server-mechanical",
@@ -236,21 +239,19 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 79,
-    "recommendationState": "top_candidate",
+    "totalScore": 58,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 15.7 倍，估值尚可對照成長"
+        "本益比 15.0 倍，估值尚可對照成長"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -258,10 +259,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：186.40",
-      "波段多空分水嶺看 MA20：184.95",
-      "追蹤法人是否延續 買超：最近 +2.8萬張",
-      "本益比 15.7 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：191.80",
+      "波段多空分水嶺看 MA20：184.70",
+      "追蹤法人是否延續 買超：最近 +4.9千張",
+      "本益比 15.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 206.00 且量比 > 1.5：列為轉強訊號",

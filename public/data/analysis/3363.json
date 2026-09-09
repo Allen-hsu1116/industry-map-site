@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3363",
   "name": "上詮",
-  "generatedAt": "2026-09-04T12:32:50.342Z",
+  "generatedAt": "2026-09-09T12:33:14.987Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -50,34 +50,34 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 40,
-    "knowledgeBasis": "canonical_pending",
-    "confidence": "low",
-    "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=2；只做保守參考。",
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "水資源、環保與電子廢料回收",
-      "roleLabel": "間接受惠",
-      "roleSummary": "上詮MOPS只支持光纖被動元件、光纖模組／整合系統與光纖生產測試設備，未揭露商業廢棄物處理、廢光纖回收或製程用水回用。環保角色只能列為工廠內部減廢監測題材，不能把回收料當產品。FinMind顯示2026年7月營收1.71億元、MoM+8.5%、YoY+12.1%。",
-      "supplyChainStage": "optical_components_outside_environment",
-      "roleType": "fiber_optics_outside_recycling",
-      "directness": "indirect",
+      "topicName": "矽光子、CPO 與高速光通訊",
+      "roleLabel": "核心產品/平台",
+      "roleSummary": "上詮MOPS確認光纖被動元件，官方ReLFACon資料明列矽光子CPO用光纖陣列連接器與FA／MPO保偏封裝；本次恢復有官方證據的CPO元件定位，並把產品能力與實際量產訂單規模分開。 2026年8月營收2.04億元，MoM+19.69%、YoY+13.20%。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。",
+      "supplyChainStage": "cpo_fiber_array_interconnect",
+      "roleType": "relfacon_and_pm_fiber_array",
+      "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "光纖被動元件",
+        "name": "ReLFACon可回焊透鏡光纖陣列連接器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "光纖模組",
+        "name": "矽光子封裝用FA光纖陣列",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "光纖整合系統",
+        "name": "MPO多通道保偏光纖陣列封裝",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -88,31 +88,29 @@
       "risks": []
     },
     "scoringFactors": [
-      "直接度 間接受惠 +8",
-      "角色信心 low +3",
-      "題材 水資源、環保與電子廢料回收（theme/active） +18",
-      "角色證據 2 則 +12",
+      "直接度 核心產品/平台 +42",
+      "角色信心 high +16",
+      "題材 矽光子、CPO 與高速光通訊（technology/active） +17",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
-      "V2 角色待驗證上限 / 缺 evidence 降權（原 53，上限 40）"
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "上詮 在「水資源、環保與電子廢料回收」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
+    "summary": "上詮 在「矽光子、CPO 與高速光通訊」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 待驗證（low）",
-      "V2 題材角色：水資源、環保與電子廢料回收 · 間接受惠 · low",
-      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 水資源、環保與電子廢料回收（theme/active） +18）",
-      "相關題材：矽光子、CPO 與高速光通訊 · 間接受惠",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：矽光子、CPO 與高速光通訊 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
+      "相關題材：水資源、環保與電子廢料回收 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
-    "risks": [
-      "已有 V2 role，但 status=candidate、confidence=low、evidence=2；只做保守參考。"
-    ],
+    "risks": [],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 水資源、環保與電子廢料回收：月營收或訂單能見度改善",
-      "追蹤 水資源、環保與電子廢料回收：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
       "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 水資源、環保與電子廢料回收：月營收或訂單能見度改善",
+      "追蹤 水資源、環保與電子廢料回收：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "知識庫最後驗證：2026-05-26（stale）"
     ]
   },
@@ -150,6 +148,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "silicon-photonics-optical-comm",
+        "topicName": "矽光子、CPO 與高速光通訊",
+        "canonicalTopicId": "silicon-photonics-optical-comm",
+        "canonicalTopicName": "矽光子、CPO 與高速光通訊",
+        "directness": "core",
+        "directnessLabel": "核心產品/平台",
+        "confidence": "high",
+        "roleSummary": "上詮MOPS確認光纖被動元件，官方ReLFACon資料明列矽光子CPO用光纖陣列連接器與FA／MPO保偏封裝；本次恢復有官方證據的CPO元件定位，並把產品能力與實際量產訂單規模分開。 2026年8月營收2.04億元，MoM+19.69%、YoY+13.20%。此為全公司營收，未拆分「矽光子、CPO 與高速光通訊」收入，不能全部歸因本題材。"
+      },
+      {
         "topicId": "environment-water-recycling",
         "topicName": "水資源、環保與電子廢料回收",
         "canonicalTopicId": "environment-water-recycling",
@@ -158,24 +166,14 @@
         "directnessLabel": "間接受惠",
         "confidence": "low",
         "roleSummary": "上詮MOPS只支持光纖被動元件、光纖模組／整合系統與光纖生產測試設備，未揭露商業廢棄物處理、廢光纖回收或製程用水回用。環保角色只能列為工廠內部減廢監測題材，不能把回收料當產品。FinMind顯示2026年7月營收1.71億元、MoM+8.5%、YoY+12.1%。"
-      },
-      {
-        "topicId": "silicon-photonics-optical-comm",
-        "topicName": "矽光子、CPO 與高速光通訊",
-        "canonicalTopicId": "silicon-photonics-optical-comm",
-        "canonicalTopicName": "矽光子、CPO 與高速光通訊",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "上詮MOPS揭露光纖被動元件、光纖模組／整合系統及光纖測試設備，沒有CPO或矽光子晶片；本題材可確認的是光纖耦合與測試的周邊角色。FinMind顯示2026年7月營收1.71億元，較6月增加8.5%。"
       }
     ],
     "swot": [],
     "topics": [
       {
-        "id": "environment-water-recycling",
-        "name": "水資源、環保與電子廢料回收",
-        "type": "theme",
+        "id": "silicon-photonics-optical-comm",
+        "name": "矽光子、CPO 與高速光通訊",
+        "type": "technology",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -184,9 +182,9 @@
         ]
       },
       {
-        "id": "silicon-photonics-optical-comm",
-        "name": "矽光子、CPO 與高速光通訊",
-        "type": "technology",
+        "id": "environment-water-recycling",
+        "name": "水資源、環保與電子廢料回收",
+        "type": "theme",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -209,7 +207,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 3,
+    "totalScore": 21,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -218,24 +216,21 @@
       "risks": []
     },
     "strategy": {
-      "classification": "觀察股",
-      "rationale": []
+      "classification": "題材股",
+      "rationale": [
+        "題材角色已 evidence-backed，可納入題材股策略"
+      ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 107 天未更新"
       }
     ]
   },

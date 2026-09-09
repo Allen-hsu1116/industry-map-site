@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2357",
   "name": "華碩",
-  "generatedAt": "2026-09-04T12:32:50.082Z",
+  "generatedAt": "2026-09-09T12:33:14.621Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,31 +54,31 @@
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "華碩MOPS支持電腦系統、主機板與板卡的設計研發銷售，2026年7月月營收更明確備註成長主要來自AI伺服器銷售，題材直接性成立；但MOPS未揭露特定伺服器型號或具名客戶。7月營收841.31億元、YoY+53.3%，惟MoM-21.2%顯示出貨波動。",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "ai_pc_gpu_system_maker",
+      "roleSummary": "華碩MOPS支持電腦系統與板卡，官方ESC8000-E12／E11產品頁確認八GPU 4U伺服器及BMC管理。7月月營收備註更明確指出主要差異來自AI伺服器銷售成長，因此AI角色不只是推測；但沒有拆出AI收入金額。本次按機種區分Xeon、記憶體、PCIe與散熱規格，不將E11氣冷機種泛寫成液冷產品。 本次TWSE回傳2026年7月營收841.31億元，MoM-21.17%、YoY+53.33%，累計年增率+40.88%。",
+      "supplyChainStage": "gpu_server_systems",
+      "roleType": "enterprise_gpu_server_system_provider",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "ASUS ESC8000系列GPU伺服器",
+        "name": "ESC8000-E12 Intel Xeon 6／八GPU 4U伺服器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "ASUS RS系列雙路機架伺服器",
+        "name": "ESC8000-E11第五代Xeon／八GPU 4U伺服器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "ASUS AI工作站",
+        "name": "ASMB11-iKVM AST2600遠端伺服器管理模組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -99,7 +99,7 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
       "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
@@ -109,9 +109,9 @@
     ],
     "summary": "華碩 在「AI 伺服器整機與 EMS」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：AI 伺服器整機與 EMS · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 AI 伺服器整機與 EMS（theme/active） +18）",
       "主要產品：主機板(Motherboard)",
       "主要產品：電競筆電(ROG)",
       "主要產品：顯示卡(GPU)",
@@ -202,8 +202,8 @@
         "canonicalTopicName": "AI 伺服器整機與 EMS",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "華碩MOPS支持電腦系統、主機板與板卡的設計研發銷售，2026年7月月營收更明確備註成長主要來自AI伺服器銷售，題材直接性成立；但MOPS未揭露特定伺服器型號或具名客戶。7月營收841.31億元、YoY+53.3%，惟MoM-21.2%顯示出貨波動。"
+        "confidence": "high",
+        "roleSummary": "華碩MOPS支持電腦系統與板卡，官方ESC8000-E12／E11產品頁確認八GPU 4U伺服器及BMC管理。7月月營收備註更明確指出主要差異來自AI伺服器銷售成長，因此AI角色不只是推測；但沒有拆出AI收入金額。本次按機種區分Xeon、記憶體、PCIe與散熱規格，不將E11氣冷機種泛寫成液冷產品。 本次TWSE回傳2026年7月營收841.31億元，MoM-21.17%、YoY+53.33%，累計年增率+40.88%。"
       }
     ],
     "swot": [
@@ -367,12 +367,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       },
       {
         "id": "risk.stop-distance",

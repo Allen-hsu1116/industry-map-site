@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2409",
   "name": "友達",
-  "generatedAt": "2026-09-04T12:32:50.117Z",
+  "generatedAt": "2026-09-09T12:33:14.670Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -57,29 +57,29 @@
     "knowledgeBasis": "canonical_pending",
     "confidence": "low",
     "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。",
     "roleDetail": {
       "topicName": "AI 伺服器整機與 EMS",
       "roleLabel": "間接受惠",
-      "roleSummary": "友達MOPS支持TFT-LCD與顯示系統、垂直場域及智慧移動方案，沒有AI伺服器整機、主板或散熱產品；本角色只能定位為資料中心控制室、KVM維運終端與監控看板的顯示應用。2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%，公司整體營運轉弱，亦未揭露AI伺服器貢獻。",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "display_panel_supplier",
+      "roleSummary": "友達MOPS確認TFT-LCD與垂直場域方案，官方Video Wall說明列控制室應用；可作AI資料中心維運顯示的間接觀察對象，並非AI伺服器算力、液冷或GPU零件供應商。本次去掉未驗證的資料中心KVM專用板與機房能源看板料號，顯示應用並不表示已取得AI機房訂單。 本次TWSE回傳2026年7月營收203.70億元，MoM-18.36%、YoY-2.64%，累計年增率-1.21%。",
+      "supplyChainStage": "display_systems_adjacent",
+      "roleType": "control_room_display_ai_server_adjacent",
       "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "資料中心機架KVM終端用TFT-LCD面板（應用推定）",
+        "name": "TFT-LCD商用顯示面板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "資料中心控制室拼接顯示面板",
+        "name": "液晶多屏拼接顯示系統",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "伺服器維運終端用觸控顯示模組",
+        "name": "控制室LED Video Wall顯示方案",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -102,7 +102,7 @@
       "直接度 間接受惠 +8",
       "角色信心 low +3",
       "題材 AI 伺服器整機與 EMS（theme/active） +18",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 6 項 +10",
       "風險 SWOT 扣分 -10",
@@ -119,7 +119,7 @@
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則"
     ],
     "risks": [
-      "已有 V2 role，但 status=verified、confidence=low、evidence=4；只做保守參考。",
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。",
       "V2 W：4月營收221億年減4.5%，面板景氣仍在底部",
       "V2 W：LCD面板價格長期下降趨勢",
       "V2 T：京東方(BOE)低價競爭",
@@ -205,7 +205,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "友達MOPS支持TFT-LCD與顯示系統、垂直場域及智慧移動方案，沒有AI伺服器整機、主板或散熱產品；本角色只能定位為資料中心控制室、KVM維運終端與監控看板的顯示應用。2026年7月營收203.70億元，MoM-18.4%、YoY-2.6%，公司整體營運轉弱，亦未揭露AI伺服器貢獻。"
+        "roleSummary": "友達MOPS確認TFT-LCD與垂直場域方案，官方Video Wall說明列控制室應用；可作AI資料中心維運顯示的間接觀察對象，並非AI伺服器算力、液冷或GPU零件供應商。本次去掉未驗證的資料中心KVM專用板與機房能源看板料號，顯示應用並不表示已取得AI機房訂單。 本次TWSE回傳2026年7月營收203.70億元，MoM-18.36%、YoY-2.64%，累計年增率-1.21%。"
       }
     ],
     "swot": [
@@ -368,12 +368,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 102 天未更新"
+        "message": "股價資料已 107 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 102 天未更新"
+        "message": "籌碼資料已 107 天未更新"
       },
       {
         "id": "risk.stop-distance",
