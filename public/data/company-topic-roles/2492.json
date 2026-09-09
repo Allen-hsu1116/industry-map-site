@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2492",
   "companyName": "華新科",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -254,15 +254,15 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "華新科MOPS揭露MLCC、圓板電容、晶片電阻、保險絲、電感、射頻元件與陶瓷粉末，可應用於太陽能逆變器及風電電力電子，但未揭露再生能源客戶或題材營收。2026年7月營收44.44億元、MoM+12.2%、YoY+42.0%、累計YoY+18.7%，為公司整體被動元件表現。",
+      "supplyChainStage": "passive_components_adjacent",
+      "roleType": "power_passives_renewable_application_candidate",
+      "roleSummary": "MOPS被動元件業務與官方電源應用目錄一致，改以可查證系列與規格取代泛稱。產品可作再生能源電力電子之應用評估，但官網電源目錄不證明特定逆變器客戶或新能源營收。本次TWSE最新回傳：2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "高壓積層陶瓷電容（逆變器濾波與旁路用）",
-        "高功率晶片電阻（電流偵測與分壓用）",
-        "晶片保險絲（逆變器過流保護用）",
-        "功率電感（DC-DC轉換與濾波用）",
-        "圓板陶瓷電容（EMI抑制用）"
+        "200V–4kV中高壓MLCC電容系列",
+        "SH系列軟端電極MLCC電容",
+        "SF.Q系列抗硫化薄膜晶片電阻",
+        "TTU系列超低阻值金屬電流感測電阻",
+        "WLFM系列多層功率電感"
       ],
       "customers": [
         "台達電(2308；逆變器應用對象，非MOPS揭露客戶)",
@@ -276,65 +276,68 @@
         "EPCOS(太陽能逆變器突波吸收器)"
       ],
       "risks": [
-        "MOPS未揭露再生能源客戶或營收占比",
-        "被動元件單價低且題材成長易被其他終端需求混淆",
-        "國巨、村田與中國被動元件商競爭壓縮價格"
+        "AEC-Q200等規格只適用型錄指定系列，不能把全部被動元件視為新能源已認證供應。",
+        "客戶降本與亞洲同業價格競爭可能壓縮被動元件利潤。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：MLCC、圓板電容、晶片電阻與保險絲、電感、射頻元件、高壓／高頻電容及陶瓷粉末。"
+          "title": "2492 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2492",
+          "claim": "MOPS主要經營業務：電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "2492 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收44.44億元，MoM+12.2%、YoY+42.0%，累計YoY+18.7%。"
+          "claim": "2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "華新科 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "http://passivecomponent.com/applications/power-supply",
+          "claim": "官方Power supply目錄列中高壓200V–4kV MLCC、SH、SF.Q、TTU及WLFM系列；技術與認證按系列分開，不確認新能源具名客戶。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "華新科 官方網站",
+          "title": "Power supply",
+          "url": "http://passivecomponent.com/applications/power-supply",
+          "claim": "來源摘錄（extracted live public page）：Middle to High Voltage Caps_(200V-4kV)0402 to 1812 Sizes NP0, X7R, Y5V 0.5pF~1uF 200V~4000VDetailDownloadSearch Open-mode Design Caps_(OP series)0805 to 1812 Sizes X7R 100pF~1uF 50V~630VDetailDownloadSearch Safety Certificated Caps X1/Y2_(S2 series)Safety Certified X1/Y2 1808 to 2220 Sizes NP0, X7R 3pF~4700pF Peak impulse: 5000~6000VDetailDownloadSearch Safety Certificated Caps X2/Y3_(S3 series)Safety Certified X2 1808 to 2220 Sizes NP0, X7R 3pF~22nF Peak impulse: 2500VDetailDownloadSearch Soft Termination Capacitors_(SH series, Ag-poly)Soft Termination Bending Spec (JIS standard) 5mm 0402 to 2225 NP0, X7R, X5R, Y5V 0.1pF~47uF 6.3V to 3000VDetailDownloadSearch ChipRHigh Precision Thick Film chip resistor TC100SF12H, SF10H, SF08H, SF06H, SF04H 0402 - 2512, 10 -1Mohm, ±0.5%, ±0.1%, TC100DetailDownloadSearch High Precision Thick Film chip resistor TC100WF10H 0402 - 2512, 10 -1Mohm, ±0.5%, ±0.1%, TC100DetailDownloadSearch High Precision Thick Film chip resistor TC100WF25H, WF20H 0402 - 2512, 10 -1Mohm, ±0.5%, ±0.1%, TC100DetailDownloadSearch High Precision Thick Film chip resistor TC100WF12H, WF08H, WF06H, WF04H 0402 - 2512, 10 -1Mohm, ±0.5%, ±0.1%, TC100DetailDownloadSearch High Precision Thick Film chip resistor TC500201 - 1206, 10 - 1Mohm, ±0.5%, ±0.1%, TC50DetailDownloadSearch Metal Foil Low Ohm Power Sensing Chip-Resistor0603 - 2512, 2 - 700mohm, ±5%, ±1%, ±0.5%, TC50, TC100DetailDownloadSearch Metal Plate Low Ohm Current Sense Chip-Resistor0603 - 2512, 1 - 100mohm, ±5%, ±1%, TC50, TC100DetailDownloadSearch Metal Plate Low Ohm Current Sense Chip-Resistor (Automotive)0805 -",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "candidate",
       "techFocus": [
-        "高壓MLCC介電層與電極共燒控制",
-        "AEC-Q200等級溫循與濕熱可靠度",
-        "低阻值電流感測電阻的TCR與功率密度控制"
+        "中高壓MLCC型錄範圍200V–4kV，實際耐壓依尺寸及品號選用",
+        "SF.Q系列列AEC-Q200、TCR 5–50ppm與抗硫化條件，認證不外推全系列",
+        "TTU系列2512尺寸列2–3W，電流感測應用需另驗熱降額（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "電容、電阻、保險絲與電感產品可覆蓋逆變器多個電路位置",
-          "7月營收YoY+42.0%、累計YoY+18.7%，公司整體需求強勁"
+          "高壓電容、電流感測與抗硫化電阻涵蓋電源控制板常見的多種需求。",
+          "2026年7月營收44.44億元，MoM+12.20%、YoY+41.95%，累計YoY+18.66%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露再生能源客戶或營收占比",
-          "被動元件單價低且題材成長易被其他終端需求混淆"
+          "AEC-Q200等規格只適用型錄指定系列，不能把全部被動元件視為新能源已認證供應。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "高電壓太陽能逆變器與風電變流器提高高壓被動元件需求",
-          "儲能加太陽能混合系統可增加電流感測與保護元件用量"
+          "逆變器功率密度提升可提高高壓電容與電流感測設計需求。",
+          "戶外長時間運轉可增加抗硫化及機械彎曲可靠度的選型價值。"
         ],
         "threats": [
-          "國巨、村田與中國被動元件商競爭壓縮價格",
-          "太陽能裝機遞延與逆變器庫存修正可能拖累拉貨"
+          "客戶降本與亞洲同業價格競爭可能壓縮被動元件利潤。",
+          "不同逆變器拓樸及電壓設計可能改變零件用量與認證要求。"
         ]
       }
     },

@@ -2,28 +2,26 @@
   "schemaVersion": 1,
   "companyCode": "2395",
   "companyName": "研華",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "edge-ai-aiot",
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "topicType": "technology",
       "directness": "core",
-      "supplyChainStage": "edge_ai",
-      "roleType": "edge_ai_platform",
-      "roleSummary": "研華MOPS揭露工業測控、工業電腦、工作站、嵌入式電腦卡與超薄液晶電腦，能直接承載Edge AI推論。2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%、累計YoY+40.3%，公司並說明客戶積極下單與專案出貨暢旺，但增長仍不能全數歸因Edge AI。",
+      "supplyChainStage": "edge_ai_computing",
+      "roleType": "edge_inference_systems_and_deployment_software",
+      "roleSummary": "MOPS工業測控及嵌入式電腦與官方AIR-030、MIC-770 V3資料相符，Edge AI角色可確認。產品聚焦推論系統與部署工具，去除不明確的系列與安裝形式混搭。本次TWSE最新回傳：2026年7月營收112.72億元，MoM+11.35%、YoY+87.58%，累計YoY+40.26%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "AIR-030 NVIDIA Jetson AGX Orin邊緣AI系統",
-        "MIC-770 V3模組化工業電腦",
-        "EPC-B系列嵌入式無風扇電腦",
-        "WISE-EdgeLink工業IoT資料閘道軟體",
-        "ARK系列DIN-Rail邊緣運算電腦"
+        "AIR-030 Jetson AGX Orin邊緣AI系統",
+        "MIC-770 V3 Intel Core無風扇工業電腦",
+        "DeviceOn for Edge AI裝置管理軟體",
+        "Advantech ROS2 Suite機器人開發套件"
       ],
       "customers": [
-        "NVIDIA（Jetson平台合作對象，非MOPS揭露客戶）",
-        "Intel（x86／OpenVINO平台合作對象，非MOPS揭露客戶）",
-        "Siemens（工業自動化整合對象，非MOPS揭露客戶）",
-        "Rockwell Automation（工業控制整合對象，非MOPS揭露客戶）"
+        "NVIDIA（官方Jetson／JetPack平台供應鏈對象，非本次具名買方）",
+        "Intel（MIC-770 V3處理器平台供應鏈對象，非本次具名買方）",
+        "Siemens（工業應用生態對象，非本次揭露客戶）"
       ],
       "competitors": [
         "新漢",
@@ -31,64 +29,75 @@
         "Dell Edge"
       ],
       "risks": [
-        "MOPS分類仍以工業電腦與測控為主，未拆分Edge AI營收",
-        "7月高成長含多產品與專案認列，不能直接外推題材成長率",
-        "樺漢、凌華等工業電腦業者競逐相同Edge AI專案"
+        "公司月營收備註只說明下單與專案出貨暢旺，不能直接把全部增長歸為Edge AI。",
+        "模型／SDK與平台換代要求持續維護，長期工業部署成本上升。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "研華 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2395",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 研華 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2395 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：工業測控產品、工業用電腦／工作站、嵌入式電腦卡及超薄液晶電腦。"
+          "title": "2395 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2395",
+          "claim": "MOPS主要經營業務：工業測控產品工業用電腦/工業用工作站嵌入式電腦卡/超薄液晶電腦",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "2395 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收112.72億元，MoM+11.4%、YoY+87.6%，累計YoY+40.3%；公司說明客戶積極下單、專案需求與出貨暢旺。"
+          "claim": "2026年7月營收112.72億元，MoM+11.35%、YoY+87.58%，累計YoY+40.26%。原始金額單位新台幣千元。公司備註：客戶端積極下單，專案需求與出貨暢旺，帶動整體營收大幅成長。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "研華 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://advantech.com/en/resources/news/advantech-releases-air-030-new-edge-ai-system-with-nvidia-jetson-agx-orin-system-on-module",
+          "claim": "AIR-030官方發布文列Jetson AGX Orin、JetPack、DeviceOn OTA／容器與ROS2 Suite；MIC-770 V3官方目錄另支持Intel Core LGA1700，兩機架構分開。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "研華 官方網站",
+          "title": "Advantech Releases AIR-030 New Edge AI System with NVIDIA Jetson AGX Orin System on Module",
+          "url": "https://advantech.com/en/resources/news/advantech-releases-air-030-new-edge-ai-system-with-nvidia-jetson-agx-orin-system-on-module",
+          "claim": "來源摘錄（extracted live public page）：Advantech Releases AIR-030 New Edge AI System with NVIDIA Jetson AGX Orin System on Module 1/4/2023 Taipei, January, 2023 - Advantech Co., Ltd. (TWSE: 2395), a global leader in industrial IoT, is pleased to announce the upcoming launch of its AIR-030 series of powerful edge AI systems powered by the NVIDIA® Jetson AGX Orin™ module. With up to 275 TOPS and 8X the performance of the previous generation of Jetson AGX Xavier based models, the AIR-030 series provides AI developers with a ready-to-deploy solution to accelerate AI robotics and video AI analytics applications. The AIR-030 series comes with DeviceOn for Edge AI software, which facilitates AI development lifecycle management, from AI container deployment and AI model OTA updates to retraining and performance optimization. DeviceOn for Edge AI also provides real-time monitoring and management from edge AI devices to cloud-based AI. Combined with server-class AI performance, an industrial-grade design, and edge management, the AIR-030 series is the ideal solution for AGV, AMR, robotics, and video analytics applications. Powerful AI Performance with Jetson AGX Orin Featuring a rugged design with dimensions of 200 x 220 x 74 mm (7.87” x 8.66” x 2.91”), the AIR-030 series delivers powerful AI inferencing capabilities by utilizing NVIDIA Jetson AGX Orin for energy-efficient autonomous machines. This edge AI system is equipped with comprehensive I/O options, including CANBus for motion and direction control, LAN, USB and optional PoE for camera input, and DI/O for sensor control. The series also has complete worldwide safet",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "研華 官方網站",
+          "title": "MIC-770 V3 - Advantech",
+          "url": "https://www.advantech.com/en-us/products/1aa4d2cd-914a-4357-a3e5-219840c81420/mic-770-v3/mod_2801e5b6-eec6-43a0-81f7-73efef338b54",
+          "claim": "來源摘錄（extracted live public page）：# MIC-770 V3 Compact Fanless System with 12th/13th/14th Gen Intel® Core™ i CPU Socket (LGA 1700) - Intel® 12th/13th/14th Gen Core™ i CPU socket-type (LGA1700) with Intel® R680E/ H610E chipset - Wide operating temperature (-20 ~ 60 °C) - 2 x GigaLAN, 2 x USB 3.2 (Gen2) and 6 x USB 3.2 (Gen1); 2 x RS-232/422/485 and 4 x RS232 serial ports (Optional) - 1 x 2.5\" HDD/SSD, 1 x mSATA, and 1 x NVMe M.2; 9 ~ 36 VDC input power range - IP40 dust proof for deployment in harsh environment - Supports FlexIO and iDoor technology, flexible configure additional DP, DVI, COM port, DIO, Remote switch IO - Supports Advantech i-Modules; Supports Advantech SUSIAPI and embedded software APIs - Supports Intel® vPro™/AMT and TPM technologies; Supports Advantech iBMC 1.2 remote out-of-band power management solution on WISE-DeviceOn - Support Windows 11 IoT Enterprise LTSC Select Product Certifications: ![](https://advdownload.advantech.com/productfile/PIS/PISResource/certs/BSMI.jpg)![](https://advdownload.advantech.com/productfile/PIS/PISResource/certs/CCC.png)![](https://advdownload.advantech.com/productfile/PIS/PISResource/certs/CE.png)![](https://advdownload.advantech.com/productfile/PIS/PISResource/certs/FCC_Class-A.png)![](https://advdownload.advantech.com/productfile/PIS/PISResource/certs/icon_UL.png)![](https://advdownload.advantech.com/productfile/PIS/PISResource/certs/iDoor_60X60.png)![](https://advdownload.advantech.com/productfile/PIS/PISResource/certs/R33138.png) Support Links: [Datasheet](https://advdownload.advantech.com/productfile/PIS/MIC-770%20V3/file/MIC-770-V3_DS(020626)2",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "verified",
       "techFocus": [
-        "Jetson Orin CUDA／TensorRT邊緣推論",
-        "寬溫無風扇設計與DIN-Rail工業部署",
-        "OPC UA／MQTT資料匯流及設備管理"
+        "AIR-030支援JetPack 5.0以上、CANBus、DI/O與可選PoE；不將其他工控機規格混入",
+        "DeviceOn以容器部署與OTA更新管理AI模型、軟韌體及裝置狀態",
+        "MIC-770 V3為LGA1700 Intel Core平台，與AIR-030 Arm／Jetson架構分別列示"
       ],
       "swot": {
         "strengths": [
-          "工業電腦、嵌入式板卡與測控產品可形成完整Edge AI硬體平台",
-          "7月營收YoY+87.6%、累計YoY+40.3%，且公告指出專案需求與出貨暢旺"
+          "AIR-030硬體、DeviceOn與ROS2 Suite可串接推論部署、遠端管理及機器人開發。",
+          "2026年7月營收112.72億元，MoM+11.35%、YoY+87.58%，累計YoY+40.26%。公司備註：客戶端積極下單，專案需求與出貨暢旺，帶動整體營收大幅成長。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS分類仍以工業電腦與測控為主，未拆分Edge AI營收",
-          "7月高成長含多產品與專案認列，不能直接外推題材成長率"
+          "公司月營收備註只說明下單與專案出貨暢旺，不能直接把全部增長歸為Edge AI。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "機器視覺、智慧製造與自主移動設備提高邊緣推論節點需求",
-          "Jetson與x86異質平台可擴大既有工業客戶升級商機"
+          "工廠視覺檢測、AMR與邊緣影像分析可提高整機與管理軟體需求。",
+          "跨平台部署與遠端OTA維護可降低多場域擴展的工程成本。"
         ],
         "threats": [
-          "樺漢、凌華等工業電腦業者競逐相同Edge AI專案",
-          "GPU模組供應與專案驗收時程可能造成季度波動"
+          "模型／SDK與平台換代要求持續維護，長期工業部署成本上升。",
+          "工業專案驗收與客戶資本支出周期可能造成營收波動。"
         ]
       }
     },

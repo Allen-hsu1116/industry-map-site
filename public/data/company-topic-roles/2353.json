@@ -2,94 +2,99 @@
   "schemaVersion": 1,
   "companyCode": "2353",
   "companyName": "宏碁",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "ai-server",
       "topicName": "AI 伺服器",
       "topicType": "end_market",
       "directness": "indirect",
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "ai_pc_brand",
-      "roleSummary": "宏碁MOPS僅揭露資訊產品、軟體及維修服務的通路銷售，未直接揭露AI伺服器製造；Altos產品應明確視為集團／品牌產品，不能等同母公司MOPS確認的伺服器營收。2026年7月營收269.04億元、YoY+21.9%、累計YoY+23.1%，但MoM-3.3%，成長不可全歸因AI伺服器。",
+      "supplyChainStage": "subsidiary_ai_systems",
+      "roleType": "altos_group_ai_servers",
+      "roleSummary": "宏碁MOPS本體為資訊通路銷售，官方2025教育高峰會公告明確確認子公司Altos展示AI伺服器與aiWorks。恢復可核驗型號並逐一標示展示／預告狀態，不將母公司全部營收歸為AI伺服器。本次TWSE最新回傳：2026年7月營收269.04億元，MoM-3.29%、YoY+21.93%，累計YoY+23.14%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "宏碁集團Altos GPU加速伺服器",
-        "宏碁集團Altos雙路AMD EPYC機架伺服器",
-        "宏碁集團Altos Intel Xeon機架伺服器",
-        "Altos BrainSphere伺服器管理軟體"
+        "集團Altos BrainSphere R680 F7 AI伺服器",
+        "集團Altos aiWorks GPU資源共享平台",
+        "集團Altos AI工作站（2025教育高峰會展示）",
+        "集團Altos BrainSphere R880 F6 HGX B200伺服器（2025預告）",
+        "集團Altos BrainSphere R780 F7 MGX伺服器（2025預告）"
       ],
       "customers": [
-        "NVIDIA（GPU平台對象，非MOPS揭露客戶）",
-        "AMD（EPYC／Instinct平台對象，非MOPS揭露客戶）",
-        "Intel（Xeon平台對象，非MOPS揭露客戶）",
-        "Microsoft（AI軟體平台對象，非MOPS揭露客戶）"
+        "NVIDIA（官方機型GPU平台供應鏈對象，非伺服器買方）",
+        "Intel（官方教育高峰會科技夥伴，非本次具名買方）",
+        "Microsoft（官方教育高峰會科技夥伴，非本次具名買方）",
+        "Google（官方教育高峰會科技夥伴，非本次具名買方）"
       ],
       "competitors": [
-        "華碩(2357)",
-        "HP",
-        "Dell",
-        "Lenovo"
+        "Dell Technologies（AI伺服器比較對象）",
+        "HPE（AI伺服器比較對象）",
+        "Lenovo（AI伺服器比較對象）"
       ],
       "risks": [
-        "MOPS主要業務為資訊產品通路銷售，未直接揭露AI伺服器製造",
-        "7月營收MoM-3.3%，且無法拆分Altos伺服器貢獻",
-        "Dell、HPE與台灣ODM在AI伺服器規模及供應鏈優勢更強"
+        "資料是2025展示與預告，未逐一確認2026各型號實際出貨；Altos收入未於本次月營收分拆。",
+        "GPU供貨與平台快速換代影響機型生命週期及庫存。",
+        "2026年7月營收269.04億元，MoM-3.29%、YoY+21.93%，累計YoY+23.14%。公司整體口徑，不可直接歸因題材。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：資訊產品、軟體及維修服務之通路銷售"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：從事資訊產品、軟體及維修服務之通路銷售。"
+          "title": "2353 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2353",
+          "claim": "MOPS主要經營業務：從事資訊產品、軟體及維修服務之通路銷售",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "2353 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收269.04億元，MoM-3.3%、YoY+21.9%，累計YoY+23.1%。"
+          "claim": "2026年7月營收269.04億元，MoM-3.29%、YoY+21.93%，累計YoY+23.14%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "宏碁 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://news.acer.com/hong-qi-yu-2025-nian-ya-tai-jiao-yu-gao-feng-hui-fa-biaoai-yu-shu-wei-hua-wei-lai-jiao-yu-yuan-jing-rylblq",
+          "claim": "宏碁2025-05-09官方公告列Altos R680 F7、aiWorks與AI工作站，並預告R880 F6/HGX B200及R780 F7/MGX；不把預告當作已出貨。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "宏碁 官方網站",
+          "title": "宏碁於 2025 年亞太教育高峰會發表AI與數位化未來教育願景",
+          "url": "https://news.acer.com/hong-qi-yu-2025-nian-ya-tai-jiao-yu-gao-feng-hui-fa-biaoai-yu-shu-wei-hua-wei-lai-jiao-yu-yuan-jing-rylblq",
+          "claim": "來源摘錄（extracted live public page）：宏碁子公司安圖斯科技（Altos Computing Inc.）於會中發表最新的 AI 伺服器與 AI 工作站，並展示了其Altos aiWorks AI 運算平台，這些強大的高效能系統旨在滿足生成式AI及大型語言模型日益增長的需求。Altos aiWorks AI運算平台的能靈活分配GPU資源功能，使得多位使用者可以共享計算資源，這一特性尤其適合應用於教育領域，支援多個學生或教育機構同時進行高效能計算和學習，從而提升數位學習環境中的協作與互動性。 在此次活動中， Altos BrainSphere™ R680 F7伺服器更成為現場活動焦點之一，不僅專為高運算需求、圖形密集與 AI工作負載所設計，其兼具強大及多功能的系統效能可支援至多8張 NVIDIA H200 Tensor Core GPU 或 RTX Pro™ 6000 Blackwell Server Edition GPU。展望未來，安圖斯科技預計於今年第三季初推出兩款頂尖伺服器，擴展其高端 AI 伺服器產品線，包括Altos BrainSphere™ R880 F6伺服器，支援NVIDIA HGX™ B200 平台，以及Altos BrainSphere™ R780 F7伺服器，支援搭載8張GPU的NVIDIA MGX 平台。這些創新的平台充分展現安圖斯科技致力實踐以AI 推動教育、企業與研究領域的承諾。 [![](https://cdn.assets.prezly.com/79f548f8-008a-42ac-a4a0-be8a854b950e/-/preview/-/format/auto/Z63_8162%20copy.jpg)](https://cdn.assets.prezly.com/79f548f8-008a-42ac-a4a0-be8a854b950e/-/preview/-/format/auto/Z63_8162%20copy.jpg) 高峰會中不僅有來自 Intel、Microsoft 和 Google 等科技夥伴的互動展示攤位；宏碁子公司建碁及宏碁SpatialLabs立體影像解決方案與 Predator 電競品牌，也將展示電競與沉浸式學習於課堂教學的應用。 欲了解詳細內容，歡迎造訪[Acer for Education](https://www.acer.com/tw-zh/education)網站 ## 分享",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-25",
-      "status": "candidate",
+      "lastVerified": "2026-09-10",
+      "status": "verified",
       "techFocus": [
-        "PCIe GPU加速器與雙路伺服器平台整合",
-        "BMC遠端管理與虛擬化資源監控",
-        "GPU叢集排程與AI工作負載管理"
+        "R680 F7官方展示規格支援最多8張H200或RTX Pro 6000 Blackwell Server Edition GPU",
+        "Altos aiWorks提供GPU資源分配及多使用者共用AI運算",
+        "R880 F6對應HGX B200、R780 F7對應8 GPU MGX；2025預告不作為2026出貨證據"
       ],
       "swot": {
         "strengths": [
-          "Altos品牌具GPU與雙路機架伺服器產品組合",
-          "7月營收YoY+21.9%、累計YoY+23.1%，集團整體需求成長"
+          "子公司提供伺服器硬體及GPU資源管理軟體，具教育與企業AI部署的整合基礎。",
+          "2026年7月營收269.04億元，MoM-3.29%、YoY+21.93%，累計YoY+23.14%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS主要業務為資訊產品通路銷售，未直接揭露AI伺服器製造",
-          "7月營收MoM-3.3%，且無法拆分Altos伺服器貢獻"
+          "資料是2025展示與預告，未逐一確認2026各型號實際出貨；Altos收入未於本次月營收分拆。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "7月營收MoM-3.29%，單月出貨與認列節奏仍有波動。"
         ],
         "opportunities": [
-          "企業私有AI與推論伺服器需求可帶動Altos品牌專案",
-          "既有PC通路可交叉銷售中小企業AI基礎設施"
+          "校園及企業共享GPU資源可增加aiWorks與伺服器整合需求。",
+          "生成式AI地端部署提供子公司AI系統新的應用場景。"
         ],
         "threats": [
-          "Dell、HPE與台灣ODM在AI伺服器規模及供應鏈優勢更強",
-          "若把集團產品直接算入母公司AI伺服器曝險，估值可能失真"
+          "GPU供貨與平台快速換代影響機型生命週期及庫存。",
+          "Dell、HPE與大型系統商的服務規模形成競爭。"
         ]
       }
     }

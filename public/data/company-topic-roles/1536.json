@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1536",
   "companyName": "和大",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "industrial-automation",
@@ -186,14 +186,14 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "和大MOPS揭露汽機車、農機齒輪與軸件，以及機械零件製造，未揭露電池、儲能櫃、PCS或儲能傳動產品；本題材至多是電動車動力系統與儲能產業景氣的旁側觀察。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，但累計YoY僅+1.0%。",
+      "supplyChainStage": "automotive_transmission_outside_topic",
+      "roleType": "ev_gears_outside_stationary_storage",
+      "roleSummary": "MOPS與官方電動車產品頁確認馬達軸、減速箱與差速器，並不是電池或定置儲能設備。此題材保留為電動車機械傳動的題外觀察，禁止把電驅動零件成長寫成儲能電池曝險。本次TWSE最新回傳：2026年7月營收4.40億元，MoM+19.81%、YoY+9.59%，累計YoY+1.03%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "電動車減速機精密斜齒輪",
-        "汽車變速箱齒輪組",
-        "傳動軸與花鍵軸件",
-        "農業機械齒輪與軸件"
+        "電動車轉子馬達軸Rotor shaft",
+        "電動車減速箱齒輪組",
+        "電動車差速器",
+        "電動車減速箱組件"
       ],
       "customers": [
         "Tesla（電動車傳動應用對象，非MOPS揭露客戶）",
@@ -202,70 +202,80 @@
         "Magna（汽車傳動供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "和大同業(SPIROTEX)",
-        "夏米納(Shimano)",
-        "NEUGART(德國減速機廠)"
+        "Musashi Seimitsu武藏精密（傳動產品比較對象）",
+        "Linamar（車用傳動產品比較對象）"
       ],
       "risks": [
-        "MOPS未揭露任何電池或定置型儲能產品，題材連結非常間接",
-        "累計營收YoY僅+1.0%，全年成長動能有限",
-        "把電動車傳動件視為儲能電池供應鏈會造成角色錯配"
+        "本次來源未驗證電池或定置儲能產品，電動車傳動件不應列為直接儲能供應鏈。",
+        "電動車價格競爭可能傳導至齒輪與軸件採購價格。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：汽機車及農業機械齒輪、軸件，各種機械與汽機車零件之製造加工及銷售。"
+          "title": "1536 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1536",
+          "claim": "MOPS主要經營業務：汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。各種汽機車零件製造及代理經銷買賣。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "1536 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY+1.0%。"
+          "claim": "2026年7月營收4.40億元，MoM+19.81%、YoY+9.59%，累計YoY+1.03%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "和大 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://www.hota.com.tw/",
+          "claim": "瀏覽器核驗和大electric-car頁，列電機／馬達軸、減速箱齒輪組、差速器、減速箱組件；未支持定置儲能產品。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "和大 官方網站",
+          "title": "1536 官方產品目錄",
+          "url": "https://www.hota.com.tw/",
+          "claim": "來源摘錄（live browser DOM）：關於和大 產品資訊 投資人關係 人才招募 繁中 關於和大 產品資訊 投資人關係 人才招募 會員專區 繁中 ENG JP 聯絡我們 重機及產業機械 傳動系統關鍵零組件 了解更多 核心技術推進宇宙 航太科技迎勢啟航 了解更多 自有機械製造品牌 齒輪工藝領先群倫 了解更多 全台最大電動車 傳動系統關鍵零組件 了解更多 全球大型專業車用 傳動系統關鍵零組件 了解更多 重機及產業機械 傳動系統關鍵零組件 了解更多 核心技術推進宇宙 航太科技迎勢啟航 了解更多 卓越企業 領導先驅 和大以各式機械之加工、農機及汽機車等齒輪與軸類零組件聞名全球，為臺灣最大並擠身至全球前十大品牌車廠傳動零組件之供應商，和大持續創新、永續成長，是與您一同前進的最佳夥伴。 了解更多 永續報告書 我們關注企業社會責任準則、環境變遷、公益關懷，兼顧經濟、環境與社會三大面向發展。 人才招募 我們提供實踐理想、創造價值的舞台，歡迎懷抱夢想及熱情的人才加入。 財務資訊 我們不斷創新研發，良好盈利水平及穩定股價，反映在穩健財務表現成果上。 新聞集錦 發布我們最新計劃，以及相關媒體報導、活動公告等資訊，提供大家共同參與見證。 傳動系統零組件 和大自成立以來始終致力於齒輪生產技能的提升，對於齒輪加工的質與量均嚴謹並重視⋯ 了解更多 工具機 生產高精度與高效率的齒輪加工機械為和大創新技術發展之目標，並且以自有HARTECH機械品牌行銷全球⋯ 了解更多 臺灣TOP 1 齒輪製造大廠 卓越經驗累積 0 年 以上 客戶滿意度 0 % 以上 每年生產部件 0 萬 以上 臺灣第一 全球領先 全球據點 因轉動而前進 因前進而精進 ROTATION CREATES ADVANCEMENT, ADVANCEMENT MAKES PERFECTION 聯絡我們 和大集團 集團簡介 企業願景 核心競爭力 關係企業 新聞中心 最新消息 新聞集錦 永續經營 ESG政策與目標 環境保護與社會責任 國際品質認證 高和春貴慈善基金會 檢舉申訴 產品資訊 傳動系統零組件 工具機 投資人關係 公司治理 財務資訊 股東專區 股務代理資訊與窗口 人才招募 工作機會 福利制度 供應商專區 同仁專區 客戶專區 全球據點 Copyright © 2022 Hota Industrial Mfg. Co., Ltd. All Rights Reserved.",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "和大 官方網站",
+          "title": "1536 官方產品細節",
+          "url": "https://www.hota.com.tw/electric-car.html",
+          "claim": "來源摘錄（live browser DOM）：電機軸/馬達軸 減速箱齒輪組 差速器 減速箱組件 轉子馬達軸 Rotor shaft 轉子馬達軸 Rotor shaft 轉子馬達軸 Rotor shaft 轉子馬達軸 Rotor shaft 轉子馬達軸 Rotor shaft 連接軸 Link shaft 啟動馬達軸 Starter shaft 因轉動而前進 因前進而精進 ROTATION CREATES ADVANCEMENT, ADVANCEMENT MAKES PERFECTION 聯絡我們 和大集團 集團簡介 企業願景 核心競爭力 關係企業 新聞中心 最新消息 新聞集錦 永續經營 ESG政策與目標 環境保護與社會責任 國際品質認證 高和春貴慈善基金會 檢舉申訴 產品資訊 傳動系統零組件 工具機 投資人關係 公司治理 財務資訊 股東專區 股務代理資訊與窗口 人才招募 工作機會 福利制度 供應商專區 同仁專區 客戶專區 全球據點 Copyright © 2022 Hota Industrial Mfg. Co., Ltd. All Rights Reserved.",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "candidate",
       "techFocus": [
-        "齒輪滾齒、磨齒與齒形誤差控制",
-        "滲碳淬火、硬度梯度與疲勞壽命控制",
-        "軸件同心度、花鍵精度與NVH控制"
+        "齒輪齒形、齒距與嚙合NVH控制（依傳動產品的工程分析）",
+        "馬達軸同心度、疲勞強度及轉子配合公差驗證（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "精密齒輪與軸件能力可服務電動車減速機",
-          "7月營收MoM+19.8%、YoY+9.6%，單月出貨回升"
+          "官方型錄將電動車傳動產品具體分為馬達軸、齒輪組、差速器及減速箱組件。",
+          "2026年7月營收4.40億元，MoM+19.81%、YoY+9.59%，累計YoY+1.03%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露任何電池或定置型儲能產品，題材連結非常間接",
-          "累計營收YoY僅+1.0%，全年成長動能有限"
+          "本次來源未驗證電池或定置儲能產品，電動車傳動件不應列為直接儲能供應鏈。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "累計YoY僅+1.03%，單月反彈不能直接外推全年。"
         ],
         "opportunities": [
-          "電動車滲透率提升可增加高精度減速齒輪需求",
-          "電驅動系統高轉速化可提高齒形與NVH技術門檻"
+          "電動車減速系統需求可支持既有精密傳動業務，但不是儲能商機證據。",
+          "高轉速與低噪音要求提高齒輪及軸件精度的差異化空間。"
         ],
         "threats": [
-          "把電動車傳動件視為儲能電池供應鏈會造成角色錯配",
-          "車市需求、客戶砍價與電驅平台改款可能壓縮毛利"
+          "電動車價格競爭可能傳導至齒輪與軸件採購價格。",
+          "若以儲能估值解讀汽車傳動業績，會產生重大題材錯配。"
         ]
       }
     },

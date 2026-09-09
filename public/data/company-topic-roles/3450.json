@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3450",
   "companyName": "聯鈞",
-  "updatedAt": "2026-09-07T19:16:13Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -100,16 +100,15 @@
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "process",
-      "directness": "indirect",
-      "supplyChainStage": "silicon_photonics",
-      "roleType": "laser_processing_equipment",
-      "roleSummary": "聯鈞MOPS支持光資訊、光通訊產品及功率半導體封裝測試，但未揭露矽光子波導加工、VCSEL／EML晶圓、奈米線寬、雷射波長或Intel／Broadcom客戶；因此應定位為矽光子鏈的光元件封裝與測試周邊，而非矽光子晶圓製程廠。2026年7月營收12.19億元、YoY+98.0%，公司僅說明客戶需求增加。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "optical_component_assembly_test",
+      "roleType": "optical_communication_packaging",
+      "roleSummary": "官網光通訊封測目錄補足MOPS的寬泛業務，確認VCSEL、FP／DFB與PIN／APD-TIA封裝產品及波長範圍。此角色是光通訊元件封測，不代表自製雷射晶圓、矽光子晶片或已取得CPO量產訂單。本次TWSE最新回傳：2026年7月營收12.19億元，MoM+7.02%、YoY+98.00%，累計YoY+20.29%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "光通訊雷射二極體封裝元件",
-        "光通訊受光二極體封裝元件",
-        "光收發模組用光電次模組",
-        "光資訊讀寫頭與光學模組",
-        "功率半導體封裝測試服務"
+        "850nm VCSEL光元件TO-46／OSA封裝測試",
+        "1270–1610nm FP／DFB雷射TO-56／TO-38／OSA封裝測試",
+        "PIN-TIA受光元件TO-46／OSA封裝測試",
+        "APD-TIA受光元件TO-46／OSA封裝測試"
       ],
       "customers": [
         "Intel（矽光子平台對象，非MOPS揭露客戶）",
@@ -118,65 +117,70 @@
         "Lumentum（光元件供應鏈對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "Disco"
+        "聯亞（光通訊產品比較對象，製程分工不同）",
+        "前鼎（光通訊封裝／模組比較對象）"
       ],
       "risks": [
-        "矽光子量產時程未定"
+        "公開來源未提供矽光子／CPO分項營收與具名購買關係；光通訊封裝不等於矽光子晶圓製程。",
+        "CPO與外置雷射架構改變可能重分配傳統TO／OSA封裝需求。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯鈞 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3450",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯鈞 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3450 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：光資訊及光通訊產品、功率半導體封裝測試。"
+          "title": "3450 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3450",
+          "claim": "MOPS主要經營業務：光資訊及光通訊產品功率半導體封裝測試",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "3450 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收12.19億元，MoM+7.0%、YoY+98.0%、累計YoY+20.3%；公司備註客戶需求增加。"
+          "claim": "2026年7月營收12.19億元，MoM+7.02%、YoY+98.00%，累計YoY+20.29%。原始金額單位新台幣千元。公司備註：因客戶需求增加，致使營收增加。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "聯鈞 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "http://www.elaser.com.tw/p2-4.htm",
+          "claim": "官方光通訊封測目錄列850nm VCSEL、1270–1610nm FP/DFB及PIN-TIA/APD-TIA與TO/OSA封裝；未提供CPO客戶與晶圓製造證據。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "聯鈞 官方網站",
+          "title": "ELITE ADVANCED LASER CORPORATION",
+          "url": "http://www.elaser.com.tw/p2-4.htm",
+          "claim": "來源摘錄（extracted live public page）：Assembly and Testing Services for Optical Communication** | | | | | |---|---|---|---| | Wavelength | Type | Application | Package | | 850nm | VCSEL | Datacom, Telecom | TO-46, OSA | | 1270~1610nm | FP, DFB | Datacom, Telecom | TO-56, TO-38, OSA | | PIN-TIA | PIN | Datacom, Telecom | TO-46, OSA | | APD-TIA | APD | Datacom, Telecom | TO-46, OSA | **** | ![](images/p2/p2-4_p005.jpg) | ![](images/p2/p2-4_p006.jpg) | ![](images/p2/p2-4_p007.jpg) | ![](images/p2/p2-4_p008.jpg) | |---|---|---|---|",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "confidence": "high",
+      "lastVerified": "2026-09-10",
       "status": "verified",
       "techFocus": [
-        "LD／PD光電元件的主動對準、耦光與封裝測試",
-        "光電次模組的熱管理、氣密性與可靠度驗證",
-        "高速光收發路徑的光功率與接收靈敏度校準"
+        "850nm VCSEL與1270–1610nm FP／DFB採不同TO封裝形式，規格依官網產品族分開列示",
+        "PIN／APD與TIA接收路徑封裝；耦光、光功率與接收靈敏度為工程驗證重點（分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持光資訊與光通訊產品，具光元件封裝測試基礎",
-          "7月營收YoY+98.0%、MoM+7.0%，公司整體客戶需求強勁"
+          "官方目錄同時涵蓋發射與接收端光元件封測，可服務不同光纖通訊架構。",
+          "2026年7月營收12.19億元，MoM+7.02%、YoY+98.00%，累計YoY+20.29%。公司備註：因客戶需求增加，致使營收增加。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露矽光子晶片、波導加工、VCSEL／EML或具名客戶",
-          "光通訊與功率半導體業務混合，月營收無法拆分矽光子周邊貢獻"
+          "公開來源未提供矽光子／CPO分項營收與具名購買關係；光通訊封裝不等於矽光子晶圓製程。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "AI資料中心高速光互連可增加光元件封裝與次模組測試需求",
-          "矽光子平台仍需要外部光源、檢光器與可靠度驗證服務"
+          "資料中心光連結擴建可增加光源與接收端封測需求，仍須追蹤實際產品組合。",
+          "光源與TIA封裝的耦光及熱可靠度改善，可提升客製化封測價值。"
         ],
         "threats": [
-          "Lumentum、Coherent及大型光模組廠具更完整垂直整合能力",
-          "CPO架構與光源整合方式變化可能使既有封裝產品快速改版"
+          "CPO與外置雷射架構改變可能重分配傳統TO／OSA封裝需求。",
+          "光元件價格競爭與終端庫存調整可能抵銷出貨成長。"
         ]
       }
     }

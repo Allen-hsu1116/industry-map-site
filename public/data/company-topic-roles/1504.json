@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1504",
   "companyName": "東元",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -96,85 +96,111 @@
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "ess",
-      "roleType": "storage_system_integrator",
-      "roleSummary": "東元MOPS揭露電氣、產業、冷凍空調、電子與運輸設備，未揭露電芯、BMS、PCS或儲能EMS；在儲能題材中較適合定位為案場馬達、變頻、配電與熱管理設備的間接供應角色。2026年7月營收55.29億元、MoM+4.8%、YoY+13.8%、累計YoY+7.0%，為公司整體數據。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "bess_system_integration",
+      "roleType": "energy_storage_epc_and_ems",
+      "roleSummary": "MOPS業務登記較廣，但東元官方智慧能源網站已列儲能系統建置、EMS與工程實績，原先僅列馬達／空調周邊的分類過窄。本次恢復儲能系統整合角色；不因此宣稱自製電芯或所有PCS零件。本次TWSE最新回傳：2026年7月營收55.29億元，MoM+4.77%、YoY+13.81%，累計YoY+7.05%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "IE4／IE5高效率三相感應馬達",
-        "儲能站泵浦與風機用變頻器",
-        "中低壓配電盤與馬達控制中心MCC",
-        "儲能機房冷凍空調與熱管理機組"
+        "電池儲能系統BESS建置與統包工程服務",
+        "儲能與再生能源微電網EMS能源管理系統",
+        "儲能案場受配電與機電整合工程",
+        "儲能系統運轉監控與維護整合服務"
       ],
       "customers": [
-        "台電（儲能站電氣設備應用對象，非MOPS揭露客戶）",
-        "台泥(1101；儲能案場應用對象，非MOPS揭露客戶)",
-        "台達電(2308；儲能系統整合對象，非MOPS揭露客戶)",
-        "中鋼(2002；工業電氣設備應用對象，非MOPS揭露客戶)"
+        "台灣電力公司（官網列龍潭儲能案業主，屬工程關係）",
+        "台泥（儲能應用對象，非本次揭露客戶）",
+        "中鋼（工業能源管理應用對象，非本次揭露客戶）"
       ],
       "competitors": [
         "華城",
         "中興電"
       ],
       "risks": [
-        "MOPS未揭露電芯、BMS、PCS或EMS，非儲能核心設備角色",
-        "月營收跨家電、馬達與工程，無法拆分儲能貢獻",
-        "台達電、士電與中興電在儲能整合及配電設備競爭激烈"
+        "官網歷史工程頁的案場容量存在不同版本，本批不混用MW／MWh；全公司月營收未拆分儲能工程。",
+        "案場消防、併網驗收與保固責任增加統包工程風險。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "東元 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1504",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 東元 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 1504 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：各種電氣、運輸、產業、冷凍空調、電子及其附件之產銷與承裝。"
+          "title": "1504 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1504",
+          "claim": "MOPS主要經營業務：各種電氣,運輸,產業,冷凍空調,電子,事務等及其附件之產銷承裝等各種通信器材,家庭電氣用具等及其附件之產銷承裝等;餐廳業務經營有關事業之代理,代辦及委託業務;有關進出口貿易及代理業務之經營",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "1504 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收55.29億元，MoM+4.8%、YoY+13.8%，累計YoY+7.0%。"
+          "claim": "2026年7月營收55.29億元，MoM+4.77%、YoY+13.81%，累計YoY+7.05%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "東元 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://tecoie.teco.com.tw/",
+          "claim": "官方智慧能源首頁確認儲能系統建置、EMS微電網監控；工程影片頁列儲能服務實績。龍潭工程索引明列業主台灣電力公司，容量版本不同不合併引用。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "東元 官方網站",
+          "title": "【TECO東元智慧能源|TECO IE|東元電機|Intelligence Energy】 - TECO 東元電力能源網",
+          "url": "https://tecoie.teco.com.tw/",
+          "claim": "來源摘錄（extracted live public page）：![](/pages/about/photo/A02.jpg) #### [深耕能源產業](/about) 東元深耕能源產業多年，近年來拓展創能、儲能、節能系統建置之智慧化，聚焦於太陽能、儲能系統、離岸風電三項核心綠色能源業務。 ![](/pages/about/photo/A05.jpg) # [東元電力能源事業群簡介](/about/about-us) 除能源產業外，更以智慧化為核心導向各種範疇，如模組式的IDC機房及透過系統整合提供各項智慧社區之解決方案，以期從傳產設備製造、供應走向智慧化及系統整合之解決方案提供者，並將自有的湖口廠區建設為綠能示範工廠，整合工程團隊及產品設備資源，優化產品效率，致力推動潔淨能源及社會永續發展。. ![](/pages/about/photo/A04.jpg) #### [跨國承攬大型工程經驗](/project) 電力能源事業群，具備跨國承攬大型工程經驗，團隊不僅參與高鐵工程，彰化高鐵站就是其中一例，獲得美國知名的「A+國際建築獎」。承接離岸風電多個案場約1944MW的陸域統包工程，也累積多起亞太IDC工程業務，未來能源事業將是重點發展之一。 [![](/images/noimg.png)](/project/green-energy-engineering) ### [綠能工程](/project/green-energy-engineering) 積極研發電力與物聯網整合技術，並發展智慧微電網監控系統，可以配合風力發電、太陽能發電，且透過能源管理系統(EMS)來管理及維護社區微電網裝置，確保系統運行狀態和系統效益，可以提供住、商社區更整體的解決方案。 [![](/images/noimg.png)](/project/Biotechnology) ### [生技醫院工程](/project/Biotechnology) 東元結合生技醫療工程施工經驗及機械設備製造實力，並具有自動化設備設計製造、精密加工、機械設備製造、建廠、整廠輸出之經驗與能力，以及設備製造監造能力。 [![](/images/noimg.png)](/project/Traffic-Construction) ### [交通建設工程](/project/Traffic-Construction) 公司成立65年以來，承攬過無數公共工程案件，舉凡是最近獲獎的捷運松山車站及華航園區開發案及迪化抽水站改善工程，抑或是台北捷運、高雄捷運、桃園機場捷運、臺灣高鐵等，均有良好且完整之實績，顯示東元公司在人力需求方面，擁有足夠的專業領域人才，可提供最安心的服務。 [![](/images/noimg.png)](/project/Mechanical-Electrical) ### [機電工程](/project/Mechanical-Electrical) 為配合取得綠建築及智慧建築標章，在全區的綜合佈線、資訊通信、系統整合等機電工程上，都會達成高度門檻要求。施工方式將採用以Web方式監控整合全區建築的各項電力、排水、保全等系統，以達成建築物安全、便利、節能又永續環保的使用效益，也兼具人性化的管理。 [![](/images/noimg.png)](/project/Special-Engineering) ### [特殊工程](/project/Special-Engineering) 東元為一財務健全及信譽卓越之公司，向來以公司信譽為珍貴資產；在承攬工程方面，特別謹守合約介面，謹慎施工，使命必達；從設計施工到售後服務之整個循環，嚴密控制，追求顧客之完全滿意。 [![](/images/noimg.png)](/project/ICT-Engineering) ### [資通訊工程]",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "東元 官方網站",
+          "title": "Project performance video - tecoie.teco.com.tw",
+          "url": "https://tecoie.teco.com.tw/en/page/movie-project",
+          "claim": "來源摘錄（extracted live public page）：1. [Home](https://tecoie.teco.com.tw/en/) 2. [支援](https://tecoie.teco.com.tw/en/support) 3. [影片專區](https://tecoie.teco.com.tw/en/page/movie) 4. [工程實績影片](https://tecoie.teco.com.tw/en/page/movie-project) ## Video area - [All](https://tecoie.teco.com.tw/en/page/movie) - [Building Information Modeling](https://tecoie.teco.com.tw/en/page/movie-bim) - [Project performance video](https://tecoie.teco.com.tw/en/page/movie-project) - [Product introduction video](https://tecoie.teco.com.tw/en/page/movie-product) ### Project performance video Movie Class6 #### [TECO Offshore Wind Farm Onshore Substation EPC Project - Changfang & Xidao Offshore Wind Farm](https://tecoie.teco.com.tw/en/page/274) The scope of TECO's EPC project includes design, procurement and construction. The cumulative performance is about 2GW of project construction, with holding 35% the onshore substation market share, TECO is ranking first in Taiwan. #### [TECO – Substation EPC Project](https://tecoie.teco.com.tw/en/page/280) Since 2015, TECO has tapped into green energy and won the offshore wind farm onshore substation EPC projects for three consecutive years, hitting a total energy yield of around 2 GW and has been ranked number one with 35% of the market share. Based on our successful EPC project experience, we have optimized our design and reduced installation costs to enhance our manufacturing clients’ competitiveness. We’ve also expanded our cooperation to offshore substations. #### [TECO Energy Storage System Service](https://tecoie.teco.com.tw/en/page/281) The TECO Group has achieved 100 MW energ",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-3",
+          "publisher": "東元 官方網站",
+          "title": "台電龍潭變電所儲能設備建置 - TECO 東元電力能源網",
+          "url": "https://tecoie.teco.com.tw/page/230?s=3",
+          "claim": "來源摘錄（extracted live public page）：### 代表性實績簡介 工程名稱：龍潭超高壓變電所(E/S)儲能設備系統 業主名稱：台灣電力股份有限公司 工程特點：儲能系統 60MW／30MWh 地 點：桃園市 - [\\# 儲能系統](https://tecoie.teco.com.tw/search?s=%E5%84%B2%E8%83%BD%E7%B3%BB%E7%B5%B1) [![台電龍潭變電所儲能設備建置-1](https://tecoie.teco.com.tw/page_img/4/1651024548DaQIA.jpeg?v=1)](https://tecoie.teco.com.tw/page_img/4/1651024548DaQIA.jpeg)[![現場圖](https://tecoie.teco.com.tw/page_img/4/1741158301076cJ.jpg?v=1)](https://tecoie.teco.com.tw/page_img/4/1741158301076cJ.jpg)[![台電龍潭變電所儲能設備建置-3](https://tecoie.teco.com.tw/page_img/4/1741158301dplkM.jpg?v=1)](https://tecoie.teco.com.tw/page_img/4/1741158301dplkM.jpg)[![台電龍潭變電所儲能設備建置-4](https://tecoie.teco.com.tw/page_img/4/1741158301P9B0p.jpg?v=1)](https://tecoie.teco.com.tw/page_img/4/1741158301P9B0p.jpg)[![台電龍潭變電所儲能設備建置-5](https://tecoie.teco.com.tw/page_img/4/1747626417QYiwP.png?v=1)](https://tecoie.teco.com.tw/page_img/4/1747626417QYiwP.png)",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-4",
+          "publisher": "東元 官方網站",
+          "title": "東元工程團隊完成台電儲能指標案龍潭儲能系統今啟用 - 東元電機",
+          "url": "https://www.teco.com.tw/zh-tw/press/news/20240122?tags=880",
+          "claim": "來源摘錄（official page search-index excerpt only; full extraction returned browser shield）：龍潭儲能系統佔地達0.66公頃、配備25個貨櫃、裝置容量60MW/80MWh、總儲電量達80MWh，這相當於近8千戶家庭一整天的用電量，佔台電自建儲能容量的37.5%。為 ...",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-25",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-10",
+      "status": "verified",
       "techFocus": [
-        "IE4／IE5馬達效率、絕緣與溫升控制",
-        "變頻器向量控制與泵風機節能調速",
-        "儲能機房冷卻負載與環境溫濕度控制"
+        "EMS整合太陽能、風電與社區微電網裝置之監控及運轉管理",
+        "儲能EPC整合設計、設備採購、施工與併網介面（依官方工程服務範圍分析）",
+        "儲能系統功率MW與容量MWh分別核驗，不混用工程舊簡介與完工版本"
       ],
       "swot": {
         "strengths": [
-          "馬達、變頻、配電與空調產品可支援儲能站輔助系統",
-          "7月營收YoY+13.8%、累計YoY+7.0%，公司整體營運成長"
+          "官方工程與能源網站確認實際儲能服務與EMS整合，較單純機電周邊有更直接題材關聯。",
+          "2026年7月營收55.29億元，MoM+4.77%、YoY+13.81%，累計YoY+7.05%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露電芯、BMS、PCS或EMS，非儲能核心設備角色",
-          "月營收跨家電、馬達與工程，無法拆分儲能貢獻"
+          "官網歷史工程頁的案場容量存在不同版本，本批不混用MW／MWh；全公司月營收未拆分儲能工程。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "大型儲能站增加泵風機、配電與熱管理設備需求",
-          "工商業微電網可帶動高效率馬達與變頻節能改造"
+          "電網輔助服務及企業用電管理增加BESS與EMS整合機會。",
+          "既有受配電及機電工程團隊可延伸再生能源與儲能聯合案場。"
         ],
         "threats": [
-          "台達電、士電與中興電在儲能整合及配電設備競爭激烈",
-          "若案場採用整櫃式一體化方案，外部輔機供應空間可能縮小"
+          "案場消防、併網驗收與保固責任增加統包工程風險。",
+          "電力交易制度、儲能利用率與工程競價影響投資回收及接單。"
         ]
       }
     }

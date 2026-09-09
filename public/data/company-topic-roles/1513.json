@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1513",
   "companyName": "中興電",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -172,88 +172,100 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "direct_enabler",
-      "supplyChainStage": "electrical_equipment",
-      "roleType": "wind_farm_electrical",
-      "roleSummary": "中興電MOPS揭露綠能、輸配電設備與工程、節能空調、發電工程、氫能發電及產氫系統，可支援再生能源併網；但MOPS未揭露特定風場海纜終端或開發商訂單。2026年7月營收24.10億元、YoY+3.8%、累計YoY+3.5%，但MoM-14.9%，工程認列波動明顯。",
+      "supplyChainStage": "grid_connection_equipment",
+      "roleType": "gis_and_renewable_energy_epc",
+      "roleSummary": "MOPS明列綠能輸配電及氫能業務，官方GIS目錄進一步確認分電壓等級規格。再生能源角色集中併網與電力工程，氫能系統另列；去除未驗證的統一IEC 61850與PEM細節。本次TWSE最新回傳：2026年7月營收24.10億元，MoM-14.93%、YoY+3.83%，累計YoY+3.53%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "161／345kV氣體絕緣開關GIS設備",
-        "再生能源併網用電力變壓器",
-        "中低壓配電盤與保護控制盤",
-        "綠能案場變電站EPC統包工程",
-        "PEM氫能發電與產氫系統"
+        "69kV 2000A GIS氣體絕緣開關設備",
+        "161kV 2000A 50kA GIS設備",
+        "345kV 4000／6000A 63kA GIS設備",
+        "再生能源併網變電站EPC統包工程",
+        "氫能燃料電池備援發電系統"
       ],
       "customers": [
-        "台電（綠能併網與變電站應用對象，非MOPS揭露客戶）",
-        "沃旭能源Orsted（離岸風場併網應用對象，非MOPS揭露客戶）",
-        "哥本哈根基礎建設基金CIP（風場併網應用對象，非MOPS揭露客戶）",
-        "中油(1328；氫能示範應用對象，非MOPS揭露客戶)"
+        "台灣電力公司（電網工程應用對象，非本次MOPS具名客戶）",
+        "Ørsted沃旭能源（風場併網應用對象，非本次揭露客戶）",
+        "CIP哥本哈根基礎建設基金（風場投資生態對象，非本次揭露客戶）",
+        "台灣中油（氫能應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "士林電機(1503)",
-        "華城(1519)",
-        "東元(1504)",
-        "中興電工同業"
+        "士林電機（輸配電設備比較對象）",
+        "華城（變電站設備比較對象）",
+        "Siemens Energy（高壓設備比較對象）"
       ],
       "risks": [
-        "7月營收MoM-14.9%，大型工程認列波動明顯",
-        "MOPS未揭露特定離岸風場或海纜終端產品",
-        "士電、華城與ABB／Siemens競逐高壓設備標案"
+        "高壓設備與工程交貨／驗收時點可造成月營收波動，氫能發展目標不等同穩定收入。",
+        "高壓設備測試、工期延遲及履約責任可能侵蝕工程毛利。",
+        "2026年7月營收24.10億元，MoM-14.93%、YoY+3.83%，累計YoY+3.53%。公司整體口徑，不可直接歸因題材。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 綠能/輸配電力設備暨工程節能空調及發電設備暨工程氫能發電暨產氫系統"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：綠能、輸配電力設備暨工程、節能空調及發電設備暨工程、氫能發電暨產氫系統。"
+          "title": "1513 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1513",
+          "claim": "MOPS主要經營業務：綠能/輸配電力設備暨工程節能空調及發電設備暨工程氫能發電暨產氫系統",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "1513 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收24.10億元，MoM-14.9%、YoY+3.8%，累計YoY+3.5%。"
+          "claim": "2026年7月營收24.10億元，MoM-14.93%、YoY+3.83%，累計YoY+3.53%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "中興電 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://chem.com.tw/en/about.aspx",
+          "claim": "官方GIS清單列69kV、161kV及345kV機型與氣動／液壓版本；公司簡介列變電站EPC、氫燃料電池及BESS/EMS發展方向。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "中興電 官方網站",
+          "title": "中興電工機械股份有限公司",
+          "url": "https://chem.com.tw/en/about.aspx",
+          "claim": "來源摘錄（extracted live public page）：GIS), electromechanical HVAC engineering, and parking management services, CHEM is further advancing into the new energy sector—hydrogen fuel cells are applied in backup and base load power generation through hydrogen-powered generators, aiming to create a cleaner living environment for people. With the rapid development of AI worldwide, many countries have launched large-scale infrastructure projects, leading to a strong demand for power and air conditioning systems. CHEM has grown as a result of increasing market demand, reaching a revenue peak of NT$25.6 billion in 2024, ranking 160th in Taiwan's manufacturing industry. We are also committed to fulfilling ESG (Environmental, Social, and Governance) responsibilities and strengthening corporate governance to achieve the goal of sustainable operations. We were honored as one of Taiwan's \"Top 100 Carbon Competitiveness Companies\" in 2023, received the \"17th TCSA Taiwan Corporate Sustainability Award\" in 2024, were recognized as one of the \"Top 100 DEI Generation Empowerment Companies\" by Business Weekly, were named an international \"Best Managed Company\" (BMC) by Deloitte, and received the \"Happy Enterprise\" Award from Taiwan's 1111 Job Bank. In addition, we promote intellectual property management and anti-bribery measures and have obtained an A-level certification and an ISO 37001 certificate from an international certification body. We also received an Excellence Award at the 24th Public Construction Golden Quality Awards for the excellent quality of our construction projects and our promotion of green energy and environm",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "中興電 官方網站",
+          "title": "CHEM",
+          "url": "https://www.chem.com.tw/en/products_list.aspx?Class1=8&Class3=42",
+          "claim": "來源摘錄（extracted live public page）：GIS (Gas Insulated Switchgear) [![69 kV 2000 A 25/40 kA GIS](https://www.chem.com.tw/Upload/product_201901291106421.jpg)\\\\ \\\\ 69 kV 2000 A 25/40 kA GIS](https://www.chem.com.tw/en/products_detail.aspx?Class1=8&PKey=49) [![161 kV 2000 A 50 kA GIS (Pnu.)](https://www.chem.com.tw/Upload/product_201901291117281.jpg)\\\\ \\\\ 161 kV 2000 A 50 kA GIS (Pnu.)](https://www.chem.com.tw/en/products_detail.aspx?Class1=8&PKey=47) [![161 kV 2000 A 50 kA GIS (Hyd-1.4m)](https://www.chem.com.tw/Upload/product_201901291118171.jpg)\\\\ \\\\ 161 kV 2000 A 50 kA GIS (Hyd-1.4m)](https://www.chem.com.tw/en/products_detail.aspx?Class1=8&PKey=51) [![161 kV 2000 A 50k A GIS (Hyd-1.8m)](https://www.chem.com.tw/Upload/product_201901291118471.jpg)\\\\ \\\\ 161 kV 2000 A 50k A GIS (Hyd-1.8m)](https://www.chem.com.tw/en/products_detail.aspx?Class1=8&PKey=53) [![345 kV 4000/6000 A 63 kA GIS (Pne.)](https://www.chem.com.tw/Upload/product_201910042226091.jpg)\\\\ \\\\ 345 kV 4000/6000 A 63 kA GIS (Pne.)](https://www.chem.com.tw/en/products_detail.aspx?Class1=8&PKey=569) [![345 kV 4000/6000 A 63 kA GIS (Hyd.)](https://www.chem.com.tw/Upload/product_201901291119471.jpg)\\\\ \\\\ 345 kV 4000/6000 A 63 kA GIS (Hyd.)](https://www.chem.com.tw/en/products_detail.aspx?Class1=8&PKey=57) [![23 kV 600/2000 A 12 kA GIS](https://www.chem.com.tw/Upload/product_201901291120161.jpg)\\\\ \\\\ 23 kV 600/2000 A 12 kA GIS](https://www.chem.com.tw/en/products_detail.aspx?Class1=8&PKey=59) [![40.5 kV 1600 A 31.5 kA GIS](https://www.chem.com.tw/Upload/product_201901291120331.jpg)\\\\ \\\\ 40.5 kV 1600 A 31.5 kA GIS](https://www.chem.com.tw/en/produ",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-25",
+      "confidence": "high",
+      "lastVerified": "2026-09-10",
       "status": "verified",
       "techFocus": [
-        "161／345kV GIS絕緣、電弧與局部放電控制",
-        "IEC 61850保護電驛、SCADA與變電站自動化",
-        "PEM燃料電池電堆與產氫系統整合"
+        "GIS依69／161／345kV型號區分額定電壓、電流與啟斷能力",
+        "161／345kV GIS提供氣動及液壓操作型式，依選用機型設計保護介面",
+        "氫燃料電池與EMS／BESS動態能源管理為官網發展方向，未據此確認特定PEM規格"
       ],
       "swot": {
         "strengths": [
-          "MOPS明確支持綠能、輸配電工程與氫能系統角色",
-          "GIS、變壓器與EPC能力可覆蓋再生能源併網電力鏈"
+          "GIS產品涵蓋多電壓等級且具變電站工程服務，可承接再生能源併網需求。",
+          "2026年7月營收24.10億元，MoM-14.93%、YoY+3.83%，累計YoY+3.53%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "7月營收MoM-14.9%，大型工程認列波動明顯",
-          "MOPS未揭露特定離岸風場或海纜終端產品"
+          "高壓設備與工程交貨／驗收時點可造成月營收波動，氫能發展目標不等同穩定收入。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "7月營收MoM-14.93%，單月出貨與認列節奏仍有波動。"
         ],
         "opportunities": [
-          "離岸風電與太陽能併網帶動GIS、變壓器與EPC需求",
-          "綠氫示範與微電網可延伸既有發電及產氫系統"
+          "風光電併網及電網升級提高GIS與變電站工程需求。",
+          "氫能備援與BESS／EMS整合提供多能源調度的發展方向。"
         ],
         "threats": [
-          "士電、華城與ABB／Siemens競逐高壓設備標案",
-          "風場環評、融資與併網時程延後會推遲營收認列"
+          "高壓設備測試、工期延遲及履約責任可能侵蝕工程毛利。",
+          "國際設備商及本地電機同業競價，氫能成本亦影響商業化速度。"
         ]
       }
     }

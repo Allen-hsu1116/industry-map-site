@@ -2,21 +2,22 @@
   "schemaVersion": 1,
   "companyCode": "1717",
   "companyName": "長興",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
-      "directness": "indirect",
+      "directness": "direct_enabler",
       "supplyChainStage": "packaging_materials",
-      "roleType": "packaging_resin_supplier",
-      "roleSummary": "長興MOPS揭露工業用合成樹脂、PCB與光阻材料、特殊化學品，具先進封裝材料配方的上游鄰近性，但未揭露特定EMC、Underfill或晶圓級封裝量產認證。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%、累計YoY+10.5%，為公司整體成長，不能全數歸因先進封裝。",
+      "roleType": "photoresist_and_development_stage_encapsulation",
+      "roleSummary": "官方光阻頁明列IC載板與封裝用途，2025法說亦列液態封裝膠產品線及LEMC、Underfill新開發。原先僅列一般樹脂的角色過窄，現恢復封裝材料參與，但保留開發／量產與品號認證邊界。本次TWSE最新回傳：2026年7月營收40.93億元，MoM+6.82%、YoY+23.86%，累計YoY+10.48%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "工業用環氧樹脂（封裝膠配方上游樹脂）",
-        "UV／EB光固化樹脂（晶圓級材料配方上游）",
-        "PCB乾膜光阻材料（封裝基板線路製程用）",
-        "特殊化學品添加劑（電子材料配方用）"
+        "IC載板／封裝圖形轉移用乾膜光阻",
+        "液態封裝膠Liquid Molding Compound（2025法說列產品線）",
+        "液態環氧封裝膠LEMC（2025法說列新開發）",
+        "Underfill底部填充材料（2025法說列新開發）",
+        "感光聚醯亞胺PSPI材料（2025法說列開發方向）"
       ],
       "customers": [
         "日月光投控(3711；封裝材料驗證對象，非MOPS揭露客戶)",
@@ -25,70 +26,80 @@
         "南電(8046；封裝基板材料應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "永信(1705)",
-        "日東電工(Nitto)",
-        "信越化學"
+        "住友培科Sumitomo Bakelite（封裝材料比較對象）",
+        "Resonac（電子封裝材料比較對象）"
       ],
       "risks": [
-        "MOPS未揭露特定先進封裝材料品號或量產認證",
-        "公司營收跨工業樹脂與PCB材料，無法拆出先進封裝貢獻",
-        "住友化學、JSR等國際材料商在高階封裝認證具先行優勢"
+        "2025新開發清單不能證明2026各品號已大量出貨；題材占比與終端封裝客戶仍未揭露。",
+        "材料認證周期、熱可靠度與客戶製程變更可能延後放量。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：各種工業用合成樹脂、印刷電路基板與光阻材料、特殊化學品之產銷。"
+          "title": "1717 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1717",
+          "claim": "MOPS主要經營業務：各種工業用合成樹脂之產銷印刷電路基板、光阻材料之產銷特殊化學品",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "1717 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收40.93億元，MoM+6.8%、YoY+23.9%，累計YoY+10.5%。"
+          "claim": "2026年7月營收40.93億元，MoM+6.82%、YoY+23.86%，累計YoY+10.48%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "長興 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://eternal-group.com/EN/ProductPage?AttributeID=ATT2023060700085&CategoryID=PC2023060200003&Detail=GU2023010100001",
+          "claim": "官方乾膜光阻頁支持IC Substrates及IC packaging；2025-03-21法說產品線列Liquid molding compound，新開發列Liquid Epoxy Molding Compound、Underfill及PSPI，未證實全部量產。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "長興 官方網站",
+          "title": "長興材料工業股份有限公司",
+          "url": "https://eternal-group.com/EN/ProductPage?AttributeID=ATT2023060700085&CategoryID=PC2023060200003&Detail=GU2023010100001",
+          "claim": "來源摘錄（extracted live public page）：# Flat Panel Display and Touch Panel Material-Dry Film Photoresist ![Flat Panel Display and Touch Panel Material-Dry Film Photoresist](/EN/Docs/Upload/PSI2023060700333/pro3_7.webp) Due to the widespread use of smartphones, touch panels have become the mainstream of current smartphones and tablet. For both glass and film capacitive touch, the requirements of the lithography and etching processes for ITO lines are more and more precise. Eternal's dry film photoresist provides film capacitors with the best solution for automatic roll-to-roll production and fine line making. Dry film photoresist is the key component used in the image transfer process. It is widely used in precision etching and electroplating products such as Printed Circuit Board (including Rigid board, Flexible board, Rigid/Flexible composite board, and HDI), Lead Frame, IC Substrates, IC packaging, etc. With strong in-house R&D capabilities, we are able to design and develop dry film products to specifically match our customers' requirements for various processes such as Chemical Milling, Electroforming, etc. ## Dry Film Photoresist (表格可左右滑動查看表格資訊) | Item Name | Characteristics | Applications | Data Sheets | |---|---|---|---| | TPR2600R Series | 1. Excellent resistance to acid etching 2. Excellent adhesion to lines 3. Excellent line resolution | Suitable for ITO Film ITO/Metal Film AgNW Film | [**](/EN/Docs/Upload/WC2023060702518/daadd793-75e7-05fb-60ba-20c9e1e11af7_147-6 TPR2600R_06、08、10_ _2013.10.23.PDF) | | TI-005 Series | 1. High insulation 2. Excellent optical properties 3. High hardness 4. Good a",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "長興 官方網站",
+          "title": "Microsoft PowerPoint - Eternal_法說會簡報 英文版_2025.03.19.pptx",
+          "url": "https://www.eternal-group.com/EN/Docs/Upload/WC2025032100003/Eternal_%E6%B3%95%E8%AA%AA%E6%9C%83%E7%B0%A1%E5%A0%B1%20%E8%8B%B1%E6%96%87%E7%89%88_2025.03.19.pdf",
+          "claim": "來源摘錄（extracted live public page）：New Development • International Certificate --- Profile Chairman — Allen K. L. Kao Core Business — Manufacturing, processing and sales Founding 1964 Employees 4,860 Overall Sales Revenue USDS 1,376 million Production Sites 25 Taiwan 5 China 14 USA 1 Thailand 1 Japan 2 Malaysia 1 Italy 1 Notes 1: Number of Employees on Dec 31,2024 Notes 2: refer to year 2024 Consolidated statement Headcounts of Researcher 590 R&D expenditures For sales revenue 3% --- Profile Eternal One of the leading suppliers of Dry film photoresist in the world. One of three largest UV curable Monomers & Oligomers material suppliers. One of the leading suppliers of synthetic resin in Asia. --- 2024 Product Lines Sales Ratio Resins Materials 47.7% - Alkyd Resin - Solvent-Based Acrylic Coating Resin - Water-Based Acrylic Coating Resin - Overprinting - Polyester Polyol Resin - Fluorocarbon Resin - Polyurethane Resin - Saturated Polyester Resin - Amino Resin - Optoelectronic Materials - Wind power materials - Other Coatings Resin - Conductive polymer - Unsaturated Polyester Resin - Vinyl Ester Resin - Fire Retardant Resin - Epoxy System - Structural Adhesive - Polyester for Polyurethane Foam Consolidated Revenue USD$1,376 million Electronic Materials 25.5% - Dry Film Photoresist - Dry Film Solder Mask - UV INK - Dry Film Photosensitive Polyimide - Liquid Polyimide Material - Vacuum Laminator - Toll Coating Service - Paper Phenolic Copper Clad Laminate - Composite Epoxy Copper Clad Laminate High Performance Materials 26.3% - UV Monomers - UV Oligomers - Special Coatings - Pressure Sens",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-25",
-      "status": "candidate",
+      "lastVerified": "2026-09-10",
+      "status": "verified",
       "techFocus": [
-        "環氧樹脂玻璃轉移溫度與低吸濕配方控制",
-        "UV／EB光固化反應速率與低殘膠控制",
-        "乾膜光阻解析度、附著力與顯影窗口控制"
+        "乾膜光阻以曝光圖形轉移支援精密蝕刻與電鍍，官方列IC載板及封裝用途",
+        "LEMC／Underfill需評估流動填隙、固化收縮與熱機械應力（工程分析，非已驗證品號）",
+        "PSPI需兼顧感光圖形化與介電可靠度；法說的新開發不等同全部完成量產認證"
       ],
       "swot": {
         "strengths": [
-          "樹脂、光阻與特殊化學品產品組合涵蓋電子材料配方上游",
-          "7月營收YoY+23.9%、累計YoY+10.5%，整體需求與出貨成長"
+          "公司具有乾膜光阻產品及液態封裝材料布局，直接材料關聯有官方來源而非只靠MOPS推測。",
+          "2026年7月營收40.93億元，MoM+6.82%、YoY+23.86%，累計YoY+10.48%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露特定先進封裝材料品號或量產認證",
-          "公司營收跨工業樹脂與PCB材料，無法拆出先進封裝貢獻"
+          "2025新開發清單不能證明2026各品號已大量出貨；題材占比與終端封裝客戶仍未揭露。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "RDL、封裝基板與晶圓級製程擴產可增加低吸濕樹脂及光阻需求",
-          "在地化電子化學材料驗證可縮短封裝供應鏈交期"
+          "先進封裝圖形精細化可提高乾膜光阻與封裝材料的研發價值。",
+          "LEMC、Underfill若完成客戶認證，可延伸既有電子材料組合。"
         ],
         "threats": [
-          "住友化學、JSR等國際材料商在高階封裝認證具先行優勢",
-          "若終端AI封裝擴產遞延，電子材料庫存可能反向修正"
+          "材料認證周期、熱可靠度與客戶製程變更可能延後放量。",
+          "國際封裝材料商與既有認證供應商的轉換門檻形成競爭壓力。"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4908",
   "companyName": "前鼎",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "leo-satellite-communications",
@@ -88,14 +88,13 @@
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "roleSummary": "前鼎MOPS直接支持雷射二極體、受光二極體封裝與光傳接模組，因此光通訊角色成立；但未揭露矽光子晶片、CPO、100G／400G／800G速率、DFB／EML材料或具名客戶，應定位為矽光子鏈周邊光源、檢光與收發模組整合。FinMind顯示2026年7月營收0.99億元、YoY+51.6%。",
+      "directness": "direct_enabler",
+      "roleSummary": "MOPS確認光二極體封裝與光傳接模組，官網型號可核驗IEEE C37.94 SFP的波長、距離及溫度。這支持光通訊業務，但不構成矽光子晶片或CPO訂單證據；電力通訊低速型號亦不等同AI高速連結。本次FinMind最新回傳：2026年7月營收0.99億元，MoM+8.20%、YoY+51.63%。公司整體營收不可直接歸因本題材。",
       "products": [
         "雷射二極體封裝元件",
         "受光二極體封裝元件",
-        "光發射次模組",
-        "光接收次模組",
-        "可插拔式光收發模組"
+        "IEEE C37.94 SFP光收發模組（850nm多模）",
+        "IEEE C37.94 SFP光收發模組（1310nm單模）"
       ],
       "customers": [
         "Cisco（光通訊設備應用對象，非MOPS揭露客戶）",
@@ -104,64 +103,73 @@
         "Broadcom（矽光子平台對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "眾達科(4977)",
-        "光環科技(2340)",
-        "中際旭創(中國)"
+        "眾達-KY（光模組比較對象）",
+        "光環（光通訊元件比較對象）"
       ],
       "risks": [
-        "上櫃公司規模小，營收有限",
-        "中國光模組廠低價競爭壓力",
-        "矽光子CPO技術顛覆傳統可插拔光模組"
+        "已核驗C37.94型號屬電力通訊，不能以其存在推估AI資料中心或CPO營收。",
+        "中國光模組同業競價與客戶庫存周期影響規模較小供應商。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "4908公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 4908 role in 矽光子、CPO 與高速光通訊 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：雷射二極體、受光二極體封裝及光傳接模組等光纖通訊產品。"
+          "title": "4908 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4908",
+          "claim": "MOPS主要經營業務：設計、研發、生產及銷售雷射二極體、受光二極體封裝及光傳接模組之相關光纖通訊產品",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "title": "4908 2026年7月營收（本批MCP查核）",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收0.99億元，MoM+8.2%、YoY+51.6%；TWSE月營收工具查無資料。"
+          "claim": "2026年7月營收0.99億元，MoM+8.20%、YoY+51.63%。TWSE月營收工具查無資料，改以FinMind備援；依revenue_year/revenue_month辨識期間。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "前鼎 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://apacoe.com.tw/en/product-652506/Optical-Transceiver-SFP-IEEE-C37-94.html",
+          "claim": "C37.94產品頁分別列LM28 850nm多模2km與LS38 1310nm單模20km，工業溫度型號TI為-40至85°C；不將規格外推至QSFP或CPO。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "前鼎 官方網站",
+          "title": "Optical Transceiver, SFP IEEE C37.94 - APAC Opto Electronics Inc.",
+          "url": "https://apacoe.com.tw/en/product-652506/Optical-Transceiver-SFP-IEEE-C37-94.html",
+          "claim": "來源摘錄（extracted live public page）：SFP IEEE C37.94 Optical Transceiver Description SFP IEEE C37.94 ,Optical Transceiver Inquire Now Specification Optical Transceiver / SFP Part Number Datarate Wavelength Media Distance Tx Power Rx Sens Temp Voltage PDF LM28-A3C-TC-N-EC 2M 850 MMF 2km -11 ~ -23 < -32 0 to 70 3.3V LM28-A3C-TK-N-EC 2M 850 MMF 2km -11 ~ -23 < -32 -10 to 85 3.3V LM28-A3C-TI-N-EC 2M 850 MMF 2km -11 ~ -23 < -32 -40 to 85 3.3V LS38-A3C-TC-N-EC 2M 1310 SMF 20km -11 ~ -19 < -32 0 to 70 3.3V LS38-A3C-TI-N-EC 2M 1310 SMF 20km -11 ~ -19 < -32 -40 to 85 3.3V Inquiry",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-24",
+      "lastVerified": "2026-09-10",
       "status": "verified",
       "techFocus": [
-        "LD／PD光電晶片的主動對準與氣密封裝",
-        "光收發模組的耦光效率、消光比與接收靈敏度校準",
-        "可插拔模組的熱管理、光功率監控與可靠度測試"
+        "LM28-A3C-TI-N-EC：2M資料率、850nm多模光纖、2km、3.3V、-40至85°C",
+        "LS38-A3C-TI-N-EC：2M資料率、1310nm單模光纖、20km、3.3V、-40至85°C",
+        "IEEE C37.94型號是電力通訊介面，不能把其規格套到資料中心高速QSFP產品"
       ],
-      "supplyChainStage": "optical_components",
-      "roleType": "optical_transceiver_module_supplier",
+      "supplyChainStage": "optical_transceiver",
+      "roleType": "optical_transceiver_and_diode_packaging",
       "swot": {
         "strengths": [
-          "MOPS直接支持LD、PD封裝與光收發模組，光通訊產品基礎明確",
-          "FinMind顯示7月營收YoY+51.6%、MoM+8.2%，公司整體需求回升"
+          "具發光、受光封裝及有明確規格的光收發模組產品族，角色不再只寫通用光元件。",
+          "2026年7月營收0.99億元，MoM+8.20%、YoY+51.63%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露矽光子、CPO、資料速率、材料系統或具名客戶",
-          "7月營收僅0.99億元，規模小且研發、認證與量產資源有限"
+          "已核驗C37.94型號屬電力通訊，不能以其存在推估AI資料中心或CPO營收。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "AI資料中心光互連成長可提升LD、PD及收發模組需求",
-          "矽光子平台仍需光源、檢光與模組封裝，前鼎可作為周邊整合者"
+          "電網數位化可帶動保護通訊使用的C37.94光介面需求。",
+          "不同距離與寬溫光收發模組可拓展工業及電信應用。"
         ],
         "threats": [
-          "CPO或共同封裝光學若加速滲透，可能壓縮傳統可插拔模組需求",
-          "中際旭創、新易盛及大型光模組廠的規模與價格競爭"
+          "中國光模組同業競價與客戶庫存周期影響規模較小供應商。",
+          "高速光架構換代需要額外研發與認證，現有低速規格不能直接沿用。"
         ]
       }
     }

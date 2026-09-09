@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6182",
   "companyName": "合晶",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "semiconductor-equipment-materials",
@@ -82,14 +82,14 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "合晶MOPS僅揭露半導體及其材料，未揭露電芯、正負極材料或儲能系統；本題材關聯限於功率半導體所需矽晶圓上游。FinMind顯示2026年7月營收9.94億元、MoM+2.9%、YoY+18.9%，公司整體成長不能直接歸因儲能。",
+      "supplyChainStage": "power_semiconductor_substrates",
+      "roleType": "silicon_wafers_storage_application_adjacent",
+      "roleSummary": "官方材料目錄明確支持功率MOSFET、IGBT與PMIC用矽晶圓，補足MOPS寬泛敘述。對儲能仍屬功率晶片上游材料，不是電池材料；保留核驗的8吋規格，避免將全產品能力套到每一用途。本次FinMind最新回傳：2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "6吋重摻雜拋光矽晶圓（功率元件基板）",
-        "8吋重摻雜拋光矽晶圓（功率元件基板）",
-        "6吋矽磊晶晶圓（MOSFET／IGBT用）",
-        "8吋矽磊晶晶圓（功率管理IC用）"
+        "8吋低／超低電阻率N型拋光矽晶圓",
+        "8吋低／超低電阻率P型拋光矽晶圓",
+        "8吋功率元件用矽磊晶晶圓",
+        "類比PMIC用輕摻雜矽晶圓"
       ],
       "customers": [
         "世界先進(5347；功率元件晶圓供應鏈對象，非MOPS揭露客戶)",
@@ -98,70 +98,81 @@
         "STMicroelectronics（功率元件應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "環球晶(6488)(功率半導體用矽晶圓)",
-        "台勝科(3532)(功率半導體晶圓)",
-        "昭和電工(外延晶圓)"
+        "環球晶（半導體矽晶圓比較對象）",
+        "SUMCO（矽晶圓比較對象）",
+        "信越半導體（矽晶圓比較對象）"
       ],
       "risks": [
-        "MOPS未揭露電池或儲能系統產品，題材僅屬上游間接關聯",
-        "月營收無法拆分功率元件用晶圓與其他半導體材料貢獻",
-        "SiC功率元件滲透可能分流部分矽基高壓應用"
+        "矽晶圓供應至儲能系統仍隔著晶片與模組環節，無本批儲能專屬客戶及營收證據。",
+        "SiC／GaN滲透可能分流部分矽基功率應用，不能把全部電力電子需求等同矽晶圓。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及其材料之研發、設計、製造、進出口及代理銷售等"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體及其材料之研發、設計、製造、進出口及代理銷售。"
+          "title": "6182 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6182",
+          "claim": "MOPS主要經營業務：半導體及其材料之研發、設計、製造、進出口及代理銷售等",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "title": "6182 2026年7月營收（本批MCP查核）",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收9.94億元，MoM+2.9%、YoY+18.9%。"
+          "claim": "2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%。TWSE月營收工具查無資料，改以FinMind備援；依revenue_year/revenue_month辨識期間。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "合晶 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://www.waferworks.com/tw/products-and-service/service",
+          "claim": "官方service頁列8吋功率／類比元件材料與長晶至磊晶技術；epitaxial頁列8吋<100>範例2–130µm及P/N電阻率限制，非儲能專案規格。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "合晶 官方網站",
+          "title": "客製化矽晶圓服務，以客為本 的半導體材料供應商 - 合晶科技",
+          "url": "https://www.waferworks.com/tw/products-and-service/service",
+          "claim": "來源摘錄（extracted live public page）：## 產品佈局 合晶科技作為世界級半導體矽晶圓供應商，致力於提供全球顧客高品質的產品與服務，產品包括各種摻質12吋(含以下)的拋光晶圓、磊晶晶圓、雙拋晶圓、研磨晶圓、蝕刻晶圓、超薄晶圓及SOI晶圓，並針對不同應用的元件特性，以自身的材料專業及由長晶至磊晶的整合技術，為客戶提供最適當的產品與服務，滿足客戶現在與未來的需求。 以8吋產品為例，下圖為合晶科技半導體晶圓的產品佈局，依據不同元件用途與終端應用的分類，搭配最適當的晶圓材料及生產技術，提供客製化的產品與服務。其餘尺寸晶圓亦有相似的產品佈局，請連絡我們獲得進一步的資訊。 ![prodcut overview01](/uploads/product/prodcut-overview01.svg) | ![spec icon](/uploads/product/spec-icon.svg) Specific Polished wafer type From ultra-low to ultra-high resistivity - N/P type Epitaxy and SOI are available Example of device MEMS, power MOSFET, PMIC(power management IC) and more | ![spec icon](/uploads/product/power-icon.svg) Power Polished wafer type low resistivity or ultra-low resistivity - N/P type Epitaxy is available Example of device power MOSFET, BJT, diode, thyristor, IGBT, CoolMOS, superjunction and more | ![spec icon](/uploads/product/imaging-icon.svg) Imaging Polished wafer type low resistivity - N/P type Epitaxy is available Example of device Image sensor, CIS(COMS image sensor) and more | |---|---|---| | ![spec icon](/uploads/product/analog.svg) Analog Polished wafer type Lightly doped wafer - N/P type Epitaxy is available Example of device LED driver, PMIC(power management IC) and more | ![spec icon](/uploads/product/logic-icon.svg) Logic Polished wafer type Lightly doped wafer - N/P type Epitaxy is available Example of device Standard logic IC and ASIC(application specific IC) | ![spec icon](/uploads/product/rf-icon.svg) RF Polished wafer type Ultra-high resistivity - N/P type Epitaxy and SOI are available - Polished wafer is ready for GaN epitaxy Example of device RF devices | ##",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "合晶 官方網站",
+          "title": "Epitaxial Wafer - WAFER WORKS",
+          "url": "https://waferworks.com/en/epitaxial-wafers",
+          "claim": "來源摘錄（extracted live public page）：Wafer Works offers a comprehensive selection of products in different fields. We provide lightly-doped and highly-doped wafers essential for integrated circuits and discrete components. Our offerings encompass various types of doping, including boron, phosphorus, arsenic, antimony, and co-doped products tailored for specific purposes. The main product categories (based on 8-inch) are outlined in the table below. Please feel free to reach out to us for more information on our products. Swipe to view table | Epitaxial Wafer (Take 8-inch 100 Crystal Orientation as an Example) | | N - | N + | N ++ | N +++ | P - | P + | P ++ | P +++ | | N - | ○ | ○ | ○ | -- | ○ | ○ | ○ | -- | | N + | -- | -- | ○ | ○ | ○ | ○ | ○ | -- | | P - | -- | -- | -- | -- | -- | ○ | ○ | ○ | | P + | -- | -- | -- | -- | -- | ○ | ○ | ○ | Note: “○” Product of mass production; the thickness of epitaxial wafer is 2-130µm; resistance of epitaxial wafer: P Type >60mohm-cm and N Type >30mohm-cm",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "candidate",
       "techFocus": [
-        "重摻雜矽單晶電阻率與氧碳濃度控制",
-        "矽磊晶層厚度、摻雜均勻度與缺陷密度控制",
-        "6吋／8吋拋光平坦度與表面金屬污染控制"
+        "8吋<100>磊晶範例厚度2–130µm，P型電阻率>60mΩ·cm、N型>30mΩ·cm",
+        "長晶至磊晶整合包含重摻低電阻率、晶圓應力控制及多層磊晶",
+        "MOSFET／IGBT／PMIC為官網元件應用，是否進入儲能PCS／BMS仍需下游客戶驗證"
       ],
       "swot": {
         "strengths": [
-          "矽晶圓與磊晶晶圓可切入儲能PCS所需功率半導體上游",
-          "FinMind顯示7月營收YoY+18.9%、MoM+2.9%，整體需求改善"
+          "官網提供由長晶、拋光至磊晶的技術鏈及功率元件產品分類，可支持上游材料角色。",
+          "2026年7月營收9.94億元，MoM+2.90%、YoY+18.90%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露電池或儲能系統產品，題材僅屬上游間接關聯",
-          "月營收無法拆分功率元件用晶圓與其他半導體材料貢獻"
+          "矽晶圓供應至儲能系統仍隔著晶片與模組環節，無本批儲能專屬客戶及營收證據。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "儲能PCS與充電設備擴產可提升MOSFET／IGBT用矽晶圓需求",
-          "功率半導體國產化可增加在地晶圓驗證機會"
+          "儲能電源轉換與控制需求可間接帶動矽基MOSFET／IGBT／PMIC材料需求。",
+          "客製摻雜與磊晶參數可提升功率元件設計配合度。"
         ],
         "threats": [
-          "SiC功率元件滲透可能分流部分矽基高壓應用",
-          "矽晶圓價格競爭與客戶庫存調整會壓縮成長"
+          "SiC／GaN滲透可能分流部分矽基功率應用，不能把全部電力電子需求等同矽晶圓。",
+          "矽晶圓產能、庫存周期及客戶議價會影響利用率與售價。"
         ]
       }
     },

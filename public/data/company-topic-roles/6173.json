@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -98,86 +98,96 @@
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "信昌電MOPS揭露晶片電容、晶片電阻與介電瓷粉，未揭露封裝基板、DPC／AMB陶瓷基板或先進封裝材料認證；本題材應定位為封裝設備與基板供應鏈的被動元件／材料鄰近角色。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，不能直接歸因先進封裝。",
+      "supplyChainStage": "dielectric_materials_adjacent",
+      "roleType": "passives_and_substrate_filler_candidate",
+      "roleSummary": "MOPS晶片電容、電阻與瓷粉範圍成立；官方瓷粉頁進一步列Substrate filler用途，可保留材料上游可能性，但不能宣稱已供應某封裝載板或自製DPC／AMB基板。更新8月營收後仍不直接歸因先進封裝。本次FinMind最新回傳：2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "積層陶瓷晶片電容MLCC（封裝設備控制板用）",
-        "厚膜晶片電阻（封裝設備電源與控制板用）",
-        "介電陶瓷粉末（電子陶瓷配方原料）",
-        "高頻低損耗陶瓷電容（測試治具訊號路徑用）"
+        "積層陶瓷晶片電容MLCC",
+        "晶片電阻Chip-R",
+        "MLCC／圓板電容用介電瓷粉",
+        "基板填料用途介電瓷粉（官網應用目錄，非已確認封裝載板訂單）"
       ],
       "customers": [
-        "國巨(2327；被動元件供應鏈對象)",
-        "華新科(2492；電子陶瓷供應鏈對象)",
-        "欣興(3037；封裝基板應用對象，非MOPS揭露客戶)",
-        "日月光投控(3711；封裝設備應用對象，非MOPS揭露客戶)"
+        "華新科（電子陶瓷供應鏈對象，非本次揭露客戶）",
+        "國巨（被動元件生態對象，非本次揭露客戶）",
+        "欣興（基板材料應用對象，非本次揭露客戶）",
+        "日月光投控（封裝供應鏈應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "京瓷(Kyocera)",
-        "村田製作所(Murata)",
-        "九豪(6107)"
+        "村田製作所（介電陶瓷與MLCC比較對象）",
+        "TDK（被動元件比較對象）"
       ],
       "risks": [
-        "MOPS未揭露封裝基板或先進封裝專用陶瓷材料",
-        "營收成長為公司整體數據，無法拆分封裝題材貢獻",
-        "把介電瓷粉直接等同封裝基板材料，可能造成題材錯配"
+        "基板填料是應用目錄，不含封裝基板品號、供貨對象及題材收入證明。",
+        "填料材料認證與基板製程相容性不足可能限制題材轉換。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 晶片電容、晶片電阻、介電瓷粉"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉。"
+          "title": "6173 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6173",
+          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "title": "6173 2026年8月營收（本批MCP查核）",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%。"
+          "claim": "2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。TWSE月營收工具查無資料，改以FinMind備援；依revenue_year/revenue_month辨識期間。營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "信昌電 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://www.pdc.com.tw/tw/powder",
+          "claim": "PDC官方powder頁明列Disc/MLCC、Substrate filler等用途及solid state Barium Titanate、窄粒徑與批次一致性；未證明封裝載板客戶或DPC/AMB成品。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "信昌電 官方網站",
+          "title": "介電瓷粉 - 信昌電子陶瓷股份有限公司",
+          "url": "https://www.pdc.com.tw/tw/powder",
+          "claim": "來源摘錄（extracted live public page）：PDC offers a diverse range of high quality dielectric powders and customized electronic materials for Disc capacitor, MLCC capacitor, SLC, Patch Antenna, Resonator, Filter applications, RF inductor, Substrate filler, and other components. ##### Specialty 1. Excellent electrical properties. 2. The whole series of products are Lead-Free and in compliance with RoHS standard. 3. Various dielectric constant of Microwave powders. 4. Specialized in solid state synthesis Barium Titanate with high crystallinity and good quality. 5. Narrow particles size distribution and lot-to-lot consistency.",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "信昌電 官方網站",
+          "title": "PDC | Multilayer Ceramic Capacitors-High Voltage & Automotive Grade Capacitors",
+          "url": "https://pdc.com.tw/mlcc",
+          "claim": "來源摘錄（extracted live public page）：![PDC](https://www.pdc.com.tw/storage/system/index/inside_banner.webp) ## Multilayer Ceramic Capacitors - PDC is a manufacturer of special MLCC Its application markets mainly include automotive, industrial, networking, new energy, aviation, medical products. - PDC provides special MLCC series, including safety-certified MLCC, high-voltage MLCC, medium-voltage high-capacitance MLCC, automotive certification, stacked MLCC, high reliability and other high-power special MLCC. [![Name](https://www.pdc.com.tw/default/system/custom/Icon_awesome-file-pdf.svg) Catalog Download](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/mlcc_catalog.pdf \"Multilayer Ceramic Capacitors\") PRODUCT SERIES Showing 1 - 13 of 13 results [![FK/FH Safety Certified capacitor](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~141/FKFH.webp)](https://www.pdc.com.tw/fk-fh \"FK/FH Safety Certified capacitor\") #### [FK/FH Safety Certified capacitor](https://www.pdc.com.tw/fk-fh \"FK/FH Safety Certified capacitor\") FK series can correspond to safety Y2/X1 class, FH series can correspond to safety X2 class, PDC safety products are designed for surge or lightning immunity and have the feature of high reliability and stability Quantity -+ [FK/FH Series](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~141/FKFH_Series.pdf) [FK/FH\\_Automotive Series](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~141/FKFH_Auto_Series.pdf) [![FV High Voltage Capacitor ( >=1KV )](https://www.pdc.com.tw/storage/archite",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-25",
+      "confidence": "medium",
+      "lastVerified": "2026-09-10",
       "status": "candidate",
       "techFocus": [
-        "介電瓷粉粒徑分布與燒結溫度控制",
-        "MLCC多層共燒與內電極對位控制",
-        "厚膜電阻漿料印刷與阻值修調"
+        "固相合成鈦酸鋇BaTiO3，官方強調高結晶性、窄粒徑分布與批次一致性",
+        "介電瓷粉依電容、微波與Substrate filler用途區分配方，不能等同成品陶瓷封裝基板",
+        "MLCC共燒及晶片電阻阻值修調為產品製程分析，不外推DPC／AMB基板能力"
       ],
       "swot": {
         "strengths": [
-          "具MLCC、晶片電阻與介電瓷粉垂直材料能力",
-          "FinMind顯示7月營收YoY+47.9%，公司整體出貨動能明顯改善"
+          "具介電瓷粉與被動元件產品，官網提供固相BaTiO3合成及粒徑一致性的可驗證細節。",
+          "2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露封裝基板或先進封裝專用陶瓷材料",
-          "營收成長為公司整體數據，無法拆分封裝題材貢獻"
+          "基板填料是應用目錄，不含封裝基板品號、供貨對象及題材收入證明。",
+          "營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "封裝設備與測試治具升級可增加高頻被動元件需求",
-          "高可靠電子陶瓷材料可爭取設備控制與電源模組驗證"
+          "封裝相關電子板與材料配方若提高介電性能要求，可增加特用瓷粉驗證機會。",
+          "高功率設備的被動元件可靠度需求可拓展非消費應用。"
         ],
         "threats": [
-          "把介電瓷粉直接等同封裝基板材料，可能造成題材錯配",
-          "國巨、村田等大廠的規模與高階認證形成競爭壓力"
+          "填料材料認證與基板製程相容性不足可能限制題材轉換。",
+          "被動元件景氣及價格競爭仍可能主導收入，而非先進封裝需求。"
         ]
       }
     },

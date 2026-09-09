@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1519",
   "companyName": "華城",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -96,15 +96,15 @@
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "supply_chain_segment",
-      "directness": "direct_enabler",
-      "supplyChainStage": "ess",
-      "roleType": "storage_electrical_integration",
-      "roleSummary": "華城MOPS揭露變壓器、配電盤、配電器材與統包工程，能支援儲能站升壓及併網，但未揭露電芯、BMS、PCS或特定儲能案場產品。2026年7月營收20.50億元、MoM+18.5%，但YoY-8.3%、累計YoY-3.7%，公司整體營運仍較去年弱。",
+      "directness": "indirect",
+      "supplyChainStage": "grid_equipment_adjacent",
+      "roleType": "transformer_storage_application_candidate",
+      "roleSummary": "MOPS確認變壓器與配電統包業務，官網可核驗非晶質鐵心油入式及模鑄式產品。對儲能題材是電力轉換後端與併網配套，不把一般變壓器命名為已出貨的儲能專用型號。本次TWSE最新回傳：2026年7月營收20.50億元，MoM+18.51%、YoY-8.32%，累計YoY-3.68%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "儲能站用三相隔離／升壓變壓器",
-        "中壓金屬封閉配電盤與保護控制盤",
-        "儲能案場變電站EPC統包工程",
-        "併網用配電器材與電力品質設備"
+        "非晶質鐵心油入式變壓器",
+        "非晶質鐵心模鑄式變壓器",
+        "電力配電盤與配電器材",
+        "變電與配電統包工程服務"
       ],
       "customers": [
         "台電（儲能併網與變電站應用對象，非MOPS揭露客戶）",
@@ -117,64 +117,68 @@
         "士電"
       ],
       "risks": [
-        "MOPS未揭露電芯、BMS或PCS，僅屬儲能站電力設備角色",
-        "7月營收YoY-8.3%、累計YoY-3.7%，整體營運仍未恢復年增",
-        "士電、中興電與台達電競逐儲能電力設備及統包標案"
+        "沒有本批可核驗的儲能專用變壓器案號與題材收入；電芯、BMS與PCS不是本次確認產品。",
+        "變壓器原料成本、長交期與客戶驗收節奏影響毛利及認列。",
+        "2026年7月營收20.50億元，MoM+18.51%、YoY-8.32%，累計YoY-3.68%。公司整體口徑，不可直接歸因題材。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "華城 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1519",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 華城 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 1519 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：變壓器、配電盤、配電器材及其他統包工程。"
+          "title": "1519 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1519",
+          "claim": "MOPS主要經營業務：變壓器及配電盤配電器材及其他統包工程",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "1519 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%。"
+          "claim": "2026年7月營收20.50億元，MoM+18.51%、YoY-8.32%，累計YoY-3.68%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "華城 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://www.fortune.com.tw/tw/product_list.aspx?Type=1&Id=4",
+          "claim": "華城官網確認非晶質鐵心油入式及模鑄式變壓器與低鐵損設計；不將一般型錄當成儲能專案或IEC 61850認證。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "華城 官方網站",
+          "title": "華城電機股份有限公司",
+          "url": "https://www.fortune.com.tw/tw/product_list.aspx?Type=1&Id=4",
+          "claim": "來源摘錄（extracted live public page）：非晶質省能環保型高效率變壓器 為提升台灣變壓器產業對節能減碳之重視，引領變壓器產業走向節能減碳國際趨勢，華城電機期許逐年在產品減碳方面能持續進步，2014年8月21日順利取得台灣區電機電子工業同業公會之B2B非晶質鐵心變壓器產品碳標籤。 ##### 非晶質鐵心變壓器之特點︰最能符合ISO14000環保理念的產品 節能之優質產品，經濟部能源委員會認定之省能源產品︰適用於（民營公司購買節約能源設備或技術適用投資抵減辦法），購買非晶質鐵心變壓器得依比例抵減營利事業所得稅。 綠色環保產品，減少 CO2 的排放量︰非晶質材料之製作步驟較矽鋼片少，可減少材料製造時之大量能源消耗。採用非晶質鐵心變壓器，不但可以降低電力系統的線路電力損耗，又可減少電源開發費用及燃料費，無形中降低了CO2 排放量，減少空氣污染、酸雨及降低溫室效應。 在高次諧波時，非晶質鐵心變壓器的節能表現更為優異︰在正常系統使用下，非晶質鐵心變壓器鐵損值只有傳統高效率鐵心變壓器之 1/3 ∼ 1/4，是一種特高效率節能變壓器，但近來因產業的需求，廣泛使用變頻設備、不斷電系統(UPS)、大眾捷運系統、電弧爐、整流設備等諧波源，使電源系統產生高次諧波，影響電力設備之正常運轉，但是非晶材料的物理及磁化性只有傳統鐵新的 1/10 損耗，將增加電力設備之能源效率，降低電力設備之能源損耗，使他在高次諧波時之表現非常優異，同時更節省電費。 ##### 節省電費----由於低損失相對電量減少因此節省電費 - **計算例︰** 三相 60Hz-1000kVA 每年節省電費 節省損失(kW)x 24小時 x 365天 x 每度電費 - **平均負載 60%時之損失︰** 非晶質鐵心變壓器︰3.64 kW 一般型變壓器︰8.54 kW - **平均每度電費︰** 1.56元(計算方式採三段式時間電價) 年節省電費 =(8.54-3.64)x24x365x1.56=66,961元 ![](https://www.fortune.com.tw/WEB_Manage/attached/image/20190918/20190918163138_8225.jpg) ##### 減少CO2排放量-由於低損失不但降低線路電力損耗又減少CO2排放量 - **CO2換算系數︰** 0.423 kg/kwh - **CO2減少排放量︰** (8.54-3.64) x 24x 365 x 0.423= 18156 kg/年 ![](https://www.fortune.com.tw/WEB_Manage/attached/image/20190918/20190918164012_6094.jpg) ##### 油入式非晶質(省能、環保、高效率)導口型變壓器 （一）外型圖 ![](https://www.fortune.com.tw/WEB_Manage/attached/image/20190918/20190918164432_3499.jpg) （二）特性、尺寸、重量、油量 ![](https://www.fortune.com.tw/WEB_Manage/attached/image/20190918/20190918165213_5803.jpg) ##### 非晶質鐵心模鑄式變壓器 （一）外型圖 ![](https://www.fortune.com.tw/WEB_Manage/attached/image/20190918/20190918165357_8509.jpg) （二）特性、尺寸、重量、油量 ![](https://www.fortune.com.tw/WEB_Manage/attached/image/20190918/20190918165",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "candidate",
       "techFocus": [
-        "變壓器絕緣、溫升與短路耐受設計",
-        "中壓開關盤保護電驛與IEC 61850通訊整合",
-        "儲能站升壓、保護協調與併網測試"
+        "非晶質合金鐵心以降低空載鐵損為設計方向，區分油入式及模鑄式結構",
+        "儲能站應用需驗證諧波、溫升、絕緣及升壓保護協調（工程分析，非特定案場規格）"
       ],
       "swot": {
         "strengths": [
-          "變壓器、配電盤與EPC能力可覆蓋儲能站交流側併網",
-          "7月營收MoM+18.5%，短期工程與設備認列回升"
+          "非晶質鐵心及配電工程提供降低長時間待機鐵損與併網配套的產品基礎。",
+          "本次7月營收MoM+18.51%，月度回升，但仍未扭轉年減。"
         ],
         "weaknesses": [
-          "MOPS未揭露電芯、BMS或PCS，僅屬儲能站電力設備角色",
-          "7月營收YoY-8.3%、累計YoY-3.7%，整體營運仍未恢復年增"
+          "沒有本批可核驗的儲能專用變壓器案號與題材收入；電芯、BMS與PCS不是本次確認產品。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "2026年7月營收20.50億元，MoM+18.51%、YoY-8.32%，累計YoY-3.68%。"
         ],
         "opportunities": [
-          "大型儲能案場與資料中心備援電力增加升壓變壓器需求",
-          "台電調頻與電網韌性標案可帶動配電盤及EPC商機"
+          "BESS案場需要升壓及配電設備，為既有變壓器業務提供應用方向。",
+          "低損耗變壓器可切入長時間帶電的再生能源配電場景。"
         ],
         "threats": [
-          "士電、中興電與台達電競逐儲能電力設備及統包標案",
-          "案場消防與併網規範變動可能延後驗收及收入認列"
+          "變壓器原料成本、長交期與客戶驗收節奏影響毛利及認列。",
+          "儲能案場延後、併網排隊與設備競價可能壓抑需求轉化。"
         ]
       }
     },

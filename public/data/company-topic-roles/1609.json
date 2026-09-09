@@ -2,20 +2,19 @@
   "schemaVersion": 1,
   "companyCode": "1609",
   "companyName": "大亞",
-  "updatedAt": "2026-08-25T19:03:16Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "renewable-energy",
       "topicName": "太陽能與離岸風電",
       "topicType": "supply_chain_segment",
       "directness": "direct_enabler",
-      "roleSummary": "大亞MOPS揭露輸配電機械、電線電纜、鋼纜、配管與工程業務，可支援再生能源案場併網；但未揭露特定離岸風場海纜訂單，故不應視為風場核心設備商。2026年7月營收29.06億元、YoY+11.5%、累計YoY+17.9%，但MoM-13.8%，整體成長不能全歸因再生能源。",
+      "roleSummary": "MOPS電纜與工程業務之外，官方能源鏈公告亦列集團太陽能案場；公司轉載的2026年報導確認600V至345kV電纜範圍。再生能源角色涵蓋集團發電及陸域輸配電，不能直接延伸為海底電纜訂單。本次TWSE最新回傳：2026年7月營收29.06億元，MoM-13.76%、YoY+11.53%，累計YoY+17.91%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "161kV交連聚乙烯XLPE高壓電力電纜",
-        "69kV交連聚乙烯XLPE輸配電電纜",
-        "600V太陽能案場低壓電力電纜",
-        "銅導體與鋼線鋼纜",
-        "再生能源案場配管與電纜工程"
+        "345kV超高壓電力電纜",
+        "161kV高壓電力電纜",
+        "600V低壓配電電纜",
+        "集團太陽能發電案場與電力管理業務"
       ],
       "customers": [
         "台電（再生能源併網對象，非MOPS揭露客戶）",
@@ -24,64 +23,84 @@
         "森崴能源(6806；綠能工程應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "華新(1605)(海纜/電力電纜)",
-        "華榮(1608)(電力電纜)",
-        "太平洋電線電纜(1602)"
+        "華新（電力電纜比較對象）",
+        "華榮（電力電纜比較對象）",
+        "太平洋電線電纜（電力電纜比較對象）"
       ],
       "risks": [
-        "MOPS未揭露特定離岸風場海纜產品或客戶",
-        "7月營收MoM-13.8%，工程與出貨認列仍有波動",
-        "華新、華榮及國際海纜商競爭可能壓縮標案毛利"
+        "引用的太陽能／儲能案場容量為歷史公告，不當成2026最新規模；無本批海纜訂單證據。",
+        "銅價、原料傳導及交貨時程影響電纜業務毛利與月營收。",
+        "2026年7月營收29.06億元，MoM-13.76%、YoY+11.53%，累計YoY+17.91%。公司整體口徑，不可直接歸因題材。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "1609公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 1609 role in 太陽能與離岸風電 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：輸配電機械、電線電纜、塑膠製品、鋼線鋼纜、配管及其他工程。"
+          "title": "1609 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1609",
+          "claim": "MOPS主要經營業務：發電輸電配電機械製造業、電線電纜製造業、其他塑膠製品製造業電子零組件製造業、配管工程業、其它工程業、塑膠膜、鋼線鋼纜金屬結構建築組件製造業、電信器材電子材料批發業、國際貿易業",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "1609 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收29.06億元，MoM-13.8%、YoY+11.5%，累計YoY+17.9%。"
+          "claim": "2026年7月營收29.06億元，MoM-13.76%、YoY+11.53%，累計YoY+17.91%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "大亞 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://www.taya.com.tw/en/media-coverage-page2271",
+          "claim": "公司網站轉載2026-08-27商周報導，支持600V至345kV產品與345kV型式測試；2024集團公告支持太陽能案場與儲能布局，數字不外推到本年。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "大亞 官方網站",
+          "title": "Taiwan’s semiconductor landscape is built, line by line. - Taya Group",
+          "url": "https://www.taya.com.tw/en/media-coverage-page2271",
+          "claim": "來源摘錄（extracted live public page）：345 kV certification: A qualification that takes time to earn To enter the high-voltage power supply chain, suppliers must pass rigorous cable type tests. For 345 kV cables, testing under relevant standards includes high-voltage withstand tests, partial discharge tests, aging tests, and other evaluations to verify long-term stability under high-voltage conditions and temperature variations. Taya Electric Wire & Cable was Taiwan’s first local manufacturer to pass Taipower’s 345 kV cable type test. This “first” was not the result of a single test. It was the product of accumulated technical expertise and years of validation. From the selection of cable materials and structural design to manufacturing process control, every stage must meet the corresponding requirements. Taya became Taiwan’s first local manufacturer to pass Taipower’s 345 kV cable type test as early as 2008. Nearly two decades have passed since this qualification was obtained. Before the current wave of semiconductor fab construction arrived, Taya had already passed the first—and one of the most critical—thresholds for entering Taiwan’s highest-voltage transmission system. Taya’s product voltage range extends from 600 V to 345 kV, covering extra-high-voltage transmission outside the fab, 161 kV cables, internal power distribution, and specially designed cables for specific applications. This breadth connects the two worlds described above within a single product portfolio. Taya’s cables across various specifications have already been put into practical use at multiple major semiconductor facilities i",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "大亞 官方網站",
+          "title": "Leading Brand in the Energy Chain",
+          "url": "https://taya.com.tw/webls-en-us/msg/msg601.html",
+          "claim": "來源摘錄（official page search-index excerpt only; full extraction failed; historical 2024 announcement）：2024-10-03 Visit : 474 2024/09/26 Leading Brand in the Energy Chain - Taya Group Honored with the \"2024 Taiwan FINI 100\" Award Taya Group (1609) has been awarded the prestigious \"2024 Taiwan FINI 100 Award,\" distinguishing itself among 1,813 publicly listed companies through its exceptional performance across various aspects, including market trends, fundamentals, sustainability, and foreign institutional investment preferences. Taya Group is dedicated to becoming a leading brand in the energy chain, offering comprehensive solutions for energy generation, transmission, conversion, storage, and management, thus building a complete energy ecosystem. Chairman Shen, Shang-Hung introduced the 3E core strategy—\"Emerging,\" \"Energy,\" and \"ESG\"—not only focusing on technological innovation and market expansion but also emphasizing sustainable development to make a positive societal impact. manage its goals across economic, environmental, social, and human rights dimensions, ensuring long-term business viability. For climate actions, Ta Ya developed a carbon reduction roadmap in 2023 to actively support the Paris Agreement’s 1.5°C temperature control target. Using 2021 as a baseline, the group aims to achieve net-zero emissions for Scope 1 & 2 by 2050.Ta Ya plans to reduce greenhouse gas emissions through renewable energy use, equipment upgrades, and transitioning from fuel-powered vehicles to hybrid or electric vehicles—all in line with the 1.5°C goal. Ta Ya’s solar power plants have a total capacity of 212 MW, and its energy storage systems boast a capacity of 36.3 MW. The compa",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-25",
-      "status": "candidate",
+      "lastVerified": "2026-09-10",
+      "status": "verified",
       "techFocus": [
-        "XLPE絕緣押出、局部放電與耐壓控制",
-        "高壓電纜接續、終端施工與併網測試",
-        "銅導體絞線與載流量／熱管理設計"
+        "345kV電纜型式測試涵蓋耐壓、局部放電與老化可靠度",
+        "高壓輸電與廠內低壓配線分開選型，關注絕緣、阻燃與環境應力",
+        "太陽能與儲能屬集團能源鏈業務，案場容量須與公告年代綁定"
       ],
-      "supplyChainStage": "electrical_equipment",
-      "roleType": "high_voltage_power_cable_supplier",
+      "supplyChainStage": "power_cables_and_group_renewables",
+      "roleType": "cables_and_group_solar_assets",
       "swot": {
         "strengths": [
-          "MOPS揭露電線電纜、輸配電機械與工程，可支援案場併網",
-          "7月營收YoY+11.5%、累計YoY+17.9%，公司整體訂單動能正向"
+          "電纜電壓範圍與集團能源鏈布局提供再生能源發電及併網的雙重參與途徑。",
+          "2026年7月營收29.06億元，MoM-13.76%、YoY+11.53%，累計YoY+17.91%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露特定離岸風場海纜產品或客戶",
-          "7月營收MoM-13.8%，工程與出貨認列仍有波動"
+          "引用的太陽能／儲能案場容量為歷史公告，不當成2026最新規模；無本批海纜訂單證據。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "7月營收MoM-13.76%，單月出貨與認列節奏仍有波動。"
         ],
         "opportunities": [
-          "太陽能、儲能與離岸風電併網增加高壓電纜及工程需求",
-          "台電強韌電網投資可與再生能源接入需求形成雙重動能"
+          "再生能源併網及電网韌性建設可提升陸域高壓電纜需求。",
+          "集團既有太陽能布局可結合儲能與能源管理，但應追蹤實際新案公告。"
         ],
         "threats": [
-          "華新、華榮及國際海纜商競爭可能壓縮標案毛利",
-          "風場環評、融資與施工延期會推遲電纜需求"
+          "銅價、原料傳導及交貨時程影響電纜業務毛利與月營收。",
+          "太陽能開發許可、電網接入及工程延後會拉長投資回收。"
         ]
       }
     }

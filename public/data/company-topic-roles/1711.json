@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1711",
   "companyName": "永光",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -82,14 +82,14 @@
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "battery_chemicals",
-      "roleType": "battery_chemical_supplier",
-      "roleSummary": "永光MOPS揭露色料、特用、電子、碳粉與醫藥化學品，未揭露鋰電池電解液、正極材料或儲能專用化學品；本題材僅能視為模組塑膠、塗層及功率元件製程化學品的潛在應用。2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%、累計YoY+9.0%，不能直接歸因儲能。",
+      "supplyChainStage": "specialty_chemicals_adjacent",
+      "roleType": "polymer_and_lithography_chemicals_adjacent",
+      "roleSummary": "官方產品導覽確認UV吸收劑、光安定劑、抗氧化劑與微影顯影化學品。這些是具體既有產品，但將它們用於儲能櫃塑料或功率元件仍是應用分析，不是已驗證的電池材料訂單。本次TWSE最新回傳：2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "色料分散劑（電池模組樹脂件配方用）",
-        "紫外線吸收劑（戶外儲能櫃塑膠件用）",
-        "電子級顯影化學品（功率元件製程用）",
-        "電子級清洗化學品（BMS與功率IC製程用）"
+        "聚合物紫外線吸收劑",
+        "聚合物光安定劑",
+        "塑料抗氧化劑",
+        "IC／LCD微影用顯影化學品"
       ],
       "customers": [
         "台塑(1301；樹脂配方供應鏈對象，非MOPS揭露客戶)",
@@ -102,65 +102,67 @@
         "巴斯夫(BASF)"
       ],
       "risks": [
-        "MOPS未揭露電池電解液、電極或隔離膜材料",
-        "月營收跨多種化學品，無法確認儲能應用占比",
-        "若以一般特用化學品推論電池材料，題材直接性會被高估"
+        "來源未支持鋰電電解液、電極材料或儲能專用型號，移除產品名稱內無條件的電池用途。",
+        "特化材料替代、客製化驗證與環保法規增加開發成本。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：色料化學品、特用化學品、電子化學品、碳粉及醫藥化學品。"
+          "title": "1711 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
+          "claim": "MOPS主要經營業務：色料化學品,特用化學品,電子化學品,碳粉產品,醫藥化學品",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "1711 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收7.81億元，MoM+13.1%、YoY+25.7%，累計YoY+9.0%。"
+          "claim": "2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "永光 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://en.ecic.com/",
+          "claim": "官方產品導覽列UV Absorbers、Light Stabilizers、Antioxidants、IC/LCD Developer；不支持儲能專用材料或具名客戶。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "永光 官方網站",
+          "title": "Everlight Chemical - Better Chemistry Better Life",
+          "url": "https://en.ecic.com/",
+          "claim": "來源摘錄（extracted live public page）：UV Absorbers](https://everlight-uva.com/) [Light Stabilizers](https://everlight-uva.com/) [Antioxidants](https://everlight-uva.com/) [Polymeric Colorants](https://everlight-uva.com/) #### **[TTI Toner](https://www.tti-toner.com/Index.aspx)** ### [Color toner](https://www.tti-toner.com/) [Black toner](https://www.tti-toner.com/) [Toner cartridges](https://www.tti-toner.com/) [Carrier and imaging agent](https://www.tti-toner.com/) #### **[Electronic Chemical](https://ecbu.ecic.com/en/)** #### [Photoresists](https://ecbu.ecic.com/en/) [IC Manufacturing](https://ecbu.ecic.com/en/ic-manufacturing/) [LCD Manufacturing](https://ecbu.ecic.com/en/lcd-manufacturing/) [LED Manufacturing](https://ecbu.ecic.com/en/led-manufacturing/) [Application of Touch Panel](https://ecbu.ecic.com/en/application-of-touch-panel/) #### [Polish Slurry](https://ecbu.ecic.com/en/) [Planarization for sapphire and silicon wafer](https://ecbu.ecic.com/en/led-manufacturing/) #### [Developer](https://ecbu.ecic.com/en/) [IC and LCD CF lithography](https://ecbu.ecic.com/en/lcd-manufacturing/) #### **[API](https://api.ecic.com/en/)** #### [Pharmaceutical](https://api.ecic.com/en/) [Prostaglandin](https://api.ecic.com/prostaglandin/) [Cardiovascular Disease](https://api.ecic.com/en/cardiovascular-disease/) [Cancer Disease](https://api.ecic.com/en/cancer-disease/) [Veterinary](https://api.ecic.com/en/veterinary/) [Other APIs](https://api.ecic.com/en/other-apis/) #### # Products ** #### [**Color Chemical**](https://everlight-ccbu.com/en/) - **[Dye](https://everlight-ccbu.com/en/)** [Textile](https",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "candidate",
       "techFocus": [
-        "顏料粒徑、表面處理與樹脂分散穩定性",
-        "UV吸收光譜與戶外耐候黃變控制",
-        "電子化學品金屬離子與微粒污染控制"
+        "紫外吸收、自由基抑制與抗氧化配方協同，評估塑料耐候及黃變（工程分析）",
+        "顯影化學品須控制濃度、金屬污染與微粒，對應IC／LCD微影用途而非電解液（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "具特用化學品與電子化學品配方及純化能力",
-          "7月營收YoY+25.7%、MoM+13.1%，公司整體需求改善"
+          "特用化學品與電子化學品產品族可分別服務聚合物耐候與微影製程。",
+          "2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露電池電解液、電極或隔離膜材料",
-          "月營收跨多種化學品，無法確認儲能應用占比"
+          "來源未支持鋰電電解液、電極材料或儲能專用型號，移除產品名稱內無條件的電池用途。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "戶外儲能櫃耐候與功率元件擴產可增加相關化學品驗證機會",
-          "電子級化學品國產化有利切入BMS與PCS半導體製程"
+          "戶外儲能設備的塑料耐候需求可作為UV吸收劑配方驗證方向。",
+          "功率電子投資可能帶動相關微影化學品需求，但需另驗供應與占比。"
         ],
         "threats": [
-          "若以一般特用化學品推論電池材料，題材直接性會被高估",
-          "中國化學品供應商與原料價格波動可能壓縮毛利"
+          "特化材料替代、客製化驗證與環保法規增加開發成本。",
+          "若誤將一般塑料添加劑歸為電池核心材料，會高估題材彈性。"
         ]
       }
     },

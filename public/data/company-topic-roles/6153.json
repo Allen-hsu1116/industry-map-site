@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6153",
   "companyName": "嘉聯益",
-  "updatedAt": "2026-08-28T19:04:07Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -96,13 +96,15 @@
       "topicName": "低軌衛星通訊",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "leo_satellite",
-      "roleType": "fpc_satellite_supplier",
-      "roleSummary": "嘉聯益MOPS只揭露FPC設計與製造，沒有衛星、LCP、毫米波規格或SpaceX／OneWeb客戶；本題材只能保留為低軌衛星終端與地面設備可能採用FPC的應用映射。2026年7月營收5.66億元、YoY+20.6%，成長為公司整體口徑，不能歸因衛星。",
+      "supplyChainStage": "flexible_interconnect_adjacent",
+      "roleType": "fpc_satellite_application_candidate",
+      "roleSummary": "官方FPC目錄確認多層、Air Gap與軟硬結合板，但MOPS及本次官網頁未提供低軌衛星射頻板、相位陣列或星座客戶證據。移除原本直接寫成衛星用板的產品名稱，只保留終端內部互連之潛在應用。本次TWSE最新回傳：2026年7月營收5.66億元，MoM+1.59%、YoY+20.60%，累計YoY+3.68%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "低軌衛星用戶終端天線控制板FPC（應用推定）",
-        "衛星閘道器射頻模組用軟硬結合板（應用推定）",
-        "相位陣列天線模組用多層FPC（應用推定）"
+        "單面軟性印刷電路板FPC",
+        "雙面軟性印刷電路板FPC",
+        "三層以上Multilayer Flex多層軟板",
+        "Air Gap Structure高撓曲軟板",
+        "Rigid-Flex軟硬結合板"
       ],
       "customers": [
         "SpaceX（Starlink終端應用對象，非MOPS揭露客戶）",
@@ -114,62 +116,82 @@
         "台郡"
       ],
       "risks": [
-        "衛星用軟板規格嚴苛，出貨量仍小"
+        "衛星射頻損耗、空間環境可靠度及星座客戶均未在本次來源驗證，題材屬候選而非已出貨。",
+        "射頻與長壽命可靠度要求可能超出現有公開FPC規格的驗證範圍。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "嘉聯益 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6153",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 嘉聯益 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6153 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：軟性電路板(FPC)之設計、研究、開發、製造、加工及買賣之業務。"
+          "title": "6153 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6153",
+          "claim": "MOPS主要經營業務：軟性電路板(FPC)之設計、研究、開發、製造、加工及買賣之業務",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "6153 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收5.66億元，MoM+1.6%、YoY+20.6%、累計YoY+3.7%。"
+          "claim": "2026年7月營收5.66億元，MoM+1.59%、YoY+20.60%，累計YoY+3.68%。原始金額單位新台幣千元。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "嘉聯益 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://www.careergroups.com/",
+          "claim": "瀏覽器讀取嘉聯益官方首頁及Multilayer/Air Gap產品頁：確認FPC種類、三層以上導體與Air Gap結構；未確認衛星產品或客戶。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "嘉聯益 官方網站",
+          "title": "6153 官方產品目錄",
+          "url": "https://www.careergroups.com/",
+          "claim": "來源摘錄（live browser DOM）：中文 │ English │ 日本語 │ Resources │ Site Map │ Staff Area │ 承攬商專區 1 2 3 Overview Career was established in 1992 and is headquartered in Shulin, Taipei. Career is ranked as one of the world's top ten leading manufacturers of flexible printed circuits. We manufacture products for various applications including mobile phones, touch panels, tablet pc, digital cameras, flat displays, notebooks, Product Single-Sided Flex Circuits Double-Sided Flex Circuits Air Gap Structure Double Access Flex Circuits Multilayer Flex Circuits Rigid-Flex Board Application Tablet PC Smart Phone Ultrabook Camera GPS Automotive Electronics Wearable Device Virtual Reality Career Technology (Mfg.) Co., Ltd. No. 248, Bo-ai St., Shulin District, New Taipei City, Taiwan TEL: +886-2-8686-8868 FAX: +886-2-8686-6998 Copyright © Career Technology (Mfg.) Co., Ltd. All Rights Reserved.",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "嘉聯益 官方網站",
+          "title": "6153 官方產品細節",
+          "url": "https://www.careergroups.com/Capabilities/ProductDetail.aspx?Id=1",
+          "claim": "來源摘錄（live browser DOM）：Description Flex circuits having three or more layers of conductors are known as multilayer flex circuits. Commonly the layers are interconnected by means of plated through holes, though this is not a requirement of the definition for it is possible to provide openings to access lower circuit level features. The layers of the multilayer flex circuit may or may not be continuously laminated together throughout the construction with the obvious exception of the areas occupied by plated through-holes. FPC Picture Career Technology (Mfg.) Co., Ltd. No. 248, Bo-ai St., Shulin District, New Taipei City, Taiwan TEL: +886-2-8686-8868 FAX: +886-2-8686-6998 Copyright © Career Technology (Mfg.) Co., Ltd. All Rights Reserved.",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-3",
+          "publisher": "嘉聯益 官方網站",
+          "title": "6153 官方產品細節",
+          "url": "https://www.careergroups.com/Capabilities/ProductDetail.aspx?Id=3",
+          "claim": "來源摘錄（live browser DOM）：Description The type of Air Gap Structure uses two single-sided flex circuits and applies pre-punched dynamic area adhesive in between to achieve high-flexible demand. It must pass through the process of CNC and plated through hole in advance to conduct the circuits on both sides then cover each single-sided flex circuits with a protective layer after the circuits were formed. It is able to design circuits on both sides and carry out plug-in and out, contact, lamination and soldering. FPC Picture Career Technology (Mfg.) Co., Ltd. No. 248, Bo-ai St., Shulin District, New Taipei City, Taiwan TEL: +886-2-8686-8868 FAX: +886-2-8686-6998 Copyright © Career Technology (Mfg.) Co., Ltd. All Rights Reserved.",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-24",
-      "status": "verified",
+      "lastVerified": "2026-09-10",
+      "status": "candidate",
       "techFocus": [
-        "多層FPC壓合與細線路阻抗控制",
-        "軟硬結合板的彎折壽命與通孔可靠度",
-        "高頻天線板材的低損耗設計驗證（題材應用，MOPS未揭露）"
+        "多層FPC採三層以上導體與鍍通孔互連，可依結構選擇局部壓合",
+        "Air Gap以兩片單面軟板搭配動態區預沖孔膠材，經CNC及鍍通孔連通兩側"
       ],
       "swot": {
         "strengths": [
-          "MOPS確認FPC設計、研發與製造能力，可對應輕薄高密度互連需求",
-          "7月營收YoY+20.6%，公司整體需求回升"
+          "官方列明多種FPC結構，Air Gap及局部壓合能滿足可撓互連需求。",
+          "2026年7月營收5.66億元，MoM+1.59%、YoY+20.60%，累計YoY+3.68%。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露衛星、LCP或毫米波產品，題材直接性低",
-          "未揭露SpaceX、Amazon或OneWeb交易關係，具名對象僅能視為應用映射"
+          "衛星射頻損耗、空間環境可靠度及星座客戶均未在本次來源驗證，題材屬候選而非已出貨。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "低軌衛星終端縮小化可提高FPC與軟硬結合板使用量",
-          "衛星與地面蜂巢網路融合可能增加天線模組互連複雜度"
+          "衛星地面終端若需要小型化可撓互連，可成為FPC新應用驗證方向。",
+          "多層與Air Gap結構可從一般消費／車載產品延伸客製化設計，但需另行確認訂單。"
         ],
         "threats": [
-          "衛星終端需求或設計變更不一定轉化為嘉聯益訂單",
-          "台郡、臻鼎等FPC廠競爭與價格壓力可能稀釋題材效益"
+          "射頻與長壽命可靠度要求可能超出現有公開FPC規格的驗證範圍。",
+          "把星座公司放入客戶名單容易誤導為已取得訂單，必須保留非確認關係標籤。"
         ]
       }
     }

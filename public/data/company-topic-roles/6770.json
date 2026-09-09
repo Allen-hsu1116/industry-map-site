@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6770",
   "companyName": "力積電",
-  "updatedAt": "2026-08-30T19:04:23Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -10,14 +10,14 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "wafer_fabrication",
-      "roleType": "specialty_foundry",
-      "roleSummary": "力積電MOPS明確揭露積體電路生產、製造、測試與封裝，以及特殊應用IC技術整合服務，屬晶圓製造核心角色；具體製程與客戶名屬題材上下文，非本次MOPS確認。2026年7月營收66.69億元、MoM+3.0%、YoY+70.5%、累計YoY+42.7%，公司說明客戶需求、銷量與售價均上升。",
+      "roleType": "dram_and_bcd_foundry_platforms",
+      "roleSummary": "MOPS支持IC製造，官網進一步核驗12吋DRAM及高壓／BCD平台。保留具體製程但逐項區分量產、設計導入及平台能力，移除未與本次官方資料綁定的8吋用途推定。本次TWSE最新回傳：2026年7月營收66.69億元，MoM+3.01%、YoY+70.54%，累計YoY+42.68%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "12吋利基型DRAM晶圓製造服務",
-        "8吋高壓顯示驅動IC晶圓製造服務",
-        "8吋BCD電源管理IC晶圓製造服務",
-        "CMOS影像感測器晶圓製造服務",
-        "積體電路測試與封裝服務"
+        "12吋40nm DRAM晶圓代工（官網明列量產）",
+        "30／20nm DRAM設計導入服務（官網技術支援範圍）",
+        "0.35µm 5V／40V高壓晶圓製程平台",
+        "0.18µm Non-EPI BCD晶圓製程平台",
+        "0.18µm EPI BCD晶圓製程平台"
       ],
       "customers": [
         "ISSI（利基記憶體應用對象，非MOPS揭露客戶）",
@@ -31,65 +31,76 @@
         "世界先進(5347)(利基代工)"
       ],
       "risks": [
-        "產品組合集中成熟與利基製程，景氣循環敏感度高",
-        "月營收未拆分DRAM、顯示驅動與電源管理製程貢獻",
-        "中國成熟製程擴產可能壓低代工價格"
+        "營收說明為需求、銷量及價格上升，未提供各製程收入拆分；設計支援不是量產占比證明。",
+        "成熟製程擴產與記憶體供需反轉可能壓低代工價格。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 各式積體電路其系統產品之生產、製造、測試、封裝；半導體設備零組件維修、開發、製造與銷售"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：積體電路及系統產品之生產、製造、測試、封裝；特殊應用IC技術整合與矽智財服務。"
+          "title": "6770 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6770",
+          "claim": "MOPS主要經營業務：各式積體電路其系統產品之生產、製造、測試、封裝；半導體設備零組件維修、開發、製造與銷售；研究、開發、設計及銷售下列產品：(1)特殊應用積體電路技術整合服務(2)矽智財設計與服務",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "6770 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收66.69億元，MoM+3.0%、YoY+70.5%，累計YoY+42.7%；公司說明客戶需求上升、銷量增加且售價調漲。"
+          "claim": "2026年7月營收66.69億元，MoM+3.01%、YoY+70.54%，累計YoY+42.68%。原始金額單位新台幣千元。公司備註：主係客戶需求上升，銷售量增加，銷售價格調漲。本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "力積電 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://powerchip.com/en-global/services/foundry-services/dram-process",
+          "claim": "DRAM服務頁確認12吋40nm量產及30/20nm設計支援；foundry服務頁確認0.35µm HV與0.18µm Non-EPI/EPI BCD、Gen1/Gen2電壓範圍。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "力積電 官方網站",
+          "title": "Services | PSMC",
+          "url": "https://powerchip.com/en-global/services/foundry-services/dram-process",
+          "claim": "來源摘錄（extracted live public page）：Technology and Applications | Powerchip Semiconductor Manufacturing Corp. has provided unique memory foundry service for many years and is the only one vendor that can provide 12-inch advanced DRAM memory technologies for foundry service. Continuing the mass production of 40nm DRAM foundry, Powerchip Semiconductor Manufacturing Corp. can now more actively assist clients to design products by 30nm and 20nm DRAM foundry processes in order to satisfy our clients' demands for product diversification. Powerchip Semiconductor Manufacturing Corp. can provide clients DRAM design service of customized DRAM which satisfies different requirements for IOT or AI applications. Powerchip Semiconductor Manufacturing Corp. can assist in building Low Power DRAM, Wide I/O, integrating logic and memory for 3D IC, thus can generate a stronger system computing performance. | Product | 圖片預覽 -",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-2",
+          "publisher": "力積電 官方網站",
+          "title": "技術與服務 | PSMC",
+          "url": "https://powerchip.com/zh-tw/services/foundry-services",
+          "claim": "來源摘錄（extracted live public page）：Technology Node 0.35um 5V / 40V HV technology 0.18um (1.8V, 3.3V) / 6V / (12V, 18V, 24V, 40V, 60V, 700V) Non_EPI BCD platforms Recently introduced 0.18um EPI BCD platforms with Gen1 9V to 100V and Gen2 9V to 40V with improved Ron performance",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "verified",
       "techFocus": [
-        "12吋DRAM電容單元與記憶體製程整合",
-        "8吋高壓／BCD元件隔離與厚閘氧製程",
-        "晶圓測試、封裝與特殊應用IC協同製造"
+        "DRAM官網區分40nm量產與30／20nm協助設計，不直接宣稱全部節點同時大量出貨",
+        "0.18µm EPI BCD Gen1為9–100V、Gen2為9–40V，改善Ron；不同平台電壓不可拼接",
+        "客製Low Power DRAM、Wide I/O與邏輯記憶體3D整合為服務能力，不能等同HBM量產"
       ],
       "swot": {
         "strengths": [
-          "MOPS明確支持IC製造、測試、封裝與技術整合服務",
-          "7月營收YoY+70.5%、累計YoY+42.7%，且公告指出需求、銷量與售價同步上升"
+          "DRAM及高壓／BCD平台形成差異化代工組合，規格由官方服務頁支持。",
+          "2026年7月營收66.69億元，MoM+3.01%、YoY+70.54%，累計YoY+42.68%。公司備註：主係客戶需求上升，銷售量增加，銷售價格調漲。成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "產品組合集中成熟與利基製程，景氣循環敏感度高",
-          "月營收未拆分DRAM、顯示驅動與電源管理製程貢獻"
+          "營收說明為需求、銷量及價格上升，未提供各製程收入拆分；設計支援不是量產占比證明。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。"
         ],
         "opportunities": [
-          "利基記憶體與高壓顯示驅動需求回升可提高產能利用率",
-          "晶圓製造加封測整合可承接特殊應用IC一站式訂單"
+          "低功耗記憶體與功率管理IC需求可提高特殊製程的設計採用。",
+          "客製DRAM及邏輯記憶體整合可延伸成熟製程附加價值。"
         ],
         "threats": [
-          "中國成熟製程擴產可能壓低代工價格",
-          "記憶體價格反轉與客戶庫存修正會放大營收波動"
+          "成熟製程擴產與記憶體供需反轉可能壓低代工價格。",
+          "新平台客戶導入、良率與產能利用率風險仍需財報交叉驗證。"
         ]
       }
     },

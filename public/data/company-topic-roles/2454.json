@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2454",
   "companyName": "聯發科",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-09T19:19:15Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -102,20 +102,20 @@
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "topicType": "technology",
       "directness": "core",
-      "supplyChainStage": "ic_design",
-      "roleType": "edge_ai_soc_provider",
-      "roleSummary": "聯發科MOPS揭露多媒體IC、電腦週邊IC、高階消費性IC與特殊應用IC，與Edge AI／AIoT SoC直接相關；Genio、Kompanio與Dimensity NPU為題材上下文，客戶對應非MOPS揭露。2026年7月營收484.75億元、YoY+12.2%，但MoM-16.4%、累計YoY僅+0.8%，顯示單月成長未全面轉化為累計動能。",
+      "supplyChainStage": "edge_ai_soc",
+      "roleType": "genio_aiot_soc_platform",
+      "roleSummary": "Genio官方開發文件核驗510、700、1200及NPU世代、TAO與NeuroPilot流程，精煉為真正Edge AIoT平台，而不是把手機、電視及Chromebook產品混成同一技術規格。本次TWSE最新回傳：2026年7月營收484.75億元，MoM-16.44%、YoY+12.16%，累計YoY+0.84%。公司整體營收不可直接歸因本題材。",
       "products": [
-        "Genio 700／1200 AIoT SoC平台",
-        "Kompanio系列Chromebook運算SoC",
-        "Dimensity系列整合NPU行動SoC",
-        "Pentonic系列智慧電視多媒體SoC"
+        "Genio 510 AIoT SoC（MDLA 3.0）",
+        "Genio 700 AIoT SoC（MDLA 3.0）",
+        "Genio 1200 AIoT SoC（MDLA 2.0）",
+        "NeuroPilot模型轉換與NPU部署工具"
       ],
       "customers": [
-        "Google（Android／Chromebook平台對象，非MOPS揭露客戶）",
-        "Lenovo（Chromebook與平板應用對象，非MOPS揭露客戶）",
-        "小米（行動與AIoT應用對象，非MOPS揭露客戶）",
-        "Amazon（智慧顯示與串流裝置應用對象，非MOPS揭露客戶）"
+        "NVIDIA（TAO工具鏈互通對象，非本次揭露晶片客戶）",
+        "Google（TensorFlow／TFLite生態對象，非本次揭露客戶）",
+        "研華（工業AIoT應用對象，非本次揭露客戶）",
+        "Lenovo（邊緣智慧裝置應用對象，非本次揭露客戶）"
       ],
       "competitors": [
         "Qualcomm",
@@ -123,9 +123,9 @@
         "Amlogic"
       ],
       "risks": [
-        "7月營收MoM-16.4%，且累計YoY僅+0.8%，成長續航需觀察",
-        "月營收未拆分Genio、Kompanio或NPU相關貢獻",
-        "Qualcomm、Apple與自研晶片客戶加劇高階終端競爭"
+        "官方基準測試仍有不支援運算子與模型失敗，不能宣稱所有INT8／FP16模型均可直接部署。",
+        "Qualcomm、Rockchip等平台競爭及客戶自研影響設計案採用。",
+        "2026年7月營收484.75億元，MoM-16.44%、YoY+12.16%，累計YoY+0.84%。公司整體口徑，不可直接歸因題材。"
       ],
       "legacy": {
         "topicSlug": "edge-ai",
@@ -134,58 +134,65 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯發科 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯發科 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
           "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：多媒體IC、電腦週邊IC、高階消費性IC及其他特殊應用IC。"
+          "title": "2454 公司完整基本資料（本批MCP查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2454",
+          "claim": "MOPS主要經營業務：多媒體IC 、電腦週邊IC、高階消費性IC、其他特殊應用IC",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE",
+          "title": "2454 2026年7月營收（本批MCP查核）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY+0.8%。"
+          "claim": "2026年7月營收484.75億元，MoM-16.44%、YoY+12.16%，累計YoY+0.84%。原始金額單位新台幣千元。公司備註：海外子公司之營收係以當月平均匯率換算之本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-role-review-v49",
+          "publisher": "聯發科 官方來源交叉查核",
+          "title": "產品與技術交叉核驗結論（綜合以下補充來源）",
+          "url": "https://genio.mediatek.com/doc/tao/ml-mtk-tao.html",
+          "claim": "Genio官方TAO文件明列510/700 MDLA 3.0與1200 MDLA 2.0、ONNX到TFLite流程及INT8/FP16模型失敗案例；不聲稱所有模型相容。",
+          "retrievedAt": "2026-09-09T19:19:15Z"
+        },
+        {
+          "sourceId": "official-product-v49-1",
+          "publisher": "聯發科 官方網站",
+          "title": "Introduction — MediaTek Genio - NVIDIA TAO documentation",
+          "url": "https://genio.mediatek.com/doc/tao/ml-mtk-tao.html",
+          "claim": "來源摘錄（extracted live public page）：TAO on Genio The Genio ecosystem is compatible with a set of [pretrained models](ngc-supported-models.html#ngc-supported-models) from NVIDIA TAO Toolkit. These Pretrained ONNX models can be seamlessly converted to TFLite format using NeuroPilot solutions, MediaTek’s state-of-the-art proprietary AI/ML solution. This combination of TAO and NeuroPilot provides the most optimal solution for your AI/ML needs on the edge, ensuring efficient and optimized inference on various Genio platforms. The following Genio platforms are supported: - **Genio 510 (MDLA 3.0)** - **Genio 700 (MDLA 3.0)** - **Genio 1200 (MDLA 2.0)** Combining the power of the NVIDIA TAO Toolkit with MediaTek’s NeuroPilot solutions provides a robust and efficient workflow for deploying AI/ML models on the edge. The Genio IoT-Yocto ecosystem, with its support for various Genio platforms and optimized inference capabilities, ensures your AI/ML applications run smoothly and efficiently. Whether you are working on smart home devices or industrial IoT solutions, this combination offers the flexibility and performance needed to meet your AI/ML needs. ### Key Features and Benefits 1. **Optimized Inference**: The Genio platforms leverage MediaTek’s MDLA (MediaTek Deep Learning Accelerator) to provide high-performance and energy-efficient inference capabilities. This ensures that TFLite models run efficiently on edge devices. 2. **Seamless Conversion**: Neuropilot solutions simplify the process of converting ONNX models to TFLite format, ensuring compatibility and ease of deployment on Genio devices. 3. **Versatile",
+          "retrievedAt": "2026-09-09T19:19:15Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-25",
+      "lastVerified": "2026-09-10",
       "status": "verified",
       "techFocus": [
-        "多核心Arm CPU、GPU與NPU異質運算",
-        "INT8／FP16低精度邊緣AI推論",
-        "4K／8K影像編解碼與低功耗多媒體處理"
+        "Genio 510／700採MDLA 3.0，Genio 1200採MDLA 2.0，不混用NPU世代",
+        "TAO預訓練ONNX模型經NeuroPilot轉為TFLite，再部署Genio IoT-Yocto",
+        "INT8／FP16支援須依運算子及轉換路徑驗證，官方測試有不支援與失敗案例"
       ],
       "swot": {
         "strengths": [
-          "MOPS產品範圍涵蓋多媒體、電腦週邊與特殊應用IC，可支持多種Edge AI終端",
-          "7月營收YoY+12.2%，單月規模達484.75億元"
+          "Genio提供硬體加速器與模型轉換／部署文件，可縮短邊緣推論評估路徑。",
+          "2026年7月營收484.75億元，MoM-16.44%、YoY+12.16%，累計YoY+0.84%。公司備註：海外子公司之營收係以當月平均匯率換算之成長不代表本題材已放量。"
         ],
         "weaknesses": [
-          "7月營收MoM-16.4%，且累計YoY僅+0.8%，成長續航需觀察",
-          "月營收未拆分Genio、Kompanio或NPU相關貢獻"
+          "官方基準測試仍有不支援運算子與模型失敗，不能宣稱所有INT8／FP16模型均可直接部署。",
+          "本次工具最新回傳月份如上，非推估8月；營收為公司整體口徑，不等於本題材收入。",
+          "7月營收MoM-16.44%，單月出貨與認列節奏仍有波動。",
+          "累計YoY僅+0.84%，單月反彈不能直接外推全年。",
+          "海外子公司營收以當月平均匯率換算，匯率變化亦會影響台幣口徑。"
         ],
         "opportunities": [
-          "AI PC、智慧顯示與工業AIoT裝置擴大終端NPU滲透率",
-          "端側模型壓縮與低功耗推論可提高SoC內容價值"
+          "工業與智慧家庭裝置導入在地推論，可增加Genio平台設計採用。",
+          "TAO與NeuroPilot整合讓既有視覺模型更容易評估跨平台移植。"
         ],
         "threats": [
-          "Qualcomm、Apple與自研晶片客戶加劇高階終端競爭",
-          "消費電子庫存與匯率波動可能抵銷Edge AI產品升級效益"
+          "Qualcomm、Rockchip等平台競爭及客戶自研影響設計案採用。",
+          "SDK、作業系統和NPU支援矩陣不同，維護與移植成本可能延後量產。"
         ]
       }
     },
