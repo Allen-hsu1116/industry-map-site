@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1536",
   "name": "和大",
-  "generatedAt": "2026-09-09T12:33:14.484Z",
+  "generatedAt": "2026-09-10T12:31:40.183Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,29 +54,29 @@
     "knowledgeBasis": "canonical_pending",
     "confidence": "low",
     "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=4；只做保守參考。",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=5；只做保守參考。",
     "roleDetail": {
       "topicName": "儲能、電芯與電池材料",
       "roleLabel": "間接受惠",
-      "roleSummary": "和大MOPS揭露汽機車、農機齒輪與軸件，以及機械零件製造，未揭露電池、儲能櫃、PCS或儲能傳動產品；本題材至多是電動車動力系統與儲能產業景氣的旁側觀察。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，但累計YoY僅+1.0%。",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
+      "roleSummary": "MOPS與官方電動車產品頁確認馬達軸、減速箱與差速器，並不是電池或定置儲能設備。此題材保留為電動車機械傳動的題外觀察，禁止把電驅動零件成長寫成儲能電池曝險。本次TWSE最新回傳：2026年7月營收4.40億元，MoM+19.81%、YoY+9.59%，累計YoY+1.03%。公司整體營收不可直接歸因本題材。",
+      "supplyChainStage": "automotive_transmission_outside_topic",
+      "roleType": "ev_gears_outside_stationary_storage",
       "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "電動車減速機精密斜齒輪",
+        "name": "電動車轉子馬達軸Rotor shaft",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "汽車變速箱齒輪組",
+        "name": "電動車減速箱齒輪組",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "傳動軸與花鍵軸件",
+        "name": "電動車差速器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -99,7 +99,7 @@
       "直接度 間接受惠 +8",
       "角色信心 low +3",
       "題材 儲能、電芯與電池材料（theme/active） +18",
-      "角色證據 4 則 +12",
+      "角色證據 5 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 13 項 +10",
       "風險 SWOT 扣分 -10",
@@ -116,7 +116,7 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "已有 V2 role，但 status=candidate、confidence=low、evidence=4；只做保守參考。",
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=5；只做保守參考。",
       "V2 W：減速機市佔遠低於 Nabtesco/Harmonic Drive",
       "V2 W：6月營收3.67億元，累計YoY-0.2%持平，再生能源相關齒輪佔營收比重低，對整體業績影響有限。",
       "V2 T：Nabtesco/Harmonic Drive 在減速機市場的寡佔地位",
@@ -172,7 +172,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "和大MOPS揭露汽機車、農機齒輪與軸件，以及機械零件製造，未揭露電池、儲能櫃、PCS或儲能傳動產品；本題材至多是電動車動力系統與儲能產業景氣的旁側觀察。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，但累計YoY僅+1.0%。"
+        "roleSummary": "MOPS與官方電動車產品頁確認馬達軸、減速箱與差速器，並不是電池或定置儲能設備。此題材保留為電動車機械傳動的題外觀察，禁止把電驅動零件成長寫成儲能電池曝險。本次TWSE最新回傳：2026年7月營收4.40億元，MoM+19.81%、YoY+9.59%，累計YoY+1.03%。公司整體營收不可直接歸因本題材。"
       },
       {
         "topicId": "industrial-automation",
@@ -532,12 +532,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 107 天未更新"
+        "message": "股價資料已 108 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 107 天未更新"
+        "message": "籌碼資料已 108 天未更新"
       },
       {
         "id": "risk.topic-evidence",

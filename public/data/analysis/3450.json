@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3450",
   "name": "聯鈞",
-  "generatedAt": "2026-09-09T12:33:15.008Z",
+  "generatedAt": "2026-09-10T12:31:40.719Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -47,34 +47,34 @@
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "score": 71,
+    "label": "核心題材受惠",
+    "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
     "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "矽光子、CPO 與高速光通訊",
-      "roleLabel": "間接受惠",
-      "roleSummary": "聯鈞MOPS支持光資訊、光通訊產品及功率半導體封裝測試，但未揭露矽光子波導加工、VCSEL／EML晶圓、奈米線寬、雷射波長或Intel／Broadcom客戶；因此應定位為矽光子鏈的光元件封裝與測試周邊，而非矽光子晶圓製程廠。2026年7月營收12.19億元、YoY+98.0%，公司僅說明客戶需求增加。",
-      "supplyChainStage": "silicon_photonics",
-      "roleType": "laser_processing_equipment",
-      "directness": "indirect",
+      "roleLabel": "直接賦能角色",
+      "roleSummary": "官網光通訊封測目錄補足MOPS的寬泛業務，確認VCSEL、FP／DFB與PIN／APD-TIA封裝產品及波長範圍。此角色是光通訊元件封測，不代表自製雷射晶圓、矽光子晶片或已取得CPO量產訂單。本次TWSE最新回傳：2026年7月營收12.19億元，MoM+7.02%、YoY+98.00%，累計YoY+20.29%。公司整體營收不可直接歸因本題材。",
+      "supplyChainStage": "optical_component_assembly_test",
+      "roleType": "optical_communication_packaging",
+      "directness": "direct_enabler",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "光通訊雷射二極體封裝元件",
+        "name": "850nm VCSEL光元件TO-46／OSA封裝測試",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "光通訊受光二極體封裝元件",
+        "name": "1270–1610nm FP／DFB雷射TO-56／TO-38／OSA封裝測試",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "光收發模組用光電次模組",
+        "name": "PIN-TIA受光元件TO-46／OSA封裝測試",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -92,8 +92,8 @@
       ]
     },
     "scoringFactors": [
-      "直接度 間接受惠 +8",
-      "角色信心 medium +10",
+      "直接度 直接賦能角色 +36",
+      "角色信心 high +16",
       "題材 矽光子、CPO 與高速光通訊（technology/active） +17",
       "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
@@ -101,11 +101,11 @@
       "風險 SWOT 扣分 -6",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "聯鈞 在「矽光子、CPO 與高速光通訊」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 71/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "聯鈞 在「矽光子、CPO 與高速光通訊」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：矽光子、CPO 與高速光通訊 · 間接受惠 · medium",
-      "產業評分：71/100（直接度 間接受惠 +8；角色信心 medium +10；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：矽光子、CPO 與高速光通訊 · 直接賦能角色 · high",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 high +16；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
       "相關題材：晶圓代工與第三代半導體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
@@ -161,10 +161,10 @@
         "topicName": "矽光子、CPO 與高速光通訊",
         "canonicalTopicId": "silicon-photonics-optical-comm",
         "canonicalTopicName": "矽光子、CPO 與高速光通訊",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "聯鈞MOPS支持光資訊、光通訊產品及功率半導體封裝測試，但未揭露矽光子波導加工、VCSEL／EML晶圓、奈米線寬、雷射波長或Intel／Broadcom客戶；因此應定位為矽光子鏈的光元件封裝與測試周邊，而非矽光子晶圓製程廠。2026年7月營收12.19億元、YoY+98.0%，公司僅說明客戶需求增加。"
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "high",
+        "roleSummary": "官網光通訊封測目錄補足MOPS的寬泛業務，確認VCSEL、FP／DFB與PIN／APD-TIA封裝產品及波長範圍。此角色是光通訊元件封測，不代表自製雷射晶圓、矽光子晶片或已取得CPO量產訂單。本次TWSE最新回傳：2026年7月營收12.19億元，MoM+7.02%、YoY+98.00%，累計YoY+20.29%。公司整體營收不可直接歸因本題材。"
       },
       {
         "topicId": "wafer-foundry",
@@ -257,7 +257,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 7,
+    "totalScore": 13,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -276,12 +276,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 107 天未更新"
+        "message": "股價資料已 108 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 107 天未更新"
+        "message": "籌碼資料已 108 天未更新"
       },
       {
         "id": "risk.stop-distance",

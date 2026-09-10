@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6153",
   "name": "嘉聯益",
-  "generatedAt": "2026-09-09T12:33:15.260Z",
+  "generatedAt": "2026-09-10T12:31:40.969Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-09",
-  "chipDataDate": "2026-09-09",
+  "marketDataDate": "2026-09-10",
+  "chipDataDate": "2026-09-10",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,30 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 45,
-    "summary": "嘉聯益 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 3.9%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 0,
+    "summary": "嘉聯益 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 3.9%"
-    ],
-    "risks": [],
-    "watch": []
-  },
-  "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 28,
-    "summary": "嘉聯益 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +299張；近 20 日法人偏買，合計 +1.7千張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +299張",
-      "近 20 日法人偏買，合計 +1.7千張",
-      "外資近 5 日買超 +345張"
+      "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-09"
+      "股價貼近 MA20，留意方向選擇",
+      "量能低於 20 日均量，突破訊號可信度較低"
+    ]
+  },
+  "chips": {
+    "stance": "neutral",
+    "label": "籌碼中性",
+    "score": 8,
+    "summary": "嘉聯益 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +787張；外資近 5 日買超 +811張。",
+    "signals": [
+      "三大法人近 5 日合計買超 +787張",
+      "外資近 5 日買超 +811張"
+    ],
+    "risks": [
+      "近 20 日法人偏賣，合計 -23張"
+    ],
+    "watch": [
+      "最近法人資料日：2026-09-10"
     ]
   },
   "industry": {
@@ -131,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-09"
+      "lastVerified": "2026-09-10"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -171,7 +174,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "嘉聯益MOPS只揭露FPC設計與製造，沒有衛星、LCP、毫米波規格或SpaceX／OneWeb客戶；本題材只能保留為低軌衛星終端與地面設備可能採用FPC的應用映射。2026年7月營收5.66億元、YoY+20.6%，成長為公司整體口徑，不能歸因衛星。"
+        "roleSummary": "官方FPC目錄確認多層、Air Gap與軟硬結合板，但MOPS及本次官網頁未提供低軌衛星射頻板、相位陣列或星座客戶證據。移除原本直接寫成衛星用板的產品名稱，只保留終端內部互連之潛在應用。本次TWSE最新回傳：2026年7月營收5.66億元，MoM+1.59%、YoY+20.60%，累計YoY+3.68%。公司整體營收不可直接歸因本題材。"
       }
     ],
     "swot": [
@@ -254,8 +257,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 76,
-    "recommendationState": "top_candidate",
+    "totalScore": 62,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
       "label": "基本面資料不足",
@@ -263,10 +266,8 @@
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -274,9 +275,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：17.49",
-      "波段多空分水嶺看 MA20：17.18",
-      "追蹤法人是否延續 買超：最近 +1.2千張"
+      "短線支撐/壓力先看 MA5：17.53",
+      "波段多空分水嶺看 MA20：17.19",
+      "追蹤法人是否延續 賣超：最近 -868張"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 18.40 且量比 > 1.5：列為轉強訊號",

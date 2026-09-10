@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6173",
   "name": "信昌電",
-  "generatedAt": "2026-09-09T12:33:15.272Z",
+  "generatedAt": "2026-09-10T12:31:40.985Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-09",
-  "chipDataDate": "2026-09-09",
+  "marketDataDate": "2026-09-10",
+  "chipDataDate": "2026-09-10",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,32 +17,33 @@
   "technical": {
     "stance": "bullish",
     "label": "偏多",
-    "score": 45,
-    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 15.6%。",
+    "score": 55,
+    "summary": "信昌電 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 25.1%。",
     "signals": [
       "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 15.6%"
+      "收盤站上 MA20 25.1%"
     ],
     "risks": [],
-    "watch": []
+    "watch": [
+      "接近 20 日高點 295.00，觀察是否突破"
+    ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": -15,
-    "summary": "信昌電 籌碼面目前為「籌碼中性」：投信近 5 日買超 +242張；融資近 5 日下降 8.1%，籌碼壓力下降。",
+    "score": 0,
+    "summary": "信昌電 籌碼面目前為「籌碼中性」：近 20 日法人偏買，合計 +545張；投信近 5 日買超 +85張。",
     "signals": [
-      "投信近 5 日買超 +242張",
-      "融資近 5 日下降 8.1%，籌碼壓力下降"
+      "近 20 日法人偏買，合計 +545張",
+      "投信近 5 日買超 +85張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -836張",
-      "近 20 日法人偏賣，合計 -2.5千張",
-      "外資近 5 日賣超 -600張"
+      "三大法人近 5 日合計賣超 -1.5千張",
+      "外資近 5 日賣超 -1.7千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-09",
-      "融券近 5 日增加 165.2%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-10",
+      "融券近 5 日增加 249.3%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -136,7 +137,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-09"
+      "lastVerified": "2026-09-10"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -175,8 +176,8 @@
         "canonicalTopicName": "先進封裝與 CoWoS",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "信昌電MOPS揭露晶片電容、晶片電阻與介電瓷粉，未揭露封裝基板、DPC／AMB陶瓷基板或先進封裝材料認證；本題材應定位為封裝設備與基板供應鏈的被動元件／材料鄰近角色。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，不能直接歸因先進封裝。"
+        "confidence": "medium",
+        "roleSummary": "MOPS晶片電容、電阻與瓷粉範圍成立；官方瓷粉頁進一步列Substrate filler用途，可保留材料上游可能性，但不能宣稱已供應某封裝載板或自製DPC／AMB基板。更新8月營收後仍不直接歸因先進封裝。本次FinMind最新回傳：2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。公司整體營收不可直接歸因本題材。"
       },
       {
         "topicId": "ai-server-power-backup",
@@ -372,14 +373,14 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 62,
-    "recommendationState": "watchlist",
+    "totalScore": 51,
+    "recommendationState": "blocked",
     "fundamental": {
       "score": -12,
       "label": "基本面中性",
       "signals": [],
       "risks": [
-        "本益比 50.6 倍，需防估值壓縮"
+        "本益比 55.6 倍，需防估值壓縮"
       ]
     },
     "strategy": {
@@ -392,20 +393,20 @@
     "riskGates": [
       {
         "id": "risk.stop-distance",
-        "severity": "soft",
-        "message": "距離 MA20 約 13.5%，部位需降速"
+        "severity": "hard",
+        "message": "距離 MA20 約 20.1%，停損距離過大"
       }
     ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：266.00",
-      "波段多空分水嶺看 MA20：232.23",
-      "追蹤法人是否延續 賣超：最近 -743張",
-      "本益比 50.6 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：276.80",
+      "波段多空分水嶺看 MA20：235.80",
+      "追蹤法人是否延續 賣超：最近 -153張",
+      "本益比 55.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 286.50 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 295.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 189.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

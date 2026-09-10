@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2395",
   "name": "研華",
-  "generatedAt": "2026-09-09T12:33:14.658Z",
+  "generatedAt": "2026-09-10T12:31:40.363Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -54,29 +54,29 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 5 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "研華MOPS揭露工業測控、工業電腦、工作站、嵌入式電腦卡與超薄液晶電腦，能直接承載Edge AI推論。2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%、累計YoY+40.3%，公司並說明客戶積極下單與專案出貨暢旺，但增長仍不能全數歸因Edge AI。",
-      "supplyChainStage": "edge_ai",
-      "roleType": "edge_ai_platform",
+      "roleSummary": "MOPS工業測控及嵌入式電腦與官方AIR-030、MIC-770 V3資料相符，Edge AI角色可確認。產品聚焦推論系統與部署工具，去除不明確的系列與安裝形式混搭。本次TWSE最新回傳：2026年7月營收112.72億元，MoM+11.35%、YoY+87.58%，累計YoY+40.26%。公司整體營收不可直接歸因本題材。",
+      "supplyChainStage": "edge_ai_computing",
+      "roleType": "edge_inference_systems_and_deployment_software",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "AIR-030 NVIDIA Jetson AGX Orin邊緣AI系統",
+        "name": "AIR-030 Jetson AGX Orin邊緣AI系統",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "MIC-770 V3模組化工業電腦",
+        "name": "MIC-770 V3 Intel Core無風扇工業電腦",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "EPC-B系列嵌入式無風扇電腦",
+        "name": "DeviceOn for Edge AI裝置管理軟體",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -97,7 +97,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 Edge AI / AIoT 邊緣智慧（technology/active） +17",
-      "角色證據 4 則 +12",
+      "角色證據 5 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -167,7 +167,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "研華MOPS揭露工業測控、工業電腦、工作站、嵌入式電腦卡與超薄液晶電腦，能直接承載Edge AI推論。2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%、累計YoY+40.3%，公司並說明客戶積極下單與專案出貨暢旺，但增長仍不能全數歸因Edge AI。"
+        "roleSummary": "MOPS工業測控及嵌入式電腦與官方AIR-030、MIC-770 V3資料相符，Edge AI角色可確認。產品聚焦推論系統與部署工具，去除不明確的系列與安裝形式混搭。本次TWSE最新回傳：2026年7月營收112.72億元，MoM+11.35%、YoY+87.58%，累計YoY+40.26%。公司整體營收不可直接歸因本題材。"
       },
       {
         "topicId": "industrial-automation",
@@ -299,12 +299,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 107 天未更新"
+        "message": "股價資料已 108 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 107 天未更新"
+        "message": "籌碼資料已 108 天未更新"
       },
       {
         "id": "risk.stop-distance",
