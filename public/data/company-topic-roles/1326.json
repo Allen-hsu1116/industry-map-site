@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1326",
   "companyName": "台化",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "pta_sm_abs_producer",
-      "roleSummary": "台化MOPS明確揭露PTA、苯乙烯、ABS、聚丙烯、芳香烴、酚酮及合成纖維產品，屬綜合石化核心廠；MOPS未揭露亞洲排名、製程授權或具名客戶。2026年7月營收312.67億元、MoM+13.0%、YoY+34.2%，累計YoY+13.9%。",
+      "roleSummary": "台化在石化塑膠題材以MOPS直接列示的PTA、SM、ABS、PP及酚類為主；官網進一步將PTA對應聚酯原料、SM對應PS／ABS及酚對應酚醛樹脂。這些是產品用途，不是下游客戶名單或當月銷售拆分。 本次最新可取得資料為2026年8月營收305.58億元，MoM-2.27%、YoY+31.70%；公司口徑，非本題材獨立收入。",
       "products": [
-        "純對苯二甲酸（PTA）",
-        "苯乙烯單體（SM）",
-        "ABS丙烯腈－丁二烯－苯乙烯樹脂",
-        "聚丙烯（PP）樹脂",
-        "耐隆絲與合成纖維紗布"
+        "純對苯二甲酸PTA",
+        "苯乙烯單體SM",
+        "ABS共聚樹脂",
+        "聚丙烯PP樹脂",
+        "酚Phenol（酚醛樹脂及BPA原料）"
       ],
       "customers": [
         "遠東新(1402；聚酯產業鏈應用對象，非MOPS揭露客戶)",
@@ -26,69 +26,72 @@
         "台塑(1301；集團石化供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "遠東新(1402)(PTA)",
-        "中國恆力石化(PTA)",
-        "LG化學(ABS)"
+        "恆力石化（PTA）",
+        "LG Chem（ABS）",
+        "奇美實業（ABS）"
       ],
       "risks": [
-        "大宗石化利差受油價、原料與中國供需影響",
-        "MOPS未支持亞洲排名、特定製程授權或具名客戶，不能把產業常識寫成已驗證關係"
+        "裝置規模大且能源密集，單月收入增加不保證利差改善",
+        "中國及亞洲石化新增產能可能造成持續價格競爭",
+        "油價、匯率及貿易政策會擾動原料與出口價差"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：PTA、聚苯乙烯、苯乙烯、芳香烴、酚酮、聚丙烯、ABS與合成纖維之製銷。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1326",
+          "claim": "股票代碼1326；本次MCP取得主要經營業務摘要：PTA、聚苯乙烯、苯乙烯、鄰二甲苯、對二甲苯、苯、合成酚、丙酮、聚丙烯、二甲基甲醯胺、ABS、合成纖維紗布、耐隆絲布及染整加工製銷。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收312.67億元，MoM+13.0%、YoY+34.2%，累計YoY+13.9%。"
+          "claim": "2026年7月營收312.67億元，MoM+13.01%、YoY+34.18%，累計YoY+13.89%；原始當月值31267016千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=1326&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收305.58億元，MoM-2.27%、YoY+31.70%；原始值30558197000元，前月31267016000元，去年同月23203688000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-1326-1",
+          "publisher": "台化 官方網站",
+          "title": "Petrochemicals（2026-09-11查詢）",
+          "url": "https://en.fcfc.com.tw/petrochemicals",
+          "claim": "官網將PTA、SM及酚連結聚酯、PS／ABS及酚醛樹脂用途；ABS與PP產品另由本次MOPS支持。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "芳香烴分離與PTA氧化、精製的純度及能耗控制",
-        "苯乙烯與ABS聚合的分子量、衝擊強度及色澤控制",
-        "聚丙烯聚合與纖維紡絲、染整的一體化製程"
+        "PTA精製與聚酯用途純度控制（工程分析）",
+        "SM與ABS聚合原料配比、流動性及衝擊性能控制（工程分析）",
+        "PP聚合與樹脂加工之分子量／熔融流動管理（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持PTA、SM、ABS、PP與合成纖維的多元石化產品組合",
-          "2026年7月營收YoY+34.2%、累計YoY+13.9%，公司整體需求回升"
+          "MOPS及官網可以交叉核對芳香烴、單體與樹脂產品鏈",
+          "PTA、SM及酚類對應不同下游材料，需求來源較分散",
+          "2026年8月營收305.58億元，MoM-2.27%、YoY+31.70%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "產品多為大宗石化與纖維，報價及毛利高度循環",
-          "大型連續製程固定成本高，低稼動率時獲利槓桿不利"
+          "裝置規模大且能源密集，單月收入增加不保證利差改善",
+          "公司營收亦包含纖維及染整，未拆出石化品別獲利",
+          "8月營收月減2.27%，即使年增仍有短期波動；未有本題材拆分。"
         ],
         "opportunities": [
-          "車用與家電材料需求可支撐ABS及PP產品升級",
-          "機能纖維、耐熱材料與循環塑料可改善大宗產品組合"
+          "聚酯包材與高性能樹脂需求可改善產品組合",
+          "節能與產品純度優化可提升長期成本競爭力"
         ],
         "threats": [
-          "中國PTA、ABS與PP新增產能壓縮區域利差",
-          "油價、匯率、環保與工安成本上升可能抵銷營收成長"
+          "中國及亞洲石化新增產能可能造成持續價格競爭",
+          "油價、匯率及貿易政策會擾動原料與出口價差"
         ]
       }
     }

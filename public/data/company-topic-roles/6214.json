@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6214",
   "companyName": "精誠",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,84 +11,93 @@
       "directness": "core",
       "supplyChainStage": "it_services",
       "roleType": "enterprise_it_services",
-      "roleSummary": "精誠MOPS支持資訊軟體、電子資訊供應、資料處理與電腦設備零售，足以列為企業IT服務核心角色；但SOC／MDR、RAG Agent與Microsoft等合作關係並非本次MOPS逐項揭露。2026年7月營收47.45億元、YoY+31.8%、累計YoY+36.2%，但MoM-29.6%反映專案認列波動。",
+      "roleSummary": "精誠MOPS為資訊服務及軟硬體銷售，官方Cyber Center明列SOC＋MOC、SOAR、MDR及Azure／AWS／Google Cloud監控，另有Splunk導入頁。本角色聚焦可核對的資安維運與資料分析服務，不將合作平台寫成客戶或自行開發的軟體。 本次最新可取得資料為2026年8月營收59.00億元，MoM+24.36%、YoY+61.91%；公司口徑，非本題材獨立收入。",
       "products": [
-        "企業資訊軟體導入與系統整合服務",
-        "雲端遷移、託管與資料處理服務",
-        "資安監控與事件應變整合服務",
-        "ERP／資料庫與企業應用維運服務",
-        "電腦設備與資訊軟體授權零售"
+        "Cyber Center 7×24 SOC資安監控服務",
+        "Cyber Center MOC系統維運監控服務",
+        "MDR端點異常監控與威脅獵捕服務",
+        "Azure／AWS／Google Cloud雲端資安事件監控",
+        "Splunk Enterprise營運智慧平台導入服務"
       ],
       "customers": [
-        "Microsoft（雲端與企業軟體平台對象，非客戶）",
-        "Amazon Web Services（雲端平台對象，非客戶）",
-        "SAP（ERP平台供應鏈對象，非客戶）",
-        "Oracle（資料庫平台供應鏈對象，非客戶)"
+        "Microsoft（Azure監控平台對象，非客戶）",
+        "Amazon（AWS監控平台對象，非客戶）",
+        "Google（Google Cloud監控平台對象，非客戶）",
+        "Splunk（軟體供應鏈對象，非客戶）"
       ],
       "competitors": [
-        "零壹(3029)",
-        "敦陽(2360)",
-        "聚碩(6270)"
+        "凌群",
+        "敦陽科技",
+        "安碁資訊"
       ],
       "risks": [
-        "大型專案驗收與軟硬體授權轉售會造成單月營收波動",
-        "原廠直接服務、人才成本與平台綁定可能壓縮整合商毛利"
+        "全公司營收包含設備及其他軟體，不能視為SOC的經常性收入",
+        "資安事件責任、SLA違約與人才短缺可能增加交付成本",
+        "原廠平台授權變動及同業價格競爭會壓縮服務利潤"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：資訊軟體、電子資訊供應、資料處理、電腦設備與資訊軟體零售服務。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6214",
+          "claim": "股票代碼6214；本次MCP取得主要經營業務摘要：資訊軟體服務、電子資訊供應、資料處理、電腦及事務性機器設備零售、資訊軟體零售。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收47.45億元，MoM-29.6%、YoY+31.8%，累計YoY+36.2%。"
+          "claim": "2026年7月營收47.45億元，MoM-29.61%、YoY+31.82%，累計YoY+36.21%；原始當月值4744529千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6214&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收59.00億元，MoM+24.36%、YoY+61.91%；原始值5900133000元，前月4744529000元，去年同月3644065000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-6214-1",
+          "publisher": "精誠 官方網站",
+          "title": "Cyber Center 資安卓越中心（2026-09-11查詢）",
+          "url": "https://event.systex.com/governance/cyber-center",
+          "claim": "Cyber Center明列SOAR、MDR、IOC、7×24 SOC＋MOC及Azure／AWS／Google Cloud資安監控。"
+        },
+        {
+          "sourceId": "official-role-v50-6214-2",
+          "publisher": "精誠 官方網站",
+          "title": "Splunk 營運智慧平台（2026-09-11查詢）",
+          "url": "https://event.systex.com/governance/splunk",
+          "claim": "精誠官方Splunk Enterprise服務頁支持資料分析、資訊安全監控及營運智慧功能。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "混合雲身分、網路、資料與備援架構整合",
-        "SIEM日誌、EDR遙測、告警關聯與事件應變流程",
-        "ERP／資料庫遷移、API介接與批次資料品質治理"
+        "SOAR自動化事件響應與IOC威脅情資整合",
+        "SOC＋MOC聯合監控資安事件、系統狀態及效能",
+        "Splunk資料分析及雲端／端點遙測關聯（官方功能與工程整合脈絡）"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持軟體、資訊供應、資料處理與設備零售的跨域整合能力",
-          "7月營收YoY+31.8%、累計YoY+36.2%，企業數位化需求強"
+          "官方服務頁揭露全天候資安與維運雙中心，可核對服務交付範圍",
+          "跨雲平台及Splunk資料分析可支援異質IT環境",
+          "2026年8月營收59.00億元，MoM+24.36%、YoY+61.91%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "7月營收MoM-29.6%，專案認列時點造成波動",
-          "本次MOPS未逐項支持SOC／MDR、RAG或具名平台合作，舊資料精確度過高"
+          "全公司營收包含設備及其他軟體，不能視為SOC的經常性收入",
+          "全天候專家維運依賴人才與排班成本，收入規模不等於軟體毛利"
         ],
         "opportunities": [
-          "企業雲端治理、資安韌性與資料平台現代化可增加顧問及維運收入",
-          "生成式AI導入需要既有ERP、權限與資料治理整合，可擴大專案範圍"
+          "企業上雲與跨平台威脅管理可增加託管監控需求",
+          "SOAR與MDR可提高既有維運客戶的安全服務覆蓋"
         ],
         "threats": [
-          "Accenture、IBM與雲端原廠直接服務企業，壓縮本地SI空間",
-          "資安與雲端人才短缺、交付延誤或固定價專案超支可能侵蝕毛利"
+          "資安事件責任、SLA違約與人才短缺可能增加交付成本",
+          "原廠平台授權變動及同業價格競爭會壓縮服務利潤"
         ]
       }
     }

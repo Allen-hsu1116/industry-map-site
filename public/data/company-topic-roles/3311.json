@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3311",
   "companyName": "閎暉",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -11,26 +11,27 @@
       "directness": "supplier",
       "supplyChainStage": "mechanical_module_components",
       "roleType": "consumer_automotive_mechanical_module_supplier",
-      "roleSummary": "閎暉MOPS只揭露按鍵及模組產品機構整合元件，足以支持手機、穿戴與車載人機介面機構模組角色，但不支持0.55mm玻璃、指紋模組精度或Apple供應關係。2026年7月營收2.35億元、YoY+25.7%，但MoM-4.4%、累計YoY僅+2.4%。",
+      "roleSummary": "閎暉MOPS為按鍵模組及機構整合，官方型錄列矽膠／TPU按鍵、FPCB及EL模組與薄膜嵌件成形；本消費運算角色以這些可核對產品取代未具型號或來源的手機／車用客製按鍵清單。終端品牌只是應用對象。 本次最新可取得資料為2026年8月營收4.22億元，MoM+79.76%、YoY+104.38%；公司口徑，非本題材獨立收入。",
       "products": [
-        "智慧手機側鍵與音量鍵模組",
-        "平板與穿戴裝置按鍵機構模組",
-        "車載中控與方向盤按鍵模組",
-        "消費電子金屬／塑膠機構整合件"
+        "Silicone Rubber Keypad矽膠按鍵",
+        "TPU熱塑性聚氨酯按鍵",
+        "M1 FPCB按鍵模組",
+        "M2 EL發光按鍵模組",
+        "H1 Film Insert Molding薄膜嵌件按鍵"
       ],
       "customers": [
-        "Apple（手機按鍵應用對象，非MOPS揭露客戶）",
-        "Samsung Electronics（手機機構應用對象，非MOPS揭露客戶）",
-        "Garmin（穿戴裝置應用對象，非MOPS揭露客戶）",
-        "Ford（車載按鍵應用對象，非MOPS揭露客戶）"
+        "Apple（消費電子按鍵應用對象，非揭露客戶）",
+        "Samsung Electronics（消費電子機構應用對象，非揭露客戶）",
+        "Garmin（穿戴裝置應用對象，非揭露客戶）"
       ],
       "competitors": [
-        "消費電子機構件廠",
-        "車用與穿戴模組供應商"
+        "毅嘉（按鍵及機構整合）",
+        "群光（輸入裝置）"
       ],
       "risks": [
-        "終端新品週期與客戶拉貨節奏會放大單月波動",
-        "MOPS未揭露具名客戶與玻璃蓋板／指紋模組規格，不能沿用直接供應宣稱"
+        "8月跳升的訂單、產品或併表原因未由FinMind揭露，不推定為有機或AI需求成長",
+        "觸控取代實體按鍵可能壓縮部分產品空間",
+        "客戶設計變更與模具攤提可能提高小批量成本"
       ],
       "evidence": [
         {
@@ -49,43 +50,58 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：按鍵及模組產品機構整合元件。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3311",
+          "claim": "股票代碼3311；本次MCP取得主要經營業務摘要：按鍵及模組產品、機構整合元件。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收2.35億元，MoM-4.4%、YoY+25.7%，累計YoY+2.4%。"
+          "claim": "2026年7月營收2.35億元，MoM-4.36%、YoY+25.69%，累計YoY+2.39%；原始當月值234539千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3311&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收4.22億元，MoM+79.76%、YoY+104.38%；原始值421603000元，前月234539000元，去年同月206281000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-3311-1",
+          "publisher": "閎暉 官方網站",
+          "title": "SILITECH（2026-09-11查詢）",
+          "url": "https://www.silitech.com/Product.aspx?BigClassID=4fbf580a-6e8f-4da5-8c6e-6bff13d543bb&ClassID=7cc1acde-99ce-4854-97f5-4d61b2f07ab2",
+          "claim": "官方型錄列矽膠與TPU按鍵、M1 FPCB、M2 EL及H1薄膜嵌件按鍵，並列噴塗印刷雷雕等工藝。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-26",
+      "confidence": "high",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "金屬沖壓、塑膠射出與嵌件成形的按鍵模組整合",
-        "按鍵行程、回彈力與壽命的一致性量測",
-        "機構件表面處理、組裝公差與環境可靠度驗證"
+        "矽膠按鍵噴塗、印刷、雷射蝕刻及塗層組合（官網製程）",
+        "H1薄膜嵌件成形與硬質鍵帽／彈性基底整合",
+        "FPCB及EL模組與按鍵機構組裝；觸感公差屬工程驗證項目"
       ],
       "swot": {
         "strengths": [
-          "MOPS明確支持按鍵與機構整合元件，可對應手機、穿戴及車載終端",
-          "2026年7月營收YoY+25.7%，顯示終端需求較去年同期改善"
+          "材料、表面處理及發光模組可按型錄區分，不再只列終端設備名稱",
+          "彈性按鍵與FPCB／EL模組結合提供客製化整合價值",
+          "2026年8月營收4.22億元，MoM+79.76%、YoY+104.38%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "7月營收MoM-4.4%，且累計YoY僅+2.4%，全年動能仍偏平",
-          "產品屬機構模組，議價能力與差異化通常低於晶片或核心平台"
+          "8月跳升的訂單、產品或併表原因未由FinMind揭露，不推定為有機或AI需求成長",
+          "品牌關係與各裝置收入未拆分，無法確認特定手機換機受惠"
         ],
         "opportunities": [
-          "手機新增實體按鍵與穿戴裝置小型化可帶動客製機構模組需求",
-          "車載座艙按鍵與觸覺回饋整合可分散手機景氣曝險"
+          "穿戴與消費裝置的人機介面客製需求可增加材料整合價值",
+          "薄膜嵌件與雷射表面工藝可擴大外觀差異化應用"
         ],
         "threats": [
-          "中國與東南亞機構件供應商價格競爭可能壓縮毛利",
-          "無按鍵化、觸控整合與客戶供應鏈調整可能侵蝕既有需求"
+          "觸控取代實體按鍵可能壓縮部分產品空間",
+          "客戶設計變更與模具攤提可能提高小批量成本"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6213",
   "companyName": "聯茂",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -11,12 +11,12 @@
       "directness": "supplier",
       "supplyChainStage": "substrate_materials",
       "roleType": "ccl_upstream_material_supplier",
-      "roleSummary": "聯茂MOPS明確支持多層PCB基材、銅箔基板與半成品製造；2026年7月營收47.49億元、YoY+96.9%，公司也說明受惠漲價與AI相關需求。惟MOPS未逐項證實IT系列料號、Df數值、ABF替代或具名PCB客戶。",
+      "roleSummary": "聯茂MOPS及官網支持CCL、Prepreg與軟性基板；官方CDN的產品簡報雖檔名含2023Q3，內文實為2020Q3，僅用於既有IT-988G系列與製程脈絡，不當成最新規格。7月TWSE說明漲價及AI需求，8月只有收入資料，兩期解釋分開。 本次最新可取得資料為2026年8月營收50.44億元，MoM+6.21%、YoY+97.93%；公司口徑，非本題材獨立收入。",
       "products": [
-        "多層印刷電路板用銅箔基板（CCL）",
-        "多層板壓合用半固化片（Prepreg）",
-        "高耐熱多層PCB基材",
-        "高速運算與網通板用低損耗基板材料"
+        "多層PCB用銅箔基板CCL",
+        "多層壓合用半固化片Prepreg",
+        "軟性銅箔基板FCCL",
+        "IT-988G系列低損耗PCB基材（2020官方簡報產品範圍）"
       ],
       "customers": [
         "欣興(3037；PCB基材應用對象，非MOPS揭露客戶)",
@@ -25,14 +25,15 @@
         "燿華(2367；PCB材料應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "台燿(6274)",
-        "宏電子(6168)",
-        "松下電工(Japan)",
-        "Rogers(USA)"
+        "台燿",
+        "台光電",
+        "Panasonic Industry",
+        "Rogers"
       ],
       "risks": [
-        "玻纖布、銅箔與樹脂價格波動會影響利差",
-        "AI相關需求為公司說明，但MOPS未拆分產品與客戶，不能把全部營收增長歸因AI基板"
+        "IT-988G來源為2020年內文，不足以確認2026年型號出貨組合",
+        "台燿、台光電及國際材料商競爭可能壓縮升級溢價",
+        "玻纖布、銅箔及樹脂供需會擾動成本與交期"
       ],
       "legacy": {
         "topicSlug": "ic-substrate",
@@ -41,58 +42,73 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯茂 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6213",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯茂 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6213 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：多層印刷電路基材、銅箔基板、半成品與成品之製造加工買賣。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6213",
+          "claim": "股票代碼6213；本次MCP取得主要經營業務摘要：多層印刷電路基材及銅箔基板及半成品成品之製造加工買賣；電子零組件製造、電子材料批發。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收47.49億元，MoM+12.7%、YoY+96.9%，累計YoY+34.7%；公司說明受惠漲價與AI相關需求。"
+          "claim": "2026年7月營收47.49億元，MoM+12.71%、YoY+96.88%，累計YoY+34.73%；原始當月值4749174千元。該月申報備註：受惠於漲價效應和AI相關需求成長。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6213&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收50.44億元，MoM+6.21%、YoY+97.93%；原始值5044034000元，前月4749174000元，去年同月2548408000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-6213-1",
+          "publisher": "聯茂 官方網站",
+          "title": "聯茂電子股份有限公司 ITEQ CORPORATION（2026-09-11查詢）",
+          "url": "https://www.iteqcorp.com/",
+          "claim": "官網首頁支持印刷電路板基礎材料定位。"
+        },
+        {
+          "sourceId": "official-role-v50-6213-2",
+          "publisher": "聯茂 官方網站",
+          "title": "PowerPoint 簡報（2026-09-11查詢）",
+          "url": "https://s3.ap-northeast-1.wasabisys.com/cdn.iteqcorp.com/2024/12/2023Q3_Quarterly-Results.pdf",
+          "claim": "此CDN檔名含2023Q3但內文標題為2020 Third Quarter Earnings Result；僅用於歷史IT-988G、CCL、Prepreg、FCCL及樹脂含浸／壓合製程，不冒充現行型號規格或2023財報。"
+        },
+        {
+          "sourceId": "official-role-v50-6213-3",
+          "publisher": "聯茂 官方網站",
+          "title": "銅箔基板及膠片 - 聯茂電子（2026-09-11查詢）",
+          "url": "https://www.iteqcorp.com/product/process/rigid-cclpp/",
+          "claim": "官網現行製程分類確認銅箔基板及膠片。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "樹脂、玻纖布與銅箔的配方及多層壓合均勻性控制",
-        "低介電損耗與高耐熱基材配方開發",
-        "銅箔表面粗糙度、剝離強度與阻抗一致性驗證"
+        "樹脂／填料混合、玻纖含浸與Prepreg製作（官方歷史製程圖）",
+        "銅箔與膠片疊合、熱壓成型的CCL製程",
+        "低Dk／低Df配方控制（官方技術方向；不套用未核對的新世代數值）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持CCL及多層PCB基材核心角色",
-          "7月營收MoM+12.7%、YoY+96.9%，且公司明確提到漲價與AI相關需求"
+          "CCL、膠片及FCCL有官方產品範圍依據，可辨識PCB材料上游角色",
+          "樹脂混合與製程整合可影響高速板材料損耗及可靠度",
+          "2026年8月營收50.44億元，MoM+6.21%、YoY+97.93%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "營收增幅同時含漲價效應，未必等同出貨量或市占同步翻倍",
-          "MOPS未揭露料號、介電數值與具名客戶，產品精確度需以技術資料表另證"
+          "IT-988G來源為2020年內文，不足以確認2026年型號出貨組合",
+          "8月未有品別／價量拆分，不能把7月漲價備註直接當8月成長原因"
         ],
         "opportunities": [
-          "AI伺服器與800G／1.6T網通板升級增加低損耗CCL需求",
-          "車載電控與高功率設備提升高耐熱多層板材料用量"
+          "高速網通及AI運算板提升低損耗基材的認證需求",
+          "薄型化與耐熱可靠度要求可增加材料配方差異化"
         ],
         "threats": [
-          "台光電、台燿與中國CCL廠競爭認證與價格",
-          "原料漲價若無法完整轉嫁，營收增長仍可能伴隨毛利壓力"
+          "台燿、台光電及國際材料商競爭可能壓縮升級溢價",
+          "玻纖布、銅箔及樹脂供需會擾動成本與交期"
         ]
       }
     }

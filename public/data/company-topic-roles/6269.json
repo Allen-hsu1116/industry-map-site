@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6269",
   "companyName": "台郡",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -11,12 +11,13 @@
       "directness": "core",
       "supplyChainStage": "fpc",
       "roleType": "fpc_manufacturer",
-      "roleSummary": "台郡MOPS明確揭露加成銅箔基層板、多層加成PCB、FPC與聚醯亞胺薄膜銅箔基層板零組件，核心是軟板與加成板，不足以證明AI伺服器8至12層FPC或Apple直接客戶。2026年7月營收20.45億元、MoM+19.2%，但YoY僅+4.0%、累計YoY+2.0%。",
+      "roleSummary": "台郡MOPS為Build-up板及FPC，官方製程能力頁直接揭露PI／MPI傳統FPC與LCP Meta／MetaLink Anylayer路線；本角色恢復真正有依據的LCP多層互連，不把不同疊構的介電厚度與孔徑混成單一規格。 本次最新可取得資料為2026年8月營收19.97億元，MoM-2.35%、YoY+1.33%；公司口徑，非本題材獨立收入。",
       "products": [
-        "多層加成式印刷電路板",
-        "軟式印刷電路板（FPC）",
-        "加成式銅箔基層板",
-        "聚醯亞胺薄膜銅箔基層板零組件"
+        "PI／MPI單面FPC",
+        "PI／MPI雙面FPC",
+        "PI／MPI多層FPC",
+        "Meta Anylayer LCP錯孔多層FPC",
+        "MetaLink Anylayer LCP疊孔多層FPC"
       ],
       "customers": [
         "Apple（消費電子FPC應用對象，非MOPS揭露客戶）",
@@ -25,69 +26,72 @@
         "緯創(3231；運算設備應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "臻鼎(4958)",
-        "台虹(8039)",
-        "嘉聯益(6153)"
+        "臻鼎-KY",
+        "嘉聯益",
+        "日本Mektron"
       ],
       "risks": [
-        "消費電子終端集中與新品週期可能造成產能利用率波動",
-        "MOPS未揭露AI伺服器層數、LCP材料或具名客戶，不能把題材應用當成已確認訂單"
+        "官網製程能力不等於各產品量產良率或客戶認證已完成",
+        "LCP材料及金屬互連製程良率可能限制成本改善",
+        "終端裝置換機減速或設計轉換可能造成產能利用率壓力"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：加成銅箔基層板、多層加成印刷電路板、軟式印刷電路板及聚醯亞胺薄膜銅箔基層板零組件。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6269",
+          "claim": "股票代碼6269；本次MCP取得主要經營業務摘要：加成Build-up銅箔基層板；多層Build-up印刷電路板、軟式印刷電路板；聚醯亞胺薄膜銅箔基層板半製品之零組配件製造研究開發買賣。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收20.45億元，MoM+19.2%、YoY+4.0%，累計YoY+2.0%。"
+          "claim": "2026年7月營收20.45億元，MoM+19.21%、YoY+3.97%，累計YoY+2.03%；原始當月值2045178千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6269&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收19.97億元，MoM-2.35%、YoY+1.33%；原始值1997131000元，前月2045178000元，去年同月1970931000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-6269-1",
+          "publisher": "台郡 官方網站",
+          "title": "Capabilities - FLEXiumSite（2026-09-11查詢）",
+          "url": "https://www.flexium.com.tw/ProductAndTech/Capability?lang=",
+          "claim": "PI／MPI單面FPC基材25–50μm與35／50μm線寬距；Meta Anylayer為LCP錯孔、MetaLink為LCP疊孔，無組合膠及金屬膏印刷，不混合各疊構規格。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "聚醯亞胺薄膜、銅箔與覆蓋膜的FPC壓合控制",
-        "細線路成像、蝕刻與雷射微孔互連",
-        "動態彎折、阻抗與回焊可靠度驗證"
+        "PI／MPI單面FPC：基材25–50μm、最小線寬／線距35／50μm（官網分類）",
+        "Meta Anylayer：LCP錯孔、無組合膠多層及金屬膏印刷",
+        "MetaLink Anylayer：LCP疊孔多層設計與50μm層間對位準度（官網能力）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持FPC、加成板與PI銅箔基板，產品定位清楚",
-          "7月營收MoM+19.2%，短期出貨較6月改善"
+          "PI／MPI與LCP各有官方疊構及製程說明，技術差異可以核對",
+          "LCP無組合膠及不同孔結構可提供高頻模組整合的設計彈性",
+          "2026年8月營收19.97億元，MoM-2.35%、YoY+1.33%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "YoY僅+4.0%、累計YoY+2.0%，中期成長仍偏弱",
-          "FPC價格競爭與消費電子集中使毛利對稼動率敏感"
+          "官網製程能力不等於各產品量產良率或客戶認證已完成",
+          "營收未拆出LCP、MPI及模組收入，無法量化高頻升級比重",
+          "8月營收月減2.35%，即使年增仍有短期波動；未有本題材拆分。"
         ],
         "opportunities": [
-          "折疊裝置、穿戴與車載電子增加高彎折FPC用量",
-          "終端模組小型化可提升細線路與多層加成板需求"
+          "高頻天線及模組小型化可增加LCP多層設計需求",
+          "軟板彎折與三維布局可降低終端機構空間需求"
         ],
         "threats": [
-          "臻鼎、嘉聯益與中國軟板廠擴產造成報價壓力",
-          "終端品牌調整供應鏈或延後新品會直接影響拉貨"
+          "LCP材料及金屬互連製程良率可能限制成本改善",
+          "終端裝置換機減速或設計轉換可能造成產能利用率壓力"
         ]
       }
     },

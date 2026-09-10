@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3605",
   "companyName": "宏致",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -11,84 +11,87 @@
       "directness": "core",
       "supplyChainStage": "connector",
       "roleType": "connector_manufacturer",
-      "roleSummary": "宏致MOPS明確揭露電子、電腦、車用、網通、工業與醫療連接器、線組及射頻連接器線組；可列為高速互連核心供應商，但MOPS未證明112G PAM4、0.4mm pitch或廣達等客戶。2026年7月營收11.54億元、YoY+29.8%，累計YoY+17.2%。",
+      "roleSummary": "宏致MOPS揭露連接器、線組及射頻線組，官網高速線纜頁直接支持MCIO、SlimSAS、QSFP-DD及EDSFF。產品按各自線長、阻抗及協定界定；MCIO的PCIe Gen5／56Gb PAM4不外推成所有線組皆達同規格。 本次最新可取得資料為2026年8月營收10.97億元，MoM-4.94%、YoY+17.24%；公司口徑，非本題材獨立收入。",
       "products": [
-        "電腦與伺服器用板對板連接器",
-        "網通設備用高速連接器與線組",
-        "無線通訊射頻連接器與同軸線組",
-        "車用防水連接器與線束",
-        "工業／醫療設備用連接器"
+        "MCIO PCIe Gen5／56Gb PAM4高速線組",
+        "SlimSAS 4i 38-pin SAS4／PCIe Gen4線組",
+        "SlimSAS 8i 74-pin SAS4線組",
+        "QSFP-DD被動高速銅纜",
+        "EDSFF GenZ PCIe高速線組"
       ],
       "customers": [
-        "廣達(2382；運算設備應用對象，非MOPS揭露客戶)",
-        "和碩(4938；消費電子應用對象，非MOPS揭露客戶)",
-        "裕隆(2201；車用連接應用對象，非MOPS揭露客戶)",
-        "台達電(2308；工業／電源設備應用對象，非MOPS揭露客戶)"
+        "廣達（伺服器互連應用對象，非揭露客戶）",
+        "緯穎（資料中心互連應用對象，非揭露客戶）",
+        "智邦（交換器線纜應用對象，非揭露客戶）",
+        "台達電（設備互連應用對象，非揭露客戶）"
       ],
       "competitors": [
-        "鴻海(2317)",
-        "正崴(2392)",
-        "連展(5491)"
+        "Amphenol",
+        "TE Connectivity",
+        "Molex"
       ],
       "risks": [
-        "車用與醫療認證週期長，量產爬坡慢且前期開發成本高",
-        "MOPS未支持特定速率、pitch或具名客戶，不能將應用對象寫成確認訂單"
+        "月營收未拆出MCIO或高速線組，不能量化AI伺服器收入",
+        "高速銅纜面臨訊號損耗及光互連替代壓力",
+        "Amphenol、TE等國際供應商在驗證及價格上競爭"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子、電腦、車用、網通、消費、工業與醫療連接器、線組、射頻線組及金屬沖壓件。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3605",
+          "claim": "股票代碼3605；本次MCP取得主要經營業務摘要：電子、電腦、車用、網通、消費性電子、工業、醫療等連接器及配件；電子線連接線組、無線通訊射頻連接器線組、金屬沖壓件研發生產銷售。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收11.54億元，MoM+3.3%、YoY+29.8%，累計YoY+17.2%。"
+          "claim": "2026年7月營收11.54億元，MoM+3.28%、YoY+29.81%，累計YoY+17.15%；原始當月值1154175千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3605&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收10.97億元，MoM-4.94%、YoY+17.24%；原始值1097137000元，前月1154175000元，去年同月935790000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-3605-1",
+          "publisher": "宏致 官方網站",
+          "title": "High Speed Cable Assembly（2026-09-11查詢）",
+          "url": "https://www.acesconn.com/family_list/SlimSAS%20Cable/23",
+          "claim": "MCIO支持PCIe Gen5／56Gb PAM4、85／92Ω；SlimSAS 4i支持SAS4及PCIe4；另列8i、QSFP-DD及EDSFF，線長阻抗分產品界定。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "差分對阻抗、插入損耗與串音的高速訊號完整性設計",
-        "車用連接器端子保持力、密封與振動可靠度",
-        "精密沖壓、電鍍、塑膠射出與自動化組裝"
+        "MCIO：85Ω／92Ω、30AWG、最長1m及4X／8X／16X／20X接點配置",
+        "SlimSAS 4i：SAS4 24Gbps／PCIe Gen4 16GT/s與85／100Ω線纜",
+        "QSFP-DD被動線纜：100Ω、0.5–3m及IEEE802.3／InfiniBand用途"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持跨電腦、網通、車用、工業及醫療的連接器產品線",
-          "2026年7月營收YoY+29.8%、累計YoY+17.2%，需求成長具延續性"
+          "高速產品清單及協定數據可直接核對官方型錄",
+          "內部儲存互連與外部網路銅纜可涵蓋不同設備連接需求",
+          "2026年8月營收10.97億元，MoM-4.94%、YoY+17.24%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "連接器與線組仍受原料、人工及客戶議價影響",
-          "缺乏本次MCP可驗證的高速速率、pitch與客戶資料，技術領先幅度不宜吹大"
+          "月營收未拆出MCIO或高速線組，不能量化AI伺服器收入",
+          "不同長度、阻抗及接點配置需個別驗證，型錄最高能力不是通用品承諾",
+          "8月營收月減4.94%，即使年增仍有短期波動；未有本題材拆分。"
         ],
         "opportunities": [
-          "AI伺服器、交換器與車載電子增加高速連接器與線組用量",
-          "射頻、工業與醫療連接器可降低單一消費市場波動"
+          "伺服器PCIe升級可增加高完整性內部線纜需求",
+          "交換器及儲存擴充可帶動QSFP-DD與SAS配套"
         ],
         "threats": [
-          "鴻海、TE Connectivity、Amphenol及中國廠競爭規模與價格",
-          "互連規格升級過快可能提高研發、模具與驗證投資風險"
+          "高速銅纜面臨訊號損耗及光互連替代壓力",
+          "Amphenol、TE等國際供應商在驗證及價格上競爭"
         ]
       }
     },

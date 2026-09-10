@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6168",
   "companyName": "宏齊",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -11,12 +11,12 @@
       "directness": "core",
       "supplyChainStage": "led_packaging",
       "roleType": "smd_led_manufacturer",
-      "roleSummary": "宏齊MOPS只明確揭露表面黏著發光二極體（SMD LED）生產銷售，足以支持LED封裝角色，但不支持VCSEL、940nm、AlN基板或Samsung／LG直接客戶。2026年7月營收2.06億元、MoM+0.8%、YoY+12.8%，累計YoY+7.8%。",
+      "roleSummary": "宏齊MOPS為SMD LED製銷，中文官網明列IR感測器、車用倒裝Mini LED CSP、可定址RGB及COBsiden；本顯示光學角色補回這些產品，取代未有本次來源的紫外光泛稱。它是LED封裝及顯示方案角色，不是LED晶圓磊晶供應商。 本次最新可取得資料為2026年8月營收2.21億元，MoM+7.70%、YoY+18.52%；公司口徑，非本題材獨立收入。",
       "products": [
-        "可見光SMD LED封裝元件",
-        "白光背光用SMD LED封裝元件",
-        "紅外光SMD發光元件",
-        "紫外光SMD發光元件"
+        "IR紅外線感測元件",
+        "車用倒裝Mini LED CSP封裝元件",
+        "可定址RGB LED顯示方案",
+        "COBsiden COB消光表面顯示產品"
       ],
       "customers": [
         "Samsung Electronics（顯示背光應用對象，非MOPS揭露客戶）",
@@ -25,69 +25,71 @@
         "友達(2409；顯示模組應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "億光(2393)",
-        "光寶(2301)",
-        "東貝(2499)"
+        "億光",
+        "光寶科技",
+        "國星光電"
       ],
       "risks": [
-        "SMD LED封裝成熟且價格競爭激烈，規模較小時成本壓力更高",
-        "MOPS未支持Mini LED、VCSEL、波長與車規認證等既有精確宣稱"
+        "未拆分Mini LED或COBsiden收入，不能由公司成長率推估滲透率",
+        "LED封裝價格競爭及終端顯示預算波動可能壓縮利潤",
+        "良率、像素一致性及可靠度問題會提高新封裝導入成本"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：表面黏著發光二極體之生產與銷售。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6168",
+          "claim": "股票代碼6168；本次MCP取得主要經營業務摘要：表面黏著發光二極體之生產與銷售。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收2.06億元，MoM+0.8%、YoY+12.8%，累計YoY+7.8%。"
+          "claim": "2026年7月營收2.06億元，MoM+0.79%、YoY+12.75%，累計YoY+7.84%；原始當月值205558千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6168&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收2.21億元，MoM+7.70%、YoY+18.52%；原始值221377000元，前月205558000元，去年同月186786000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-6168-1",
+          "publisher": "宏齊 官方網站",
+          "title": "宏齊科技股份有限公司-LED顯示屏, 半導體晶片, 發光二極體封裝（2026-09-11查詢）",
+          "url": "https://www.harvatek.com.tw/",
+          "claim": "中文官網列IR感測器、車用倒裝Mini LED CSP、可定址RGB與COBsiden COB消光表面產品；支持LED下游封裝定位。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-26",
+      "confidence": "high",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "LED晶粒固晶、打線與樹脂封裝的一致性控制",
-        "光色分選、亮度分級與封裝光學設計",
-        "回焊耐熱、濕熱與熱循環可靠度驗證"
+        "倒裝Mini LED CSP封裝對應車用儀表與顯示用途",
+        "可定址RGB：單顆LED獨立控制與動態光效",
+        "COBsiden：COB封裝及消光表面設計以改善顯示均勻性"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持SMD LED生產銷售，角色沒有硬扯別的產業",
-          "2026年7月營收YoY+12.8%、累計YoY+7.8%，維持溫和成長"
+          "官網具體產品族可驗證顯示、感測與車用封裝定位",
+          "SMD、CSP及COB產品可對應不同尺寸和顯示整合需求",
+          "2026年8月營收2.21億元，MoM+7.70%、YoY+18.52%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "單月營收僅2.06億元，規模與億光、光寶科存在差距",
-          "MOPS揭露範圍很窄，無法據此確認Mini LED、UV／IR規格或具名客戶"
+          "未拆分Mini LED或COBsiden收入，不能由公司成長率推估滲透率",
+          "封裝方案商品化仍依客戶設計及模組驗證，官網未證實具名客戶"
         ],
         "opportunities": [
-          "車載顯示、工業指示與穿戴裝置可增加小型SMD LED用量",
-          "顯示背光與特殊波段應用可改善傳統指示燈產品組合"
+          "車用儀表與商用顯示導入細間距LED可增加封裝需求",
+          "IR感測與可定址顯示整合可拓展智慧裝置應用"
         ],
         "threats": [
-          "中國LED封裝廠低價競爭持續壓縮標準品毛利",
-          "OLED與Micro LED等顯示技術演進可能改變既有背光需求"
+          "LED封裝價格競爭及終端顯示預算波動可能壓縮利潤",
+          "良率、像素一致性及可靠度問題會提高新封裝導入成本"
         ]
       }
     },

@@ -2,20 +2,20 @@
   "schemaVersion": 1,
   "companyCode": "2355",
   "companyName": "敬鵬",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "敬鵬MOPS支持電子用PCB、電子材料、PCB模具與絕緣板製造，足以列為PCB核心廠；但AEC-Q100是IC規範，且MOPS未揭露3oz至6oz、Bosch／Tesla客戶或汽車板占比。2026年7月營收14.73億元、YoY+15.9%，累計YoY+6.2%。",
+      "roleSummary": "敬鵬MOPS支持PCB製造，官方技術頁更明列HDI／IVH、約26層多層板、最高約14oz厚銅及Cu Inlay／Busbar；本次保留有來源的特殊板能力，而非因營登簡短刪掉規格。各上限屬不同產品能力，不代表每塊汽車PCB同時具備。 本次最新可取得資料為2026年8月營收14.69億元，MoM-0.26%、YoY+13.43%；公司口徑，非本題材獨立收入。",
       "products": [
-        "車載電子用多層剛性PCB",
-        "雙面剛性印刷電路板",
-        "HDI高密度互連印刷電路板",
-        "電源控制用厚銅印刷電路板",
-        "PCB沖壓模具與絕緣板"
+        "車載及伺服器用多層PCB（官網能力約26層）",
+        "HDI／IVH高密度互連PCB",
+        "厚銅PCB（官網能力最高約14oz）",
+        "Cu Inlay／Busbar嵌銅及匯流排PCB",
+        "Metal Base／Pedestal金屬基散熱PCB"
       ],
       "customers": [
         "Bosch（車載PCB應用對象，非MOPS揭露客戶)",
@@ -24,63 +24,73 @@
         "ZF（底盤控制電子應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "欣興電子(3037)(汽車PCB)",
-        "燿華(2367)(汽車PCB)",
-        "先豐(2493)(汽車PCB)"
+        "TTM Technologies",
+        "欣興",
+        "燿華"
       ],
       "risks": [
-        "車市景氣與Tier-1庫存調整會影響汽車板稼動率",
-        "MOPS未揭露車規認證、銅厚與具名客戶，不能沿用精確供應關係"
+        "層數、銅厚與客戶認證需依個案，不能把最大能力當全面出貨規格",
+        "汽車產量與終端庫存變化可能拉長訂單調整",
+        "製程良率、工安及銅價會影響高規格板成本"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "2355公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 2355 role in PCB、IC 載板與高階基板材料 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子用印刷線路板、電子材料、PCB模具與絕緣板之製造加工買賣。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2355",
+          "claim": "股票代碼2355；本次MCP取得主要經營業務摘要：電子用印刷線路板及電子材料製造加工買賣；沖床及鋼鐵類PCB模具；絕緣板製造加工買賣及進出口。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收14.73億元，MoM+7.8%、YoY+15.9%，累計YoY+6.2%。"
+          "claim": "2026年7月營收14.73億元，MoM+7.82%、YoY+15.91%，累計YoY+6.17%；原始當月值1472569千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=2355&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收14.69億元，MoM-0.26%、YoY+13.43%；原始值1468680000元，前月1472569000元，去年同月1294737000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-2355-1",
+          "publisher": "敬鵬 官方網站",
+          "title": "Product and Technology（2026-09-11查詢）",
+          "url": "https://chinpoon.com/en/product",
+          "claim": "官方產品頁支持約26層多層板、HDI／IVH、約14oz厚銅、金屬基板、Cu Inlay／Busbar；上限非所有PCB共通規格。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-26",
+      "confidence": "high",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "多層板壓合、層間對位與通孔鍍銅可靠度控制",
-        "HDI雷射微孔、填孔電鍍與細線路成像",
-        "厚銅蝕刻、熱管理與車載溫循振動可靠度驗證"
+        "HDI／IVH微孔互連及多層對位控制（工程分析）",
+        "厚銅板對應OBC、逆變器及高功率轉換用途；14oz限官網厚銅類別",
+        "嵌銅、匯流排及金屬基板提升電流與熱傳路徑（工程分析）"
       ],
       "supplyChainStage": "pcb",
       "roleType": "automotive_pcb_manufacturer",
       "swot": {
         "strengths": [
-          "MOPS直接支持PCB與電子材料製造，角色明確",
-          "2026年7月營收MoM+7.8%、YoY+15.9%，出貨較去年同期改善"
+          "特殊板與技術上限均可由官方產品頁查證，產品分化更清楚",
+          "汽車控制、功率轉換及散熱板提供多種高可靠應用入口",
+          "2026年8月營收14.69億元，MoM-0.26%、YoY+13.43%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "累計YoY僅+6.2%，全年增速低於單月表現",
-          "未由MOPS證實高層數AI板、車規認證或具名客戶，題材規格需保守"
+          "層數、銅厚與客戶認證需依個案，不能把最大能力當全面出貨規格",
+          "汽車板設計導入與可靠度驗證週期長，需求變化傳導慢",
+          "8月營收月減0.26%，即使年增仍有短期波動；未有本題材拆分。"
         ],
         "opportunities": [
-          "電動車電控、BMS與ADAS增加高可靠度及厚銅PCB需求",
-          "車載域控制器提升多層、HDI與熱管理板用量"
+          "車載OBC與高功率模組增加厚銅及嵌銅板應用",
+          "ADAS及高頻連線增加高密度與低損耗板設計需求"
         ],
         "threats": [
-          "中國汽車板廠擴產與低價競爭壓縮報價",
-          "車廠降價、平台改款或終端需求轉弱會向上游轉嫁成本壓力"
+          "汽車產量與終端庫存變化可能拉長訂單調整",
+          "製程良率、工安及銅價會影響高規格板成本"
         ]
       }
     }

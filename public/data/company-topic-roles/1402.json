@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1402",
   "companyName": "遠東新",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "pet polyester_fiber_supplier",
-      "roleSummary": "遠東新MOPS明確支持石化纖維原料、紗布、假撚絲及成衣，屬聚酯與紡織垂直整合角色；本次MOPS未揭露TopCool／TopGreen、FDA／GRS認證或Nike、Coca-Cola客戶。2026年7月營收233.67億元、YoY+20.6%，累計YoY+7.4%。",
+      "roleSummary": "遠東新MOPS支持石化纖維至成衣的垂直整合，官方永續產品頁提供rPET、TOPGREEN Bio PET、Bio3 PET及rTEX具體產品。本角色聚焦聚酯材料的原料替代與循環再生，不能把集團全部收入視為綠色聚酯收入，也不將Bio PET一律寫成100%生質。 本次最新可取得資料為2026年8月營收228.32億元，MoM-2.29%、YoY+15.20%；公司口徑，非本題材獨立收入。",
       "products": [
-        "PET聚酯粒與聚酯纖維原料",
-        "聚酯長纖、短纖與混紡紗",
-        "DTY假撚加工絲",
-        "機織布與針織布",
-        "紡織成衣與針織成衣"
+        "回收寶特瓶製rPET聚酯樹脂",
+        "TOPGREEN Bio PET生質聚酯",
+        "TOPGREEN Bio3 PET低碳聚酯長纖",
+        "TOPGREEN rTEX廢紡織品再生長纖",
+        "TOPGREEN rTEX再生短纖紗"
       ],
       "customers": [
         "Nike（運動紡織應用對象，非MOPS揭露客戶)",
@@ -26,69 +26,72 @@
         "Coca-Cola（PET包材應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "新光合纖(1409)",
-        "力麗(1444)",
-        "Recron(Malaysia)"
+        "新光合纖",
+        "Indorama Ventures",
+        "東麗"
       ],
       "risks": [
-        "PTA／MEG原料、能源與運費波動會影響聚酯加工利差",
-        "MOPS未支持品牌客戶、專有商品名或認證，商業關係需另以年報與品牌揭露驗證"
+        "Bio PET、Bio3 PET與rTEX是不同技術，不可混用生質比例或減碳數值",
+        "原生PET價格下跌可能壓縮再生材料溢價",
+        "回收料供應品質、追溯與認證成本可能限制擴產效益"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：石化纖維原料、半成品與製成品、紗布、假撚絲及紡織成衣。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1402",
+          "claim": "股票代碼1402；本次MCP取得主要經營業務摘要：石化纖維原料、半成品及製成品；纖維紗布、混紡紗布、假撚絲、棉布、被單；紡織成衣、針織成衣。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收233.67億元，MoM+1.9%、YoY+20.6%，累計YoY+7.4%。"
+          "claim": "2026年7月營收233.67億元，MoM+1.94%、YoY+20.58%，累計YoY+7.41%；原始當月值23366547千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=1402&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收228.32億元，MoM-2.29%、YoY+15.20%；原始值22832378000元，前月23366547000元，去年同月19820523000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-1402-1",
+          "publisher": "遠東新 官方網站",
+          "title": "遠東新世紀（2026-09-11查詢）",
+          "url": "https://esg.fenc.com/Climate-Mitigation-Series?lang=en",
+          "claim": "官網列rPET、TOPGREEN Bio PET（30%生質MEG＋70%石化PTA）、Bio3 PET及rTEX長纖／短纖；各產品不可共用生質或減碳比例。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "PET聚合黏度、切粒與熔融紡絲品質控制",
-        "長纖／短纖紡絲、假撚與張力均勻性控制",
-        "織造、染整與成衣垂直整合的色牢度及功能加工"
+        "TOPGREEN Bio PET使用30%生質MEG與70%石化PTA（僅限該產品配方）",
+        "rTEX長纖之破碎、熔融、造粒、延伸及假撚流程",
+        "混合廢聚酯之化學分離及再聚合（官網揭露再生路徑）"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持從纖維原料、紗布、假撚到成衣的垂直整合",
-          "2026年7月營收YoY+20.6%、累計YoY+7.4%，公司整體維持成長"
+          "官網提供再生、生質與廢氣碳源聚酯的不同路徑，差異化可核對",
+          "從原料到紗布成衣的整合有助材料開發及應用驗證",
+          "2026年8月營收228.32億元，MoM-2.29%、YoY+15.20%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "聚酯與紡織多屬成熟市場，毛利受原料利差與客戶議價影響",
-          "本次資料未驗證再生品牌、認證與具名客戶，差異化程度不宜過度宣稱"
+          "Bio PET、Bio3 PET與rTEX是不同技術，不可混用生質比例或減碳數值",
+          "合併收入包含其他事業，未量化回收聚酯產品的當期收入",
+          "8月營收月減2.29%，即使年增仍有短期波動；未有本題材拆分。"
         ],
         "opportunities": [
-          "品牌減碳與循環材料採購可帶動再生聚酯與低碳製程需求",
-          "運動休閒、機能布料及區域化成衣供應鏈可提高加工附加價值"
+          "品牌回收含量與供應鏈減碳要求可增加rPET及rTEX採用",
+          "廢紡織品回收可將原料來源由瓶片擴至紡織廢料"
         ],
         "threats": [
-          "中國與東南亞聚酯及成衣產能價格競爭",
-          "全球服飾需求轉弱或庫存調整會同時影響纖維、布料與成衣"
+          "原生PET價格下跌可能壓縮再生材料溢價",
+          "回收料供應品質、追溯與認證成本可能限制擴產效益"
         ]
       }
     }

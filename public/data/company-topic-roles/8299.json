@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8299",
   "companyName": "群聯",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "memory-modules",
@@ -11,28 +11,27 @@
       "directness": "core",
       "supplyChainStage": "nand_controller_storage_module",
       "roleType": "nand_controller_ssd_solution_provider",
-      "roleSummary": "群聯MOPS僅概括揭露IC設計、半導體與電腦周邊業，既有公司產品資料支持NAND控制器與SSD方案，但MOPS未證明Apple、Samsung等直接客戶。FinMind顯示2026年7月營收271.62億元、MoM+9.3%、YoY+377.6%，高成長仍是公司整體口徑。",
+      "roleSummary": "群聯MOPS為IC設計及電腦周邊，官方CES2024公告列E26、E31T、E27T與U21控制器方案並揭露與Micron／Crucial合作。以具型號的儲存方案取代大類堆疊；2024展示性能與容量上限不是本月量產配置或營收拆分，且NAND儲存不同於DRAM記憶體模組。 本次最新可取得資料為2026年8月營收282.76億元，MoM+4.10%、YoY+376.52%；公司口徑，非本題材獨立收入。",
       "products": [
-        "PCIe NVMe SSD控制晶片與參考設計",
-        "UFS嵌入式儲存控制晶片",
-        "eMMC嵌入式儲存控制晶片",
-        "USB快閃儲存控制晶片",
-        "消費、企業與工業用SSD儲存模組"
+        "PS5026-E26 Max14um PCIe 5.0 SSD方案",
+        "PS5031-E31T PCIe 5.0 DRAMless SSD控制器",
+        "PS5027-E27T PCIe 4.0 SSD控制器／2230方案",
+        "PS2251-21 U21 USB4單晶片儲存方案"
       ],
       "customers": [
-        "Kioxia（NAND供應鏈對象，非MOPS揭露客戶)",
-        "Micron Technology（NAND供應鏈對象，非MOPS揭露客戶)",
-        "Intel（PCIe平台驗證對象，非MOPS揭露客戶)",
-        "AMD（伺服器平台驗證對象，非MOPS揭露客戶)"
+        "Micron／Crucial（2024公告揭露T500／T700合作對象，非本次確認當期客戶收入）",
+        "AMD（運算平台應用對象，非揭露客戶）",
+        "Intel（運算平台應用對象，非揭露客戶）"
       ],
       "competitors": [
-        "慧榮(5274)",
+        "Silicon Motion慧榮",
         "Marvell",
-        "Realtek"
+        "Samsung Electronics（自研SSD控制器）"
       ],
       "risks": [
-        "NAND報價與庫存循環會同時影響控制晶片、模組需求與存貨評價",
-        "MOPS未支持具名客戶與速度規格，產品關係需依公司產品資料而非客戶傳聞"
+        "NAND成本、存貨及整合模組占比會影響利潤，營收高增長不等於控制器單價上升",
+        "NAND價格反轉或客戶庫存修正可能放大營運波動",
+        "慧榮、Marvell及NAND原廠自研控制器構成競爭"
       ],
       "evidence": [
         {
@@ -51,43 +50,51 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：IC設計、半導體及電腦周邊設備業。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=8299",
+          "claim": "股票代碼8299；本次MCP取得主要經營業務摘要：IC設計業、半導體業、電腦及週邊設備業。業務登記不自動證實具名客戶及型號規格。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收271.62億元，MoM+9.3%、YoY+377.6%。"
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=8299&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收282.76億元，MoM+4.10%、YoY+376.52%；原始值28275661000元，前月27161687000元，去年同月5933811000元；MoM／YoY程式計算。取得途徑：CasualMarket MCP；TWSE主工具無此公司資料後備援。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-8299-1",
+          "publisher": "群聯 官方網站",
+          "title": "Taking you to the Fast Lane: Phison Drives Innovation at CES 2024 with Enthusiast and Mainstream Consumer Solutions Designed to Elevate Cross-Platform User Experience - Phison Blog（2026-09-11查詢）",
+          "url": "https://phisonblog.com/taking-you-to-the-fast-lane-phison-drives-innovation-at-ces-2024/",
+          "claim": "2024-01-08 CES公告列E26 Max14um、E31T 4-channel DRAMless、E27T及U21 USB4，並揭露Micron／Crucial T500／T700合作；當時展示不證實本月配置或收入。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-26",
+      "confidence": "high",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "NAND管理韌體、LDPC錯誤更正、磨耗平均與垃圾回收",
-        "PCIe／NVMe佇列、主機介面與快取一致性控制",
-        "不同NAND顆粒的訊號、壽命、資料保存與量產相容性驗證"
+        "E31T：4-channel DRAMless架構；2024公告最高10.8GB/s及8TB上限",
+        "E26 Max14um：PCIe 5.0與I/O+技術；不與E31T功耗配置混用",
+        "U21：USB4單晶片儲存控制；E27T另對應低功耗PCIe 4.0便攜應用"
       ],
       "swot": {
         "strengths": [
-          "NAND控制器、韌體與SSD模組整合能力可涵蓋多種儲存介面",
-          "FinMind顯示2026年7月營收MoM+9.3%、YoY+377.6%，需求與產品出貨強勁"
+          "控制器型號、協定及Micron合作可由官方公告查證",
+          "PCIe與USB方案跨桌機、筆電及便攜儲存，具韌體與系統整合價值",
+          "2026年8月營收282.76億元，MoM+4.10%、YoY+376.52%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "營運高度依賴NAND產業循環與原廠供貨條件",
-          "本次MOPS僅揭露產業類別，未證實Apple／Samsung等直接客戶"
+          "NAND成本、存貨及整合模組占比會影響利潤，營收高增長不等於控制器單價上升",
+          "本次未取得8月價量或併表說明，不能把高成長歸因特定AI或企業SSD產品"
         ],
         "opportunities": [
-          "AI PC與伺服器儲存升級可增加高效能NVMe SSD需求",
-          "工控、車載與邊緣設備需要長供貨週期與客製韌體方案"
+          "PCIe 5.0普及與低功耗SSD升級提供控制器導入空間",
+          "USB4便攜儲存可擴展單晶片高速方案應用"
         ],
         "threats": [
-          "慧榮、Marvell與NAND原廠自研控制器競爭",
-          "NAND價格快速下跌或客戶去庫存可能使高成長急轉直下"
+          "NAND價格反轉或客戶庫存修正可能放大營運波動",
+          "慧榮、Marvell及NAND原廠自研控制器構成競爭"
         ]
       }
     }

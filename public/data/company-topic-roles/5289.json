@@ -2,92 +2,94 @@
   "schemaVersion": 1,
   "companyCode": "5289",
   "companyName": "宜鼎",
-  "updatedAt": "2026-09-04T19:06:48Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "cxl-memory-pooling",
       "topicName": "CXL 記憶體池化",
       "topicType": "technology",
-      "directness": "indirect",
-      "supplyChainStage": "industrial_memory_adjacent",
-      "roleType": "industrial_memory_adjacent_to_cxl",
-      "roleSummary": "宜鼎MOPS直接支持工業用嵌入式儲存裝置與工業DRAM模組，但未揭露CXL控制器、CXL記憶體擴充卡或記憶體池化產品；本角色是工規記憶體能力對CXL生態的相鄰觀察。FinMind顯示2026年7月營收84.95億元、MoM+3.5%、YoY+636.5%，高增幅須留意基期與資料口徑，不能歸因CXL。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "cxl_memory_module_card",
+      "roleType": "cxl_type3_memory_expansion_supplier",
+      "roleSummary": "宜鼎MOPS的工業記憶體大類不足以否定CXL：現行官方CMM產品頁明列CXL 1.1／2.0 Type 3、PCIe Gen5 x8與E3.S 2T，2026年AIC型錄亦確認記憶體擴充卡。本次將過度保守的間接角色修正為CXL記憶體擴充直接供應；多主機池化仍需相容交換器、主機韌體及軟體，不代表單卡即可獨立完成。 本次最新可取得資料為2026年8月營收86.80億元，MoM+2.18%、YoY+576.29%；公司口徑，非本題材獨立收入。",
       "products": [
-        "工業用SATA固態硬碟",
-        "工業用NVMe固態硬碟",
-        "工業用DRAM記憶體模組",
-        "嵌入式快閃儲存模組"
+        "CXL CMM 64GB DDR5 E3.S 2T模組",
+        "CXL CMM 96GB DDR5 E3.S 2T模組",
+        "CXL CMM 128GB DDR5 E3.S 2T模組",
+        "CXL AIC HHHL記憶體擴充卡（最高256GB）"
       ],
       "customers": [
-        "Intel（CXL平台驗證對象，非MOPS揭露客戶)",
-        "AMD（伺服器平台驗證對象，非MOPS揭露客戶)",
-        "研華(2395；工業電腦應用對象，非MOPS揭露客戶)",
-        "Siemens（工業自動化應用對象，非MOPS揭露客戶)"
+        "Intel（CXL主機平台驗證對象，非揭露客戶）",
+        "AMD（CXL主機平台驗證對象，非揭露客戶）",
+        "研華（邊緣運算應用對象，非揭露客戶）",
+        "Siemens（工業運算應用對象，非揭露客戶）"
       ],
       "competitors": [
-        "創見(2451)",
-        "宇瞻(8271)",
-        "群聯(8299)"
+        "Samsung Electronics（CXL記憶體）",
+        "Micron（CXL記憶體）",
+        "SMART Modular（CXL方案）"
       ],
       "risks": [
-        "CXL市場仍在早期階段",
-        "工規記憶體市場規模有限"
+        "公司月營收未拆出CXL，本次高成長不能當作CXL放量證據",
+        "主機平台驗證及軟體支援成熟度可能拉長導入週期",
+        "DRAM原廠與其他CXL方案的成本及互通性競爭可能壓縮溢價"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用DRAM模組"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind fallback：2026年7月營收84.95億元，MoM+3.5%"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：工業用嵌入式儲存裝置及工業用動態隨機記憶體模組。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5289",
+          "claim": "股票代碼5289；本次MCP取得主要經營業務摘要：工業用嵌入式儲存裝置、工業用動態隨機記憶體模組。業務登記不自動證實具名客戶及型號規格。"
         },
         {
-          "sourceId": "finmind-revenue-history",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "FinMind月營收歷史",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收84.95億元，MoM+3.5%、YoY+636.5%；高增幅需留意基期與資料口徑。"
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=5289&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收86.80億元，MoM+2.18%、YoY+576.29%；原始值8680123000元，前月8494810000元，去年同月1283486000元；MoM／YoY程式計算。取得途徑：CasualMarket MCP；TWSE主工具無此公司資料後備援。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-5289-1",
+          "publisher": "宜鼎 官方網站",
+          "title": "CXL Memory Module E3.S 2T | CXL Memory Expander（2026-09-11查詢）",
+          "url": "https://www.innodisk.com/en/products/dram-modules/cxl/cxl-memory-module",
+          "claim": "CMM現行訂購料號涵蓋64／96／128GB；CXL 1.1／2.0 Type3、PCIe5 x8、DDR5 E3.S 2T及0–70°C，直接更正無CXL產品的舊推定。"
+        },
+        {
+          "sourceId": "official-role-v50-5289-2",
+          "publisher": "宜鼎 官方網站",
+          "title": "Innodisk_CXL_AIC_Flyer（2026-09-11查詢）",
+          "url": "https://www.innodisk.com/upload/file/innodisk_cxl_aic_flyer.pdf",
+          "claim": "2026年3月AIC型錄列PCIe5 x8、CXL2.0、HHHL、RDIMM VLP與最高256GB，勿套用CMM溫度及外形；多主機池化需平台架構配合。"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-27",
+      "confidence": "high",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "工業儲存之斷電保護、韌體管理與寫入耐久控制",
-        "DRAM模組訊號完整性、燒機與寬溫可靠度驗證",
-        "CXL協定與記憶體池化能力仍待正式產品揭露驗證"
+        "CMM：CXL 1.1／2.0 Type 3、CXL.mem與CXL.io、PCIe Gen5 x8",
+        "CMM：E3.S 2T、EDSFF 2C 84-pin、DDR5及0–70°C（僅限CMM規格）",
+        "AIC：HHHL卡、DDR5 RDIMM VLP與最高256GB；池化需整體平台支援"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持工業嵌入式儲存與DRAM模組，工規記憶體基礎明確",
-          "FinMind顯示7月營收MoM+3.5%，工業儲存與記憶體整體出貨仍有動能"
+          "CXL模組有現行規格及訂購料號，直接產品定位有實據",
+          "CMM與AIC提供不同安裝型式，可在不占主機DIMM槽下擴充記憶體",
+          "2026年8月營收86.80億元，MoM+2.18%、YoY+576.29%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "MOPS未揭露CXL控制器、擴充卡或記憶體池化產品，題材直接性不足",
-          "FinMind顯示YoY+636.5%異常高，需留意低基期、合併或資料口徑，不能直接當CXL成長"
+          "公司月營收未拆出CXL，本次高成長不能當作CXL放量證據",
+          "多主機池化需主機、交換器及作業系統配合，並非只有插卡就能部署"
         ],
         "opportunities": [
-          "CXL平台普及可為既有工規DRAM與儲存客戶帶來相容性驗證需求",
-          "邊緣AI與工業伺服器升級可提高高可靠記憶體與NVMe用量"
+          "AI工作集擴大可增加Type 3容量擴充需求",
+          "CXL AIC可服務邊緣資料中心及記憶體密集工作負載"
         ],
         "threats": [
-          "CXL控制器與模組規格由大型晶片及記憶體廠主導，宜鼎議價空間有限",
-          "CXL導入延後或平台碎片化會拉長產品驗證及量產週期"
+          "主機平台驗證及軟體支援成熟度可能拉長導入週期",
+          "DRAM原廠與其他CXL方案的成本及互通性競爭可能壓縮溢價"
         ]
       }
     },

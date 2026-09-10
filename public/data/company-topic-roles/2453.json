@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2453",
   "companyName": "凌群",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "enterprise_software_system_integration",
       "roleType": "system_integrator_enterprise_software_provider",
-      "roleSummary": "凌群MOPS支持電腦系統銷售出租、系統整合與軟硬體維護；既有公司產品資料可支撐DBMaker、NETCenter、OMFLOW與Ayuda，但MOPS未揭露行政院、兆豐金或台北捷運客戶。2026年7月營收5.87億元、YoY+5.3%，但MoM-8.2%。",
+      "roleSummary": "凌群MOPS支持系統整合與維護，官方產品站明列DBMaker、NETCenter、OMFLOW及Diamond Guard。原資料把Ayuda寫成CTI／IVR客服中心並不正確，官網定位為服務型機器人；本軟體雲資安角色改用真正的資料庫、維運與SOC產品，不混入機器人規格。 本次最新可取得資料為2026年8月營收6.23億元，MoM+6.00%、YoY+10.05%；公司口徑，非本題材獨立收入。",
       "products": [
-        "DBMaker關聯式資料庫與SQL應用平台",
-        "NETCenter網路與系統管理平台",
-        "OMFLOW流程管理與自動化平台",
-        "Ayuda客服中心與CTI／IVR整合系統",
-        "企業電腦系統整合與軟硬體維護服務"
+        "DBMaker SQL關聯式資料庫",
+        "NETCenter IT基礎架構監控平台",
+        "NETCenter Advanced整合維運平台",
+        "OMFLOW流程自動化平台",
+        "Diamond Guard資安監控與聯防方案"
       ],
       "customers": [
         "中華電信(2412；系統整合應用對象，非MOPS揭露客戶)",
@@ -26,12 +26,14 @@
         "台灣高鐵(2633；交通IT應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "系統整合商",
-        "企業軟體與資安服務供應商"
+        "精誠",
+        "叡揚資訊",
+        "ServiceNow（流程及IT維運平台）"
       ],
       "risks": [
-        "系統整合收入受政府與企業專案驗收時點影響",
-        "MOPS未揭露具名客戶或AI監控功能，舊資料的客戶與功能宣稱需降級"
+        "專案收入與自有軟體授權未分開，無法推算訂閱收入或產品毛利",
+        "國際監控與資安平台持續壓縮本土軟體議價空間",
+        "專案延遲及資安責任事件可能增加維護成本"
       ],
       "evidence": [
         {
@@ -50,43 +52,58 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦系統出租與銷售、系統整合及軟硬體維護。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2453",
+          "claim": "股票代碼2453；本次MCP取得主要經營業務摘要：電腦系統之出租與銷售、電腦系統整合及電腦軟硬體維護。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收5.87億元，MoM-8.2%、YoY+5.3%，累計YoY+6.1%。"
+          "claim": "2026年7月營收5.87億元，MoM-8.21%、YoY+5.30%，累計YoY+6.10%；原始當月值587363千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=2453&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收6.23億元，MoM+6.00%、YoY+10.05%；原始值622610000元，前月587363000元，去年同月565750000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-2453-1",
+          "publisher": "凌群 官方網站",
+          "title": "SYSCOM（2026-09-11查詢）",
+          "url": "https://syscomgo.com/en/",
+          "claim": "DBMaker、NETCenter／Advanced、OMFLOW及Diamond Guard功能明確；Ayuda為服務機器人，非CTI／IVR客服中心。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "關聯式資料庫SQL引擎、交易一致性與備援複寫",
-        "SNMP網管、事件告警與網路流量可視化",
-        "BPM工作流程、CTI／IVR與既有企業系統介接"
+        "DBMaker SQL資料管理及標準應用介面整合",
+        "OMFLOW流程引擎、表單及跨系統自動化串接",
+        "Diamond Guard SIEM／SOC、端點網路可視性及ISAC／CERT協同"
       ],
       "swot": {
         "strengths": [
-          "具DBMaker、NETCenter、OMFLOW與Ayuda等自有軟體產品，差異化高於純轉售",
-          "2026年7月營收YoY+5.3%、累計YoY+6.1%，維持小幅成長"
+          "自有資料庫、流程與監控產品可串接系統整合服務",
+          "Diamond Guard官方功能含事件前預防、偵測與事後應變",
+          "2026年8月營收6.23億元，MoM+6.00%、YoY+10.05%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "7月營收MoM-8.2%，專案型收入波動仍明顯",
-          "月營收5.87億元，研發與市場規模小於大型系統整合商"
+          "專案收入與自有軟體授權未分開，無法推算訂閱收入或產品毛利",
+          "跨系統客製導入依賴工程人力，服務擴張不等於純SaaS擴張"
         ],
         "opportunities": [
-          "資料庫自主化、流程數位化與網管現代化可擴大軟體維護收入",
-          "交通、金融與公部門系統汰換可帶動整合與長約維運需求"
+          "IT維運自動化與事件整合需求有利NETCenter與OMFLOW協作",
+          "跨IT／OT資安聯防可增加Diamond Guard與系統整合價值"
         ],
         "threats": [
-          "精誠、敦陽及國際軟體平台競爭大型標案",
-          "政府與企業預算遞延、缺工或交付延誤可能侵蝕專案毛利"
+          "國際監控與資安平台持續壓縮本土軟體議價空間",
+          "專案延遲及資安責任事件可能增加維護成本"
         ]
       }
     }

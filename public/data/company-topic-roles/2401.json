@@ -2,21 +2,20 @@
   "schemaVersion": 1,
   "companyCode": "2401",
   "companyName": "凌陽",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
       "topicName": "半導體製造｜晶圓代工",
       "topicType": "supply_chain_segment",
       "directness": "customer_or_channel",
-      "supplyChainStage": "fabless_ic_design",
-      "roleType": "fabless_ic_design_house",
-      "roleSummary": "凌陽MOPS支持IC與模組設計、製造、測試、銷售及應用軟體，但未證明自有晶圓廠、聯電28nm投片、車用MCU ASIL-B或具名客戶；在晶圓代工題材應定位為無廠IC設計需求方與平台整合對象。2026年7月營收7.46億元、YoY+37.6%、累計YoY+22.1%。",
+      "supplyChainStage": "ic_design_demand_side",
+      "roleType": "fabless_design_demand_adjacent_to_foundry",
+      "roleSummary": "凌陽官網明列SPHE8368-P車載影音、SPHE6702 ADAS及SPA300音訊處理器；MOPS中的IC製造字樣不代表對外經營晶圓代工。本晶圓代工角色維持IC設計需求端／供應鏈鄰接定位，移除無依據的通用MCU主產品。 本次最新可取得資料為2026年8月營收6.88億元，MoM-7.74%、YoY+40.95%；公司口徑，非本題材獨立收入。",
       "products": [
-        "微控制器與控制IC模組",
-        "多媒體音訊／影像處理IC模組",
-        "積體電路應用軟體與韌體",
-        "IC測試、銷售與技術支援服務"
+        "SPHE8368-P車載Display Audio SoC",
+        "SPHE6702 ADAS系統單晶片",
+        "SPA300高解析音訊處理器"
       ],
       "customers": [
         "聯電(2303；晶圓製造供應鏈對象，非MOPS揭露合作關係)",
@@ -25,69 +24,71 @@
         "Synopsys（EDA平台驗證對象，非MOPS揭露合作關係)"
       ],
       "competitors": [
-        "盛群(6202)(MCU)",
-        "中穎(6202)(MCU)",
-        "新唐(4919)(MCU)"
+        "聯發科（多媒體SoC）",
+        "瑞昱（音訊IC）"
       ],
       "risks": [
-        "MOPS未揭露晶圓廠、製程節點、功能安全認證或具名客戶，不能列為晶圓代工廠",
-        "IC產品需求與委外晶圓產能、投片成本及庫存循環高度連動"
+        "本次未驗證對外晶圓代工服務，收入不能視為代工產能或晶圓加工費",
+        "多媒體SoC價格競爭及車載設計導入延遲可能限制成長",
+        "將營收成長誤當代工業務成長會造成題材與估值錯配"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：各種積體電路及模組之設計、製造、測試與銷售，以及積體電路應用軟體研發銷售。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2401",
+          "claim": "股票代碼2401；本次MCP取得主要經營業務摘要：積體電路及模組之設計、製造、測試及銷售；積體電路應用軟體研究開發銷售；積體電路貿易代理。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收7.46億元，MoM+1.6%、YoY+37.6%，累計YoY+22.1%。"
+          "claim": "2026年7月營收7.46億元，MoM+1.60%、YoY+37.59%，累計YoY+22.12%；原始當月值745822千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=2401&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收6.88億元，MoM-7.74%、YoY+40.95%；原始值688102000元，前月745822000元，去年同月488178000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-2401-1",
+          "publisher": "凌陽 官方網站",
+          "title": "Sunplus Technology, A Leading Home Entertainment Multimedia SoC Design and IP Design Provider（2026-09-11查詢）",
+          "url": "https://w3.sunplus.com/",
+          "claim": "官網列SPHE8368-P Automotive Display Audio、SPHE6702 ADAS與SPA300 Premium HD Audio Processor；不提供對外晶圓代工證據。"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "數位／混合訊號IC架構、RTL設計與模組整合",
-        "DFT測試設計、韌體驗證與量產測試程式",
-        "晶圓代工PDK介接、Tape-out與封裝測試協同"
+        "SPHE8368-P車載顯示與音訊系統整合（官網用途）",
+        "SPHE6702 ADAS影像處理與系統驗證（工程分析）",
+        "SPA300高解析音訊訊號處理（官網產品定位）"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持IC設計、模組、應用軟體與測試銷售的完整產品化流程",
-          "2026年7月營收YoY+37.6%、累計YoY+22.1%，營運動能改善"
+          "具體車用影音與ADAS晶片型號可核對，避免把凌陽誤寫成MCU或晶圓製造平台",
+          "MOPS涵蓋IC設計、軟體、測試及銷售，可支持完整產品導入",
+          "2026年8月營收6.88億元，MoM-7.74%、YoY+40.95%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "在晶圓代工題材屬需求方而非產能供應者，無法直接受惠代工漲價",
-          "MOPS未揭露具體產品節點與代工夥伴，舊資料的28nm與ASIL-B宣稱欠缺本次證據"
+          "本次未驗證對外晶圓代工服務，收入不能視為代工產能或晶圓加工費",
+          "未披露各型號製程節點及具名晶圓供應關係",
+          "8月營收月減7.74%，即使年增仍有短期波動；未有本題材拆分。"
         ],
         "opportunities": [
-          "車載、消費與邊緣裝置晶片需求可增加委外投片與測試需求",
-          "與成熟製程代工平台共同優化成本、功耗與長供貨週期可形成利基"
+          "車用影音及ADAS需求可間接帶動委外晶圓需求",
+          "IC與應用軟體協同可縮短終端客戶產品開發"
         ],
         "threats": [
-          "晶圓代工產能緊張或價格上升會直接壓縮IC設計公司毛利",
-          "大型MCU與多媒體SoC競爭者可能以規模、IP與生態系壓制市場空間"
+          "多媒體SoC價格競爭及車載設計導入延遲可能限制成長",
+          "將營收成長誤當代工業務成長會造成題材與估值錯配"
         ]
       }
     }

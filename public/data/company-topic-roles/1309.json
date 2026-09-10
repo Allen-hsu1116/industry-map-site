@@ -2,85 +2,101 @@
   "schemaVersion": 1,
   "companyCode": "1309",
   "companyName": "台達化",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
       "topicName": "石化、塑橡膠與特用化學",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "台達化MOPS明確支持PS、ABS、SAN、玻璃棉與塑膠加工品，屬合成樹脂核心廠；MOPS未揭露台灣市占、聚合製程型式或台達電／鴻海等客戶。2026年7月營收10.32億元，MoM+71.6%，但YoY-10.6%、累計YoY-22.0%，反彈仍未扭轉衰退。",
+      "roleSummary": "台達化MOPS列PS、ABS、SAN及玻璃棉，現行官網主產品清單則列ABS、GPPS、HIPS、EPS及玻璃棉；本角色以後者為產品主軸，並用TAITAREX型號補上GPPS／HIPS細節，不把營業登記中的SAN自動當成現行主力。 本次最新可取得資料為2026年8月營收11.48億元，MoM+11.21%、YoY+6.37%；公司口徑，非本題材獨立收入。",
       "products": [
-        "GPPS通用級聚苯乙烯樹脂",
-        "HIPS耐衝擊聚苯乙烯樹脂",
+        "TAITAREX GPPS 808光學級聚苯乙烯樹脂",
+        "TAITAREX HIPS 666高流動射出級聚苯乙烯樹脂",
         "ABS共聚樹脂",
-        "SAN苯乙烯－丙烯腈共聚樹脂",
-        "建築與工業保溫用玻璃棉"
+        "EPS發泡性聚苯乙烯樹脂",
+        "建築及工業保溫用玻璃棉"
       ],
       "customers": [
-        "奇美實業（ABS／SAN產業鏈對象，非MOPS揭露客戶)",
-        "仁寶(2324；電子外殼材料應用對象，非MOPS揭露客戶)",
-        "緯創(3231；電子外殼材料應用對象，非MOPS揭露客戶)",
-        "鴻海(2317；塑膠材料應用對象，非MOPS揭露客戶)"
+        "NOVA Chemicals（官網揭露1999年PS技術引進對象，非客戶）",
+        "鴻海（電子外殼材料應用對象，非揭露客戶）",
+        "仁寶（電子外殼材料應用對象，非揭露客戶）",
+        "Amcor（包裝材料應用對象，非揭露客戶）"
       ],
       "competitors": [
-        "奇美實業(ABS/PS塑膠原料)",
-        "國喬(1312)(PS/ABS)",
-        "台化(1326)(PS/ABS)"
+        "奇美實業",
+        "國喬",
+        "台化"
       ],
       "risks": [
-        "7月YoY-10.6%、累計YoY-22.0%，單月MoM反彈可能只是低基期或出貨時點",
-        "PS、ABS與SAN受中國產能、苯乙烯與丁二烯原料價格夾擊"
+        "7月TWSE累計營收年減21.98%，8月單月轉正不代表累計衰退已消失",
+        "奇美、台化等競爭者價格策略可能壓低PS／ABS利差",
+        "原油及苯乙烯價格反轉可能導致庫存損失"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "1309公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 1309 role in 石化、塑橡膠與特用化學 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：聚苯乙烯、ABS、SAN、玻璃棉及塑膠原料加工品之製銷。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1309",
+          "claim": "股票代碼1309；本次MCP取得主要經營業務摘要：聚苯乙烯及加工品、ABS共聚體樹脂、SAN共聚合樹脂、玻璃棉及有關產品、塑膠原料及加工品之製銷。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收10.32億元，MoM+71.6%、YoY-10.6%，累計YoY-22.0%。"
+          "claim": "2026年7月營收10.32億元，MoM+71.55%、YoY-10.61%，累計YoY-21.98%；原始當月值1032063千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=1309&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收11.48億元，MoM+11.21%、YoY+6.37%；原始值1147797000元，前月1032063000元，去年同月1079037000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-1309-1",
+          "publisher": "台達化 官方網站",
+          "title": "產品資訊（2026-09-11查詢）",
+          "url": "https://www.ttc.com.tw/zh-tw/dirProduct/frmProduct.aspx",
+          "claim": "現行產品總覽列ABS、GPPS、HIPS、EPS及玻璃棉，不把MOPS登記SAN等同主力。"
+        },
+        {
+          "sourceId": "official-role-v50-1309-2",
+          "publisher": "台達化 官方網站",
+          "title": "GPPS/HIPS樹脂（2026-09-11查詢）",
+          "url": "https://www.ttc.com.tw/zh-tw/dirProduct/frmProduct3.aspx",
+          "claim": "GPPS 808光學級與HIPS 666射出級；另記錄1999年NOVA Chemicals技術引進，非當期客戶關係。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "GPPS／HIPS聚合之分子量、橡膠相與衝擊強度控制",
-        "ABS／SAN共聚比例、色澤、流動性與表面品質控制",
-        "玻璃棉纖維化、黏結與導熱性能控制"
+        "GPPS 808低殘留單體、透明度及耐熱性控制（官網產品特性）",
+        "HIPS 666射出流動性與耐衝擊性能平衡（官網產品特性）",
+        "EPS成型與玻璃棉隔熱用途之密度／尺寸穩定控制（工程分析）"
       ],
       "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "ps_abs_san_resin_producer",
+      "roleType": "ps_abs_eps_glass_wool_producer",
       "swot": {
         "strengths": [
-          "MOPS直接支持PS、ABS、SAN與玻璃棉等清楚產品線",
-          "7月營收MoM+71.6%，較6月明顯回升"
+          "PS具可核對的型號與加工用途，可區別光學級及射出級需求",
+          "ABS、PS、EPS及玻璃棉涵蓋外殼、包裝與隔熱應用",
+          "2026年8月營收11.48億元，MoM+11.21%、YoY+6.37%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "7月營收YoY-10.6%、累計YoY-22.0%，全年需求仍弱",
-          "產品多為成熟樹脂，差異化與成本轉嫁能力有限"
+          "7月TWSE累計營收年減21.98%，8月單月轉正不代表累計衰退已消失",
+          "樹脂利潤取決於苯乙烯等原料價差，營收不等於獲利"
         ],
         "opportunities": [
-          "家電、汽車與AI PC外殼需求回溫可改善ABS／SAN出貨",
-          "建築節能規範可增加玻璃棉保溫材料需求"
+          "光學級PS與特殊包裝材料可提升產品組合",
+          "建築節能改造提供玻璃棉與保溫材料的應用空間"
         ],
         "threats": [
-          "中國PS／ABS低價供給持續搶單",
-          "苯乙烯、丙烯腈與丁二烯價格波動可能使利差再度惡化"
+          "奇美、台化等競爭者價格策略可能壓低PS／ABS利差",
+          "原油及苯乙烯價格反轉可能導致庫存損失"
         ]
       }
     }

@@ -2,84 +2,91 @@
   "schemaVersion": 1,
   "companyCode": "1314",
   "companyName": "中石化",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
       "topicName": "石化、塑橡膠與特用化學",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "中石化MOPS只明確揭露CPL與AN製造銷售，因此產品應聚焦己內醯胺及丙烯腈不同下游等級，移除尼龍66原料與中國中石化客戶等未支持敘述。2026年7月營收10.60億元，雖MoM+1.8%，但YoY-35.6%、累計YoY-30.7%，景氣壓力很重。",
+      "roleSummary": "中石化MOPS主業為CPL及AN；官網另明列尼龍6粒與硫酸銨，因此以四種實際產品取代把同一CPL／AN按用途拆成多個產品的湊數寫法。CPL與AN仍是石化原料主軸，硫酸銨屬肥料產品，不把新材料名詞等同已形成大額收入。 本次最新可取得資料為2026年8月營收9.28億元，MoM-12.48%、YoY-24.41%；公司口徑，非本題材獨立收入。",
       "products": [
-        "尼龍6纖維級己內醯胺（CPL）",
-        "工程塑料聚合級己內醯胺（CPL）",
-        "ABS樹脂原料用丙烯腈（AN）",
-        "壓克力纖維原料用丙烯腈（AN）"
+        "己內醯胺CPL（尼龍6聚合原料）",
+        "丙烯腈AN（ABS及壓克力纖維原料）",
+        "PA6尼龍粒CHIP",
+        "硫酸銨AS肥料"
       ],
       "customers": [
-        "力麗(1444；尼龍6產業鏈應用對象，非MOPS揭露客戶)",
-        "集盛(1455；尼龍聚合應用對象，非MOPS揭露客戶)",
-        "奇美實業（ABS產業鏈應用對象，非MOPS揭露客戶)",
-        "台化(1326；合成材料產業鏈對象，非MOPS揭露客戶)"
+        "集盛（PA6及尼龍纖維應用對象，非揭露客戶）",
+        "奇美實業（AN／ABS應用對象，非揭露客戶）",
+        "台化（合成材料生態系對象，非揭露客戶）"
       ],
       "competitors": [
-        "中國石化(中國CPL/AN)",
-        "BASF(德國CPL)",
-        "台化(1326)(AN原料)"
+        "台塑（AN競爭對象）",
+        "中國石化（CPL／AN競爭對象）"
       ],
       "risks": [
-        "2026年7月營收YoY-35.6%、累計YoY-30.7%，需求與價格壓力明顯",
-        "CPL與AN產品集中度高，受中國產能與原料價格變動放大"
+        "CPL／AN屬循環性大宗化學品，設備固定成本及開工率敏感",
+        "區域CPL／AN擴產及低價出口壓力可能延續供過於求",
+        "能源、環保及工安要求可能提高營運成本"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "1314公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 1314 role in 石化、塑橡膠與特用化學 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：石油化學產品己內醯胺（CPL）及丙烯腈（AN）之製造與銷售。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1314",
+          "claim": "股票代碼1314；本次MCP取得主要經營業務摘要：石油化學產品CPL、AN之製造及銷售。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收10.60億元，MoM+1.8%、YoY-35.6%，累計YoY-30.7%。"
+          "claim": "2026年7月營收10.60億元，MoM+1.85%、YoY-35.60%，累計YoY-30.74%；原始當月值1059916千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=1314&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收9.28億元，MoM-12.48%、YoY-24.41%；原始值927609000元，前月1059916000元，去年同月1227152000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-1314-1",
+          "publisher": "中石化 官方網站",
+          "title": "產品系列 - 中國石油化學工業開發股份有限公司，中石化，石化、塑化、紡織、化纖、人纖、樹脂、工程塑膠等上游原料製造供應銷售。（2026-09-11查詢）",
+          "url": "https://www.cpdc.com.tw/tw/product_list",
+          "claim": "CPL、AN、PA6尼龍粒與AS硫酸銨四類產品均有官網列項。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "環己酮肟經貝克曼重排製造CPL的純度與副產物控制",
-        "丙烯氨氧化製造AN的觸媒選擇性與反應熱控制",
-        "大宗化學品連續製程的能耗、腐蝕與工安管理"
+        "CPL至PA6聚合的純度、含水率與分子量控制（工程分析）",
+        "AN製造與儲運之純度、反應熱及安全管理（工程分析）",
+        "硫酸銨結晶、粒度與肥料品質管理（工程分析）"
       ],
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "caprolactam_acrylonitrile_producer",
       "swot": {
         "strengths": [
-          "MOPS直接支持CPL與AN製造銷售，產品與供應鏈位置清楚",
-          "兩項產品分別連結尼龍6、ABS與壓克力纖維等大宗下游"
+          "CPL、AN、PA6與AS可在官網逐項核對，主業及下游延伸清楚",
+          "從尼龍原料到聚合粒料的產品銜接提供不同加工價值"
         ],
         "weaknesses": [
-          "7月營收YoY-35.6%、累計YoY-30.7%，營運衰退幅度大",
-          "產品集中CPL與AN，缺少MOPS可驗證的高附加價值下游延伸"
+          "CPL／AN屬循環性大宗化學品，設備固定成本及開工率敏感",
+          "全公司收入未拆出CPL、AN與PA6利差，無法由收入判斷個別產品獲利",
+          "2026年8月營收9.28億元，MoM-12.48%、YoY-24.41%；公司整體營收收縮，需追蹤產品價量與利差。"
         ],
         "opportunities": [
-          "工程塑料與汽車輕量化若回溫，可改善CPL需求",
-          "ABS與壓克力纖維補庫可帶動AN稼動率回升"
+          "尼龍6工程塑料及差異化粒料可能減少純原料價格競爭",
+          "製程節能與副產品品質改善可降低每噸成本"
         ],
         "threats": [
-          "中國CPL與AN產能過剩持續壓低區域報價",
-          "油價、氨與丙烯等原料波動加上環保成本，可能進一步壓縮利差"
+          "區域CPL／AN擴產及低價出口壓力可能延續供過於求",
+          "能源、環保及工安要求可能提高營運成本"
         ]
       }
     }

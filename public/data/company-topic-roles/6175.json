@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6175",
   "companyName": "立敦",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "passive-components",
@@ -11,12 +11,13 @@
       "directness": "supplier",
       "supplyChainStage": "capacitor_upstream_materials",
       "roleType": "aluminum_electrolytic_capacitor_foil_supplier",
-      "roleSummary": "立敦MOPS明確支持化成鋁箔與電蝕鋁箔生產銷售，屬鋁電解電容器上游材料；但未揭露400V至700V規格、全球排名或Nichicon等客戶。FinMind顯示2026年7月營收4.75億元、YoY+40.6%，但MoM-2.3%。",
+      "roleSummary": "立敦MOPS支持化成及電蝕鋁箔；官網規格清單明列低、中、高壓陽極化成箔、粉末積層化成箔及低壓電蝕箔。此角色是鋁電解電容上游材料，不是MLCC陶瓷粉末或電容成品製造，未讀取各PDF前不擅加工作電壓數字。 本次最新可取得資料為2026年8月營收4.84億元，MoM+2.01%、YoY+68.94%；公司口徑，非本題材獨立收入。",
       "products": [
-        "鋁電解電容器用化成鋁箔",
-        "鋁電解電容器用電蝕鋁箔",
-        "高比電容量陽極鋁箔",
-        "高耐壓電容器用形成箔"
+        "低壓陽極用化成鋁箔",
+        "中壓陽極用化成鋁箔",
+        "高壓陽極用化成鋁箔",
+        "粉末積層化成箔",
+        "低壓陽極用電蝕箔"
       ],
       "customers": [
         "Nichicon（鋁電解電容應用對象，非MOPS揭露客戶)",
@@ -25,21 +26,16 @@
         "立隆電(2472；鋁電解電容供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "鋁箔材料供應商",
-        "電容器上游材料廠"
+        "日本蓄電器工業JCC",
+        "KDK日本電解電容器材料",
+        "新疆眾和"
       ],
       "risks": [
-        "鋁價、電力成本與下游電容器庫存會影響毛利與稼動率",
-        "MOPS未支持電壓、壽命、全球排名或具名客戶，不能保留過度精確的商業宣稱"
+        "電壓等級不等於已核對的實際額定電壓或特定電源認證",
+        "日系及中國鋁箔材料商的品質與價格競爭持續",
+        "能源供應或電蝕化成良率波動可能影響交期及成本"
       ],
       "evidence": [
-        {
-          "sourceId": "mops-6175-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "立敦科技股份有限公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "立敦科技股份有限公司基本資料 supports 立敦 role as aluminum_electrolytic_capacitor_foil_supplier in 被動元件 through disclosed product/service scope."
-        },
         {
           "sourceId": "mops-6175-annual-report",
           "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
@@ -49,43 +45,51 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：化成鋁箔與電蝕鋁箔之生產及銷售。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6175",
+          "claim": "股票代碼6175；本次MCP取得主要經營業務摘要：生產及銷售化成鋁箔、生產及銷售電蝕鋁箔。業務登記不自動證實具名客戶及型號規格。"
         },
         {
-          "sourceId": "finmind-taiwan-stock-datasets",
+          "sourceId": "finmind-monthly-revenue",
           "publisher": "FinMind",
-          "title": "公司月營收",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收4.75億元，MoM-2.3%、YoY+40.6%。"
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6175&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收4.84億元，MoM+2.01%、YoY+68.94%；原始值484052000元，前月474537000元，去年同月286526000元；MoM／YoY程式計算。取得途徑：CasualMarket MCP；TWSE主工具無此公司資料後備援。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-6175-1",
+          "publisher": "立敦 官方網站",
+          "title": "立敦科技股份有限公司 LITON TECHNOLOGY CORP.（2026-09-11查詢）",
+          "url": "http://www.liton.com.tw/liton_web/pro-1.asp",
+          "claim": "現行規格清單列低中高壓陽極化成箔、粉末積層化成箔與低壓電蝕箔；本次未讀各PDF，不推定電壓數字。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "鋁箔陽極氧化形成介電氧化膜與耐壓控制",
-        "直流／交流電蝕擴大有效表面積與比電容量",
-        "箔厚、晶粒、孔蝕均勻性及捲對捲製程控制"
+        "陽極化成氧化膜之厚度、漏電及耐壓控制（工程分析）",
+        "電蝕擴大有效表面積與比電容量一致性管理（工程分析）",
+        "粉末積層化成箔產品路線（官網規格清單，未推定配方或電壓）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持化成鋁箔與電蝕鋁箔，供應鏈角色清楚",
-          "FinMind顯示7月營收YoY+40.6%，下游需求較去年同期改善"
+          "官方按低中高壓及粉末積層分類，材料用途比泛稱鋁箔更具辨識性",
+          "電蝕與化成提供電容介電與有效面積的上游加工價值",
+          "2026年8月營收4.84億元，MoM+2.01%、YoY+68.94%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "7月營收MoM-2.3%，短期成長並非一路向上",
-          "產品集中鋁電解電容上游，受鋁價、電價與成熟市場議價影響"
+          "電壓等級不等於已核對的實際額定電壓或特定電源認證",
+          "電費與高純度鋁料成本敏感，營收成長不保證加工利差改善"
         ],
         "opportunities": [
-          "資料中心電源、工業變頻器與新能源設備可增加高耐壓電容用箔需求",
-          "提升比電容量與耐壓一致性可改善單位產品價值"
+          "伺服器電源、逆變器等電容應用可提高高性能箔需求",
+          "高比電容量與粉末積層路線可提供差異化材料空間"
         ],
         "threats": [
-          "中國化成箔擴產與低價競爭壓縮報價",
-          "薄膜電容、固態電容與MLCC在部分應用替代鋁電解電容"
+          "日系及中國鋁箔材料商的品質與價格競爭持續",
+          "能源供應或電蝕化成良率波動可能影響交期及成本"
         ]
       }
     }

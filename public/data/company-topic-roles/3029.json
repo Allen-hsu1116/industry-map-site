@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3029",
   "companyName": "零壹",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "software-cloud-security",
@@ -11,84 +11,106 @@
       "directness": "core",
       "supplyChainStage": "it_distribution",
       "roleType": "cybersecurity_value_added_distributor",
-      "roleSummary": "零壹MOPS明確揭露網路資安、IT基礎架構、雲平台與大數據產品的代理、製造及開發，屬加值經銷與整合角色；原廠名稱應視為供應鏈對象，不是客戶。2026年7月營收32.42億元、MoM+27.8%、YoY+59.2%，公司明確說明受惠IT基建AI化與資安韌性專案。",
+      "roleSummary": "零壹是資安、IT基建與混合雲加值代理商，官網可核對Palo Alto Networks、Nutanix及NetApp代理與產品頁；這些是上游原廠，不是零壹的下游客戶。7月TWSE備註提及IT基建AI化及資安專案，僅保留為7月解釋，不套用至8月成長。 本次最新可取得資料為2026年8月營收34.88億元，MoM+7.58%、YoY+44.44%；公司口徑，非本題材獨立收入。",
       "products": [
-        "次世代防火牆、SASE與零信任整合方案",
-        "EDR／XDR與SIEM資安監控整合方案",
-        "虛擬化與超融合私有雲基礎架構",
-        "企業備份、資料保護與災難復原方案",
-        "大數據分析與AI運算基礎架構"
+        "Palo Alto Networks Strata零信任網路安全平台代理整合",
+        "Palo Alto Networks Cortex資安作業平台代理整合",
+        "Nutanix NCI混合雲超融合平台代理整合",
+        "Nutanix NKP Kubernetes平台代理整合",
+        "NetApp ONTAP儲存及資料保護方案代理整合"
       ],
       "customers": [
-        "Fortinet（資安原廠供應鏈對象，非客戶）",
-        "Palo Alto Networks（資安原廠供應鏈對象，非客戶）",
-        "Broadcom VMware（虛擬化平台供應鏈對象，非客戶）",
-        "Nutanix（超融合平台供應鏈對象，非客戶）"
+        "Palo Alto Networks（官網確認代理原廠／供應鏈對象，非客戶）",
+        "Nutanix（官網確認代理原廠／供應鏈對象，非客戶）",
+        "NetApp（官網確認代理原廠／供應鏈對象，非客戶）"
       ],
       "competitors": [
-        "精誠(6214)",
-        "敦陽(2360)",
-        "聚碩(6270)"
+        "精誠",
+        "大綜",
+        "邁達特"
       ],
       "risks": [
-        "代理權調整與原廠直銷可能改變產品組合及毛利",
-        "專案驗收、軟硬體轉售占比與大型標案時點會造成營收波動"
+        "代理收入受原廠授權條件及硬體／軟體組合影響，不是全額高毛利SaaS",
+        "原廠改變通路政策、授權或直銷模式會影響代理業務",
+        "大型專案驗收與採購遞延可能放大月營收波動"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：網路軟硬體代理、製造與開發；涵蓋網路資安、IT基礎架構、雲平台、大數據。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3029",
+          "claim": "股票代碼3029；本次MCP取得主要經營業務摘要：網路軟硬體產品代理製造開發；產品分類為網路暨資訊安全、IT基礎架構、雲平台與應用、大數據與應用及其他。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收32.42億元，MoM+27.8%、YoY+59.2%，累計YoY+16.2%；公司說明受惠IT基建AI化與資安韌性專案。"
+          "claim": "2026年7月營收32.42億元，MoM+27.79%、YoY+59.18%，累計YoY+16.20%；原始當月值3242008千元。該月申報備註：本月營收成長主要受惠於IT基建AI化、資安韌性產品專案挹注。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3029&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收34.88億元，MoM+7.58%、YoY+44.44%；原始值3487591000元，前月3242008000元，去年同月2414496000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-3029-1",
+          "publisher": "零壹 官方網站",
+          "title": "代理品牌列表（2026-09-11查詢）",
+          "url": "https://www.zerone.com.tw/product/brand",
+          "claim": "確認Palo Alto Networks、Nutanix、NetApp為代理原廠而非下游客戶。"
+        },
+        {
+          "sourceId": "official-role-v50-3029-2",
+          "publisher": "零壹 官方網站",
+          "title": "品牌總覽 | Palo Alto Networks（2026-09-11查詢）",
+          "url": "https://www.zerone.com.tw/product/brand/palo-alto-networks",
+          "claim": "Strata網路安全與Cortex資安作業平台及零壹加值代理服務。"
+        },
+        {
+          "sourceId": "official-role-v50-3029-3",
+          "publisher": "零壹 官方網站",
+          "title": "品牌總覽 | Nutanix | 零壹科技 Zerone｜企業 IT 現代化的最佳夥伴（2026-09-11查詢）",
+          "url": "https://www.zerone.com.tw/product/brand/nutanix",
+          "claim": "Nutanix NCI、NKP、混合雲與容器產品由零壹提供導入支援。"
+        },
+        {
+          "sourceId": "official-role-v50-3029-4",
+          "publisher": "零壹 官方網站",
+          "title": "品牌總覽 | NetApp | 零壹科技 Zerone｜企業 IT 現代化的最佳夥伴（2026-09-11查詢）",
+          "url": "https://www.zerone.com.tw/product/brand/netapp",
+          "claim": "NetApp ONTAP、Snapshot、SnapMirror及混合雲資料管理方案。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "防火牆策略、SASE連線與身分式零信任架構整合",
-        "EDR／XDR遙測、SIEM日誌關聯與事件應變流程",
-        "虛擬化、超融合、備份及混合雲遷移的容量與可用性設計"
+        "Nutanix NCI運算／儲存／虛擬化整合與NKP容器管理",
+        "NetApp ONTAP Snapshot快照、SnapMirror複寫及混合雲資料管理",
+        "Palo Alto Networks Strata與Cortex之網路防護及SOC可視性整合"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持資安、IT基礎架構、雲平台與大數據產品線",
-          "7月營收MoM+27.8%、YoY+59.2%，且公司明確歸因AI基建與資安韌性專案"
+          "官方品牌頁提供代理方向、售前驗證及在地導入服務的明確依據",
+          "跨資安、混合雲及資料保護的組合可增加專案交叉銷售",
+          "2026年8月營收34.88億元，MoM+7.58%、YoY+44.44%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "加值經銷模式毛利受原廠政策與轉售占比限制",
-          "MOPS未揭露終端客戶，不能以電信或金融機構名稱包裝成已確認關係"
+          "代理收入受原廠授權條件及硬體／軟體組合影響，不是全額高毛利SaaS",
+          "8月FinMind無申報備註，不能將7月AI與資安解釋直接延用"
         ],
         "opportunities": [
-          "企業AI基礎設施升級可帶動伺服器、虛擬化、資料保護與資安整合",
-          "零信任、SASE與資安韌性法遵可增加長期維運服務收入"
+          "虛擬化轉換與Kubernetes導入可增加NCI／NKP評估案件",
+          "勒索防護及混合雲資料一致性需求可帶動ONTAP與SOC整合"
         ],
         "threats": [
-          "原廠併購、代理權重整或直接銷售會壓縮通路空間",
-          "精誠、敦陽與其他加值經銷商競價可能稀釋專案毛利"
+          "原廠改變通路政策、授權或直銷模式會影響代理業務",
+          "大型專案驗收與採購遞延可能放大月營收波動"
         ]
       }
     }

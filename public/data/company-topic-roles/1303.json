@@ -2,85 +2,93 @@
   "schemaVersion": 1,
   "companyCode": "1303",
   "companyName": "南亞",
-  "updatedAt": "2026-08-26T19:04:29Z",
+  "updatedAt": "2026-09-10T19:16:45Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
       "topicName": "石化、塑橡膠與特用化學",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "roleSummary": "南亞MOPS支持塑膠加工品、塑膠原料、電子材料、聚酯纖維、染整與配電盤等多元製造，屬石化與材料核心公司；但MOPS未證明特定CCL規格或台積電、Nike等客戶。2026年7月營收305.73億元、MoM+12.7%、YoY+44.5%，累計YoY+19.9%。",
+      "roleSummary": "南亞在石化塑膠題材的定位收斂到可逐項核對的PET膜材：官網列光學電子、工業、包裝、回收及輕量白色聚酯膜，MOPS亦支持塑膠加工與聚酯業務；電子材料及配電盤不是本角色的主產品。 本次最新可取得資料為2026年8月營收306.01億元，MoM+0.09%、YoY+46.75%；公司口徑，非本題材獨立收入。",
       "products": [
-        "聚酯薄膜與塑膠加工膜材",
-        "聚酯纖維、聚酯絲與染整加工品",
-        "銅箔基板等電子材料",
-        "PVC管材與塑膠加工品",
-        "配電盤與電機配套產品"
+        "光學及電子級PET聚酯膜",
+        "工業用PET聚酯膜",
+        "包裝用PET聚酯膜",
+        "寶特瓶片再生PET聚酯膜",
+        "輕量化白色PET聚酯膜"
       ],
       "customers": [
-        "遠東新(1402；聚酯產業鏈對象，非MOPS揭露客戶)",
-        "台化(1326；石化原料供應鏈對象，非MOPS揭露客戶)",
-        "欣興(3037；電子材料應用對象，非MOPS揭露客戶)",
-        "台積電(2330；電子材料終端應用對象，非MOPS揭露客戶)"
+        "友達（光學膜應用對象，非揭露客戶）",
+        "群創（光學膜應用對象，非揭露客戶）",
+        "Amcor（PET包裝膜應用對象，非揭露客戶）",
+        "遠東新（聚酯循環材料生態系對象，非揭露客戶）"
       ],
       "competitors": [
-        "奇美實業(ABS/PS塑膠原料)",
-        "聯茂電子(6213)(高頻CCL基板)",
-        "遠東新(1402)(聚酯纖維)"
+        "東麗（PET膜材競爭對象）",
+        "三菱化學（PET膜材競爭對象）"
       ],
       "risks": [
-        "多元產品雖分散風險，但石化、纖維與電子材料景氣不同步，資本配置複雜",
-        "MOPS未拆分題材營收或具名客戶，不能將公司成長全歸因高階電子材料"
+        "全公司收入含電子材料與其他事業，不能把成長全部視為PET薄膜景氣",
+        "原生樹脂降價可能削弱再生膜材價格競爭力",
+        "PET膜新增產能與下游議價會壓縮加工利差"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "1303公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 1303 role in 石化、塑橡膠與特用化學 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：各種塑膠加工品、塑膠原料、電子材料、聚酯纖維之製銷與染整加工及配電盤。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "公司完整基本資料（54欄位版；2026-09-11查詢）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1303",
+          "claim": "股票代碼1303；本次MCP取得主要經營業務摘要：各種塑膠加工品、塑膠原料、電子材料、聚酯纖維之製銷及染整加工、配電盤。業務登記不自動證實具名客戶及型號規格。"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026年7月營收（2026-09-11主工具回傳；非最新月份）",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收305.73億元，MoM+12.7%、YoY+44.5%，累計YoY+19.9%。"
+          "claim": "2026年7月營收305.73億元，MoM+12.67%、YoY+44.53%，累計YoY+19.94%；原始當月值30572583千元。該月申報備註：-。本次另取得8月FinMind，不把7月原因移植至8月。"
+        },
+        {
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind",
+          "title": "2026年8月營收（2026-09-11查詢）",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=1303&start_date=2025-07-01&end_date=2026-09-11",
+          "claim": "2026年8月營收306.01億元，MoM+0.09%、YoY+46.75%；原始值30601161000元，前月30572583000元，去年同月20853020000元；MoM／YoY程式計算。取得途徑：public HTTP API freshness supplement after successful MCP TWSE July lookup。FinMind未回傳申報備註，無法認定成長原因；未拆本題材收入。"
+        },
+        {
+          "sourceId": "official-role-v50-1303-1",
+          "publisher": "南亞 官方網站",
+          "title": "我們的產品（2026-09-11查詢）",
+          "url": "https://npc.com.tw/j2npc/zhtw/prodindex?dc_btn_0=Func_Prodlist&dc_cateid_0=P_C_002",
+          "claim": "官網列出光學電子、工業、包裝、回收及輕量白色PET膜；製程控制項目另標工程分析。"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-26",
+      "lastVerified": "2026-09-11",
       "status": "verified",
       "techFocus": [
-        "聚酯聚合、薄膜雙軸延伸與厚度均勻性控制",
-        "纖維紡絲、假撚與染整製程",
-        "電子材料樹脂配方、銅箔壓合與耐熱可靠度控制"
+        "PET膜材厚度與光學均勻性控制（依產品用途之工程分析）",
+        "回收瓶片至PET膜材的雜質、色澤與品質一致性管理（工程分析）",
+        "包裝／工業膜之尺寸穩定與表面處理匹配（工程分析）"
       ],
-      "supplyChainStage": "upstream_petrochemical_materials",
-      "roleType": "diversified_petrochemical_materials_supplier",
+      "supplyChainStage": "polyester_film_processing",
+      "roleType": "pet_film_materials_supplier",
       "swot": {
         "strengths": [
-          "MOPS支持塑膠、聚酯纖維與電子材料的多元產品組合",
-          "2026年7月營收YoY+44.5%、累計YoY+19.9%，公司整體動能強"
+          "官網直接列出五類PET膜材，較單寫塑膠或聚酯纖維更能定位加工價值",
+          "產品跨光學、工業及包裝用途，有助分散單一應用需求",
+          "2026年8月營收306.01億元，MoM+0.09%、YoY+46.75%；整體營收成長，非個別產品或題材收入證據。"
         ],
         "weaknesses": [
-          "成熟塑膠與纖維產品受大宗原料利差及中國產能影響",
-          "本次資料未拆分電子材料占比，題材純度低於專業材料廠"
+          "全公司收入含電子材料與其他事業，不能把成長全部視為PET薄膜景氣",
+          "光學級與回收級膜材需要不同品質管制，轉換產品組合有驗證成本"
         ],
         "opportunities": [
-          "高速運算與車用電子可增加高耐熱電子材料需求",
-          "循環聚酯與低碳薄膜可配合品牌減碳與再生材料採購"
+          "回收含量要求可增加瓶片再生PET膜導入機會",
+          "薄型化與光學均勻性需求可提高差異化加工價值"
         ],
         "threats": [
-          "油價、乙二醇與樹脂原料波動可能壓縮加工利差",
-          "中國石化、聚酯與電子材料擴產帶來跨產品線價格競爭"
+          "原生樹脂降價可能削弱再生膜材價格競爭力",
+          "PET膜新增產能與下游議價會壓縮加工利差"
         ]
       }
     }
