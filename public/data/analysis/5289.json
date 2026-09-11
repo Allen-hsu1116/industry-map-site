@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "5289",
   "name": "宜鼎",
-  "generatedAt": "2026-09-10T12:31:40.902Z",
+  "generatedAt": "2026-09-11T12:32:07.415Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -184,10 +184,10 @@
         "topicName": "CXL 記憶體池化",
         "canonicalTopicId": "cxl-memory-pooling",
         "canonicalTopicName": "CXL 記憶體池化",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "宜鼎MOPS直接支持工業用嵌入式儲存裝置與工業DRAM模組，但未揭露CXL控制器、CXL記憶體擴充卡或記憶體池化產品；本角色是工規記憶體能力對CXL生態的相鄰觀察。FinMind顯示2026年7月營收84.95億元、MoM+3.5%、YoY+636.5%，高增幅須留意基期與資料口徑，不能歸因CXL。"
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "high",
+        "roleSummary": "宜鼎MOPS的工業記憶體大類不足以否定CXL：現行官方CMM產品頁明列CXL 1.1／2.0 Type 3、PCIe Gen5 x8與E3.S 2T，2026年AIC型錄亦確認記憶體擴充卡。本次將過度保守的間接角色修正為CXL記憶體擴充直接供應；多主機池化仍需相容交換器、主機韌體及軟體，不代表單卡即可獨立完成。 本次最新可取得資料為2026年8月營收86.80億元，MoM+2.18%、YoY+576.29%；公司口徑，非本題材獨立收入。"
       }
     ],
     "swot": [],
@@ -269,12 +269,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 108 天未更新"
+        "message": "股價資料已 109 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 108 天未更新"
+        "message": "籌碼資料已 109 天未更新"
       }
     ]
   },

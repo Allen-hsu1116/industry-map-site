@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2453",
   "name": "凌群",
-  "generatedAt": "2026-09-10T12:31:40.401Z",
+  "generatedAt": "2026-09-11T12:32:07.064Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-10",
-  "chipDataDate": "2026-09-10",
+  "marketDataDate": "2026-09-11",
+  "chipDataDate": "2026-09-11",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,32 +15,33 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -10,
-    "summary": "凌群 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
+    "stance": "bullish",
+    "label": "偏多",
+    "score": 58,
+    "summary": "凌群 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；帶量上漲，量比 2.29x。",
     "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+      "收盤價、MA5、MA20 呈多頭排列",
+      "帶量上漲，量比 2.29x"
     ],
     "risks": [],
     "watch": [
       "股價貼近 MA20，留意方向選擇",
-      "接近 20 日低點 51.30，留意支撐是否失守"
+      "接近 20 日高點 53.40，觀察是否突破"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 28,
-    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +179張；近 20 日法人偏買，合計 +435張。",
+    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +273張；近 20 日法人偏買，合計 +482張。",
     "signals": [
-      "三大法人近 5 日合計買超 +179張",
-      "近 20 日法人偏買，合計 +435張",
-      "外資近 5 日買超 +179張"
+      "三大法人近 5 日合計買超 +273張",
+      "近 20 日法人偏買，合計 +482張",
+      "外資近 5 日買超 +275張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-10"
+      "最近法人資料日：2026-09-11"
     ]
   },
   "industry": {
@@ -49,11 +50,11 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 6 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "資安、雲端服務與企業軟體",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "凌群MOPS支持電腦系統銷售出租、系統整合與軟硬體維護；既有公司產品資料可支撐DBMaker、NETCenter、OMFLOW與Ayuda，但MOPS未揭露行政院、兆豐金或台北捷運客戶。2026年7月營收5.87億元、YoY+5.3%，但MoM-8.2%。",
+      "roleSummary": "凌群MOPS支持系統整合與維護，官方產品站明列DBMaker、NETCenter、OMFLOW及Diamond Guard。原資料把Ayuda寫成CTI／IVR客服中心並不正確，官網定位為服務型機器人；本軟體雲資安角色改用真正的資料庫、維運與SOC產品，不混入機器人規格。 本次最新可取得資料為2026年8月營收6.23億元，MoM+6.00%、YoY+10.05%；公司口徑，非本題材獨立收入。",
       "supplyChainStage": "enterprise_software_system_integration",
       "roleType": "system_integrator_enterprise_software_provider",
       "directness": "core",
@@ -94,7 +95,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 high +16",
       "題材 資安、雲端服務與企業軟體（theme/active） +18",
-      "角色證據 4 則 +12",
+      "角色證據 6 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -132,7 +133,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-10"
+      "lastVerified": "2026-09-11"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -162,7 +163,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "凌群MOPS支持電腦系統銷售出租、系統整合與軟硬體維護；既有公司產品資料可支撐DBMaker、NETCenter、OMFLOW與Ayuda，但MOPS未揭露行政院、兆豐金或台北捷運客戶。2026年7月營收5.87億元、YoY+5.3%，但MoM-8.2%。"
+        "roleSummary": "凌群MOPS支持系統整合與維護，官方產品站明列DBMaker、NETCenter、OMFLOW及Diamond Guard。原資料把Ayuda寫成CTI／IVR客服中心並不正確，官網定位為服務型機器人；本軟體雲資安角色改用真正的資料庫、維運與SOC產品，不混入機器人規格。 本次最新可取得資料為2026年8月營收6.23億元，MoM+6.00%、YoY+10.05%；公司口徑，非本題材獨立收入。"
       }
     ],
     "swot": [
@@ -230,20 +231,21 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 65,
-    "recommendationState": "watchlist",
+    "totalScore": 80,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 16.5 倍，估值尚可對照成長",
-        "殖利率 5.4%，提供部分下檔支撐"
+        "本益比 16.7 倍，估值尚可對照成長",
+        "殖利率 5.3%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "趨勢題材股",
       "rationale": [
+        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
@@ -252,10 +254,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：51.90",
-      "波段多空分水嶺看 MA20：51.97",
-      "追蹤法人是否延續 買超：最近 +43張",
-      "本益比 16.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：52.08",
+      "波段多空分水嶺看 MA20：52.02",
+      "追蹤法人是否延續 買超：最近 +135張",
+      "本益比 16.7 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 53.40 且量比 > 1.5：列為轉強訊號",

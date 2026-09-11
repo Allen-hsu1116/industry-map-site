@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-09-10T12:31:40.300Z",
+  "generatedAt": "2026-09-11T12:32:06.995Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-10",
-  "chipDataDate": "2026-09-10",
+  "marketDataDate": "2026-09-11",
+  "chipDataDate": "2026-09-11",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,16 +15,17 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bearish",
-    "label": "偏空",
-    "score": -30,
-    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列。",
-    "signals": [],
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": -15,
+    "summary": "旺宏 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 3.6%。",
+    "signals": [
+      "均線結構偏震盪，尚未形成明確排列"
+    ],
     "risks": [
-      "收盤價、MA5、MA20 呈空頭排列"
+      "收盤跌破 MA20 3.6%"
     ],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
@@ -32,17 +33,17 @@
     "stance": "neutral",
     "label": "籌碼中性",
     "score": 0,
-    "summary": "旺宏 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.3萬張；外資近 5 日買超 +1.4萬張。",
+    "summary": "旺宏 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +9.6千張；外資近 5 日買超 +1萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.3萬張",
-      "外資近 5 日買超 +1.4萬張"
+      "三大法人近 5 日合計買超 +9.6千張",
+      "外資近 5 日買超 +1萬張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -2.8萬張",
-      "投信近 5 日賣超 -2.3千張"
+      "近 20 日法人偏賣，合計 -3.7萬張",
+      "投信近 5 日賣超 -1.3千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-10"
+      "最近法人資料日：2026-09-11"
     ]
   },
   "industry": {
@@ -168,7 +169,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-09-10"
+      "lastVerified": "2026-09-11"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -207,8 +208,8 @@
         "canonicalTopicName": "IC 設計與矽智財",
         "directness": "supplier",
         "directnessLabel": "供應商角色",
-        "confidence": "medium",
-        "roleSummary": "旺宏MOPS支持積體電路與半導體產品從研發、設計到製造測試及銷售，屬非揮發性記憶體IDM而非純IC設計公司；本題材保留產品供應角色，但刪除MOPS未支持的節點、認證與Tesla等直接客戶宣稱。2026年7月營收77.25億元、MoM+11.0%、YoY+180.5%，公司說明為市場需求增加。"
+        "confidence": "high",
+        "roleSummary": "旺宏同時具設計與製造業務，不是純無晶圓廠設計公司；本IC設計角色聚焦官方OctaBus產品族的介面及架構價值。LM／UM的最高250MHz不能套用到每款記憶體，LW／UW的多bank並行操作另行標示。 本次最新可取得資料為2026年8月營收81.45億元，MoM+5.44%、YoY+218.53%；公司口徑，非本題材獨立收入。"
       }
     ],
     "swot": [
@@ -290,7 +291,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 60,
+    "totalScore": 64,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
@@ -312,14 +313,14 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：124.20",
-      "波段多空分水嶺看 MA20：124.35",
-      "追蹤法人是否延續 賣超：最近 -5.6千張",
+      "短線支撐/壓力先看 MA5：123.70",
+      "波段多空分水嶺看 MA20：123.45",
+      "追蹤法人是否延續 賣超：最近 -1.6千張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值",
-      "本益比 29.0 倍，需和同族群估值比較"
+      "本益比 28.2 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 144.50 且量比 > 1.5：列為轉強訊號",
+      "收盤突破 20 日高點 135.00 且量比 > 1.5：列為轉強訊號",
       "收盤跌破 20 日低點 115.00：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]

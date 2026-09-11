@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "2401",
   "name": "凌陽",
-  "generatedAt": "2026-09-10T12:31:40.366Z",
+  "generatedAt": "2026-09-11T12:32:07.040Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -60,25 +60,25 @@
     "roleDetail": {
       "topicName": "晶圓代工與第三代半導體",
       "roleLabel": "客戶/通路角色",
-      "roleSummary": "凌陽MOPS支持IC與模組設計、製造、測試、銷售及應用軟體，但未證明自有晶圓廠、聯電28nm投片、車用MCU ASIL-B或具名客戶；在晶圓代工題材應定位為無廠IC設計需求方與平台整合對象。2026年7月營收7.46億元、YoY+37.6%、累計YoY+22.1%。",
-      "supplyChainStage": "fabless_ic_design",
-      "roleType": "fabless_ic_design_house",
+      "roleSummary": "凌陽官網明列SPHE8368-P車載影音、SPHE6702 ADAS及SPA300音訊處理器；MOPS中的IC製造字樣不代表對外經營晶圓代工。本晶圓代工角色維持IC設計需求端／供應鏈鄰接定位，移除無依據的通用MCU主產品。 本次最新可取得資料為2026年8月營收6.88億元，MoM-7.74%、YoY+40.95%；公司口徑，非本題材獨立收入。",
+      "supplyChainStage": "ic_design_demand_side",
+      "roleType": "fabless_design_demand_adjacent_to_foundry",
       "directness": "customer_or_channel",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "微控制器與控制IC模組",
+        "name": "SPHE8368-P車載Display Audio SoC",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "多媒體音訊／影像處理IC模組",
+        "name": "SPHE6702 ADAS系統單晶片",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "積體電路應用軟體與韌體",
+        "name": "SPA300高解析音訊處理器",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -203,7 +203,7 @@
         "directness": "customer_or_channel",
         "directnessLabel": "客戶/通路角色",
         "confidence": "medium",
-        "roleSummary": "凌陽MOPS支持IC與模組設計、製造、測試、銷售及應用軟體，但未證明自有晶圓廠、聯電28nm投片、車用MCU ASIL-B或具名客戶；在晶圓代工題材應定位為無廠IC設計需求方與平台整合對象。2026年7月營收7.46億元、YoY+37.6%、累計YoY+22.1%。"
+        "roleSummary": "凌陽官網明列SPHE8368-P車載影音、SPHE6702 ADAS及SPA300音訊處理器；MOPS中的IC製造字樣不代表對外經營晶圓代工。本晶圓代工角色維持IC設計需求端／供應鏈鄰接定位，移除無依據的通用MCU主產品。 本次最新可取得資料為2026年8月營收6.88億元，MoM-7.74%、YoY+40.95%；公司口徑，非本題材獨立收入。"
       }
     ],
     "swot": [
@@ -366,12 +366,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 108 天未更新"
+        "message": "股價資料已 109 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 108 天未更新"
+        "message": "籌碼資料已 109 天未更新"
       },
       {
         "id": "risk.stop-distance",

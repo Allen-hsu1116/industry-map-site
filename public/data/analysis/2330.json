@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-09-10T12:31:40.298Z",
+  "generatedAt": "2026-09-11T12:32:06.992Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-10",
-  "chipDataDate": "2026-09-10",
+  "marketDataDate": "2026-09-11",
+  "chipDataDate": "2026-09-11",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -30,19 +30,17 @@
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 20,
-    "summary": "台積電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +2萬張；近 20 日法人偏買，合計 +1.1萬張。",
+    "score": 36,
+    "summary": "台積電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +8.7千張；近 20 日法人偏買，合計 +6.3千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2萬張",
-      "近 20 日法人偏買，合計 +1.1萬張",
-      "外資近 5 日買超 +1.9萬張"
+      "三大法人近 5 日合計買超 +8.7千張",
+      "近 20 日法人偏買，合計 +6.3千張",
+      "投信近 5 日買超 +5張",
+      "外資近 5 日買超 +8.9千張"
     ],
-    "risks": [
-      "投信近 5 日賣超 -136張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-10",
-      "融券近 5 日增加 44.0%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-11"
     ]
   },
   "industry": {
@@ -134,7 +132,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-09-10"
+      "lastVerified": "2026-09-11"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -303,8 +301,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 69,
-    "recommendationState": "watchlist",
+    "totalScore": 72,
+    "recommendationState": "top_candidate",
     "fundamental": {
       "score": 24,
       "label": "基本面中性",
@@ -312,7 +310,7 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 9.9 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 9.7 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -328,10 +326,10 @@
   "nextSession": {
     "focus": [
       "短線支撐/壓力先看 MA5：2451.00",
-      "波段多空分水嶺看 MA20：2410.25",
-      "追蹤法人是否延續 賣超：最近 -2.5千張",
+      "波段多空分水嶺看 MA20：2411.00",
+      "追蹤法人是否延續 賣超：最近 -8.8千張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 28.4 倍，需和同族群估值比較"
+      "本益比 27.9 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2505.00 且量比 > 1.5：列為轉強訊號",

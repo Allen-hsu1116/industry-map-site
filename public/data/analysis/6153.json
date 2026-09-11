@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "6153",
   "name": "嘉聯益",
-  "generatedAt": "2026-09-10T12:31:40.969Z",
+  "generatedAt": "2026-09-11T12:32:07.463Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-10",
-  "chipDataDate": "2026-09-10",
+  "marketDataDate": "2026-09-11",
+  "chipDataDate": "2026-09-11",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -29,19 +29,19 @@
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 8,
-    "summary": "嘉聯益 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +787張；外資近 5 日買超 +811張。",
+    "stance": "accumulation",
+    "label": "籌碼偏多",
+    "score": 28,
+    "summary": "嘉聯益 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +597張；近 20 日法人偏買，合計 +528張。",
     "signals": [
-      "三大法人近 5 日合計買超 +787張",
-      "外資近 5 日買超 +811張"
+      "三大法人近 5 日合計買超 +597張",
+      "近 20 日法人偏買，合計 +528張",
+      "外資近 5 日買超 +645張"
     ],
-    "risks": [
-      "近 20 日法人偏賣，合計 -23張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-10"
+      "最近法人資料日：2026-09-11",
+      "融券近 5 日增加 16.5%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-10"
+      "lastVerified": "2026-09-11"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -257,7 +257,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 62,
+    "totalScore": 66,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 0,
@@ -268,6 +268,7 @@
     "strategy": {
       "classification": "題材股",
       "rationale": [
+        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
@@ -275,9 +276,9 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：17.53",
-      "波段多空分水嶺看 MA20：17.19",
-      "追蹤法人是否延續 賣超：最近 -868張"
+      "短線支撐/壓力先看 MA5：17.46",
+      "波段多空分水嶺看 MA20：17.20",
+      "追蹤法人是否延續 買超：最近 +621張"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 18.40 且量比 > 1.5：列為轉強訊號",
