@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3443",
   "companyName": "創意",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -90,28 +90,26 @@
       "directness": "indirect",
       "supplyChainStage": "design_enablement",
       "roleType": "asic_design_service_adjacent_to_foundry",
-      "roleSummary": "創意MOPS支持應用IC、嵌入式記憶體與邏輯元件、設計元件庫、自動化工具及委託技術服務；公司不是晶圓代工廠，而是投片前設計與量產導入的生態角色。2026年7月營收57.69億元、YoY+158.4%，公司明示晶圓產品收入增加，但MOPS未證實N2／N3、CoWoS或具名客戶。",
+      "roleSummary": "創意MOPS確認ASIC與委託設計服務；官網進一步明列SoC整合、實體設計、Turn-key與HBM/D2D IP，並揭露台積電為唯一晶圓供應商。晶圓代工題材屬設計及量產導入角色，晶圓產品收入不是自有晶圓廠的證明。2026年8月營收58.40億元，MoM+1.23%、YoY+111.02%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "客製應用積體電路設計服務",
-        "嵌入式記憶體與邏輯元件",
-        "IC設計用元件資料庫",
-        "IC設計自動化工具",
-        "客戶委託技術服務"
+        "Spec-in客製ASIC規格與SoC整合服務",
+        "RTL-in／GDSII-in實體設計與量產導入",
+        "KGD-in先進封裝及Turn-key製造整合服務",
+        "HBM與Die-to-Die互連IP授權／整合"
       ],
       "customers": [
-        "台積電(2330；晶圓製造平台合作對象，非MOPS揭露客戶)",
-        "Arm（處理器IP生態對象，非MOPS揭露客戶）",
-        "Synopsys（EDA生態對象，非MOPS揭露客戶）",
-        "Cadence（EDA生態對象，非MOPS揭露客戶）"
+        "台積電（官網確認唯一晶圓製造供應商與合作方，非下游客戶）",
+        "Arm（SoC IP生態對象，非本次揭露客戶）",
+        "Synopsys（EDA生態對象，非本次揭露客戶）",
+        "Cadence（EDA生態對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "世芯(3661)",
-        "Altera(Intel)",
-        "eSilicon"
+        "世芯-KY（ASIC設計服務比較）"
       ],
       "risks": [
-        "先進製程NRE與設計資源投入高，專案延誤會影響收入認列",
-        "MOPS未揭露製程節點及客戶，不得把平台傳聞當成已確認訂單"
+        "晶圓製造依賴台積電，不能將創意列為實體晶圓製造廠",
+        "單一晶圓供應商交期與產能限制可能影響交付",
+        "大型ASIC專案驗證與量產時間延誤會使收入認列波動"
       ],
       "legacy": {
         "topicSlug": "wafer-foundry",
@@ -120,58 +118,63 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "創意 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3443",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 創意 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3443 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：研究、開發、生產、製造及銷售各種應用積體電路，包括嵌入式記憶體及邏輯元件、設計用元件資料庫、設計用自動化工具，並提供相關及客戶委託技術服務。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "3443 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3443",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：應用積體電路、嵌入式記憶體及邏輯元件、設計用元件資料庫、設計自動化工具及客戶委託技術服務。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收57.69億元，MoM+17.1%、YoY+158.4%，累計YoY+102.5%；備註為晶圓產品收入增加。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "3443 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收57.69億元，MoM+17.06%、YoY+158.38%，1–7月累計YoY+102.55%。備註：主要為晶圓產品收入增加。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "3443 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3443&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收58.40億元，MoM+1.23%、YoY+111.02%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "創意 官方網站",
+          "title": "About GUC",
+          "url": "https://www.guc-asic.com/en/about/us",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：GLOBAL UNICHIP CORP. (GUC) is a market leader in advanced ASIC (application-specific integrated circuit) services. Our comprehensive design services include ‘spec-in’ and SoC (System-on-Chip) integration, physical implementation, advanced packaging technologies, turn-key manufacturing, as well as cutting-edge technologies such as world-class HBM (high-bandwidth memory) and die-to-die interconnect IPs.\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_07_60x60.svg)\n\nSpec-in\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_08_60x60.svg)\n\nSoC Integration\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_09_60x60.svg)\n\nPhysical Design\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_10_60x60.svg)\n\nAdvanced Packaging Technology\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_11_60x60.svg)\n\nTurn-key manufacturing\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_12_60x60.svg)\n\nHBM & D2D IPs\n\n### Market & Advantages\n\nGUC leads the ASIC service market in the AI (artificial intelligence), HPC (high-performance computing), 5G/networking, SSD (solid-state drive), and several other industrial segments. We are committed to expertly delivering to our customers the most competitive PPA (power, performance, and area) designs, promising quality and yield. We dedicate ourselves to differentiating our ASIC products in the highly competitive market through engineering excellence.\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_13_1025x675.jpg)\n\n### TSMC Partnership\n\nTaiwan Semiconductor Manufacturing Co. (TSMC) is our single largest shareholder who holds 35% of the company’s total shares. TSMC is also GUC’s sole foundry supplier as well as the closest partner in advanced process and packaging technologies. Relying on the close relationship with TSMC, GUC is able to conquer various design to manufacturing challenges in order to create excellence in everything we produce.\n\nBased in Hsinchu, Taiwan, GUC has a global reputation with presence in North America, Mainland China, Europe, Korea, Japan and Vietnam. GUC is publicly listed on the Taiwan Stock Exchange (TWSE) under the ticker number “3443”.\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_mb_14_445x600.jpg)\n\n![](https://www.guc-asic.com/dist/assets/img/about/pic_mb_15_750x1500.jpg)![](https://www.guc-asic.com/dist/assets/img/about/pic_mb_16_750x1500.jpg)![](https://www.guc-asic.com/dist/assets/img/about/pic_mb_17_750x1500.jpg)\n\n### GUC Core Strengths\n\nAt GUC, customers are our most important focus and they are fundamental to everything we do. With a comprehensive sui",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-27",
+      "confidence": "high",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "嵌入式記憶體與邏輯元件之SoC整合",
-        "標準元件庫建立、時序模型與實體設計驗證",
-        "自動化設計流程與客戶委託IC量產導入"
+        "Spec-in、RTL-in、GDSII-in、KGD-in依設計入口提供Turn-key流程（官方服務模式）",
+        "CoWoS、InFO、SoIC屬官方先進封裝設計整合範圍，不代表創意自有晶圓製造產線",
+        "HBM與D2D介面IP、前後端設計及封裝測試協同驗證"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持ASIC元件、設計資料庫、自動化工具與委託服務，設計鏈條完整",
-          "7月營收57.69億元、YoY+158.4%，且公司明示晶圓產品收入增加"
+          "官方確認ASIC設計、IP與封裝製造整合服務鏈",
+          "台積電唯一晶圓供應商關係有公司官方文字支持",
+          "2026年8月營收58.40億元，MoM+1.23%、YoY+111.02%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "創意不製造晶圓，在晶圓代工題材僅是設計導入角色",
-          "MOPS未揭露N2／N3、CoWoS或具名客戶，舊資料的精確平台敘述過度"
+          "晶圓製造依賴台積電，不能將創意列為實體晶圓製造廠",
+          "產品收入、設計NRE及IP收入占比未由本次月資料拆分"
         ],
         "opportunities": [
-          "客製ASIC需求可帶動設計服務、元件庫與量產導入收入",
-          "晶圓產品收入增加顯示設計案轉量產可形成營運槓桿"
+          "客製ASIC規模擴大可增加投片與量產導入需求",
+          "多晶粒設計可帶動HBM/D2D IP及封裝協同設計服務"
         ],
         "threats": [
-          "客戶自建設計團隊與大型EDA／IP廠競爭會壓縮服務價值",
-          "晶圓產能、驗證延誤或專案集中會造成季度波動"
+          "單一晶圓供應商交期與產能限制可能影響交付",
+          "大型ASIC專案驗證與量產時間延誤會使收入認列波動"
         ]
       }
     }

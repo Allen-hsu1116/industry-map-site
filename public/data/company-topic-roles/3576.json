@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3576",
   "companyName": "聯合再生",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "renewable-energy",
@@ -10,8 +10,8 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "solar",
-      "roleType": "solar_cell_manufacturer",
-      "roleSummary": "聯合再生的MOPS直接揭露太陽能電池、晶圓、發電模組及相關系統，屬太陽能製造核心角色；MOPS未支持舊資料的效率、尺寸、電壓及具名客戶規格。2026年7月營收3.08億元、MoM+47.9%、YoY+72.7%，公司明示成長來自太陽能專案工程，但累計仍YoY-14.8%。",
+      "roleType": "solar_cells_modules_and_project_services",
+      "roleSummary": "聯合再生MOPS確認太陽能電池、晶圓、模組及系統；7月營收備註明示專案工程收入增加，但8月已呈月減與年減，不可沿用7月高成長敘事或把工程收入當成電池出貨量。2026年8月營收2.45億元，MoM-20.53%、YoY-13.03%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
         "太陽能電池片",
         "太陽能矽晶圓",
@@ -26,69 +26,64 @@
         "茂迪(6244；太陽能製造生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "元晶",
-        "茂迪",
-        "聯景"
+        "元晶（太陽能模組比較）",
+        "茂迪（太陽能電池與模組比較）"
       ],
       "risks": [
-        "累計營收年減24.1%，太陽能供過於求",
-        "中國太陽能模組低價傾銷壓力",
-        "TOPCon製程轉換需持續資本投入"
+        "模組製造與工程認列性質不同，單月收入不能推算電池產能利用率",
+        "太陽能產能過剩與低價競爭可能壓低產品毛利",
+        "土地審查、併網排程與工程驗收延後會加劇收入波動"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯合再生 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3576",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯合再生 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3576 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：研究、開發、設計、製造及銷售太陽能電池及相關系統、太陽能發電模組及晶圓，並經營相關進出口貿易。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "3576 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3576",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：太陽能電池及相關系統、太陽能發電模組及晶圓研發設計製造銷售及相關進出口。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收3.08億元，MoM+47.9%、YoY+72.7%，累計YoY-14.8%；備註為太陽能專案工程收入增加。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "3576 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收3.08億元，MoM+47.90%、YoY+72.75%，1–7月累計YoY-14.82%。備註：太陽能專案工程收入增加，以致本月營收較去年同月增加。。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "3576 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3576&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收2.45億元，MoM-20.53%、YoY-13.03%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "矽晶圓至太陽能電池之成膜、金屬化與電性分選",
-        "電池片串接、封裝與模組耐候可靠度控制",
-        "案場直流集電、逆變併網與發電系統整合"
+        "矽晶圓至電池之成膜、金屬化及電性分選（太陽能製程分析）",
+        "電池串接、模組封裝、直流集電與逆變併網（系統工程分析，未指定未查證效率或尺寸）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電池、晶圓、模組、系統與專案工程，產品鏈完整",
-          "7月營收MoM+47.9%、YoY+72.7%，且公司明示太陽能專案工程收入增加"
+          "MOPS確認電池、晶圓、模組與系統業務",
+          "7月官方營收備註提供太陽能專案工程的直接收入證據"
         ],
         "weaknesses": [
-          "前七月累計營收仍YoY-14.8%，單月跳升尚未扭轉全年衰退",
-          "MOPS未揭露轉換效率、尺寸或具名客戶，舊資料的量產規格不能保留"
+          "模組製造與工程認列性質不同，單月收入不能推算電池產能利用率",
+          "月營收未拆分各產品及風電收入，本角色應聚焦太陽能",
+          "2026年8月營收2.45億元，MoM-20.53%、YoY-13.03%。整體收入仍低於去年同期。"
         ],
         "opportunities": [
-          "台灣太陽能案場建置可帶動模組與工程整合收入",
-          "電池、模組與系統垂直整合有利承接專案型需求"
+          "在地屋頂與地面型光伏建置可增加模組工程需求",
+          "系統整合可提供由元件到併網施工的交付服務"
         ],
         "threats": [
-          "全球太陽能產能過剩與低價模組壓縮報價及毛利",
-          "政策、併網與土地審查延誤會造成工程收入大幅波動"
+          "太陽能產能過剩與低價競爭可能壓低產品毛利",
+          "土地審查、併網排程與工程驗收延後會加劇收入波動"
         ]
       }
     },

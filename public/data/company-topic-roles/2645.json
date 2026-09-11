@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2645",
   "companyName": "長榮航太",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "aerospace_mro",
       "roleType": "aerospace_mro_components",
-      "roleSummary": "長榮航太MOPS直接支持航空器機體、零組件與發動機維修，以及航空器零組件製造組裝，航太MRO核心角色成立；但MOPS未揭露軍機型號或軍方客戶，不能把民航維修直接等同軍工訂單。2026年7月營收17.23億元、YoY+18.5%、累計YoY+13.3%。",
+      "roleSummary": "長榮航太MOPS明確支持機體、發動機及零組件維修與製造組裝，是航太服務核心角色；此證據不等同軍用無人機業務或軍方採購，本輪移除舊風險欄對無人機起步階段的無來源敘述。2026年8月營收18.48億元，MoM+7.29%、YoY+25.97%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "航空器機體重維修服務",
-        "航空發動機維修服務",
-        "航空器零組件維修服務",
-        "航空器零組件製造服務",
-        "航空器部件組裝服務"
+        "航空器機體維修",
+        "航空發動機維修",
+        "航空器零組件檢修",
+        "航空器零組件製造",
+        "航空器部件組裝"
       ],
       "customers": [
         "長榮航空(2618；集團航機應用對象，非MOPS揭露客戶)",
@@ -26,67 +26,64 @@
         "GE Aerospace（發動機平台生態對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "漢翔",
-        "亞航"
+        "亞航（航空器MRO比較）",
+        "漢翔（航空零件製造與維修比較）"
       ],
       "risks": [
-        "航空維修受全球航空業景氣影響",
-        "軍用無人機業務仍在起步階段"
+        "本次資料未披露軍用機型授權或國防收入占比",
+        "航材供應、技師人力及適航規範可能限制服務產能",
+        "航空公司壓縮支出或改變維修排程會影響接單節奏"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "長榮航太 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2645",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 長榮航太 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2645 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：航空器機體、零組件及發動機維修；航空器零組件製造及組裝。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "2645 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2645",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：航空器機體、零組件及發動機維修；航空器零組件製造及組裝。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收17.23億元，MoM-5.6%、YoY+18.5%，累計YoY+13.3%。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "2645 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收17.23億元，MoM-5.59%、YoY+18.48%，1–7月累計YoY+13.29%。備註：-。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "2645 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=2645&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收18.48億元，MoM+7.29%、YoY+25.97%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "機體結構檢查、腐蝕修理與維修工卡執行",
-        "發動機拆解、零件檢測、修復與再組裝",
-        "航空零件製造之尺寸量測、序號與適航文件追溯"
+        "機體腐蝕檢查、維修工卡與適航文件追溯（服務流程分析）",
+        "發動機拆解、檢測與再組裝，以及航空零件尺寸量測（技術分析，不代表任一機型完整授權）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持機體、發動機與零組件維修及製造組裝，航太服務鏈完整",
-          "2026年7月營收YoY+18.5%、累計YoY+13.3%，整體MRO需求穩健"
+          "機體與發動機維修、零組件製造組裝皆有直接業務揭露",
+          "維修與製造服務可共同參與航空器全生命週期需求",
+          "2026年8月營收18.48億元，MoM+7.29%、YoY+25.97%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "7月營收MoM-5.6%，維修排程與交機節奏會造成月度波動",
-          "MOPS未揭露軍機、軍方客戶或軍工收入占比，國防題材需保守解讀"
+          "本次資料未披露軍用機型授權或國防收入占比",
+          "個別機型、發動機授權範圍需另依原廠及適航文件確認"
         ],
         "opportunities": [
-          "全球機隊高齡化與民航運量增加可帶動重維修需求",
-          "航空零組件在地製造與維修供應鏈重整可提升接案機會"
+          "民航機齡提高可增加重維修需求",
+          "航空供應鏈交付延遲可延長既有機隊維護需求"
         ],
         "threats": [
-          "適航規範、原廠授權與航材短缺可能延長周轉時間",
-          "景氣或航空公司資本支出收縮會遞延大型維修案"
+          "航材供應、技師人力及適航規範可能限制服務產能",
+          "航空公司壓縮支出或改變維修排程會影響接單節奏"
         ]
       }
     }

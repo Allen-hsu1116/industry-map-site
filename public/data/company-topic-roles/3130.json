@@ -2,93 +2,87 @@
   "schemaVersion": 1,
   "companyCode": "3130",
   "companyName": "一零四",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "talent_services",
-      "roleType": "recruiting_platform_for_aerospace",
-      "roleSummary": "一零四MOPS只支持一般廣告與電子資訊就業服務，在國防航太題材僅是人才招募與就業資訊平台，不製造軍工、航太或無人機產品。2026年7月營收2.75億元、YoY+12.4%、累計YoY+7.8%，成長不能歸因國防訂單。",
+      "supplyChainStage": "talent_services_outside_topic",
+      "roleType": "recruitment_platform_outside_defense",
+      "roleSummary": "一零四本業為廣告與電子資訊就業服務；本題材只保留航太招募需求觀察，屬題材外人才服務，不是軍工、航太零件或無人機供應商。具名航太公司僅是應用情境，不是已查證付費客戶。2026年8月營收2.59億元，MoM-5.76%、YoY+12.45%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "線上職缺刊登廣告服務",
+        "104線上職缺刊登廣告",
         "履歷人才庫搜尋服務",
         "電子就業資訊查詢服務",
-        "企業徵才媒合服務"
+        "企業職缺與求職者媒合服務"
       ],
       "customers": [
-        "漢翔(2634；航太徵才應用對象，非MOPS揭露客戶)",
-        "國家中山科學研究院（國防人才應用對象，非MOPS揭露客戶）",
-        "長榮航太(2645；MRO徵才應用對象，非MOPS揭露客戶)",
-        "亞洲航空(2630；航太徵才應用對象，非MOPS揭露客戶)"
+        "漢翔（航太招聘應用對象，非本次揭露客戶）",
+        "長榮航太（維修人才招聘應用對象，非本次揭露客戶）",
+        "亞洲航空（航太技師招聘應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "1111人力銀行(國防人才招募)",
-        "LinkedIn(國際航太人才)",
-        "業界獵人頭公司"
+        "LinkedIn（招募平台比較）"
       ],
       "risks": [
-        "國防航太人才招募佔營收比重極低",
-        "6月營收YoY+7.9%但與國防關聯性薄弱",
-        "被歸類為國防概念股但實質貢獻有限"
+        "沒有國防航太產品，與題材關係僅為人才需求間接觀察",
+        "機密職缺或專業資格限制可能降低公開媒合平台適用性",
+        "招募預算景氣循環與其他平台競爭可能壓縮服務收入"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 一般廣告服務業電子資訊就業服務"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：一般廣告服務業與電子資訊就業服務。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "3130 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3130",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：一般廣告服務業、電子資訊就業服務。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收2.75億元，MoM+4.3%、YoY+12.4%，累計YoY+7.8%。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "3130 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收2.75億元，MoM+4.35%、YoY+12.45%，1–7月累計YoY+7.79%。備註：-。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "3130 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3130&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收2.59億元，MoM-5.76%、YoY+12.45%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-27",
-      "status": "verified",
+      "lastVerified": "2026-09-12",
+      "status": "candidate",
       "techFocus": [
-        "職缺、履歷與技能標籤之搜尋及媒合",
-        "企業徵才廣告投放、履歷篩選與回覆流程",
-        "就業市場資料分類、去識別化與人才供需分析"
+        "職缺與履歷技能標籤搜尋、條件篩選與媒合（就業平台技術分析）",
+        "履歷個資存取權限、去識別化統計與招募流程追蹤（功能分析，非軍用安全認證）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持廣告與電子資訊就業服務，人才平台定位清楚",
-          "2026年7月營收YoY+12.4%、累計YoY+7.8%，服務收入穩定成長"
+          "MOPS直接支持職缺廣告與就業資訊服務",
+          "職缺刊登和人才搜尋可支援技術職能招聘流程",
+          "2026年8月營收2.59億元，MoM-5.76%、YoY+12.45%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "不製造軍工、航太或無人機產品，題材直接性極低",
-          "營收未拆分國防航太徵才，不能用公司成長證明軍工景氣受惠"
+          "沒有國防航太產品，與題材關係僅為人才需求間接觀察",
+          "營收未提供航太徵才拆分，不能估計國防相關占比",
+          "8月營收MoM-5.76%，年增與月減並存，不能只取年增率解讀需求。"
         ],
         "opportunities": [
-          "國防自主與航太擴產若增加工程師需求，可提升職缺與人才庫使用量",
-          "技能分類與供需資料可協助企業縮短特殊職能招聘週期"
+          "航太維修與製造若擴編，可增加特殊職能招聘需求",
+          "職能標籤與履歷搜尋可協助媒合技師、品保與製程人才"
         ],
         "threats": [
-          "國防職缺具保密與資格限制，公開平台可服務範圍有限",
-          "LinkedIn及其他招聘平台競爭可能提高企業客戶取得成本"
+          "機密職缺或專業資格限制可能降低公開媒合平台適用性",
+          "招募預算景氣循環與其他平台競爭可能壓縮服務收入"
         ]
       }
     },

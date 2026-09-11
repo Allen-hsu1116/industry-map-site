@@ -2,22 +2,21 @@
   "schemaVersion": 1,
   "companyCode": "4541",
   "companyName": "晟田",
-  "updatedAt": "2026-08-27T19:04:20Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "supplier",
-      "supplyChainStage": "aerospace_mro",
+      "supplyChainStage": "aerospace_precision_parts",
       "roleType": "aerospace_precision_machining",
-      "roleSummary": "晟田MOPS直接揭露航太發動機、起落架及次系統零組件，航太精密件供應角色成立；MOPS未揭露軍用機型、材料牌號、認證或具名客戶。FinMind顯示2026年7月營收1.95億元、MoM-2.5%、YoY+39.2%，但為全公司口徑。",
+      "roleSummary": "晟田MOPS直接揭露航太發動機、起落架及次系統零件，應定位航太零件製造而非MRO整機維修；軍用機型、材料牌號與客戶合約未由本次資料證實。2026年8月營收1.75億元，MoM-10.12%、YoY+23.57%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
         "航空發動機精密零件",
-        "航空起落架精密零件",
-        "航空器次系統機構零件",
-        "半導體設備精密零件",
-        "工業自動化精密傳動零件"
+        "航空起落架零件",
+        "航空次系統機構零件",
+        "半導體設備精密加工件"
       ],
       "customers": [
         "漢翔(2634；航太系統整合對象，非MOPS揭露客戶)",
@@ -26,67 +25,65 @@
         "Collins Aerospace（航太次系統生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "寶一（8222）",
-        "豐達科（3004）"
+        "豐達科（航太精密零件比較）",
+        "寶一（航空引擎零組件比較）"
       ],
       "risks": [
-        "營收規模較小",
-        "多業務分散但各領域競爭激烈"
+        "另含半導體及食品設備業務，總收入不能全數歸因航太",
+        "航太材料交期及加工良率會影響交付成本",
+        "認證與長交期訂單變動可能使小規模工廠收入集中"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "晟田 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=4541",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 晟田 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 4541 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：航太發動機、起落架及其他次系統零組件；半導體設備零組件；無菌食品充填設備與工業自動化精密傳動零組件。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "4541 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=4541",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：航太產業發動機、起落架及其他次系統相關零組件；半導體設備及相關零組件；無菌食品充填設備及工業自動化精密傳動相關零組件。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "4541 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026-09-12本批MCP查詢4541月營收回傳找不到資料；這是主查詢未覆蓋，並非公司未公告。改用FinMind MCP備援。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "FinMind月營收歷史",
+          "title": "4541 2026年8月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收1.95億元，MoM-2.5%、YoY+39.2%。"
+          "claim": "2026年8月營收1.75億元，MoM-10.12%、YoY+23.57%。FinMind MCP營收歷史備援。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "航太零件多軸切削、薄壁變形與尺寸公差控制",
-        "起落架及發動機零件之表面完整性與量測驗證",
-        "小批量多品項製程排程、治具與全程批次追溯"
+        "航太零件尺寸公差、表面完整性與加工變形控制（精密加工分析）",
+        "起落架及發動機零件批次追溯、治具與量測驗證（流程分析，未宣稱特定材料牌號或認證）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持發動機、起落架與航太次系統零件，供應鏈定位清楚",
-          "2026年7月營收YoY+39.2%，精密加工需求較去年同期改善"
+          "發動機與起落架零件業務有直接揭露",
+          "航太與設備精密件加工可累積多品項製程管理經驗",
+          "2026年8月營收1.75億元，MoM-10.12%、YoY+23.57%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "7月營收僅1.95億元且MoM-2.5%，規模小、接單波動較大",
-          "公司另有半導體及食品設備業務，整體營收不能全歸因航太或軍工"
+          "另含半導體及食品設備業務，總收入不能全數歸因航太",
+          "本次未確認軍用機型或原廠認證，不能將具名平台當成訂單",
+          "8月營收MoM-10.12%，年增與月減並存，不能只取年增率解讀需求。"
         ],
         "opportunities": [
-          "航太維修與新機交付可增加發動機、起落架替換件需求",
-          "供應鏈在地化有利具精密加工與追溯能力的零件廠送樣"
+          "航空新機與機隊維護可增加精密零件需求",
+          "供應鏈在地化提供航太零件認證與送樣機會"
         ],
         "threats": [
-          "MOPS未揭露軍機型號、認證或客戶，題材若無新公告容易高估",
-          "航太認證週期長、原料與加工良率問題會延誤交付"
+          "航太材料交期及加工良率會影響交付成本",
+          "認證與長交期訂單變動可能使小規模工廠收入集中"
         ]
       }
     }

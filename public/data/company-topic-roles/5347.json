@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5347",
   "companyName": "世界",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,13 +11,12 @@
       "directness": "core",
       "supplyChainStage": "wafer_fabrication",
       "roleType": "customer_spec_foundry",
-      "roleSummary": "世界先進的MOPS揭露可確認客戶委託積體電路製造、封裝測試、光罩設計與IC電腦輔助設計服務；但未揭露8吋／12吋、BCD節點或具名客戶，本輪移除舊資料的過度規格。FinMind顯示2026年7月營收47.06億元、MoM-21.3%、YoY+30.3%，營收為全公司口徑。",
+      "roleSummary": "世界先進MOPS確認委託IC製造；官方技術頁進一步明列8吋BCD、UHV與SOI製程及電壓、節點範圍，本輪恢復原資料過度刪除的已公開技術細節。具名客戶及各製程收入仍未披露。2026年8月營收50.93億元，MoM+8.22%、YoY+40.48%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "客戶委託積體電路晶圓製造服務",
-        "積體電路封裝服務",
-        "積體電路成品測試服務",
-        "半導體光罩製造與設計服務",
-        "積體電路電腦輔助設計服務"
+        "8吋BCD電源管理IC晶圓代工",
+        "BCD-on-SOI隔離式電源IC晶圓代工",
+        "超高壓UHV積體電路晶圓代工",
+        "客製光罩設計與製造服務"
       ],
       "customers": [
         "德州儀器TI（成熟製程應用對象，非MOPS揭露客戶）",
@@ -26,69 +25,75 @@
         "Analog Devices（類比IC應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "聯電(2303)(晶圓代工二哥)",
-        "台積電(2330)(先進製程龍頭)",
-        "中芯國際SMIC(中國8吋代工)"
+        "聯電（特殊製程代工比較）",
+        "台積電（特殊製程平台比較）",
+        "中芯國際（成熟製程代工比較）"
       ],
       "risks": [
-        "成熟製程價格競爭與產能利用率變化會放大獲利循環",
-        "MOPS未揭露製程節點及客戶，外部題材規格不可當成已確認訂單"
+        "技術平台範圍不等於各客戶晶片皆採最高電壓或最小節點",
+        "成熟製程新增產能可能使報價承壓",
+        "終端庫存與產品平台轉換會影響晶圓投片量"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 依客戶訂單與其提供之產品設計說明，從事製造與銷售積體電路。提供前述產品之封裝與測試服務。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：依客戶訂單與其提供之產品設計說明，從事製造與銷售積體電路。提供前述產品之封裝與測試服務。提供製造光罩及其設計服務。提供積體電路以及其他晶圓半導體裝置之電腦輔助設計技術服務。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "5347 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5347",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：依客戶訂單及產品設計製造銷售積體電路，提供封裝測試、光罩製造設計及積體電路電腦輔助設計技術服務。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "5347 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026-09-12本批MCP查詢5347月營收回傳找不到資料；這是主查詢未覆蓋，並非公司未公告。改用FinMind MCP備援。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "FinMind月營收歷史",
+          "title": "5347 2026年8月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收47.06億元，MoM-21.3%、YoY+30.3%。"
+          "claim": "2026年8月營收50.93億元，MoM+8.22%、YoY+40.48%。FinMind MCP營收歷史備援。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "世界 官方網站",
+          "title": "\n世界先進積體電路股份有限公司\n",
+          "url": "https://www.vis.com.tw/tc/technology",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：VIS offers 8\" foundry's most comprehensive and competitive power management process technologies including Bipolar-CMOS-DMOS (BCD), Ultra High Voltage (UHV) and Silicon-on-Insulator (SOI).\n\n##### BCD\n\n![Image](https://www.vis.com.tw/assets/images/technology/bcd.png)\n\n##### BCD\n\nVIS' BCD technology provides wide spectrum of voltage rating from 5V to 120V with geometry from 0.5µm to 0.11µm. VIS' BCD technology features the most competitive low Rsp performance for high efficiency, high current and form factor limitation applications in mobile, consumer and computing markets; and high quality of robustness and reliability for automotive and industrial applications.\n\nIn addition, VIS' BCD technology also provides wide variety of embedded Non-Volatile Memory (eNVM) IPs, including One-Time-Programing (OTP) and Multiple-Time-Programing (MTP) IPs, for smart power management design like USB power delivery, quick charger, wireless charger, smart lighting and motor driver applications. Moreover, VIS also offers ultra-high voltage capacitive insulator module (>5KV) on selected BCD technology for galvanic isolation application.\n\n![Image](https://www.vis.com.tw/assets/images/technology/bcd_application.png)\n\n##### UHV\n\n![Image](https://www.vis.com.tw/assets/images/technology/uhv.png)\n\n##### UHV\n\nVIS offers the best-in-class 0.5um UHV technology with voltage rating from 200V to 700V for green energy applications. VIS' UHV technology features high reliability devices and the best fit processes for solid state lighting, AC/DC adapter and motor driver applications.\n\n![Image](https://www.vis.com.tw/assets/images/technology/uhv_application.png)\n\n##### SOI\n\n![Image](https://www.vis.com.tw/assets/images/technology/soi.png)\n\n##### SOI\n\nVIS offers BCD-on-SOI process with voltage rating from 10V to 200V and geometry from 0.5um to 0.15um. The SOI process provides the ultimate isolation solution for noise and temperature sensitive design in automotive, medical and industrial applications. In addition, VIS' BCD-on-SOI provide high precision thin film resistor (SiCr) that enables high precision analog feature design.\n\n![Image](https://www.vis.com.tw/assets/images/technology/soi_application.png)\n\n###### Cookies和隱私政策\n\n我們使用cookies來提升您在我們網站上的體驗。繼續使用本網站即表示您同意使用這些cookies。有關我們如何使用cookies以及了解如何更改cookie設置的更多資料，請仔細閱讀我們的 [隱私政策](https://www.vis.com.tw/tc/policy)。\n\n接受Cookies\n\n[![Image](https://www.vis.com.tw/assets/images/pdf-blackicon.png)下載\\\\\n\\\\\n永續報告書](https://www.vis.com.tw/tc/csr_documents)\n\n[![Image](https://www.vis.com.tw/assets/images/overview-page/contact.png)訂閱\\\\\n\\\\\nESG電子報](https://www.vis.com.tw/tc/technology#!)\n\n[![Image](https://www.vis.com.tw/assets/images/overview-page/mail_icon.png)聯絡我們](mailto:cs@vis.com.tw)\n\n[![Image](https://www.vis.com.tw/assets/images/overview-page/subscribe_icon.png)填寫回饋問卷](https://www.vis.com.tw/tc/csr_survey)\n\n[![Image](https://www.vis.com.tw/assets/images/overview-page/fbicon.png)前往\\\\\n\\\\\n臉書粉絲團](https://www.facebook.com/VanguardInternationalSemiconductor/?locale=zh_TW)\n\n[![Image](https://www.vis.com.tw/assets/images/overview-page/inicon.png)前往LinkedIn](https://www.linkedin.com/company/vanguard-international-semiconductor-corporation/)",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "依客戶設計資料執行光罩、晶圓製造與製程控管",
-        "封裝、電性測試與晶圓製造的後段整合",
-        "IC電腦輔助設計資料轉換與光罩設計驗證"
+        "BCD官方技術範圍：0.5µm至0.11µm、5V至120V，為平台範圍非每顆IC規格",
+        "BCD-on-SOI官方範圍：0.5µm至0.15µm、10V至200V，提供隔離及SiCr薄膜電阻",
+        "BCD可搭配OTP／MTP eNVM IP；僅指定BCD平台提供逾5kV電容隔離模組"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持IC製造、封裝測試、光罩及設計服務，服務鏈條完整",
-          "2026年7月營收YoY+30.3%，成熟製程需求較去年同期改善"
+          "官網直接提供BCD與SOI不同電壓及節點平台，產品差異化可驗證",
+          "BCD結合OTP/MTP與特定平台隔離模組，可支援智慧電源設計",
+          "2026年8月營收50.93億元，MoM+8.22%、YoY+40.48%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "7月營收MoM-21.3%，月度拉貨與產能利用率波動明顯",
-          "MOPS未揭露8吋／12吋、BCD節點或客戶，無法用精確規格判斷產品組合"
+          "技術平台範圍不等於各客戶晶片皆採最高電壓或最小節點",
+          "月收入不能拆分BCD、SOI與其他製程貢獻"
         ],
         "opportunities": [
-          "電源、顯示與車用等成熟製程IC可支撐利基代工需求",
-          "光罩、設計支援與封測整合可提高客戶黏著度"
+          "工控電源、馬達驅動與隔離需求可增加特殊製程導入",
+          "eNVM整合可提升電源IC可編程與校準功能"
         ],
         "threats": [
-          "中國成熟製程新增產能可能加劇報價競爭",
-          "終端庫存修正會迅速傳導至晶圓投片與產能利用率"
+          "成熟製程新增產能可能使報價承壓",
+          "終端庫存與產品平台轉換會影響晶圓投片量"
         ]
       }
     },

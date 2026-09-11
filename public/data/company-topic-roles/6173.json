@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -11,85 +11,104 @@
       "directness": "core",
       "supplyChainStage": "ceramic_components_and_materials",
       "roleType": "mlcc_resistor_dielectric_powder_provider",
-      "roleSummary": "信昌電MOPS明確揭露晶片電容、晶片電阻與介電瓷粉，是MLCC及電子陶瓷材料的直接角色；本次刪除「台灣唯一」與未揭露直供客戶等過度精確說法。FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%，整體動能改善。",
+      "roleSummary": "信昌電MOPS確認電容、電阻及介電瓷粉，官方目錄補強具體系列與粉體技術。本輪移除「月營收未揭露」和未查證國巨集團關係等矛盾；FinMind可取得8月營收，不因上櫃查詢失敗就宣稱資訊不透明。2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "多層陶瓷晶片電容MLCC",
-        "高頻用陶瓷晶片電容",
-        "厚膜晶片電阻",
-        "MLCC用介電陶瓷粉末"
+        "FK／FH安規MLCC",
+        "FV千伏級高壓MLCC",
+        "FM 100–630V中壓MLCC",
+        "厚膜／薄膜晶片電阻",
+        "MLCC用鈦酸鋇介電瓷粉"
       ],
       "customers": [
-        "國巨(2327；集團供應鏈對象，非MOPS揭露客戶）",
-        "華新科(2492；電子陶瓷供應鏈對象，非MOPS揭露客戶）",
-        "村田製作所（MLCC市場應用對象，非MOPS揭露客戶）",
-        "太陽誘電（MLCC市場應用對象，非MOPS揭露客戶）",
-        "風華高科（MLCC市場應用對象，非MOPS揭露客戶）"
+        "台達電（電源電容應用對象，非本次揭露客戶）",
+        "光寶科（電源電容應用對象，非本次揭露客戶）",
+        "Bosch（車用被動元件應用對象，非本次揭露客戶）",
+        "華新科（電子陶瓷供應鏈對照，非本次揭露客戶）"
       ],
       "competitors": [
-        "國巨(2327)瓷粉自製",
-        "華新科(2492)",
-        "太陽誘電(Taiyo Yuden)"
+        "村田製作所（MLCC產品比較）",
+        "太陽誘電（MLCC產品比較）"
       ],
       "risks": [
-        "月營收資料未揭露(上櫃公司資訊透明度較低)",
-        "MLCC瓷粉為利基材料但下游需求週期性強",
-        "日本村田/信越化學瓷粉技術領先,競爭壓力大"
+        "未揭露特定客戶、瓷粉市占或各系列收入占比",
+        "MLCC景氣與價格競爭可能壓低稼動率及利差",
+        "材料批次穩定、電容可靠度與客戶認證若不符需求會限制導入"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 晶片電容、晶片電阻、介電瓷粉"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "晶片電容、晶片電阻、介電瓷粉。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "6173 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6173",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：晶片電容、晶片電阻、介電瓷粉。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "6173 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026-09-12本批MCP查詢6173月營收回傳找不到資料；這是主查詢未覆蓋，並非公司未公告。改用FinMind MCP備援。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "2026年7月月營收",
+          "title": "6173 2026年8月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%。"
+          "claim": "2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。FinMind MCP營收歷史備援。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "信昌電 官方網站",
+          "title": "PDC | Multilayer Ceramic Capacitors-High Voltage & Automotive Grade Capacitors",
+          "url": "https://www.pdc.com.tw/mlcc",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：## Multilayer Ceramic Capacitors\n\n- PDC is a manufacturer of special MLCC Its application markets mainly include automotive, industrial, networking, new energy, aviation, medical products.\n- PDC provides special MLCC series, including safety-certified MLCC, high-voltage MLCC, medium-voltage high-capacitance MLCC, automotive certification, stacked MLCC, high reliability and other high-power special MLCC.\n\n[![Name](https://www.pdc.com.tw/default/system/custom/Icon_awesome-file-pdf.svg) Catalog Download](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/mlcc_catalog.pdf \"Multilayer Ceramic Capacitors\")\n\nPRODUCT SERIES\n\nShowing 1 - 13 of 13 results\n\n[![FK/FH Safety Certified capacitor](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~141/FKFH.webp)](https://www.pdc.com.tw/fk-fh \"FK/FH Safety Certified capacitor\")\n\n#### [FK/FH Safety Certified capacitor](https://www.pdc.com.tw/fk-fh \"FK/FH Safety Certified capacitor\")\n\nFK series can correspond to safety Y2/X1 class, FH series can correspond to safety X2 class, PDC safety products are designed for surge or lightning immunity and have the feature of high reliability and stability\n\nQuantity\n\n-+\n\n[FK/FH Series](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~141/FKFH_Series.pdf) [FK/FH\\_Automotive Series](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~141/FKFH_Auto_Series.pdf)\n\n[![FV High Voltage Capacitor ( >=1KV )](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~153/FV.webp)](https://www.pdc.com.tw/fv \"FV High Voltage Capacitor ( >=1KV )\")\n\n#### [FV High Voltage Capacitor ( >=1KV )](https://www.pdc.com.tw/fv \"FV High Voltage Capacitor ( >=1KV )\")\n\nThe FV series is a series of electrical appliances with a voltage higher than 1000 volts. The characteristics of the series connection of multi-layer electrical units\n\nRealistic high voltage performance. This special design distributes the voltage gradient throughout the appliance to prevent circuit short fail.\n\nQuantity\n\n-+\n\n[Download](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~153/FV_Series.pdf)\n\n[![FM Mid-Voltage Capacitor](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~152/FM.webp)](https://www.pdc.com.tw/fm \"FM Mid-Voltage Capacitor\")\n\n#### [FM Mid-Voltage Capacitor](https://www.pdc.com.tw/fm \"FM Mid-Voltage Capacitor\")\n\nFM series are 100~630V products, this series is the best solution for LLC resonance, high ripple current tolerance and extremely low loss suitable for high conversion rate products.\n\nQuantity\n\n-+\n\n[Download](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~152/FM_Series.pdf)\n\n[![FS High Capacitance Capacitor ( >=1µF )](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~151/FS.webp)](https://www.pdc.com.tw/fs \"FS High Capacitance Capacitor ( >=1µF )\")\n\n#### [FS High Capacitance Capacitor ( >=1µF )](https://www.pdc.com.tw/fs \"FS High Capacitance Capacitor ( >=1µF )\")\n\nHigh-capacitance products with a capacitance higher than 1uF, excellent capacitance characteristics and high rated voltage, can replace tantalum capacitors and reduce the number of chips used.\n\nQuantity\n\n-+\n\n[Download](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~151/FS_Series.pdf)\n\n[![FP Anti-Bend (Soft termination) Capacitor](https://www.pdc.com.tw/storage/architecture/product~~19/product~~106/product~~150/FP.webp)](https://www.pdc.com.tw/fp \"FP Anti-Bend (Soft termination) Capacitor\")\n\n#### [FP Anti-Bend (Soft termination) Capacitor](https://www.pdc.com.tw/fp \"FP Anti-Bend (Soft termination) Capacitor\")\n\nPDC FP series is a capacitor bending solution product. By adding an additional polymer-Ag layer inside the terminal electrodes, the capacitor becomes more flexible to resist bending stress, thereby avoiding bending cracks.\n\nQuantity\n\n-+\n\n[Download](https://www.pdc.c",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-2",
+          "publisher": "信昌電 官方網站",
+          "title": "Ceramic Dielectric Powders - PDC | Prosperity Dielectrics Co., Ltd.",
+          "url": "https://www.pdc.com.tw/powder",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：PDC offers a diverse range of high quality dielectric powders and customized electronic materials for Disc capacitor, MLCC capacitor, SLC, Patch Antenna, Resonator, Filter applications, RF inductor, Substrate filler, and other components.\n\n##### Specialty\n\n1. Excellent electrical properties.\n2. The whole series of products are Lead-Free and in compliance with RoHS standard.\n3. Various dielectric constant of Microwave powders.\n4. Specialized in solid state synthesis Barium Titanate with high crystallinity and good quality.\n5. Narrow particles size distribution and lot-to-lot consistency.\n\n#### [Barium Titanate Powder](https://www.pdc.com.tw/barium-titanate \"Barium Titanate Powder\")\n\n- Purity: 98% / 99% / 99.5%\n- Mole ratio: 0.995 / 1.000 / 1.005\n- Particle Size: 1.4 / 1.0 / 0.8 / 0.6 / 0.4 / 0.25 μm\n\n#### [MLCC Formulations](https://www.pdc.com.tw/powder-mlcc \"MLCC Formulations\")\n\n- PME series NP0 X7R X8R\n- BME series NP0 X7R Y5V\n\n#### [Microwave Applications Powder](https://www.pdc.com.tw/microwave \"Microwave Applications Powder\")\n\n- K10 K20 K37 K40 K45 K65 K90 K100 K130\n\n#### [Low Temperature Co-fire Ceramic Powder](https://www.pdc.com.tw/ltcc \"Low Temperature Co-fire Ceramic Powder\")\n\n- Glasses System (K4.5 / K6 / K7 / K8)\n- Ceramics System (K5 / K10 / K20 / K40)\n\n#### [Dielectric powder for Dry Process](https://www.pdc.com.tw/dry-process \"Dielectric powder for Dry Process\")\n\n- Class I.\n\nTemperature Compensation Type\n- Class II.\n\nHigh-K Type\n\n#### [Dielectric powder for Wet Process](https://www.pdc.com.tw/wet-process \"Dielectric powder for Wet Process\")\n\n- Class I.\n\nTemperature Compensation Type\n- Class II.\n\nHigh-K Type\n- Class III.\n\nSemiconductive Type\n\nClose\n\nClose\n\n**[✛](https://www.pdc.com.tw/powder#) Preference for all services**\n\n✓ Allow\n\n✗ Deny\n\nBy allowing these third party services, you accept their cookies and the use of tracking technologies necessary for their proper functioning.\n\n[✛](https://www.pdc.com.tw/powder#) APIs\n\nAPIs are used to load scripts: geolocation, search engines, translations, ...\n\n**Google Tag Manager**\n\nThis service has not installed any cookie.\n\n[Read more](https://opt-out.ferank.eu/service/googletagmanager/) \\- [View the official website](http://www.google.com/ads/preferences/)\n\n✓ Allow\n\n✗ Deny\n\n[✛](https://www.pdc.com.tw/powder#) Advertising network\n\nAd networks can generate revenue by selling advertising space on the site.\n\n[✛](https://www.pdc.com.tw/powder#) Audience measurement\n\nThe audience measurement services used to generate useful statistics attendance to improve the site.\n\n[✛](https://www.pdc.com.tw/powder#) Comments\n\nComments managers facilitate the filing of comments and fight against spam.\n\n[✛](https://www.pdc.com.tw/powder#) Social networks\n\nSocial networks can improve the usability of the site and help to promote it via the shares.\n\n[✛](https://www.pdc.com.tw/powder#) Support\n\nSupport services allow you to get in touch with the site team and help to improve it.\n\n[✛](https://www.pdc.com.tw/powder#) Videos\n\nVideo sharing services help to add rich media on the site and increase its visibility.\n\nIf you continue to browse this website, you are allowing all third-party services  OK, accept all",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-3",
+          "publisher": "信昌電 官方網站",
+          "title": "PDC | Chip Resistors",
+          "url": "https://www.pdc.com.tw/chip-resister",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：## Chip Resistors\n\n- PDC special chip resistors manufacturer, applications in major market segments, including automotive, industrial, alternative energy, and consumer electronics.\n- PDC provides resistors range, covering current sensors metal strip, current sensors thick film, precision thick film, surge, sulfur-resistant, high power, high voltage, and more.\n\n[![Name](https://www.pdc.com.tw/default/system/custom/Icon_awesome-file-pdf.svg) Catalog Download](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/CHR_catalog.pdf \"Chip Resistors\")\n\n[![Current Sensing](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~130/Current-Sensing.webp)](https://www.pdc.com.tw/current-sensing \"Current Sensing\")\n\n#### [Current Sensing](https://www.pdc.com.tw/current-sensing \"Current Sensing\")\n\nSuitable for current sensing of power management.\n\nPlease refer to Specification (Reference) at the Website to confirm the specification for more detail.\n\n[![Wide Terminal](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~154/WCF.webp)](https://www.pdc.com.tw/wide-terminal-thick-film-resistors \"Wide Terminal\")\n\n#### [Wide Terminal](https://www.pdc.com.tw/wide-terminal-thick-film-resistors \"Wide Terminal\")\n\nDownsizing and High rated dissipation by wide termination structure.\n\nHigh solderability strength and reliability by wide termination structure.\n\n[![Automotive](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~157/Automotive-Chip.webp)](https://www.pdc.com.tw/automotive-chip \"Automotive\")\n\n#### [Automotive](https://www.pdc.com.tw/automotive-chip \"Automotive\")\n\nMeet AECQ200 Compliant Parts\n\n[![High Voltage](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~156/High-Voltage.webp)](https://www.pdc.com.tw/high-voltage \"High Voltage\")\n\n#### [High Voltage](https://www.pdc.com.tw/high-voltage \"High Voltage\")\n\nSuitable for the voltage divider & bleeder appcation.\n\nHigher Limiting Element Voltage\n\n[![Anti-Surge & Speciality & High Reliability](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~155/High-Reliability.webp)](https://www.pdc.com.tw/anti-surge-speciality-high-reliability \"Anti-Surge & Speciality & High Reliability\")\n\n#### [Anti-Surge & Speciality & High Reliability](https://www.pdc.com.tw/anti-surge-speciality-high-reliability \"Anti-Surge & Speciality & High Reliability\")\n\nHigher Anti surge performance and high rated power rating.\n\n[![Thin Film](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~160/Thin-Film.webp)](https://www.pdc.com.tw/thin-film \"Thin Film\")\n\n#### [Thin Film](https://www.pdc.com.tw/thin-film \"Thin Film\")\n\nSuitable for high precision, higher stability and reliability applications.\n\n[![Lead-free](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~159/FCF-G-v1.webp)](https://www.pdc.com.tw/green \"Lead-free\")\n\n#### [Lead-free](https://www.pdc.com.tw/green \"Lead-free\")\n\nROHS compliant and total lead free (Pb<100ppm).\n\n[![Normal](https://www.pdc.com.tw/storage/architecture/product~~19/product~~105/product~~158/Normal.webp)](https://www.pdc.com.tw/normal \"Normal\")\n\n#### [Normal](https://www.pdc.com.tw/normal \"Normal\")\n\nAvailable in 01005 to 2512 size resistors and jumper resistors.\n\nNew Products\n\n| Type | AECQ200 | Resistance Range | Tolerance | TCR (ppm/°C) | Power Rating | Size |  |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| WME -Metal Strip Wide Terminal<br>High Power Current Sensing Resistors | V | 1mΩ~5mΩ\\* | ±1%、5% | ±50~±70 | 1W | 0508 | [more](https://www.pdc.com.tw/wme) |\n| WBF -Wide Side Termination<br>Low TCR CSR Thick Film | V | 10mΩ\\*~910mΩ | ±1%、5% | ±100~±400\\* | 1~2W | 0612~1225 | [more](https://www.pdc.com.tw/wbf) |\n| WCF -Wide Side Termination<br>Low TCR Thick Film | V | 0Ω: 1Ω~1MΩ | ±1%、5% | ±100~±200 | 1~2W | 0612~1225 | [more](https://www.pdc.com.tw/wcf) |\n\nAPPLICATION\n\n[![Automotive](https://www.pdc.",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "介電瓷粉粒徑分布、摻雜配方與燒結溫度控制",
-        "MLCC多層陶瓷與內電極共燒對位控制",
-        "厚膜電阻漿料印刷、燒結與雷射阻值修調"
+        "FK對應Y2/X1、FH對應X2安規類別；FM為100–630V系列，不套用至全產品",
+        "FV以多層單元串聯分配電壓梯度；粉體採固相BaTiO3合成與窄粒徑控制"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持晶片電容、晶片電阻與介電瓷粉的垂直產品組合",
-          "FinMind顯示7月營收YoY+47.9%、MoM+6.6%，整體出貨動能改善"
+          "官方MLCC目錄明列安規、高壓與中壓系列",
+          "介電瓷粉與晶片元件產品提供材料至元件的垂直產品組合",
+          "2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露瓷粉市占率、唯一供應地位或具名客戶",
-          "月營收無法拆分MLCC、電阻與介電瓷粉各自貢獻"
+          "未揭露特定客戶、瓷粉市占或各系列收入占比",
+          "公司整體收入不等同MLCC或高壓系列收入，不能直接推估單品需求"
         ],
         "opportunities": [
-          "AI伺服器、車用電子與高頻通訊增加高可靠度MLCC需求",
-          "介電粉體自主配方有機會提高材料內製與產品差異化"
+          "高功率電源可增加中高壓與安規電容的選型需求",
+          "工控與車用可靠度要求可提高特用MLCC及粉體配方價值"
         ],
         "threats": [
-          "村田、太陽誘電與中國被動元件廠在規模及價格上競爭",
-          "MLCC庫存循環與原料價格波動可能壓縮稼動率及毛利"
+          "MLCC景氣與價格競爭可能壓低稼動率及利差",
+          "材料批次穩定、電容可靠度與客戶認證若不符需求會限制導入"
         ]
       }
     },

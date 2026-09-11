@@ -1,88 +1,104 @@
 {
   "schemaVersion": 1,
   "companyCode": "6215",
-  "companyName": "6215",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "companyName": "和椿",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "roleSummary": "和椿MOPS揭露自動化設備及系統零組件，未揭露冷板、CDU、快接頭、泵浦或散熱風扇；本題材僅定位為液冷零件產線可能採用的傳動與自動化設備供應。2026年7月營收3.78億元，MoM+35.5%、YoY+37.2%，公司說明為自動化零組件及設備需求增加，不能歸因液冷。",
+      "roleSummary": "和椿MOPS支持自動化設備與系統元件；官網確認NB直線運動產品與Kuroda滑台通路，液冷只可能是製造設備應用，未確認特定液冷產線訂單。修正公司名稱占位及舊競品代碼錯配，不再保留未查證EtherCAT與真空模組。2026年8月營收4.07億元，MoM+7.73%、YoY+132.82%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "線性滑軌定位模組",
-        "滾珠螺桿傳動模組",
-        "真空吸附搬運模組",
-        "多軸伺服定位工作站",
-        "機器人取放與鎖附自動化設備"
+        "NIPPON BEARING交叉滾柱導軌／弧形軌（通路產品）",
+        "NIPPON BEARING直線軸承／襯套（通路產品）",
+        "Kuroda SG高精度滾珠螺桿滑台",
+        "Kuroda SE高剛性滾珠螺桿滑台",
+        "Kuroda SC全密封滾珠螺桿滑台"
       ],
       "customers": [
-        "奇鋐(3017；液冷產線應用對象，非MOPS揭露客戶）",
-        "雙鴻(3324；液冷產線應用對象，非MOPS揭露客戶）",
-        "台達電(2308；設備整合應用對象，非MOPS揭露客戶）",
-        "Vertiv（冷卻設備產線驗證對象，非MOPS揭露客戶）"
+        "NIPPON BEARING（官網確認品牌供應鏈對象，非下游客戶）",
+        "Kuroda／黑田精工（官網產品供應鏈對象，非下游客戶）",
+        "奇鋐（液冷製造設備應用對象，非本次揭露客戶）",
+        "雙鴻（液冷製造設備應用對象，非本次揭露客戶）"
       ],
       "competitors": [
-        "建準(8154)(散熱風扇馬達)",
-        "全毅(3362)(精密軸承)",
-        "三聯(5493)(自動化傳動)",
-        "上銀(2049)(直線導軌)"
+        "上銀（直線運動產品比較，非已證實液冷產線競標者）"
       ],
       "risks": [
-        "散熱風扇馬達/精密軸承非和椿主力產品，題材連結弱，營收貢獻比重極低",
-        "6月營收YoY+30.5%主要來自自動化設備需求，非散熱相關訂單",
-        "散熱風扇馬達市場建準(8154)市佔高，和椿缺乏規模優勢"
+        "本次無冷板、CDU或液冷產線專案證據，不能列為液冷核心產品商",
+        "散熱廠自建設備或改用其他直線運動品牌會限制導入",
+        "設備景氣循環與原廠交期可能造成通路庫存風險"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "6215公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 6215 role in AI 伺服器液冷散熱 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "自動化設備及系統零組件之製造加工及買賣業務。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "6215 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6215",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：自動化設備及系統零組件之製造加工及買賣業務。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收3.78億元，MoM+35.5%、YoY+37.2%，累計YoY+50.4%；備註為自動化零組件及設備需求增加。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "6215 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收3.78億元，MoM+35.54%、YoY+37.20%，1–7月累計YoY+50.40%。備註：自動化零組件及設備需求增加。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "6215 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=6215&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收4.07億元，MoM+7.73%、YoY+132.82%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "6215 官方網站",
+          "title": "NIPPON BEARING｜和椿科技 Aurotek",
+          "url": "https://aurotek.com/brand/nippon-bearing/",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：NB（NIPPON BEARING），日本直線運動元件專家，提供高精密直線軸承、導軌與滑塊，廣泛應用於醫療設備與自動化機械。\n\nBrand Filter\n\n全品牌\n\nOILES\n\n週邊配件\n\nNB\n\ninovance\n\nPanasonic\n\nAKUSENSE\n\nPBA\n\nAurotek\n\nDH Robotics\n\nKuroda\n\nDENSO\n\nNissei\n\nFARobot\n\nNabtesco\n\nDOBOT\n\nHarmonicDrive®\n\nSesame\n\nNidec\n\nSycotec\n\nNOVA\n\nKTR\n\n銑刀切板機\n\nKYOWA\n\n雷射切板機\n\n- ## OILES\n\n- ## NB\n\n- ## Panasonic\n\n- ## AKUSENSE\n\n- ## PBA\n\n- ## Aurotek\n\n- ## DH Robotics\n\n- ## Kuroda\n\n- ## DENSO\n\n- ## Nissei\n\n- ## FARobot\n\n- ## Nabtesco\n\n- ## DOBOT\n\n- ## HarmonicDrive®\n\n- ## Sesame\n\n- ## Nidec\n\n- ## Sycotec\n\n- ## NOVA\n\n- ## KTR\n\n- ## inovance\n\n- ## KYOWA\n\n\n- [![NB 滑動螺桿](https://aurotek.com/wp-content/uploads/2025/07/scimgix8RAv.webp)](https://aurotek.com/products/nb-ss/ \"滑動螺桿\")\n\n\n\n\n\n\n\n## [滑動螺桿](https://aurotek.com/products/nb-ss/)\n\n\n\n\n\nSS\n\n- [![NB 交叉滾柱導軌](https://aurotek.com/wp-content/uploads/2025/07/scimgcPz6uj.webp)](https://aurotek.com/products/nb-slide-way/ \"交叉滾柱導軌 / 弧形軌\")\n\n\n\n\n\n\n\n## [交叉滾柱導軌 / 弧形軌](https://aurotek.com/products/nb-slide-way/)\n\n\n\n\n\nNV / SV / NY / RV\n\n- [![NB 直線軸承襯套](https://aurotek.com/wp-content/uploads/2025/07/scimg9xWskg.webp)](https://aurotek.com/products/nb-slide-bush/ \"直線軸承/襯套\")\n\n\n\n\n\n\n\n## [直線軸承/襯套](https://aurotek.com/products/nb-slide-bush/)\n\n\n\n\n\nSM / KB / SW / TR / TQ / GM / AK\n\n- [![NB SPR/SPB 外筒旋轉式滾珠花鏈](https://aurotek.com/wp-content/uploads/2025/07/scimgGjJcXX.webp)](https://aurotek.com/products/nb-spr-spb/ \"外筒旋轉式滾珠花鏈\")\n\n\n\n\n\n\n\n## [外筒旋轉式滾珠花鏈](https://aurotek.com/products/nb-spr-spb/)\n\n\n\n\n\nSPR / SPB\n\n- [![NB SSP滾珠花鍵](https://aurotek.com/wp-content/uploads/2025/07/scimgHOs57x.webp)](https://aurotek.com/products/nb-ssp/ \"滾珠花鍵\")\n\n\n\n\n\n\n\n## [滾珠花鍵](https://aurotek.com/products/nb-ssp/)\n\n\n\n\n\nSSP\n\n\n聯絡我們\n\n![News](https://aurotek.com/wp-content/uploads/2025/07/news.svg)\n\n投資人專區\n\n聯絡我們",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-2",
+          "publisher": "6215 官方網站",
+          "title": "Kuroda 滾珠螺桿滑台｜和椿科技 Aurotek",
+          "url": "https://aurotek.com/products/kuroda-s-series/",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：## Kuroda SG / SE / SC 系列滾珠螺桿滑台\n\nKURODA 滾珠螺桿滑台是一種緊湊型單軸裝置，由滾珠螺桿與滑動導軌組成，其滑塊安裝於 U 型導軌中，實現小巧設計與緊湊結構，與傳統的工作機台相比，可大幅減少所需空間。U 型導軌對於彎曲力矩、撓曲展現高剛性，懸臂樑結構也可以使用。\n\n系列種類有高精度型、高剛性型及全防塵蓋型三種，可滿足各種需求，亦可加購防塵蓋、感測器等配件一起使用。\n\n**SG 系列－高精度型**\n\n- 採用緊湊結構，U 型導軌與滾珠螺桿主體兩側，將直線導軌形成一體的滑塊結構。\n- 直線導軌向負載滾珠施加適度的預壓，減少因負載變動而導致的摩擦阻力變化，確保高重複定位精度。\n- U 型導軌將撓曲降至最低，對懸臂載荷導致力矩負載剛性高。\n\n**SE 系列－高剛性型**\n\n- 滾珠螺桿和直線導軌一體成型，省去繁瑣精密調整，大大簡化安裝步驟。\n- 採用 U 型導軌，結構小巧，卻具備高剛性，懸臂結構也可以使用。\n- 透過在 U 型導軌中配置滑塊，實現了低截斷面結構，與傳統的工作檯機相比，大幅節省空間。\n\n**SC 系列－全密封型**\n\n- 為防止異物從外部進入，將傳動器側面開口部縮至極限，實現防塵性能的大幅提升。\n- SC 系列以其與 SE 系列完全相同的導軌尺寸實現全防塵蓋。SE 系列的安裝空間不變，可替換成全防塵蓋型，滿足節省空間需求（但要注意：安裝高度不同。）\n- SC系列採用與 SG、SE 系列同樣的鋼鐵材質 U 型導軌，緊湊形狀且具有高剛性，也可用於一側保持結構。\n\nKURODA- 黒田精工の低発塵クリーンアクチュエータSCシリーズ - YouTube\n\nTap to unmute\n\n[KURODA- 黒田精工の低発塵クリーンアクチュエータSCシリーズ](https://www.youtube.com/watch?v=laxvKEiotPI) [黒田精工株式会社](https://www.youtube.com/channel/UCeLfQzDkDE5DkAAmHjsoGrw)\n\n![thumbnail-image](https://yt3.ggpht.com/ytc/AIdro_nSHpoee4TloH4CfBo7iWMcKU8a4whVSi7IlErLxUnK8ro=s68-c-k-c0x00ffffff-no-rj)\n\n黒田精工株式会社1.35K subscribers\n\n[Watch on](https://www.youtube.com/watch?v=laxvKEiotPI)\n\nKuroda SC 系列產品影片\n\n[聯絡我們](https://aurotek.com/contact-us/components-inquiry/)\n\n文件下載\n\n產品與服務\n\n![Subtitle Deco](https://en.aurotek.com/wp-content/uploads/2025/07/subtitle_deco.svg)\n\n產品服務\n\n自動化設備\n\n自動化零組件\n\nAI機器人\n\n※ Please complete the form to download the document\n\n【產品】文件下載\n\nNotify\n\n姓名\n\n公司名稱\n\n部門/職稱\n\n聯絡電話\n\nUnited States +1\n\n244 results found\n\n- Afghanistan+93\n- Åland Islands+358\n- Albania+355\n- Algeria+213\n- American Samoa+1\n- Andorra+376\n- Angola+244\n- Anguilla+1\n- Antigua & Barbuda+1\n- Argentina+54\n- Armenia+374\n- Aruba+297\n- Ascension Island+247\n- Australia+61\n- Austria+43\n- Azerbaijan+994\n- Bahamas+1\n- Bahrain+973\n- Bangladesh+880\n- Barbados+1\n- Belarus+375\n- Belgium+32\n- Belize+501\n- Benin+229\n- Bermuda+1\n- Bhutan+975\n- Bolivia+591\n- Bosnia & Herzegovina+387\n- Botswana+267\n- Brazil+55\n- British Indian Ocean Territory+246\n- British Virgin Islands+1\n- Brunei+673\n- Bulgaria+359\n- Burkina Faso+226\n- Burundi+257\n- Cambodia+855\n- Cameroon+237\n- Canada+1\n- Cape Verde+238\n- Caribbean Netherlands+599\n- Cayman Islands+1\n- Central African Republic+236\n- Chad+235\n- Chile+56\n- China+86\n- Christmas Island+61\n- Cocos (Keeling) Islands+61\n- Colombia+57\n- Comoros+269\n- Congo - Brazzaville+242\n- Congo - Kinshasa+243\n- Cook Islands+682\n- Costa Rica+506\n- Côte d’Ivoire+225\n- Croatia+385\n- Cuba+53\n- Curaçao+599\n- Cyprus+357\n- Czechia+420\n- Denmark+45\n- Djibouti+253\n- Dominica+1\n- Dominican Republic+1\n- Ecuador+593\n- Egypt+20\n- El Salvador+503\n- Equatorial Guinea+240\n- Eritrea+291\n- Estonia+372\n- Eswatini+268\n- Ethiopia",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-12",
       "status": "candidate",
       "techFocus": [
-        "滾珠螺桿預壓、背隙與重複定位精度控制",
-        "EtherCAT伺服同步、位置迴路與多軸插補",
-        "真空壓力監測、治具防呆與設備互鎖"
+        "Kuroda SG以U型導軌整合滾珠螺桿與預壓直線導軌，提高重複定位精度",
+        "Kuroda SE採緊湊高剛性結構；SC縮小側面開口並加全防塵蓋，兩系列安裝高度不同"
       ],
       "supplyChainStage": "automation_equipment_adjacent",
       "roleType": "automation_for_cooling_production",
       "swot": {
         "strengths": [
-          "MOPS直接支持自動化設備及系統零組件製造與買賣",
-          "7月營收YoY+37.2%、累計YoY+50.4%，且公司明示自動化需求增加"
+          "官網明列NB與Kuroda產品及各滑台差異，技術細節可查",
+          "精密定位與防塵設計可支援製造設備導入",
+          "2026年8月營收4.07億元，MoM+7.73%、YoY+132.82%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露冷板、CDU、快接頭、泵浦或風扇等液冷產品",
-          "公司成長來自整體自動化業務，液冷只屬潛在產線應用"
+          "本次無冷板、CDU或液冷產線專案證據，不能列為液冷核心產品商",
+          "通路原廠產品不能表述為和椿自研能力，亦無液冷收入拆分"
         ],
         "opportunities": [
-          "液冷模組擴產可增加鎖附、點膠、搬運與測試自動化需求",
-          "液冷零件追溯與良率要求提高，可提升精密傳動及設備控制價值"
+          "液冷製造若需要精密定位，可形成滑台選型機會",
+          "產線潔淨與定位要求提升可增加全防塵與高精度型產品需求"
         ],
         "threats": [
-          "散熱廠可能自行整合產線或採用日系、歐系自動化品牌",
-          "把產線設備誤列為液冷核心零件會高估直接受惠程度"
+          "散熱廠自建設備或改用其他直線運動品牌會限制導入",
+          "設備景氣循環與原廠交期可能造成通路庫存風險"
         ]
       }
     }

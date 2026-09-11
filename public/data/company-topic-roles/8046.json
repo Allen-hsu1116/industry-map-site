@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "companyCode": "8046",
   "companyName": "南電",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
       "topicName": "PCB、IC 載板與高階基板材料",
       "topicType": "supply_chain_segment",
-      "directness": "direct_enabler",
+      "directness": "supplier",
       "supplyChainStage": "ic_substrate",
-      "roleType": "abf_substrate_provider",
-      "roleSummary": "南電MOPS登記僅支持電子零組件與電池製造，未具體揭露ABF、BT載板、HDI、材料牌號或具名客戶；考量公司題材脈絡，本角色保留為封裝載板與PCB產品觀察，但明確標示產品為公司既有產品範圍、非本次MOPS逐項證實。2026年7月營收54.40億元、MoM+16.1%、YoY+50.2%，公司說明受市場需求成長。",
+      "roleType": "flip_chip_and_wire_bond_substrate_provider",
+      "roleSummary": "南電MOPS登記過於概括，不能據此否定載板業務；官方覆晶與打線產品頁直接支持微處理器、繪圖晶片及ASIC的載板應用，本輪由歷史待核範圍提升為官方已確認的載板產品角色。未取得新代材料牌號、層數與具名客戶，不追加精密參數。2026年8月營收53.53億元，MoM-1.60%、YoY+40.59%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "FC-BGA封裝載板（既有產品範圍，非本次MOPS逐項揭露）",
-        "CSP封裝載板（既有產品範圍，非本次MOPS逐項揭露）",
-        "多層印刷電路板（既有產品範圍，非本次MOPS逐項揭露）",
-        "高密度互連PCB（既有產品範圍，非本次MOPS逐項揭露）"
+        "微處理器用覆晶封裝載板",
+        "繪圖晶片／ASIC用覆晶封裝載板",
+        "金線接合Wire Bond封裝載板",
+        "BGA／CSP打線封裝載板"
       ],
       "customers": [
         "Intel（封裝載板應用對象，非MOPS揭露客戶）",
@@ -25,14 +25,14 @@
         "日月光投控(3711；封裝供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "欣興(3037)",
-        "景碩(3189)",
-        "IBIDEN",
-        "Shennan Circuits"
+        "欣興（IC載板比較）",
+        "景碩（IC載板比較）",
+        "IBIDEN（封裝載板比較）"
       ],
       "risks": [
-        "IC 載板資本支出龐大",
-        "ABF 載板景氣波動大"
+        "本次產品頁未揭露ABF牌號、量產線寬或特定CPU/GPU客戶",
+        "高階載板產能擴張可能引發價格與稼動率壓力",
+        "封裝平台轉換與客戶驗證延後會增加資本回收風險"
       ],
       "legacy": {
         "topicSlug": "ic-substrate",
@@ -41,58 +41,71 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "南電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8046",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 8046 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零組件製造業、電池製造業。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "8046 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=8046",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：CC01080電子零組件製造業、CC01090電池製造業及其他非禁止限制業務。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收54.40億元，MoM+16.1%、YoY+50.2%，累計YoY+39.4%；受市場需求成長影響。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "8046 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收54.40億元，MoM+16.13%、YoY+50.24%，1–7月累計YoY+39.38%。備註：因受市場需求成長影響。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "8046 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=8046&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收53.53億元，MoM-1.60%、YoY+40.59%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "南電 官方網站",
+          "title": "覆晶載板產品介紹與應用",
+          "url": "https://www.nanyapcb.com.tw/nypcb/chinese/Product/ICIntroduction",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：將具有凸塊接點之IC晶片反貼覆置於承載基板上，該承載基板即稱為覆晶載板 (Flip ChipSubstrate)，係作為晶片與電路板間電性連接與傳輸的緩衝介面。透過載板的扇出 (Fan out)功能，以確定晶片邏輯閘 (Logicgate)輸出能達到電路板上邏輯閘輸入的最大數目。與打線載板相異處在於晶片與載板間連接以植球 (Solder bumps)方式取代金線 (Goldwire)，此舉能大幅提高載板的訊號密度 (I/O port)，並提升晶片效能表現，為未來載板發展之趨勢。\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/FlipChipSubstrate.png)\n\n## ![](https://www.nanyapcb.com.tw/nypcb/images/icon/BD10263_.GIF)封裝方法\n\n* * *\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/TypesofPackage.png)\n\n## ![](https://www.nanyapcb.com.tw/nypcb/images/icon/BD10263_.GIF)產品應用\n\n* * *\n\n![](https://www.nanyapcb.com.tw/nypcb/images/icon/arrow2.gif)**針型/閘型陣列封裝**： 微處理器\n\n![](https://www.nanyapcb.com.tw/nypcb/images/icon/arrow2.gif)**球型陣列封裝** ： 繪圖晶片、北橋晶片、遊戲機晶片、高階ASIC晶片、數位電視晶片\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/ProductApplications.png)",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-2",
+          "publisher": "南電 官方網站",
+          "title": "打線載板產品介紹與應用",
+          "url": "https://www.nanyapcb.com.tw/nypcb/chinese/Product/WBIntroduction",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：利用金線 (Gold wire)連接IC晶片上之電性接點 (Electricalpad)與承載基板，該種特殊打線封裝方式下使用之載板即稱為打線載板 (Wire Bond Substrate) ，係作為晶片與電路板間之電性連接與傳輸的緩衝介面。透過載板的扇出 (Fan out)功能，以確定晶片邏輯閘 (Logicgate)輸出能達到電路板上邏輯閘輸入的最大數目。\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/WireBondSubstrateC.jpg)\n\n## ![](https://www.nanyapcb.com.tw/nypcb/images/icon/BD10263_.GIF)封裝方法\n\n* * *\n\n##### ![](https://www.nanyapcb.com.tw/nypcb/images/icon/arrow2.gif)**球型陣列封裝 (Ball Grid Array;BGA)**\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/product3_2_1.jpg)\n\n##### 傳統印刷電路板    (Conventional PCB)\n\n##### ![](https://www.nanyapcb.com.tw/nypcb/images/icon/arrow2.gif)**晶片級尺寸封裝 (Chip Scale Package;CSP)**\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/product3_2_3.jpg)\n\n##### 打線式晶片級尺寸封裝    (Wire Bonding CSP)\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/product3_2_4.jpg)\n\n##### 覆晶式晶片級尺寸封裝    (Flip Chip CSP ;FC-CSP)\n\n![](https://www.nanyapcb.com.tw/nypcb/images/Prodct/product3_2_2.jpg)\n\n##### 視窗閘球型陣列封裝    (Window BGA)\n\n## ![](https://www.nanyapcb.com.tw/nypcb/images/icon/BD10263_.GIF)產品應用\n\n* * *\n\n![](https://www.nanyapcb.com.tw/nypcb/images/icon/arrow2.gif)**針型/閘型陣列封裝**： 微處理器\n\n![](https://www.nanyapcb.com.tw/nypcb/images/icon/arrow2.gif)**球型陣列封裝** ： 繪圖晶片、北橋晶片、遊戲機晶片、高階ASIC晶片、數位電視晶片",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-28",
+      "confidence": "high",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "封裝載板增層、微孔與細線路製程控制（既有產品脈絡）",
-        "載板翹曲、熱膨脹匹配與封裝可靠度控制（既有產品脈絡）",
-        "高速PCB之阻抗、插入損耗與多層壓合控制（既有產品脈絡）"
+        "覆晶載板以Solder Bumps取代Gold Wire連接晶片與基板以提升I/O密度（官方產品定義）",
+        "Wire Bond載板以金線接合並透過Fan-out對接PCB，不等同晶圓級Fan-out封裝"
       ],
       "swot": {
         "strengths": [
-          "公司題材脈絡具封裝載板與PCB製造基礎，可承接運算晶片需求",
-          "2026年7月營收YoY+50.2%、MoM+16.1%，累計YoY+39.4%，公司明示市場需求成長"
+          "官方明確解釋覆晶與打線載板產品及其應用",
+          "可參與微處理器、繪圖與ASIC等不同封裝需求",
+          "2026年8月營收53.53億元，MoM-1.60%、YoY+40.59%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "本次MOPS僅揭露電子零組件／電池製造，未逐項支持載板產品與規格",
-          "MOPS未揭露具名客戶，營收成長不能完全歸因AI或高階載板"
+          "本次產品頁未揭露ABF牌號、量產線寬或特定CPU/GPU客戶",
+          "月收入不能分離AI載板與其他載板貢獻",
+          "8月營收MoM-1.60%，年增與月減並存，不能只取年增率解讀需求。"
         ],
         "opportunities": [
-          "AI加速器與伺服器CPU可提高高階封裝載板面積與層數需求",
-          "高效能運算升級可帶動載板與高速PCB產品組合改善"
+          "運算晶片I/O提高可增加覆晶載板互連需求",
+          "不同晶片封裝選型可維持覆晶及打線產品需求"
         ],
         "threats": [
-          "載板擴產造成供需反轉時，價格與稼動率可能下滑",
-          "先進封裝技術路線改變或客戶集中會提高投資回收風險"
+          "高階載板產能擴張可能引發價格與稼動率壓力",
+          "封裝平台轉換與客戶驗證延後會增加資本回收風險"
         ]
       }
     },

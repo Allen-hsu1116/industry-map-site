@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3296",
   "companyName": "勝德",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -11,12 +11,13 @@
       "directness": "indirect",
       "supplyChainStage": "power_distribution_adjacent",
       "roleType": "power_protection_adjacent_to_storage",
-      "roleSummary": "勝德MOPS只揭露通信機械、電子元件與電機電子機械器材，未揭露電芯、電池模組、BMS、PCS或儲能櫃；本題材應限於電源分配、突波保護與遠端監控的周邊應用。2026年7月營收1.72億元、YoY+42.9%，但累計YoY僅+5.8%，且不能歸因儲能。",
+      "roleSummary": "勝德MOPS登記較概括，但官方目錄明列多類PDU、ATS及熱插拔突波保護，應保留可驗證的配電技術；儲能題材限於機房電源周邊，未確認電芯、BMS或PCS產品。2026年8月營收2.01億元，MoM+16.75%、YoY+53.39%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "機架式電源分配器PDU",
-        "突波保護電源排插",
-        "遠端電源監控通訊模組",
-        "繼電器式電源開關模組"
+        "Basic機架式電源分配器PDU",
+        "Metered／Monitored量測監控PDU",
+        "Switched遠端開關PDU",
+        "ATS自動切換配電系列",
+        "可熱插拔突波保護產品"
       ],
       "customers": [
         "台達電(2308；電源系統整合對象，非MOPS揭露客戶)",
@@ -25,69 +26,73 @@
         "中興電(1513；儲能與電網應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "華城電能(1513)",
-        "康舒(6282)",
-        "旭隼(6404)"
+        "Schneider Electric（機架PDU產品比較）",
+        "Eaton（機架配電產品比較）"
       ],
       "risks": [
-        "電池模組毛利率低",
-        "太陽能逆變器市場競爭激烈"
+        "PDU與突波保護並非電池、PCS或完整BESS",
+        "整機系統整合商自備配電方案可能壓縮通路空間",
+        "高功率配電可靠度與維運成本不符要求會影響導入"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：有線及無線通信機械器材、電子零組件、電機與電子機械器材之製造買賣。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "3296 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3296",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：有線及無線通信機械器材製造買賣、電子零組件製造買賣、電機與電子機械器材製造買賣。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收1.72億元，MoM+4.3%、YoY+42.9%，累計YoY+5.8%。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "3296 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收1.72億元，MoM+4.34%、YoY+42.88%，1–7月累計YoY+5.76%。備註：-。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "3296 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=3296&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收2.01億元，MoM+16.75%、YoY+53.39%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "勝德 官方網站",
+          "title": "POWERTECH 勝德國際研發股份有限公司",
+          "url": "https://power-tech.com.tw/",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：# Leader in Power Management Solutions and PDU Manufacturing\n\nEstablished in 2000, POWERTECH is a leading power solutions manufacturer with a diverse power-related product line in surge protection, power management and PDU solutions. Our products serve homes, offices, mobile environments, businesses, and industrial sites, offering advanced solutions for energy management and power protection—such as active power distribution systems, PDUs for data centers and AI servers, and protection devices for IT and AV equipment...... [Read More](https://www.power-tech.com.tw/aboutUs/profile/introduction)\n\n![About Us](https://power-tech.com.tw/storage/01KQ9FQ4AHW01DK98ZTJ6W118P.png)\n\n# Technical Solutions\n\n![Previous](https://power-tech.com.tw/icon/prev-arrow-3.png)\n\n[![](https://power-tech.com.tw/storage/01KT146HT0CWXVZQKYCY4SB65C.png)\\\\\n\\\\\nSurge Protection\\\\\n\\\\\nUpgrade surge protection to a higher level to shield against extreme weather damage. We provide the most advanced surge protection technology, such as Hot Swappable Surge Protection and Non-Sacrificial Surge Protection,...etc.](https://power-tech.com.tw/solutionsList/13)\n\n[![](https://power-tech.com.tw/storage/01KZWZBZ6EPK7QB2WJCM7N0BWA.png)\\\\\n\\\\\nEnergy Management\\\\\n\\\\\nSmart Energy Management delivers intelligent monitoring, power protection, and energy optimization for smarter, safer, and more sustainable operations in order to track data related to ultimate sustainability.](https://power-tech.com.tw/solutionsList/14)\n\n[![](https://power-tech.com.tw/storage/01KT149DCPPSHCJYG9V9TBQAKR.png)\\\\\n\\\\\nSmart Power\\\\\n\\\\\nMonitoring your appliances power usage and enables remote control via your smartphone or tablet, schedule each appliance and establish rules to activate them under specific conditions.](https://power-tech.com.tw/solutionsList/15)\n\n[![](https://power-tech.com.tw/storage/01KZWZDV11HBX3KE5BBF0ZX708.png)\\\\\n\\\\\nIndustrial Power\\\\\n\\\\\nSwitching power supplies are indispensable to various industrial and manufacturing operations. All our power supplies are characterizing by their high energy efficiency, and high reliability.](https://power-tech.com.tw/solutionsList/20)\n\n[![](https://power-tech.com.tw/storage/01KZWZ96V70B3BWPX9GK5HQ0HK.png)\\\\\n\\\\\nPDU\\\\\n\\\\\nComprehensive rack power solutions featuring Basic, Metered, Monitored, Switched, and ATS series. Optimize energy management and uptime with precise measurement.](https://power-tech.com.tw/solutionsList/12)\n\n[![](https://power-tech.com.tw/storage/01KT146HT0CWXVZQKYCY4SB65C.png)\\\\\n\\\\\nSurge Protection\\\\\n\\\\\nUpgrade surge protection to a higher level to shield against extreme weather damage. We provide the most advanced surge protection technology, such as Hot Swappable Surge Protection and Non-Sacrificial Surge Protection,...etc.](https://power-tech.com.tw/solutionsList/13)\n\n[![](https://power-tech.com.tw/storage/01KZWZBZ6EPK7QB2WJCM7N0BWA.png)\\\\\n\\\\\nEnergy Management\\\\\n\\\\\nSmart Energy Management delivers intelligent monitoring, power protection, and energy optimization for smarter, safer, and more sustainable operations in order to track data related to ultimate sustainability.](https://power-tech.com.tw/solutionsList/14)\n\n[![](https://power-tech.com.tw/storage/01KT149DCPPSHCJYG9V9TBQAKR.png)\\\\\n\\\\\nSmart Power\\\\\n\\\\\nMonitoring your appliances power usage and enables remote control via your smartphone or tablet, schedule each appliance and establish rules to activate them under specific conditions.](https://power-tech.com.tw/solutionsList/15)\n\n[![](https://power-tech.com.tw/storage/01KZWZDV11HBX3KE5BBF0ZX708.png)\\\\\n\\\\\nIndustrial Power\\\\\n\\\\\nSwitching power supplies are indispensable to various industrial and manufacturing operations. All our power supplies are characterizing by their high energy efficiency, and high reliability.](https://power-tech.com.tw/solutionsList/20)\n\n[![](https://power-tech.com.tw/storage/01KZWZ96V70B3BWPX9GK5HQ0HK.png)\\\\\n\\\\\nPDU\\\\\n\\\\\nComprehensive rack power solutions featuring Basic, Metered, Monitored, Switched, an",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-27",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-12",
+      "status": "candidate",
       "techFocus": [
-        "電壓、電流與功率量測及遠端通訊監控",
-        "突波吸收、過流保護與繼電器切換",
-        "機架配電、接地與負載分路管理"
+        "Basic、Metered、Monitored、Switched、ATS為官方分列PDU系列，不合併成單一機型規格",
+        "Hot Swappable Surge Protection為官方突波保護方案；遠端電源監測屬Smart Power系列"
       ],
       "swot": {
         "strengths": [
-          "電源分配、保護與通訊監控能力可支援儲能機房周邊配電",
-          "2026年7月營收YoY+42.9%，單月需求顯著改善"
+          "官方提供Basic至ATS多類PDU產品，配電周邊定位有據",
+          "熱插拔突波保護可支援設備維運不中斷的需求",
+          "2026年8月營收2.01億元，MoM+16.75%、YoY+53.39%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露電芯、BMS、PCS或儲能櫃，不能列為核心儲能供應商",
-          "累計YoY僅+5.8%，單月高成長尚未形成全年同幅度趨勢"
+          "PDU與突波保護並非電池、PCS或完整BESS",
+          "無儲能專案收入拆分與具名買方，不能將配電收入全歸因儲能"
         ],
         "opportunities": [
-          "工商儲能及資料中心擴建可增加智慧配電與遠端監控需求",
-          "儲能安全規範提高有利突波、過流與分路管理功能升級"
+          "儲能監控機房與資料中心建置可增加配電監測需求",
+          "可更換保護模組有助降低維修停機時間"
         ],
         "threats": [
-          "儲能系統商可自行整合PDU與監控，周邊元件議價空間有限",
-          "MOPS產品揭露過於概括，若無專案公告容易把通用配電誤當儲能收入"
+          "整機系統整合商自備配電方案可能壓縮通路空間",
+          "高功率配電可靠度與維運成本不符要求會影響導入"
         ]
       }
     },

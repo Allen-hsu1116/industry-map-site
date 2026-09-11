@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6261",
   "companyName": "久元",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,12 +11,12 @@
       "directness": "indirect",
       "supplyChainStage": "back_end_process",
       "roleType": "dicing_grinding_test_service",
-      "roleSummary": "久元MOPS直接支持半導體與光電產品切割、研磨、測試、挑檢、基板切割，以及IC／CIS／CCM測試設備；其角色是晶圓製造後段加工與測試，不是晶圓代工廠。FinMind顯示2026年7月營收3.74億元、MoM-4.1%、YoY-6.5%。",
+      "roleSummary": "久元MOPS揭露切割、研磨、測試挑檢及IC/CIS/CCM設備；本題材是晶圓後段加工與檢測，不是前段晶圓製造，也未據此宣稱第三代半導體量產能力。2026年8月營收3.45億元，MoM-7.81%、YoY-0.38%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "半導體晶圓切割服務",
-        "晶圓背面研磨服務",
-        "IC電性測試與挑檢服務",
-        "封裝基板切割服務",
+        "半導體晶圓切割加工",
+        "晶圓研磨加工",
+        "IC電性測試與挑檢",
+        "封裝／光電基板切割",
         "IC／CIS／CCM自動測試設備"
       ],
       "customers": [
@@ -26,71 +26,66 @@
         "日月光投控(3711；封測生態對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "精測(6510)(晶圓測試探針卡)",
-        "致茂科技(6130)(測試設備)",
-        "旺捷科技(分選機)",
-        "京元電子(2449)(IC測試代工)"
+        "京元電子（IC測試服務比較）",
+        "致茂（電子測試設備比較，非切割業務直接競爭）"
       ],
       "risks": [
-        "6月營收3.90億MoM+11.8%，但晶圓切割/研磨為低毛利加工服務，利潤空間有限",
-        "晶圓代工後段加工市場競爭者多，台積電/聯電部分製程自建加工能力",
-        "先進製程晶圓薄化需求增加，但技術門檻提升需持續設備投資"
+        "前段晶圓代工與第三代材料製造並非此次揭露業務",
+        "大型封測供應商擴張或客戶自建產能會減少委外機會",
+        "設備投資與訂單起伏可能放大固定成本壓力"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及光電產品加工：切割、研磨、測試、挑檢與基板切割等。半導體及光電設備之研發、製造與銷售：IC/CIS/CCM測試設備等。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：半導體及光電產品切割、研磨、測試、挑檢與基板切割；IC、CIS、CCM測試設備等半導體及光電設備之研發、製造與銷售。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "6261 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6261",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：半導體及光電產品切割、研磨、測試、挑檢與基板切割加工；IC/CIS/CCM測試設備研發製造銷售。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "6261 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026-09-12本批MCP查詢6261月營收回傳找不到資料；這是主查詢未覆蓋，並非公司未公告。改用FinMind MCP備援。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "FinMind月營收歷史",
+          "title": "6261 2026年8月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收3.74億元，MoM-4.1%、YoY-6.5%。"
+          "claim": "2026年8月營收3.45億元，MoM-7.81%、YoY-0.38%。FinMind MCP營收歷史備援。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-27",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "晶圓切割之刀痕、崩邊與顆粒污染控制",
-        "晶圓研磨之厚度均勻性、翹曲與破片控制",
-        "IC／CIS／CCM自動測試、影像檢測與分選整合"
+        "切割崩邊、刀痕及顆粒污染控制（後段加工技術分析）",
+        "研磨厚度均勻性、翹曲及破片控制（技術分析，未指定微米級量產能力）",
+        "IC／CIS／CCM測試設備整合量測與分選（MOPS揭露設備範圍）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持切割、研磨、測試、挑檢及自研測試設備，後段服務範圍完整",
-          "加工服務與設備銷售並存，可交叉累積測試與自動化經驗"
+          "MOPS直接支持多項後段加工與測試服務",
+          "自研測試設備與加工服務能共同參與測試流程改進"
         ],
         "weaknesses": [
-          "2026年7月營收3.74億元、MoM-4.1%、YoY-6.5%，近期需求偏弱",
-          "公司不是晶圓代工廠，且MOPS未揭露先進節點或具名客戶"
+          "前段晶圓代工與第三代材料製造並非此次揭露業務",
+          "月收入未拆分設備銷售與加工服務，不能推算單項稼動率",
+          "2026年8月營收3.45億元，MoM-7.81%、YoY-0.38%。整體收入仍低於去年同期。"
         ],
         "opportunities": [
-          "CIS、CCM與IC測試需求可帶動自動測試設備及加工服務",
-          "晶圓薄化與高密度封裝增加切割、研磨及挑檢難度與附加價值"
+          "薄化晶圓與影像模組需求可提升加工及測試難度",
+          "CIS/CCM自動檢測可降低人工挑檢成本"
         ],
         "threats": [
-          "客戶自建後段產能或大型封測廠擴充會壓縮委外需求",
-          "設備投資與稼動率受半導體景氣循環影響明顯"
+          "大型封測供應商擴張或客戶自建產能會減少委外機會",
+          "設備投資與訂單起伏可能放大固定成本壓力"
         ]
       }
     },

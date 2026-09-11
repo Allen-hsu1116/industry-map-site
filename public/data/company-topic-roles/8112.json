@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-09-06T19:15:54Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -320,84 +320,89 @@
       "topicId": "ai-server-liquid-cooling",
       "topicName": "AI 伺服器液冷散熱",
       "topicType": "technology",
-      "directness": "indirect",
-      "supplyChainStage": "thermal_component_distribution",
-      "roleType": "thermal_component_distributor",
-      "roleSummary": "至上MOPS僅揭露電子零組件經銷，未揭露冷板、CDU、泵浦或液冷系統製造；本題材限縮為伺服器液冷控制所需記憶體、電源與感測零組件的通路角色。2026年7月營收768.74億元、MoM+24.7%、YoY+333.5%，公司說明由記憶體漲價及伺服器、手機客戶拉貨帶動，不能全數歸因液冷。",
+      "directness": "supplier",
+      "supplyChainStage": "liquid_cooling_fluids_distribution",
+      "roleType": "castrol_cooling_fluid_distributor",
+      "roleSummary": "至上MOPS僅概括列電子元件經銷，但實際官網bp/Castrol產品頁明列PG25、EG25、DC15/DC20資料中心冷卻液。本輪由臆測感測IC鄰近角色修正為有官方產品證據的液冷材料通路；不是冷板或CDU製造商，原廠生態合作也不等於至上具名客戶。2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "伺服器控制板用記憶體零組件經銷",
-        "泵浦與風扇控制用功率半導體經銷",
-        "溫度／壓力／流量感測IC經銷",
-        "電源管理與馬達驅動IC經銷"
+        "Castrol PG25冷板式直接晶片冷卻液（通路產品）",
+        "Castrol EG25直接晶片冷卻液（通路產品）",
+        "Castrol DC15浸沒式冷卻液（通路產品）",
+        "Castrol DC20浸沒式冷卻液（通路產品）"
       ],
       "customers": [
-        "奇鋐(3017；液冷系統應用對象，非MOPS揭露客戶)",
-        "雙鴻(3324；液冷模組應用對象，非MOPS揭露客戶)",
-        "台達電(2308；散熱與電源應用對象，非MOPS揭露客戶)",
-        "建準(2421；風扇控制應用對象，非MOPS揭露客戶)"
+        "bp／Castrol（官網液冷產品品牌供應鏈對象，非下游客戶）",
+        "技鋼科技（Castrol液冷生態應用對象，非至上已揭露客戶）",
+        "Submer（Castrol浸沒冷卻生態對象，非至上已揭露客戶）",
+        "仁寶（浸沒式伺服器應用對象，非至上已揭露客戶）"
       ],
-      "competitors": [
-        "文曄(3034)",
-        "世平(2451)"
-      ],
+      "competitors": [],
       "risks": [
-        "散熱元件經銷佔比極低"
+        "月營收未披露冷卻液占比；7月官方成長說明是記憶體漲價及伺服器／手機拉貨，非液冷收入證據",
+        "冷卻液材料相容性、系統保固與維護規範可能延長驗證",
+        "通路交易波動與記憶體價格變動仍可能主導總收入"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零組件經銷業務。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "8112 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=8112",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：電子零組件經銷業務。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
-          "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，累計YoY+180.4%；記憶體漲價及伺服器、手機拉貨帶動。"
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "8112 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026年7月營收768.74億元，MoM+24.74%、YoY+333.48%，1–7月累計YoY+180.42%。備註：營收大幅成長，主要係記憶體等零組件價格持續上漲，伺服器及手機客戶拉貨動能強勁所致。。本次TWSE工具僅回傳7月，已另補8月；7月原因不直接延用至8月。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "finmind-revenue-history",
+          "publisher": "FinMind",
+          "title": "8112 2026年8月營收",
+          "url": "https://api.finmindtrade.com/api/v4/data?dataset=TaiwanStockMonthRevenue&data_id=8112&start_date=2025-08-01&end_date=2026-09-12",
+          "claim": "2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%。FinMind公開HTTP補充（非MCP）；TWSE主來源僅回傳7月。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "至上 官方網站",
+          "title": "\n\tSupreme\n",
+          "url": "https://www.supreme.com.tw/WP/WP0089.aspx",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：Product Advantages (PG25) – Cold Plate/Direct Liquid Cooling (DLC)： |\n| - Excellent heat dissipation capability<br>- Provide corrosion protection<br>- Recognized non-toxic Contains propylene glycol (PG)<br>- Amine and phosphate free |\n|  |\n| Product Advantages (EG25) – Cold Plate/Direct Liquid Cooling (DLC)： |\n| - Available directly<br>- Excellent thermal performance<br>- Low conductivity<br>- Ethylene glycol content of 25% has cost advantages |\n|  |\n| Product Advantages (DC15/DC20) – Immersion Cooling： |\n| - Low viscosity<br>- Proven thermal performance<br>- Strong electrical characteristics<br>- High fluid stability<br>- Proven material compatibility<br>- Low GWP/ODP |\n|  |\n| Applications： |\n| - Server<br>- Data Center |\n|  |\n| Relative News： |\n| 1. Direct-to-Chip Liquid Cooling<br>   - [bp 重磅宣布 Direct-To-Chip PG25 直接晶片冷卻液](https://www.datacenterdynamics.com/en/news/castrol-launches-new-direct-to-chip-cooling-fluid/)<br>   - [從潤滑油到資料中心冷卻液 bp 嘉實多COMPUTEX大秀液冷黑科技](https://www.digitimes.com.tw/tech/dt/n/shwnws.asp?id=0000723499_W015DPJV8Q2B3HLVZZI0A)<br>   - [bp嘉實多與技鋼科技簽署合作備忘錄，攜手推動液冷資料中心發展](https://ithome.com.tw/pr/169213)<br>   - [技嘉攜嘉實多 打入歐洲GB200 AIDC](https://www.ctee.com.tw/news/20250604700198-439901)<br>   - [bp嘉實多與廣運旗下金運科技締約結盟 合攻AI伺服器液冷解決方案](https://udn.com/news/story/7238/8718064)<br>   - [Castrol ON Advances Liquid Cooling Strategy with OCP Inspired™ Portfolio](https://www.prnewswire.com/news-releases/castrol-on-advances-liquid-cooling-strategy-with-ocp-inspired-portfolio-302762113.html)<br>2. Immersion Cooling<br>   - [Submer 台灣實驗室啟用並強化與 bp Castrol 全球合作關係](https://money.udn.com/money/story/11799/8770958)<br>   - [bp 嘉實多及Intel 技術研究報告DC15浸沒式冷卻液展現長期熱穩定性及安全性](https://money.udn.com/money/amp/story/11799/8493435)<br>   - [仁寶揪英特爾及嘉實多強攻浸沒式液冷AI伺服器](https://www.ctee.com.tw/news/20241224700226-439901) |\n|  |\n| Offical Website： **[Castrol](https://www.castrol.com/)** |\n| Contact Person：Joe Cheng |\n| E-mail： **[joe@supreme.com.tw](mailto:joe@supreme.com.tw)** |\n|  |\n|  | |\n\n|     |\n| --- |\n|  |\n\n[▲](https://www.supreme.com.tw/WP/WP0089.aspx#banner)\n\n|     |     |     |     |\n| --- | --- | --- | --- |\n|  |\n|  | © 2015 Supreme Electronics Co., Ltd.. All rights reserved. | Privacy Declaration of Group |  |\n\n──────── [TRUNCATED] ────────\nShowing 8,227 chars (head) + 2,243 chars (tail) of 11,837 total clean characters.\nFull text saved to: /Users/yenlunhsu/.hermes/cache/web/www.supreme.com.tw-283f877084.md\nTo read the omitted middle: read_file path=\"/Users/yenlunhsu/.hermes/cache/web/www.supreme.com.tw-283f877084.md\" offset=64 limit=200  (the file is the complete page; raise/lower offset to page through it).\n─────────────────────────────",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-28",
+      "confidence": "medium",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "感測IC之I2C／SPI介面與類比前端選型支援",
-        "泵浦／風扇馬達驅動與功率元件散熱設計支援",
-        "伺服器控制板記憶體、電源與感測器料號供應管理"
+        "PG25為含丙二醇、提供防蝕且不含胺及磷酸鹽的DLC冷卻液（至上官網）",
+        "EG25明列25%乙二醇、即用型與低電導率，不與PG25配方混用",
+        "DC15／DC20為低黏度浸沒式冷卻液，官方強調材料相容性與流體穩定性"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持電子零組件經銷，可受惠伺服器客戶拉貨擴大",
-          "2026年7月營收YoY+333.5%、累計YoY+180.4%，公司明示伺服器與手機拉貨強勁"
+          "官方產品頁直接支持冷板式與浸沒式冷卻液通路，液冷產品連結成立",
+          "DLC及浸沒兩種產品線提供不同冷卻架構選型",
+          "2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "不製造冷板、CDU或泵浦，液冷直接性低",
-          "營收主要受記憶體價格與通路交易規模影響，不能視為液冷收入"
+          "月營收未披露冷卻液占比；7月官方成長說明是記憶體漲價及伺服器／手機拉貨，非液冷收入證據",
+          "Castrol與系統商合作新聞不能轉寫成至上的直接買賣關係",
+          "8月營收MoM-47.00%，年增與月減並存，不能只取年增率解讀需求。"
         ],
         "opportunities": [
-          "液冷系統感測、馬達控制與電源管理零組件用量可隨部署增加",
-          "伺服器拉貨強勁可擴大通路備貨與設計導入機會"
+          "直接晶片冷卻部署可增加PG25／EG25材料評估需求",
+          "浸沒式機房可形成DC15／DC20相容性與維護服務需求"
         ],
         "threats": [
-          "記憶體價格反轉會使高基期營收快速回落",
-          "原廠直供或客戶縮短通路層級可能壓縮經銷毛利"
+          "冷卻液材料相容性、系統保固與維護規範可能延長驗證",
+          "通路交易波動與記憶體價格變動仍可能主導總收入"
         ]
       }
     }

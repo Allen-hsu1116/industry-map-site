@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3131",
   "companyName": "弘塑",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-11T19:17:38Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -85,13 +85,13 @@
       "directness": "core",
       "supplyChainStage": "process_equipment_and_chemicals",
       "roleType": "wet_process_equipment_and_chemicals_provider",
-      "roleSummary": "弘塑MOPS明確揭露半導體及IC製造設備工程、製造、買賣與維修，以及工業級、試藥級、電子級混酸蝕刻液和電鑄藥液；是濕製程設備與電子化學品直接角色。FinMind顯示2026年7月營收7.93億元，MoM+25.6%、YoY+42.4%，整體動能強。",
+      "roleSummary": "弘塑MOPS確認設備工程與混酸／電鑄藥液，官方產品頁進一步提供單晶圓、Batch Wet Bench及Combo架構與RCA清洗技術，補足具體設備。前段材料題材須區分設備及化學品，不能將全部收入指認為CoWoS。2026年8月營收6.81億元，MoM-14.07%、YoY+43.35%。營收為公司整體口徑，不等同本題材收入。",
       "products": [
-        "半導體濕式清洗設備",
-        "半導體濕式蝕刻設備",
+        "Single Wafer Spin Processor單晶圓旋轉處理設備",
+        "Batch Type Wet Bench多槽濕式設備",
+        "浸泡槽與單晶圓旋轉整合式Combo設備",
         "電子級混酸蝕刻液",
-        "電鑄製程藥液",
-        "半導體設備安裝維修服務"
+        "電鑄製程藥液"
       ],
       "customers": [
         "台積電(2330；晶圓製造應用對象，非MOPS揭露客戶）",
@@ -100,69 +100,83 @@
         "日月光投控(3711；封裝製程應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "辛耘(3583)",
-        "崇越(5434)",
-        "中美矽晶(5763)"
+        "辛耘（濕製程設備比較）",
+        "SCREEN（晶圓清洗設備比較）"
       ],
       "risks": [
-        "客戶集中度高(台積電佔比大)",
-        "設備廠規模相對小,研發資源有限"
+        "月收入未拆分前段設備、先進封裝與化學品，題材貢獻不可直接估算",
+        "資本支出與設備驗收遞延會影響月收入",
+        "藥液純度、設備潔淨及專利競爭會提高研發與認證成本"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 半導體及積體電路製造設備之工程承包、製造、買賣及維修工程。化學品：工業級、試藥級、電子級混酸（蝕刻液）、電鑄藥液。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "半導體及IC製造設備工程承包、製造、買賣、維修；工業級、試藥級、電子級混酸蝕刻液與電鑄藥液；半導體機械安裝及電子零組件製造。"
+          "publisher": "公開資訊觀測站 MOPS（MCP）",
+          "title": "3131 公司完整基本資料，本批查核",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3131",
+          "claim": "本批MCP成功取得主要經營業務（摘要）：半導體及積體電路製造設備工程承包、製造、買賣維修；工業級、試藥級、電子級混酸蝕刻液及電鑄藥液；機械安裝及電子零組件製造。MOPS未逐項揭露的工程機制在techFocus標為分析；正式產品規格另依下列官方來源。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "twse-monthly-revenue",
+          "publisher": "TWSE OpenAPI（MCP）",
+          "title": "3131 月營收主查詢結果",
+          "url": "https://openapi.twse.com.tw/v1/opendata/t187ap05_L",
+          "claim": "2026-09-12本批MCP查詢3131月營收回傳找不到資料；這是主查詢未覆蓋，並非公司未公告。改用FinMind MCP備援。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         },
         {
           "sourceId": "finmind-revenue-history",
           "publisher": "FinMind",
-          "title": "2026年7月月營收",
+          "title": "3131 2026年8月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收7.93億元，MoM+25.6%、YoY+42.4%。"
+          "claim": "2026年8月營收6.81億元，MoM-14.07%、YoY+43.35%。FinMind MCP營收歷史備援。原始單位新臺幣元，依revenue_year/revenue_month辨識月份並計算月增／年增；公司整體數據不等同題材收入。",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-1",
+          "publisher": "弘塑 官方網站",
+          "title": "Batch Type Wet Bench System-Product-Grand Process Technology Corporation.",
+          "url": "https://www.gptc.com.tw/en/product/Batch-Type-Wet-Bench-System/",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：## Single Wafer Spin Processor\n\nUFO Series、UFO-A Series\n\nAs semiconductor process requirements continue to tighten, achieving process consistency and reproducibility within and between individual wafer substrates has become increasingly critical. The Single Wafer Spin Processor offers automated handling and precise positioning through robotic arms, enabling precise control of chemical reactions within the process chamber via flexible parameter settings to meet process requirements. Additionally, the system boasts a compact footprint and includes features such as chemical recycling system, etch endpoint detector, double-sided cleaning, all of which aid in reducing production costs. It is well-suited for various process applications, including Metal Etch, Silicon Etch, Oxide Etch, PR Strip, Wafer Clean, Mask Clean, and more.\n\n[![UFO-A Series](https://www.gptc.com.tw/upload/catalog_list_pic/enL_catalog_23B09_hkvhWP3LH8.png)](https://www.gptc.com.tw/en/product-detail/UFO-A-Series/ \"UFO-A Series\")\n\n[view more](https://www.gptc.com.tw/en/product-detail/UFO-A-Series/ \"UFO-A Series\")\n\n### [UFO-A Series](https://www.gptc.com.tw/en/product-detail/UFO-A-Series/ \"UFO-A Series\")\n\nProcess :\n\nEtch, PR Strip, Wafer Cleaning\n\nSolutions :\n\nAdvanced Semiconductor Packaging, 2.5D/3D IC Packaging, Compound Semiconductors, Silicon Wafer Manufacturing, SiC Wafer Manufacturing, MOSFET Backend Processes (BGBM)\n\n[![UFO Series](https://www.gptc.com.tw/upload/catalog_list_pic/enL_catalog_23B09_UWuarOu0Bd.png)](https://www.gptc.com.tw/en/product-detail/UFO-Series/ \"UFO Series\")\n\n[view more](https://www.gptc.com.tw/en/product-detail/UFO-Series/ \"UFO Series\")\n\n### [UFO Series](https://www.gptc.com.tw/en/product-detail/UFO-Series/ \"UFO Series\")\n\nProcess :\n\nWafer Clean, Flux Clean, Mask Clean\n\nSolutions :\n\nAdvanced Semiconductor Packaging, 2.5D/3D IC Packaging, Compound Semiconductors, Silicon Wafer Manufacturing, SiC Wafer Manufacturing, MOSFET Backend Processes (BGBM)\n\n[![UFO Long Type Series](https://www.gptc.com.tw/upload/catalog_list_pic/enL_catalog_23B09_bxtPp8YAAd.png)](https://www.gptc.com.tw/en/product-detail/UFO-Long-Type-Series/ \"UFO Long Type Series\")\n\n[view more](https://www.gptc.com.tw/en/product-detail/UFO-Long-Type-Series/ \"UFO Long Type Series\")\n\n### [UFO Long Type Series](https://www.gptc.com.tw/en/product-detail/UFO-Long-Type-Series/ \"UFO Long Type Series\")\n\nProcess :\n\nEtch, PR Strip, Wafer Clean\n\nSolutions :\n\nAdvanced Semiconductor Packaging, 2.5D/3D IC Packaging, Panel-Level Advanced Packaging, Compound Semiconductors, Silicon Wafer Manufacturing, SiC Wafer Manufacturing, MOSFET Backend Processes (BGBM)\n\n## Batch Type Wet Bench System\n\nVAN Series、DIO Series\n\nOur highly customized wet bench system design can support multi soaking tanks setup for dipping process, optimize process conditions by temperature control mechanism, flow circulation, agitation, ultra/mega-sonic, chemical mixing and spiking mechanism, wafer drying, the advantages are high throughput, low cost and support various wafer/substrate sizes. This system can apply for various wet processes such as Metal Etch, Silicon Etch, Oxide Etch, Nitride Etch, PR Strip, RCA Clean, Glass Clean, Electric Plating, Electroless Plating and more.\n\n[![VAN and DIO Series](https://www.gptc.com.tw/upload/catalog_list_pic/enL_catalog_23B09_ssRtPowmwn.png)](https://www.gptc.com.tw/en/product-detail/VAN-And-DIO-Series/ \"VAN and DIO Series\")\n\n[view more](https://www.gptc.com.tw/en/product-detail/VAN-And-DIO-Series/ \"VAN and DIO Series\")\n\n### [VAN and DIO Series](https://www.gptc.com.tw/en/product-detail/VAN-And-DIO-Series/ \"VAN and DIO Series\")\n\nProcess :\n\nEtch, PR Strip, RCA Clean, Plating\n\nSolutions :\n\nAdvanced Semiconductor Packaging, 2.5D/3D IC Packaging, Panel-Level Advanced Packaging, Compound Semiconductors, Silicon Wafer Manufacturing, SiC Wafer Manufacturing, MOSFET Backend Processes (BGBM), Automotive Diodes, Quartz Components, CIS Optical Eleme\n\n## Combo System\n\nUFO-C Series\n\nRegarding the",
+          "retrievedAt": "2026-09-11T19:17:38Z"
+        },
+        {
+          "sourceId": "official-role-refinement-20260912-2",
+          "publisher": "弘塑 官方網站",
+          "title": "RCA Clean Manufacturing Process-Grand Process Technology Corporation.",
+          "url": "https://www.gptc.com.tw/en/technology-detail/RCA/",
+          "claim": "本批實際擷取公開頁面之產品／技術佐證（截錄）：### The wet chemical cleaning and etching processes most commonly used in GPTC wet bench equipment are:\n\n### 1\\.  Wet chemical cleaning process\n\nChemicals often used include SC-1 (APM), SC-2 (HPM), SPM, HF, and BHF. The composition and function of these chemicals are listed in the table below. The US company RCA invented the SC1 and SC2 cleaning processes, so they are also called RCA-1 and RCA-2.\n\n| Cleaning Chemicals | Method |\n| --- | --- |\n| SC-1(APM) | The ammonia solution is slight alkaline. It is used to clean the surface by inducing mutual repulsion between the wafer surface and fine particles. Hydrogen peroxide can also oxidize the surface of the silicon wafer, and ammonia solution micro-etches SiO2 to remove fine particles. Generally, the APM process is performed with a volume ratio of NH4OH:H2O2:H2O=0.05–1:1:5 at 70 °C. Ammonia solution has a lower boiling point and the APM process tends to cause surface micro-roughness, so to maximize yields, you have to control the concentration ratio of the ammonia solution (NH4OH) and the hydrogen peroxide (H2O2) |\n| SC-2(HPM) | This process is important for the removal of metallic impurities. Metal chloride dissolves readily in water, so the HPM process uses hydrogen peroxide to oxidize contaminated metal. Then, the process dissolves the soluble chloride formed in the reaction between hydrochloric acid and metal ions. Generally, the HPM process is performed with a volume ratio of HCl: H2O2: H2O = 1:1:6 at 70 °C. It takes 5–10 minutes of cleaning |\n| SPM | This process removes organic matter on wafer surfaces. It uses Caro's acid generated from sulfuric acid and hydrogen peroxide. The acid has strongly oxidizing and dehydrating power. It destroys the hydrocarbon bonds of organic matter to remove organic impurities. Generally, the SPM process is performed with a volume ratio of H2SO4:H2O2=2-4: 1 at 130 °C. It takes 10–15 minutes |\n| HF(BOE) | This process removes naturally occurring oxide layers from silicon wafer surfaces. It uses dilute hydrofluoric acid (0.49–2%) or a buffer solution. The buffer solution is generated from hydrofluoric acid and ammonium fluoride (HF/NH4F=1:200-400). The process takes 15–30 seconds at room temperature |\n\n### 2\\. Wet etching process\n\nThe advantages of the wet etching technique are characterized by its streamlined manufacturing process, low cost, high-performance etching selectivity, and fast yield rate. The wet etching mechanism is as follows:\n\n1.An oxidizing agent is normally used to oxidize the etching material. A suitable acid is then used to dissolve the oxidized material.\n\n2.A surfactant and buffer solution are often added to the etchant to maintain stability; this will stabilize the rate of etching and reduce chemical consumption.\n\nCommon wet etching processes are described below:\n\n| Type of wet etching | Method |\n| --- | --- |\n| Silicon dioxide layer etching (SiO2 Etching) | A buffer solution of hydrofluoric acid and ammonium fluoride (HF/NH4F; BOE or BHF) is used to etch the silicon dioxide layer and initiate the following chemical reaction:<br> SiO2 + 4HF + 2NH4F ® (NH4)2SiF6 + 2H2O<br> When using hydrofluoric acid to etch silicon dioxide layer, it is the concentration of \\[HF2-\\] that determines the etching rate: if the HF concentration is kept constant and the NH4F buffer solution provides a large amount of F- ions, the etching rate will remain stable. At the same time, typically a small amount of surfactant is added to a buffer solution in order to assist the chemical exposure of hydrophobic silicon wafer surface. This will make the reaction more uniform and improve the wettability of the wafer, thus also preventing roughness on the etched wafer surface. Factors affecting the rate of etching include:<br> (1) SiO2 layer patterns: Looser structures (such as naturally occurring oxide layers: Native Oxide) produce faster etching rates<br> (2) Reaction temperature: Higher temperatures produce faster etching rates<br> (3) Buffer solution mix",
+          "retrievedAt": "2026-09-11T19:17:38Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-12",
       "status": "verified",
       "techFocus": [
-        "濕式清洗／蝕刻設備之藥液流場、溫度與顆粒控制",
-        "電子級混酸之濃度、金屬雜質與批次穩定控制",
-        "電鑄藥液之添加劑、沉積均勻度與製程監控"
+        "Batch Wet Bench採溫控、循環、攪拌及超音波／兆聲波；設備功能以官方描述為準",
+        "Single Wafer設備可結合藥液回收、蝕刻終點偵測及雙面清洗，不與所有批次機型混用",
+        "RCA Clean官方說明SC-1/APM與SC-2/HPM分別處理微粒及金屬污染；不是特定客戶配方披露"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持半導體設備工程、製造、維修與電子化學品雙產品線",
-          "FinMind顯示7月營收YoY+42.4%、MoM+25.6%，整體接單與認列強"
+          "MOPS確認半導體設備與化學品兩類業務",
+          "官方明列多槽、單晶圓與Combo設備及清洗機制，產品不再停留泛稱",
+          "2026年8月營收6.81億元，MoM-14.07%、YoY+43.35%。年增僅反映整體收入，不證明本題材單獨放量。"
         ],
         "weaknesses": [
-          "MOPS未揭露具名客戶、特定設備型號或藥液配方細節",
-          "設備及工程專案認列波動大，月營收不能拆分化學品貢獻"
+          "月收入未拆分前段設備、先進封裝與化學品，題材貢獻不可直接估算",
+          "官網通用製程說明不等於各客戶實際量產配方或機台驗收",
+          "8月營收MoM-14.07%，年增與月減並存，不能只取年增率解讀需求。"
         ],
         "opportunities": [
-          "先進製程與封裝擴產可增加濕式清洗、蝕刻及電鑄需求",
-          "電子級化學品在地化可縮短供應與服務反應時間"
+          "晶圓微粒與金屬污染要求提升可增加濕式清洗升級需求",
+          "前段材料在地供應可增加混酸配方及設備服務機會"
         ],
         "threats": [
-          "國際設備與化學品大廠具規模、專利及客戶認證優勢",
-          "半導體資本支出循環與客戶延後驗收會影響營收節奏"
+          "資本支出與設備驗收遞延會影響月收入",
+          "藥液純度、設備潔淨及專利競爭會提高研發與認證成本"
         ]
       }
     }
