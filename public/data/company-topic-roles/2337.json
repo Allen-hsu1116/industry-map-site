@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2337",
   "companyName": "旺宏",
-  "updatedAt": "2026-09-10T19:16:45Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "niche-memory",
@@ -11,19 +11,18 @@
       "directness": "core",
       "supplyChainStage": "memory_ic",
       "roleType": "nor_flash_and_non_volatile_memory_supplier",
-      "roleSummary": "旺宏MOPS直接支持積體電路、半導體零組件及系統應用產品之研發、製造與測試，利基記憶體角色成立；但MOPS未揭露特定容量、節點、車規等級或具名客戶。2026年7月營收77.25億元、MoM+11.0%、YoY+180.5%，公司說明受市場需求增加影響。",
+      "roleSummary": "旺宏在利基記憶體的具體產品由官方OctaBus頁與ST夥伴頁補證，恢復xSPI介面、LM/UM與LW/UW系列區別、SLC NAND及安全Flash，不僅是籠統IC。STMicroelectronics為有官方來源的生態系夥伴，不等同直接採購客戶。2026年8月營收81.45億元，MoM+5.44%、YoY+218.53%，1–8月累計YoY+149.14%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "Serial NOR Flash記憶體",
-        "平行介面NOR Flash記憶體",
-        "SLC NAND Flash記憶體",
-        "唯讀記憶體ROM產品",
-        "嵌入式記憶體系統應用產品"
+        "OctaFlash LM/UM系列xSPI NOR Flash",
+        "OctaFlash LW/UW系列多Bank NOR Flash",
+        "QSPI Serial NOR Flash",
+        "1–8Gb SLC NAND Flash",
+        "ArmorFlash安全快閃記憶體"
       ],
       "customers": [
-        "任天堂Nintendo（遊戲儲存應用對象，非MOPS揭露客戶）",
-        "聯發科(2454；系統晶片生態對象，非MOPS揭露客戶)",
-        "NXP（車用與工控應用對象，非MOPS揭露客戶）",
-        "Bosch（車用電子應用對象，非MOPS揭露客戶）"
+        "STMicroelectronics（官方揭露STM32／TESEO非揮發記憶體生態系夥伴，非採購證明）",
+        "Nintendo（遊戲儲存應用對象，未確認本次採購關係）",
+        "NXP（車用／工控儲存應用對象，未確認本次採購關係）"
       ],
       "competitors": [
         "華邦電(2344)",
@@ -31,9 +30,9 @@
         "GigaDevice"
       ],
       "risks": [
-        "NOR Flash價格波動",
-        "中國GigaDevice低價競爭",
-        "車用需求若放緩影響高增長基期"
+        "公司僅稱市場需求增加，沒有拆分NOR、NAND、遊戲及車用貢獻，不能把高年增全歸車用。",
+        "中國記憶體廠擴產與價格競爭可能壓縮利潤",
+        "終端庫存調整或報價反轉會快速放大營收波動"
       ],
       "legacy": {
         "topicSlug": "semiconductor-memory",
@@ -42,57 +41,54 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "旺宏 公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
-          "claim": "MOPS 公司基本資料揭露 旺宏 主要業務為積體電路、各種半導體零組件，及其系統應用產品之研究發展、設計、製造、測試、銷售及顧問諮詢。"
-        },
-        {
-          "sourceId": "product-knowledge-2337",
-          "publisher": "internal evidence-backed product knowledge",
-          "title": "旺宏 product knowledge",
-          "url": "public/data/product-knowledge/2337.json",
-          "claim": "產品知識庫將旺宏的非揮發性記憶體與積體電路產品映射到 memory-modules / ic-design，並列出 NOR Flash、NAND Flash、ROM 等別名。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2337 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：積體電路、半導體零組件及系統應用產品之研發、設計、製造、測試與銷售。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2337",
+          "claim": "2026-09-13查詢2337，主要經營業務：積體電路、各種半導體零組件，及其系統應用產品之研究發展、設計、製造、測試、銷售及顧問諮詢。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收77.25億元，MoM+11.0%、YoY+180.5%，累計YoY+137.8%；受市場需求增加影響。"
+          "claim": "2026年8月營收81.45億元，MoM+5.44%、YoY+218.53%，1–8月累計YoY+149.14%；來源TWSE OpenAPI via MCP，原始營收8145267（NT$ thousand）。來源備註：受市場需求增加影響。。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2337-2337-20260913",
+          "publisher": "旺宏 / 官方產品或合作方資料",
+          "title": "Macronix - OctaBus Memory | Nonvolatile Memory Solutions",
+          "url": "https://macronix.com/en-us/products/NOR-Flash/Pages/OctaFlash.aspx",
+          "claim": "OctaBus頁明列LM/UM最高250MHz、500MB/s及JESD251-xSPI；LW/UW為多Bank並行更新。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2337-2337-partner-20260913",
+          "publisher": "旺宏 / 官方產品或合作方資料",
+          "title": "Macronix - 意法半导体STMicroelectronics - 意法半导体STMicroelectronics",
+          "url": "https://st.com.cn/content/st_com/zh/partner/partner-program/partnerpage/Macronix.html",
+          "claim": "ST夥伴頁列QSPI NOR、OctaFlash、1–8Gb SLC NAND、ArmorFlash及STM32／TESEO夥伴關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "NOR Flash之SPI介面、高速讀取與資料保持控制",
-        "SLC NAND之錯誤修正、壞塊管理與寫入耐久設計",
-        "嵌入式記憶體之安全啟動、韌體儲存與寬溫可靠度"
+        "LM/UM：最高250MHz、JEDEC JESD251-xSPI DDR 8D-8D-8D、最高500MB/s讀取",
+        "LW/UW：多Bank並行操作，服務OTA更新；不把LM/UM最高速率套用所有系列",
+        "ST官方夥伴頁列QSPI／OctaFlash搭配STM32評估板及ArmorFlash驗證安全操作"
       ],
       "swot": {
         "strengths": [
-          "MOPS涵蓋IC研發、製造、測試與系統應用，垂直能力完整",
-          "2026年7月營收YoY+180.5%、累計YoY+137.8%，且公司明示市場需求增加"
+          "OctaFlash高速XIP讀取與多Bank OTA更新支援，讓NOR不只承接低價容量需求，也能滿足韌體執行及維護場景。",
+          "2026年8月營收81.45億元，MoM+5.44%、YoY+218.53%，1–8月累計YoY+149.14%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露容量、製程節點、車規認證或具名客戶",
-          "記憶體價格與需求循環強，高基期成長未必可持續"
+          "公司僅稱市場需求增加，沒有拆分NOR、NAND、遊戲及車用貢獻，不能把高年增全歸車用。",
+          "Flash報價與產能利用率循環強；營收增長本身不證明毛利率改善。"
         ],
         "opportunities": [
           "車用、工控與邊緣裝置需要長供貨期的非揮發記憶體",

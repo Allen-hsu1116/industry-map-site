@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2368",
   "companyName": "金像電",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -177,12 +177,13 @@
       "directness": "supplier",
       "supplyChainStage": "pcb",
       "roleType": "networking_pcb_supplier",
-      "roleSummary": "金像電MOPS直接支持雙層／多層印刷電路板，以及電腦、通訊與資訊產品零件加工；在網通基礎建設題材中可定位為交換器、網路設備與伺服器用多層PCB供應端，但MOPS未揭露層數、材料牌號或具名客戶。2026年7月營收100.15億元、MoM+21.3%、YoY+77.4%，公司說明接單量增加。",
+      "roleSummary": "金像電MOPS支持雙面／多層板，官方Networking頁補證路由器、交換器、基地台與光網路設備PCB，並載明高層數、低損耗及阻抗控制方向；不是交换器整機或交換晶片供應商。2026年8月營收103.84億元，MoM+3.69%、YoY+76.39%，1–8月累計YoY+71.25%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "交換器用多層印刷電路板",
-        "網路設備用高速數位印刷電路板",
-        "伺服器主機板用多層印刷電路板",
-        "通訊設備用雙層／多層印刷電路板"
+        "交換器用高多層PCB",
+        "路由器用高速訊號PCB",
+        "基地台用高頻通訊PCB",
+        "光網路設備用多層PCB",
+        "AI伺服器用多層HDI PCB"
       ],
       "customers": [
         "智邦(2345；交換器應用對象，非MOPS揭露客戶)",
@@ -196,8 +197,9 @@
         "深南電路"
       ],
       "risks": [
-        "高速 PCB 技術要求高，良率管理挑戰",
-        "網通設備需求受電信資本支出週期影響"
+        "接單量增加未區分網通與AI伺服器，高年增不能全算交換器升級貢獻。",
+        "客戶集中或雲端資本支出放緩會放大營收波動",
+        "同業擴產與低損耗材料成本上升可能壓縮利潤"
       ],
       "legacy": {
         "topicSlug": "networking-equipment",
@@ -206,50 +208,46 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "金像電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2368",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 金像電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2368 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：雙層、多層印刷電路板製造加工買賣；電腦、電子、通訊、資訊產品及零件加工。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2368",
+          "claim": "2026-09-13查詢2368，主要經營業務：雙層、多層印刷電路板之製造加工及買賣業務。各種電腦、電子、通訊、資訊產品及其週邊設備與電子零件、加工。。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收100.15億元，MoM+21.3%、YoY+77.4%，累計YoY+70.3%；備註為接單量增加。"
+          "claim": "2026年8月營收103.84億元，MoM+3.69%、YoY+76.39%，1–8月累計YoY+71.25%；來源TWSE OpenAPI via MCP，原始營收10383971（NT$ thousand）。來源備註：接單量增加。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2368-2368-20260913",
+          "publisher": "金像電 / 官方產品或合作方資料",
+          "title": "Gold Circit Electronics",
+          "url": "https://www.gce.com.tw/en/product.html",
+          "claim": "官方Networking列routers、switches、base stations、optical networking；低損耗、高層數及阻抗控制為產品方向。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "高速差動訊號之阻抗、串擾與插入損耗控制",
-        "高多層板壓合、鑽孔與層間對位製程",
-        "網通設備PCB的散熱、翹曲與長時間可靠度驗證"
+        "網通PCB採低損耗材料與精準阻抗控制，未披露特定材料牌號或通道速率",
+        "AI／Advanced Server頁列多層HDI、高層數及熱管理；不外推全部網通板規格",
+        "高速差動線的串擾、插入損耗與層間對位為製造分析重點"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持多層PCB與通訊產品加工，題材角色清楚",
-          "2026年7月營收YoY+77.4%、累計YoY+70.3%，且公司明示接單量增加"
+          "官方網通產品用途與MOPS多層板能力吻合；備註接單量增加提供整體訂單動能佐證。",
+          "2026年8月營收103.84億元，MoM+3.69%、YoY+76.39%，1–8月累計YoY+71.25%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露高速材料牌號、板層數或具名客戶",
-          "PCB業務資本密集，擴產與良率爬坡會影響現金流和毛利"
+          "接單量增加未區分網通與AI伺服器，高年增不能全算交換器升級貢獻。",
+          "未揭露800G／1.6T板型認證、特定層數或材料牌號，不以公司上限拼接虛構產品。"
         ],
         "opportunities": [
           "資料中心交換器頻寬升級可提高多層高速PCB用量與技術門檻",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2356",
   "companyName": "英業達",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -92,12 +92,13 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "notebook_odm",
-      "roleSummary": "英業達MOPS直接揭露筆記型電腦與伺服器，消費運算裝置ODM角色成立；但MOPS未揭露Dell、HP、Lenovo、Apple等機種與客戶。2026年7月營收901.90億元、MoM-11.8%、YoY+65.7%，公司稱客戶需求增加，但未區分筆電與伺服器。",
+      "roleSummary": "英業達MOPS列筆電與伺服器，官方Personal Systems另確認Notebook PC、Desktop/AIO、Thin Client，以及AI PC、工作站與電競筆电應用；本題材聚焦PC而非伺服器。8月收入未分拆筆電與伺服器，不能套用上月需求說明。2026年8月營收832.68億元，MoM-7.68%、YoY+35.83%，1–8月累計YoY+40.12%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "商用筆記型電腦ODM服務",
-        "消費型筆記型電腦ODM服務",
-        "教育用筆記型電腦ODM服務",
-        "筆記型電腦主機板與系統整合服務"
+        "AI PC筆記型電腦ODM",
+        "商用筆記型電腦與行動工作站ODM",
+        "電競筆記型電腦ODM",
+        "Desktop／AIO一體式電腦ODM",
+        "Thin Client精簡型電腦ODM"
       ],
       "customers": [
         "Dell（筆記型電腦應用對象，非MOPS揭露客戶）",
@@ -112,9 +113,9 @@
         "和碩(4938)(筆電ODM)"
       ],
       "risks": [
-        "PC需求疲軟，AI PC換機週期尚未明確",
-        "客戶砍單風險",
-        "筆電ODM毛利低(3-5%)"
+        "筆電與伺服器收入未拆分，整體年增不等同AI PC出貨年增。",
+        "筆電成熟市場價格競爭激烈，品牌客戶議價力高",
+        "需求季節性與零組件缺料可能放大月營收波動"
       ],
       "legacy": {
         "topicSlug": "pc-nb-tablet",
@@ -123,54 +124,51 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "英業達 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2356",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 英業達 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2356 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：筆記型電腦、伺服器。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2356",
+          "claim": "2026-09-13查詢2356，主要經營業務：筆記型電腦伺服器。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收901.90億元，MoM-11.8%、YoY+65.7%，累計YoY+40.8%；客戶需求增加。"
+          "claim": "2026年8月營收832.68億元，MoM-7.68%、YoY+35.83%，1–8月累計YoY+40.12%；來源TWSE OpenAPI via MCP，原始營收83267681（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2356-2356-20260913",
+          "publisher": "英業達 / 官方產品或合作方資料",
+          "title": "Personal Systems|Inventec",
+          "url": "https://inventec.com/en/products11.htm",
+          "claim": "官方Personal Systems列Notebook PC、Desktop/AIO、Thin Client，並介紹AI PC、工作站及獨立GPU電競筆電。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "筆電主機板、電源、散熱與高速周邊介面系統整合",
-        "輕薄機構、電池續航與熱管理協同設計",
-        "多機種混線生產、自動測試與量產追溯"
+        "AI PC整合處理器、GPU與AI應用最佳化；官方未在該頁提供NPU TOPS數值",
+        "電競筆電採高效獨立GPU，系統熱管理與供電協同為工程分析重點",
+        "ODM涵蓋工業設計、產品開發與品質驗證；不綁定未披露的品牌機種"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持筆記型電腦與伺服器，ODM製造基礎清楚",
-          "2026年7月營收YoY+65.7%、累計YoY+40.8%，公司明示客戶需求增加"
+          "官方個人電腦產品線覆蓋AI PC、工作站、電競與精簡終端，ODM範圍比MOPS一句筆電更完整。",
+          "2026年8月營收832.68億元，MoM-7.68%、YoY+35.83%，1–8月累計YoY+40.12%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露具名客戶或機種，舊產品列表過度精確",
-          "7月MoM-11.8%，且營收成長未拆分筆電與伺服器貢獻"
+          "筆電與伺服器收入未拆分，整體年增不等同AI PC出貨年增。",
+          "品牌機種與採購關係未由本次來源確認，勿把教育標案或特定作業系統換機當既有訂單。",
+          "8月MoM-7.68%，整體月度拉貨／認列回落，需避免只看年增率。"
         ],
         "opportunities": [
-          "AI PC換機可增加散熱、記憶體與電源設計複雜度",
-          "企業Windows換機與教育市場標案可支撐商用筆電需求"
+          "AI PC與行動工作站提升GPU、記憶體及熱管理設計需求，有利ODM方案升級。",
+          "企業終端與Thin Client部署可能增加多形態PC整合需求，尚非本次已確認訂單。"
         ],
         "threats": [
           "筆電成熟市場價格競爭激烈，品牌客戶議價力高",

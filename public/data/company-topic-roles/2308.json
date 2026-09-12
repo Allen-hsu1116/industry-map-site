@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-09-03T19:04:21Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,12 +11,12 @@
       "directness": "indirect",
       "supplyChainStage": "power",
       "roleType": "power_product_application_side_user",
-      "roleSummary": "台達電MOPS支持電源、散熱、微型關鍵零組件、工業自動化與通訊產品，但未揭露晶圓代工服務；本題材為晶圓廠設備電源、散熱與自動化的供應鏈鄰接角色，不是代工廠。2026年7月營收670.73億元、MoM+2.2%、YoY+47.7%，無晶圓代工歸因。",
+      "roleSummary": "台達電是電源轉換、風扇散熱與工業自動化供應商；官網可確認HU1145、HP4206等POL模組，但未證實這些型號供應特定晶圓廠。晶圓代工題材僅屬設備電源與廠務節能的間接應用，不提供晶圓代工服務。2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，1–8月累計YoY+41.06%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "晶圓廠設備用電源供應系統",
-        "晶圓廠機台用無刷直流風扇",
-        "製程設備散熱系統",
-        "工業自動化伺服驅動與控制系統"
+        "HU1145 POL降壓DC-DC電源模組",
+        "HP4206 24Vin系列POL電源模組",
+        "無刷直流散熱風扇",
+        "設備電源供應系統"
       ],
       "customers": [
         "台積電(2330；晶圓廠設備應用對象，非MOPS揭露客戶)",
@@ -30,9 +30,9 @@
         "艾默生Emerson"
       ],
       "risks": [
-        "電源供應器同業價格競爭",
-        "AI伺服器需求增速放緩風險",
-        "EV充電市場政策依賴度高"
+        "未揭露晶圓廠設備電源營收占比，具名晶圓廠僅為應用對象。",
+        "半導體資本支出循環放緩會延後設備相關需求",
+        "設備商自研電源與控制模組可能降低外購比例"
       ],
       "legacy": {
         "topicSlug": "sic-gan-power",
@@ -63,35 +63,46 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電源、風扇、散熱、關鍵零組件、工業自動化、網通與能源解決方案。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2308",
+          "claim": "2026-09-13查詢2308，主要經營業務：電源供應系統、無刷直流風扇、散熱系統、微型化關鍵零組件、電動車電源相關系統、工業自動化、視訊顯示、資訊、網路通訊消費性電子、可再生能源應用、智慧樓宇管理與控制解決方案等。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%；未揭露晶圓代工歸因。"
+          "claim": "2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，1–8月累計YoY+41.06%；來源TWSE OpenAPI via MCP，原始營收64586049（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2308-2308-20260913",
+          "publisher": "台達電 / 官方產品或合作方資料",
+          "title": "Products - Power Modules - Delta Electronics (Australia)",
+          "url": "https://www.deltaelectronics.com.au/en-AU/products/Power-Modules",
+          "claim": "POL型錄確認HU1145與HP4206的輸入輸出規格、控制IC／扼流圈／電容整合；晶圓廠用途為本次分析，非客戶實績。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "設備電源之高效率轉換、電能品質與備援控制",
-        "無刷直流風扇與散熱系統之轉速、氣流及熱管理控制",
-        "工業自動化伺服驅動、運動控制與設備通訊整合"
+        "HU1145：Vin 2.7–5.5V、Vout 0.6–3.3V、1A POL降壓模組",
+        "HP4206：Vin 9–40V、Vout 1–5V、5A POL模組；不代表所有台達電源規格",
+        "POL封裝整合控制IC、扼流圈與輸入／輸出電容，支援SMT組裝"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電源、散熱及工業自動化，能服務晶圓廠設備需求",
-          "2026年7月營收YoY+47.7%、累計YoY+42.1%，整體營運動能強"
+          "MOPS與官方POL型錄共同支持電源及熱管理基礎，可切入製程設備供電設計的應用評估。",
+          "2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，1–8月累計YoY+41.06%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "不提供晶圓代工服務，題材僅為設備供應鏈鄰接",
-          "MOPS未揭露晶圓廠收入占比或具名客戶，營收不能歸因代工擴產"
+          "未揭露晶圓廠設備電源營收占比，具名晶圓廠僅為應用對象。",
+          "模組型錄不能證明SiC／GaN晶圓製造能力，亦不能證明已通過晶圓廠設備認證。",
+          "8月MoM-3.71%，整體月度拉貨／認列回落，需避免只看年增率。"
         ],
         "opportunities": [
           "晶圓廠擴產與節能要求可增加高效率電源及設備散熱需求",

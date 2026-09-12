@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3034",
   "companyName": "聯詠",
-  "updatedAt": "2026-09-07T19:16:13Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "display_driver_ic_provider",
-      "roleSummary": "聯詠MOPS直接支持語音、通訊、微控制器、DSP、電腦周邊與液晶顯示驅動IC系統，IC設計角色明確；但MOPS未揭露OLED製程節點、車規認證或具名面板客戶。2026年7月營收102.96億元、MoM+2.7%、YoY+26.8%，累計YoY僅+1.2%，單月改善尚未形成強勁全年成長。",
+      "roleSummary": "聯詠官方2024里程碑具體揭露OLED TDDI、22nm TCON、智慧電視SoC、車載觸控與電源IC，補正舊角色把MOPS未列細節當成無產品證據的錯誤；歷史發表僅確認能力，不證明2026各產品出貨規模。2026年8月營收103.27億元，MoM+0.30%、YoY+26.33%，1–8月累計YoY+4.11%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "液晶顯示器驅動積體電路及系統",
-        "觸控與顯示整合控制積體電路",
-        "數位訊號處理器及影像處理系統",
-        "內嵌式微控制器及系統",
-        "電腦周邊控制積體電路及系統"
+        "FHD RAMless OLED TDDI（2024年發表）",
+        "22nm低功耗筆電TCON（2024年發表）",
+        "4K60智慧電視SoC（2024年發表）",
+        "車載in-cell LTDI顯示觸控IC",
+        "OLED筆電EL電源IC（2024年發表）"
       ],
       "customers": [
         "友達(2409；面板應用對象，非MOPS揭露客戶)",
@@ -26,14 +26,14 @@
         "華星光電CSOT（面板應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "Samsung LSI",
-        "LX Semicon",
-        "Magnachip",
-        "奕力(3582)"
+        "Samsung System LSI（顯示IC比較對象）",
+        "LX Semicon（顯示IC比較對象）",
+        "奕力（顯示IC比較對象，不附未驗證股票代碼）"
       ],
       "risks": [
-        "面板驅動IC受面板景氣週期影響",
-        "中國驅動IC競爭加劇（集創北方/奕斯偉）"
+        "引用產品規格來自2024年發表，未取得2026年對應型號出貨、占比或具名客戶。",
+        "中國顯示IC設計商價格競爭可能壓縮毛利",
+        "面板庫存調整與終端需求轉弱會快速影響拉貨"
       ],
       "legacy": {
         "topicSlug": "ddic",
@@ -42,50 +42,47 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯詠 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯詠 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：語音、通訊、微控制器、DSP、電腦周邊控制及液晶顯示驅動積體電路與系統。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3034",
+          "claim": "2026-09-13查詢3034，主要經營業務：研究.開發.設計.生產.製造.銷售下列產品:A語音積體電路及系統B通訊積體電路及系統C內崁式微控制器及系統D數位訊號處理器及系統E電腦週邊控制積體電路及系統F液晶顯示器驅動積體電路及系統。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%，累計YoY+1.2%。"
+          "claim": "2026年8月營收103.27億元，MoM+0.30%、YoY+26.33%，1–8月累計YoY+4.11%；來源TWSE OpenAPI via MCP，原始營收10327444（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-3034-3034-20260913",
+          "publisher": "聯詠 / 官方產品或合作方資料",
+          "title": "Accomplished Milestones - NOVATEK MICROELECTRONICS CORP.",
+          "url": "https://novatek.com.tw/en-global/Milestone/aboutus_milestones",
+          "claim": "官方2024里程碑：6月OLED TDDI、10月22nm 60–120Hz NB TCON、11月3-phase OLED NB電源IC。不同世代與產品不合併規格。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "顯示驅動IC之多通道源極／閘極驅動與灰階校正",
-        "觸控感測、顯示驅動與時序控制的系統整合",
-        "DSP影像處理、縮放、色彩管理與介面控制"
+        "2024年10月筆電TCON：22nm、60–120Hz；不與7月5K3K TCON拼成單一型號",
+        "2024年6月FHD RAMless OLED TDDI整合顯示与觸控；官方比較前代觸控功耗降低30%",
+        "2024年11月OLED NB EL電源IC採3-phase DC/DC；顯示SoC與電源IC為不同產品"
       ],
       "swot": {
         "strengths": [
-          "MOPS列出多類IC與系統，產品設計與系統整合基礎完整",
-          "2026年7月營收YoY+26.8%，單月需求回升"
+          "顯示、觸控、影像與電源IC設計跨功能整合，官方有可辨識的產品世代與技術內容。",
+          "2026年8月營收103.27億元，MoM+0.30%、YoY+26.33%，1–8月累計YoY+4.11%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露OLED節點、車規認證或具名客戶，舊資料精度過度",
-          "累計YoY僅+1.2%，全年成長仍偏弱且面板景氣循環明顯"
+          "引用產品規格來自2024年發表，未取得2026年對應型號出貨、占比或具名客戶。",
+          "面板與終端庫存循環仍影響拉貨；單月年增高於累計，不能過度外推復甦幅度。",
+          "1–8月累計YoY+4.11%，仍應搭配產品結構與獲利查核。"
         ],
         "opportunities": [
           "高更新率、低功耗顯示可提高驅動與時序控制IC價值",

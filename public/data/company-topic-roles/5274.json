@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -102,13 +102,13 @@
       "topicType": "technology",
       "directness": "indirect",
       "supplyChainStage": "ic_design",
-      "roleType": "cxl_management_ic_candidate",
-      "roleSummary": "信驊MOPS支持多媒體、電腦周邊與高階消費性電子IC，但未揭露CXL控制器、PCIe Retimer或記憶體池化交換器；本題材只能定位為伺服器BMC與周邊管理IC對CXL伺服器平台的鄰接角色。FinMind顯示2026年7月營收15.24億元、MoM+16.3%、YoY+97.6%，但無CXL歸因。",
+      "roleType": "bmc_management_adjacent_to_cxl",
+      "roleSummary": "信驊官方BMC型錄與AST2700頁補證新舊世代管理晶片及12nm／DDR5等真實規格。CXL記憶體池化題材仍僅為主機板帶外管理的鄰接層；PCIe或DDR5支援不代表CXL交換器、Retimer或池化資料路徑控制器。2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "伺服器主機板管理控制器BMC",
-        "電腦周邊控制積體電路",
-        "遠端KVM多媒體控制積體電路",
-        "伺服器管理用高階控制積體電路"
+        "AST2700伺服器BMC SoC",
+        "AST2720 PCIe+BMC管理晶片",
+        "AST2600 VGA／BMC／KVM-over-IP晶片",
+        "AST2500遠端伺服器管理晶片"
       ],
       "customers": [
         "Intel（CXL伺服器平台對象，非MOPS揭露客戶）",
@@ -117,13 +117,12 @@
         "廣達(2382；伺服器整合應用對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "Microchip",
-        "Astera Labs",
-        "Rambus"
+        "新唐（BMC／伺服器管理產品比較對象）"
       ],
       "risks": [
-        "第二批 V2 role migration 仍需補強產品占比、客戶名稱與毛利率證據。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "官方頁未確認CXL池化控制產品或CXL營收；不能把BMC需求直接算成CXL出貨。",
+        "CPU平台商或大型客戶自研管理控制器可能壓縮外購需求",
+        "把BMC成長誤當CXL收入會造成估值與題材錯配"
       ],
       "legacy": {
         "topicSlug": "cxl-technology",
@@ -132,50 +131,54 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "信驊 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：多媒體積體電路、電腦周邊積體電路、高階消費性電子積體電路。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=5274",
+          "claim": "2026-09-13查詢5274，主要經營業務：多媒體積體電路電腦周邊積體電路高階消費性電子積體電路。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "publisher": "FinMind via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收15.24億元，MoM+16.3%、YoY+97.6%；TWSE月營收查無資料，未揭露CXL歸因。"
+          "claim": "2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%；來源FinMind via MCP，原始營收1625937000（NT$）。來源備註：TWSE primary no data; FinMind fallback。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-5274-5274-20260913",
+          "publisher": "信驊 / 官方產品或合作方資料",
+          "title": "ASPEED - AST2700",
+          "url": "https://www.aspeedtech.com/server_ast2700/",
+          "claim": "AST2700官方頁列12nm、A35/M4、PCIe Gen4、DDR5-3200、LTPI、CAN、Caliptra；無CXL池化控制產品證明。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-5274-5274-extra-20260913",
+          "publisher": "信驊 / 官方產品或合作方資料",
+          "title": "ASPEED - Server Management",
+          "url": "https://www.aspeedtech.com/server/",
+          "claim": "官方BMC型錄列AST2700／2720／2600／2500，各自功能及上市時程，不代表最新出貨占比。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-28",
-      "status": "verified",
+      "lastVerified": "2026-09-13",
+      "status": "candidate",
       "techFocus": [
-        "BMC帶外管理、遠端KVM與主機板感測遙測整合",
-        "伺服器管理IC與PCIe／CXL平台的側帶管理介面協同",
-        "安全開機、韌體更新與資料中心遠端管理可靠度"
+        "AST2700：12nm、四核64-bit Cortex-A35加兩顆獨立Cortex-M4",
+        "AST2700：PCIe Gen4、USB 3.2、DDR5-3200、UFS、CAN及LTPI；DDR5介面不是CXL控制器證據",
+        "AST2700採OCP Caliptra silicon RoT IP；不將這項安全功能追溯套用AST2500／2600"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電腦周邊與多媒體IC，具伺服器管理IC基礎",
-          "FinMind顯示2026年7月營收YoY+97.6%、MoM+16.3%，營運動能強"
+          "AST2700整合高效管理處理器、LTPI及Caliptra安全根，能支援複雜伺服器監控與管理設計。",
+          "2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露CXL控制器、Retimer或記憶體池化交換器",
-          "公司整體營收成長不能歸因CXL，題材屬平台鄰接而非直接產品"
+          "官方頁未確認CXL池化控制產品或CXL營收；不能把BMC需求直接算成CXL出貨。",
+          "AST2700系列型錄列2026年6月上市時程，並未提供實際量產占比及具名系統採購資料。"
         ],
         "opportunities": [
           "CXL伺服器增加裝置管理、遙測與韌體協同複雜度",

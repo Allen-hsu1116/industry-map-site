@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2492",
   "companyName": "華新科",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "passive_components",
       "roleType": "mlcc_manufacturer",
-      "roleSummary": "華新科MOPS直接支持積層陶瓷與圓板電容、高壓／高頻／精密電容、電阻、電感、射頻元件及陶瓷粉末，MLCC角色明確；但MOPS未揭露封裝尺寸、耐壓範圍、AEC-Q200或具名客戶。2026年7月營收44.44億元、MoM+12.2%、YoY+42.0%，累計YoY+18.7%。",
+      "roleSummary": "華新科官方電容型錄明確揭露微型、中高壓、RF與車用MLCC，恢復過去僅因MOPS摘要未列而刪去的實際尺寸、介質與AEC-Q200產品能力；各規格綁定系列，不拼成全系列通用規格。2026年8月營收45.69億元，MoM+2.81%、YoY+45.54%，1–8月累計YoY+22.10%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "積層陶瓷電容MLCC",
-        "高壓陶瓷電容",
-        "高頻陶瓷電容",
-        "精密陶瓷電容",
-        "MLCC用陶瓷粉末"
+        "01R5系列01005微型MLCC",
+        "200V–4kV中高壓NP0／X7R MLCC",
+        "RF系列高Q／低ESR微波MLCC",
+        "MT系列AEC-Q200車用MLCC",
+        "ST系列柔性端頭車用MLCC"
       ],
       "customers": [
         "台達電(2308；電源與工控應用對象，非MOPS揭露客戶)",
@@ -31,57 +31,53 @@
         "太陽誘電(MLCC/電感)"
       ],
       "risks": [
-        "6月營收39.61億YoY+25.8%累計+14.7%被動元件復甦強勁",
-        "車規MLCC認證週期長(2-3年)且量產爬坡慢",
-        "中國低價MLCC競爭壓縮中低階市場毛利"
+        "營收包含電阻、電感與其他產品，年增不能全部視為MLCC或車規放量。",
+        "日韓與中國被動元件廠擴產可能加劇價格競爭",
+        "終端庫存調整或原料能源成本上升會壓縮利潤"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：積層陶瓷及圓板電容、高壓高頻精密電容、電阻、電感、射頻元件與陶瓷粉末。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2492",
+          "claim": "2026-09-13查詢2492，主要經營業務：電子零組件製造業積層陶瓷及圓板電容、晶片電阻及保險絲、電感、射頻元件製造銷售高壓、高頻與精密電容，車用與工業用特殊電阻及陶瓷粉末製造加工。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收44.44億元，MoM+12.2%、YoY+42.0%，累計YoY+18.7%。"
+          "claim": "2026年8月營收45.69億元，MoM+2.81%、YoY+45.54%，1–8月累計YoY+22.10%；來源TWSE OpenAPI via MCP，原始營收4568665（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2492-2492-20260913",
+          "publisher": "華新科 / 官方產品或合作方資料",
+          "title": "電容",
+          "url": "https://passivecomponent.com/zh-hant/products/capacitors",
+          "claim": "官方電容型錄列01R5、200V–4kV、RF、MT與ST系列及各自規格，MG標示Without AEC-Q200。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "積層陶瓷介電層薄化、電極印刷與共燒製程",
-        "高壓／高頻電容之介電材料、損耗與耐壓控制",
-        "陶瓷粉末粒徑、配方與燒結收縮一致性控制"
+        "01R5：01005（0.4×0.2mm），NP0／X7R／X5R；不能把所有高容值套進此尺寸",
+        "中高壓系列：200–4000V、NP0／X7R、0402–1812，耐壓依料號選型",
+        "ST：AEC-Q200、X7R、0603–0805、10–50V及5mm彎曲規格；MG系列不可視為同認證"
       ],
       "swot": {
         "strengths": [
-          "MOPS具體支持MLCC、高壓高頻精密電容與陶瓷粉末，產品鏈完整",
-          "2026年7月營收YoY+42.0%、MoM+12.2%，累計YoY+18.7%"
+          "官方產品涵蓋01005微型、200V–4kV中高壓與MT／ST車用系列，能對應尺寸、損耗與可靠度差異。",
+          "2026年8月營收45.69億元，MoM+2.81%、YoY+45.54%，1–8月累計YoY+22.10%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露尺寸、耐壓、車規認證或具名客戶",
-          "MLCC標準品價格循環與稼動率變化會放大毛利波動"
+          "營收包含電阻、電感與其他產品，年增不能全部視為MLCC或車規放量。",
+          "型錄同時有未取得AEC-Q200的MG系列；不能用部分認證推論全部電容均合格。"
         ],
         "opportunities": [
           "AI伺服器電源與高速運算板可增加高容值、高可靠度電容用量",

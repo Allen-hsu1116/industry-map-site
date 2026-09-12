@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1504",
   "companyName": "東元",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "electrical_equipment",
       "roleType": "motor_and_electrical_system_provider",
-      "roleSummary": "東元MOPS揭露電氣、運輸、產業與冷凍空調設備及附件之產銷承裝，核心可確認為馬達、驅動與工業電氣系統；既有345kV變壓器與GIS精確規格缺乏本次MOPS支持，已移除。2026年7月營收55.29億元，MoM+4.8%、YoY+13.8%，累計YoY+7.0%。",
+      "roleSummary": "東元MOPS支持電氣與機電承裝，官方機電產品頁確認各效率等級馬達與中高壓變頻器，應恢復可證規格。本題材重點是工業電力驅動及機電整合，不以未查證345kV變壓器或GIS替代其馬達主業。2026年8月營收54.08億元，MoM-2.18%、YoY+16.83%，1–8月累計YoY+8.22%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "高壓工業馬達",
-        "低壓高效率馬達",
-        "變頻器與馬達驅動系統",
-        "工業冷凍空調設備",
-        "機電系統承裝與整合服務"
+        "IE3／IE4低壓感應馬達",
+        "IE4永磁同步馬達",
+        "IE5 EC通風馬達",
+        "中高壓工業馬達",
+        "中高壓變頻驅動器"
       ],
       "customers": [
         "台電（機電工程應用對象，非MOPS揭露客戶）",
@@ -32,55 +32,53 @@
         "西門子"
       ],
       "risks": [
-        "原物料（銅/矽鋼片）成本波動",
-        "大型重電標案競爭激烈"
+        "各馬達效率級距與用途不同，不能把IE5通風馬達概括為所有工業馬達皆達IE5。",
+        "ABB、Siemens、三菱電機等國際品牌競爭工業驅動市場",
+        "大型工程認列時點與原物料價格波動可能造成營收及毛利起伏"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "東元 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1504",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 東元 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 1504 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "各種電氣、運輸、產業、冷凍空調、電子與事務設備及附件之產銷承裝。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1504",
+          "claim": "2026-09-13查詢1504，主要經營業務：各種電氣,運輸,產業,冷凍空調,電子,事務等及其附件之產銷承裝等各種通信器材,家庭電氣用具等及其附件之產銷承裝等;餐廳業務經營有關事業之代理,代辦及委託業務;有關進出口貿易及代理業務之經營。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收55.29億元，MoM+4.8%、YoY+13.8%，累計YoY+7.0%。"
+          "claim": "2026年8月營收54.08億元，MoM-2.18%、YoY+16.83%，1–8月累計YoY+8.22%；來源TWSE OpenAPI via MCP，原始營收5408315（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-1504-1504-20260913",
+          "publisher": "東元 / 官方產品或合作方資料",
+          "title": "Mechanical and electrical products - motor driver, inverter (Inverter), drive the world's motors",
+          "url": "https://teco.com.tw/en/products/engine",
+          "claim": "官方頁列IE3／IE4感應、IE4永磁、IE5 EC通風馬達及中高壓變頻器210–12,950kVA、AVR、cell bypass。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "高效率馬達之電磁、絕緣與熱管理設計",
-        "變頻器向量控制與馬達驅動整合",
-        "大型冷凍空調之壓縮機、泵浦與控制系統整合"
+        "IE3／IE4感應馬達、IE4永磁馬達與IE5 EC通風馬達為不同官方產品類別",
+        "中高壓變頻器列210–12,950kVA、自動電壓調節AVR及cell bypass，非變壓器電壓級距",
+        "低壓變頻器支援感應／永磁／同步磁阻馬達與自動調諧；此能力不套用全部中高壓機種"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持電氣、運輸、產業與冷凍空調設備的廣泛產銷承裝能力",
-          "7月營收YoY+13.8%、累計YoY+7.0%，整體營運穩健成長"
+          "官方具多種效率等級馬達及高功率變頻器，可透過完整驅動系統承接工業節能需求。",
+          "2026年8月營收54.08億元，MoM-2.18%、YoY+16.83%，1–8月累計YoY+8.22%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未支持既有345kV變壓器、GIS與特定效率級距等精確說法",
-          "業務橫跨馬達、空調與家電，月營收無法拆出重電EPC貢獻"
+          "各馬達效率級距與用途不同，不能把IE5通風馬達概括為所有工業馬達皆達IE5。",
+          "營收含多項業務，本次未拆分馬達、空調與EPC，也未確認所列公司的訂單關係。",
+          "8月MoM-2.18%，整體月度拉貨／認列回落，需避免只看年增率。"
         ],
         "opportunities": [
           "工業節能與馬達能效升級可帶動高效率馬達及變頻器需求",

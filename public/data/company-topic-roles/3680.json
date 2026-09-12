@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3680",
   "companyName": "家登",
-  "updatedAt": "2026-09-07T19:16:13Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -185,14 +185,15 @@
       "topicName": "高速連接器與車工業連接",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "peripheral",
-      "roleType": "indirect",
-      "roleSummary": "家登MOPS支持光罩、晶圓與機台設備解決方案，未揭露高速連接器、CPO耦合或資料傳輸產品；本題材限縮為半導體製程載具與設備對高速互連晶片製造的上游支援角色。FinMind顯示2026年7月營收8.71億元、MoM+15.8%、YoY+71.7%，不能歸因高速互連。",
+      "supplyChainStage": "semiconductor_carriers_adjacent",
+      "roleType": "process_carrier_supplier_adjacent",
+      "roleSummary": "家登MOPS列光罩、晶圓與機台方案，官網完整HTML導覽亦確認EUV POD、晶圓尺寸及先進封裝載具。高速互連題材僅是互連晶片製造上游載具應用，不能當高速連接器或光纖耦合元件供應商。2026年8月營收8.40億元，MoM-3.58%、YoY+49.94%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "光罩傳送與儲存解決方案",
-        "晶圓傳送與儲存解決方案",
-        "半導體製程機台設備產品",
-        "先進封裝製程用承載解決方案（題材應用推定）"
+        "EUV POD光罩傳載盒",
+        "200mm晶圓載具",
+        "300mm晶圓載具",
+        "RSP 150／RSP 200光罩盒",
+        "先進封裝傳載載具"
       ],
       "customers": [
         "台積電(2330；晶圓製程應用對象，非MOPS揭露客戶)",
@@ -201,70 +202,65 @@
         "Intel（半導體製程應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "Entegris(先進封裝載具)",
-        "Brooks(晶圓傳送盒)",
-        "信紘科(6432)(半導體耗材)"
+        "Entegris（晶圓／光罩載具產品比較對象）"
       ],
       "risks": [
-        "先進封裝載具為利基型耗材，單價高但總量有限",
-        "客戶集中度高，台積電佔比大，客戶議價能力強",
-        "先進封裝技術演進快，載具規格需持續跟隨客戶升級"
+        "未核得高速互連／CPO專案營收或客戶；所列晶圓與封裝公司僅為製程應用對象。",
+        "晶圓廠資本支出遞延可能使載具採購落後高速互連題材熱度。",
+        "若把載具支援誤當CPO光學元件供貨，將造成題材估值與實際收入錯配。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 光罩解決方案產品晶圓解決方案產品機台設備產品"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：光罩解決方案產品、晶圓解決方案產品、機台設備產品。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3680",
+          "claim": "2026-09-13查詢3680，主要經營業務：光罩解決方案產品晶圓解決方案產品機台設備產品。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "publisher": "FinMind via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收8.71億元，MoM+15.8%、YoY+71.7%；TWSE月營收查無資料，未揭露高速互連歸因。"
+          "claim": "2026年8月營收8.40億元，MoM-3.58%、YoY+49.94%；來源FinMind via MCP，原始營收839771000（NT$）。來源備註：TWSE primary no data; FinMind fallback。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-3680-catalog-navigation-20260913",
+          "publisher": "家登",
+          "title": "官方網站完整HTML產品導覽",
+          "url": "https://www.gudeng.com/",
+          "claim": "以驗證TLS的直接HTTP取回完整HTML，導覽列EUV POD、RSP 150／200、200mm／300mm及先進封裝載具；正文抽取會漏掉選單。不證明CPO特定採用。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-28",
-      "status": "verified",
+      "lastVerified": "2026-09-13",
+      "status": "candidate",
       "techFocus": [
-        "光罩載具之潔淨、密封與微環境污染控制",
-        "晶圓載具之機台介面、定位與搬運可靠度",
-        "先進封裝承載件之平整度、熱循環與材料相容性控制"
+        "官網導覽明列EUV POD及RSP光罩盒；潔淨與搬運污染控制是工程分析重點",
+        "200mm／300mm晶圓載具應匹配機台接口與定位；尺寸不代表光互連速率",
+        "先進封裝載具需評估平整度與熱循環相容性（分析）；沒有已驗證CPO耦光精度"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持光罩、晶圓與機台設備解決方案，半導體製程角色清楚",
-          "FinMind顯示2026年7月營收YoY+71.7%、MoM+15.8%，營運成長強"
+          "官方載具類別比簡略文字擷取完整，晶圓／光罩及先進封裝製程支援範疇有依據。",
+          "2026年8月營收8.40億元，MoM-3.58%、YoY+49.94%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "不生產高速連接器或光互連元件，題材直接性低",
-          "營收不能歸因高速互連，且舊有CPO精度規格缺乏MOPS支持"
+          "未核得高速互連／CPO專案營收或客戶；所列晶圓與封裝公司僅為製程應用對象。",
+          "載具產品目錄存在不等於CPO量產採用，題材直接性低。",
+          "8月MoM-3.58%，整體月度拉貨／認列回落，需避免只看年增率。"
         ],
         "opportunities": [
           "高速運算晶片擴產可間接增加光罩與晶圓載具需求",
           "先進封裝複雜度提升可擴大承載與設備解決方案商機"
         ],
         "threats": [
-          "晶圓廠資本支出放緩會延後載具與設備採購",
-          "客戶驗證期長，題材訂單轉換可能落後市場預期"
+          "晶圓廠資本支出遞延可能使載具採購落後高速互連題材熱度。",
+          "若把載具支援誤當CPO光學元件供貨，將造成題材估值與實際收入錯配。"
         ]
       }
     },

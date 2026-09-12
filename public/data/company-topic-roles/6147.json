@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6147",
   "companyName": "頎邦",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -11,13 +11,13 @@
       "directness": "core",
       "supplyChainStage": "display_driver_ic_osat",
       "roleType": "display_driver_ic_bumping_packaging_test",
-      "roleSummary": "頎邦MOPS直接支持金／錫鉛凸塊、晶圓測試、TCP、COF與COG，顯示驅動IC後段角色明確；但MOPS未揭露凸塊間距、線寬、高頻測試規格或具名客戶。FinMind顯示2026年7月營收25.23億元、MoM+10.2%、YoY+39.2%，無顯示業務歸因。",
+      "roleSummary": "頎邦MOPS已列凸塊、CP及COF／COG，官方COF頁更確認小於16µm間距、薄PI、雙面銅與多晶片封裝能力，補正過去把官網實際能力一併泛化的問題。用途涵蓋LCD／OLED顯示驅動，並非面板或LED製造。2026年8月營收26.20億元，MoM+3.85%、YoY+43.61%；公司整體數據不能完全歸因本題材。",
       "products": [
         "顯示驅動IC金凸塊製程服務",
-        "顯示驅動IC錫鉛凸塊製程服務",
-        "捲帶式薄膜覆晶COF封裝服務",
-        "玻璃覆晶COG封裝服務",
-        "顯示驅動IC晶圓測試服務"
+        "Super Fine Pitch COF薄膜覆晶封裝",
+        "雙面銅COF封裝",
+        "多晶片COF封裝",
+        "顯示驅動IC晶圓測試CP服務"
       ],
       "customers": [
         "聯詠(3034；顯示驅動IC應用對象，非MOPS揭露客戶)",
@@ -26,12 +26,12 @@
         "群創(3481；面板供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "南茂(8150)",
-        "頎中(6149)",
-        "ChipMOS(8199)"
+        "南茂（ChipMOS，顯示驅動IC封測）"
       ],
       "risks": [
-        "OLED驅動IC封測競爭加劇，面板需求週期性波動"
+        "技術量產能力不是各客戶產品採用證明，也未取得顯示與非顯示收入拆分。",
+        "面板需求轉弱會降低驅動IC投片與封裝量",
+        "同業價格競爭與客戶內製可能壓縮封測毛利"
       ],
       "evidence": [
         {
@@ -50,35 +50,45 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：金凸塊、錫鉛凸塊、晶圓測試、TCP、COF、COG。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6147",
+          "claim": "2026-09-13查詢6147，主要經營業務：金凸塊(GOLD BUMPING)，錫鉛凸塊(SOLD BUMPING)，晶圓測試(CP)捲帶軟板封裝(TCP)，捲帶式薄膜覆晶(COF)，玻璃覆晶封裝(COG)。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "TaiwanStockMonthRevenue",
+          "publisher": "FinMind via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind：2026年7月營收25.23億元，MoM+10.2%、YoY+39.2%；TWSE月營收查無資料，未揭露顯示業務歸因。"
+          "claim": "2026年8月營收26.20億元，MoM+3.85%、YoY+43.61%；來源FinMind via MCP，原始營收2619692000（NT$）。來源備註：TWSE primary no data; FinMind fallback。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-6147-6147-20260913",
+          "publisher": "頎邦 / 官方產品或合作方資料",
+          "title": "Products - Chipbond",
+          "url": "https://chipbond.com.tw/en/product/processing_service/package",
+          "claim": "官方COF頁明列<16µm、PI≤25µm、熱壓接合、雙面銅與多晶片量產能力及晶圓／捲帶規格。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "金／錫鉛凸塊之電鍍、厚度均勻性與接合可靠度",
-        "COF捲帶封裝之晶粒接合、薄膜對位與連續製程控制",
-        "COG封裝與晶圓測試之電性篩選及良率回饋"
+        "COF以熱壓將IC金凸塊接合軟性基板內引腳，再以低吸濕絕緣膠填補保護",
+        "官方COF頁：可生產小於16µm超細間距產品、PI材料厚度不大於25µm",
+        "COF頁列6／8／12吋晶圓、35／48／70mm捲帶；不是所有封裝共同規格"
       ],
       "swot": {
         "strengths": [
-          "MOPS具體列出凸塊、晶圓測試、COF與COG，顯示後段能力直接",
-          "FinMind顯示2026年7月營收YoY+39.2%、MoM+10.2%，營運動能改善"
+          "官方COF細間距、薄膜及多晶片量產描述，直接支持窄邊框與高密度顯示封裝能力。",
+          "2026年8月營收26.20億元，MoM+3.85%、YoY+43.61%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露間距、線寬、頻率或具名客戶，舊規格缺乏支持",
-          "顯示驅動IC後段受面板景氣與終端庫存循環影響大"
+          "技術量產能力不是各客戶產品採用證明，也未取得顯示與非顯示收入拆分。",
+          "營收反映多項封測業務，不能將全部年增歸因OLED或車載顯示。"
         ],
         "opportunities": [
           "高解析與窄邊框顯示可提升COF、凸塊與測試複雜度",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8150",
   "companyName": "南茂",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "hbm",
@@ -96,15 +96,14 @@
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "display_panel",
+      "supplyChainStage": "display_driver_ic_osat",
       "roleType": "ddic_packaging",
-      "roleSummary": "南茂MOPS直接支持顯示器驅動IC封裝測試、金凸塊、記憶體與混合訊號IC封測，顯示後段角色成立；但MOPS未揭露凸塊間距、COF／COG細節或具名IC客戶。2026年7月營收28.23億元、MoM+11.2%、YoY+43.6%，累計YoY+29.5%。",
+      "roleSummary": "南茂MOPS直接列顯示驅動封測與金凸塊，官方Bumping頁補證7–15µm金凸塊高度及Cu／Ni／Au三層MCB，與COF／COG用途有直接關聯。定位是顯示IC後段封測，不是面板製造；不同凸塊與RDL製程規格不能混用。2026年8月營收27.86億元，MoM-1.32%、YoY+33.27%，1–8月累計YoY+30.04%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "顯示器驅動IC封裝服務",
-        "顯示器驅動IC測試服務",
-        "顯示驅動IC金凸塊製程服務",
-        "混合訊號IC封裝服務",
-        "混合訊號IC測試服務"
+        "8／12吋顯示驅動IC金凸塊服務",
+        "Cu／Ni／Au三層MCB金屬複合凸塊",
+        "顯示驅動IC封裝服務",
+        "顯示驅動IC晶圓／成品測試"
       ],
       "customers": [
         "聯詠(3034；顯示驅動IC應用對象，非MOPS揭露客戶)",
@@ -116,54 +115,53 @@
         "頎邦"
       ],
       "risks": [
-        "OLED DDI 封裝需求轉變"
+        "本次未取得各顯示客戶收入或OLED封測占比，不能由公司整體成長推算。",
+        "面板需求下滑會快速傳導至驅動IC投片與封測量",
+        "同業擴產及封測價格競爭可能壓縮毛利"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "南茂 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8150",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南茂 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 8150 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：記憶體封裝測試、顯示器驅動IC封裝測試含金凸塊、混合訊號IC封裝測試。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=8150",
+          "claim": "2026-09-13查詢8150，主要經營業務：研究開發生產製造銷售高集積度高精密度記憶體之封裝及測試服務顯示器驅動IC封裝測試(含金凸塊)業務混合訊號IC封裝測試業務。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%。"
+          "claim": "2026年8月營收27.86億元，MoM-1.32%、YoY+33.27%，1–8月累計YoY+30.04%；來源TWSE OpenAPI via MCP，原始營收2785705（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-8150-8150-20260913",
+          "publisher": "南茂 / 官方產品或合作方資料",
+          "title": "ChipMOS TECHNOLOGIES INC.",
+          "url": "https://www.chipmos.com/english/product/detail.aspx?MID=6",
+          "claim": "官方Bumping頁列金凸塊7–15µm高度、8／12吋晶圓、COF／COG互連及Cu／Ni／Au三層MCB。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "顯示驅動IC金凸塊之電鍍均勻性與接合可靠度",
-        "驅動IC封裝之薄型化、翹曲與細間距互連控制",
-        "混合訊號與顯示驅動IC之晶圓／成品電性測試"
+        "顯示驅動IC金凸塊高度7–15µm、支援8／12吋晶圓，供COF／COG互連",
+        "MCB以Cu／Ni／Au三層取代純金凸塊，官方列COF成本優化用途",
+        "金凸塊高度不是間距；RDL線寬與Cu pillar間距屬另一製程，不套用到顯示金凸塊"
       ],
       "swot": {
         "strengths": [
-          "MOPS具體支持顯示驅動IC封裝測試與金凸塊，角色直接",
-          "2026年7月營收YoY+43.6%、累計YoY+29.5%，營運動能強"
+          "官方金凸塊與MCB產品提供顯示驅動IC薄型互連及成本選項，與MOPS業務吻合。",
+          "2026年8月營收27.86億元，MoM-1.32%、YoY+33.27%，1–8月累計YoY+30.04%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露間距、封裝形式細節或具名客戶",
-          "顯示驅動IC封測受面板景氣與終端庫存循環影響"
+          "本次未取得各顯示客戶收入或OLED封測占比，不能由公司整體成長推算。",
+          "記憶體與混合訊號封測也在公司營收內；金凸塊能力不等於所有封装技術共用規格。",
+          "8月MoM-1.32%，整體月度拉貨／認列回落，需避免只看年增率。"
         ],
         "opportunities": [
           "高解析、窄邊框與車載顯示可提高驅動IC封測價值",

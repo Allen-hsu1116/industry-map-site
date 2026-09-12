@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2393",
   "companyName": "億光",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -175,12 +175,12 @@
       "directness": "indirect",
       "supplyChainStage": "sensors",
       "roleType": "optical_sensor_supplier",
-      "roleSummary": "億光MOPS支持電子製品、光電控制器及半導體相關原料設備，與工業自動化的關聯在光電感測、光耦隔離與指示元件應用；MOPS未揭露IP等級、耐壓數值或具名自動化客戶。2026年7月營收19.74億元、MoM+7.8%、YoY+17.4%，但無法拆分工控貢獻。",
+      "roleSummary": "億光的工業自動化角色可由官方光耦產品頁直接補證：CNY17／4NXX列Industrial controls用途，EL20X／EL21X及ELD系列支援回授、監測與切換。不是CNC整機供應商；個別光耦電氣規格不代表整機安規或防護等級。2026年8月營收18.63億元，MoM-5.65%、YoY+14.10%，1–8月累計YoY+6.28%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "工業設備用光電感測發光元件",
-        "控制電路用光耦合器",
-        "機台狀態指示用可見光LED",
-        "工業檢測用紅外線發光元件"
+        "CNY17系列6-pin DIP光電晶體光耦",
+        "4NXX系列6-pin DIP光耦",
+        "EL20X／EL21X單通道SO-8光耦",
+        "ELD20X／ELD21X雙通道SO-8光耦"
       ],
       "customers": [
         "台達電(2308；工業控制應用對象，非MOPS揭露客戶)",
@@ -189,62 +189,68 @@
         "Keyence（工業感測應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "光寶科(2301)(光耦合器)",
-        "億光自身(2393)(工控LED)",
-        "Sharp(工業LED)"
+        "光寶科（光耦產品比較對象）",
+        "Vishay（隔離光耦產品比較對象）",
+        "Toshiba（光耦產品比較對象）"
       ],
       "risks": [
-        "6月營收18.31億YoY+10.6%但工控光電佔比有限",
-        "工控光電感測器為利基市場，規模成長有限",
-        "車用LED需AEC-Q102認證週期長且量產爬坡慢"
+        "尚無工控光耦收入占比，不能把公司LED相關成長全部算到工業自動化。",
+        "工控景氣放緩與客戶去庫存可能延後拉貨",
+        "中國LED封裝價格競爭與產品同質化可能壓縮毛利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 電子製品之加工製造買賣業務各種光電控制器之加工買賣業務半導體原料及其設備之製造買賣業務"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子製品、光電控制器加工買賣；半導體原料及設備製造買賣。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2393",
+          "claim": "2026-09-13查詢2393，主要經營業務：電子製品之加工製造買賣業務各種光電控制器之加工買賣業務半導體原料及其設備之製造買賣業務。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收19.74億元，MoM+7.8%、YoY+17.4%，累計YoY+5.2%。"
+          "claim": "2026年8月營收18.63億元，MoM-5.65%、YoY+14.10%，1–8月累計YoY+6.28%；來源TWSE OpenAPI via MCP，原始營收1862682（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2393-2393-20260913",
+          "publisher": "億光 / 官方產品或合作方資料",
+          "title": "6Pin DIP-DC | A Leader in LED Industry | EVERLIGHT",
+          "url": "https://en.everlight.com/photo_coupler_igbt_ssr/category-photo_transistor/6pin_dip_dc/",
+          "claim": "CNY17／4NXX為6-pin DIP光耦、5000Vrms，官方列Industrial controls。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2393-2393-extra-20260913",
+          "publisher": "億光 / 官方產品或合作方資料",
+          "title": "8Pin SOP-DC | A Leader in LED Industry | EVERLIGHT",
+          "url": "https://en.everlight.com/photo_coupler_igbt_ssr/category-photo_transistor/8pin_sop_dc/",
+          "claim": "EL20X／EL21X單通道及ELD20X／ELD21X雙通道，SO-8封裝、3750Vrms隔離；回授、監測與切換用途。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "光耦輸入輸出隔離、電流轉換比與老化穩定性控制",
-        "紅外線發射端之波長、光功率與感測器匹配",
-        "工業溫度循環下的封裝熱阻、焊點與光衰可靠度"
+        "CNY17／4NXX產品頁：紅外LED耦合光電晶體，6-pin DIP，隔離耐壓5000Vrms",
+        "EL20X／EL21X及雙通道ELD20X／ELD21X頁：SO-8封裝、隔離耐壓3750Vrms",
+        "工控回授與不同電位電路隔離需評估CTR和老化；耐壓依產品系列，不跨系列套用"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持光電控制器及電子製品，具工控光電元件應用基礎",
-          "2026年7月營收YoY+17.4%、MoM+7.8%，短期營運改善"
+          "官方具體列工業控制用隔離光耦，製造能力與本題材的控制／感測層直接相關。",
+          "2026年8月營收18.63億元，MoM-5.65%、YoY+14.10%，1–8月累計YoY+6.28%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露工控產品占比、規格或具名客戶",
-          "累計YoY僅+5.2%，成長幅度低於單月且不能歸因工業自動化"
+          "尚無工控光耦收入占比，不能把公司LED相關成長全部算到工業自動化。",
+          "隔離光耦規格不等同機台認證；台達、Omron等仍是應用對象而非已核實客戶。",
+          "8月MoM-5.65%，整體月度拉貨／認列回落，需避免只看年增率。",
+          "1–8月累計YoY+6.28%，仍應搭配產品結構與獲利查核。"
         ],
         "opportunities": [
           "工廠自動化升級可增加隔離、感測與機台指示元件需求",

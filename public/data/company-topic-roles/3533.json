@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3533",
   "companyName": "嘉澤",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "high-speed-interconnect",
@@ -11,19 +11,19 @@
       "directness": "core",
       "supplyChainStage": "high_speed_connector",
       "roleType": "high_speed_connector_leader",
-      "roleSummary": "嘉澤MOPS僅以「連接器」概括主要業務，支持高速互連的產品類別但未揭露112G PAM4、PCIe世代、DDR速率、插座型號或具名客戶；本角色保留為伺服器與高速運算連接器供應商，移除無證據規格。2026年7月營收33.69億元、MoM+8.9%、YoY+18.6%，累計YoY+17.4%。",
+      "roleSummary": "嘉澤MOPS僅列連接器，但官方產品頁實際列SP5、SP6、AM5插座及明確料號；應保留這些可查規格，而不是退回無型號敘述。高速互連角色在運算平台插座、記憶體及板間連接，未證實特定PAM4速率或具名客戶訂單。2026年8月營收31.98億元，MoM-5.06%、YoY+19.58%，1–8月累計YoY+17.70%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "伺服器CPU插座連接器",
-        "記憶體模組插槽連接器",
-        "高速板對板連接器",
-        "伺服器高速I/O連接器",
-        "電源與訊號端子連接器"
+        "AZIFA182 Updated SP5 CPU Socket（LGA6096）",
+        "AZIF0057 SP6 CPU Socket（LGA4844）",
+        "AZIFS055 AM5 CPU Socket（LGA1718）",
+        "記憶體插槽連接器",
+        "高速板對板連接器"
       ],
       "customers": [
-        "廣達(2382；伺服器應用對象，非MOPS揭露客戶)",
-        "緯穎(6669；資料中心伺服器應用對象，非MOPS揭露客戶)",
-        "鴻海(2317；電子製造供應鏈對象，非MOPS揭露客戶)",
-        "Intel（CPU平台驗證對象，非MOPS揭露客戶）"
+        "AMD（AM5／SP5／SP6平台應用對象，非採購證明）",
+        "Intel（CPU平台比較／驗證對象，非MOPS揭露客戶）",
+        "廣達（伺服器應用對象，未確認本次採購關係）",
+        "緯穎（資料中心應用對象，未確認本次採購關係）"
       ],
       "competitors": [
         "Amphenol",
@@ -31,55 +31,61 @@
         "鴻海"
       ],
       "risks": [
-        "高速連接器技術迭代快，需持續投入研發",
-        "單一 AI 客戶比重高的風險"
+        "產品目錄未披露具名系統客戶收入及實際採購，不能保留單一AI客戶占比高的無來源說法。",
+        "國際連接器大廠與客戶自研規格可能提高競爭門檻",
+        "伺服器資本支出放緩或平台延期會影響新產品放量"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "嘉澤 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3533",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 嘉澤 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3533 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：連接器。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3533",
+          "claim": "2026-09-13查詢3533，主要經營業務：連接器。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收33.69億元，MoM+8.9%、YoY+18.6%，累計YoY+17.4%。"
+          "claim": "2026年8月營收31.98億元，MoM-5.06%、YoY+19.58%，1–8月累計YoY+17.70%；來源TWSE OpenAPI via MCP，原始營收3198344（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-3533-3533-20260913",
+          "publisher": "嘉澤 / 官方產品或合作方資料",
+          "title": "產品介紹 | 嘉澤端子",
+          "url": "https://www.lotes.cc/zh-tw/product.php",
+          "claim": "官方產品頁列AZIFA182 SP5 LGA6096、AZIF0057 SP6 LGA4844、AZIFS055 AM5 LGA1718；官網sitemap另列Memory Connector及Board to Board Solution。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-3533-sitemap-index-20260913",
+          "publisher": "嘉澤",
+          "title": "網站地圖（搜尋索引補證）",
+          "url": "https://www.lotes.cc/zh-tw/sitemap.php",
+          "claim": "官方sitemap搜尋索引列Memory Connector、Board to Board Solution等類別；料號另以完整產品頁確認。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "高速連接器之差動阻抗、插入損耗與串擾控制",
-        "CPU插座與記憶體插槽之接觸力、共面度及耐插拔設計",
-        "高電流端子之接觸電阻、溫升與鍍層可靠度"
+        "AZIFA182綁定SP5／LGA6096；AZIF0057綁定SP6／LGA4844，依官方料號辨識",
+        "AZIFS055綁定AM5／LGA1718；CPU插座與SRM／背板是不同組件",
+        "高速互連需評估接觸電阻、共面度、插入損耗與串擾（工程分析）；本次未核得PAM4或PCIe速率"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持連接器，題材產品方向成立",
-          "2026年7月營收YoY+18.6%、MoM+8.9%，累計YoY+17.4%穩定成長"
+          "CPU插座有料號與平台腳位對應，加上記憶體及板間連接产品，平台升級的工程關聯明確。",
+          "2026年8月營收31.98億元，MoM-5.06%、YoY+19.58%，1–8月累計YoY+17.70%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露協定世代、速率、型號或具名客戶",
-          "高速連接器驗證期長，產品切換與良率爬坡成本高"
+          "產品目錄未披露具名系統客戶收入及實際採購，不能保留單一AI客戶占比高的無來源說法。",
+          "本次查得插座料號不是112G／224G或特定PCIe世代認證證據。",
+          "8月MoM-5.06%，整體月度拉貨／認列回落，需避免只看年增率。"
         ],
         "opportunities": [
           "AI伺服器提高高速I/O、記憶體與電源連接器數量",

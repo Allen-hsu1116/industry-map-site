@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2317",
   "companyName": "鴻海",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -90,14 +90,14 @@
       "topicType": "end_market",
       "directness": "core",
       "supplyChainStage": "system_assembly",
-      "roleType": "smartphone_assembly_provider",
-      "roleSummary": "鴻海MOPS支持電腦系統週邊連接器、線纜組件、殼體、基座與精密模具，能證明消費運算裝置零組件與製造基礎；但MOPS未揭露iPhone、AirPods、GB200等產品或具名客戶。2026年7月營收9,465.13億元、MoM+15.2%、YoY+54.2%，公司明示主要受伺服器需求與出貨成長，不能歸因消費裝置。",
+      "roleType": "consumer_device_integrated_manufacturing",
+      "roleSummary": "鴻海官方Products and Services直接列出智慧手機、穿戴、遊戲主機、筆電與平板，消費運算終端製造角色不應因MOPS摘要簡略而縮成連接器。仍未以本次來源確認iPhone等機種或客戶採購關係；8月營收備註明示成長主要來自伺服器出貨。2026年8月營收9,217.66億元，MoM-2.61%、YoY+51.98%，1–8月累計YoY+39.73%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "電腦系統週邊連接器",
-        "電腦週邊線纜組件",
-        "消費運算裝置殼體與基座",
-        "電子產品用精密模具",
-        "電腦系統設備整合製造服務"
+        "智慧型手機整合設計製造服務",
+        "筆記型電腦整合製造服務",
+        "平板電腦整合製造服務",
+        "穿戴式消費電子製造服務",
+        "遊戲主機整合製造服務"
       ],
       "customers": [
         "Apple（消費電子應用對象，非MOPS揭露客戶）",
@@ -106,14 +106,14 @@
         "Lenovo（個人電腦應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "和碩",
-        "比亞迪電子",
-        "偉創力",
-        "富士康印度"
+        "和碩（消費電子製造）",
+        "比亞迪電子（消費電子製造）",
+        "Flex（電子製造服務）"
       ],
       "risks": [
-        "蘋果 iPhone 營收佔比極高，成長受制於 iPhone 週期",
-        "印度/越南產能轉移壓縮毛利"
+        "8月成長主因是伺服器，不是手機／平板訂單的直接證據。",
+        "消費電子成熟且品牌議價力高，毛利率易受壓",
+        "產品週期縮短、地緣政治與生產基地移轉會提高資本支出"
       ],
       "legacy": {
         "topicSlug": "mobile",
@@ -122,50 +122,47 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "鴻海 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2317",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 鴻海 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2317 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電腦系統設備及週邊連接器、線纜組件、殼體、基座與精密模具。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2317",
+          "claim": "2026-09-13查詢2317，主要經營業務：電腦系統設備及其週邊之連接器等線纜組件及殼體,基座之開發、設計、製造及銷售等精密模具之製造及銷售等。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收9,465.13億元，MoM+15.2%、YoY+54.2%，累計YoY+37.9%；主要受伺服器需求與出貨成長。"
+          "claim": "2026年8月營收9,217.66億元，MoM-2.61%、YoY+51.98%，1–8月累計YoY+39.73%；來源TWSE OpenAPI via MCP，原始營收921766023（NT$ thousand）。來源備註：主要受惠於伺服器產品出貨持續成長，帶動營收較去年同期增加。。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2317-2317-20260913",
+          "publisher": "鴻海 / 官方產品或合作方資料",
+          "title": "Products and Services - Hon Hai Technology Group",
+          "url": "https://honhai.com/en-us/products-and-services",
+          "claim": "官方列出smartphones、wearables、game consoles、desktops、laptops、tablets及IIDM軟硬體整合製造；未披露具名品牌客戶。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "高速連接器與線纜之阻抗、訊號完整性及耐插拔設計",
-        "薄型殼體、基座與精密模具的尺寸公差及量產控制",
-        "大規模電子組裝之自動化測試、追溯與良率管理"
+        "IIDM結合工業設計、軟硬體整合與全球組裝，官方揭露為製造服務模式",
+        "連接器／線纜與殼體／基座的垂直整合，精密模具為MOPS揭露能力",
+        "多產品量產之公差、電性測試與良率追溯為工程分析重點，非特定機種規格"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持連接器、線纜、殼體、基座及精密模具，製造鏈完整",
-          "2026年7月營收YoY+54.2%、累計YoY+37.9%，整體出貨動能強"
+          "官方揭露IIDM、軟硬體整合及全球組裝，消費電子與運算終端產品範疇明確。",
+          "2026年8月營收9,217.66億元，MoM-2.61%、YoY+51.98%，1–8月累計YoY+39.73%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露具名消費裝置或品牌客戶，舊有機種精度過高",
-          "公司說明7月成長主要來自伺服器，不能當作消費裝置復甦證據"
+          "8月成長主因是伺服器，不是手機／平板訂單的直接證據。",
+          "具名品牌僅列消費終端應用對象，未核得其採購金額或產品收入占比。",
+          "8月MoM-2.61%，整體月度拉貨／認列回落，需避免只看年增率。"
         ],
         "opportunities": [
           "AI PC與裝置換機可增加高速連接、機構件及系統整合需求",

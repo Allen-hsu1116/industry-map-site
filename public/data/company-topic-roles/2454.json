@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2454",
   "companyName": "聯發科",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -202,20 +202,20 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "ic_design",
-      "roleType": "hpc_networking_soc_provider",
-      "roleSummary": "聯發科MOPS直接支持多媒體、電腦周邊、高階消費與特殊應用IC，IC設計角色成立；但MOPS未揭露特定SoC型號、3nm節點、基頻世代或具名網通客戶。2026年7月營收484.75億元、MoM-16.4%、YoY+12.2%，累計YoY僅+0.8%，月減與累計低成長是短期壓力。",
+      "roleType": "multimedia_mobile_and_custom_soc_designer",
+      "roleSummary": "聯發科的IC設計角色包括手機、智慧家庭、周邊與ASIC；官方創新報告補證Dimensity 9400全大核、CT-X1 3nm及NVIDIA座艙合作。這些是已揭露產品／合作能力，不據此推定2026年各產品收入或量產比重。2026年8月營收641.83億元，MoM+32.41%、YoY+44.08%，1–8月累計YoY+5.76%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "行動裝置多媒體系統單晶片",
-        "無線通訊與連線積體電路",
-        "智慧家庭與高階消費性電子積體電路",
-        "電腦周邊控制積體電路",
-        "特殊應用積體電路"
+        "Dimensity 9400旗艦5G SoC（官方2024年揭露）",
+        "Dimensity Auto Cockpit CT-X1座艙SoC（官方2024年發表）",
+        "智慧家庭多媒體IC",
+        "電腦周邊控制IC",
+        "特殊應用積體電路ASIC"
       ],
       "customers": [
-        "Samsung（行動裝置應用對象，非MOPS揭露客戶）",
-        "小米Xiaomi（行動裝置應用對象，非MOPS揭露客戶）",
-        "OPPO（行動裝置應用對象，非MOPS揭露客戶）",
-        "TP-Link（網通設備應用對象，非MOPS揭露客戶）"
+        "NVIDIA（官方揭露Dimensity Auto Cockpit平台合作對象，非購買客戶）",
+        "Samsung（手機應用對象，未確認本次採購關係）",
+        "Xiaomi（手機應用對象，未確認本次採購關係）",
+        "OPPO（手機應用對象，未確認本次採購關係）"
       ],
       "competitors": [
         "Broadcom",
@@ -223,8 +223,9 @@
         "Realtek"
       ],
       "risks": [
-        "先進製程設計成本高（N3/N4）",
-        "網通晶片市場競爭激烈"
+        "8月單月回升不能證明全年高增長，累計比較與產品組合仍需一起觀察。",
+        "高階手機需求疲弱與客戶庫存調整可能壓抑出貨",
+        "Qualcomm、Apple及中國IC設計商競爭會提高研發與價格壓力"
       ],
       "legacy": {
         "topicSlug": "hpc-networking-ic",
@@ -233,50 +234,47 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯發科 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯發科 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：多媒體IC、電腦週邊IC、高階消費性IC、其他特殊應用IC。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2454",
+          "claim": "2026-09-13查詢2454，主要經營業務：多媒體IC 、電腦週邊IC、高階消費性IC、其他特殊應用IC。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY+0.8%；海外子公司營收以平均匯率換算。"
+          "claim": "2026年8月營收641.83億元，MoM+32.41%、YoY+44.08%，1–8月累計YoY+5.76%；來源TWSE OpenAPI via MCP，原始營收64183361（NT$ thousand）。來源備註：海外子公司之營收係以當月平均匯率換算之。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-2454-2454-20260913",
+          "publisher": "聯發科 / 官方產品或合作方資料",
+          "title": "Innovation",
+          "url": "https://corp.mediatek.com/about/sustainability/innovation",
+          "claim": "官方2024創新成果列Dimensity 9400第二代全大核、CT-X1 3nm；座艙平台整合NVIDIA GPU／DRIVE OS。非2026出貨占比。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-28",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "CPU／GPU／NPU與多媒體引擎之SoC異質整合",
-        "無線射頻、基頻、協定堆疊與低功耗連線整合",
-        "先進製程下的功耗、效能、面積協同最佳化"
+        "Dimensity 9400採第二代全大核架構及端側生成式AI設計，依官方2024年成果揭露",
+        "CT-X1為官方揭露3nm座艙平台；不可把此製程規格套用所有產品",
+        "Dimensity Auto Cockpit整合Arm v9-A、NVIDIA GPU／RTX與DRIVE OS生態系，合作非客戶採購證明"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持多媒體、周邊、消費與特殊應用IC，產品平台廣",
-          "2026年7月營收仍YoY+12.2%，具跨終端產品分散能力"
+          "手機與座艙SoC的CPU／GPU／AI及軟體平台協作可提升系統設計附加價值。",
+          "2026年8月營收641.83億元，MoM+32.41%、YoY+44.08%，1–8月累計YoY+5.76%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露特定型號、節點或具名客戶，舊資料過度精確",
-          "2026年7月MoM-16.4%，累計YoY僅+0.8%，短期成長不均"
+          "8月單月回升不能證明全年高增長，累計比較與產品組合仍需一起觀察。",
+          "海外子公司營收按當月平均匯率換算；本次未分拆手機、ASIC、座艙收入，發表不等於收入認列。",
+          "1–8月累計YoY+5.76%，仍應搭配產品結構與獲利查核。"
         ],
         "opportunities": [
           "端側AI可提升SoC運算、記憶體與連線整合價值",

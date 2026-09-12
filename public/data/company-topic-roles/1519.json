@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1519",
   "companyName": "華城",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "transformers_and_epc",
       "roleType": "transformer_switchgear_epc_provider",
-      "roleSummary": "華城MOPS明確揭露變壓器、配電盤、配電器材及統包工程，是重電與變電站EPC核心角色；本次移除MOPS未證實的特定電壓級距與具名客戶直供說法。2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%，短期認列波動仍需留意。",
+      "roleSummary": "華城MOPS列變壓器、配電盤及統包，官方沿革明確記載345kV實績、台中廠500kV級能力與台電六輸工程，補回過去僅因MOPS未列而刪除的技術事實；歷史實績不表示2026年同規格新單。2026年8月營收19.16億元，MoM-6.51%、YoY+12.50%，1–8月累計YoY-1.77%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "油浸式電力變壓器",
+        "345kV電力變壓器（官方歷史實績）",
+        "500kV級超高壓變壓器（台中廠歷史能力）",
         "配電變壓器",
         "高低壓配電盤",
-        "變電站配電器材",
-        "變電站統包工程EPC"
+        "變電站統包EPC工程"
       ],
       "customers": [
-        "台電（變電設備標案應用對象，非MOPS揭露客戶）",
-        "台積電(2330；廠務供電應用對象，非MOPS揭露客戶）",
-        "中鋼(2002；工業配電應用對象，非MOPS揭露客戶）",
-        "台塑(1301；工廠配電應用對象，非MOPS揭露客戶）",
-        "Orsted（離岸風電變電應用對象，非MOPS揭露客戶）"
+        "台電（官方歷史客戶／工程實績：六輸竹嶺、榴中，非2026新單）",
+        "Hitachi（日立；官方歷史合資／技術合作對象，非客戶）",
+        "Secheron（官方歷史直流牽引技術合作對象，非客戶）",
+        "台積電（廠務配電應用對象，未確認本次採購關係）"
       ],
       "competitors": [
         "士電",
@@ -32,55 +31,54 @@
         "大同"
       ],
       "risks": [
-        "台電標案進度受政策影響",
-        "銅價波動影響毛利"
+        "8月雖年增，但累計仍年減；大型設備與工程交付認列不同，不能宣稱全面復甦。",
+        "中興電、士電及Hitachi Energy等業者競逐大型標案",
+        "銅、電磁鋼片及運輸成本上升可能侵蝕專案毛利"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "華城 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1519",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 華城 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 1519 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "變壓器、配電盤、配電器材及其他統包工程。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1519",
+          "claim": "2026-09-13查詢1519，主要經營業務：變壓器及配電盤配電器材及其他統包工程。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%。"
+          "claim": "2026年8月營收19.16億元，MoM-6.51%、YoY+12.50%，1–8月累計YoY-1.77%；來源TWSE OpenAPI via MCP，原始營收1916427（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-1519-1519-20260913",
+          "publisher": "華城 / 官方產品或合作方資料",
+          "title": "華城電機",
+          "url": "https://www.fortune.com.tw/fe50/history.aspx",
+          "claim": "官方50周年沿革記載345kV、2019年台中廠500kV級能力、台電六輸工程及Hitachi／Secheron歷史合作。不得當2026年訂單證明。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "變壓器繞組、絕緣、鐵心損耗與油冷設計",
-        "配電盤保護電驛、母線與短路耐受協調",
-        "變電站EPC之設計、安裝、試車與併網整合"
+        "官方沿革記載345kV變壓器實績及2019年取得台中廠500kV級技術能力，非2026年新接單證明",
+        "非晶質鐵心與低噪音變壓器為官方歷史開發方向；不推定所有產品均採用",
+        "EPC的設計、安裝、試車與保護協調為工程分析；工程認列與設備交付時點須分開追蹤"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持變壓器、配電盤、配電器材及統包工程完整產品線",
-          "7月營收MoM+18.5%，大型設備與工程認列回升"
+          "具變壓器與變電站EPC整合範疇，官方歷史實績確認超高壓能力及台電工程經驗。",
+          "2026年8月營收19.16億元，MoM-6.51%、YoY+12.50%，1–8月累計YoY-1.77%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "7月營收YoY-8.3%、累計YoY-3.7%，訂單認列節奏偏弱",
-          "大型變壓器與EPC專案交期長，單月營收容易波動"
+          "8月雖年增，但累計仍年減；大型設備與工程交付認列不同，不能宣稱全面復甦。",
+          "超高壓能力與台電工程來源為歷史沿革，本次未確認2026年在手訂單、交期與專案毛利。",
+          "8月MoM-6.51%，整體月度拉貨／認列回落，需避免只看年增率。",
+          "1–8月累計YoY-1.77%，仍應搭配產品結構與獲利查核。"
         ],
         "opportunities": [
           "台灣電網強韌、資料中心與晶圓廠擴建可增加變壓器需求",

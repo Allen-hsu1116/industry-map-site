@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6669",
   "companyName": "緯穎",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -89,13 +89,14 @@
       "topicType": "theme",
       "directness": "indirect",
       "supplyChainStage": "system_assembly",
-      "roleType": "cloud_infrastructure_hardware_provider",
-      "roleSummary": "緯穎MOPS僅揭露資料中心產品，支持伺服器與資料中心硬體，但未揭露雲端託管、DCaaS、資安軟體或叢集代營服務；本題材改為資料中心硬體管理韌體與雲端基礎設施承載角色。2026年7月營收1,176.86億元、MoM+5.7%、YoY+39.2%，不能直接歸因軟體或資安。",
+      "roleType": "cloud_hardware_firmware_integration_provider",
+      "roleSummary": "緯穎官方Rack Integration揭露Redfish、OpenBMC、MODBUS與韌體客製整合，雲端題材不應被簡化為只有硬體。定位仍是資料中心硬體＋管理軟韌體整合，而非獨立SaaS、機房出租或資安軟體收入；本次未取得訂閱營收證據。2026年8月營收1,443.12億元，MoM+22.62%、YoY+50.36%，1–8月累計YoY+42.80%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "資料中心伺服器系統",
-        "伺服器機櫃與節點整合產品",
-        "伺服器管理控制器韌體整合服務",
-        "雲端基礎設施硬體驗證服務"
+        "L10–L12伺服器／機櫃／列級整合服務",
+        "Redfish／OpenBMC管理介面客製化",
+        "BIOS／BMC／GPU韌體協同整合服務",
+        "機櫃風扇與泵浦熱控整合服務",
+        "節點至機櫃遙測與故障驗證服務"
       ],
       "customers": [
         "Microsoft（雲端基礎設施應用對象，非MOPS揭露客戶）",
@@ -104,13 +105,14 @@
         "Google（雲端運算應用對象，非MOPS揭露客戶）"
       ],
       "competitors": [
-        "Equinix",
-        "Digital Realty",
-        "廣達雲端"
+        "廣達QCT（資料中心系統整合比較對象）",
+        "英業達（伺服器整合比較對象）",
+        "鴻海（資料中心系統製造比較對象）"
       ],
       "risks": [
-        "目前為第一批 V2 role migration，產品占比、客戶與毛利率需後續用法說/年報細節補強。",
-        "不得用短線股價或題材熱度反推營運事實。"
+        "公司營收未拆出軟韌體服務或經常性訂閱收入，不能比照純SaaS估值。",
+        "雲端客戶自研硬體與管理軟體可能壓縮ODM附加價值",
+        "資料中心資本支出放緩或客戶集中會放大訂單波動"
       ],
       "legacy": {
         "topicSlug": "cloud-msp",
@@ -119,50 +121,46 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "緯穎 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6669",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 緯穎 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6669 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：資料中心產品。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6669",
+          "claim": "2026-09-13查詢6669，主要經營業務：資料中心產品。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收1,176.86億元，MoM+5.7%、YoY+39.2%，累計YoY+41.3%；未揭露軟體歸因。"
+          "claim": "2026年8月營收1,443.12億元，MoM+22.62%、YoY+50.36%，1–8月累計YoY+42.80%；來源TWSE OpenAPI via MCP，原始營收144311808（NT$ thousand）。來源備註：主要係客戶需求強勁。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-6669-6669-20260913",
+          "publisher": "緯穎 / 官方產品或合作方資料",
+          "title": "Rack Integration - Wiwynn",
+          "url": "https://www.wiwynn.com/solutions/rack-integration",
+          "claim": "官方Rack Integration明列L10–L12、Redfish／OpenBMC／MODBUS、Redfish／PLDM韌體整合、風扇泵浦曲線與漏液保護；非SaaS收入證據。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-28",
+      "confidence": "medium",
+      "lastVerified": "2026-09-13",
       "status": "verified",
       "techFocus": [
-        "BMC帶外管理、硬體遙測與遠端韌體更新整合",
-        "機櫃節點之安全開機、韌體簽章與存取權限控制",
-        "大規模資料中心伺服器配置、自動化部署與故障監控介面"
+        "官方Rack Integration支援Redfish API、OpenBMC及MODBUS，整合In-Band與OOB帶外管理",
+        "以Redfish／PLDM協同BIOS、BMC、GPU韌體，支援啟動與BFT驗證流程",
+        "熱感測搭配風扇／泵浦曲線調控及Tray至Rack漏液保護；不是端點防毒或SOC資安服務"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持資料中心產品，為雲端服務的硬體承載層",
-          "2026年7月營收YoY+39.2%、累計YoY+41.3%，資料中心產品需求強"
+          "官方確認L10–L12整合與開放管理協定，可降低雲端機櫃監控、部署及熱控整合摩擦。",
+          "2026年8月營收1,443.12億元，MoM+22.62%、YoY+50.36%，1–8月累計YoY+42.80%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS未揭露雲端託管、資安軟體或SaaS收入，不能列為軟體服務商",
-          "公司營收以硬體產品為主，軟體議價與經常性收入證據不足"
+          "公司營收未拆出軟韌體服務或經常性訂閱收入，不能比照純SaaS估值。",
+          "官方系統安全包含漏液與硬體可靠度，不能混同資安SOC、身分驗證或防毒產品。"
         ],
         "opportunities": [
           "雲端資料中心擴建可提升伺服器管理與安全韌體整合需求",

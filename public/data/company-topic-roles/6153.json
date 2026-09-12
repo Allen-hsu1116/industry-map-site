@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6153",
   "companyName": "嘉聯益",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -11,13 +11,11 @@
       "directness": "core",
       "supplyChainStage": "fpc",
       "roleType": "fpc_manufacturer",
-      "roleSummary": "嘉聯益MOPS直接支持軟性電路板FPC的設計、研發、製造與加工；在PCB題材中是軟板供應商，而非ABF／BT封裝載板廠。MOPS未揭露LCP材料、線寬、層數或具名手機客戶。2026年7月營收5.66億元、MoM+1.6%、YoY+20.6%，累計YoY+3.7%。",
+      "roleSummary": "嘉聯益MOPS明確支持FPC設計、研發、製造與加工，本題材定位軟板，不是ABF／BT IC載板。官方網站本次多路擷取與TLS驗證均未成功，因此不把舊資料中的手機、車用FPC或LCP細節當已驗證產品；僅保留可證明的三類軟板服務。2026年8月營收5.68億元，MoM+0.48%、YoY+15.95%，1–8月累計YoY+5.32%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "智慧型手機用軟性電路板FPC",
-        "筆記型電腦與平板用FPC",
-        "穿戴裝置用薄型FPC",
-        "相機與顯示模組用FPC",
-        "車用電子模組用FPC"
+        "軟性印刷電路板FPC設計服務（MOPS揭露）",
+        "FPC軟板製造服務（MOPS揭露）",
+        "FPC後段加工服務（MOPS揭露）"
       ],
       "customers": [
         "Apple（消費電子應用對象，非MOPS揭露客戶）",
@@ -26,60 +24,57 @@
         "和碩(4938；電子組裝供應鏈對象，非MOPS揭露客戶)"
       ],
       "competitors": [
-        "台郡",
-        "臻鼎",
-        "鵬鼎"
+        "台郡（FPC產品比較對象）",
+        "臻鼎集團（FPC產品比較對象，鵬鼎不重複列獨立集團）"
       ],
       "risks": [
-        "累計營收年減 7.8%，手機需求疲弱",
-        "中國軟板廠低價競爭"
+        "本次官方產品頁無法取回，終端用途、材料、層數與線寬未完成覆核，信心下調。",
+        "手機需求疲弱與客戶議價會壓縮稼動率及毛利",
+        "同業擴產與替代互連技術可能加劇價格競爭"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "嘉聯益 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6153",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 嘉聯益 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6153 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：軟性電路板FPC之設計、研究、開發、製造、加工與買賣。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=6153",
+          "claim": "2026-09-13查詢6153，主要經營業務：軟性電路板(FPC)之設計、研究、開發、製造、加工及買賣之業務。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收5.66億元，MoM+1.6%、YoY+20.6%，累計YoY+3.7%。"
+          "claim": "2026年8月營收5.68億元，MoM+0.48%、YoY+15.95%，1–8月累計YoY+5.32%；來源TWSE OpenAPI via MCP，原始營收568307（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-6153-retrieval-unavailable-20260913",
+          "publisher": "嘉聯益／查核紀錄",
+          "title": "官方產品資料未完成取得",
+          "url": "https://www.careergroups.com",
+          "claim": "本次HTTP／HTTPS文字擷取失敗；直接TLS驗證亦失敗。未登入、未略過憑證驗證；產品僅依MOPS披露FPC設計、製造、加工，技術細節標為工程分析。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-28",
-      "status": "verified",
+      "confidence": "low",
+      "lastVerified": "2026-09-13",
+      "status": "candidate",
       "techFocus": [
-        "FPC細線路蝕刻、微孔與多層壓合製程",
-        "動態彎折壽命、聚醯亞胺材料與薄型化控制",
-        "高速訊號阻抗、電磁相容與模組組裝可靠度"
+        "FPC線路配置與彎折區應力評估（題材工程分析，未核實特定製程能力）",
+        "軟板介質、導體與黏著層的彎折壽命匹配（分析，不主張LCP材料或特定層數）",
+        "加工對位及組裝可靠度檢查（分析，不提供未驗證線寬／孔徑）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持FPC全流程，軟板題材角色明確",
-          "2026年7月營收YoY+20.6%，短期需求改善"
+          "MOPS可確認FPC設計到製造加工的服務範疇，與PCB題材相關但須區別封裝載板。",
+          "2026年8月營收5.68億元，MoM+0.48%、YoY+15.95%，1–8月累計YoY+5.32%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "不是封裝載板廠，不能用ABF／BT載板成長邏輯估值",
-          "累計YoY僅+3.7%，且營收規模偏小、客戶集中風險高"
+          "本次官方產品頁無法取回，終端用途、材料、層數與線寬未完成覆核，信心下調。",
+          "沒有客戶集中度或各終端收入資料，應用對象不能當採購名單；舊累計年減敘述已不適用。",
+          "1–8月累計YoY+5.32%，仍應搭配產品結構與獲利查核。"
         ],
         "opportunities": [
           "穿戴、摺疊裝置與相機模組可提升軟板用量及設計複雜度",

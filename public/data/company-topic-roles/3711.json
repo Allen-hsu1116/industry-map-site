@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3711",
   "companyName": "日月光投控",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-12T19:12:42Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -171,15 +171,14 @@
       "topicId": "silicon-photonics-optical-comm",
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "process",
-      "directness": "indirect",
-      "supplyChainStage": "silicon_photonics",
-      "roleType": "optical_packaging_provider",
-      "roleSummary": "日月光投控MOPS僅揭露一般投資業，不能由母公司登記直接證明矽光子封裝規格或客戶；本角色限縮為集團旗下封測事業可能承接的光電晶片封裝、測試與系統級封裝能力，屬集團／子公司範圍且非母公司直接產品。2026年7月合併營收737.84億元、MoM+12.2%、YoY+43.2%，但公司未把成長歸因矽光子。",
+      "directness": "supplier",
+      "supplyChainStage": "group_optical_packaging",
+      "roleType": "group_cpo_packaging_demonstrator",
+      "roleSummary": "日月光投控母公司MOPS業務為一般投資業，但旗下ASE於2025-04-01正式展示VIPack CPO多光引擎封裝，不能把已公開的子公司技術降為純推定。此角色屬集團光電封裝技術，產品狀態是已展示；本次未取得量產客戶與CPO收入拆分。2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，1–8月累計YoY+27.98%；公司整體數據不能完全歸因本題材。",
       "products": [
-        "集團旗下光電晶片封裝服務（子公司範圍）",
-        "集團旗下覆晶封裝服務（子公司範圍）",
-        "集團旗下系統級封裝服務（子公司範圍）",
-        "集團旗下半導體成品測試服務（子公司範圍）"
+        "集團ASE VIPack CPO多光引擎共封裝展示方案",
+        "集團ASE光引擎與ASIC大尺寸基板整合方案",
+        "集團ASE水平／垂直光纖耦合封裝製程方案"
       ],
       "customers": [
         "台積電(2330；矽光子生態系對象，非MOPS揭露客戶)",
@@ -191,64 +190,60 @@
         "安靠"
       ],
       "risks": [
-        "6月營收657.8億YoY+32.9%,累計YoY+22.0%(AI封裝需求強勁)",
-        "矽光子封裝良率挑戰高(光學對位精度<1μm)",
-        "中國封廠低價競爭壓力持續"
+        "2025年展示與可用平台不等於2026年量產交付；客戶、良率及商業規模未披露。",
+        "晶圓與光模組廠內製、替代光互連架構可能壓縮外包封裝機會。",
+        "量產良率、可靠度及成本尚需商業證據；展示效能不能直接轉成盈利預測。"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "日月光投控 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3711",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 日月光投控 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3711 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：H201010 一般投資業。"
+          "publisher": "公開資訊觀測站 MOPS via MCP",
+          "title": "公司完整基本資料（本批查核）",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=3711",
+          "claim": "2026-09-13查詢3711，主要經營業務：H201010  一般投資業。此摘要不證明未列的規格不存在，也不證明具名客戶關係。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "公司月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026年8月公司月營收",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE：2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%；未揭露矽光子歸因。"
+          "claim": "2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，1–8月累計YoY+27.98%；來源TWSE OpenAPI via MCP，原始營收82247374（NT$ thousand）。未提供本題材收入拆分。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
+        },
+        {
+          "sourceId": "official-role-3711-3711-20260913",
+          "publisher": "日月光投控 / 官方產品或合作方資料",
+          "title": "ASE Demonstrates CPO that Improves Energy Efficiency for AI applications | ASE Holdings",
+          "url": "https://www.aseglobal.com/press-room/ase-demonstrates-cpo-for-ai-applications",
+          "claim": "2025-04-01 ASE官方展示VIPack CPO：多光引擎直接置基板、<5pJ/bit、>75×75mm、翹曲／共面度與水平／垂直耦合；未稱量產收入。",
+          "retrievedAt": "2026-09-12T19:12:42.255353+00:00"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-28",
-      "status": "verified",
+      "confidence": "medium",
+      "lastVerified": "2026-09-13",
+      "status": "candidate",
       "techFocus": [
-        "光電晶片與光纖／波導之封裝對準及耦光控制（集團能力推定）",
-        "覆晶互連、底填與封裝翹曲控制（集團能力推定）",
-        "高速光電元件封裝後電性與光性測試整合（集團能力推定）"
+        "ASE 2025年展示多光引擎直接置於基板的CPO，公告能耗低於5pJ/bit，非全部封裝產品指標",
+        "展示結構大於75×75mm，透過翹曲與共面度控制滿足光纖陣列耦合要求",
+        "支援edge水平與surface垂直耦合結構協同；3D CPO為後續路線，不當已量產"
       ],
       "swot": {
         "strengths": [
-          "集團封裝測試版圖可提供光電晶片後段整合的潛在平台",
-          "2026年7月合併營收YoY+43.2%、累計YoY+25.1%，集團營運動能強"
+          "ASE官方CPO展示含能耗、基板尺寸與耦合控制細節，集團技術參與已有明確來源。",
+          "2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，1–8月累計YoY+27.98%；屬公司整體營運動能，非本題材收入拆分。"
         ],
         "weaknesses": [
-          "MOPS母公司僅揭露一般投資業，不能直接證明矽光子產品與規格",
-          "合併營收涵蓋多項業務，無法歸因矽光子封裝"
+          "2025年展示與可用平台不等於2026年量產交付；客戶、良率及商業規模未披露。",
+          "母公司合併收入包含封測與其他業務，不能用整體成長證明CPO營收成長。"
         ],
         "opportunities": [
-          "資料中心高速光互連可增加光電晶片封裝與測試需求",
-          "CPO與矽光子量產若擴大，封測整合複雜度可提高外包價值"
+          "交換器頻寬與功耗要求提升，可增加多光引擎共封裝的驗證與設計機會。",
+          "若CPO由展示走向商用，可提高光纖耦合、翹曲控制與先進封裝整合價值。"
         ],
         "threats": [
-          "晶圓代工廠與光模組廠擴大內製可能壓縮外包空間",
-          "未具名客戶與量產節點揭露不足，題材容易被市場過度解讀"
+          "晶圓與光模組廠內製、替代光互連架構可能壓縮外包封裝機會。",
+          "量產良率、可靠度及成本尚需商業證據；展示效能不能直接轉成盈利預測。"
         ]
       }
     },
