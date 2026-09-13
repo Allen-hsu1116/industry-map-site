@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1519",
   "companyName": "華城",
-  "updatedAt": "2026-09-12T19:12:42Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -184,22 +184,22 @@
       "topicId": "renewable-energy",
       "topicName": "太陽能與離岸風電",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "grid_interconnection",
-      "roleType": "transformer_and_switchboard_enabler",
-      "roleSummary": "華城MOPS直接揭露變壓器、配電盤、配電器材與統包工程，能支援風電與太陽能升壓併網；但未揭露離岸風場專案、海上變電站或具名開發商。2026年7月營收20.50億元、MoM+18.5%、YoY-8.3%，累計YoY-3.7%。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "renewable_grid_interconnection",
+      "roleType": "renewable_grid_transformer_and_epc_provider",
+      "roleSummary": "華城官方2025綠能專案頁確認向沃旭大彰化風場交付兩具345kV／380MVA主變壓器，並揭露利澤30MW儲能建置，足以修正「僅可能支援風電」的舊判讀。其角色是再生能源併網電力設備與工程，不是風機或電芯製造；台積電是該風場購電方，不能列為華城設備客戶。 2026年8月營收19.16億元，MoM-6.51%、YoY+12.50%，累計YoY-1.77%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "電力變壓器（再生能源升壓併網應用）",
-        "配電變壓器",
-        "中低壓配電盤",
-        "配電器材與保護設備",
+        "345kV／380MVA風場陸域主變壓器",
+        "再生能源升壓／配電變壓器",
+        "中低壓配電盤與配電器材",
+        "表前儲能案場161kV併網工程",
         "變電站統包工程"
       ],
       "customers": [
-        "台灣電力公司（電網併聯應用對象，非MOPS揭露客戶）",
-        "沃旭能源(Ørsted；風場併網應用對象，非MOPS揭露客戶)",
-        "Copenhagen Infrastructure Partners（風場應用對象，非MOPS揭露客戶）",
-        "wpd達德能源（再生能源應用對象，非MOPS揭露客戶）"
+        "Ørsted沃旭能源（官方確認大彰化風場核心電力設備交付對象）",
+        "長庚國際能源（官方利澤儲能建置合作對象／電池櫃供應方）",
+        "東元電機（利澤案PCS供應鏈對象，非客戶）",
+        "台灣電力公司（併網電網營運對象，非該頁確認設備採購方）"
       ],
       "competitors": [
         "士林電機(1503)",
@@ -207,63 +207,62 @@
         "東元(1504)"
       ],
       "risks": [
-        "MOPS未揭露離岸風電設備或風場客戶，題材直接性有限",
-        "變壓器交期、原料與工程驗收會影響營收認列"
+        "8月月減且累計年減，已公開專案不能推定整體收入持續高速成長",
+        "不同年度交付與建置中的儲能案不得混為當月營收；工程規模也不是設備售價",
+        "工程工期、電網併聯與案場融資延誤可能延後認列",
+        "銅材、電工鋼和高壓設備交期及保固責任影響專案毛利"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "華城 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=1519",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 華城 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 1519 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 1519 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：變壓器、配電盤、配電器材及其他統包工程。"
+          "claim": "MOPS主要經營業務：變壓器及配電盤配電器材及其他統包工程",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 1519 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收20.50億元，MoM+18.5%、YoY-8.3%，累計YoY-3.7%。"
+          "claim": "2026年8月營收19.16億元，MoM-6.51%、YoY+12.50%，累計YoY-1.77%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-1519",
+          "publisher": "公司官方網站",
+          "title": "華城電機ESG",
+          "url": "https://esg.fortune.com.tw/governance/20",
+          "claim": "官方頁確認2025交付沃旭兩具345kV/380MVA變壓器；利澤30MW由長庚國際能源電池櫃搭配東元PCS、161kV併聯；台積電僅為風場CPPA購電方。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-30",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-14",
+      "status": "verified",
       "techFocus": [
-        "變壓器鐵心、繞組、絕緣與冷卻設計",
-        "配電盤開關、保護電驛與短路耐受整合",
-        "變電站EPC介面、試運轉與電網併聯"
+        "大彰化案使用345kV／380MVA主變壓器，規格僅綁定該案",
+        "利澤30MW儲能建置採電池櫃、東元PCS與161kV外線併聯；MW非MWh",
+        "升壓變壓器絕緣、保護及併聯介面（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持變壓器、配電盤與統包工程完整組合",
-          "7月營收MoM+18.5%，單月較上月回升"
+          "具名離岸風場的主變壓器交付已由官方頁確認，不再只是泛化綠能關聯",
+          "2026年8月營收19.16億元，MoM-6.51%、YoY+12.50%，累計YoY-1.77%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "未揭露離岸風場專案或海上變電站產品",
-          "7月營收YoY-8.3%、累計YoY-3.7%"
+          "8月月減且累計年減，已公開專案不能推定整體收入持續高速成長",
+          "不同年度交付與建置中的儲能案不得混為當月營收；工程規模也不是設備售價",
+          "8月MoM-6.51%，年增與月度轉弱並存，需觀察產品／專案組合。"
         ],
         "opportunities": [
-          "風光電升壓站與電網強韌計畫增加變壓器需求",
-          "大型再生能源案場可帶動配電盤及統包工程"
+          "離岸風電升壓併網及本土儲能建置可增加變壓器與EPC需求",
+          "再生能源購電推進可帶動電網骨幹升級與場站供電工程"
         ],
         "threats": [
-          "風場時程遞延與併網審查可能推遲設備出貨",
-          "國際電機廠競爭及銅鋼成本可能壓縮毛利"
+          "工程工期、電網併聯與案場融資延誤可能延後認列",
+          "銅材、電工鋼和高壓設備交期及保固責任影響專案毛利"
         ]
       }
     }

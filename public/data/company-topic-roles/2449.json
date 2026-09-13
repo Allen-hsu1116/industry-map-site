@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2449",
   "companyName": "京元電子",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -83,82 +83,81 @@
       "topicName": "HBM 高頻寬記憶體",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "test_adjacent",
-      "roleType": "memory_test_house_adjacent_to_hbm",
-      "roleSummary": "京元電子MOPS支持積體電路測試、加工與包裝，但未揭露HBM、TSV、KGD或堆疊記憶體測試；本題材定位為可承接高階記憶體與邏輯IC測試的相鄰角色。2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%，公司整體成長不能直接歸因HBM。",
+      "supplyChainStage": "test_services_adjacent",
+      "roleType": "ic_test_services_adjacent_to_hbm",
+      "roleSummary": "京元電子的官方服務涵蓋晶圓測試、成品測試、記憶體／GPU老化與SLT；本輪來源沒有確認HBM堆疊或TSV測試訂單，因此在HBM僅列測試能力鄰近觀察。P2000的老化系統規格不能寫成HBM高速資料介面能力。 2026年8月營收40.80億元，MoM+2.24%、YoY+31.58%，累計YoY+35.53%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "積體電路晶圓測試服務",
-        "積體電路成品測試服務",
-        "積體電路加工與包裝服務",
-        "測試配件與量產測試程式整合"
+        "Wafer Probing晶圓探針測試",
+        "Final Test封裝成品測試",
+        "記憶體／GPU IC Burn-in老化測試",
+        "Wafer Level Burn-in晶圓級老化測試",
+        "System Level Testing系統級測試"
       ],
       "customers": [
-        "SK hynix（HBM測試應用對象，非MOPS揭露客戶）",
-        "Micron Technology（記憶體測試應用對象，非MOPS揭露客戶）",
-        "Samsung Electronics（記憶體測試生態對象，非MOPS揭露客戶）",
-        "NVIDIA（HBM終端平台對象，非MOPS揭露客戶）"
+        "SK hynix（HBM測試應用情境，未確認交易或驗證）",
+        "Micron Technology（記憶體測試應用情境，未確認交易或驗證）",
+        "Samsung Electronics（記憶體測試生態對象，未確認交易或驗證）",
+        "NVIDIA（HBM終端平台對象，未確認交易或驗證）"
       ],
       "competitors": [
         "日月光投控"
       ],
       "risks": [
-        "HBM測試機台投資成本高",
-        "HBM測試需求受記憶體景氣週期影響"
+        "一般記憶體或GPU測試不等於HBM KGD、TSV或堆疊封測能力已驗證",
+        "8月營收備註排除停業部門；去年累計排除985,800仟元，解讀累計年增須保留此比較口徑",
+        "HBM主要製造商可能以自有測試流程保留關鍵訂單",
+        "高功率測試設備折舊與客戶排程變動影響稼動率"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "京元電子 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2449",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 京元電子 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2449 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 2449 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "各種積體電路之設計、製造、測試、配件、加工、包裝與買賣。"
+          "claim": "MOPS主要經營業務：各種積體電路之設計.製造.測試.配件.加工.包裝.買賣業務各種奔應機及其零配件之製造.加工.買賣業務前各項產品之進出口貿易業務",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 2449 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收39.91億元，MoM+10.2%、YoY+36.7%，累計YoY+36.2%。"
+          "claim": "2026年8月營收40.80億元，MoM+2.24%、YoY+31.58%，累計YoY+35.53%。 備註：以上不含停業部門營收：115年8月0仟元、114年8月0仟元；115年1~8月0仟元、114年1~8月985,800仟元。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-2449",
+          "publisher": "公司官方網站",
+          "title": "京元電子",
+          "url": "https://www.kyec.com.tw/en/Service/burn-in",
+          "claim": "京元官方Burn-in頁列記憶體、微處理器、GPU、MBI/DBI、BIB/kit與P2000；未列HBM或TSV。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-29",
-      "status": "verified",
+      "lastVerified": "2026-09-14",
+      "status": "candidate",
       "techFocus": [
-        "晶圓探針與成品自動化測試整合",
-        "多溫度電性測試、分選與壽命篩選",
-        "高腳數IC測試介面與量產資料分析"
+        "MBI監控式與DBI動態老化測試",
+        "BIB老化板／治具設計與測試程式開發",
+        "P2000晶圓級老化系統：10MHz、512 pins（非HBM介面規格）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持IC測試、加工及包裝能力",
-          "7月營收YoY+36.7%、累計YoY+36.2%，整體測試需求強"
+          "已公開記憶體與GPU老化測試及自有治具／程式服務，可支援複雜晶片驗證",
+          "2026年8月營收40.80億元，MoM+2.24%、YoY+31.58%，累計YoY+35.53%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "MOPS未揭露HBM、TSV、KGD或堆疊測試",
-          "公司整體營收無法拆出HBM測試貢獻"
+          "一般記憶體或GPU測試不等於HBM KGD、TSV或堆疊封測能力已驗證",
+          "8月營收備註排除停業部門；去年累計排除985,800仟元，解讀累計年增須保留此比較口徑"
         ],
         "opportunities": [
-          "HBM供應擴張可增加高腳數、多溫與長測時需求",
-          "AI邏輯晶片與記憶體同步放量可提高測試產能利用率"
+          "AI運算平台增加測試時間及熱壓力，可帶動GPU與邏輯IC測試需求而非直接證明HBM收入",
+          "若日後取得HBM介面與堆疊測試認證，可再評估題材直接性"
         ],
         "threats": [
-          "記憶體原廠自建測試產能會限制外包份額",
-          "HBM測試介面昂貴且世代更新快，設備折舊風險高"
+          "HBM主要製造商可能以自有測試流程保留關鍵訂單",
+          "高功率測試設備折舊與客戶排程變動影響稼動率"
         ]
       }
     }

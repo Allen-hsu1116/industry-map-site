@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1513",
   "companyName": "中興電",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -83,22 +83,20 @@
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "grid_interconnection",
-      "roleType": "grid_equipment_and_epc_adjacent",
-      "roleSummary": "中興電MOPS揭露綠能、輸配電設備暨工程、發電設備暨工程及氫能系統，但沒有揭露電芯、電池模組、BMS或PCS；因此在儲能題材只屬案場併網與電力工程鄰近角色。2026年7月營收24.10億元、YoY+3.8%、MoM-14.9%，累計YoY+3.5%。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "grid_and_hybrid_storage_integration",
+      "roleType": "hybrid_energy_storage_integration_historical",
+      "roleSummary": "中興電不應僅因MOPS文字簡短被排除儲能：官方2020合作備忘錄明列西門子提供PCS、中興整合燃料電池與儲能系統。可確認有歷史整合開發角色，但不能把備忘錄視為2026現行訂單，更不是中興自製PCS或電芯的證據。 2026年8月營收25.02億元，MoM+3.82%、YoY+8.93%，累計YoY+4.21%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "輸配電力設備（儲能案場併網應用）",
-        "變電與配電工程統包服務",
-        "發電設備暨工程系統",
-        "節能空調與能源工程",
+        "輸配電與儲能併網工程整合",
+        "燃料電池與PCS混合儲能整合方案（2020年合作公告）",
+        "微電網供電及儲電系統（2020年合作開發範圍）",
         "氫能發電暨產氫系統"
       ],
       "customers": [
-        "台灣電力公司（併網工程應用對象，非MOPS揭露客戶）",
-        "台達電(2308；儲能系統整合對象，非MOPS揭露客戶）",
-        "Fluence Energy（儲能案場生態對象，非MOPS揭露客戶）",
-        "台灣中油（氫能系統應用對象，非MOPS揭露客戶）"
+        "Siemens西門子（官方2020合作備忘錄之PCS供應／技術夥伴，非客戶）",
+        "台灣電力公司（官方公告輔助服務應用對象，非本公告確認採購）",
+        "台灣中油（氫能應用情境對象，非已揭露客戶）"
       ],
       "competitors": [
         "士林電機(1503)",
@@ -106,64 +104,62 @@
         "華城(1519)"
       ],
       "risks": [
-        "MOPS未揭露電池、BMS或PCS，儲能直接產品曝險有限",
-        "工程認列與標案時程使單月營收波動"
+        "儲能詳細證據為2020合作開發公告，本輪未取得新專案量產或營收分拆",
+        "PCS在合作中由西門子提供，不能改寫為中興自製變流器",
+        "氫源成本、能源轉換效率及案場規範影響混合儲能經濟性",
+        "備忘錄若未轉化為交付，題材貢獻可能停留歷史規劃"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 綠能/輸配電力設備暨工程節能空調及發電設備暨工程氫能發電暨產氫系統"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 1513 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：綠能／輸配電力設備暨工程、節能空調及發電設備暨工程、氫能發電暨產氫系統。"
+          "claim": "MOPS主要經營業務：綠能/輸配電力設備暨工程節能空調及發電設備暨工程氫能發電暨產氫系統",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 1513 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收24.10億元，MoM-14.9%、YoY+3.8%，累計YoY+3.5%。"
+          "claim": "2026年8月營收25.02億元，MoM+3.82%、YoY+8.93%，累計YoY+4.21%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-1513",
+          "publisher": "公司官方網站",
+          "title": "\n\t\n        最新消息 ∣ 中興電工\n",
+          "url": "https://www.chem.com.tw/tc/news_detail.aspx?PKey=151",
+          "claim": "2020-11-05官方公告：西門子提供PCS，中興整合燃料電池與客製儲能，涉及SINAMICS及微電網；是合作備忘錄而非現行訂單。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-14",
       "status": "candidate",
       "techFocus": [
-        "變電站保護電驛、開關設備與併網控制整合",
-        "EPC工程介面、測試送電與電能品質管理",
-        "產氫、氫能發電與站級控制系統整合"
+        "西門子SINAMICS技術PCS與中興燃料電池整合（歷史合作範圍）",
+        "微電網多元能源調度及AFC／FRR應用（公告情境，非已得標規模）",
+        "輸配電保護、併網測試與電力工程介面（工程評估重點）"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持輸配電設備、工程及綠能系統整合能力",
-          "7月營收24.10億元、YoY+3.8%，累計仍成長"
+          "MOPS輸配電工程與氫能系統，可對接微電網供電及案場整合需求",
+          "2026年8月營收25.02億元，MoM+3.82%、YoY+8.93%，累計YoY+4.21%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "沒有揭露電芯、電池模組、BMS或PCS產品",
-          "7月MoM-14.9%，工程認列動能轉弱"
+          "儲能詳細證據為2020合作開發公告，本輪未取得新專案量產或營收分拆",
+          "PCS在合作中由西門子提供，不能改寫為中興自製變流器"
         ],
         "opportunities": [
-          "大型儲能案場仍需要變電、保護與併網工程",
-          "電網強韌及氫能示範可擴大能源工程需求"
+          "工商用戶備援與削峰需求可提供燃料電池、儲能與配電整合情境",
+          "調頻與再生能源併網需跨設備控制，電力工程經驗可能提高系統整合價值"
         ],
         "threats": [
-          "標案競價與驗收遞延可能壓縮毛利及營收",
-          "儲能系統商若垂直整合併網設備，外包商機可能下降"
+          "氫源成本、能源轉換效率及案場規範影響混合儲能經濟性",
+          "備忘錄若未轉化為交付，題材貢獻可能停留歷史規劃"
         ]
       }
     },

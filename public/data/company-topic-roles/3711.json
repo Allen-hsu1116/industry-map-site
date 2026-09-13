@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3711",
   "companyName": "日月光投控",
-  "updatedAt": "2026-09-12T19:12:42Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -252,20 +252,19 @@
       "topicName": "晶圓代工與第三代半導體",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "roleSummary": "日月光投控MOPS主要經營業務僅為一般投資業，母公司本身不是晶圓代工廠；本題材只能以集團旗下封裝測試與電子製造服務承接晶圓製造後段，屬間接角色。2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%，為集團整體數據，不能視為晶圓代工收入。",
+      "roleSummary": "日月光投控母公司MOPS為一般投資業，官方子公司ASE產品頁則直接支持凸塊、覆晶、晶圓級及扇出封裝。在晶圓代工題材是已確認的集團後段互補服務，不是前段晶圓製造，也不把投控合併營收稱為晶圓代工營收。 2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，累計YoY+27.98%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "集團旗下晶圓凸塊服務",
-        "集團旗下覆晶封裝服務",
-        "集團旗下系統級封裝SiP服務",
-        "集團旗下晶圓級封裝服務",
-        "集團旗下半導體測試服務"
+        "集團旗下晶圓凸塊bumping服務",
+        "集團旗下Flip-chip BGA封裝",
+        "集團旗下Wafer Level Packaging服務",
+        "集團旗下Fan-out封裝服務"
       ],
       "customers": [
-        "台積電(2330；晶圓製造供應鏈對象，非MOPS揭露客戶）",
-        "聯電(2303；晶圓製造供應鏈對象，非MOPS揭露客戶）",
-        "世界先進(5347；晶圓製造供應鏈對象，非MOPS揭露客戶）",
-        "聯發科(2454；封裝應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI封裝應用對象，非MOPS揭露客戶）"
+        "台積電（晶圓製造供應鏈對象，未確認交易或驗證）",
+        "聯電（晶圓製造供應鏈對象，未確認交易或驗證）",
+        "世界先進（晶圓製造供應鏈對象，未確認交易或驗證）",
+        "聯發科（封裝應用情境，未確認交易或驗證）",
+        "NVIDIA（AI封裝應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "安靠科技(Amkor)",
@@ -273,59 +272,63 @@
         "力成(6239)"
       ],
       "risks": [
-        "封測為代工角色，非晶圓製造核心",
-        "先進封裝資本支出壓力增大",
-        "同業(安靠/力成)競爭壓縮毛利"
+        "投控母公司與子公司產品揭露層級不同，需保持集團範圍標籤",
+        "合併營收含不同集團事業，無法拆分晶圓代工題材收入",
+        "晶圓製造業者擴充封裝能力可能改變外包分工",
+        "先進封裝良率、翹曲及客戶驗證限制量產速度"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "3711公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS 公司基本資料 supports 3711 role in 晶圓代工與第三代半導體 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 3711 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "H201010一般投資業。"
+          "claim": "MOPS主要經營業務：H201010  一般投資業",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 3711 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月集團營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%。"
+          "claim": "2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，累計YoY+27.98%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-3711",
+          "publisher": "公司官方網站",
+          "title": "Flip Chip Packaging | ASE",
+          "url": "https://ase.aseglobal.com/flip-chip-packaging/",
+          "claim": "ASE官方Flip Chip、Bumping、Wafer Level及Fan-Out產品服務屬集團子公司；MOPS投控為一般投資業。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-29",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-14",
+      "status": "verified",
       "techFocus": [
-        "集團旗下晶圓凸塊與覆晶互連製程",
-        "集團旗下SiP與晶圓級封裝整合",
-        "集團旗下封裝後電性測試與可靠度篩選"
+        "集團旗下晶圓凸塊與覆晶互連；後段接點非前段電晶體製造",
+        "Flip-chip以焊凸塊連接基板，搭配underfill及散熱蓋",
+        "Fan-out晶圓級封裝重佈線與系統互連（封裝工程分析）"
       ],
-      "supplyChainStage": "holding_company_packaging_adjacent",
-      "roleType": "holding_company_adjacent_to_foundry",
+      "supplyChainStage": "backend_packaging_not_wafer_fabrication",
+      "roleType": "group_backend_packaging_complement_to_foundry",
       "swot": {
         "strengths": [
-          "集團具封裝、測試與電子製造服務，可承接晶圓製造後段價值鏈",
-          "7月集團營收YoY+43.2%、累計YoY+25.1%，整體營運動能強"
+          "集團後段封裝可承接晶圓製造後的互連、散熱與組裝需求",
+          "2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，累計YoY+27.98%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "MOPS對母公司只揭露一般投資業，不能把子公司產品直接視為母公司製造業務",
-          "本角色不執行晶圓代工，營收亦未拆出任何晶圓製造貢獻"
+          "投控母公司與子公司產品揭露層級不同，需保持集團範圍標籤",
+          "合併營收含不同集團事業，無法拆分晶圓代工題材收入"
         ],
         "opportunities": [
-          "晶圓代工與AI晶片成長可外溢至凸塊、封裝及測試需求",
-          "晶圓廠與封測廠協同設計可提高後段整合價值"
+          "晶片異質整合增加晶圓凸塊與扇出封裝需求",
+          "前後段協同設計可增加封裝早期介入與服務價值"
         ],
         "threats": [
-          "晶圓代工廠擴大先進封裝內製可能壓縮外包空間",
-          "把控股公司封測能力誤標為晶圓代工會造成題材錯配"
+          "晶圓製造業者擴充封裝能力可能改變外包分工",
+          "先進封裝良率、翹曲及客戶驗證限制量產速度"
         ]
       }
     }

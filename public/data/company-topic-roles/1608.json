@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1608",
   "companyName": "華榮",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -173,22 +173,21 @@
       "topicId": "renewable-energy",
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
-      "directness": "indirect",
-      "supplyChainStage": "grid_cable_adjacent",
-      "roleType": "power_cable_grid_enabler",
-      "roleSummary": "華榮MOPS揭露電線電纜、銅製品與電力／通信工程，但沒有揭露離岸風場海纜或特定風場客戶；在再生能源題材應定位為併網與場內配電電纜的應用鄰近者。2026年7月營收12.68億元、MoM+15.0%、YoY+42.7%，公司整體動能強，但不能全數歸因於綠能。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "grid_cable_and_installation",
+      "roleType": "power_cable_and_grid_epc_enabler",
+      "roleSummary": "華榮官方產品頁確認161kV／345kV電纜線路統包及國內離島海纜工程，台電與中華電信亦為具名工程對象；不應把MOPS未列海纜解讀為公司沒有海纜工程能力。不過工程實績尚不能證明特定離岸風場訂單或自製動態海纜，綠能角色聚焦併網工程及電纜。 2026年8月營收11.80億元，MoM-6.90%、YoY+17.90%，累計YoY+19.18%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "交連聚乙烯絕緣電力電纜（再生能源併網應用）",
-        "高壓電力電纜（升壓站至電網應用）",
-        "銅導體與銅製電纜材料",
-        "通信電纜（場站監控與通訊應用）",
-        "電力與通信工程設計施工服務"
+        "高／中／低壓電力電纜",
+        "161kV與345kV電纜線路統包工程",
+        "通信／光纖／電力海纜統包工程",
+        "無氧銅棒與銅線",
+        "場站監控通信銅纜與光纜"
       ],
       "customers": [
-        "台灣電力公司（電網工程應用對象，非MOPS揭露客戶）",
-        "沃旭能源(Ørsted；風場併網應用對象，非MOPS揭露客戶)",
-        "Copenhagen Infrastructure Partners（風場應用對象，非MOPS揭露客戶）",
-        "中華電信(2412；通信工程應用對象，非MOPS揭露客戶）"
+        "台灣電力公司（官方確認高壓電纜與離島海纜工程對象）",
+        "中華電信（官方確認離島通信海纜工程對象）",
+        "Ørsted沃旭能源（風場併網應用情境，未確認華榮訂單）"
       ],
       "competitors": [
         "華新(1605)",
@@ -196,64 +195,63 @@
         "太平洋電線電纜"
       ],
       "risks": [
-        "MOPS未揭露海底電纜或風場標案，離岸風電直接性不足",
-        "銅價與工程驗收時程會放大營收及毛利波動"
+        "官網支持離島海纜工程，不支持本輪未揭露的離岸風場直供或製造規格",
+        "8月月減；全公司銅製品與通信工程營收也不能歸入再生能源",
+        "銅價變動可能推升營收而未同步增加毛利",
+        "海事施工窗口、路權及併網工期風險可能延後工程認列"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 各種電線電纜及銅製品等之加工,製造,銷售及施工等各種電力,通信工程設計,施工維護及技術服務等"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 1608 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：各種電線電纜及銅製品之加工、製造、銷售及施工；電力與通信工程設計、施工維護及技術服務。"
+          "claim": "MOPS主要經營業務：各種電線電纜及銅製品等之加工,製造,銷售及施工等各種電力,通信工程設計,施工維護及技術服務等各種電氣器具,電力及通信器材,通信用戶迴路配線器材等之製造買賣",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 1608 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收12.68億元，MoM+15.0%、YoY+42.7%，累計YoY+19.4%。"
+          "claim": "2026年8月營收11.80億元，MoM-6.90%、YoY+17.90%，累計YoY+19.18%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-1608",
+          "publisher": "公司官方網站",
+          "title": "超高壓、海纜統包工程-華榮電線電纜股份有限公司",
+          "url": "https://www.hegroup.com.tw/index.php?option=product&lang=cht&task=showlist&id=5&index=5",
+          "claim": "官方列台電161/345kV電纜統包及中華電信、台電離島海纜完工；產品目錄列電力電纜、銅棒銅線、通信銅纜和光纖光纜。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-30",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-14",
+      "status": "verified",
       "techFocus": [
-        "XLPE絕緣押出、交連與局部放電控制",
-        "銅導體絞合、屏蔽與電纜熱容量設計",
-        "電纜終端接續、路由與現場工程整合"
+        "161kV／345kV電纜線路施工與送電整合（不是自製海纜額定電壓）",
+        "電力、通信及光纖海纜工程；鋪設維護不等同自製風場動態海纜",
+        "導體、絕緣與接續介面及熱容量管理（工程分析）"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持電線電纜、銅製品及電力工程一體化能力",
-          "7月營收12.68億元，MoM+15.0%、YoY+42.7%"
+          "具電纜製造與高壓線路／海纜施工兩類能力，能連接設備供應與工程服務",
+          "2026年8月營收11.80億元，MoM-6.90%、YoY+17.90%，累計YoY+19.18%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "未揭露離岸風場海纜產品或風場客戶",
-          "公司整體營收成長不能直接視為再生能源收入"
+          "官網支持離島海纜工程，不支持本輪未揭露的離岸風場直供或製造規格",
+          "8月月減；全公司銅製品與通信工程營收也不能歸入再生能源",
+          "8月MoM-6.90%，年增與月度轉弱並存，需觀察產品／專案組合。"
         ],
         "opportunities": [
-          "再生能源併網與電網強韌計畫增加高壓電纜需求",
-          "場站監控可帶動電力與通信工程整合商機"
+          "再生能源升壓與陸域輸電改造可增加高壓電纜與施工需求",
+          "海纜工程經驗可用於評估新場域，但仍需專案資格與合約確認"
         ],
         "threats": [
-          "風場建置延誤與工程認列遞延會影響拉貨",
-          "銅價、同業競標及低價電纜競爭可能侵蝕毛利"
+          "銅價變動可能推升營收而未同步增加毛利",
+          "海事施工窗口、路權及併網工期風險可能延後工程認列"
         ]
       }
     }

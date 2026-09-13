@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1717",
   "companyName": "長興",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -255,87 +255,85 @@
       "topicId": "semiconductor-equipment-materials",
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "photoresist_materials_adjacent",
-      "roleType": "photoresist_and_specialty_chemicals",
-      "roleSummary": "長興MOPS揭露工業用合成樹脂、印刷電路基板、光阻材料與特殊化學品，但沒有分列半導體用光阻、曝光波長、先進節點或晶圓廠客戶；因此本題材定位為光阻／電子化學材料的潛在上游，而非已驗證先進光刻供應商。2026年7月營收40.93億元、MoM+6.8%、YoY+23.9%。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "packaging_substrate_photoresist_materials",
+      "roleType": "ic_substrate_dry_film_photoresist_supplier",
+      "roleSummary": "長興MOPS的光阻與特殊化學品，由官方型錄具體落在PCB／IC載板乾膜光阻：UDH、LDF、HP-3600及NIT均有載板應用。這是封裝載板材料的直接上游，不是已驗證EUV或ArF前段晶圓光阻供應商；移除未證實的先進曝光節點與晶圓客戶。 2026年8月營收40.70億元，MoM-0.57%、YoY+20.95%，累計YoY+11.78%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "光阻材料",
-        "光阻用合成樹脂",
-        "印刷電路基板材料",
-        "工業用合成樹脂",
-        "電子級特殊化學品候選材料"
+        "UDH系列LDI／IC載板乾膜光阻",
+        "LDF系列LDI／IC載板乾膜光阻",
+        "HP-3600系列IC載板耐酸電鍍乾膜",
+        "NIT系列軟板／IC載板乾膜光阻",
+        "E7700M系列ENIG耐化性乾膜"
       ],
       "customers": [
-        "台積電(2330；半導體材料驗證對象，非MOPS揭露客戶)",
-        "聯電(2303；晶圓製程應用對象，非MOPS揭露客戶)",
-        "華邦電(2344；晶圓製程應用對象，非MOPS揭露客戶)",
-        "欣興(3037；PCB材料應用對象，非MOPS揭露客戶）"
+        "欣興（IC載板乾膜應用對象，未確認交易）",
+        "南電（IC載板乾膜應用對象，未確認交易）",
+        "景碩（IC載板乾膜應用對象，未確認交易）",
+        "臻鼎-KY（PCB／軟板乾膜應用對象，未確認交易）"
       ],
       "competitors": [
-        "JSR",
-        "東京應化(TOK)",
-        "永光(1711)"
+        "旭化成（乾膜光阻產品比較）",
+        "DuPont（乾膜光阻產品比較）"
       ],
       "risks": [
-        "MOPS未揭露半導體用光阻世代、純度或晶圓廠認證",
-        "高階光阻長期由日美材料廠掌握，導入門檻高"
+        "本輪沒有EUV／ArF光阻或特定晶圓廠認證證據",
+        "合併營收含工業樹脂與其他材料，未分列IC載板乾膜貢獻",
+        "載板產能循環與替代材料認證會影響乾膜拉貨",
+        "石化原料成本及日系乾膜光阻競爭影響報價與毛利"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 1717 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：工業用合成樹脂、印刷電路基板、光阻材料及特殊化學品。"
+          "claim": "MOPS主要經營業務：各種工業用合成樹脂之產銷印刷電路基板、光阻材料之產銷特殊化學品",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 1717 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收40.93億元，MoM+6.8%、YoY+23.9%，累計YoY+10.5%。"
+          "claim": "2026年8月營收40.70億元，MoM-0.57%、YoY+20.95%，累計YoY+11.78%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-1717",
+          "publisher": "公司官方網站",
+          "title": "長興材料工業股份有限公司",
+          "url": "https://www.eternal-group.com/EN/ProductPage?CategoryID=PC2023060200003&AttributeID=ATT2023060700079",
+          "claim": "官方乾膜光阻型錄確認UDH、LDF、HP-3600、NIT的IC Substrate用途，E7700M對應ENIG；不證明EUV/ArF晶圓光阻。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-30",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-14",
+      "status": "verified",
       "techFocus": [
-        "感光樹脂分子量、溶解速率與膜厚均勻性控制",
-        "曝光、顯影與烘烤製程視窗的配方調整",
-        "金屬離子、顆粒與殘留溶劑的純度管理"
+        "UDH／LDF支援雷射直接成像LDI，控制線路附著與解析",
+        "HP-3600針對酸性電鍍耐受；NIT兼顧軟板與載板柔韌性",
+        "E7700M對應ENIG製程耐化性；不可外推為EUV／ArF晶圓光阻"
       ],
       "swot": {
         "strengths": [
-          "MOPS支持合成樹脂、光阻、PCB材料與特殊化學品組合",
-          "7月營收40.93億元、MoM+6.8%、YoY+23.9%"
+          "官方產品型錄提供具體系列、耐蝕刻／電鍍特性和IC載板用途，能核對材料與製程匹配",
+          "2026年8月營收40.70億元，MoM-0.57%、YoY+20.95%，累計YoY+11.78%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "未揭露半導體光阻世代、先進節點或具名客戶",
-          "公司整體營收成長無法拆分為半導體材料貢獻"
+          "本輪沒有EUV／ArF光阻或特定晶圓廠認證證據",
+          "合併營收含工業樹脂與其他材料，未分列IC載板乾膜貢獻",
+          "8月MoM-0.57%，年增與月度轉弱並存，需觀察產品／專案組合。"
         ],
         "opportunities": [
-          "供應鏈在地化可增加光阻樹脂與電子化學品驗證機會",
-          "既有樹脂合成與配方能力可延伸高純度電子材料"
+          "高密度IC載板與LDI製程升級可帶動解析度及附著力要求",
+          "耐酸電鍍和耐化性乾膜可服務更複雜的載板及表面處理流程"
         ],
         "threats": [
-          "JSR、TOK等國際廠掌握高階光阻技術與認證",
-          "純度或製程穩定性不達晶圓廠要求將延後商轉"
+          "載板產能循環與替代材料認證會影響乾膜拉貨",
+          "石化原料成本及日系乾膜光阻競爭影響報價與毛利"
         ]
       }
     }

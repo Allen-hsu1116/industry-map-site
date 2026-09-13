@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "5274",
   "companyName": "信驊",
-  "updatedAt": "2026-09-12T19:12:42Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -11,28 +11,29 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "server_management_ic_provider",
-      "roleSummary": "信驊MOPS揭露多媒體、電腦周邊與高階消費性電子積體電路；依IC設計題材上下文，核心產品聚焦伺服器管理BMC與遠端管理SoC，但具名客戶皆標示為應用對象而非MOPS確認。FinMind顯示2026年7月營收15.24億元，MoM+16.3%、YoY+97.6%，成長強勁。",
+      "roleSummary": "信驊在IC設計題材以帶外管理BMC為核心。官方AST2600與AST2700頁提供可核對的處理器、記憶體和安全功能；AST2700的Caliptra與DDR5不可移植為AST2600規格，也不是CXL記憶體交換晶片。 2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "AST2600系列伺服器管理BMC SoC",
-        "AST2700系列伺服器管理BMC SoC",
-        "伺服器遠端KVM管理控制器",
-        "BMC整合式VGA顯示控制晶片"
+        "AST2600伺服器管理BMC SoC",
+        "AST2700伺服器管理BMC SoC",
+        "AST2620伺服器管理處理器（官方系列目錄）",
+        "AST2750伺服器管理處理器（官方系列目錄）"
       ],
       "customers": [
-        "Dell Technologies（伺服器BMC應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（伺服器BMC應用對象，非MOPS揭露客戶）",
-        "Lenovo（伺服器管理應用對象，非MOPS揭露客戶）",
-        "Supermicro（伺服器BMC應用對象，非MOPS揭露客戶）",
-        "廣達(2382；伺服器平台整合對象，非MOPS揭露客戶）"
+        "Dell Technologies（伺服器BMC應用情境，未確認交易或驗證）",
+        "Hewlett Packard Enterprise（伺服器BMC應用情境，未確認交易或驗證）",
+        "Lenovo（伺服器管理應用情境，未確認交易或驗證）",
+        "Supermicro（伺服器BMC應用情境，未確認交易或驗證）",
+        "廣達（伺服器平台整合情境，未確認交易或驗證）"
       ],
       "competitors": [
-        "Nuvoton",
-        "Microchip",
-        "Intel (BMC整合)"
+        "Nuvoton新唐（伺服器管理IC比較）",
+        "Microchip（伺服器管理IC比較）"
       ],
       "risks": [
-        "伺服器 BMC 幾乎獨佔但競爭者正切入",
-        "ASP 壓力：伺服器成本下降壓力傳導"
+        "產品世代和BMC搭載量未由月營收分拆，不能以收入年增直接推算AST2700占比",
+        "伺服器平台認證與韌體維護期長，設計導入不等於立即放量",
+        "客戶平台延後及同業BMC方案競爭可能影響切換速度",
+        "安全漏洞或韌體維護成本可能擴大產品責任"
       ],
       "legacy": {
         "topicSlug": "hpc-networking-ic",
@@ -41,58 +42,62 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "信驊 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=5274",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 信驊 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 5274 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 5274 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "多媒體積體電路、電腦周邊積體電路、高階消費性電子積體電路。"
+          "claim": "MOPS主要經營業務：多媒體積體電路電腦周邊積體電路高階消費性電子積體電路",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
-          "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "2026年7月月營收",
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind via CasualMarket MCP",
+          "title": "2026-09-14 5274 月營收核對",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind顯示2026年7月營收15.24億元，MoM+16.3%、YoY+97.6%。"
+          "claim": "2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%。 備註：FinMind MCP；TWSE月營收查無 FinMind原始單位新臺幣元；按revenue_year/revenue_month核對。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-5274",
+          "publisher": "公司官方網站",
+          "title": "ASPEED - AST2600",
+          "url": "https://www.aspeedtech.com/server_ast2600/",
+          "claim": "AST2600頁確認28nm、雙核Cortex-A7、DDR4 1600Mbps 16-bit、Secure Boot及iKVM，系列目錄列AST2620、AST2750。AST2700規格另引其專屬頁。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-detail-5274new",
+          "publisher": "公司官方網站",
+          "title": "AST2700官方產品規格",
+          "url": "https://www.aspeedtech.com/server_ast2700/",
+          "claim": "12nm、四核Cortex-A35及雙M4、DDR5 3200、PCIe Gen4、LTPI與Caliptra。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-14",
       "status": "verified",
       "techFocus": [
-        "BMC SoC之遠端帶外管理與系統健康監控",
-        "KVM over IP影像擷取、壓縮與遠端控制",
-        "伺服器管理介面、韌體安全與硬體信任根整合"
+        "AST2600：28nm、雙核Cortex-A7、DDR4 1600Mbps 16-bit及Secure Boot",
+        "AST2700：12nm、四核64-bit Cortex-A35、雙Cortex-M4及DDR5 3200",
+        "AST2700：PCIe Gen4、LTPI/DC-SCM及Caliptra silicon RoT"
       ],
       "swot": {
         "strengths": [
-          "BMC與遠端管理SoC在伺服器管理晶片市場具明確產品定位",
-          "FinMind顯示7月營收YoY+97.6%、MoM+16.3%，整體成長強"
+          "BMC整合iKVM、管理介面及安全啟動，使伺服器管理與韌體具有設計黏著性",
+          "2026年8月營收16.26億元，MoM+6.69%、YoY+118.42%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "MOPS只列IC大類，未揭露BMC型號、市占率或具名客戶",
-          "產品高度集中伺服器管理控制，終端景氣影響較直接"
+          "產品世代和BMC搭載量未由月營收分拆，不能以收入年增直接推算AST2700占比",
+          "伺服器平台認證與韌體維護期長，設計導入不等於立即放量"
         ],
         "opportunities": [
-          "AI伺服器數量與單機管理複雜度提升可擴大BMC需求",
-          "平台安全、遠端維運與高可用性要求提升晶片價值量"
+          "AI伺服器增加電源與裝置監控需求，AST2700的CAN／LTPI可擴大管理範圍",
+          "DC-SCM模組化及硬體信任根需求提高管理SoC功能價值"
         ],
         "threats": [
-          "伺服器CPU與平台業者自研管理控制器可能壓縮外購市場",
-          "大型雲端業者規格集中與客戶議價會提高產品迭代壓力"
+          "客戶平台延後及同業BMC方案競爭可能影響切換速度",
+          "安全漏洞或韌體維護成本可能擴大產品責任"
         ]
       }
     },

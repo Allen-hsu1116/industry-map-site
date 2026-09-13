@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2382",
   "companyName": "廣達",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -91,20 +91,20 @@
       "directness": "core",
       "supplyChainStage": "system_assembly",
       "roleType": "notebook_odm",
-      "roleSummary": "廣達MOPS直接揭露電子筆記型電腦及相關產品，足以支持筆電ODM核心角色，但未揭露原角色中的具體型號與品牌客戶。2026年7月營收3,662.74億元、YoY+131.3%、MoM-4.9%，累計YoY+92.7%；公司備註為產品組合變更，不能只歸因於消費筆電。",
+      "roleSummary": "廣達MOPS明列筆記型電腦及相關產品，官網產品頁搜尋索引補充行動終端、觸控輸入及近眼顯示整合。本輪完整產品頁遭Radware阻擋，索引證據已與完整擷取分開標示；移除未核對的輕薄／商用／工作站品類與具名品牌訂單，不以集團伺服器成長證明筆電復甦。 2026年8月營收4,239.71億元，MoM+15.75%、YoY+177.45%，累計YoY+102.63%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "筆記型電腦ODM整機",
-        "輕薄型筆記型電腦",
-        "商用筆記型電腦",
-        "行動工作站",
-        "筆電主機板與系統組裝"
+        "筆記型電腦研發設計與製造",
+        "智慧型行動運算終端裝置",
+        "筆電用智慧觸控輸入系統",
+        "AR／VR近眼顯示光機模組（官網搜尋索引揭露）",
+        "頭戴顯示器技術整合與製造（官網搜尋索引揭露）"
       ],
       "customers": [
-        "Apple（筆電品牌應用對象，非MOPS揭露客戶）",
-        "Dell Technologies（筆電品牌應用對象，非MOPS揭露客戶）",
-        "HP Inc.（筆電品牌應用對象，非MOPS揭露客戶）",
-        "Lenovo（筆電品牌應用對象，非MOPS揭露客戶）",
-        "ASUS(2357；筆電品牌應用對象，非MOPS揭露客戶）"
+        "Apple（筆電品牌應用情境，未確認交易或驗證）",
+        "Dell Technologies（筆電品牌應用情境，未確認交易或驗證）",
+        "HP Inc.（筆電品牌應用情境，未確認交易或驗證）",
+        "Lenovo（筆電品牌應用情境，未確認交易或驗證）",
+        "ASUS（筆電品牌應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "緯創(3231)",
@@ -113,8 +113,10 @@
         "和碩(4938)"
       ],
       "risks": [
-        "MOPS未揭露品牌客戶、機種與各產品營收占比",
-        "PC需求循環及品牌庫存調整會影響稼動率"
+        "8月備註為產品組合變更，整體年增不能解讀成筆電出貨同幅成長",
+        "官網完整產品頁受阻，本輪未驗證AR／VR產品量產狀態與客戶占比",
+        "消費裝置庫存與品牌規格切換可能導致筆電排程波動",
+        "雲端伺服器與筆電產品組合差異使單看合併營收易高估消費景氣"
       ],
       "legacy": {
         "topicSlug": "pc-nb-tablet",
@@ -123,58 +125,54 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "廣達 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2382",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 廣達 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2382 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 2382 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子筆記型電腦及相關產品。"
+          "claim": "MOPS主要經營業務：電子筆記型電腦及相關產品",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 2382 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收3,662.74億元，MoM-4.9%、YoY+131.3%，累計YoY+92.7%；公司備註產品組合變更。"
+          "claim": "2026年8月營收4,239.71億元，MoM+15.75%、YoY+177.45%，累計YoY+102.63%。 備註：產品組合變更 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-2382-index",
+          "publisher": "廣達官網（搜尋索引）",
+          "title": "產品及服務（完整頁被Radware阻擋）",
+          "url": "https://www.quantatw.com/quanta/chinese/product/qci_all.aspx",
+          "claim": "MOPS支持筆電；官方產品頁搜尋索引列行動終端、智慧觸控、近眼光機及頭戴顯示整合，web_extract僅得302且真實瀏覽器遭Radware阻擋，未宣稱取得完整頁。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-14",
       "status": "verified",
       "techFocus": [
-        "輕薄機構、散熱模組與電池空間協同設計",
-        "主機板SMT、整機組裝與自動化功能測試",
-        "CPU平台、韌體、電源管理與周邊相容性驗證"
+        "筆電主板、電源、散熱與機構協同設計（ODM工程分析）",
+        "智慧觸控輸入與無線連線整合（官方產品索引範圍）",
+        "Near Eye Display光機模組與頭戴顯示整合（索引揭露，非量產數字）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電子筆記型電腦及相關產品",
-          "7月營收3,662.74億元、YoY+131.3%，累計YoY+92.7%"
+          "MOPS直接支持筆電主業，官網索引呈現行動裝置與人機介面研發延伸",
+          "2026年8月營收4,239.71億元，MoM+15.75%、YoY+177.45%，累計YoY+102.63%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "未揭露具體筆電型號、品牌客戶或產品毛利",
-          "7月MoM-4.9%，且公司說明成長涉及產品組合變更"
+          "8月備註為產品組合變更，整體年增不能解讀成筆電出貨同幅成長",
+          "官網完整產品頁受阻，本輪未驗證AR／VR產品量產狀態與客戶占比"
         ],
         "opportunities": [
-          "AI PC與企業換機週期可帶動高階筆電ODM需求",
-          "平台整合與規模採購可提高製造效率"
+          "終端AI筆電對功耗與散熱整合的要求，可提高ODM設計價值",
+          "近眼顯示與智慧輸入若獲得正式設計採用，可延伸消費運算型態"
         ],
         "threats": [
-          "同業競價與品牌議價壓縮ODM毛利",
-          "關稅、匯率與供應鏈區域化增加生產成本"
+          "消費裝置庫存與品牌規格切換可能導致筆電排程波動",
+          "雲端伺服器與筆電產品組合差異使單看合併營收易高估消費景氣"
         ]
       }
     }

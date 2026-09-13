@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6230",
   "companyName": "尼得科超眾",
-  "updatedAt": "2026-09-01T19:06:18Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "ai-server-liquid-cooling",
@@ -83,20 +83,20 @@
       "directness": "indirect",
       "supplyChainStage": "thermal_management_adjacent",
       "roleType": "thermal_module_adjacent_to_bbu",
-      "roleSummary": "尼得科超眾MOPS僅揭露散熱模組、散熱片、熱導管及微均熱板，未揭露BBU、電池模組、電源供應器或高功率風扇；本題材只保留為AI伺服器電源與BBU的散熱鄰近角色。2026年7月營收7.89億元，MoM+4.1%、YoY-0.3%，累計YoY+7.6%，動能平淡。",
+      "roleSummary": "尼得科超眾的MOPS與現行官方目錄支持散熱模組、熱導管及伺服器／筆電VC；AI伺服器電源備援題材只屬散熱配套，不是BBU電池或電源供應器。路徑帶2026的簡報內文實為2021年，僅能用於歷史研發分工，不能拿其中功率、CDU規劃證明現在出貨。 2026年8月營收7.59億元，MoM-3.71%、YoY-0.86%，累計YoY+6.45%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "伺服器散熱模組",
-        "鋁製散熱片",
-        "銅熱導管",
-        "微型均熱板",
-        "電源模組用被動散熱組件"
+        "散熱模組",
+        "熱導管Heat Pipe",
+        "伺服器均熱板Server Vapor Chamber",
+        "筆電均熱板Laptop Vapor Chamber",
+        "散熱鰭片組"
       ],
       "customers": [
-        "台達電(2308；電源散熱應用對象，非MOPS揭露客戶）",
-        "光寶科(2301；電源散熱應用對象，非MOPS揭露客戶）",
-        "廣達(2382；伺服器整合對象，非MOPS揭露客戶）",
-        "緯穎(6669；AI伺服器應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI平台應用對象，非MOPS揭露客戶）"
+        "台達電（電源散熱應用情境，未確認交易或驗證）",
+        "光寶科（電源散熱應用情境，未確認交易或驗證）",
+        "廣達（伺服器整合對象，未確認交易或驗證）",
+        "緯穎（AI伺服器應用情境，未確認交易或驗證）",
+        "NVIDIA（AI平台應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "奇鋐(3017)",
@@ -104,64 +104,70 @@
         "泰碩(3338)"
       ],
       "risks": [
-        "散熱模組價格競爭激烈",
-        "均熱板技術門檻降低",
-        "AI伺服器散熱方案多元化"
+        "8月月減且年減，無法以AI電源題材解釋為高成長",
+        "未核對到BBU電池、電源供應器或特定備援電源客戶的直接供應關係",
+        "液冷架構變更可能改變傳統鰭片／熱導管的使用位置與數量",
+        "銅材成本、客製化打樣及競爭報價壓力可能侵蝕毛利"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "尼得科超眾 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=6230",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 尼得科超眾 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 6230 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 6230 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "散熱模組、散熱片、熱導管及微均熱板。"
+          "claim": "MOPS主要經營業務：散熱模組、散熱片、熱導管及微均熱板",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 6230 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收7.89億元，MoM+4.1%、YoY-0.3%，累計YoY+7.6%。"
+          "claim": "2026年8月營收7.59億元，MoM-3.71%、YoY-0.86%，累計YoY+6.45%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-6230",
+          "publisher": "公司官方網站",
+          "title": "2021-08-31簡報（檔案路徑含2026，依內文年份引用）",
+          "url": "https://ccic.com.tw/upload/files/20260529052947bflof.pdf",
+          "claim": "MOPS確認散熱模組／片／導管／微均熱板，現行官網列Heat Pipe與Server/Laptop VC；20260529路徑簡報內文日期2021-08-31，僅作歷史參考。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-detail-6230new",
+          "publisher": "公司官方網站",
+          "title": "現行Thermal Components目錄",
+          "url": "https://ccic.com.tw/products/27/1",
+          "claim": "官網當前列Heat Pipe、Server Vapor Chamber與Laptop Vapor Chamber。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-14",
       "status": "candidate",
       "techFocus": [
-        "熱導管與微均熱板之毛細結構、工質回流與熱阻控制",
-        "散熱片鰭片幾何、接觸熱阻與風道匹配",
-        "電源模組局部熱點之導熱介面與被動散熱整合"
+        "熱導管與VC的毛細回流、多孔芯及熱阻管理（工程分析）",
+        "伺服器VC局部熱點均熱與接觸熱阻控制（工程分析）",
+        "被動散熱件與風扇／泵的系統介面；不得將集團主動件當成超眾自製"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持散熱模組、散熱片、熱導管與微均熱板產品組合",
-          "7月營收MoM+4.1%、累計YoY+7.6%，營運維持小幅成長"
+          "熱導管與均熱板可用於高熱通量元件的被動散熱",
+          "官方現行目錄有Server Vapor Chamber，伺服器應用並非只靠題材猜測"
         ],
         "weaknesses": [
-          "MOPS未揭露BBU、電池模組、PSU或風扇，題材僅屬散熱鄰近",
-          "7月營收YoY-0.3%，公司整體成長動能偏平"
+          "8月月減且年減，無法以AI電源題材解釋為高成長",
+          "未核對到BBU電池、電源供應器或特定備援電源客戶的直接供應關係",
+          "2026年8月營收7.59億元，MoM-3.71%、YoY-0.86%，累計YoY+6.45%。年減列為需求風險，不包裝成題材成長。"
         ],
         "opportunities": [
-          "AI伺服器功耗提高可增加電源與備援電池周邊散熱需求",
-          "微均熱板與熱導管可切入更高熱流密度的電源模組設計"
+          "AI電源高密度設計可增加熱點均熱與導熱介面設計需求",
+          "與系統主動冷卻協同驗證，可能提升被動件價值而非轉型電池供應商"
         ],
         "threats": [
-          "奇鋐、雙鴻與國際散熱廠競爭伺服器熱管理份額",
-          "液冷滲透若取代部分被動散熱架構，傳統模組需求可能受壓"
+          "液冷架構變更可能改變傳統鰭片／熱導管的使用位置與數量",
+          "銅材成本、客製化打樣及競爭報價壓力可能侵蝕毛利"
         ]
       }
     }

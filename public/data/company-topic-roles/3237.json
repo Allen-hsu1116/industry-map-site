@@ -2,90 +2,91 @@
   "schemaVersion": 1,
   "companyCode": "3237",
   "companyName": "汎銓",
-  "updatedAt": "2026-08-29T19:02:58Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "defense-aerospace",
       "topicName": "軍工、航太與無人機",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "materials_analysis_adjacent",
-      "roleType": "failure_analysis_adjacent_to_aerospace",
-      "roleSummary": "本輪MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無3237資料，無法驗證軍規認證、國防客戶或軍工收入。既有FIB、TEM、SEM／EDS與OBIRCH僅保留為歷史分析服務範圍，國防航太角色限於材料與電子元件驗證的間接應用。",
+      "supplyChainStage": "unverified_identity_outside_topic",
+      "roleType": "identity_conflict_unverified_role",
+      "roleSummary": "此筆3237／汎銓存在識別衝突：3237的兩種MCP公司資料及兩種營收查詢均無資料；另查MOPS確認汎銓科技的代碼為6830，官網亦標示6830。本輪保留原鍵值以免破壞跨檔關聯，但隔離為身分待釐清角色；歷史分析服務不得視為3237的產品，更不能視為國防航太供應證據，亦未將6830營收移植至3237。 本輪TWSE月營收及FinMind 2025-08-01至2026-09-14查詢皆無資料，無法計算最新月營收與成長率。",
       "products": [
-        "FIB聚焦離子束截面分析（歷史服務範圍）",
-        "TEM穿透式電子顯微鏡試片製備（歷史服務範圍）",
-        "SEM／EDS表面形貌與成分分析（歷史服務範圍）",
-        "OBIRCH電性失效定位（歷史服務範圍）"
+        "FIB截面分析（舊角色歷史記載，3237歸屬未證實）",
+        "TEM試片製備（舊角色歷史記載，3237歸屬未證實）",
+        "SEM／EDS缺陷分析（舊角色歷史記載，3237歸屬未證實）"
       ],
       "customers": [
-        "漢翔(2634；航太材料驗證對象，非MOPS揭露客戶）",
-        "RTX（航太電子驗證對象，非MOPS揭露客戶）",
-        "GE Aerospace（航太材料分析對象，非MOPS揭露客戶）",
-        "台積電(2330；半導體分析應用對象，非MOPS揭露客戶）"
+        "漢翔（僅舊角色航太應用情境，與3237交易未證實）",
+        "RTX（僅舊角色航太電子情境，與3237交易未證實）",
+        "GE Aerospace（僅舊角色材料分析情境，與3237交易未證實）"
       ],
-      "competitors": [
-        "閎康（6457）",
-        "宜特（3289）"
-      ],
+      "competitors": [],
       "risks": [
-        "利基型檢測服務市場規模有限",
-        "客戶集中度高，受代工廠資本支出週期影響"
+        "3237無法由MOPS核對公司身分，不能把汎銓6830的揭露當成3237證據",
+        "國防認證、軍工客戶、產品與近期營收均無法驗證",
+        "名稱誤配可能污染行情、營收與選股排名，故本筆不宜用於投資判斷",
+        "將民用材料分析擴寫成軍規服務會產生虛假的國防曝險"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "汎銓 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3237",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 汎銓 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3237 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 3237 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "2026-08-30查詢MOPS完整基本資料與一般公司資料皆無結果；未取得可驗證主要經營業務。"
+          "claim": "2026-09-14 查詢原始代碼3237，公司完整及一般基本資料均no data returned；不能確認汎銓身分。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
-          "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "月營收查詢結果",
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind via CasualMarket MCP",
+          "title": "2026-09-14 3237 月營收核對",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026-08-30查詢TWSE月營收及FinMind 2025-06至2026-08月營收皆無結果。"
+          "claim": "2026-09-14 3237 TWSE月營收與FinMind 2025-08-01至2026-09-14皆no data returned；不得使用其他代碼營收。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "mops-identity-conflict-check",
+          "publisher": "MOPS via CasualMarket MCP",
+          "title": "6830 identity check; NOT a replacement for 3237",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "本輪額外查6830，MOPS回傳汎銓科技股份有限公司、mainBusiness技術分析服務及www.msscorps.com。3237主查失敗；不得將6830產品/營收移植為3237。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-mss-identity-check",
+          "publisher": "汎銓科技官網",
+          "title": "汎銓官網名稱與代碼核對",
+          "url": "https://www.msscorps.com/",
+          "claim": "官網2026-03-30及2026-03-27新聞摘要明列汎銓(6830)；此僅確認名稱代碼衝突，未驗證3237產品。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-14",
       "status": "candidate",
       "techFocus": [
-        "FIB lift-out奈米截面製備與電路切割",
-        "TEM晶格／界面分析與EDS元素鑑定",
-        "OBIRCH漏電熱點定位與SEM缺陷關聯"
+        "FIB離子束切削與截面製備（歷史方法，非3237已驗證能力）",
+        "TEM／EDS界面與元素分析（歷史方法，非3237已驗證能力）"
       ],
       "swot": {
         "strengths": [
-          "歷史服務範圍涵蓋FIB、TEM、SEM／EDS與電性失效定位",
-          "材料與失效分析方法可支援高可靠度電子元件驗證"
+          "本輪已辨識名稱與代碼衝突，阻止將另一檔公司的產品與營收混入",
+          "舊角色保留方法名稱僅供資料追溯，不構成公司競爭優勢的確認"
         ],
         "weaknesses": [
-          "MOPS與兩條月營收資料路徑均失敗，最新公司與營運資訊無法驗證",
-          "沒有軍規認證、國防客戶或軍工收入證據"
+          "3237無法由MOPS核對公司身分，不能把汎銓6830的揭露當成3237證據",
+          "國防認證、軍工客戶、產品與近期營收均無法驗證",
+          "本輪TWSE月營收及FinMind 2025-08-01至2026-09-14查詢皆無資料，無法計算最新月營收與成長率。"
         ],
         "opportunities": [
-          "航太電子國產化可增加第三方材料與失效分析需求",
-          "先進封裝與第三代半導體導入可擴大高可靠度分析案件"
+          "待完成跨檔主檔映射稽核後，才可在正確代碼重新評估材料分析角色",
+          "若正確實體另揭露航太驗證業務，應以具體合約及認證重建題材"
         ],
         "threats": [
-          "晶圓廠與封測廠自建分析實驗室可能壓縮外包需求",
-          "資料不可得容易使題材精確度與投資判斷失真"
+          "名稱誤配可能污染行情、營收與選股排名，故本筆不宜用於投資判斷",
+          "將民用材料分析擴寫成軍規服務會產生虛假的國防曝險"
         ]
       }
     }

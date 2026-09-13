@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-09-12T19:12:42Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -481,31 +481,34 @@
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "product",
-      "directness": "direct_enabler",
-      "supplyChainStage": "power_conversion_and_management",
-      "roleType": "energy_storage_power_electronics_provider",
-      "roleSummary": "台達電MOPS揭露電源供應、電動車電源、工業自動化與可再生能源應用，但未直接列出電芯製造；本題材聚焦儲能所需功率轉換、管理與能源控制，非電芯供應。2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%，但公司整體成長不能完全歸因儲能。",
+      "directness": "core",
+      "supplyChainStage": "power_conversion_and_energy_management",
+      "roleType": "energy_storage_system_integrator",
+      "roleSummary": "台達電官網直接列出PCS、一體式與分散式ESS及EMS，補足MOPS概括的電源與再生能源業務，應列為儲能系統直接供應角色；不是電芯製造商，也不把BMS當成已確認獨立外售IC。 2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，累計YoY+41.06%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "雙向儲能功率轉換系統PCS",
-        "電池管理系統BMS控制器",
-        "微電網能源管理系統EMS",
-        "太陽能逆變器與功率調節器",
-        "貨櫃式儲能系統整合方案"
+        "PCS100HV／PCS125HV雙向儲能變流器",
+        "PCS3000儲能功率轉換系統",
+        "C Series一體式儲能系統",
+        "M2 Series分散式儲能系統",
+        "DeltaGrid EM能源管理系統"
       ],
       "customers": [
-        "台電（儲能案場應用對象，非MOPS揭露客戶）",
-        "台泥(1101；工商儲能應用對象，非MOPS揭露客戶）",
-        "台塑(1301；工廠微電網應用對象，非MOPS揭露客戶）",
-        "AGL Energy（海外儲能應用對象，非MOPS揭露客戶）",
-        "Tesla（電源生態對象，非MOPS揭露客戶）"
+        "台電（儲能案場應用情境，未確認交易或驗證）",
+        "台泥（工商儲能應用情境，未確認交易或驗證）",
+        "台塑（工廠微電網應用情境，未確認交易或驗證）",
+        "AGL Energy（海外儲能應用情境，未確認交易或驗證）",
+        "Tesla（電源生態對象，未確認交易或驗證）"
       ],
       "competitors": [
-        "儲能系統整合商",
-        "逆變器與能源管理系統供應商"
+        "Fluence Energy（儲能系統整合比較）",
+        "Sungrow陽光電源（儲能PCS及系統比較）",
+        "Tesla Energy（儲能系統比較）"
       ],
       "risks": [
-        "儲能案場導入受政策、電價、案場資本支出與安全規範影響",
-        "需追蹤能源基礎設施產品是否實際反映到部門營收與獲利"
+        "多元電源與自動化業務混合，整體月營收無法分拆儲能比重",
+        "電池系統整合能力不等於自製電芯，仍須管理電池供應與保固責任",
+        "儲能案場安全事件、消防規範與保固成本可能影響專案獲利",
+        "電價套利及輔助服務價格下降會拉長客戶投資回收期"
       ],
       "legacy": {
         "topicSlug": "ess-storage",
@@ -529,43 +532,54 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 2308 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "電源供應系統、散熱系統、電動車電源、工業自動化、可再生能源應用及智慧樓宇控制解決方案。"
+          "claim": "MOPS主要經營業務：電源供應系統、無刷直流風扇、散熱系統、微型化關鍵零組件、電動車電源相關系統、工業自動化、視訊顯示、資訊、網路通訊消費性電子、可再生能源應用、智慧樓宇管理與控制解決方案等",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 2308 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%。"
+          "claim": "2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，累計YoY+41.06%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-2308",
+          "publisher": "公司官方網站",
+          "title": "Products - Energy Storage Systems - Delta",
+          "url": "https://www.deltaww.com/en-US/products/Energy-Storage-Systems",
+          "claim": "官網列PCS100HV/PCS125HV、PCS3000、C Series、M2 Series與DeltaGrid EM；PCS為雙向逆變器，EMS標示IEC 62443-3-3。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-29",
+      "confidence": "high",
+      "lastVerified": "2026-09-14",
       "status": "verified",
       "techFocus": [
-        "PCS雙向逆變、併網控制與孤島保護",
-        "BMS之SOC／SOH估算、均衡與CAN通訊",
-        "EMS需量反應、多機調度與微電網控制"
+        "PCS雙向逆變與電池直流／交流電網能量轉換",
+        "一體式ESS整合PCS、電池模組與單元控制器",
+        "EMS集中調度再生能源、充電與儲能；官網標示IEC 62443-3-3"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持電源系統、可再生能源及工業自動化整合能力",
-          "7月營收YoY+47.7%、累計YoY+42.1%，公司整體成長強勁"
+          "自研PCS、電池系統與EMS可提供站級整合及維運服務",
+          "2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，累計YoY+41.06%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "MOPS未揭露電芯製造，本題材價值主要在PCS、BMS與EMS",
-          "公司月營收未拆分儲能，無法把高成長直接視為儲能收入"
+          "多元電源與自動化業務混合，整體月營收無法分拆儲能比重",
+          "電池系統整合能力不等於自製電芯，仍須管理電池供應與保固責任",
+          "8月MoM-3.71%，年增與月度轉弱並存，需觀察產品／專案組合。"
         ],
         "opportunities": [
-          "再生能源併網與工商儲能可擴大PCS及EMS需求",
-          "資料中心備援與微電網建置提高高可靠度電源管理價值"
+          "表前電網調頻與工商用戶削峰可分別帶動大型與一體式ESS需求",
+          "再生能源、充電站及微電網共同調度提高EMS附加價值"
         ],
         "threats": [
-          "Sungrow、Tesla與大型系統整合商競爭儲能標案",
-          "儲能安全法規、電價制度與案場認列時程可能造成需求波動"
+          "儲能案場安全事件、消防規範與保固成本可能影響專案獲利",
+          "電價套利及輔助服務價格下降會拉長客戶投資回收期"
         ]
       }
     }

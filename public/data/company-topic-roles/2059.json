@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2059",
   "companyName": "川湖",
-  "updatedAt": "2026-09-02T19:03:57Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "ai-server-mechanical",
@@ -11,19 +11,20 @@
       "directness": "core",
       "supplyChainStage": "server_mechanical_rails",
       "roleType": "server_rail_manufacturer",
-      "roleSummary": "川湖MOPS直接揭露伺服器用導軌及周邊零組件，屬AI伺服器機構件的核心滑軌環節；但MOPS沒有揭露特定雲端或ODM客戶。2026年7月營收64.07億元、MoM+44.2%、YoY+355.5%，公司說明由新產品出貨帶動，仍不能把全部增幅都歸因於AI伺服器。",
+      "roleSummary": "川湖MOPS直接支持伺服器導軌，官網另確認重載超薄滑軌、免工具安裝與CMA理線臂。本題材是AI伺服器機構與維修介面，不是整機或冷卻設備；8月大幅年增的官方原因為新產品開始出貨，未揭露特定GPU機櫃及客戶份額。 2026年8月營收64.66億元，MoM+0.92%、YoY+344.42%，累計YoY+163.96%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "機架式伺服器伸縮導軌",
-        "高載重伺服器滑軌組",
-        "伺服器導軌周邊固定組件",
-        "免工具機架安裝滑軌套件"
+        "超薄型伺服器滑軌套件",
+        "重載型機架伸縮導軌",
+        "CMA伺服器理線臂",
+        "伺服器／儲存設備機架安裝套件",
+        "UPS／KVM機架導軌"
       ],
       "customers": [
-        "Dell Technologies（伺服器應用對象，非MOPS揭露客戶）",
-        "Hewlett Packard Enterprise（伺服器應用對象，非MOPS揭露客戶）",
-        "廣達(2382；伺服器ODM應用對象，非MOPS揭露客戶）",
-        "緯穎(6669；AI伺服器ODM應用對象，非MOPS揭露客戶）",
-        "Supermicro（伺服器應用對象，非MOPS揭露客戶）"
+        "Dell Technologies（伺服器應用情境，未確認交易或驗證）",
+        "Hewlett Packard Enterprise（伺服器應用情境，未確認交易或驗證）",
+        "廣達（伺服器ODM應用情境，未確認交易或驗證）",
+        "緯穎（AI伺服器ODM應用情境，未確認交易或驗證）",
+        "Supermicro（伺服器應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "Accuride International",
@@ -31,63 +32,61 @@
         "General Devices"
       ],
       "risks": [
-        "伺服器平台換代可能使導軌規格與驗證成本上升",
-        "客戶拉貨集中及高基期可能放大月營收波動"
+        "新產品營收未分拆具體平台、載重或客戶，不宜推算某一代AI機櫃市占",
+        "規格依機殼重量及行程客製，不能用單一載重數字代表全部產品",
+        "大型客戶改款或機構設計標準切換可能影響既有產品生命週期",
+        "競爭滑軌、專利爭議與高負載可靠度責任可能提高成本"
       ],
       "evidence": [
         {
-          "sourceId": "king-slide-cloud-rail",
-          "publisher": "川湖科技 King Slide",
-          "title": "超薄伺服器導軌與理線器",
-          "url": "https://www.kingslide.com/products_cloud",
-          "claim": "超薄伺服器導軌與理線器 supports 川湖 role as server_rail_cable_management_supplier in AI 伺服器機構件與滑軌 through disclosed product/service scope."
-        },
-        {
-          "sourceId": "mops-2059-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "川湖科技股份有限公司基本資料",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "川湖科技股份有限公司基本資料 supports 川湖 role as server_rail_cable_management_supplier in AI 伺服器機構件與滑軌 through disclosed product/service scope."
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 2059 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：研發、設計、製造和銷售伺服器等用導軌及其周邊零組件；鉸鏈與滑軌製造買賣。"
+          "claim": "MOPS主要經營業務：研發、設計、製造和銷售伺服器等用導軌及其週邊零組件生產及買賣鉸鏈(筆記型電腦鉸鏈)及其零組件之製造生產及買賣滑軌之製造生產及買賣",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 2059 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收64.07億元，MoM+44.2%、YoY+355.5%，累計YoY+136.6%；公司備註新產品開始出貨。"
+          "claim": "2026年8月營收64.66億元，MoM+0.92%、YoY+344.42%，累計YoY+163.96%。 備註：新產品開始出貨，導致年對年營收增幅較大。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-2059",
+          "publisher": "公司官方網站",
+          "title": "Thin Server Slide Rail、Cloud Computing Devices | King Slide",
+          "url": "https://www.kingslide.com/products_cloud",
+          "claim": "官方雲端產品頁確認Server rail kits、CMA、ultra-thin/heavy-loading、tool-less及多重鎖定；未提供特定AI機櫃載重規格。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-14",
       "status": "verified",
       "techFocus": [
-        "多節伸縮滑軌、鋼珠保持與低摩擦運動設計",
-        "高載重條件下的鎖定、止擋與耐久循環驗證",
-        "沖壓、表面處理與總成公差鏈控制"
+        "精密鋼珠滑軌與多重鎖定機構，兼顧抽拉穩定與維修安全",
+        "免工具單人安裝／拆卸，依機架間距、機殼重量及行程客製",
+        "CMA理線臂整理電纜以維持風道；不等於液冷管路或冷板"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持伺服器導軌及周邊零組件製造",
-          "7月營收64.07億元、YoY+355.5%，且公司說明新產品開始出貨"
+          "超薄、重載、免工具與CMA可同時改善機架密度及伺服器維修動線",
+          "2026年8月營收64.66億元，MoM+0.92%、YoY+344.42%，累計YoY+163.96%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "MOPS沒有揭露AI伺服器占比或具名客戶",
-          "7月MoM+44.2%與高基期並存，後續波動可能加大"
+          "新產品營收未分拆具體平台、載重或客戶，不宜推算某一代AI機櫃市占",
+          "規格依機殼重量及行程客製，不能用單一載重數字代表全部產品"
         ],
         "opportunities": [
-          "AI伺服器重量與維護需求提高高載重滑軌價值",
-          "機架密度提升可增加免工具安裝與維修導軌需求"
+          "AI系統重量與維修複雜度上升，可提高重載滑軌及理線價值",
+          "儲存、UPS及KVM等機架設備提供伺服器以外的共用設計市場"
         ],
         "threats": [
-          "ODM平台重新設計或替代供應商導入可能影響份額",
-          "鋼材、表面處理成本與專利競爭可能壓縮獲利"
+          "大型客戶改款或機構設計標準切換可能影響既有產品生命週期",
+          "競爭滑軌、專利爭議與高負載可靠度責任可能提高成本"
         ]
       }
     },

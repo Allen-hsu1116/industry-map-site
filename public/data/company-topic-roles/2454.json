@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2454",
   "companyName": "聯發科",
-  "updatedAt": "2026-09-12T19:12:42Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "consumer-computing-devices",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "ic_design",
       "roleType": "mobile_and_consumer_soc_provider",
-      "roleSummary": "聯發科MOPS揭露多媒體、電腦周邊、高階消費性與特殊應用IC；依題材上下文，核心涵蓋行動SoC、連接晶片與平板／Chromebook平台，但具名品牌皆標示為應用對象。2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY僅+0.8%，月度波動明顯。",
+      "roleSummary": "聯發科的MOPS多媒體、電腦周邊與消費性IC範圍，由官方產品目錄補足手機、Chromebook、平板、智慧電視及Filogic 880平台；本題材聚焦消費終端晶片而非資料中心ASIC。Filogic的網路NPU不可與手機AI NPU混為一談。 2026年8月營收641.83億元，MoM+32.41%、YoY+44.08%，累計YoY+5.76%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "Dimensity天璣旗艦智慧手機SoC",
-        "5G行動通訊數據機晶片",
-        "Filogic Wi-Fi 7連接晶片",
-        "Kompanio平板與Chromebook SoC",
-        "智慧電視多媒體SoC"
+        "Dimensity天璣5G手機SoC",
+        "Kompanio Chromebook平台SoC",
+        "智慧平板多媒體SoC",
+        "Filogic 880 Wi-Fi 7路由器平台",
+        "Pentonic智慧電視SoC"
       ],
       "customers": [
-        "Samsung Electronics（手機平台應用對象，非MOPS揭露客戶）",
-        "小米（手機SoC應用對象，非MOPS揭露客戶）",
-        "OPPO（手機SoC應用對象，非MOPS揭露客戶）",
-        "vivo（手機SoC應用對象，非MOPS揭露客戶）",
-        "Lenovo（平板與Chromebook應用對象，非MOPS揭露客戶）"
+        "Samsung Electronics（手機平台應用情境，未確認交易或驗證）",
+        "小米（手機SoC應用情境，未確認交易或驗證）",
+        "OPPO（手機SoC應用情境，未確認交易或驗證）",
+        "vivo（手機SoC應用情境，未確認交易或驗證）",
+        "Lenovo（平板與Chromebook應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "Qualcomm Snapdragon",
@@ -32,8 +32,10 @@
         "Unisoc"
       ],
       "risks": [
-        "手機SoC面臨高通競爭壓力",
-        "累計營收年減1.59%，手機市場復甦緩慢"
+        "8月月增強勁但累計年增幅較小，不能以單月推定消費市場全面復甦",
+        "海外子公司依當月平均匯率換算，且整體營收混有其他IC應用",
+        "手機換機放緩與客戶庫存調整可能放大單月營收波動",
+        "Qualcomm及垂直整合晶片方案競爭可能壓縮高階平台定價"
       ],
       "legacy": {
         "topicSlug": "mobile",
@@ -42,58 +44,54 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯發科 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2454",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯發科 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2454 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 2454 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "多媒體IC、電腦周邊IC、高階消費性IC及其他特殊應用IC。"
+          "claim": "MOPS主要經營業務：多媒體IC 、電腦週邊IC、高階消費性IC、其他特殊應用IC",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 2454 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收484.75億元，MoM-16.4%、YoY+12.2%，累計YoY+0.8%。"
+          "claim": "2026年8月營收641.83億元，MoM+32.41%、YoY+44.08%，累計YoY+5.76%。 備註：海外子公司之營收係以當月平均匯率換算之 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-2454",
+          "publisher": "公司官方網站",
+          "title": "MediaTek | Filogic 880 | Flagship Wi-Fi 7 Router",
+          "url": "https://www.mediatek.com/products/broadband-wifi/mediatek-filogic-880",
+          "claim": "官方Filogic 880頁確認320MHz、網路NPU與Cortex-A73；同站目錄列Dimensity、Kompanio、平板及Pentonic，不外推具名客戶訂單。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-14",
       "status": "verified",
       "techFocus": [
-        "CPU、GPU、NPU與影像訊號處理器的異質SoC整合",
-        "5G NR數據機、射頻協同與低功耗連線管理",
-        "Wi-Fi 7多鏈路操作、320MHz頻寬與藍牙共存"
+        "手機SoC之CPU、GPU、NPU與ISP異質整合（平台架構分析）",
+        "Filogic 880支援Wi-Fi 7之320MHz、4096-QAM與MLO",
+        "Filogic 880以Cortex-A73與網路處理NPU進行QoS／隧道卸載；非神經網路NPU"
       ],
       "swot": {
         "strengths": [
-          "產品橫跨行動SoC、5G數據機、Wi-Fi與消費多媒體IC",
-          "7月營收YoY+12.2%，高階與連接產品維持成長"
+          "消費裝置處理與連接產品線可共用平台軟體及通訊研發資源",
+          "2026年8月營收641.83億元，MoM+32.41%、YoY+44.08%，累計YoY+5.76%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "7月營收MoM-16.4%、累計YoY僅+0.8%，終端需求波動大",
-          "MOPS未揭露各產品線占比、具名客戶或旗艦產品出貨量"
+          "8月月增強勁但累計年增幅較小，不能以單月推定消費市場全面復甦",
+          "海外子公司依當月平均匯率換算，且整體營收混有其他IC應用"
         ],
         "opportunities": [
-          "AI手機、Wi-Fi 7與平板端側AI可提高SoC內容與平均售價",
-          "多裝置連線與智慧家庭可擴大Filogic及多媒體平台需求"
+          "終端AI、影像運算與低功耗需求可帶動手機及平板SoC升級",
+          "Wi-Fi 7家庭網路升級與Chromebook更新提供不同於手機的設計導入機會"
         ],
         "threats": [
-          "Qualcomm、Apple與中國IC設計商競爭手機與連接平台",
-          "中國手機品牌庫存、匯率與地緣管制可能影響訂單節奏"
+          "手機換機放緩與客戶庫存調整可能放大單月營收波動",
+          "Qualcomm及垂直整合晶片方案競爭可能壓縮高階平台定價"
         ]
       }
     },

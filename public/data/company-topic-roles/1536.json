@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1536",
   "companyName": "和大",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "industrial-automation",
@@ -99,85 +99,80 @@
       "directness": "indirect",
       "supplyChainStage": "precision_gears_adjacent",
       "roleType": "precision_gear_manufacturing_adjacent_to_robotics",
-      "roleSummary": "和大MOPS僅揭露汽機車、農業機械齒輪與軸類，以及一般機械零件製造買賣，未揭露諧波減速機、RV減速機、人形機器人關節或具名機器人客戶；本題材應降為精密齒輪加工能力對機器人傳動的間接鄰近角色。2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY+1.0%。",
+      "roleSummary": "和大MOPS揭露汽機車與農業機械齒輪、軸類；官網支持電動車傳動件與農機齒輪箱。這些可作機器人傳動加工能力的鄰近參考，但本輪來源未確認人形機器人關節、諧波／RV減速機量產或訂單，不把車用營收當成機器人收入。 2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "汽車變速箱精密齒輪",
-        "電動車減速箱齒輪",
-        "傳動軸與軸類零件",
-        "農業機械傳動齒輪",
-        "精密機械用齒輪零件"
+        "汽車變速箱傳動齒輪",
+        "電動車動力傳動齒輪",
+        "汽機車傳動軸",
+        "農業曳引機齒輪與齒輪箱"
       ],
       "customers": [
-        "Tesla（電動車傳動應用對象，非MOPS揭露客戶）",
-        "BorgWarner（車用減速齒輪應用對象，非MOPS揭露客戶）",
-        "上銀(2049；機器人傳動生態對象，非MOPS揭露客戶）",
-        "達明機器人(4585；關節齒輪驗證對象，非MOPS揭露客戶）"
+        "Tesla（電動車傳動應用情境，未確認交易或驗證）",
+        "BorgWarner（車用減速齒輪應用情境，未確認交易或驗證）",
+        "上銀（機器人傳動生態對象，未確認交易或驗證）",
+        "達明機器人（關節齒輪潛在應用情境，未確認交易或驗證）"
       ],
       "competitors": [
-        "綠的諧波(蘇州)",
-        "來福諧波(來福)",
-        "Harmonic Drive Systems(日本)"
+        "Harmonic Drive Systems（機器人減速器跨域比較，非已證實直接競爭）",
+        "Nabtesco（機器人減速器跨域比較）"
       ],
       "risks": [
-        "累計營收年減0.9%，顯示上半年汽車齒輪需求偏弱拖累整體",
-        "機器人齒輪佔營收比重仍低，主要受惠仍需看人形機器人量產進度",
-        "諧波減速機齒輪技術門檻高，與日本HD品牌差距仍大"
+        "機器人專用產品及客戶驗證未取得直接證據",
+        "車用主業規模與機器人關節出貨不能畫上等號",
+        "關節減速器供應商的壽命、回差及專利壁壘可能阻擋跨域切入",
+        "電動車訂單或鋼材成本波動可能壓縮機器人開發資源"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 1536 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "汽機車、農業機械等齒輪與軸類製造買賣；各種機械、零件及汽機車零件製造加工。"
+          "claim": "MOPS主要經營業務：汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。各種汽機車零件製造及代理經銷買賣。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 1536 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY+1.0%。"
+          "claim": "2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-1536",
+          "publisher": "公司官方網站",
+          "title": "\n  HOTA",
+          "url": "https://www.hota.com.tw/en/",
+          "claim": "官網列出EV powertrain components、商用車傳動件、機車與農機gearbox；未確認機器人量產，技術項目為工程分析。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-14",
       "status": "candidate",
       "techFocus": [
-        "齒形研磨、熱處理與齒面精度控制",
-        "軸類同軸度、跳動與疲勞壽命管理",
-        "減速齒輪之噪音、振動與扭矩傳遞優化"
+        "齒形／齒向公差與嚙合噪音控制（傳動應用分析）",
+        "傳動軸同軸度、跳動及疲勞壽命（工程評估重點）",
+        "齒輪箱扭矩傳遞與裝配間隙（工程評估重點）"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持汽機車與農業機械齒輪、軸類量產能力",
-          "7月營收MoM+19.8%、YoY+9.6%，短期出貨回升"
+          "具齒輪、軸類及齒輪箱的實體產品基礎，並非僅有機器人題材命名",
+          "2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "MOPS未揭露諧波、RV減速機或人形機器人關節產品",
-          "累計營收YoY僅+1.0%，且無法拆分任何機器人貢獻"
+          "機器人專用產品及客戶驗證未取得直接證據",
+          "車用主業規模與機器人關節出貨不能畫上等號"
         ],
         "opportunities": [
-          "精密齒輪與軸類加工經驗可爭取機器人減速傳動件驗證",
-          "電動車減速箱量產有助累積高轉速、低噪音傳動能力"
+          "機器人關節對低噪音傳動與精度管理的要求，可成為既有加工能力的跨域驗證方向",
+          "以齒輪與軸類單件先行切入的門檻可能低於自建完整關節模組，但須取得驗證"
         ],
         "threats": [
-          "Harmonic Drive、Nabtesco與中國減速機廠掌握專利及既有客戶",
-          "若機器人驗證進度不如預期，題材可能長期停留在能力鄰近"
+          "關節減速器供應商的壽命、回差及專利壁壘可能阻擋跨域切入",
+          "電動車訂單或鋼材成本波動可能壓縮機器人開發資源"
         ]
       }
     },

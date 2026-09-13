@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3034",
   "companyName": "聯詠",
-  "updatedAt": "2026-09-12T19:12:42Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "ic-design",
@@ -101,20 +101,20 @@
       "directness": "direct_enabler",
       "supplyChainStage": "display_ic_design",
       "roleType": "display_driver_and_control_ic_provider",
-      "roleSummary": "聯詠MOPS直接揭露液晶顯示器驅動IC、電腦周邊控制IC、DSP與嵌入式控制系統，是面板顯示驅動與控制晶片核心供應角色；既有製程節點、車規認證及具名客戶直供說法因MOPS未證實而移除。2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%，但累計YoY僅+1.2%。",
+      "roleSummary": "聯詠在本題材是顯示驅動與控制IC供應商，不是LED晶粒或面板製造商。官方產品頁與里程碑確認LCD驅動、車用TDDI、22nm筆電TCON及OLED電源IC，補回先前因MOPS過於簡略而刪掉的可驗證產品細節；歷史推出不代表目前出貨占比。 2026年8月營收103.27億元，MoM+0.30%、YoY+26.33%，累計YoY+4.11%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "LCD顯示驅動IC",
-        "觸控顯示整合IC TDDI",
-        "顯示時序控制IC TCON",
-        "電視影像處理SoC",
-        "嵌入式顯示控制IC"
+        "大型LCD源極／閘極顯示驅動IC",
+        "中小尺寸LCD顯示驅動IC",
+        "車用in-cell TDDI觸控顯示整合IC",
+        "筆電22nm低功耗TCON（2024年推出）",
+        "OLED筆電EL電源IC（2024年推出）"
       ],
       "customers": [
-        "友達(2409；面板應用對象，非MOPS揭露客戶）",
-        "群創(3481；面板應用對象，非MOPS揭露客戶）",
-        "BOE京東方（面板應用對象，非MOPS揭露客戶）",
-        "LG Display（面板應用對象，非MOPS揭露客戶）",
-        "Samsung Display（面板應用對象，非MOPS揭露客戶）"
+        "友達（面板應用情境，未確認交易或驗證）",
+        "群創（面板應用情境，未確認交易或驗證）",
+        "BOE京東方（面板應用情境，未確認交易或驗證）",
+        "LG Display（面板應用情境，未確認交易或驗證）",
+        "Samsung Display（面板應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "Samsung LSI",
@@ -123,8 +123,10 @@
         "MegaChips"
       ],
       "risks": [
-        "面板需求復甦緩慢（累計年減6.83%）",
-        "OLED驅動IC技術門檻高但競爭者增加"
+        "公司未在本輪來源揭露各面板客戶收入或車用占比",
+        "整體月營收同時涵蓋顯示與其他IC，不能全歸因OLED或車用",
+        "LCD與OLED面板庫存週期可能造成DDIC拉貨反覆",
+        "面板廠議價與同業整合方案會壓低驅動晶片毛利"
       ],
       "legacy": {
         "topicSlug": "display-panel",
@@ -133,58 +135,62 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "聯詠 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=3034",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 聯詠 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 3034 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 3034 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "語音、通訊、嵌入式微控制器、DSP、電腦周邊控制及液晶顯示器驅動積體電路與系統。"
+          "claim": "MOPS主要經營業務：研究.開發.設計.生產.製造.銷售下列產品:A語音積體電路及系統B通訊積體電路及系統C內崁式微控制器及系統D數位訊號處理器及系統E電腦週邊控制積體電路及系統F液晶顯示器驅動積體電路及系統",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 3034 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收102.96億元，MoM+2.7%、YoY+26.8%，累計YoY+1.2%。"
+          "claim": "2026年8月營收103.27億元，MoM+0.30%、YoY+26.33%，累計YoY+4.11%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-3034",
+          "publisher": "公司官方網站",
+          "title": "Products - NOVATEK MICROELECTRONICS CORP.",
+          "url": "https://www.novatek.com.tw/en-global/Product/product/Index/product2",
+          "claim": "官方顯示驅動IC產品頁列大中小型LCD驅動IC與源極/閘極驅動、低功耗低EMI方向；TDDI、TCON及OLED電源另引里程碑。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-detail-3034new",
+          "publisher": "公司官方網站",
+          "title": "官方歷年產品里程碑",
+          "url": "https://novatek.com.tw/en-global/Milestone/aboutus_milestones",
+          "claim": "2024-10推出22nm 60–120Hz筆電TCON；2024-11推出OLED EL電源IC之3-phase DC/DC；2024-12車用TDDI。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-14",
       "status": "verified",
       "techFocus": [
-        "源極／閘極驅動、灰階電壓與像素補償控制",
-        "TDDI之觸控感測與顯示驅動時序整合",
-        "TCON與電視SoC之影像縮放、HDR及動態補償"
+        "LCD源極／閘極驅動之灰階、低EMI與低功耗設計",
+        "2024筆電TCON支援60–120Hz及Beyond Vision節能演算法",
+        "2024 OLED筆電EL電源IC採3-phase DC/DC；不與TCON混為同一晶片"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持液晶顯示器驅動IC與控制系統研發製造",
-          "7月營收YoY+26.8%、MoM+2.7%，單月需求改善"
+          "從DDIC到TDDI、TCON及OLED電源控制，具多種顯示介面與系統整合產品",
+          "2026年8月營收103.27億元，MoM+0.30%、YoY+26.33%，累計YoY+4.11%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "累計營收YoY僅+1.2%，顯示相關需求復甦仍不均衡",
-          "MOPS未揭露製程節點、車規認證、面板類別占比或具名客戶"
+          "公司未在本輪來源揭露各面板客戶收入或車用占比",
+          "整體月營收同時涵蓋顯示與其他IC，不能全歸因OLED或車用"
         ],
         "opportunities": [
-          "OLED筆電、平板、車用面板與高刷新顯示可增加驅動IC價值",
-          "觸控顯示整合及影像處理升級可擴大單機晶片內容"
+          "AI PC省電需求帶動TCON與背光／顯示協同控制",
+          "車用in-cell整合可減少控制元件並提高單車顯示晶片價值"
         ],
         "threats": [
-          "面板景氣循環與客戶庫存調整影響驅動IC訂單",
-          "Samsung LSI及中國顯示IC設計商競爭中高階市場"
+          "LCD與OLED面板庫存週期可能造成DDIC拉貨反覆",
+          "面板廠議價與同業整合方案會壓低驅動晶片毛利"
         ]
       }
     },

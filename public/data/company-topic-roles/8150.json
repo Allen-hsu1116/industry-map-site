@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "8150",
   "companyName": "南茂",
-  "updatedAt": "2026-09-12T19:12:42Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "hbm",
@@ -11,18 +11,18 @@
       "directness": "indirect",
       "supplyChainStage": "memory_packaging_test_adjacent",
       "roleType": "memory_osat_adjacent_to_hbm",
-      "roleSummary": "南茂MOPS揭露高集積度、高精密度記憶體封裝測試、顯示驅動IC金凸塊與混合訊號IC封測，但沒有HBM、TSV或堆疊封裝字樣；本題材是記憶體封測能力的鄰近觀察，不是已確認HBM量產。2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%，不能全歸因HBM。",
+      "roleSummary": "南茂的MOPS支持記憶體、顯示及混合訊號封測，官方產品頁進一步確認金凸塊、銅RDL與銅柱。這些是可核對後段能力，但本輪未取得HBM堆疊、TSV或HBM量產訂單證據；在HBM維持鄰近候選，不將一般凸塊或記憶體成長當成HBM受惠。 2026年8月營收27.86億元，MoM-1.32%、YoY+33.27%，累計YoY+30.04%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "高集積度記憶體IC封裝服務",
-        "高精密度記憶體IC測試服務",
-        "顯示驅動IC金凸塊與封裝測試",
-        "混合訊號IC封裝測試"
+        "記憶體IC封裝服務",
+        "記憶體IC電性測試服務",
+        "顯示驅動IC金凸塊／COF／COG互連服務",
+        "銅柱凸塊與Copper RDL服務"
       ],
       "customers": [
-        "SK hynix（HBM應用生態對象，非MOPS揭露客戶）",
-        "Micron Technology（記憶體驗證對象，非MOPS揭露客戶）",
-        "Samsung Electronics（記憶體應用對象，非MOPS揭露客戶）",
-        "NVIDIA（HBM終端平台對象，非MOPS揭露客戶）"
+        "SK hynix（HBM應用生態對象，未確認交易或驗證）",
+        "Micron Technology（記憶體潛在應用情境，未確認交易或驗證）",
+        "Samsung Electronics（記憶體應用情境，未確認交易或驗證）",
+        "NVIDIA（HBM終端平台對象，未確認交易或驗證）"
       ],
       "competitors": [
         "日月光投控(3711)(封測龍頭)",
@@ -30,64 +30,62 @@
         "力成(6239)(記憶體封測)"
       ],
       "risks": [
-        "HBM封測需持續擴產，資本支出壓力",
-        "客戶集中度高(SK Hynix/Samsung)",
-        "HBM測試技術門檻高但同業跟進"
+        "金凸塊、Cu pillar及一般記憶體測試不能證明HBM堆疊製程已認證",
+        "8月整體營收年增但月減，且無法拆分HBM或不同記憶體種類",
+        "HBM製造商的內製封裝與封測整合可能限制外包市場",
+        "顯示驅動及成熟記憶體景氣回落可能抵銷新封裝產品成長"
       ],
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "南茂 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=8150",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 南茂 的營業項目、產品組合與財務資料。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 8150 的月營收、股價、估值與法人資料。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 8150 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "高集積度、高精密度記憶體封裝及測試；顯示驅動IC封裝測試含金凸塊；混合訊號IC封裝測試。"
+          "claim": "MOPS主要經營業務：研究開發生產製造銷售高集積度高精密度記憶體之封裝及測試服務顯示器驅動IC封裝測試(含金凸塊)業務混合訊號IC封裝測試業務",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 8150 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收28.23億元，MoM+11.2%、YoY+43.6%，累計YoY+29.5%。"
+          "claim": "2026年8月營收27.86億元，MoM-1.32%、YoY+33.27%，累計YoY+30.04%。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-8150",
+          "publisher": "公司官方網站",
+          "title": "ChipMOS TECHNOLOGIES INC. – Back-end testing service for memory, LCD Diver, Bumping and MEMS.",
+          "url": "https://www.chipmos.com/english/product/detail.aspx?MID=6",
+          "claim": "官方Bumping頁確認8/12吋金凸塊、5/5µm Cu RDL及PI/RDL銅柱選項；該頁未確認HBM/TSV。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-29",
-      "status": "verified",
+      "lastVerified": "2026-09-14",
+      "status": "candidate",
       "techFocus": [
-        "高集積度記憶體封裝良率與翹曲控制",
-        "記憶體IC電性測試、分選與可靠度篩選",
-        "金凸塊製程與顯示驅動IC封裝整合"
+        "8／12吋晶圓金凸塊對接COF／COG；此為顯示互連非HBM TSV",
+        "Copper RDL官方最小線寬／間距5µm／5µm（不是HBM堆疊規格）",
+        "Cu pillar搭配PI/RDL或PI-free選項，管理互連與底填可靠度"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持高密度記憶體封裝與測試服務",
-          "7月營收YoY+43.6%、累計YoY+29.5%，整體封測動能強"
+          "具記憶體封測與多種凸塊／重佈線製程，能力不限單一封裝形式",
+          "2026年8月營收27.86億元，MoM-1.32%、YoY+33.27%，累計YoY+30.04%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "MOPS未揭露HBM、TSV或堆疊封裝，不能直接視為HBM量產",
-          "業務亦涵蓋顯示驅動與混合訊號IC，營收成長無法歸因HBM"
+          "金凸塊、Cu pillar及一般記憶體測試不能證明HBM堆疊製程已認證",
+          "8月整體營收年增但月減，且無法拆分HBM或不同記憶體種類",
+          "8月MoM-1.32%，年增與月度轉弱並存，需觀察產品／專案組合。"
         ],
         "opportunities": [
-          "HBM供應擴張可外溢至記憶體測試與可靠度篩選需求",
-          "既有記憶體封測產線若取得新世代驗證，可縮短切入時間"
+          "記憶體景氣改善可增加既有封測稼動，但應與HBM投資論述分開",
+          "若取得高密度互連相關客戶正式驗證，可逐案評估新後段服務"
         ],
         "threats": [
-          "HBM核心封裝由記憶體原廠與先進封裝大廠主導，切入門檻高",
-          "顯示驅動IC景氣反轉可能抵銷記憶體封測成長"
+          "HBM製造商的內製封裝與封測整合可能限制外包市場",
+          "顯示驅動及成熟記憶體景氣回落可能抵銷新封裝產品成長"
         ]
       }
     },

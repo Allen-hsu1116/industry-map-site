@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2330",
   "companyName": "台積電",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-13T19:15:37Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -11,20 +11,20 @@
       "directness": "core",
       "supplyChainStage": "wafer_fabrication",
       "roleType": "advanced_logic_foundry",
-      "roleSummary": "台積電MOPS明確揭露依客戶設計製造與銷售積體電路及晶圓半導體裝置，並提供封裝測試、IC電腦輔助設計與光罩服務，是晶圓代工核心角色。2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%，累計YoY+37.0%，先進製程需求推升整體動能。",
+      "roleSummary": "台積電為依客戶設計製造IC與晶圓裝置的核心晶圓代工角色。官方2026股東會確認N2已於2025年第四季量產，N2P／A16仍表述為2026下半年規劃，不以時間到期推定已量產；N3A與N2A亦須區分生產平台和未來驗證計畫。 2026年8月營收5,148.05億元，MoM+10.10%、YoY+53.32%，累計YoY+39.26%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "N3系列3奈米FinFET晶圓代工",
-        "N5系列5奈米FinFET晶圓代工",
-        "N2系列2奈米奈米片電晶體晶圓代工",
-        "A16背面供電晶圓代工平台",
-        "28／40奈米車用與工業IC晶圓代工"
+        "N3系列3奈米晶圓代工",
+        "N2系列2奈米奈米片晶圓代工",
+        "N2P製程平台（2026股東會規劃下半年量產）",
+        "A16 Super Power Rail製程平台（2026股東會規劃下半年量產）",
+        "N3A車用晶圓製程平台（2026官方公告）"
       ],
       "customers": [
-        "Apple（先進製程應用對象，非MOPS揭露客戶）",
-        "NVIDIA（AI晶片應用對象，非MOPS揭露客戶）",
-        "AMD（CPU／GPU應用對象，非MOPS揭露客戶）",
-        "Qualcomm（行動SoC應用對象，非MOPS揭露客戶）",
-        "Broadcom（客製ASIC應用對象，非MOPS揭露客戶）"
+        "Apple（先進製程應用情境，未確認交易或驗證）",
+        "NVIDIA（AI晶片應用情境，未確認交易或驗證）",
+        "AMD（CPU／GPU應用情境，未確認交易或驗證）",
+        "Qualcomm（行動SoC應用情境，未確認交易或驗證）",
+        "Broadcom（客製ASIC應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "Samsung Foundry",
@@ -32,8 +32,10 @@
         "中芯國際"
       ],
       "risks": [
-        "先進製程資本支出龐大（年 CapEx >500 億美元）",
-        "地緣政治風險：海外建廠成本高於台灣"
+        "N2P／A16的規劃時程不是本輪已確認的量產進度",
+        "營收備註指向先進製程需求，但不能拆分N2、N3或特定客戶貢獻",
+        "海外廠成本、先進製程良率與資本支出折舊影響獲利品質",
+        "出口管制及客戶新產品延後可能改變產能利用率"
       ],
       "legacy": {
         "topicSlug": "wafer-foundry",
@@ -42,58 +44,62 @@
       },
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報書系統",
-          "title": "台積電 公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05?co_id=2330",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證 台積電 的營業項目、產品組合與財務資料；本角色由 legacy 題材關聯先行遷移，並以公開揭露資料作為後續覆核來源。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤 2330 的月營收、股價、估值與法人資料，作為題材傳導是否反映到營運/市場資料的後續觀察。"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-14 2330 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "依客戶訂單與設計製造、銷售積體電路及其他晶圓半導體裝置；並提供封裝測試、IC電腦輔助設計與光罩製造設計服務。"
+          "claim": "MOPS主要經營業務：依客戶之訂單與其提供之產品設計說明，以從事製造與銷售積體電路以及其他晶圓半導體裝置。提供前述產品之封裝與測試服務、積體電路之電腦輔助設計技術服務。提供製造光罩及其設計服務。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via CasualMarket MCP",
+          "title": "2026-09-14 2330 月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "TWSE顯示2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%，累計YoY+37.0%。"
+          "claim": "2026年8月營收5,148.05億元，MoM+10.10%、YoY+53.32%，累計YoY+39.26%。 備註：因先進製程產品需求增加所致。 原始TWSE單位新臺幣千元。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-products-2330",
+          "publisher": "公司官方網站",
+          "title": "TSMC Debuts A13 Technology at 2026 North America Technology Symposium",
+          "url": "https://pr.tsmc.com/english/news/3302",
+          "claim": "2026-04-23技術論壇公告N3A於2026生產、N2A AEC-Q100規劃2028；此公告不確認N2P/A16當下量產。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
+        },
+        {
+          "sourceId": "official-role-detail-2330agm",
+          "publisher": "公司官方網站",
+          "title": "2026-06-04股東會紀錄",
+          "url": "https://investor.tsmc.com/sites/ir/shareholders-meeting/2026-06-04/2026AGM_Minutes_wmn_0.pdf",
+          "claim": "N2於2025第四季量產；N2P及A16規劃2026下半年量產，A16採Super Power Rail。",
+          "retrievedAt": "2026-09-13T19:15:37Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-29",
+      "lastVerified": "2026-09-14",
       "status": "verified",
       "techFocus": [
-        "N3 FinFET量產與N2奈米片電晶體整合",
-        "EUV極紫外光微影與多重圖形化控制",
-        "A16背面供電網路與訊號繞線整合"
+        "N2奈米片電晶體；股東會確認2025年第四季已進入大量生產",
+        "A16 Super Power Rail背面供電，針對複雜訊號與高密度供電HPC設計",
+        "N3A車用設計提前導入；N2A的AEC-Q100驗證仍是2028規劃"
       ],
       "swot": {
         "strengths": [
-          "MOPS直接支持晶圓製造、封裝測試、設計服務與光罩的一站式能力",
-          "7月營收YoY+44.7%、累計YoY+37.0%，整體先進製程需求強"
+          "MOPS直接支持晶圓製造、光罩、設計支援及封測，官網補足節點與量產階段",
+          "2026年8月營收5,148.05億元，MoM+10.10%、YoY+53.32%，累計YoY+39.26%。整體年增支持營運資源，但不是題材收入分拆。"
         ],
         "weaknesses": [
-          "先進節點與海外晶圓廠需要龐大資本支出及折舊負擔",
-          "公司月營收未拆分節點與客戶，無法量化N2、N3各自貢獻"
+          "N2P／A16的規劃時程不是本輪已確認的量產進度",
+          "營收備註指向先進製程需求，但不能拆分N2、N3或特定客戶貢獻"
         ],
         "opportunities": [
-          "AI加速器、智慧手機與客製ASIC持續擴大先進節點需求",
-          "N2與A16平台可延續效能、功耗與密度領先"
+          "N2量產爬坡與N2P／A16導入可增加高效能低功耗設計需求",
+          "車用N3A與後續N2A提供先進節點向長生命週期應用延伸的機會"
         ],
         "threats": [
-          "Samsung Foundry與Intel Foundry競逐先進製程客戶",
-          "地緣政治、出口管制與海外生產成本可能壓縮營運彈性"
+          "海外廠成本、先進製程良率與資本支出折舊影響獲利品質",
+          "出口管制及客戶新產品延後可能改變產能利用率"
         ]
       }
     },
