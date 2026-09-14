@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8033",
   "name": "雷虎",
-  "generatedAt": "2026-09-11T12:32:07.603Z",
+  "generatedAt": "2026-09-14T12:33:11.791Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -53,27 +53,27 @@
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "雷虎MOPS直接包含中大型無人載具與無線電遙控模型及零配件，軍工無人機題材有產品基礎；但未揭露軍方客戶、特定機型或認證。2026年7月營收1.18億元、MoM-47.6%、YoY-9.5%，累計YoY+7.4%，專案出貨波動很大。",
-      "supplyChainStage": "aerospace_mro",
-      "roleType": "military_uav_manufacturer",
+      "roleSummary": "雷虎MOPS確認中大型無人載具，官方沿革補充空中基地台、FPV與無人快艇活動；將錯誤的MRO分類改為無人載具製造與整合。官方參展或比武不能當作得標，總營收仍包含醫療與包材等業務。2026年8月營收1.76億元，MoM+49.00%、YoY+74.96%。營收為公司整體口徑，不等同本題材收入。",
+      "supplyChainStage": "unmanned_vehicles",
+      "roleType": "unmanned_vehicle_manufacturer_and_integrator",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "中大型旋翼無人載具",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "固定翼無人載具",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
-      },
-      {
-        "name": "無線電遙控飛行模型",
-        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
-        "confidence": "low"
+        "name": "無線電遙控模型",
+        "description": "遙控直升機/車/船模型及零配件。，並用於公司對應終端產品與客戶應用。",
+        "whyItMatters": "遙控模型為傳統核心業務與技術基礎。，是公司接單動能與產品組合的重要觀察指標。",
+        "topicFit": "遙控模型",
+        "businessImpact": "營運觀察重點為雷虎在無線電遙控模型的訂單動能、客戶導入進度與產品組合變化。",
+        "sourceLabels": [
+          "公開資訊觀測站 MOPS：雷虎科技股份有限公司 公司基本資料"
+        ],
+        "sourceUrls": [
+          "https://mops.twse.com.tw/mops/web/t05st03?co_id=8033"
+        ],
+        "lastVerified": "2026-08-13",
+        "confidence": "high"
       }
     ],
     "swotSnapshot": {
@@ -164,7 +164,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "雷虎MOPS直接包含中大型無人載具與無線電遙控模型及零配件，軍工無人機題材有產品基礎；但未揭露軍方客戶、特定機型或認證。2026年7月營收1.18億元、MoM-47.6%、YoY-9.5%，累計YoY+7.4%，專案出貨波動很大。"
+        "roleSummary": "雷虎MOPS確認中大型無人載具，官方沿革補充空中基地台、FPV與無人快艇活動；將錯誤的MRO分類改為無人載具製造與整合。官方參展或比武不能當作得標，總營收仍包含醫療與包材等業務。2026年8月營收1.76億元，MoM+49.00%、YoY+74.96%。營收為公司整體口徑，不等同本題材收入。"
       }
     ],
     "swot": [
@@ -331,12 +331,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 109 天未更新"
+        "message": "股價資料已 112 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 109 天未更新"
+        "message": "籌碼資料已 112 天未更新"
       }
     ]
   },

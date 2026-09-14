@@ -2,19 +2,21 @@
   "schemaVersion": 1,
   "code": "1605",
   "name": "華新",
-  "generatedAt": "2026-09-11T12:32:06.920Z",
+  "generatedAt": "2026-09-14T12:33:11.073Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "B",
-    "label": "可用但仍有缺口",
-    "upgradePriority": "medium",
+    "grade": "C",
+    "label": "弱分析 / 部分資料",
+    "upgradePriority": "high",
     "missingKnowledge": [
+      "verified_topic_role",
       "complete_swot"
     ],
     "blockingReasons": [
+      "topic_role_not_verified",
       "incomplete_swot"
     ]
   },
@@ -57,27 +59,27 @@
     "provenanceLabel": "V2 待驗證",
     "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=4；只做保守參考。",
     "roleDetail": {
-      "topicName": "AI 伺服器整機與 EMS",
-      "roleLabel": "間接受惠",
-      "roleSummary": "華新MOPS為電線電纜、鋼線鋼纜及特殊鋼，官方目錄支持中高壓XLPE具體電纜。AI伺服器題材限於資料中心供配電間接需求，不能把電纜當GPU內部高速線或假設Google、Microsoft直接採購。 2026年7月營收157.14億元，MoM-6.02%、YoY+10.08%，累計年增率+0.98%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。",
-      "supplyChainStage": "data_center_grid_power_adjacent",
-      "roleType": "power_cable_infrastructure_adjacent",
-      "directness": "indirect",
+      "topicName": "太陽能與離岸風電",
+      "roleLabel": "供應商角色",
+      "roleSummary": "MOPS確認電線電纜及特殊鋼；官方2025年12月公告另確認集團華纜系統與NKT合作海纜廠已開幕，規劃2026年認證、2027年量產。修正原先僅列鄰近材料的過度限縮，但不把廠房開幕當成海纜出貨。2026年8月營收144.29億元，MoM-8.18%、YoY+14.97%。營收為公司整體口徑，不等同本題材收入。",
+      "supplyChainStage": "power_cable_and_subsea_project",
+      "roleType": "grid_cables_and_group_subsea_cable_project",
+      "directness": "supplier",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "5～25kV XLPE-PVC電力電纜",
+        "name": "銅／鋁導體電力電纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "69kV XLPE電力電纜",
+        "name": "鋼線與鋼纜",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "161kV XLPE電力電纜",
+        "name": "特殊鋼線材",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -97,21 +99,21 @@
       ]
     },
     "scoringFactors": [
-      "直接度 間接受惠 +8",
+      "直接度 供應商角色 +26",
       "角色信心 medium +10",
-      "題材 AI 伺服器整機與 EMS（theme/active） +18",
+      "題材 太陽能與離岸風電（theme/active） +18",
       "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 7 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 角色待驗證上限 / 缺 evidence 降權（原 60，上限 40）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 78，上限 40）"
     ],
-    "summary": "華新 在「AI 伺服器整機與 EMS」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
+    "summary": "華新 在「太陽能與離岸風電」的 V2 角色為「供應商角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
       "資料基礎：V2 待驗證（medium）",
-      "V2 題材角色：AI 伺服器整機與 EMS · 間接受惠 · medium",
-      "產業評分：40/100（直接度 間接受惠 +8；角色信心 medium +10；題材 AI 伺服器整機與 EMS（theme/active） +18）",
-      "相關題材：太陽能與離岸風電 · 間接受惠",
+      "V2 題材角色：太陽能與離岸風電 · 供應商角色 · medium",
+      "產業評分：40/100（直接度 供應商角色 +26；角色信心 medium +10；題材 太陽能與離岸風電（theme/active） +18）",
+      "相關題材：AI 伺服器整機與 EMS · 間接受惠",
       "主要產品：電力電纜(161kV超高壓)",
       "主要產品：銅線及銅纜",
       "主要產品：不鏽鋼線材"
@@ -127,9 +129,9 @@
       "V2 O：離岸風電電纜需求",
       "V2 O：AI資料中心電力基礎建設",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善"
+      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
+      "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -195,6 +197,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "MOPS確認電線電纜及特殊鋼；官方2025年12月公告另確認集團華纜系統與NKT合作海纜廠已開幕，規劃2026年認證、2027年量產。修正原先僅列鄰近材料的過度限縮，但不把廠房開幕當成海纜出貨。2026年8月營收144.29億元，MoM-8.18%、YoY+14.97%。營收為公司整體口徑，不等同本題材收入。"
+      },
+      {
         "topicId": "ai-server",
         "topicName": "AI 伺服器",
         "canonicalTopicId": "ai-server",
@@ -203,16 +215,6 @@
         "directnessLabel": "間接受惠",
         "confidence": "medium",
         "roleSummary": "華新MOPS為電線電纜、鋼線鋼纜及特殊鋼，官方目錄支持中高壓XLPE具體電纜。AI伺服器題材限於資料中心供配電間接需求，不能把電纜當GPU內部高速線或假設Google、Microsoft直接採購。 2026年7月營收157.14億元，MoM-6.02%、YoY+10.08%，累計年增率+0.98%。此為全公司營收，未拆分「AI 伺服器」收入，不能全部歸因本題材。"
-      },
-      {
-        "topicId": "renewable-energy",
-        "topicName": "太陽能與離岸風電",
-        "canonicalTopicId": "renewable-energy",
-        "canonicalTopicName": "太陽能與離岸風電",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "華新MOPS只揭露電線電纜、鋼線鋼纜與特殊鋼，未明確揭露離岸風電海纜、電壓等級或風場客戶；在再生能源題材應定位為電網電纜與金屬材料供應的相鄰角色。2026年7月營收157.14億元、YoY+10.1%、累計YoY+1.0%，不能全歸因再生能源。"
       }
     ],
     "swot": [
@@ -336,8 +338,8 @@
     ],
     "topics": [
       {
-        "id": "ai-server",
-        "name": "AI 伺服器整機與 EMS",
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -347,8 +349,8 @@
         ]
       },
       {
-        "id": "renewable-energy",
-        "name": "太陽能與離岸風電",
+        "id": "ai-server",
+        "name": "AI 伺服器整機與 EMS",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -395,12 +397,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 109 天未更新"
+        "message": "股價資料已 112 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 109 天未更新"
+        "message": "籌碼資料已 112 天未更新"
       },
       {
         "id": "risk.stop-distance",

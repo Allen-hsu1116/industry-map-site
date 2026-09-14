@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1513",
   "name": "中興電",
-  "generatedAt": "2026-09-11T12:32:06.902Z",
+  "generatedAt": "2026-09-14T12:33:11.053Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -107,8 +107,8 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：重電、電纜與 EPC 工程 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 重電、電纜與 EPC 工程（supply_chain_segment/active） +16）",
+      "相關題材：儲能、電芯與電池材料 · 直接賦能角色",
       "相關題材：太陽能與離岸風電 · 直接賦能角色",
-      "相關題材：儲能、電芯與電池材料 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -124,7 +124,7 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
       "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善"
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -171,6 +171,16 @@
         "roleSummary": "中興電MOPS直接支持輸配電設備暨工程、節能空調與發電工程，以及氫能發電和產氫系統，是重電與EPC核心角色；但未逐項揭露電壓等級或具名客戶。2026年7月營收24.10億元、MoM-14.9%、YoY+3.8%、累計YoY+3.5%，工程認列節奏偏波動。"
       },
       {
+        "topicId": "energy-storage-battery",
+        "topicName": "儲能、電芯與電池材料",
+        "canonicalTopicId": "energy-storage-battery",
+        "canonicalTopicName": "儲能、電芯與電池材料",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "medium",
+        "roleSummary": "中興電不應僅因MOPS文字簡短被排除儲能：官方2020合作備忘錄明列西門子提供PCS、中興整合燃料電池與儲能系統。可確認有歷史整合開發角色，但不能把備忘錄視為2026現行訂單，更不是中興自製PCS或電芯的證據。 2026年8月營收25.02億元，MoM+3.82%、YoY+8.93%，累計YoY+4.21%。此為公司整體營收，無法全數歸因本題材。"
+      },
+      {
         "topicId": "renewable-energy",
         "topicName": "太陽能與離岸風電",
         "canonicalTopicId": "renewable-energy",
@@ -179,16 +189,6 @@
         "directnessLabel": "直接賦能角色",
         "confidence": "high",
         "roleSummary": "MOPS明列綠能輸配電及氫能業務，官方GIS目錄進一步確認分電壓等級規格。再生能源角色集中併網與電力工程，氫能系統另列；去除未驗證的統一IEC 61850與PEM細節。本次TWSE最新回傳：2026年7月營收24.10億元，MoM-14.93%、YoY+3.83%，累計YoY+3.53%。公司整體營收不可直接歸因本題材。"
-      },
-      {
-        "topicId": "energy-storage-battery",
-        "topicName": "儲能、電芯與電池材料",
-        "canonicalTopicId": "energy-storage-battery",
-        "canonicalTopicName": "儲能、電芯與電池材料",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "中興電MOPS揭露綠能、輸配電設備暨工程、發電設備暨工程及氫能系統，但沒有揭露電芯、電池模組、BMS或PCS；因此在儲能題材只屬案場併網與電力工程鄰近角色。2026年7月營收24.10億元、YoY+3.8%、MoM-14.9%，累計YoY+3.5%。"
       }
     ],
     "swot": [
@@ -431,8 +431,8 @@
         ]
       },
       {
-        "id": "renewable-energy",
-        "name": "太陽能與離岸風電",
+        "id": "energy-storage-battery",
+        "name": "儲能、電芯與電池材料",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -442,8 +442,8 @@
         ]
       },
       {
-        "id": "energy-storage-battery",
-        "name": "儲能、電芯與電池材料",
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -488,12 +488,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 109 天未更新"
+        "message": "股價資料已 112 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 109 天未更新"
+        "message": "籌碼資料已 112 天未更新"
       }
     ]
   },

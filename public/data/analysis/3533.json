@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3533",
   "name": "嘉澤",
-  "generatedAt": "2026-09-11T12:32:07.306Z",
+  "generatedAt": "2026-09-14T12:33:11.480Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -60,7 +60,7 @@
     "roleDetail": {
       "topicName": "高速連接器與車工業連接",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "嘉澤MOPS僅以「連接器」概括主要業務，支持高速互連的產品類別但未揭露112G PAM4、PCIe世代、DDR速率、插座型號或具名客戶；本角色保留為伺服器與高速運算連接器供應商，移除無證據規格。2026年7月營收33.69億元、MoM+8.9%、YoY+18.6%，累計YoY+17.4%。",
+      "roleSummary": "嘉澤MOPS僅列連接器，但官方產品頁實際列SP5、SP6、AM5插座及明確料號；應保留這些可查規格，而不是退回無型號敘述。高速互連角色在運算平台插座、記憶體及板間連接，未證實特定PAM4速率或具名客戶訂單。2026年8月營收31.98億元，MoM-5.06%、YoY+19.58%，1–8月累計YoY+17.70%；公司整體數據不能完全歸因本題材。",
       "supplyChainStage": "high_speed_connector",
       "roleType": "high_speed_connector_leader",
       "directness": "core",
@@ -68,17 +68,17 @@
     },
     "productNarratives": [
       {
-        "name": "伺服器CPU插座連接器",
+        "name": "AZIFA182 Updated SP5 CPU Socket（LGA6096）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "記憶體模組插槽連接器",
+        "name": "AZIF0057 SP6 CPU Socket（LGA4844）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高速板對板連接器",
+        "name": "AZIFS055 AM5 CPU Socket（LGA1718）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -156,7 +156,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "嘉澤MOPS僅以「連接器」概括主要業務，支持高速互連的產品類別但未揭露112G PAM4、PCIe世代、DDR速率、插座型號或具名客戶；本角色保留為伺服器與高速運算連接器供應商，移除無證據規格。2026年7月營收33.69億元、MoM+8.9%、YoY+18.6%，累計YoY+17.4%。"
+        "roleSummary": "嘉澤MOPS僅列連接器，但官方產品頁實際列SP5、SP6、AM5插座及明確料號；應保留這些可查規格，而不是退回無型號敘述。高速互連角色在運算平台插座、記憶體及板間連接，未證實特定PAM4速率或具名客戶訂單。2026年8月營收31.98億元，MoM-5.06%、YoY+19.58%，1–8月累計YoY+17.70%；公司整體數據不能完全歸因本題材。"
       },
       {
         "topicId": "silicon-photonics-optical-comm",
@@ -226,12 +226,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 109 天未更新"
+        "message": "股價資料已 112 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 109 天未更新"
+        "message": "籌碼資料已 112 天未更新"
       }
     ]
   },

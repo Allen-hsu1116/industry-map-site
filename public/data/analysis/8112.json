@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "8112",
   "name": "至上",
-  "generatedAt": "2026-09-11T12:32:07.622Z",
+  "generatedAt": "2026-09-14T12:33:11.811Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -51,33 +51,33 @@
   },
   "industry": {
     "label": "核心題材受惠",
-    "score": 90,
+    "score": 85,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "high",
+    "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "MLCC / 電容器",
+      "topicName": "AI 伺服器液冷散熱",
       "roleLabel": "供應商角色",
-      "roleSummary": "MOPS只揭露電子通路，但官網三星電機頁明載至上在台灣／中國代理MLCC，因此保留已確認的MLCC通路角色。去除未確認村田／國巨／KEMET／Vishay代理暗示及鉭／鋁電容品項；三星電機是供應品牌，不是買方客戶。 TWSE：2026年7月營收768.74億元，MoM+24.74%、YoY+333.48%，累計YoY+180.42%；全公司口徑，不能歸因本題材。",
-      "supplyChainStage": "component_distribution",
-      "roleType": "confirmed_semco_mlcc_distributor",
+      "roleSummary": "至上MOPS僅概括列電子元件經銷，但實際官網bp/Castrol產品頁明列PG25、EG25、DC15/DC20資料中心冷卻液。本輪由臆測感測IC鄰近角色修正為有官方產品證據的液冷材料通路；不是冷板或CDU製造商，原廠生態合作也不等於至上具名客戶。2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%。營收為公司整體口徑，不等同本題材收入。",
+      "supplyChainStage": "liquid_cooling_fluids_distribution",
+      "roleType": "castrol_cooling_fluid_distributor",
       "directness": "supplier",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "Samsung Electro-Mechanics積層陶瓷電容經銷",
+        "name": "Castrol PG25冷板式直接晶片冷卻液（通路產品）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "三星MLCC電腦／記憶體模組去耦選型服務",
+        "name": "Castrol EG25直接晶片冷卻液（通路產品）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "三星MLCC電視／顯示設備電容選型服務",
+        "name": "Castrol DC15浸沒式冷卻液（通路產品）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -89,29 +89,29 @@
     },
     "scoringFactors": [
       "直接度 供應商角色 +26",
-      "角色信心 high +16",
-      "題材 MLCC / 電容器（product/active） +16",
-      "角色證據 3 則 +12",
+      "角色信心 medium +10",
+      "題材 AI 伺服器液冷散熱（technology/active） +17",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "至上 在「MLCC / 電容器」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 90/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "至上 在「AI 伺服器液冷散熱」的 V2 角色為「供應商角色」，資料基礎為「V2 已驗證」，產業 score 85/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（high）",
-      "V2 題材角色：MLCC / 電容器 · 供應商角色 · high",
-      "產業評分：90/100（直接度 供應商角色 +26；角色信心 high +16；題材 MLCC / 電容器（product/active） +16）",
-      "相關題材：AI 伺服器液冷散熱 · 間接受惠",
+      "資料基礎：V2 已驗證（medium）",
+      "V2 題材角色：AI 伺服器液冷散熱 · 供應商角色 · medium",
+      "產業評分：85/100（直接度 供應商角色 +26；角色信心 medium +10；題材 AI 伺服器液冷散熱（technology/active） +17）",
+      "相關題材：MLCC / 電容器 · 供應商角色",
       "相關題材：AI 伺服器機構件與滑軌 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [],
     "watch": [
-      "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 MLCC / 電容器：月營收或訂單能見度改善",
-      "追蹤 MLCC / 電容器：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "催化訊號：AI GPU/ASIC TDP 升高、客戶導入液冷機櫃或 CDU、散熱廠液冷相關營收揭露增加",
       "追蹤 AI 伺服器液冷散熱：AI GPU/ASIC TDP 升高",
       "追蹤 AI 伺服器液冷散熱：客戶導入液冷機櫃或 CDU",
+      "追蹤 MLCC / 電容器：月營收或訂單能見度改善",
+      "追蹤 MLCC / 電容器：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "知識庫最後驗證：2026-05-26（stale）"
     ]
   },
@@ -149,6 +149,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "ai-server-liquid-cooling",
+        "topicName": "AI 伺服器液冷散熱",
+        "canonicalTopicId": "ai-server-liquid-cooling",
+        "canonicalTopicName": "AI 伺服器液冷散熱",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "至上MOPS僅概括列電子元件經銷，但實際官網bp/Castrol產品頁明列PG25、EG25、DC15/DC20資料中心冷卻液。本輪由臆測感測IC鄰近角色修正為有官方產品證據的液冷材料通路；不是冷板或CDU製造商，原廠生態合作也不等於至上具名客戶。2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%。營收為公司整體口徑，不等同本題材收入。"
+      },
+      {
         "topicId": "passive-components-mlcc",
         "topicName": "MLCC / 電容器",
         "canonicalTopicId": "passive-components-mlcc",
@@ -157,16 +167,6 @@
         "directnessLabel": "供應商角色",
         "confidence": "high",
         "roleSummary": "MOPS只揭露電子通路，但官網三星電機頁明載至上在台灣／中國代理MLCC，因此保留已確認的MLCC通路角色。去除未確認村田／國巨／KEMET／Vishay代理暗示及鉭／鋁電容品項；三星電機是供應品牌，不是買方客戶。 TWSE：2026年7月營收768.74億元，MoM+24.74%、YoY+333.48%，累計YoY+180.42%；全公司口徑，不能歸因本題材。"
-      },
-      {
-        "topicId": "ai-server-liquid-cooling",
-        "topicName": "AI 伺服器液冷散熱",
-        "canonicalTopicId": "ai-server-liquid-cooling",
-        "canonicalTopicName": "AI 伺服器液冷散熱",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "至上MOPS僅揭露電子零組件經銷，未揭露冷板、CDU、泵浦或液冷系統製造；本題材限縮為伺服器液冷控制所需記憶體、電源與感測零組件的通路角色。2026年7月營收768.74億元、MoM+24.7%、YoY+333.5%，公司說明由記憶體漲價及伺服器、手機客戶拉貨帶動，不能全數歸因液冷。"
       },
       {
         "topicId": "ai-server-mechanical",
@@ -202,17 +202,6 @@
     "swot": [],
     "topics": [
       {
-        "id": "passive-components-mlcc",
-        "name": "MLCC / 電容器",
-        "type": "product",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
-      {
         "id": "ai-server-liquid-cooling",
         "name": "AI 伺服器液冷散熱",
         "type": "technology",
@@ -221,6 +210,17 @@
           "AI GPU/ASIC TDP 升高",
           "客戶導入液冷機櫃或 CDU",
           "散熱廠液冷相關營收揭露增加"
+        ]
+      },
+      {
+        "id": "passive-components-mlcc",
+        "name": "MLCC / 電容器",
+        "type": "product",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
         ]
       },
       {
@@ -271,7 +271,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 7,
+    "totalScore": 6,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 0,
@@ -289,12 +289,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 109 天未更新"
+        "message": "股價資料已 112 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 109 天未更新"
+        "message": "籌碼資料已 112 天未更新"
       }
     ]
   },

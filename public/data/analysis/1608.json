@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1608",
   "name": "華榮",
-  "generatedAt": "2026-09-11T12:32:06.922Z",
+  "generatedAt": "2026-09-14T12:33:11.075Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -107,8 +107,8 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：重電、電纜與 EPC 工程 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 重電、電纜與 EPC 工程（supply_chain_segment/active） +16）",
+      "相關題材：太陽能與離岸風電 · 直接賦能角色",
       "相關題材：儲能、電芯與電池材料 · 間接受惠",
-      "相關題材：太陽能與離岸風電 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -121,8 +121,8 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
       "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 太陽能與離岸風電：月營收或訂單能見度改善",
+      "追蹤 太陽能與離岸風電：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -169,6 +169,16 @@
         "roleSummary": "華榮MOPS確認電纜、銅製品及電力／通信工程；官網進一步列69／161／345kV超高壓XLPE電纜、46kV以下配電電纜和儀表線。維持電力設備與工程核心角色，規格以官網可核實內容為限，未把台電等應用對象當作已確認合約。 2026年7月營收12.68億元，MoM+14.96%、YoY+42.67%，累計YoY+19.38%。此為全公司營收，未拆分「重電、電纜與 EPC 工程」貢獻，不能全部歸因於本題材。"
       },
       {
+        "topicId": "renewable-energy",
+        "topicName": "太陽能與離岸風電",
+        "canonicalTopicId": "renewable-energy",
+        "canonicalTopicName": "太陽能與離岸風電",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "high",
+        "roleSummary": "華榮官方產品頁確認161kV／345kV電纜線路統包及國內離島海纜工程，台電與中華電信亦為具名工程對象；不應把MOPS未列海纜解讀為公司沒有海纜工程能力。不過工程實績尚不能證明特定離岸風場訂單或自製動態海纜，綠能角色聚焦併網工程及電纜。 2026年8月營收11.80億元，MoM-6.90%、YoY+17.90%，累計YoY+19.18%。此為公司整體營收，無法全數歸因本題材。"
+      },
+      {
         "topicId": "energy-storage-battery",
         "topicName": "儲能、電芯與電池材料",
         "canonicalTopicId": "energy-storage-battery",
@@ -177,16 +187,6 @@
         "directnessLabel": "間接受惠",
         "confidence": "medium",
         "roleSummary": "華榮MOPS揭露電線電纜、銅製品及電力／通信工程，沒有電芯、電池模組、PCS或儲能系統產品；在儲能題材中只能定位為案場配電與工程鄰近角色。2026年7月營收12.68億元，MoM+14.96%、YoY+42.67%，公司整體成長不可直接歸因儲能。"
-      },
-      {
-        "topicId": "renewable-energy",
-        "topicName": "太陽能與離岸風電",
-        "canonicalTopicId": "renewable-energy",
-        "canonicalTopicName": "太陽能與離岸風電",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "華榮MOPS揭露電線電纜、銅製品與電力／通信工程，但沒有揭露離岸風場海纜或特定風場客戶；在再生能源題材應定位為併網與場內配電電纜的應用鄰近者。2026年7月營收12.68億元、MoM+15.0%、YoY+42.7%，公司整體動能強，但不能全數歸因於綠能。"
       }
     ],
     "swot": [
@@ -248,8 +248,8 @@
         ]
       },
       {
-        "id": "energy-storage-battery",
-        "name": "儲能、電芯與電池材料",
+        "id": "renewable-energy",
+        "name": "太陽能與離岸風電",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -259,8 +259,8 @@
         ]
       },
       {
-        "id": "renewable-energy",
-        "name": "太陽能與離岸風電",
+        "id": "energy-storage-battery",
+        "name": "儲能、電芯與電池材料",
         "type": "theme",
         "status": "active",
         "activationSignals": [
@@ -303,12 +303,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 109 天未更新"
+        "message": "股價資料已 112 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 109 天未更新"
+        "message": "籌碼資料已 112 天未更新"
       }
     ]
   },

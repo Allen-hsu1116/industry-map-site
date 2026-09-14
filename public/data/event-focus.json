@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-11T12:32:06.684Z",
+  "generatedAt": "2026-09-14T12:33:10.828Z",
   "status": "partial",
   "source": {
     "name": "TWSE OpenAPI t187ap04_L",
@@ -8,9 +8,23 @@
     "scope": "listed-company-major-news",
     "semantics": "official subject preserved; topic mapping is derived, not official"
   },
-  "latestDate": "2026-09-10",
+  "latestDate": "2026-09-13",
   "itemCount": 80,
   "items": [
+    {
+      "id": "twse-1721-2026-09-13-070004-第51款",
+      "date": "2026-09-13",
+      "announcedAt": "2026-09-13 07:00:04",
+      "companyCode": "1721",
+      "companyName": "國慶科技",
+      "officialSubject": "公告本公司名稱由「三晃股份有限公司」更名為 「國慶科技股份有限公司」 ，公告期間：115年07月01日至115年9月30日。",
+      "clause": "第51款",
+      "derivedTopics": [],
+      "mappingMethod": "unmapped_official_event",
+      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
+      "source": "TWSE OpenAPI t187ap04_L",
+      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
+    },
     {
       "id": "twse-2357-2026-09-10-225108-第51款",
       "date": "2026-09-10",
@@ -193,9 +207,9 @@
         {
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
-          "roleLabel": "optical_packaging_provider",
-          "confidence": "low",
-          "status": "verified"
+          "roleLabel": "group_cpo_packaging_demonstrator",
+          "confidence": "medium",
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -229,9 +243,9 @@
         {
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
-          "roleLabel": "optical_packaging_provider",
-          "confidence": "low",
-          "status": "verified"
+          "roleLabel": "group_cpo_packaging_demonstrator",
+          "confidence": "medium",
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -321,7 +335,7 @@
         {
           "topicId": "ic-design",
           "topicName": "IC 設計與矽智財",
-          "roleLabel": "hpc_networking_soc_provider",
+          "roleLabel": "multimedia_mobile_and_custom_soc_designer",
           "confidence": "high",
           "status": "verified"
         }
@@ -535,9 +549,9 @@
         {
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
-          "roleLabel": "optical_packaging_provider",
-          "confidence": "low",
-          "status": "verified"
+          "roleLabel": "group_cpo_packaging_demonstrator",
+          "confidence": "medium",
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -614,9 +628,9 @@
         {
           "topicId": "hbm",
           "topicName": "HBM 高頻寬記憶體",
-          "roleLabel": "memory_test_house_adjacent_to_hbm",
+          "roleLabel": "ic_test_services_adjacent_to_hbm",
           "confidence": "medium",
-          "status": "verified"
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -708,7 +722,7 @@
           "topicId": "wafer-foundry",
           "topicName": "半導體製造｜晶圓代工",
           "roleLabel": "asic_design_service_adjacent_to_foundry",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         }
       ],
@@ -737,7 +751,7 @@
           "topicId": "wafer-foundry",
           "topicName": "半導體製造｜晶圓代工",
           "roleLabel": "asic_design_service_adjacent_to_foundry",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         }
       ],
@@ -766,7 +780,7 @@
           "topicId": "wafer-foundry",
           "topicName": "半導體製造｜晶圓代工",
           "roleLabel": "asic_design_service_adjacent_to_foundry",
-          "confidence": "medium",
+          "confidence": "high",
           "status": "verified"
         }
       ],
@@ -861,7 +875,7 @@
           "topicName": "HBM 高頻寬記憶體",
           "roleLabel": "memory_osat_adjacent_to_hbm",
           "confidence": "medium",
-          "status": "verified"
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -1031,9 +1045,9 @@
         {
           "topicId": "silicon-photonics-optical-comm",
           "topicName": "矽光子、CPO 與高速光通訊",
-          "roleLabel": "optical_packaging_provider",
-          "confidence": "low",
-          "status": "verified"
+          "roleLabel": "group_cpo_packaging_demonstrator",
+          "confidence": "medium",
+          "status": "candidate"
         }
       ],
       "mappingMethod": "derived_from_company_topic_roles",
@@ -1687,20 +1701,6 @@
       "companyName": "億泰",
       "officialSubject": "公告本公司從事衍生性金融商品交易 單筆達交易合約10%損失上限",
       "clause": "第20款",
-      "derivedTopics": [],
-      "mappingMethod": "unmapped_official_event",
-      "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",
-      "source": "TWSE OpenAPI t187ap04_L",
-      "sourceUrl": "https://openapi.twse.com.tw/v1/opendata/t187ap04_L"
-    },
-    {
-      "id": "twse-2891-2026-09-09-142613-第51款",
-      "date": "2026-09-09",
-      "announcedAt": "2026-09-09 14:26:13",
-      "companyCode": "2891",
-      "companyName": "中信金",
-      "officialSubject": "本公司代子公司中國信託綜合證券(股)公司公告修正 114年度股東會年報部分內容",
-      "clause": "第51款",
       "derivedTopics": [],
       "mappingMethod": "unmapped_official_event",
       "verificationNote": "官方重大訊息原文保留；題材只由已建檔 company-topic-roles 派生，不代表 TWSE 官方題材分類。",

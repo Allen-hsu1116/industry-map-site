@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "3237",
   "name": "汎銓",
-  "generatedAt": "2026-09-04T12:32:50.317Z",
+  "generatedAt": "2026-09-14T12:33:11.421Z",
   "sourceUpdatedAt": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
@@ -50,25 +50,25 @@
     "roleDetail": {
       "topicName": "軍工、航太與無人機",
       "roleLabel": "間接受惠",
-      "roleSummary": "本輪MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無3237資料，無法驗證軍規認證、國防客戶或軍工收入。既有FIB、TEM、SEM／EDS與OBIRCH僅保留為歷史分析服務範圍，國防航太角色限於材料與電子元件驗證的間接應用。",
-      "supplyChainStage": "materials_analysis_adjacent",
-      "roleType": "failure_analysis_adjacent_to_aerospace",
+      "roleSummary": "此筆3237／汎銓存在識別衝突：3237的兩種MCP公司資料及兩種營收查詢均無資料；另查MOPS確認汎銓科技的代碼為6830，官網亦標示6830。本輪保留原鍵值以免破壞跨檔關聯，但隔離為身分待釐清角色；歷史分析服務不得視為3237的產品，更不能視為國防航太供應證據，亦未將6830營收移植至3237。 本輪TWSE月營收及FinMind 2025-08-01至2026-09-14查詢皆無資料，無法計算最新月營收與成長率。",
+      "supplyChainStage": "unverified_identity_outside_topic",
+      "roleType": "identity_conflict_unverified_role",
       "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "FIB聚焦離子束截面分析（歷史服務範圍）",
+        "name": "FIB截面分析（舊角色歷史記載，3237歸屬未證實）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "TEM穿透式電子顯微鏡試片製備（歷史服務範圍）",
+        "name": "TEM試片製備（舊角色歷史記載，3237歸屬未證實）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "SEM／EDS表面形貌與成分分析（歷史服務範圍）",
+        "name": "SEM／EDS缺陷分析（舊角色歷史記載，3237歸屬未證實）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -147,7 +147,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "本輪MOPS完整基本資料、一般公司資料、TWSE月營收與FinMind月營收皆查無3237資料，無法驗證軍規認證、國防客戶或軍工收入。既有FIB、TEM、SEM／EDS與OBIRCH僅保留為歷史分析服務範圍，國防航太角色限於材料與電子元件驗證的間接應用。"
+        "roleSummary": "此筆3237／汎銓存在識別衝突：3237的兩種MCP公司資料及兩種營收查詢均無資料；另查MOPS確認汎銓科技的代碼為6830，官網亦標示6830。本輪保留原鍵值以免破壞跨檔關聯，但隔離為身分待釐清角色；歷史分析服務不得視為3237的產品，更不能視為國防航太供應證據，亦未將6830營收移植至3237。 本輪TWSE月營收及FinMind 2025-08-01至2026-09-14查詢皆無資料，無法計算最新月營收與成長率。"
       }
     ],
     "swot": [

@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2337",
   "name": "旺宏",
-  "generatedAt": "2026-09-11T12:32:06.995Z",
+  "generatedAt": "2026-09-14T12:33:11.152Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-11",
-  "chipDataDate": "2026-09-11",
+  "marketDataDate": "2026-09-14",
+  "chipDataDate": "2026-09-14",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,35 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": -15,
-    "summary": "旺宏 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列；收盤跌破 MA20 3.6%。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
-    ],
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -55,
+    "summary": "旺宏 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 5.5%。",
+    "signals": [],
     "risks": [
-      "收盤跌破 MA20 3.6%"
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 5.5%"
     ],
     "watch": [
-      "量能低於 20 日均量，突破訊號可信度較低"
+      "量能低於 20 日均量，突破訊號可信度較低",
+      "接近 20 日低點 114.50，留意支撐是否失守"
     ]
   },
   "chips": {
-    "stance": "neutral",
-    "label": "籌碼中性",
-    "score": 0,
-    "summary": "旺宏 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +9.6千張；外資近 5 日買超 +1萬張。",
-    "signals": [
-      "三大法人近 5 日合計買超 +9.6千張",
-      "外資近 5 日買超 +1萬張"
-    ],
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -36,
+    "summary": "旺宏 籌碼面目前為「籌碼偏空」：三大法人近 5 日合計賣超 -5.2千張；近 20 日法人偏賣，合計 -1.7萬張。",
+    "signals": [],
     "risks": [
-      "近 20 日法人偏賣，合計 -3.7萬張",
-      "投信近 5 日賣超 -1.3千張"
+      "三大法人近 5 日合計賣超 -5.2千張",
+      "近 20 日法人偏賣，合計 -1.7萬張",
+      "投信近 5 日賣超 -1.2千張",
+      "外資近 5 日賣超 -3.6千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-11"
+      "最近法人資料日：2026-09-14"
     ]
   },
   "industry": {
@@ -52,11 +51,11 @@
     "knowledgeBasis": "canonical_verified",
     "confidence": "medium",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 5 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "NOR Flash 與利基記憶體",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "旺宏MOPS直接支持積體電路、半導體零組件及系統應用產品之研發、製造與測試，利基記憶體角色成立；但MOPS未揭露特定容量、節點、車規等級或具名客戶。2026年7月營收77.25億元、MoM+11.0%、YoY+180.5%，公司說明受市場需求增加影響。",
+      "roleSummary": "旺宏在利基記憶體的具體產品由官方OctaBus頁與ST夥伴頁補證，恢復xSPI介面、LM/UM與LW/UW系列區別、SLC NAND及安全Flash，不僅是籠統IC。STMicroelectronics為有官方來源的生態系夥伴，不等同直接採購客戶。2026年8月營收81.45億元，MoM+5.44%、YoY+218.53%，1–8月累計YoY+149.14%；公司整體數據不能完全歸因本題材。",
       "supplyChainStage": "memory_ic",
       "roleType": "nor_flash_and_non_volatile_memory_supplier",
       "directness": "core",
@@ -97,7 +96,7 @@
       "直接度 核心產品/平台 +42",
       "角色信心 medium +10",
       "題材 NOR Flash 與利基記憶體（product/active） +16",
-      "角色證據 5 則 +12",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -169,7 +168,7 @@
         "financials:2337"
       ],
       "freshness": "fresh",
-      "lastVerified": "2026-09-11"
+      "lastVerified": "2026-09-14"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -199,7 +198,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "旺宏MOPS直接支持積體電路、半導體零組件及系統應用產品之研發、製造與測試，利基記憶體角色成立；但MOPS未揭露特定容量、節點、車規等級或具名客戶。2026年7月營收77.25億元、MoM+11.0%、YoY+180.5%，公司說明受市場需求增加影響。"
+        "roleSummary": "旺宏在利基記憶體的具體產品由官方OctaBus頁與ST夥伴頁補證，恢復xSPI介面、LM/UM與LW/UW系列區別、SLC NAND及安全Flash，不僅是籠統IC。STMicroelectronics為有官方來源的生態系夥伴，不等同直接採購客戶。2026年8月營收81.45億元，MoM+5.44%、YoY+218.53%，1–8月累計YoY+149.14%；公司整體數據不能完全歸因本題材。"
       },
       {
         "topicId": "ic-design",
@@ -291,7 +290,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 64,
+    "totalScore": 48,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 30,
@@ -313,15 +312,15 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：123.70",
-      "波段多空分水嶺看 MA20：123.45",
-      "追蹤法人是否延續 賣超：最近 -1.6千張",
+      "短線支撐/壓力先看 MA5：122.00",
+      "波段多空分水嶺看 MA20：122.78",
+      "追蹤法人是否延續 賣超：最近 -6.2千張",
       "月營收年增率 +44.9%，觀察基本面是否支撐估值",
-      "本益比 28.2 倍，需和同族群估值比較"
+      "本益比 27.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
-      "收盤突破 20 日高點 135.00 且量比 > 1.5：列為轉強訊號",
-      "收盤跌破 20 日低點 115.00：列為轉弱警訊",
+      "收盤突破 20 日高點 133.50 且量比 > 1.5：列為轉強訊號",
+      "收盤跌破 20 日低點 114.50：列為轉弱警訊",
       "三大法人連 3 日同向買/賣超：提高籌碼分數權重"
     ]
   }

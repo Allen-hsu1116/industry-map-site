@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2330",
   "name": "台積電",
-  "generatedAt": "2026-09-11T12:32:06.992Z",
+  "generatedAt": "2026-09-14T12:33:11.150Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-11",
-  "chipDataDate": "2026-09-11",
+  "marketDataDate": "2026-09-14",
+  "chipDataDate": "2026-09-14",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -17,30 +17,32 @@
   "technical": {
     "stance": "neutral",
     "label": "中性震盪",
-    "score": 0,
+    "score": -10,
     "summary": "台積電 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
     "signals": [
       "均線結構偏震盪，尚未形成明確排列"
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "接近 20 日低點 2335.00，留意支撐是否失守"
     ]
   },
   "chips": {
-    "stance": "accumulation",
-    "label": "籌碼偏多",
-    "score": 36,
-    "summary": "台積電 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +8.7千張；近 20 日法人偏買，合計 +6.3千張。",
+    "stance": "distribution",
+    "label": "籌碼偏空",
+    "score": -20,
+    "summary": "台積電 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +905張；三大法人近 5 日合計賣超 -1.8萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +8.7千張",
-      "近 20 日法人偏買，合計 +6.3千張",
-      "投信近 5 日買超 +5張",
-      "外資近 5 日買超 +8.9千張"
+      "投信近 5 日買超 +905張"
     ],
-    "risks": [],
+    "risks": [
+      "三大法人近 5 日合計賣超 -1.8萬張",
+      "近 20 日法人偏賣，合計 -6.7千張",
+      "外資近 5 日賣超 -1.8萬張"
+    ],
     "watch": [
-      "最近法人資料日：2026-09-11"
+      "最近法人資料日：2026-09-14"
     ]
   },
   "industry": {
@@ -132,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "needs_review",
-      "lastVerified": "2026-09-11"
+      "lastVerified": "2026-09-14"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -172,7 +174,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台積電MOPS明確揭露依客戶設計製造與銷售積體電路及晶圓半導體裝置，並提供封裝測試、IC電腦輔助設計與光罩服務，是晶圓代工核心角色。2026年7月營收4,675.81億元，MoM+5.6%、YoY+44.7%，累計YoY+37.0%，先進製程需求推升整體動能。"
+        "roleSummary": "台積電為依客戶設計製造IC與晶圓裝置的核心晶圓代工角色。官方2026股東會確認N2已於2025年第四季量產，N2P／A16仍表述為2026下半年規劃，不以時間到期推定已量產；N3A與N2A亦須區分生產平台和未來驗證計畫。 2026年8月營收5,148.05億元，MoM+10.10%、YoY+53.32%，累計YoY+39.26%。此為公司整體營收，無法全數歸因本題材。"
       },
       {
         "topicId": "ai-server",
@@ -301,8 +303,8 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 72,
-    "recommendationState": "top_candidate",
+    "totalScore": 60,
+    "recommendationState": "watchlist",
     "fundamental": {
       "score": 24,
       "label": "基本面中性",
@@ -310,13 +312,12 @@
         "月營收 YoY +20.4%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 9.7 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 9.6 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
       "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
@@ -325,11 +326,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：2451.00",
-      "波段多空分水嶺看 MA20：2411.00",
-      "追蹤法人是否延續 賣超：最近 -8.8千張",
+      "短線支撐/壓力先看 MA5：2435.00",
+      "波段多空分水嶺看 MA20：2410.00",
+      "追蹤法人是否延續 賣超：最近 -1萬張",
       "月營收年增率 +20.4%，觀察基本面是否支撐估值",
-      "本益比 27.9 倍，需和同族群估值比較"
+      "本益比 27.6 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 2505.00 且量比 > 1.5：列為轉強訊號",

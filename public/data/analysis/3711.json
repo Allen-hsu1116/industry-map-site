@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3711",
   "name": "日月光投控",
-  "generatedAt": "2026-09-11T12:32:07.346Z",
+  "generatedAt": "2026-09-14T12:33:11.522Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-11",
-  "chipDataDate": "2026-09-11",
+  "marketDataDate": "2026-09-14",
+  "chipDataDate": "2026-09-14",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -24,61 +24,58 @@
     ],
     "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇"
+      "股價貼近 MA20，留意方向選擇",
+      "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
-    "score": 25,
-    "summary": "日月光投控 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +2.6萬張；近 20 日法人偏買，合計 +1.5萬張。",
+    "score": 41,
+    "summary": "日月光投控 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +7千張；近 20 日法人偏買，合計 +1.1萬張。",
     "signals": [
-      "三大法人近 5 日合計買超 +2.6萬張",
-      "近 20 日法人偏買，合計 +1.5萬張",
-      "外資近 5 日買超 +2.6萬張",
-      "融資近 5 日下降 20.0%，籌碼壓力下降"
+      "三大法人近 5 日合計買超 +7千張",
+      "近 20 日法人偏買，合計 +1.1萬張",
+      "投信近 5 日買超 +396張",
+      "外資近 5 日買超 +7.7千張",
+      "融資近 5 日下降 18.3%，籌碼壓力下降"
     ],
-    "risks": [
-      "投信近 5 日賣超 -136張"
-    ],
+    "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-11",
-      "融券近 5 日增加 26.3%，留意軋空或空方壓力"
+      "最近法人資料日：2026-09-14"
     ]
   },
   "industry": {
-    "label": "題材關聯明確",
-    "score": 70,
-    "knowledgeBasis": "canonical_verified",
+    "label": "題材關聯待驗證",
+    "score": 40,
+    "knowledgeBasis": "canonical_pending",
     "confidence": "medium",
-    "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 2 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "provenanceLabel": "V2 待驗證",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=medium、evidence=3；只做保守參考。",
     "roleDetail": {
-      "topicName": "先進封裝與 CoWoS",
-      "roleLabel": "間接受惠",
-      "roleSummary": "日月光投控本體MOPS只揭露一般投資業；封裝、測試與電子製造能力必須明確視為集團子公司範圍，不能當作投控本體產品或具名客戶關係。2026年7月合併營收737.84億元、YoY+43.2%、累計YoY+25.1%，未拆分先進封裝貢獻。",
-      "supplyChainStage": "holding_company_group_packaging",
-      "roleType": "group_level_advanced_packaging_exposure",
-      "directness": "indirect",
+      "topicName": "矽光子、CPO 與高速光通訊",
+      "roleLabel": "供應商角色",
+      "roleSummary": "日月光投控母公司MOPS業務為一般投資業，但旗下ASE於2025-04-01正式展示VIPack CPO多光引擎封裝，不能把已公開的子公司技術降為純推定。此角色屬集團光電封裝技術，產品狀態是已展示；本次未取得量產客戶與CPO收入拆分。2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，1–8月累計YoY+27.98%；公司整體數據不能完全歸因本題材。",
+      "supplyChainStage": "group_optical_packaging",
+      "roleType": "group_cpo_packaging_demonstrator",
+      "directness": "supplier",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "電子製造服務 EMS",
-        "description": "EMS 是電子產品與模組的代工製造服務，涵蓋組裝、測試與供應鏈管理。",
-        "whyItMatters": "日月光投控同時具備封測與電子製造服務曝險，能承接從晶片到模組/系統組裝的後段需求。",
-        "topicFit": "封裝到模組整合的延伸",
-        "businessImpact": "此項為集團層級摘要，需以分部營收與公司揭露確認權重。",
-        "sourceLabels": [
-          "公開資訊觀測站 MOPS：日月光投控 公司基本資料與公開揭露",
-          "FinMind：Taiwan Stock Market Datasets"
-        ],
-        "sourceUrls": [
-          "https://mops.twse.com.tw/mops/web/t05st03?co_id=3711",
-          "https://finmindtrade.com/analysis/#/data/api"
-        ],
-        "lastVerified": "2026-05-28",
-        "confidence": "medium"
+        "name": "集團ASE VIPack CPO多光引擎共封裝展示方案",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "集團ASE光引擎與ASIC大尺寸基板整合方案",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
+      },
+      {
+        "name": "集團ASE水平／垂直光纖耦合封裝製程方案",
+        "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
+        "confidence": "low"
       }
     ],
     "swotSnapshot": {
@@ -94,36 +91,37 @@
       ]
     },
     "scoringFactors": [
-      "直接度 間接受惠 +8",
+      "直接度 供應商角色 +26",
       "角色信心 medium +10",
-      "題材 先進封裝與 CoWoS（process/active） +16",
-      "角色證據 2 則 +12",
+      "題材 矽光子、CPO 與高速光通訊（technology/active） +17",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
-      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
+      "V2 角色待驗證上限 / 缺 evidence 降權（原 81，上限 40）"
     ],
-    "summary": "日月光投控 在「先進封裝與 CoWoS」的 V2 角色為「間接受惠」，資料基礎為「V2 已驗證」，產業 score 70/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
+    "summary": "日月光投控 在「矽光子、CPO 與高速光通訊」的 V2 角色為「供應商角色」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：先進封裝與 CoWoS · 間接受惠 · medium",
-      "產業評分：70/100（直接度 間接受惠 +8；角色信心 medium +10；題材 先進封裝與 CoWoS（process/active） +16）",
+      "資料基礎：V2 待驗證（medium）",
+      "V2 題材角色：矽光子、CPO 與高速光通訊 · 供應商角色 · medium",
+      "產業評分：40/100（直接度 供應商角色 +26；角色信心 medium +10；題材 矽光子、CPO 與高速光通訊（technology/active） +17）",
+      "相關題材：先進封裝與 CoWoS · 間接受惠",
       "相關題材：AI 伺服器整機與 EMS · 間接受惠",
-      "相關題材：矽光子、CPO 與高速光通訊 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
+      "已有 V2 role，但 status=candidate、confidence=medium、evidence=3；只做保守參考。",
       "V2 W：在晶圓代工題材中屬封測角色，非核心代工業務。",
       "V2 T：半導體景氣循環、先進封裝資本支出及同業競爭，可能增加稼動率與毛利波動。"
     ],
     "watch": [
       "V2 O：AI 與 HPC 對先進封裝測試需求提升，可望擴大高階覆晶與系統級封裝商機。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
+      "追蹤 矽光子、CPO 與高速光通訊：月營收或訂單能見度改善",
+      "追蹤 矽光子、CPO 與高速光通訊：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "追蹤 先進封裝與 CoWoS：月營收或訂單能見度改善",
-      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 AI 伺服器整機與 EMS：月營收或訂單能見度改善",
-      "追蹤 AI 伺服器整機與 EMS：官方公告、年報或重大訊息揭露新產品/客戶/產能"
+      "追蹤 先進封裝與 CoWoS：官方公告、年報或重大訊息揭露新產品/客戶/產能"
     ]
   },
   "knowledge": {
@@ -137,7 +135,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-11"
+      "lastVerified": "2026-09-14"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -160,6 +158,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "silicon-photonics-optical-comm",
+        "topicName": "矽光子、CPO 與高速光通訊",
+        "canonicalTopicId": "silicon-photonics-optical-comm",
+        "canonicalTopicName": "矽光子、CPO 與高速光通訊",
+        "directness": "supplier",
+        "directnessLabel": "供應商角色",
+        "confidence": "medium",
+        "roleSummary": "日月光投控母公司MOPS業務為一般投資業，但旗下ASE於2025-04-01正式展示VIPack CPO多光引擎封裝，不能把已公開的子公司技術降為純推定。此角色屬集團光電封裝技術，產品狀態是已展示；本次未取得量產客戶與CPO收入拆分。2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，1–8月累計YoY+27.98%；公司整體數據不能完全歸因本題材。"
+      },
+      {
         "topicId": "advanced-packaging",
         "topicName": "先進封裝與 CoWoS",
         "canonicalTopicId": "advanced-packaging",
@@ -180,24 +188,14 @@
         "roleSummary": "母公司MOPS為一般投資業；集團日月光官方VIPack頁面明確支持AI／HPC異質封裝，並非僅憑控股業務推測。產品皆標記子公司範圍，定位AI伺服器上游封裝支援，不是母公司直接製造整機。本次TWSE最新回傳：2026年7月營收737.84億元，MoM+12.16%、YoY+43.15%，累計YoY+25.13%。公司整體營收不可直接歸因本題材。"
       },
       {
-        "topicId": "silicon-photonics-optical-comm",
-        "topicName": "矽光子、CPO 與高速光通訊",
-        "canonicalTopicId": "silicon-photonics-optical-comm",
-        "canonicalTopicName": "矽光子、CPO 與高速光通訊",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "日月光投控MOPS僅揭露一般投資業，不能由母公司登記直接證明矽光子封裝規格或客戶；本角色限縮為集團旗下封測事業可能承接的光電晶片封裝、測試與系統級封裝能力，屬集團／子公司範圍且非母公司直接產品。2026年7月合併營收737.84億元、MoM+12.2%、YoY+43.2%，但公司未把成長歸因矽光子。"
-      },
-      {
         "topicId": "wafer-foundry",
         "topicName": "晶圓代工與第三代半導體",
         "canonicalTopicId": "wafer-foundry",
         "canonicalTopicName": "晶圓代工與第三代半導體",
         "directness": "indirect",
         "directnessLabel": "間接受惠",
-        "confidence": "low",
-        "roleSummary": "日月光投控MOPS主要經營業務僅為一般投資業，母公司本身不是晶圓代工廠；本題材只能以集團旗下封裝測試與電子製造服務承接晶圓製造後段，屬間接角色。2026年7月營收737.84億元，MoM+12.2%、YoY+43.2%，累計YoY+25.1%，為集團整體數據，不能視為晶圓代工收入。"
+        "confidence": "high",
+        "roleSummary": "日月光投控母公司MOPS為一般投資業，官方子公司ASE產品頁則直接支持凸塊、覆晶、晶圓級及扇出封裝。在晶圓代工題材是已確認的集團後段互補服務，不是前段晶圓製造，也不把投控合併營收稱為晶圓代工營收。 2026年8月營收822.47億元，MoM+11.47%、YoY+45.66%，累計YoY+27.98%。此為公司整體營收，無法全數歸因本題材。"
       }
     ],
     "swot": [
@@ -240,6 +238,17 @@
     ],
     "topics": [
       {
+        "id": "silicon-photonics-optical-comm",
+        "name": "矽光子、CPO 與高速光通訊",
+        "type": "technology",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
         "id": "advanced-packaging",
         "name": "先進封裝與 CoWoS",
         "type": "process",
@@ -254,17 +263,6 @@
         "id": "ai-server",
         "name": "AI 伺服器整機與 EMS",
         "type": "theme",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
-      {
-        "id": "silicon-photonics-optical-comm",
-        "name": "矽光子、CPO 與高速光通訊",
-        "type": "technology",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -298,7 +296,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 64,
+    "totalScore": 56,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 24,
@@ -307,26 +305,31 @@
         "月營收 YoY +19.2%，成長動能明確"
       ],
       "risks": [
-        "股價淨值比 7.0 倍偏高，需和 ROE/成長性比對"
+        "股價淨值比 6.9 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
-      "classification": "題材股",
+      "classification": "觀察股",
       "rationale": [
         "籌碼面有法人/信用籌碼支撐",
-        "題材角色已 evidence-backed，可納入題材股策略",
         "基本面成長可支撐估值與題材敘事"
       ]
     },
-    "riskGates": []
+    "riskGates": [
+      {
+        "id": "risk.topic-evidence",
+        "severity": "soft",
+        "message": "題材角色尚未 evidence-backed，只能保守參考"
+      }
+    ]
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：629.40",
-      "波段多空分水嶺看 MA20：604.35",
-      "追蹤法人是否延續 賣超：最近 -7.8千張",
+      "短線支撐/壓力先看 MA5：627.60",
+      "波段多空分水嶺看 MA20：604.20",
+      "追蹤法人是否延續 賣超：最近 -106張",
       "月營收年增率 +19.2%，觀察基本面是否支撐估值",
-      "本益比 44.7 倍，需和同族群估值比較"
+      "本益比 44.3 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 653.00 且量比 > 1.5：列為轉強訊號",

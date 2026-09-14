@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3189",
   "name": "景碩",
-  "generatedAt": "2026-09-11T12:32:07.232Z",
+  "generatedAt": "2026-09-14T12:33:11.404Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-11",
-  "chipDataDate": "2026-09-11",
+  "marketDataDate": "2026-09-14",
+  "chipDataDate": "2026-09-14",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,34 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "neutral",
-    "label": "中性震盪",
-    "score": 0,
-    "summary": "景碩 技術面目前為「中性震盪」：均線結構偏震盪，尚未形成明確排列。",
-    "signals": [
-      "均線結構偏震盪，尚未形成明確排列"
+    "stance": "bearish",
+    "label": "偏空",
+    "score": -45,
+    "summary": "景碩 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.5%。",
+    "signals": [],
+    "risks": [
+      "收盤價、MA5、MA20 呈空頭排列",
+      "收盤跌破 MA20 4.5%"
     ],
-    "risks": [],
     "watch": [
-      "股價貼近 MA20，留意方向選擇",
       "量能低於 20 日均量，突破訊號可信度較低"
     ]
   },
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": 16,
-    "summary": "景碩 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +69張；投信近 5 日買超 +189張。",
+    "score": 0,
+    "summary": "景碩 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.8千張；外資近 5 日買超 +2.5千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +69張",
-      "投信近 5 日買超 +189張",
-      "外資近 5 日買超 +328張"
+      "三大法人近 5 日合計買超 +1.8千張",
+      "外資近 5 日買超 +2.5千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -6.7千張"
+      "近 20 日法人偏賣，合計 -8.1千張",
+      "投信近 5 日賣超 -146張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-11"
+      "最近法人資料日：2026-09-14"
     ]
   },
   "industry": {
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-11"
+      "lastVerified": "2026-09-14"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -184,7 +184,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "medium",
-        "roleSummary": "景碩MOPS僅概括揭露電子零組件製造與電子材料買賣，未證實HBM專用載板、TSV製程或具名記憶體客戶；本題材限於高階IC載板對HBM封裝生態的間接曝險。2026年7月營收45.49億元，MoM+7.7%、YoY+35.9%，累計YoY+30.7%，但公司整體成長不能直接歸因HBM。"
+        "roleSummary": "景碩MOPS業務登記概括，但官網直接確認FC-BGA、FCCSP、PBGA與射頻載板。HBM題材僅為運算晶片封裝載板的間接應用：高腳數CPU/GPU載板不是HBM晶粒、TSV堆疊或矽中介層，也未確認HBM專用訂單。2026年8月營收48.10億元，MoM+5.73%、YoY+40.58%。營收為公司整體口徑，不等同本題材收入。"
       }
     ],
     "swot": [
@@ -282,7 +282,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 67,
+    "totalScore": 55,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
@@ -292,8 +292,8 @@
         "月營收 MoM +3.4%，短期動能改善"
       ],
       "risks": [
-        "本益比 152.5 倍，需防估值壓縮",
-        "股價淨值比 9.7 倍偏高，需和 ROE/成長性比對"
+        "本益比 148.1 倍，需防估值壓縮",
+        "股價淨值比 9.5 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -307,11 +307,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：814.80",
-      "波段多空分水嶺看 MA20：840.60",
-      "追蹤法人是否延續 買超：最近 +581張",
+      "短線支撐/壓力先看 MA5：811.80",
+      "波段多空分水嶺看 MA20：835.25",
+      "追蹤法人是否延續 賣超：最近 -1.1千張",
       "月營收年增率 +26.8%，觀察基本面是否支撐估值",
-      "本益比 152.5 倍，需和同族群估值比較"
+      "本益比 148.1 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 960.00 且量比 > 1.5：列為轉強訊號",
