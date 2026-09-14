@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6169",
   "companyName": "昱泉",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -81,21 +81,20 @@
       "topicName": "Edge AI / AIoT 邊緣智慧",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "software_content_outside_aiot",
-      "roleType": "game_and_education_software_adjacent",
-      "roleSummary": "昱泉MOPS只揭露遊戲及教育軟體研發、生產、代理與銷售，沒有Edge AI、AIoT硬體、端側模型或AI產品收入；原角色中的小型語言模型、ONNX與NPU規格均無資料支持，已刪除。FinMind顯示2026年7月營收僅2.3萬元、MoM-42.5%、YoY-99.2%。",
+      "supplyChainStage": "game_software_outside_edge_ai",
+      "roleType": "game_and_education_content_outside_aiot",
+      "roleSummary": "昱泉MOPS與官網確認遊戲、授權發行及教育軟體；官網已有2026年新遊戲公告，不能沿用7月2.3萬元而聲稱完全沒有營運活動。惟未取得Edge AI硬體、NPU或端側推論產品證據，本題材維持題外軟體內容觀察。8月FinMind營收回升仍是小規模、極低基期資料，不能推論AI商業化。 2026年8月營收121.40萬元，MoM+5178.26%、YoY+148.26%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "遊戲軟體研發服務",
-        "教育軟體產品",
-        "遊戲軟體代理服務",
-        "數位遊戲內容銷售",
-        "教育互動內容製作"
+        "《我在三國當村長》代理發行服務（2026年8月事前預約）",
+        "《M2神甲奇兵M》遊戲產品（官方2026年5月公告）",
+        "跨平台3D動作遊戲研發",
+        "遊戲IP授權與委託開發服務",
+        "數位幼教互動學習平台（官方歷來業務範圍）"
       ],
       "customers": [
-        "Microsoft（遊戲平台生態對象，非MOPS揭露客戶）",
-        "Apple（行動應用平台生態對象，非MOPS揭露客戶）",
-        "Google（行動應用平台生態對象，非MOPS揭露客戶）",
-        "Unity Technologies（遊戲引擎生態對象，非MOPS揭露合作關係）"
+        "Apple（行動遊戲平台生態對象，未確認採購或合作）",
+        "Google（行動遊戲發行平台生態對象，未確認採購或合作）",
+        "Microsoft（遊戲平台生態對象，未確認採購或合作）"
       ],
       "competitors": [
         "智冠(5478)",
@@ -103,64 +102,63 @@
         "橘子(6180)"
       ],
       "risks": [
-        "MOPS未揭露Edge AI或AIoT產品，題材幾乎沒有直接營運支持",
-        "7月營收僅2.3萬元且YoY-99.2%，商業規模極小"
+        "8月營收僅121.40萬元；7月基期只有2.30萬元，MoM倍增不能代表已形成穩健商業規模。",
+        "未揭露Edge AI／AIoT產品，FinMind也沒有本輪單月成長的公司說明，不能自行歸因新遊戲。",
+        "遊戲生命周期、IP授權成本及獲客費用可能使小規模收入難以負擔研發。",
+        "大型平台提供標準AI工具並不會自動轉化為昱泉的端側AI競爭優勢。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind fallback：2026年7月營收2.3萬元，MoM-42.5%"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 6169 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售。"
+          "claim": "MOPS主要經營業務：遊戲及教育軟體研究開發、生產、代理及銷售",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
-          "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "2026年7月月營收",
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind MCP",
+          "title": "2026-09-15 6169 2026年8月月營收核對",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收2.3萬元，MoM-42.5%、YoY-99.2%。"
+          "claim": "2026年8月營收121.40萬元，MoM+5178.26%、YoY+148.26%。 原始單位：NTD。TWSE主查無資料，FinMind MCP回補。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-6169-edge-ai-aiot-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "昱泉官方產品、服務與2026年新聞",
+          "url": "https://www.interserv.com.tw/",
+          "claim": "確認3D動作遊戲、跨平台手遊、授權／自研／發行／訂製及幼教平台歷來業務；8月《我在三國當村長》預約與5月《M2神甲奇兵M》公告，未揭露Edge AI產品。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-15",
       "status": "candidate",
       "techFocus": [
-        "遊戲引擎腳本、內容資產與跨平台建置流程",
-        "連線遊戲內容更新、帳號與營運資料管理",
-        "教育內容互動流程與學習進度追蹤設計"
+        "3D動作遊戲的動畫、資產與跨平台版本整合（依官方產品範圍的工程分析）",
+        "手遊發行的帳號、內容更新與授權地區管理（工程分析，非已揭露AI模型）",
+        "幼教互動內容與學習流程設計（歷來業務範圍，非已證實AIoT產品）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS支持遊戲與教育軟體研發、代理及銷售能力",
-          "具軟體內容製作基礎，可觀察未來是否導入端側AI功能"
-        ],
         "weaknesses": [
-          "沒有Edge AI、AIoT硬體或AI產品收入揭露",
-          "7月營收2.3萬元、MoM-42.5%、YoY-99.2%"
+          "8月營收僅121.40萬元；7月基期只有2.30萬元，MoM倍增不能代表已形成穩健商業規模。",
+          "未揭露Edge AI／AIoT產品，FinMind也沒有本輪單月成長的公司說明，不能自行歸因新遊戲。",
+          "2026年8月營收121.40萬元，MoM+5178.26%、YoY+148.26%。需區分基期、認列節奏與可持續出貨。"
         ],
         "opportunities": [
-          "端側推論成熟後，遊戲與教育軟體可加入離線互動功能",
-          "既有內容資產可用於教育情境與互動產品迭代"
+          "2026年新遊戲代理與預約活動可觀察後續實際付費轉換，但未證實持續收入。",
+          "跨平台內容與教育互動可作未來AI功能研究情境，需有產品發布與營收證據。"
         ],
         "threats": [
-          "大型遊戲引擎與平台商可直接提供AI功能，壓縮差異化",
-          "營收規模過小可能不足以支撐持續研發與商業化"
+          "遊戲生命周期、IP授權成本及獲客費用可能使小規模收入難以負擔研發。",
+          "大型平台提供標準AI工具並不會自動轉化為昱泉的端側AI競爭優勢。"
+        ],
+        "strengths": [
+          "官方近期遊戲公告與授權、研發、發行服務，提供可辨識的產品及營運活動證據。",
+          "官方2026年遊戲公告提供近期營運活動證據，但不能證明Edge AI商業化。"
         ]
       }
     },

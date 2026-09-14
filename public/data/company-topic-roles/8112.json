@@ -2,28 +2,28 @@
   "schemaVersion": 1,
   "companyCode": "8112",
   "companyName": "至上",
-  "updatedAt": "2026-09-11T19:17:38Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
       "topicName": "儲能、電芯與電池材料",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "component_distribution_adjacent",
-      "roleType": "electronic_component_distributor",
-      "roleSummary": "至上MOPS只揭露電子零組件經銷，沒有揭露電芯、電池模組、BMS、PCS或儲能客戶；本題材僅能視為儲能控制板可能採用的電子元件通路鄰近者。2026年7月營收768.74億元、YoY+333.5%、MoM+24.7%，公司明確說明主因是記憶體漲價與伺服器、手機拉貨，不能歸因於儲能。",
+      "supplyChainStage": "memory_distribution_and_backup_power_adjacent",
+      "roleType": "distributor_adjacent_to_storage_controls",
+      "roleSummary": "至上MOPS為電子通路；官方記憶體及整合方案頁確認Samsung代理與Schneider UPS／PDU／監控資源，取代舊版未有證據的BMS、保護MOSFET及感測器產品拼湊。三星SDI頁實際介紹偏光片／電子材料，不是電芯代理證據。本題材為控制電子及機房備援的間接鄰近者，沒有確認定置儲能電芯、BMS或PCS出貨。 2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%，累計YoY+177.42%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "電池管理IC通路方案（儲能應用）",
-        "功率半導體通路方案（PCS應用）",
-        "記憶體元件通路方案（EMS控制器應用）",
-        "電流與溫度感測元件通路方案",
-        "保護MOSFET與浪湧保護元件通路方案"
+        "Samsung DDR4／DDR5記憶體代理方案",
+        "Samsung企業級SSD與Flash通路方案",
+        "Schneider Electric UPS不斷電方案資源",
+        "Rack PDU機櫃電源分配方案",
+        "EcoStruxure資料中心電力監控方案"
       ],
       "customers": [
-        "台達電(2308；儲能應用對象，非MOPS揭露客戶)",
-        "AES-KY(6781；電池模組應用對象，非MOPS揭露客戶)",
-        "新盛力(4931；BMS應用對象，非MOPS揭露客戶)",
-        "Samsung Electronics（記憶體供應鏈對象，MOPS未揭露代理關係）"
+        "Samsung Electronics（官網確認記憶體代理原廠，屬上游供應商而非客戶）",
+        "Schneider Electric（官網列電力與監控方案資源，非據此確認儲能客戶）",
+        "台達電（儲能控制系統應用情境，未確認採購）",
+        "AES-KY（電池系統應用情境，未確認採購）"
       ],
       "competitors": [
         "文曄(3036)",
@@ -31,64 +31,80 @@
         "益登(3048)"
       ],
       "risks": [
-        "MOPS未揭露儲能產品或客戶，直接曝險無法確認",
-        "通路毛利薄且庫存價格波動可能造成跌價損失"
+        "8月MoM下滑47.00%；YoY高成長備註指向記憶體價格、伺服器與手機拉貨，不是儲能。",
+        "Samsung SDI品牌出現在目錄不代表電芯代理；官網該頁為偏光片，未取得BESS產品／客戶證據。",
+        "記憶體價格反轉與大額備貨可能帶來庫存跌價及資金壓力。",
+        "把UPS或三星品牌直接等同電池儲能營收，會造成嚴重題材錯配。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 8112 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電子零組件經銷業務。"
+          "claim": "MOPS主要經營業務：電子零組件經銷業務",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 8112 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收768.74億元，MoM+24.7%、YoY+333.5%，累計YoY+180.4%；公司說明主因為記憶體價格上漲及伺服器、手機拉貨。"
+          "claim": "2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%，累計YoY+177.42%。 原始單位：NTD thousand。公司當月說明：營收大幅成長，主要係記憶體等零組件價格持續上漲，伺服器及手機客戶拉貨動能強勁所致。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-8112-energy-storage-battery-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "Samsung記憶體官方代理頁（HTTP表單導覽）",
+          "url": "https://www.supreme.com.tw/WP/WP0011.aspx",
+          "claim": "官方明列Samsung Electronics代理、DDR3／DDR4／DDR5、UDIMM／SODIMM／RDIMM；上游原廠不是客戶。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-8112-energy-storage-battery-2",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "整合型解決方案官方頁（HTTP表單導覽）",
+          "url": "https://www.supreme.com.tw/WP/WP0105.aspx",
+          "claim": "列Samsung記憶體／企業SSD／Flash，以及Schneider Electric UPS、Rack PDU、EcoStruxure與監控資源，未列BESS電芯或PCS自製。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-8112-energy-storage-battery-3",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "Samsung SDI官方代理頁（HTTP表單導覽）",
+          "url": "https://www.supreme.com.tw/WP/WP0019.aspx",
+          "claim": "內容為電子化學品／偏光片，不能只因Samsung SDI名稱就認定電芯代理。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-30",
+      "confidence": "medium",
+      "lastVerified": "2026-09-15",
       "status": "candidate",
       "techFocus": [
-        "BOM選型、替代料驗證與供應生命週期管理",
-        "功率與保護元件額定值、熱設計及安全裕度配套",
-        "批號追溯、庫存配置與客戶認證文件管理"
+        "Samsung記憶體方案列DDR4／DDR5及UDIMM、SODIMM、RDIMM（須依實際料號選型）",
+        "UPS、Rack PDU與EcoStruxure為機房備援、配電與監控方案，不等同定置BESS／PCS自製",
+        "儲能EMS控制器的記憶體選型、溫度等級與資料保存驗證（潛在應用工程分析）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS支持電子零組件經銷與供應鏈服務角色",
-          "7月營收768.74億元、YoY+333.5%、MoM+24.7%"
-        ],
         "weaknesses": [
-          "沒有揭露電池、BMS或PCS產品線",
-          "營收大增主因為記憶體價格與伺服器／手機拉貨，而非儲能"
+          "8月MoM下滑47.00%；YoY高成長備註指向記憶體價格、伺服器與手機拉貨，不是儲能。",
+          "Samsung SDI品牌出現在目錄不代表電芯代理；官網該頁為偏光片，未取得BESS產品／客戶證據。",
+          "2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%，累計YoY+177.42%。需區分基期、認列節奏與可持續出貨。",
+          "8月公司營收說明：營收大幅成長，主要係記憶體等零組件價格持續上漲，伺服器及手機客戶拉貨動能強勁所致。不得超出該說明推定特定產品或客戶。"
         ],
         "opportunities": [
-          "儲能控制器與PCS需要多種功率、感測及記憶體元件",
-          "元件短缺時通路庫存與替代料能力可提高服務價值"
+          "儲能EMS的運算及資料記錄可提供記憶體選型服務機會，仍需具體料號與設計導入證據。",
+          "UPS與電力監控可支援高可用機房，但應與電網級儲能市場分開分析。"
         ],
         "threats": [
-          "記憶體價格反轉可能造成營收與庫存評價下滑",
-          "大聯大、文曄等大型通路商具規模與代理線優勢"
+          "記憶體價格反轉與大額備貨可能帶來庫存跌價及資金壓力。",
+          "把UPS或三星品牌直接等同電池儲能營收，會造成嚴重題材錯配。"
+        ],
+        "strengths": [
+          "官方可確認記憶體代理與機房電力監控方案，具上游原廠支援與選型服務。",
+          "2026年8月營收407.41億元，MoM-47.00%、YoY+154.83%，累計YoY+177.42%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

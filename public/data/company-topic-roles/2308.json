@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2308",
   "companyName": "台達電",
-  "updatedAt": "2026-09-13T19:15:37Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "wafer-foundry",
@@ -120,21 +120,18 @@
       "topicType": "product",
       "directness": "core",
       "supplyChainStage": "power_and_backup",
-      "roleType": "power_system_provider",
-      "roleSummary": "台達電MOPS直接揭露電源供應系統、散熱系統與微型化關鍵零組件，能支援AI伺服器電源與備援架構；但MOPS沒有分列BBU規格、AI伺服器營收或具名雲端客戶。2026年7月營收670.73億元、MoM+2.2%、YoY+47.7%，累計YoY+42.1%。",
+      "roleType": "ai_rack_power_and_bbu_provider",
+      "roleSummary": "台達電MOPS支持電源供應與散熱系統；官方GTC 2026資料進一步確認800 VDC 660 kW電源機櫃、每層80 kW BBU及SST微電網方案，修正僅靠MOPS而將BBU規格視為未公開的舊版說法。這些是官方展示／新開發方案，不等於已取得雲端客戶量產訂單。 2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，累計YoY+41.06%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "伺服器用高功率電源供應系統",
-        "資料中心不斷電電源系統",
-        "機架式電力分配單元",
-        "直流電源轉換與備援模組",
-        "電源系統散熱與風扇模組"
+        "800 VDC In-Row 660 kW電源機櫃（GTC 2026展示）",
+        "80 kW BBU電池備援單元（該機櫃每層配置）",
+        "固態變壓器SST微電網供電方案（GTC 2026展示）"
       ],
       "customers": [
-        "NVIDIA（AI平台應用對象，非MOPS揭露客戶）",
-        "Microsoft（資料中心應用對象，非MOPS揭露客戶）",
-        "Google（資料中心應用對象，非MOPS揭露客戶）",
-        "Meta Platforms（AI叢集應用對象，非MOPS揭露客戶）",
-        "Amazon Web Services（雲端資料中心應用對象，非MOPS揭露客戶）"
+        "NVIDIA（官網確認GTC展示及Omniverse平台應用，非據此確認採購）",
+        "Microsoft（AI資料中心電力應用對象，未確認客戶關係）",
+        "Amazon Web Services（雲端機房備援應用對象，未確認客戶關係）",
+        "Google（高密度機架供電應用對象，未確認客戶關係）"
       ],
       "competitors": [
         "光寶科(2301)",
@@ -142,8 +139,10 @@
         "群電(6412)"
       ],
       "risks": [
-        "MOPS未分列BBU與AI伺服器電源收入，題材貢獻仍需法說驗證",
-        "功率半導體成本與雲端資本支出週期會影響需求"
+        "展示機櫃未提供訂單、出貨量或BBU可用能量，不能自行推算備援時間。",
+        "全公司營收涵蓋多類產品，AI電源與BBU的個別收入、毛利仍未分拆。",
+        "高壓直流安全規範、雲端平台認證與架構切換可能拉長導入週期。",
+        "光寶及國際電源商競爭，且資料中心資本支出波動會影響設備拉貨。"
       ],
       "legacy": {
         "topicSlug": "psu",
@@ -167,43 +166,54 @@
         },
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 2308 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電源供應系統、無刷直流風扇、散熱系統、微型化關鍵零組件、工業自動化等。"
+          "claim": "MOPS主要經營業務：電源供應系統、無刷直流風扇、散熱系統、微型化關鍵零組件、電動車電源相關系統、工業自動化、視訊顯示、資訊、網路通訊消費性電子、可再生能源應用、智慧樓宇管理與控制解決方案等",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 2308 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收670.73億元，MoM+2.2%、YoY+47.7%，累計YoY+42.1%。"
+          "claim": "2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，累計YoY+41.06%。 原始單位：NTD thousand。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-2308-ai-server-power-backup-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "2026年4月品牌雙月刊：GTC 2026電力展示",
+          "url": "https://brandnews.deltaww.com/EN/IoTSolutionsDetail/12772",
+          "claim": "800 VDC In-Row 660kW Power Racks、每層80kW BBU／合計480kW、AC-DC效率最高98%，及SST微電網展示；未聲稱全數量產或特定雲端採購。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-30",
+      "confidence": "high",
+      "lastVerified": "2026-09-15",
       "status": "verified",
       "techFocus": [
-        "高功率AC/DC轉換、功率因數校正與效率管理",
-        "冗餘電源熱插拔、故障隔離與備援切換",
-        "電池管理、直流匯流排與機架級電源監控整合"
+        "GTC 2026展示機櫃採800 VDC／660 kW，AC-DC效率最高98%（展示規格，非全系列保證值）",
+        "該機櫃每層嵌入80 kW BBU、總備援功率480 kW；kW為功率，未揭露kWh或備援時長",
+        "SST與儲能整合至微電網供電架構（官方展示方案，非已驗證大規模出貨）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS直接支持電源供應、散熱與關鍵零組件能力",
-          "7月營收670.73億元、YoY+47.7%，累計YoY+42.1%"
-        ],
         "weaknesses": [
-          "MOPS未揭露BBU規格、出貨量或具名客戶",
-          "公司產品線廣，整體營收成長不能全部歸因於AI電源"
+          "展示機櫃未提供訂單、出貨量或BBU可用能量，不能自行推算備援時間。",
+          "全公司營收涵蓋多類產品，AI電源與BBU的個別收入、毛利仍未分拆。",
+          "2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，累計YoY+41.06%。需區分基期、認列節奏與可持續出貨。"
         ],
         "opportunities": [
-          "AI機架功率提高，帶動高功率電源與備援需求",
-          "資料中心直流化與機架級監控提升系統整合價值"
+          "AI機架電流與配電損耗提升，使800 VDC架構的效率與系統整合能力更具價值。",
+          "機架備援與微電網協同可擴大從市電到運算設備的供電服務範圍。"
         ],
         "threats": [
-          "光寶科、康舒及國際電源廠競爭平台認證",
-          "雲端客戶架構切換或資本支出放緩可能造成拉貨波動"
+          "高壓直流安全規範、雲端平台認證與架構切換可能拉長導入週期。",
+          "光寶及國際電源商競爭，且資料中心資本支出波動會影響設備拉貨。"
+        ],
+        "strengths": [
+          "電源機櫃、BBU與上游微電網方案可共同處理AI機房高功率與備援需求。",
+          "2026年8月營收645.86億元，MoM-3.71%、YoY+34.95%，累計YoY+41.06%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

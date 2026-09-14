@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6168",
   "companyName": "宏齊",
-  "updatedAt": "2026-09-10T19:16:45Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "display-led-optics",
@@ -98,85 +98,90 @@
       "topicName": "矽光子、CPO 與高速光通訊",
       "topicType": "technology",
       "directness": "indirect",
-      "supplyChainStage": "smd_led_adjacent",
-      "roleType": "led_packaging_adjacent",
-      "roleSummary": "宏齊MOPS只揭露表面黏著發光二極體生產與銷售，未揭露矽光子、CPO、雷射光源、光檢測器或光收發模組；因此本題材只能保留為光電封裝能力的遠端鄰近觀察。2026年7月營收2.06億元、MoM+0.8%、YoY+12.8%。",
+      "supplyChainStage": "infrared_optoelectronics_adjacent_to_cpo",
+      "roleType": "led_and_photodiode_packaging_adjacent",
+      "roleSummary": "宏齊MOPS列SMD LED，但官網另有B17M1PD光二極體、紅外LED、光耦合器與CSP LED，故撤回舊版『沒有光檢測器產品』的過度否定。940nm／10ns等是特定紅外元件規格，不能據此認定其具備CPO或高速資料中心光收發器業務；本題材仍屬遠端光電能力觀察。 2026年8月營收2.21億元，MoM+7.70%、YoY+18.52%，累計YoY+9.29%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "表面黏著發光二極體封裝",
-        "小型化SMD LED指示元件",
-        "多色SMD LED封裝",
-        "顯示與背光用SMD LED"
+        "B17M1PD 940nm SMD光二極體",
+        "紅外線SMD LED發射元件",
+        "可見光SMD LED封裝",
+        "OptoCoupler光耦合器",
+        "CSP LED封裝"
       ],
       "customers": [
-        "億光(2393；LED封裝供應鏈對照，非MOPS揭露客戶)",
-        "光寶科(2301；光電應用對象，非MOPS揭露客戶)",
-        "聯亞(3081；高速光源供應鏈對照，非MOPS揭露客戶)",
-        "華星光(4979；光收發模組供應鏈對照，非MOPS揭露客戶）"
+        "光寶科（紅外線與光耦合應用生態對象，未確認交易）",
+        "聯亞（高速光通訊供應鏈比較對象，非已確認客戶）",
+        "華星光（高速光模組應用情境，未確認供貨或驗證）"
       ],
       "competitors": [
-        "億光(2393)",
-        "光寶科(2301)",
-        "Everlight Electronics"
+        "億光（LED與紅外元件比較對象）",
+        "光寶科（光耦合與紅外元件比較對象）"
       ],
       "risks": [
-        "MOPS沒有矽光子或高速光通訊產品，題材直接性極低",
-        "LED封裝價格競爭與產品同質化壓縮毛利"
+        "本輪未取得矽光子、CPO或高速光收發器的產品與收入證據。",
+        "紅外光二極體的存在及營收年增不能證明已切入AI資料中心核心光路。",
+        "將940nm感測元件套成CPO供應鏈會造成產品與估值錯配。",
+        "LED與紅外元件價格競爭，以及進入高速光通訊所需的新製程投資均有風險。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 6168 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：表面黏著發光二極體之生產與銷售。"
+          "claim": "MOPS主要經營業務：表面黏著發光二極體之生產與銷售",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 6168 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收2.06億元，MoM+0.8%、YoY+12.8%，累計YoY+7.8%。"
+          "claim": "2026年8月營收2.21億元，MoM+7.70%、YoY+18.52%，累計YoY+9.29%。 原始單位：NTD thousand。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-6168-silicon-photonics-optical-comm-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "B17M1PD官方規格",
+          "url": "https://www.harvatek.com/b17m1-series-1",
+          "claim": "SMD Photo Diode，2.0×1.3×0.8 mm、940nm、Rise/Fall 10/10 ns；不是高速CPO資格證據。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-6168-silicon-photonics-optical-comm-2",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "宏齊官方產品目錄",
+          "url": "https://www.harvatek.com/products",
+          "claim": "列OptoCoupler、Infrared LED、Visible LED、Flipchip LED、CSP LED等。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-15",
       "status": "candidate",
       "techFocus": [
-        "SMD LED固晶、打線與封裝界面控制",
-        "螢光粉配方、色座標與亮度一致性分選",
-        "回焊耐熱、濕氣敏感度與封裝可靠度驗證"
+        "B17M1PD：2.0×1.3×0.8 mm、峰值波長940 nm、上升／下降時間10／10 ns（僅此型號）",
+        "紅外發射與接收元件的光譜匹配、暗電流及封裝可靠度（工程分析）",
+        "CSP LED與光耦合器屬光電封裝產品，不能推定具備矽光子耦光或高速雷射製程"
       ],
       "swot": {
-        "strengths": [
-          "MOPS直接支持SMD LED生產與銷售能力",
-          "7月營收2.06億元、YoY+12.8%，累計YoY+7.8%"
-        ],
         "weaknesses": [
-          "未揭露雷射、光檢測器、CPO或矽光子產品",
-          "公司整體成長不能視為高速光通訊營收"
+          "本輪未取得矽光子、CPO或高速光收發器的產品與收入證據。",
+          "紅外光二極體的存在及營收年增不能證明已切入AI資料中心核心光路。"
         ],
         "opportunities": [
-          "封裝可靠度與小型化能力可作為光電元件開發基礎",
-          "資料中心光連接成長可提供跨入新光源封裝的長期選項"
+          "既有紅外發射／接收產品可對應感測與控制需求，並累積封裝可靠度經驗。",
+          "若未來公開高速光源或接收元件驗證，才有條件重新評估光通訊直接性。"
         ],
         "threats": [
-          "矽光子採用雷射與光檢測器，SMD LED通常不在核心光路",
-          "億光、光寶及中國LED封裝廠價格競爭激烈"
+          "將940nm感測元件套成CPO供應鏈會造成產品與估值錯配。",
+          "LED與紅外元件價格競爭，以及進入高速光通訊所需的新製程投資均有風險。"
+        ],
+        "strengths": [
+          "官方可核驗紅外發射、光二極體及多種LED封裝，光電產品範圍比MOPS摘要更完整。",
+          "2026年8月營收2.21億元，MoM+7.70%、YoY+18.52%，累計YoY+9.29%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

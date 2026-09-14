@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "6173",
   "companyName": "信昌電",
-  "updatedAt": "2026-09-11T19:17:38Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "passive-components-mlcc",
@@ -288,20 +288,19 @@
       "topicName": "太陽能與離岸風電",
       "topicType": "theme",
       "directness": "indirect",
-      "supplyChainStage": "inverter_passives_adjacent",
-      "roleType": "passive_component_application_adjacent",
-      "roleSummary": "信昌電MOPS僅揭露晶片電容、晶片電阻與介電瓷粉，未揭露太陽能或風電專案；本題材只定位為逆變器控制板可能採用的被動元件供應鄰近者。FinMind顯示2026年7月營收5.37億元、MoM+6.6%、YoY+47.9%，但公司整體成長不能直接歸因於再生能源。",
+      "supplyChainStage": "inverter_passive_component_adjacency",
+      "roleType": "high_voltage_resistor_and_ceramic_material_supplier",
+      "roleSummary": "信昌電MOPS列電容、電阻與介電瓷粉，官方高壓電阻頁確認FVF、FVS與抗硫化AVF的厚膜系列；修正舊版把電阻一概描述為薄膜製程。本題材限於光伏／風電控制與分壓電路的元件應用鄰近性，不代表供應逆變器整機或已取得特定再生能源專案。 2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "高壓多層陶瓷晶片電容（逆變器濾波應用）",
-        "精密晶片電阻（電壓／電流取樣應用）",
-        "介電瓷粉（多層陶瓷電容介電層材料）",
-        "晶片電容／電阻組合（光伏控制板應用）"
+        "FVF高壓厚膜晶片電阻",
+        "FVS安規高壓厚膜晶片電阻",
+        "AVF抗硫化高壓厚膜晶片電阻",
+        "介電瓷粉（MLCC介電層材料）"
       ],
       "customers": [
-        "台達電(2308；逆變器應用對象，非MOPS揭露客戶)",
-        "茂迪(6244；光伏設備應用對象，非MOPS揭露客戶)",
-        "SMA Solar Technology（逆變器應用對象，非MOPS揭露客戶）",
-        "SolarEdge Technologies（逆變器應用對象，非MOPS揭露客戶）"
+        "台達電（逆變器控制與分壓應用對象，未確認採購）",
+        "SMA Solar Technology（太陽能逆變器應用對象，未確認採購）",
+        "SolarEdge Technologies（光伏控制電路應用對象，未確認採購）"
       ],
       "competitors": [
         "國巨(2327)",
@@ -309,64 +308,62 @@
         "太陽誘電(Taiyo Yuden)"
       ],
       "risks": [
-        "MOPS未揭露再生能源客戶或產品營收，題材歸因風險高",
-        "逆變器被動元件價格競爭與原料成本可能壓縮毛利"
+        "未取得太陽能或風電的具名專案、客戶認證及營收拆分。",
+        "系列最高電壓及元件AEC-Q200標示不能直接等同逆變器整機或風電使用認證。",
+        "日系與台灣被動元件供應者的認證與價格競爭可能限制市占。",
+        "光伏設備庫存與安裝需求波動，以及高壓安全失效風險，會影響導入。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 晶片電容、晶片電阻、介電瓷粉"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 6173 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉。"
+          "claim": "MOPS主要經營業務：晶片電容、晶片電阻、介電瓷粉",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
-          "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "2026年7月月營收",
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind MCP",
+          "title": "2026-09-15 6173 2026年8月月營收核對",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收5.37億元，MoM+6.6%、YoY+47.9%。"
+          "claim": "2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。 原始單位：NTD。TWSE主查無資料，FinMind MCP回補。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-6173-renewable-energy-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "信昌電高壓電阻官方目錄",
+          "url": "https://www.pdc.com.tw/high-voltage",
+          "claim": "FVF、FVS、AVF均為厚膜；FVF／AVF系列最高3000V，尺寸與阻值範圍依列分開；頁面列分壓與洩放用途，未指名再生能源客戶。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-15",
       "status": "candidate",
       "techFocus": [
-        "介電瓷粉粒徑、燒結與介電常數控制",
-        "多層陶瓷電容介電層與內電極共燒製程",
-        "晶片電阻薄膜阻值與雷射修整控制"
+        "FVF：厚膜、0603～2512、47Ω～100MΩ，系列最高工作電壓3000V（實際依型號／尺寸）",
+        "AVF：抗硫化厚膜、1206～2512、100kΩ～100MΩ；FVS為UL／IEC 62368_ed3對應系列",
+        "逆變器分壓與洩放電阻的功率降額、串聯分壓及爬電距離檢核（應用分析，非整機認證）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS直接支持晶片電容、晶片電阻與介電瓷粉產品組合",
-          "7月營收5.37億元，MoM+6.6%、YoY+47.9%"
-        ],
         "weaknesses": [
-          "MOPS沒有揭露太陽能、風電或逆變器產品",
-          "公司整體營收成長無法拆分為再生能源貢獻"
+          "未取得太陽能或風電的具名專案、客戶認證及營收拆分。",
+          "系列最高電壓及元件AEC-Q200標示不能直接等同逆變器整機或風電使用認證。"
         ],
         "opportunities": [
-          "光伏逆變器控制板需要高可靠度電容與精密取樣電阻",
-          "介電瓷粉垂直整合可支援高容量陶瓷元件開發"
+          "逆變器高壓分壓、洩放與控制板可提供高壓電阻應用評估機會。",
+          "工業環境的硫化與可靠度要求可能提升特殊電阻的設計價值。"
         ],
         "threats": [
-          "國巨、華新科與日系被動元件廠競爭激烈",
-          "再生能源裝置與逆變器庫存循環可能造成需求波動"
+          "日系與台灣被動元件供應者的認證與價格競爭可能限制市占。",
+          "光伏設備庫存與安裝需求波動，以及高壓安全失效風險，會影響導入。"
+        ],
+        "strengths": [
+          "具可查的高壓及抗硫化電阻系列，搭配MOPS介電瓷粉業務，產品不再只是泛稱被動元件。",
+          "2026年8月營收5.52億元，MoM+2.69%、YoY+54.27%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

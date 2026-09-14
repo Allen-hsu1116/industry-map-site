@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1301",
   "companyName": "台塑",
-  "updatedAt": "2026-08-31T19:06:27Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "petrochem-plastics",
@@ -11,20 +11,19 @@
       "directness": "core",
       "supplyChainStage": "upstream_petrochemical_materials",
       "roleType": "integrated_polymer_producer",
-      "roleSummary": "台塑MOPS直接揭露PVC、VCM、液鹼、PP、HDPE、EVA、LDPE／LLDPE、高吸水性樹脂、碳纖維與多種化學中間體，是石化塑料核心上游。2026年7月營收152.94億元、MoM+9.4%、YoY+4.8%，但累計YoY-2.5%，單月回升尚未扭轉全年壓力。",
+      "roleSummary": "台塑MOPS與官方產品總覽共同確認PVC、PP、各類PE、EVA及高吸水性樹脂，屬石化塑料上游核心供應者。本輪聚焦可核對的聚合物產品，不將碳纖維與SAP硬塞同一產品項，也不以集團關聯推定客戶交易。8月年增為正但月減、累計仍年減，不能宣稱石化景氣已全面復甦。 2026年8月營收139.92億元，MoM-8.51%、YoY+6.79%，累計YoY-1.47%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "聚氯乙烯（PVC）樹脂與氯乙烯單體（VCM）",
-        "聚丙烯（PP）樹脂",
+        "PVC聚氯乙烯樹脂與VCM單體",
+        "PP聚丙烯樹脂",
         "HDPE／LDPE／LLDPE聚乙烯樹脂",
         "EVA乙烯醋酸乙烯酯共聚物",
-        "丙烯酸酯高吸水性樹脂與PAN基碳纖維"
+        "高吸水性樹脂SAP"
       ],
       "customers": [
-        "南亞(1303；集團下游加工對象，非MOPS揭露客戶）",
-        "台化(1326；集團原料互供對象，非MOPS揭露客戶）",
-        "台塑化(6505；烯烴原料供應鏈對象，非MOPS揭露客戶）",
-        "華夏(1305；PVC產業鏈對象，非MOPS揭露客戶）",
-        "聯成(1313；塑化增塑劑產業鏈對象，非MOPS揭露客戶）"
+        "南亞（下游塑料加工生態對象，未確認本輪交易）",
+        "台塑化（烯烴原料上游供應鏈對象，未確認本輪交易）",
+        "華夏（PVC產業鏈比較對象，未確認本輪交易）",
+        "聯成（塑化添加劑產業鏈對象，未確認本輪交易）"
       ],
       "competitors": [
         "信越化學(Shin-Etsu)(PVC)",
@@ -32,50 +31,63 @@
         "台聚(1304)(PE)"
       ],
       "risks": [
-        "累計營收YoY-2.5%，石化景氣尚未全面復甦",
-        "中國新增產能、原油與烯烴價差及碳成本共同壓縮利差"
+        "8月MoM-8.51%、前八月累計YoY-1.47%，單月年增尚未扭轉累計壓力。",
+        "大宗塑料利差依賴原料、能源與產能利用率，營收成長不等同利潤改善。",
+        "亞洲石化供需失衡及低價出口可能持續壓低聚合物報價。",
+        "碳成本、塑膠減量與環保設備支出可能增加長期營運負擔。"
       ],
       "legacy": {},
       "evidence": [
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS t05st03）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1301",
-          "claim": "MOPS主要業務明列PVC、VCM、液鹼、PP、HDPE、EVA、LDPE、LLDPE、高吸水性樹脂、碳纖維及多種化學品。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 1301 公司完整基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：聚氯乙烯(PVC)、氯乙烯、液(石咸)、聚丙烯、高密度聚乙烯聚乙烯醋酸乙烯酯、低密度聚乙烯、線性低密度聚乙烯、丙烯酸酯高吸水性樹脂、碳素纖維、丙烯睛、甲基丙烯酸甲酯及環氧氯丙烷等",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "TWSE 2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 1301 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收152.94億元、MoM+9.4%、YoY+4.8%、累計YoY-2.5%。"
+          "claim": "2026年8月營收139.92億元，MoM-8.51%、YoY+6.79%，累計YoY-1.47%。 原始單位：NTD thousand。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-1301-petrochem-plastics-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "台塑官方產品總覽",
+          "url": "https://www.fpc.com.tw/fpcw/index.php?op=prp",
+          "claim": "列PVC、HDPE、LLDPE、LDPE、EVA、PP、VCM與高吸水性樹脂；技術控制項為工程分析，未聲稱特定牌號認證。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-09-15",
       "status": "verified",
       "techFocus": [
-        "VCM純化、懸浮法PVC聚合、殘單脫除與粒徑分布控制",
-        "PP／PE聚合觸媒、熔融指數與分子量分布控制",
-        "PAN原絲穩定化、碳化與表面處理的碳纖維製程"
+        "PVC樹脂粒徑、殘留單體與加工安定性管理（聚合材料工程分析）",
+        "PP／PE的熔融指數與分子量分布調整（工程分析，非特定牌號保證）",
+        "EVA共聚比例與SAP吸水性能的應用配方匹配（工程分析，未虛構封裝級認證）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS揭露PVC、PP、PE、EVA、高吸水性樹脂與碳纖維等多元產品鏈",
-          "2026年7月營收152.94億元、MoM+9.4%、YoY+4.8%，短期出貨回升"
-        ],
         "weaknesses": [
-          "前七月累計營收YoY-2.5%，大宗塑料景氣仍偏弱",
-          "產品利差高度受原料、能源、運費與亞洲產能利用率影響"
+          "8月MoM-8.51%、前八月累計YoY-1.47%，單月年增尚未扭轉累計壓力。",
+          "大宗塑料利差依賴原料、能源與產能利用率，營收成長不等同利潤改善。",
+          "2026年8月營收139.92億元，MoM-8.51%、YoY+6.79%，累計YoY-1.47%。需區分基期、認列節奏與可持續出貨。"
         ],
         "opportunities": [
-          "EVA封裝膜、醫療級PVC、高吸水性樹脂與碳纖維可提高產品組合附加價值",
-          "交通輕量化、風電與壓力容器需求可擴大碳纖維應用"
+          "EVA及SAP可藉應用配方區隔降低對單一PVC市場的依賴，但須驗證實際產品組合改善。",
+          "下游對回收相容性與特殊加工需求，可增加差異化樹脂開發機會。"
         ],
         "threats": [
-          "中國低價PVC、PP與PE出口持續壓縮亞洲市場利差",
-          "碳費、塑膠減量與環保設備支出提高長期營運成本"
+          "亞洲石化供需失衡及低價出口可能持續壓低聚合物報價。",
+          "碳成本、塑膠減量與環保設備支出可能增加長期營運負擔。"
+        ],
+        "strengths": [
+          "MOPS與官網交叉確認多種塑料、單體與吸水樹脂產品，能對應不同加工市場。",
+          "2026年8月營收139.92億元，MoM-8.51%、YoY+6.79%，累計YoY-1.47%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3380",
   "companyName": "明泰",
-  "updatedAt": "2026-09-05T19:17:30Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
@@ -315,87 +315,98 @@
       "topicId": "display-led-optics",
       "topicName": "面板、LED、光學鏡頭與感測",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "network_equipment_outside_topic",
-      "roleType": "rf_network_equipment_not_optics",
-      "roleSummary": "明泰MOPS只揭露電信管制射頻器材與無線通信設備，沒有顯示器、LED、鏡頭、感測器或光收發模組；原角色將網通設備錯當光學模組，已改為題材外的射頻網通觀察。2026年7月營收17.43億元、MoM-23.3%、YoY-2.1%，累計YoY僅+1.9%。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "vision_sensing_terminal_integration",
+      "roleType": "network_camera_and_radar_doorbell_integrator",
+      "roleSummary": "明泰MOPS僅列射頻及無線通信業務，但官方目錄明確存在監控攝影機、無線攝影機與雷達影像門鈴，撤回舊版『沒有鏡頭或感測相關產品』的錯誤排除。本題材定位為影像／感測終端整合商，不是面板、LED晶粒或鏡頭材料製造商。8月跳升備註為子公司大型專案認列，未指出該專案屬攝影機。 2026年8月營收29.82億元，MoM+71.11%、YoY+66.88%，累計YoY+10.29%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "無線網路存取設備",
-        "射頻通信器材",
-        "寬頻網路閘道器",
-        "乙太網路交換設備",
-        "無線通信終端設備"
+        "IN-5013 5MP HDR監控攝影機",
+        "APRC-20C1 2MP無線攝影機",
+        "APRC-2121 3MP雷達影像門鈴"
       ],
       "customers": [
-        "Cisco Systems（網通平台應用對象，非MOPS揭露客戶）",
-        "HPE Aruba（企業無線應用對象，非MOPS揭露客戶）",
-        "Broadcom（網通晶片平台對象，非MOPS揭露合作關係）",
-        "Qualcomm（無線晶片平台對象，非MOPS揭露合作關係）"
+        "Axis Communications（影像監控應用生態對象，未確認採購或合作）",
+        "Amazon Ring（影像門鈴應用情境，未確認採購或合作）",
+        "Google Nest（智慧家庭影像應用情境，未確認採購或合作）"
       ],
       "competitors": [
-        "中磊(5388)",
-        "啟碁(6285)",
-        "正文(4906)"
+        "晶睿（網路攝影機比較對象）",
+        "Axis Communications（監控終端比較對象）"
       ],
       "risks": [
-        "MOPS未揭露任何顯示、LED或光學產品，題材匹配度極低",
-        "7月營收MoM-23.3%、YoY-2.1%，短期動能偏弱"
+        "8月高成長有子公司大型專案認列因素，不能視為可連續複製的攝影機出貨增速。",
+        "未分拆影像產品收入，也未披露感測器與鏡頭自製能力或具名客戶。",
+        "安防市場的資安規範、隱私要求與區域採購限制可能增加認證負擔。",
+        "大型平台自研終端及低價安防產品競爭，可能壓縮設計與製造利潤。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 3380 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：電信管制射頻器材製造業、無線通信機械器材製造業。"
+          "claim": "MOPS主要經營業務：電信管制射頻器材製造業無線通信機械器材製造業",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 3380 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收17.43億元，MoM-23.3%、YoY-2.1%，累計YoY+1.9%。"
+          "claim": "2026年8月營收29.82億元，MoM+71.11%、YoY+66.88%，累計YoY+10.29%。 原始單位：NTD thousand。公司當月說明：主係子公司大型專案於本月認列收入，致營收較去年同期增加此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-3380-display-led-optics-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "IN-5013官方規格",
+          "url": "https://www.alphanetworks.com/en/product_detail/23aaa9f3afbcc798",
+          "claim": "5MP HDR、CS Mount、DC-IRIS／P-IRIS、1GBase-T與PoE／12V供電。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-3380-display-led-optics-2",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "APRC-20C1官方規格",
+          "url": "https://www.alphanetworks.com/en/product_detail/f83c48ea1182d20c",
+          "claim": "2MP／1080p、160°視角、IR夜視5公尺、1x1無線。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-3380-display-led-optics-3",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "APRC-2121官方規格",
+          "url": "https://www.alphanetworks.com/en/product_detail/26c2e52cb50c7bd3",
+          "claim": "3MP雷達門鈴、PIR 5公尺、雷達10公尺、16～24VAC與IP65。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
-      "confidence": "low",
-      "lastVerified": "2026-08-30",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-15",
+      "status": "verified",
       "techFocus": [
-        "射頻前端、天線與無線通信協定整合",
-        "乙太網路交換、封包處理與網路管理韌體",
-        "EMI／EMC、射頻法規與量產校正驗證"
+        "IN-5013：5MP HDR、CS Mount鏡頭、DC-IRIS／P-IRIS控制及1GBase-T",
+        "APRC-20C1：1080p／2MP、160°視角、5公尺IR夜視與1x1無線連接",
+        "APRC-2121：3MP、PIR 5公尺／雷達10公尺偵測、16～24VAC供電與IP65"
       ],
       "swot": {
-        "strengths": [
-          "MOPS支持射頻器材與無線通信設備製造能力",
-          "累計營收YoY+1.9%，全年仍勉強維持正成長"
-        ],
         "weaknesses": [
-          "沒有顯示器、LED、鏡頭、感測器或光模組產品",
-          "7月營收17.43億元，MoM-23.3%、YoY-2.1%"
+          "8月高成長有子公司大型專案認列因素，不能視為可連續複製的攝影機出貨增速。",
+          "未分拆影像產品收入，也未披露感測器與鏡頭自製能力或具名客戶。",
+          "8月公司營收說明：主係子公司大型專案於本月認列收入，致營收較去年同期增加不得超出該說明推定特定產品或客戶。"
         ],
         "opportunities": [
-          "若網通設備導入光纖上行，可形成外購光模組整合需求",
-          "無線設備升級可帶動射頻與網路管理能力深化"
+          "智慧家庭門鈴與安防系統升級，可擴大影像、雷達及雙向音訊整合需求。",
+          "企業監控導入HDR與遠端管理，可增加網路攝影機系統整合價值。"
         ],
         "threats": [
-          "光學題材敘事若持續高估，容易造成錯誤投資歸因",
-          "網通價格競爭與營運商需求波動壓迫成長"
+          "安防市場的資安規範、隱私要求與區域採購限制可能增加認證負擔。",
+          "大型平台自研終端及低價安防產品競爭，可能壓縮設計與製造利潤。"
+        ],
+        "strengths": [
+          "官方三款產品把影像感測、鏡頭／光圈、IR照明及網路連接整合為完整終端。",
+          "2026年8月營收29.82億元，MoM+71.11%、YoY+66.88%，累計YoY+10.29%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     }

@@ -2,93 +2,97 @@
   "schemaVersion": 1,
   "companyCode": "1536",
   "companyName": "和大",
-  "updatedAt": "2026-09-13T19:15:37Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "industrial-automation",
       "topicName": "工業自動化與 CNC 工具機",
       "topicType": "technology",
-      "directness": "indirect",
-      "supplyChainStage": "precision_transmission_adjacent",
-      "roleType": "gear_and_shaft_manufacturer",
-      "roleSummary": "和大MOPS揭露汽車、機車與農業機械用齒輪、軸類及各種機械零件，沒有揭露機器人減速機、伺服齒輪箱或CNC主軸客戶；在工業自動化題材應定位為精密傳動加工的應用鄰近者。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，累計YoY僅+1.0%。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "gear_machine_tools_and_automation",
+      "roleType": "gear_processing_machine_tool_provider",
+      "roleSummary": "和大除MOPS揭露的齒輪、軸類與機械加工外，官方工具機目錄明列HARTECH滾齒、刮齒、倒角、CNC砂輪開槽及自動化整合服務；因此撤回舊版『沒有CNC或自動化設備』的過度否定，改為齒輪加工工具機與產線整合的直接角色，仍不推論機器人關節訂單。 2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "汽車傳動齒輪",
-        "機車傳動齒輪",
-        "農業機械齒輪",
-        "精密傳動軸類",
-        "機械用齒輪與軸類加工件"
+        "HARTECH HGH系列滾齒機",
+        "HARTECH HGS系列刮齒機",
+        "HGD 250-NC2齒輪倒角機",
+        "CNC砂輪開槽機",
+        "齒輪加工自動化整合服務"
       ],
       "customers": [
-        "台達電(2308；伺服系統應用對象，非MOPS揭露客戶)",
-        "上銀(2049；自動化傳動生態對象，非MOPS揭露客戶)",
-        "FANUC（工業機器人應用對象，非MOPS揭露客戶）",
-        "Yaskawa Electric（伺服與機器人應用對象，非MOPS揭露客戶）"
+        "上銀（精密傳動加工應用對象，未確認採購或驗證）",
+        "FANUC（自動化設備生態對象，未確認合作）",
+        "Yaskawa Electric（產線機器人整合情境，未確認合作）"
       ],
       "competitors": [
-        "英利-KY(2239)",
-        "KYB",
-        "Musashi Seimitsu"
+        "Gleason（齒輪加工設備比較對象）",
+        "Liebherr（齒輪加工設備比較對象）"
       ],
       "risks": [
-        "MOPS未揭露自動化設備或機器人減速機產品",
-        "汽車與機械景氣循環、鋼材及能源成本影響獲利"
+        "未揭露工具機或自動化整合服務營收占比與具名採購客戶。",
+        "汽車傳動件與工具機收入混合，不能以全公司年增直接衡量CNC接單。",
+        "日歐齒輪加工設備的精度、刀具與售服體系形成競爭門檻。",
+        "車用景氣或資本支出轉弱，可能同時拖累齒輪本業與設備銷售。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 1536 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：汽機車及農業機械齒輪、軸類與各種機械零件製造加工。"
+          "claim": "MOPS主要經營業務：汽、機車、農業機械等之齒輪、軸類製造及買賣。各種機械及零件之製造加工與代理經銷買賣業務。各種汽機車零件製造及代理經銷買賣。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 1536 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收4.40億元，MoM+19.8%、YoY+9.6%，累計YoY+1.0%。"
+          "claim": "2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。 原始單位：NTD thousand。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-1536-industrial-automation-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "官方工具機目錄",
+          "url": "https://www.hota.com.tw/machineTool-list.html",
+          "claim": "列出滾齒機、刮齒機、倒角機、伺服壓床、CNC砂輪開槽機、光學式量測儀及自動化整合服務。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-1536-industrial-automation-2",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "HGD 250-NC2產品規格",
+          "url": "https://www.hota.com.tw/HGD-250-NC2-machineTool-content-6.html",
+          "claim": "工件模數1.5～5 mm、最大外徑250 mm、齒寬50 mm、刀具外徑160 mm、標準彈簧式對齒；不可套用至其他機型。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-30",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-15",
+      "status": "verified",
       "techFocus": [
-        "齒輪滾削、研磨與齒形／齒向誤差控制",
-        "滲碳淬火、硬度梯度與疲勞壽命管理",
-        "軸類同心度、表面粗糙度與動平衡控制"
+        "HGD 250-NC2：工件模數1.5～5 mm、最大外徑250 mm、齒寬50 mm（僅限此機型）",
+        "HGD 250-NC2：標準彈簧式對齒，倒角刀具最大外徑160 mm",
+        "滾齒／刮齒設備與量測、上下料站整合（依產品類別的工程分析）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS直接支持齒輪、軸類與機械零件製造能力",
-          "7月營收4.40億元、MoM+19.8%、YoY+9.6%"
-        ],
         "weaknesses": [
-          "沒有揭露機器人減速機、伺服齒輪箱或CNC產品",
-          "累計營收YoY僅+1.0%，中期成長仍偏弱"
+          "未揭露工具機或自動化整合服務營收占比與具名採購客戶。",
+          "汽車傳動件與工具機收入混合，不能以全公司年增直接衡量CNC接單。"
         ],
         "opportunities": [
-          "工業自動化擴張可增加高精度齒輪與軸類需求",
-          "既有熱處理與精密加工可延伸至非車用傳動件"
+          "電動車傳動齒輪的低噪音與精度要求，可能提高專用滾齒、刮齒設備需求。",
+          "以齒輪量測與上下料整合減少工序等待，可提升整線方案價值。"
         ],
         "threats": [
-          "日歐減速機與精密齒輪廠掌握高階客戶認證",
-          "車用主業循環若轉弱，可能限制跨域研發資源"
+          "日歐齒輪加工設備的精度、刀具與售服體系形成競爭門檻。",
+          "車用景氣或資本支出轉弱，可能同時拖累齒輪本業與設備銷售。"
+        ],
+        "strengths": [
+          "齒輪製造本業搭配官方工具機系列，可從加工經驗延伸設備與產線整合服務。",
+          "2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2395",
   "companyName": "研華",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "edge-ai-aiot",
@@ -177,70 +177,83 @@
       "topicName": "人形機器人與實體 AI",
       "topicType": "technology",
       "directness": "direct_enabler",
-      "supplyChainStage": "industrial_edge_control",
-      "roleType": "robotics_edge_computing_platform",
-      "roleSummary": "研華MOPS直接支持工業測控、工業電腦、工作站、嵌入式電腦卡與工業顯示終端，可作為機器人控制、視覺與邊緣推論平台；但未揭露ROS 2產品、Tesla／FANUC客戶或人形機器人訂單。2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%，公司說明專案需求與出貨暢旺，仍不能全數歸因機器人。",
+      "supplyChainStage": "robotics_edge_compute_and_sensor_io",
+      "roleType": "amr_edge_ai_platform_provider",
+      "roleSummary": "研華MOPS工業電腦與測控業務可由官方MIC-732-AO產品直接補強：Nova Orin AMR平台、GMSL相機介面、CANbus與Isaac ROS2均有公開證據，修正舊版將ROS2僅當未驗證應用的說法。本題材定位為機器人邊緣運算平台，AMR不等同人形機器人整機或特定大廠訂單。 2026年8月營收104.19億元，MoM-7.57%、YoY+87.52%，累計YoY+45.88%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "機器人控制用工業電腦",
-        "嵌入式邊緣運算電腦卡",
-        "工業測控與遠端I/O模組",
-        "機器視覺用工業工作站",
-        "工業觸控顯示電腦"
+        "MIC-732-AO Nova Orin AMR推論系統",
+        "MIC-732D-AO Nova Orin AI開發套件",
+        "MIC-711D-OX Jetson Orin NX開發套件",
+        "工業測控與機器人周邊I/O產品（MOPS揭露測控範圍）"
       ],
       "customers": [
-        "NVIDIA（邊緣AI平台對象，非MOPS揭露客戶）",
-        "Siemens（工業自動化整合對象，非MOPS揭露客戶）",
-        "Rockwell Automation（控制系統整合對象，非MOPS揭露客戶）",
-        "ABB（機器人應用對象，非MOPS揭露客戶）",
-        "FANUC（機器人／CNC應用對象，非MOPS揭露客戶）"
+        "NVIDIA（官網確認Jetson／Nova Orin與Isaac ROS平台支援，非下游客戶）",
+        "ABB（機器人系統應用對象，未確認採購）",
+        "FANUC（工業控制與視覺應用對象，未確認採購）",
+        "Siemens（自動化系統生態對象，未確認本輪合作）"
       ],
       "competitors": [
-        "新漢"
+        "新漢（機器人邊緣控制平台比較對象）",
+        "凌華（邊緣AI運算平台比較對象）"
       ],
       "risks": [
-        "MOPS未揭露特定機器人客戶或人形機器人營收，題材歸因需保守",
-        "工業電腦平台面臨客製控制器、專用SoC與機器人廠自研硬體替代"
+        "全公司專案需求暢旺不等於AMR或人形機器人收入，未披露相關占比。",
+        "平台支援與型錄規格不保證終端演算法延遲、安全認證或長期量產採購。",
+        "機器人整機廠自製控制器或採專用SoC，可能減少通用IPC採購。",
+        "工廠驗證週期、客製I/O及平台改版可能拉長專案回收期。"
       ],
       "evidence": [
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS t05st03）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2395",
-          "claim": "MOPS主要經營業務為工業測控產品、工業用電腦／工作站、嵌入式電腦卡與超薄液晶電腦。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 2395 公司完整基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：工業測控產品工業用電腦/工業用工作站嵌入式電腦卡/超薄液晶電腦",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "TWSE 2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 2395 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%、累計YoY+40.3%；公司說明客戶積極下單、專案需求與出貨暢旺。"
+          "claim": "2026年8月營收104.19億元，MoM-7.57%、YoY+87.52%，累計YoY+45.88%。 原始單位：NTD thousand。公司當月說明：客戶端積極下單，專案需求與出貨暢旺，帶動整體營收大幅成長。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-2395-robotics-physical-ai-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "MIC-732-AO官方完整產品頁",
+          "url": "https://www.advantech.com/en-us/products/965e4edb-fb98-429e-89ed-9a0a8435a7be/mic-732-ao/mod_232b907c-a285-452f-ac0c-28fdadd7d041",
+          "claim": "讀取完整快取中產品區：AGX Orin最高275TOPS、8ch GMSL3/2、FAKRA、2CANbus、10GbE+2.5GbE、Isaac ROS2；同頁產品清單列MIC-732D-AO與MIC-711D-OX，不混用其規格。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-31",
+      "confidence": "high",
+      "lastVerified": "2026-09-15",
       "status": "verified",
       "techFocus": [
-        "x86／ARM邊緣運算、GPU加速卡與隔離式工業I/O整合",
-        "EtherCAT、Modbus與OPC UA等控制／資料協定介接",
-        "ROS 2／DDS機器人軟體整合（題材應用能力，MOPS未逐項揭露）"
+        "MIC-732-AO：Jetson AGX Orin最高275 TOPS、無風扇設計（僅限官網該型號）",
+        "MIC-732-AO：8通道GMSL3.0／2.0 FAKRA、2×CANbus、10GbE＋2.5GbE",
+        "MIC-732-AO明列NVIDIA Isaac ROS2支援；不由此推定其他機型相同I/O或人形機器人訂單"
       ],
       "swot": {
-        "strengths": [
-          "MOPS確認工業測控、工業電腦、工作站與嵌入式電腦卡，可承載機器人控制與視覺",
-          "2026年7月營收112.72億元、MoM+11.4%、YoY+87.6%，專案需求與出貨動能強"
-        ],
         "weaknesses": [
-          "營收為全公司口徑，沒有機器人或Physical AI占比拆分",
-          "ROS 2、人形機器人客戶及特定GPU平台未由MOPS逐項支持"
+          "全公司專案需求暢旺不等於AMR或人形機器人收入，未披露相關占比。",
+          "平台支援與型錄規格不保證終端演算法延遲、安全認證或長期量產採購。",
+          "2026年8月營收104.19億元，MoM-7.57%、YoY+87.52%，累計YoY+45.88%。需區分基期、認列節奏與可持續出貨。",
+          "8月公司營收說明：客戶端積極下單，專案需求與出貨暢旺，帶動整體營收大幅成長。不得超出該說明推定特定產品或客戶。"
         ],
         "opportunities": [
-          "AMR、協作機器人與機器視覺升級增加工業邊緣運算與I/O需求",
-          "工廠導入AI推論可提高工業電腦、工作站與測控模組的單機價值"
+          "AMR視覺感測與路徑規劃需求，可增加多相機邊緣推論平台的導入機會。",
+          "ROS2與NVIDIA軟體平台整合可降低部分開發工作，但仍需系統商現場驗證。"
         ],
         "threats": [
-          "NVIDIA等平台商或機器人整機廠自建控制硬體可能壓縮通用IPC角色",
-          "工業專案驗證期長且客製化程度高，容易造成訂單與毛利波動"
+          "機器人整機廠自製控制器或採專用SoC，可能減少通用IPC採購。",
+          "工廠驗證週期、客製I/O及平台改版可能拉長專案回收期。"
+        ],
+        "strengths": [
+          "AMR產品明確整合GPU推論、相機與控制介面及ROS2支援，比泛稱工業電腦更可驗證。",
+          "2026年8月營收104.19億元，MoM-7.57%、YoY+87.52%，累計YoY+45.88%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "3264",
   "companyName": "欣銓",
-  "updatedAt": "2026-09-08T19:19:28Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "advanced-packaging",
@@ -240,21 +240,19 @@
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
       "directness": "indirect",
-      "supplyChainStage": "back_end_test",
+      "supplyChainStage": "back_end_test_equipment_user",
       "roleType": "wafer_and_final_test_service",
-      "roleSummary": "欣銓MOPS直接揭露記憶體IC晶圓測試、數位／混合訊號IC晶圓與成品測試及晶圓型Burn-in；公司不是半導體設備或前段材料供應商，而是使用測試設備的後段服務業者。FinMind顯示2026年7月營收17.67億元、MoM+13.8%、YoY+52.3%。",
+      "roleSummary": "欣銓MOPS確認記憶體、數位／混合訊號IC晶圓及成品測試與晶圓級Burn-in；在『半導體設備與前段材料』應定位為後段測試服務及設備使用端，不是設備製造或前段材料供應商。TWSE主查無營收，已改用FinMind MCP取得8月資料，沒有把上櫃查不到誤認為公司不存在。 2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
         "記憶體IC晶圓測試服務",
         "數位訊號IC晶圓測試服務",
-        "混合訊號IC晶圓測試服務",
-        "封裝後成品功能測試服務",
-        "晶圓型Burn-in老化測試"
+        "混合訊號IC晶圓與成品測試",
+        "晶圓級Burn-in老化測試"
       ],
       "customers": [
-        "華邦電(2344；記憶體測試應用對象，非MOPS揭露客戶)",
-        "旺宏(2337；記憶體測試應用對象，非MOPS揭露客戶)",
-        "聯詠(3034；數位／混合訊號測試應用對象，非MOPS揭露客戶)",
-        "力積電(6770；晶圓製造供應鏈對象，非MOPS揭露客戶）"
+        "華邦電（記憶體測試應用對象，未確認採購）",
+        "旺宏（非揮發記憶體測試應用對象，未確認採購）",
+        "聯詠（數位／混合訊號測試應用對象，未確認採購）"
       ],
       "competitors": [
         "京元電子(2449)",
@@ -262,64 +260,54 @@
         "力成(6239)"
       ],
       "risks": [
-        "本題材屬設備使用端而非設備／材料供應端，直接性有限",
-        "測試機台資本支出與IC景氣循環會影響利用率"
+        "營收屬測試服務，不能當成半導體設備或前段材料銷售。",
+        "未取得各測試產品營收、測試精度與具名客戶分拆；技術流程部分為工程分析。",
+        "IC需求轉弱或客戶自建測試線，可能使高固定成本機台利用率下滑。",
+        "京元電子與矽格等測試業者擴產，可能導致價格與人才競爭。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務: 記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 3264 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：記憶體IC晶圓測試、數位及混合訊號IC晶圓與成品測試、晶圓型Burn-in。"
+          "claim": "MOPS主要經營業務：記憶體IC之晶圓測試數位訊號IC及混合訊號IC之晶圓及成品測試晶圓型式之Burn in 之測試",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
-          "sourceId": "finmind-revenue-history",
-          "publisher": "FinMind",
-          "title": "2026年7月月營收",
+          "sourceId": "finmind-monthly-revenue",
+          "publisher": "FinMind MCP",
+          "title": "2026-09-15 3264 2026年8月月營收核對",
           "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "2026年7月營收17.67億元，MoM+13.8%、YoY+52.3%。"
+          "claim": "2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%。 原始單位：NTD。TWSE主查無資料，FinMind MCP回補。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "medium",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-15",
       "status": "verified",
       "techFocus": [
-        "探針卡、晶圓圖與自動測試機程式整合",
-        "高溫晶圓Burn-in、失效篩選與壽命資料分析",
-        "混合訊號量測、校正與量產測試時間優化"
+        "Wafer-level Burn-in晶圓級老化篩選（MOPS明列服務）",
+        "ATE測試程式、探針接觸與wafer map失效分布管理（測試服務工程分析）",
+        "混合訊號參數量測、校正與測試時間折衷（工程評估重點，非公司公開精度規格）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS直接支持記憶體、數位與混合訊號IC測試能力",
-          "7月營收17.67億元、MoM+13.8%、YoY+52.3%"
-        ],
         "weaknesses": [
-          "不是半導體設備或前段材料供應商",
-          "MOPS未揭露具名客戶或各測試類別營收"
+          "營收屬測試服務，不能當成半導體設備或前段材料銷售。",
+          "未取得各測試產品營收、測試精度與具名客戶分拆；技術流程部分為工程分析。"
         ],
         "opportunities": [
-          "IC複雜度提高可增加測試時間與Burn-in需求",
-          "記憶體與混合訊號需求復甦有利機台利用率"
+          "IC功能與可靠度需求提高，可增加晶圓測試與Burn-in服務工作量。",
+          "擴充程式開發及多類IC測試可提高設備利用效率，但須追蹤實際利用率。"
         ],
         "threats": [
-          "京元電、矽格與力成競爭測試產能與報價",
-          "客戶自建測試產能或景氣反轉可能壓低稼動率"
+          "IC需求轉弱或客戶自建測試線，可能使高固定成本機台利用率下滑。",
+          "京元電子與矽格等測試業者擴產，可能導致價格與人才競爭。"
+        ],
+        "strengths": [
+          "MOPS具體列出不同IC類型與晶圓級老化測試，服務範圍有直接揭露支持。",
+          "2026年8月營收17.94億元，MoM+1.57%、YoY+46.57%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "4764",
   "companyName": "雙鍵",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "energy-storage-battery",
@@ -207,21 +207,20 @@
       "topicName": "先進封裝與 CoWoS",
       "topicType": "process",
       "directness": "indirect",
-      "supplyChainStage": "uv_materials_adjacent",
-      "roleType": "uv_curing_material_adjacent",
-      "roleSummary": "雙鍵MOPS只揭露塑膠添加劑與UV光固化產品，沒有揭露晶圓暫時貼合、底部填膠、封裝膠或半導體客戶；在先進封裝題材僅屬UV固化材料的潛在應用鄰近者。2026年7月營收2.94億元、MoM+3.4%、YoY+44.1%，成長不能歸因於先進封裝。",
+      "supplyChainStage": "uv_and_polymer_materials_adjacent",
+      "roleType": "uv_materials_with_led_encapsulation_adjacency",
+      "roleSummary": "雙鍵MOPS與官網確認塑膠添加劑、光引發劑與UV寡聚物；官方列LED encapsulation應用，因此不再一概否定封裝材料鄰近性，但LED包封不等於CoWoS、晶圓暫時貼合或underfill認證。本角色仍是先進封裝的低直接性材料觀察，不冒充已量產半導體封裝膠供應商。 2026年8月營收2.68億元，MoM-8.96%、YoY+22.75%，累計YoY+27.90%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "UV光固化樹脂配方",
-        "UV光固化塗層材料",
-        "塑膠用抗氧化添加劑",
-        "塑膠用光安定添加劑",
-        "塑膠用紫外線吸收添加劑"
+        "UV固化用光引發劑",
+        "UV光固化寡聚物",
+        "聚合物抗氧化添加劑",
+        "紫外線吸收劑",
+        "光安定添加劑"
       ],
       "customers": [
-        "長興(1717；UV材料配方生態對象，非MOPS揭露客戶)",
-        "達興材料(5234；電子材料驗證對象，非MOPS揭露客戶)",
-        "日月光投控(3711；封裝材料終端驗證對象，非MOPS揭露客戶)",
-        "力成(6239；封裝材料終端驗證對象，非MOPS揭露客戶）"
+        "長興（UV配方材料生態對象，未確認交易或合作）",
+        "達興材料（電子材料應用情境，未確認驗證）",
+        "日月光投控（先進封裝材料潛在應用情境，未確認交易或驗證）"
       ],
       "competitors": [
         "長興(1717)",
@@ -229,64 +228,63 @@
         "ADEKA"
       ],
       "risks": [
-        "MOPS未揭露半導體封裝材料或量產認證",
-        "先進封裝材料驗證週期長且電子級純度要求高"
+        "LED包封產品應用不能證明CoWoS、底部填膠或晶圓貼合材料已通過認證。",
+        "全公司營收涵蓋塑膠、塗料等多種市場，沒有先進封裝產品收入分拆。",
+        "半導體材料污染與長期可靠度要求可能阻擋一般UV材料直接導入。",
+        "國際添加劑與電子膠材廠的認證基礎及價格競爭，可能限制切入收益。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品之研發、製造與銷售"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 4764 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品之研發、製造與銷售。"
+          "claim": "MOPS主要經營業務：塑膠添加劑及UV光固化產品等產品之研發、製造與銷售",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 4764 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收2.94億元，MoM+3.4%、YoY+44.1%，累計YoY+28.6%。"
+          "claim": "2026年8月營收2.68億元，MoM-8.96%、YoY+22.75%，累計YoY+27.90%。 原始單位：NTD thousand。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-4764-advanced-packaging-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "DBC官方公司與產品介紹",
+          "url": "https://www.dbc.com.tw/about.php",
+          "claim": "產品列antioxidants、UV absorbers、light stabilizers、photoinitiators與oligomer；應用含LED encapsulation，但未揭露CoWoS或underfill產品。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "low",
-      "lastVerified": "2026-08-30",
+      "lastVerified": "2026-09-15",
       "status": "candidate",
       "techFocus": [
-        "UV自由基聚合、固化速率與表面黏著控制",
-        "抗氧化劑與光安定劑配方相容性設計",
-        "樹脂黏度、添加劑分散與耐黃變控制"
+        "光引發劑與寡聚物的光固化反應配套（官方產品；波長／固化速率須依配方核驗）",
+        "抗氧化、UV吸收與光安定添加劑的配方相容性（工程分析）",
+        "若延伸晶片封裝須驗證離子污染、熱循環與黏著可靠度（導入條件，非已認證能力）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS支持塑膠添加劑與UV光固化產品研發製造",
-          "7月營收2.94億元、YoY+44.1%、累計YoY+28.6%"
-        ],
         "weaknesses": [
-          "未揭露封裝膠、底填膠或晶圓製程材料",
-          "營收成長無法拆分為先進封裝貢獻"
+          "LED包封產品應用不能證明CoWoS、底部填膠或晶圓貼合材料已通過認證。",
+          "全公司營收涵蓋塑膠、塗料等多種市場，沒有先進封裝產品收入分拆。",
+          "2026年8月營收2.68億元，MoM-8.96%、YoY+22.75%，累計YoY+27.90%。需區分基期、認列節奏與可持續出貨。"
         ],
         "opportunities": [
-          "封裝製程對低溫快速固化材料有潛在需求",
-          "既有UV固化與添加劑能力可作為電子材料開發起點"
+          "LED包封經驗可提供光固化與材料可靠度的延伸研究起點。",
+          "封裝製程對低熱負荷固化材料的需求，可形成送樣機會，但仍須電子級純度驗證。"
         ],
         "threats": [
-          "日美電子化學品大廠掌握認證與客戶關係",
-          "材料離子純度或可靠度未達標將阻礙導入"
+          "半導體材料污染與長期可靠度要求可能阻擋一般UV材料直接導入。",
+          "國際添加劑與電子膠材廠的認證基礎及價格競爭，可能限制切入收益。"
+        ],
+        "strengths": [
+          "具官方揭露的UV固化與聚合物添加劑產品，並有LED包封應用描述。",
+          "2026年8月營收2.68億元，MoM-8.96%、YoY+22.75%，累計YoY+27.90%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

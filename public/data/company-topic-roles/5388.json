@@ -2,28 +2,27 @@
   "schemaVersion": 1,
   "companyCode": "5388",
   "companyName": "中磊",
-  "updatedAt": "2026-09-07T19:16:13Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "networking-infrastructure",
       "topicName": "高速交換器與網通設備",
       "topicType": "supply_chain_segment",
       "directness": "core",
-      "supplyChainStage": "networking_equipment",
-      "roleType": "wired_wireless_network_product_manufacturer",
-      "roleSummary": "中磊MOPS揭露有線與無線網路產品，足以支持網通設備核心角色，但未揭露原角色中的特定協定版本、頻段或具名電信客戶。2026年7月營收79.80億元、MoM+9.7%、YoY+51.3%，累計YoY+56.9%，公司備註北美市場訂單增溫。",
+      "supplyChainStage": "broadband_access_equipment",
+      "roleType": "pon_gateway_and_access_equipment_provider",
+      "roleSummary": "中磊MOPS確認有線與無線網路產品，官網FTTx目錄進一步公開Wi-Fi 7 HGU、XGSPON SFU與PON Stick規格。本題材核心在寬頻接取設備而不是把每款產品誤稱資料中心高速交換器；8月備註北美訂單增溫，未指名電信客戶或產品占比。 2026年8月營收70.44億元，MoM-11.72%、YoY+45.05%，累計YoY+55.15%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "寬頻網路閘道器",
-        "企業與家用無線存取點",
-        "光纖寬頻終端設備",
-        "固定無線接取CPE",
-        "智慧家庭與物聯網閘道器"
+        "三頻Wi-Fi 7 10G PON家庭閘道器HGU",
+        "雙頻Wi-Fi 7 G／E PON閘道器HGU",
+        "10G XGSPON光纖終端SFU",
+        "10G PON Stick可插拔接取模組"
       ],
       "customers": [
-        "Comcast（北美寬頻應用對象，非MOPS揭露客戶）",
-        "Verizon（電信網路應用對象，非MOPS揭露客戶）",
-        "AT&T（寬頻接取應用對象，非MOPS揭露客戶）",
-        "Charter Communications（有線寬頻應用對象，非MOPS揭露客戶）"
+        "Comcast（北美寬頻接取應用對象，未確認本輪採購）",
+        "Verizon（電信接取設備應用對象，未確認本輪採購）",
+        "AT&T（光纖寬頻應用對象，未確認本輪採購）",
+        "Charter Communications（寬頻營運應用對象，未確認本輪採購）"
       ],
       "competitors": [
         "啟碁(6285)",
@@ -31,64 +30,64 @@
         "正文(4906)"
       ],
       "risks": [
-        "MOPS未揭露客戶、協定版本或各產品營收占比",
-        "北美電信資本支出與單一區域訂單波動可能影響營收"
+        "北美訂單增加不代表特定電信商關係已驗證，客戶與產品別收入仍未分拆。",
+        "電信商測試、韌體維護與售後責任可能拉長收款及產品生命週期成本。",
+        "北美營運商縮減建設或延後CPE換機，可能使區域訂單快速反轉。",
+        "啟碁、正文及國際CPE廠的價格與軟體整合競爭，可能壓縮利潤。"
       ],
       "legacy": {},
       "evidence": [
         {
-          "sourceId": "mops-company-disclosures",
-          "publisher": "公開資訊觀測站 MOPS / TWSE 財報系統",
-          "title": "公司公告、年報與財務資訊",
-          "url": "https://mops.twse.com.tw/mops/web/t146sb05",
-          "claim": "MOPS/TWSE 公司公告與財報可用來驗證公司的營業項目、產品組合與財務資料"
-        },
-        {
-          "sourceId": "finmind-taiwan-stock-datasets",
-          "publisher": "FinMind",
-          "title": "Taiwan Stock Market Datasets",
-          "url": "https://finmindtrade.com/analysis/#/data/api",
-          "claim": "FinMind 可用於追蹤月營收、股價、估值與法人資料，作為題材傳導是否反映到營運的觀察"
-        },
-        {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS 54欄位版）",
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 5388 公司完整基本資料",
           "url": "https://mops.twse.com.tw/mops/web/t05st03",
-          "claim": "MOPS主要經營業務：有線網路產品、無線網路產品及其他。"
+          "claim": "MOPS主要經營業務：有線網路產品無線網路產品其他",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 5388 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收79.80億元，MoM+9.7%、YoY+51.3%，累計YoY+56.9%；公司備註北美市場訂單增溫。"
+          "claim": "2026年8月營收70.44億元，MoM-11.72%、YoY+45.05%，累計YoY+55.15%。 原始單位：NTD thousand。公司當月說明：北美市場訂單增溫此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-5388-networking-infrastructure-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "FTTx官方產品比較表",
+          "url": "https://www.sercomm.com/en/solutions/product/6/0/19",
+          "claim": "分別列三頻／雙頻Wi-Fi 7 HGU、XGSPON SFU與10G Stick，規格按列绑定，不拼成單一虛構產品。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-30",
+      "confidence": "high",
+      "lastVerified": "2026-09-15",
       "status": "verified",
       "techFocus": [
-        "有線／無線閘道器SoC、射頻前端與天線整合",
-        "光纖接取終端的PON協定與營運商管理介面",
-        "CPE韌體、遠端管理、資安更新與量產測試"
+        "三頻Wi-Fi 7 HGU：2.4／5／6GHz各4x4 802.11be，WAN為XGSPON 10／10Gbps",
+        "三頻HGU具2×10GbE＋4×1GbE LAN，不能套用至雙頻HGU或SFU",
+        "XGSPON HGU／SFU支援OMCI、TR-069／TR-369遠端管理；Stick規格僅列OMCI"
       ],
       "swot": {
-        "strengths": [
-          "MOPS直接支持有線與無線網路產品製造",
-          "7月營收79.80億元、YoY+51.3%，公司說明北美訂單增溫"
-        ],
         "weaknesses": [
-          "未揭露具名客戶、產品規格與毛利結構",
-          "電信設備ODM議價空間與區域集中度仍需追蹤"
+          "北美訂單增加不代表特定電信商關係已驗證，客戶與產品別收入仍未分拆。",
+          "電信商測試、韌體維護與售後責任可能拉長收款及產品生命週期成本。",
+          "2026年8月營收70.44億元，MoM-11.72%、YoY+45.05%，累計YoY+55.15%。需區分基期、認列節奏與可持續出貨。",
+          "8月公司營收說明：北美市場訂單增溫不得超出該說明推定特定產品或客戶。"
         ],
         "opportunities": [
-          "寬頻升級與固定無線接取可帶動CPE換機",
-          "智慧家庭與遠端管理需求提高軟硬體整合價值"
+          "光纖接取升至10G與Wi-Fi 7，有機會同步帶動PON終端與家庭無線更新。",
+          "TR-369等遠端管理可提高終端維護、診斷與服務整合價值。"
         ],
         "threats": [
-          "北美營運商資本支出轉弱會直接影響拉貨",
-          "啟碁、正文及中國網通ODM競價激烈"
+          "北美營運商縮減建設或延後CPE換機，可能使區域訂單快速反轉。",
+          "啟碁、正文及國際CPE廠的價格與軟體整合競爭，可能壓縮利潤。"
+        ],
+        "strengths": [
+          "FTTx目錄涵蓋HGU、SFU與Stick，可依接取網路與家庭無線需求提供不同終端形態。",
+          "2026年8月營收70.44億元，MoM-11.72%、YoY+45.05%，累計YoY+55.15%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

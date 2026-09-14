@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "1711",
   "companyName": "永光",
-  "updatedAt": "2026-09-09T19:19:15Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "electrical-equipment-epc",
@@ -261,21 +261,22 @@
       "topicId": "semiconductor-equipment-materials",
       "topicName": "半導體設備與前段材料",
       "topicType": "supply_chain_segment",
-      "directness": "indirect",
-      "supplyChainStage": "electronic_chemicals",
-      "roleType": "electronic_chemical_materials_adjacent",
-      "roleSummary": "永光MOPS明列電子化學品，但未逐項揭露DNQ／PAC、蝕刻液、晶圓清洗劑、純度等級或台積電／聯電客戶。半導體材料角色可保留為電子化學品的應用相鄰，不能把特定配方與認證寫死。2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%、累計YoY+9.0%，為色料、特化、電子、碳粉與醫藥等全公司口徑。",
+      "directness": "direct_enabler",
+      "supplyChainStage": "semiconductor_lithography_and_passivation_materials",
+      "roleType": "photoresist_and_pspi_material_supplier",
+      "roleSummary": "永光MOPS電子化學品大類經官方電子化學事業與PSPI頁核驗，確有G-line／I-line光阻及EverPI正、負型感光聚醯亞胺，不應再降為僅可能供應電子化學品。於半導體設備／前段材料題材定位為黃光化學材料直接供應者，PSPI兼有封裝絕緣用途；未推定先進EUV光阻、具名晶圓廠認證或全部收入均來自半導體。 2026年8月營收7.47億元，MoM-4.40%、YoY+33.16%，累計YoY+11.64%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "電子級製程化學品（MOPS支持產品類別）",
-        "光阻配方用感光／功能性化學品（題材應用，MOPS未逐項揭露）",
-        "晶圓清洗用高純度溶劑與添加劑（題材應用，MOPS未逐項揭露）",
-        "蝕刻／顯影製程用配方添加劑（題材應用，MOPS未逐項揭露）"
+        "G-line半導體黃光製程光阻",
+        "I-line半導體黃光製程光阻",
+        "EverPI P09正型感光聚醯亞胺",
+        "EverPI N1301負型感光聚醯亞胺",
+        "EverPI N2301水相顯影負型感光聚醯亞胺"
       ],
       "customers": [
-        "台積電(2330；半導體材料驗證對象，非MOPS揭露客戶）",
-        "聯電(2303；半導體材料驗證對象，非MOPS揭露客戶）",
-        "JSR（光阻材料生態對象，非MOPS揭露客戶）",
-        "信越化學（電子材料生態對象，非MOPS揭露客戶）"
+        "台積電（半導體光阻與保護層應用對象，未確認交易或驗證）",
+        "聯電（黃光製程材料應用對象，未確認交易或驗證）",
+        "日月光投控（PSPI封裝絕緣材料應用對象，未確認交易或驗證）",
+        "JSR（光阻材料生態比較對象，非已確認客戶）"
       ],
       "competitors": [
         "長興(1717)",
@@ -283,50 +284,71 @@
         "信越化學"
       ],
       "risks": [
-        "MOPS只揭露電子化學品大類，沒有半導體產品規格與客戶驗證證據",
-        "半導體材料認證期長，且電子化學品占全公司比重未揭露"
+        "未取得具名晶圓廠或封裝廠認證與PSPI收入占比，產品存在不等於訂單規模。",
+        "色料、特化、碳粉與醫藥等業務混合，不能將公司年增全歸因半導體材料。",
+        "國際光阻材料商的認證、專利與客戶黏著優勢，可能限制替代速度。",
+        "批次污染、顯影窗口或固化可靠度異常可能造成昂貴品質損失。"
       ],
       "legacy": {},
       "evidence": [
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS t05st03）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=1711",
-          "claim": "MOPS主要經營業務含色料化學品、特用化學品、電子化學品、碳粉產品與醫藥化學品；未逐項揭露半導體配方或客戶。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 1711 公司完整基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：色料化學品,特用化學品,電子化學品,碳粉產品,醫藥化學品",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "TWSE 2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 1711 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%、累計YoY+9.0%；為公司整體口徑。"
+          "claim": "2026年8月營收7.47億元，MoM-4.40%、YoY+33.16%，累計YoY+11.64%。 原始單位：NTD thousand。此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-1711-semiconductor-equipment-materials-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "永光電子化學事業官方產品",
+          "url": "https://ecbu.ecic.com/",
+          "claim": "明列G-line、I-line、厚膜光阻及半導體／封裝黃光用途。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-1711-semiconductor-equipment-materials-2",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "EverPI PSPI官方產品與規格",
+          "url": "https://ecbu.ecic.com/ic_manufacturing/photo-sensitive-polyimide/",
+          "claim": "P09／N1301／N2301各自的顯影劑、膜厚與黏度；PSPI絕緣／鈍化用途。未把表中不同產品規格混用。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
-      "confidence": "medium",
-      "lastVerified": "2026-08-31",
-      "status": "candidate",
+      "confidence": "high",
+      "lastVerified": "2026-09-15",
+      "status": "verified",
       "techFocus": [
-        "功能性有機化合物合成、反應副產物控制與批次一致性",
-        "高純度化學品精製、過濾、金屬離子與微粒管理",
-        "配方相容性、儲存安定性與晶圓製程驗證流程"
+        "EverPI P09：2.38% TMAH顯影、膜厚1～20 μm、黏度15～1200 cP（官方表格）",
+        "EverPI N1301採Cyclopentanone顯影／膜厚6～15 μm；N2301採2.38% TMAH／膜厚1～10 μm",
+        "G-line／I-line光阻對應黃光圖形化；PSPI對應絕緣與鈍化，不把兩種用途混為同一配方"
       ],
       "swot": {
-        "strengths": [
-          "MOPS確認電子化學品與特用化學品本業，具功能性材料合成基礎",
-          "2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%，整體營收改善"
-        ],
         "weaknesses": [
-          "MOPS未揭露半導體級純度、特定配方或晶圓廠認證，題材信心僅中等",
-          "公司產品線橫跨色料、碳粉與醫藥，月營收無法拆分半導體材料貢獻"
+          "未取得具名晶圓廠或封裝廠認證與PSPI收入占比，產品存在不等於訂單規模。",
+          "色料、特化、碳粉與醫藥等業務混合，不能將公司年增全歸因半導體材料。",
+          "2026年8月營收7.47億元，MoM-4.40%、YoY+33.16%，累計YoY+11.64%。需區分基期、認列節奏與可持續出貨。"
         ],
         "opportunities": [
-          "供應鏈在地化可增加電子化學品送樣、驗證與替代料機會",
-          "成熟與先進製程對微粒、金屬離子與配方穩定性的要求持續提高"
+          "本土黃光材料供應與第二來源需求可增加光阻驗證機會。",
+          "晶片鈍化與封裝絕緣需要不同正／負型PSPI，可擴大特定應用配方的價值。"
         ],
         "threats": [
-          "JSR、信越、BASF等國際材料商具認證、規模與客戶黏著優勢",
-          "任一批次純度或污染異常都可能導致長期停單與高額品質成本"
+          "國際光阻材料商的認證、專利與客戶黏著優勢，可能限制替代速度。",
+          "批次污染、顯影窗口或固化可靠度異常可能造成昂貴品質損失。"
+        ],
+        "strengths": [
+          "官方公開光阻及PSPI型號、顯影劑與膜厚條件，具實際半導體材料產品而非泛化學品敘事。",
+          "2026年8月營收7.47億元，MoM-4.40%、YoY+33.16%，累計YoY+11.64%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     }

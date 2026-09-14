@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2383",
   "companyName": "台光電",
-  "updatedAt": "2026-09-07T19:16:13Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "pcb-substrates",
@@ -10,32 +10,31 @@
       "topicType": "supply_chain_segment",
       "directness": "core",
       "supplyChainStage": "ccl_and_prepreg",
-      "roleType": "ccl_prepreg_supplier",
-      "roleSummary": "台光電MOPS直接揭露銅箔基板、黏合片與多層壓合板，是PCB上游材料核心供應者；但未揭露ABF／BT載板材料、EMC牌號、Df數值或具名客戶。2026年7月營收192.07億元、MoM+8.3%、YoY+129.4%、累計YoY+89.4%，公司明示受惠AI伺服器成長。",
+      "roleType": "low_loss_pcb_material_supplier",
+      "roleSummary": "台光電MOPS支持CCL／黏合片，官方公開EM-888、EM-890K、EM-892K與EM-892K2材料型號及10GHz介電表，不應只因MOPS未逐項列出就刪除真實規格。本題材為PCB上游基材核心供應者；8月公司明示AI伺服器帶動，但未揭露各牌號收入或具名客戶，亦不將一般CCL認作ABF增層膜。 2026年8月營收201.46億元，MoM+4.89%、YoY+129.85%，累計YoY+95.18%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "高速低損耗銅箔基板（伺服器／網通PCB應用）",
-        "高耐熱銅箔基板",
-        "印刷電路板用黏合片（Prepreg）",
-        "多層印刷電路壓合板",
-        "高頻應用銅箔基板"
+        "EM-888銅箔基板／配套黏合片",
+        "EM-890K低損耗銅箔基板／配套黏合片",
+        "EM-892K低損耗銅箔基板／配套黏合片",
+        "EM-892K2低損耗銅箔基板／配套黏合片"
       ],
       "customers": [
-        "金像電(2368；伺服器PCB應用對象，非MOPS揭露客戶）",
-        "欣興(3037；PCB／載板應用對象，非MOPS揭露客戶）",
-        "健鼎(3044；多層PCB應用對象，非MOPS揭露客戶）",
-        "瀚宇博(5469；伺服器PCB應用對象，非MOPS揭露客戶）",
-        "廣達(2382；AI伺服器終端應用對象，非MOPS揭露客戶）"
+        "金像電（AI伺服器PCB基材應用對象，未確認採購）",
+        "欣興（PCB基材應用對象，未確認採購）",
+        "健鼎（多層板材料應用對象，未確認採購）",
+        "廣達（伺服器終端應用對象，未確認直接採購）"
       ],
       "competitors": [
-        "聯茂(6213)",
-        "台耀(6228)",
-        "松下電工",
-        "Rogers",
-        "Isola"
+        "台燿（低損耗CCL比較對象）",
+        "聯茂（CCL與prepreg比較對象）",
+        "Panasonic（電子基材比較對象）",
+        "Isola（高性能層壓材料比較對象）"
       ],
       "risks": [
-        "AI伺服器需求集中可能放大高階材料景氣循環",
-        "銅箔、樹脂與玻纖布價格及供應波動會影響成本"
+        "單一牌號、AI伺服器產品比重與客戶採購均未拆分，不能把全公司增速套在每個材料上。",
+        "高階材料配方、玻纖與銅箔供應及客戶認證需同步到位，擴產不等同立即收入。",
+        "台燿、聯茂與國際材料廠持續升級低損耗牌號，可能加劇高階競爭。",
+        "AI資本支出反轉或新平台延後，可能影響材料拉貨與新產能利用率。"
       ],
       "legacy": {
         "topicSlug": "ic-substrate",
@@ -45,43 +44,54 @@
       "evidence": [
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS t05st03）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2383",
-          "claim": "MOPS主要經營業務明列銅箔基板、黏合片、多層壓合板；未列ABF／BT載板材料或具名客戶。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 2383 公司完整基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：銅箔基板黏合片多層壓合板",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "TWSE 2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 2383 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收192.07億元、MoM+8.3%、YoY+129.4%、累計YoY+89.4%；備註為受惠AI伺服器成長力道。"
+          "claim": "2026年8月營收201.46億元，MoM+4.89%、YoY+129.85%，累計YoY+95.18%。 原始單位：NTD thousand。公司當月說明：受惠於AI伺服器成長力道此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-2383-pcb-substrates-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "台光電官方材料牌號與規格表",
+          "url": "https://www.emctw.com/zh-TW/product_name/index",
+          "claim": "EM-890K與EM-892K2之Dk／Df依10GHz與RC50／70%條件分列；EM-892K2 Tg@TMA180°C。修正舊版競品名稱／代碼錯配，未把CCL等同ABF膜。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-09-15",
       "status": "verified",
       "techFocus": [
-        "低介電常數／低介電損耗樹脂配方、玻纖布浸潤與含膠量控制",
-        "銅箔粗糙度、差分通道插入損耗與耐熱可靠度管理",
-        "多層板壓合的厚度、樹脂流動、層間對位與翹曲控制"
+        "EM-890K：10GHz、RC50／70%時Dk 3.0／2.8、Df 0.0025／0.0024（官方典型值）",
+        "EM-892K2：10GHz、RC50／70%時Dk 2.90／2.76、Df 0.0014／0.0013（不套至EM-892K）",
+        "EM-892K2的Tg@TMA為180°C；銅箔粗糙度、含膠量與層疊設計仍須按實板驗證（工程分析）"
       ],
       "swot": {
-        "strengths": [
-          "MOPS確認CCL、黏合片與多層壓合板完整產品鏈，題材直接性高",
-          "2026年7月營收192.07億元、YoY+129.4%，且公司明示受惠AI伺服器成長"
-        ],
         "weaknesses": [
-          "MOPS未揭露特定材料牌號、Df數值或ABF／BT載板材料，規格精度需保守",
-          "高階CCL擴產依賴樹脂、玻纖布、銅箔及客戶驗證同步到位"
+          "單一牌號、AI伺服器產品比重與客戶採購均未拆分，不能把全公司增速套在每個材料上。",
+          "高階材料配方、玻纖與銅箔供應及客戶認證需同步到位，擴產不等同立即收入。",
+          "8月公司營收說明：受惠於AI伺服器成長力道不得超出該說明推定特定產品或客戶。"
         ],
         "opportunities": [
-          "AI伺服器與高速交換器升級可提高低損耗CCL及Prepreg單板價值",
-          "高速差分通道損耗與耐熱要求提升，有利配方與壓合能力較強的供應商"
+          "AI伺服器與高速交換器的通道損耗要求提高，可增加低損耗CCL價值。",
+          "高層數PCB需要core與prepreg協同，可擴大材料配套及可靠度驗證服務。"
         ],
         "threats": [
-          "聯茂、台燿及日本材料商擴充低損耗產品會加劇競爭",
-          "AI資本支出放緩或伺服器平台改版延後會影響高階材料拉貨"
+          "台燿、聯茂與國際材料廠持續升級低損耗牌號，可能加劇高階競爭。",
+          "AI資本支出反轉或新平台延後，可能影響材料拉貨與新產能利用率。"
+        ],
+        "strengths": [
+          "官方材料表提供可區分牌號與RC條件的介電數據，能支持低損耗PCB設計比較。",
+          "2026年8月營收201.46億元，MoM+4.89%、YoY+129.85%，累計YoY+95.18%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     },

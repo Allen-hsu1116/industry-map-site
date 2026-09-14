@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "companyCode": "2376",
   "companyName": "技嘉",
-  "updatedAt": "2026-09-07T19:16:13Z",
+  "updatedAt": "2026-09-14T19:25:52Z",
   "roles": [
     {
       "topicId": "ai-server",
@@ -186,20 +186,19 @@
       "directness": "core",
       "supplyChainStage": "pc_brand",
       "roleType": "pc_component_and_system_brand",
-      "roleSummary": "技嘉MOPS支持電腦硬體、零件、系統週邊與軟體製造銷售，消費PC角色成立；但MOPS未逐項揭露AORUS、BRIX型號或Intel、NVIDIA、AMD為客戶。2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%，公司說明AI訂單暢旺，因此成長不能全歸因消費PC。",
+      "roleSummary": "技嘉MOPS與官方消費產品頁確認主機板、顯示卡、筆電、AI TOP PC與SSD。以Z890 AORUS ELITE WIFI7實際型號綁定DDR5、VRM與I/O細節，不再把不同世代規格拼接。8月備註仍為AI訂單需求暢旺，未說明全數為消費PC或AI PC收入。 2026年8月營收474.01億元，MoM+7.21%、YoY+98.43%，累計YoY+55.23%。此為公司整體營收，無法全數歸因本題材。",
       "products": [
-        "GIGABYTE／AORUS桌上型電腦主機板",
-        "GIGABYTE／AORUS獨立顯示卡",
-        "AORUS電競筆記型電腦",
-        "BRIX迷你電腦",
-        "電腦週邊設備與系統軟體"
+        "Z890 AORUS ELITE WIFI7主機板",
+        "AORUS GeForce RTX 5080 INFINITY顯示卡",
+        "GIGABYTE電競／AI筆記型電腦",
+        "AI TOP PC運算整機",
+        "GIGABYTE桌上型電腦SSD"
       ],
       "customers": [
-        "Intel（處理器與晶片組平台對象，非MOPS揭露客戶）",
-        "AMD（CPU／GPU平台對象，非MOPS揭露客戶）",
-        "NVIDIA（GPU平台對象，非MOPS揭露客戶）",
-        "Newegg（零售通路應用對象，非MOPS揭露客戶）",
-        "Amazon（電商通路應用對象，非MOPS揭露客戶）"
+        "Intel（Z890主機板官方相容處理器平台，非採購客戶）",
+        "NVIDIA（官方GeForce顯示卡平台對象，非據此確認下游客戶）",
+        "AMD（官網CPU／GPU活動平台對象，非據此確認下游客戶）",
+        "Newegg（PC零售通路應用對象，未確認本輪交易）"
       ],
       "competitors": [
         "華碩",
@@ -207,8 +206,10 @@
         "華擎"
       ],
       "risks": [
-        "消費PC需求循環與DIY市場萎縮會影響主機板及顯示卡出貨",
-        "2026年7月營收成長由AI訂單帶動，不能當成消費終端全面復甦"
+        "8月AI訂單說明未區分伺服器與消費PC，不能據此宣稱DIY市場全面反彈。",
+        "CPU／GPU平台供應與上市節奏掌握在上游晶片商，產品組合受制於供貨。",
+        "華碩、微星與華擎等品牌在主機板與遊戲硬體市場持續競爭。",
+        "終端庫存、GPU供應配置與售後品質事件可能壓低消費產品毛利。"
       ],
       "legacy": {
         "topicSlug": "pc-nb-tablet",
@@ -218,43 +219,62 @@
       "evidence": [
         {
           "sourceId": "mops-company-profile",
-          "publisher": "公開資訊觀測站 MOPS",
-          "title": "公司完整基本資料（MOPS t05st03）",
-          "url": "https://mops.twse.com.tw/mops/web/t05st03?co_id=2376",
-          "claim": "MOPS主要經營業務為電腦硬體及零件、電腦系統週邊設備與軟體之製造加工及買賣。"
+          "publisher": "公開資訊觀測站 MOPS via CasualMarket MCP",
+          "title": "2026-09-15 2376 公司完整基本資料",
+          "url": "https://mops.twse.com.tw/mops/web/t05st03",
+          "claim": "MOPS主要經營業務：電腦硬體及其零件之製造加工及買賣電腦系統週邊設備(包括軟體)之製造加工及買賣前項有關商品進口及代理國內外廠商之投標報價及經營業務",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         },
         {
           "sourceId": "twse-monthly-revenue",
-          "publisher": "TWSE OpenAPI",
-          "title": "TWSE 2026年7月月營收",
+          "publisher": "TWSE OpenAPI via MCP",
+          "title": "2026-09-15 2376 2026年8月月營收核對",
           "url": "https://openapi.twse.com.tw/",
-          "claim": "2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%、累計YoY+50.0%；公司備註AI訂單需求暢旺。"
+          "claim": "2026年8月營收474.01億元，MoM+7.21%、YoY+98.43%，累計YoY+55.23%。 原始單位：NTD thousand。公司當月說明：AI訂單需求暢旺此為公司整體營收，無法全數歸因本題材。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-2376-consumer-computing-devices-1",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "Z890 AORUS ELITE WIFI7官方規格",
+          "url": "https://www.gigabyte.com/us/Motherboard/Z890-AORUS-ELITE-WIFI7",
+          "claim": "Core Ultra Series2、DDR5、1×PCIe5 M.2、16+1+2 Twin VRM／8+8並聯、2.5GbE、Wi-Fi7、Thunderbolt4；非PLUS款。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
+        },
+        {
+          "sourceId": "official-role-products-2376-consumer-computing-devices-2",
+          "publisher": "公司官方網站（索引來源依title／claim明示）",
+          "title": "技嘉消費產品官方目錄",
+          "url": "https://www.gigabyte.com/us/Consumer",
+          "claim": "列主機板、顯示卡、筆電、AI TOP PC與SSD；官方近期公告列AORUS RTX5080 INFINITY供貨，不推定全公司營收均屬PC。",
+          "retrievedAt": "2026-09-14T19:25:52Z"
         }
       ],
       "confidence": "high",
-      "lastVerified": "2026-08-31",
+      "lastVerified": "2026-09-15",
       "status": "verified",
       "techFocus": [
-        "主機板高速差分訊號、多相供電與BIOS平台整合",
-        "顯示卡散熱器、風扇曲線與GPU板級供電設計",
-        "迷你電腦的小型化機構、熱管理與I/O整合"
+        "Z890 AORUS ELITE WIFI7支援Core Ultra Series 2、4個DDR5插槽與1個PCIe 5.0 x4 M.2",
+        "該Z890主板為16+1+2 Twin VRM（8+8並聯供電設計），不能寫成16相全獨立供電",
+        "該Z890主板具2.5GbE、Wi-Fi 7與Thunderbolt 4；不套用PLUS款5GbE規格"
       ],
       "swot": {
-        "strengths": [
-          "MOPS直接支持電腦硬體、零件、系統週邊與軟體，本題材產品鏈完整",
-          "2026年7月營收442.13億元、MoM+3.1%、YoY+59.7%，整體出貨動能強"
-        ],
         "weaknesses": [
-          "公司說明成長主要來自AI訂單，消費PC貢獻未分拆",
-          "主機板與顯示卡依賴Intel、AMD、NVIDIA平台節奏及供貨"
+          "8月AI訂單說明未區分伺服器與消費PC，不能據此宣稱DIY市場全面反彈。",
+          "CPU／GPU平台供應與上市節奏掌握在上游晶片商，產品組合受制於供貨。",
+          "8月公司營收說明：AI訂單需求暢旺不得超出該說明推定特定產品或客戶。"
         ],
         "opportunities": [
-          "AI PC與新一代CPU／GPU平台可帶動主機板、顯示卡及電競筆電換機",
-          "BRIX與小型電腦可切入家庭、商用與邊緣運算等多元終端"
+          "新CPU平台、DDR5與高速儲存更新可帶動主機板及周邊換機。",
+          "AI TOP PC與筆電可拓展本地運算需求，但銷售轉換須獨立驗證。"
         ],
         "threats": [
-          "華碩、微星與華擎在主機板、顯示卡及電競品牌市場競爭激烈",
-          "DIY PC結構性縮減或GPU供應配置變動可能壓抑消費產品出貨"
+          "華碩、微星與華擎等品牌在主機板與遊戲硬體市場持續競爭。",
+          "終端庫存、GPU供應配置與售後品質事件可能壓低消費產品毛利。"
+        ],
+        "strengths": [
+          "具品牌主機板、顯示卡與整機／儲存產品，可由零件到PC平台共同布局。",
+          "2026年8月營收474.01億元，MoM+7.21%、YoY+98.43%，累計YoY+55.23%。整體年增為營運背景，不是本題材產品收入分拆。"
         ]
       }
     }
