@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3189",
   "name": "景碩",
-  "generatedAt": "2026-09-14T12:33:11.404Z",
+  "generatedAt": "2026-09-15T12:32:17.038Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-14",
-  "chipDataDate": "2026-09-14",
+  "marketDataDate": "2026-09-15",
+  "chipDataDate": "2026-09-15",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -18,11 +18,11 @@
     "stance": "bearish",
     "label": "偏空",
     "score": -45,
-    "summary": "景碩 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.5%。",
+    "summary": "景碩 技術面目前為「偏空」：收盤價、MA5、MA20 呈空頭排列；收盤跌破 MA20 4.4%。",
     "signals": [],
     "risks": [
       "收盤價、MA5、MA20 呈空頭排列",
-      "收盤跌破 MA20 4.5%"
+      "收盤跌破 MA20 4.4%"
     ],
     "watch": [
       "量能低於 20 日均量，突破訊號可信度較低"
@@ -31,31 +31,31 @@
   "chips": {
     "stance": "neutral",
     "label": "籌碼中性",
-    "score": 0,
-    "summary": "景碩 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +1.8千張；外資近 5 日買超 +2.5千張。",
+    "score": 16,
+    "summary": "景碩 籌碼面目前為「籌碼中性」：三大法人近 5 日合計買超 +5.2千張；投信近 5 日買超 +1.1千張。",
     "signals": [
-      "三大法人近 5 日合計買超 +1.8千張",
-      "外資近 5 日買超 +2.5千張"
+      "三大法人近 5 日合計買超 +5.2千張",
+      "投信近 5 日買超 +1.1千張",
+      "外資近 5 日買超 +4.5千張"
     ],
     "risks": [
-      "近 20 日法人偏賣，合計 -8.1千張",
-      "投信近 5 日賣超 -146張"
+      "近 20 日法人偏賣，合計 -6.4千張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-14"
+      "最近法人資料日：2026-09-15"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "景碩MOPS本次僅揭露電子零組件製造及電子材料批零售，無法支持原角色的線寬、孔徑與具名客戶；本題材保留其既有IC載板產品家族，但將規格與關係降為待年報／法說交叉驗證。2026年7月營收45.49億元、MoM+7.7%、YoY+35.9%，累計YoY+30.7%。",
+      "roleSummary": "景碩MOPS僅列電子零組件與材料業務，但官方新產品目錄已明確確認FC-BGA、FCCSP、PBGA、CSP及SiP載板；本題材為IC封裝載板核心供應角色，不再把真實產品家族寫成待驗證。官方未指名本輪客戶，也未公開可套用全系列的線寬、孔徑或CoWoS訂單。 2026年8月營收48.10億元，MoM+5.73%、YoY+40.58%，累計YoY+32.09%。此為公司整體營收，無法全數歸因本題材。",
       "supplyChainStage": "ic_substrate",
       "roleType": "ic_substrate_manufacturer",
       "directness": "core",
@@ -63,17 +63,17 @@
     },
     "productNarratives": [
       {
-        "name": "FC-BGA封裝載板（既有產品家族）",
+        "name": "FC-BGA CPU／GPU封裝載板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "BT樹脂封裝載板（既有產品家族）",
+        "name": "FCCSP倒裝晶片尺寸封裝載板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "CSP晶片尺寸封裝載板（既有產品家族）",
+        "name": "PBGA打線式球柵陣列載板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -92,9 +92,9 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 2 項 +10",
       "風險 SWOT 扣分 -6",
@@ -102,9 +102,9 @@
     ],
     "summary": "景碩 在「PCB、IC 載板與高階基板材料」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：PCB、IC 載板與高階基板材料 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PCB、IC 載板與高階基板材料（supply_chain_segment/active） +16）",
       "相關題材：先進封裝與 CoWoS · 間接受惠",
       "相關題材：HBM 高頻寬記憶體 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -134,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-14"
+      "lastVerified": "2026-09-15"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -163,8 +163,8 @@
         "canonicalTopicName": "PCB、IC 載板與高階基板材料",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "景碩MOPS本次僅揭露電子零組件製造及電子材料批零售，無法支持原角色的線寬、孔徑與具名客戶；本題材保留其既有IC載板產品家族，但將規格與關係降為待年報／法說交叉驗證。2026年7月營收45.49億元、MoM+7.7%、YoY+35.9%，累計YoY+30.7%。"
+        "confidence": "high",
+        "roleSummary": "景碩MOPS僅列電子零組件與材料業務，但官方新產品目錄已明確確認FC-BGA、FCCSP、PBGA、CSP及SiP載板；本題材為IC封裝載板核心供應角色，不再把真實產品家族寫成待驗證。官方未指名本輪客戶，也未公開可套用全系列的線寬、孔徑或CoWoS訂單。 2026年8月營收48.10億元，MoM+5.73%、YoY+40.58%，累計YoY+32.09%。此為公司整體營收，無法全數歸因本題材。"
       },
       {
         "topicId": "advanced-packaging",
@@ -282,7 +282,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 55,
+    "totalScore": 58,
     "recommendationState": "watchlist",
     "fundamental": {
       "score": 18,
@@ -292,8 +292,8 @@
         "月營收 MoM +3.4%，短期動能改善"
       ],
       "risks": [
-        "本益比 148.1 倍，需防估值壓縮",
-        "股價淨值比 9.5 倍偏高，需和 ROE/成長性比對"
+        "本益比 147.5 倍，需防估值壓縮",
+        "股價淨值比 9.4 倍偏高，需和 ROE/成長性比對"
       ]
     },
     "strategy": {
@@ -307,11 +307,11 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：811.80",
-      "波段多空分水嶺看 MA20：835.25",
-      "追蹤法人是否延續 賣超：最近 -1.1千張",
+      "短線支撐/壓力先看 MA5：810.80",
+      "波段多空分水嶺看 MA20：831.75",
+      "追蹤法人是否延續 買超：最近 +1.1千張",
       "月營收年增率 +26.8%，觀察基本面是否支撐估值",
-      "本益比 148.1 倍，需和同族群估值比較"
+      "本益比 147.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 960.00 且量比 > 1.5：列為轉強訊號",

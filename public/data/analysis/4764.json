@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "4764",
   "name": "雙鍵",
-  "generatedAt": "2026-09-14T12:33:11.558Z",
+  "generatedAt": "2026-09-15T12:32:17.269Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -55,29 +55,29 @@
     "knowledgeBasis": "canonical_pending",
     "confidence": "low",
     "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=4；只做保守參考。",
+    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。",
     "roleDetail": {
       "topicName": "先進封裝與 CoWoS",
       "roleLabel": "間接受惠",
-      "roleSummary": "雙鍵MOPS只揭露塑膠添加劑與UV光固化產品，沒有揭露晶圓暫時貼合、底部填膠、封裝膠或半導體客戶；在先進封裝題材僅屬UV固化材料的潛在應用鄰近者。2026年7月營收2.94億元、MoM+3.4%、YoY+44.1%，成長不能歸因於先進封裝。",
-      "supplyChainStage": "uv_materials_adjacent",
-      "roleType": "uv_curing_material_adjacent",
+      "roleSummary": "雙鍵MOPS與官網確認塑膠添加劑、光引發劑與UV寡聚物；官方列LED encapsulation應用，因此不再一概否定封裝材料鄰近性，但LED包封不等於CoWoS、晶圓暫時貼合或underfill認證。本角色仍是先進封裝的低直接性材料觀察，不冒充已量產半導體封裝膠供應商。 2026年8月營收2.68億元，MoM-8.96%、YoY+22.75%，累計YoY+27.90%。此為公司整體營收，無法全數歸因本題材。",
+      "supplyChainStage": "uv_and_polymer_materials_adjacent",
+      "roleType": "uv_materials_with_led_encapsulation_adjacency",
       "directness": "indirect",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "UV光固化樹脂配方",
+        "name": "UV固化用光引發劑",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "UV光固化塗層材料",
+        "name": "UV光固化寡聚物",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "塑膠用抗氧化添加劑",
+        "name": "聚合物抗氧化添加劑",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -91,7 +91,7 @@
       "直接度 間接受惠 +8",
       "角色信心 low +3",
       "題材 先進封裝與 CoWoS（process/active） +16",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "V2 角色待驗證上限 / 缺 evidence 降權（原 51，上限 40）"
     ],
@@ -106,7 +106,7 @@
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "已有 V2 role，但 status=candidate、confidence=low、evidence=4；只做保守參考。"
+      "已有 V2 role，但 status=candidate、confidence=low、evidence=3；只做保守參考。"
     ],
     "watch": [
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
@@ -158,7 +158,7 @@
         "directness": "indirect",
         "directnessLabel": "間接受惠",
         "confidence": "low",
-        "roleSummary": "雙鍵MOPS只揭露塑膠添加劑與UV光固化產品，沒有揭露晶圓暫時貼合、底部填膠、封裝膠或半導體客戶；在先進封裝題材僅屬UV固化材料的潛在應用鄰近者。2026年7月營收2.94億元、MoM+3.4%、YoY+44.1%，成長不能歸因於先進封裝。"
+        "roleSummary": "雙鍵MOPS與官網確認塑膠添加劑、光引發劑與UV寡聚物；官方列LED encapsulation應用，因此不再一概否定封裝材料鄰近性，但LED包封不等於CoWoS、晶圓暫時貼合或underfill認證。本角色仍是先進封裝的低直接性材料觀察，不冒充已量產半導體封裝膠供應商。 2026年8月營收2.68億元，MoM-8.96%、YoY+22.75%，累計YoY+27.90%。此為公司整體營收，無法全數歸因本題材。"
       },
       {
         "topicId": "energy-storage-battery",
@@ -291,12 +291,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 112 天未更新"
+        "message": "股價資料已 113 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 112 天未更新"
+        "message": "籌碼資料已 113 天未更新"
       },
       {
         "id": "risk.stop-distance",

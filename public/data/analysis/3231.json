@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "3231",
   "name": "緯創",
-  "generatedAt": "2026-09-14T12:33:11.417Z",
+  "generatedAt": "2026-09-15T12:32:17.056Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-14",
-  "chipDataDate": "2026-09-14",
+  "marketDataDate": "2026-09-15",
+  "chipDataDate": "2026-09-15",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -32,32 +32,32 @@
     "stance": "distribution",
     "label": "籌碼偏空",
     "score": -20,
-    "summary": "緯創 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +1.2千張；三大法人近 5 日合計賣超 -8.2萬張。",
+    "summary": "緯創 籌碼面目前為「籌碼偏空」：投信近 5 日買超 +64張；三大法人近 5 日合計賣超 -3.9萬張。",
     "signals": [
-      "投信近 5 日買超 +1.2千張"
+      "投信近 5 日買超 +64張"
     ],
     "risks": [
-      "三大法人近 5 日合計賣超 -8.2萬張",
-      "近 20 日法人偏賣，合計 -8.2萬張",
-      "外資近 5 日賣超 -8.3萬張"
+      "三大法人近 5 日合計賣超 -3.9萬張",
+      "近 20 日法人偏賣，合計 -7.3萬張",
+      "外資近 5 日賣超 -3.9萬張"
     ],
     "watch": [
-      "最近法人資料日：2026-09-14"
+      "最近法人資料日：2026-09-15"
     ]
   },
   "industry": {
     "label": "核心題材受惠",
     "score": 94,
     "knowledgeBasis": "canonical_verified",
-    "confidence": "medium",
+    "confidence": "high",
     "provenanceLabel": "V2 已驗證",
-    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 3 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
       "topicName": "PC、手機與 AR/VR/XR 終端",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "緯創MOPS只揭露3C電子產品，無法支持原角色中的具體筆電型號、軍規認證或品牌客戶；本題材保留消費運算ODM產品家族，並將品牌全數標為應用對象。2026年7月營收3,082.19億元、YoY+60.8%、MoM-4.2%，公司說明成長主因為客戶需求增加。",
+      "roleSummary": "緯創MOPS的3C電子產品經官方Personal Computing頁補充，確認筆电、桌機、Mini PC、AIO與擴充基座，屬消費運算ODM核心角色。官方提及PCR塑膠機殼與設計至售後整合，未據此確認品牌採購或XR收入。8月營收備註僅稱客戶需求增加，不能把全公司倍增解讀為筆電單一產品成長。 2026年8月營收4,600.65億元，MoM+49.27%、YoY+166.48%，累計YoY+98.87%。此為公司整體營收，無法全數歸因本題材。",
       "supplyChainStage": "system_assembly",
-      "roleType": "consumer_device_odm",
+      "roleType": "personal_computing_odm",
       "directness": "core",
       "source": "canonical"
     },
@@ -68,12 +68,12 @@
         "confidence": "low"
       },
       {
-        "name": "商用電腦ODM整機",
+        "name": "桌上型電腦ODM整機",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "桌上型電腦與工作站ODM",
+        "name": "Mini PC迷你電腦",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -87,18 +87,18 @@
     },
     "scoringFactors": [
       "直接度 核心產品/平台 +42",
-      "角色信心 medium +10",
+      "角色信心 high +16",
       "題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14",
-      "角色證據 4 則 +12",
+      "角色證據 3 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 1 項 +5",
       "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
     "summary": "緯創 在「PC、手機與 AR/VR/XR 終端」的 V2 角色為「核心產品/平台」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 已驗證（medium）",
-      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · medium",
-      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 medium +10；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：PC、手機與 AR/VR/XR 終端 · 核心產品/平台 · high",
+      "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 PC、手機與 AR/VR/XR 終端（end_market/active） +14）",
       "相關題材：AI 伺服器整機與 EMS · 直接賦能角色",
       "相關題材：AI 伺服器機構件與滑軌 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
@@ -125,7 +125,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-14"
+      "lastVerified": "2026-09-15"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -154,8 +154,8 @@
         "canonicalTopicName": "PC、手機與 AR/VR/XR 終端",
         "directness": "core",
         "directnessLabel": "核心產品/平台",
-        "confidence": "medium",
-        "roleSummary": "緯創MOPS只揭露3C電子產品，無法支持原角色中的具體筆電型號、軍規認證或品牌客戶；本題材保留消費運算ODM產品家族，並將品牌全數標為應用對象。2026年7月營收3,082.19億元、YoY+60.8%、MoM-4.2%，公司說明成長主因為客戶需求增加。"
+        "confidence": "high",
+        "roleSummary": "緯創MOPS的3C電子產品經官方Personal Computing頁補充，確認筆电、桌機、Mini PC、AIO與擴充基座，屬消費運算ODM核心角色。官方提及PCR塑膠機殼與設計至售後整合，未據此確認品牌採購或XR收入。8月營收備註僅稱客戶需求增加，不能把全公司倍增解讀為筆電單一產品成長。 2026年8月營收4,600.65億元，MoM+49.27%、YoY+166.48%，累計YoY+98.87%。此為公司整體營收，無法全數歸因本題材。"
       },
       {
         "topicId": "ai-server",
@@ -245,7 +245,7 @@
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 14.4 倍，估值尚可對照成長",
+        "本益比 14.5 倍，估值尚可對照成長",
         "殖利率 3.0%，提供部分下檔支撐"
       ],
       "risks": []
@@ -260,10 +260,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：185.40",
-      "波段多空分水嶺看 MA20：183.40",
-      "追蹤法人是否延續 賣超：最近 -1.2萬張",
-      "本益比 14.4 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：184.60",
+      "波段多空分水嶺看 MA20：183.48",
+      "追蹤法人是否延續 賣超：最近 -850張",
+      "本益比 14.5 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 200.50 且量比 > 1.5：列為轉強訊號",

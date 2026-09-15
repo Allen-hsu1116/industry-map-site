@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6770",
   "name": "力積電",
-  "generatedAt": "2026-09-14T12:33:11.773Z",
+  "generatedAt": "2026-09-15T12:32:17.587Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -59,25 +59,25 @@
     "roleDetail": {
       "topicName": "NOR Flash 與利基記憶體",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "力積電MOPS揭露積體電路生產、製造、測試、封裝及ASIC技術整合，足以支持記憶體製造服務角色，但沒有揭露原角色中的特定製程節點、記憶體規格、車規認證或具名客戶。2026年7月營收66.69億元、YoY+70.5%、MoM+3.0%，公司說明由需求、銷量與價格同步上升帶動。",
-      "supplyChainStage": "wafer_manufacturing",
-      "roleType": "memory_ic_manufacturing_service",
+      "roleSummary": "力積電MOPS確認IC製造與ASIC整合，官方搜尋索引進一步指出利基DRAM 25nm及SLC NAND Flash 40nm服務；完整產品頁遭Cloudflare阻擋且瀏覽器取用失敗，因此精確節點明確標為索引證據而非本輪全文核驗。本題材保留利基DRAM／NAND代工，不把Flash總稱改寫成NOR，也不再以一般封裝業務充當記憶體產品細目。 2026年8月營收70.09億元，MoM+5.10%、YoY+76.19%，累計YoY+47.08%。此為公司整體營收，無法全數歸因本題材。",
+      "supplyChainStage": "memory_wafer_foundry",
+      "roleType": "niche_dram_and_slc_nand_foundry",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "利基型記憶體晶圓製造服務",
+        "name": "利基DRAM晶圓代工（官網索引列25nm平台）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "記憶體IC晶圓測試服務",
+        "name": "SLC NAND Flash晶圓代工（官網索引列40nm）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "記憶體IC封裝服務",
+        "name": "Flash產品設計服務（官方索引揭露）",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -167,7 +167,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "medium",
-        "roleSummary": "力積電MOPS揭露積體電路生產、製造、測試、封裝及ASIC技術整合，足以支持記憶體製造服務角色，但沒有揭露原角色中的特定製程節點、記憶體規格、車規認證或具名客戶。2026年7月營收66.69億元、YoY+70.5%、MoM+3.0%，公司說明由需求、銷量與價格同步上升帶動。"
+        "roleSummary": "力積電MOPS確認IC製造與ASIC整合，官方搜尋索引進一步指出利基DRAM 25nm及SLC NAND Flash 40nm服務；完整產品頁遭Cloudflare阻擋且瀏覽器取用失敗，因此精確節點明確標為索引證據而非本輪全文核驗。本題材保留利基DRAM／NAND代工，不把Flash總稱改寫成NOR，也不再以一般封裝業務充當記憶體產品細目。 2026年8月營收70.09億元，MoM+5.10%、YoY+76.19%，累計YoY+47.08%。此為公司整體營收，無法全數歸因本題材。"
       },
       {
         "topicId": "wafer-foundry",
@@ -280,12 +280,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 112 天未更新"
+        "message": "股價資料已 113 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 112 天未更新"
+        "message": "籌碼資料已 113 天未更新"
       },
       {
         "id": "risk.stop-distance",

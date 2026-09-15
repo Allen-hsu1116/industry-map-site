@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "code": "2453",
   "name": "凌群",
-  "generatedAt": "2026-09-14T12:33:11.226Z",
+  "generatedAt": "2026-09-15T12:32:16.780Z",
   "sourceUpdatedAt": "2026-06-01",
-  "marketDataDate": "2026-09-14",
-  "chipDataDate": "2026-09-14",
+  "marketDataDate": "2026-09-15",
+  "chipDataDate": "2026-09-15",
   "mode": "rule-batch",
   "analysisQuality": {
     "grade": "A",
@@ -15,33 +15,34 @@
     "blockingReasons": []
   },
   "technical": {
-    "stance": "bullish",
-    "label": "偏多",
-    "score": 73,
-    "summary": "凌群 技術面目前為「偏多」：收盤價、MA5、MA20 呈多頭排列；收盤站上 MA20 6.0%。",
+    "stance": "neutral",
+    "label": "中性震盪",
+    "score": 12,
+    "summary": "凌群 技術面目前為「中性震盪」：收盤價、MA5、MA20 呈多頭排列；帶量下跌，量比 3.20x。",
     "signals": [
-      "收盤價、MA5、MA20 呈多頭排列",
-      "收盤站上 MA20 6.0%",
-      "帶量上漲，量比 9.01x"
+      "收盤價、MA5、MA20 呈多頭排列"
     ],
-    "risks": [],
+    "risks": [
+      "帶量下跌，量比 3.20x"
+    ],
     "watch": [
-      "接近 20 日高點 56.00，觀察是否突破"
+      "股價貼近 MA20，留意方向選擇"
     ]
   },
   "chips": {
     "stance": "accumulation",
     "label": "籌碼偏多",
     "score": 28,
-    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +125張；近 20 日法人偏買，合計 +341張。",
+    "summary": "凌群 籌碼面目前為「籌碼偏多」：三大法人近 5 日合計買超 +36張；近 20 日法人偏買，合計 +354張。",
     "signals": [
-      "三大法人近 5 日合計買超 +125張",
-      "近 20 日法人偏買，合計 +341張",
-      "外資近 5 日買超 +131張"
+      "三大法人近 5 日合計買超 +36張",
+      "近 20 日法人偏買，合計 +354張",
+      "外資近 5 日買超 +39張"
     ],
     "risks": [],
     "watch": [
-      "最近法人資料日：2026-09-14"
+      "最近法人資料日：2026-09-15",
+      "融券近 5 日增加 300.0%，留意軋空或空方壓力"
     ]
   },
   "industry": {
@@ -133,7 +134,7 @@
       "threats": [],
       "sources": [],
       "freshness": "fresh",
-      "lastVerified": "2026-09-14"
+      "lastVerified": "2026-09-15"
     },
     "dataSources": [
       "MOPS company profile / financial statements",
@@ -231,21 +232,20 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 84,
+    "totalScore": 70,
     "recommendationState": "top_candidate",
     "fundamental": {
       "score": 8,
       "label": "基本面中性",
       "signals": [
-        "本益比 17.5 倍，估值尚可對照成長",
-        "殖利率 5.1%，提供部分下檔支撐"
+        "本益比 17.0 倍，估值尚可對照成長",
+        "殖利率 5.2%，提供部分下檔支撐"
       ],
       "risks": []
     },
     "strategy": {
-      "classification": "趨勢題材股",
+      "classification": "題材股",
       "rationale": [
-        "技術面符合趨勢股條件",
         "籌碼面有法人/信用籌碼支撐",
         "題材角色已 evidence-backed，可納入題材股策略"
       ]
@@ -254,10 +254,10 @@
   },
   "nextSession": {
     "focus": [
-      "短線支撐/壓力先看 MA5：52.76",
-      "波段多空分水嶺看 MA20：52.19",
-      "追蹤法人是否延續 賣超：最近 -141張",
-      "本益比 17.5 倍，需和同族群估值比較"
+      "短線支撐/壓力先看 MA5：53.12",
+      "波段多空分水嶺看 MA20：52.29",
+      "追蹤法人是否延續 賣超：最近 -63張",
+      "本益比 17.0 倍，需和同族群估值比較"
     ],
     "triggerRules": [
       "收盤突破 20 日高點 56.00 且量比 > 1.5：列為轉強訊號",

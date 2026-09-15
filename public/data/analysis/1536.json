@@ -2,21 +2,17 @@
   "schemaVersion": 1,
   "code": "1536",
   "name": "和大",
-  "generatedAt": "2026-09-14T12:33:11.064Z",
+  "generatedAt": "2026-09-15T12:32:16.537Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
   "mode": "rule-batch",
   "analysisQuality": {
-    "grade": "C",
-    "label": "弱分析 / 部分資料",
-    "upgradePriority": "high",
-    "missingKnowledge": [
-      "verified_topic_role"
-    ],
-    "blockingReasons": [
-      "topic_role_not_verified"
-    ]
+    "grade": "A",
+    "label": "完整 evidence-backed",
+    "upgradePriority": "low",
+    "missingKnowledge": [],
+    "blockingReasons": []
   },
   "technical": {
     "stance": "neutral",
@@ -49,34 +45,34 @@
     ]
   },
   "industry": {
-    "label": "題材關聯待驗證",
-    "score": 40,
-    "knowledgeBasis": "canonical_pending",
-    "confidence": "low",
-    "provenanceLabel": "V2 待驗證",
-    "verificationNote": "已有 V2 role，但 status=candidate、confidence=low、evidence=5；只做保守參考。",
+    "label": "核心題材受惠",
+    "score": 94,
+    "knowledgeBasis": "canonical_verified",
+    "confidence": "high",
+    "provenanceLabel": "V2 已驗證",
+    "verificationNote": "角色已由 company-topic-roles 驗證，含 4 則 evidence；可搭配 canonical topic / SWOT 作為產業加分。",
     "roleDetail": {
-      "topicName": "儲能、電芯與電池材料",
-      "roleLabel": "間接受惠",
-      "roleSummary": "MOPS與官方電動車產品頁確認馬達軸、減速箱與差速器，並不是電池或定置儲能設備。此題材保留為電動車機械傳動的題外觀察，禁止把電驅動零件成長寫成儲能電池曝險。本次TWSE最新回傳：2026年7月營收4.40億元，MoM+19.81%、YoY+9.59%，累計YoY+1.03%。公司整體營收不可直接歸因本題材。",
-      "supplyChainStage": "automotive_transmission_outside_topic",
-      "roleType": "ev_gears_outside_stationary_storage",
-      "directness": "indirect",
+      "topicName": "工業自動化與 CNC 工具機",
+      "roleLabel": "直接賦能角色",
+      "roleSummary": "和大除MOPS揭露的齒輪、軸類與機械加工外，官方工具機目錄明列HARTECH滾齒、刮齒、倒角、CNC砂輪開槽及自動化整合服務；因此撤回舊版『沒有CNC或自動化設備』的過度否定，改為齒輪加工工具機與產線整合的直接角色，仍不推論機器人關節訂單。 2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。此為公司整體營收，無法全數歸因本題材。",
+      "supplyChainStage": "gear_machine_tools_and_automation",
+      "roleType": "gear_processing_machine_tool_provider",
+      "directness": "direct_enabler",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "電動車轉子馬達軸Rotor shaft",
+        "name": "HARTECH HGH系列滾齒機",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "電動車減速箱齒輪組",
+        "name": "HARTECH HGS系列刮齒機",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "電動車差速器",
+        "name": "HGD 250-NC2齒輪倒角機",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -96,27 +92,26 @@
       ]
     },
     "scoringFactors": [
-      "直接度 間接受惠 +8",
-      "角色信心 low +3",
-      "題材 儲能、電芯與電池材料（theme/active） +18",
-      "角色證據 5 則 +12",
+      "直接度 直接賦能角色 +36",
+      "角色信心 high +16",
+      "題材 工業自動化與 CNC 工具機（technology/active） +17",
+      "角色證據 4 則 +12",
       "催化訊號 3 項 +12",
       "正向 SWOT 13 項 +10",
       "風險 SWOT 扣分 -10",
-      "V2 角色待驗證上限 / 缺 evidence 降權（原 53，上限 40）"
+      "V2 已驗證 bonus +8（上限 94，避免 evidence-backed 直接滿分）"
     ],
-    "summary": "和大 在「儲能、電芯與電池材料」的 V2 角色為「間接受惠」，資料基礎為「V2 待驗證」，產業 score 40/100；Daily analysis 只保守參考，待補 evidence 後才提高權重。",
+    "summary": "和大 在「工業自動化與 CNC 工具機」的 V2 角色為「直接賦能角色」，資料基礎為「V2 已驗證」，產業 score 94/100；Daily analysis 會用 canonical 題材/角色/SWOT 校正技術與籌碼訊號。",
     "signals": [
-      "資料基礎：V2 待驗證（low）",
-      "V2 題材角色：儲能、電芯與電池材料 · 間接受惠 · low",
-      "產業評分：40/100（直接度 間接受惠 +8；角色信心 low +3；題材 儲能、電芯與電池材料（theme/active） +18）",
-      "相關題材：工業自動化與 CNC 工具機 · 間接受惠",
+      "資料基礎：V2 已驗證（high）",
+      "V2 題材角色：工業自動化與 CNC 工具機 · 直接賦能角色 · high",
+      "產業評分：94/100（直接度 直接賦能角色 +36；角色信心 high +16；題材 工業自動化與 CNC 工具機（technology/active） +17）",
+      "相關題材：儲能、電芯與電池材料 · 間接受惠",
       "相關題材：太陽能與離岸風電 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
     "risks": [
-      "已有 V2 role，但 status=candidate、confidence=low、evidence=5；只做保守參考。",
       "V2 W：減速機市佔遠低於 Nabtesco/Harmonic Drive",
       "V2 W：6月營收3.67億元，累計YoY-0.2%持平，再生能源相關齒輪佔營收比重低，對整體業績影響有限。",
       "V2 T：Nabtesco/Harmonic Drive 在減速機市場的寡佔地位",
@@ -126,9 +121,9 @@
       "V2 O：工業機器人需求帶動減速機成長，人形機器人帶動新規格需求",
       "V2 O：儲能電池櫃散熱風扇傳動齒輪需求隨儲能裝機量成長，和大可切入台達電/東元供應鏈。",
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
-      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善",
-      "追蹤 儲能、電芯與電池材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善"
+      "追蹤 工業自動化與 CNC 工具機：月營收或訂單能見度改善",
+      "追蹤 工業自動化與 CNC 工具機：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 儲能、電芯與電池材料：月營收或訂單能見度改善"
     ]
   },
   "knowledge": {
@@ -165,6 +160,16 @@
   "canonicalKnowledge": {
     "topicRoles": [
       {
+        "topicId": "industrial-automation",
+        "topicName": "工業自動化與 CNC 工具機",
+        "canonicalTopicId": "industrial-automation",
+        "canonicalTopicName": "工業自動化與 CNC 工具機",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "high",
+        "roleSummary": "和大除MOPS揭露的齒輪、軸類與機械加工外，官方工具機目錄明列HARTECH滾齒、刮齒、倒角、CNC砂輪開槽及自動化整合服務；因此撤回舊版『沒有CNC或自動化設備』的過度否定，改為齒輪加工工具機與產線整合的直接角色，仍不推論機器人關節訂單。 2026年8月營收4.60億元，MoM+4.63%、YoY+13.73%，累計YoY+2.65%。此為公司整體營收，無法全數歸因本題材。"
+      },
+      {
         "topicId": "energy-storage-battery",
         "topicName": "儲能、電芯與電池材料",
         "canonicalTopicId": "energy-storage-battery",
@@ -173,16 +178,6 @@
         "directnessLabel": "間接受惠",
         "confidence": "low",
         "roleSummary": "MOPS與官方電動車產品頁確認馬達軸、減速箱與差速器，並不是電池或定置儲能設備。此題材保留為電動車機械傳動的題外觀察，禁止把電驅動零件成長寫成儲能電池曝險。本次TWSE最新回傳：2026年7月營收4.40億元，MoM+19.81%、YoY+9.59%，累計YoY+1.03%。公司整體營收不可直接歸因本題材。"
-      },
-      {
-        "topicId": "industrial-automation",
-        "topicName": "工業自動化與 CNC 工具機",
-        "canonicalTopicId": "industrial-automation",
-        "canonicalTopicName": "工業自動化與 CNC 工具機",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "和大MOPS揭露汽車、機車與農業機械用齒輪、軸類及各種機械零件，沒有揭露機器人減速機、伺服齒輪箱或CNC主軸客戶；在工業自動化題材應定位為精密傳動加工的應用鄰近者。2026年7月營收4.40億元、MoM+19.8%、YoY+9.6%，累計YoY僅+1.0%。"
       },
       {
         "topicId": "renewable-energy",
@@ -452,9 +447,9 @@
     ],
     "topics": [
       {
-        "id": "energy-storage-battery",
-        "name": "儲能、電芯與電池材料",
-        "type": "theme",
+        "id": "industrial-automation",
+        "name": "工業自動化與 CNC 工具機",
+        "type": "technology",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -463,9 +458,9 @@
         ]
       },
       {
-        "id": "industrial-automation",
-        "name": "工業自動化與 CNC 工具機",
-        "type": "technology",
+        "id": "energy-storage-battery",
+        "name": "儲能、電芯與電池材料",
+        "type": "theme",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -510,7 +505,7 @@
       "ruleCount": 25,
       "updatedAt": "2026-05-29"
     },
-    "totalScore": 8,
+    "totalScore": 25,
     "recommendationState": "blocked",
     "fundamental": {
       "score": 4,
@@ -523,26 +518,22 @@
       ]
     },
     "strategy": {
-      "classification": "觀察股",
+      "classification": "題材股",
       "rationale": [
-        "籌碼面有法人/信用籌碼支撐"
+        "籌碼面有法人/信用籌碼支撐",
+        "題材角色已 evidence-backed，可納入題材股策略"
       ]
     },
     "riskGates": [
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 112 天未更新"
+        "message": "股價資料已 113 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 112 天未更新"
-      },
-      {
-        "id": "risk.topic-evidence",
-        "severity": "soft",
-        "message": "題材角色尚未 evidence-backed，只能保守參考"
+        "message": "籌碼資料已 113 天未更新"
       }
     ]
   },

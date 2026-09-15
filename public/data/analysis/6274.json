@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "6274",
   "name": "台燿",
-  "generatedAt": "2026-09-14T12:33:11.706Z",
+  "generatedAt": "2026-09-15T12:32:17.487Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -56,25 +56,25 @@
     "roleDetail": {
       "topicName": "PCB、IC 載板與高階基板材料",
       "roleLabel": "核心產品/平台",
-      "roleSummary": "台燿MOPS直接揭露銅箔基板、粘合片與多層壓合板，屬PCB上游核心材料；原角色中的他牌商品名、精確介電數值與具名客戶均無MOPS支持，已改為產品家族與應用對象。FinMind顯示2026年7月營收59.08億元、MoM+20.7%、YoY+121.5%。",
-      "supplyChainStage": "ccl_and_lamination",
-      "roleType": "ccl_prepreg_manufacturer",
+      "roleSummary": "台燿MOPS確認CCL、粘合片與多層壓合板，官方可查ThunderClad牌號及TU-933+／TU-933P+介電與耐熱條件；本題材為PCB上游核心材料，不再以『MOPS未列規格』為由抹除官方數據。營收使用FinMind MCP 8月值，未將公司整體成長等同某一高速牌號收入。 2026年8月營收59.15億元，MoM+0.11%、YoY+132.48%。此為公司整體營收，無法全數歸因本題材。",
+      "supplyChainStage": "ccl_and_prepreg",
+      "roleType": "high_speed_laminate_and_prepreg_manufacturer",
       "directness": "core",
       "source": "canonical"
     },
     "productNarratives": [
       {
-        "name": "高速網通用銅箔基板",
+        "name": "ThunderClad 3+ TU-933+低損耗銅箔基板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "高多層PCB用銅箔基板",
+        "name": "TU-933P+低損耗粘合片",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       },
       {
-        "name": "粘合片(Prepreg)",
+        "name": "ThunderClad 5Q TU-953Q極低損耗基板",
         "description": "已列為公司/題材相關產品，但尚未建立 evidence-backed 產品說明。",
         "confidence": "low"
       }
@@ -168,7 +168,7 @@
         "directness": "core",
         "directnessLabel": "核心產品/平台",
         "confidence": "high",
-        "roleSummary": "台燿MOPS直接揭露銅箔基板、粘合片與多層壓合板，屬PCB上游核心材料；原角色中的他牌商品名、精確介電數值與具名客戶均無MOPS支持，已改為產品家族與應用對象。FinMind顯示2026年7月營收59.08億元、MoM+20.7%、YoY+121.5%。"
+        "roleSummary": "台燿MOPS確認CCL、粘合片與多層壓合板，官方可查ThunderClad牌號及TU-933+／TU-933P+介電與耐熱條件；本題材為PCB上游核心材料，不再以『MOPS未列規格』為由抹除官方數據。營收使用FinMind MCP 8月值，未將公司整體成長等同某一高速牌號收入。 2026年8月營收59.15億元，MoM+0.11%、YoY+132.48%。此為公司整體營收，無法全數歸因本題材。"
       },
       {
         "topicId": "leo-satellite-communications",
@@ -328,12 +328,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 112 天未更新"
+        "message": "股價資料已 113 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 112 天未更新"
+        "message": "籌碼資料已 113 天未更新"
       },
       {
         "id": "risk.stop-distance",

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "code": "1711",
   "name": "永光",
-  "generatedAt": "2026-09-14T12:33:11.089Z",
+  "generatedAt": "2026-09-15T12:32:16.575Z",
   "sourceUpdatedAt": "2026-05-26",
   "marketDataDate": "2026-05-25",
   "chipDataDate": "2026-05-25",
@@ -118,8 +118,8 @@
       "資料基礎：V2 已驗證（high）",
       "V2 題材角色：石化、塑橡膠與特用化學 · 核心產品/平台 · high",
       "產業評分：94/100（直接度 核心產品/平台 +42；角色信心 high +16；題材 石化、塑橡膠與特用化學（supply_chain_segment/active） +16）",
+      "相關題材：半導體設備與前段材料 · 直接賦能角色",
       "相關題材：重電、電纜與 EPC 工程 · 間接受惠",
-      "相關題材：儲能、電芯與電池材料 · 間接受惠",
       "日 K / 成交量已接 FinMind，可用於技術面與量價觸發規則",
       "法人買賣超已接 FinMind，可追蹤外資、投信、自營商方向"
     ],
@@ -128,8 +128,8 @@
       "催化訊號：月營收或訂單能見度改善、官方公告、年報或重大訊息揭露新產品/客戶/產能、產業報價、資本支出或需求循環出現方向性變化",
       "追蹤 石化、塑橡膠與特用化學：月營收或訂單能見度改善",
       "追蹤 石化、塑橡膠與特用化學：官方公告、年報或重大訊息揭露新產品/客戶/產能",
-      "追蹤 重電、電纜與 EPC 工程：月營收或訂單能見度改善",
-      "追蹤 重電、電纜與 EPC 工程：官方公告、年報或重大訊息揭露新產品/客戶/產能",
+      "追蹤 半導體設備與前段材料：月營收或訂單能見度改善",
+      "追蹤 半導體設備與前段材料：官方公告、年報或重大訊息揭露新產品/客戶/產能",
       "知識庫最後驗證：2026-05-26（stale）"
     ]
   },
@@ -177,6 +177,16 @@
         "roleSummary": "永光MOPS揭露色料、特用與電子化學品、碳粉及醫藥化學品；官網具體確認染料、UV吸收劑、光安定劑、抗氧化劑和反應型PUR膠。本題材聚焦塑料與塗料用特化添加及著色，避免以未證實PAG或原料藥細項填充石化分析。 2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%。此為全公司營收，未拆分「石化、塑橡膠與特用化學」貢獻，不能全部歸因於本題材。"
       },
       {
+        "topicId": "semiconductor-equipment-materials",
+        "topicName": "半導體設備與前段材料",
+        "canonicalTopicId": "semiconductor-equipment-materials",
+        "canonicalTopicName": "半導體設備與前段材料",
+        "directness": "direct_enabler",
+        "directnessLabel": "直接賦能角色",
+        "confidence": "high",
+        "roleSummary": "永光MOPS電子化學品大類經官方電子化學事業與PSPI頁核驗，確有G-line／I-line光阻及EverPI正、負型感光聚醯亞胺，不應再降為僅可能供應電子化學品。於半導體設備／前段材料題材定位為黃光化學材料直接供應者，PSPI兼有封裝絕緣用途；未推定先進EUV光阻、具名晶圓廠認證或全部收入均來自半導體。 2026年8月營收7.47億元，MoM-4.40%、YoY+33.16%，累計YoY+11.64%。此為公司整體營收，無法全數歸因本題材。"
+      },
+      {
         "topicId": "electrical-equipment-epc",
         "topicName": "重電、電纜與 EPC 工程",
         "canonicalTopicId": "electrical-equipment-epc",
@@ -195,16 +205,6 @@
         "directnessLabel": "間接受惠",
         "confidence": "low",
         "roleSummary": "官方產品導覽確認UV吸收劑、光安定劑、抗氧化劑與微影顯影化學品。這些是具體既有產品，但將它們用於儲能櫃塑料或功率元件仍是應用分析，不是已驗證的電池材料訂單。本次TWSE最新回傳：2026年7月營收7.81億元，MoM+13.12%、YoY+25.71%，累計YoY+8.99%。公司整體營收不可直接歸因本題材。"
-      },
-      {
-        "topicId": "semiconductor-equipment-materials",
-        "topicName": "半導體設備與前段材料",
-        "canonicalTopicId": "semiconductor-equipment-materials",
-        "canonicalTopicName": "半導體設備與前段材料",
-        "directness": "indirect",
-        "directnessLabel": "間接受惠",
-        "confidence": "medium",
-        "roleSummary": "永光MOPS明列電子化學品，但未逐項揭露DNQ／PAC、蝕刻液、晶圓清洗劑、純度等級或台積電／聯電客戶。半導體材料角色可保留為電子化學品的應用相鄰，不能把特定配方與認證寫死。2026年7月營收7.81億元、MoM+13.1%、YoY+25.7%、累計YoY+9.0%，為色料、特化、電子、碳粉與醫藥等全公司口徑。"
       }
     ],
     "swot": [],
@@ -212,6 +212,17 @@
       {
         "id": "petrochem-plastics",
         "name": "石化、塑橡膠與特用化學",
+        "type": "supply_chain_segment",
+        "status": "active",
+        "activationSignals": [
+          "月營收或訂單能見度改善",
+          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
+          "產業報價、資本支出或需求循環出現方向性變化"
+        ]
+      },
+      {
+        "id": "semiconductor-equipment-materials",
+        "name": "半導體設備與前段材料",
         "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
@@ -235,17 +246,6 @@
         "id": "energy-storage-battery",
         "name": "儲能、電芯與電池材料",
         "type": "theme",
-        "status": "active",
-        "activationSignals": [
-          "月營收或訂單能見度改善",
-          "官方公告、年報或重大訊息揭露新產品/客戶/產能",
-          "產業報價、資本支出或需求循環出現方向性變化"
-        ]
-      },
-      {
-        "id": "semiconductor-equipment-materials",
-        "name": "半導體設備與前段材料",
-        "type": "supply_chain_segment",
         "status": "active",
         "activationSignals": [
           "月營收或訂單能見度改善",
@@ -286,12 +286,12 @@
       {
         "id": "risk.market-data-stale",
         "severity": "hard",
-        "message": "股價資料已 112 天未更新"
+        "message": "股價資料已 113 天未更新"
       },
       {
         "id": "risk.chip-data-stale",
         "severity": "hard",
-        "message": "籌碼資料已 112 天未更新"
+        "message": "籌碼資料已 113 天未更新"
       }
     ]
   },
